@@ -24,11 +24,7 @@ search.app:
 > This is an advanced topic that assumes you have already read and understood these topics:
 > - [Create and use Custom APIs](custom-api.md)
 > - [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)
->
-> This topic also involves working with solutions. This topic assumes you have familarity with the following:
-> - [Solution concepts](/power-platform/alm/solution-concepts-alm)
-> - [Source control with solution files](/power-platform/alm/use-source-control-solution-files)
-> - [Solution component file reference (SolutionPackager)](solution-component-file-reference-solutionpackager.md)
+
 
 While you can create Custom APIs through a designer or with code, you can also define them by working with files within a solution. This may be the preferred option for solution publishers who apply the recommended best practices for Application Lifecycle Management (ALM).
 
@@ -61,24 +57,24 @@ The solution is a compressed (zip) file.
 
 1. Right-click on the file and choose **Extract All...** from the context menu.
 
-  You should see just the following three files in the folder:
+    You should see just the following three files in the folder:
 
-  - `[Content_Types].xml`
-  - `customizations.xml`
-  - `solution.xml`
+    - `[Content_Types].xml`
+    - `customizations.xml`
+    - `solution.xml`
 
 1. Open the solution.xml file and locate the `Version` element.
 
-  ```xml
-  <ImportExportXml version="9.1.0.23474" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <SolutionManifest>
-      <UniqueName>CustomAPIExample</UniqueName>
-      <LocalizedNames>
-        <LocalizedName description="Custom API Example" languagecode="1033" />
-      </LocalizedNames>
-      <Descriptions />
-      <Version>1.0.0.1</Version>
-  ```
+    ```xml
+    <ImportExportXml version="9.1.0.23474" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <SolutionManifest>
+        <UniqueName>CustomAPIExample</UniqueName>
+        <LocalizedNames>
+          <LocalizedName description="Custom API Example" languagecode="1033" />
+        </LocalizedNames>
+        <Descriptions />
+        <Version>1.0.0.1</Version>
+    ```
 
 1. Update the value by 1. In this example, it will be `<Version>1.0.0.2</Version>`.
 1. Save the file.
@@ -92,24 +88,24 @@ Within the folder, the data representing the Custom API is found within an XML f
 1. In the **customapis** folder, create a folder with the `UniqueName` of the Custom API you want to create. For this example we will use `sample_CustomAPIExample`.
 1. In the **sample_CustomAPIExample** folder, create a file named `customapi.xml`.
 1. Edit the customapi.xml to set the properties of the custom API you want to create. For this example, we will use the following:
-  ```xml
-  <customapi uniquename="sample_CustomAPIExample">
-    <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
-    <bindingtype>0</bindingtype>
-    <description default="A simple example of a Custom API">
-      <label description="A simple example of a Custom API" languagecode="1033" />
-    </description>
-    <displayname default="Custom API Example">
-      <label description="Custom API Example" languagecode="1033" />
-    </displayname>
-    <iscustomizable>1</iscustomizable>
-    <isfunction>0</isfunction>
-    <name>sample_CustomAPIExample</name>
-  </customapi>
-  ```
+    ```xml
+    <customapi uniquename="sample_CustomAPIExample">
+      <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+      <bindingtype>0</bindingtype>
+      <description default="A simple example of a Custom API">
+        <label description="A simple example of a Custom API" languagecode="1033" />
+      </description>
+      <displayname default="Custom API Example">
+        <label description="Custom API Example" languagecode="1033" />
+      </displayname>
+      <iscustomizable>1</iscustomizable>
+      <isfunction>0</isfunction>
+      <name>sample_CustomAPIExample</name>
+    </customapi>
+    ```
 
-See the information in [CustomAPI entity attributes](custom-api.md#customapi-entity-attributes) to set the values of the elements.
-    
+  See the information in [CustomAPI entity attributes](custom-api.md#customapi-entity-attributes) to set the values of the elements.
+      
   > [!NOTE]
   > If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the  `<customapi>` element:
   >
@@ -185,7 +181,7 @@ See the information in [CustomAPIResponseProperty entity attributes](custom-api.
 1. Return to the folder where you extracted the original solution file in [Step 2: Extract the contents of the solution](#step-2-extract-the-contents-of-the-solution)
 1. Select all the extracted files and the **customapis** folder you created.
 
-  :::image type="content" source="media/selected-solution-files.png" alt-text="The selected solution files":::
+    :::image type="content" source="media/selected-solution-files.png" alt-text="The selected solution files":::
 
 1. Right-click the selected files and choose **Send to** > **Compressed (zipped folder)**.
 1. You can re-name the resulting file to be anything you want. For this example, rename it to match the original exported solution file: `CustomAPIExample_1_0_0_2.zip`.
@@ -195,10 +191,10 @@ See the information in [CustomAPIResponseProperty entity attributes](custom-api.
 1. Return to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions**.
 1. Select **Import** and follow the instructions to select the solution file you created in the previous step.
 
-:::image type="content" source="media/import-solution-with-customapi.png" alt-text="Import the solution file":::
+    :::image type="content" source="media/import-solution-with-customapi.png" alt-text="Import the solution file":::
 
-  > [!NOTE]
-  > If you see a warning saying **This version of the solution package is already installed**, you must not have updated the `Version` element of the solution.xml as described in [Step 2: Extract the contents of the solution and update the version](#step-2-extract-the-contents-of-the-solution-and-update-the-version).
+    > [!NOTE]
+    > If you see a warning saying **This version of the solution package is already installed**, you must not have updated the `Version` element of the solution.xml as described in [Step 2: Extract the contents of the solution and update the version](#step-2-extract-the-contents-of-the-solution-and-update-the-version).
 
 1. You should see a warning saying **This solution package contains an update for a solution that is already installed**. Click **Import** to continue.
 1. Wait a few minutes while the solution import completes. 
@@ -209,4 +205,15 @@ See the information in [CustomAPIResponseProperty entity attributes](custom-api.
 ## Step 8: Verify that the Custom API was added to your solution
 
 Open the solution you created and verify that the Custom API and the associated request parameters and response properties are included.
-You can 
+
+:::image type="content" source="media/customapi-solution-installed-successfully.png" alt-text="Showing that the solution component installed successfully":::
+
+At this point, you can test your API using the steps describe in [Test your Custom API](create-custom-api-maker-portal.md#test-your-custom-api)
+
+
+### See also
+
+[Create and use Custom APIs](custom-api.md)<br />
+[Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br />
+[Create a Custom API with code](create-custom-api-with-code.md)<br />
+[Create your own messages](custom-actions.md)<br />

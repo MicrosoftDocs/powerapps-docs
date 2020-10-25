@@ -300,3 +300,9 @@ You may have requirements to create a client application which will allow creati
 
 Your ALM process may be better served by creating Custom APIs by editing solution files. More information: [Create a Custom API with solution files](create-custom-api-solution.md).
 
+### See also
+
+[Create and use Custom APIs](custom-api.md)<br />
+[Create a Custom API with code](create-custom-api-with-code.md)<br />
+[Create a Custom API with solution files](create-custom-api-solution.md)<br />
+[Create your own messages](custom-actions.md)<br />
