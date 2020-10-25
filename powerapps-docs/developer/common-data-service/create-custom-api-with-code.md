@@ -2,7 +2,7 @@
 title: "Create a Custom API with code (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write code create custom APis." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/19/2020
+ms.date: 10/26/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -175,7 +175,7 @@ var stringparameter = new Entity("customapirequestparameter")
     Attributes = {
         { "description", "The StringParameter request parameter for Custom API Example"},
         { "displayname", "Custom API Example String Parameter"},
-        { "entitylogicalname", null},
+        { "logicalentityname", null},
         { "isoptional", false}, //False
         { "name", "sample_CustomAPIExample.StringParameter"},
         { "type", new OptionSetValue(10)}, //String
@@ -192,7 +192,7 @@ var stringproperty = new Entity("customapiresponseproperty")
     Attributes = {
         { "description", "The StringProperty response property for Custom API Example"},
         { "displayname", "Custom API Example String Property"},
-        { "entitylogicalname", null},
+        { "logicalentityname", null},
         { "name", "sample_CustomAPIExample.StringProperty"},
         { "type", new OptionSetValue(10)}, //String
         { "uniquename", "StringProperty"},
@@ -231,3 +231,9 @@ var addProperty = new AddSolutionComponentRequest
 //Add the property to the solution.
 svc.Execute(addProperty);
 ```
+
+### See also
+
+[Create and use Custom APIs](custom-api.md)<br/>
+[Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br/>
+[Create a Custom API with solution files](create-custom-api-solution.md)<br/>

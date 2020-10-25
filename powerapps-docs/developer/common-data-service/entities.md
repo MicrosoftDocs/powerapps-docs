@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/31/2018
+ms.date: 10/26/2020
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -21,13 +21,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- 
-Was Mike Carter
-This topic was not migrated it was written for Power Apps 
-
-Overlap with content in https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-entities
-
--->
 
 # Common Data Service entities
 
@@ -83,6 +76,14 @@ The Entity metadata includes the following information:
 
 > [!TIP]
 > Developing an understanding of the entity metadata in the system can help you understand how Common Data Service works. Many of the properties also control what entities in model-driven apps can do. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the Metadata Browser which will allow you to view all the hidden entities and metadata properties that are found in the system. More information: [Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
+
+## Private entities
+
+Common Data Service contains some entities which are not intended for 3rd party developers to use. These entities are added by Microsoft to enable feature functionality. Private entities are indicated by the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>. <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsPrivate> property. These entities are not included in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) for this reason. However you will find them when querying entity metadata.
+
+> [!CAUTION]
+> You should not use private entities in your solutions. By marking an entity as private, Microsoft is explicitly indicating that we do not support other apps to use the entity. Microsoft may remove the entity or introduce breaking changes at any time. Use of these entities by anyone other than Microsoft is not supported.
+
 
 ### See also
 
