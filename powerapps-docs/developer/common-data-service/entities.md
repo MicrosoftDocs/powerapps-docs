@@ -79,7 +79,7 @@ The Entity metadata includes the following information:
 
 ## Private entities
 
-Common Data Service contains some entities which are not intended for 3rd party developers to use. These entities are added by Microsoft to enable feature functionality. Private entities are indicated by the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>. <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsPrivate> property. These entities are not included in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) for this reason. However you will find them when querying entity metadata.
+Common Data Service contains some entities which are not intended for 3rd party developers to use. These entities are added by Microsoft to enable feature functionality. Private entities are indicated by the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsPrivate> property. These entities are not included in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) for this reason. However you will find them when querying entity metadata.
 
 > [!CAUTION]
 > You should not use private entities in your solutions. By marking an entity as private, Microsoft is explicitly indicating that we do not support other apps to use the entity. Microsoft may remove the entity or introduce breaking changes at any time. Use of these entities by anyone other than Microsoft is not supported.
