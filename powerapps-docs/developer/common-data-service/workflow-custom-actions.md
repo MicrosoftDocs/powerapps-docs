@@ -2,7 +2,7 @@
 title: "Use Workflow Custom Actions with code (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Actions are custom messages that extend the functionality of Common Data Service. Learn more about how to create your own actions" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/19/2020
+ms.date: 10/26/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -23,8 +23,6 @@ Workflow Custom Actions, also known as simply *Custom Actions*, are one of two w
 Both of these capabilities allow for creating new messages that can be called from web services. Workflow Custom Actions will continue to provide a no-code way to declaratively define synchronous business logic. Custom actions have always been synchronous 'real-time' workflows and therefore not suitable to be converted to use Power Automate.
 
 For a comparison of the capabilities of Workflow Custom Actions and Custom APIs, see [Compare Workflow Custom Action and Custom API](custom-actions.md#compare-workflow-custom-action-and-custom-api).
-
-Workflow Custom Actions provide a no-code way to compose a set of logic that is encapsulated by the message. Workflow Custom Actions are typically used to add new domain specific functionality to the organization web service or to combine multiple organization web service message requests into a single request. For example, in a support call center, you may want to combine the `Create`, `Assign`, and `Update` messages into a single new `Escalate` message.  
   
 The business logic of an action is implemented using a workflow. When you create an action, the associated real-time workflow is automatically registered to execute in the main operation stage of the message execution pipeline.
 
@@ -49,7 +47,7 @@ Because a Workflow Custom Action is a workflow, you can include re-usable custom
 
 ### Register plug-ins steps for stages in the execution pipeline
 
-Because a Workflow Custom Action creates a message, you can register plug-ins steps on the `PreOperation` and `PostOperation` stages to modify the behavior of the Workflow Custom Action. Developers have used this to define all the logic for the message, frequently not defining any workflow logic at all. The Custom API preview feature now simplifies this code-first pattern and provides other capabilities not possible with Custom Workflow Activities. 
+Because a Workflow Custom Action creates a message, you can register plug-ins steps on the `PreOperation` and `PostOperation` stages to modify the behavior of the Workflow Custom Action. Developers have used this to define all the logic for the message, frequently not defining any workflow logic at all. The Custom API preview feature now simplifies this code-first pattern and provides other capabilities not possible with Custom Workflow Activities. More information: [Create and use Custom APIs](custom-api.md)
 
 The message for a Workflow Custom Action is only available with the Workflow that defines it is activated. You cannot register plug-in steps for a Workflow Custom Action that isn't active.
 
@@ -66,12 +64,12 @@ If you register any plug-in steps on a Workflow Custom action it will establish 
 
 ## Watch out for long running actions
 
-If one of the steps in the action’s real-time workflow is a custom workflow activity, that custom workflow activity is executed inside the isolated sandbox run-time environment and will be subject to the two minute timeout limit, similar to how sandboxed plug-ins are managed. However, there are no restrictions on the amount of overall time the action itself can take. In addition, if an action participates in a transaction, where rollback is enabled, SQL Server timeouts will apply.  
+If one of the steps in the action’s real-time workflow is a custom workflow activity, that custom workflow activity is executed inside the isolated sandbox run-time environment and will be subject to the two minute timeout limit, similar to how plug-ins are managed. However, there are no specific restrictions on the amount of overall time the action itself can take. This is not an advantage. The workflow cannot run indefinitely. It will eventually fail for various reasons. For example, if an action participates in a transaction, where rollback is enabled, SQL Server timeouts will apply. Take care to ensure that your custom actions can complete with a clear success or failure in a reasonable period of time. Anything longer than 2 minutes is probably too long.
 
 The existing <xref:Microsoft.Xrm.Sdk.IExecutionContext.Depth> platform checks ensure an infinite loop does not occur. For more information on depth limits see <xref:Microsoft.Xrm.Sdk.Deployment.WorkflowSettings.MaxDepth>. 
 
 > [!TIP]
->  A best practice recommendation is that long running operations should be executed outside of Common Data Service using .NET asynchronous or background processes.  
+>  A best practice recommendation is that long running operations should be executed outside of Common Data Service using Power Automate, Logic Apps, or other capabilities offered by Azure.
   
 ### See also  
  [Create a custom action](../../maker/common-data-service/create-actions.md)<br />

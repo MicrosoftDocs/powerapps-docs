@@ -2,7 +2,7 @@
 title: "Create a Custom API in the maker portal (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create a Custom API definition with the maker portal" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/19/2020
+ms.date: 10/26/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -55,7 +55,7 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 
     You cannot set values for **Plug-in Type** unless you have already created the plug-in. You can change this later.
 
-    As noted in Known Issues: [The Is Private field is not included in the Custom API form](custom-api.md#the-is-private-field-is-not-included-in-the-custom-api-form).
+    Known Issue: [The Is Private field is not included in the Custom API form](custom-api.md#the-is-private-field-is-not-included-in-the-custom-api-form).
 
 1. Click **Save**. Your form should look something like this:
     :::image type="content" source="media/saved-customapi-form.png" alt-text="Saved Custom API form":::
@@ -65,6 +65,8 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 > If you delete the Custom API record, all request parameters and response properties will be deleted with it. Make sure that the Custom API field values are correct before proceeding. Otherwise you may need to repeat all of these steps to re-create your Custom API if you need to delete it.
 
 ### Known issue: Add your Custom API to your solution
+
+Known issue: [A custom API created is not added to the current solution](custom-api.md#a-custom-api-created-is-not-added-to-the-current-solution)
 
 After you create your Custom API, it will not appear in your solution. In your solution you must select **Add existing** and then select **Custom API** from the drop-down.
 
@@ -205,7 +207,10 @@ OrganizationResponse response = svc.Execute(request);
 var stringProperty = (string)response.Results["StringProperty"];
 ```
 
-For more information, see [Use messages with the Organization service](org-service/use-messages.md);
+You can also generate strongly typed request and response classes for an early-bound programming style. For more information:
+
+- [Use messages with the Organization service](org-service/use-messages.md);
+- [Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)
 
 
 ## Write a Plug-in for your Custom API
