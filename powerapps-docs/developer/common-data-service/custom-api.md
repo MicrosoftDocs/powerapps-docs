@@ -55,7 +55,7 @@ This table includes attributes of the Custom API entity that you can set.
 |**Bound Entity Logical Name**<br />`BoundEntityLogicalName`|String|The logical name of the entity bound to the custom API if it is not Global.<br />**Cannot be changed after it is saved.**|
 |**Custom API**<br />`CustomAPIId`|Uniqueidentifier|Unique identifier for custom API instances<br />**Cannot be changed after it is saved.**|
 |**Description**<br />`Description`|String|Localized description for this Custom API. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
-|**Display Name**<br />DisplayName|String|Localized display name for this Custom API. For use when the message is exposed to be called in an app.|
+|**Display Name**<br />`DisplayName`|String|Localized display name for this Custom API. For use when the message is exposed to be called in an app.|
 |**Execute Privilege Name**<br />`ExecutePrivilegeName`|String|(Optional) Name of the privilege that allows execution of the custom API|
 |**Is Function**<br />`IsFunction`|Boolean|Indicates if the custom API is a function. A function requires the HTTP GET method. Otherwise the Http POST method is required.<ul> <li>**Value**: 0 **Label**: No</li> <li>**Value**: 1 **Label**: Yes</li> </ul>More information: [Use Web API functions](webapi/use-web-api-functions.md)<br />**Cannot be changed after it is saved.**|
 |**Is Private**<br />`IsPrivate`|Boolean|Indicates if the custom API is private (hidden from metadata and documentation) More information: [Private Messages](org-service/use-messages.md#private-messages)<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li> </ul>|
