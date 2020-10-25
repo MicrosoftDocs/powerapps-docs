@@ -183,8 +183,13 @@ It is not possible to create the Custom API, Custom API Request Parameter, and C
 
 If you define your Custom API as a function by setting the **Is Function** property to true, you cannot bind the function to an entity or entity collection. You also cannot use any **Entity** or **EntityCollection** request parameters or response properties.
 
-### 
-
 ### Next Steps
 
 [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br />
+
+### See also
+
+[Create and use Custom APIs](custom-api.md)<br />
+[Create a Custom API with code](create-custom-api-with-code.md)<br />
+[Create a Custom API with solution files](create-custom-api-solution.md)<br />
+[Create your own messages](custom-actions.md)<br />
