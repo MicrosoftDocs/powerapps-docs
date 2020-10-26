@@ -167,7 +167,7 @@ You can say how you're feeling about returning to the workplace. On the home pag
 
 ## Facility access not available
 
-Sometimes the case manager can inform you about the facility that the access is no longer available for you. You'll see a banner appearing on the home screen, which indicates the **Facility access is not available**. A message is shown with further instructions when you select the banner. 
+A case manager or facility manager can block you from making bookings which results in that access is no longer available for you. You'll see a banner appearing on the home screen, which indicates the **Access is not available**. A notification is received with further instructions.
 
 > [!div class="mx-imgBorder"]
 > ![Facility access is not available](media/facility-access-not-available.png "Facility access is not available")
