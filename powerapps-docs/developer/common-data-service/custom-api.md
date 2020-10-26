@@ -371,9 +371,9 @@ When viewing the Custom API entities in a solution, the **Display Name** column 
 
 It is not possible to create the Custom API, Custom API Request Parameter, and Custom API Response Properties in a single operation using 'deep-insert' as described in [Create related entity records in one operation](webapi/create-entity-web-api.md#create-related-entity-records-in-one-operation) and [Create related entities in one operation](org-service/entity-operations-create.md#create-related-entities-in-one-operation). Instead, each record must be created individually and be related to the Custom API record.
 
-### Custom API functions cannot use Entity or EntityCollection Request Parameters or Response Properties
+### Custom API functions cannot use Entity or EntityCollection Request Parameters
 
-If you define your Custom API as a function by setting the **Is Function** property to true, you cannot bind the function to an entity or entity collection. You also cannot use any **Entity** or **EntityCollection** request parameters or response properties.
+If you define your Custom API as a function by setting the **Is Function** property to true, you cannot bind the function to an entity or entity collection. You also cannot use any **Entity** or **EntityCollection** request parameters.
 
 ### Next Steps
 
