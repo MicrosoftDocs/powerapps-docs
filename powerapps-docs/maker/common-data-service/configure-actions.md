@@ -26,6 +26,8 @@ search.audienceType:
 # Configure custom actions from a workflow
 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can enable a custom action from a real-time workflow without writing code. More information: [Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md)  
   
 You also can create an action so that a developer can use it in code, or you might need to edit an action that was previously defined. Like real-time workflow processes, consider the following:  

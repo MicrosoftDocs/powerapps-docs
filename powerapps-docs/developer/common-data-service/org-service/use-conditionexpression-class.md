@@ -17,6 +17,8 @@ search.app:
 ---
 # Use the ConditionExpression class
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> class to compare an attribute to a value or set of values by using an operator, such as “equal to” or “greater than”. The `ConditionExpression` class lets you pass condition expressions as parameters to other classes, such as <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.  
   
  The following table lists the properties you can set to create a condition using the `ConditionExpression` class.  

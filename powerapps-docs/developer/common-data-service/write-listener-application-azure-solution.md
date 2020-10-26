@@ -19,6 +19,8 @@ search.app:
 
 # Write a listener application for a Azure solution
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This topic describes how to write an Azure solution  listener application that can read and process Common Data Service messages that are posted to the Azure Service Bus. As a prerequisite, you should familiarize yourself with how to write a Azure Service Bus listener before trying to learn the specifics of a Common Data Service listener. For more information, see the [Azure Service Bus documentation](/azure/service-bus/).
   
 <a name="bkmk_writequeued"></a>

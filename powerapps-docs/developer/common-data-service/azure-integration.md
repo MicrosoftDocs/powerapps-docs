@@ -17,6 +17,8 @@ search.app:
 ---
 # Azure Integration
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service supports integration with Azure. Developers can register plug-ins with Common Data Service that can pass runtime message data, known as the execution context, to one or more Azure solutions in the cloud. This is especially important because Azure is one of two supported solutions for communicating runtime context obtained in a plug-in to external line-of-business (LOB) applications. The other solution is the external custom endpoint access capability from a plug-in registered in the sandbox.
 
 The Azure Service Bus provides a secure and reliable communication channel between Common Data Service runtime data and external cloud-based line-of-business (LOB) applications. This capability is especially useful in keeping disparate Common Data Service systems or other Common Data Service servers synchronized with business data changes.

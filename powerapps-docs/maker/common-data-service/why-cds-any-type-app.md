@@ -21,6 +21,8 @@ search.app:
 
 # Work with any type of app 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service provides multiple ways to integrate in any type of app&&mdash;mobile, web, desktop, device, system, or service. For cloud solutions, there are ways to integrate regardless of the model in which your solution is deployed&mdash;infrastructure as a service (IaaS), platform as a service (PaaS), or software as a service (SaaS). For IaaS-based solutions, the integration approach also
 works well if solutions are running inside of containers.
 

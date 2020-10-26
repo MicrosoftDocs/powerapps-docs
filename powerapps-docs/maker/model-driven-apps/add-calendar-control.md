@@ -2,8 +2,7 @@
 title: "Add the calendar control to entities in model-driven apps | MicrosoftDocs"
 description: "Learn how to add the calendar control to entities in model-driven apps."
 ms.date: 05/11/2020
-ms.service:
-  - "dynamics-365-sales"
+ms.service: powerapps
 ms.topic: article
 author: sbmjais
 ms.author: shjais

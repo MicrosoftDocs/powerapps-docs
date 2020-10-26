@@ -10,7 +10,6 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
-author: "Mattp123"
 ms.assetid: be93b9d7-f1c2-4ee7-8d7c-0f5c34dfa5f7
 author: "Mattp123"
 ms.author: "matp"
@@ -29,7 +28,7 @@ search.app:
 Card forms are used in views for Unified Interface apps. Card forms are designed to present information in a compact format that is suitable for mobile devices. For example, the default card form for the My Active Accounts view defines the information displayed for each account record. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/account-cardform-for-myactiveaccounts-view.png "Account card form for my active accounts view")
+> ![Account card form for my active accounts view](media/account-cardform-for-myactiveaccounts-view.png "Account card form for my active accounts view")
 
 Although card forms can be created and edited in the same way as other form types, card forms are added to apps differently. Instead of adding a form as an app component, custom card forms are added to views by using the **Read Only Grid** control. 
 

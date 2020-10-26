@@ -17,6 +17,8 @@ search.app:
 ---
 # FetchXML schema
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The FetchXML query language is used to create queries against the Common Data Service database. The following is the schema for the FetchXML query language. For more information, see [Use FetchXML to Construct a Query](use-fetchxml-construct-query.md).
 
 You can find this schema in the `Schemas\9.0.0.2090\Fetch.xsd` folder when you download the Schemas zip file.

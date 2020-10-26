@@ -17,6 +17,8 @@ search.app:
 ---
 # Use plug-ins to extend business processes
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 A plug-in is a .NET assembly that you can upload to the Common Data Service. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform.
 
 > [!IMPORTANT]

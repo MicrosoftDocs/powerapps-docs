@@ -23,6 +23,8 @@ search.app:
 ---
 # Perform conditional operations using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Common Data Service provides support for a set of conditional operations that rely upon the standard HTTP resource versioning mechanism known as *ETags*.  
   
 <a name="bkmk_ETags"></a>

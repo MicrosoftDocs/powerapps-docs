@@ -17,6 +17,8 @@ search.app:
 ---
 # Quickstart: Blazor Server Web API sample (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In this quickstart, you'll create a Blazor Server application to connect to your Common Data Service environment using the Web API.
 
 You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI](/dynamics365/customer-engagement/web-api/whoami) function. The response will be a [WhoAmIResponse](/dynamics365/customer-engagement/web-api/whoamiresponse) complex type. After call completion, the `UserId` property value is displayed.

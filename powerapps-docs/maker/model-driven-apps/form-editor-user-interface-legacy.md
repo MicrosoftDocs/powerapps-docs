@@ -8,6 +8,7 @@ applies_to:
   - "powerapps"
 ms.author: "matp"
 manager: "kvivek"
+ms.service: powerapps
 ms.assetid: 146f8035-4fcd-4572-8e71-4270cd150495
 search.audienceType: 
   - maker
@@ -89,7 +90,7 @@ Select the **File** tab to add/view the following options:
  The **Home** tab displays the commands listed in the following table:
 
 > [!div class="mx-imgBorder"] 
-> ![home-tab](media/home-tab.png)
+> ![Classic form editor home tab](media/home-tab.png)
 
 |Group|Command|Description|
 |-----------|-------------|-----------------| 
@@ -116,7 +117,7 @@ Select the **File** tab to add/view the following options:
 
 ## Insert tab  
 > [!div class="mx-imgBorder"] 
-> ![insert-tab](media/insert-tab.png)
+> ![Classic form editor insert tab](media/insert-tab.png)
  
 The Insert tab displays the commands in the following table:
 

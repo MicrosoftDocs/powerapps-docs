@@ -17,6 +17,8 @@ search.app:
 ---
 # Create extensions for the code generation tool
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 You can extend the functionality of the code generation tool by specifying additional command-line parameters and parameter values. To specify a parameter, add the following to the command line: /\<*parametername*>:\<*class name*>,\<*assembly name*>. Note that assembly name does not include the .dll extension. As an alternative, you can add the equivalent value to the config file in the format “<add key=”\<*parametername*>” value=”\<*class name*>,\<*assembly name*>” />”.  
 
 The following table lists the parameters that you can use.  
@@ -99,7 +101,7 @@ public sealed class BasicFilteringService : ICodeWriterFilterService
 
 ```
 
-Download the sample: [CrmSvcUtilExtensions](https://code.msdn.microsoft.com/Create-extensions-for-the-b8b24d1d) and  [GeneratePickListEnums](https://code.msdn.microsoft.com/Create-extensions-for-the-3dd56a27). 
+Download the sample: [CrmSvcUtilExtensions](https://github.com/microsoft/Dynamics365-Apps-Samples/tree/master/samples-from-msdn/BasicFilteringService) and  [GeneratePickListEnums](https://github.com/microsoft/Dynamics365-Apps-Samples/tree/master/samples-from-msdn/GeneratePicklistEnums). 
 
 The **GeneratePicklistEnums** sample extension outputs a source code file that contains enumerations for all option sets, state codes, and status codes. For an example of how to use these enumerations, see the `SampleCode\CS\QuickStart` sample.  
 

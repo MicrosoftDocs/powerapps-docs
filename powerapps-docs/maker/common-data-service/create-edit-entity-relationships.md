@@ -23,6 +23,8 @@ search.app:
   - D365CE
 ---
 # Entity relationships 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Entity relationships define how records can be related to each other in the database. At the simplest level, adding a lookup field to an entity creates a new 1:N (one-to-many) relationship between the two entities and lets you put that lookup field in a form. With the lookup field, users can associate multiple *child* records of that entity to a single *parent* entity record.  
   
 Beyond simply defining how records can be related to other records, 1:N entity relationships also provide data to address the following questions:  

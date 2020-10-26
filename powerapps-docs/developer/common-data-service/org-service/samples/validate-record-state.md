@@ -18,6 +18,8 @@ search.app:
 
 # Validate record state and set the state of record
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to validate a change of state of an entity and set a state of an entity. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ValidateandExecuteSavedQuery).
 
 ## How to run this sample
