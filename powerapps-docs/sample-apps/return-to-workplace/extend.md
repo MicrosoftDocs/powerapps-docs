@@ -385,6 +385,19 @@ The data definitions section provides information about a list of entities, data
 | Value            | Decimal       | Used to capture the value of the measurement.                                     | Model-driven app |
 |||||
 
+### Notification
+
+| Display name        | Data type     | Description                                                                       | Platform use                    |
+|---------------------|---------------|--------------------------------------------------------------------|---------------------------------|
+| Employee            | Lookup        | Used to associate the contact.                                     | Model-driven app and canvas app |
+| Notification Type   | Option set    | Used to set warning level                                          | Model-driven app and canvas app |
+| Header              | Text          | Header text to be displayed or subject line of the email.          | Model-driven app and canvas app |
+| Body                | Text          | Main text of the message.                                          | Model-driven app and canvas app |
+| Send as email       | Two option    | Checked if notification has to be send via email.                  | Model-driven app                |
+| Send as push notification | Two option  | Checked if the notification has to be send via push-message.   | Model-driven app                |
+| Read?               | Two option    | Used to capture if the message has been read by the end user.      | Model-driven app and canvas app |
+|||||
+
 ### Readiness Category
 
 | Display name | Data type | Description                                     | Platform use    |
