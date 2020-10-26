@@ -132,10 +132,10 @@ You can use the following queries to retrieve data about Custom APIs.
 
 ### Web API
 
-Using the Web API where `yourorg.crm.dynamics.com` is the URl for your organization. More information: [Query Data using the Web API](webapi/query-data-web-api.md)
+ More information: [Query Data using the Web API](webapi/query-data-web-api.md)
 
 ```http
-GET https://yourorg.crm.dynamics.com/api/data/v9.1/customapis?$select=
+GET [Organization URI]/api/data/v9.1/customapis?$select=
     uniquename,
     allowedcustomprocessingsteptype,
     bindingtype,
