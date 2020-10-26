@@ -370,6 +370,19 @@ This area of the Facility Safety Management app keeps track of general employee 
 > [!div class="mx-imgBorder"]
 ![Employee sentiment](media/facility-manager-employee-sentiment.png "Employee sentiment")
 
+## Employee Access
+
+Each employee can be blocked for making bookings and thus entering a building by disabling Access. This can be done by a Case Manager in the Workplace Care Management app or by a Facility Manager. To do so as facility manager, follow these steps:
+
+1. Open an employee record. Go to the **Solution Setup** area and click **Employees** in the **Master Data** subsection.
+2. Open the **Access** tab
+3. Click **+ New Access Action**
+4. Select **Access Status** as **Blocked**, set **Access Available Date** to a date in the future when you would like the block to expire and enter some notes to display to the Employee.
+5. Employee, Source, Submitted By and Owner are filled in automatically. Select **Save & Close**
+
+The Employee is now blocked and can no longer make bookings via the Employee App.
+All existing bookings are disabled.
+
 ## Give feedback about the solution
 
 To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
