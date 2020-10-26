@@ -34,7 +34,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: `Promise<OpenFormSuccessResponse>`
+Type: `Promise<OpenFormSuccessResponse>`. The `openFormSuccessResponse` returns an array of type `savedEntityReference` with the values present in the [EntityReference](../entityreference.md) method.
 
 ## Remarks
 
