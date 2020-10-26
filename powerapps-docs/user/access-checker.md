@@ -29,9 +29,9 @@ You can have access rights to a perform an action on a record through ownership,
 |Access type|Description|  
 |---------------|-----------------|  
 |**Ownership**| User owns the record or belongs to a team that owns the record.|  
-|**Role access**|User has access to perform an action on a record because of their security role.|  
-|**Shared access**| The record is shared with a user, team, or organization by a user that has appropriate share rights.|  
-|**Hierarchy access**|Hierarchy access only takes place if hierarchy security management is turned on for the organization and the entity. The user also needs to be a manager.
+|[**Role access**](https://docs.microsoft.com/power-platform/admin/how-record-access-determined#role-access)|User has access to perform an action on a record because of their security role.|  
+|[**Shared access**](https://docs.microsoft.com/power-platform/admin/how-record-access-determined#shared-access)| The record is shared with a user, team, or organization by a user that has appropriate share rights.|  
+|[**Hierarchy access**](https://docs.microsoft.com/power-platform/admin/how-record-access-determined#hierarchy-access)|Hierarchy access only takes place if hierarchy security management is turned on for the organization and the entity. The user also needs to be a manager.
 
 For more information on how privileges and access checks work, go to [How access to a record is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
 
