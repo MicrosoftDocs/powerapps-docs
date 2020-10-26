@@ -139,6 +139,19 @@ These entities are used primarily by the Facility Safety Management model-driven
 
 The data definitions section provides information about a list of entities, data attributes, and the areas of the solution where they're used. System-generated attributes such as **Created On** and **Modified On** aren't displayed.
 
+### Access Action
+
+| Display name          | Data type     | Description                                                                      | Platform use                    |
+|-----------------------|---------------|----------------------------------------------------------------------------------|---------------------------------|
+| Employee              | Lookup        | Used to associate the contact.                                                   | Model-driven app and canvas app |
+| Access Status         | Option set    | Used to set type of access action                                                | Model-driven app and canvas app |
+| Access Available date | Date time     | Set expire date for this record.                                                 | Model-driven app                |
+| Submitted by          | Lookup        | Lookup to systemuser. Used to capture original creator                           | Model-driven app                |
+| Source                | Text          | Used to capture source name, defaults to manual when created in model-driven app | Model-driven app                |
+| Notes                 | Text          | Used to capture reason for the block or instructions to the end user.            | Model-driven app                |
+| Notification          | Lookup        | Used to accociate to a specific notification so notes and body can be synched.   | Model-driven app and canvas app |
+|||||
+
 ### Area
 
 | Display name  | Data type     | Description     | Platform use    |
@@ -505,6 +518,8 @@ This section describes the different flows in the solution and explains their pu
 
 | Flow | Entity | Description                        |
 |--------------|-----------|-------------------------------------------------|
+| Access Action - Reset facility access | Access Action | Deactivates records when past the date in 'Access available date'. |
+| Access Action - Update linked case | Access Action | Updates linked Employee Case via source field when record is deactivated |
 | Access Action - Update notification | Access Action | Updates the body of the linked notification when the notes changes. | 
 | Access Action - Validate and create notification | Checks if owner is set to linked employee and creates a notification record. |
 | Area - Update Capacity for future Occupancies         | Area      | Updates the daily occupancy when there are capacity changes on an area.|
@@ -514,10 +529,10 @@ This section describes the different flows in the solution and explains their pu
 | Employee Attestation - Disable Earlier Pass      | Employee Attestation    | When an employee creates multiple passes on a single day, earlier passes will be disabled. |
 | Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. |
 | Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Reactivate occupancy in daily occupancy when employee bookings are disabled. |
+| Employee Case - Create Access Action | Employee Case | Creates Access Action blocking the employee when 'Facility Access Available' is set to 'No' |
 | Employee Case - Create suggestions | Employee Attestation | Creates case contacts when attestation is linked to the case. |
-|Employee Case – Disable Earlier Passes  | Employee Case | Disable passes that are active when an employee no longer has access to a facility.|
-| Employee Case - Reset Facility Access Available      | Employee Case    | Reset the employee case facility access available when the time is reached. |
-| Employee Case - Share with Employee | Employee Case | Shares the employee case record with an employee when facility access is disabled. |
+| Employee Case - Disable Access Action | Employee Case | Deactivates Access Action linked to the Employee Case when 'Facility Access Available' is set to 'Yes' |
+| Employee Case – Update Access Action | Employee Case | Updates linked Access Action when 'Facility Access Available Date' or 'Employee Instructions' changes. |
 | Employee Case - Update Case Contacts | Case Contact | Deactivates case contact records for an employee if an employee case is created for the employee |
 | Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations. |
 | Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. |
