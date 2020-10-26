@@ -492,6 +492,8 @@ This section describes the different flows in the solution and explains their pu
 
 | Flow | Entity | Description                        |
 |--------------|-----------|-------------------------------------------------|
+| Access Action - Update notification | Access Action | Updates the body of the linked notification when the notes changes. | 
+| Access Action - Validate and create notification | Checks if owner is set to linked employee and creates a notification record. |
 | Area - Update Capacity for future Occupancies         | Area      | Updates the daily occupancy when there are capacity changes on an area.|
 | Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes. |
 | Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase. |
