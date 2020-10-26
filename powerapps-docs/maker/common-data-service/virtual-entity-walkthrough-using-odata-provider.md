@@ -26,6 +26,8 @@ search.app:
 
 # Virtual entity walkthrough using the OData v4 Data Provider
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Imagine that you want to access ticket information from an external data source within your model-driven app. In this simple walkthrough, you'll model a virtual entity with fields mapped to the external schema that retrieves ticket data at runtime from an OData web service.
 
 ## Data source details

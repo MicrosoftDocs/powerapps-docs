@@ -17,6 +17,8 @@ search.app:
 ---
 # Use messages with the Organization service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 All data operations in the organization service are defined as messages. While the <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides 7 methods to perform data operations (<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*>, and <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> ), each of these methods is a convenience wrapper around the underlying message which is ultimately invoked using the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. The underlying organization service only has the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method which as a single parameter: an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class. The value returned by the `Execute` method is an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
 
 To make your experience better when you write code, all the standard system data operations have a pair of `*Request` and `*Response` classes defined in the SDK assemblies. Each of these classes inherit from the respective <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes and provide a more productive experience for you when you write code.

@@ -23,6 +23,8 @@ search.app:
 ---
 # Best practices and guidance regarding plug-in and workflow development for the Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This list below contains all of the guidance and best practices regarding the plug-in and workflow development within the Common Data Service.
 
 |Best Practice  |Description  |

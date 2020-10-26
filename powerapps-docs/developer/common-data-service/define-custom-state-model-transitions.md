@@ -17,6 +17,8 @@ search.app:
 ---
 # Define custom state model transitions
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can specify custom state transitions for the `Incident` (**Case**) entity or custom entities. The <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsStateModelAware> property is `true` for entities that support state model transitions.  
   
  Custom state transitions are an optional level of filtering to define which state transitions are valid for a record in a given state. Particularly when you have a large number of combinations for valid states and status values, defining a limited list of options can make it easier for people to choose the correct status for a record.  

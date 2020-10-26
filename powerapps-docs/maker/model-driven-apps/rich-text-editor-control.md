@@ -2,14 +2,14 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 08/10/2020
+ms.date: 10/08/2020
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "matp"
-ms.author: "Mattp123"
+author: "Mattp123"
+ms.author: "craigm"
 manager: "kvivek"
 tags: 
 search.audienceType: 
@@ -19,8 +19,6 @@ search.app:
   - D365CE
 ---
 # Add the rich text editor control to a model-driven app (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. 
 
@@ -32,6 +30,7 @@ Some of the format options available are:
 - Numbered lists and bulleted lists.
 - Hyperlinks.
 - Tables.
+- Images.
 
 <img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app" height="500" width="520"> 
 
@@ -54,7 +53,7 @@ You can create a new text field and configure the control, or replace an existin
 
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To configure the rich text editor control, follow these steps:
 
-1. Create a JSON file that includes the defaultSupportedProps structure and [configuration](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html) with the changes you want. More information: [Rich text editor properties](#rich-text-editor-properties)
+1. Create a JSON file that includes the defaultSupportedProps structure and configuration with the changes you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
 2. In Power Apps, create a JavaScript web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
 3. Open the **Field Properties** page for the text field with the rich text editor control, and then next to **RichTextEditorControl_URL** select **Edit**.
    > [!div class="mx-imgBorder"] 
@@ -118,6 +117,76 @@ Setting this property to true will disable images. This property will have highe
 ### disableDefaultImageProcessing
 
 By default, images will be uploaded using the client API. As soon as an image gets added to the editor, it will be uploaded to the platform. To process images, set this property to true.
+
+## Sample rich text editor configurations
+
+The following sample rich text editor configuration code sample data can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource. More information: [Rich text editor control configuration options](#rich-text-editor-control-configuration-options)
+
+### Add the full screen expander
+
+`{ "showAsTabControl": true, "showFullScreenExpander": true }`
+
+:::image type="content" source="media/cke-screen-expander.png" alt-text="Screen expander control":::
+
+### Add the HTML source view tab
+
+`{ "showAsTabControl": true, "showHtml": true }`
+
+:::image type="content" source="media/cke-html-source.png" alt-text="HTML tab control":::
+
+### Add a simple toolbar with font size, bold, italic, underline, and highlight
+
+`{ "defaultSupportedProps": {"toolbar":[{ "items": ["FontSize", "Bold", "Italic", "Underline", "BGColor"]}]  }}`
+
+:::image type="content" source="media/cke-simple-editor.png" alt-text="Controls for a simple editor":::
+
+### Remove the toolbar to make a rich text rendering surface
+
+`{ "defaultSupportedProps": {"toolbar":[]  }}`
+
+:::image type="content" source="media/cke-no-toolbar.png" alt-text="No toolbar":::
+
+### Add a new font list and set Brush Script MT as the default font with a default size of 20 px
+
+`{ "defaultSupportedProps": {"font_names":"Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;", "font_defaultLabel":"Brush Script MT", "fontSize_sizes":"8/8px;12/12px;20/20px;32/32px", "fontSize_defaultLabel":"20", "stickyStyle":{"font-size":"20px", "font-family":"'Brush Script MT', cursive"}  }}`
+
+:::image type="content" source="media/cke-default-font.png" alt-text="Set a new default font":::
+
+### Position the toolbar at the top of the rich text editor
+
+`{ "defaultSupportedProps": {"toolbarLocation":"top"  }}`
+
+:::image type="content" source="media/cke-toolbar-top.png" alt-text="Toolbar positioned at the top of the rich text editor":::
+
+### Start the editor at 30 px height and then auto-grow to fit content
+
+`{ "defaultSupportedProps": { "autoGrow_onStartup": false , "autoGrow_maxHeight": 0 , "autoGrow_minHeight": 30 , "height": 30  }}`
+
+:::image type="content" source="media/cke-autogrow.png" alt-text="Typing into the rich text area will increase it to fit the content":::
+
+### Fix the height of the editor at 500 px
+
+`{ "defaultSupportedProps": { "removePlugins":["autogrow"], "height": 500   }}`
+
+:::image type="content" source="media/cke-fixed-height.png" alt-text="With a fixed height, the editor remains at the same height. When enough content is added, a scroll bar appears.":::
+
+## Find the current setting for a rich text editor configuration
+
+1. In a Microsoft Edge or Google Chrome web browser, run your model-driven app and open a form that has the rich text editor control, such as an account record.
+1. Hold down **Ctrl** while clicking the rich text editor control area, and then select **Inspect**.
+1. In the inspection pane, select the **Console** tab, and then select the parent **Main.aspx** page in the drop-down list box on the command bar.
+
+   :::image type="content" source="media/cke-select-parent-main.png" alt-text="Select the Console tab and then select the parent main.aspx page from the drop-down list box":::
+
+1. Select **Clear console** on the inspection pane command bar.
+
+   :::image type="content" source="media/cke-clear-console.png" alt-text="Clear console command":::
+
+1. In the inspection pane console, enter **CKEDITOR.config.** to display the different configurations.
+
+   :::image type="content" source="media/cke-configs.png" alt-text="List of CK Editor configurations":::
+
+1. Select a configuration, such as **autoGrow_minHeight**, to display the current setting.
 
 ## Sample rich text editor configuration file
 

@@ -28,6 +28,8 @@ This topic should only cover the Web API specific details -->
 
 # Impersonate another user using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 There are times when your code will need to perform operations on behalf of another user. If the system account running your code has the necessary privileges, you can perform operations on behalf of other users.  
   
 <a name="bkmk_Requirementsforimpersonation"></a>

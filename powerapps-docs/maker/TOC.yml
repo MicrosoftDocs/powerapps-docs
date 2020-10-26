@@ -29,7 +29,7 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: On a phone
+  - name: On a mobile device
     href: ../user/run-canvas-and-model-apps-on-mobile.md
   - name: On a SharePoint Online page (canvas apps)
     href: ../user/powerapps-web-part.md
@@ -165,9 +165,7 @@
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
-  - name: Use model-driven apps on mobile
-    href: ../user/use-custom-model-driven-app-on-mobile.md
-  - name: 'Use Dynamics 365 App for Outlook'
+  - name: Use Dynamics 365 App for Outlook
     href: ../user/use-outlook-app.md
 - name: Create apps
   items:
@@ -875,6 +873,8 @@
             href: ./canvas-apps/accessible-apps-content-visibility.md
           - name: Announce dynamic changes with live regions
             href: ./canvas-apps/accessible-apps-live-regions.md
+      - name: Send notifications from an app
+        href: ./canvas-apps/add-notifications.md
       - name: Experimental and preview features
         href: ./canvas-apps/working-with-experimental-preview.md
   - name: Save and publish an app
@@ -1267,6 +1267,20 @@
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 
+- name: Power Apps mobile  
+  items:
+  - name: Run apps on Power Apps mobile
+    href: ../mobile/run-powerapps-on-mobile.md
+  - name: Use model-driven apps on mobile
+    href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Configure mobile offline synchronization 
+    href: ../mobile/setup-mobile-offline.md 
+  - name: Work offline on your mobile device 
+    href: ../mobile/work-in-offline-mode.md  
+  - name: Create push notifications for Power Apps mobile
+    href: ../mobile/power-apps-mobile-notification.md
+ 
+
 - name: Portals
   items:
     - name: Portals
@@ -1359,26 +1373,6 @@
           href: ./portals/configure/configure-portal.md
         - name: Configure site settings
           href: ./portals/configure/configure-site-settings.md
-        - name: Portal authentication
-          items:
-            - name: Configure portal authentication
-              href: ./portals/configure/configure-portal-authentication.md
-            - name: Use simplified authentication configuration (Preview)
-              href: ./portals/configure/use-simplified-authentication-configuration.md
-            - name: Set authentication identity
-              href: ./portals/configure/set-authentication-identity.md
-            - name: Azure AD B2C provider settings for portals
-              href: ./portals/configure/azure-ad-b2c.md
-            - name: Configure OAuth2 provider settings
-              href: ./portals/configure/configure-oauth2-settings.md
-            - name: Configure OpenID provider settings
-              href: ./portals/configure/configure-openid-settings.md
-            - name: Configure WS-Federation provider settings
-              href: ./portals/configure/configure-ws-federation-settings.md
-            - name: Configure SAML 2.0 provider settings
-              href: ./portals/configure/configure-saml2-settings.md
-            - name: Migrate identity providers to Azure AD B2C
-              href: ./portals/configure/migrate-identity-providers.md
         - name: Search
           items:
             - name: About search
@@ -1453,6 +1447,64 @@
           href: ./portals/configure/publishing-states.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
+    - name: Portal authentication
+      items:
+          - name: Overview
+            href: ./portals/configure/configure-portal-authentication.md
+          - name: Get started
+            href: ./portals/configure/use-simplified-authentication-configuration.md
+          - name: Azure AD B2C
+            items:
+                - name: Configure
+                  href: ./portals/configure/configure-azure-ad-b2c-provider.md
+                - name: Customize the Azure AD B2C user interface
+                  href: ./portals/configure/azure-ad-b2c.md
+          - name: OAuth 2.0
+            items:
+                 - name: Overview
+                   href: ./portals/configure/configure-oauth2-provider.md
+                 - name: Microsoft
+                   href: ./portals/configure/configure-oauth2-microsoft.md
+                 - name: LinkedIn
+                   href: ./portals/configure/configure-oauth2-linkedin.md
+                 - name: Facebook
+                   href: ./portals/configure/configure-oauth2-facebook.md
+                 - name: Google
+                   href: ./portals/configure/configure-oauth2-google.md
+                 - name: Twitter
+                   href: ./portals/configure/configure-oauth2-twitter.md
+                 - name: Additional settings
+                   href: ./portals/configure/configure-oauth2-settings.md
+          - name: OpenID Connect
+            items:
+                 - name: Configure
+                   href: ./portals/configure/configure-openid-provider.md
+                 - name: Configure OpenID Connect for Azure AD
+                   href: ./portals/configure/configure-openid-settings.md
+                 - name: FAQs when using OpenID Connect
+                   href: ./portals/configure/configure-openid-faqs.md                                        
+          - name: SAML 2.0
+            items:
+                  - name: Configure
+                    href: ./portals/configure/configure-saml2-provider.md
+                  - name: Configure Azure AD with SAML 2.0
+                    href: ./portals/configure/configure-saml2-settings-azure-ad.md
+                  - name: Configure ADFS with SAML 2.0
+                    href: ./portals/configure/configure-saml2-settings.md
+                  - name: FAQs when using SAML 2.0
+                    href: ./portals/configure/configure-saml2-faqs.md
+          - name: WS-Federation
+            items:
+                  - name: Configure
+                    href: ./portals/configure/configure-ws-federation-provider.md
+                  - name: Configure WS-Federation with Azure AD
+                    href: ./portals/configure/configure-ws-federation-settings-azure-ad.md
+                  - name: Configure WS-Federation with ADFS
+                    href: ./portals/configure/configure-ws-federation-settings.md
+          - name: Local authentication, registration and other settings
+            href: ./portals/configure/set-authentication-identity.md
+          - name: Migrate to Azure AD B2C
+            href: ./portals/configure/migrate-identity-providers.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
@@ -1913,6 +1965,8 @@
     items:
     - name: Overview
       href: ../sample-apps/return-to-workplace/overview.md
+    - name: What's new?
+      href: ../sample-apps/return-to-workplace/whats-new.md
     - name: Deploy the solution
       href: ../sample-apps/return-to-workplace/deploy.md
     - name: Upgrade the solution

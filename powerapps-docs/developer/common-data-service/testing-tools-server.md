@@ -17,6 +17,8 @@ search.app:
 ---
 # Testing tools for server-side development
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Many developers strongly advocate including unit testing as part of their development process. Others are not convinced. Common Data Service doesn't provide testing framework tools, but you should be aware that there are community tools available that you can use. A popular framework for server-side development is [Fake Xrm Easy](https://dynamicsvalue.com/home). This framework can be combined with your choice of .NET framework testing frameworks. [FakeItEasy](https://fakeiteasy.github.io/) is a common choice.
 
 > [!NOTE]

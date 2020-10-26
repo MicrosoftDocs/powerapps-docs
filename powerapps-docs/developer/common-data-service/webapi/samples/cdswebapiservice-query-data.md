@@ -17,6 +17,8 @@ search.app:
 ---
 # Query Data sample (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample demonstrates how to perform data queries of Common Data Service entity instances, using the Common Data Service Web API. Those query operations include:
 
 - Selecting specific properties

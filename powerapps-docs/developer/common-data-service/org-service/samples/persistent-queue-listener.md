@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Persistent queue listener
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-persistent-queue-listener -->
 
 This sample shows how to write a Azure Service Bus listener application for a persistent queue endpoint contract. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/PersistentQueueListener).

@@ -18,6 +18,8 @@ search.app:
 
 # Sample: Disable or enable a user
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to disable and enable a system user account in an online or on-premise/IFD environment.
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DisableOrEnableUser)

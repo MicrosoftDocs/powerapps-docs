@@ -25,6 +25,8 @@ search.app:
 ---
 # Types of entities
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Before creating or editing entities in Common Data Service, you should understand that there are different types of entities. Once a custom entity is created, these types can't be changed. The two main entity types are standard entities and activity entities.  
   
 <a name="BKMK_EntityOwnership"></a>

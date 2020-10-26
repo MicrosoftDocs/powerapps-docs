@@ -17,6 +17,8 @@ search.app:
 ---
 # Troubleshoot plug-ins 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This topic contains information about errors that can occur due to plug-ins and how to fix them.
 
 ## Transaction errors

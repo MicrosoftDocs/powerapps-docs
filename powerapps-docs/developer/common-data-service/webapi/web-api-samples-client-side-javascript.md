@@ -24,6 +24,8 @@ search.app:
 # Web API Data operations Samples (Client-side JavaScript)
 
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic provides common understanding about Web API samples using client-side JavaScript. While each sample focuses on a different aspect of Common Data Service Web API, they all follow similar process and structure described in this topic.  
 
 <a name="bkmk_listOfSamples"></a>   

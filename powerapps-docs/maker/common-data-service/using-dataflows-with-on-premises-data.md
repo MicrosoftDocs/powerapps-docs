@@ -26,6 +26,8 @@ search.app:
 ---
 # Using an on-premises data gateway in Power Platform Dataflows
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Install an on-premises data gateway to transfer data quickly and securely
 between a Power Platform dataflow and a data source that isn't in the cloud,
 such as an on-premises SQL Server database or an on-premises SharePoint site.

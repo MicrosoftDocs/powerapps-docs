@@ -23,6 +23,8 @@ search.app:
 ---
 # Include filtering attributes with plug-in registration
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Performance
 
 **Impact potential**: Medium

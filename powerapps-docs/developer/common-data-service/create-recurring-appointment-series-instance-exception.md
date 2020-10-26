@@ -17,6 +17,8 @@ search.app:
 ---
 # Create a recurring appointment series, instance, or exception
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 When you create a recurring appointment master (series), Common Data Service creates individual appointment instances based on the specified recurrence information. You can also create individual recurring appointment instances and exceptions to those instances, and you can convert an appointment to a recurring appointment.  
   
 <a name="bkmk_createseries"></a>   

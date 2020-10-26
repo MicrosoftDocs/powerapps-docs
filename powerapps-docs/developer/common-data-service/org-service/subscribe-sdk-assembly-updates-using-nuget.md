@@ -17,6 +17,8 @@ search.app:
 ---
 # Subscribe to SDK assembly updates using NuGet
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 .NET SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](https://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you.  
   
 <a name="BKMK_GetNuGetPackages"></a>

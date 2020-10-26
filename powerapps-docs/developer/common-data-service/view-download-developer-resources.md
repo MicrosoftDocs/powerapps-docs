@@ -22,6 +22,8 @@ search.app:
 
 # View or download developer resources
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This page provides resources for developers and information about the specific instance you're working on. 
 
 ## View the Developer Resources page for your environment

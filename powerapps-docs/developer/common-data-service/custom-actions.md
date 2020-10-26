@@ -17,6 +17,8 @@ search.app:
 ---
 # Create your own messages
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The Common Data Service exposes APIs using *messages*. There are many messages available for you to use. Custom messages are typically used to add new domain specific functionality to combine multiple message requests into a single request. For example, in a support call center, you may want to combine the `Create`, `Assign`, and `Update` messages into a single new `Escalate` message.
 
 There are now two ways to define custom messages:

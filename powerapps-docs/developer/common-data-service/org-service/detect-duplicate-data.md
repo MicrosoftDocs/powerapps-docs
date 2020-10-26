@@ -17,6 +17,8 @@ search.app:
 ---
 # Detect duplicate data using the Organization service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The Common Data Service Organization service allows you to detect duplicate records to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md). 
 
 > [!NOTE]

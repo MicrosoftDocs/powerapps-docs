@@ -17,6 +17,8 @@ search.app:
 ---
 # Entity attribute metadata messages
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <!-- 
 Was Mike Carter
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/entity-attribute-metadata-messages -->
