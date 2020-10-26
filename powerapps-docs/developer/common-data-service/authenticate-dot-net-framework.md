@@ -18,6 +18,8 @@ search.app:
 
 # Authentication with .NET Framework applications
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 If you are using the .NET Framework you can use classes within the [Xrm.Tooling](/dotnet/api/?view=dynamics-xrmtooling-ce-9) namespace to authenticate and connect to the Organization service and the Web API.
 
 With `Xrm.Tooling` classes you can use the SDK assemblies using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface methods. This is the same style of programming used by plug-ins and workflow activities, making it one style that you can use everywhere for .NET Framework applications.

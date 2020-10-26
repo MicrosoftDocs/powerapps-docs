@@ -19,6 +19,8 @@ search.app:
 
 # Walkthrough: Registering and configuring a SPA application with adal.js
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Common Data Service using adal.js and Cross-origin Resource Sharing (CORS). More information: [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application to Common Data Service ](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
   
 ## Prerequisites  

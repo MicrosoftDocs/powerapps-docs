@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Convert queries between FetchXML and QueryExpression
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to convert queries between FetchXML and QueryExpression. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Convertqueriesfetchqueryexpressions).
 
 ## How to run this sample

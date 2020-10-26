@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Use FetchXML with a paging cookie
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- This could be greatly simplified IMHO 
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-fetchxml-paging-cookie
 -->

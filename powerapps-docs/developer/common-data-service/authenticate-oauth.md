@@ -17,6 +17,8 @@ search.app:
 ---
 # Use OAuth with Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [OAuth 2.0](https://oauth.net/2/) is the industry-standard protocol for authorization. After people provide credentials to authenticate, OAuth determines whether they are authorized to access the resources.
 
 Client applications must support the use of OAuth to access data using the Web API. OAuth enables two-factor authentication (2FA) or certificate-based authentication for server-to-server application scenarios.

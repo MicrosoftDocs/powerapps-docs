@@ -17,6 +17,8 @@ search.app:
 ---
 # Generate early-bound classes for the Organization service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 **CrmSvcUtil.exe** is a command-line code generation tool for use with Common Data Service. This tool generates early-bound .NET Framework  classes that represent the entity data model used by Common Data Service. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. 
 
 > [!NOTE]

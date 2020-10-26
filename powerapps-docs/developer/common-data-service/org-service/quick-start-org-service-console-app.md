@@ -17,6 +17,8 @@ search.app:
 ---
 # Quickstart: Organization service sample (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This is where you begin working with the .NET SDK assemblies to work with data using Common Data Service.
 
 In this quickstart, you will create a minimum console application to connect to the Organization service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. You will pass  your connection information using a connection string passed to the constructor.

@@ -2,12 +2,12 @@
 title: Tab properties for for model-driven app forms in Power Apps | MicrosoftDocs
 description: Understand the tab properties for main forms
 Keywords: Tab properties; Dynamics 365; Main forms
-author: matp
+author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-ms.author: Mattp123
+ms.author: matp
 manager: kvivek
 ms.date: 03/17/2020
 ms.service: powerapps

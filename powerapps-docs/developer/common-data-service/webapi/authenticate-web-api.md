@@ -25,6 +25,8 @@ search.app:
 # Authenticate to Common Data Service with the Web API
 
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 You must use OAuth as described in [Use OAuth with Common Data Service](../authenticate-oauth.md).
 
 The code you write to manage authentication when using the Web API depends on the type of deployment and where your code is.  

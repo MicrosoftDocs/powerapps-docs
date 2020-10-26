@@ -25,6 +25,8 @@ search.app:
 ---
 # Translate label text
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The standard entities include default text for labels that are available in many different languages. However, when you customize a form, such as adding or changing fields, or create custom entities, you may need the labels for those components to appear in different languages. You can import translated label text for customized entities for your apps so that the label text displays in languages other than the base language.
 
 When you translate label text for a form, you are modifying the base language of the form as part of a form customization. When you do this, you create active unmanaged changes to the labels. Subsequently, if you don’t modify the base language translation for a component, such as a field, and then export the translation file, the field's object id won't be exported. This is because the export doesn't see any modifications done to the base language label of that field.

@@ -17,6 +17,8 @@ search.app:
 
 # Improve FetchXML request performance
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 An option available in FetchXML requests called *LateMaterialize* allows you to break up such
 requests into smaller more usable segments which can improve the performance of long running FetchXML requests.
 

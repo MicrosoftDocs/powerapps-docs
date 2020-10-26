@@ -17,6 +17,8 @@ search.app:
 ---
 # Update and Delete entities using the Organization Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic will include examples using both late-bound and early-bound programming styles. More information: [Early-bound and Late-bound programming using the Organization service](early-bound-programming.md)
 
 Each of the examples uses a `svc` variable that represents an instance of a class that implements the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).

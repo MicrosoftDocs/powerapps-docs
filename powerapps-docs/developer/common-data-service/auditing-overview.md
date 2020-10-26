@@ -6,9 +6,9 @@ ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "paulliew" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: "Bluebear73" # GitHub ID
+ms.author: "munzinge" # MSFT alias of Microsoft employees only
+manager: "mayadu" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Auditing overview
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Organizations often need to be in compliance with various regulations to ensure availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations may want to track changes in Common Data Service data for security and analytical purpose.  
   

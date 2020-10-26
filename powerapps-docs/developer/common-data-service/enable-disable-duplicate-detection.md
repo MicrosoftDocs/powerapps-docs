@@ -17,6 +17,8 @@ search.app:
 ---
 # Enable and Disable duplicate detection
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This topic covers information on how to enable and disable duplicate detection in Dynamics 365.
 
 <a name="bkmk_enable"></a>

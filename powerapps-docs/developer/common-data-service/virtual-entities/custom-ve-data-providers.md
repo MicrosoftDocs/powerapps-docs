@@ -19,6 +19,8 @@ search.app:
 
 # Custom virtual entity data providers
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Using the Common Data Service Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider. Each data provider is composed of a reusable set of Common Data Service plug-ins that implement the supported CRUD operations. (The initial release is limited to the **Retrieve** and **RetrieveMultiple** read operations.)  This section provides fundamental information about data providers and approaches to developing custom providers, including example code.
 
 > [!NOTE]

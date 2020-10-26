@@ -2,7 +2,7 @@
 title: "Image attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about image attributes that store image data, supporting attributes, retrieving image data, and Uploading image data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/27/2020
+ms.date: 10/15/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Image attributes
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Certain system entities and all custom entities support images. Those entities that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the entity's form data. There can be multiple image attributes in an entity instance but there can be only one primary image. However, you can change the primary image from one image to another by setting [IsPrimaryImage](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage) for that attribute to `true`. Each full-sized image attribute is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image attribute is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
 
@@ -184,27 +186,19 @@ In the above example, the **Range** header indicates the first chunked download 
 |![Image before resize](media/crm-itpro-cust-imagebeforeresize.png "Image before resize")<br /><br /> 300x428|![image after resize](media/crm-itpro-cust-imageafterresize.jpg "image after resize")<br /><br /> 144x144|  
 |![Second image resize example](media/crm-itpro-cust-imagebeforeresizeexample2.png "Second image resize example")<br /><br /> 91x130|![second resize example](media/crm-itpro-cust-imageafterresizeexample2.jpg "second resize example")<br /><br /> 91x91|
 
-To upload image data less than or equal to 16MB in size, use the following APIs.
+Images can be uploaded either in full up to the maximum size configured, or in chunks.
+
+> [!NOTE]
+> As of this article's publication date, the restriction of using chunked upload for images greater than 16 MB has been removed.
+> The chunking APIs will continue to be available to maintain backwards compatibility with existing solutions.
+
+To upload full image data in single call, use the following APIs.
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
 PUT or PATCH /api/data/v9.1/\<entity-type(id)\>/\<image-attribute-name\>   | <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>
 
-Image data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. Image data greater that that amount must be divided into 4 MB or smaller data blocks (chunks) where each block is uploaded in a separate API call until all image data has been received. It is your responsibility to divide the image data into blocks up to 4MB in size and upload them in the correct sequence.
-
- More information on chunking: [File attributes](file-attributes.md).
-
-To upload image data greater than 16MB in size, use the following APIs.
-
-Web API (REST) | .NET API (SOAP)
-------- | -------
-none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>
-PATCH /api/data/v9.1/\<entity-type(id)\>/\<image-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>
-none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>
-
-You could also use the Initialize/Upload/Commit block message requests for an image attribute <=16MB in size (instead of the Create/Update message requests) if you chunk the image data.
-
-### Example: REST full image upload (<=16MB)
+### Example: REST full image upload
 
 **Request**
 ```http
@@ -218,6 +212,19 @@ Body:
 byte[]
 ```
 After the upload is completed, a thumbnail image is automatically created by the web service. 
+
+If your code is using the legacy method, image data transfers from the web service endpoints are limited to a maximum of 16 MB data in a single service call. Image data 16MB or greater must be divided into 4 MB or smaller data blocks (chunks) where each block is uploaded in a separate API call until all image data has been received. It is your responsibility to divide the image data into blocks up to 4MB in size and upload them in the correct sequence.
+
+ More information on chunking: [File attributes](file-attributes.md).
+
+To use the legacy chunking to upload image data greater than 16MB in size, use the following APIs.
+
+Web API (REST) | .NET API (SOAP)
+------- | -------
+none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>
+PATCH /api/data/v9.1/\<entity-type(id)\>/\<image-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>
+none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>
+
 
 ### Example: REST upload with chunking (first request)
 

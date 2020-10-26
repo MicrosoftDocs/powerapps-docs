@@ -23,6 +23,8 @@ search.app:
 ---
 # Use XRM tooling to execute actions in Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 After you are connected to Common Data Service, you can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object to perform actions on your Common Data Service data such as create, update, retrieve or delete data. This section provides some examples on how you can perform actions in Common Data Service using XRM tooling.  
   
 ## In This Section

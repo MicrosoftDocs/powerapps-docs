@@ -17,6 +17,8 @@ search.app:
 ---
 # Developer resources page
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-resources-page
 
 - The UI in the app needs to be updated

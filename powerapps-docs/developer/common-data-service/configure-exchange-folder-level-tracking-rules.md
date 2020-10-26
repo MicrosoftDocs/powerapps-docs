@@ -17,6 +17,8 @@ search.app:
 ---
 # Configure Exchange folder-level tracking rules
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Configure folder-level tracking rules to map a Microsoft Exchange inbox folder to a Common Data Service record so that all the emails in the Microsoft Exchange folder get automatically tracked against the mapped record in Common Data Service. Folder-level tracking of emails will work only if:  
 
 - The folder-level tracking feature is enabled for your Common Data Service instance. You can enable folder-level tracking by using the web client or Dynamics 365 for Outlook. More information: [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)  

@@ -24,6 +24,8 @@ search.app:
 
 # Common Data Service entities
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Providing storage for data is the most important function of Common Data Service. Common Data Service includes a base set of entities that provide structure for data used by business applications. 
 
 You can view the base set of entities in the [Common Data Service entity reference](reference/about-entity-reference.md).
