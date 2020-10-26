@@ -214,6 +214,27 @@ Open the solution you created and verify that the Custom API and the associated 
 At this point, you can test your API using the steps describe in [Test your Custom API](create-custom-api-maker-portal.md#test-your-custom-api)
 
 
+## Providing Localized Labels with the solution
+
+As an alternative to using the process described in [Localized values](custom-api.md#localized-values), if you are editing the solution files for Custom API entities, you can provide translations directly in these files. For example if you want to provide Japanese localized labels for your Custom API, you can provide them for the `description` and `displayname` properties as shown below
+
+```xml
+<customapi uniquename="sample_CustomAPIExample">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="A simple example of a Custom API">
+    <label description="A simple example of a Custom API" languagecode="1033" />
+    <label description="カスタムAPIの簡単な例" languagecode="1041" />
+  </description>
+  <displayname default="Custom API Example">
+    <label description="Custom API Example" languagecode="1033" />
+    <label description="カスタムAPIの例" languagecode="1041" />
+  </displayname>
+  <isfunction>0</isfunction>
+  <name>sample_CustomAPIExample</name>
+</customapi>
+```
+
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br />

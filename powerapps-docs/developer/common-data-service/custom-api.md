@@ -259,15 +259,74 @@ FROM   customapi AS api
        ON api.plugintypeid = type.plugintypeid
 ```
 
+## Localized values
+
+You can localize the values using the steps documented here: [Translate localizable text for model-driven apps](../../maker/model-driven-apps/translate-localizable-text.md) and [Translating labels and display strings](/power-platform/alm/create-solutions-support-multiple-languages#translating-labels-and-display-strings).
+
+This process involves exporting a file that contains the base language values and will include a column for each additional language enabled. You can then edit the values in Excel. After you complete the process to import the translations the labels will be included in your solution.
+
+The following example shows editing the Excel worksheet to add Japanese translations for the English values.
+
+:::image type="content" source="media/solution-strings-for-translation.png" alt-text="Shows how labels are localized":::
+
+> [!TIP]
+> If you are editing the solution files to create your Custom APIs, you can provide the localized labels directly. More information: [Providing Localized Labels with the solution](create-custom-api-solution.md#providing-localized-labels-with-the-solution)
+
+### Retrieving localized values
+
+To retrieve the localized labels use the `RetrieveLocLabels` message using either the Web API [RetrieveLocLabels Function](/dynamics365/customer-engagement/web-api/retrieveloclabels) or the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.
+
+The following example shows using the RetrieveLocLabels Function to retrieve the labels for the the `displayname` property of a Custom API with the `customapiid` of `88602189-183d-4584-ba4b-8b60f0f5b89f`
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.1/RetrieveLocLabels(EntityMoniker=@p1,AttributeName=@p2,IncludeUnpublished=@p3)?
+@p1={'@odata.id':'customapis(88602189-183d-4584-ba4b-8b60f0f5b89f)'}&
+@p2='displayname'&
+@p3=false HTTP/1.1
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.RetrieveLocLabelsResponse",
+    "Label": {
+        "LocalizedLabels": [
+            {
+                "Label": "Custom API Example",
+                "LanguageCode": 1033,
+                "IsManaged": null,
+                "MetadataId": null,
+                "HasChanged": null
+            },
+            {
+                "Label": "カスタムAPIの例",
+                "LanguageCode": 1041,
+                "IsManaged": null,
+                "MetadataId": null,
+                "HasChanged": null
+            }
+        ],
+        "UserLocalizedLabel": {
+            "Label": "Custom API Example",
+            "LanguageCode": 1033,
+            "IsManaged": null,
+            "MetadataId": null,
+            "HasChanged": null
+        }
+    }
+}
+```
+
 ## Frequently Asked Questions (FAQs)
 
-### Q: Do I have to provide localized display names and descriptions for my Custom API, parameters, and response properties?
-
-A: No, you don’t but it is strongly recommended.
-
-### Q: How to provide localized values for the localized display names? 
-
-A: You don’t need to provide the localized values. These values are typically localized on a per environment case depending on the additional languages they have enabled. But if you wish to include them in your solution you can. More information: [Translating labels and display strings](/alm/create-solutions-support-multiple-languages#translating-labels-and-display-strings)
+The following represent questions you may have:
 
 ### Q: Can I create a new privilege for my Custom API?
 
@@ -282,7 +341,7 @@ A: You cannot. Although these records have the common **Status** and **Status Re
 
 ### Q: How can I use my private messages if they are not included in the Web API $metadata service document?
 
-A: Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `false` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `true`.
+A: Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `false` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `true`. More information: [Private Messages](org-service/use-messages.md#private-messages)
 
 ## Known issues with Custom APIs
 
