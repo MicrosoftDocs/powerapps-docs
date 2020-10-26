@@ -1,6 +1,6 @@
 ---
 title: "setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 10/26/2020
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -35,7 +35,7 @@ search.app:
 Another way to hide a tab is to hide all the sections within it. If all the sections within a tab are not visible, the tab will not be visible.
 
 > [!NOTE]
-> If you set the boolean to false the runtime will default to the first visible tab. If there are no visible tabs the body of the form will show as a blank page.
+> If you set the value to false, the first visible tab is shown by default. If there are no visible tabs, the body of the form will show as a blank page.
 
 ### Related topics
 
