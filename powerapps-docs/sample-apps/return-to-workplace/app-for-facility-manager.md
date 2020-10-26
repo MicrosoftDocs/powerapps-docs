@@ -47,9 +47,11 @@ The Facility Safety Management app has the following components:
 
 **Employee**
 
+- **Employee Attestation** - Keeps track of employee health assessments or attestations based on the questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
+
 - **Employee Sentiment** -  Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees with the Employee Return to the Workplace app.
 
-- **Employee Attestation** - Keeps track of employee health assessments or attestations based on the questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
+- **Employee Bookings** - Keeps track of bookings made by employees. Together with an attestation this would be a valid and safe way to enter a building and is referred to as a pass.
 
 - **Employee Visits** - Keeps track of the visits. Employee visits are linked to an employee and a booking record.
 
