@@ -1,5 +1,6 @@
 ---
 title: "Add an embedded canvas app on a model-driven form | MicrosoftDocs"
+description: Learn how to embed a canvas app into a model-driven form in Power Apps
 ms.custom: ""
 ms.date: 08/05/2020
 ms.reviewer: "matp"
@@ -43,9 +44,15 @@ Imagine that you want to create a new canvas app and embed it on a main form for
 11.	In the section below the controls list, the list of properties available to the canvas app control are displayed.
      - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that contains the field you added in an earlier step.
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
-     - The **App ID** property specifies the ID of the embedded canvas app. It will be automatically generated and filled-in for you when the canvas app is created.
-         - Notice that any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.
-12.	Select **Customize** to create or edit the canvas app. This opens Power Apps Studio in a new tab.
+     - The **App Name** property specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control will use the App ID to load the canvas app. Enter the App Name for an existing canvas app.
+     - The **App ID** property specifies the ID of the embedded canvas app. You can enter an App ID for an existing canvas app or an App ID will be automatically generated and filled-in for you when you create or edit a canvas app by selecting **Customize**. The canvas App ID can be found on Power Apps, go to **Apps**, select the canvas app, and then select **Details** on the command bar.
+         
+      > [!NOTE]
+      > Notice that any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.
+      >
+      > If neither the App Name or App ID match an existing canvas app, the form displays the message "Sorry, we didn't find that app."
+
+12.	Go to step 20 if you're adding a completed canvas app. If you are creating a new or editing an existing canvas app, continue to follow these steps. Select **Customize** to create or edit a canvas app. This opens Power Apps Studio in a new tab.
 	   > [!NOTE]
        > If opening Power Apps Studio is blocked due to a web browser pop-up blocker you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 13.	Observe the following: 

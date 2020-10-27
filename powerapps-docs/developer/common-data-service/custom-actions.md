@@ -1,8 +1,8 @@
 ---
-title: "Create your own actions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Actions are custom messages that help in extending functionality of Common Data Service. Learn more about how to create your own actions" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create your own messages (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Common Data service provides messages that can be called from the web services. You can create your own messages and call them from your apps." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/20/2019
+ms.date: 10/26/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,135 +15,46 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create your own actions
+# Create your own messages
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can extend the functionality of Common Data Service by creating custom messages known as *actions*. These actions will have associated request/response classes and a Web API action will be generated. Actions are typically used to add new domain specific functionality to the organization web service or to combine multiple organization web service message requests into a single request. For example, in a support call center, you may want to combine the Create, Assign, and Update messages into a single new Escalate message.  
-  
-The business logic of an action is implemented using a workflow. When you create an action, the associated real-time workflow is automatically registered to execute in the main operation stage of the execution pipeline. 
-  
-  
-<a name="about_actions"></a>   
+The Common Data Service exposes APIs using *messages*. There are many messages available for you to use. Custom messages are typically used to add new domain specific functionality to combine multiple message requests into a single request. For example, in a support call center, you may want to combine the `Create`, `Assign`, and `Update` messages into a single new `Escalate` message.
 
-## About action definitions  
+There are now two ways to define custom messages:
 
- An action is defined by using a `Workflow` entity record, similar to a real-time workflow. Some key points of what an action is and how it works are in the following list:  
-  
-- Can be associated with a single entity or be global (not associated with any particular entity).  
-  
-- Is executed in the main operation stage of the event execution pipeline.  
-  
-- Supports the invocation of plug-ins registered in the pre-operation and post-operation stages of the event execution pipeline.  
-  
-- Can have plug-ins registered in the pre-operation or post-operation stages only when the action status is Activated.  
-  
-- Is available through the Web API or `organization.svc` and `organization.svc/web` endpoints.  
-  
-- Can be executed using a JavaScript web resource. 
-  
-- Always runs under the security context of the calling user.  
-  
-- Record can’t be deleted while there are plug-in steps registered on the action.  
-  
-- Can optionally, through a configuration setting, participate in the current database transaction.  
-  
-- Doesn’t support a scope where the execution is restricted to a user, business unit, or organization. Actions always execute in organization scope.  
-  
-- Supports input and output arguments.  
-  
-- Supports auditing of data changes.  
-  
-- Isn’t supported with offline clients.  
-  
-- Can be invoked  by a web service method call.  
-  
-- Can be invoked directly from a workflow.  
-  
-<a name="bkmk_permissions"></a> 
-  
-## Required permissions
-  
- A security privilege named Activate Real-time Processes (`prvActivateSynchronousWorkflow`) is required to activate an action’s real-time workflow so that it can be executed. This is in addition to any privileges needed to create a workflow.  
 
-  
-<a name="bkmk_package"></a>   
+|Custom message method  |Description  |
+|---------|---------|
+|Workflow Custom Action|Also known as simply *Custom Actions*, these have been part of CDS for many years. Workflow Custom Actions provide a no-code way to define a custom message using the Workflow designer. The logic in these workflows can also be extended with code by using custom workflow activities. More information: [Use Workflow Custom Actions with code](workflow-custom-actions.md)|
+|Custom API| This new capability is a preview feature that extends the concept of custom actions to provide developers with capabilities not limited by the workflow designer. More information: [Create and use Custom APIs](custom-api.md)|
 
-## Package an action for distribution
+Many developers have been creating workflow custom actions simply to create new messages without implementing any logic in the workflow. Instead, they register plug-ins for the message created by the custom action to implement all of their logic. The Custom API feature makes this pattern a first class capability for developers to extend Common Data Service.
 
- To distribute your action so that it can be imported into a Common Data Service organization, add your action to a Common Data Service solution. This is easily done using the web application by navigating to **Settings** > **Customizations** > **Solutions**. You can also write code to create the solution. For more information about solutions, see [Introduction to solutions](introduction-solutions.md).  
-  
-<a name="bkmk_gentypes"></a>
+## Compare Workflow Custom Action and Custom API
 
-## Generate early-bound types for an action
+The following table describes some of the different capabilities.
 
- Using the CrmSvcUtil tool, you can generate request and response classes for your action to include in your application code. However, before you generate these classes, be sure to activate the action.  
-  
-To download the CrmSvcUtil.exe, see [Download tools from NuGet](download-tools-NuGet.md).
- 
- The following sample shows the format for running the tool from the command line with Common Data Service. You supply the parameter values appropriate for your account and server.  
-  
-```ms-dos  
-CrmSvcUtil.exe /interactivelogin ^
-/out:<outputFilename>.cs ^
-/namespace:<outputNamespace> ^
-/serviceContextName:<serviceContextName> ^
-/generateActions
-```  
-  
- Notice the use of the `/generateActions` parameter. More information: [Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md).  
-  
- You can use early-bound or late-bound types with the generated request and response classes for your action.  
-  
-<a name="bkmk_executeWebAPI"></a>
 
-## Execute an action using the Web API
+|Capability |Workflow Custom Action  |Custom API  |Description  |
+|---------|---------|---------|---------|
+|Declarative logic with workflow |Yes|No|Workflow Actions can have logic defined without writing code using the Classic Workflow designer. <br />Custom APIs require a plug-in written in .NET to implement logic that is applied on the server.|
+|Require specific privilege|No|Yes|With Custom API you can designate that a user must have a specific privilege to call the message. If the user doesn’t have that privilege through their security roles or team membership, an error will be returned.|
+|Define main operation logic with code|Yes|Yes|With Workflow Custom Actions the main operation processes the Workflow definition which may include custom workflow activities. The code in these custom workflow activities is processed in the main operation together with any other logic in the workflow.<br /><br />With Custom API the message creator simply associates their plug-in type with the Custom API to provide the main operation logic.|
+|Block Extension by other plug-ins|No|Yes|All messages defined using Workflow Custom Actions are extensible. This means any 3rd party developer can apply additional logic in a plug-in registered on the `PreValidation`, `PreOperation`, or `PostOperation` stages of the message to change the behavior.<br /><br />If a 3rd party plug-in step is synchronous, it means that logic or errors in plug-ins that extend your message can cause the message defined by a Workflow Custom Action to fail. With a Custom API you can block this.|
+|Make message private|No|Yes|When you create a message using a Workflow Custom Action, it is exposed publicly in the endpoint for anyone else to discover and use. If someone else takes a dependency on the message you created, their code will be broken if you remove, rename, or change the input or output parameter signature in the future.<br /><br />If you do not intend for your message to be used by anyone else, you can mark it as a private message. This will indicate that you do not support others using the message you create, and it will not be included in definitions of available functions or actions exposed by the Web API $metadata service definition. Classes for calling these messages will not be generated using code generation tools.|
+|Localizable names and descriptions|No|Yes|While Workflow Custom Actions provide for a friendly name for the custom action and any input and output parameters it uses, these values are not localizable. With Custom API you can provide localizable names and descriptions. These localized strings can then be bound to controls that provide a UI to use the message.|
+|Create OData Function|No|Yes| The CDS Web API is an OData web service. OData provides for two types of operations: *Actions* & *Functions*.<br /><ul><li>An **Action** is an operation that makes changes to data in the system. It is invoked using the Http POST method and parameters are passed in the body of the request.</li><li>A **Function** is an operation that makes no change to data, for example an operation that simply retrieves data. It is invoked using an Http GET method and the parameters are passed in the URL of the request</li></ul>There is nothing to prevent you from defining all operations as Actions if you wish.  But some operations may be best expressed using a GET request available by defining a function.|
+|Create a global operation not bound to an entity|Yes|Yes|Both provide the ability to define a global message not bound to an entity.|
+|Bind an operation to an entity|Yes|Yes|Both provide the ability to pass a reference to a specific entity record by binding it to an entity.|
+|Bind an operation to an entity collection|No|Yes|Binding an operation to an entity collection allows for another way to accept an entity collection as a required parameter value for operation. |
+|Compose or modify a custom API by editing a solution|No|Yes|ISVs who build and maintain products that work with the Power Platform apply ALM practices that involve solutions. The data within a solution is commonly checked into a source code repository and checked out by a developer applying changes.<br /><br />A Workflow Custom Action is defined by a XAML Windows Workflow Foundation document which is transported as part of a solution. However, creating new or editing existing workflow definitions outside of the workflow designer is not supported.<br /><br />Custom API definitions are solution aware components included in a solution through a set of folders and XML documents. These files and the file structure enable transport the API from one environment to another. Because these are plain text files, changes can be made to them, or new APIs can be defined by working with these files. This method of defining Custom APIs is supported.|
+|Subject to 2 minute time limit|No|Yes|A plug-in that implements the main operation for a Custom API is subject to the 2 minute time limit to complete execution.<br /><br />A Workflow Custom Action is not technically limited to two minutes. If a step in the Workflow logic contains a custom workflow activity, that part will be limited to two minutes. But the entire workflow cannot run indefinitely. There are other limitations that will cause long-running Workflow custom actions to fail. More information: [Watch out for long running actions](workflow-custom-actions.md#watch-out-for-long-running-actions)|
 
-A new action is created in the Web API when it is created. If the action is created in the context of an entity, it is bound to that entity. Otherwise it is an unbound action. More information: [Use Web API actions](webapi/use-web-api-actions.md).  
-  
-<a name="bkmk_execute"></a>
 
-## Execute an action using the organization service
 
-To execute an action using the organization web service using managed code, follow these steps.  
-  
-1. Include the early-bound types file that you generated using the CrmSvcUtil tool in your application’s project.  
-  
-2. In your application code, instantiate your action’s request and populate any required properties.  
-  
-3. Invoke <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>, passing your request as an argument.  
-  
-   Before you run your application code, make sure the action is activated. Otherwise, you’ll receive a run-time error.  
-  
-<a name="BKMK_JavaScript"></a>   
 
-### Execute an action using a JavaScript web resource
+## Next Steps
 
-An action can be executed using the Web API just like any system action. More information: [Use Web API actions](webapi/use-web-api-actions.md).  
-
-  
-<a name="bkmk_execute-process"></a>
-
-## Execute an action using a process
-
-You can execute an action from workflows, dialogs, or other process actions. Activated custom actions are available to processes by selecting the **Perform Action** item in the **Add Step** drop down of the web application process form. After the step is added to your process, you can select your new custom action (or any action) from the **Action** list provided in the step. Select **Set Properties** in the step to specify any input parameters that your custom action requires.  
-  
-> [!NOTE]
->  If a custom action has unsupported parameter types, for example Picklist, Entity, or Entity Collection, the custom action isn’t listed in the **Action** list.  
-  
-The existing <xref:Microsoft.Xrm.Sdk.IExecutionContext.Depth> platform checks ensure an infinite loop does not occur. For more information on depth limits see <xref:Microsoft.Xrm.Sdk.Deployment.WorkflowSettings.MaxDepth>.  
-  
-<a name="bkmk_longrunning"></a>
-
-## Watch out for long running actions
-
-If one of the steps in the action’s real-time workflow is a custom workflow activity, that custom workflow activity is executed inside the isolated sandbox run-time environment and will be subject to the two minute timeout limit, similar to how sandboxed plug-ins are managed. However, there are no restrictions on the amount of overall time the action itself can take. In addition, if an action participates in a transaction, where rollback is enabled, SQL Server timeouts will apply.  
-
-> [!TIP]
->  A best practice recommendation is that long running operations should be executed outside of Common Data Service using .NET asynchronous or background processes.  
-  
-### See also  
- [Use actions](https://docs.microsoft.com/powerapps/maker/common-data-service/actions)<br />
- [Event execution pipeline](event-framework.md#event-execution-pipeline)<br />
- [Classic Common Data Service workflows](/flow/workflow-processes)<br />
-
+[Use Workflow Custom Actions with code](workflow-custom-actions.md)<br />
+[Create and use Custom APIs](custom-api.md)
