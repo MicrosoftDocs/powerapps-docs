@@ -349,7 +349,9 @@ Custom APIs are a preview feature and subject to change. Following are some know
 
 ### Not able to use profiler for debugging
 
-To debug using the Plug-in Registration tool and the Plug-in profiler solution, you need to be able to select a specific plug-in step. The main stage implementation for the plug-in is not available in the Plug-in Registration tool. Workaround: Register the plug-in type on the PostOperation stage of the message created for the Custom API.
+To debug using the Plug-in Registration tool and the Plug-in profiler solution, you need to be able to select a specific plug-in step. The main stage implementation for the plug-in is not available in the Plug-in Registration tool. 
+
+**Workaround**: Register the plug-in type on the PostOperation stage of the message created for the Custom API.
 
 ### A custom API cannot be called from a workflow
 
