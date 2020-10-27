@@ -125,7 +125,7 @@ By default, the file size is set to 10 MB. However, you can configure the file s
 
 ## Maximum file download size
 
-File upload size limit set using the portals site setting doesn't apply when you upload them directly to SharePoint. However, when you use portals to download large files from SharePoint, the operation may timeout after a few minutes. When this happens, download files directly from SharePoint. More information: [Download files from SharePoint](https://support.microsoft.com/en-us/office/download-files-and-folders-from-onedrive-or-sharepoint-5c7397b7-19c7-4893-84fe-d02e8fa5df05)
+File upload size limit set using the portals site setting doesn't apply when you upload them directly to SharePoint. However, when you use portals to download large files from SharePoint, the operation may timeout after a few minutes. When this happens, download the files directly from SharePoint. More information: [Download files from SharePoint](https://support.microsoft.com/en-us/office/download-files-and-folders-from-onedrive-or-sharepoint-5c7397b7-19c7-4893-84fe-d02e8fa5df05)
 
 ## Sample configuration to enable document management on the Case entity form
 
