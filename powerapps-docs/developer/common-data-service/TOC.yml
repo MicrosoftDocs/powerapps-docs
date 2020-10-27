@@ -14,8 +14,20 @@
     href: webapi/index.md
   - name: Use Organization Service
     href: org-service/index.md
-  - name: Create your own actions
+  - name: Create your own messages
     href: custom-actions.md
+    items:
+    - name: Use Workflow Custom Actions with code
+      href: workflow-custom-actions.md
+    - name: Create and use Custom APIs (Preview)
+      href: custom-api.md 
+      items:
+      - name: Create a Custom API in the maker portal (Preview)
+        href: create-custom-api-maker-portal.md
+      - name: Create a Custom API with code (Preview)
+        href: create-custom-api-with-code.md
+      - name: Create a Custom API with solution files (Preview)
+        href: create-custom-api-solution.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
