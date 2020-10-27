@@ -152,7 +152,7 @@ You can view or set these privileges on the **Customization** tab of a security 
     - **More Descriptions**: If your organization uses multiple languages, select a language for the description, enter the description for the group, and then select **Add** ![Add button in the site map designer](media/add-icon-sitemap-designer.png "Add button in the site map designer"). You can create, edit, or delete descriptions for as many languages as your organization uses. However, you can have only one description per language.  
   
     - **URL**: Enter the URL to render for the Dynamics 365 for Outlook folder that represents the group.  
-  
+
     - **Set as Profile**: Select this check box to indicate whether this group represents a user-selectable profile for the workplace. The group set as a user-selectable profile is made available as options in your personal options. This only applies for groups within the **Workplace** area.  
   
 <a name="bkmk_AddSubarea"></a>   
@@ -175,7 +175,10 @@ You can view or set these privileges on the **Customization** tab of a security 
     - **Entity**: Select the entity that the subarea is for. This field is disabled if the subarea type is other than **Entity** in the **Type** drop-down list.  
   
     - **URL**: Specify a URL for the main page of the application to show when this subarea is selected. This field is disabled if you've selected **Entity** in the **Type** drop-down list.  
-  
+ 
+      > [!IMPORTANT]
+      > Site map subarea URLs that link to an .aspx page aren’t supported.
+ 
     - **Default Dashboard**: Select the default dashboard to be displayed for this subarea. This field is disabled if you haven't selected **Dashboard** in the **Type** drop-down list.  
   
     - **Title**: Enter the title for the subarea in the base language of the organization.  
