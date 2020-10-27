@@ -165,9 +165,22 @@ You can say how you're feeling about returning to the workplace. On the home pag
 > [!NOTE]
 > In the solution settings, you can turn this feature off if you don't want to use this.
 
+## Notifications
+
+Each employee can receive notifications via the Employee App. In the top right a bell icon is displayed. If there are unread notifications, a badge will be displayed indicating the number of unread notifications. Clicking on the bell icon will take the employee to a new screen, where all the notifications are listed. The newest notifications are shown on top of the list.
+
+A notification shows a created date, a type, a header text and a body. There are three types of notications: information, warning and error. Each indicated with their own icon. 
+
+A notification is marked as read when it has been viewed by the employee in the app. The notification will still be visible on this screen. The user can return to the main screen by clicking on the cross in the top right of the screen.
+
 ## Facility access not available
 
-A case manager or facility manager can block you from making bookings which results in that access is no longer available for you. You'll see a banner appearing on the home screen, which indicates the **Access is not available**. A notification is received with further instructions.
+A case manager or facility manager can block you from making bookings which results in that access is no longer available for you. You'll see a banner appearing on the home screen, which indicates the **Access is not available**. A notification of type error is received with further instructions.
+
+When a user is blocked, the health and safety instructions are shown on the bottom of the notifications screen.
+
+> [!NOTE]
+> The health and safety instructions can be configured in the solution settings.
 
 > [!div class="mx-imgBorder"]
 > ![Facility access is not available](media/facility-access-not-available.png "Facility access is not available")
