@@ -875,6 +875,8 @@
             href: ./canvas-apps/accessible-apps-content-visibility.md
           - name: Announce dynamic changes with live regions
             href: ./canvas-apps/accessible-apps-live-regions.md
+      - name: Send notifications from an app
+        href: ./canvas-apps/add-notifications.md
       - name: Experimental and preview features
         href: ./canvas-apps/working-with-experimental-preview.md
   - name: Save and publish an app
@@ -1753,6 +1755,8 @@
         items:
         - name: Use actions
           href: ./common-data-service/actions.md
+        - name: Create a custom action
+          href: ./common-data-service/create-actions.md
         - name: Configure custom actions from a real-time workflow
           href: ./common-data-service/configure-actions.md    
         - name: Invoke custom actions from a real-time workflow

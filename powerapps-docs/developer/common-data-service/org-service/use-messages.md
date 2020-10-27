@@ -2,7 +2,7 @@
 title: "Use messages with the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/11/2020
+ms.date: 10/26/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -128,6 +128,15 @@ Will result in the following value within the `SharedVariables` collection when 
 ```
 
 This can also be done using the Web API: [Add a Shared Variable from the Web API](../webapi/compose-http-requests-handle-errors.md#add-a-shared-variable-from-the-web-api)
+
+## Private Messages
+
+Common Data Service contains some messages which are not intended for 3rd party developers to use. These messages are typically added by Microsoft to enable feature functionality, but can also be added by 3rd party solutions with the Custom API feature. Private messages are indicated by the [SdkMessage.IsPrivate](/powerapps/developer/common-data-service/reference/entities/sdkmessage#BKMK_IsPrivate) property.
+
+> [!CAUTION]
+> You should not use private messages unless you created them as a Custom API. By marking a message as private, the solution publisher is explicitly calling out that they do not support other apps to use the message. They may remove the message or introduce breaking changes at any time. Use of these messages by anyone other than the solution publisher are not supported.
+
+More information: [Create and use Custom APIs](../custom-api.md)
 
 ### See also
 
