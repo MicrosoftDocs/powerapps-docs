@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.reviewer: nabuthuk
 ms.workload: na
-ms.date: 10/25/2020
+ms.date: 10/28/2020
 ms.author: nabuthuk
 search.audienceType: 
   - developer
@@ -56,42 +56,42 @@ The install failures tab contains the following graphs and metrics.
 
 The line chart shown below illustrates the number of app installation failures occurred by date. When hovering over the graph, the following information is shown:
 
- 1. Count of isError. 
- 1. Date of error.
+ 1. Failure Count 
+ 1. Date 
 
 > [!div class="mx-imgBorder"]
 > ![Date](media/isv-failure-by-date.png "Date")
 
-### Failure by GEO
+### Failure by Geo
 
 The pie chart shown below illustrates the number app installation failures by GEO. When hovering over the graph, the following information is shown:
 
 1. Geo 
-1. Error count
+1. Failure Count
 
 > [!div class="mx-imgBorder"]
 > ![Geo](media/isv-failure-by-geo.png "Geo")
 
-### Failure by package version
+### Failure by solution version
 
 The bar chart shown below illustrates the number of app installation failures occurred by package version. When hovering over the graph, the following information is shown:
 
 1. Package Version
-1. Error Category
-1. Error Count
+1. Failure Type
+1. Failure Count
 
 > [!div class="mx-imgBorder"]
 > ![Package version](media/isv-failure-by-package-version.png "Package version")
 
-### Install error details
+### Failure details
 
-Tracks the information about the app install failure error in detail. The following details are shown in the install error details tab:
+Tracks the information about the app install failure error in detail. The following details are shown in the failure details tab:
 
-1. Title
-1. Date of Error
-1. Error Count
-1. Error
 1. Category
+1. Date 
+1. Count
+1. Failure
+1. Type
 1. Package
 1. Version
 1. Environment
@@ -100,9 +100,14 @@ Tracks the information about the app install failure error in detail. The follow
 > [!div class="mx-imgBorder"]
 > ![Install error details](media/isv-install-error-details.png "Install error details")
 
+You can drill through the **Failure** column to see the full failure details. To see the full failure details, right-click on one of the error messages on the **Failure details** tab and then select **Drill through** > **Failure details**.
+
+> [!div class="mx-imgBorder"]
+> ![Failure details](media/isv-failure-details-drill-through.png "Failure details")
+
 ### Filtering the install failure dashboard
 
-ISVs can filter the install failures dashboard using the filters available. For example, an ISV can filter to see the metrics at **App Hierarchy**, **GEO**, and **Date range** level.   
+ISVs can filter the install failures dashboard using the filters available. For example, an ISV can filter to see the metrics at **Package & Solution version**, **Geo**, and **Date range** level.   
 
 ### See also
 
