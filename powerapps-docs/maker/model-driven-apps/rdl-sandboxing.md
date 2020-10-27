@@ -1,5 +1,6 @@
 ---
 title: "RDL sandboxing  | MicrosoftDocs"
+description: Learn about RDL sandboxing that may affect SSRS reports in Power Apps.
 ms.custom: 
 ms.date: 09/30/2017
 ms.reviewer: 
@@ -245,7 +246,7 @@ In Common Data Service, reports run in the sandbox mode. This is done by enablin
 ## Common denied members  
  The following table contains a list of denied members common in allowed types:  
   
-||  
+|Denied member|  
 |-|  
 |DateString|  
 |Duration|  
