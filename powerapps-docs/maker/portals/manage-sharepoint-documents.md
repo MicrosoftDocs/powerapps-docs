@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 10/27/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -122,6 +122,10 @@ Two entity permission records are required to establish the necessary access to 
 ## Configure file upload size
 
 By default, the file size is set to 10 MB. However, you can configure the file size to a maximum of 50 MB by using the site setting `SharePoint/MaxUploadSize`.
+
+## Maximum file download size
+
+File upload size limit set using the portals site setting doesn't apply when you upload them directly to SharePoint. However, when you use portals to download large files from SharePoint, the operation may timeout after a few minutes. When this happens, download files directly from SharePoint. More information: [Download files from SharePoint](https://support.microsoft.com/en-us/office/download-files-and-folders-from-onedrive-or-sharepoint-5c7397b7-19c7-4893-84fe-d02e8fa5df05)
 
 ## Sample configuration to enable document management on the Case entity form
 
