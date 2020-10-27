@@ -20,6 +20,8 @@ search.app:
 
 # Check your user access to a record
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+
 To perform an action on a record, a user needs to have the required privilege assigned through a security role or the user must be a member of a team that has a security role with assigned privileges.
 
 To perform actions on a record, the system checks your privileges and if the privilege check passes, then the system performs an access check. The access check verifies that you have the required rights to perform actions on a record such as read, write, create, delete, append, append to, share, and assign.
