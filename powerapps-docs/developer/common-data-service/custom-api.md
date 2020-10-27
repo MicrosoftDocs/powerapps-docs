@@ -74,7 +74,7 @@ If you do not set the **Plugin Type** (`PluginTypeId`)  to specify main operatio
 **Known Issues**:
 
 - [The Is Private field is not included in the Custom API form](#the-is-private-field-is-not-included-in-the-custom-api-form)
-- [Custom API functions cannot use Entity or EntityCollection Request Parameters or Response Properties](#custom-api-functions-cannot-use-entity-or-entitycollection-request-parameters-or-response-properties)
+- [Custom API functions cannot use Entity or EntityCollection Request Parameters](#custom-api-functions-cannot-use-entity-or-entitycollection-request-parameters)
 
 ### CustomAPIRequestParameter entity attributes
 
