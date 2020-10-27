@@ -23,12 +23,11 @@ search.app:
 ---
 
 # App usage analytics
-<!--note from editor: Please note the edit to the title. We still need to use "Microsoft" in front of "Power Platform," and there are other articles in this ISV Studio doc set that don't do so. -->
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-As an ISV<!--note from editor: Suggested. We should talk directly to the reader by using "you."-->, you need data&mdash;like active users or the number of times the solution has been installed&mdash;to measure the success of your application. You can use<!--note from editor: Via Writing Style Guide, we don't want to say that our software "allows" or "enables," we should "focus on what the customer needs to do." --> app usage analytics to get visibility into monthly, daily, and weekly usage data. 
+As an ISV, you need data&mdash;like active users or the number of times the solution has been installed&mdash;to measure the success of your application. You can use app usage analytics to get visibility into monthly, daily, and weekly usage data. 
 
 > [!NOTE]
 > A tenant or customer needs to update their apps for you to start seeing usage data.
@@ -46,15 +45,14 @@ Some of the components of a solution can have shared ownership by multiple ISVs.
 For a component that isn't shared, only the publisher who created it gets the usage credit.
 
 ## View the app usage dashboard
-<!--note from editor: Please double-check this procedure. I wasn't sure how steps 2 and 3 related to each other. -->
 1. Sign in to [ISV studio](https://aka.ms/ISVStudio/).
 1. On the **Home** page, view the list of published apps. If necessary, scroll down to view the app for which you want to view usage details.
-1. Select the app, and then select the **Usage** tab.<!--note from editor: I don't see a Usage tab in any of the screenshots for ISV Studio, but will it be obvious to the reader?-->
+1. Select the app, and then select the **Usage** tab.
 
    > [!div class="mx-imgBorder"]
    > ![List of top apps](media/isv-top-apps.png "List of top apps")
 
-   <!--note from editor: I turned this into an indented paragraph because it's not a step, it's an alternative to the previous step. By the way, do you think this icon would be helpful in other articles? If so, we could make an inline graphic out of it.-->You can also go directly to the app usage details by selecting the app usage icon from an app in the list, as shown in the following image.
+   You can also go directly to the app usage details by selecting the app usage icon from an app in the list, as shown in the following image.
 
    > [!div class="mx-imgBorder"]
    > ![Usage icon](media/isv-select-app-to-see-details.png "Usage icon")
@@ -72,7 +70,7 @@ The usage dashboard shows the following metrics:
 
 ### Filtering the usage dashboard
 
-You can filter the usage dashboard by using the available filters. To see the metrics rolled up to the solution level, select all the components of the solution in the filter. Similarly, you can roll up all solution metrics to the package level, and roll up all package metrics to the app level.<!--note from editor: Edit okay? It seemed that the previous paragraph just restated what was in this section, so I combined them. -->
+You can filter the usage dashboard by using the available filters. To see the metrics rolled up to the solution level, select all the components of the solution in the filter. Similarly, you can roll up all solution metrics to the package level, and roll up all package metrics to the app level.
 
 ### See also
 
