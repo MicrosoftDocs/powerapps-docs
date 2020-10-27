@@ -2,7 +2,7 @@
 title: "Create and use Custom APIs (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/26/2020
+ms.date: 10/27/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -346,6 +346,12 @@ A: Your private messages will work regardless of whether they are advertised in 
 ## Known issues with Custom APIs
 
 Custom APIs are a preview feature and subject to change. Following are some known issues we expect to change.
+
+### Not able to use profiler for debugging
+
+To debug using the Plug-in Registration tool and the Plug-in profiler solution, you need to be able to select a specific plug-in step. The main stage implementation for the plug-in is not available in the Plug-in Registration tool. 
+
+**Workaround**: Register the plug-in type on the PostOperation stage of the message created for the Custom API.
 
 ### A custom API cannot be called from a workflow
 
