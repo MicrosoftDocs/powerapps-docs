@@ -57,16 +57,16 @@ When [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] inte
     > [!div class=mx-imgBorder]
     > ![Disable SharePoint integration](media/disable-sharepoint-integration.png "Disable SharePoint integration")
 
-Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will update the [!INCLUDE[pn-azure-active-directory](../../includes/pn-azure-active-directory.md)] ([!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD) application for the portal and add or remove the required [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] permissions, respectively. You will also be redirected to provide your consent for the changes to be made in the [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD application. 
+Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will update the [!INCLUDE[pn-azure-active-directory](../../includes/pn-azure-active-directory.md)] ([!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD) application for the portal and add or remove the required [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] permissions, respectively. You'll also be redirected to provide your consent for the changes to be made in the [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD application. 
 
 > [!div class=mx-imgBorder]
 > ![Disable SharePoint integration](media/sharepoint-integration-consent.png "Disable SharePoint integration")
 
-If you do not provide your consent:
+If you don't provide your consent:
 
-- Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will not be complete and an error message will display.
+- Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration won't be complete and an error message will display.
 
-- Your out-of-the-box [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD login on the portal will not work. 
+- Your out-of-the-box [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD login on the portal won't work.
 
 
 ## Step 3: Enable document management for entities
@@ -106,7 +106,7 @@ Two entity permission records are required to establish the necessary access to 
 
 - Permissions on the entity of the entity or web form: 
     - Create an **Entity Permission** record specifying the **Entity Name** as the entity of the entity form or web form configured previously. 
-    - Select a **Scope** and scope relationship that is appropriate to the desired behavior of the form. 
+    - Select a **Scope** and scope relationship that is appropriate to the behavior of the form that you want.
     - Enable **Read** and **Append To** privileges to allow read access to documents and optionally enable **Write** privilege to allow document uploads. Ignore the **Child Entity Permissions** section for now since it will be populated by the next step.
 - Permissions on the **Document Location** with **Parent scope** referring to the previous permission record: 
     - Create an **Entity Permission** record specifying the **Entity Name** as **Document Location** entity with **Scope** set to **Parent**. 
@@ -125,13 +125,13 @@ By default, the file size is set to 10 MB. However, you can configure the file s
 
 ## Maximum file download size
 
-File upload size limit set using the portals site setting doesn't apply when you upload them directly to SharePoint. However, when you use portals to download large files from SharePoint, the operation may timeout after a few minutes. When this happens, download the files directly from SharePoint. More information: [Download files from SharePoint](https://support.microsoft.com/en-us/office/download-files-and-folders-from-onedrive-or-sharepoint-5c7397b7-19c7-4893-84fe-d02e8fa5df05)
+We recommend limiting the size of the individual files available for download to 250 MB or less. If you use portals to download larger files from SharePoint, the operation may timeout after a couple of minutes.
 
 ## Sample configuration to enable document management on the Case entity form
 
-The below example demonstrates configuration using the Case entity which needs the Dynamics 365 Customer Service application as a pre-requisite. Although this sample uses the Case entity, it is just an illustration of the steps mentioned above and can be followed with any other custom entity or any Common Data Service entity that supports managing documents in SharePoint. 
+The below example demonstrates configuration using the Case entity that needs the Dynamics 365 Customer Service application as a pre-requisite. Although this sample uses the Case entity, it's just an illustration of the steps mentioned above and can be followed with any other custom entity or any Common Data Service entity that supports managing documents in SharePoint. 
 
-1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-model-driven-apps) to ensure that server-based configuration is complete for your envoronment and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
+1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-model-driven-apps) to ensure that server-based configuration is complete for your environment and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
 
 2.	Follow the instructions in [Step 2](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center) to ensure that the portal has permissions to integrate with [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. 
 
@@ -225,7 +225,7 @@ The below example demonstrates configuration using the Case entity which needs t
       > [!div class=mx-imgBorder]
       > ![Portal support page](media/portal-support-page.png "Portal support page")
 
-      b. Click on an existing Case record from the list. Go to the **Case Documents** section on the page and see the document list added.
+      b. Select an existing Case record from the list. Go to the **Case Documents** section on the page and see the document list added.
 
       > [!div class=mx-imgBorder]
       > ![Case document](media/case-document.png "Case document")
