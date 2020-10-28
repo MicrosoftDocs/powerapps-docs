@@ -25,7 +25,7 @@ If you want to keep ownership of the record but let someone else work on it with
 
 ## Assign a record to a user or team
 
-1. From a list of records, select the record that you want to assign to someone else.
+1. From a list of records, select the record that you want to assign to someone else. You can select multiple records.
 
    > [!div class="mx-imgBorder"]
    > ![Select record that you want o reassign](media/reassign-1.png "Select record that you want o reassign")
