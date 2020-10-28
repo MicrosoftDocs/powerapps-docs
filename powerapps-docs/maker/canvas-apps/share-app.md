@@ -298,7 +298,7 @@ Intune only applies policies of a user’s home tenant. For instance, if Lesa@Co
 
 #### What connectors support guest access?
 
-All connectors that don't use Azure AD authentication of any type supports guest access. The following table enumerates all connectors that use Azure AD authentication and which connectors currently support guest access. More information: [List of all Power Apps connectors](../../../connectors/connector-reference/connector-reference-powerapps-connectors.md)
+All connectors that don't use Azure AD authentication of any type supports guest access. The following table enumerates all connectors that use Azure AD authentication and which connectors currently support guest access. More information: [List of all Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors)
 
 | **Connector**                                     | **Supports guest access**                                              |
 |---------------------------------------------------|------------------------------------------------------------------------|
