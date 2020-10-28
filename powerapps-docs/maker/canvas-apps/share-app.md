@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/02/2020
+ms.date: 10/28/2020
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -298,7 +298,7 @@ Intune only applies policies of a user’s home tenant. For instance, if Lesa@Co
 
 #### What connectors support guest access?
 
-All connectors that don't use Azure AD authentication of any type supports guest access. The following table enumerates all connectors that use Azure AD authentication and which connectors currently support guest access.
+All connectors that don't use Azure AD authentication of any type supports guest access. The following table enumerates all connectors that use Azure AD authentication and which connectors currently support guest access. More information: [List of all Power Apps connectors](../../../connectors/connector-reference/connector-reference-powerapps-connectors.md)
 
 | **Connector**                                     | **Supports guest access**                                              |
 |---------------------------------------------------|------------------------------------------------------------------------|
@@ -382,7 +382,11 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | Paylocity                                         | No                                                                     |
 | Planner                                           | No                                                                     |
 | Plumsail Forms                                    | No                                                                     |
+| Power Apps for Admins | No |
+| Power Apps for Makers | No |
+| Power Automate Management | No |
 | Power BI                                          | Yes                                                                    |
+| Power Platform for Admins                                          | No                                                                    |
 | Project Online                                    | No                                                                     |
 | ProjectWise Design Integration                    | No                                                                     |
 | Projectwise Share                                 | No                                                                     |
