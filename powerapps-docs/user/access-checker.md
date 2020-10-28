@@ -37,6 +37,10 @@ You can have access rights to a perform an action on a record through ownership,
 
 For more information on how privileges and access checks work, go to [How access to a record is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
 
+## Early access feature
+
+Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
+
 ## Check your access to a record
 
 
