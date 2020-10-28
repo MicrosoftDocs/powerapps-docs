@@ -20,7 +20,61 @@ search.app:
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article describes the differences between Common Data Service SQL and Transact-SQL.  
+This article describes the differences between Common Data Service SQL and Transact-SQL. Common Data Service SQL is a subset of Transact-SQL.
+
+## Metadata functions
+
+The following scalar functions return information about the database and database objects.
+
+### [Supported](#tab/supported)
+
+- DATABASE_PRINCIPAL_ID
+- DATABASEPROPERTYEX
+- DB_ID
+- DB_NAME
+- FILE_ID
+- FILE_IDEX
+- FILE_NAME
+- FILEGROUP_ID
+- FILEGROUP_NAME
+- FILEGROUPPROPERTY
+- FILEPROPERTY
+- FULLTEXTCATALOGPROPERTY
+- FULLTEXTSERVICEPROPERTY
+- INDEX_COL  
+- INDEXKEY_PROPERTY  
+- INDEXPROPERTY  
+- NEXT VALUE FOR
+- OBJECT_DEFINITION
+- OBJECT_ID
+- OBJECT_NAME
+- OBJECT_SCHEMA_NAME
+- OBJECTPROPERTY
+- OBJECTPROPERTYEX
+- ORIGINAL_DB_NAME
+- PARSENAME
+- SCHEMA_ID
+- SCHEMA_NAME
+- SCOPE_IDENTITY
+- SERVERPROPERTY
+- STATS_DATE
+- TYPE_ID
+- TYPE_NAME
+- TYPEPROPERTY
+- VERSION
+
+### [Not supported](#tab/not-supported)
+
+- @@PROCID
+- APP_NAME
+- APPLOCK_MODE
+- APPLOCK_TEST
+- ASSEMBLYPROPERTY
+- COL_LENGTH
+- COL_NAME
+- COLUMNPROPERTY
+
+--- 
   
 ## Inheritance and Relationships Support  
 
