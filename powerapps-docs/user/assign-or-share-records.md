@@ -77,7 +77,7 @@ Use advanced find to search for records and then reassign them to someone else. 
  
  ## Reassign all records (for admins)
  
- A admin can reassign all record for a user from the admin Setting area.
+ A administrator can reassign all record for a user from the admin settings area.
  
  1. Go to **Settings** > **Security**.
  2. Select **Users** and select a user name to open the user's profile.
