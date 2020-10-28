@@ -39,10 +39,10 @@ To follow this quickstart, you need:
 Sign in to the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 
 ## Find an app on the Home page
-The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You also select **Bussiness Apps** to lauch your business app that you have access to.
+The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You also select **Business Apps** to launch your business app that you have access to.
 
 
-![Bussiness Apps](media/bussinessapps.png)
+![Busines Apps](media/bussinessapps.png)
 
 
 
