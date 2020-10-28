@@ -71,7 +71,14 @@ When the new relevance search experience is turned then is available by default 
 
 ## Use the new relevance search experience 
 
-The new search experience is intuitive and easy to use. Start typing your search query and you will see suggestions on recent searches and records, automatic record suggestions based on the typed query. 
+The new search experience is intuitive and easy to use. Start typing your search query and you will see suggestions based based on the typed query. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Suggested search results](media/search-results-suggestions.png) 
+
+
+
+on recent searches and records, automatic record 
 
    > [!div class="mx-imgBorder"]
    > ![Legend for new search experience](media/legend-for-new-exp.png) 
