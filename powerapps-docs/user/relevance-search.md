@@ -77,8 +77,7 @@ The new search experience is intuitive and easy to use. Start typing your search
    > ![Suggested search results](media/search-results-suggestions.png) 
 
 
-
-on recent searches and records, automatic record 
+You can also serach for records in a page (entity) by searching for the page (entity) name. You will also see your recent searches and records that you accessed recently.
 
    > [!div class="mx-imgBorder"]
    > ![Legend for new search experience](media/legend-for-new-exp.png) 
