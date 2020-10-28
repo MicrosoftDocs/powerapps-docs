@@ -22,6 +22,52 @@ search.app:
 
 This article describes the differences between Common Data Service SQL and Transact-SQL. Common Data Service SQL is a subset of Transact-SQL.
 
+## Language elements
+
+The Common Data Service SQL endpoint supports the following language elements.
+
+More information: [Language Elements (Transact-SQL)](/sql/t-sql/language-elements/language-elements-transact-sql)
+
+### [Supported](#tab/supported)
+
+- Expressions
+- [General](#language-elements-general)
+- Variables
+
+### [Not supported](#tab/not-supported)
+
+- Control-of-Flow
+- Transactions
+
+---
+
+### Language elements general
+
+### [Supported](#tab/supported)
+
+- Reserved Keywords
+- Syntax Conventions
+- -- (Comment)
+- Slash Star (Block Comment)
+- NULL and UNKNOWN
+- Backslash (Line Continuation)
+- GO
+
+### [Not supported](#tab/not-supported)
+
+- EXECUTE
+- PRINT
+- RAISERROR
+- CHECKPOINT
+- KILL
+- KILL QUERY NOTIFICATION SUBSCRIPTION
+- KILL STATS JOB
+- RECONFIGURE
+- SHUTDOWN
+- USE
+
+---
+
 ## Functions
 
 Learn about the categories of built-in functions you can use with Common Data Service environments through the SQL endpoint.
@@ -115,7 +161,7 @@ More information: [System Functions (Transact-SQL)](/sql/t-sql/functions/system-
 
 ### Metadata functions
 
-The following scalar functions return information about the database and database objects.
+The following scalar functions return information about the environment and environment objects.
 
 More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metadata-functions-transact-sql)
 
