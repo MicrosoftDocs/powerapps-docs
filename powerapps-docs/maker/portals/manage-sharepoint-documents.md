@@ -60,7 +60,7 @@ When [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] inte
 Enabling or disabling the [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration will update the [!INCLUDE[pn-azure-active-directory](../../includes/pn-azure-active-directory.md)] ([!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD) application for the portal and add or remove the required [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] permissions, respectively. You'll also be redirected to provide your consent for the changes to be made in the [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD application. 
 
 > [!div class=mx-imgBorder]
-> ![Disable SharePoint integration](media/sharepoint-integration-consent.png "Disable SharePoint integration")
+> ![Disable SharePoint integration consent screen](media/sharepoint-integration-consent.png "Disable SharePoint integration consent screen")
 
 If you don't provide your consent:
 
