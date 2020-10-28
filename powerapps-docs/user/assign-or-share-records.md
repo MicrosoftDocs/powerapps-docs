@@ -42,23 +42,11 @@ If you want to keep ownership of the record but let someone else work on it with
       > [!div class="mx-imgBorder"]
       > ![Select Me to assign the record to yourself](media/reassign-4.png "Select Me to assign the record to yourself")
     
-    - Select **User or Team** and then in the **User or team** field enter the name of the user or team or use the lookup to find them. Or, select **New Record** to create a new user or team record.
+    - Select **User or Team** and then enter the name of the user or team or use the lookup to find them. Or, select **New Record** to create a new user or team record. When you're done select **Assign**.
 
      > [!div class="mx-imgBorder"]
      > ![Use the lookup to reassign a record](media/reassign-3.png "Use the lookup to reassign a record")
 
-
-   > [!NOTE]
-   > If you want to keep ownership of the record but let someone else work with it, select **Share**. Then use the tooltips to guide you through the **Share** option. 
-   
-4. In the assign dialog box, in the **Assign to** area, choose **Me** or **User or Team**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Reassign a record to me or team](media/assign2.png "Reassign a record me team")
-  
-   If you select **User or Team**, in the **Look for Records** box, enter the name of the user or team. If you need to create a new record, select **+ New**.
-  
-5. When you're done, select **Assign**.
 
 ## Use advanced find to reassign records
 
@@ -98,4 +86,7 @@ Use advanced find to search for records and then reassign them to someone else. 
    > [!div class="mx-imgBorder"]
    > ![Reassign all records to user or team](media/assign6.png "Reassign all records to user or team")
  
-
+ 
+ ## Share a record with someone else
+ 
+ If you want to keep ownership of the record but let someone else work with it, select **Share**. 
