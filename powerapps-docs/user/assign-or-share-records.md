@@ -28,12 +28,12 @@ If you want to keep ownership of the record but let someone else work on it with
 1. From a list of records, select the record that you want to assign to someone else.
 
    > [!div class="mx-imgBorder"]
-   > ![Select record that you want o reassign](media/assign-1.png "Select record that you want o reassign")
+   > ![Select record that you want o reassign](media/reassign-1.png "Select record that you want o reassign")
 
 2. On the command bar, select **Assign**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select assign a record](media/assign-2.png "[Select assign a record")
+   > ![Select assign a record](media/reassign-2.png "[Select assign a record")
 
   
 3. In the assign dialog box, select the **Assign to** field and choose one of the following options:
@@ -42,7 +42,7 @@ If you want to keep ownership of the record but let someone else work on it with
     - Select **User or Team** and then in the **User or team** field enter the name of the user or team or use the lookup to find them. Or, select **New Record** to create a new user or team record.
 
    > [!div class="mx-imgBorder"]
-   > ![Use the lookup to reassign a record](media/assign-3.png "Use the lookup to reassign a record")
+   > ![Use the lookup to reassign a record](media/reassign-3.png "Use the lookup to reassign a record")
 
 
    > [!NOTE]
