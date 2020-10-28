@@ -25,18 +25,20 @@ search.app:
 > [!WARNING]
 > A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is presently globally disabled as we work to address a security issue. A fix for the issue has been developed. Deployment of the fix and feature re-enablement to all public regions is planned for the first week of November 2020. A safe deployment practice is being followed so the feature may be available in your region earlier. Thank you for your patience on this matter.
 
-A SQL data connection is available through the Tabular Data Stream (TDS) endpoint of the Common Data Service. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute TSQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
+A SQL data connection is available through the Tabular Data Stream (TDS) endpoint of the Common Data Service. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute Transact-SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - As of this article's publication date, the TDS endpoint is enabled by default.
+
 
 ## Applications support
 
 You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the SQL connection feature to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi)
 
 > [!NOTE]
+> As of this article's publication date, the TDS endpoint is enabled by default.
+>
 > To verify if your target environment has the Common Data Service SQL connection feature enabled, do the following:
 > 1. Sign into Power Apps, on the left navigation pane expand **Data**, and then select **Entities**.
 > 2. On the command bar, you should see a button **Analyze in Power BI**. If you do not see this button, your environment does not yet have the feature.
@@ -52,6 +54,9 @@ The Common Data Service TDS endpoint SQL connection uses the Common Data Service
 Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication are not supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
 
 ![Connec dialog](media/ssms-connect-dialog.PNG)
+
+> [!NOTE]
+> The requirement to specify a port number after the service URL has been removed.
 
 ## Example entity data queries
 
