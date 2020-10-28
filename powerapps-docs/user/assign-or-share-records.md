@@ -19,18 +19,31 @@ search.app:
 ---
 # Assign or share records
 
-If you would like another person in your organization to handle a customer record, you can assign the record to that person. You can also assign a record to a team, or to yourself.  
+When you create a record, you are the owner of the record. If you would like another person in your organization to take owership of the record, then you can assign the record to that person. You can assign a record to someone else or a  team. You can also assign a record to yourself that that another user owns if you have system administrator privilege.
 
-Use the **Share** option if you want to keep ownership of the record but let someone else work on it with you. 
+If you want to keep ownership of the record but let someone else work on it with you, then use the **Share** option to share the record. 
 
-1. From the left navigation pane, select a record type. For example, **Contacts**.
+## Assign a record to a user or team
 
-2. From the list of records, select the record that you want to reassign.  
-  
-3. On the command bar, select **Assign**.
+1. From a list of records, select the record that you want to assign to someone else.
 
    > [!div class="mx-imgBorder"]
-   > ![Reassign a record](media/assign1.png "Reassign a record")
+   > ![Select record that you want o reassign](media/assign-1.png "Select record that you want o reassign")
+
+2. On the command bar, select **Assign**. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Select assign a record](media/assign-2.png "[Select assign a record")
+
+  
+3. In the assign dialog box, select the **Assign to** field and choose one of the following options:
+    - Select **Me** to assign the record to youself and them select **Assign**. Remember only a system administrator can assign a record that belongs to someone else to themself.
+    
+    - Select **User or Team** and then in the **User or team** field enter the name of the user or team or use the lookup to find them. Or, select **New Record** to create a new user or team record.
+
+   > [!div class="mx-imgBorder"]
+   > ![Use the lookup to reassign a record](media/assign-3.png "Use the lookup to reassign a record")
+
 
    > [!NOTE]
    > If you want to keep ownership of the record but let someone else work with it, select **Share**. Then use the tooltips to guide you through the **Share** option. 
