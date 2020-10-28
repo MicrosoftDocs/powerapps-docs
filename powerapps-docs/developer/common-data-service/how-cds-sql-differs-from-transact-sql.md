@@ -24,7 +24,7 @@ This article describes the differences between Common Data Service SQL and Trans
 
 ## Metadata functions
 
-The following scalar functions return information about the database and database objects.
+The following scalar functions return information about the database and database objects. More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metadata-functions-transact-sql)
 
 ### [Supported](#tab/supported)
 
