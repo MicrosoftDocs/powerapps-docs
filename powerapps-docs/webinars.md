@@ -47,3 +47,7 @@ by Pierce Boggan and Hailey Huber
 **Deliver Java Apps Quickly Using Custom Connectors in Microsoft Power Apps**  
 by Sandra Ahlgrimm and Dawid van Heerden  
 [Register and watch now](https://info.microsoft.com/ww-Landing-DeliverJavaAppsQuicklyUsingCustomConnectors.html?LCID=EN-US)
+
+### See also
+
+[Power Automate webinars](/power-automate/webinars}
