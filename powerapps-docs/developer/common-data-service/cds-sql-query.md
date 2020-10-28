@@ -25,16 +25,12 @@ search.app:
 > [!WARNING]
 > A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is presently globally disabled as we work to address a security issue. A fix for the issue has been developed. Deployment of the fix and feature re-enablement to all public regions is planned for the first week of November 2020. A safe deployment practice is being followed so the feature may be available in your region earlier. Thank you for your patience on this matter.
 
-
-
-A SQL data connection is available on the Common Data Service endpoint. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
-
-
+A SQL data connection is available through the Tabular Data Stream (TDS) endpoint of the Common Data Service. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute TSQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Instructions to enable the feature can be found here: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi), and [Manage feature settings](/power-platform/admin/settings-features) (see TDS endpoint setting).
+> - As of this article's publication date, the TDS endpoint is enabled by default.
 
 ## Applications support
 
@@ -45,15 +41,15 @@ You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Anal
 > 1. Sign into Power Apps, on the left navigation pane expand **Data**, and then select **Entities**.
 > 2. On the command bar, you should see a button **Analyze in Power BI**. If you do not see this button, your environment does not yet have the feature.
 
-You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Common Data Service endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
+You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Common Data Service TDS endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
 ![Expanded account table](media/ssms-table-expanded.PNG)
 
 ## Security and authentication
 
-The Common Data Service endpoint SQL connection uses the Common Data Service security model for data access. Data can be obtained for all entities to which a user has access to in Common Data Service.
+The Common Data Service TDS endpoint SQL connection uses the Common Data Service security model and filtered views for data access. Data can be obtained for all entities to which a user has access to in Common Data Service. In addition, because of adherence to the security model and use of filtered views, the [Service Protection API Limits](https://docs.microsoft.com/powerapps/developer/common-data-service/api-limits) are supported when using the endpoint.
 
-Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication are not supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL followed by a comma and the port value of 5558.
+Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication are not supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
 
 ![Connec dialog](media/ssms-connect-dialog.PNG)
 
@@ -77,13 +73,7 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 
 ## Supported operations and data types
 
-The list of supported SQL operations includes:
-
-- Batch operations
-- SELECT
-- Aggregation functions (i.e., Count() and Max() functions)
-- UNIONs and JOINs
-- Filtering
+For a detailed list of supported SQL operations on the TDS endpoint see [How Common Data Service SQL differs from Transact-SQL](how-cds-sql-differs-from-transact-sql.md).
 
 Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. Common Data Service option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
 
@@ -100,11 +90,14 @@ The following Common Data Service datatypes are not supported with the SQL conne
 > group by act.activityid, act.subject
 > ```
 
-## Plug-ins
+## Limitations
+
+There is an 80MB maximum size limit for query results returned from the TDS endpoint. Consider using data integration tools such as [Data Export Service](https://docs.microsoft.com/powerapps/developer/common-data-service/data-export-service) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data.
+
+Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
 Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any re-writing of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
 
 ### See also
 
-[How Common Data Service SQL differs from Transact-SQL](how-cds-sql-differs-from-transact-sql.md)  
 [Use FetchXML to construct a query](cds-sql-query.md)
