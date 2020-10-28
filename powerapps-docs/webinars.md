@@ -50,4 +50,4 @@ by Sandra Ahlgrimm and Dawid van Heerden
 
 ### See also
 
-[Power Automate webinars](/power-automate/webinars}
+[Power Automate webinars](/power-automate/webinars)
