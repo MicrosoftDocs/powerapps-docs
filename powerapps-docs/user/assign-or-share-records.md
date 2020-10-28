@@ -63,12 +63,10 @@ Use advanced find to search for records and then reassign them to someone else. 
     > [!div class="mx-imgBorder"]
     > ![Enter search query](media/reassign-5.png "Enter search query")
 
-
-
-From the list of records, select the records that you want to reassign and then select the assign option.
+3. From the list of records, select the records that you want to assign and then select **Assign (page name)**
 
    > [!div class="mx-imgBorder"]
-   > ![Reassign a record using advanced find](media/assign4.png "Reassign a record using advacned find")
+   > ![Reassign the selected records](media/reassign-6.png "Reassign the selected records")
    
  
  ## Reassign all records (for admins)
