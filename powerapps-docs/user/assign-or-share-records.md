@@ -40,7 +40,7 @@ If you want to keep ownership of the record but let someone else work on it with
     - Select **Me** to assign the record to youself and them select **Assign**. Remember only a system administrator can assign a record that belongs to someone else to themself.
     
       > [!div class="mx-imgBorder"]
-      > ![Select Me to assign the record to yourself](media/reassign-34.png "Select Me to assign the record to yourself")
+      > ![Select Me to assign the record to yourself](media/reassign-4.png "Select Me to assign the record to yourself")
     
     - Select **User or Team** and then in the **User or team** field enter the name of the user or team or use the lookup to find them. Or, select **New Record** to create a new user or team record.
 
