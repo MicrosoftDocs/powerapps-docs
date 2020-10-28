@@ -19,7 +19,7 @@ search.app:
 ---
 # Assign or share records
 
-When you create a record, you are the owner of the record. If you would like another person in your organization to take owership of the record, then you can assign the record to that person. You can assign a record to someone else or a  team. You can also assign a record to yourself that that another user owns if you have system administrator privilege.
+When you create a record, you are the owner of the record. If you would like another person in your organization to take owership of the record, then you can assign the record to that person. You can assign a record to a user or team. You can also assign a record to yourself that that another user owns but you need to have system administrator privilege to do this.
 
 If you want to keep ownership of the record but let someone else work on it with you, then use the **Share** option to share the record. 
 
