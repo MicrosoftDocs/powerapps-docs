@@ -169,7 +169,13 @@ You can say how you're feeling about returning to the workplace. On the home pag
 
 Each employee can receive notifications via the Employee App. In the top right a bell icon is displayed. If there are unread notifications, a badge will be displayed indicating the number of unread notifications. Clicking on the bell icon will take the employee to a new screen, where all the notifications are listed. The newest notifications are shown on top of the list.
 
+> [!div class="mx-imgBorder"]
+> ![Notification bell](media/employee-notification-bell.png "Notification bell")
+
 A notification shows a created date, a type, a header text and a body. There are three types of notications: information, warning and error. Each indicated with their own icon. 
+
+> [!div class="mx-imgBorder"]
+> ![Notifications list](media/employee-notification-list.png "Notifications list")
 
 A notification is marked as read when it has been viewed by the employee in the app. The notification will still be visible on this screen. The user can return to the main screen by clicking on the cross in the top right of the screen.
 
