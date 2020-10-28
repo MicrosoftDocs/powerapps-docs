@@ -68,6 +68,12 @@ Use advanced find to search for records and then reassign them to someone else. 
    > [!div class="mx-imgBorder"]
    > ![Reassign the selected records](media/reassign-6.png "Reassign the selected records")
    
+ 4. In the assign dialog box, select the **Assign to** field and choose one of the following options:
+ 
+    - Select **Me** to assign the record to youself and them select **Assign**. Remember only a system administrator can assign a record that belongs to someone else to themself.
+    
+    - Select **User or Team** and then enter the name of the user or team or use the lookup to find them. Or, select **New Record** to create a new user or team record. When you're done select **Assign**.
+   
  
  ## Reassign all records (for admins)
  
