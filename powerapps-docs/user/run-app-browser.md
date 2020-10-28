@@ -49,7 +49,7 @@ The Home page may show several types of business apps, but you can find a specif
 ## Run an app from a URL
 You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
 
-![](./media/run-app-browser/web-login.png)
+![Run an app from URL](./media/run-app-browser/web-login.png)
 
 ## Connect to data
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
