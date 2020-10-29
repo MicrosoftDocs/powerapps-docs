@@ -263,17 +263,38 @@ Retrieves rows from a Common Data Service environment and enables the selection 
 
 ### FROM plus JOIN, APPLY, PIVOT
 
-#### FROM - Using PIVOT & UNPIVOT
+#### [Supported](#tab/supported)
+
+- FROM plus JOIN, APPLY, PIVOT
+- FROM - Using PIVOT & UNPIVOT
+
+---
 
 ### WHERE
+
+#### [Supported](#tab/supported)
+
+- WHERE
+- MATCH
+
+---
 
 ### Hints
 
 Hints are not supported.
 
-More information: [Hints (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql)
-
 ### Predicates
+
+#### [Supported](#tab/supported)
+
+- CONTAINS
+- IS NULL
+
+#### [Not supported](#tab/not-supported)
+
+- FREETEXT (planned)
+
+---
 
 ## See also
 
