@@ -76,7 +76,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
    > ![Select Time](media/employee-select-time.png "Select time")
 
    > [!NOTE]
-   > On a facility, you can indicate a time window in which people can check in—30 minutes, 1 hour, or none. When the time window is not filled or is none, this screen will be skipped.
+   > For a facility, you can indicate a time window in which people can check in—30 minutes, 1 hour, or none. When the time window is not filled or is none, this screen will be skipped.
 
 6. Accept the terms and agreements.
 
