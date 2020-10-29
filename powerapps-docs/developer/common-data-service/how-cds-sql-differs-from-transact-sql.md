@@ -22,59 +22,13 @@ search.app:
 
 This article describes the differences between Common Data Service SQL and Transact-SQL. Common Data Service SQL is a subset of Transact-SQL.
 
-## Language elements
-
-The Common Data Service SQL endpoint supports the following language elements.
-
-More information: [Language Elements (Transact-SQL)](/sql/t-sql/language-elements/language-elements-transact-sql)
-
-### [Supported](#tab/supported)
-
-- Expressions
-- [General](#language-elements-general)
-- Variables
-
-### [Not supported](#tab/not-supported)
-
-- Control-of-Flow
-- Transactions
-
----
-
-### Language elements general
-
-### [Supported](#tab/supported)
-
-- Reserved Keywords
-- Syntax Conventions
-- -- (Comment)
-- Slash Star (Block Comment)
-- NULL and UNKNOWN
-- Backslash (Line Continuation)
-- GO
-
-### [Not supported](#tab/not-supported)
-
-- EXECUTE
-- PRINT
-- RAISERROR
-- CHECKPOINT
-- KILL
-- KILL QUERY NOTIFICATION SUBSCRIPTION
-- KILL STATS JOB
-- RECONFIGURE
-- SHUTDOWN
-- USE
-
----
-
 ## Functions
 
 Learn about the categories of built-in functions you can use with Common Data Service environments through the SQL endpoint.
 
 More information: [What are the SQL database functions?](/sql/t-sql/functions/functions)
 
-#### [Supported](#tab/supported)
+### [Supported](#tab/supported)
 
 - Aggregate
 - Collation
@@ -89,7 +43,7 @@ More information: [What are the SQL database functions?](/sql/t-sql/functions/fu
 - String
 - [System](#system-functions)
 
-#### [Not supported](#tab/not-supported)
+### [Not supported](#tab/not-supported)
 
 - ODBC Scalar
 - Analytic (planned)
@@ -214,7 +168,113 @@ More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metad
 - COLUMNPROPERTY
 
 ---
-  
+
+## Language elements
+
+The Common Data Service SQL endpoint supports the following language elements.
+
+More information: [Language Elements (Transact-SQL)](/sql/t-sql/language-elements/language-elements-transact-sql)
+
+### [Supported](#tab/supported)
+
+- Expressions
+- [General](#language-elements-general)
+- Variables
+
+### [Not supported](#tab/not-supported)
+
+- Control-of-Flow
+- Transactions
+
+---
+
+### Language elements general
+
+#### [Supported](#tab/supported)
+
+- Reserved Keywords
+- Syntax Conventions
+- -- (Comment)
+- Slash Star (Block Comment)
+- NULL and UNKNOWN
+- Backslash (Line Continuation)
+- GO
+
+#### [Not supported](#tab/not-supported)
+
+- EXECUTE
+- PRINT
+- RAISERROR
+- CHECKPOINT
+- KILL
+- KILL QUERY NOTIFICATION SUBSCRIPTION
+- KILL STATS JOB
+- RECONFIGURE
+- SHUTDOWN
+- USE
+
+---
+
+## Queries
+
+Use these statements to query data from the Common Data Service SQL endpoint.
+
+More information: [Queries](/sql/t-sql/queries/queries)
+
+### General
+
+#### [Supported](#tab/supported)
+
+- Search Condition
+- TOP
+
+#### [Not supported](#tab/not-supported)
+
+- AT TIME ZONE
+- OPTION Clause
+- OUTPUT Clause
+- PREDICT
+- READTEXT
+- Table Value Constructor
+- UPDATETEXT
+- WITH common_table_expression
+- WRITETEXT
+
+---
+
+### SELECT
+
+Retrieves rows from a Common Data Service environment and enables the selection of one or many rows or columns from one or many tables.
+
+#### [Supported](#tab/supported)
+
+- General (SELECT and SELECT Clause)
+- GROUP BY
+- HAVING
+- ORDER BY
+
+#### [Not supported](#tab/not-supported)
+
+- FOR
+- INTO
+- OVER
+
+---
+
+### FROM plus JOIN, APPLY, PIVOT
+
+#### FROM - Using PIVOT & UNPIVOT
+
+### WHERE
+
+### Hints
+
+Hints are not supported.
+
+More information: [Hints (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql)
+
+### Predicates
+
 ## See also
 
 [Use SQL to query data](cds-sql-query.md)
