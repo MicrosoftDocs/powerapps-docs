@@ -12,19 +12,19 @@ ms.reviewer: tapanm
 
 # Roles required for portal administration
 
-Power Apps portals has a variety of administrative tasks that can be performed by the members of different roles. The admin and security roles required to perform these tasks vary depending on the impact area.
+Power Apps portals has different kinds of administrative tasks that can be done by the members of different roles. The admin and security roles required to do these tasks vary depending on the impact area.
 
-For example, some tasks may require the user to be a member of admin roles in [Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true), and others may need membership to security roles in [Power Platform environment](https://docs.microsoft.com/power-platform/admin/database-security). 
+For example, some tasks may require the user to be a member of admin roles in [Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true), and others may need membership to security roles in [Power Platform environment](https://docs.microsoft.com/power-platform/admin/database-security).
 
-In this article, you'll learn about the role memberships required for a user to have the ability to perform specific administrative tasks for portals.
+In this article, you'll learn about the roles and permissions required to do different administrative tasks for portals.
 
 ## Required roles and permissions
 
-The following table lists different administrative tasks for portals, and the roles required to perform that task. The listed tasks can be performed through the membership of the roles listed as required.
+The following table lists different administrative tasks for portals, and the roles required to do that task. The listed tasks can be done through the membership of the roles listed as required.
 
 | Task | Required roles |
 | - | - |
-| [Create portal](..\create-portal.md) | <ul> <li> [Global admin](#global-admin) or </li> <li> Permissions to [register an app](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) in the Azure portal for the tenant, and any one of the following roles: </li> <ul> <li> [System administrator](#system-administrator) </li> <li> [System customizer](#system-customizer) </li> </ul> |
+| [Create portal](..\create-portal.md) | [Global admin](#global-admin). For non-global admins, permissions to [register an app](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) in the Azure portal, and any one of the following roles: <ul> <li> [System administrator](#system-administrator) </li> <li> [System customizer](#system-customizer) </li> </ul> |
 | [Download public key of a portal](get-public-key.md) | Any one of the following roles: <ul> <li> [Global admin](#global-admin) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator)  </li> <li> [System administrator](#system-administrator) </li> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> </ul> |
 | [Import metadata translation](import-metadata-translation.md) | Any one of the following roles: <ul> <li> [Global admin](#global-admin) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [System administrator](#system-administrator) </li> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> </ul> |
 | [View portal error logs](view-portal-error-log.md) | Any one of the following roles: <ul> <li> [Global admin](#global-admin) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [System administrator](#system-administrator) </li> <li> [Portal owner](#portal-owner) </li> </ul> |
