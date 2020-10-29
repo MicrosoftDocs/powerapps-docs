@@ -138,7 +138,7 @@ Use advanced find to search for records and then reassign them to someone else. 
     > [!div class="mx-imgBorder"]
     > ![Choose user or team from the drop down menu](media/share-3.png "Choose user or team from the drop down menu")
     
- 5. Use the lookup to find the user or team and select the name and choose **Select**.
+ 5. Use the lookup to find the user or team and select the name and then choose **Select**.
  
      > [!div class="mx-imgBorder"]
      > ![Select the user name and then choose select](media/share-4.png "Select the user name and then choose select")
