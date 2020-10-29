@@ -39,7 +39,7 @@ More information on available portal templates: [Portal templates](portal-templa
 To create a portal:
 
 > [!TIP]
-> To learn about the roles required to create a portal, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+> To learn about the roles required to create a portal, read [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md).
 
 1.  Sign in to [Power Apps](https://make.powerapps.com).  
 
