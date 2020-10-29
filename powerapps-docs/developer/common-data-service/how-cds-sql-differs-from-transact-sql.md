@@ -268,6 +268,8 @@ Retrieves rows from a Common Data Service environment and enables the selection 
 - FROM plus JOIN, APPLY, PIVOT
 - FROM - Using PIVOT & UNPIVOT
 
+#### [Not supported](#tab/not-supported)
+
 ---
 
 ### WHERE
@@ -276,6 +278,8 @@ Retrieves rows from a Common Data Service environment and enables the selection 
 
 - WHERE
 - MATCH
+
+#### [Not supported](#tab/not-supported)
 
 ---
 
