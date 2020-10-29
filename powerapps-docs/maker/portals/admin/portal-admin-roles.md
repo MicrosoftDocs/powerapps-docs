@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/12/2020
+ms.date: 10/28/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -24,6 +24,7 @@ The following table lists different administrative tasks for portals, and the ro
 
 | Task | Required roles |
 | - | - |
+| [Create portal](..\create-portal.md) | [Global admin](#global-admin) OR <br> <br> Permissions to [register an app](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) in the Azure portal for the tenant, and any one of the following roles: <ul> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator)  </li> <li> [System administrator](#system-administrator) </li> <li> [System customizer](#system-customizer) </li> </ul> |
 | [Download public key of a portal](get-public-key.md) | Any one of the following roles: <ul> <li> [Global admin](#global-admin) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator)  </li> <li> [System administrator](#system-administrator) </li> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> </ul> |
 | [Import metadata translation](import-metadata-translation.md) | Any one of the following roles: <ul> <li> [Global admin](#global-admin) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [System administrator](#system-administrator) </li> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> </ul> |
 | [View portal error logs](view-portal-error-log.md) | Any one of the following roles: <ul> <li> [Global admin](#global-admin) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [System administrator](#system-administrator) </li> <li> [Portal owner](#portal-owner) </li> </ul> |

@@ -16,6 +16,9 @@ If you select an environment that contains customer engagement apps (Dynamics 36
 
 > [!NOTE]
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-portal.md#create-additional-portals-in-an-environment).
+> - To learn about the roles required to create a portal, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
+To create a portal in an environment containing customer engagement apps:
 
 1.	Sign in to [Power Apps](https://make.powerapps.com).
 
