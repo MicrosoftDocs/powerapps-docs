@@ -249,7 +249,7 @@ Retrieves rows from a Common Data Service environment and enables the selection 
 #### [Supported](#tab/supported)
 
 - General (SELECT and SELECT Clause)
-- GROUP BY
+- [GROUP BY](#select-group-by)
 - HAVING
 - ORDER BY
 
@@ -258,6 +258,22 @@ Retrieves rows from a Common Data Service environment and enables the selection 
 - FOR
 - INTO
 - OVER
+
+---
+
+#### SELECT GROUP BY
+
+##### [Supported](#tab/supported)
+
+- GROUP BY column-expression [ ,...n ]
+- GROUP BY ROLLUP
+- GROUP BY CUBE ( )
+- GROUP BY GROUPING SETS ( )
+- GROUP BY ()
+- GROUP BY [ ALL ] column-expression [ ,...n ]
+- WITH (DISTRIBUTED_AGG)
+
+##### [Not supported](#tab/not-supported)
 
 ---
 
