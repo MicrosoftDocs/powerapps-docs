@@ -227,23 +227,23 @@ You can see all the details of a facility by opening the facility record. To exp
    > [!div class="mx-imgBorder"]
    > ![Select details ](media/facility-manager-facility-form-populated.png "Select details")
 
- - Select the **Checklist** tab to see the checklist items and their completion status.
+- Select the **Checklist** tab to see the checklist items and their completion status.
 
    > [!div class="mx-imgBorder"]
    > ![Checklist items](media/facility-manager-checklist-2-1.png "Checklist items") 
 
-    > [!NOTE]
-    > Checklist items are configured as part of the global process for managing reopen phases and their associated readiness factors. Therefore, new checks are added as readiness factors on a reopen phase and not on the facility.
+   > [!NOTE]
+   > Checklist items are configured as part of the global process for managing reopen phases and their associated readiness factors. Therefore, new checks are added as readiness factors on a reopen phase and not on the facility.
 
-  - Select the **Transitions** tab to see any related transition requests and their status.
+- Select the **Transitions** tab to see any related transition requests and their status.
 
-     > [!div class="mx-imgBorder"]
-     > ![Facility transition](media/facility-manager-facility-transitions.png "Facility transition")
+    > [!div class="mx-imgBorder"]
+    > ![Facility transition](media/facility-manager-facility-transitions.png "Facility transition")
 
 - Select the **Occupancy** tab to see any floors and areas, or add them to the facility.
 
-     > [!div class="mx-imgBorder"]
-     > ![Facility transition occupancy](media/facility-manager-facility-ocupancy.png "Facility transition occupancy")
+    > [!div class="mx-imgBorder"]
+    > ![Facility transition occupancy](media/facility-manager-facility-ocupancy.png "Facility transition occupancy")
 
 - Select the **Related** tab to see any related actions.
 
@@ -349,7 +349,7 @@ For ease of use, you can also use the business process flow to create new transi
 
 - Moving forward
 
-   Given that the facility isn't in the final phase, you can select the circle of the current stage and then select **Next Stage**. The business process flow won't move instantly, but in the background, a new transition record is created and you'll go to that record. The record is auto populated with the next phase and is ready for approval.
+   Given that the facility isn't in the final phase, you can select the circle of the current stage and then select **Next Stage**. The business process flow won't move instantly, but in the background, a new transition record is created and you'll go to that record. The record is auto-populated with the next phase and is ready for approval.
 
 - Moving backward
 
@@ -364,7 +364,7 @@ You can monitor whether your organization's employees are feeling healthy enough
 
 ## Monitor employee sentiments
 
-This area of the Facility Safety Management app keeps track of general employee sentiment about the prospect of returning to their workplace. This information is self-reported, but it's a valuable parameter when tracked consistently over time and with larger groups. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Attestations** area of the Facility Safety Management app.
+This area of the Facility Safety Management app keeps track of general employee sentiment about the prospect of returning to their workplace. This information is self-reported, but it's a valuable parameter when tracked consistently over time and with larger groups. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Sentiment** area of the Facility Safety Management app.
 
 > [!div class="mx-imgBorder"]
 ![Employee sentiment](media/facility-manager-employee-sentiment.png "Employee sentiment")
