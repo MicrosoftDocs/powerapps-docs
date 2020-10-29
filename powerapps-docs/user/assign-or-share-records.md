@@ -115,7 +115,7 @@ Use advanced find to search for records and then reassign them to someone else. 
  
  ## Share a record with someone else
  
- If you want to keep ownership of the record but let someone else work with it, select **Share**. 
+ If you want to keep ownership of a record but let someone else work on the record with you then use the share option.
  
  
 1. From a list of records, select the record that you want to assign to someone else. You can select multiple records.
