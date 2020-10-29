@@ -125,3 +125,8 @@ Use advanced find to search for records and then reassign them to someone else. 
 
    > [!div class="mx-imgBorder"]
    > ![Select share to share record](media/share-1.png "[Select share to share to share a record")
+   
+ 3. On the share dialog box, select **Add User/Team**.  
+
+   > [!div class="mx-imgBorder"]
+   > ![Select add user or team](media/share-2.png "[Select add user or team")
