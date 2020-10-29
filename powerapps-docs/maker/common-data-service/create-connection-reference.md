@@ -16,13 +16,20 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create a connection reference from a solution
+# Use a connection reference in a solution
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 A connection  is a proxy or a wrapper around an API that allows the underlying service to talk to Microsoft Power Automate, Microsoft Power Apps, and Azure Logic Apps. It provides a way for users to connect their accounts and use a set of pre-built actions and triggers to build their apps and workflows.
 
 A connection reference is a solution component that contains information about a connector. Both canvas app and operations within a Power Automate flow bind to a connection reference. You can import your connection reference into a target environment with no further configuration needed after the import completes. To change a specific connection associated with a canvas app or flow, you edit the connection reference component within the solution.
+
+You can add a connection reference to a solution in a few different ways:
+- From the **Solutions** area as described in this article.
+- During solution import. More information: [Import solutions](import-update-export-solutions.md)
+- When you build your [canvas apps](../canvas-apps/add-app-solution.md) and [flows](/power-automate/create-flow-solution) in a solution.
 
 > [!NOTE]
 >
@@ -42,7 +49,7 @@ A connection reference is a solution component that contains information about a
 
 ## Limits
 
-During the preview, the same connection reference can be used a maximum of 16 times in flows.
+While connection references are in preview, one connection reference can only be used within a maximum of 16 flows. If the same connection needs to be used in more than 16 flows, then create another connection reference with a connection to the same connector. There is no limit to the number of actions in each flow that can be associated with the connection reference.
 
 ### See also
 

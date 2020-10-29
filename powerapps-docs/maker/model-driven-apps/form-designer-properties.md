@@ -1,9 +1,10 @@
 ---
 title: "Properties available in the form designer | MicrosoftDocs"
+description: Manage component properties using the form designer.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -28,7 +29,7 @@ search.app:
 Located on the right-pane of the model-driven form designer, the property pane lets you quickly view and update the properties of any element selected from the preview or the tree view. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/form-designer-property-pane.png "Form designer property pane")
+> ![Form designer property pane](media/form-designer-property-pane.png "Form designer property pane")
 
 ## Form properties
 

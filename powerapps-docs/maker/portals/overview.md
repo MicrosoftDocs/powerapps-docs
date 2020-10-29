@@ -8,6 +8,8 @@ ms.custom:
 ms.date: 09/02/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+searchScope:
+  - "Power Apps"
 ---
 
 # What is Power Apps portals?
@@ -24,5 +26,5 @@ These capabilities feature a revamped end-to-end experience for makers to quickl
 
 - [Microsoft Learn: Get started with Power Apps portals](https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/)
 - [Portal admin center](admin/admin-overview.md)
-- [Portal management app](configure/configure-portal.md)
+- [Portal Management app](configure/configure-portal.md)
 - [Portal site settings](configure/configure-site-settings.md)

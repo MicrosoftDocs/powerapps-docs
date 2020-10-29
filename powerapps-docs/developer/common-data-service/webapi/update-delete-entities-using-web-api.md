@@ -23,6 +23,8 @@ search.app:
 ---
 # Update and delete entities using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Operations to modify data are a core part of the Web API. In addition to a simple update and delete, you can perform operations on single attributes and compose *upsert* requests that will either update or insert an entity depending on whether it exists.  
   
 > [!NOTE]

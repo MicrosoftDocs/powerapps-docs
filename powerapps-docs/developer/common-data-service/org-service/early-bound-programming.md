@@ -17,6 +17,8 @@ search.app:
 ---
 # Late-bound and Early-bound programming using the Organization service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 When you work with the Organization service assemblies you have two styles you can use: *late-bound* and *early-bound*.
 
 The key difference between early and late binding involves type conversion. While early binding provides compile-time checking of all types so that no implicit casts occur, late binding checks types only when the object is created or an action is performed on the type. The <xref:Microsoft.Xrm.Sdk.Entity> class requires types to be explicitly specified to prevent implicit casts.

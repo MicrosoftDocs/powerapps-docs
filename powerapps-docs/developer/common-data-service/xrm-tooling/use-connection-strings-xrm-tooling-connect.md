@@ -17,6 +17,8 @@ search.app:
 ---
 # Use connection strings in XRM tooling to connect to Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 With Common Data Service, XRM tooling enables you to connect to your Common Data Service environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Common Data Service connections at deployment time, and not hard code in your application to connect to your Common Data Service environment.  
 
 
@@ -85,7 +87,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
  
 The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customerengagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) 
 
-### Named account using Office 365  
+### Named account using Microsoft 365  
   
 ```xml
 <add name="MyCDSServer" 
@@ -96,7 +98,7 @@ The following examples show how you can use connection strings for connecting to
   Url=https://contoso.crm.dynamics.com"/>  
 ```  
   
-### OAuth using named account in Office 365 with UX to prompt for authentication  
+### OAuth using named account in Microsoft 365 with UX to prompt for authentication  
 
 Create a new connection to Common Data Service using a UserID or Password via OAuth.
 

@@ -193,6 +193,7 @@ Not all types of columns are supported, and not all types of columns support all
 | Picture |Yes (read-only) |View image<br>View text |
 | Attachment |Yes (read-only) |View Attachments|
 | Calculated |Yes (read-only) | |
+| Image |No | |
 | Task Outcome |No | |
 | External data |No | |
 | Managed Metadata |Yes (read-only) | |

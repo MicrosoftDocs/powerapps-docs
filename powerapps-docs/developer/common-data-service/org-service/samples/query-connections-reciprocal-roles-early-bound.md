@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Query connections by reciprocal roles (early bound)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-query-connections-reciprocal-roles-early-bound -->
 
 This sample shows how to create matching roles and then find a matching role for a particular role. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueryByReciprocalRole).

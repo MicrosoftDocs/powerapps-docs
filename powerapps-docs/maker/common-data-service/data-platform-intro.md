@@ -14,9 +14,13 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+searchScope:
+  - "Power Apps"
 ---
 
 # What is Common Data Service?
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service lets you securely store and manage data that's used by business applications. Data within Common Data Service is stored within a set of entities. An *entity* is a set of records used to store data, similar to how a table stores data within a database. Common Data Service includes a base set of standard entities that cover typical scenarios, but you can also create custom entities specific to your organization and populate them with data using Power Query. App makers can then use Power Apps to build rich applications using this data.
 
 ![Screenshot showing overview of Power Platform.](./media/data-platform-cds-intro/platform.png "Common Data Service in Power Platform")
@@ -58,8 +62,6 @@ For more information about integrating data into the Common Data Service, see [A
 
 ## Interacting with entities
 When you develop an app, you can use standard entities, custom entities, or both. Common Data Service provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
-
-![Screenshot showing a list of entities.](./media/data-platform-cds-intro/entitylist.png "Entity list")
 
 For a full list of entities, see the [Entity reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
 

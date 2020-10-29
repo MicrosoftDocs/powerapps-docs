@@ -17,6 +17,8 @@ search.app:
 ---
 # Build web applications using Server-to-Server (S2S) authentication
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Use server-to-server (S2S) authentication to securely and seamlessly communicate with Common Data Service with your web applications and services. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the Common Data Service data of their subscribers.  
 
 S2S authentication means you don’t need to use a paid Power Apps user license when you connect to Common Data Service environments. There is no license fee for the special *application user* account you will use with S2S authentication. However, there are [limits to the number of requests the application user](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations#non-licensed-usersapplication-users) account can call. With S2S authentication, a special unlicensed application user account is created and includes information about your application registered with Azure Active Directory (Azure AD). Rather than user credentials, the application is authenticated based on a service principal identified by an Azure AD Object ID value which is stored in the application user record. The application user is associated with a custom security role which controls the kinds of data and operations the application is allowed to perform.  

@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Delete an entity
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can delete custom entities, but you can't delete standard entities. Notice that you can't delete a custom entity while it has one or more dependent components. More information: [Delete an entity that has dependencies](#delete-an-entity-that-has-dependencies)
 
 > [!WARNING]

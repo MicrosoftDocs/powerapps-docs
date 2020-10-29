@@ -1,11 +1,11 @@
 ---
 title: Known issues and limitations for Project Oakdale | Microsoft Docs
 description: Provides an overview of known issues and limitations when using Power Apps with Microsoft Teams.
-author: tapanm-msft
+author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/14/2020
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
@@ -42,14 +42,12 @@ Project Oakdale currently isn't available in [Power Apps Government Community Cl
 
 ## Hidden membership groups
 
-Project Oakdale doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options). You'll receive one of the following errors when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
+Project Oakdale doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options). You'll receive the following error when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
 
-| Action | Error |
-| - | - |
-| [Create your first app](create-first-app.md#get-started-with-creating-your-first-app) | `Something went wrong` <br> `The request failed with error: '{"errorCode":"BadRequest"}'. The tracking Id is 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'` |
-| [Install a sample app](use-sample-apps-from-teams-store.md#install-the-sample-app) | `Something went wrong. Please try again later.` <br> `We couldn't save your tab settings. Please try again.` |
+`Existing limits on this team` <br>
+`You're unable to continue due to an administrative setting on this team. You can try again with another team.`
 
-The group may have hidden membership enabled by your administrator. Try using a different Teams team that has hidden membership not enabled, or contact your administrator.
+The group may have hidden membership enabled by your administrator. Try using Project Oakdale on a new Teams team, an existing team that does not have hidden membership enabled, or contact your administrator.
 
 ## Localization
 

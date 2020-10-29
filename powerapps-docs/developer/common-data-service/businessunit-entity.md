@@ -17,6 +17,8 @@ search.app:
 ---
 # BusinessUnit entity
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 An organization in Common Data Service, such as a holding company or a corporation, is made up of business units. A *business unit* is a unit of the top-level organization. Business units can be parents of other business units (child business units). The first business unit created for an organization is called the root business unit. Business units can be deleted, however, the root business unit can’t be deleted.  
   
 - A *parent business unit* is any business unit with one or more business units that report to it in the hierarchy.  

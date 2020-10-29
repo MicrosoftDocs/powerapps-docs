@@ -23,9 +23,14 @@ search.app:
 
 # Sample: Generic virtual entity data provider plug-in
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 ## Demonstrates
 
 This sample shows a minimal implementation for a generic Common Data Service virtual entity data provider plug-in, **DropboxRetrieveMultiplePlugin**, for the [Dropbox](https://www.dropbox.com/) file-sharing service. It uses the "bare metal" approach, translating the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> through the creation of the custom visitor class, **DropBoxExpressionVisitor**. It returns a collection of the files that satisfy the search criteria as an <xref:Microsoft.Xrm.Sdk.EntityCollection>. 
+
+> [!NOTE]
+> This sample requires the use of ILMERGE to combine the plug-in and Dropbox assemblies prior to registering the assembly with Common Data Service. Use of ILMERGE is not officially supported. A future update to this sample will remove the need to use ILMERGE. 
 
 ## Getting started
 

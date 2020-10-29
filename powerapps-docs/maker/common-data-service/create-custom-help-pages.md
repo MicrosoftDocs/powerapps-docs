@@ -2,7 +2,7 @@
 title: "Create custom help pages | MicrosoftDocs"
 description: "Create custom help pages on UCI"
 ms.custom: ""
-ms.date: 06/19/2020
+ms.date: 10/02/2020
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.suite: ""
@@ -25,6 +25,8 @@ search.app:
 ---
 
 # Create guided help for your Unified Interface app
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -131,15 +133,10 @@ All help content is stored in a help page component in Common Data Service as pa
 ### Moving content via solutions
 By default, all new help pages appear in the default solution. If you want to move your content to another environment, first add your existing help pages into an unmanaged solution before you export them. To add a help page to an unmanaged solution, follow these steps:
 
-1. Navigate to your unmanaged solution.
-2. Select **Switch to classic** from the ellipsis on the command bar.
-3. Select **Add Existing**.
-4. Select **Help Page**.
-5. Select the help pages that you want to add, and then select **Ok**.
-
-> [!NOTE]
-> Currently, you can't add existing help panes to an unmanaged solution in the modern solution explorer. 
-
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+2. On the left navigation pane, select **Solutions** and then open the unmanaged solution you want.
+3. Select **Add Existing** on the command bar, and then select **Help Page**.
+4. Select the help pages that you want to add, and then select **Add**. More information: [Export solutions](export-solutions.md)
 
 ## Help page documentation automation
 You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content. The custom help pane data is stored directly in Common Data Service and can be exported and imported for this purpose.  

@@ -25,6 +25,8 @@ search.app:
 ---
 # Create and edit virtual entities that contain data from an external data source
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 A virtual entity is a custom entity in Common Data Service that has fields containing data from an external data source. Virtual entities appear in your app to users as regular entity records, but contain data that is sourced from an external database, such as an  Azure SQL Database. Records based on virtual entities are available in all clients including custom clients developed using the Common Data Service web services.  
   
 In the past, to integrate the disparate data sources you would need to create a connector to move data or develop a custom plug-in, either client or server-side. However, with virtual entities you can connect directly with an external data source  at runtime so that specific data from the external data source is available in an environment, without the need for data replication.  

@@ -24,6 +24,8 @@ search.app:
 
 # Retrieve and execute predefined queries
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Common Data Service provides a way for administrators to create system views that are available to all users. Individual users can save the advanced find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
 
 <a name="bkmk_predefinedQueries"></a>

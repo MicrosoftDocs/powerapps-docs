@@ -17,6 +17,8 @@ search.app:
 ---
 # Tutorial: Write and register a plug-in
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This tutorial is the first in a series that will show you how to work with plug-ins. This tutorial is a pre-requisite for the following tutorials:
 
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
@@ -234,7 +236,7 @@ To register a plug-in, you will need the plug-in registration tool
 
     ![Register new assembly dialog](media/tutorial-write-plug-in-register-new-assembly-dialog.png)
 
-1. For Office 365 users, verify that the **isolation mode** is **sandbox** and the **location** to store the assembly is **Database**.
+1. For Microsoft 365 users, verify that the **isolation mode** is **sandbox** and the **location** to store the assembly is **Database**.
 
     > [!NOTE]
     > Other options for **isolation mode** and **location** apply to on-premises Dynamics 365 deployments. For the location, you can specify the D365 server's database, the server's local storage (disk), or the server's Global Assembly Cache. For more information see [Plug-in Storage](/dynamics365/customer-engagement/developer/register-deploy-plugins#plug-in-storage).

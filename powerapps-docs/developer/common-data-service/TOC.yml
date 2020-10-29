@@ -14,8 +14,20 @@
     href: webapi/index.md
   - name: Use Organization Service
     href: org-service/index.md
-  - name: Create your own actions
+  - name: Create your own messages
     href: custom-actions.md
+    items:
+    - name: Use Workflow Custom Actions with code
+      href: workflow-custom-actions.md
+    - name: Create and use Custom APIs (Preview)
+      href: custom-api.md 
+      items:
+      - name: Create a Custom API in the maker portal (Preview)
+        href: create-custom-api-maker-portal.md
+      - name: Create a Custom API with code (Preview)
+        href: create-custom-api-with-code.md
+      - name: Create a Custom API with solution files (Preview)
+        href: create-custom-api-solution.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
@@ -343,6 +355,8 @@
       href: isv-app-management-appsource-checker.md
     - name: Connector Certification 
       href: isv-app-management-certification.md
+    - name: App usage analytics
+      href: isv-app-usage-analytics.md
 - name: Create client applications
   href: connect-cds.md
   items:
@@ -353,7 +367,7 @@
       href: authenticate-dot-net-framework.md
     - name: Use OAuth
       href: authenticate-oauth.md
-    - name: Office365 authentication with WS-Trust
+    - name: Microsoft 365 authentication with WS-Trust
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
     href: walkthrough-register-app-azure-active-directory.md

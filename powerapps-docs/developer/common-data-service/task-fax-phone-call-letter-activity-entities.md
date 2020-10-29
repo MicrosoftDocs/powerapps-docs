@@ -17,6 +17,8 @@ search.app:
 ---
 # Task, fax, phone call, and letter activity entities
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This section contains information about the entities that enable you to manage core activities that are performed in a relationship management solution.  
 ## In This Section  
  [Fax Entity](reference/entities/fax.md)  

@@ -23,6 +23,8 @@ search.app:
 ---
 # Use InvalidPluginExecutionException in plug-ins and workflow activities
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Supportability, Usability
 
 **Impact potential**: Medium

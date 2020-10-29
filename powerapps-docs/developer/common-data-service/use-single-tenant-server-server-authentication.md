@@ -17,6 +17,8 @@ search.app:
 ---
 # Use Single-Tenant server-to-server authentication
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The single-tenant server-to-server scenario typically applies for enterprise organizations that have multiple Common Data Service environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.  
   
  An enterprise can create a web application or service to connect to any Common Data Service environments associated with a single Azure Active Directory (Azure AD) tenant.
@@ -98,7 +100,7 @@ To create an unlicensed "application user" in your environment, follow these ste
 7. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
 
 > [!NOTE]
-> In an environment, only one Application User for each Azure AD registered application is supported.
+> In an environment, only one Application User for each Azure AD registered application is supported. You will not be able to change the primary email address or username once the application user is created.
 
 > [!IMPORTANT]
 > When developing a real-world application using S2S, you should use a custom security role which can be stored in a solution and distributed along with your application.

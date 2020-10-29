@@ -17,6 +17,8 @@ search.app:
 ---
 # Write a plug-in
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The process of writing, registering, and debugging a plug-in is:
 
 1. **Create a .NET Framework Class library project in Visual Studio**

@@ -2,7 +2,7 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 08/27/2020
+ms.date: 10/22/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -18,6 +18,8 @@ search.app:
   - D365CE
 ---
 # Import solutions
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -47,7 +49,7 @@ To import a solution:
   
 1. Information about the solution is displayed. By default, in the **Advanced settings** section, if SDK messages and flows exist in the solution, they will be imported. Clear the **Enable SDK messages and flows included in the solution** option if you want them to import in an inactive state. 
 
-1. If your solution contains [connection references](create-connection-reference.md), you’ll be prompted to select the connections you want. If a connection does not already exist, create a new one. Click **Next**.
+1. If your solution contains [connection references](create-connection-reference.md), you’ll be prompted to select the connections you want. If a connection does not already exist, create a new one. Select **Next**.
 
 1. If your solution contains [environment variables](EnvironmentVariables.md), you will be prompted to enter values. You will not see this screen if value(s) are already present in your solution or the target environment. 
 
@@ -76,15 +78,24 @@ During export of unmanaged solutions, some forms that aren't modified get export
 
 ### *Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form <formid>* message during solution import
 
-This error can occur when the form you are importing doesn’t exist in the target environment and the form is imported for the first time. The solution you are importing has only form changes (diff) in the form XML when it should have the full form XML. A solution should only import a diff form XML when the form is already present in the environment and you’re importing the changes.  To verify, open your solution’s customizations.xml file and search for the FormXml node using the form id that appears in the error message. If the form XML contains an attribute named `solutionaction`, then the form XML is a diff. To resolve this scenario the form XML must be a full form XML (should not contain the solutionaction attribute) and can be obtained from the instance this form was originally created in as unmanaged.
+This error can occur when the form you are importing doesn’t exist in the target environment and the form is imported for the first time. The solution you are importing has only form changes (diff) in the form XML when it should have the full form XML. A solution should only import a diff form XML when the form is already present in the environment and you’re importing the changes.  To verify, open your solution’s customizations.xml file and search for the FormXml node using the form ID that appears in the error message. If the form XML contains an attribute named `solutionaction`, then the form XML is a diff. To resolve this scenario the form XML must be a full form XML (should not contain the solutionaction attribute) and can be obtained from the instance this form was originally created in as unmanaged.
 
 ### *Microsoft.Crm.CrmException: You cannot delete this form because it is the only fallback form of type main for the 'Entity' entity. Each entity must have at least one fallback form for each form type* message during solution upgrade or uninstall
 
-This error occurs when a solution upgrade or uninstall attempts to delete the last remaining form for an entity. This behavior is by design. Each entity must be able to display a form for any valid user. Therefore, at least one form must be designated as a fallback form. A fallback form is available to users whose security roles do not have any forms explicitly assigned to them. To workaround this issue, create a temporary form configured as the fallback form for the entity, and then try the upgrade or uninstall again. More information: [Set the fallback form for an entity](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-an-entity)
+This error occurs when a solution upgrade or uninstall attempts to delete the last remaining form for an entity. This behavior is by design. Each entity must be able to display a form for any valid user. Therefore, at least one form must be designated as a fallback form. A fallback form is available to users whose security roles do not have any forms explicitly assigned to them. To work around this issue, create a temporary form configured as the fallback form for the entity, and then try the upgrade or uninstall again. More information: [Set the fallback form for an entity](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-an-entity)
 
 ### *Solution cannot be deleted due to dependencies from other components in the system* message when uninstalling a solution
 
 This issue can occur when the solution contains components that are referenced by other solutions on top of it in the layer stack. To resolve this issue, either delete the component or remove the dependency from the solution you’re trying to uninstall. More information: [Removing dependencies](/power-platform/alm/removing-dependencies)
+
+### Newly added components don’t appear in the app after importing an update to the app 
+
+A model-driven app change that uses **All** when selecting a component, such as a view, aren’t reflected after importing an update to the app in the target environment.  This can happen when the following are true:
+
+1. You didn’t initially select **All** in the app designer but selected the components individually. For example, you select two views, and then export the app in a managed solution from your development environment and imported it to your test (target) environment.
+2. Then you created another solution with the same app in the development environment. You selected **All** to select all views in the app designer. The solution is then exported as managed from your development environment and imported into your test (target) environment.
+
+To work around this behavior, select each component individually, such as the newly added views described in step 2, rather than select All.
 
 ### See also
 

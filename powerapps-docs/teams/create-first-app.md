@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/24/2020
-ms.author: tapanm
+ms.author: jshum
 ms.reviewer: 
 ---
 
@@ -47,16 +47,6 @@ After installing the Power Apps app from the Teams store:
 
 > [!NOTE]
 > Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
-
-### Notification
-
-Once the environment gets created, you'll see a notification on the bottom-right side of Teams.
-
-![Bottom notification](media/notification-bottom.png "Bottom notification")
-
-The notification also appears in Teams Activity.
-
-![Activity notification](media/notification-activity.png "Activity notification")
 
 ## Creating an app in a team with a Microsoft 365 Group
 

@@ -17,6 +17,8 @@ search.app:
 ---
 # Custom activities
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, you can create custom activities to support the communication needs of a business such as instant messaging (IM) and Short Message Service (SMS). To create a custom activity in Common Data Service, create a custom entity, and specify it as an activity entity using the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsActivity> property.  
   
  However, unlike other custom entities, you can’t specify a primary attribute for a custom activity because, by default, each custom activity must have a primary attribute named ”Subject”.  

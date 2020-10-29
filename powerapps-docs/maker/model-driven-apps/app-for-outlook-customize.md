@@ -6,6 +6,7 @@ author: mduelae
 ms.author: mkaur
 manager: kvivek
 ms.date: 06/19/2019
+ms.service: powerapps
 ms.topic: article
 applies_to: 
   - Dynamics 365 (online)
