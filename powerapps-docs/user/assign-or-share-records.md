@@ -60,7 +60,7 @@ Use advanced find to search for records and then reassign them to someone else. 
    > [!div class="mx-imgBorder"]
    > ![Advanced find](media/assign3.png "advacned find")
    
-2. Use the [advanced find search](advanced-find.md) to find records that you want to assigned to someone else. For example, to look for active record types that are **Challenges**, in **Look for:** enter **Challenges** and status equals **Active**. Then select **Results** to run the query.
+2. Use the [advanced find search](advanced-find.md) to find records that you want to assign to someone else. For example, to look for active record types that are **Challenges**, in **Look for:** enter **Challenges** and status equals **Active**. Then select **Results** to run the query.
 
     > [!div class="mx-imgBorder"]
     > ![Enter search query](media/reassign-5.png "Enter search query")
