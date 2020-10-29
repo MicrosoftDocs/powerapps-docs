@@ -22,6 +22,61 @@ search.app:
 
 This article describes the differences between Common Data Service SQL and Transact-SQL. Common Data Service SQL is a subset of Transact-SQL.
 
+## Data types
+
+In a SQL database, each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
+
+More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)
+
+### [Supported](#tab/supported)
+
+- bigint
+- bit
+- char
+- datetime
+- decimal
+- float
+- int
+- money
+- nchar
+- numeric
+- nvarchar*
+- real
+- smalldatetime
+- smallint
+- smallmoney
+- tinyint
+- uniqueidentifier
+- varchar*
+- picklist
+- lookup
+- primarykey
+- customer
+- owner
+- state
+- status
+- multiselectpicklist
+
+### [Not supported](#tab/not-supported)
+
+- binary
+- image
+- ntext
+- nvarchar(max)
+- sql_variant
+- text
+- timestamp
+- varbinary
+- varchar(max)
+- virtual
+- partylist
+- HierarchyId
+- managedproperty
+- file
+- xml
+
+---
+
 ## Functions
 
 Learn about the categories of built-in functions you can use with Common Data Service environments through the SQL endpoint.
@@ -188,7 +243,7 @@ More information: [Language Elements (Transact-SQL)](/sql/t-sql/language-element
 
 ---
 
-### Language elements general
+### Language elements General
 
 #### [Supported](#tab/supported)
 
@@ -313,6 +368,51 @@ Hints are not supported.
 #### [Not supported](#tab/not-supported)
 
 - FREETEXT (planned)
+
+---
+
+## Statements
+
+A SQL statement is an atomic unit of work and either completely succeeds or completely fails. A SQL statement is a set of instruction that consists of identifiers, parameters, variables, names, data types, and SQL reserved words that compiles successfully. 
+
+More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
+
+### [Supported](#tab/supported)
+
+- DQL
+  - SELECT column
+  - SELECT expression
+  - SELECT STAR
+  - SELECT distinct
+  - SELECT TOP
+  - SELECT SET Variable
+  - All JOIN types
+  - All WHERE conditions
+  - All nested queries (SELECT, FROM, WHERE)
+  - Union
+  - [GROUP BY](#select-group-by)/Having
+- General
+  - IF THEN ELSE
+  - DECLARE variable
+
+
+### [Not supported](#tab/not-supported)
+
+- DDL
+- DML
+- TCL
+- SCS
+- DCL
+- Stored Procedure
+- DQL
+  - Pivot (planned)
+  - DQL XML function
+  - DQL JSON function
+  - CUBE and ROLLUP (planned)
+  - Duplicate columns
+  - Without unique column name and alias (planned)
+- General
+  - WHILE LOOP
 
 ---
 
