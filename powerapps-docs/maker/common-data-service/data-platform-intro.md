@@ -39,6 +39,22 @@ Standard and custom entities within Common Data Service provide a secure and clo
 
 For more information, see [Why choose Common Data Service?](why-cds-overview.md).
 
+## Terminology updates
+
+Responding to customer feedback and data from user research, effective November 2020, we are making terminology updates to make usage more intuitive and more productive. The terminology updates are reflected below and are in the process of rolling out across Microsoft Power Platform.
+
+|Legacy term |Current term |
+|--|--|
+|Entity, entities	|Table, tables|
+|Field, fields<br/>Attribute, attributes|	Column, columns|
+|Record, records|	Row, rows|
+|Option set, option sets<br/>Picklist, picklists|	Choice, choices
+Two options|	Yes/No|
+ 
+> [!NOTE]
+> These terminology changes aren’t applicable to any APIs or messages in the Common Data Service web services. For example, <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> messages will continue to have the same name. 
+
+
 ## Dynamics 365 and Common Data Service
 
 Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Service or Dynamics 365 Talent, also use the Common Data Service to store and secure data used by the applications. This enables you to build apps using Power Apps and the Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration.
