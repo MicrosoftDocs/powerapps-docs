@@ -28,7 +28,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-As an ISV, you need data like install failure details or failure count of the application to quickly resolve the issues for the customers. You can use the install failures feature to get the app installation failure data. The install failure features makes it easy for you to quickly resolve the install failures that customer encounter by providing the detailed error logs thus reducing the time for the customers to get the issues resolved.
+As an ISV, you need data like failure details or failure count to quickly resolve the issues for the customers. You can use the install failures feature to get the install failures data. 
+
+The install failures features makes it easy for you to quickly resolve the issues that customer encounter while installing your application by providing the detailed error logs thus reducing the time for the customers to get the issues resolved.
 
 With the install failures feature, you can see the install failures data by date, GEO, package, and by solution version. You can also see the failure details on the install failures dashboard. 
 
