@@ -1,6 +1,6 @@
 ---
 title: Configuration guide for the Return to the Workplace solution administrator
-description: Provides an overview of Return to the Workplace Solution.
+description: Provides an overview of the Return to the Workplace solution.
 author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
@@ -22,7 +22,7 @@ This article provides step-by-step instructions to IT administrators for configu
 
 ## Prerequisites
 
-- The environment needs to have all the Return to the Workplace components in place with the model-driven apps, canvas apps, and Power BI dashboards.
+The environment needs to have all Return to the Workplace components in place with the model-driven apps, canvas apps, and Power BI dashboards.
 
 ## Plan reopening phases
 
@@ -243,7 +243,7 @@ The facility sample data file is available in the package. When you want to impo
 
 ## Specify solution settings
 
-The overall solution requires certain configurations to ensure that the user has the correct information. You can use solution settings to configure your own terms of agreement, health terms of agreement, and contact email, etc. You can also use themes to tailor the experience to your company branding.
+The overall solution requires certain configurations to ensure that the user has the correct information. You can use solution settings to configure your own terms of agreement, health terms of agreement, and contact email. You can also use themes to tailor the experience to your company branding.
 
 When setting up the solution, do the following:
 
@@ -255,16 +255,16 @@ When setting up the solution, do the following:
 
 With solution settings, you define system settings unique to your company. Solution settings are linked to a facility group or to the entire organization, which makes it possible to differentiate them for facilities in that group. One solution setting will act as the default and will be applicable for every facility, which will be the solution setting record that has an empty facility group.
 
-Some of these settings have impact on the Employee app. The solution setting record that applies, is found by matching the facility group of the default facility of that user to settings. If no record is found or the user has no default facility set, the default solution settings record is used.
+Some of these settings have impact on the Employee app. The solution setting record that applies is found by matching the facility group of the default facility of that user to settings. If no record is found or the user has no default facility set, the default solution settings record is used.
 
-To set solution settings:
+**To set solution settings**
 
 1. Select **Solution Settings** in the left pane, and then select **New**.
 
    > [!div class="mx-imgBorder"]
    > ![Solution Settings](media/solution-admin-view-solution-settings.png)
 
-2. Enter the appropriate values in the fields:
+2. Enter the appropriate values in the fields.
 
    > [!div class="mx-imgBorder"]
    > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
@@ -280,10 +280,10 @@ To set solution settings:
    | Allow QR codes | Enables QR code on the pass in the Employee app.  |
    | Allow Guest Registrations | Enables employees to register guest on their bookings in the Employee app.  |
    | Allow Share Guest Registrations | Enables employees to share passes with guests. |
-   | Health & Safety email | E-mail address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
-   | Health & Safety Instructions | General instruction provided to employee in the Employee app when access is blocked by the case manager. |
-   | General Terms & Agreement | Showed in the Employee app during the booking process. |
-   | Health Terms & Agreement | Showed in the Employee app during the booking process. |
+   | Health & Safety email | Email address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
+   | Health & Safety Instructions | General instructions provided to employee in the Employee app when access is blocked by the case manager. |
+   | General Terms & Agreement | Shown in the Employee app during the booking process. |
+   | Health Terms & Agreement | Shown in the Employee app during the booking process. |
    |||
 
 3. On the **Guest** tab, add values for the guest-related settings.
@@ -293,15 +293,15 @@ To set solution settings:
 
    | **Field**              | **Description**                                |
    |------------------------|------------------------------------------------|
-   | Guest Health Terms & Agreement | Showed in the Employee app during the guest registration process.|
-   | Guest Privacy Terms & Agreement | Showed in the Employee app during the guest registration process. |
+   | Guest Health Terms & Agreement | Shown in the Employee app during the guest registration process.|
+   | Guest Privacy Terms & Agreement | Shown in the Employee app during the guest registration process. |
    |||
 
 ## Set duplicate detection rules for employee cases 
 
 For active employee cases, the number of cases can be limited to one active case per employee. When you want to enable this, you need to create a **Duplicate rule**. 
 
-1. Go to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
 2. Select the environment in which the app is located.
 
@@ -315,7 +315,7 @@ For active employee cases, the number of cases can be limited to one active case
    > [!div class="mx-imgBorder"]
    > ![Data Management](media/solution-data-management.png "Data Management")
 
-5. Select **New** and enter appropriate values in the fields: 
+5. Select **New** and enter the appropriate values in the fields. 
 
    | **Field**   | **Description**                     |
    |-------------|-------------------------------------|
@@ -360,7 +360,10 @@ You can use a theme to enhance the user experience.
    
 ## Contoso sample data
 
-To try out the solution, when installing the Return to the Workplace solution, Contoso sample data is installed with it. This sample data includes data around the entities listed below. Advised is to import or create your own data for these entities.
+
+<!-- editor note: Please review the rewording in the following paragraph. -->
+
+When installing the Return to the Workplace solution, Contoso sample data is installed with it so you can try out the solution. The sample data includes data around the following entities. We advise you to import or create your own data for these entities.
 
 - Facilities
 - Facility Groups
@@ -368,31 +371,31 @@ To try out the solution, when installing the Return to the Workplace solution, C
 - Employees
 - Solution Settings
 
-Usage sample data is generated by four flows, these need to be disabled when you are not using the Contoso sample data or when accessing the solution in a production environment.
+Usage sample data is generated by four flows. These need to be disabled when you are not using the Contoso sample data or when accessing the solution in a production environment.
 
 - Sample Data - Generate Facility transitions
 
-This flow will loop over all the facilities and randomly move a facility one phase backward or forward. By generating and approving a Reopen Phase Transition record. Prerequisites: Facility should be in active state and has a Reopen phase set.
+  This flow will loop over all the facilities and randomly move a facility one phase backward or forward by generating and approving a Reopen Phase Transition record. Prerequisites: Facility should be in active state and have a Reopen phase set.
 
 - Sample Data - Generate Employee Records
 
-This flow mimics employees using the app. It will create a booking, attestation, and sentiment record for the current day for each active employee. Prerequisites: Employees record should be active, have a default facility assigned and an assigned area that is part of that default facility.
+  This flow mimics employees using the app. It will create a booking, attestation, and sentiment record for the current day for each active employee. Prerequisites: Employee's record should be active, have a default facility assigned, and an assigned area that is part of that default facility.
 
 - Sample Data - Guest Registrations
 
-This flow adds five guests to bookings created by the flow. Each booking receives one guest. This flow creates a new contact record for each guest every time it triggers.
+  This flow adds five guests to bookings created by the flow. Each booking receives one guest. This flow creates a new contact record for each guest every time it triggers.
 
 - Sample Data - Create and update employee cases
 
-This flow runs twice a day and randomly moves cases one step forward through the process. For each employee, a case is created if none exists. If a case exists, it is moved forward one step in the process. If the case reaches the **Resolved** stage, it will be closed. When moving from opening to investigation, it creates a linked case facility record based on the employees' default facility. Prerequisites: Employees records should be in active state and have a default facility selected.
+  This flow runs twice a day and randomly moves cases one step forward through the process. For each employee, a case is created if none exists. If a case exists, it is moved forward one step in the process. If the case reaches the **Resolved** stage, it will be closed. When moving from opening to investigation, it creates a linked case facility record based on the employee's default facility. Prerequisites: Employee's records should be in active state and have a default facility selected.
 
 - Sample Data - Visits
 
-This flow runs twice a day and creates a visit record for each employee for their default facility. When an employee record is in active state, has a default facility assigned and an assigned area that is part of that default facility, then the visit will also be linked to a booking or attestation record.
+  This flow runs twice a day and creates a visit record for each employee for their default facility. When an employee record is in an active state, has a default facility assigned, and an assigned area that is part of that default facility, then the visit will also be linked to a booking or attestation record.
 
 ## Bulk record deletion
 
-Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period. Also to reduce storage, you can delete deactivated share guest registrations or employee attestations after a certain period of time.
+Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period. Also, to reduce storage, you can delete deactivated share guest registrations or employee attestations after a certain period of time.
 
 **To create bulk record-delete jobs**
 
