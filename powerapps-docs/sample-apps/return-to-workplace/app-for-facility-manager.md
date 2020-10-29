@@ -171,9 +171,9 @@ To access the facility manager dashboard:
 1. On the left pane, select **Facility**. The default view, **My Facilities**, shows only your facilities. When switching the views, you can see all the active or inactive facilities. 
 
 2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information on facility usage, guides reopening, and analyzes the occupancy at a facility. The report has three main tabs: 
-- Facility 
-- Virus Spread
-- Employee Activity
+   - Facility 
+   - Virus Spread
+   - Employee Activity
 
 **Facility**
 
