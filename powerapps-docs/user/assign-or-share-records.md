@@ -44,8 +44,8 @@ If you want to keep ownership of the record but let someone else work on it with
     
     - Select **User or Team** and then enter the name of the user or team or use the lookup to find them. Or, select **New Record** to create a new user or team record. When you're done select **Assign**.
 
-     > [!div class="mx-imgBorder"]
-     > ![Use the lookup to reassign a record](media/reassign-3.png "Use the lookup to reassign a record")
+      > [!div class="mx-imgBorder"]
+      > ![Use the lookup to reassign a record](media/reassign-3.png "Use the lookup to reassign a record")
 
 
 ## Use advanced find to reassign records
@@ -124,9 +124,19 @@ Use advanced find to search for records and then reassign them to someone else. 
 2. On the command bar, select **Share**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select share to share record](media/share-1.png "[Select share to share to share a record")
+   > ![Select share to share record](media/share-1.png "Select share to share to share a record")
    
  3. On the share dialog box, select **Add User/Team**.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Select add user or team](media/share-2.png "[Select add user or team")
+    > [!div class="mx-imgBorder"]
+    > ![Select add user or team](media/share-2.png "Select add user or team")
+   
+ 4. On the **Look up Rcords** dialog box, select the **Look for** menu and choose **User** or **Team**.
+ 
+    > [!div class="mx-imgBorder"]
+    > ![Choose user or team from the drop down menu](media/share-3.png "Choose user or team from the drop down menu")
+    
+ 5. Use the lookup to find the user or team and select the name and choose **Select**.
+ 
+     > [!div class="mx-imgBorder"]
+     > ![Select the user name and then choose select](media/share-4.png "Select the user name and then choose select")
