@@ -135,8 +135,8 @@ For example:
 
 * **Value( "12,345.678", "en-US" )** or **Value( "12,345.678" )** when located where "en-US" is the user's language returns the number **12345.678**, ready for calculations.
 * **DateValue( "1/2/01", "es-ES" )** or **DateValue( "1/2/01" )** when located where "es-ES" is the user's language returns the date/time value **February 1, 2001 at midnight**.
-* **TimeValue( "11:43:02", "fr-FR" )** or **DateValue( "11:43:02" )** when located where "fr-FR" is the user's language returns the date/time value **January 1, 1970 at 11:43:02**.
-* **TimeDateValue( "11:43:02 1/2/01", "de-DE" )** or **DateValue( "11:43:02" )** when located where "de-DE" is the user's language returns the date/time value **February 1, 2001 at 11:43:02**.
+* **TimeValue( "11:43:02", "fr-FR" )** or **TimeValue( "11:43:02" )** when located where "fr-FR" is the user's language returns the date/time value **January 1, 1970 at 11:43:02**.
+* **DateTimeValue( "11:43:02 1/2/01", "de-DE" )** or **DateTimeValue( "11:43:02 1/2/01" )** when located where "de-DE" is the user's language returns the date/time value **February 1, 2001 at 11:43:02**.
 
 For more information, see the documentation for the **[Value](functions/function-value.md)** and **[DateValue, TimeValue, and DateTimeValue](functions/function-datevalue-timevalue.md)**  functions and [working with dates and times](show-text-dates-times.md).
 
