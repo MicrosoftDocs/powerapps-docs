@@ -170,9 +170,12 @@ To access the facility manager dashboard:
 
 1. On the left pane, select **Facility**. The default view, **My Facilities**, shows only your facilities. When switching the views, you can see all the active or inactive facilities. 
 
-2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information on facility usage, guides reopening, and analyzes the occupancy at a facility. The report has three main tabs: **Facility**, **Virus Spread**, and **Employee Activity**.
+2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information on facility usage, guides reopening, and analyzes the occupancy at a facility. The report has three main tabs: 
+- Facility 
+- Virus Spread
+- Employee Activity
 
-#### Facility
+**Facility**
 
 - **Readiness** shows the status of the readiness checks needed for a facility’s safe reopening. At the top, the phase is shown together with the reproductive number, which is the average number of people to whom COVID-19 might be transmitted by an infected individual, and the average sentiment. In the middle, you find the checks separated into categories (for example, Employee Experience or Communications) that can be expanded to show the progress of individual actions. 
 
@@ -197,7 +200,7 @@ To access the facility manager dashboard:
     > [!div class="mx-imgBorder"]
     > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - Readiness")
 
-#### Virus Spread
+**Virus Spread**
 
 This tab shows data from public health sources by country (and by state in the United States):
 
@@ -210,7 +213,7 @@ This tab shows data from public health sources by country (and by state in the U
   > [!div class="mx-imgBorder"]
   > ![Facility manager dashboard - Virus spread](media/pbi-dash-facility-manager-virus-spread.png "Facility manager dashboard - Virus spread")
 
-#### Employee Activity
+**Employee Activity**
 
 This tab summarizes the employee engagement and Employee Return to the Workplace app usage over a period. The following metrics are shown:
 
