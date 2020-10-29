@@ -85,7 +85,7 @@ Use advanced find to search for records and then reassign them to someone else. 
  1. Go to **Settings** > **Advanced Settings**.
  
     > [!div class="mx-imgBorder"]
-   > ![Go to settings and advanced settings](media/settings-gear-icon.png "Go to settings and advanced settings")
+    > ![Go to settings and advanced settings](media/settings-gear-icon.png "Go to settings and advanced settings")
  
  2. From the top menu navigate from **Settings** > **Security**.
      > [!div class="mx-imgBorder"]
@@ -97,15 +97,15 @@ Use advanced find to search for records and then reassign them to someone else. 
 
  5. On the command bar, select **REASSIGN RECORDS**.
  
-   > [!div class="mx-imgBorder"]
-   > ![Reassign all records](media/assign5.png "Reassign all records")
+    > [!div class="mx-imgBorder"]
+    > ![Reassign all records](media/assign5.png "Reassign all records")
    
  4. On the **Reassign Records** dialog box choose how to want to reassign all the records and then select **OK**.
  
     > [!div class="mx-imgBorder"]
     > ![Reassign all records to user or team](media/assign6.png "Reassign all records to user or team")
  
-  > [!NOTE]
+   > [!NOTE]
    > - The **Reassign Records** option will reassign all records regardless of their status. Inactive and active records will be reassigned to the other user or team. This will also deactivate all activated processes including business rules and workflows when the record is reassigned to another user or team. The new owner must activate the processes that was deactivated when the record is reassigned.  
    > - When there is a large amount records to reassign, the system may take a while to process. 
    > - If there is an issue during the reassignment process such as the user that the records are being reassigned to doesn't have the required privileges then the **Reassign Records** process will stop. The records that are processed before the issue will be updated and saved. For the records that were not saved, you will need reassign the records again using the **Reassign Records** option.
