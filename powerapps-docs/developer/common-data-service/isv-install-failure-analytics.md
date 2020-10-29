@@ -22,18 +22,15 @@ search.app:
   - D365CE
 ---
 
-# App install failure analytics
+# Install failures
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The install failure analytics feature gives the ability to see the  app installation failure data for ISVs. The install failure features makes it easy for ISVs to quickly resolve the customer app install failure issues by providing the detailed error logs thus reducing the time for the customers to get the issues resolved.
+As an ISV, you need data like install failure details or failure count of the application to quickly resolve the issues for the customers. You can use the install failures feature to get the app installation failure data. The install failure features makes it easy for you to quickly resolve the install failures that customer encounter by providing the detailed error logs thus reducing the time for the customers to get the issues resolved.
 
-> [!NOTE]
-> The install failure dashboard shows the failure data from the last 28 days only.
-
-ISVs can see the details on the app installation failure by date, GEO, and by package version. The install failure dashboard also shows the install error details. 
+With the install failures feature, you can see the install failures data by date, GEO, package, and by solution version. You can also see the failure details on the install failures dashboard. 
 
 > [!div class="mx-imgBorder"]
 > ![Install failure dashboard](media/isv-install-failure-report.png "Install failure dashboard")
