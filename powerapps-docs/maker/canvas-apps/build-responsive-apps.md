@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 09/15/2020
+ms.date: 10/30/2020
 ms.author: emcoope
 search.audienceType:
   - maker
@@ -29,7 +29,7 @@ Responsiveness allows different elements of the app to specify how they:
 
 - Stretch or resize with the screen size changes.
 
-- Maintain or change position with the screen size changes. 
+- Maintain or change positions with the screen size changes. 
 
 > [!NOTE]
 > The new responsive layouts are applicable to the apps that are built for **Tablet** format.
@@ -82,31 +82,23 @@ The Split-screen layout has two sections, each occupying 50% width of the screen
 
 The Sidebar layout has a fixed width sidebar on the left. The main body consists of a fixed height header, and the main section takes up the rest of the screen width.  By default, the template has the same behavior on mobile, however some customizations are recommended based on the UI pattern desired for the mobile experience. 
 
-<!-- #### Sidebar layout considerations for mobile devices
-
-The Sidebar layout can be modified to implement a popular design pattern for mobile apps such as a hamburger menu that appears and allows the user to navigate to a screen or a record and then disappears from the UI. By adding formulas to conditionally show the sidebar or the main components, this pattern can be implemented with auto-layout containers.
-
-### Header, main section, footer
-
-The Header, main section, footer layout is a popular design for webpages and apps that consists of a fixed height for header and footer, and the main section takes up the rest of the screen height. The same layout is displayed both on large screens as well as mobile devices. -->
-
 ### Working with containers 
 
 Containers are building blocks of all the responsive design. A container can be an [auto-layout container](#auto-layout-containers) in vertical or horizontal direction, or a fixed-layout container, which in the future will support constraints. 
 
-Below are some tips for building your app’s UI with containers: 
+Below are some tips for building your app’s UI with containers:
 
-- Always create UI elements that form a UI entity inside a container 
+- Always create UI elements that form a UI entity inside a container.
 
 - Allows the container to have its own responsive properties and settings to specify how it is positioned or resized on different screen sizes.
 
 - Allows you to change how its child components are laid out with respect to responsiveness. 
 
-Choose one of two layout modes for a container: Manual layout or Auto layout (horizontal or vertical) 
+Choose one of two layout modes for a container: Manual layout or auto-layout (Horizontal or Vertical) 
 
 ### Auto-layout containers 
 
-Two controls, `Vertical layout container` and `Horizontal layout container` can be used to automatically lay out child components. These containers determine the position of the child components so that you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components.  
+Two controls, `Vertical container` and `Horizontal container` can be used to automatically lay out child components. These containers determine the position of the child components so that you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components.  
 
 #### When to use auto-layout containers
 
@@ -145,9 +137,24 @@ The following properties can be set on any child for an auto-layout container (v
 |Property|Description|Parameters/Value|
 |--------|-----------|----------|
 |AlignInContainer|Defines how the individual component is aligned to the parent. The default value, `SetByContainer`, inherits the value from the parent’s `LayoutAlignItems` property, while other properties can be used to customize the alignment for the individual child component. | SetByContainer, Start, End, Center, Stretch | 
-|GrowthPortions|Defines how the individual component grows when there is more screen real-estate assigned to its parent.  The number represents the portion of the extra space given to the component out of all the available extra space claimed by children of its parent.  For example, if child A has `GrowthPortions` set to 1 and child B has `GrowthPortions` set to 2, child A gets 1/3 of the extra space available while child B gets 2/3 of the extra available space.| Integer |
-|MinWidth, MinHeight|When GrowthPortions is used, represent the minimum size of the component in the direction of the GrowthPortions (that is, the parent’s LayoutDirection) | Number |
+|FillPortions|Defines how the individual component grows when there is more screen real-estate assigned to its parent.  The number represents the portion of the extra space given to the component out of all the available extra space claimed by children of its parent.  For example, if child A has `FillPortions` set to 1 and child B has `FillPortions` set to 2, child A gets 1/3 of the extra space available while child B gets 2/3 of the extra available space.| Integer |
+|MinWidth, MinHeight|When FillPortions property is used, represent the minimum size of the component in the direction of the FillPortions (that is, the parent’s LayoutDirection) | Number |
 |||
+
+## Known issues
+
+- Certain combinations of layout container properties are incompatible or can produce undesirable outputs, for example:
+   - If the container’s `LayoutWrap` property is enabled, the `AlignInContainer` property setting is ignored on child controls. 
+   - If the container’s `LayoutWrap` property is disabled and the container’s primary-axis overflow is set to **Scroll** (Horizontal Overflow for Horizontal containers or Vertical Overflow for Vertical containers), it is recommended to set the `LayoutJustify` property to either **Start** or **Space Between**. 
+   - The **Center** or **End** options can cause child controls inaccessible when the container is too small to display all the controls, even though the `Overflow` property is set to **Scroll**. 
+
+- You can’t resize or reposition the controls on the canvas app because the drag & drop controls are disabled in the layout containers. Instead, use the layout container properties to achieve the desired size and positioning. Control ordering can be changed via the **Tree view**, or by using the arrow keys as shortcuts. 
+
+- The **Data table**, **Charts**, and **Add Picture** controls are currently not supported in the layout containers. 
+
+- Some of the layout containers properties are hidden for child controls. The hidden properties can still be accessible via the formula bar or from the advanced panel. However, these properties will be ignored even if they are set in these places. 
+
+- When controls are moved into a layout container (for example, when copy or pasting the controls), they are inserted into the container by their order in the **Tree view**.
 
 ## See also
 
