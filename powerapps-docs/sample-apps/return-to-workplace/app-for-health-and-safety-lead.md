@@ -168,16 +168,20 @@ Case managers are the resources who manage employee cases.
 
 #### Open
 
-This is the first process stage. The Health and Safety Lead starts the case and can verify that all basic information is available. The Health and Safety Lead becomes the case manager and will verify the employee details and assign the case to a different case manager. The key piece of data to be captured and recorded before moving to the next stage is:
+This is the first process stage. The Health and Safety Lead starts the case and can verify that all basic information is available. The Health and Safety Lead becomes the case manager and will verify the employee details and assign the case to a different case manager. 
 
-  Health & Safety Leader: Case manager owning the case.
+The key piece of data to be captured and recorded before moving to the next stage is:
+
+- Health & Safety Leader: Case manager owning the case.
 
   > [!div class="mx-imgBorder"]
   > ![Open stage](media/health-safety-bpf-open1.png "Open stage")
 
 #### Investigating
 
-In this process stage, the case manager contacts the employee to verify how the employee is feeling, and continues to investigate by capturing and recording the case-related data and updating fields on the case form. The key pieces of data to be captured and recorded before moving to the next stage are:
+In this process stage, the case manager contacts the employee to verify how the employee is feeling, and continues to investigate by capturing and recording the case-related data and updating fields on the case form. 
+
+The key pieces of data to be captured and recorded before moving to the next stage are:
 
 - Employee Contacted (Yes/No)
 
@@ -190,9 +194,11 @@ In this process stage, the case manager contacts the employee to verify how the 
 
 #### Monitoring
 
-In this process stage, the case manager monitors and manages the cases, ensuring that guidance or instructions that were provided are being followed and that expected target dates for being eligible to return to work are updated for the employee. This stage can be regarded as a holding stage, meaning that it's clear when the next moment of contact will be and when to follow up on the case. The key piece of data to be captured and recorded before moving to the next stage is:
+In this process stage, the case manager monitors and manages the cases, ensuring that guidance or instructions that were provided are being followed and that expected target dates for being eligible to return to work are updated for the employee. This stage can be regarded as a holding stage, meaning that it's clear when the next moment of contact will be and when to follow up on the case. 
 
-  Employee Instructions Provided (Yes/No)
+The key piece of data to be captured and recorded before moving to the next stage is:
+
+- Employee Instructions Provided (Yes/No)
 
   > [!div class="mx-imgBorder"]
   > ![Monitoring](media/health-safety-bpf-monitoring.png "Monitoring")
@@ -204,9 +210,11 @@ A case manager can inform an employee that the facility is not available to ente
 
 #### Resolve
 
-In this process stage, the case manager completes the process by resolving the case, and selects **Finish**. After the process is finished, the employee case becomes inactive. The inactive employee case is then considered completed. The key piece of data to be captured and recorded is:
+In this process stage, the case manager completes the process by resolving the case, and selects **Finish**. After the process is finished, the employee case becomes inactive. The inactive employee case is then considered completed. 
 
-  Employee Instructions Provided (Yes/No)
+The key piece of data to be captured and recorded is:
+
+- Employee Instructions Provided (Yes/No)
 
   > [!div class="mx-imgBorder"]
   > ![Resolve](media/health-safety-bpf-resolve.png "Resolve")
