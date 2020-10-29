@@ -19,7 +19,7 @@ search.app:
 ---
 # Assign or share records
 
-When you create a record, you are the owner of the record. If you would like another person in your organization to take owership of the record, then you can assign the record to that person. You can assign a record to a user or team. You can also assign a record to yourself that that another user owns but you need to have system administrator privilege to do this.
+When you create a record, you are the owner of the record. If you would like another person in your organization to take ownership of the record, then you can assign the record to that person. You can assign a record to a user or team. You can also assign a record to yourself that that another user owns but you need to have system administrator privilege to do this.
 
 If you want to keep ownership of the record but let someone else work on it with you, then use the **Share** option to share the record. 
 
@@ -39,7 +39,7 @@ For more information on how privileges and access works, see [How access to a re
 
   
 3. In the assign dialog box, select the **Assign to** field and choose one of the following options:
-    - Select **Me** to assign the record to youself and them select **Assign**. Remember only a system administrator can assign a record that belongs to someone else to themself.
+    - Select **Me** to assign the record to yourself and them select **Assign**. Remember only a system administrator can assign a record that belongs to someone else to themself.
     
       > [!div class="mx-imgBorder"]
       > ![Select Me to assign the record to yourself](media/reassign-4.png "Select Me to assign the record to yourself")
@@ -72,7 +72,7 @@ Use advanced find to search for records and then reassign them to someone else. 
    
  4. In the assign dialog box, select the **Assign to** field and choose one of the following options:
  
-    - Select **Me** to assign the record to youself and them select **Assign**. Remember only a system administrator can assign a record that belongs to someone else to themself.
+    - Select **Me** to assign the record to yourself and them select **Assign**. Remember only a system administrator can assign a record that belongs to someone else to themself.
     
     - Select **User or Team** and then enter the name of the user or team or use the lookup to find them. Or, select **New Record** to create a new user or team record. When you're done select **Assign**.
     
@@ -133,7 +133,7 @@ Use advanced find to search for records and then reassign them to someone else. 
     > [!div class="mx-imgBorder"]
     > ![Select add user or team](media/share-2.png "Select add user or team")
    
- 4. On the **Look up Rcords** dialog box, select the **Look for** menu and choose **User** or **Team**.
+ 4. On the **Look up Records** dialog box, select the **Look for** menu and choose **User** or **Team**.
  
     > [!div class="mx-imgBorder"]
     > ![Choose user or team from the drop down menu](media/share-3.png "Choose user or team from the drop down menu")
