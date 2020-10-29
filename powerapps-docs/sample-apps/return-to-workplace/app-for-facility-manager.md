@@ -179,13 +179,19 @@ To access the facility manager dashboard:
 - **Occupancy** provides metrics regarding the facility capacity and usage, such as:
   
   - Facility’s total capacity, and current capacity based on reopening phase.
+  
   - Number of bookings, guest registrations, and visits for the most recent day and daily average for the last seven days.
+  
   - Two charts that can be filtered by date range and to a floor or an area:
+  
     - Employee bookings (or employee bookings and guest registrations) versus capacity by date. Shows the employee bookings (and guest registrations) on a certain date on the total capacity on that date.
+    
     - Average daily occupancy by floor (or floor and area). The dot represents the capacity and the contents show the average employee bookings and average guest registrations.
     
 - **Daily Arrivals** shows booking information to assist in controlling the facility traffic, such as:
+
   - Capacity and visit metrics, busiest weekday, and arrival time window for the last seven days.
+  
   - Two charts that can be filtered by date range and that display number of bookings by arrival window and by weekday.
 
     > [!div class="mx-imgBorder"]
