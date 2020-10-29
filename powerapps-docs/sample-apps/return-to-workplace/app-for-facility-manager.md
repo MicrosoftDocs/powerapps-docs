@@ -14,7 +14,7 @@ ms.reviewer: kvivek
 
 The Facility Safety Management app provides step-by-step instructions to facility managers in the organization to manage the reopening and readiness of their facilities. 
 
-This helps the organizations ensure that they can provide a safe working environment for employees by using the Return to the Workplace solution.
+This helps organizations ensure that they can provide a safe working environment for employees by using the Return to the Workplace solution.
 
 ## App at a glance
 
@@ -43,21 +43,25 @@ The Facility Safety Management app has the following components:
 
 **Reopen Readiness**
 
-- **Phase Transitions** - A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase and its associated checklist based upon the phase's configured readiness factors.
+- **Phase Transitions**: A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase and its associated checklist based upon the phase's configured readiness factors.
+
+
+<!-- editor note: The following doesn't include Employee Bookings, although that's shown in the image. -->
+
 
 **Employee**
 
-- **Employee Sentiment** -  Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees with the Employee Return to the Workplace app.
+- **Employee Attestation**: Keeps track of employee health assessments or attestations based on the questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
 
-- **Employee Attestation** - Keeps track of employee health assessments or attestations based on the questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
+- **Employee Sentiment**: Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees with the Employee Return to the Workplace app.
 
-- **Employee Visits** - Keeps track of the visits. Employee visits are linked to an employee and a booking record.
+- **Employee Visits**: Keeps track of the visits. Employee visits are linked to an employee and a booking record.
 
 **Guests**
 
-- **Guest Registrations** - Keep track of registered guests. Guest registrations are always linked to a booking for an employee. The employee serves as a host. Guests are stored as a contact record of type `Guest`. Guests can be added via the Employee app.
+- **Guest Registrations**: Keeps track of registered guests. Guest registrations are always linked to a booking for an employee. The employee serves as a host. Guests are stored as a contact record of type `Guest`. Guests can be added via the Employee app.
 
-- **Employee Visits** - Keeps track of visits to the facility. Employee visits are linked to an employee and a booking record. 
+- **Employee Visits**: Keeps track of visits to the facility. Employee visits are linked to an employee and a booking record. 
 
 ## Manage facilities 
 
@@ -164,57 +168,55 @@ You can monitor and assess the current status of a facility by reviewing its ass
 
 1. On the left pane, select **Facility**. The default view, **My Facilities**, shows only your facilities. When switching the views, you can see all the active or inactive facilities. 
 
-2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information on facility usage, guide reopening, and analyze the occupancy at a facility.  The report has three main tabs: Facility, Virus Spread, and Employee Activity.
+2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information on facility usage, guides reopening, and analyzes the occupancy at a facility. The report has three main tabs: **Facility**, **Virus Spread**, and **Employee Activity**.
 
-   **Facility**:
+- **Facility**
 
-   The **Readiness** tab shows the status of the readiness checks needed for a facility’s safe reopening. At the top, the phase is shown together with the reproductive number, which is the average number of people to whom COVID-19 may be transmitted by an infected individual, and the average sentiment. In the middle, you find the checks separated into categories (for example, Employee Experience, Communications, etc.) which can be expanded to show the progress of individual actions. 
+  - **Readiness** shows the status of the readiness checks needed for a facility’s safe reopening. At the top, the phase is shown together with the reproductive number, which is the average number of people to whom COVID-19 might be transmitted by an infected individual, and the average sentiment. In the middle, you find the checks separated into categories (for example, Employee Experience or Communications) that can be expanded to show the progress of individual actions. 
 
-   The **Occupancy** tab provides metrics regarding the facility capacity and usage, such as:
-      - Facility’s total capacity, and current capacity based on reopening phase.
-      - Number of bookings, guest registrations, and visits for the most recent day and daily average for the last seven days.
-      - Two charts, that can be filtered by date range, and to a floor or an area:
-          - Employee bookings (or Employee bookings + guest registrations) vs capacity by date. Shows the employee bookings (+ guest registrations) on a certain date on the total capacity on that date.
-          - Average daily occupancy by Floor (or Floor and Area). The dot represents the capacity and the contents show the average employee bookings and average guest registrations. 
+  - **Occupancy** provides metrics regarding the facility capacity and usage, such as:
+  
+    - Facility’s total capacity, and current capacity based on reopening phase.
+    - Number of bookings, guest registrations, and visits for the most recent day and daily average for the last seven days.
+    - Two charts that can be filtered by date range and to a floor or an area:
+      - Employee bookings (or employee bookings and guest registrations) versus capacity by date. Shows the employee bookings (and guest registrations) on a certain date on the total capacity on that date.
+      - Average daily occupancy by floor (or floor and area). The dot represents the capacity and the contents show the average employee bookings and average guest registrations. 
 
-   The **Daily Arrivals** tab shows booking information to assist in controlling the facility traffic, such as:
-      - Capacity and visit metrics, busiest weekday, and arrival time window for the last seven days.
-      - Two charts, which can be filtered by date range, display number of bookings by arrival window, and by weekday.
+- **Daily Arrivals** shows booking information to assist in controlling the facility traffic, such as:
 
-     > [!div class="mx-imgBorder"]
-     > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - Readiness")
+  - Capacity and visit metrics, busiest weekday, and arrival time window for the last seven days.
+  - Two charts that can be filtered by date range and that display number of bookings by arrival window and by weekday.
 
-   - **Virus Spread** tab
+    > [!div class="mx-imgBorder"]
+    > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - Readiness")
 
-      This tab shows data from public health sources by country (by state in the United States):
+- **Virus Spread**
 
-   The **New COVID-19 Cases** tab shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
+  This tab shows data from public health sources by country (and by state in the United States):
+
+  - **New COVID Cases** shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
    
-   The **Fatal COVID Cases** tab shows information for COVID-19 cases with fatalities.
+  - **New Fatal COVID Cases** shows information for COVID-19 cases with fatalities.
    
-   The **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the US is at the state level.
+  - **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual. Data for the United States is at the state level.
+  
+    > [!div class="mx-imgBorder"]
+    > ![Facility manager dashboard - Virus spread](media/pbi-dash-facility-manager-virus-spread.png "Facility manager dashboard - Virus spread")
 
-      - **Fatal COVID Cases show information for COVID-19 cases with fatalities.
+- **Employee Activity**
 
-      - **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the United States is at the state level.
+  This tab summarizes the employee engagement and Employee Return to the Workplace app usage over a period. The following metrics are shown:
 
-      > [!div class="mx-imgBorder"]
-      > ![Facility manager dashboard - Virus spread](media/pbi-dash-facility-manager-virus-spread.png "Facility manager dashboard - Virus spread")
+  - **Employee App Usage** shows the number of times the Employee Return to the Workplace app has been used to obtain a pass.
 
-   - **Employee Activity** tab
+  - **Average sentiment** shows average employee sentiment.
 
-     This tab summarizes the employee engagement and Employee Return to the Workplace app usage over a period. The following metrics are shown:
+  - **Passes generated** shows number of passes generated.
 
-      - Employee App Usage, which shows the number of times the Employee Return to Workplace app has been used to obtain a pass
+    There are two charts. One displays the sentiment by date and the other displays the pass and guest registrations generated versus the number of visits by date, along with the trend over time.
 
-      - Average employee sentiment
-
-      - Number of passes generated
-
-      There are two charts. One displays the sentiment by date and the other displays the pass + guest registrations generated vs. the number of visits by date, along with the trend over time.
-
-      > [!div class="mx-imgBorder"]
-      > ![Facility manager dashboard - Employee activity](media/pbi-dash-facility-manager-employee-activity.png "Facility manager dashboard - Employee activity")
+    > [!div class="mx-imgBorder"]
+    > ![Facility manager dashboard - Employee activity](media/pbi-dash-facility-manager-employee-activity.png "Facility manager dashboard - Employee activity")
 
 ### Exploring the facility
 
