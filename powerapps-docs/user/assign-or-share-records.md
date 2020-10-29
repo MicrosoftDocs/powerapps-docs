@@ -28,7 +28,7 @@ If you want to keep ownership of the record but let someone else work on it with
 1. From a list of records, select the record that you want to assign to someone else. You can select multiple records.
 
    > [!div class="mx-imgBorder"]
-   > ![Select record that you want o reassign](media/reassign-1.png "Select record that you want o reassign")
+   > ![Select record that you want to reassign](media/reassign-1.png "Select record that you want o reassign")
 
 2. On the command bar, select **Assign**. 
 
@@ -111,7 +111,17 @@ Use advanced find to search for records and then reassign them to someone else. 
    > - If there is an issue during the reassignment process such as the user that the records are being reassigned to doesn't have the required privileges then the **Reassign Records** process will stop. The records that are processed before the issue will be updated and saved. For the records that were not saved, you will need reassign the records again using the **Reassign Records** option.
    
  
- 
  ## Share a record with someone else
  
  If you want to keep ownership of the record but let someone else work with it, select **Share**. 
+ 
+ 
+1. From a list of records, select the record that you want to assign to someone else. You can select multiple records.
+
+   > [!div class="mx-imgBorder"]
+   > ![Select record that you want to reassign](media/reassign-1.png "Select record that you want o reassign")
+
+2. On the command bar, select **Share**. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Select share to share record](media/share-1.png "[Select share to share to share a record")
