@@ -23,6 +23,8 @@ When you create a record, you are the owner of the record. If you would like ano
 
 If you want to keep ownership of the record but let someone else work on it with you, then use the **Share** option to share the record. 
 
+For more information on how privileges and access works, see [How access to a record is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
+
 ## Assign a record to a user or team
 
 1. From a list of records, select the record that you want to assign to someone else. You can select multiple records.
@@ -140,3 +142,14 @@ Use advanced find to search for records and then reassign them to someone else. 
  
      > [!div class="mx-imgBorder"]
      > ![Select the user name and then choose select](media/share-4.png "Select the user name and then choose select")
+     
+ 6. Select **Add**. 
+ 
+     > [!div class="mx-imgBorder"].
+     > ![Select add](media/share-5.png "Select add")
+     
+ 7. On the share dialog box, select the type of permissions the user or team has for the record. When you're done, select **Share**   
+ 
+     > [!div class="mx-imgBorder"].
+     > ![Select the type of permissions](media/share-6.png "Select the type of permissions")
+ 
