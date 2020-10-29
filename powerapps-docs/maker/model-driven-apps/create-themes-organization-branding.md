@@ -1,6 +1,6 @@
 ---
 title: "Change the color scheme or add a logo to match your brand  | MicrosoftDocs"
-description: Learn how to create a theme
+description: Learn how to change the color scheme for your app with Power Apps
 ms.custom: ""
 ms.date: 04/30/2020
 ms.reviewer: ""
@@ -111,7 +111,7 @@ The following screenshot shows a portion of the default theme setup.
 ### Theme contrast  
  We recommend the following approach to providing contrast colors:  
   
--   Carefully choose the contrasting colors. The Common Data Service out-of-the-box default theme has the correct contrast ratios to ensure optimal usability. Use similar rations for your new themes.  
+-   Carefully choose the contrasting colors. The Common Data Service out-of-the-box default theme has the correct contrast ratios to ensure optimal usability. Use similar contrast ratios for your new themes.  
   
 -   For high contrast mode, use the default color settings.  
   
