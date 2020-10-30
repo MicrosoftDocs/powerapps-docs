@@ -19,13 +19,13 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" tables or creating custom tables. An table defines the information you want to track in the form of rows, which typically include properties such as company name, location, products, email, and phone. 
+With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" tables or creating custom tables. A table defines the information you want to track in the form of rows, which typically include properties such as company name, location, products, email, and phone. 
 
-In this topic you create an table and then add or customize key components such as columns, relationships, views, and forms. You learn how to:
+In this topic you create a table and then add or customize key components such as columns, relationships, views, and forms. You learn how to:
 
 - Create a custom table
 - Add custom columns to your table
-- Add an table relationship
+- Add a table relationship
 - Customize a view 
 - Customize a form
 
@@ -37,10 +37,10 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 ## Create a custom table
 
-1. On the left navigation pane expand **Data**, select **tables**, and then select **New table**.
+1. On the left navigation pane expand **Data**, select **Tables**, and then select **New table**.
 
     > [!div class="mx-imgBorder"] 
-    > ![New table](media/create-custom-table/create-new-table.png)
+    > ![New table](media/create-custom-entity/create-new-entity.png)
 
 2. In the right pane, enter the following values, and then select **Create**.
 
@@ -59,14 +59,14 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
     -	Select **Searchable**  
   
       > [!div class="mx-imgBorder"] 
-      > ![Change primary column](media/create-custom-table/primary-column.png)
+      > ![Change primary column](media/create-custom-entity/primary-field.png)
 
 4. Select **Done**.
 
 5. On the **Columns** tab on the table designer toolbar select **Add column**. On the **Field properties** pane, enter or select the following values and options.
     - **Display name**. *Species*
     - **Data type**. *Option Set*
-    - **Choice**. *New choice *
+    - **Choice**. *New choice*
   
 6. Select **View more**, and then select **Local choice **.
 
@@ -81,7 +81,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
       d. Select **Save**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![New choice ](media/create-custom-table/optionset-add-items.png)
+    > ![New choice ](media/create-custom-entity/optionset-add-items.png)
 
 6. Select **Searchable**, and then select **Done**.
 
@@ -111,7 +111,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
   Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns on the **Columns** tab.
   > [!div class="mx-imgBorder"]
-  > ![Account lookup column](media/create-custom-table/account-lookup-column.png)
+  > ![Account lookup column](media/create-custom-entity/account-lookup-field.png)
 
 ## Customize a view
 
@@ -128,7 +128,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 4. To arrange the columns, select the column you want to move and then use **Move Left** and **Move Right** until your view looks like this.
     > [!div class="mx-imgBorder"] 
-    > ![Active pets view](media/create-custom-table/active-pets-view.png)
+    > ![Active pets view](media/create-custom-entity/active-pets-view.png)
 
 5. On the view designer toolbar, select **Save**.  
 
@@ -136,17 +136,17 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 Skip this step if you only want to use the Pet table in a canvas app. 
 
-1. On the left navigation pane, expand **Data**, select **tables**, and then select **Pet**.
+1. On the left navigation pane, expand **Data**, select **Tables**, and then select **Pet**.
 
 2. Select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form designer.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit main form](media/create-custom-table/main-form-edit.png)
+    > ![Edit main form](media/create-custom-entity/main-form-edit.png)
 
 3. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** columns located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select columns for main form](media/create-custom-table/main-form-edit2.png) 
+    > ![Select columns for main form](media/create-custom-entity/main-form-edit2.png) 
 
 4. Select **Save**.
 
@@ -160,6 +160,6 @@ Now your table is ready to be used to build either a canvas or model-driven app.
 
 ## Next steps
 
-In this topic, you learned how to create an table that can be used to create a useful app. 
+In this topic, you learned how to create a table that can be used to create a useful app. 
 - To learn how to create a model-driven app, see [Build your first model-driven app](../model-driven-apps/build-first-model-driven-app.md).
 - To learn how to create a canvas app, see [Create an app from scratch](../canvas-apps/get-started-create-from-blank.md).

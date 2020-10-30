@@ -39,7 +39,7 @@ You can add a connection reference to a solution in a few different ways:
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and on the left pane select **Solutions**. 
 2. Create a new or open an existing solution.
 3. On the command bar select **New**, and then in the list of components select Connection Reference. 
-4. On the **New Connection Reference** pane, enter the following information. Required columns a denoted with an asterisk (*).
+4. On the **New Connection Reference** pane, enter the following information. Required columns are denoted with an asterisk (*).
    - **Display name**: Enter a friendly name to help differentiate this connection reference from others.
    - **Description**: Enter text that describes the connection.
    - **Connector**: Choose from the following options:

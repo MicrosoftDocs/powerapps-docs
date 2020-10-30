@@ -35,9 +35,7 @@ business data from various sources, clean the data, transform it, and then load
 it to Common Data Service or your organization’s Azure Data Lake Gen2 storage
 account.
 
-A dataflow is a collection of tables (tables are similar to tables)
-that are created and managed in environments in the Power Apps service. You can
-add and edit tables in your dataflow, as well as manage data refresh
+A dataflow is a collection of tables that are created and managed in environments in the Power Apps service. You can add and edit tables in your dataflow, as well as manage data refresh
 schedules, directly from the environment in which your dataflow was created.
 
 Once you create a dataflow in the Power Apps portal, you can get data from it
@@ -144,7 +142,7 @@ Model](/powerapps/common-data-model/overview).
 
 To leverage the Common Data Model with your dataflow, select the **Map to Standard** transformation in the **Edit Queries** dialog. In the **Map tables** screen that appears, select the standard table that you want to map.
 
-![Map to standard table](media/map-to-standard-table.png)
+![Map to standard table](media/map-to-standard-entity.png)
 
 When you map a source column to a standard column, the following occurs:
 
@@ -223,7 +221,7 @@ issues. This section provides troubleshooting tips when issues occur.
 ## Next steps
 The following articles are useful for further information and scenarios when using dataflows:
 
--   [Add data to an table in Common Data Service](data-platform-cds-newtable-pq.md)
+-   [Add data to a table in Common Data Service](data-platform-cds-newtable-pq.md)
 
 -   [Using dataflows with on-premises data sources](using-dataflows-with-on-premises-data.md)
 

@@ -78,7 +78,7 @@ To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow t
 
 4. Select the analytical tables you want. These tables indicate what data you want to store in your organization's Azure Data Lake Store Gen2 account. 
 
-   ![Select analytical tables](media/select-analytical-tables.png)
+   ![Select analytical tables](media/select-analytical-entities.png)
 
 ## Select the storage account to use for dataflow storage
 If a storage account has not yet been associated with the environment, a **Link to data lake** dialog box appears. You'll need to sign in and find the data lake you created in the previous steps. In this example, no data lake is associated with the environment and so a prompt occurs to add one. 

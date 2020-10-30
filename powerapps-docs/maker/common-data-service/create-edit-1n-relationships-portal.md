@@ -94,13 +94,13 @@ While [viewing table relationships](#view-table-relationships), select the relat
 >
 > The publisher of a managed solution can prevent some customizations of relationships that are part of their solution.
 
-The only columns you can edit are **Lookup column display name** and **Lookup column description**. These can also be edited in the properties of the lookup column in the related table. More information: [Edit a column](create-edit-column-portal.md#edit-a-column)
+The only columns you can edit are **Lookup column display name** and **Lookup column description**. These can also be edited in the properties of the lookup column in the related table. More information: [Edit a column](create-edit-field-portal.md#edit-a-column)
 
 ## Delete relationships
 
-While [viewing table relationships](#view-table-relationships), select the relationship you want to delete.
+While [viewing table relationships](#view-entity-relationships), select the relationship you want to delete.
 
-![Delete table relationship](media/delete-table-relationship-portal.png)
+![Delete table relationship](media/delete-entity-relationship-portal.png)
 
 You can use the **Delete relationship** command from the command bar or from the row context menu when you click the ellipses (**...**).
 
@@ -114,4 +114,4 @@ Deleting the relationship will delete the lookup column on the related table.
 [Create and edit relationships between tables](create-edit-table-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
-[Edit a column](create-edit-column-portal.md#edit-a-column)
+[Edit a column](create-edit-field-portal.md#edit-a-column)
