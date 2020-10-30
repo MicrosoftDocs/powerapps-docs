@@ -71,23 +71,15 @@ The new search experience compliments the performance and intelligence of releva
 > [!div class="mx-imgBorder"]
 > ![Search box on header](media/new-search-exp.png)
 
-**Recenet records are remembered**: When you run a search, recent searches and recently accessed records are shown in combined view to help you complete your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
 
-   > ![Suggested search results on first click](media/relevance-search-first-click.gif) 
+**No search required to see recent records**: Immediately see the records that you accessed recently when you click in the serach box.
 
+![Suggested search results on first click](media/relevance-search-first-click.gif) 
 
+**View results quickly**: When you run a search, recent searches and recently accessed records are shown in combined view to help you complete your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
 
-
-
-
-   > [!div class="mx-imgBorder"]
-   > ![Suggested search results](media/search-results-suggestions.png) 
-
-
-You can also serach for records in a page (entity) by searching for the page (entity) name. You will also see your recent searches and records that you accessed recently.
-
-   > [!div class="mx-imgBorder"]
-   > ![Legend for new search experience](media/legend-for-new-exp.png) 
+> [!div class="mx-imgBorder"]
+> ![Legend for new search experience](media/legend-for-new-exp.png) 
 
 Legend
 
