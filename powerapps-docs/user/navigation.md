@@ -160,8 +160,6 @@ Legend:
 
 ### Multiple notification
 
-If there is only one notification, you'll see a single line. If there are multiple notifications, you'll see chevron button.
-
-Select the chevron to view each message.
+If there is only one notification, you'll see a single line. If there are multiple notifications, you'll see chevron button. Select the chevron to view each message.
 
 ![Example of multiple notifications](media/multiple_notification_1.png "Example of multiple notifications")
