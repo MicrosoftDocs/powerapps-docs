@@ -66,17 +66,23 @@ The new search experience is available as a feature setting in the Power Platfor
 
 The new search experience compliments the performance and intelligence of relevance search service and is intuitive and easy to use. 
 
-**Prominent search bar**: The search bar in the top is easily find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
+### Prominent search bar
+
+The search bar in the top is easily find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
 
 > [!div class="mx-imgBorder"]
 > ![Search box on header](media/new-search-exp.png)
 
 
-**No search required to see recent records**: Immediately see the records that you accessed recently when you click in the serach box.
+### No search required to see recent records
+
+Immediately see the records that you accessed recently when you click in the serach box.
 
 ![Suggested search results on first click](media/relevance-search-first-click.gif) 
 
-**View results quickly**: When you run a search, recent searches and recently accessed records are shown in combined view to help you complete your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
+### View results quickly
+
+When you run a search, recent searches and recently accessed records are shown in combined view to help you complete your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
@@ -86,9 +92,16 @@ Legend
 1. **Recent searches**: Shows your recent searches.
 2. **Recently accessed records**:  Shows recently accessed records that are grouped by entity type.
 
-### Search results
+### Search results page
 
-The search results page allow users to search for their information quickly. When you run a search the search results page displays the search results
+Search results are ranked and grouped by entity, with more fields displayed for distinguishing records and filtering for further action.
+
+The Top results tab displays the top 20 results for the search term, with records grouped by entity type.
+
+The full result set is grouped by entity, with the entity type displayed as a horizontal list of tabs along the top of the screen.
+
+Each of the tabs enables you to drill into a specific entity type, with the filter panel updating to show the set of facets and filters configured for that entity.
+
 
    > [!div class="mx-imgBorder"]
    > ![Legend the search results page](media/legend-for-new-exp-2.png) 
@@ -123,7 +136,7 @@ If your organization has turned on both relevance search and categorized search,
 
 
 > [!IMPORTANT]
-> If you have the new relevance search experience available but you set your default search experience to categorized search, then the old relevance search experience and categorized is available. To use the new relevance search experience, you must set your deault search experience to, Relevance Search. 
+> If you have the new Relevance Search experience available but you set your default search experience to Categorized Search, then the old relevance search experience and categorized is available. To use the new relevance search experience, you must set your default search experience to, Relevance Search. 
 
 ## Use the old relevance search experience 
 
