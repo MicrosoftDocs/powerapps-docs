@@ -74,7 +74,7 @@ Change your display settings in an app to suit your preferences. For example, yo
 |-------------|-----------------|  
 |**Default view**||  
 |Default Calendar|Select the default view for your calendar.|   
-|Start Time|Select your default work hours.|
+|Start your default work hours|Select your default start and end time for your work hours.|
 ## Formats tab options  
   
 |Options|Description|  
