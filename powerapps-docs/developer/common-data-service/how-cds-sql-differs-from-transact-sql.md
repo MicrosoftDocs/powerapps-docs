@@ -416,6 +416,6 @@ More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
 
 ---
 
-## See also
+### See also
 
 [Use SQL to query data](cds-sql-query.md)
