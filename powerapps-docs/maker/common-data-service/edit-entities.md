@@ -33,11 +33,11 @@ You can perform the following edits to an table:
 
 - table properties. More information: [Edit table properties using Power Apps](#edit-table-properties-using-power-apps)
 
-- **Columns**. More information:  [Create and edit columns for Common Data Service](create-edit-columns.md)
+- **Columns**. More information:  [Create and edit columns for Common Data Service](create-edit-fields.md)
   
-- **Relationships**. More information:  [Create and edit relationships between tables](create-edit-table-relationships.md)
+- **Relationships**. More information:  [Create and edit relationships between tables](create-edit-entity-relationships.md)
 
-- **Keys**. [Define alternate keys to reference rows](define-alternate-keys-reference-rows.md)
+- **Keys**. [Define alternate keys to reference rows](define-alternate-keys-reference-records.md)
   
 You can also make changes to rows that support the table:  
 
@@ -58,9 +58,9 @@ You can also make changes to rows that support the table:
 
 In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, open the unmanaged solution you want, and then select the table you want to edit. To modify the table properties, select **Settings** on the command bar to view the **Edit table** pane as shown below:
 
-![Edit table properties](media/edit-table-properties-powerapps-portal-designer.png)
+![Edit table properties](media/edit-entity-properties-powerapps-portal-designer.png)
 
-For a description of the properties available to edit see, [Create an table](data-platform-create-table.md#create-an-table).
+For a description of the properties available to edit see, [Create an table](data-platform-create-entity.md#create-a-table).
 
 > [!NOTE]
 > Once enabled, not all table properties can be changed. More information: [table options that can only be enabled](#table-options-that-can-only-be-enabled)
@@ -95,7 +95,7 @@ By default, all custom tables in the web application have the same icons. You ca
 
 The following table lists the options that you can enable for an table, but after these items are enabled, they can’t be disabled:  
 
-[!INCLUDE [cc_table-set-once-options-entity](../../includes/cc_table-set-once-options-entity.md)] 
+[!INCLUDE [cc_entity-set-once-options-entity](../../includes/cc_entity-set-once-options-entity.md)] 
   
 <a name="BKMK_EnableDisableOptions"></a>  
  
@@ -103,7 +103,7 @@ The following table lists the options that you can enable for an table, but afte
 
 The following table lists the table options that you can enable or disable at any time.  
 
-[!INCLUDE [cc_table-changeable-options-entity](../../includes/cc_entity-changeable-options-entity.md)] 
+[!INCLUDE [cc_entity-changeable-options-entity](../../includes/cc_entity-changeable-options-entity.md)] 
 
 ### See also
 

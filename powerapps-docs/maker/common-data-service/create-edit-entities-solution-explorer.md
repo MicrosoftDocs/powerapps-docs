@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can easily create an table using the Power Apps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Common Data Service](create-edit-tables.md), you can achieve them by creating or editing tables using the Solution Explorer.
+You can easily create an table using the Power Apps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing tables using the Solution Explorer.
 
 ## Open solution explorer
 
@@ -37,24 +37,24 @@ Part of the name of any table you create is the customization prefix. This is se
 
 In the solution explorer **Components** node, select the **tables** node.
 
-![View tables in solution explorer](media/view-tables-solution-explorer.png)
+![View tables in solution explorer](media/view-entities-solution-explorer.png)
 
-## Create an table
+## Create a table
 
 While [viewing tables](#view-tables), select **New** to open the new table form.
 
-![new table form in solution explorer](media/new-table-form-solution-explorer.png)
+![new table form in solution explorer](media/new-entity-form-solution-explorer.png)
 
 The new table form has two tabs. The **General** tab is for table options. The **Primary Field** tab is for options about the special single line of text column that each table has that defines the text shown when there is a link to open the table in a lookup column.
 
 For information about each section see the following:
-- [Configure the primary column](#configure-the-primary-column)
-- [Configure required columns](#configure-required-columns)
+- [Configure the primary column](#configure-the-primary-field)
+- [Configure required columns](#configure-required-fields)
 
 > [!NOTE]
-> You can also make the table a custom activity. This choice changes some of the default option values. More information: [Create a custom activity table](#create-custom-activity-table)
+> You can also make the table a custom activity. This choice changes some of the default option values. More information: [Create a custom activity table](#create-a-custom-activity-table)
 
-After you have set the required options for the table, click ![Save command](media/save-table-icon-solution-explorer.png) to create the custom table.
+After you have set the required options for the table, click ![Save command](media/save-entity-icon-solution-explorer.png) to create the custom table.
 
 ### Configure the primary column
 
@@ -67,7 +67,7 @@ In the **Primary Field** tab you can usually accept the default values for the p
 |**Maximum Length**|Enter the maximum length for the column values. The default is 100.|
 
 > [!NOTE]
-> These options do not apply if the table is an activity table. More information:  [Create a custom activity table](#create-custom-activity-table)
+> These options do not apply if the table is an activity table. More information:  [Create a custom activity table](#create-custom-activity-entity)
 
 ### Configure required columns
 
@@ -78,9 +78,9 @@ In the **General** tab, some of the options are required before you can save the
 |**Display Name**|This is the singular name for the table that will be shown in the app.<br />This can be changed later.|
 |**Plural Name**|This is the plural name for the table that will be shown in the app.<br />This can be changed later.|
 |**Name**|This column is pre-populated based on the display name you enter. It includes the solution publisher customization prefix.|
-|**Ownership**|You can choose either user or team-owned or organization owned. More information: [Standard table ownership](types-of-tables.md#standard-tables)|
+|**Ownership**|You can choose either user or team-owned or organization owned. More information: [Standard table ownership](types-of-entities.md#standard-tables)|
 
-## Edit an table
+## Edit a table
 
 While [viewing tables](#view-tables), select the table you want to edit, or continue editing a new table you have just saved.
 
@@ -95,7 +95,7 @@ The following options can be set once and cannot be changed after you set them. 
 Same data is presented in edit-tables.md
 Both should point to this include
  -->
-[!INCLUDE [cc_table-set-once-options-table](../../includes/cc_table-set-once-options-table.md)]
+[!INCLUDE [cc_entity-set-once-options-entity](../../includes/cc_entity-set-once-options-entity.md)]
 
 #### Options that you can change
 
@@ -105,11 +105,11 @@ The following properties can be changed at any time.
 Same data is presented in edit-tables.md
 Both should point to this include
  -->
-[!INCLUDE [cc_table-changeable-options-table](../../includes/cc_table-changeable-options-table.md)]
+[!INCLUDE [cc_entity-changeable-options-entity](../../includes/cc_entity-changeable-options-entity.md)]
 
 You can also make the following changes:
-- [Create and edit columns for Common Data Service](create-edit-columns.md)
-- [Create and edit relationships between tables](create-edit-table-relationships.md)
+- [Create and edit columns for Common Data Service](create-edit-fields.md)
+- [Create and edit relationships between tables](create-edit-entity-relationships.md)
 - [Create and design forms](../model-driven-apps/create-design-forms.md)
 - [Create a business process flow to standardize processes](/flow/create-business-process-flow)
 
@@ -118,7 +118,7 @@ You can also make the following changes:
 As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
   
 > [!IMPORTANT]
->  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-table-relationships.md).  
+>  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).  
   
 > [!NOTE]
 > The only way to recover data from an table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
@@ -127,7 +127,7 @@ While [viewing tables](#view-tables), click the ![Delete command](media/delete.g
 
 While viewing an table use the delete command in the menu bar.
 
-![Delete command](media/delete-custom-table-solution-explorer.png)
+![Delete command](media/delete-custom-entity-solution-explorer.png)
 
 > [!WARNING]
 > Deleting an table that contains data will remove all the data. This data can only be retrieved by backup of the database.
@@ -145,11 +145,11 @@ You can identify dependencies that will prevent an table from being deleted befo
 
 1. In the solution explorer with the table selected, click **Show Dependencies** in the command bar.
 
-![Show Dependencies command](media/table-show-dependencies.png)
+![Show Dependencies command](media/entity-show-dependencies.png)
 
 2. In the dialog window that opens, scroll the list to the right to view the **Dependency Type** column.
 
-![Published Dependency Type](media/published-table-dependency.png)
+![Published Dependency Type](media/published-entity-dependency.png)
 
 **Published** dependencies will block deleting an table. **Internal** dependencies should be resolved by the system.  
 
@@ -162,9 +162,9 @@ You can identify dependencies that will prevent an table from being deleted befo
 
 To create the table as an activity table, use the same steps described in this topic except select **Define as an activity table**.
 
-![Define as activity table](media/create-activity-table-solution-explorer.png)
+![Define as activity table](media/create-activity-entity-solution-explorer.png)
 
-An activity table is a special kind of table that tracks actions for which an entry can be made on a calendar. More information: [Activity tables](types-of-tables.md#activity-tables).
+An activity table is a special kind of table that tracks actions for which an entry can be made on a calendar. More information: [Activity tables](types-of-entities.md#activity-tables).
 
 When you set this option some table properties are not compatible. An activity table has to conform to standard behaviors that all activity tables use.
 
@@ -196,9 +196,9 @@ Some options are only used when creating a virtual table.
 |**Virtual table**|Whether the table is a virtual table.|
 |**Data Source**|The data source for the table.|
 
-More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-tables.md)
+More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create and edit tables in Common Data Service](create-edit-tables.md)<br />
-[Tutorial: Create a custom table that has components in Power Apps](/powerapps/maker/common-data-service/create-custom-table)<br />
+[Create and edit tables in Common Data Service](create-edit-entities.md)<br />
+[Tutorial: Create a custom table that has components in Power Apps](/powerapps/maker/common-data-service/create-custom-entity)<br />
 [Create a solution](create-solution.md)

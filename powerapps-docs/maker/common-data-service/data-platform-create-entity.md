@@ -25,16 +25,16 @@ To create an table, you must have either a System Administrator or System Custom
 ## Sign in to Power Apps
 Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-## Create an table
+## Create a table
 1. In the navigation pane, expand **Data**, and then select **tables**.
 
 2. On the command bar, select **New table**.
 
-    Before you create an table, check out the [table reference](../../developer/common-data-service/reference/about-table-reference.md) for a description of available standard tables. These tables cover typical scenarios. If one of these tables meets your requirements as is or after minor changes, you can save time by starting with that table. 
+    Before you create an table, check out the [table reference](../../developer/common-data-service/reference/about-entity-reference.md) for a description of available standard tables. These tables cover typical scenarios. If one of these tables meets your requirements as is or after minor changes, you can save time by starting with that table. 
 
 3. In the **New table** panel, enter the following information columns. Required columns are designated with an asterisk (*) next to the column label. 
     > [!div class="mx-imgBorder"] 
-    > ![Create new table](media/data-platform-cds-create-table/newtablepanel.png)
+    > ![Create new table](media/data-platform-cds-create-entity/newtablepanel.png)
     
     |Section  |Field  |Description  |
     |---------|---------|---------|
@@ -46,7 +46,7 @@ Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com
     |**Description**     | **Description**      | Expand **More settings** > **Description**.  You can enter a description for your table if you wish. Descriptions are helpful if other people will use this table.     |
     |**table type and ownership**   |  **Choose table type**    | Switch the table type to **Activity table** to create tables that can manage tasks.      |
     |**table type and ownership**   |  **Ownership**     | The type of ownership defines who can perform operations on a row. **User or team** ownership allows the table rows to contain data that relates to customers, such as accounts or contacts. Security can be defined according to the business unit for the user or team.  **Organization** ownership table rows contain data involving something that belongs to or that can be viewed by the whole organization. *Organization-owned table rows can't be assigned or shared.*      |
-    |**Collaboration**     |  **Allow feedback**     |  Let customers write feedback for any table row, or rate table rows within a defined rating range. Once enabled this setting can't be disabled. More information: [Configure an table for feedback/ratings](configure-table-feedback.md)    |
+    |**Collaboration**     |  **Allow feedback**     |  Let customers write feedback for any table row, or rate table rows within a defined rating range. Once enabled this setting can't be disabled. More information: [Configure an table for feedback/ratings](configure-entity-feedback.md)    |
     |**Collaboration**     | **Enable for activities**    | Associate activities to rows for this table.  Once enabled this setting can't be disabled.      |
     |**Collaboration**     | **Enable connections**    | Use the connections feature to show how rows for this table have connections to rows of other tables that also have connections enabled. Once enabled this setting can't be disabled.    |
     |**Collaboration**     |  **Send email to table**     | Send emails using an email address stored in one of the columns for this table. If a **Single Line** of **Text column** with format set to email doesn’t already exist for this table, a new one will be created when you enable sending email. Once enabled this setting can't be disabled.   |
@@ -67,7 +67,7 @@ On the table details page, observe that the table is now being provisioned in th
 In this article, you learned how to create a custom table. Next, learn how to define relationships between tables.
 
 > [!div class="nextstepaction"]
-> [Create a relationship](data-platform-table-lookup.md)
+> [Create a relationship](data-platform-entity-lookup.md)
 
 ## Privacy notice
 With the Microsoft Power Apps common data model, Microsoft collects and stores custom table and column names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The table and column names that app Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service’s standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom table and column names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
