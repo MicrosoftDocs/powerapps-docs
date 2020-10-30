@@ -145,7 +145,7 @@ If your organization has turned on both Relevance Search and categorized search,
 
 ## Use the old Relevance Search experience 
 
-If you're organization has Relevance Search enabled but your administrator has not turned on the [new relevance search experience](relevance-search.md#new-relevance-search-experience) then you will see the old search experience.
+If you're organization has Relevance Search enabled but your administrator has not turned on the [new relevance search experience](https://docs.microsoft.com/powerapps/user/relevance-search#use-the-new-relevance-search-experience) then you will see the old search experience.
 
 
 ### Switch between the old Relevance Search experience and Categorized Search
