@@ -52,7 +52,7 @@ For information about each section see the following:
 - [Configure required columns](#configure-required-columns)
 
 > [!NOTE]
-> You can also make the table a custom activity. This choice changes some of the default option values. More information: [Create a custom activity table](#create-a-custom-activity-table)
+> You can also make the table a custom activity. This choice changes some of the default option values. More information: [Create a custom activity table](#create-custom-activity-table)
 
 After you have set the required options for the table, click ![Save command](media/save-entity-icon-solution-explorer.png) to create the custom table.
 
