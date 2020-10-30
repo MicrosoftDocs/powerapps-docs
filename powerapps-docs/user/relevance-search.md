@@ -56,23 +56,29 @@ Relevance search needs to be enabled on by the administrator for your organizati
 
 The new search experience is available as a feature setting in the Power Platform admin Center. It combines the strength of relevance search as a service, with a user interface that is intuitive, familiar, and easy to use. When the **Use new search experience** setting is turned on, it will enable the new experience to all the apps in the environment.
 
+ > [!div class="mx-imgBorder"]
+ > ![Turn on new search experience](media/admin-enable-search.jpg) 
+
 > [!NOTE]
-> The **Use new search experience** feature setting is only available for environments where Relevance Search is turned on. For environments where Relevance Search is not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default.
+> The **Use new search experience** feature setting is only available for environments where Relevance Search is turned on. For environments where Relevance Search is not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default when Relevance Search is turned on.
 
-If you're on the Microsoft Power Platform release plan for the 2020 release wave 2, you can turn on the new search experience for your organization. 
+## Use the new Relevance Search experience 
 
-   > [!div class="mx-imgBorder"]
-   > ![Turn on new search experience](media/admin-enable-search.jpg) 
+The new search experience compliments the performance and intelligence of relevance search service and is intuitive and easy to use. 
 
-When the new relevance search experience is turned then is available by default to all your users. There is also a prominent search bar at the top.
+**Prominent search bar**: The search bar in the top is easily find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
 
-   > [!div class="mx-imgBorder"]
-   > ![Search box on header](media/new-search-exp.png) 
+> [!div class="mx-imgBorder"]
+> ![Search box on header](media/new-search-exp.png)
+
+**Recenet records are remembered**: When you run a search, recent searches and recently accessed records are shown in combined view to help you complete your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
+
+   > ![Suggested search results on first click](media/relevance-search-first-click.gif) 
 
 
-## Use the new relevance search experience 
 
-The new search experience is intuitive and easy to use. Start typing your search query and you will see suggestions based based on the typed query. 
+
+
 
    > [!div class="mx-imgBorder"]
    > ![Suggested search results](media/search-results-suggestions.png) 
