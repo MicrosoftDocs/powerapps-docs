@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/2/2020
+ms.date: 10/30/2020
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -20,12 +20,6 @@ search.app:
 
 This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
-## Early access feature
-
-If you have enabled early access, then you will have a different navigation experience. This topic calls out both experiences.
-
-Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
- 
 
 ## Navigating among apps, areas, and entities
 
@@ -40,24 +34,19 @@ A model-driven app is built out of applications (apps), areas, and entities.
 
 ### User info and sign out
 
-Select the user menu to view your account information or sign out. 
+Select the user menu to view your account information or sign out. Go to your account page by selecting the **View account** hyperlink.
 
-In early access, you can go to your account page by selecting the **View account** hyperlink.
-
-|Current  |Early access  |
-|---------|---------|
-| ![User menu](media/usermenu_1.png "User menu")     |     ![User menu](media/usermenu_2.png "User menu")   |
-
+![User menu](media/usermenu_2.png "User menu")   
 
 
 ### Move between apps
 
 Use the app-selector menu to switch between apps.
 
+1. Select the current app name.
+2. On the **Apps** page select an app. You will only see apps for your organization.
 
-|Current  |Early access  |
-|---------|---------|
-| <ul><li> Select the drop-down menu and then choose an app. The apps you see listed depends on which apps you have access to.  </li> <div></div> <div></div> ![The app-selector menu](media/app-selector1.png "The app-selector menu")     |   <ol><li> Select the current app name.</li> <li> On the **Apps** page select an app. You will only see apps for your organization. </li> <div></div> <div></div>  ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
+![The app-selector menu](media/app-selector2.png "The app-selector menu")   
 
 
 ### Move between pages and records
