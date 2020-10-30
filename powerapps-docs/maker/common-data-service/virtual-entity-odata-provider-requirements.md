@@ -74,7 +74,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
     - **OData v4 Data Provider**. Common Data Service includes an Odata v4 data provider that can be used to connect to data sources that support the OData v4 open standard.  
     - *Custom data provider*. If you've imported a data  provider plug-in, the data provider will appear here. More information:  [Developer Documentation: Get started with virtual tables](/dynamics365/customer-engagement/developer/virtual-tables/get-started-ve)  
     
-1. On the **New Data Source** properties page, complete the following columns, and then save the record.  
+1. On the **New Data Source** properties page, complete the following columns, and then save the row.  
   
     - **Name**. Type a name that describes the data source.  
     - **Uri**. If you are using the OData Data Provider, enter the uri for the OData web service. For example, if you are using the OData provider to connect to a web service hosted in Azure, the URI can look similar to *`https://contosodataservice.azurewebsites.net/odata/`*.  
@@ -83,7 +83,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
         -  **Return inline count**. Returns the total number rows in the result set. This setting is used to enable next page functionality when you return data to a grid. Use a value of false if your OData endpoint doesn't support the OData $inlinecount parameter. The default value is false.
     - **Request Parameters**. Optionally, you can add custom header or query string parameters used to connect to the OData web service, such as authentication parameters to the external service. Click **Query String** to toggle between header and query string parameter and value. Up to 10 header or query strings can be added. 
         > [!div class="mx-imgBorder"] 
-        > ![Virtual table data source record](media/virtual-table-data-source.png) 
+        > ![Virtual table data source row](media/virtual-table-data-source.png) 
 
 
 ## See also  

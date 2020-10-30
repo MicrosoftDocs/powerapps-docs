@@ -68,10 +68,10 @@ There are some columns used by the system that you cannot add using the designer
 |--|--|
 |**Big Integer** or **Time Stamp**|Used by the system to capture a version number manage updates to an table.|
 |**Customer**|A lookup column that you can use to specify a customer, which can be an account or contact.<br />**Note**: This attribute can be added using solution explorer designer.|
-|**Owner**|A system lookup column that references the user or team that is assigned a user or team owned table record.|
+|**Owner**|A system lookup column that references the user or team that is assigned a user or team owned table row.|
 |**Status Reason**|A system column that has options that provide additional detail about the Status column. Each option is associated with one of the available Status options. You can add and edit the options. <br /><br /> You can also include custom state transitions to control which status options are available for certain tables. More information: [Define status reason transitions for custom tables](define-status-reason-transitions.md)|
 |**Status**|A system column that has options that generally correspond to active and inactive status. Some system attributes have additional options, but all custom attributes have only **Active** and **Inactive** status options.  |
-|**Unique Identifier**|A system column stores a globally unique identifier (GUID) value for each record.|
+|**Unique Identifier**|A system column stores a globally unique identifier (GUID) value for each row.|
 
   
 ## MultiSelect Option Set
@@ -117,7 +117,7 @@ Use floating point numbers when you store data that represents fractions or valu
 
 Currency columns allow for an organization to configure multiple currencies that can be used for rows in the organization. When organizations have multiple currencies, they typically want to be able to perform calculations to provide values using their base currency. When you add a currency column to an table that has no other currency columns, two additional columns are added:  
   
-- A lookup column called **Currency** that you can set to any active currency configured for your organization. You can configure multiple active currencies for your organization in **Settings** > **Business Management** > **Currencies**. There you can specify the currency and an exchange rate with the base currency set for your organization. If you have multiple active currencies, you can add the currency column to the form and allow people to specify which currency should be applied to money values for this record. This will change the currency symbol that is shown for the currency columns in the form.  
+- A lookup column called **Currency** that you can set to any active currency configured for your organization. You can configure multiple active currencies for your organization in **Settings** > **Business Management** > **Currencies**. There you can specify the currency and an exchange rate with the base currency set for your organization. If you have multiple active currencies, you can add the currency column to the form and allow people to specify which currency should be applied to money values for this row. This will change the currency symbol that is shown for the currency columns in the form.  
   
   Individuals can also change their personal options to select a default currency for the rows they create.
   
@@ -130,7 +130,7 @@ When you configure a currency column you can choose the precision value. There a
 |Option|Description|  
 |------------|-----------------|  
 |Pricing Decimal Precision|This is a single organization precision to be used for prices found in **Settings** > **Administration** > **System Settings** > **General Tab**.|  
-|Currency Precision|This option applies the precision defined for the currency in the record.|  
+|Currency Precision|This option applies the precision defined for the currency in the row.|  
 |Specific precision values|These settings allow for defining a specific set precision using values between  0 and 4.|  
   
 <a name="BKMK_DifferentTypesOfLookups"></a> 
@@ -144,8 +144,8 @@ However, you should be aware that not every lookup behaves this way. There are s
 |Lookup type|Description|  
 |-----------------|-----------------|  
 |**Simple**|Allows for a single reference to a specific table. All custom lookups are this type.|  
-|**Customer**|Allows for a single reference to either an account or a contact record.|  
-|**Owner**|Allows for a single reference to either a team or a user record. All team or user-owned tables have one of these. More information: [Add an table as a lookup option in your app](../model-driven-apps/team-table-lookup.md)|  
+|**Customer**|Allows for a single reference to either an account or a contact row.|  
+|**Owner**|Allows for a single reference to either a team or a user row. All team or user-owned tables have one of these. More information: [Add an table as a lookup option in your app](../model-driven-apps/team-table-lookup.md)|  
 |**PartyList**|Allows for multiple references to multiple tables. These lookups are found on the Email table **To** and **Cc** columns. They’re also used in the Phone and Appointment tables.|  
 |**Regarding**|Allows for a single reference to multiple tables. These lookups are found in the regarding column used in activities.|  
 
@@ -161,7 +161,7 @@ Even though an table has an image column, displaying that image in a model-drive
 When image display is enabled for an table, any rows that don’t have an image will display a placeholder image. For example:
 
 > [!div class="mx-imgBorder"] 
-> ![Sample table image for an account record](../common-data-service/media/account-record-default-image.png "Default account table image")
+> ![Sample table image for an account row](../common-data-service/media/account-row-default-image.png "Default account table image")
   
 People can choose the default image to upload a picture from their computer. Images must be less than 10 MB and must be in one of the following formats:  
   
@@ -191,12 +191,12 @@ By default,	when an app user adds an image to display to a form or canvas app, t
    - **Display name**. Enter a friendly name for the column. 
    - **Data type**. Select **Image**. 
    - **Primary image**. When selected, the primary image column becomes the image column for the table. You can only have one primary image for each table. 
-   - **Maximum image size**. The maximum file size that an app user can upload to the record. 10,240 KB is the default maximum size and 10 MB is the maximum size limit. 
-   - **Can store full images**. When selected, in addition to the rescaled thumbnail image described earlier, the full image is stored when uploaded by the user for each record. Full size images are limited to 30 MB.  -->
+   - **Maximum image size**. The maximum file size that an app user can upload to the row. 10,240 KB is the default maximum size and 10 MB is the maximum size limit. 
+   - **Can store full images**. When selected, in addition to the rescaled thumbnail image described earlier, the full image is stored when uploaded by the user for each row. Full size images are limited to 30 MB.  -->
 
 ### Add image support for a form in a custom table using solution explorer
 1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). 
-2. In the left navigation pane, expand **tables**, expand the custom table you want, and then select **Fields**. 
+2. In the left navigation pane, expand **tables**, expand the custom table you want, and then select **Columns**. 
 3. On the toolbar, select **New**. 
 4. In the **Type** section in the **Data Type** dropdown list select **Image**. 
 5. Enter a **Display Name**, such as *Custom table image*. 
@@ -217,21 +217,21 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 >[!NOTE]
 > Once the maximum file size has been saved, it can't be changed.
 
-App users can now select the image to display on the form. When an app user opens the form for a record, they can choose the image that they want displayed on the form. 
+App users can now select the image to display on the form. When an app user opens the form for a row, they can choose the image that they want displayed on the form. 
 
 > [!IMPORTANT]
 > If the row is a new row that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
 
-### Change the image for a record
-Once an table form has an image column, app users can change the image for a given record. 
+### Change the image for a row
+Once an table form has an image column, app users can change the image for a given row. 
 
 1. Open the app that includes the table form, and then select the image on the form. 
    > [!div class="mx-imgBorder"] 
    > ![Default table image](../common-data-service/media/default-table-image-on-form.png "Default table image")
 
-2. Select **Upload image**, browse and select the image you want displayed on the table form, and then select **Change**. The image appears on the record. 
+2. Select **Upload image**, browse and select the image you want displayed on the table form, and then select **Change**. The image appears on the row. 
    > [!div class="mx-imgBorder"] 
-   > ![Changed image saved to a record](../common-data-service/media/custom-table-icon-record.png "Changed image saved to a record")
+   > ![Changed image saved to a row](../common-data-service/media/custom-table-icon-row.png "Changed image saved to a row")
 
 
 More information for developers working with image data:
@@ -249,7 +249,7 @@ The default **Maximum file size** is 32 MB and the largest size you can set is 1
 >[!NOTE]
 > Once the maximum file size has been saved, it can't be changed.
 
-To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, on the **Fields** tab select **Add Field**, and then in the **Field properties** pane, select **File** as the **Data type**. 
+To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, on the **Columns** tab select **Add Field**, and then in the **Field properties** pane, select **File** as the **Data type**. 
 
 > [!div class="mx-imgBorder"] 
 > ![File data type](media/file-data-type.png)

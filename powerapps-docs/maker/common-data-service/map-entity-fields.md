@@ -28,7 +28,7 @@ search.app:
  
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can map attributes between tables that have an table relationship. This lets you set default values for a row that is created in the context of another record. 
+You can map attributes between tables that have an table relationship. This lets you set default values for a row that is created in the context of another row. 
 
 ## Easier way to create new rows in model-driven apps
 
@@ -40,9 +40,9 @@ People could just navigate in the app to create a new contact row from scratch. 
   
 ### The easier way
 
-The easier way is to start with the account table and, using the **Contacts** subgrid on the form, select **+** to add a contact. It will first guide people to look up any existing related contacts so they don’t accidentally create a duplicate record. If they don’t find an existing record, they can select **New** and create a new contact record. 
+The easier way is to start with the account table and, using the **Contacts** subgrid on the form, select **+** to add a contact. It will first guide people to look up any existing related contacts so they don’t accidentally create a duplicate row. If they don’t find an existing row, they can select **New** and create a new contact row. 
 
-The new contact row form will include any of the mapped attribute values from the account (such as address and phone information) as the default values. People can edit these values before they save the record.
+The new contact row form will include any of the mapped attribute values from the account (such as address and phone information) as the default values. People can edit these values before they save the row.
 
 ## How this works
 

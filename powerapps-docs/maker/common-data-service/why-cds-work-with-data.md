@@ -85,14 +85,14 @@ For more information about creating table relationships, see [Create a relations
 
 Organizations often need to be in compliance with various regulations to ensure the availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations might want to track changes in Common Data Service data for security and analytical purposes.
 
-Common Data Service provides an auditing capability where changes to tables and attribute data in an organization can be recorded over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;tables and attributes. Auditing isn't supported on metadata
+Common Data Service provides an auditing capability where changes to tables and attribute data in an organization can be rowed over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;tables and attributes. Auditing isn't supported on metadata
 changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](/powerapps/developer/common-data-service/configure-tables-attributes-auditing).
 
 Common Data Service supports analytics by providing the capability to choose tables for machine learning models to run. It has a prebuilt AI capability through AI Builder.
 
 ## Search
 
-Common Data Service provides three ways to query records:
+Common Data Service provides three ways to query rows:
 
 - Relevance search
 
@@ -119,9 +119,9 @@ Relevance search brings the following enhancements and benefits:
 
 - Returns results from all searchable tables in a single list sorted by relevance, so the better the match, the higher the result appears in the list. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than finding the same words in a long article, far apart from each other.
 
-- Highlights matches in the results list. When a search term matches a term in a record, the term appears as bold and italicized text in your search results.
+- Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results.
 
-For more information about relevance search, see [Using relevance search to search for records](/powerapps/user/relevance-search).
+For more information about relevance search, see [Using relevance search to search for rows](/powerapps/user/relevance-search).
 
 ### Quick find
 
@@ -132,7 +132,7 @@ Common Data Service includes the ability to find rows quickly and has approaches
 ![Single-table quick find](media/single-table-quick-find.png "Single-table quick find")
 
 *Multiple-table quick find (categorized search)* is also used to find
-records, but will find them across different types of tables, such as accounts or contacts.
+rows, but will find them across different types of tables, such as accounts or contacts.
 
 ## Data Lake
 

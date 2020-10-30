@@ -76,7 +76,7 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
     ![Pie chart](media/pie-chart.png "Pie chart")
 
-2. On the **Fields** menu, search for and select the columns **ownerid** and **revenue**. The columns will appear on the **Visualizations** menu under **Legend** and **Values**, respectively.
+2. On the **Columns** menu, search for and select the columns **ownerid** and **revenue**. The columns will appear on the **Visualizations** menu under **Legend** and **Values**, respectively.
 
     ![Search for and select the revenue column](media/select-columns.png "Search for and select the revenue column")
 

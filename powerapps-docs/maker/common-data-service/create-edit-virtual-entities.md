@@ -27,11 +27,11 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-A virtual table is a custom table in Common Data Service that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table records, but contain data that is sourced from an external database, such as an  Azure SQL Database. Records based on virtual tables are available in all clients including custom clients developed using the Common Data Service web services.  
+A virtual table is a custom table in Common Data Service that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database, such as an  Azure SQL Database. Records based on virtual tables are available in all clients including custom clients developed using the Common Data Service web services.  
   
 In the past, to integrate the disparate data sources you would need to create a connector to move data or develop a custom plug-in, either client or server-side. However, with virtual tables you can connect directly with an external data source  at runtime so that specific data from the external data source is available in an environment, without the need for data replication.  
 
-Virtual tables are made up of three main components, a *data provider*, a *data source* record, and a *virtual table*. The data provider consists of plug-ins and a data source table. The data source is an table row in Common Data Service, which includes metadata that represents the schema of the connection parameters. Each virtual table references a data source in the table definition.  
+Virtual tables are made up of three main components, a *data provider*, a *data source* row, and a *virtual table*. The data provider consists of plug-ins and a data source table. The data source is an table row in Common Data Service, which includes metadata that represents the schema of the connection parameters. Each virtual table references a data source in the table definition.  
   
 Common Data Service includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
   
@@ -123,7 +123,7 @@ Part of the name of any virtual table you create is the customization prefix. Th
 
     Complete the additional properties as necessary. For more information about these properties, see [Create and edit columns](create-edit-columns.md).  
   
-1. Select **Save and Close** on the **Field** properties page.  
+1. Select **Save and Close** on the **Column** properties page.  
 1. On the solution explorer toolbar, select **Save**.  
 1. On the solution explorer toolbar, select **Publish**.  
 1. Close solution explorer.  

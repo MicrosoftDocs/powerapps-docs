@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" tables or creating custom tables. An table defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
+With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" tables or creating custom tables. An table defines the information you want to track in the form of rows, which typically include properties such as company name, location, products, email, and phone. 
 
 In this topic you create an table and then add or customize key components such as columns, relationships, views, and forms. You learn how to:
 
@@ -51,7 +51,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
  
 1. In the list of tables, select the **Pet** table that was created in the previous section.
 
-2. On the **Fields** tab, select the **Pet** column.
+2. On the **Columns** tab, select the **Pet** column.
 
 3. In the right pane make the following changes to the **Display name** column: 
 
@@ -63,10 +63,10 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 4. Select **Done**.
 
-5. On the **Fields** tab on the table designer toolbar select **Add column**. On the **Field properties** pane, enter or select the following values and options.
+5. On the **Columns** tab on the table designer toolbar select **Add column**. On the **Field properties** pane, enter or select the following values and options.
     - **Display name**. *Species*
     - **Data type**. *Option Set*
-    - **Option set**. *New choice *
+    - **Choice**. *New choice *
   
 6. Select **View more**, and then select **Local choice **.
 
@@ -109,7 +109,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 4. Select **Save table**.
 
-  Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns on the **Fields** tab.
+  Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns on the **Columns** tab.
   > [!div class="mx-imgBorder"]
   > ![Account lookup column](media/create-custom-table/account-lookup-column.png)
 

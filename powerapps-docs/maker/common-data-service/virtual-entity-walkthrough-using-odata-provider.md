@@ -108,7 +108,7 @@ Part of the name of any custom table you create is the customization prefix. Thi
 
 ## Create the columns for the virtual table
 
-On the left navigation pane of the **table: Ticket** page, select **Fields**. As part of this walkthrough you will edit two existing columns and add a third column.
+On the left navigation pane of the **table: Ticket** page, select **Columns**. As part of this walkthrough you will edit two existing columns and add a third column.
 
 > [!IMPORTANT]
 > External names are case sensitive. Refer to your web service metadata to make sure you use the correct name.
@@ -166,8 +166,8 @@ On the left navigation pane of the **table: Ticket** page, select **Fields**. As
     The **All Tickets** view displays. Notice that you may need to refresh your browser to view the table from the **Service** area.
 
     ![All Tickets view](media/all-tickets-view.png)
-1. Open a **Ticket** row to view the form that includes the **Title** and **Severity** columns for the given record.
-    ![Ticket record](media/ticket-record.png)
+1. Open a **Ticket** row to view the form that includes the **Title** and **Severity** columns for the given row.
+    ![Ticket row](media/ticket-row.png)
 
 ### See also
 

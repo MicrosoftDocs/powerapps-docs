@@ -60,7 +60,7 @@ Use the column editor to specify a calculated column. In this example we will us
   
 1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **tables**.  
-1. Select the table you want and choose **Fields**. Choose **Add Field**.  
+1. Select the table you want and choose **Columns**. Choose **Add Field**.  
 1. Provide the required information for the column, including the **Display name**, **Name** and **Data type**. 
 1. If the data type is one of types that support calculated columns, you can make the column a calculated column by selecting **Add** > **Calculation**.
 
@@ -78,7 +78,7 @@ Use the column editor to specify a calculated column. In this example we will us
 1. Selecting **Calculation** requires that you save the changes to the table. Click **Save** in the **Pending changes** dialog to proceed.
 1. This will open the calculated column definition editor, where the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
   ![New Field Calculation form](media/empty-column-calculation.png)
-- In the **Condition** section, you can specify an table, column, operator, type, and value. In the dropdown box for the **table**, you can choose a current table or a related table. In the **Field** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
+- In the **Condition** section, you can specify an table, column, operator, type, and value. In the dropdown box for the **table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
 - In the **Action** section, you provide the formula for the calculated column.  
   
 > [!NOTE]
@@ -214,11 +214,11 @@ You should be aware of certain conditions and limitations when working with calc
 - If you change one of the condition operators in a multiple condition clause, all of the condition operators will update to that condition. For example, in the clause `IF (x > 50) OR (y ==10) OR (z < 5)`, if you change the `OR` operator to the `AND` operator, then all `OR` operators in the clause will become `AND` operators.  
 - You can access parental columns via the Lookup column to the parent table, such as *`<LookupFieldName>.<FieldName>`*. This is not possible with multi-table lookup columns like Customer which can be Account or Contact. However, some tables have individual Lookup columns for a specific table, such as  `ParentAccountid.`*`<FieldName>`* or `ParentContactid.`*`<FieldName>`*.  
 - Sorting is disabled on:  
-  - A calculated column that contains a column of a parent record.  
+  - A calculated column that contains a column of a parent row.  
   - A calculated column that contains a logical column (for example, address column)
   - A calculated column that contains another calculated column.  
 - Calculated columns can span two tables only.  
-  - A calculated column can contain a column from another table (spanning two tables – current table and parent record).  
+  - A calculated column can contain a column from another table (spanning two tables – current table and parent row).  
   - A calculated column can’t contain a calculated column from another table that also contains another column from a different table (spanning three tables):   
     (Current table) Calculated Field &larr; (Parent Record) Calculated Field 1 &larr; (Parent Record) Calculated Field 2.  
 - You can’t trigger workflows or plug-ins on calculated columns.  

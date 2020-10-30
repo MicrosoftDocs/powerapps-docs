@@ -40,7 +40,7 @@ Option sets can be created in two ways, either from the **Option Sets** list wit
     > [!div class="mx-imgBorder"] 
     > ![New Field](./media/data-platform-cds-create-table/newcolumnpanel.png "New Field Panel")
 
-6. Click the **Option set** drop down and select **New Option set**
+6. Click the **Choice** drop down and select **New Option set**
 
     > [!NOTE]
     > If an existing choice  could be used for your table, you can select it from this list without creating a new one.

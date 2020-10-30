@@ -69,7 +69,7 @@ Enter data for the following columns
 |**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
 |**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
 |**Primary Name**|This is the only column visible at this point.| Edit it if you want to change the **Display Name**or **Name** of the column.
-|**Display name**|This is the main user-friendly text identifier for your row (typically a name or a number). The value of this column is shown to users when they need to select from a list of records.
+|**Display name**|This is the main user-friendly text identifier for your row (typically a name or a number). The value of this column is shown to users when they need to select from a list of rows.
 |**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
 
 Select **Enable Attachments** to append notes and files to rows for this table.
@@ -79,7 +79,7 @@ Select **More settings**. These settings are optional for an table.
 |Field|Description|
 |--|--|
 |**Description**|Provide a meaningful description of the purpose of the table.|
-|**table type and ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record.|
+|**table type and ownership**|Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a row.|
 |**Collaboration**|Enable features to help users to more easily work together on this table.|
 |**Create and Update Settings**|You can enable quick create forms, giving your app a streamlined data entry experience. Duplicate detection lets you set duplicate detection policies and create duplicate detection rules. Change tracking provides a way to keep data synchronized in a performant way.|
 |**Dynamics 365 for Outlook**|Configure how this table appears in Outlook.|
@@ -132,7 +132,7 @@ See [Create a system chart](../model-driven-apps/create-edit-system-chart.md)
 
 ### Keys
 
-See [Define alternate keys to reference records](define-alternate-keys-reference-records.md)
+See [Define alternate keys to reference rows](define-alternate-keys-reference-rows.md)
 
 ### Data
 

@@ -64,7 +64,7 @@ Every table has required columns that must exist in your input file. We recommen
     > ![Example of a successful import that shows the number of inserts and updates](./media/data-platform-import-export/success-imp-insert.png)
 
     > [!NOTE]
-    > Use the Upsert (Update or Insert) logic to either update the record, if it already exists, or to insert a new record.
+    > Use the Upsert (Update or Insert) logic to either update the row, if it already exists, or to insert a new row.
 
 ## Option 2: Import by bringing your own source file
 

@@ -111,14 +111,14 @@ On the other hand, you may decide that you don't want  actions to cascade down t
 
 As you model your business data by creating custom tables or when using existing Common Data Model tables, consider the behavior you require and the implications for the entire hierarchy of related tables and choose between one of the following standard behaviors:
 
-* **Referential, Remove Link:** In a referential relationship between two tables, you can navigate to any related records, but actions taken on one will not affect the other. For example, if you have a one-to-many relationship between teachers and classes, deleting a teacher will have no impact on the related class.
+* **Referential, Remove Link:** In a referential relationship between two tables, you can navigate to any related rows, but actions taken on one will not affect the other. For example, if you have a one-to-many relationship between teachers and classes, deleting a teacher will have no impact on the related class.
 
-* **Referential, Restrict Delete:** In a referential, restrict delete relationship between two tables, you can navigate to any related records. Actions taken on the parent row will not be applied to the child record, but the parent row cannot be deleted while the child row exists. This is useful if you do not want child rows to become orphaned. This forces the user to delete all of the children before deleting the parent.
+* **Referential, Restrict Delete:** In a referential, restrict delete relationship between two tables, you can navigate to any related rows. Actions taken on the parent row will not be applied to the child row, but the parent row cannot be deleted while the child row exists. This is useful if you do not want child rows to become orphaned. This forces the user to delete all of the children before deleting the parent.
 
     > [!div class="mx-imgBorder"] 
     > ![Referential, Restrict Delete](./media/data-platform-cds-newrelationship/advanced-3.png "Referential, Restrict Delete")
 
-* **Parental:** In a parental relationship between two tables, any action taken on a row of the parent table is also taken on any child table rows that are related to the parent table record. For example, this would cause all of the child rows to be deleted when the parent is deleted.
+* **Parental:** In a parental relationship between two tables, any action taken on a row of the parent table is also taken on any child table rows that are related to the parent table row. For example, this would cause all of the child rows to be deleted when the parent is deleted.
 
 * **Custom:** In a custom relationship between two tables, you select the behavior associated with each of a set of possible actions. 
 

@@ -24,18 +24,18 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-With Common Data Service you can define **connections** between table rows without creating an table relationship. In model-driven apps people can establish a named link between rows to establish less a formal relationship which doesn't justify creating an actual table relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocal, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
+With Common Data Service you can define **connections** between table rows without creating a table relationship. In model-driven apps people can establish a named link between rows to establish less a formal relationship which doesn't justify creating an actual table relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocal, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
 
-When people set a connection between two records, they can also add a description and additional information such as start and end dates for the relationship. More information: [Create connections to define and view relationships between records](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)
+When people set a connection between two rows, they can also add a description and additional information such as start and end dates for the relationship. More information: [Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-rows)
 
 Anyone with write access to the **Connection Role** table can establish which connection are available for people to use.
 
 > [!IMPORTANT]
 > For an table to be available as a row type for a new or existing connection role, the **Enable connections** property must be enabled for the table. 
 
-## Enable connection roles for an table
+## Enable connection roles for a table
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. Expand **Data**, and then select **tables**. 
+2. Expand **Data**, and then select **Tables**. 
 3. Select the table that you want to enable for connection roles, and then on the command bar select **Settings**. 
 4. In the **Settings** pane expand the **Collaboration** area, and then select **Enable connections**.
     > [!div class="mx-imgBorder"] 
@@ -131,7 +131,7 @@ In this optional step, you can define any roles that be applied in a reciprocal 
 
 For example, people can set that Glen is a *Friend* to Mary, but does this mean that Mary is a *Friend* to Glen? We hope so. But if Glen is the *Father* of Mary it doesn't mean that Mary is the *Father* of Glen. Establishing correct reciprocity requires this extra step.
 
-When people set a connection role that doesn't have a matching connection role, the role will only be displayed when viewing the connection from the row that the connection was applied to. When viewed from the connected record, the role will be empty unless a matching role is set.
+When people set a connection role that doesn't have a matching connection role, the role will only be displayed when viewing the connection from the row that the connection was applied to. When viewed from the connected row, the role will be empty unless a matching role is set.
 
 For role definitions like *Friend*, *Spouse*, *Colleague*, or *Sibling*, it is best to assign the matching role to itself. If a single matching connection role is configured, the single matching connection role will be applied in both directions.
 
@@ -149,7 +149,7 @@ If more than one matching connection role is configured, those connection roles 
 
 ### See also
 <!-- This is in the basics guide. It needs to be migrated -->
-[Create connections to define and view relationships between records](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
+[Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-rows)<br />
 [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)<br />
 [Create and edit relationships between tables](create-edit-table-relationships.md)
 

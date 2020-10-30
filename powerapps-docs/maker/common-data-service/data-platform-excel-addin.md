@@ -50,15 +50,15 @@ After the Excel Add-in reads table data into the workbook, you can update the da
 ## Edit data in Excel
 You can change table data as you require and then publish it back by selecting **Publish** in the Excel Add-in.
 
-To edit a record, select a cell in the worksheet, and then change the cell value.
+To edit a row, select a cell in the worksheet, and then change the cell value.
 
-To add a new record, follow one of these steps:
+To add a new row, follow one of these steps:
 
 * Select anywhere in the worksheet, and then select **New** in the Excel Add-in.
 * Select in the last row of the worksheet, and then press the Tab key until the cursor moves out of the last column of that row, and a new row is created.
 * Select in the row immediately below the worksheet and start to enter data in a cell. When you move the focus out of that cell, the worksheet expands to include the new row.
 
-To delete a record, follow one of these steps:
+To delete a row, follow one of these steps:
 
 * Right-click the row number next to the worksheet row to delete, and then select **Delete**.
 * Right-click in the worksheet row to delete, and then select **Delete** > **Table Rows**.
@@ -86,7 +86,7 @@ You can use the designer to adjust the columns and tables that are automatically
 ## Troubleshooting
 There are a few issues that can be resolved through some easy steps.
 
-* Not all tables support editing and creation of new records, these tables will open in Excel and allow you to view data but publishing will be disabled.
+* Not all tables support editing and creation of new rows, these tables will open in Excel and allow you to view data but publishing will be disabled.
 * Look up columns must be edited using the add-in to ensure the correct row is referenced, updating these columns via copy and past or typing directly into the column is not supported.
 
 If you encounter an issue that isn't described here, contact us via the [support pages](https://powerapps.microsoft.com/support/).

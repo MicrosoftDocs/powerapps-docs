@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Define alternate keys to reference records
+# Define alternate keys to reference rows
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -36,12 +36,12 @@ For example, to identify an account row with an alternate key, you can use the a
 > [!NOTE]
 > While you can define alternate keys with Power Apps, they can only be used programmatically in code. 
 > To learn more about using alternate keys programmatically, see:   
-> - [Developer Documentation: Use an alternate key to create a record](/dynamics365/customer-engagement/developer/use-alternate-key-create-record) 
+> - [Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-row) 
 > - [Developer Documentation: Retrieve a row with the Web API using an alternate key](/dynamics365/customer-engagement/developer/webapi/retrieve-table-using-web-api#retrieve-using-an-alternate-key)
 
 Some of the benefits of the alternate keys feature include:  
   
-- Faster lookup of the records.  
+- Faster lookup of the rows.  
 - More robust bulk data operations.  
 - Simplified programming with data imported from external systems without row IDs.  
   
@@ -120,4 +120,4 @@ If the system job fails, locate the system job to view any errors. The system jo
 [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
 [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)<br />
 [Developer Documentation: Define alternate keys for an table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)<br />
-[Developer Documentation: Use an alternate key to create a record](/dynamics365/customer-engagement/developer/use-alternate-key-create-record)
+[Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-row)

@@ -33,11 +33,11 @@ You can perform the following edits to an table:
 
 - table properties. More information: [Edit table properties using Power Apps](#edit-table-properties-using-power-apps)
 
-- **Fields**. More information:  [Create and edit columns for Common Data Service](create-edit-columns.md)
+- **Columns**. More information:  [Create and edit columns for Common Data Service](create-edit-columns.md)
   
 - **Relationships**. More information:  [Create and edit relationships between tables](create-edit-table-relationships.md)
 
-- **Keys**. [Define alternate keys to reference records](define-alternate-keys-reference-records.md)
+- **Keys**. [Define alternate keys to reference rows](define-alternate-keys-reference-rows.md)
   
 You can also make changes to rows that support the table:  
 

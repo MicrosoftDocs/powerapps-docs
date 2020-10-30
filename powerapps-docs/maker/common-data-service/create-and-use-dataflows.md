@@ -191,7 +191,7 @@ You can also use the search bar, near the top of the window, to quickly find the
 name of your dataflow or tables from among many dataflow tables.
 
 When you select the table and then select the **Load** button, the tables
-appear in the **Fields** pane in Power BI Desktop, and appear and behave just
+appear in the **Columns** pane in Power BI Desktop, and appear and behave just
 like tables from any other dataset. -->
 
 ## Using dataflows stored in Azure Data Lake Storage Gen2

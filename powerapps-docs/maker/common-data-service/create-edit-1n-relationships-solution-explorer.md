@@ -63,7 +63,7 @@ The following columns must be set in order to save the table relationship:
 |Required Field|Description|
 |--|--|
 |**Primary table**|This table will be the target type for the lookup column created on the related table.|
-|**Related table**|This table will have a lookup column added to associate the table rows with the primary table record.|
+|**Related table**|This table will have a lookup column added to associate the table rows with the primary table row.|
 |**Name**|The name of the relationship. A value will be generated based on the primary and related table values. This column will be prefixed by the customization prefix of the solution publisher.|
 |**Lookup Field Display Name**|The localizable text for the lookup column that will be created for the related table. This is usually the same as the display name for the primary table. <br /> This can be changed later.|
 |**Lookup Field Name**|The name of the lookup column that will be created on the related table. A value will be generated based on the **Lookup Field Display Name**. This column will be prefixed by the customization prefix of the solution publisher.|
@@ -101,7 +101,7 @@ These are the properties of the lookup column created on the related table. The 
 
 ### Navigation Pane Item for Primary table
 
-From the primary table you can navigate to see related records. This data is used by model-driven apps to control how the related table rows are displayed. These settings can also be edited using the form editor.
+From the primary table you can navigate to see related rows. This data is used by model-driven apps to control how the related table rows are displayed. These settings can also be edited using the form editor.
 
 |Field|Description|
 |--|--|
@@ -135,7 +135,7 @@ Let’s say that you have a new salesperson and you want to assign them a number
 - Reassign none of the tasks.  
 - Reassign all tasks currently assigned to the former owner of the opportunity.  
   
-The relationship can control how actions performed on a row for the primary table row cascade down to any related table records.   
+The relationship can control how actions performed on a row for the primary table row cascade down to any related table rows.   
 
 There are several kinds of behaviors that can be applied when certain actions occur.
 
@@ -145,12 +145,12 @@ These are the behaviors available to be configured.
 
 |Behavior|Description|
 |--|--|
-|**Cascade Active**|Perform the action on all active related table records.|
-|**Cascade All**|Perform the action on all related table records.|
+|**Cascade Active**|Perform the action on all active related table rows.|
+|**Cascade All**|Perform the action on all related table rows.|
 |**Cascade None**|Do nothing.|
-|**Remove Link**|Remove the lookup value for all related records.|
+|**Remove Link**|Remove the lookup value for all related rows.|
 |**Restrict**|Prevent the primary table row from being deleted when related table rows exist.|
-|**Cascade User Owned**|Perform the action on all related table rows owned by the same user as the primary table record.|
+|**Cascade User Owned**|Perform the action on all related table rows owned by the same user as the primary table row.|
 
 #### Actions
 

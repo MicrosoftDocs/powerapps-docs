@@ -50,7 +50,7 @@ When you view a list of real-time workflow processes, any individual process can
 |Locked|In Progress<br /><br /> Pausing<br /><br /> Canceling|  
 |Completed|Succeeded<br /><br /> Failed<br /><br /> Canceled|  
 
-## Deleting process log records
+## Deleting process log rows
 
 If your organization uses background workflows or business process flows that run frequently, the amount of process log rows can become large enough to cause performance issues as well as consume significant amounts of storage. To delete process log rows not removed sufficiently by one of the standard bulk row deletion jobs, you can use the bulk delete system jobs feature to create a custom bulk row deletion job.
 
@@ -62,9 +62,9 @@ If your organization uses background workflows or business process flows that ru
 
 4. In the **Look for** list, select **System Jobs**.
 
-5. The following conditions are used to create a bulk row deletion job to delete process log records: 
+5. The following conditions are used to create a bulk row deletion job to delete process log rows: 
 
-   - **System Job Type Equals Workflow**: This targets real-time workflow records. 
+   - **System Job Type Equals Workflow**: This targets real-time workflow rows. 
    
    - **Status Equals Completed**: Only completed workflows are valid to run the job against.
    
@@ -72,13 +72,13 @@ If your organization uses background workflows or business process flows that ru
    
    - **Completed On Older than X Days 30**: Use the Completed On column to only delete real-time workflow process log rows that are older than 30 days.
    
-   ![View of a page for custom bulk row deletions](media/custom-bulk-record-deletion.png)
+   ![View of a page for custom bulk row deletions](media/custom-bulk-row-deletion.png)
    
 6. Select **Next**.
 
 7. Set the frequency that your bulk delete job will run. You can schedule your job to run at set intervals or create a one-time bulk deletion job [using the Immediately option](#using-the-immediately-option). In this example, a recurring job is set to run on May 21, 2018, and every 30 days thereafter. 
 
-   ![Bulk row deletion options](media/custom-bulk-record-delete-options.png)
+   ![Bulk row deletion options](media/custom-bulk-row-delete-options.png)
 
 ### Using the Immediately option
 

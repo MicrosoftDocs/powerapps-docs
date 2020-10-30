@@ -25,14 +25,14 @@ search.app:
 # table relationships 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-table relationships define how rows can be related to each other in the database. At the simplest level, adding a lookup column to an table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table record.  
+table relationships define how rows can be related to each other in the database. At the simplest level, adding a lookup column to an table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table row.  
   
-Beyond simply defining how rows can be related to other records, 1:N table relationships also provide data to address the following questions:  
+Beyond simply defining how rows can be related to other rows, 1:N table relationships also provide data to address the following questions:  
   
 - When I delete a row should any rows related to that row also be deleted?  
-- When I assign a record, do I also need to assign all rows related to that row to the new owner?  
-- How can I streamline the data entry process when I create a new related row in the context of an existing record?  
-- How should people viewing a row be able to view the associated records?  
+- When I assign a row, do I also need to assign all rows related to that row to the new owner?  
+- How can I streamline the data entry process when I create a new related row in the context of an existing row?  
+- How should people viewing a row be able to view the associated rows?  
   
  tables can also participate in a N:N (many-to-many) relationship where any number of rows for two tables can be associated with each other.  
 
@@ -65,7 +65,7 @@ Some tables exist to support other tables. They don't make sense on their own. T
 You can use the relationship behavior to define this according to the rules for your business. Two options are:
 
 - Prevent deleting the primary table so that the related table rows can be reconciled, perhaps by associating them with a different primary table.
-- Allow the related tables to be deleted automatically with the deletion of the primary table record.
+- Allow the related tables to be deleted automatically with the deletion of the primary table row.
 
 If the related table doesn't support a primary table, you can allow the primary table to be deleted and the value of the lookup will be cleared.
 
@@ -77,19 +77,19 @@ Let's say that you have a new salesperson and you want to assign them a number o
 - Reassign none of the tasks.  
 - Reassign all tasks currently assigned to the former owner of the accounts.  
   
-The relationship can control how actions performed on a row for the primary table row cascade down to any related table records.  
+The relationship can control how actions performed on a row for the primary table row cascade down to any related table rows.  
 
 ### Behaviors
 There are several kinds of behaviors that can be applied when certain actions occur.
 
 |Behavior|Description|
 |--|--|
-|**Cascade Active**|Perform the action on all active related table records.|
-|**Cascade All**|Perform the action on all related table records.|
+|**Cascade Active**|Perform the action on all active related table rows.|
+|**Cascade All**|Perform the action on all related table rows.|
 |**Cascade None**|Do nothing.|
-|**Remove Link**|Remove the lookup value for all related records.|
+|**Remove Link**|Remove the lookup value for all related rows.|
 |**Restrict**|Prevent the primary table row from being deleted when related table rows exist.|
-|**Cascade User Owned**|Perform the action on all related table rows owned by the same user as the primary table record.|
+|**Cascade User Owned**|Perform the action on all related table rows owned by the same user as the primary table row.|
 
 ### Actions
 These are the actions that can trigger certain behaviors:
@@ -107,7 +107,7 @@ These are the actions that can trigger certain behaviors:
 > [!NOTE]
 > Assign, Delete, Merge, and Reparent actions will not execute in the following situations:
 > - If the original parent row and requested action contain the same values. Example: Attempting to trigger an Assign and 
->   choosing a contact that is already the owner of the record
+>   choosing a contact that is already the owner of the row
 > - Attempting to perform an action on a parent row that is already running a cascading action
 
 > [!NOTE]
@@ -167,7 +167,7 @@ This is how inherited access rights cleanup works:
 
 4. Removes inherited access for the collected users on the collected tables.
 
-After the cleanup runs, users who were able to access related tables only because of the cascading feature can no longer access the records, ensuring greater security.
+After the cleanup runs, users who were able to access related tables only because of the cascading feature can no longer access the rows, ensuring greater security.
 
 
 ### See also

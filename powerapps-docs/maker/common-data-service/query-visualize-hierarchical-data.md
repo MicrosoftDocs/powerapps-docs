@@ -39,7 +39,7 @@ For some tables, such as account and user, the visualizations are provided out-o
   
 <a name="BKMK_Querydata"></a>   
 ## Query hierarchical data  
- With Common Data Service, hierarchical data structures are supported by self-referential relationships of the related records. In the past, to view hierarchical data, you had to iteratively query for the related records. Presently, you can query the related data as a hierarchy, in one step. You’ll be able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search)  
+ With Common Data Service, hierarchical data structures are supported by self-referential relationships of the related rows. In the past, to view hierarchical data, you had to iteratively query for the related rows. Presently, you can query the related data as a hierarchy, in one step. You’ll be able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search)  
   
  The following examples illustrate various scenarios for querying hierarchies:  
   
@@ -74,7 +74,7 @@ For some tables, such as account and user, the visualizations are provided out-o
   
 <a name="BKMK_Visualizedata"></a>   
 ## Visualize hierarchical data  
- The system tables that have visualizations available out-of-the-box include `Account`, `Position`, `Product`, and `User`. In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that have a parent record, a child record, or both.  
+ The system tables that have visualizations available out-of-the-box include `Account`, `Position`, `Product`, and `User`. In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that have a parent row, a child row, or both.  
  
  > [!div class="mx-imgBorder"] 
  > ![Active accounts](media/cust-hs-active-account.png "Active accounts")  
@@ -111,7 +111,7 @@ For some tables, such as account and user, the visualizations are provided out-o
 > [!div class="mx-imgBorder"] 
 > ![Create quick form for widget](media/create-quickf-orm.png "Create quick form for widget")  
   
- After we completed the setup, we created two records: Standard Widget and Premium Widget. After making the Premium Widget a parent of the Standard Widget by using the lookup column, the new_Widget grid view depicted the hierarchy icons, as shown below:  
+ After we completed the setup, we created two rows: Standard Widget and Premium Widget. After making the Premium Widget a parent of the Standard Widget by using the lookup column, the new_Widget grid view depicted the hierarchy icons, as shown below:  
   
 > [!div class="mx-imgBorder"] 
 > ![Widget's hierarchy grid](media/widget-hierarchy-grid.png "Widget's hierarchy grid")  
@@ -119,7 +119,7 @@ For some tables, such as account and user, the visualizations are provided out-o
 > [!TIP]
 >  The hierarchy icons don’t appear in the row grid view until the rows are paired in the parent – child relationship.  
   
- Choosing the hierarchy icon displays the new_Widget hierarchy with the tree view on the left and the tile view on the right, showing two records. Each tile contains four columns that we provided in the **Widget Hierarchy Tile Form**.  
+ Choosing the hierarchy icon displays the new_Widget hierarchy with the tree view on the left and the tile view on the right, showing two rows. Each tile contains four columns that we provided in the **Widget Hierarchy Tile Form**.  
  
  > [!div class="mx-imgBorder"] 
  > ![Widget's tree and tiles views](media/widget-tree-tiles.png "Widget's tree and tiles views")  

@@ -78,6 +78,6 @@ Option set columns provide a set of options that will be displayed in a drop-dow
   
 ## Next steps 
 
-[Create or edit tables (record types)](create-edit-tables.md)<br />
+[Create or edit tables (row types)](create-edit-tables.md)<br />
 [Create and edit relationships between tables](create-edit-table-relationships.md)
 

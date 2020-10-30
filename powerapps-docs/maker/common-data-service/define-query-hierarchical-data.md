@@ -37,10 +37,10 @@ Some standard tables already have hierarchies defined. Other tables, including c
 
 ## Define hierarchical data
 
-With Common Data Service, hierarchical data structures are supported by *self-referential* one-to-many (1:N) relationships of the related records. 
+With Common Data Service, hierarchical data structures are supported by *self-referential* one-to-many (1:N) relationships of the related rows. 
 
 > [!NOTE]
-> *Self-referential* means that the table is related to itself. For example, the account table has a lookup column to associate it with another account table record.
+> *Self-referential* means that the table is related to itself. For example, the account table has a lookup column to associate it with another account table row.
 
 When a self-referential one-to-many (1:N) relationship exists, in the relationship definition the **Hierarchical** option is available to be set to **Yes**.
 
@@ -71,7 +71,7 @@ To turn the hierarchy on:
   
 ## Query hierarchical data  
 
-Without a defined hierarchy, to retrieve hierarchical data, need to iteratively query for the related records. With a defined hierarchy, you can query the related data as a hierarchy in one step. You are able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps#setting-conditions-for-workflow-actions). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search)  
+Without a defined hierarchy, to retrieve hierarchical data, need to iteratively query for the related rows. With a defined hierarchy, you can query the related data as a hierarchy in one step. You are able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps#setting-conditions-for-workflow-actions). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search)  
 
 > [!NOTE]
 > Developers will also be able to use these operators in code. More information [Developer Documentation: Query hierarchical data](/dynamics365/customer-engagement/developer/org-service/query-hierarchical-data)

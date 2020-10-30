@@ -47,7 +47,7 @@ Responding to customer feedback and data from user research, effective November 
 |--|--|
 |table, tables	|Table, tables|
 |Field, columns<br/>Attribute, attributes|	Column, columns|
-|Record, records|	Row, rows|
+|Record, rows|	Row, rows|
 |Option set, choice s<br/>Picklist, picklists|	Choice, choices
 Two options|	Yes/No|
  
@@ -92,7 +92,7 @@ tables within Common Data Service can leverage rich server-side logic and valida
 * **Business logic with code** supports advanced developer scenarios to extend the application directly through code. For more information, see [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md).
 
 ## Security
-Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, record-based security, and column-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) 
+Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) 
 
 ## Developer capabilities
 In addition to the features available through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service also includes features for developers to programmatically access metadata and data to create tables and business logic, as well as interact with data. For more information, see [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)

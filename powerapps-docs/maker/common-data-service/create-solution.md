@@ -181,7 +181,7 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
   
  ![Start the wizard.](media/solution-segmentation-wizard-starts-admin.png "Start the wizard.")  
   
- Open the **Fields** tab and select the **Account Number** column.  
+ Open the **Columns** tab and select the **Account Number** column.  
   
  ![Select the Account table assets.](media/solution-segmentation-select-account-assets-admin.png "Select the Account table assets.")  
   

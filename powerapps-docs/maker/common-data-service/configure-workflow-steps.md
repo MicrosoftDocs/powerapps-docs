@@ -39,7 +39,7 @@ Real-time workflow processes can perform the actions listed in the following tab
   
 |Action|Description|  
 |------------|-----------------|  
-|**Create Record**|Creates a new row for an table and assigns values that you choose to attributes.|  
+|**Create Record**|Creates a new row for a table and assigns values that you choose to attributes.|  
 |**Update Record**|You can update the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps.|  
 |**Assign Record**|You can assign the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps.|  
 |**Send Email**|Sends an email. You can choose to create a new email message or use an email template configured for the table of the row that the real-time workflow is running on or any tables that have an N:1 relationship with the table, or the table for any rows created by earlier steps.|  
@@ -50,7 +50,7 @@ Real-time workflow processes can perform the actions listed in the following tab
   
 ### Setting row values  
 
-When you create a record, you can set values for the record. When you update a record, you can set, append, increment, decrement, multiply, or clear values.  
+When you create a row, you can set values for the row. When you update a row, you can set, append, increment, decrement, multiply, or clear values.  
   
 When you select **Set Properties**, a dialog box opens showing you the default form for the table.  
   
@@ -58,7 +58,7 @@ At the bottom of the dialog box you can see a list of additional columns not pre
   
 For any column, you can set a static value and that will be set by the workflow.  
   
-On the right side of the dialog box, the **Form Assistant** gives you the ability to set or append dynamic values from the context of the current record. This includes values from related rows that can be accessed from the N:1 (many-to-one) relationships for the table.  
+On the right side of the dialog box, the **Form Assistant** gives you the ability to set or append dynamic values from the context of the current row. This includes values from related rows that can be accessed from the N:1 (many-to-one) relationships for the table.  
   
 The options available in the **Form Assistant** depend on the column you have selected in the form. When you set a dynamic value, you will see a yellow placeholder known as a ‘slug’ that shows where the dynamic data will be included. If you want to remove the value, select the slug and delete it. For text columns, you can use a combination of static and dynamic data.  
   
@@ -72,7 +72,7 @@ The actions that you will apply often depend on conditions. Real-time workflow p
   
 |Condition Type|Description|  
 |--------------------|-----------------|  
-|**Check Condition**|A logical "if \<condition> then" statement.<br /><br /> You can check the current values for the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps. Based on these values, you can define additional steps when the condition is true.<br /><br /> In the "if \<condition> then" statement, you can use the following operators: **Equals**, **Does Not Equal**, **Contains Data**, **Does Not Contain Data**, **Under** and **Not Under**. <br /><br />**Note:**  The **Under** and **Not Under** are hierarchical operators. They can only be used on the tables that have a hierarchical relationship defined. If you’re trying to use these operators on the tables that don’t have the hierarchical relationship defined, you’ll see the error message: “You’re using a hierarchical operator on an table that doesn’t have a hierarchical relationship defined. Either make the table hierarchical (by marking a relationship as hierarchical) or use a different operator.” <br /><br />For more information about hierarchical relationships, go to [Define and query hierarchically related data](/powerapps/maker/common-data-service/define-query-hierarchical-data). A screenshot that follows the table is an example of the definition of the real-time workflow process that uses the **Under** and **Not Under** hierarchical operators.|  
+|**Check Condition**|A logical "if \<condition> then" statement.<br /><br /> You can check the current values for the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps. Based on these values, you can define additional steps when the condition is true.<br /><br /> In the "if \<condition> then" statement, you can use the following operators: **Equals**, **Does Not Equal**, **Contains Data**, **Does Not Contain Data**, **Under** and **Not Under**. <br /><br />**Note:**  The **Under** and **Not Under** are hierarchical operators. They can only be used on the tables that have a hierarchical relationship defined. If you’re trying to use these operators on the tables that don’t have the hierarchical relationship defined, you’ll see the error message: “You’re using a hierarchical operator on a table that doesn’t have a hierarchical relationship defined. Either make the table hierarchical (by marking a relationship as hierarchical) or use a different operator.” <br /><br />For more information about hierarchical relationships, go to [Define and query hierarchically related data](/powerapps/maker/common-data-service/define-query-hierarchical-data). A screenshot that follows the table is an example of the definition of the real-time workflow process that uses the **Under** and **Not Under** hierarchical operators.|  
 |**Conditional Branch**|A logical "else-if-then" statement, the editor uses the text “Otherwise, if \<condition> then:”<br /><br /> Select a check condition you have previously defined and you can add a conditional branch to define additional steps when the check condition returns false.|  
 |**Default Action**|A logical "else" statement. The editor uses the text “Otherwise:”<br /><br /> Select a check condition, conditional branch, wait condition, or parallel wait branch that you have previously defined and you can use a default action to define steps for all cases that do not match the criteria defined in condition or branch elements.|  
 |**Wait Condition**|Enables a real-time workflow to pause itself until the criteria defined by the condition have been met. The real-time workflow starts again automatically when the criteria in the wait condition have been met.<br /><br /> Real-time workflows cannot use wait conditions.|  

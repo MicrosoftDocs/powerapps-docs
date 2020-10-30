@@ -64,9 +64,9 @@ To use Power BI with Common Data Service, you need the following items:
 5. Select the **Account** table to see a preview of your data in the right pane. Select **Load**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Load account table records](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account table records")
+    > ![Load account table rows](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account table rows")
 
-6. Your table is now loaded into your report, and you can begin building reports, or repeat the previous steps to add additional tables. For example, in the **Fields** pane, select the **name** column and then select the **numberofemployees** column. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
+6. Your table is now loaded into your report, and you can begin building reports, or repeat the previous steps to add additional tables. For example, in the **Columns** pane, select the **name** column and then select the **numberofemployees** column. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
 
     > [!div class="mx-imgBorder"] 
     > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")

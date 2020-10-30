@@ -43,7 +43,7 @@ tables that can have different status values have two columns that capture this 
   
 |Display Name|Description|  
 |------------------|-----------------|  
-|**Status**|Represents the state of the record. Typically **Active** or **Inactive**. You cannot add new status options.|  
+|**Status**|Represents the state of the row. Typically **Active** or **Inactive**. You cannot add new status options.|  
 |**Status Reason**|Represents a reason that is linked to a specific status. Each status must have at least one possible status reason. You can add additional status reason options.|  
   
 The metadata for the column defines what status values are valid for a given state. For example, for the Incident (**Case**) table, the default status and status reason options are:  

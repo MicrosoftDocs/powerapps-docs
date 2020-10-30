@@ -28,7 +28,7 @@ search.app:
 Solution explorer provides one way to view and create alternate keys for Common Data Service.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
+- [Define alternate keys to reference rows](define-alternate-keys-reference-rows.md)<br />
 - [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)
 
 > [!IMPORTANT]
@@ -71,6 +71,6 @@ While [viewing alternate keys](#view-alternate-keys), select ![Delete](media/del
 
 ### See also
 
-[Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
+[Define alternate keys to reference rows](define-alternate-keys-reference-rows.md)<br />
 [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
 [Developer Documentation: Work with alternate keys](../../developer/common-data-service/define-alternate-keys-table.md)

@@ -90,7 +90,7 @@ For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy T
 > [!div class="mx-imgBorder"] 
 > ![Create quick form for widget](media/create-quickform.png)  
   
-After we completed the setup, we created two records: *Standard Widget* and *Premium Widget*. After making the Premium Widget a parent of the Standard Widget by using the lookup column, the `new_Widget` grid view depicted the hierarchy icons, as shown below:  
+After we completed the setup, we created two rows: *Standard Widget* and *Premium Widget*. After making the Premium Widget a parent of the Standard Widget by using the lookup column, the `new_Widget` grid view depicted the hierarchy icons, as shown below:  
 
 > [!div class="mx-imgBorder"] 
 > ![Widget's hierarchy grid](media/widget-hierarchy-grid.png)  
@@ -98,7 +98,7 @@ After we completed the setup, we created two records: *Standard Widget* and *Pre
 > [!NOTE]
 >  The hierarchy icons don’t appear in the row grid view until the rows are related using the hierarchical relationship.  
   
-Choosing the hierarchy icon displays the `new_Widget` hierarchy with the tree view on the left and the tile view on the right, showing two records. Each tile contains four columns that we provided in the **Widget Hierarchy Tile Form**.  
+Choosing the hierarchy icon displays the `new_Widget` hierarchy with the tree view on the left and the tile view on the right, showing two rows. Each tile contains four columns that we provided in the **Widget Hierarchy Tile Form**.  
 
 > [!div class="mx-imgBorder"] 
 > ![Widget's tree and tiles views](media/widget-tree-tiles.png)  

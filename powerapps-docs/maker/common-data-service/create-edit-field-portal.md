@@ -33,7 +33,7 @@ The portal enables configuring the most common options, but certain options can 
 ## View columns
 
 1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **tables** and select the table that has the columns you want to view.
-2. With the **Fields** tab selected, you can select the following views: 
+2. With the **Columns** tab selected, you can select the following views: 
 
  |View|Description|
  |--|--|
@@ -56,7 +56,7 @@ Initially, just three column properties are available:
  |**Display Name**|The text to be displayed for the column in the user interface.|
  |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a column is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Common Data Service Default Publisher** prepended to it.|
  |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, you cannot change the data type with the exception of converting text columns to autonumber columns.|
- |**Required**| A row can't be saved without data in this column. More information: [Saving rows programmatically for required columns](#saving-records-programmatically-for-required-columns) |
+ |**Required**| A row can't be saved without data in this column. More information: [Saving rows programmatically for required columns](#saving-rows-programmatically-for-required-columns) |
  |**Searchable**| This column appears in Advanced Find and is available when customizing views. |
  |**Calculated or Rollup**| Use to automate manual calculations. Use values, dates, or text.|
  |**Advanced Options**| Add a description, and specify a maximum length and IME mode for the column.
@@ -150,7 +150,7 @@ Every column has the following properties you can change:
 
 |Property|Description|
 |--|--|
-|**Required**|When this is selected a row can't be saved without data in this column. More information: [Saving rows programmatically for required columns](#saving-records-programmatically-for-required-columns) |
+|**Required**|When this is selected a row can't be saved without data in this column. More information: [Saving rows programmatically for required columns](#saving-rows-programmatically-for-required-columns) |
 |**Searchable**|De-select this for columns for the table that you don’t use.  When a column is searchable it appears in **Advanced Find** and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
 |**Description**|Found within **Advanced Options**. Enter instructions to the user about what the column is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the column.|
 
@@ -164,7 +164,7 @@ Every column has the following properties you can change:
 ### Saving rows programmatically for required columns 
 When a row is saved programmatically using web services, only the SystemRequired columns are enforced. Failure to set a value for SystemRequired columns will return an error.  You can’t set the SystemRequired level of requirement. 
 
-Setting a column to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the column has no value. The app user is shown an error and prompted to add data to the required column before they can save the record. There are options within the app to override this behavior and allow operation to proceed if needed.
+Setting a column to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the column has no value. The app user is shown an error and prompted to add data to the required column before they can save the row. There are options within the app to override this behavior and allow operation to proceed if needed.
 ## Calculated or Rollup
 
 You can set a custom column to be a **Calculated** or a **Rollup** column. Fields that are not calculated or rollup columns are sometimes referred to as *simple* columns.
