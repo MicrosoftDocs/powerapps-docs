@@ -94,13 +94,13 @@ Legend
 
 ### Search results page
 
-Search results are ranked and grouped by entity, with more fields displayed for distinguishing records and filtering for further action.
+Search results are ranked and grouped by entity, with more fields that are displayed to help distinguish records and filter for further action.
 
-The Top results tab displays the top 20 results for the search term, with records grouped by entity type.
+The **Top results** tab displays the top 20 results for the search term, with records grouped by entity type.
 
 The full result set is grouped by entity, with the entity type displayed as a horizontal list of tabs along the top of the screen.
 
-Each of the tabs enables you to drill into a specific entity type, with the filter panel updating to show the set of facets and filters configured for that entity.
+Each of the tabs lets you drill into a specific entity type, with the filter panel updating to show the set of facets and filters configured for that entity.
 
 
    > [!div class="mx-imgBorder"]
@@ -239,7 +239,6 @@ Like other facets, you can use date and time facets to filter and see search res
 
    > [!div class="mx-imgBorder"]
    > ![Configure Facets and Filters dialog box](media/configure-ff.png)  
-  
   
  
    - In the **Select Entity** drop-down list, select an entity you want to configure facets for. This drop-down list contains only the entities that are enabled for Relevance Search.  
