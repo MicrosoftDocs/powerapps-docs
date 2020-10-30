@@ -21,14 +21,12 @@ search.app:
 # Using relevance search to search for records
 
 Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
-  
-## Benefits of relevance search
 
 Relevance search in Power Apps is the best search experience to find and act on your data in Common Data Service. 
 
 - Relevance search is faster than Categorized search. Relevance search finds matches across fields to find the most relevant results. Relevance search is smarter, in the following ways: 
 
-  - It finds matches for inflectional words like **stream**, **streaming**, or **streamed**.. A relevance ranking system that factors in information like how close or spread out the search terms are in a field 
+  - It finds matches for inflectional words like **stream**, **streaming**, or **streamed**. A relevance ranking system that factors in information like how close or spread out the search terms are in a field 
   - Search results with matched text is highlighted, so you can easily see and understand the results. 
   
 - Finds matches to any word in the search term in any field in the entity, compared to quick find where all words from the search term must be found in one field. 
