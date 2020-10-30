@@ -20,9 +20,7 @@ search.app:
 
 # Search for records using Relevance Search 
 
-Relevance Search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
-
-Relevance search in Power Apps is the best search experience to find and act on your data in Common Data Service. 
+Relevance Search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. It is the best search experience to find and act on your data in Common Data Service. 
 
 - Relevance Search is faster than Categorized search. Relevance Search finds matches across fields to find the most relevant results. Relevance Search is smarter, in the following ways: 
 
