@@ -1221,7 +1221,11 @@
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
-    href: ./model-driven-apps/share-model-driven-app.md
+    items:
+       - name: Share a model-driven app
+         href: ./model-driven-apps/share-model-driven-app.md
+       - name: Privileges to view and access apps
+         href: ./model-driven-apps/app-visibility-privileges.md
   - name: Manage an app
     items:
     - name: Manage app properties
