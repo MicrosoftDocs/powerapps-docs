@@ -124,7 +124,7 @@ The number of records that you see in the record set navigation pane is based on
 
 
 1. To use record set navigation in the early access release, open a page with a list of records.
-2. Open a record and then select **Open Record Set** ![Record set navigation](media/openrecordset_2.png "Record set button") and then select a record from the list. 
+2. Open a record and then select **Open Record Set** ![Select to open Record set navigation](media/openrecordset_2.png "Select to open Record set navigation") and then select a record from the list. 
 
 
 ![Record set navigation](media/recordsetnav_new.gif "This shows how to use the record set navigation feature")   
