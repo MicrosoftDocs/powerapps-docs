@@ -50,9 +50,14 @@ Relevance search in Power Apps is the best search experience to find and act on 
 
 ## Turn on relevance search
 
-Relevance search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing relevance search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+Relevance search needs to be enabled on by the administrator for your organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization before it is available in your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
-### New relevance search experience  
+### Turn on the new Relevance Search experience 
+
+The new search experience is available as a feature setting in the Power Platform admin Center. It combines the strength of relevance search as a service, with a user interface that is intuitive, familiar, and easy to use. When the **Use new search experience** setting is turned on, it will enable the new experience to all the apps in the environment.
+
+> [!NOTE]
+> The **Use new search experience** feature setting is only available for environments where Relevance Search is turned on. For environments where Relevance Search is not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default.
 
 If you're on the Microsoft Power Platform release plan for the 2020 release wave 2, you can turn on the new search experience for your organization. 
 
