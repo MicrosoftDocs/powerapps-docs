@@ -36,7 +36,8 @@ A model-driven app is built out of applications (apps), areas, and entities.
 
 Select the user menu to view your account information or sign out. Go to your account page by selecting the **View account** hyperlink.
 
-![User menu](media/usermenu_2.png "User menu")   
+> [!div class="mx-imgBorder"] 
+> ![User menu](media/usermenu_2.png "User menu")   
 
 
 ### Move between apps
@@ -46,7 +47,8 @@ Use the app-selector menu to switch between apps.
 1. Select the current app name.
 2. On the **Apps** page select an app. You will only see apps for your organization.
 
-![The app-selector menu](media/app-selector2.png "The app-selector menu")   
+   > [!div class="mx-imgBorder"] 
+   > ![The app-selector menu](media/app-selector2.png "The app-selector menu")   
 
 
 ### Move between pages and records
@@ -54,9 +56,15 @@ Use the app-selector menu to switch between apps.
 It's easy to get around and get back to your favorite or most-used records. The following illustration shows the primary navigation elements.
 
 
-|Current  |Early access  |
-|---------|---------|
-|![Navigation controls, expanded view](media/nav-expanded1.png "Navigation controls, expanded view") <div></div>  <div></div>  <ol><li>**App selector**: Open this menu to move between apps</li> <li>**Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. </li>  <li>**Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).</li> <li> **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.</li> <li> **Page navigation**: This area lists each entity and dashboard page available for the current work area.</li>  |     ![Navigation controls, expanded view](media/nav-expanded2.png "Navigation controls, expanded view")  <div></div> <div></div>  <ol><li>**Click to change app**: Select the current app name to change a differ app. </li> <li>**Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. </li>  <li>**Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).</li> <li> **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.</li> <li> **Page navigation**: This area lists each entity and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that entity.</li>    |
+![Navigation controls showing expanded view](media/nav-expanded2.png "Navigation controls showing expanded view")  
+
+Legend
+  
+1. **Click to change app**: Select the current app name to change a differ app. 
+2. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. 
+3. **Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
+4. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
+5.  **Page navigation**: This area lists each entity and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that entity.
 
 ### Area switcher 
 
@@ -67,9 +75,9 @@ Open this menu to move to another work area. The current work area is named here
 ![Area switcher](media/work_area.png "Area switcher")
 
 
-## Go back (for early access)
+## Go back 
 
-With the early access release there is now a back button for form, view, and dashboard pages on the command bar.
+Use the back button for form, view, and dashboard pages on the command bar to go back to the previous page.
 
 To go back to the previous page, select the **Go back** button.
 
@@ -83,7 +91,7 @@ Usually, when you first open an entity, you'll see the list view, which shows a 
 
 Legend:
 
-1. **Go back** (For early access): Select to go back to the previous page.
+1. **Go back**: Select to go back to the previous page.
 2. **Select records**: Select one or more records by placing a check mark in this column. Depending on where you're working, you might be able to apply a single operation to all the selected records at once by using buttons in the command bar. Note, when you use the **Email a link** command on the command bar you can only select up to ten records to send via email. 
 3. **Open a record**: Select any record in the list to open its record view, which shows all the details about the record. Usually you select from the **Name** column to open a record from the current entity. Some entities provide links to records from related entities in other columns (such as a related contact).
 4. **Sort or filter the list**: Select to sort the list by values in that column or filter the list by values in that column. An arrow in the column heading indicates which column is being sorted and in which direction. 
@@ -114,14 +122,6 @@ Navigate through multiple records by using preset views and queries. The record-
 
 The number of records that you see in the record set navigation pane is based on the number of rows that your system administrator has defined for the subgrid.
 
-**Current**
-
-1. To use record set navigation in the current release, open a page with a list of records.
-2. Open a record and then select **Open Record Set** ![Record set navigation](media/openrecordset_1.png "Record set button") and then select a record from the list.  
-
- ![Record set navigation](media/recordsetnav.gif "This show how to use the record set navigation feature")     
-
-**Early Access**
 
 1. To use record set navigation in the early access release, open a page with a list of records.
 2. Open a record and then select **Open Record Set** ![Record set navigation](media/openrecordset_2.png "Record set button") and then select a record from the list. 
@@ -135,7 +135,7 @@ The number of records that you see in the record set navigation pane is based on
 The reference panel is a great way to get work done without moving away from the screen you're on. You can look up other related items&mdash;such as reviews or reservations for a product&mdash;within the context of the record you're viewing, without having to navigate to other screens.
 
 
-> ![Reference panel](media/reference-panel1.png "Reference panel")
+![Reference panel](media/reference-panel1.png "Reference panel")
 
  Watch this video to learn more about the reference panel:
 
@@ -148,11 +148,7 @@ The app message bar shows three types of notifications: informational, warning, 
 
 When you select the error notification, it will take you to the field on the form where the error occurred.
 
-
-
-|Current  |Early access  |
-|---------|---------|
-| ![Example of notifications](media/notifications.png "Examples of notifications")     |     ![Example of notifications](media/notifications_1.png "Examples of notifications")   |
+![Example of notifications](media/notifications_1.png "Examples of notifications")   
 
 
 Legend:
@@ -166,14 +162,6 @@ Legend:
 
 If there is only one notification, you'll see a single line. If there are multiple notifications, you'll see chevron button.
 
-**Current**
-
-In the current release, you'll see the number of notifications. Select the chevron to view each message.
-
-![Example of multiple notifications](media/multiple_notification.png "Example of multiple notifications")
-
-**Early Access**
-
-In the early access release, select the chevron to view each message.
+Select the chevron to view each message.
 
 ![Example of multiple notifications](media/multiple_notification_1.png "Example of multiple notifications")
