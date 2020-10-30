@@ -58,7 +58,7 @@ The new search experience is available as a feature setting in the Power Platfor
  > ![Turn on new search experience](media/admin-enable-search.jpg) 
 
 > [!NOTE]
-> The **Use new search experience** feature setting is only available for environments where Relevance Search is turned on. For environments where Relevance Search is not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default when Relevance Search is turned on.
+> The **Use new search experience** feature setting is only available for environments where Relevance Search is already turned on. For environments where Relevance Search has never been not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default.
 
 ## Use the new Relevance Search experience 
 
@@ -66,7 +66,7 @@ The new search experience compliments the performance and intelligence of Releva
 
 ### Prominent search bar
 
-The search bar in the top is easily find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
+The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
 
 > [!div class="mx-imgBorder"]
 > ![Search box on header](media/new-search-exp.png)
@@ -74,11 +74,11 @@ The search bar in the top is easily find from any page in your app. It is always
 
 ### No search required to see recent records
 
-Immediately see the records that you accessed recently when you click inside the serach box.
+Immediately see the records that you accessed recently when you click inside the search box.
 
 ![Suggested search results on first click](media/relevance-search-first-click.gif) 
 
-### View results quickly
+### See recent records and searches
 
 When you run a search, recent searches and recently accessed records are shown in combined view to help you complete your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
 
@@ -89,6 +89,12 @@ Legend
 
 1. **Recent searches**: Shows your recent searches.
 2. **Recently accessed records**:  Shows recently accessed records that are grouped by entity type.
+
+
+
+### View results quickly
+
+
 
 ### Search results page
 
