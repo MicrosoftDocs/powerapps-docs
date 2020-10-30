@@ -48,8 +48,8 @@ While [viewing tables](#view-tables), select **New** to open the new table form.
 The new table form has two tabs. The **General** tab is for table options. The **Primary Field** tab is for options about the special single line of text column that each table has that defines the text shown when there is a link to open the table in a lookup column.
 
 For information about each section see the following:
-- [Configure the primary column](#configure-the-primary-field)
-- [Configure required columns](#configure-required-fields)
+- [Configure the primary column](#configure-the-primary-column)
+- [Configure required columns](#configure-required-columns)
 
 > [!NOTE]
 > You can also make the table a custom activity. This choice changes some of the default option values. More information: [Create a custom activity table](#create-a-custom-activity-table)
@@ -95,7 +95,7 @@ The following options can be set once and cannot be changed after you set them. 
 Same data is presented in edit-tables.md
 Both should point to this include
  -->
-[!INCLUDE [cc_entity-set-once-options-entity](../../includes/cc_entity-set-once-options-entity.md)]
+[!INCLUDE [cc_entity-set-once-options-table](../../includes/cc_entity-set-once-options-table.md)]
 
 #### Options that you can change
 
@@ -105,7 +105,7 @@ The following properties can be changed at any time.
 Same data is presented in edit-tables.md
 Both should point to this include
  -->
-[!INCLUDE [cc_entity-changeable-options-entity](../../includes/cc_entity-changeable-options-entity.md)]
+[!INCLUDE [cc_entity-changeable-options-table](../../includes/cc_entity-changeable-options-table.md)]
 
 You can also make the following changes:
 - [Create and edit columns for Common Data Service](create-edit-fields.md)

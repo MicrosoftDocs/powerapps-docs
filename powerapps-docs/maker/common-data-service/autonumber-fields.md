@@ -31,7 +31,7 @@ Autonumber columns are columns that automatically generate alphanumeric strings 
 
 While autonumber columns are formally just text columns with additional functionality built on top of them, [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) simplifies this concept by simply exposing **Autonumber** as a distinct data type under the **Text** category. It is important to note that the classic solution explorer doesn't support creating or managing autonumber columns.
 
-To create an autonumber column, follow the same steps to [create a column](create-edit-field-portal.md#create-a-field) and simply select **Autonumber** from the **Data type** drop-down list box. 
+To create an autonumber column, follow the same steps to [create a column](create-edit-field-portal.md#create-a-column) and simply select **Autonumber** from the **Data type** drop-down list box. 
 
 You may also activate autonumber functionality on an existing text column by opening the column and selecting **Autonumber** from the **Data type** drop-down list box. Similarly, autonumber functionality can also be disabled at any time by opening the column and selecting a different option in the **Data type** drop-down list box.
 

@@ -95,7 +95,7 @@ By default, all custom tables in the web application have the same icons. You ca
 
 The following table lists the options that you can enable for an table, but after these items are enabled, they can’t be disabled:  
 
-[!INCLUDE [cc_entity-set-once-options-entity](../../includes/cc_entity-set-once-options-entity.md)] 
+[!INCLUDE [cc_entity-set-once-options-table](../../includes/cc_entity-set-once-options-table.md)] 
   
 <a name="BKMK_EnableDisableOptions"></a>  
  
@@ -103,7 +103,7 @@ The following table lists the options that you can enable for an table, but afte
 
 The following table lists the table options that you can enable or disable at any time.  
 
-[!INCLUDE [cc_entity-changeable-options-entity](../../includes/cc_entity-changeable-options-entity.md)] 
+[!INCLUDE [cc_entity-changeable-options-table](../../includes/cc_entity-changeable-options-table.md)] 
 
 ### See also
 
