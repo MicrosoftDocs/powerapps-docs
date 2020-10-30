@@ -341,7 +341,7 @@ Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>
 2. In the **Properties** dialog box, select the **Unblock** check box, select **Apply**, and then select **OK**.
 
 
-<!-- editor note: It would help the user if the "Unblock" check box was highlighted in the image. It's hard to find. -->
+   <!-- editor note: It would help the user if the "Unblock" check box was highlighted in the image. It's hard to find. -->
 
 
     > [!div class="mx-imgBorder"] 
