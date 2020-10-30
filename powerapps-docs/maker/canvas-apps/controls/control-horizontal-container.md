@@ -1,6 +1,6 @@
 ---
 title: 'Horizontal container: reference | Microsoft Docs'
-description: Information, including properties and examples, about the HTML text control
+description: Information, including properties and examples, about the Horizontal container control
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -58,7 +58,7 @@ Horizontal container control determine the position of the child components so t
 
 **Wrap** -  Defines whether the content wraps to a new row or column when it cannot fit.
 
-**Align in container** - Defines how the individual component is aligned to the parent. The default value, **Set by container**, inherits the value from the parent’s `LayoutAlignItems` property, while other properties can be used to customize the alignment for the individual child component. **Set by container**, **Start**, **End**, **Center**, and **Stretch**. | 
+**Align in container** - Defines how the individual component is aligned to the parent. The default value, **Set by container**, inherits the value from the parent’s `LayoutAlignItems` property, while other properties can be used to customize the alignment for the individual child component. **Set by container**, **Start**, **End**, **Center**, and **Stretch**. 
 
 **Fill portions** - Defines how the individual component grows when there is more screen real-estate assigned to its parent.  The number represents the portion of the extra space given to the component out of all the available extra space claimed by children of its parent.  For example, if child A has `Fill portions` set to 1 and child B has `Fill portions` set to 2, child A gets 1/3 of the extra space available while child B gets 2/3 of the extra available space.
 
@@ -82,20 +82,7 @@ Horizontal container control determine the position of the child components so t
 
 
 ## Example
-1. Add a **[Label](control-text-box.md)** control, name it **Source**, and set its **[Text](properties-core.md)** property to this string:
-
-"\<p>We've\&nbsp;done an unusually \&quot;deep\&quot; globalization and localization.\<p>"
-
-Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-
-1. Add an **HTML text** control, and set its **HtmlText** property to this value:<br>
-   **Source.Text**
-   
-     The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
-
 
 ### Screen reader support
-* **HtmlText** must be present.
 
 ### Keyboard support
-* **HtmlText** should not contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in Power Apps does not consider elements inside **HtmlText**.

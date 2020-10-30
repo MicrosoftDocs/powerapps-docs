@@ -94,11 +94,11 @@ Below are some tips for building your app’s UI with containers:
 
 - Allows you to change how its child components are laid out with respect to responsiveness. 
 
-Choose one of two layout modes for a container: Manual layout or auto-layout (Horizontal or Vertical) 
+Choose one of two layout modes for a container: Manual layout or auto-layout (Horizontal or Vertical)
 
-### Auto-layout containers 
+### Auto-layout containers
 
-Two controls, `Vertical container` and `Horizontal container` can be used to automatically lay out child components. These containers determine the position of the child components so that you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components.  
+Two controls, [Horizontal container](controls/control-horizontal-container.md) and [Vertical container](controls/control-vertical-container.md) can be used to automatically lay out the child components. These containers determine the position of the child components so that you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components.  
 
 #### When to use auto-layout containers
 
@@ -111,35 +111,6 @@ You can use auto-layout containers in the following scenarios:
 - When you need to stack items vertically or horizontally (regardless of their size).
 
 - When you need to space items evenly on the screen.
-
-Auto-layout containers have the following properties:
-
-<!--#### Vertical vs. Horizontal mode 
-
-**LayoutDirection**: Horizontal, Vertical 
-In what direction does the container layout its children 
-
-##### Alignment options of Vertical Container and Horizontal Container -->
-
-|Property|Description|Parameters|
-|--------|-----------|----------|
-|LayoutDirection|Defines in what direction the container layouts its child components. | Horizontal, Vertical |
-|LayoutJustifyContent| Defines how child elements are aligned with the primary axis.|Start, End, Center, Space Between|
-|LayoutAlignItems| Defines how child components are positioned in the container, in the off axis (opposite from LayoutDirection).| Start, Center, End, Stretch| 
-|LayoutGap| Defines the space between containers child components in pixels. |Number|
-|LayoutOverflowX |Defines whether the container shows scrollbars or remove content when it is too large to fit. |Scroll, Hide |
-|LayoutOverflowY|Defines whether the container shows scrollbars or remove content when it is too large to fit. |Scroll, Hide |
-|LayoutWrap| Defines whether the content wraps to a new row or column when it cannot fit.| Boolean |
-|||
-
-The following properties can be set on any child for an auto-layout container (vertical or horizontal): 
-
-|Property|Description|Parameters/Value|
-|--------|-----------|----------|
-|AlignInContainer|Defines how the individual component is aligned to the parent. The default value, `SetByContainer`, inherits the value from the parent’s `LayoutAlignItems` property, while other properties can be used to customize the alignment for the individual child component. | SetByContainer, Start, End, Center, Stretch | 
-|FillPortions|Defines how the individual component grows when there is more screen real-estate assigned to its parent.  The number represents the portion of the extra space given to the component out of all the available extra space claimed by children of its parent.  For example, if child A has `FillPortions` set to 1 and child B has `FillPortions` set to 2, child A gets 1/3 of the extra space available while child B gets 2/3 of the extra available space.| Integer |
-|MinWidth, MinHeight|When FillPortions property is used, represent the minimum size of the component in the direction of the FillPortions (that is, the parent’s LayoutDirection) | Number |
-|||
 
 ## Known issues
 
