@@ -20,11 +20,11 @@ search.app:
 
 # Using relevance search to search for records
 
-Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
+Relevance Search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
 
 Relevance search in Power Apps is the best search experience to find and act on your data in Common Data Service. 
 
-- Relevance search is faster than Categorized search. Relevance search finds matches across fields to find the most relevant results. Relevance search is smarter, in the following ways: 
+- Relevance Search is faster than Categorized search. Relevance Search finds matches across fields to find the most relevant results. Relevance Search is smarter, in the following ways: 
 
   - It finds matches for inflectional words like **stream**, **streaming**, or **streamed**. A relevance ranking system that factors in information like how close or spread out the search terms are in a field 
   - Search results with matched text is highlighted, so you can easily see and understand the results. 
@@ -36,25 +36,25 @@ Relevance search in Power Apps is the best search experience to find and act on 
     > - Certain words that are very commonly used in a language (like the or a) are ignored during search, because they don't help uniquely identify records. Because they're ignored during search, these words are also not highlighted in results
 
 
-- Relevance search can comb through the text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.
-- Relevance search enables you to search for records that are shared with you and records that you own.
+- Relevance Search can comb through the text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.
+- Relevance Search enables you to search for records that are shared with you and records that you own.
     > [!NOTE]
-    > - Hierarchical security models aren't supported. Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in relevance search.
+    > - Hierarchical security models aren't supported. Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in Relevance Search.
     
-- Relevance search lets you search for option sets and lookups. For example, if you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.
+- Relevance Search lets you search for option sets and lookups. For example, if you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.
     > [!NOTE]
-    > - Relevance search is text-based and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type.
+    > - Relevance Search is text-based and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type.
 
--  Relevance search allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search). 
+-  Relevance Search allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search). 
 
 
-## Turn on relevance search
+## Turn on Relevance Search
 
-Relevance search needs to be enabled on by the administrator for your organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization before it is available in your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+Relevance Search needs to be enabled on by the administrator for your organization, thus allowing all users in the organization to use it. After Relevance Search is enabled, you might have to wait up to an hour or more, depending on the size of your organization before it is available in your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
 ### Turn on the new Relevance Search experience 
 
-The new search experience is available as a feature setting in the Power Platform admin Center. It combines the strength of relevance search as a service, with a user interface that is intuitive, familiar, and easy to use. When the **Use new search experience** setting is turned on, it will enable the new experience to all the apps in the environment.
+The new search experience is available as a feature setting in the Power Platform admin Center. It combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. When the **Use new search experience** setting is turned on, it will enable the new experience to all the apps in the environment.
 
  > [!div class="mx-imgBorder"]
  > ![Turn on new search experience](media/admin-enable-search.jpg) 
@@ -64,7 +64,7 @@ The new search experience is available as a feature setting in the Power Platfor
 
 ## Use the new Relevance Search experience 
 
-The new search experience compliments the performance and intelligence of relevance search service and is intuitive and easy to use. 
+The new search experience compliments the performance and intelligence of Relevance Search service and is intuitive and easy to use. 
 
 ### Prominent search bar
 
@@ -122,7 +122,7 @@ Legend
 
 ## Set default search experience
 
-If your organization has turned on both relevance search and categorized search, you can select a default search experience in your personal settings.
+If your organization has turned on both Relevance Search and categorized search, you can select a default search experience in your personal settings.
 
 1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
   
@@ -136,14 +136,14 @@ If your organization has turned on both relevance search and categorized search,
 
 
 > [!IMPORTANT]
-> If you have the new Relevance Search experience available but you set your default search experience to Categorized Search, then the old relevance search experience and categorized is available. To use the new relevance search experience, you must set your default search experience to, Relevance Search. 
+> If you have the new Relevance Search experience available but you set your default search experience to Categorized Search, then the old Relevance Searchh experience and categorized is available. To use the new Relevance Search experience, you must set your default search experience to, Relevance Search. 
 
-## Use the old relevance search experience 
+## Use the old Relevance Search experience 
 
-If you're organization has relevance search enabled but your administrator has not turned on the [new relevance search experience](relevance-search.md#new-relevance-search-experience) then you will see the old search experience.
+If you're organization has Relevance Search enabled but your administrator has not turned on the [new relevance search experience](relevance-search.md#new-relevance-search-experience) then you will see the old search experience.
 
 
-### Switch between the old relevance search experience and categorized search
+### Switch between the old Relevance Search experience and Categorized Search
 
 If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
 
@@ -157,7 +157,7 @@ If your organization has turned on both search options (relevance search and cat
    > [!div class="mx-imgBorder"]
    > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
    
-### Start a search using the old relevance search experience
+### Start a search using the old Relevance Search experience
  
 1.  From the top nav bar, select **Search**.  
 
@@ -242,7 +242,7 @@ Like other facets, you can use date and time facets to filter and see search res
   
   
  
-   - In the **Select Entity** drop-down list, select an entity you want to configure facets for. This drop-down list contains only the entities that are enabled for relevance search.  
+   - In the **Select Entity** drop-down list, select an entity you want to configure facets for. This drop-down list contains only the entities that are enabled for Relevance Search.  
   
    - For the selected entity, select up to four facet fields. By default, the first four "facet-able" fields in the **Quick Find** view for the selected entity are selected in the list. At any time, you can only have four fields selected as facets.  
   
