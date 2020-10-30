@@ -148,7 +148,7 @@ To edit the record, select it, update the values, and then select **Save & Close
    > [!div class="mx-imgBorder"]
    > ![Select a phase to add a goal to](media/solution-reopen-phases-active.png "Select a phase to add a goal to")
 
-2. Under **Key Metrics**, select **+ New Goal**.
+2. Under **Key Metrics**, select **New Goal**.
 
    > [!div class="mx-imgBorder"]
    > ![Select a new goal](media/solution-admin-new-goal.png "Select a new goal")
@@ -190,7 +190,7 @@ To edit the record, select it, update the values, and then select **Save & Close
 
 ## Manage facilities
 
-Facilities are an important part of the Return to the Workplace solution. By default, the solution includes two facility types&mdash;buildings and conference centers&mdash. The IT administrator is responsible for creating, updating the existing facility types, and importing records. 
+Facilities are an important part of the Return to the Workplace solution. By default, the solution includes two facility types&mdash;buildings and conference centers. The IT administrator is responsible for creating, updating the existing facility types, and importing records. 
 
 **To manage facilities**
 
@@ -229,6 +229,11 @@ The facility sample data file is available in the package. When you want to impo
 
 **To import sample facility data to the Facility entity**
 
+
+
+<!-- from editor: Is "Facility Management" correct? I don't see it in the screenshot of the left pane. -->
+
+
 1. On the left pane, under **Facility Management**, select **Facilities**.
 
 2. Select **Import from Excel**, and select the facilities data file.
@@ -255,7 +260,7 @@ When setting up the solution, do the following:
 
 With solution settings, you define system settings unique to your company. Solution settings are linked to a facility group or to the entire organization, which makes it possible to differentiate them for facilities in that group. One solution setting will act as the default and will be applicable for every facility, which will be the solution setting record that has an empty facility group.
 
-Some of these settings have impact on the Employee app. The solution setting record that applies is found by matching the facility group of the default facility of that user to settings. If no record is found or the user has no default facility set, the default solution settings record is used.
+Some of these settings have an impact on the Employee app. The solution setting record that applies is found by matching the facility group of that user's default facility to settings. If no record is found or the user has no default facility set, the default solution settings record is used.
 
 **To set solution settings**
 
@@ -278,7 +283,7 @@ Some of these settings have impact on the Employee app. The solution setting rec
    | Allow Employee Sentiment | Capture employee sentiment information in the Employee app. |
    | Allow storing of Negative Attestations | When disabled, negative attestations registered in the Employee app are not stored. |
    | Allow QR codes | Enables QR code on the pass in the Employee app.  |
-   | Allow Guest Registrations | Enables employees to register guest on their bookings in the Employee app.  |
+   | Allow Guest Registrations | Enables employees to register guests on their bookings in the Employee app.  |
    | Allow Share Guest Registrations | Enables employees to share passes with guests. |
    | Health & Safety email | Email address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
    | Health & Safety Instructions | General instructions provided to employee in the Employee app when access is blocked by the case manager. |
@@ -310,7 +315,7 @@ For active employee cases, the number of cases can be limited to one active case
    > [!div class="mx-imgBorder"]
    > ![Environment Settings](media/solution-environmnet-setting.png "Environment Settings")
 
-4. Expand **Data Management** and then select **Duplicate detection rules**.
+4. Expand **Data management** and then select **Duplicate detection rules**.
 
    > [!div class="mx-imgBorder"]
    > ![Data Management](media/solution-data-management.png "Data Management")
@@ -320,10 +325,10 @@ For active employee cases, the number of cases can be limited to one active case
    | **Field**   | **Description**                     |
    |-------------|-------------------------------------|
    | Name        | Enter a name for the rule.     |
-   | Base Record Type | Select employee cases. |
-   | Matching Record Type | Select employee cases. |
-   | Field | Select employee. |
-   | Criteria | Select exact match. |
+   | Base Record Type | Select Employee Case. |
+   | Matching Record Type | Select Employee Case. |
+   | Field | Select Employee. |
+   | Criteria | Select Exact Match. |
 
    Select the **Exclude inactive matching records** check box.
 
@@ -371,6 +376,11 @@ When installing the Return to the Workplace solution, Contoso sample data is ins
 - Employees
 - Solution Settings
 
+
+
+<!-- from editor: This says four flows, but five are described. Change to five flows? -->
+
+
 Usage sample data is generated by four flows. These need to be disabled when you are not using the Contoso sample data or when accessing the solution in a production environment.
 
 - Sample Data - Generate Facility transitions
@@ -401,7 +411,7 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 
 1.	Select **Settings**, and then select **Data Management**
 
-2.	Under **Data Management**, select **Bulk record deletion**.
+2.	Under **Data Management**, select **Bulk Record Deletion**.
 
    > [!div class="mx-imgBorder"]
    > ![Data Management admin](media/solution-admin-dm.png "Data Management admin")
