@@ -210,9 +210,9 @@ Not all types of columns are supported, and not all types of columns support all
 
 SharePoint lists with links to images stored in SharePoint document libraries may fail to render inside Power Apps with authentication errors.
 
-Power Apps connections to SharePoint are made to an explicitly identified list, and not to a SharePoint site in general. Power Apps will try to resolve an external link to an external source. Rendering such images succeeds if there's no authentication required, or if the user has previously authenticated to the referenced SharePoint site. However, it's common that the Power Apps users on mobile devices may not have previously authenticated to the referenced SharePoint site for images. Using links to refer to images from SharePoint document libraries in this scenario may not succeed.
+Power Apps connections to SharePoint are made to an explicitly identified list, and not to a SharePoint site in general. Power Apps will try to resolve an external link to an external source. Rendering such images succeeds if there's no authentication required, or if the user has previously authenticated to the referenced SharePoint site. However, it's common that the Power Apps users on mobile devices may not have previously authenticated to the referenced SharePoint site for images. Using links to refer to images from SharePoint document libraries in this scenario may not succeed. This behavior applies even if a separate connection exists for the document library inside the app.
 
-As a solution for such scenarios, store images on a [CORS-enabled](https://enable-cors.org/) source, or a CDN service that doesn't require authentication.
+As a solution for such scenarios, store images on a [CORS-enabled](https://enable-cors.org/) source such as [Azure Storage](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services), or a CDN service that doesn't require authentication.
 
 ## Next steps
 
