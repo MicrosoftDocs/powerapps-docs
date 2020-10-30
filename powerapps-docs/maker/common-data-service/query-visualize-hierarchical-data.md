@@ -96,7 +96,7 @@ For some tables, such as account and user, the visualizations are provided out-o
   
 -   Presently, a hierarchy or visualization is based on one table only. You can depict the account hierarchy showing accounts at multiple levels, but you can’t show accounts and contacts in the same hierarchy visualization.  
   
--   Maximum number of fields that can be displayed in a tile is four. If you add more fields to the Quick Form that is used for the tile view, only the first four fields will be displayed.  
+-   Maximum number of columns that can be displayed in a tile is four. If you add more columns to the Quick Form that is used for the tile view, only the first four columns will be displayed.  
   
 ### Visualization example  
  Let’s look at an example of creating the visualization for a custom table. We created a custom table called new_Widget, created a self-referential relationship and marked it as hierarchical, as shown here.  
@@ -104,14 +104,14 @@ For some tables, such as account and user, the visualizations are provided out-o
 > [!div class="mx-imgBorder"] 
 > ![Widget relationship definition](media/widget-relationship-definition.png "Widget relationship definition")  
    
- Next, in the **Hierarchy Settings** grid view, we selected the **Widget_new_Widget_new_Widget** hierarchical relationship. In the form, we filled in the required fields. If you haven’t yet marked the relationship as hierarchical, the link on the form will take you to the classic table editor, where you can also mark the relationship as hierarchical.  
+ Next, in the **Hierarchy Settings** grid view, we selected the **Widget_new_Widget_new_Widget** hierarchical relationship. In the form, we filled in the required columns. If you haven’t yet marked the relationship as hierarchical, the link on the form will take you to the classic table editor, where you can also mark the relationship as hierarchical.  
   
- For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four fields to display in each tile.  
+ For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four columns to display in each tile.  
   
 > [!div class="mx-imgBorder"] 
 > ![Create quick form for widget](media/create-quickf-orm.png "Create quick form for widget")  
   
- After we completed the setup, we created two records: Standard Widget and Premium Widget. After making the Premium Widget a parent of the Standard Widget by using the lookup field, the new_Widget grid view depicted the hierarchy icons, as shown below:  
+ After we completed the setup, we created two records: Standard Widget and Premium Widget. After making the Premium Widget a parent of the Standard Widget by using the lookup column, the new_Widget grid view depicted the hierarchy icons, as shown below:  
   
 > [!div class="mx-imgBorder"] 
 > ![Widget's hierarchy grid](media/widget-hierarchy-grid.png "Widget's hierarchy grid")  
@@ -119,7 +119,7 @@ For some tables, such as account and user, the visualizations are provided out-o
 > [!TIP]
 >  The hierarchy icons don’t appear in the record grid view until the records are paired in the parent – child relationship.  
   
- Choosing the hierarchy icon displays the new_Widget hierarchy with the tree view on the left and the tile view on the right, showing two records. Each tile contains four fields that we provided in the **Widget Hierarchy Tile Form**.  
+ Choosing the hierarchy icon displays the new_Widget hierarchy with the tree view on the left and the tile view on the right, showing two records. Each tile contains four columns that we provided in the **Widget Hierarchy Tile Form**.  
  
  > [!div class="mx-imgBorder"] 
  > ![Widget's tree and tiles views](media/widget-tree-tiles.png "Widget's tree and tiles views")  

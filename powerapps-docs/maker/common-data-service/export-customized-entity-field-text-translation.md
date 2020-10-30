@@ -1,6 +1,6 @@
 ---
-title: "Export customized table and field text for translation with Power Apps | MicrosoftDocs"
-description: "Learn how to export table and field text for translation"
+title: "Export customized table and column text for translation with Power Apps | MicrosoftDocs"
+description: "Learn how to export table and column text for translation"
 ms.custom: ""
 ms.date: 08/05/2020
 ms.reviewer: ""
@@ -23,10 +23,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Translate customized table, form, and field text into other languages
+# Translate customized table, form, and column text into other languages
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-After you create customized table and field text in your unmanaged solution, you may want to translate it into other languages.  
+After you create customized table and column text in your unmanaged solution, you may want to translate it into other languages.  
 
 > [!IMPORTANT]
 > When you export translations, the export translations feature exports translations for the table. So, that means even if the solution contains only a single form, labels for all the forms for the table will be exported. Make sure you only modify the form's labels when importing the translations back otherwise another component translation you modify will be added as a dependency to the solution.
@@ -49,7 +49,7 @@ After you create customized table and field text in your unmanaged solution, you
     > [!div class="mx-imgBorder"]
     > ![Translated text in Excel file](media/translated-table-label-text.png)
 
-9. When you're finished adding your translations, save, and zip up the package so you can [Import translated table and field text](import-translated-table-field-text.md).
+9. When you're finished adding your translations, save, and zip up the package so you can [Import translated table and column text](import-translated-table-column-text.md).
 
 ## Community tools
 
@@ -60,4 +60,4 @@ After you create customized table and field text in your unmanaged solution, you
 > If you have questions about the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ## Next steps  
- [Import translated table and field text](import-translated-table-field-text.md)
+ [Import translated table and column text](import-translated-table-column-text.md)

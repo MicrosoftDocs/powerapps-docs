@@ -34,7 +34,7 @@ Standard and custom tables within Common Data Service provide a secure and cloud
 * **Easy to secure** &ndash; Data is securely stored so that users can see it only if you grant them access. Role-based security allows you to control access to tables for different users within your organization.
 * **Access your Dynamics 365 Data** &ndash; Data from your Dynamics 365 applications is also stored within the Common Data Service allowing you to quickly build apps which leverage your Dynamics 365 data and extend your apps using Power Apps.
 * **Rich metadata** &ndash; Data types and relationships are leveraged directly within Power Apps.
-* **Logic and validation** &ndash; Define calculated fields, business rules, workflows, and business process flows to ensure data quality and drive business processes.
+* **Logic and validation** &ndash; Define calculated columns, business rules, workflows, and business process flows to ensure data quality and drive business processes.
 * **Productivity tools** &ndash; tables are available within the add-ins for Microsoft Excel to increase productivity and ensure data accessibility.
 
 For more information, see [Why choose Common Data Service?](why-cds-overview.md).
@@ -46,7 +46,7 @@ Responding to customer feedback and data from user research, effective November 
 |Legacy term |Current term |
 |--|--|
 |table, tables	|Table, tables|
-|Field, fields<br/>Attribute, attributes|	Column, columns|
+|Field, columns<br/>Attribute, attributes|	Column, columns|
 |Record, records|	Row, rows|
 |Option set, option sets<br/>Picklist, picklists|	Choice, choices
 Two options|	Yes/No|
@@ -86,13 +86,13 @@ You can extend the functionality of standard tables by creating one or more cust
 ## Logic and validation
 tables within Common Data Service can leverage rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data within an table.
 
-* **Business rules** validate data across multiple fields and tables and provide warning and error messages, regardless of the app used to create the data. For more information, see [Create a business rule](./data-platform-create-business-rule.md).
+* **Business rules** validate data across multiple columns and tables and provide warning and error messages, regardless of the app used to create the data. For more information, see [Create a business rule](./data-platform-create-business-rule.md).
 * **Business process flows** guide users to ensure they enter data consistently and follow the same steps every time. Business process flows are currently only supported for Model driven apps. For more information, see [Business process flows overview](/dynamics365/customer-engagement/customize/business-process-flows-overview).
 * **Workflows** allow you to automate business processes without user interaction. For more information, see [Workflows overview](/dynamics365/customer-engagement/customize/workflow-processes).
 * **Business logic with code** supports advanced developer scenarios to extend the application directly through code. For more information, see [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md).
 
 ## Security
-Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, record-based security, and field-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) 
+Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, record-based security, and column-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) 
 
 ## Developer capabilities
 In addition to the features available through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service also includes features for developers to programmatically access metadata and data to create tables and business logic, as well as interact with data. For more information, see [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)
@@ -105,4 +105,4 @@ To get started using Common Data Service:
 - [Use Power Query](./data-platform-cds-newtable-pq.md) to connect to an online or on-premises data source and import the data directly into Common Data Service.
 
 ## Privacy notice
-With the Microsoft Power Apps common data model, Microsoft collects and stores custom table and field names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The table and field names that app Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service's standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom table and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
+With the Microsoft Power Apps common data model, Microsoft collects and stores custom table and column names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The table and column names that app Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service's standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom table and column names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).

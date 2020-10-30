@@ -40,7 +40,7 @@ This article shows you how to perform the following tasks:
 This section describes the prerequisites necessary to consume Common Data Service data with Power BI by using the Export to Data Lake service.
 -  **Power BI Desktop**. [Get it now](https://powerbi.microsoft.com/downloads/)
 
--  **Export to data lake:** This guide assumes that you have already exported data from Common Data Service by using the [Export to Data Lake service](export-to-data-lake.md). In this example, account table data is exported to the data lake and will generate a report by using the account table fields.
+-  **Export to data lake:** This guide assumes that you have already exported data from Common Data Service by using the [Export to Data Lake service](export-to-data-lake.md). In this example, account table data is exported to the data lake and will generate a report by using the account table columns.
 
 ## Connect the Data Lake Storage Gen2 storage to Power BI Desktop
 
@@ -76,9 +76,9 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
     ![Pie chart](media/pie-chart.png "Pie chart")
 
-2. On the **Fields** menu, search for and select the fields **ownerid** and **revenue**. The fields will appear on the **Visualizations** menu under **Legend** and **Values**, respectively.
+2. On the **Fields** menu, search for and select the columns **ownerid** and **revenue**. The columns will appear on the **Visualizations** menu under **Legend** and **Values**, respectively.
 
-    ![Search for and select the revenue field](media/select-fields.png "Search for and select the revenue field")
+    ![Search for and select the revenue column](media/select-columns.png "Search for and select the revenue column")
 
    A pie chart appears that separates each account owner by color and displays the total revenue of accounts.
 

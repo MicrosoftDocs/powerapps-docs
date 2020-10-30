@@ -21,10 +21,10 @@ search.app:
 
 With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" tables or creating custom tables. An table defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
 
-In this topic you create an table and then add or customize key components such as fields, relationships, views, and forms. You learn how to:
+In this topic you create an table and then add or customize key components such as columns, relationships, views, and forms. You learn how to:
 
 - Create a custom table
-- Add custom fields to your table
+- Add custom columns to your table
 - Add an table relationship
 - Customize a view 
 - Customize a form
@@ -47,23 +47,23 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
     - **Display name**: *Pet* 
     - **Description**: *Custom table to track pet services*
 
-## Add and customize fields
+## Add and customize columns
  
 1. In the list of tables, select the **Pet** table that was created in the previous section.
 
-2. On the **Fields** tab, select the **Pet** field.
+2. On the **Fields** tab, select the **Pet** column.
 
-3. In the right pane make the following changes to the **Display name** field: 
+3. In the right pane make the following changes to the **Display name** column: 
 
     - Change the **Display name** from **Pet** to *Pet Name*
     -	Select **Searchable**  
   
       > [!div class="mx-imgBorder"] 
-      > ![Change primary field](media/create-custom-table/primary-field.png)
+      > ![Change primary column](media/create-custom-table/primary-column.png)
 
 4. Select **Done**.
 
-5. On the **Fields** tab on the table designer toolbar select **Add field**. On the **Field properties** pane, enter or select the following values and options.
+5. On the **Fields** tab on the table designer toolbar select **Add column**. On the **Field properties** pane, enter or select the following values and options.
     - **Display name**. *Species*
     - **Data type**. *Option Set*
     - **Option set**. *New option set*
@@ -85,13 +85,13 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 6. Select **Searchable**, and then select **Done**.
 
-7. On the table designer toolbar select **Add field**. On the **Field properties** pane, enter or select the following values, and then select **Done**.
+7. On the table designer toolbar select **Add column**. On the **Field properties** pane, enter or select the following values, and then select **Done**.
     - **Display name**. *Breed*
     - **Data type**. *Text*
 
 8. Select **Searchable**, and then select **Done**.
 
-8. On the table designer toolbar select **Add field**. 
+8. On the table designer toolbar select **Add column**. 
 
 9. On the **Field properties** pane, enter or select the following values, and then select **Done**. 
     -	**Display name**. *Appointment date*
@@ -109,9 +109,9 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 4. Select **Save table**.
 
-  Notice that when you add a many-to-one relationship, an **Account** field with the data type **Lookup** is automatically added to your list of fields on the **Fields** tab.
+  Notice that when you add a many-to-one relationship, an **Account** column with the data type **Lookup** is automatically added to your list of columns on the **Fields** tab.
   > [!div class="mx-imgBorder"]
-  > ![Account lookup field](media/create-custom-table/account-lookup-field.png)
+  > ![Account lookup column](media/create-custom-table/account-lookup-column.png)
 
 ## Customize a view
 
@@ -143,10 +143,10 @@ Skip this step if you only want to use the Pet table in a canvas app.
     > [!div class="mx-imgBorder"] 
     > ![Edit main form](media/create-custom-table/main-form-edit.png)
 
-3. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** fields located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
+3. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** columns located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select fields for main form](media/create-custom-table/main-form-edit2.png) 
+    > ![Select columns for main form](media/create-custom-table/main-form-edit2.png) 
 
 4. Select **Save**.
 

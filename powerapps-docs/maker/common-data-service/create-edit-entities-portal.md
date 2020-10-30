@@ -61,16 +61,16 @@ While [viewing tables](#view-tables), in the menu bar select **New table**. This
 > [!div class="mx-imgBorder"] 
 > ![New table Panel](media/new-table-panel.png)
 
-Enter data for the following fields
+Enter data for the following columns
 
 |Field|Description|
 |--|--|
 |**Display name**|This is the singular name for the table that will be shown in the app. This can be changed later.|
 |**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
-|**Name**|This field is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
-|**Primary Name**|This is the only field visible at this point.| Edit it if you want to change the **Display Name**or **Name** of the field.
-|**Display name**|This is the main user-friendly text identifier for your record (typically a name or a number). The value of this field is shown to users when they need to select from a list of records.
-|**Name**|This field is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
+|**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
+|**Primary Name**|This is the only column visible at this point.| Edit it if you want to change the **Display Name**or **Name** of the column.
+|**Display name**|This is the main user-friendly text identifier for your record (typically a name or a number). The value of this column is shown to users when they need to select from a list of records.
+|**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
 
 Select **Enable Attachments** to append notes and files to records for this table.
 
@@ -84,9 +84,9 @@ Select **More settings**. These settings are optional for an table.
 |**Create and Update Settings**|You can enable quick create forms, giving your app a streamlined data entry experience. Duplicate detection lets you set duplicate detection policies and create duplicate detection rules. Change tracking provides a way to keep data synchronized in a performant way.|
 |**Dynamics 365 for Outlook**|Configure how this table appears in Outlook.|
 
-Select **Create** to continue, this will close the **New table** panel and display the list of fields.
+Select **Create** to continue, this will close the **New table** panel and display the list of columns.
 
-The **Primary Name** field of the table is displayed in the list of fields. Select the **Primary Name** field to edit it if you want to change the **Display Name**or **Name** of the field. The default values are shown below:
+The **Primary Name** column of the table is displayed in the list of columns. Select the **Primary Name** column to edit it if you want to change the **Display Name**or **Name** of the column. The default values are shown below:
 
 > [!div class="mx-imgBorder"] 
 > ![Primary Name panel](media/primary-name-panel.png)
@@ -104,7 +104,7 @@ For other items choose from the tabs.
 
 ### Fields
 
-See [Create and edit fields](create-edit-fields.md)
+See [Create and edit columns](create-edit-columns.md)
 
 ### Relationships
 
@@ -137,7 +137,7 @@ See [Define alternate keys to reference records](define-alternate-keys-reference
 ### Data
 
 View the data in the table.
-Use the **Select view** menu to choose from available views for the table or to show all fields.
+Use the **Select view** menu to choose from available views for the table or to show all columns.
 
 > [!div class="mx-imgBorder"] 
 > ![Select view](media/table-data-select-view.png)

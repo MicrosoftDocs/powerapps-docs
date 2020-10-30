@@ -70,7 +70,7 @@ If your organization uses background workflows or business process flows that ru
    
    - **Status Reason Equals Succeeded**: Delete successful, canceled, and failed jobs.
    
-   - **Completed On Older than X Days 30**: Use the Completed On field to only delete real-time workflow process log records that are older than 30 days.
+   - **Completed On Older than X Days 30**: Use the Completed On column to only delete real-time workflow process log records that are older than 30 days.
    
    ![View of a page for custom bulk record deletions](media/custom-bulk-record-deletion.png)
    

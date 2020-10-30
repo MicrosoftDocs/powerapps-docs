@@ -91,7 +91,7 @@ Common Data Service uses Azure Active Directory idtable and access management me
 
 Common Data Service uses role-based security to group together a collection of privileges. These security roles can be associated directly with users, or they can be associated with Common Data Service teams and business units.
 
-In Common Data Service, individual records can be shared on a one-by-one basis with another user. Because record-level control of access isn't adequate for some business scenarios, Common Data Service has a field-level security feature to allow more granular control of security at the field level.
+In Common Data Service, individual records can be shared on a one-by-one basis with another user. Because record-level control of access isn't adequate for some business scenarios, Common Data Service has a column-level security feature to allow more granular control of security at the column level.
 
 Common Data Service also includes two security models that can be used for hierarchies: the *manager* hierarchy and the *position* hierarchy. With the manager hierarchy, a manager must be within the same business unit as the report, or in the parent business unit of the report's business unit, to have access to the report's data. The position hierarchy allows data access across business units.
 

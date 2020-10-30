@@ -1,6 +1,6 @@
 ---
-title: Create a relationship between tables by using a lookup field | Microsoft Docs
-description: Step-by-step instructions for how to create a relationship between tables in Power Apps by using a lookup field.
+title: Create a relationship between tables by using a lookup column | Microsoft Docs
+description: Step-by-step instructions for how to create a relationship between tables in Power Apps by using a lookup column.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -18,18 +18,18 @@ search.app:
 # Create a relationship between tables
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Data in one table often relates to data in another table. For example, you might have a **Teachers** table and a **Class** table, and the **Class** table might have a lookup relation to the **Teachers** table to show which teacher teaches the class. You can use a lookup field to show data from the **Teachers** table. This is commonly referred to as a lookup field.
+Data in one table often relates to data in another table. For example, you might have a **Teachers** table and a **Class** table, and the **Class** table might have a lookup relation to the **Teachers** table to show which teacher teaches the class. You can use a lookup column to show data from the **Teachers** table. This is commonly referred to as a lookup column.
 
 ## Define a relationship
 You can create several types of relationships from one table to another (or between an table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table. Some common relationship types are:
 
-* **Many-to-one** - In this type of relationship, each record in table A can match more than one record in table B, but each record in table B can match only one record in table A. For example, a class has a single classroom. This is the most common type of relationship and is shown in the field list as a **Lookup field**
+* **Many-to-one** - In this type of relationship, each record in table A can match more than one record in table B, but each record in table B can match only one record in table A. For example, a class has a single classroom. This is the most common type of relationship and is shown in the column list as a **Lookup column**
 * **One-to-many** - In this type of relationship, each record in table B can match more than one record in table A, but each record in table A can match only one record in table B. For example, a single teacher, teaches many classes.
 * **Many-to-many** - In this type of relationship, each record in table A can match more than one record in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
 Additionally, you can set advanced cascading behaviors on many-to-one and one-to-many relationships whenever an action is taken on the parent table.
 
-## Add a lookup field (Many-to-one relationship)
+## Add a lookup column (Many-to-one relationship)
 
 To add a lookup relation to an table, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
 
@@ -44,7 +44,7 @@ To add a lookup relation to an table, create a relation under the **Relationship
     > [!div class="mx-imgBorder"] 
     > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-1.png "Many to One Relationship")
 
-5. After selecting an table the Look up fields will be shown on the Primary table, they will default with the table's name (in this example Classroom) but you can change them if needed.
+5. After selecting an table the Look up columns will be shown on the Primary table, they will default with the table's name (in this example Classroom) but you can change them if needed.
 
     ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to One Relationship")
 
@@ -67,10 +67,10 @@ To add a One-to-many relationship, create a relation under the **Relationships**
     > [!div class="mx-imgBorder"] 
     > ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-1.png "One to Many Relationship")
 
-5. After selecting an table the Look up fields will be shown on the Primary table, they will default with the tables name (in this example Class) but you can change them if needed.
+5. After selecting an table the Look up columns will be shown on the Primary table, they will default with the tables name (in this example Class) but you can change them if needed.
 
     > [!NOTE]
-    > In the case of a One-to-many relationships, the Look up field will be created on the related table, not the table you currently have selected. If you need the lookup on the current table, please create a Many-to-one relationship.
+    > In the case of a One-to-many relationships, the Look up column will be created on the related table, not the table you currently have selected. If you need the lookup on the current table, please create a Many-to-one relationship.
 
     > [!div class="mx-imgBorder"] 
     > ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-2.png "One to Many Relationship")
@@ -129,8 +129,8 @@ For more information on defaults and custom behaviors: [Configure table relation
 
 
 
-## Use a lookup field in an app
-If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from an table that contains a lookup field, it appears as a **Drop down** control that contains data from the **Primary name** field of the table.
+## Use a lookup column in an app
+If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from an table that contains a lookup column, it appears as a **Drop down** control that contains data from the **Primary name** column of the table.
 
 ## Add 1:N and N:N relationships for canvas apps
 Use the **Relate** function to link two records through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in Power Apps](../canvas-apps/functions/function-relate-unrelate.md)

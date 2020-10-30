@@ -37,7 +37,7 @@ In the solution explorer, below the table, if you see a **Messages** node you ca
 
 ![table Messages](../model-driven-apps/media/table-messages.png)
 
-Editing this text is straightforward. Double-click the message to see a form with three fields:  
+Editing this text is straightforward. Double-click the message to see a form with three columns:  
   
 |Field|Description|  
 |-----------|-----------------|  

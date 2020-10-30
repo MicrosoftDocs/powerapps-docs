@@ -96,7 +96,7 @@ Once you add the connection role to your solution, you can edit it wherever it i
 
 ### Describe the connection role
 
-Set the following fields:
+Set the following columns:
 
 |Field|Description|
 |--|--|

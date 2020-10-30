@@ -66,13 +66,13 @@ The following table lists activity tables that are available in a default Common
 |**Recurring Appointment**|The master appointment of a recurring appointment series.|Yes|[RecurringAppointmentMaster](/powerapps/developer/common-data-service/reference/tables/recurringappointmentmaster)|
 |**Task**|Generic activity representing work needed to be done.|Yes|[Task](/powerapps/developer/common-data-service/reference/tables/task)|
   
-You can create new custom activity tables. For example you might create a custom activity table to record instant message communications. Creating an activity table is different from creating a non-activity table because you don’t specify a primary field. All activity tables have a **Primary Field** set to **Subject** and other common fields that are defined by the Activity table. This allows all types of activities to be shown in a view where just the common fields are displayed.  
+You can create new custom activity tables. For example you might create a custom activity table to record instant message communications. Creating an activity table is different from creating a non-activity table because you don’t specify a primary column. All activity tables have a **Primary Field** set to **Subject** and other common columns that are defined by the Activity table. This allows all types of activities to be shown in a view where just the common columns are displayed.  
 
 To create a custom activity table, open the **More settings** section in the **New table** panel, select **Activity table** option from the **Choose table type** drop-down list. After you select this, you’ll see that **Display in Activity Menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn’t selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the table, you can’t change these settings.  
 
 ## Virtual tables
 
-A virtual table is a custom table in Common Data Service that has fields containing data from an external data source. Virtual tables appear in your app to users as regular table records, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Records based on virtual tables are available in all clients including custom clients developed using the Common Data Service web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-tables.md)
+A virtual table is a custom table in Common Data Service that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table records, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Records based on virtual tables are available in all clients including custom clients developed using the Common Data Service web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-tables.md)
 
 ### See also
 [Create or edit tables](create-edit-tables.md)

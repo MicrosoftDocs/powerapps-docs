@@ -45,31 +45,31 @@ While [viewing tables](#view-tables), select **New** to open the new table form.
 
 ![new table form in solution explorer](media/new-table-form-solution-explorer.png)
 
-The new table form has two tabs. The **General** tab is for table options. The **Primary Field** tab is for options about the special single line of text field that each table has that defines the text shown when there is a link to open the table in a lookup field.
+The new table form has two tabs. The **General** tab is for table options. The **Primary Field** tab is for options about the special single line of text column that each table has that defines the text shown when there is a link to open the table in a lookup column.
 
 For information about each section see the following:
-- [Configure the primary field](#configure-the-primary-field)
-- [Configure required fields](#configure-required-fields)
+- [Configure the primary column](#configure-the-primary-column)
+- [Configure required columns](#configure-required-columns)
 
 > [!NOTE]
 > You can also make the table a custom activity. This choice changes some of the default option values. More information: [Create a custom activity table](#create-custom-activity-table)
 
 After you have set the required options for the table, click ![Save command](media/save-table-icon-solution-explorer.png) to create the custom table.
 
-### Configure the primary field
+### Configure the primary column
 
-In the **Primary Field** tab you can usually accept the default values for the primary field, but you have the following options:
+In the **Primary Field** tab you can usually accept the default values for the primary column, but you have the following options:
 
 |Field   |Description  |
 |---------|---------|
-|**Display Name**|Enter the localizable label that will be displayed for this field in forms and lists. The default value is **Name**.|
-|**Name**|Set the name used in the system for this field. The default value is `<customization prefix>_name`|
-|**Maximum Length**|Enter the maximum length for the field values. The default is 100.|
+|**Display Name**|Enter the localizable label that will be displayed for this column in forms and lists. The default value is **Name**.|
+|**Name**|Set the name used in the system for this column. The default value is `<customization prefix>_name`|
+|**Maximum Length**|Enter the maximum length for the column values. The default is 100.|
 
 > [!NOTE]
 > These options do not apply if the table is an activity table. More information:  [Create a custom activity table](#create-custom-activity-table)
 
-### Configure required fields
+### Configure required columns
 
 In the **General** tab, some of the options are required before you can save the table.
 
@@ -77,7 +77,7 @@ In the **General** tab, some of the options are required before you can save the
 |---------|---------|
 |**Display Name**|This is the singular name for the table that will be shown in the app.<br />This can be changed later.|
 |**Plural Name**|This is the plural name for the table that will be shown in the app.<br />This can be changed later.|
-|**Name**|This field is pre-populated based on the display name you enter. It includes the solution publisher customization prefix.|
+|**Name**|This column is pre-populated based on the display name you enter. It includes the solution publisher customization prefix.|
 |**Ownership**|You can choose either user or team-owned or organization owned. More information: [Standard table ownership](types-of-tables.md#standard-tables)|
 
 ## Edit an table
@@ -108,7 +108,7 @@ Both should point to this include
 [!INCLUDE [cc_table-changeable-options-table](../../includes/cc_table-changeable-options-table.md)]
 
 You can also make the following changes:
-- [Create and edit fields for Common Data Service](create-edit-fields.md)
+- [Create and edit columns for Common Data Service](create-edit-columns.md)
 - [Create and edit relationships between tables](create-edit-table-relationships.md)
 - [Create and design forms](../model-driven-apps/create-design-forms.md)
 - [Create a business process flow to standardize processes](/flow/create-business-process-flow)
@@ -156,7 +156,7 @@ You can identify dependencies that will prevent an table from being deleted befo
 3. Remove these published dependencies and you should be able to delete the table.
 
  > [!NOTE]
- > A very common dependency is that another table form has a lookup field for the table you are deleting. Removing the lookup field from the form will resolve the dependency.
+ > A very common dependency is that another table form has a lookup column for the table you are deleting. Removing the lookup column from the form will resolve the dependency.
 
 ## Create custom activity table
 
@@ -168,7 +168,7 @@ An activity table is a special kind of table that tracks actions for which an en
 
 When you set this option some table properties are not compatible. An activity table has to conform to standard behaviors that all activity tables use.
 
-The primary field **Name** and **Display Name** will be set to **Subject** and you cannot change this.
+The primary column **Name** and **Display Name** will be set to **Subject** and you cannot change this.
 
 The following options are set by default and cannot be changed:
 

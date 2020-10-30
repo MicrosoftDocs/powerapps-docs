@@ -1,6 +1,6 @@
 ---
-title: "Delete fields in Power Apps | MicrosoftDocs"
-description: "Learn how to delete fields"
+title: "Delete columns in Power Apps | MicrosoftDocs"
+description: "Learn how to delete columns"
 ms.custom: ""
 ms.date: 06/20/2018
 ms.reviewer: ""
@@ -24,17 +24,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Delete fields
+# Delete columns
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 <a name="BKMK_DeletingFields"></a>   
  
- As someone with the system administrator security role, you can delete any custom fields that aren’t part of a managed solution. When you delete a field, any data stored in the field is lost. The only way to recover data from a field that was deleted is to restore the database from a point before the field was deleted.  
+ As someone with the system administrator security role, you can delete any custom columns that aren’t part of a managed solution. When you delete a column, any data stored in the column is lost. The only way to recover data from a column that was deleted is to restore the database from a point before the column was deleted.  
   
- Before you can delete a custom table, you must remove any dependencies that may exist in other solution components. Open the field and use the **Show Dependencies** button in the menu bar to view any **Dependent Components**. For example, if the field is used in a form or view, you must first, remove references to the field in those solution components.  
+ Before you can delete a custom table, you must remove any dependencies that may exist in other solution components. Open the column and use the **Show Dependencies** button in the menu bar to view any **Dependent Components**. For example, if the column is used in a form or view, you must first, remove references to the column in those solution components.  
   
- If you delete a lookup field, the 1:N table relationship for it will automatically be deleted.  
+ If you delete a lookup column, the 1:N table relationship for it will automatically be deleted.  
 
  ## Next steps
 

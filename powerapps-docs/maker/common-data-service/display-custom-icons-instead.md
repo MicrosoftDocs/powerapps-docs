@@ -159,17 +159,17 @@ function displayIconTooltip(rowData, userLCID) {
  ![Custom column graphics example](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  --> 
 
 ## Custom icon view display behavior
-### Primary fields 
-In the grid list view, custom icons applied to the table primary field replace the default system-generated icon. 
+### Primary columns 
+In the grid list view, custom icons applied to the table primary column replace the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
-> ![Primary field replaces default icon in the custom icon view](media/mobile-primary-field-custom-icon-display.png "Primary field replaces default icon in the custom icon view")
+> ![Primary column replaces default icon in the custom icon view](media/mobile-primary-column-custom-icon-display.png "Primary column replaces default icon in the custom icon view")
 
-### Other fields 
-In the grid list view, custom icons applied to a field that isn't the table primary field display as a secondary icon in addition to the default system-generated icon. 
+### Other columns 
+In the grid list view, custom icons applied to a column that isn't the table primary column display as a secondary icon in addition to the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
-> ![Not an table primary field custom icon view](media/card-form-not-primary-field.png "Not an table primary field custom icon view")
+> ![Not an table primary column custom icon view](media/card-form-not-primary-column.png "Not an table primary column custom icon view")
 
 ### Card forms
 Custom icons replace the default system-generated icon when the view is configured to use a card form.

@@ -30,8 +30,8 @@ This topic describes how to configure the OData v4 Data Provider as well as the 
 
 ## OData v4 data provider best practices
 
-- Common Data Service requires that all tables have an ID attribute, this ID is known as a unique identifier and the value must be a guid.  You can only map ID fields to external fields with the `Edm.Guid` data type.  You can’t map an `Edm.Int32` data type to a Unique Identifier data type field in Common Data Service.
--  OData tables with nullable properties must be set to match the mapped field in the virtual table. For example, an OData table property with Nullable=False must have the mapped field in Common Data Service **Field Requirement** attribute set to **Business Required**. 
+- Common Data Service requires that all tables have an ID attribute, this ID is known as a unique identifier and the value must be a guid.  You can only map ID columns to external columns with the `Edm.Guid` data type.  You can’t map an `Edm.Int32` data type to a Unique Identifier data type column in Common Data Service.
+-  OData tables with nullable properties must be set to match the mapped column in the virtual table. For example, an OData table property with Nullable=False must have the mapped column in Common Data Service **Field Requirement** attribute set to **Business Required**. 
 - For retrieve multiple queries, such as when you load data in to a grid, control the size of the dataset returned from the external data source by using the select and filter query parameters.
 - If not already enabled, system administrators should enable plug-in tracing. Once enabled, all errors from the OData endpoint are captured in the plug-in trace log. More information:  [Administrator Guide: System Settings dialog box - Customization tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab) 
 
@@ -74,7 +74,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
     - **OData v4 Data Provider**. Common Data Service includes an Odata v4 data provider that can be used to connect to data sources that support the OData v4 open standard.  
     - *Custom data provider*. If you've imported a data  provider plug-in, the data provider will appear here. More information:  [Developer Documentation: Get started with virtual tables](/dynamics365/customer-engagement/developer/virtual-tables/get-started-ve)  
     
-1. On the **New Data Source** properties page, complete the following fields, and then save the record.  
+1. On the **New Data Source** properties page, complete the following columns, and then save the record.  
   
     - **Name**. Type a name that describes the data source.  
     - **Uri**. If you are using the OData Data Provider, enter the uri for the OData web service. For example, if you are using the OData provider to connect to a web service hosted in Azure, the URI can look similar to *`https://contosodataservice.azurewebsites.net/odata/`*.  

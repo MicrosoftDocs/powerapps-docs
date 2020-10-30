@@ -26,11 +26,11 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-An option set (picklist) is a type of field that can be included in an table. It defines a set of options. When an option set is displayed in a form it uses a drop-down list control. When displayed in **Advanced Find** it uses a *picklist control*. Sometimes option sets are called picklists by developers.  
+An option set (picklist) is a type of column that can be included in an table. It defines a set of options. When an option set is displayed in a form it uses a drop-down list control. When displayed in **Advanced Find** it uses a *picklist control*. Sometimes option sets are called picklists by developers.  
   
-You can define an option set to use a set of options defined within itself (locally) or it can use a set of options defined elsewhere (globally) which can be used by other option set fields. 
+You can define an option set to use a set of options defined within itself (locally) or it can use a set of options defined elsewhere (globally) which can be used by other option set columns. 
 
-Global option sets are useful when you have a standard set of categories that can apply to more than one field. Maintaining two separate option sets with the same values is difficult and if they are not synchronized you can see errors, especially if you are mapping table fields in a one-to-many table relationship. More information:  [Mapping table fields](map-table-fields.md)
+Global option sets are useful when you have a standard set of categories that can apply to more than one column. Maintaining two separate option sets with the same values is difficult and if they are not synchronized you can see errors, especially if you are mapping table columns in a one-to-many table relationship. More information:  [Mapping table columns](map-table-columns.md)
 
 > [!NOTE]
 > If you define every option set as a global option set your list of global option sets will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local option set.

@@ -25,7 +25,7 @@ search.app:
 # table relationships 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-table relationships define how records can be related to each other in the database. At the simplest level, adding a lookup field to an table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup field in a form. With the lookup field, users can associate multiple *child* records of that table to a single *parent* table record.  
+table relationships define how records can be related to each other in the database. At the simplest level, adding a lookup column to an table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* records of that table to a single *parent* table record.  
   
 Beyond simply defining how records can be related to other records, 1:N table relationships also provide data to address the following questions:  
   
@@ -51,16 +51,16 @@ When you look at the solution explorer you might think that there are three type
   
 |Relationship Type|Description|  
 |-----------------------|-----------------|  
-|**1:N (One-to-Many)**|An table relationship where one table record for the **Primary table** can be associated to many other **Related table** records because of a lookup field on the related table.<br /><br /> When viewing a primary table record you can see a list of the related table records that are associated with it.<br /><br /> In the Power Apps portal, **Current table** represents the primary table.|  
+|**1:N (One-to-Many)**|An table relationship where one table record for the **Primary table** can be associated to many other **Related table** records because of a lookup column on the related table.<br /><br /> When viewing a primary table record you can see a list of the related table records that are associated with it.<br /><br /> In the Power Apps portal, **Current table** represents the primary table.|  
 |**N:N (Many-to-Many)**|An table relationship that depends on a special **Relationship table**, sometimes called an Intersect table, so that many records of one table can be related to many records of another table.<br /><br /> When viewing records of either table in a N:N relationship you can see a list of any records of the other table that are related to it.|  
   
-The **N:1 (many-to-one)** relationship type exists in the user interface because the designer shows you a view grouped by tables. 1:N relationships actually exist *between* tables and refer to each table as either a **Primary/Current table** or **Related table**. The related table, sometimes called the *child* table, has a lookup field that allows storing a reference to a record from the primary table, sometimes called the *parent* table. A N:1 relationship is just a 1:N relationship viewed from the related table.  
+The **N:1 (many-to-one)** relationship type exists in the user interface because the designer shows you a view grouped by tables. 1:N relationships actually exist *between* tables and refer to each table as either a **Primary/Current table** or **Related table**. The related table, sometimes called the *child* table, has a lookup column that allows storing a reference to a record from the primary table, sometimes called the *parent* table. A N:1 relationship is just a 1:N relationship viewed from the related table.  
  
 ## table relationship behavior
 Behaviors  for related tables is important because it helps ensure data integrity and can automate business processes for your company.
 
 ### Preserve data integrity
-Some tables exist to support other tables. They don't make sense on their own. They will typically have a required lookup field to link to the primary table they support. What should happen when the primary record is deleted?
+Some tables exist to support other tables. They don't make sense on their own. They will typically have a required lookup column to link to the primary table they support. What should happen when the primary record is deleted?
 
 You can use the relationship behavior to define this according to the rules for your business. Two options are:
 
@@ -134,7 +134,7 @@ Usually this means that for each table pair there is only one parental relations
 
 For example, if an table has a Customer lookup that can refer to either a contact or account table. There are two separate parental 1:N table relationships.
 
-Any activity table has a similar set of parental table relationships for tables that can be associated using the regarding lookup field.
+Any activity table has a similar set of parental table relationships for tables that can be associated using the regarding lookup column.
 
 <a name="BKMK_RelationshipBehaviorLimitations"></a>   
 

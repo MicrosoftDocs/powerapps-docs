@@ -54,7 +54,7 @@ While [viewing table relationships](#view-table-relationships), select **New Man
 
 ![New many-to-many relationship form](media/new-nn-table-relationship-form-solution-explorer.png)
 
-In the **Other table** group, in the **table Name** field, choose the table that you want to create the relationship with. This will populate the **Name** and **Relationship table Name** fields in the **Relationship Definition** group.
+In the **Other table** group, in the **table Name** column, choose the table that you want to create the relationship with. This will populate the **Name** and **Relationship table Name** columns in the **Relationship Definition** group.
 
 You can click ![Save table relationship button](media/save-table-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
 
@@ -75,7 +75,7 @@ The following table relationship properties can be edited after the relationship
 
 ### Edit Display options
 
-For both the **Current table** and the **Other table**, you can edit the display option fields which control how the related tables are displayed for model-driven apps.
+For both the **Current table** and the **Other table**, you can edit the display option columns which control how the related tables are displayed for model-driven apps.
 
 |Field|Description|
 |--|--|
@@ -93,12 +93,12 @@ These are the available display options:
 |Option|Description|
 |--|--|
 |**Do not Display**|Do not display the related tables for this relationship.|
-|**Use Custom Label**|When this option is chosen, the **Custom Label** field is enabled so that you can specify the localizable text to be used instead of the plural name.|
+|**Use Custom Label**|When this option is chosen, the **Custom Label** column is enabled so that you can specify the localizable text to be used instead of the plural name.|
 |**Use Plural Name**|Use the plural display name defined for the related table.|
 
 ### Searchable
 
-You can hide the relationship from **Advanced Find** in model-driven apps by setting the **Searchable** field to **No**.
+You can hide the relationship from **Advanced Find** in model-driven apps by setting the **Searchable** column to **No**.
 
 ## Delete relationships
 

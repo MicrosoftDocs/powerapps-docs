@@ -51,22 +51,22 @@ While [viewing table relationships](#view-table-relationships), select either **
 > [!NOTE]
 > If the commands are not available, the table is not eligible to create a custom relationship.
 
-Either option will open a form like the following. The difference is whether the **Primary table** or **Related table** field is set.
+Either option will open a form like the following. The difference is whether the **Primary table** or **Related table** column is set.
 
 ![New one-to-many relationship form](media/new-1n-table-relationship-form-solution-explorer.png)
 
 - With **1:N Relationship**, the **Primary table** is set to the current table
 - With **N:1 Relationship**, the **Related table** is set to the current table
 
-The following fields must be set in order to save the table relationship:
+The following columns must be set in order to save the table relationship:
 
 |Required Field|Description|
 |--|--|
-|**Primary table**|This table will be the target type for the lookup field created on the related table.|
-|**Related table**|This table will have a lookup field added to associate the table records with the primary table record.|
-|**Name**|The name of the relationship. A value will be generated based on the primary and related table values. This field will be prefixed by the customization prefix of the solution publisher.|
-|**Lookup Field Display Name**|The localizable text for the lookup field that will be created for the related table. This is usually the same as the display name for the primary table. <br /> This can be changed later.|
-|**Lookup Field Name**|The name of the lookup field that will be created on the related table. A value will be generated based on the **Lookup Field Display Name**. This field will be prefixed by the customization prefix of the solution publisher.|
+|**Primary table**|This table will be the target type for the lookup column created on the related table.|
+|**Related table**|This table will have a lookup column added to associate the table records with the primary table record.|
+|**Name**|The name of the relationship. A value will be generated based on the primary and related table values. This column will be prefixed by the customization prefix of the solution publisher.|
+|**Lookup Field Display Name**|The localizable text for the lookup column that will be created for the related table. This is usually the same as the display name for the primary table. <br /> This can be changed later.|
+|**Lookup Field Name**|The name of the lookup column that will be created on the related table. A value will be generated based on the **Lookup Field Display Name**. This column will be prefixed by the customization prefix of the solution publisher.|
 
 You can click ![Save table relationship button](media/save-table-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
 
@@ -87,17 +87,17 @@ These properties are about the relationship.
 |Field|Description|
 |--|--|
 |**Searchable**|Whether this relationship should be visible within Advanced Find in model-driven apps. Select **No** if this is a relationship that isn't important for your business.|
-|**Hierarchical**|This option is enabled only for self-referential relationships. Whether the table should be considered to define a hierarchy for the table.<br />**Important**: Once you set this property rollup fields, processes, and views may be configured to depend on this property. If you later change this value those capabilities that depend on the hierarchy will not work. <br />More information: [Define and query hierarchically related data](define-query-hierarchical-data.md)|
+|**Hierarchical**|This option is enabled only for self-referential relationships. Whether the table should be considered to define a hierarchy for the table.<br />**Important**: Once you set this property rollup columns, processes, and views may be configured to depend on this property. If you later change this value those capabilities that depend on the hierarchy will not work. <br />More information: [Define and query hierarchically related data](define-query-hierarchical-data.md)|
 
-### Lookup field
+### Lookup column
 
-These are the properties of the lookup field created on the related table. The properties can be edited here or by editing the lookup field directly. Some field properties are not editable from the relationship. More information: [Edit a field](create-edit-field-solution-explorer.md#edit-a-field)
+These are the properties of the lookup column created on the related table. The properties can be edited here or by editing the lookup column directly. Some column properties are not editable from the relationship. More information: [Edit a column](create-edit-column-solution-explorer.md#edit-a-column)
 
 |Field|Description|
 |--|--|
-|**Display Name**|The localizable text for the lookup field that will be created for the related table.|
-|**Field requirement**|Whether the field must have data before a form in a model-driven app can be saved. More information: [Field Requirement options](create-edit-field-solution-explorer.md#field-requirement-options)|
-|**Description**|Enter instructions to the user about what the field is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the field.|
+|**Display Name**|The localizable text for the lookup column that will be created for the related table.|
+|**Field requirement**|Whether the column must have data before a form in a model-driven app can be saved. More information: [Field Requirement options](create-edit-column-solution-explorer.md#column-requirement-options)|
+|**Description**|Enter instructions to the user about what the column is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the column.|
 
 ### Navigation Pane Item for Primary table
 
@@ -119,7 +119,7 @@ These are the available display options:
 |Option|Description|
 |--|--|
 |**Do not Display**|Do not display the related tables for this relationship.|
-|**Use Custom Label**|When this option is chosen, the **Custom Label** field is enabled so that you can specify the localizable text to be used instead of the plural name.|
+|**Use Custom Label**|When this option is chosen, the **Custom Label** column is enabled so that you can specify the localizable text to be used instead of the plural name.|
 |**Use Plural Name**|Use the plural display name defined for the related table.|
 
 ### Relationship Behavior
@@ -172,7 +172,7 @@ These are the actions that can trigger certain behaviors:
 
 #### Type of Behavior options
 
-Use the **Type of Behavior** field to choose between a set of standard behaviors or whether you want to configure them independently. 
+Use the **Type of Behavior** column to choose between a set of standard behaviors or whether you want to configure them independently. 
 
 |Option|Description|
 |--|--|
@@ -192,10 +192,10 @@ Use the **Type of Behavior** field to choose between a set of standard behaviors
 
 While [viewing table relationships](#view-table-relationships), select the table relationship you want to delete and click the ![Delete command](media/delete.gif) command.
 
-Deleting the relationship will delete the lookup field on the related table.
+Deleting the relationship will delete the lookup column on the related table.
 
 > [!NOTE]
-> You will not be able to delete a relationship that has dependencies. For example, if you have added the lookup field to a form for the related table, you must remove the field from the form before you delete the relationship.
+> You will not be able to delete a relationship that has dependencies. For example, if you have added the lookup column to a form for the related table, you must remove the column from the form before you delete the relationship.
 
 ## Parental table relationships
 
@@ -217,7 +217,7 @@ Usually this means that for each table pair there is only one parental relations
 
 For example, if an table has a Customer lookup that can refer to either a contact or account table. There are two separate parental 1:N table relationships.
 
-Any activity table has a similar set of parental table relationships for tables that can be associated using the regarding lookup field.
+Any activity table has a similar set of parental table relationships for tables that can be associated using the regarding lookup column.
 
 <a name="BKMK_RelationshipBehaviorLimitations"></a>   
 

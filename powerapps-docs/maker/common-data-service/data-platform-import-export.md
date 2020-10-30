@@ -23,7 +23,7 @@ There are two ways that you can import files into tables from Excel or CSV files
 
 ## Option 1: Import by creating and modifying a file template
 
-Every table has required fields that must exist in your input file. We recommend that you create a template. First, export data from the table. Use the same file (modified with your data) to import data into the table. This template saves time and effort. You won't have to account for the required fields for each table.
+Every table has required columns that must exist in your input file. We recommend that you create a template. First, export data from the table. Use the same file (modified with your data) to import data into the table. This template saves time and effort. You won't have to account for the required columns for each table.
 
 1. Prepare the file template.
 
@@ -68,25 +68,25 @@ Every table has required fields that must exist in your input file. We recommend
 
 ## Option 2: Import by bringing your own source file
 
-If you're an advanced user and know the required fields for a given table for Common Data Service tables, define your own Excel or CSV source file. Follow the steps in **Import the file**.
+If you're an advanced user and know the required columns for a given table for Common Data Service tables, define your own Excel or CSV source file. Follow the steps in **Import the file**.
 
 ## Navigate mapping errors
 
-If you get mapping errors after you upload your file, select **Map status**. Take the following steps to inspect and rectify the field mapping errors.
+If you get mapping errors after you upload your file, select **Map status**. Take the following steps to inspect and rectify the column mapping errors.
 
-1. Use the drop-down menu on the right, under **Show**, to walk through the **Unmapped fields**, **Fields with error**, or **Required Fields**.
+1. Use the drop-down menu on the right, under **Show**, to walk through the **Unmapped columns**, **Fields with error**, or **Required Fields**.
 
     > [!TIP]
-    > Depending on whether you get a Warning or an Error, inspect **Unmapped fields** or **Fields with error** through the drop-down menu in **Field Mappings**.
+    > Depending on whether you get a Warning or an Error, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Field Mappings**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Example of a partial match due to warnings with field mappings](./media/data-platform-import-export/partial-match.png)
+    > ![Example of a partial match due to warnings with column mappings](./media/data-platform-import-export/partial-match.png)
 
     > [!div class="mx-imgBorder"] 
-    > ![Example of navigating field mapping issues](./media/data-platform-import-export/navigate-mappings.png)
+    > ![Example of navigating column mapping issues](./media/data-platform-import-export/navigate-mappings.png)
 
     > [!div class="mx-imgBorder"] 
-    > ![Example of inspecting and rectifying warnings with field mappings](./media/data-platform-import-export/inspect-warnings.png)
+    > ![Example of inspecting and rectifying warnings with column mappings](./media/data-platform-import-export/inspect-warnings.png)
 
 2. After you resolve all the errors and warnings, select **Save Changes** in the top-right corner. You'll go back to the **Import Data** screen.
 3. When the **Mapping Status** column shows **Completed** in green, select **Import** in the top-right corner.

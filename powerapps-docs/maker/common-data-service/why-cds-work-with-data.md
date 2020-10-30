@@ -47,21 +47,21 @@ The following image shows some elements of the standard Common Data Model tables
 
 In Common Data Service, tables are used to model and manage business data. To increase productivity, Common Data Service includes a set of tables known as standard tables. These tables are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization. The standard tables adhere to Common Data Model.
 
-A set of tables that are commonly used across industries, such as **User** and **Team**, are included in Common Data Service and referred to as *standard tables*. These out-of-the-box tables can also be customized, such as including additional fields. In addition, you can easily create your own custom tables in Common Data Service.
+A set of tables that are commonly used across industries, such as **User** and **Team**, are included in Common Data Service and referred to as *standard tables*. These out-of-the-box tables can also be customized, such as including additional columns. In addition, you can easily create your own custom tables in Common Data Service.
 
 ![View tables](media/standard-tables.png "View tables")
 
 ## Fields
 
-Fields define the individual data items that can be used to store data in an table. Fields are sometimes called attributes by developers. An table representing a course at a university might contain fields such as "Name," "Location," "Department," "Registered Students," and so on.
+Fields define the individual data items that can be used to store data in an table. Fields are sometimes called attributes by developers. An table representing a course at a university might contain columns such as "Name," "Location," "Department," "Registered Students," and so on.
 
 Fields might have different types of data such as strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Common Data Service stores the data in the best storage type for the model created.
 
-Each of these fields can be associated with one of many data types supported by Common Data Service.
+Each of these columns can be associated with one of many data types supported by Common Data Service.
 
-![Create a field](media/table-field.png "Create a field")
+![Create a column](media/table-column.png "Create a column")
 
-More information: [Types of fields](/powerapps/maker/common-data-service/types-of-fields)
+More information: [Types of columns](/powerapps/maker/common-data-service/types-of-columns)
 
 ## Relationships
 
@@ -113,7 +113,7 @@ Relevance search brings the following enhancements and benefits:
 
 - Improves performance by using external indexing and Azure search technology.
 
-- Finds matches to any word in the search term in any field in the table, compared to quick find where all words from the search term must be found in one field.
+- Finds matches to any word in the search term in any column in the table, compared to quick find where all words from the search term must be found in one column.
 
 - Finds matches that include inflectional words like *stream*, *streaming*, or *streamed*.
 

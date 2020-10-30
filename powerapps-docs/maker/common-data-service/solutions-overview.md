@@ -145,7 +145,7 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 
  For details about customizing the individual components in a solution, see the following topics:  
   
--   For table, table relationships, field and message customizations, see [Metadata](create-edit-metadata.md).  
+-   For table, table relationships, column and message customizations, see [Metadata](create-edit-metadata.md).  
   
 -   For table forms, see [Forms](../model-driven-apps/create-design-forms.md).  
   

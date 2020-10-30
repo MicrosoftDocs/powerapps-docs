@@ -40,7 +40,7 @@ Some standard tables already have hierarchies defined. Other tables, including c
 With Common Data Service, hierarchical data structures are supported by *self-referential* one-to-many (1:N) relationships of the related records. 
 
 > [!NOTE]
-> *Self-referential* means that the table is related to itself. For example, the account table has a lookup field to associate it with another account table record.
+> *Self-referential* means that the table is related to itself. For example, the account table has a lookup column to associate it with another account table record.
 
 When a self-referential one-to-many (1:N) relationship exists, in the relationship definition the **Hierarchical** option is available to be set to **Yes**.
 

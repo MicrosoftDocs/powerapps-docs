@@ -48,15 +48,15 @@ With solution explorer open, under **Components** select **Option Sets**.
 ## Create a global option set
 
 > [!NOTE]
-> You do not need to create a global option set before you use it within a custom field. When you create a new option set field you have the option to create a new global option set or use an existing one. See [Option set field options](create-edit-field-solution-explorer.md#option-set-field-options)
+> You do not need to create a global option set before you use it within a custom column. When you create a new option set column you have the option to create a new global option set or use an existing one. See [Option set column options](create-edit-column-solution-explorer.md#option-set-column-options)
 
 While viewing global option sets, click **New** to open a form to define the global option set.
 
 ![Create global option set](media/create-global-option-set-solution-explorer.png)
 
-Type a **Display name** that will be visible to people with the system administrator or customizer role who will choose this global option set when defining new fields that use it. This name will not be visible to people using your apps.
+Type a **Display name** that will be visible to people with the system administrator or customizer role who will choose this global option set when defining new columns that use it. This name will not be visible to people using your apps.
 
-A **Name** field value will be generated for you based on the **Display name** you enter. It will include the customization prefix for the Solution publisher in the context of the solution you are working in. You can change the generated portion of the **Name** field value before you save.
+A **Name** column value will be generated for you based on the **Display name** you enter. It will include the customization prefix for the Solution publisher in the context of the solution you are working in. You can change the generated portion of the **Name** column value before you save.
 
 Type a **Description** for the global option set. 
 
@@ -71,7 +71,7 @@ Type a **Description** for the global option set.
 
 While viewing global option sets, select the option set you want to edit to open the panel to edit it.
 
-Except for changing the **Name** field value or the number **Value** assigned to an option, you can make any of the changes you can when creating the global option set.
+Except for changing the **Name** column value or the number **Value** assigned to an option, you can make any of the changes you can when creating the global option set.
 
 > [!NOTE]
 > You cannot edit an option set if it is part of a managed solution. To edit managed solution option sets, you will have to contact the solution owner.
@@ -83,11 +83,11 @@ Except for changing the **Name** field value or the number **Value** assigned to
 To delete a global option set, while viewing the list select the ![Delete command](media/delete.gif) command in the command bar.
 
 > [!IMPORTANT]
-> If the global option set has been used by a field, you will not be able to delete it until that field is deleted.
+> If the global option set has been used by a column, you will not be able to delete it until that column is deleted.
   
 ### See also
  
 [Create and edit global option sets for Common Data Service](create-edit-global-option-sets.md)<br />
 [Create an option set](custom-picklists.md)<br />
-[Create and edit fields](create-edit-fields.md)<br />
+[Create and edit columns](create-edit-columns.md)<br />
 [Developer documentation: Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)

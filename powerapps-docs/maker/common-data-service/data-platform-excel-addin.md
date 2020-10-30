@@ -72,22 +72,22 @@ You can use the designer to adjust the columns and tables that are automatically
 
 3. Next to the data source, select the **Edit** button (the pencil symbol).
 
-4. Adjust the list in the **Selected fields** field as you require:
-   * To add a field from the **Available fields** field to the **Selected fields** field, select the field, and then select **Add**. Alternatively, double-click the field.
-   * To remove a field from the **Selected fields** field, select the field, and then select **Remove**. Alternatively, double-click the field.
-   * To change the order of fields, select the field in the **Selected fields** field, and then select **Up** or **Down**.
+4. Adjust the list in the **Selected columns** column as you require:
+   * To add a column from the **Available columns** column to the **Selected columns** column, select the column, and then select **Add**. Alternatively, double-click the column.
+   * To remove a column from the **Selected columns** column, select the column, and then select **Remove**. Alternatively, double-click the column.
+   * To change the order of columns, select the column in the **Selected columns** column, and then select **Up** or **Down**.
 
-5. Apply your changes to the data source by selecting **Update**, and then select **Done** to exit the designer. If you added a field (column), select **Refresh** to pull in an updated set of data.
+5. Apply your changes to the data source by selecting **Update**, and then select **Done** to exit the designer. If you added a column (column), select **Refresh** to pull in an updated set of data.
 
 > [!NOTE]
-> - Make sure to always include the ID and required fields in your workbook, as you may receive errors when publishing.
-> - When adding look up fields, make sure to add both the ID and the Display fields.
+> - Make sure to always include the ID and required columns in your workbook, as you may receive errors when publishing.
+> - When adding look up columns, make sure to add both the ID and the Display columns.
 
 ## Troubleshooting
 There are a few issues that can be resolved through some easy steps.
 
 * Not all tables support editing and creation of new records, these tables will open in Excel and allow you to view data but publishing will be disabled.
-* Look up fields must be edited using the add-in to ensure the correct record is referenced, updating these fields via copy and past or typing directly into the field is not supported.
+* Look up columns must be edited using the add-in to ensure the correct record is referenced, updating these columns via copy and past or typing directly into the column is not supported.
 
 If you encounter an issue that isn't described here, contact us via the [support pages](https://powerapps.microsoft.com/support/).
 
@@ -111,7 +111,7 @@ For more information about ways to export and view table record data, see these 
 
 
 ### See also
-* [Manage fields in an table](data-platform-manage-fields.md)
+* [Manage columns in an table](data-platform-manage-columns.md)
 * [Define relationships between tables](data-platform-table-lookup.md)
 * [Generate an app by using Common Data Service](../canvas-apps/data-platform-create-app.md)
 * [Create an app from scratch using Common Data Service](../canvas-apps/data-platform-create-app-scratch.md)

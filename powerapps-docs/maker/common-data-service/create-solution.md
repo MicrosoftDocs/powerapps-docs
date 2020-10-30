@@ -29,18 +29,18 @@ To locate and work with just the components you’ve customized, create a soluti
 To create a solution:   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
   
-2.  Select **New solution** and then complete the required fields for the solution.
+2.  Select **New solution** and then complete the required columns for the solution.
   
     |Field|Description|  
     |-----------|-----------------|  
     |**Display Name**|The name shown in the list of solutions. You can change this later.|  
-    |**Name**|The unique name of the solution. This is generated using the value you enter in the Display Name field. You can edit this before you save the solution, but after you save the solution, you can’t change it.|  
+    |**Name**|The unique name of the solution. This is generated using the value you enter in the Display Name column. You can edit this before you save the solution, but after you save the solution, you can’t change it.|  
     |**Publisher**|You can select the default publisher or create a new publisher. We recommend that you create a publisher for your organization to use consistently across your environments where you will use the solution. See [Solution publisher](#solution-publisher) later in this article. |  
     |**Version**|Enter a number for the version of your solution. This is only important if you export your solution. The version number will be included in the file name when you export the solution.|  
   
 3.  Select **Save**.  
   
- After you save the solution, you may wish to add information to fields that aren’t required. These steps are optional. Use the **Description** field to describe the solution and choose an HTML web resource as a **Configuration Page** for the solution. The configuration page is typically used by ISVs who distribute solutions. When this is set, a new **Configuration** node appears below the **Information** node to display this web resource. Developers will use this page to include instructions or controls to allow you to set configuration data or launch their solution.  
+ After you save the solution, you may wish to add information to columns that aren’t required. These steps are optional. Use the **Description** column to describe the solution and choose an HTML web resource as a **Configuration Page** for the solution. The configuration page is typically used by ISVs who distribute solutions. When this is set, a new **Configuration** node appears below the **Information** node to display this web resource. Developers will use this page to include instructions or controls to allow you to set configuration data or launch their solution.  
   
 <a name="BKMK_AddSolutionComponents"></a>
 
@@ -65,7 +65,7 @@ To create a solution:
 > [!NOTE]
 > The list of existing components will be different depending on the version and solutions imported in your environment. 
   
-When you add an existing table, rather than select **Include all components** or **Include table metadata**, use the **Select components** option to only add the table components that have been updated. With solution segmentation, you export solution updates with selected table assets, such as table fields, forms, and views, rather than entire tables with all the assets. [Create a segmented solution with table assets](#create-a-segmented-solution-with-table-assets)
+When you add an existing table, rather than select **Include all components** or **Include table metadata**, use the **Select components** option to only add the table components that have been updated. With solution segmentation, you export solution updates with selected table assets, such as table columns, forms, and views, rather than entire tables with all the assets. [Create a segmented solution with table assets](#create-a-segmented-solution-with-table-assets)
 
  Many of the customizations you’ll want to do will involve tables. You can use the **table** filter to show a list of all the tables in the current solution that can be customized in some way. Once you drill into an table, you can see the components that are part of the table as shown with the account table in the following screenshot. 
    
@@ -79,7 +79,7 @@ When you do this you may see a **Missing Required Components** dialog.
   
  This dialog alerts you that the solution component has dependencies on other solution components. If you select **No, do not include required components**, the solution may fail if you import it into another organization where all those required components do not exist. If the solution import succeeds, the behavior in the other solution may not be identical as the original organization because the components are configured differently than those in the source solution.  
   
-When you select table components, we recommend that you use solution segmentation so that you only include table components that are new or updated when you distribute solution updates. With solution segmentation, you work in a solution with selected table assets, such as table fields, forms, and views, rather than entire tables with all the assets. More information: [Use segmented solutions](use-segmented-solutions-patches-simplify-updates.md)
+When you select table components, we recommend that you use solution segmentation so that you only include table components that are new or updated when you distribute solution updates. With solution segmentation, you work in a solution with selected table assets, such as table columns, forms, and views, rather than entire tables with all the assets. More information: [Use segmented solutions](use-segmented-solutions-patches-simplify-updates.md)
   
  If you don’t intend to export the solution, or if you only intend to export it as an unmanaged solution and import it back into the same organization, it isn’t necessary to include required components. If you ever export the solution you’ll see another warning indicating that some required components are missing. If you are only going to import this solution back into the same organization, it is OK to disregard this warning. The steps to edit application navigation or the ribbon without using a third-party editing tool expect that you’ll export the solution back into the same organization.-->  
 
@@ -117,7 +117,7 @@ The solution publisher indicates who developed the app. For this reason, you sho
    - **Display Name**. Enter the display name for the publisher. 
    - **Name**. Enter the unique name for the publisher. 
    - **Prefix**. Enter the publisher prefix you want. 
-   -	**Option Value Prefix**. This field generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
+   -	**Option Value Prefix**. This column generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
    - **Contact Details**. Optionally, you can add contact and address information.
 4. Select **Save and Close**.
 
@@ -125,7 +125,7 @@ The solution publisher indicates who developed the app. For this reason, you sho
 You can change a solution publisher for an unmanaged solution by following these steps:
 1.	In the Power Apps portal, select **Solutions**, select **…** next to the solution you want, and then select **Settings**. 
 2.	In the **Solution settings** pane, select **Edit publisher**. 
-3.	Edit the **Display name** and **Prefix** fields to the values you want. The **Option Value Prefix** field generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
+3.	Edit the **Display name** and **Prefix** columns to the values you want. The **Option Value Prefix** column generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
 4.	In addition to the prefix, you can also change the solution publisher display name, contact information, and address in the **Contact Details** section. 
 5.	Select **Save and Close**.
 
@@ -136,11 +136,11 @@ Use solution segmentation so that you only include table components that are upd
 ### Create a segmented solution with table assets 
  To create a segmented solution, start with creating an unmanaged solution and add only the components that you've updated. The wizard-like setup takes you step by step through the process of adding table assets. 
 
-For example, imagine that you've created a new custom table that doesn't exist in any other environment named *Custom table* and also added a new field named *topten* for the account table. To create a segmented solution, follow these steps. 
+For example, imagine that you've created a new custom table that doesn't exist in any other environment named *Custom table* and also added a new column named *topten* for the account table. To create a segmented solution, follow these steps. 
   
 1. Go to the Power Apps portal and then select **Solutions**.  
   
-2.  Select **New solution** and create a solution. Enter information in the required fields. Select **Create**.  
+2.  Select **New solution** and create a solution. Enter information in the required columns. Select **Create**.  
   
 3.  Open the solution you created. On the command bar, select **Add Existing**, and then select **table**.  
   
@@ -149,14 +149,14 @@ For example, imagine that you've created a new custom table that doesn't exist i
 5.  In the **Select tables** pane, you can choose from the assets to include: 
     - **Include all components**. This option includes all components *and* metadata associated with the table. It can include other tables or table components such as business process flows, reports, connections, and queues. 
     - **Include table metadata**. This option includes *only* the metadata associated with the table. Metadata includes the table attributes, such as auditing, duplicate detection, or change tracking. 
-    - **Select components**. This option lets you individually select each component that’s associated with the table, such as fields, relationships, business rules, views, forms, and charts. 
+    - **Select components**. This option lets you individually select each component that’s associated with the table, such as columns, relationships, business rules, views, forms, and charts. 
     - Don't include any components. 
 
       For this example, because *Custom table* has never been imported into the target environment, next to **Custom table** select **Include all components**. Under **Account**, choose **Select components**.  
       > [!div class="mx-imgBorder"] 
       > ![Add existing tables](media/add-existing-tables1.png)
   
-6.  Since only the *topten* custom field is new to the account  table, select **Top Ten**, and then select **Add**.  
+6.  Since only the *topten* custom column is new to the account  table, select **Top Ten**, and then select **Add**.  
      > [!div class="mx-imgBorder"] 
      > ![Select table components](media/add-existing-tables2.png)
 
@@ -181,7 +181,7 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
   
  ![Start the wizard.](media/solution-segmentation-wizard-starts-admin.png "Start the wizard.")  
   
- Open the **Fields** tab and select the **Account Number** field.  
+ Open the **Fields** tab and select the **Account Number** column.  
   
  ![Select the Account table assets.](media/solution-segmentation-select-account-assets-admin.png "Select the Account table assets.")  
   
@@ -189,7 +189,7 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
   
  ![Select the Case table assets.](media/solution-segmentation-select-case-assets-admin.png "Select the Case table assets.")  
   
- In Step 3, add the **Anniversary** field for the **Contact** table.  
+ In Step 3, add the **Anniversary** column for the **Contact** table.  
   
  ![Select the Contact table assets.](media/solution-segmentation-select-contact-assets-admin.png "Select the Contact table assets.")  
   

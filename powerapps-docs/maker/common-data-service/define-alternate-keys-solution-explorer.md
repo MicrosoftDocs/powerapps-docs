@@ -32,7 +32,7 @@ The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium
 - [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)
 
 > [!IMPORTANT]
-> If the data within a field that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?` then `GET` or `PATCH` actions will not work. If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with those characters.
+> If the data within a column that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?` then `GET` or `PATCH` actions will not work. If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on columns that won't have data with those characters.
 
 ## Open solution explorer
 
@@ -50,7 +50,7 @@ Part of the name of any alternate key you create is the customization prefix. Th
 ## Create an alternate key
 
 1. While [viewing alternate keys](#view-alternate-keys), select **New**.
-1. On the form, enter the **Display Name**. The **Name** field will be auto-populated based on the **Display Name**. 
+1. On the form, enter the **Display Name**. The **Name** column will be auto-populated based on the **Display Name**. 
 2. From the **Available Attributes** list, select each attribute and then **Add >** to move the attribute into the **Selected Attributes** list.
     ![Create Alternate key](media/create-alternate-key-solution-explorer.png)
 1. Select **OK** to close the form.

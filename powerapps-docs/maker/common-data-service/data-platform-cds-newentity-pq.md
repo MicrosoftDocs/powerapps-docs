@@ -75,9 +75,9 @@ Before you start to follow this topic:
 
     You can give the new table a different name or display name, but leave the default values to follow this tutorial exactly.
 
-1. In the **Unique primary name field** list, select **ContactName**, and then select **Next**.
+1. In the **Unique primary name column** list, select **ContactName**, and then select **Next**.
 
-    You can specify a different primary-name field, map a different column in the source table to each field in the table that you're creating, or both. You can also specify whether Text columns in your query output should be created as either Multiline Text or Single-Line Text in the Common Data Service. To follow this tutorial exactly, leave the default column mapping.
+    You can specify a different primary-name column, map a different column in the source table to each column in the table that you're creating, or both. You can also specify whether Text columns in your query output should be created as either Multiline Text or Single-Line Text in the Common Data Service. To follow this tutorial exactly, leave the default column mapping.
 
 1. Select **Refresh manually** for Power Query - Refresh Settings, and then select **Create**.
 

@@ -1,6 +1,6 @@
 ---
-title: "Map table fields in Power Apps | MicrosoftDocs"
-description: "Learn how to map table fields"
+title: "Map table columns in Power Apps | MicrosoftDocs"
+description: "Learn how to map table columns"
 ms.custom: ""
 ms.date: 05/29/2018
 ms.reviewer: ""
@@ -24,7 +24,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Map table fields
+# Map table columns
  
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -46,7 +46,7 @@ The new contact record form will include any of the mapped attribute values from
 
 ## How this works
 
-When you map table fields for a 1:N table relationship certain items of data from the primary table record will be copied into the new related table form to set default values that people can edit before saving.
+When you map table columns for a 1:N table relationship certain items of data from the primary table record will be copied into the new related table form to set default values that people can edit before saving.
  
   
 > [!NOTE]
@@ -56,21 +56,21 @@ When you map table fields for a 1:N table relationship certain items of data fro
 
 ## Open solution explorer
 
-The only way to map table fields is to use solution explorer.
+The only way to map table columns is to use solution explorer.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
   
-Mapping fields is done in the context of a 1:N or N:1 table relationship, so first you need to [view 1:N or N:1 table relationships](create-edit-1n-relationships-solution-explorer.md#view-table-relationships).
+Mapping columns is done in the context of a 1:N or N:1 table relationship, so first you need to [view 1:N or N:1 table relationships](create-edit-1n-relationships-solution-explorer.md#view-table-relationships).
 
-## View mappable fields
+## View mappable columns
 
-Field mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for an table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table fields. 
+Field mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for an table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table columns. 
 
 ![View mappable table relationships](media/mappable-table-relationships.png) 
 
 When you open a mappable table relationship, select **Mappings** in the left navigation.
 
-![Select Mappings for the table relationship](media/map-table-fields-ui-solution-explorer.png)
+![Select Mappings for the table relationship](media/map-table-columns-ui-solution-explorer.png)
 
 ## Delete mappings
 
@@ -80,41 +80,41 @@ If there are any mappings that you do not want to apply, you can select them and
 
 To create a new mapping click **New** in the toolbar. This will open the **Create Field Mapping** dialog.
 
-![Create field mapping dialog](media/create-field-mapping-dialog.png)
+![Create column mapping dialog](media/create-column-mapping-dialog.png)
 
-Select one source table field and one target table fields with values you want to map. 
+Select one source table column and one target table columns with values you want to map. 
 
-![Configure field mapping](media/configure-field-mapping.png)
+![Configure column mapping](media/configure-column-mapping.png)
 
 Then select **OK** to close the dialog.
 
 The following rules show what kinds of data can be mapped.  
   
-- Both fields must be of the same type and the same format.  
-- The length of the target field must be equal to or greater than the length of the source field.  
-- The target field can’t be mapped to another field already.  
-- The source field must be visible on the form.  
-- The target field must be a field that a user can enter data into.  
+- Both columns must be of the same type and the same format.  
+- The length of the target column must be equal to or greater than the length of the source column.  
+- The target column can’t be mapped to another column already.  
+- The source column must be visible on the form.  
+- The target column must be a column that a user can enter data into.  
 - Address ID values can’t be mapped.
-- If you map to or from a field that isn’t displayed on a form, the mapping won't be done until the field is added to a form.
-- If the fields are option sets, the integer values for each option should be identical.  
+- If you map to or from a column that isn’t displayed on a form, the mapping won't be done until the column is added to a form.
+- If the columns are option sets, the integer values for each option should be identical.  
   
 > [!NOTE]
->  If you need to map option set fields, we recommend you configure both fields to use the same global option set. Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)  
+>  If you need to map option set columns, we recommend you configure both columns to use the same global option set. Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)  
   
-## Automatically generate field mappings  
+## Automatically generate column mappings  
 
 You can also generate mappings automatically by selecting **Generate Mappings** from the **More Actions** menu.
 
 You should use care when doing this with system tables. Use this when you create custom tables and want to leverage mapping. 
 
 > [!WARNING]
-> This removes any existing mappings and replaces them with suggested mappings that are based only on the fields that have similar names and data types. If you use this on a system table, you could lose some expected mappings. For custom tables, it helps save time because you can more easily delete any mappings you don’t want and add any others that the generate mappings action didn’t create.  
+> This removes any existing mappings and replaces them with suggested mappings that are based only on the columns that have similar names and data types. If you use this on a system table, you could lose some expected mappings. For custom tables, it helps save time because you can more easily delete any mappings you don’t want and add any others that the generate mappings action didn’t create.  
 
 
 ## Publish customizations 
 
-Because field mappings are not metadata, you must publish them before changes take effect. 
+Because column mappings are not metadata, you must publish them before changes take effect. 
 <!-- TODO Need a general topic about publishing to link to in situations like this -->
 
 ### See also

@@ -45,7 +45,7 @@ landingContent:
           - text: table relationships
             url: relationships-overview.md
           - text: Fields
-            url: fields-overview.md
+            url: columns-overview.md
           - text: Option sets
             url: create-edit-global-option-sets.md
           
@@ -60,8 +60,8 @@ landingContent:
             url: data-platform-import-export.md
           - text: Create a relationship between tables
             url: data-platform-table-lookup.md
-          - text: Create and edit fields
-            url: create-edit-fields.md
+          - text: Create and edit columns
+            url: create-edit-columns.md
           - text: Create an option set
             url: custom-picklists.md
 

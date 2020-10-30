@@ -37,16 +37,16 @@ Status reason transitions are an optional additional level of filtering to defin
   
 <a name="BKMK_StatusAndStatusReasons"></a>
 
-## What is the connection between Status and Status Reason fields?  
+## What is the connection between Status and Status Reason columns?  
 
-tables that can have different status values have two fields that capture this data:  
+tables that can have different status values have two columns that capture this data:  
   
 |Display Name|Description|  
 |------------------|-----------------|  
 |**Status**|Represents the state of the record. Typically **Active** or **Inactive**. You cannot add new status options.|  
 |**Status Reason**|Represents a reason that is linked to a specific status. Each status must have at least one possible status reason. You can add additional status reason options.|  
   
-The metadata for the field defines what status values are valid for a given state. For example, for the Incident (**Case**) table, the default status and status reason options are:  
+The metadata for the column defines what status values are valid for a given state. For example, for the Incident (**Case**) table, the default status and status reason options are:  
   
 |Status|Status Reason|  
 |------------|-------------------|  
@@ -59,12 +59,12 @@ The metadata for the field defines what status values are valid for a given stat
 
 ## Edit status reason transitions
  
-You can modify the status reason field options for the Case table and custom tables to define which other status reason options people can choose. The only restriction is that each status reason option for an active status must allow at least one path to an inactive status. Otherwise you could create a condition where it would not be possible to resolve or cancel the case.  
+You can modify the status reason column options for the Case table and custom tables to define which other status reason options people can choose. The only restriction is that each status reason option for an active status must allow at least one path to an inactive status. Otherwise you could create a condition where it would not be possible to resolve or cancel the case.  
 
 > [!NOTE]
-> Editing the status reason transitions requires using solution explorer. See [Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
+> Editing the status reason transitions requires using solution explorer. See [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-column-solution-explorer.md) for information about how to edit columns.
   
- When you edit a status reason field the **Edit Status Reason Transitions** button is in the menu. 
+ When you edit a status reason column the **Edit Status Reason Transitions** button is in the menu. 
 
 ![Edit Status Reason Transitions command](media/status-reason-transitions-command.png)
 
@@ -83,7 +83,7 @@ The screenshot below provides an example that meets the following requirements:
   
 ### See Also  
 
-[Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-column-solution-explorer.md)<br />
 [table metadata > table states](/powerapps/developer/common-data-service/table-metadata#table-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 

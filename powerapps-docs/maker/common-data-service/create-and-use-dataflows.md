@@ -136,7 +136,7 @@ Dataflows tables include new tools to easily map your business data to the
 Common Data Model, enrich it with Microsoft and third-party data, and gain simplified access to machine learning. These new capabilities can be leveraged to provide intelligent and actionable insights
 into your business data. Once you’ve completed any transformations in the edit
 queries step described below, you can map columns from your data source tables to standard
-table fields as defined by the Common Data Model. Standard tables have a
+table columns as defined by the Common Data Model. Standard tables have a
 known schema defined by the Common Data Model.
 
 For more information about this approach, and about the Common Data Model, see [The Common Data
@@ -146,18 +146,18 @@ To leverage the Common Data Model with your dataflow, select the **Map to Standa
 
 ![Map to standard table](media/map-to-standard-table.png)
 
-When you map a source column to a standard field, the following occurs:
+When you map a source column to a standard column, the following occurs:
 
-1.  The source column takes on the standard field name (the column is renamed if
+1.  The source column takes on the standard column name (the column is renamed if
     the names are different). 
 
-2.  The source column gets the standard field data type. 
+2.  The source column gets the standard column data type. 
 
-To keep the Common Data Model standard table, all standard fields that are not
+To keep the Common Data Model standard table, all standard columns that are not
 mapped get *Null* values.
 
 All source columns that are not mapped remain as is to ensure that the result
-of the mapping is a standard table with custom fields.
+of the mapping is a standard table with custom columns.
 
 Once you’ve completed your selections and your table and its data settings are
 complete, you’re ready for the next step, which is selecting the refresh frequency of your

@@ -27,11 +27,11 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-One-to-many (1:N) table relationships establish a hierarchy between records. With Many-to-many (N:N) relationships there is no explicit hierarchy. There are no lookup fields or behaviors to configure. Records created using Many-to-many relationships can be considered peers and the relationship is reciprocal.  
+One-to-many (1:N) table relationships establish a hierarchy between records. With Many-to-many (N:N) relationships there is no explicit hierarchy. There are no lookup columns or behaviors to configure. Records created using Many-to-many relationships can be considered peers and the relationship is reciprocal.  
 
 One example of a many-to-many relationship is defined between two standard tables included with the Dynamics 365 Sales app. The opportunity table has an N:N relationship with the competitor table. This allows for multiple competitors to be added to the opportunity and multiple opportunities associated with the same competitor. 
   
-With Many-to-many relationships a Relationship (or Intersect) table stores the data that associates the tables. This table has a One-to-many table relationship with both of the related tables and only stores the necessary values to define the relationship. You can’t add custom fields to a relationship table and it is never visible in the user interface. 
+With Many-to-many relationships a Relationship (or Intersect) table stores the data that associates the tables. This table has a One-to-many table relationship with both of the related tables and only stores the necessary values to define the relationship. You can’t add custom columns to a relationship table and it is never visible in the user interface. 
   
 Creating a Many-to-many relationship requires choosing the two tables that you want to participate in the relationship. For model-driven apps you can decide how you want the respective lists to be available within the navigation for each table. These are the same options used for the primary table in 1:N table relationships. More information:  [Navigation Pane Item for Primary table](create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table)
   

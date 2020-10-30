@@ -62,15 +62,15 @@ In the **Many-to-many** panel, choose the table you want related to the current 
 > [!div class="mx-imgBorder"] 
 > ![Many-to-many panel with account table selected](media/many-to-many-panel-1.png)
 
-Select **More Options** to view the **Relationship Name** and **Relationship table name** fields.
+Select **More Options** to view the **Relationship Name** and **Relationship table name** columns.
 
 > [!div class="mx-imgBorder"] 
 > ![Many-to-many panel with More Options selected](media/many-to-many-panel-2.png)
 
-The values for these fields are generated for you based on the tables chosen.
+The values for these columns are generated for you based on the tables chosen.
 
 > [!NOTE]
-> If you create more than one **Many-to-many** relationship with the same two tables, you will need to edit the generated **Relationship Name** and **Relationship table name** fields so that they will be unique.
+> If you create more than one **Many-to-many** relationship with the same two tables, you will need to edit the generated **Relationship Name** and **Relationship table name** columns so that they will be unique.
 
 Select **OK** to close the **Many-to-many** panel. The relationship will be created when you save changes to the table. 
 

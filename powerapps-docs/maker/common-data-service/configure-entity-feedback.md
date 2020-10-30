@@ -47,9 +47,9 @@ By default, users must go to the list of associated records of the record you wa
 <!-- This is the closest I could find to a topic about adding an subgrid to a form. -->
 More information:  [Sub-Grid properties overview](../model-driven-apps/sub-grid-properties-legacy.md)
 
-## Add a rollup field  to the table form to show the ratings  
+## Add a rollup column  to the table form to show the ratings  
 
-Depending on how you want to calculate the rating for the table, you can create a rollup field that calculates the rating, and then add it to the form of the table you're enabling for feedback. More information: [Define rollup fields that aggregate values](define-rollup-fields.md)
+Depending on how you want to calculate the rating for the table, you can create a rollup column that calculates the rating, and then add it to the form of the table you're enabling for feedback. More information: [Define rollup columns that aggregate values](define-rollup-columns.md)
   
 ### See also  
  [Submit feedback or ratings for Dynamics 365 records](/dynamics365/customer-engagement/basics/submit-feedback-ratings)

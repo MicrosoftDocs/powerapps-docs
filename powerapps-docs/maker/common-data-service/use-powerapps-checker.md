@@ -111,7 +111,7 @@ The solution check results are also available for download. The solution checker
 
 Here's a summary of each column in the report.
 
-|Report field |Description  |Applies-to component   |
+|Report column |Description  |Applies-to component   |
 |---------|---------|---------|
 |Issue     |   The title of the issue identified in the solution.      | All        |
 |Category     | The categorization of the issue identified, such as **Performance**, **Usage**, or **Supportability**.      |  All     |

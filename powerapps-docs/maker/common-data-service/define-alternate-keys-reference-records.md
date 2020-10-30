@@ -29,9 +29,9 @@ search.app:
 
 *Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify records in Common Data Service. 
 
-A data integration system will use alternate keys to uniquely identify records using one or more table field values that represent a unique combination. Each alternate key has a unique name. 
+A data integration system will use alternate keys to uniquely identify records using one or more table column values that represent a unique combination. Each alternate key has a unique name. 
 
-For example, to identify an account record with an alternate key, you can use the account number or the account number field in combination with some other fields which have values that should not change.
+For example, to identify an account record with an alternate key, you can use the account number or the account number column in combination with some other columns which have values that should not change.
 
 > [!NOTE]
 > While you can define alternate keys with Power Apps, they can only be used programmatically in code. 
@@ -74,7 +74,7 @@ There are constraints on alternate key creation.
 
 ### Fields that can be used for alternate keys
 
-Only these kinds of fields can be used to create alternate keys:
+Only these kinds of columns can be used to create alternate keys:
  - Decimal
  - Whole Number (Integer)
  - Single line of Text (String)
@@ -92,13 +92,13 @@ When a key is created, the system validates that the key can be supported by the
 
 ### Unicode characters in key value
 
-If the data within a field that is used in an alternate key will contain one of the following characters `<`,`>`,`*`,`%`,`&`,`:`,`/`,`\\` then update or upsert (PATCH) actions will not work.
+If the data within a column that is used in an alternate key will contain one of the following characters `<`,`>`,`*`,`%`,`&`,`:`,`/`,`\\` then update or upsert (PATCH) actions will not work.
 
-If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with these characters.
+If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on columns that won't have data with these characters.
 
 ## Track the status of the creation of the alternate key
 
-When an alternate key is created it will initiate a system job to create indexes on the database tables to enforce unique constraints on the fields used by the alternate key. The alternate key will not be in effect until these indexes are created. Creating these indexes may take some time depending on the amount of data in the system. 
+When an alternate key is created it will initiate a system job to create indexes on the database tables to enforce unique constraints on the columns used by the alternate key. The alternate key will not be in effect until these indexes are created. Creating these indexes may take some time depending on the amount of data in the system. 
 
 The status of the system job determines the state of the alternate key. The alternate key can have the following states:
 - **Pending**

@@ -29,11 +29,11 @@ You can create business rules and recommendations to apply logic and validations
 
 By combining conditions and actions, you can do any of the following with business rules:  
   
-* Set field values  
-* Clear field values  
-* Set field requirement levels  
-* Show or hide fields  
-* Enable or disable fields  
+* Set column values  
+* Clear column values  
+* Set column requirement levels  
+* Show or hide columns  
+* Enable or disable columns  
 * Validate data and show error messages  
 * Create business recommendations based on business intelligence.  
   
@@ -41,8 +41,8 @@ By combining conditions and actions, you can do any of the following with busine
 
 Model driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on Canvas apps :
 
-* Show or hide fields  
-* Enable or disable fields  
+* Show or hide columns  
+* Enable or disable columns  
 * Create business recommendations based on business intelligence.  
 
 ## Prerequisites
@@ -85,7 +85,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
   
     2. To set properties for the condition, click the **Condition** component in the designer window, and then set the properties in the **Properties** tab on the right side of the screen. As you set properties, the Common Data Service creates an expression at the bottom of the **Properties** tab.  
   
-    3. To add an additional clause (an AND or OR)  to the  condition, click **New** in the **Properties** tab to create a new rule, and then set the properties for that rule. In the **Rule Logic** field, you can specify whether to add the new rule as an AND or an OR.  
+    3. To add an additional clause (an AND or OR)  to the  condition, click **New** in the **Properties** tab to create a new rule, and then set the properties for that rule. In the **Rule Logic** column, you can specify whether to add the new rule as an AND or an OR.  
   
         ![Add a new rule to a condition](./media/data-platform-cds-create-business-rule/add-new-rule-condition.png "Add a new rule to a condition")  
   

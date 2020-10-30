@@ -30,7 +30,7 @@ search.app:
 
 <a name="BKMK_ManagedProperties"></a>   
 
- Managed properties only apply when you include a field with a managed solution and import it into another organization. These settings allow a solution maker to have some control over the level of customization that they want to allow people who install their managed solution to have when they customize an table relationship. To set managed properties for a relationship, in solution explorer expand the table, open the relationship, and then select  **Managed Properties** on the menu bar.  
+ Managed properties only apply when you include a column with a managed solution and import it into another organization. These settings allow a solution maker to have some control over the level of customization that they want to allow people who install their managed solution to have when they customize an table relationship. To set managed properties for a relationship, in solution explorer expand the table, open the relationship, and then select  **Managed Properties** on the menu bar.  
   
  With relationships, the only managed property is **Can Be Customized**. This single setting controls all changes that can be made to the table relationship.  
   

@@ -1,6 +1,6 @@
 ---
-title: "Import translated table and field text with Power Apps | MicrosoftDocs"
-description: "Learn how to import translated table and field text"
+title: "Import translated table and column text with Power Apps | MicrosoftDocs"
+description: "Learn how to import translated table and column text"
 ms.custom: ""
 ms.date: 06/19/2018
 ms.reviewer: ""
@@ -23,11 +23,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Import translated table, form, and field text back into an app
+# Import translated table, form, and column text back into an app
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-If you have customized table or field text, such as field labels or drop-down list values, you can provide the users in your organization who are not working with the base language version of your environment with this customized text in their own languages. To do so, you export the text strings for all your customizations so that they can be translated into the languages you use in your organization.  
+If you have customized table or column text, such as column labels or drop-down list values, you can provide the users in your organization who are not working with the base language version of your environment with this customized text in their own languages. To do so, you export the text strings for all your customizations so that they can be translated into the languages you use in your organization.  
   
  After the translation, you need to import the translated text strings into your environment before users can take advantage of the changes.  
   
@@ -57,4 +57,4 @@ If you have customized table or field text, such as field labels or drop-down li
 > If you have questions about the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ## Next steps  
- [Export customized table and field text for translation](export-customized-table-field-text-translation.md)
+ [Export customized table and column text for translation](export-customized-table-column-text-translation.md)

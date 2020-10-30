@@ -28,7 +28,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Imagine that you want to access ticket information from an external data source within your model-driven app. In this simple walkthrough, you'll model a virtual table with fields mapped to the external schema that retrieves ticket data at runtime from an OData web service.
+Imagine that you want to access ticket information from an external data source within your model-driven app. In this simple walkthrough, you'll model a virtual table with columns mapped to the external schema that retrieves ticket data at runtime from an OData web service.
 
 ## Data source details
 
@@ -39,9 +39,9 @@ Web service url: `https://contosowebservice.azurewebsites.net/odata/`
 > [!IMPORTANT]
 > The web service url used for this walkthrough isn't a functioning web service.
 
-For this walkthrough, a single virtual table that contains the following three fields is needed.
+For this walkthrough, a single virtual table that contains the following three columns is needed.
 
-|External field name |External data type |Virtual table data type |Purpose |
+|External column name |External data type |Virtual table data type |Purpose |
 |---------|---------|---------|---------|
 |TicketID |`Edm.Guid` |Primary key |Primary key for the table |
 |Title  |`Edm.String` |Single Line of Text |Title of the ticket |
@@ -75,7 +75,7 @@ Create the data source for the OData v4 data provider that uses the OASIS Open D
     |**Timeout**|30|
     |**Return Inline Count**|True|
 
-Leave the other fields as-is, and select **SAVE & CLOSE**.
+Leave the other columns as-is, and select **SAVE & CLOSE**.
 
 > [!TIP]
 > When using your own web service, verify that the URL is valid by pasting it in to your web browser. 
@@ -106,22 +106,22 @@ Part of the name of any custom table you create is the customization prefix. Thi
 1. Next to **Areas that display this table**, select **Service**, and then select **Save** (but don’t close the table form).
     ![Ticket table definition](media/ticket-table.png)
 
-## Create the fields for the virtual table
+## Create the columns for the virtual table
 
-On the left navigation pane of the **table: Ticket** page, select **Fields**. As part of this walkthrough you will edit two existing fields and add a third field.
+On the left navigation pane of the **table: Ticket** page, select **Fields**. As part of this walkthrough you will edit two existing columns and add a third column.
 
 > [!IMPORTANT]
 > External names are case sensitive. Refer to your web service metadata to make sure you use the correct name.
-> A Nullable value of false indicates that the attribute is required. Notice that primary key fields are always system required.
+> A Nullable value of false indicates that the attribute is required. Notice that primary key columns are always system required.
 
-1. Open the **new_ticketid** field, and change the following attribute with the value indicated here:
+1. Open the **new_ticketid** column, and change the following attribute with the value indicated here:
     **External Name**: TicketID
-    ![TicketID field](media/ticketid-field.png)
+    ![TicketID column](media/ticketid-column.png)
 1. Select **Save and Close**.
-1. Open the **new_name** field, and change the following attributes to have the values indicated here:
+1. Open the **new_name** column, and change the following attributes to have the values indicated here:
     - **Display Name**: Title
     - **External Name**: Title
-    ![Title field](media/title-field.png)
+    ![Title column](media/title-column.png)
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Ticket** page enter the following information:
 
@@ -135,14 +135,14 @@ On the left navigation pane of the **table: Ticket** page, select **Fields**. As
     |**Minimum Value**|0|
     |**Maximum Value**|4|
 
-  ![Severity field](media/severity-field.png)
+  ![Severity column](media/severity-column.png)
 1. Select **Save and Close**.
 
-## Add the fields to the Main form
+## Add the columns to the Main form
 
 1. On the Ticket table window, select **Forms**.
-1. Open the main form, drag and drop the **Severity** field from the right pane onto the form in the **General** section under the **Title** field. 
-    ![Severity field added to main form](media/drop-severity-field.png)
+1. Open the main form, drag and drop the **Severity** column from the right pane onto the form in the **General** section under the **Title** column. 
+    ![Severity column added to main form](media/drop-severity-column.png)
 1. On the Ticket table window select **Save and Close**.
 
 ## Configure the default view
@@ -166,7 +166,7 @@ On the left navigation pane of the **table: Ticket** page, select **Fields**. As
     The **All Tickets** view displays. Notice that you may need to refresh your browser to view the table from the **Service** area.
 
     ![All Tickets view](media/all-tickets-view.png)
-1. Open a **Ticket** record to view the form that includes the **Title** and **Severity** fields for the given record.
+1. Open a **Ticket** record to view the form that includes the **Title** and **Severity** columns for the given record.
     ![Ticket record](media/ticket-record.png)
 
 ### See also

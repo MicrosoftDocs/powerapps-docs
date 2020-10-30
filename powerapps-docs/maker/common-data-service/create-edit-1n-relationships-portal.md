@@ -67,21 +67,21 @@ Depending on your choice you will see either:
 Choose the **Related table** for the relationship you want to create between the two tables. 
 
 > [!NOTE]
-> With either choice, a lookup field will be created on the *current* table.
+> With either choice, a lookup column will be created on the *current* table.
 
 Once you select the table you can edit the details of the relationship. In this example, multiple contact table records can be associated with a single account.
 
 > [!div class="mx-imgBorder"] 
 > ![One to many relationship account and contact](media/One-to-many-account-contact.png)
 
-You can edit the default values provided before you save. Select **More options** to view the **Relationship name** and **Lookup field description** values
+You can edit the default values provided before you save. Select **More options** to view the **Relationship name** and **Lookup column description** values
 
 |Field|Description|
 |--|--|
-|**Lookup field display name**|The localizable text for the lookup field that will be created on the related table.<br />This can be edited later.|
-|**Lookup field name**|The name for the Lookup field that will be created on the related table.|
+|**Lookup column display name**|The localizable text for the lookup column that will be created on the related table.<br />This can be edited later.|
+|**Lookup column name**|The name for the Lookup column that will be created on the related table.|
 |**Relationship name**|The name for the relationship that will be created.|
-|**Lookup field description**|The description for the lookup field. In model-driven apps this will appear as a tooltip when people hover their mouse over the field. <br />This can be edited later.|
+|**Lookup column description**|The description for the lookup column. In model-driven apps this will appear as a tooltip when people hover their mouse over the column. <br />This can be edited later.|
 
 You can continue editing the table. Select **Save table** to create the relationship you have configured.
 
@@ -94,7 +94,7 @@ While [viewing table relationships](#view-table-relationships), select the relat
 >
 > The publisher of a managed solution can prevent some customizations of relationships that are part of their solution.
 
-The only fields you can edit are **Lookup field display name** and **Lookup field description**. These can also be edited in the properties of the lookup field in the related table. More information: [Edit a field](create-edit-field-portal.md#edit-a-field)
+The only columns you can edit are **Lookup column display name** and **Lookup column description**. These can also be edited in the properties of the lookup column in the related table. More information: [Edit a column](create-edit-column-portal.md#edit-a-column)
 
 ## Delete relationships
 
@@ -104,14 +104,14 @@ While [viewing table relationships](#view-table-relationships), select the relat
 
 You can use the **Delete relationship** command from the command bar or from the row context menu when you click the ellipses (**...**).
 
-Deleting the relationship will delete the lookup field on the related table.
+Deleting the relationship will delete the lookup column on the related table.
 
 > [!NOTE]
-> You will not be able to delete a relationship that has dependencies. For example, if you have added the lookup field to a form for the related table, you must remove the field from the form before you delete the relationship.
+> You will not be able to delete a relationship that has dependencies. For example, if you have added the lookup column to a form for the related table, you must remove the column from the form before you delete the relationship.
 
 ### See also
 
 [Create and edit relationships between tables](create-edit-table-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
-[Edit a field](create-edit-field-portal.md#edit-a-field)
+[Edit a column](create-edit-column-portal.md#edit-a-column)

@@ -1,6 +1,6 @@
 ---
-title: "Set managed properties for fields in Power Apps | MicrosoftDocs"
-description: "Learn how to set managed properties for a field"
+title: "Set managed properties for columns in Power Apps | MicrosoftDocs"
+description: "Learn how to set managed properties for a column"
 ms.custom: ""
 ms.date: 06/19/2018
 ms.reviewer: ""
@@ -24,17 +24,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Set managed properties for fields
+# Set managed properties for columns
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 <a name="BKMK_SettingManagedProperties"></a>   
 
- Managed properties only apply when you include fields in a managed solution and import the solution into another environment. These settings allow a solution maker to have some control over the level of customization that people who install their managed solution can have when they customize this field. To set managed properties for a field, select **Managed Properties** on the menu bar.  
+ Managed properties only apply when you include columns in a managed solution and import the solution into another environment. These settings allow a solution maker to have some control over the level of customization that people who install their managed solution can have when they customize this column. To set managed properties for a column, select **Managed Properties** on the menu bar.  
   
  The **Can be customized** option controls all the other options. If this option is `False`, none of the other settings apply. When it is `True`, you can specify the other customization options.  
   
- If the field is customizable, you set the following options to `True` or `False`.  
+ If the column is customizable, you set the following options to `True` or `False`.  
   
 - **Display name can be modified**  
   
@@ -46,4 +46,4 @@ search.app:
 
  ## Next steps
 
- [Create and edit fields](create-edit-fields.md)
+ [Create and edit columns](create-edit-columns.md)
