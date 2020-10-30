@@ -94,7 +94,7 @@ Legend
 
 ### Search results page
 
-Search results are ranked and grouped by entity, with more fields that are displayed to help distinguish records and filter for further action.
+Search results are ranked and grouped by entity, with more fields that are displayed to help distinguish records and filter to take further action.
 
 The **Top results** tab displays the top 20 results for the search term, with records grouped by entity type.
 
