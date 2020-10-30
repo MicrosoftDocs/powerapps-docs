@@ -76,7 +76,7 @@ The search bar in the top is easily find from any page in your app. It is always
 
 ### No search required to see recent records
 
-Immediately see the records that you accessed recently when you click in the serach box.
+Immediately see the records that you accessed recently when you click inside the serach box.
 
 ![Suggested search results on first click](media/relevance-search-first-click.gif) 
 
