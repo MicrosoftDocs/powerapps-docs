@@ -137,7 +137,7 @@ When you configure a currency column you can choose the precision value. There a
   
 ## Different types of lookups  
 
-When you create a new lookup column you are creating a new Many-to-One (N:1) table relationship between the table you’re working with and the **Target Record Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-table-relationships.md). But all custom lookups can only allow for a reference to a single row for a single target row type.  
+When you create a new lookup column you are creating a new Many-to-One (N:1) table relationship between the table you’re working with and the **Target Row Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-table-relationships.md). But all custom lookups can only allow for a reference to a single row for a single target row type.  
   
 However, you should be aware that not every lookup behaves this way. There are several different types of system lookups as shown here.  
   

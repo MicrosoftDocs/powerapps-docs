@@ -53,7 +53,7 @@ Power Automate has several different flows you can use to create automated workf
 |Automated flows     |  Create a flow that performs one or more tasks automatically after it's triggered by an event.    | [Learn more](/power-automate/get-started-logic-flow)        |
 |Button flows   | Run repetitive tasks from anyplace, at any time, via a flow app on your mobile device.        | [Learn more](/power-automate/introduction-to-button-flows)        |
 |Scheduled flows   | Create a flow that performs one or more tasks on a schedule.    | [Learn more](/power-automate/run-scheduled-tasks)        |
-|UI flows   | Record and automate the playback of manual steps on legacy software.    | [Learn more](/power-automate/ui-flows/overview)     |
+|UI flows   | Row and automate the playback of manual steps on legacy software.    | [Learn more](/power-automate/ui-flows/overview)     |
 
 
 ### See also

@@ -54,9 +54,9 @@ When you view a list of real-time workflow processes, any individual process can
 
 If your organization uses background workflows or business process flows that run frequently, the amount of process log rows can become large enough to cause performance issues as well as consume significant amounts of storage. To delete process log rows not removed sufficiently by one of the standard bulk row deletion jobs, you can use the bulk delete system jobs feature to create a custom bulk row deletion job.
 
-1. Go to **Settings** > **Data Management** > **Bulk Record Deletion**.
+1. Go to **Settings** > **Data Management** > **Bulk Row Deletion**.
 
-2. From the **Bulk Record Deletion** area, select **New**. 
+2. From the **Bulk Row Deletion** area, select **New**. 
 
 3. On the **Bulk Deletion Wizard** start page, select **Next**.
 

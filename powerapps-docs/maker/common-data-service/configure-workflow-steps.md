@@ -39,9 +39,9 @@ Real-time workflow processes can perform the actions listed in the following tab
   
 |Action|Description|  
 |------------|-----------------|  
-|**Create Record**|Creates a new row for a table and assigns values that you choose to attributes.|  
-|**Update Record**|You can update the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps.|  
-|**Assign Record**|You can assign the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps.|  
+|**Create Row**|Creates a new row for a table and assigns values that you choose to attributes.|  
+|**Update Row**|You can update the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps.|  
+|**Assign Row**|You can assign the row that the real-time workflow is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps.|  
 |**Send Email**|Sends an email. You can choose to create a new email message or use an email template configured for the table of the row that the real-time workflow is running on or any tables that have an N:1 relationship with the table, or the table for any rows created by earlier steps.|  
 |**Start Child Workflow**|Starts a real-time workflow process that has been configured as a child workflow.|  
 |**Change Status**|Changes the status of the row that the process is running on, any of the rows linked to that row in an N:1 relationship, or any rows created by earlier steps.|  
@@ -79,7 +79,7 @@ The actions that you will apply often depend on conditions. Real-time workflow p
 |**Parallel Wait Branch**|Defines an alternative wait condition for a real-time workflow with a corresponding set of additional steps that are performed only when the initial criterion is met. You can use parallel wait branches to create time limits in your real-time workflow logic. They help prevent the real-time workflow from waiting indefinitely until the criteria defined in a wait condition have been met.|  
 |**Custom Step**|Developers can create custom real-time workflow steps that define conditions. There are no custom steps available by default.|  
   
-The following screenshot contains an example of the workflow process definition with the **Under** and **Not Under** hierarchical operators. In our example, we apply two different discounts to two groups of accounts. In **Add Step**, we selected the **Check Condition** to specify the **if-then** condition containing the **Under** or **Not Under** operators. The first **if-then** condition applies to all accounts that are **Under** the Alpine Ski House account. These accounts receive a 10% discount on purchased good and services. The second **if-then** condition applies to all accounts that are **Not Under** the Alpine Ski House account and they receive a 5% discount. Then, we selected **Update Record** to define the action to be performed based on the condition.  
+The following screenshot contains an example of the workflow process definition with the **Under** and **Not Under** hierarchical operators. In our example, we apply two different discounts to two groups of accounts. In **Add Step**, we selected the **Check Condition** to specify the **if-then** condition containing the **Under** or **Not Under** operators. The first **if-then** condition applies to all accounts that are **Under** the Alpine Ski House account. These accounts receive a 10% discount on purchased good and services. The second **if-then** condition applies to all accounts that are **Not Under** the Alpine Ski House account and they receive a 5% discount. Then, we selected **Update Row** to define the action to be performed based on the condition.  
   
 ![Workflow process with Under&#47;Not Under operators](media/wfp-under-not-under.PNG "Workflow process with Under/Not Under operators")  
   
@@ -94,11 +94,11 @@ The following screenshot contains an example of the workflow process definition 
 
 |Action  |Start when  |Explanation  |
 |---------|---------|---------|
-|Record is created   | After    | Only **After** is available. The row won't have a unique identifier until after the internal MainOperation stage so can’t occur before the row is created.      |
-|Record status changes   |  Before <br />  After     |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.       |
-|Record is assigned   |  Before <br />  After     |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.       |
-|Record columns change     |  Before <br />  After   |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.        |
-|Record is deleted     |  Before       |  Only **Before** is available. Record deletion corresponds to the PreOperation stage. After the MainOperation occurs, the row is deleted and there is no further status change that can occur.       |
+|Row is created   | After    | Only **After** is available. The row won't have a unique identifier until after the internal MainOperation stage so can’t occur before the row is created.      |
+|Row status changes   |  Before <br />  After     |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.       |
+|Row is assigned   |  Before <br />  After     |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.       |
+|Row columns change     |  Before <br />  After   |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.        |
+|Row is deleted     |  Before       |  Only **Before** is available. Row deletion corresponds to the PreOperation stage. After the MainOperation occurs, the row is deleted and there is no further status change that can occur.       |
 
 For more information about preoperation, mainoperation, and postoperation stages, see [Event execution pipeline](/powerapps/developer/common-data-service/event-framework#event-execution-pipeline).
 

@@ -220,7 +220,7 @@ You should be aware of certain conditions and limitations when working with calc
 - Calculated columns can span two tables only.  
   - A calculated column can contain a column from another table (spanning two tables – current table and parent row).  
   - A calculated column can’t contain a calculated column from another table that also contains another column from a different table (spanning three tables):   
-    (Current table) Calculated Field &larr; (Parent Record) Calculated Field 1 &larr; (Parent Record) Calculated Field 2.  
+    (Current table) Calculated Field &larr; (Parent Row) Calculated Field 1 &larr; (Parent Row) Calculated Field 2.  
 - You can’t trigger workflows or plug-ins on calculated columns.  
 - You can’t change an existing simple column to a calculated column. If your current application is using JavaScript or plug-ins to calculate a column, you would not be able to use the calculated columns feature without creating a new column.  
 - Duplicate detection rules are not triggered on calculated columns.  

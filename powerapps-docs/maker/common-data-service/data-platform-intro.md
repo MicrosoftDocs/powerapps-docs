@@ -47,7 +47,7 @@ Responding to customer feedback and data from user research, effective November 
 |--|--|
 |table, tables	|Table, tables|
 |Field, columns<br/>Attribute, attributes|	Column, columns|
-|Record, rows|	Row, rows|
+|Row, rows|	Row, rows|
 |Option set, choice s<br/>Picklist, picklists|	Choice, choices
 Two options|	Yes/No|
  
