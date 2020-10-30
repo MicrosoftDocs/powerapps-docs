@@ -24,33 +24,31 @@ Relevance search delivers fast and comprehensive results across multiple entitie
   
 ## Benefits of relevance search
 
-Relevance search brings the following enhancements and benefits:  
+Relevance search in Power Apps is the best search experience to find and act on your data in Common Data Service. 
 
-- Improved performance compared to Categorized search.  
+- Relevance search is faster than Categorized search. Relevance search finds matches across fields to find the most relevant results. Relevance search is smarter, in the following ways: 
+
+  - It finds matches for inflectional words like **stream**, **streaming**, or **streamed**.. A relevance ranking system that factors in information like how close or spread out the search terms are in a field 
+  - Search results with matched text is highlighted, so you can easily see and understand the results. 
   
 - Finds matches to any word in the search term in any field in the entity, compared to quick find where all words from the search term must be found in one field. 
-
-- Finds matches that include inflectional words like **stream**, **streaming**, or **streamed**.  
   
-- Returns results from all searchable entities in a single list sorted by relevance, so the better the match, the higher the result appears in the list. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than finding the same words in a long article, far apart from each other.
-  
-- Highlights matches in the results list. When a search term matches a term in a record, the term appears as bold and italicized text in your search results. Note, that certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify records. Because they're ignored during search, these words are also not highlighted in results. Highlighted terms are often returned as a portion of the full value in a field because only the matched terms are highlighted.
     > [!NOTE]
     > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a field has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results were part of the matched field is truncated.
+    > - Certain words that are very commonly used in a language (like the or a) are ignored during search, because they don't help uniquely identify records. Because they're ignored during search, these words are also not highlighted in results
 
-- Includes search results for text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
-  
-- Enables you to search for records that are shared with you and records that you own.  
-  
-  > [!NOTE]
-  >  Hierarchical security models aren't supported. Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in relevance search.  
-  
-- Let's you also search for option sets and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.
 
-  > [!NOTE]
-  >  Relevance search is text-based and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type.
-  
-- Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search). Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.
+- Relevance search can comb through the text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.
+- Relevance search enables you to search for records that are shared with you and records that you own.
+    > [!NOTE]
+    > - Hierarchical security models aren't supported. Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in relevance search.
+    
+- Relevance search lets you search for option sets and lookups. For example, if you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.
+    > [!NOTE]
+    > - Relevance search is text-based and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type.
+
+-  Relevance search allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search). 
+
 
 ## Turn on relevance search
 
