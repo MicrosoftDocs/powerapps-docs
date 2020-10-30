@@ -27,8 +27,7 @@ Relevance Search delivers fast and comprehensive results across multiple entitie
 
   - It finds matches for inflectional words like **stream**, **streaming**, or **streamed**. A relevance ranking system that factors in information like how close or spread out the search terms are in a field 
   - Search results with matched text is highlighted, so you can easily see and understand the results. 
-  
-- Finds matches to any word in the search term in any field in the entity, compared to quick find where all words from the search term must be found in one field. 
+  - Finds matches to any word in the search term in any field in the entity, compared to quick find where all words from the search term must be found in one field. 
   
     > [!NOTE]
     > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a field has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results were part of the matched field is truncated.
