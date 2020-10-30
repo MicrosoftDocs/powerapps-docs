@@ -18,7 +18,7 @@ search.app:
   - D365CE
 ---
 
-# Using relevance search to search for records
+# Search for records using Relevance Search 
 
 Relevance Search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
 
