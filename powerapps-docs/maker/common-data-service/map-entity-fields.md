@@ -97,10 +97,10 @@ The following rules show what kinds of data can be mapped.
 - The target column must be a column that a user can enter data into.  
 - Address ID values can’t be mapped.
 - If you map to or from a column that isn’t displayed on a form, the mapping won't be done until the column is added to a form.
-- If the columns are option sets, the integer values for each option should be identical.  
+- If the columns are choice s, the integer values for each option should be identical.  
   
 > [!NOTE]
->  If you need to map option set columns, we recommend you configure both columns to use the same global option set. Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)  
+>  If you need to map choice  columns, we recommend you configure both columns to use the same global choice . Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)  
   
 ## Automatically generate column mappings  
 

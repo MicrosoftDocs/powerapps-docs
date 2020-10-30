@@ -118,8 +118,8 @@ Part of the name of any virtual table you create is the customization prefix. Th
     |Field|Description|
     |--|--|
     |**External Name**|This is typically the unique name to identify the data  you want to display in the column.|
-    |**External Type Name**|If the column type you create is OptionSet: This property maps to the external name of the set of values in the external service for the option set.  Typically, this can be an enum or name of a string value class. The External Type Name can be used when a fully qualified name is required.  For example, as the *Type Name* with OData where parameters in a query need the fully qualified name, such as [*Type Name*].[*Value*].|
-    |**External Value**|If the column type you create is OptionSet: This property maps to the corresponding value in the external data source for the option set item.  This value entered is used to determine which option set item to display in the app.  |
+    |**External Type Name**|If the column type you create is OptionSet: This property maps to the external name of the set of values in the external service for the choice .  Typically, this can be an enum or name of a string value class. The External Type Name can be used when a fully qualified name is required.  For example, as the *Type Name* with OData where parameters in a query need the fully qualified name, such as [*Type Name*].[*Value*].|
+    |**External Value**|If the column type you create is OptionSet: This property maps to the corresponding value in the external data source for the choice  item.  This value entered is used to determine which choice  item to display in the app.  |
 
     Complete the additional properties as necessary. For more information about these properties, see [Create and edit columns](create-edit-columns.md).  
   

@@ -72,13 +72,13 @@ To use Power BI with Common Data Service, you need the following items:
     > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
 
 
-## Using option sets
+## Using choice s
 
-Options sets are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector option set columns will be presented as two columns to show both the unique value, and the display value.
+Options sets are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector choice  columns will be presented as two columns to show both the unique value, and the display value.
 
-As an example, if you had an option set on your table called ApprovalStatus, you would see two columns in Power BI:
+As an example, if you had an choice  on your table called ApprovalStatus, you would see two columns in Power BI:
 
-* ApprovalStatus - This will show a unique integer value for each item in your option set, this is help when applying filters so they will not be impacted if you make future changes to the display name.
+* ApprovalStatus - This will show a unique integer value for each item in your choice , this is help when applying filters so they will not be impacted if you make future changes to the display name.
 * ApprovalStatus_display - This will show the friendly display name of the item and is most commonly used when presenting the option in a table or chart.
 
     |ApprovalStatus|ApprovalStatus_Display|

@@ -116,7 +116,7 @@ The default **Connection Role Category** values are:
 - Sales Team
 - Service
 
-You can add new categories or modify existing ones by editing the **Category** global option set. More information: [Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)
+You can add new categories or modify existing ones by editing the **Category** global choice . More information: [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)
 
 #### Select row types
 
@@ -150,7 +150,7 @@ If more than one matching connection role is configured, those connection roles 
 ### See also
 <!-- This is in the basics guide. It needs to be migrated -->
 [Create connections to define and view relationships between records](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
-[Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)<br />
+[Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)<br />
 [Create and edit relationships between tables](create-edit-table-relationships.md)
 
 

@@ -139,7 +139,7 @@ You can do a one-time data export from a standard table or custom table. And you
 The following data types aren't currently supported.
 
 - Timezone
-- Multiselect option set
+- Multiselect choice 
 - Image
 
     > [!NOTE]

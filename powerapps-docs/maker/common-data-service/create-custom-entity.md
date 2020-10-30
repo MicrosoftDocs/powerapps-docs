@@ -66,11 +66,11 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 5. On the **Fields** tab on the table designer toolbar select **Add column**. On the **Field properties** pane, enter or select the following values and options.
     - **Display name**. *Species*
     - **Data type**. *Option Set*
-    - **Option set**. *New option set*
+    - **Option set**. *New choice *
   
-6. Select **View more**, and then select **Local option set**.
+6. Select **View more**, and then select **Local choice **.
 
-7. Create the option set
+7. Create the choice 
 
       a. Replace **New option** with *Dog*. 
       
@@ -81,7 +81,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
       d. Select **Save**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![New option set](media/create-custom-table/optionset-add-items.png)
+    > ![New choice ](media/create-custom-table/optionset-add-items.png)
 
 6. Select **Searchable**, and then select **Done**.
 

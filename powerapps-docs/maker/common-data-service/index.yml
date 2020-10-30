@@ -62,7 +62,7 @@ landingContent:
             url: data-platform-table-lookup.md
           - text: Create and edit columns
             url: create-edit-columns.md
-          - text: Create an option set
+          - text: Create an choice 
             url: custom-picklists.md
 
     # Card

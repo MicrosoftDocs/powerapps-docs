@@ -85,7 +85,7 @@ Standard text columns can store up to 4,000 characters. The default [Max Length]
 
 #### Max Length
 
-Fields that store text have an absolute maximum depending on the type. The **Max Length** option sets a value lower than the maximum specific to your environment. You can increase this max length but you should not lower it if you have data in the system that exceeds the lower value.
+Fields that store text have an absolute maximum depending on the type. The **Max Length** choice s a value lower than the maximum specific to your environment. You can increase this max length but you should not lower it if you have data in the system that exceeds the lower value.
 
 ### Whole Number
 
@@ -129,7 +129,7 @@ More information: [Behavior and format of the Date and Time column](behavior-for
 |**Multi Select Option Set**|Displays a list of options where more than one can be selected.|
 |<a name="multi-line-column"></a> **Multiline Text**|A text value intended to be displayed in a multi-line textbox. Limited to a maximum of 1,048,576 characters. You can also set a lower [Max Length](#max-length). |
 |**Option Set**|Displays a list of options where only one can be selected.|
-|**Two Options**|Displays two options where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
+|**Two Options**|DisplaysYes/No where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
 
 ## Save new column
 
@@ -193,23 +193,23 @@ For **Floating Point Number** and **Decimal Number** data types, you can specify
 
 Fields that provide a set of options can include their own set of *local* options or refer to a common set of *global* options that can be used by multiple columns.
 
-Using a global option set is valuable when you find yourself creating the same set of options for multiple columns. With a global option set, you only need to maintain the set of options in one place. 
+Using a global choice  is valuable when you find yourself creating the same set of options for multiple columns. With a global choice , you only need to maintain the set of options in one place. 
 
-When you choose **Multi Select Option Set** or **Option Set** data type the designer will list a set of available global option sets for you to choose from and provide the option to create a **New option set**.
+When you choose **Multi Select Option Set** or **Option Set** data type the designer will list a set of available global choice s for you to choose from and provide the option to create a **New choice **.
 
-![Choose  option set type](media/option-set-options.png)
+![Choose  choice  type](media/option-set-options.png)
 
-If you choose **New option set** the default behavior is to create a new global option set.
-
-> [!NOTE]
-> While you are editing options for a new global option set, the **Display name** and **Name** values are for the global option set rather than for the column. The default values match the column values, but you can edit them while you edit the global option set to be different from the column you are currently creating.
-
-If you want to create a local option set you must select **View more** and choose **Local option set**.
-
-![Local option set](media/local-option-set.png)
+If you choose **New choice ** the default behavior is to create a new global choice .
 
 > [!NOTE]
-> If you define every option set as a global option set your list of global option sets will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local option set.
+> While you are editing options for a new global choice , the **Display name** and **Name** values are for the global choice  rather than for the column. The default values match the column values, but you can edit them while you edit the global choice  to be different from the column you are currently creating.
+
+If you want to create a local choice  you must select **View more** and choose **Local choice **.
+
+![Local choice ](media/local-option-set.png)
+
+> [!NOTE]
+> If you define every choice  as a global choice  your list of global choice s will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local choice .
 
 [!INCLUDE [cc_remove-option-warning](../../includes/cc_remove-option-warning.md)]
 

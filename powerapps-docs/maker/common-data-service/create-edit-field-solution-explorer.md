@@ -131,11 +131,11 @@ You can also set a **Maximum length** to so that the system will not allow text 
 
 Fields that provide a set of options can include their own set of *local* options or refer to a common set of *global* options that can be used by multiple columns.
 
-Using a global option set is valuable when you find yourself creating the same set of options for multiple columns. With a global option set, you only need to maintain the set of options in one place. 
+Using a global choice  is valuable when you find yourself creating the same set of options for multiple columns. With a global choice , you only need to maintain the set of options in one place. 
 
-When you choose **Multi Select Option Set** or **Option Set** data type the solution explorer designer will provide the option for a local option set by default.
+When you choose **Multi Select Option Set** or **Option Set** data type the solution explorer designer will provide the option for a local choice  by default.
 
-![Configure a local option set](media/local-option-set-solution-explorer.png)
+![Configure a local choice ](media/local-option-set-solution-explorer.png)
 
 #### Configure local options
 
@@ -143,14 +143,14 @@ When you choose **Multi Select Option Set** or **Option Set** data type the solu
 
 #### Use Existing Option Set
 
-If you to choose **Use Existing Option Set** the designer will display a list of existing *global option sets* and include an **Edit** and **New** buttons to configure the global options that this column should use.
+If you to choose **Use Existing Option Set** the designer will display a list of existing *global choice s* and include an **Edit** and **New** buttons to configure the global options that this column should use.
 
-![Configure a global option set](media/global-option-set-solution-explorer.png)
+![Configure a global choice ](media/global-option-set-solution-explorer.png)
 
-You can also configure global option sets separately. More information: [Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)
+You can also configure global choice s separately. More information: [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)
 
 > [!NOTE]
-> If you define every option set as a global option set your list of global option sets will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local option set.
+> If you define every choice  as a global choice  your list of global choice s will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local choice .
 
 
 ### Whole number options

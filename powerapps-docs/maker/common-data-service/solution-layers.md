@@ -75,8 +75,8 @@ There are additional tabs available for specific component solution layers.
 |Tab name  |Description  |Possible value  |
 |---------|---------|---------|
 |RolePrivileges     | Displays the privileges for a security role.   | Added, Updated, Removed, Unchanged   |
-|AttributePicklistValues (optionset)  | When selected for a global optionset, displays the possible values for an optionset.   | Added, Updated, Removed, Unchanged        |
-|AttributePicklistValues (optionset attribute)   |  When selected for an optionset attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
+|AttributePicklistValues (optionset)  | When selected for a global choice , displays the possible values for an choice .   | Added, Updated, Removed, Unchanged        |
+|AttributePicklistValues (optionset attribute)   |  When selected for an choice  attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
 
 <!--## Remove an unmanaged layer
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 

@@ -43,7 +43,7 @@ Option sets can be created in two ways, either from the **Option Sets** list wit
 6. Click the **Option set** drop down and select **New Option set**
 
     > [!NOTE]
-    > If an existing option set could be used for your table, you can select it from this list without creating a new one.
+    > If an existing choice  could be used for your table, you can select it from this list without creating a new one.
 
     ![Option Set List](./media/data-platform-cds-newoptionset/columnpanel-1.png "Option Set list")
 
@@ -84,11 +84,11 @@ Option sets can be created in two ways, either from the **Option Sets** list wit
     > [!div class="mx-imgBorder"] 
     > ![New Option Set](./media/data-platform-cds-newoptionset/optionset-create-values.png "New Option Set")
 
-5. You can now use this option set by creating new column on an table.
+5. You can now use this choice  by creating new column on an table.
 
 ## Global and Local Option sets
 
-By default, Option sets are created as Global Option sets which allows them to be reused across multiple tables. Under the **View more** option when creating a new Option set you can chose to make an Option set **Local**. This option is only available when creating an Option set while adding a column, and not through the **Option Sets** list. Local option sets can only be used by the table and column they are created against, and cannot be reused on other tables. This approach is only recommended for advanced users that a specific need for a local option set.
+By default, Option sets are created as Global Option sets which allows them to be reused across multiple tables. Under the **View more** option when creating a new Option set you can chose to make an Option set **Local**. This option is only available when creating an Option set while adding a column, and not through the **Option Sets** list. Local choice s can only be used by the table and column they are created against, and cannot be reused on other tables. This approach is only recommended for advanced users that a specific need for a local choice .
 
 > [!IMPORTANT]
-> Once an option set is created as local or global, this cannot be changed.
+> Once an choice  is created as local or global, this cannot be changed.

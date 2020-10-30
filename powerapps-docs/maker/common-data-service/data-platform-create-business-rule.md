@@ -23,7 +23,7 @@ You can create business rules and recommendations to apply logic and validations
 
 > [!IMPORTANT]
 > Business rules defined for an table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
-> Business rules don’t work with multi-select option sets.
+> Business rules don’t work with multi-select choice s.
 >
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
 
