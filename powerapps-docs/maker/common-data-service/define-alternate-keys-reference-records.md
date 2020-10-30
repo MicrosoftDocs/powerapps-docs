@@ -1,6 +1,6 @@
 ---
-title: "Define alternate keys to reference records with Common Data Service | MicrosoftDocs"
-description: "Learn how to define alternate keys that can be used to reference records in Common Data Service"
+title: "Define alternate keys to reference rows with Common Data Service | MicrosoftDocs"
+description: "Learn how to define alternate keys that can be used to reference rows in Common Data Service"
 ms.custom: ""
 ms.date: 06/24/2020
 ms.reviewer: ""
@@ -27,23 +27,23 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-*Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify records in Common Data Service. 
+*Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify rows in Common Data Service. 
 
-A data integration system will use alternate keys to uniquely identify records using one or more table column values that represent a unique combination. Each alternate key has a unique name. 
+A data integration system will use alternate keys to uniquely identify rows using one or more table column values that represent a unique combination. Each alternate key has a unique name. 
 
-For example, to identify an account record with an alternate key, you can use the account number or the account number column in combination with some other columns which have values that should not change.
+For example, to identify an account row with an alternate key, you can use the account number or the account number column in combination with some other columns which have values that should not change.
 
 > [!NOTE]
 > While you can define alternate keys with Power Apps, they can only be used programmatically in code. 
 > To learn more about using alternate keys programmatically, see:   
 > - [Developer Documentation: Use an alternate key to create a record](/dynamics365/customer-engagement/developer/use-alternate-key-create-record) 
-> - [Developer Documentation: Retrieve a record with the Web API using an alternate key](/dynamics365/customer-engagement/developer/webapi/retrieve-table-using-web-api#retrieve-using-an-alternate-key)
+> - [Developer Documentation: Retrieve a row with the Web API using an alternate key](/dynamics365/customer-engagement/developer/webapi/retrieve-table-using-web-api#retrieve-using-an-alternate-key)
 
 Some of the benefits of the alternate keys feature include:  
   
 - Faster lookup of the records.  
 - More robust bulk data operations.  
-- Simplified programming with data imported from external systems without record IDs.  
+- Simplified programming with data imported from external systems without row IDs.  
   
 
 ## Creating an alternate key

@@ -31,7 +31,7 @@ There are several choices available for applying business logic in Common Data S
 ## Business rules
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules.
 
-Define *business rules* for an table that apply to all the table forms and at the server level. Business rules defined for an table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. More information: [Create a business rule for an table](data-platform-create-business-rule.md)
+Define *business rules* for a table that apply to all the table forms and at the server level. Business rules defined for an table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. More information: [Create a business rule for a table](data-platform-create-business-rule.md)
 
 > [!NOTE]
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules for a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)

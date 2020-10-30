@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Apps and flows often require different configuration settings across environments. Environment variables as configurable input parameters allow management of data separately compared to hard-coding values within your customization or using additional tools. Because they're solution components, performance is much better than importing configuration data as record data.
+Apps and flows often require different configuration settings across environments. Environment variables as configurable input parameters allow management of data separately compared to hard-coding values within your customization or using additional tools. Because they're solution components, performance is much better than importing configuration data as row data.
 
 Benefits of using environment variables:
 - No need to manually edit configurable values in a production environment.
@@ -74,7 +74,7 @@ Both the environmentvariabledefinition and environmentvariablevalue tables are [
 
 ## Current limitations
 - Caching. Plugins will need to run a query to fetch the values. 
-- Canvas apps and flows can consume environment variables just like table record data. <!-- In the future we plan to build additional actions into canvas app and flow designers. This will simplify authoring and provide better visibility into environment variables being used by a specific app or flow. -->
+- Canvas apps and flows can consume environment variables just like table row data. <!-- In the future we plan to build additional actions into canvas app and flow designers. This will simplify authoring and provide better visibility into environment variables being used by a specific app or flow. -->
 - Azure Key Vault integration for secret management. Currently environment variables should'nt be used to store secure data such as passwords and keys.
 - Data types are validated in the modern solution interface only, but not currently on the server during the preview. 
 - Dependencies are not enforced for certain component types.

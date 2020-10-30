@@ -45,7 +45,7 @@ The Export to Data Lake service supports initial and incremental writes for tabl
 
 Both standard and custom tables can be exported. Notice that the change tracking table attribute in Common Data Service is used to keep the data synchronized in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized. 
 
-All create, update, and delete operations are exported from Common Data Service to the data lake. For example, when a user deletes an Account table record in Common Data Service, the transaction is replicated to the destination data lake.
+All create, update, and delete operations are exported from Common Data Service to the data lake. For example, when a user deletes an Account table row in Common Data Service, the transaction is replicated to the destination data lake.
 
 ## Prerequisites
 

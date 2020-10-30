@@ -21,7 +21,7 @@ search.app:
 You can create and update one or more custom columns in any table. When you create a custom column, you specify a set of properties, such as the column's name, its display name, and the type of data that it will contain. For more information, see [table attribute metadata](../../developer/common-data-service/table-attribute-metadata.md).
 
 > [!NOTE]
-> Every table has system columns, such as columns that indicate when a record was last updated, and who updated it. In addition, standard tables have standard (default) columns. You can't modify or delete system columns or standard columns. If you create a custom column, it should provide functionality on top of these built-in columns.
+> Every table has system columns, such as columns that indicate when a row was last updated, and who updated it. In addition, standard tables have standard (default) columns. You can't modify or delete system columns or standard columns. If you create a custom column, it should provide functionality on top of these built-in columns.
 
 ## Create a column
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.

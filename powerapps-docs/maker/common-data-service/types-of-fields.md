@@ -115,11 +115,11 @@ Use floating point numbers when you store data that represents fractions or valu
  
 ## Using currency columns
 
-Currency columns allow for an organization to configure multiple currencies that can be used for records in the organization. When organizations have multiple currencies, they typically want to be able to perform calculations to provide values using their base currency. When you add a currency column to an table that has no other currency columns, two additional columns are added:  
+Currency columns allow for an organization to configure multiple currencies that can be used for rows in the organization. When organizations have multiple currencies, they typically want to be able to perform calculations to provide values using their base currency. When you add a currency column to an table that has no other currency columns, two additional columns are added:  
   
 - A lookup column called **Currency** that you can set to any active currency configured for your organization. You can configure multiple active currencies for your organization in **Settings** > **Business Management** > **Currencies**. There you can specify the currency and an exchange rate with the base currency set for your organization. If you have multiple active currencies, you can add the currency column to the form and allow people to specify which currency should be applied to money values for this record. This will change the currency symbol that is shown for the currency columns in the form.  
   
-  Individuals can also change their personal options to select a default currency for the records they create.
+  Individuals can also change their personal options to select a default currency for the rows they create.
   
 - A decimal column called **Exchange Rate** that provides the exchange rate for a selected currency associated with the table with respect to the base currency. If this column is added to the form, people can see the value, but they can’t edit it. The exchange rate is stored with the currency.  
   
@@ -137,7 +137,7 @@ When you configure a currency column you can choose the precision value. There a
   
 ## Different types of lookups  
 
-When you create a new lookup column you are creating a new Many-to-One (N:1) table relationship between the table you’re working with and the **Target Record Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-table-relationships.md). But all custom lookups can only allow for a reference to a single record for a single target record type.  
+When you create a new lookup column you are creating a new Many-to-One (N:1) table relationship between the table you’re working with and the **Target Record Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-table-relationships.md). But all custom lookups can only allow for a reference to a single row for a single target row type.  
   
 However, you should be aware that not every lookup behaves this way. There are several different types of system lookups as shown here.  
   
@@ -152,13 +152,13 @@ However, you should be aware that not every lookup behaves this way. There are s
 <a name="BKMK_ImageFields"></a>
 
 ## Image columns  
-Use image columns to display a single image per record in the application. Each table can have one image column. You can add an image column to custom tables but not to standard tables. Some standard tables have image columns defined.
+Use image columns to display a single image per row in the application. Each table can have one image column. You can add an image column to custom tables but not to standard tables. Some standard tables have image columns defined.
   
 Even though an table has an image column, displaying that image in a model-driven app requires that you enable two settings. 
 - The standard table definition **Primary Image** property value must be set to **Default Image**. Custom tables require a custom image column. Then, you can select that image column for the **Primary Image** value in the custom table definition.  
 - The table form where the image is to be displayed must have the **Show image in the form** property enabled.  
   
-When image display is enabled for an table, any records that don’t have an image will display a placeholder image. For example:
+When image display is enabled for an table, any rows that don’t have an image will display a placeholder image. For example:
 
 > [!div class="mx-imgBorder"] 
 > ![Sample table image for an account record](../common-data-service/media/account-record-default-image.png "Default account table image")
@@ -220,7 +220,7 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 App users can now select the image to display on the form. When an app user opens the form for a record, they can choose the image that they want displayed on the form. 
 
 > [!IMPORTANT]
-> If the record is a new record that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
+> If the row is a new row that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
 
 ### Change the image for a record
 Once an table form has an image column, app users can change the image for a given record. 

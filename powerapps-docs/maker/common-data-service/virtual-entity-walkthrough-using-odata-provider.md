@@ -166,7 +166,7 @@ On the left navigation pane of the **table: Ticket** page, select **Fields**. As
     The **All Tickets** view displays. Notice that you may need to refresh your browser to view the table from the **Service** area.
 
     ![All Tickets view](media/all-tickets-view.png)
-1. Open a **Ticket** record to view the form that includes the **Title** and **Severity** columns for the given record.
+1. Open a **Ticket** row to view the form that includes the **Title** and **Severity** columns for the given record.
     ![Ticket record](media/ticket-record.png)
 
 ### See also

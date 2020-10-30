@@ -128,7 +128,7 @@ Balloons and coach marks can be used to point to specific UI elements. A balloon
 A user can either select an element in order or go back to a specific one and highlight it.
 
 ## Solutions and custom help pane content
-All help content is stored in a help page component in Common Data Service as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help records are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
+All help content is stored in a help page component in Common Data Service as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help rows are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
 
 ### Moving content via solutions
 By default, all new help pages appear in the default solution. If you want to move your content to another environment, first add your existing help pages into an unmanaged solution before you export them. To add a help page to an unmanaged solution, follow these steps:
@@ -158,7 +158,7 @@ For more information about customizable help, see [Enable and use customizable h
 ### How do I migrate my data from learning path to custom help pages? 
 Learning path has two types of help: help panes and sequential help balloons. The sequential help balloon locations are deeply integrated with the legacy web client UI and are not transferrable to the new custom help panes.  
 
-Depending on how much text you have in your guided help it might be easiest to simply copy the information directly from the learning path user interface to the new custom help pane user interface. However, you can also export your learning path help content.  The simplest way to do this is to export your content using the **Learning Path** > **Content Library** > **Localize** > **Export** feature. Select the records you want and then export them. This creates an XLIFF file for each help pane and guided task.  Then, use a publicly available XLIFF editor or XLIFF to HTML converter to retrieve your content. 
+Depending on how much text you have in your guided help it might be easiest to simply copy the information directly from the learning path user interface to the new custom help pane user interface. However, you can also export your learning path help content.  The simplest way to do this is to export your content using the **Learning Path** > **Content Library** > **Localize** > **Export** feature. Select the rows you want and then export them. This creates an XLIFF file for each help pane and guided task.  Then, use a publicly available XLIFF editor or XLIFF to HTML converter to retrieve your content. 
 
 ## Custom help XML definition
 This section describes the custom help XML definition. 

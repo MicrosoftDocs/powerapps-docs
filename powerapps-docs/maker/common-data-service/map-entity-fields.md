@@ -28,31 +28,31 @@ search.app:
  
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can map attributes between tables that have an table relationship. This lets you set default values for a record that is created in the context of another record. 
+You can map attributes between tables that have an table relationship. This lets you set default values for a row that is created in the context of another record. 
 
-## Easier way to create new records in model-driven apps
+## Easier way to create new rows in model-driven apps
 
-Let’s say that people want to add a new contact record for a person who is an employee for a specific account. They can do this in two different ways:  
+Let’s say that people want to add a new contact row for a person who is an employee for a specific account. They can do this in two different ways:  
   
 ### The hard way
 
-People could just navigate in the app to create a new contact record from scratch. But then they need to set the parent account and enter several items of information (such as address and phone information) which are probably the same as the parent account. This can be time consuming and introduces opportunities for errors.  
+People could just navigate in the app to create a new contact row from scratch. But then they need to set the parent account and enter several items of information (such as address and phone information) which are probably the same as the parent account. This can be time consuming and introduces opportunities for errors.  
   
 ### The easier way
 
 The easier way is to start with the account table and, using the **Contacts** subgrid on the form, select **+** to add a contact. It will first guide people to look up any existing related contacts so they don’t accidentally create a duplicate record. If they don’t find an existing record, they can select **New** and create a new contact record. 
 
-The new contact record form will include any of the mapped attribute values from the account (such as address and phone information) as the default values. People can edit these values before they save the record.
+The new contact row form will include any of the mapped attribute values from the account (such as address and phone information) as the default values. People can edit these values before they save the record.
 
 ## How this works
 
-When you map table columns for a 1:N table relationship certain items of data from the primary table record will be copied into the new related table form to set default values that people can edit before saving.
+When you map table columns for a 1:N table relationship certain items of data from the primary table row will be copied into the new related table form to set default values that people can edit before saving.
  
   
 > [!NOTE]
-> These mappings only set default values to a record before it is saved. People can edit the values before saving. The data that is transferred is the data at that point in time. It isn’t synchronized if the source data later changes.
+> These mappings only set default values to a row before it is saved. People can edit the values before saving. The data that is transferred is the data at that point in time. It isn’t synchronized if the source data later changes.
 >   
-> These mappings aren’t applied to related records created using a workflow or dialog process. They aren’t automatically applied to new records created using code, although developers can use a special message called `InitializeFrom` ([InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom?view=dynamics-ce-odata-9) or [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest?view=dynamics-general-ce-9)) to create a new record using available mappings.  
+> These mappings aren’t applied to related rows created using a workflow or dialog process. They aren’t automatically applied to new rows created using code, although developers can use a special message called `InitializeFrom` ([InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom?view=dynamics-ce-odata-9) or [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest?view=dynamics-general-ce-9)) to create a new row using available mappings.  
 
 ## Open solution explorer
 

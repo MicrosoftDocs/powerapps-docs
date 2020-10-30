@@ -74,7 +74,7 @@ You can use this behavior when time zone information isn't required, such as the
 
 ### For my Date/Time column I was expecting (UTC/Local) and I am seeing the opposite value
 
-This is caused by a lack of parity between the table column setting and the app form setting. When an table column is configured for Time Zone Independent or User Local, it determines if the time zone offset is honored or not when the data is being retrieved from the store. However, the app form also has a setting of UTC or Local. 
+This is caused by a lack of parity between the table column setting and the app form setting. When a table column is configured for Time Zone Independent or User Local, it determines if the time zone offset is honored or not when the data is being retrieved from the store. However, the app form also has a setting of UTC or Local. 
  
 This tells the form how to interpret the data it receives from the Common Data Service. If the data retrieved from the store is time zone independent, but the form is set to local, the UTC data will be displayed as user local time based on the user’s time zone in their profile. The reverse is also true, a user local value from the store will be displayed as UTC if the form is set to UTC. Fortunately, the form’s date time zone values can be modified without disrupting the existing records.
 

@@ -24,14 +24,14 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-With Common Data Service you can define **connections** between table records without creating an table relationship. In model-driven apps people can establish a named link between records to establish less a formal relationship which doesn't justify creating an actual table relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocal, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
+With Common Data Service you can define **connections** between table rows without creating an table relationship. In model-driven apps people can establish a named link between rows to establish less a formal relationship which doesn't justify creating an actual table relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocal, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
 
 When people set a connection between two records, they can also add a description and additional information such as start and end dates for the relationship. More information: [Create connections to define and view relationships between records](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)
 
 Anyone with write access to the **Connection Role** table can establish which connection are available for people to use.
 
 > [!IMPORTANT]
-> For an table to be available as a record type for a new or existing connection role, the **Enable connections** property must be enabled for the table. 
+> For an table to be available as a row type for a new or existing connection role, the **Enable connections** property must be enabled for the table. 
 
 ## Enable connection roles for an table
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
@@ -118,9 +118,9 @@ The default **Connection Role Category** values are:
 
 You can add new categories or modify existing ones by editing the **Category** global option set. More information: [Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)
 
-#### Select record types
+#### Select row types
 
-Select which record types should be available to connect.
+Select which row types should be available to connect.
 
 > [!NOTE]
 > Although **All** is selected by default, make sure you consider which types are appropriate for the connection role you are adding.
@@ -131,7 +131,7 @@ In this optional step, you can define any roles that be applied in a reciprocal 
 
 For example, people can set that Glen is a *Friend* to Mary, but does this mean that Mary is a *Friend* to Glen? We hope so. But if Glen is the *Father* of Mary it doesn't mean that Mary is the *Father* of Glen. Establishing correct reciprocity requires this extra step.
 
-When people set a connection role that doesn't have a matching connection role, the role will only be displayed when viewing the connection from the record that the connection was applied to. When viewed from the connected record, the role will be empty unless a matching role is set.
+When people set a connection role that doesn't have a matching connection role, the role will only be displayed when viewing the connection from the row that the connection was applied to. When viewed from the connected record, the role will be empty unless a matching role is set.
 
 For role definitions like *Friend*, *Spouse*, *Colleague*, or *Sibling*, it is best to assign the matching role to itself. If a single matching connection role is configured, the single matching connection role will be applied in both directions.
 

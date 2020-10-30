@@ -82,13 +82,13 @@ You can set additional options depending on your choice of **Data type**. More i
 ## Field Requirement options
 
 There are three column requirement options:
-- **Optional**: The record can be saved even if there is no data in this column.
-- **Business Recommended**: The record can be saved even if there is no data in this column. However, a blue symbol appears next to the column to indicate it is important.
-- **Business Required**: The record can’t be saved if there is no data in this column. 
+- **Optional**: The row can be saved even if there is no data in this column.
+- **Business Recommended**: The row can be saved even if there is no data in this column. However, a blue symbol appears next to the column to indicate it is important.
+- **Business Required**: The row can’t be saved if there is no data in this column. 
 
 > [!NOTE]
-> - When a record is saved programmatically using web services, only the SystemRequired columns are enforced. Failure to set a value for SystemRequired columns will return an error.  You can’t set the SystemRequired level of requirement. <br />Setting a column to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the column has no value. The app user is shown an error and prompted to add data to the required column before they can save the record. There are options within the app to override this behavior and allow operation to proceed if needed.
-> - Be careful when you make columns business required. People will resist using the application if they can’t save records because they lack the correct information to enter into a required column. People may enter incorrect data simply to save the record and get on with their work. You can use business rules or form scripts to change the requirement level as the data in the record changes as people work on it. More information  [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+> - When a row is saved programmatically using web services, only the SystemRequired columns are enforced. Failure to set a value for SystemRequired columns will return an error.  You can’t set the SystemRequired level of requirement. <br />Setting a column to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the column has no value. The app user is shown an error and prompted to add data to the required column before they can save the record. There are options within the app to override this behavior and allow operation to proceed if needed.
+> - Be careful when you make columns business required. People will resist using the application if they can’t save rows because they lack the correct information to enter into a required column. People may enter incorrect data simply to save the row and get on with their work. You can use business rules or form scripts to change the requirement level as the data in the row changes as people work on it. More information  [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
 ## Field Data types
 
@@ -102,14 +102,14 @@ When creating a column, **Data type** provides the following choices:
 |**Option Set**|Displays a list of options where one can be selected. More information: [Option set column options](#option-set-column-options)|
 |**MultiSelect Option Set**|Displays a list of options where more than one can be selected. More information: [Option set column options](#option-set-column-options)|
 |**Two Options**|Displays a list of options where one of two can be selected.<br /><br /> Two option columns don’t provide format options at the column level. But when you add one to the form you can choose to display them as radio buttons, a check box, or a select list.|
-|**Image**|Displays a single image per record in the application. Each table can have one image column. Image columns are always named `tableImage`.|
+|**Image**|Displays a single image per row in the application. Each table can have one image column. Image columns are always named `tableImage`.|
 |**Whole Number**|Integers with a value between -2,147,483,648 and 2,147,483,647 can be in this column.  This column has options that change depending on how the column is presented. More information: [Whole number options](#whole-number-options)|
 |**Floating Point Number**|Up to 5 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-columns.md#using-the-right-type-of-number)|
 |**Decimal Number**|Up to 10 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-columns.md#using-the-right-type-of-number)|
 |**Currency**|Monetary values between -922,337,203,685,477 and 922,337,203,685,477 can be in this column. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization. More information: [Using currency columns](types-of-columns.md#using-currency-columns)|
 |**Multiple Lines of Text**|This column can contain up to 1,048,576 text characters. You can set the maximum length to be less than this. When you add this column to a model-driven app form, you can specify the dimensions of the column.|
 |**Date and Time**|Use these columns to store time values. You can store values as early as 1/1/1753 12:00 AM. More information: [Date and Time options](#date-and-time-options)|
-|**Lookup**|A column that allows setting a reference to a single record of a specific type of table. Some system lookup columns behave differently. More information: [Different types of lookups](types-of-columns.md#different-types-of-lookups)|
+|**Lookup**|A column that allows setting a reference to a single row of a specific type of table. Some system lookup columns behave differently. More information: [Different types of lookups](types-of-columns.md#different-types-of-lookups)|
 |**Customer**|A lookup column that you can use to specify a customer, which can be an account or contact.  More information: [Different types of lookups](types-of-columns.md#different-types-of-lookups)|
 
 ### Single line of text options

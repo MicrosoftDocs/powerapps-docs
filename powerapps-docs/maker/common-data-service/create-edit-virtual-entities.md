@@ -31,7 +31,7 @@ A virtual table is a custom table in Common Data Service that has columns contai
   
 In the past, to integrate the disparate data sources you would need to create a connector to move data or develop a custom plug-in, either client or server-side. However, with virtual tables you can connect directly with an external data source  at runtime so that specific data from the external data source is available in an environment, without the need for data replication.  
 
-Virtual tables are made up of three main components, a *data provider*, a *data source* record, and a *virtual table*. The data provider consists of plug-ins and a data source table. The data source is an table record in Common Data Service, which includes metadata that represents the schema of the connection parameters. Each virtual table references a data source in the table definition.  
+Virtual tables are made up of three main components, a *data provider*, a *data source* record, and a *virtual table*. The data provider consists of plug-ins and a data source table. The data source is an table row in Common Data Service, which includes metadata that represents the schema of the connection parameters. Each virtual table references a data source in the table definition.  
   
 Common Data Service includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
   
@@ -44,8 +44,8 @@ Alternatively, developers can build their own data providers. Data providers are
 ## Virtual table benefits  
   
 - Developers can implement plugins to read external data using the Common Data Service web services and Plug-in Registration tool.  
-- System customizers use Power Apps solution explorer to configure the data source record and create virtual tables that are used to access external data without writing any code.  
-- End users work with the records created by the virtual table to view the data in columns, grids, search results, and Fetch XML-based reports and dashboards.  
+- System customizers use Power Apps solution explorer to configure the data source row and create virtual tables that are used to access external data without writing any code.  
+- End users work with the rows created by the virtual table to view the data in columns, grids, search results, and Fetch XML-based reports and dashboards.  
   
 <a name="AddDataSource"></a> 
   

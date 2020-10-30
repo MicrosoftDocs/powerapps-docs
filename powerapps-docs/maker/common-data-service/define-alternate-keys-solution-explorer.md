@@ -1,6 +1,6 @@
 ---
 title: "Define alternate keys using solution explorer | MicrosoftDocs"
-description: "Learn how to define alternate keys that can be used to reference records in Common Data Service using solution explorer"
+description: "Learn how to define alternate keys that can be used to reference rows in Common Data Service using solution explorer"
 ms.custom: ""
 ms.date: 08/01/2020
 ms.reviewer: ""

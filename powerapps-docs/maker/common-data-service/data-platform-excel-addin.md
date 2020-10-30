@@ -87,7 +87,7 @@ You can use the designer to adjust the columns and tables that are automatically
 There are a few issues that can be resolved through some easy steps.
 
 * Not all tables support editing and creation of new records, these tables will open in Excel and allow you to view data but publishing will be disabled.
-* Look up columns must be edited using the add-in to ensure the correct record is referenced, updating these columns via copy and past or typing directly into the column is not supported.
+* Look up columns must be edited using the add-in to ensure the correct row is referenced, updating these columns via copy and past or typing directly into the column is not supported.
 
 If you encounter an issue that isn't described here, contact us via the [support pages](https://powerapps.microsoft.com/support/).
 
@@ -96,14 +96,14 @@ If Office Store add-in downloading has been disabled for your organization, you 
 
 *Office 365 has been configured to prevent individual acquisition and execution of Office Store Add-ins.*
 
-This setting prevents the Power Apps Excel Add-in from downloading. When this occurs, table record data will not be displayed in Excel. 
+This setting prevents the Power Apps Excel Add-in from downloading. When this occurs, table row data will not be displayed in Excel. 
 
 For more information about enabling Office Store Add-in downloading, contact your Office app administrator. 
 
 For more information about preventing Office Store Add-in downloading from the Office Store, see [Prevent add-in downloads by turning off the Office Store across all clients](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook).
 
-## Other ways to export and view table record data
-For more information about ways to export and view table record data, see these articles.
+## Other ways to export and view table row data
+For more information about ways to export and view table row data, see these articles.
 - [Export data to CSV](/powerapps/maker/common-data-service/data-platform-import-export#export-data-to-csv) 
 - [Export your data to Excel Online](/powerapps/user/export-to-excel-online)
 - [Export table data to Azure Data Lake Storage Gen2](/powerapps/maker/common-data-service/export-to-data-lake)

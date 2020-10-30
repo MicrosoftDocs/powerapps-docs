@@ -39,7 +39,7 @@ For some tables, such as account and user, the visualizations are provided out-o
   
 <a name="BKMK_Querydata"></a>   
 ## Query hierarchical data  
- With Common Data Service, hierarchical data structures are supported by self-referential relationships of the related records. In the past, to view hierarchical data, you had to iteratively query for the related records. Presently, you can query the related data as a hierarchy, in one step. You’ll be able to query records using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search)  
+ With Common Data Service, hierarchical data structures are supported by self-referential relationships of the related records. In the past, to view hierarchical data, you had to iteratively query for the related records. Presently, you can query the related data as a hierarchy, in one step. You’ll be able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search)  
   
  The following examples illustrate various scenarios for querying hierarchies:  
   
@@ -74,7 +74,7 @@ For some tables, such as account and user, the visualizations are provided out-o
   
 <a name="BKMK_Visualizedata"></a>   
 ## Visualize hierarchical data  
- The system tables that have visualizations available out-of-the-box include `Account`, `Position`, `Product`, and `User`. In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the record name. The hierarchy icon isn’t present for all records by default. The icon is shown for the records that have a parent record, a child record, or both.  
+ The system tables that have visualizations available out-of-the-box include `Account`, `Position`, `Product`, and `User`. In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that have a parent record, a child record, or both.  
  
  > [!div class="mx-imgBorder"] 
  > ![Active accounts](media/cust-hs-active-account.png "Active accounts")  
@@ -117,7 +117,7 @@ For some tables, such as account and user, the visualizations are provided out-o
 > ![Widget's hierarchy grid](media/widget-hierarchy-grid.png "Widget's hierarchy grid")  
   
 > [!TIP]
->  The hierarchy icons don’t appear in the record grid view until the records are paired in the parent – child relationship.  
+>  The hierarchy icons don’t appear in the row grid view until the rows are paired in the parent – child relationship.  
   
  Choosing the hierarchy icon displays the new_Widget hierarchy with the tree view on the left and the tile view on the right, showing two records. Each tile contains four columns that we provided in the **Widget Hierarchy Tile Form**.  
  

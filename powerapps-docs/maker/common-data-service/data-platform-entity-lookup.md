@@ -23,9 +23,9 @@ Data in one table often relates to data in another table. For example, you might
 ## Define a relationship
 You can create several types of relationships from one table to another (or between an table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table. Some common relationship types are:
 
-* **Many-to-one** - In this type of relationship, each record in table A can match more than one record in table B, but each record in table B can match only one record in table A. For example, a class has a single classroom. This is the most common type of relationship and is shown in the column list as a **Lookup column**
-* **One-to-many** - In this type of relationship, each record in table B can match more than one record in table A, but each record in table A can match only one record in table B. For example, a single teacher, teaches many classes.
-* **Many-to-many** - In this type of relationship, each record in table A can match more than one record in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
+* **Many-to-one** - In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class has a single classroom. This is the most common type of relationship and is shown in the column list as a **Lookup column**
+* **One-to-many** - In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, a single teacher, teaches many classes.
+* **Many-to-many** - In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
 Additionally, you can set advanced cascading behaviors on many-to-one and one-to-many relationships whenever an action is taken on the parent table.
 
@@ -113,12 +113,12 @@ As you model your business data by creating custom tables or when using existing
 
 * **Referential, Remove Link:** In a referential relationship between two tables, you can navigate to any related records, but actions taken on one will not affect the other. For example, if you have a one-to-many relationship between teachers and classes, deleting a teacher will have no impact on the related class.
 
-* **Referential, Restrict Delete:** In a referential, restrict delete relationship between two tables, you can navigate to any related records. Actions taken on the parent record will not be applied to the child record, but the parent record cannot be deleted while the child record exists. This is useful if you do not want child records to become orphaned. This forces the user to delete all of the children before deleting the parent.
+* **Referential, Restrict Delete:** In a referential, restrict delete relationship between two tables, you can navigate to any related records. Actions taken on the parent row will not be applied to the child record, but the parent row cannot be deleted while the child row exists. This is useful if you do not want child rows to become orphaned. This forces the user to delete all of the children before deleting the parent.
 
     > [!div class="mx-imgBorder"] 
     > ![Referential, Restrict Delete](./media/data-platform-cds-newrelationship/advanced-3.png "Referential, Restrict Delete")
 
-* **Parental:** In a parental relationship between two tables, any action taken on a record of the parent table is also taken on any child table records that are related to the parent table record. For example, this would cause all of the child records to be deleted when the parent is deleted.
+* **Parental:** In a parental relationship between two tables, any action taken on a row of the parent table is also taken on any child table rows that are related to the parent table record. For example, this would cause all of the child rows to be deleted when the parent is deleted.
 
 * **Custom:** In a custom relationship between two tables, you select the behavior associated with each of a set of possible actions. 
 
@@ -133,7 +133,7 @@ For more information on defaults and custom behaviors: [Configure table relation
 If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from an table that contains a lookup column, it appears as a **Drop down** control that contains data from the **Primary name** column of the table.
 
 ## Add 1:N and N:N relationships for canvas apps
-Use the **Relate** function to link two records through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in Power Apps](../canvas-apps/functions/function-relate-unrelate.md)
+Use the **Relate** function to link two rows through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in Power Apps](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## Next steps
 * [Generate an app by using a Common Data Service database](../canvas-apps/data-platform-create-app.md)

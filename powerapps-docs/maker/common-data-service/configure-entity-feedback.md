@@ -27,7 +27,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Let customers or employees write feedback for any table record, or rate table records within a defined rating range by enabling tables for feedback.  
+Let customers or employees write feedback for any table record, or rate table rows within a defined rating range by enabling tables for feedback.  
 
 This capability is commonly used with a system that captures data from customers via a portal, or survey. Data about service or product satisfaction can be applied with tables that represent that kind of data.
 
@@ -42,7 +42,7 @@ Edit the table to enable **Feedback**. More information: [Edit an table](edit-ta
   
 ## Add a subgrid for feedback on the table form  
 
-By default, users must go to the list of associated records of the record you want to add feedback to. To make it easier for users to add feedback, you may want to add a feedback subgrid to the form of the table you are enabling feedback for.  
+By default, users must go to the list of associated rows of the row you want to add feedback to. To make it easier for users to add feedback, you may want to add a feedback subgrid to the form of the table you are enabling feedback for.  
 
 <!-- This is the closest I could find to a topic about adding an subgrid to a form. -->
 More information:  [Sub-Grid properties overview](../model-driven-apps/sub-grid-properties-legacy.md)

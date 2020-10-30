@@ -21,7 +21,7 @@ searchScope:
 # What is Common Data Service?
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Common Data Service lets you securely store and manage data that's used by business applications. Data within Common Data Service is stored within a set of tables. An *table* is a set of records used to store data, similar to how a table stores data within a database. Common Data Service includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization and populate them with data using Power Query. App makers can then use Power Apps to build rich applications using this data.
+Common Data Service lets you securely store and manage data that's used by business applications. Data within Common Data Service is stored within a set of tables. An *table* is a set of rows used to store data, similar to how a table stores data within a database. Common Data Service includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization and populate them with data using Power Query. App makers can then use Power Apps to build rich applications using this data.
 
 ![Screenshot showing overview of Power Platform.](./media/data-platform-cds-intro/platform.png "Common Data Service in Power Platform")
 

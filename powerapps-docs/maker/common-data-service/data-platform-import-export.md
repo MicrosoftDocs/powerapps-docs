@@ -94,7 +94,7 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 
 ## Ensure uniqueness when you import data into an table from Excel or CSV
 
-Common Data Service tables use a primary key to uniquely identify records within a Common Data Service table table. The primary key for a Common Data Service table is a globally unique identifier (GUID). It forms the default basis for record identification. Data operations, like importing data into Common Data Service tables, surface the default primary keys.
+Common Data Service tables use a primary key to uniquely identify rows within a Common Data Service table table. The primary key for a Common Data Service table is a globally unique identifier (GUID). It forms the default basis for row identification. Data operations, like importing data into Common Data Service tables, surface the default primary keys.
 
 Example:  
 The primary key for an **Account** table is **accountid**.
@@ -102,7 +102,7 @@ The primary key for an **Account** table is **accountid**.
    > [!div class="mx-imgBorder"] 
    > ![Sample export file from an **Account** table showing **accountid** as the primary key](./media/data-platform-import-export/export-pk.png)
 
-Sometimes, a primary key might not work when you integrate data from an external source. Use Common Data Service to define alternate keys that uniquely identify a record in place of the primary key.
+Sometimes, a primary key might not work when you integrate data from an external source. Use Common Data Service to define alternate keys that uniquely identify a row in place of the primary key.
 
 Example:  
 For an **Account** table, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.

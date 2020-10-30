@@ -65,7 +65,7 @@ More information: [Types of columns](/powerapps/maker/common-data-service/types-
 
 ## Relationships
 
-Data in one table often relates to data in another table. table relationships define how records can be related to each other in the Common Data Service model.
+Data in one table often relates to data in another table. table relationships define how rows can be related to each other in the Common Data Service model.
 
 Common Data Service provides easy-to-use visual designers to define the different types of relationships from one table to another (or between an table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table.
 
@@ -73,11 +73,11 @@ Common Data Service provides easy-to-use visual designers to define the differen
 
 The relationship types are:
 
-- **Many-to-one**: In this type of relationship, each record in table A can match more than one record in table B, but each record in table B can match only one record in table A. For example, a class of students have a single classroom.
+- **Many-to-one**: In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class of students have a single classroom.
 
-- **One-to-many**: In this type of relationship, each record in table B can match more than one record in table A, but each record in table A can match only one record in table B. For example, one single teacher teaches many classes.
+- **One-to-many**: In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, one single teacher teaches many classes.
 
-- **Many-to-many**: In this type of relationship, each record in table A can match more than one record in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
+- **Many-to-many**: In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
 Because many-to-one relationships are the most common, Common Data Service provides a specific data type named *lookup*, which not only makes it easy to define this relationship but adds productivity to building forms and apps.
 
@@ -125,9 +125,9 @@ For more information about relevance search, see [Using relevance search to sear
 
 ### Quick find
 
-Common Data Service includes the ability to find records quickly and has approaches that will search just one type of table, such as customer, or be used to search across multiple types of tables at the same time, such as contacts, users, customers, and so on.
+Common Data Service includes the ability to find rows quickly and has approaches that will search just one type of table, such as customer, or be used to search across multiple types of tables at the same time, such as contacts, users, customers, and so on.
 
-*Single-table quick find* is used to find records of only one type. This search option is available from within a view.
+*Single-table quick find* is used to find rows of only one type. This search option is available from within a view.
 
 ![Single-table quick find](media/single-table-quick-find.png "Single-table quick find")
 

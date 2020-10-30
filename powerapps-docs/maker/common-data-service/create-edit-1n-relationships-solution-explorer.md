@@ -63,7 +63,7 @@ The following columns must be set in order to save the table relationship:
 |Required Field|Description|
 |--|--|
 |**Primary table**|This table will be the target type for the lookup column created on the related table.|
-|**Related table**|This table will have a lookup column added to associate the table records with the primary table record.|
+|**Related table**|This table will have a lookup column added to associate the table rows with the primary table record.|
 |**Name**|The name of the relationship. A value will be generated based on the primary and related table values. This column will be prefixed by the customization prefix of the solution publisher.|
 |**Lookup Field Display Name**|The localizable text for the lookup column that will be created for the related table. This is usually the same as the display name for the primary table. <br /> This can be changed later.|
 |**Lookup Field Name**|The name of the lookup column that will be created on the related table. A value will be generated based on the **Lookup Field Display Name**. This column will be prefixed by the customization prefix of the solution publisher.|
@@ -101,7 +101,7 @@ These are the properties of the lookup column created on the related table. The 
 
 ### Navigation Pane Item for Primary table
 
-From the primary table you can navigate to see related records. This data is used by model-driven apps to control how the related table records are displayed. These settings can also be edited using the form editor.
+From the primary table you can navigate to see related records. This data is used by model-driven apps to control how the related table rows are displayed. These settings can also be edited using the form editor.
 
 |Field|Description|
 |--|--|
@@ -128,14 +128,14 @@ This where you can define standard behaviors for related tables. This informatio
 
 Let’s look at an example.  
   
-Let’s say that you have a new salesperson and you want to assign them a number of existing opportunities currently assigned to another salesperson. Each opportunity record may have a number of task activities associated with it. You can easily locate the active opportunities you want to reassign and assign them to the new salesperson. But what should happen for any of the task activities that are associated with the opportunities? Do you want to open each task and decide whether they should also be assigned to the new salesperson? Probably not. Instead, you can let the relationship apply some standard rules for you automatically. These rules only apply to task records associated to the opportunities you are reassigning. Your options are:  
+Let’s say that you have a new salesperson and you want to assign them a number of existing opportunities currently assigned to another salesperson. Each opportunity row may have a number of task activities associated with it. You can easily locate the active opportunities you want to reassign and assign them to the new salesperson. But what should happen for any of the task activities that are associated with the opportunities? Do you want to open each task and decide whether they should also be assigned to the new salesperson? Probably not. Instead, you can let the relationship apply some standard rules for you automatically. These rules only apply to task rows associated to the opportunities you are reassigning. Your options are:  
   
 - Reassign all active tasks.  
 - Reassign all tasks. 
 - Reassign none of the tasks.  
 - Reassign all tasks currently assigned to the former owner of the opportunity.  
   
-The relationship can control how actions performed on a record for the primary table record cascade down to any related table records.   
+The relationship can control how actions performed on a row for the primary table row cascade down to any related table records.   
 
 There are several kinds of behaviors that can be applied when certain actions occur.
 
@@ -149,8 +149,8 @@ These are the behaviors available to be configured.
 |**Cascade All**|Perform the action on all related table records.|
 |**Cascade None**|Do nothing.|
 |**Remove Link**|Remove the lookup value for all related records.|
-|**Restrict**|Prevent the primary table record from being deleted when related table records exist.|
-|**Cascade User Owned**|Perform the action on all related table records owned by the same user as the primary table record.|
+|**Restrict**|Prevent the primary table row from being deleted when related table rows exist.|
+|**Cascade User Owned**|Perform the action on all related table rows owned by the same user as the primary table record.|
 
 #### Actions
 
@@ -158,12 +158,12 @@ These are the actions that can trigger certain behaviors:
 
 |Field|Description|Options|
 |--|--|--|
-|**Assign**|What should happen when the primary table record is assigned to someone else?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
+|**Assign**|What should happen when the primary table row is assigned to someone else?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 |**Reparent**|What should happen when the lookup value of a related table in a parental relationship is changed?<br />More information: [Parental table relationships](#parental-table-relationships)|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
-|**Share**|What should happen when the primary table record is shared?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
-|**Delete**|What should happen when the primary table record is deleted?|Cascade All<br />Remove Link<br />Restrict|
-|**Unshare**|What should happen when a primary table record is unshared?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
-|**Merge**|What should happen when a primary table record is merged?|Cascade All<br />Cascade None|
+|**Share**|What should happen when the primary table row is shared?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
+|**Delete**|What should happen when the primary table row is deleted?|Cascade All<br />Remove Link<br />Restrict|
+|**Unshare**|What should happen when a primary table row is unshared?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
+|**Merge**|What should happen when a primary table row is merged?|Cascade All<br />Cascade None|
 |**Rollup View**|What is the desired behavior of the rollup view associated with this relationship? |Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 
 <!-- TODO: I find no official docs related to rollup views, but plenty of hits online: https://www.google.com/search?q=Dynamics+365++%27rollup+view%27 -->

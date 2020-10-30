@@ -19,7 +19,7 @@ search.app:
 
 App makers, who are building custom apps, can use all of the Common Data Service tables available within [Common Data Model](https://docs.microsoft.com/common-data-model/) to create apps and flows for users who have any version of Power Apps license.  
 
-However, a smaller set of tables tied to Dynamics 365 apps (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) require canvas and model-driven app users to have a license for the corresponding Dynamics 365 app if they need to create, update, or delete records within the tables. These are referred to as restricted tables.
+However, a smaller set of tables tied to Dynamics 365 apps (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) require canvas and model-driven app users to have a license for the corresponding Dynamics 365 app if they need to create, update, or delete rows within the tables. These are referred to as restricted tables.
 
 tables may be restricted to a Dynamics 365 app license for the following reasons:
 * The table is used to store and maintain product-specific configuration data that should typically be not used outside of the application.

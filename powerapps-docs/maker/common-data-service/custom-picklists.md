@@ -60,7 +60,7 @@ Option sets can be created in two ways, either from the **Option Sets** list wit
 9. Click **Done** to close the column panel, and then **Save table** to save your table to the Common Data Service.
 
     > [!NOTE]
-    > You can select one of your items as the **Default** for this column, and it will be selected by default when users are creating new records in your table.
+    > You can select one of your items as the **Default** for this column, and it will be selected by default when users are creating new rows in your table.
 
     > [!div class="mx-imgBorder"] 
     > ![New Field](./media/data-platform-cds-newoptionset/columnpanel-2.png "New Field Panel")

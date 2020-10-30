@@ -42,7 +42,7 @@ tables in Common Data Service can use rich server-side logic and validation to e
 
 ## Integrating with apps by using events
 
-A common approach of app integration is through the use of events. For example, an event such as adding a new record occurs in Common Data Service, and this should be communicated to an associated system so that an action can be taken. For example, if a new support request was raised, it might trigger an SMS message to be sent to the assigned support staff.
+A common approach of app integration is through the use of events. For example, an event such as adding a new row occurs in Common Data Service, and this should be communicated to an associated system so that an action can be taken. For example, if a new support request was raised, it might trigger an SMS message to be sent to the assigned support staff.
 
 This interactivity can also occur in the opposite direction&mdash;an update in an external system might result in data being added, updated, or deleted from a Common Data Service environment.
 
@@ -89,7 +89,7 @@ Logic Apps, offered via Azure, and Power Automate, offered via Microsoft Power P
 
 These workflows can execute logic and interact with these systems using the hundreds of connectors to databases, PaaS, and SaaS.
 
-For example, when a record is added to a relational database, such as SQL, this might trigger a workflow that can insert this data in Common Data Service.
+For example, when a row is added to a relational database, such as SQL, this might trigger a workflow that can insert this data in Common Data Service.
 
 With the ability to create custom connectors by using Open API (formerly known as Swagger) definitions for a service, it's also straightforward to include services, functions, and code running in IaaS and Azure Kubernetes Service (AKS).
 

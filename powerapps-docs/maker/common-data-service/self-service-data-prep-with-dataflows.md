@@ -55,7 +55,7 @@ be handled with a few clicks by individuals who aren’t even data scientists,
 such as app creators, business analysts and report creators.
 
 
-Dataflows store data in tables. An table is a set of records used to store
+Dataflows store data in tables. An table is a set of rows used to store
 data, similar to how a table stores data within a database. Customers can define
 custom table schema or leverage the Common Data Model’s standard tables.
 The Common Data Model is a shared data language for business and analytical

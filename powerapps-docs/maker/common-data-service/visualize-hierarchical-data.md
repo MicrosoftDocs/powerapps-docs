@@ -27,7 +27,7 @@ search.app:
 
 When an table is configured to have a hierarchical self-referential relationship you can configure visualizations using that hierarchy. More information: [Define and query hierarchically related data](../common-data-service/define-query-hierarchical-data.md)
 
-The  tables that have visualizations available by default include [Account](/powerapps/developer/common-data-service/reference/tables/account), [Position](/powerapps/developer/common-data-service/reference/tables/position), and [User](/powerapps/developer/common-data-service/reference/tables/systemuser). In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the record name. The hierarchy icon isn’t present for all records by default. The icon is shown for the records that are related using the hierarchical relationship.  
+The  tables that have visualizations available by default include [Account](/powerapps/developer/common-data-service/reference/tables/account), [Position](/powerapps/developer/common-data-service/reference/tables/position), and [User](/powerapps/developer/common-data-service/reference/tables/systemuser). In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that are related using the hierarchical relationship.  
 > [!div class="mx-imgBorder"] 
 > ![View hierarchy button](media/view-hierarchy-button.png)  
   
@@ -96,7 +96,7 @@ After we completed the setup, we created two records: *Standard Widget* and *Pre
 > ![Widget's hierarchy grid](media/widget-hierarchy-grid.png)  
   
 > [!NOTE]
->  The hierarchy icons don’t appear in the record grid view until the records are related using the hierarchical relationship.  
+>  The hierarchy icons don’t appear in the row grid view until the rows are related using the hierarchical relationship.  
   
 Choosing the hierarchy icon displays the `new_Widget` hierarchy with the tree view on the left and the tile view on the right, showing two records. Each tile contains four columns that we provided in the **Widget Hierarchy Tile Form**.  
 

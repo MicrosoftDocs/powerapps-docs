@@ -44,7 +44,7 @@ Restricted tables are not standard tables within Common Data Service, but are in
 > [!NOTE]
 > Apps and flows that use these tables require the app and flow user to be licensed appropriately-not the maker or developer of the app or flow.
 
-tables that are tied to the functionality of Dynamics 365 apps (such as Dynamics 365 Sales or Dynamics 365 Customer Service) require app users to have the corresponding license for that application if they want to create, update, or delete records within the tables. For a full list of restricted tables, see [Restricted tables requiring Dynamics 365 licenses](data-platform-restricted-tables.md).
+tables that are tied to the functionality of Dynamics 365 apps (such as Dynamics 365 Sales or Dynamics 365 Customer Service) require app users to have the corresponding license for that application if they want to create, update, or delete rows within the tables. For a full list of restricted tables, see [Restricted tables requiring Dynamics 365 licenses](data-platform-restricted-tables.md).
 
 ## Licensing examples
 Barb and Isaac are creating apps in Power Apps using Common Data Service to store their data.

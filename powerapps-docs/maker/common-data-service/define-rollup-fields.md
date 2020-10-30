@@ -28,7 +28,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Rollup columns help users obtain insights into data by monitoring key business metrics. A rollup column contains an aggregate value computed over the records related to a specified record. This includes regular tables and activity tables such as emails and appointments.
+Rollup columns help users obtain insights into data by monitoring key business metrics. A rollup column contains an aggregate value computed over the rows related to a specified record. This includes regular tables and activity tables such as emails and appointments.
 
 In more complex scenarios, you can aggregate data over the hierarchy of records. As an administrator or customizer, you can define rollup columns by using the customization tools in Power Apps, without needing to write code.  
   
@@ -84,11 +84,11 @@ To view rollup jobs:
  
 ### Mass Calculate Rollup Field
 
-**Mass Calculate Rollup Field** is a recurring job, created per a rollup column. It runs once, after you created or updated a rollup column. The job recalculates the specified rollup column value in all existing records that contain this column. By default, the job will run 12 hours after you created or updated a column. After the job completes, it is automatically scheduled to run in the distant future, approximately, in 10 years. If the column is modified, the job resets to run again in 12 hours after the update. The 12-hour delay is needed to assure that the **Mass Calculate Rollup Field** runs during the non-operational hours of the environment. It is recommended that an administrator adjusts the start time of a **Mass Calculate Rollup Field** job after the rollup column is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup columns.  
+**Mass Calculate Rollup Field** is a recurring job, created per a rollup column. It runs once, after you created or updated a rollup column. The job recalculates the specified rollup column value in all existing rows that contain this column. By default, the job will run 12 hours after you created or updated a column. After the job completes, it is automatically scheduled to run in the distant future, approximately, in 10 years. If the column is modified, the job resets to run again in 12 hours after the update. The 12-hour delay is needed to assure that the **Mass Calculate Rollup Field** runs during the non-operational hours of the environment. It is recommended that an administrator adjusts the start time of a **Mass Calculate Rollup Field** job after the rollup column is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup columns.  
 
 ### Calculate Rollup Field 
 
-**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup columns in the existing records for a specified table. There is only one **Calculate Rollup Field** job per table. The incremental calculations mean that the **Calculate Rollup Field** job processes the records that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup column on an table is created and deleted when the last rollup column is deleted.  
+**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup columns in the existing rows for a specified table. There is only one **Calculate Rollup Field** job per table. The incremental calculations mean that the **Calculate Rollup Field** job processes the rows that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup column on an table is created and deleted when the last rollup column is deleted.  
 
 ## Online recalculation option
 The rollup column on the form displays a calculator image, rollup value, and the time of the last calculation. To recaclulate, select the calculator image, and then select the **Recalculate** button that appears. 
@@ -99,10 +99,10 @@ The rollup column on the form displays a calculator image, rollup value, and the
 
 There are a few considerations you should keep in mind when using the online recalculation option (manual refresh on the form):  
   
-- You must have Write privileges on the table and Write access rights on the source record on which you are requesting the Refresh. For example, if you are calculating the estimated revenue from the open opportunities of an account, you don’t have to have Write privileges on the opportunity table, only on the account table.  
+- You must have Write privileges on the table and Write access rights on the source row on which you are requesting the Refresh. For example, if you are calculating the estimated revenue from the open opportunities of an account, you don’t have to have Write privileges on the opportunity table, only on the account table.  
 - This option is only available in the online mode. You can’t use it while working offline.  
-- The maximum number of records during the rollup refresh is limited to 50,000 records. In case of the hierarchical rollup, this applies to the related records across the hierarchy. If the limit is exceeded, you see an error message: *Calculations can’t be performed online because the calculation limit of 50,000 related records has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
-- The maximum hierarchy depth is limited to 10 for the source record. If the limit is exceeded, you see an error message: *Calculations can’t be performed online because the hierarchy depth limit of 10 for the source record has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
+- The maximum number of rows during the rollup refresh is limited to 50,000 records. In case of the hierarchical rollup, this applies to the related rows across the hierarchy. If the limit is exceeded, you see an error message: *Calculations can’t be performed online because the calculation limit of 50,000 related rows has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
+- The maximum hierarchy depth is limited to 10 for the source record. If the limit is exceeded, you see an error message: *Calculations can’t be performed online because the hierarchy depth limit of 10 for the source row has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
 
 ## Modify rollup job recurrence
 
@@ -120,33 +120,33 @@ For the **Calculate Rollup Field** job, the available selections are: **Modify R
  
 ## Examples 
 
-Let’s take a look at several rollup column examples. We’ll aggregate data for a record from the related records with and without using a hierarchy. We’ll also aggregate data for a record from related activities and activities indirectly related to a record via the ActivityParty table. In each example, we define the rollup column by using the Field Editor. To open the Field Editor, open solution explorer and expand **Components** > **tables**. Select the table you want and select **Fields**. Choose **New**. In the editor, provide the required information for the column, including the **Field Type** and **Data Type**. In the **Field Type**, select **Rollup**, after you have selected the data type. The data types include decimal or whole numbers, currency, and date/time. Choose the **Edit** button next to the **Field Type**. This takes you to the rollup column definition editor. The rollup column definition consists of three sections: **Source table**, **Related table** and **Aggregation**.  
+Let’s take a look at several rollup column examples. We’ll aggregate data for a row from the related rows with and without using a hierarchy. We’ll also aggregate data for a row from related activities and activities indirectly related to a row via the ActivityParty table. In each example, we define the rollup column by using the Field Editor. To open the Field Editor, open solution explorer and expand **Components** > **tables**. Select the table you want and select **Fields**. Choose **New**. In the editor, provide the required information for the column, including the **Field Type** and **Data Type**. In the **Field Type**, select **Rollup**, after you have selected the data type. The data types include decimal or whole numbers, currency, and date/time. Choose the **Edit** button next to the **Field Type**. This takes you to the rollup column definition editor. The rollup column definition consists of three sections: **Source table**, **Related table** and **Aggregation**.  
   
--   In the **Source table** section, you specify the table for which the rollup column is defined and whether or not you aggregate over a hierarchy. You can add filters with multiple conditions to specify the records in the hierarchy you want to use for rollup.  
+-   In the **Source table** section, you specify the table for which the rollup column is defined and whether or not you aggregate over a hierarchy. You can add filters with multiple conditions to specify the rows in the hierarchy you want to use for rollup.  
   
--   In the **Related table** section, you specify the table over which you aggregate. This section is optional when you choose to rollup over the hierarchy on the source table. You can add filters with multiple conditions to specify which related records to use in the calculation. For example, you include the revenue from the open opportunities with an annual revenue greater than $1000.  
+-   In the **Related table** section, you specify the table over which you aggregate. This section is optional when you choose to rollup over the hierarchy on the source table. You can add filters with multiple conditions to specify which related rows to use in the calculation. For example, you include the revenue from the open opportunities with an annual revenue greater than $1000.  
   
 -   In the **Aggregate** section, you specify the metric you want to compute. You can choose available aggregate functions, such as SUM, COUNT, MIN, MAX or AVG.  
   
-### Aggregate data for a record from related records  
+### Aggregate data for a row from related rows  
 
 In this example, a hierarchy is not used. The total estimated revenue is calculated for an account, from the related open opportunities.  
 
 ![Aggregate the estimated revenue for an account](media/rollup-column-no-hierarchy.png)
   
-### Aggregate data for a record from the child records, over the hierarchy 
+### Aggregate data for a row from the child records, over the hierarchy 
  
 In this example, we calculate the total estimated revenue of an opportunity including the child opportunities, over the hierarchy.  
   
 ![Aggregate estimated revenue, opportunity hierarchy](media/rollup-column-hierarchy-self.png)
   
-### Aggregate data for a record from the related records, over the hierarchy
+### Aggregate data for a row from the related records, over the hierarchy
 
 In this example, we calculate the total estimated revenue of open opportunities across all accounts, over the hierarchy.  
   
 ![Aggregate estimated revenue over account hierarchy](media/rollup-column-hierarchy.png)  
   
-### Aggregate data for a record from all related activities
+### Aggregate data for a row from all related activities
   
 In this example, we calculate the total time spent and billed from all activities related to an account. This may include time spent on the phone, at appointments, or on  custom activities.  
   
@@ -154,7 +154,7 @@ In earlier releases, you could define a rollup column for an individual activity
   
 ![Rollup all activities for an account](media/rollup-enhancements-activities.png)  
   
-### Aggregate data for a record from all related activities and activities indirectly related via the Activity Party table  
+### Aggregate data for a row from all related activities and activities indirectly related via the Activity Party table  
 
 In this example, we count the total number of emails sent to an account, where the account is listed on the email’s “To Recipient” line or “Cc Recipient line. This is done by specifying the **Participation Type** in **FILTERS** for the Activity Party table in the rollup column definition. If you don’t use filtering, then all available participation types for an activity are used in the calculation. 
  
@@ -163,7 +163,7 @@ For more information about the Activity Party table and participation types avai
   
 ![Rollup related activities and activity party](media/rollup-enhancements-indirect-activities.png)  
   
-### Aggregate data for a record from related records using the AVG operator
+### Aggregate data for a row from related rows using the AVG operator
 
 In this example, we calculate an average estimated revenue from all opportunities related to an account.  
   
@@ -202,7 +202,7 @@ As you can see, the precision rounding to two decimal points on the aggregated c
   
 ### Different behavior from Associated grids
  
-Certain table  forms, such as Account or Contact, out-of-the-box, contain the associated grids. For example, an Account form includes Contacts, Cases, Opportunities and other grids. Some of the records shown in the Account form grids are directly related to the account record; others, indirectly, through the relationships with other records. In comparison, the rollup column aggregation uses only direct relationships explicitly defined in the rollup column definition. No other relationships are considered. To illustrate the difference in behavior, let’s look at the following example.  
+Certain table  forms, such as Account or Contact, out-of-the-box, contain the associated grids. For example, an Account form includes Contacts, Cases, Opportunities and other grids. Some of the rows shown in the Account form grids are directly related to the account record; others, indirectly, through the relationships with other records. In comparison, the rollup column aggregation uses only direct relationships explicitly defined in the rollup column definition. No other relationships are considered. To illustrate the difference in behavior, let’s look at the following example.  
   
 1. The account A1 has a primary contact, P1. The case C1 is associated  with the account  A1 (C1.Customer column  =  A1) and the case C2 is associated with the contact P1 (C2.Customer column = P1).  
 1. The **Cases** grid on the **Account** form for the A1 record, shows two cases, C1 and C2.  

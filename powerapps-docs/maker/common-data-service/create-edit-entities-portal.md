@@ -69,10 +69,10 @@ Enter data for the following columns
 |**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
 |**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
 |**Primary Name**|This is the only column visible at this point.| Edit it if you want to change the **Display Name**or **Name** of the column.
-|**Display name**|This is the main user-friendly text identifier for your record (typically a name or a number). The value of this column is shown to users when they need to select from a list of records.
+|**Display name**|This is the main user-friendly text identifier for your row (typically a name or a number). The value of this column is shown to users when they need to select from a list of records.
 |**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
 
-Select **Enable Attachments** to append notes and files to records for this table.
+Select **Enable Attachments** to append notes and files to rows for this table.
 
 Select **More settings**. These settings are optional for an table.
 
@@ -149,7 +149,7 @@ Use the **Next Page** and **Previous Page** commands at the bottom of the form t
 As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
   
 > [!IMPORTANT]
->  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated records that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-table-relationships.md).  
+>  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-table-relationships.md).  
   
 > [!NOTE]
 > The only way to recover data from an table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)

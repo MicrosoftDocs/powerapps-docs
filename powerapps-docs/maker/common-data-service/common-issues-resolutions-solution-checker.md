@@ -80,7 +80,7 @@ To install Power Apps Checker back into your Common Data Service environment:
 
 ## Solution checker can't access environments in Administration Mode
 
-Environments that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application idtable has neither of these roles assigned by default, it can't access organizations operating in this mode.
+Environments that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
 
 In order to use solution checker in this organization, Administration Mode must be disabled.
 
@@ -185,13 +185,13 @@ Common operations invoked by solution checker include Create and Update. These o
 
 ## Solution checker fails due to disabled first-party application in Azure Active Directory
 
-The first-party enterprise application idtable used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the idtable cannot authenticate when requesting bearer tokens for Common Data Service and other required resource providers on-behalf of the requesting user.
+The first-party enterprise application identity used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the identity cannot authenticate when requesting bearer tokens for Common Data Service and other required resource providers on-behalf of the requesting user.
 
-Follow the below steps to verify that the application idtable hasn't been disabled in AAD and if necessary enable the application.
+Follow the below steps to verify that the application identity hasn't been disabled in AAD and if necessary enable the application.
 
 ### How to verify and/or modify application enabled status
 
-To verify and/or modify the enabled status of the PowerApps-Advisor enterprise application idtable
+To verify and/or modify the enabled status of the PowerApps-Advisor enterprise application identity
 
 1. Access your tenant in the [Azure Active Directory (AAD) Portal](https://aad.portal.azure.com/).
 2. Navigate to **Enterprise Applications**.

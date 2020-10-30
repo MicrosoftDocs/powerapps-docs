@@ -118,7 +118,7 @@ You can also make the following changes:
 As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
   
 > [!IMPORTANT]
->  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated records that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-table-relationships.md).  
+>  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-table-relationships.md).  
   
 > [!NOTE]
 > The only way to recover data from an table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
@@ -184,8 +184,8 @@ The following options cannot be set:
 - **Activities**
 - **Sending email**
 - **Mail Merge**
-- **Single record auditing**
-- **Multiple record auditing**
+- **Single row auditing**
+- **Multiple row auditing**
 
 ## Create a Virtual table
 

@@ -90,11 +90,11 @@ As an example, if you had an option set on your table called ApprovalStatus, you
 
 ## Navigating Relationships
 
-Relationships in Common Data Service require you to create a relationship within Power BI desktop between the two tables using a GUID column, this is a system-generated unique identifier that ensures relationships are created for the create records where ambiguity or duplication may exist with other columns. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
+Relationships in Common Data Service require you to create a relationship within Power BI desktop between the two tables using a GUID column, this is a system-generated unique identifier that ensures relationships are created for the create rows where ambiguity or duplication may exist with other columns. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
 
 While some relationships may be automatically created, you can still review and ensure the correct relationships are established when creating your report:
 
-* The lookup column on the table will contain the GUID of the record in the related table.
+* The lookup column on the table will contain the GUID of the row in the related table.
 * The related table will have a column in the format "[tableName]ID" that contains the GUID, for example Accountid or MyCustomtableid
 * Using the Power BI desktop Manage Relationships feature, you would create a new relationship between your lookup column, and the id column on the related table.
 

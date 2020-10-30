@@ -82,7 +82,7 @@ Use the column editor to specify a calculated column. In this example we will us
 - In the **Action** section, you provide the formula for the calculated column.  
   
 > [!NOTE]
->  You can use data from Lookup records within your Action. You first have to select the Lookup column and then type a period. After that, you can select one of the columns available on the related table. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
+>  You can use data from Lookup rows within your Action. You first have to select the Lookup column and then type a period. After that, you can select one of the columns available on the related table. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
 >   
 >  Note that column level security will be ignored on the related table, so if there is sensitive data in the accessed column we suggest securing your calculated column as well.  
 
@@ -143,9 +143,9 @@ The following screenshots show step-by-step how to define the **Follow-up date**
   
  ![Set Follow up date If&#45;Then & Else in Dynamics 365](media/calc-column-follow-update-6.PNG)  
   
-### Days from a record creation 
+### Days from a row creation 
  
-In this example, we are using the **DIFFINDAYS** function, to compute the difference in days from the time when a record was created to the current date. 
+In this example, we are using the **DIFFINDAYS** function, to compute the difference in days from the time when a row was created to the current date. 
 
 Create a new Whole Number column called **Calculated difference in days**.
   
@@ -155,7 +155,7 @@ Create a new Whole Number column called **Calculated difference in days**.
   
 #### Altogether:
   
-![Difference in days since record creation](media/calc-column-diff-days-complete.png)  
+![Difference in days since row creation](media/calc-column-diff-days-complete.png)  
   
 <a name="Syntax"></a> 
   

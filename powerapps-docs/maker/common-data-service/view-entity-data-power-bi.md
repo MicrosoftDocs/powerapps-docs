@@ -30,7 +30,7 @@ search.app:
 You can use Power BI Desktop to view tables in Common Data Service. The table
 record data that you can access from your environment is read-only. Data access
 uses the Common Data Service security model that is the same used to access
-table record data using a Power Apps app.
+table row data using a Power Apps app.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
@@ -76,7 +76,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
     its data.
 
     > [!div class="mx-imgBorder"] 
-    > ![table records displayed example](media/table-record-data-displayed.png "table records displayed example" )
+    > ![table rows displayed example](media/table-record-data-displayed.png "table rows displayed example" )
 
 > [!NOTE]
 > SQL options, such as a T-SQL queries aren’t supported.

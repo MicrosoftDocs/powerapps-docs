@@ -69,7 +69,7 @@ Choose the **Related table** for the relationship you want to create between the
 > [!NOTE]
 > With either choice, a lookup column will be created on the *current* table.
 
-Once you select the table you can edit the details of the relationship. In this example, multiple contact table records can be associated with a single account.
+Once you select the table you can edit the details of the relationship. In this example, multiple contact table rows can be associated with a single account.
 
 > [!div class="mx-imgBorder"] 
 > ![One to many relationship account and contact](media/One-to-many-account-contact.png)

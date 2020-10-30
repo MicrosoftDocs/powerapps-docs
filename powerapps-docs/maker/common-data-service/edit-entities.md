@@ -39,7 +39,7 @@ You can perform the following edits to an table:
 
 - **Keys**. [Define alternate keys to reference records](define-alternate-keys-reference-records.md)
   
-You can also make changes to records that support the table:  
+You can also make changes to rows that support the table:  
 
 - **Business Rules**. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 

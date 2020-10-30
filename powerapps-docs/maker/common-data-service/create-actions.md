@@ -127,9 +127,9 @@ The following table describes the action process argument types.
 |Boolean|A `true` or `false` value.|  
 |DateTime|A value that stores date and time information.|  
 |Decimal|A number value with decimal precision. Used when precision is extremely important.|  
-|table|A record for the specified table. When you select table, the drop-down list is enabled and allows you to select the table type.|  
+|table|A row for the specified table. When you select table, the drop-down list is enabled and allows you to select the table type.|  
 |tableCollection|A collection of table records.|  
-|tableReference|An object that contains the name, ID, and type of an table record that uniquely identifies it. When you select tableReference, the drop-down list is enabled and allows you to select the table type.|  
+|tableReference|An object that contains the name, ID, and type of an table row that uniquely identifies it. When you select tableReference, the drop-down list is enabled and allows you to select the table type.|  
 |Float|A number value with decimal precision. Used when data comes from a measurement that isn’t absolutely precise.|  
 |Integer|A whole number.|  
 |Money|A value that stores data about an amount of money.|  
@@ -143,7 +143,7 @@ The following table describes the action process argument types.
 ### Add stages and steps  
 Actions are a type of process very similar to real-time workflows. All the steps that can be used in real-time workflows can be used in actions. For information about the steps that can be used for both real-time workflows and actions, see [Workflow stages and steps](configure-workflow-steps.md).  
   
-In addition to the steps that can be used for real-time workflows, actions also have the **Assign Value** step. In actions, these can be used only to set output arguments. You can use the form assistant to set output arguments to specific values or, more likely, to values from the record that the action is running against, records related to that record with a many-to-one relationship, records created in an earlier step, or values that are part of the process itself.  
+In addition to the steps that can be used for real-time workflows, actions also have the **Assign Value** step. In actions, these can be used only to set output arguments. You can use the form assistant to set output arguments to specific values or, more likely, to values from the row that the action is running against, rows related to that row with a many-to-one relationship, rows created in an earlier step, or values that are part of the process itself.  
   
 ## Next steps  
 [Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md)   
