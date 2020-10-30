@@ -22,7 +22,8 @@ search.app:
 
 Relevance Search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. It is the best search experience to find and act on your data in Common Data Service. 
 
-- Relevance Search is faster than Categorized search. Relevance Search finds matches across fields to find the most relevant results. Relevance Search is smarter, in the following ways: 
+- Relevance Search is faster than Categorized search. 
+- Relevance Search finds matches across fields to find the most relevant results. Relevance Search is smarter, in the following ways: 
 
   - It finds matches for inflectional words like **stream**, **streaming**, or **streamed**. A relevance ranking system that factors in information like how close or spread out the search terms are in a field 
   - Search results with matched text is highlighted, so you can easily see and understand the results. 
