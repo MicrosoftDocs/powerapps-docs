@@ -71,9 +71,9 @@ Autonumber fields have a default seed value of 1000, but you may set a custom se
   
 1.  Sign in to the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-2.  On the left pane expand **Data** and select **Entities**.
+2.  On the left pane expand **Data** and select **tables**.
   
-3.  Select the entity that you would like to add an autonumber field to and then select the **Fields** tab.
+3.  Select the table that you would like to add an autonumber field to and then select the **Fields** tab.
   
 4.  On the toolbar, select **Add** field.  
   

@@ -30,7 +30,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide entity, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
+Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide table, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
 
 > [!IMPORTANT]
 > Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
@@ -65,13 +65,13 @@ To author custom help panes, you need the following:
     > ![Enable custom help panes](media/enable-custom-help-panes.png "Enable custom help panes")
 
 > [!IMPORTANT]
-> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are both set to **No**.  
+> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable tables** and **Append parameters to URL** are both set to **No**.  
 > - Some environments may require that you also set **Enable Learning Path** to **Yes**.
  
 ## Context-sensitive custom help
 Each help pane is unique for these contexts: 
 - Application 
-- Entity
+- table
 - Form 
 - Language   
 
@@ -150,7 +150,7 @@ This section discusses frequently asked questions about custom help pages.
 
 ### Are custom help pages the same as customizable help?
 
-Custom help panes and guided tasks are an option in the **Set custom help URL** section of system settings. Custom help panes and guided tasks enable a customizable help pane that shows up right next to the user’s form.  The other options in this system settings set custom help section comprise the customizable help features. They allow you to override the default apps help and point users in your organization to a different URL for help. Alternatively, you can override the help for a highly customized entity so that you can better describe your workflow.
+Custom help panes and guided tasks are an option in the **Set custom help URL** section of system settings. Custom help panes and guided tasks enable a customizable help pane that shows up right next to the user’s form.  The other options in this system settings set custom help section comprise the customizable help features. They allow you to override the default apps help and point users in your organization to a different URL for help. Alternatively, you can override the help for a highly customized table so that you can better describe your workflow.
 
 For more information about customizable help, see [Enable and use customizable help](../model-driven-apps/use-customizable-help.md).
 

@@ -1,6 +1,6 @@
 ---
-title: "Entity overview in Power Apps | MicrosoftDocs"
-description: "Learn about entities in Power Apps"
+title: "table overview in Power Apps | MicrosoftDocs"
+description: "Learn about tables in Power Apps"
 ms.custom: ""
 ms.date: 07/25/2018
 ms.reviewer: ""
@@ -24,13 +24,13 @@ search.app:
   - D365CE
 ---
 
-# Entity summary
+# table summary
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Entities are used to model and manage business data. When you develop an app, you can use standard entities, custom entities, or both. Common Data Service provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
+tables are used to model and manage business data. When you develop an app, you can use standard tables, custom tables, or both. Common Data Service provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
 ## See also
-[Create a custom entity](data-platform-create-entity.md) <br/>
-[Types of entities](types-of-entities.md)
+[Create a custom table](data-platform-create-table.md) <br/>
+[Types of tables](types-of-tables.md)
 

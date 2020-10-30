@@ -32,14 +32,14 @@ The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium
   
 ## Open solution explorer
 
-Part of the name of any custom field you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this entity. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
+Part of the name of any custom field you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 
 ## View fields
 
-With solution explorer open, under **Components** expand **Entities** and select the entity where you want to create or edit the field.
+With solution explorer open, under **Components** expand **tables** and select the table where you want to create or edit the field.
 
 ![Solution explorer fields view](media/solution-explorer-fields-view.png)
 
@@ -47,13 +47,13 @@ You can select the following views:
 
  |View|Description|
  |--|--|
- |**All**| Shows all the fields for the entity|
- |**Custom**|Shows only custom fields for the entity|
+ |**All**| Shows all the fields for the table|
+ |**Custom**|Shows only custom fields for the table|
  |**Customizable**|Shows only the fields that can be edited|
 
 ## Create a field
 
-While viewing fields, in the command bar, click **New** which will open the new field form.  Some standard entities or custom entities that are included in a managed solution might not allow you to add new fields.
+While viewing fields, in the command bar, click **New** which will open the new field form.  Some standard tables or custom tables that are included in a managed solution might not allow you to add new fields.
 
 > [!NOTE]
 > For model-driven apps you can also create a new field from the form editor. In the form editor, below the **Field Explorer** click **New Field** to create a new field. More information: [Add a field to a form](../model-driven-apps/add-field-form.md)
@@ -67,13 +67,13 @@ You must enter data and confirm default values set for the following properties 
 |**Display Name**|The text to be displayed for the field in the user interface. You can change this after you save, but the value you enter will generate a value for the **Name** field.|
 |**Field Requirement**|Whether data is required in the field to save the record. More information: [Field Requirement options](#field-requirement-options)|
 |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a field is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for the current solution's publisher prepended to it.|
-|**Searchable**|Set this to **No** for fields for the entity that you don’t use.  When a field is searchable it appears in **Advanced Find** in model-driven apps and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
-|**Field Security**|Whether the data in the field is secured at a higher level than the entity. More information: [Field level security to control access](/dynamics365/customer-engagement/admin/field-level-security)|
-|**Auditing**|Whether data for this field will be audited when the entity is enabled for auditing. More information: [Audit data and user activity for security and compliance](/customer-engagement/admin/audit-data-user-activity)|
+|**Searchable**|Set this to **No** for fields for the table that you don’t use.  When a field is searchable it appears in **Advanced Find** in model-driven apps and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
+|**Field Security**|Whether the data in the field is secured at a higher level than the table. More information: [Field level security to control access](/dynamics365/customer-engagement/admin/field-level-security)|
+|**Auditing**|Whether data for this field will be audited when the table is enabled for auditing. More information: [Audit data and user activity for security and compliance](/customer-engagement/admin/audit-data-user-activity)|
 |**Description**|Enter instructions to the user about what the field is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the field.|
 |**Appears in global filter in interactive experience**|More information: [Configure interactive experience dashboards](/dynamics365/customer-engagement/customize/configure-interactive-experience-dashboards) |
 |**Sortable in interactive experience dashboard**|More information: [Configure interactive experience dashboards](/dynamics365/customer-engagement/customize/configure-interactive-experience-dashboards)|
-|**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a field is saved, you cannot change the data type as it may impact the data in your entity. More information: [Field Data types](#field-data-types)|
+|**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a field is saved, you cannot change the data type as it may impact the data in your table. More information: [Field Data types](#field-data-types)|
 |**Field type**|Whether the field is **Simple**, **Calculated**, or **Rollup**. More information: [Field Type](#field-type)|
 |**Format**|How the field will be formatted. The available formatting options depend on the **Data type**.|
 
@@ -102,14 +102,14 @@ When creating a field, **Data type** provides the following choices:
 |**Option Set**|Displays a list of options where one can be selected. More information: [Option set field options](#option-set-field-options)|
 |**MultiSelect Option Set**|Displays a list of options where more than one can be selected. More information: [Option set field options](#option-set-field-options)|
 |**Two Options**|Displays a list of options where one of two can be selected.<br /><br /> Two option fields don’t provide format options at the field level. But when you add one to the form you can choose to display them as radio buttons, a check box, or a select list.|
-|**Image**|Displays a single image per record in the application. Each entity can have one image field. Image fields are always named `EntityImage`.|
+|**Image**|Displays a single image per record in the application. Each table can have one image field. Image fields are always named `tableImage`.|
 |**Whole Number**|Integers with a value between -2,147,483,648 and 2,147,483,647 can be in this field.  This field has options that change depending on how the field is presented. More information: [Whole number options](#whole-number-options)|
 |**Floating Point Number**|Up to 5 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this field. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
 |**Decimal Number**|Up to 10 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this field. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
 |**Currency**|Monetary values between -922,337,203,685,477 and 922,337,203,685,477 can be in this field. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization. More information: [Using currency fields](types-of-fields.md#using-currency-fields)|
 |**Multiple Lines of Text**|This field can contain up to 1,048,576 text characters. You can set the maximum length to be less than this. When you add this field to a model-driven app form, you can specify the dimensions of the field.|
 |**Date and Time**|Use these fields to store time values. You can store values as early as 1/1/1753 12:00 AM. More information: [Date and Time options](#date-and-time-options)|
-|**Lookup**|A field that allows setting a reference to a single record of a specific type of entity. Some system lookup fields behave differently. More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)|
+|**Lookup**|A field that allows setting a reference to a single record of a specific type of table. Some system lookup fields behave differently. More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)|
 |**Customer**|A lookup field that you can use to specify a customer, which can be an account or contact.  More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)|
 
 ### Single line of text options
@@ -224,9 +224,9 @@ While [viewing fields](#view-fields), click the field you want to edit. Some sta
 
 After you make changes to a field, you must publish customizations. 
 
-- To publish your changes for one entity, under **Components**, select **Entities**, and then select the entity that you made changes to. On the **Actions** toolbar, select **Publish**.  
+- To publish your changes for one table, under **Components**, select **tables**, and then select the table that you made changes to. On the **Actions** toolbar, select **Publish**.  
   
-- To publish all changes you have made to multiple entities or components, on the **Actions** toolbar, select **Publish All Customizations**.  
+- To publish all changes you have made to multiple tables or components, on the **Actions** toolbar, select **Publish All Customizations**.  
   
 > [!NOTE]
 >  Installing a solution or publishing customizations can interfere with normal system operation. We recommend that you schedule a solution to be published when it’s least disruptive to users.  
@@ -258,7 +258,7 @@ Select the field in the list. In the **More Actions** menu, select **Show Depend
 
 Dependencies are any related use of the field that would prevent it from being deleted. For example, if the field is used in a form or view, you must first remove references to the field in those solution components.  
   
-If you delete a lookup field, the 1:N entity relationship for it will automatically be deleted.  
+If you delete a lookup field, the 1:N table relationship for it will automatically be deleted.  
 
 ## IME Mode
 

@@ -55,7 +55,7 @@ Solution checker is a feature enabled by the Power Apps Checker app.  If you hav
 
 However, if you have a Power Apps Checker version earlier than version **1.0.0.45** installed, we recommend that you delete the solution and install it again. Due to recent schema changes, upgrade of Power Apps Checker from versions earlier than version **1.0.0.45** may fail.
 
-If you want to keep the past results from solution checker, export the results from a previous run or export all solution checker data using [Export data to Excel](../../user/export-data-excel.md) to export the data from the following entities:
+If you want to keep the past results from solution checker, export the results from a previous run or export all solution checker data using [Export data to Excel](../../user/export-data-excel.md) to export the data from the following tables:
 
 - Analysis Component
 - Analysis Job
@@ -80,7 +80,7 @@ To install Power Apps Checker back into your Common Data Service environment:
 
 ## Solution checker can't access environments in Administration Mode
 
-Environments that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
+Environments that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application idtable has neither of these roles assigned by default, it can't access organizations operating in this mode.
 
 In order to use solution checker in this organization, Administration Mode must be disabled.
 
@@ -162,8 +162,8 @@ When solution checker receives and processes analysis requests, it must call the
 
 Typical Common Data Service operations requested by solution checker:
 
-- Retrieve solution, systemuser, and organization entity data
-- Create, update, and retrieve analysis job, analysis component, and analysis result entity data
+- Retrieve solution, systemuser, and organization table data
+- Create, update, and retrieve analysis job, analysis component, and analysis result table data
 - Export solutions
 
 ### Plugin step registered to execute in context of an unlicensed user
@@ -181,17 +181,17 @@ When solution checker fails due to Common Data Service denying access based on a
 
 Solution checker may fail due to the errors "ISV code aborted the operation" or "An unexpected error occurred from ISV code". When this occurs, it indicates a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException or that an error was not caught properly in plugin code. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
 
-Common operations invoked by solution checker include Create and Update. These operations can occur on the following entities: Analysis Job, Analysis Component, or Analysis Result.
+Common operations invoked by solution checker include Create and Update. These operations can occur on the following tables: Analysis Job, Analysis Component, or Analysis Result.
 
 ## Solution checker fails due to disabled first-party application in Azure Active Directory
 
-The first-party enterprise application identity used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the identity cannot authenticate when requesting bearer tokens for Common Data Service and other required resource providers on-behalf of the requesting user.
+The first-party enterprise application idtable used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the idtable cannot authenticate when requesting bearer tokens for Common Data Service and other required resource providers on-behalf of the requesting user.
 
-Follow the below steps to verify that the application identity hasn't been disabled in AAD and if necessary enable the application.
+Follow the below steps to verify that the application idtable hasn't been disabled in AAD and if necessary enable the application.
 
 ### How to verify and/or modify application enabled status
 
-To verify and/or modify the enabled status of the PowerApps-Advisor enterprise application identity
+To verify and/or modify the enabled status of the PowerApps-Advisor enterprise application idtable
 
 1. Access your tenant in the [Azure Active Directory (AAD) Portal](https://aad.portal.azure.com/).
 2. Navigate to **Enterprise Applications**.
@@ -217,9 +217,9 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 
 ## Solution checker fails to export solutions with draft Business Process Flow components
 
-If a solution contains a business process flow component in draft state that has never been previously activated, then Solution Checker will fail to export the solution for analysis. This error is not unique to Solution Checker and is caused by the business process flow having a dependency on a backing (custom) entity component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within Solution Explorer.
+If a solution contains a business process flow component in draft state that has never been previously activated, then Solution Checker will fail to export the solution for analysis. This error is not unique to Solution Checker and is caused by the business process flow having a dependency on a backing (custom) table component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within Solution Explorer.
 
-Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-entity-missing) for details about the issue and steps to resolve.
+Reference [KB Article #4337537: Invalid Export - Business Process table Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-table-missing) for details about the issue and steps to resolve.
 
 ## Solution checker fails to export solutions with model-driven app components
 
@@ -246,7 +246,7 @@ The workaround is to create smaller solutions with fewer components to be analyz
 > [!IMPORTANT]
 > To minimize false positives, ensure you add dependent customizations. When you create a solution and add these components, include the following:
 > - When you add plug-ins, include the SDK Message Processing Steps for the plug-in.
-> - When you add entity forms, include the JavaScript web resources attached to the form events.  
+> - When you add table forms, include the JavaScript web resources attached to the form events.  
 > - When you add JavaScript web resources, include any dependent JavaScript web resources.
 > - When you add HTML web resources, include any dependent scripts that are defined within the HTML web resource.
 > - When you add custom workflows, include the assembly used within the workflow.

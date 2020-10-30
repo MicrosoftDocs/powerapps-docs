@@ -44,8 +44,8 @@ Environment variables can be created and managed through the modern solution int
    - **Display name**. Enter a name for the environment variable. 
    - **Name**. The unique name is automatically generated from the **Display name**, but you can change it. 
    - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, or a **Two option** field. 
-   - **Default Value**. This field is part of the environment variable definition entity and is not required. Set a default value for the production environments or when the values don't need to be changed for different environments. 
-   - **Current Value**. Also known as the override value. This field is optional and is a part of the environment variable value entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into a separate JSON file within the solution.zip file that is exported. 
+   - **Default Value**. This field is part of the environment variable definition table and is not required. Set a default value for the production environments or when the values don't need to be changed for different environments. 
+   - **Current Value**. Also known as the override value. This field is optional and is a part of the environment variable value table. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into a separate JSON file within the solution.zip file that is exported. 
 
       Separation of default value and current value allows you to service the definition and the default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
 
@@ -57,7 +57,7 @@ Environment variables can be created and managed through the modern solution int
 
 ## Enter new values while importing solutions
 
-The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` entity.
+The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
 
 You will not be prompted if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in Common Data Service.
    >[!NOTE]
@@ -70,11 +70,11 @@ A notification is displayed when the environment variables do not have any value
 > We recommend partners build their own interfaces requiring the customers to provide the values. Notifications help prevent failures if this step is skipped. 
 
 ## Security
-Both the environmentvariabledefinition and environmentvariablevalue entities are [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-entities). When creating an application that uses environment variables, be sure to assign users the appropriate level of permission. More information: [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security). 
+Both the environmentvariabledefinition and environmentvariablevalue tables are [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-tables). When creating an application that uses environment variables, be sure to assign users the appropriate level of permission. More information: [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security). 
 
 ## Current limitations
 - Caching. Plugins will need to run a query to fetch the values. 
-- Canvas apps and flows can consume environment variables just like entity record data. <!-- In the future we plan to build additional actions into canvas app and flow designers. This will simplify authoring and provide better visibility into environment variables being used by a specific app or flow. -->
+- Canvas apps and flows can consume environment variables just like table record data. <!-- In the future we plan to build additional actions into canvas app and flow designers. This will simplify authoring and provide better visibility into environment variables being used by a specific app or flow. -->
 - Azure Key Vault integration for secret management. Currently environment variables should'nt be used to store secure data such as passwords and keys.
 - Data types are validated in the modern solution interface only, but not currently on the server during the preview. 
 - Dependencies are not enforced for certain component types.

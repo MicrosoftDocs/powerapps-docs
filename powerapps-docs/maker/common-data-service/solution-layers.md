@@ -28,7 +28,7 @@ search.app:
 
 Managed and unmanaged solutions exist at different levels within a Common Data Service environment. In Common Data Service, there are two distinct layer levels:  
 - Unmanaged layer. All imported unmanaged solutions and unmanaged customizations exist at this layer. The unmanaged layer is a single layer.  
-- Managed layers. All imported managed solutions and the system solution exist at this level. When multiple managed solutions are installed, the last one installed is above the managed solution installed previously. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the runtime behavior is either “Last one wins” or a merge logic is implemented.  If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solutions, the default behavior defined within the system solution is applied. At the base of the managed layers level is the system layer. The system layer contains the entities and components that are required for the platform to function. 
+- Managed layers. All imported managed solutions and the system solution exist at this level. When multiple managed solutions are installed, the last one installed is above the managed solution installed previously. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the runtime behavior is either “Last one wins” or a merge logic is implemented.  If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solutions, the default behavior defined within the system solution is applied. At the base of the managed layers level is the system layer. The system layer contains the tables and components that are required for the platform to function. 
 
 ![Solution layers](media/solution-layers.png)
 
@@ -50,7 +50,7 @@ The see solution layers feature:
    > [!div class="mx-imgBorder"] 
    > ![Solution layers button](media/solution-layers-toolbar.png "Solution layers button")
 
-2. The solution layer page appears. It displays each layer for the component, such as the **Account** entity displayed here, with the most recent layer at the top. To view the details for a solution layer, select it. 
+2. The solution layer page appears. It displays each layer for the component, such as the **Account** table displayed here, with the most recent layer at the top. To view the details for a solution layer, select it. 
 
    > [!div class="mx-imgBorder"] 
    > ![Solution layers list](media/solution-layers-list.png "Solution layers list")

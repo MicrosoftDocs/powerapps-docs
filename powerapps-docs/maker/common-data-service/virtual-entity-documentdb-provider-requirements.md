@@ -1,6 +1,6 @@
 ---
 title: "Preview Feature: Use the Azure Cosmos DB for SQL API Data Provider with Common Data Service | MicrosoftDocs"
-description: "Learn how to configure the Azure Cosmos DB for SQL API Data Provider to use with virtual entities."
+description: "Learn how to configure the Azure Cosmos DB for SQL API Data Provider to use with virtual tables."
 keywords: "SQL API"
 ms.date: 02/15/2019
 ms.service: powerapps
@@ -30,7 +30,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-This topic describes the requirements for the Azure Cosmos DB for SQL API data provider as well as how to configure and recommended best practices when you use the Azure Cosmos DB for SQL API data provider with virtual entities. 
+This topic describes the requirements for the Azure Cosmos DB for SQL API data provider as well as how to configure and recommended best practices when you use the Azure Cosmos DB for SQL API data provider with virtual tables. 
 
 > [!IMPORTANT]
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
@@ -88,7 +88,7 @@ SQL query filtering supports the following operators.
 ## Add a data source using the Azure Cosmos DB for SQL API Data Provider
 
 1. Go to [AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.documentdb_data_provider?tab=Overview), select **GET IT NOW**, and follow the instructions to add the application to your environment using v9x or later.
-2. After the solution is installed, sign in to the environment and go to **Settings** > **Administration** > **Virtual Entity Data Sources**.
+2. After the solution is installed, sign in to the environment and go to **Settings** > **Administration** > **Virtual table Data Sources**.
 3. On the Actions toolbar select **NEW**, and in the **Select Data Provider** dialog box select **Azure Cosmos DB for SQL API Data Provider**, and then select **OK**.
 ![Select the Azure Cosmos DB for SQL API Data Provider.](media/createdatasource.png)
 1. Enter the following information, and then select **SAVE & CLOSE**.
@@ -96,7 +96,7 @@ SQL query filtering supports the following operators.
     |Field|Description|
     |--|--|
     |**Name**|Type a name that describes the data source.|
-    |**Collection Name**|The name of the Azure Cosmos DB *database* containing the collection you want to surface in a virtual entity.  |
+    |**Collection Name**|The name of the Azure Cosmos DB *database* containing the collection you want to surface in a virtual table.  |
     |**Authorization Key**|The primary or secondary key for the Azure Cosmos DB account. You can find the key from the Azure admin portal under the **Keys** setting under your Azure Cosmos DB account.|
     |**Uri**|The URI of the resource group where the Azure Cosmos DB collection is located. The URI is formed similar to `https://contoso/documents.azure.com:443`. You can find the URI from the Azure admin portal under the **Keys** setting for the Azure Cosmos DB account. |
     |**Timeout in seconds**|Enter the number of seconds to wait for a response from the Azure Cosmos DB service before a data request time-out. For example, enter 30 to wait a maximum of thirty seconds before a time-out occurs. The default timeout is 120 seconds.|
@@ -107,13 +107,13 @@ SQL query filtering supports the following operators.
 ## Best practices and limitations
 
 - Notice the following when you use Azure Cosmos DB as a Data Source:
-   - Each Azure Cosmos DB Data Source can only be associated with a single virtual entity.
+   - Each Azure Cosmos DB Data Source can only be associated with a single virtual table.
    - You can connect multiple Data Sources to the same Collection in the Azure Cosmos DB.
-- You can’t segment the data in a collection by entity.
+- You can’t segment the data in a collection by table.
 - Azure Cosmos DB databases do not require a schema, however the data within the Azure Cosmos DB must be structured using a predictable schema. 
 - Although the Azure Cosmos DB for SQL API Data Provider implements query translation of projection, filtering, and sorting operators, it does not support join operations.
 - You can only filter by a single column with SQL API.
 
 ## See also
 
-[Create and edit virtual entities that contain data from an external data source](create-edit-virtual-entities.md)
+[Create and edit virtual tables that contain data from an external data source](create-edit-virtual-tables.md)

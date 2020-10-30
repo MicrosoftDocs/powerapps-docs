@@ -37,7 +37,7 @@ There is no log for successful operations. You can enable logging for errors by 
   
 To view the log of errors for a specific process, open the real-time workflow or action definition and go to the **Process Session** tab. This will only show any errors logged for this process.  
   
-If you want a view of all the errors for any process, go to **Advanced Find** and create a view showing errors on the process session entity.  
+If you want a view of all the errors for any process, go to **Advanced Find** and create a view showing errors on the process session table.  
   
 <a name="BKMK_StatusOfWorkflowProcesses"></a>   
 ## Status of real-time workflow processes  
@@ -85,9 +85,9 @@ If your organization uses background workflows or business process flows that ru
 Notice that you have the option of performing an immediate synchronous bulk delete of the records by selecting the **Immediately** option. This delete is performed with direct SQL Server execution rather than passing each record through the delete event pipeline, which can reduce the impact to system performance. This is a good option if you want to quickly clean up the extra real-time workflow records instead of the bulk delete job waiting in the asynchronous queue for processing. 
 
 The **Immediately** option is enabled when the following conditions are true: 
-- Bulk delete job is for the System Jobs entity.
+- Bulk delete job is for the System Jobs table.
 - The search criteria has the condition system job type equals workflow. 
-- The user creating the bulk delete job has global depth for the delete privilege on the AsyncOperation entity. The system administrator security role has this privilege.  
+- The user creating the bulk delete job has global depth for the delete privilege on the AsyncOperation table. The system administrator security role has this privilege.  
 
 The synchronous bulk delete will only delete AsyncOperation records in the completed state. A maximum of 1 million records are processed for each invocation. You will need to execute the job multiple times if your environment has more than 1 million records to remove.  
   

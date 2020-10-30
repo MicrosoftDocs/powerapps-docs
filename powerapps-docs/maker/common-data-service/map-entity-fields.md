@@ -1,6 +1,6 @@
 ---
-title: "Map entity fields in Power Apps | MicrosoftDocs"
-description: "Learn how to map entity fields"
+title: "Map table fields in Power Apps | MicrosoftDocs"
+description: "Learn how to map table fields"
 ms.custom: ""
 ms.date: 05/29/2018
 ms.reviewer: ""
@@ -24,11 +24,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Map entity fields
+# Map table fields
  
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can map attributes between entities that have an entity relationship. This lets you set default values for a record that is created in the context of another record. 
+You can map attributes between tables that have an table relationship. This lets you set default values for a record that is created in the context of another record. 
 
 ## Easier way to create new records in model-driven apps
 
@@ -40,13 +40,13 @@ People could just navigate in the app to create a new contact record from scratc
   
 ### The easier way
 
-The easier way is to start with the account entity and, using the **Contacts** subgrid on the form, select **+** to add a contact. It will first guide people to look up any existing related contacts so they don’t accidentally create a duplicate record. If they don’t find an existing record, they can select **New** and create a new contact record. 
+The easier way is to start with the account table and, using the **Contacts** subgrid on the form, select **+** to add a contact. It will first guide people to look up any existing related contacts so they don’t accidentally create a duplicate record. If they don’t find an existing record, they can select **New** and create a new contact record. 
 
 The new contact record form will include any of the mapped attribute values from the account (such as address and phone information) as the default values. People can edit these values before they save the record.
 
 ## How this works
 
-When you map entity fields for a 1:N entity relationship certain items of data from the primary entity record will be copied into the new related entity form to set default values that people can edit before saving.
+When you map table fields for a 1:N table relationship certain items of data from the primary table record will be copied into the new related table form to set default values that people can edit before saving.
  
   
 > [!NOTE]
@@ -56,21 +56,21 @@ When you map entity fields for a 1:N entity relationship certain items of data f
 
 ## Open solution explorer
 
-The only way to map entity fields is to use solution explorer.
+The only way to map table fields is to use solution explorer.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
   
-Mapping fields is done in the context of a 1:N or N:1 entity relationship, so first you need to [view 1:N or N:1 entity relationships](create-edit-1n-relationships-solution-explorer.md#view-entity-relationships).
+Mapping fields is done in the context of a 1:N or N:1 table relationship, so first you need to [view 1:N or N:1 table relationships](create-edit-1n-relationships-solution-explorer.md#view-table-relationships).
 
 ## View mappable fields
 
-Field mappings aren’t actually defined within the entity relationships, but they are exposed in the relationship user interface. Not every 1:N entity relationship has them. When you view a list of 1:N (or N:1) entity relationships for an entity, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable entity relationships provide access to allow mapping entity fields. 
+Field mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for an table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table fields. 
 
-![View mappable entity relationships](media/mappable-entity-relationships.png) 
+![View mappable table relationships](media/mappable-table-relationships.png) 
 
-When you open a mappable entity relationship, select **Mappings** in the left navigation.
+When you open a mappable table relationship, select **Mappings** in the left navigation.
 
-![Select Mappings for the entity relationship](media/map-entity-fields-ui-solution-explorer.png)
+![Select Mappings for the table relationship](media/map-table-fields-ui-solution-explorer.png)
 
 ## Delete mappings
 
@@ -82,7 +82,7 @@ To create a new mapping click **New** in the toolbar. This will open the **Creat
 
 ![Create field mapping dialog](media/create-field-mapping-dialog.png)
 
-Select one source entity field and one target entity fields with values you want to map. 
+Select one source table field and one target table fields with values you want to map. 
 
 ![Configure field mapping](media/configure-field-mapping.png)
 
@@ -106,10 +106,10 @@ The following rules show what kinds of data can be mapped.
 
 You can also generate mappings automatically by selecting **Generate Mappings** from the **More Actions** menu.
 
-You should use care when doing this with system entities. Use this when you create custom entities and want to leverage mapping. 
+You should use care when doing this with system tables. Use this when you create custom tables and want to leverage mapping. 
 
 > [!WARNING]
-> This removes any existing mappings and replaces them with suggested mappings that are based only on the fields that have similar names and data types. If you use this on a system entity, you could lose some expected mappings. For custom entities, it helps save time because you can more easily delete any mappings you don’t want and add any others that the generate mappings action didn’t create.  
+> This removes any existing mappings and replaces them with suggested mappings that are based only on the fields that have similar names and data types. If you use this on a system table, you could lose some expected mappings. For custom tables, it helps save time because you can more easily delete any mappings you don’t want and add any others that the generate mappings action didn’t create.  
 
 
 ## Publish customizations 
@@ -118,6 +118,6 @@ Because field mappings are not metadata, you must publish them before changes ta
 <!-- TODO Need a general topic about publishing to link to in situations like this -->
 
 ### See also
-[Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
-[Developer Documentation: Customize entity and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)<br />
-[Developer Documentation: Web API Create a new entity from another entity](/dynamics365/customer-engagement/developer/webapi/create-entity-web-api#create-a-new-entity-from-another-entity)
+[Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
+[Developer Documentation: Customize table and attribute mappings](/dynamics365/customer-engagement/developer/customize-table-attribute-mappings)<br />
+[Developer Documentation: Web API Create a new table from another table](/dynamics365/customer-engagement/developer/webapi/create-table-web-api#create-a-new-table-from-another-table)

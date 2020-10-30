@@ -24,7 +24,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entity fields with the Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit table fields with the Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit fields for Common Data Service](create-edit-fields.md)
@@ -32,15 +32,15 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View fields
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Entities** and select the entity that has the fields you want to view.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **tables** and select the table that has the fields you want to view.
 2. With the **Fields** tab selected, you can select the following views: 
 
  |View|Description|
  |--|--|
- |**All**| Shows all the fields for the entity|
- |**Managed**| Shows only managed and standard fields for the entity|
- |**Custom**|Shows only custom fields for the entity|
- |**Default**|Shows only the standard fields for the entity|
+ |**All**| Shows all the fields for the table|
+ |**Managed**| Shows only managed and standard fields for the table|
+ |**Custom**|Shows only custom fields for the table|
+ |**Default**|Shows only the standard fields for the table|
 <!-- TODO: What is the actual difference between All and Default? -->
 
 ## Create a field
@@ -124,7 +124,7 @@ More information: [Behavior and format of the Date and Time field](behavior-form
 |**Decimal Number**| A decimal value with up to 10 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
 |**File**| For storing binary data.|
 |**Floating Point Number**|A floating point number with up to 5 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
-|**Image**|Displays a single image per record in the application. Each entity can have one image field. The **Name** you enter when creating an image field will be ignored. Image fields are always named 'EntityImage'.|
+|**Image**|Displays a single image per record in the application. Each table can have one image field. The **Name** you enter when creating an image field will be ignored. Image fields are always named 'tableImage'.|
 |**Lookup**| Creates a reference to a single record for a single target record type.|
 |**Multi Select Option Set**|Displays a list of options where more than one can be selected.|
 |<a name="multi-line-field"></a> **Multiline Text**|A text value intended to be displayed in a multi-line textbox. Limited to a maximum of 1,048,576 characters. You can also set a lower [Max Length](#max-length). |
@@ -135,15 +135,15 @@ More information: [Behavior and format of the Date and Time field](behavior-form
 
 Once you have set the **Display Name**, **Name** and **Data type** properties you can select **Done** to close the **Field properties** panel. 
 
-You can continue to edit the entity and add additional fields or return and continue editing this field. The fields will not be created until you select **Save Entity** to save all the changes to the entity.
+You can continue to edit the table and add additional fields or return and continue editing this field. The fields will not be created until you select **Save table** to save all the changes to the table.
 
-![Save Entity Button](media/save-entity-button.png)
+![Save table Button](media/save-table-button.png)
 
 You can also select **Discard** to discard the changes you have made.
  
 ## Edit a field
 
-While viewing fields, select the field you want to edit. You can modify the **Display Name** but you cannot change the **Name** and **Data type** if you have saved changes to the entity to add the field.
+While viewing fields, select the field you want to edit. You can modify the **Display Name** but you cannot change the **Name** and **Data type** if you have saved changes to the table to add the field.
 
 ### General Properties
 Every field has the following properties you can change:
@@ -151,7 +151,7 @@ Every field has the following properties you can change:
 |Property|Description|
 |--|--|
 |**Required**|When this is selected a record can't be saved without data in this field. More information: [Saving records programmatically for required fields](#saving-records-programmatically-for-required-fields) |
-|**Searchable**|De-select this for fields for the entity that you don’t use.  When a field is searchable it appears in **Advanced Find** and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
+|**Searchable**|De-select this for fields for the table that you don’t use.  When a field is searchable it appears in **Advanced Find** and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
 |**Description**|Found within **Advanced Options**. Enter instructions to the user about what the field is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the field.|
 
 > [!NOTE]
@@ -224,9 +224,9 @@ While [viewing fields](#view-fields), if you select a custom field that can be d
 
 ![Delete a field using the portal](media/delete-field-portal.png)
 
-Use the **Delete field** command to delete the field. After deleting the field you must save the changes to the entity.
+Use the **Delete field** command to delete the field. After deleting the field you must save the changes to the table.
 
-![Save entity after deleting field](media/delete-field-portal-save-entity.png)
+![Save table after deleting field](media/delete-field-portal-save-table.png)
 
 > [!NOTE]
 > If you get an error related to dependencies, you must use solution explorer to detect dependencies. More information: [Check field dependencies](create-edit-field-solution-explorer.md#check-field-dependencies)

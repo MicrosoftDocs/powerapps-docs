@@ -35,7 +35,7 @@ Power Query is a data connection technology you can use to discover, connect, co
 
 ![Dataflows and Power Query with Common Data Service](media/dataflows-power-query-with-cds.png "Dataflows and Power Query with Common Data Service")
 
-More information: [Create and use dataflows in Power Apps](/powerapps/maker/common-data-service/create-and-use-dataflows) and [Add data to an entity in Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq)
+More information: [Create and use dataflows in Power Apps](/powerapps/maker/common-data-service/create-and-use-dataflows) and [Add data to an table in Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newtable-pq)
 
 ## Azure Data Factory
 

@@ -22,7 +22,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, flows, and more.
+Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, tables, processes, web resources, option sets, flows, and more.
 
 Solutions are the mechanism for implementing application lifecycle management (ALM) in Power Apps and other Power Platform products, such as Power Automate. For detailed information about the solution concepts and how solutions are used for application lifecycle management, see [Overview of ALM with Microsoft Power Platform](/power-platform/alm/overview-alm) in the Power Platform ALM guide.
 
@@ -145,9 +145,9 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 
  For details about customizing the individual components in a solution, see the following topics:  
   
--   For entity, entity relationships, field and message customizations, see [Metadata](create-edit-metadata.md).  
+-   For table, table relationships, field and message customizations, see [Metadata](create-edit-metadata.md).  
   
--   For entity forms, see [Forms](../model-driven-apps/create-design-forms.md).  
+-   For table forms, see [Forms](../model-driven-apps/create-design-forms.md).  
   
 -   For processes, see [Processes](../model-driven-apps/guide-staff-through-common-tasks-processes.md).  
   

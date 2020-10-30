@@ -1,6 +1,6 @@
 ---
-title: "Translate label text for customized entities  | MicrosoftDocs"
-description: "Overview of label text translation for custom entities"
+title: "Translate label text for customized tables  | MicrosoftDocs"
+description: "Overview of label text translation for custom tables"
 ms.custom: ""
 ms.date: 08/05/2020
 ms.reviewer: ""
@@ -27,14 +27,14 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The standard entities include default text for labels that are available in many different languages. However, when you customize a form, such as adding or changing fields, or create custom entities, you may need the labels for those components to appear in different languages. You can import translated label text for customized entities for your apps so that the label text displays in languages other than the base language.
+The standard tables include default text for labels that are available in many different languages. However, when you customize a form, such as adding or changing fields, or create custom tables, you may need the labels for those components to appear in different languages. You can import translated label text for customized tables for your apps so that the label text displays in languages other than the base language.
 
 When you translate label text for a form, you are modifying the base language of the form as part of a form customization. When you do this, you create active unmanaged changes to the labels. Subsequently, if you don’t modify the base language translation for a component, such as a field, and then export the translation file, the field's object id won't be exported. This is because the export doesn't see any modifications done to the base language label of that field.
 
 ## High-level process
 
-1. Export the translations from the solution that contains the entities that you want to translate label text. Then, open the translations XML file and add the translated text. More information: [Translate customized entity and field text into other languages](export-customized-entity-field-text-translation.md)
-2. Import the translations. More information: [Import translated entity and field text back into an app](import-translated-entity-field-text.md)
+1. Export the translations from the solution that contains the tables that you want to translate label text. Then, open the translations XML file and add the translated text. More information: [Translate customized table and field text into other languages](export-customized-table-field-text-translation.md)
+2. Import the translations. More information: [Import translated table and field text back into an app](import-translated-table-field-text.md)
 
 
 ## Common issues with translating form label text
@@ -67,5 +67,5 @@ This can happen because the label has no translations. The following behavior oc
 - The managed solution is empty, which is seen as non-existent and falls back to the display name: &lt;label description="" languagecode="1033"&gt;
 
 ### See also
-[Translate customized entity and field text into other languages](export-customized-entity-field-text-translation.md) <br />
-[Import translated entity and field text back into an app](import-translated-entity-field-text.md)
+[Translate customized table and field text into other languages](export-customized-table-field-text-translation.md) <br />
+[Import translated table and field text back into an app](import-translated-table-field-text.md)

@@ -40,7 +40,7 @@ This article shows you how to perform the following tasks:
 This section describes the prerequisites necessary to consume Common Data Service data with Power BI by using the Export to Data Lake service.
 -  **Power BI Desktop**. [Get it now](https://powerbi.microsoft.com/downloads/)
 
--  **Export to data lake:** This guide assumes that you have already exported data from Common Data Service by using the [Export to Data Lake service](export-to-data-lake.md). In this example, account entity data is exported to the data lake and will generate a report by using the account entity fields.
+-  **Export to data lake:** This guide assumes that you have already exported data from Common Data Service by using the [Export to Data Lake service](export-to-data-lake.md). In this example, account table data is exported to the data lake and will generate a report by using the account table fields.
 
 ## Connect the Data Lake Storage Gen2 storage to Power BI Desktop
 
@@ -66,7 +66,7 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
     ![Copy the access key](media/copy-access-key.png "Copy the access key")
 
-10. After successfully connecting to your storage account, expand the **cdm** directory and select the entities that you want to analyze. Then, select **Load**.
+10. After successfully connecting to your storage account, expand the **cdm** directory and select the tables that you want to analyze. Then, select **Load**.
 
     ![Load account data](media/load-account-data.png "Load account data")
 
@@ -86,5 +86,5 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
 ### See also
 
-[Export entity data to Azure Data Lake Storage Gen2](export-to-data-lake.md)
+[Export table data to Azure Data Lake Storage Gen2](export-to-data-lake.md)
 

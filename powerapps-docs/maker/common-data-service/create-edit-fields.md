@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service fields define the individual data items that can be used to store data in an entity. Fields are sometimes called *attributes* by developers. 
+In Common Data Service fields define the individual data items that can be used to store data in an table. Fields are sometimes called *attributes* by developers. 
   
 Before you create a custom field, evaluate whether using an existing field would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -41,7 +41,7 @@ There are two designers you can use to create or edit fields:
 > You can also create fields in your environment using the following:
 > - In model-driven apps, select **New Field** from the form editor.
 > - Import a solution that contains the definition of the fields.
-> - Use Power Query to create new entities and fill them with data.<br />More information: [Add data to an entity in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
+> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to an table in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newtable-pq).
 > - A developer can use [Metadata services](/powerapps/developer/common-data-service/use-web-services#metadata-services) to write a program to create and update fields.
 
 Information in this topic will help you choose which designer you can use. 
@@ -53,12 +53,12 @@ You should use the Power Apps portal to Create and edit fields for Common Data S
 - Create a field in a solution other than the Common Data Service Default solution. 
    - More information: [Solutions overview](solutions-overview.md)
 - Define status reason transitions. 
-   - More information: [Define status reason transitions for the Case or custom entities](define-status-reason-transitions.md)
+   - More information: [Define status reason transitions for the Case or custom tables](define-status-reason-transitions.md)
 - Edit multiple fields at once.
 - Enable Auditing. 
    - More information: [Auditing overview](../../developer/common-data-service/auditing-overview.md)
 - Enable Field Level Security. 
-   - More information: [Field security entities](../../developer/common-data-service/field-security-entities.md)
+   - More information: [Field security tables](../../developer/common-data-service/field-security-tables.md)
 - Select whether the field appears in global filter in interactive experience. 
    - More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
 - Select whether the field is sortable in interactive experience dashboards. 
@@ -69,7 +69,7 @@ You should use the Power Apps portal to Create and edit fields for Common Data S
    - More information: [Set managed properties for fields](set-managed-properties-for-field.md)
 
 > [!NOTE]
-> You can create a Lookup field in the Power Apps portal or in solution explorer by creating a One-to-many relationship on the entity. But only solution explorer offers the option to create this relationship while creating a field.
+> You can create a Lookup field in the Power Apps portal or in solution explorer by creating a One-to-many relationship on the table. But only solution explorer offers the option to create this relationship while creating a field.
 
 ## Community tools
 

@@ -38,7 +38,7 @@ Workflows have numerous capabilities supporting business scenarios. Calling basi
 Let’s look at the scenario in which a custom action is invoked from a workflow. We’ll invoke a custom action to request the manager’s approval when a discount for a particular opportunity exceeds 20 percent.  
   
 <a name="action"></a>   
-## Example: Create a custom action using the opportunity entity
+## Example: Create a custom action using the opportunity table
   
 1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer), select **Processes**.  
   

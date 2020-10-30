@@ -29,7 +29,7 @@ search.app:
 
 *Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify records in Common Data Service. 
 
-A data integration system will use alternate keys to uniquely identify records using one or more entity field values that represent a unique combination. Each alternate key has a unique name. 
+A data integration system will use alternate keys to uniquely identify records using one or more table field values that represent a unique combination. Each alternate key has a unique name. 
 
 For example, to identify an account record with an alternate key, you can use the account number or the account number field in combination with some other fields which have values that should not change.
 
@@ -37,7 +37,7 @@ For example, to identify an account record with an alternate key, you can use th
 > While you can define alternate keys with Power Apps, they can only be used programmatically in code. 
 > To learn more about using alternate keys programmatically, see:   
 > - [Developer Documentation: Use an alternate key to create a record](/dynamics365/customer-engagement/developer/use-alternate-key-create-record) 
-> - [Developer Documentation: Retrieve a record with the Web API using an alternate key](/dynamics365/customer-engagement/developer/webapi/retrieve-entity-using-web-api#retrieve-using-an-alternate-key)
+> - [Developer Documentation: Retrieve a record with the Web API using an alternate key](/dynamics365/customer-engagement/developer/webapi/retrieve-table-using-web-api#retrieve-using-an-alternate-key)
 
 Some of the benefits of the alternate keys feature include:  
   
@@ -58,7 +58,7 @@ There are two designers you can use to create alternate keys:
 > [!NOTE]
 > You can also create an alternate key in your environment using the following:
 > - Import a solution that contains the definition of the alternate key.
-> - A developer can also write code to create them. More information: [Developer Documentation: Define alternate keys for an entity](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)
+> - A developer can also write code to create them. More information: [Developer Documentation: Define alternate keys for an table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)
 
 Information in this topic will help you choose which designer you can use. 
 
@@ -84,7 +84,7 @@ Only these kinds of fields can be used to create alternate keys:
 
 ### Number of keys
 
-You can define up to five different keys for an entity.
+You can define up to five different keys for an table.
  
 ### Valid key size
 
@@ -108,7 +108,7 @@ The status of the system job determines the state of the alternate key. The alte
 
 When the system job is completed, the alternate key status is **Active** and it is available for use.
 
-If the system job fails, locate the system job to view any errors. The system job will have a name that follows this pattern: `Create index for {0} for entity {1}` where `0` is the **Display Name** of the alternate key and `1` is the name of the entity.
+If the system job fails, locate the system job to view any errors. The system job will have a name that follows this pattern: `Create index for {0} for table {1}` where `0` is the **Display Name** of the alternate key and `1` is the name of the table.
 
 
 > [!NOTE]
@@ -119,5 +119,5 @@ If the system job fails, locate the system job to view any errors. The system jo
 
 [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
 [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)<br />
-[Developer Documentation: Define alternate keys for an entity](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)<br />
+[Developer Documentation: Define alternate keys for an table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)<br />
 [Developer Documentation: Use an alternate key to create a record](/dynamics365/customer-engagement/developer/use-alternate-key-create-record)

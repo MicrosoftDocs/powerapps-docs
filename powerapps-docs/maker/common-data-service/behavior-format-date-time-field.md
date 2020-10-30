@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service, the Date and Time data type is used in many standard entity fields. Depending on what kind of date the field represents, you can choose different field behaviors: **User Local**, **Date Only** or **Time-Zone Independent**.  
+In Common Data Service, the Date and Time data type is used in many standard table fields. Depending on what kind of date the field represents, you can choose different field behaviors: **User Local**, **Date Only** or **Time-Zone Independent**.  
   
 <a name="Behavior"></a>   
 
@@ -74,11 +74,11 @@ You can use this behavior when time zone information isn't required, such as the
 
 ### For my Date/Time field I was expecting (UTC/Local) and I am seeing the opposite value
 
-This is caused by a lack of parity between the entity field setting and the app form setting. When an entity field is configured for Time Zone Independent or User Local, it determines if the time zone offset is honored or not when the data is being retrieved from the store. However, the app form also has a setting of UTC or Local. 
+This is caused by a lack of parity between the table field setting and the app form setting. When an table field is configured for Time Zone Independent or User Local, it determines if the time zone offset is honored or not when the data is being retrieved from the store. However, the app form also has a setting of UTC or Local. 
  
 This tells the form how to interpret the data it receives from the Common Data Service. If the data retrieved from the store is time zone independent, but the form is set to local, the UTC data will be displayed as user local time based on the user’s time zone in their profile. The reverse is also true, a user local value from the store will be displayed as UTC if the form is set to UTC. Fortunately, the form’s date time zone values can be modified without disrupting the existing records.
 
-### I picked Date Only in my entity field, but my form is showing a time picker along with the date
+### I picked Date Only in my table field, but my form is showing a time picker along with the date
 
 This would happen if you chose a behavior of time zone independent or user local for your date only field. In the Common Data Service it will store a time of 00:00:00 by default, but if you add the field to a form it will assume you need to set the time as well. If you leave the time pickers in the form, users can enter a time and it will be saved as something other than 00:00:00. How can you fix this
 * Edit the form and remove the time picker and associated formulas. This will save the time as 00:00:00 and will still allow for time zone based date calculations.

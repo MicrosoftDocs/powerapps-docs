@@ -15,14 +15,14 @@ search.app:
   - D365CE
 ---
 
-# Create a business rule for an entity
+# Create a business rule for an table
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules.
 
 > [!IMPORTANT]
-> Business rules defined for an entity apply to both *canvas apps* and *model-driven apps* if the entity is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
+> Business rules defined for an table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
 > Business rules don’t work with multi-select option sets.
 >
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
@@ -46,15 +46,15 @@ Model driven apps can use all actions available on business rules, however not a
 * Create business recommendations based on business intelligence.  
 
 ## Prerequisites
-To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create and edit entities.
+To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create and edit tables.
 
 ## Create a business rule
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
 
-2. In the list that appears, click or tap **Entities**.
+2. In the list that appears, click or tap **tables**.
   
-3. Open the entity you want to create the business rule for (for example, open the **Account** entity), and then click the **Business Rules** tab.  
+3. Open the table you want to create the business rule for (for example, open the **Account** table), and then click the **Business Rules** tab.  
 
 4. Click **New**.  
   
@@ -70,12 +70,12 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
     |||  
     |-|-|  
     |**If you select this item...**|**The scope is set to...**|  
-    |**Entity**|Model Driven forms and server|  
+    |**table**|Model Driven forms and server|  
     |**All Forms**|Model Driven forms|  
     |Specific form (**Account** form, for example)|Just that Model Driven form|  
 
     > [!TIP]
-    > If you're building a Canvas app, you must use Entity as the scope.
+    > If you're building a Canvas app, you must use table as the scope.
   
 7. **Add conditions.** To add more conditions to your business rule:  
   

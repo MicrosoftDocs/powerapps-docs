@@ -62,8 +62,8 @@ For workflows that don't run in the background (synchronous), we recommend selec
 
 ![Keep logs for failed workflows option](media/keep-logs-for-workflows.png)
 
-## Limit the number of workflows that update the same entity
-Running more than one real-time workflow that updates the same entity can cause resource lock issues. Imagine several workflows running where every opportunity update triggers an update to the associated account. Multiple instances of these workflows running and attempting to update the same account record at the same time can result in resource locking issues. Real-time workflow failures occur and an error message, such as **SQL Timeout: Cannot obtain lock on resource _resource name_**, is recorded. 
+## Limit the number of workflows that update the same table
+Running more than one real-time workflow that updates the same table can cause resource lock issues. Imagine several workflows running where every opportunity update triggers an update to the associated account. Multiple instances of these workflows running and attempting to update the same account record at the same time can result in resource locking issues. Real-time workflow failures occur and an error message, such as **SQL Timeout: Cannot obtain lock on resource _resource name_**, is recorded. 
 
   
 <a name="BKMK_DocumentChangesUsingNotes"></a>   

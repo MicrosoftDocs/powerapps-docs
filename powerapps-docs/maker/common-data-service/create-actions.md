@@ -44,9 +44,9 @@ Like workflow processes, actions have the following properties in the **Create P
 
   This property establishes that this is an action process. You can’t change this after you save the process.  
   
-- **Entity**  
+- **table**  
 
-  With actions processes, you can select an entity to provide context for the workflow just like other types of processes, but you also have the option to choose **None (global)**. Use this if your action doesn’t require the context of a specific entity. You can’t change this after you save the process.  
+  With actions processes, you can select an table to provide context for the workflow just like other types of processes, but you also have the option to choose **None (global)**. Use this if your action doesn’t require the context of a specific table. You can’t change this after you save the process.  
   
 - **Type**  
 
@@ -127,9 +127,9 @@ The following table describes the action process argument types.
 |Boolean|A `true` or `false` value.|  
 |DateTime|A value that stores date and time information.|  
 |Decimal|A number value with decimal precision. Used when precision is extremely important.|  
-|Entity|A record for the specified entity. When you select Entity, the drop-down list is enabled and allows you to select the entity type.|  
-|EntityCollection|A collection of entity records.|  
-|EntityReference|An object that contains the name, ID, and type of an entity record that uniquely identifies it. When you select EntityReference, the drop-down list is enabled and allows you to select the entity type.|  
+|table|A record for the specified table. When you select table, the drop-down list is enabled and allows you to select the table type.|  
+|tableCollection|A collection of table records.|  
+|tableReference|An object that contains the name, ID, and type of an table record that uniquely identifies it. When you select tableReference, the drop-down list is enabled and allows you to select the table type.|  
 |Float|A number value with decimal precision. Used when data comes from a measurement that isn’t absolutely precise.|  
 |Integer|A whole number.|  
 |Money|A value that stores data about an amount of money.|  
@@ -137,7 +137,7 @@ The following table describes the action process argument types.
 |String|A text value.|  
   
 > [!NOTE]
-> **EntityCollection** argument values can’t be set in the user interface for conditions or actions. These are provided for use by developers in custom code. More information: [Create your own actions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-own-actions) 
+> **tableCollection** argument values can’t be set in the user interface for conditions or actions. These are provided for use by developers in custom code. More information: [Create your own actions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-own-actions) 
   
 <a name="BKMK_AddStagesConditionsAndActions"></a>   
 ### Add stages and steps  

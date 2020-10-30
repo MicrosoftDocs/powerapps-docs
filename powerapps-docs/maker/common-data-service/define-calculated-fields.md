@@ -33,8 +33,8 @@ For example, a salesperson may want to know the weighted revenue for an opportun
   
 ## Capabilities
   
-- Calculated fields use the fields from the current entity or related parent entities.  
-- The expression support is available on the current entity and the related parent entity fields in the **Condition** sections and the **Action** sections. The built-in functions include:  
+- Calculated fields use the fields from the current table or related parent tables.  
+- The expression support is available on the current table and the related parent table fields in the **Condition** sections and the **Action** sections. The built-in functions include:  
  **ADDHOURS**, **ADDDAYS**, **ADDWEEKS**, **ADDMONTHS**, **ADDYEARS**, **SUBTRACTHOURS**, **SUBTRACTDAYS**, **SUBTRACTWEEKS**, **SUBTRACTMONTHS**, **SUBTRACTYEARS**, **DIFFINDAYS**, **DIFFINHOURS**, **DIFFINMINUTES**, **DIFFINMONTHS**, **DIFFINWEEKS**, **DIFFINYEARS**, **CONCAT**, **TRIMLEFT**, and **TRIMRIGHT**.  
 - A rich conditional support provides branching and multiple conditions. The logical operations include **AND** and **OR** operators.  
 - The visual editing capabilities include modern user interface and intellisense in the **ACTION** section. 
@@ -52,15 +52,15 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 - **Follow Up By**: Follow up on an activity by a specified number of days based on priority  
   
 > [!IMPORTANT]
->  To create a calculated field you must have the Write privilege on the [Field Security Profile entity](/powerapps/developer/common-data-service/reference/entities/fieldsecurityprofile). If the calculated field uses the secured fields in a calculation, you should consider securing the calculated field as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated field editor gives you a warning if you are creating a calculated field that uses secured fields in a calculation, suggesting you secure the calculated field. More information:  [Field level security to control access](/dynamics365/customer-engagement/admin/field-level-security).  
+>  To create a calculated field you must have the Write privilege on the [Field Security Profile table](/powerapps/developer/common-data-service/reference/tables/fieldsecurityprofile). If the calculated field uses the secured fields in a calculation, you should consider securing the calculated field as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated field editor gives you a warning if you are creating a calculated field that uses secured fields in a calculation, suggesting you secure the calculated field. More information:  [Field level security to control access](/dynamics365/customer-engagement/admin/field-level-security).  
 
 ## Create a calculated field
 
 Use the field editor to specify a calculated field. In this example we will use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit fields](create-edit-fields.md)
   
 1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
-1. Expand **Data** > **Entities**.  
-1. Select the entity you want and choose **Fields**. Choose **Add Field**.  
+1. Expand **Data** > **tables**.  
+1. Select the table you want and choose **Fields**. Choose **Add Field**.  
 1. Provide the required information for the field, including the **Display name**, **Name** and **Data type**. 
 1. If the data type is one of types that support calculated fields, you can make the field a calculated field by selecting **Add** > **Calculation**.
 
@@ -75,16 +75,16 @@ Use the field editor to specify a calculated field. In this example we will use 
     - Currency  
     - Date Time
 
-1. Selecting **Calculation** requires that you save the changes to the entity. Click **Save** in the **Pending changes** dialog to proceed.
+1. Selecting **Calculation** requires that you save the changes to the table. Click **Save** in the **Pending changes** dialog to proceed.
 1. This will open the calculated field definition editor, where the new calculated field has been created, but no formula has been set. The calculated field definition consists of two sections: **CONDITION** and **ACTION**.  
   ![New Field Calculation form](media/empty-field-calculation.png)
-- In the **Condition** section, you can specify an entity, field, operator, type, and value. In the dropdown box for the **Entity**, you can choose a current entity or a related entity. In the **Field** dropdown box, you have a selection of all available fields for the entity. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
+- In the **Condition** section, you can specify an table, field, operator, type, and value. In the dropdown box for the **table**, you can choose a current table or a related table. In the **Field** dropdown box, you have a selection of all available fields for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
 - In the **Action** section, you provide the formula for the calculated field.  
   
 > [!NOTE]
->  You can use data from Lookup records within your Action. You first have to select the Lookup field and then type a period. After that, you can select one of the fields available on the related entity. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
+>  You can use data from Lookup records within your Action. You first have to select the Lookup field and then type a period. After that, you can select one of the fields available on the related table. For example, in the case of *`<LookupFieldName>.<RelatedFieldName>`*, you can select: `ParentAccountId.AccountNumber`.  
 >   
->  Note that field level security will be ignored on the related entity, so if there is sensitive data in the accessed field we suggest securing your calculated field as well.  
+>  Note that field level security will be ignored on the related table, so if there is sensitive data in the accessed field we suggest securing your calculated field as well.  
 
 
 <a name="BusinessScenarios"></a> 
@@ -95,7 +95,7 @@ Let’s take a look at calculated field examples in more detail.
   
 ### Weighted revenue of opportunity
 
-In this example, we are using the fields of the opportunity entity to calculate the weighted revenue based on the opportunity’s probability. In the field editor for an opportunity entity, we create a field called **Weighted Revenue** and specify the field type as **Calculated** and the data type is **Currency**.
+In this example, we are using the fields of the opportunity table to calculate the weighted revenue based on the opportunity’s probability. In the field editor for an opportunity table, we create a field called **Weighted Revenue** and specify the field type as **Calculated** and the data type is **Currency**.
 
 In the calculated field definition editor, in the **Condition** section, we specify the opportunity with the Status = Open. In the **ACTION**, the formula calculates the weighted revenue based on the opportunity estimated revenue multiplied by the probability of the opportunity.  The following screenshots show step-by-step how to define the **Weighted Revenue** calculated field.  
   
@@ -115,7 +115,7 @@ In the calculated field definition editor, in the **Condition** section, we spec
  
 In this example, we are using the fields of the originated lead of an opportunity to calculate the appropriate date when to follow up on the opportunity. 
 
-In the field editor for an opportunity entity, we create a field called **Follow-up date** and specify the type as **Calculated** and the data type is **Date and Time**.  
+In the field editor for an opportunity table, we create a field called **Follow-up date** and specify the type as **Calculated** and the data type is **Date and Time**.  
 
 In the calculated field definition editor, in the **Condition** section, we specify two conditions the purchase time frame and the estimated value of the lead. 
 
@@ -194,7 +194,7 @@ The following table contains information about the syntax for the functions prov
 > [!NOTE]
 >  You cannot enter a date, such as 01/01/2015, as the Date value in a calculated field. Date and DateTime values can only be set or compared using other DateTime fields.  
   
-In the **CONCAT** function, you can use literal strings as single lines of text, entity fields that contain a single line of text, or a combination of both. For example: **CONCAT** (FirstName, LastName, "is a manager."). If a literal string contains quotation marks, precede each mark with the backslash (\\) escape character, like this: `This string contains the \"quotation marks.\"` This ensures that the quotation marks inside the string aren’t treated as special characters that separate the strings.  
+In the **CONCAT** function, you can use literal strings as single lines of text, table fields that contain a single line of text, or a combination of both. For example: **CONCAT** (FirstName, LastName, "is a manager."). If a literal string contains quotation marks, precede each mark with the backslash (\\) escape character, like this: `This string contains the \"quotation marks.\"` This ensures that the quotation marks inside the string aren’t treated as special characters that separate the strings.  
   
 The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functions. They contain the initial strings and the resulting strings, returned by the **TRIMLEFT** and **TRIMRIGHT** functions:  
   
@@ -208,23 +208,23 @@ The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functi
 You should be aware of certain conditions and limitations when working with calculated fields:  
   
 - [Saved queries](/powerapps/developer/common-data-service/saved-queries), charts, and visualizations can have a maximum of 10 unique calculated fields.  
-- The calculated field values are not displayed in the Outlook Client Offline mode in the tile views or on entity main forms.  
+- The calculated field values are not displayed in the Outlook Client Offline mode in the tile views or on table main forms.  
 - A maximum number of chained calculated fields is 5.  
 - A calculated field can’t refer to itself or have cyclic chains.  
 - If you change one of the condition operators in a multiple condition clause, all of the condition operators will update to that condition. For example, in the clause `IF (x > 50) OR (y ==10) OR (z < 5)`, if you change the `OR` operator to the `AND` operator, then all `OR` operators in the clause will become `AND` operators.  
-- You can access parental fields via the Lookup field to the parent entity, such as *`<LookupFieldName>.<FieldName>`*. This is not possible with multi-entity lookup fields like Customer which can be Account or Contact. However, some entities have individual Lookup fields for a specific entity, such as  `ParentAccountid.`*`<FieldName>`* or `ParentContactid.`*`<FieldName>`*.  
+- You can access parental fields via the Lookup field to the parent table, such as *`<LookupFieldName>.<FieldName>`*. This is not possible with multi-table lookup fields like Customer which can be Account or Contact. However, some tables have individual Lookup fields for a specific table, such as  `ParentAccountid.`*`<FieldName>`* or `ParentContactid.`*`<FieldName>`*.  
 - Sorting is disabled on:  
   - A calculated field that contains a field of a parent record.  
   - A calculated field that contains a logical field (for example, address field)
   - A calculated field that contains another calculated field.  
-- Calculated fields can span two entities only.  
-  - A calculated field can contain a field from another entity (spanning two entities – current entity and parent record).  
-  - A calculated field can’t contain a calculated field from another entity that also contains another field from a different entity (spanning three entities):   
-    (Current Entity) Calculated Field &larr; (Parent Record) Calculated Field 1 &larr; (Parent Record) Calculated Field 2.  
+- Calculated fields can span two tables only.  
+  - A calculated field can contain a field from another table (spanning two tables – current table and parent record).  
+  - A calculated field can’t contain a calculated field from another table that also contains another field from a different table (spanning three tables):   
+    (Current table) Calculated Field &larr; (Parent Record) Calculated Field 1 &larr; (Parent Record) Calculated Field 2.  
 - You can’t trigger workflows or plug-ins on calculated fields.  
 - You can’t change an existing simple field to a calculated field. If your current application is using JavaScript or plug-ins to calculate a field, you would not be able to use the calculated fields feature without creating a new field.  
 - Duplicate detection rules are not triggered on calculated fields.  
-- A rollup can't reference a calculated field that uses another calculated field, even if all the fields of the other calculated field are on the current entity.  
+- A rollup can't reference a calculated field that uses another calculated field, even if all the fields of the other calculated field are on the current table.  
   
 ### See also
  

@@ -30,9 +30,9 @@ In some cases, integration with an app can be achieved by using business logic c
 
 ## Defining business logic
 
-Entities in Common Data Service can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in an entity.
+tables in Common Data Service can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in an table.
 
-- **Business rules**: Validate data across multiple fields and entities, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule)
+- **Business rules**: Validate data across multiple fields and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for an table](/powerapps/maker/common-data-service/data-platform-create-business-rule)
 
 - **Business process flows**: Guide users to ensure that they enter data consistently and follow the same steps every time. Business process flows are currently only supported for model-driven apps. More information: [Business processes flows overview](/power-automate/business-process-flows-overview)
 
@@ -103,7 +103,7 @@ The Common Data Service Web API provides a development experience that can be us
 
 Common Data Service takes an "API first" approach. This means that the service doesn't just provide a mechanism to query data, it also provides metadata from the service on business rules, constraints, and so on that you can use to build intelligent, responsive apps and services.
 
-The API is secured by using OAuth. OAuth requires an identity provider for authentication. For Common Data Service, the identity provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Azure AD Authentication Libraries (ADAL).
+The API is secured by using OAuth. OAuth requires an idtable provider for authentication. For Common Data Service, the idtable provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Azure AD Authentication Libraries (ADAL).
 
 For more information about getting started with the Common Data Service Web API, see [Use the Common Data Service Web API](/powerapps/developer/common-data-service/webapi/overview).
 

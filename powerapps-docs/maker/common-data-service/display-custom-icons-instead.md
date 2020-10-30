@@ -29,7 +29,7 @@ search.app:
 
 Power Apps environment administrators and customizers can add graphics to a view and establish the logic used to select a graphic based on the column value using JavaScript. The capability lets you customize list views that display icons alongside text or numerical values. 
 
-This example displays custom icons in a view for the opportunity entity, which is available with certain apps, such as Dynamics 365 Sales. You can display custom icons in views with other standard entities, such as the account or contact entity, as well as custom entities. 
+This example displays custom icons in a view for the opportunity table, which is available with certain apps, such as Dynamics 365 Sales. You can display custom icons in views with other standard tables, such as the account or contact table, as well as custom tables. 
 
 > [!div class="mx-imgBorder"] 
 > ![All Opportunities view with Rating column displaying icons and text value](media/icon-in-opportunity-view.png "All Opportunities view with Rating column displaying icons and text value")
@@ -72,11 +72,11 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
     5.  Select **Save** and then close the **Web Resource** window.  
   
-8.  With the **Default Solution** pop-up window still open, expand the **Components** > **Entities** tree and locate the entity that you want to customize.  
+8.  With the **Default Solution** pop-up window still open, expand the **Components** > **tables** tree and locate the table that you want to customize.  
   
-9. Expand your entity and select its **Views** icon.  
+9. Expand your table and select its **Views** icon.  
   
-10. You now see a list of views for your selected entity. Select a view from the list. Then open the **More Actions** drop-down list in the toolbar and select **Edit**.  
+10. You now see a list of views for your selected table. Select a view from the list. Then open the **More Actions** drop-down list in the toolbar and select **Edit**.  
   
 11. A pop-up window opens with controls for editing your selected view. It shows each column that is part of the view. Select the target column and then select the **Change Properties** in the **Common Tasks** box. The **Change Column Properties** dialog opens; make the following settings here:  
   
@@ -88,7 +88,7 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
 13. Select **Save and Close** to save your view.  
   
-14. Repeat these steps for each entity, view, and column as needed.  
+14. Repeat these steps for each table, view, and column as needed.  
   
 15. When you're ready, select **Publish All Customizations** to publish  your changes. Then, close the **Default Solution** window.  
   
@@ -102,7 +102,7 @@ Assuming you will be adding custom icons for an option-set type of attribute, wh
 The following sample code displays icons and tooltips based on one of three values (1: Hot, 2: Warm, 3: Cold) in the opportunityratingcode (Rating) attribute. The sample code also shows how to display localized tooltip text. For this sample to work, you must create three image web resources with 16x16 images with the following names: new_Hot, new_Warm, and new_Cold.  
 
 > [!IMPORTANT]
-> This sample requires the opportunity entity, which is available with Dynamics 365 Sales app.
+> This sample requires the opportunity table, which is available with Dynamics 365 Sales app.
   
 ```javascript
 function displayIconTooltip(rowData, userLCID) {      
@@ -160,16 +160,16 @@ function displayIconTooltip(rowData, userLCID) {
 
 ## Custom icon view display behavior
 ### Primary fields 
-In the grid list view, custom icons applied to the entity primary field replace the default system-generated icon. 
+In the grid list view, custom icons applied to the table primary field replace the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
 > ![Primary field replaces default icon in the custom icon view](media/mobile-primary-field-custom-icon-display.png "Primary field replaces default icon in the custom icon view")
 
 ### Other fields 
-In the grid list view, custom icons applied to a field that isn't the entity primary field display as a secondary icon in addition to the default system-generated icon. 
+In the grid list view, custom icons applied to a field that isn't the table primary field display as a secondary icon in addition to the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
-> ![Not an entity primary field custom icon view](media/card-form-not-primary-field.png "Not an entity primary field custom icon view")
+> ![Not an table primary field custom icon view](media/card-form-not-primary-field.png "Not an table primary field custom icon view")
 
 ### Card forms
 Custom icons replace the default system-generated icon when the view is configured to use a card form.

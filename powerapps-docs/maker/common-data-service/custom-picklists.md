@@ -19,31 +19,31 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Option sets allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice fields in other applications. Similar to entities, there are both standard Option sets, and the ability to create custom Option sets to use within your app.
+Option sets allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice fields in other applications. Similar to tables, there are both standard Option sets, and the ability to create custom Option sets to use within your app.
 
-Option sets can be created in two ways, either from the **Option Sets** list within the portal or directly within an entity while creating a field. For more information on how to create an entity, see [Create an entity](data-platform-create-entity.md).
+Option sets can be created in two ways, either from the **Option Sets** list within the portal or directly within an table while creating a field. For more information on how to create an table, see [Create an table](data-platform-create-table.md).
 
 ## Creating an Option set while adding a field
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
 
-    ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
+    ![table Details](./media/data-platform-cds-create-table/tablelist.png "table List")
 
-2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
+2. Click or tap an existing table, or [Create a new table](data-platform-create-table.md)
 
-3. Add a new field to your entity by clicking **Add field**.
+3. Add a new field to your table by clicking **Add field**.
 
 4. In the new field panel, enter the **Display name** for your field, **Name** will be automatically populated and is used as the unique name for your field. The **Display name** is used when presenting this field to your users, the **Name** is used when building your app, in expressions and formulas.
 
 5. Click the **Data type** drop down and select **Option Set** or **Multi Select Option set**.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
+    > ![New Field](./media/data-platform-cds-create-table/newfieldpanel.png "New Field Panel")
 
 6. Click the **Option set** drop down and select **New Option set**
 
     > [!NOTE]
-    > If an existing option set could be used for your entity, you can select it from this list without creating a new one.
+    > If an existing option set could be used for your table, you can select it from this list without creating a new one.
 
     ![Option Set List](./media/data-platform-cds-newoptionset/fieldpanel-1.png "Option Set list")
 
@@ -57,10 +57,10 @@ Option sets can be created in two ways, either from the **Option Sets** list wit
     > [!div class="mx-imgBorder"] 
     > ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "New Option Set")
 
-9. Click **Done** to close the field panel, and then **Save entity** to save your entity to the Common Data Service.
+9. Click **Done** to close the field panel, and then **Save table** to save your table to the Common Data Service.
 
     > [!NOTE]
-    > You can select one of your items as the **Default** for this field, and it will be selected by default when users are creating new records in your entity.
+    > You can select one of your items as the **Default** for this field, and it will be selected by default when users are creating new records in your table.
 
     > [!div class="mx-imgBorder"] 
     > ![New Field](./media/data-platform-cds-newoptionset/fieldpanel-2.png "New Field Panel")
@@ -84,11 +84,11 @@ Option sets can be created in two ways, either from the **Option Sets** list wit
     > [!div class="mx-imgBorder"] 
     > ![New Option Set](./media/data-platform-cds-newoptionset/optionset-create-values.png "New Option Set")
 
-5. You can now use this option set by creating new field on an entity.
+5. You can now use this option set by creating new field on an table.
 
 ## Global and Local Option sets
 
-By default, Option sets are created as Global Option sets which allows them to be reused across multiple entities. Under the **View more** option when creating a new Option set you can chose to make an Option set **Local**. This option is only available when creating an Option set while adding a field, and not through the **Option Sets** list. Local option sets can only be used by the entity and field they are created against, and cannot be reused on other entities. This approach is only recommended for advanced users that a specific need for a local option set.
+By default, Option sets are created as Global Option sets which allows them to be reused across multiple tables. Under the **View more** option when creating a new Option set you can chose to make an Option set **Local**. This option is only available when creating an Option set while adding a field, and not through the **Option Sets** list. Local option sets can only be used by the table and field they are created against, and cannot be reused on other tables. This approach is only recommended for advanced users that a specific need for a local option set.
 
 > [!IMPORTANT]
 > Once an option set is created as local or global, this cannot be changed.

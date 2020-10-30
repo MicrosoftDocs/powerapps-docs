@@ -28,7 +28,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Rollup fields help users obtain insights into data by monitoring key business metrics. A rollup field contains an aggregate value computed over the records related to a specified record. This includes regular entities and activity entities such as emails and appointments.
+Rollup fields help users obtain insights into data by monitoring key business metrics. A rollup field contains an aggregate value computed over the records related to a specified record. This includes regular tables and activity tables such as emails and appointments.
 
 In more complex scenarios, you can aggregate data over the hierarchy of records. As an administrator or customizer, you can define rollup fields by using the customization tools in Power Apps, without needing to write code.  
   
@@ -40,7 +40,7 @@ The benefits and capabilities of rollup fields include the following:
   
 - Visual editing is easy. You can create rollup fields by using the Field Editor, just like you do when you create a regular field.  
 - Wide selection of aggregate functions. You can aggregate data by using the following functions: `SUM`, `COUNT`, `MIN`, `MAX` and `AVG`.  
-- Full filter support for aggregation. You can set various filters for the source entity or related entity while setting multiple conditions.  
+- Full filter support for aggregation. You can set various filters for the source table or related table while setting multiple conditions.  
 - Seamless integration with the user interface. You can include the rollup fields in forms, views, charts and reports.  
 - Rollup fields are solution components. You can easily transport the rollup fields as components between environments and distribute them in solutions.  
 - Rollup fields and the calculated fields are complementary to each other. You can use a rollup field as a part of the calculated field, and vice versa.  
@@ -88,7 +88,7 @@ To view rollup jobs:
 
 ### Calculate Rollup Field 
 
-**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup fields in the existing records for a specified entity. There is only one **Calculate Rollup Field** job per entity. The incremental calculations mean that the **Calculate Rollup Field** job processes the records that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup field on an entity is created and deleted when the last rollup field is deleted.  
+**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup fields in the existing records for a specified table. There is only one **Calculate Rollup Field** job per table. The incremental calculations mean that the **Calculate Rollup Field** job processes the records that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup field on an table is created and deleted when the last rollup field is deleted.  
 
 ## Online recalculation option
 The rollup field on the form displays a calculator image, rollup value, and the time of the last calculation. To recaclulate, select the calculator image, and then select the **Recalculate** button that appears. 
@@ -99,7 +99,7 @@ The rollup field on the form displays a calculator image, rollup value, and the 
 
 There are a few considerations you should keep in mind when using the online recalculation option (manual refresh on the form):  
   
-- You must have Write privileges on the entity and Write access rights on the source record on which you are requesting the Refresh. For example, if you are calculating the estimated revenue from the open opportunities of an account, you don’t have to have Write privileges on the opportunity entity, only on the account entity.  
+- You must have Write privileges on the table and Write access rights on the source record on which you are requesting the Refresh. For example, if you are calculating the estimated revenue from the open opportunities of an account, you don’t have to have Write privileges on the opportunity table, only on the account table.  
 - This option is only available in the online mode. You can’t use it while working offline.  
 - The maximum number of records during the rollup refresh is limited to 50,000 records. In case of the hierarchical rollup, this applies to the related records across the hierarchy. If the limit is exceeded, you see an error message: *Calculations can’t be performed online because the calculation limit of 50,000 related records has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
 - The maximum hierarchy depth is limited to 10 for the source record. If the limit is exceeded, you see an error message: *Calculations can’t be performed online because the hierarchy depth limit of 10 for the source record has been reached.* This limit does not apply when the rollup is automatically recalculated by the system jobs.  
@@ -120,11 +120,11 @@ For the **Calculate Rollup Field** job, the available selections are: **Modify R
  
 ## Examples 
 
-Let’s take a look at several rollup field examples. We’ll aggregate data for a record from the related records with and without using a hierarchy. We’ll also aggregate data for a record from related activities and activities indirectly related to a record via the ActivityParty entity. In each example, we define the rollup field by using the Field Editor. To open the Field Editor, open solution explorer and expand **Components** > **Entities**. Select the entity you want and select **Fields**. Choose **New**. In the editor, provide the required information for the field, including the **Field Type** and **Data Type**. In the **Field Type**, select **Rollup**, after you have selected the data type. The data types include decimal or whole numbers, currency, and date/time. Choose the **Edit** button next to the **Field Type**. This takes you to the rollup field definition editor. The rollup field definition consists of three sections: **Source entity**, **Related entity** and **Aggregation**.  
+Let’s take a look at several rollup field examples. We’ll aggregate data for a record from the related records with and without using a hierarchy. We’ll also aggregate data for a record from related activities and activities indirectly related to a record via the ActivityParty table. In each example, we define the rollup field by using the Field Editor. To open the Field Editor, open solution explorer and expand **Components** > **tables**. Select the table you want and select **Fields**. Choose **New**. In the editor, provide the required information for the field, including the **Field Type** and **Data Type**. In the **Field Type**, select **Rollup**, after you have selected the data type. The data types include decimal or whole numbers, currency, and date/time. Choose the **Edit** button next to the **Field Type**. This takes you to the rollup field definition editor. The rollup field definition consists of three sections: **Source table**, **Related table** and **Aggregation**.  
   
--   In the **Source entity** section, you specify the entity for which the rollup field is defined and whether or not you aggregate over a hierarchy. You can add filters with multiple conditions to specify the records in the hierarchy you want to use for rollup.  
+-   In the **Source table** section, you specify the table for which the rollup field is defined and whether or not you aggregate over a hierarchy. You can add filters with multiple conditions to specify the records in the hierarchy you want to use for rollup.  
   
--   In the **Related entity** section, you specify the entity over which you aggregate. This section is optional when you choose to rollup over the hierarchy on the source entity. You can add filters with multiple conditions to specify which related records to use in the calculation. For example, you include the revenue from the open opportunities with an annual revenue greater than $1000.  
+-   In the **Related table** section, you specify the table over which you aggregate. This section is optional when you choose to rollup over the hierarchy on the source table. You can add filters with multiple conditions to specify which related records to use in the calculation. For example, you include the revenue from the open opportunities with an annual revenue greater than $1000.  
   
 -   In the **Aggregate** section, you specify the metric you want to compute. You can choose available aggregate functions, such as SUM, COUNT, MIN, MAX or AVG.  
   
@@ -150,15 +150,15 @@ In this example, we calculate the total estimated revenue of open opportunities 
   
 In this example, we calculate the total time spent and billed from all activities related to an account. This may include time spent on the phone, at appointments, or on  custom activities.  
   
-In earlier releases, you could define a rollup field for an individual activity, such as a phone call, fax, or appointment. But, to achieve the result of the example shown below, you had to total the data by using the calculated fields. Now, you can do it all in one step by defining one rollup field for the Activity entity.  
+In earlier releases, you could define a rollup field for an individual activity, such as a phone call, fax, or appointment. But, to achieve the result of the example shown below, you had to total the data by using the calculated fields. Now, you can do it all in one step by defining one rollup field for the Activity table.  
   
 ![Rollup all activities for an account](media/rollup-enhancements-activities.png)  
   
-### Aggregate data for a record from all related activities and activities indirectly related via the Activity Party entity  
+### Aggregate data for a record from all related activities and activities indirectly related via the Activity Party table  
 
-In this example, we count the total number of emails sent to an account, where the account is listed on the email’s “To Recipient” line or “Cc Recipient line. This is done by specifying the **Participation Type** in **FILTERS** for the Activity Party entity in the rollup field definition. If you don’t use filtering, then all available participation types for an activity are used in the calculation. 
+In this example, we count the total number of emails sent to an account, where the account is listed on the email’s “To Recipient” line or “Cc Recipient line. This is done by specifying the **Participation Type** in **FILTERS** for the Activity Party table in the rollup field definition. If you don’t use filtering, then all available participation types for an activity are used in the calculation. 
  
-For more information about the Activity Party entity and participation types available for a particular activity, see [ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
+For more information about the Activity Party table and participation types available for a particular activity, see [ActivityParty table](/dynamics365/customer-engagement/developer/activityparty-table).
 
   
 ![Rollup related activities and activity party](media/rollup-enhancements-indirect-activities.png)  
@@ -179,20 +179,20 @@ The following example shows how to calculate an average estimated revenue from r
 
 You should be aware of certain conditions and restrictions when working with rollup fields:  
   
-- You can define a maximum of 100 rollup fields for the organization and up to 10 rollup fields per entity.  
+- You can define a maximum of 100 rollup fields for the organization and up to 10 rollup fields per table.  
 - A workflow can’t be triggered by the rollup field updates.  
 - A workflow wait condition cannot use a rollup field.  
 - A rollup over the rollup field is not supported.  
-- A rollup can't reference a calculated field that uses another calculated field, even if all the fields of the other calculated field are on the current entity.  
-- The rollup can only apply filters to the source entity or related entities, simple fields or non-complex calculated fields.  
-- A rollup can be done only over related entities with the 1:N relationship. A rollup can’t be done over the N:N relationships.  
-- A rollup can’t be done over the 1:N relationship for the Activity entity or the Activity Party entity.  
+- A rollup can't reference a calculated field that uses another calculated field, even if all the fields of the other calculated field are on the current table.  
+- The rollup can only apply filters to the source table or related tables, simple fields or non-complex calculated fields.  
+- A rollup can be done only over related tables with the 1:N relationship. A rollup can’t be done over the N:N relationships.  
+- A rollup can’t be done over the 1:N relationship for the Activity table or the Activity Party table.  
 - The business rules, workflows or calculated fields always use the last calculated value of the rollup field.  
 - A rollup field is aggregated under the system user context. All users are able to see the same rollup field value. You can control the rollup field visibility with the field level security (FLS), by restricting who can access the rollup field. More information  [Field level security to control access](/dynamics365/customer-engagement/admin/field-level-security). 
 
 ### Precision rounding
  
-If the precision of the aggregated field is greater than the precision of the rollup field, the aggregated field precision is rounded down to the precision of the rollup field, before the aggregation is performed. To illustrate this behavior, let’s look at a specific example. Let’s say that the rollup field on the account entity, for calculating the total estimated revenue of the related opportunities, has a precision of two decimal points. The Est. Revenue field on the opportunity entity is the aggregated field with the precision of four decimal points. In our example, the account has two related opportunities. The aggregated sum of the estimated revenue is calculated as follows:  
+If the precision of the aggregated field is greater than the precision of the rollup field, the aggregated field precision is rounded down to the precision of the rollup field, before the aggregation is performed. To illustrate this behavior, let’s look at a specific example. Let’s say that the rollup field on the account table, for calculating the total estimated revenue of the related opportunities, has a precision of two decimal points. The Est. Revenue field on the opportunity table is the aggregated field with the precision of four decimal points. In our example, the account has two related opportunities. The aggregated sum of the estimated revenue is calculated as follows:  
   
 1. Est. Revenue for the first opportunity: $1000.0041  
 1. Est. Revenue for the second opportunity: $2000.0044  
@@ -202,11 +202,11 @@ As you can see, the precision rounding to two decimal points on the aggregated f
   
 ### Different behavior from Associated grids
  
-Certain entity  forms, such as Account or Contact, out-of-the-box, contain the associated grids. For example, an Account form includes Contacts, Cases, Opportunities and other grids. Some of the records shown in the Account form grids are directly related to the account record; others, indirectly, through the relationships with other records. In comparison, the rollup field aggregation uses only direct relationships explicitly defined in the rollup field definition. No other relationships are considered. To illustrate the difference in behavior, let’s look at the following example.  
+Certain table  forms, such as Account or Contact, out-of-the-box, contain the associated grids. For example, an Account form includes Contacts, Cases, Opportunities and other grids. Some of the records shown in the Account form grids are directly related to the account record; others, indirectly, through the relationships with other records. In comparison, the rollup field aggregation uses only direct relationships explicitly defined in the rollup field definition. No other relationships are considered. To illustrate the difference in behavior, let’s look at the following example.  
   
 1. The account A1 has a primary contact, P1. The case C1 is associated  with the account  A1 (C1.Customer field  =  A1) and the case C2 is associated with the contact P1 (C2.Customer field = P1).  
 1. The **Cases** grid on the **Account** form for the A1 record, shows two cases, C1 and C2.  
-1. The rollup field on the account entity, called Total Number of Cases, is used to count the cases associated with the account.  
+1. The rollup field on the account table, called Total Number of Cases, is used to count the cases associated with the account.  
 1. In the account rollup field definition, we specify the cases that have the Customer relationship with the account. After aggregation, the Total Number of Cases is equal to 1 (case C1). The case C2 is not included in the total, as it is directly related to the contact, not to the account, and can’t be explicitly defined in the account rollup field definition. As a result, the total number of cases returned by rollup operation doesn’t match the number of cases shown in the **Cases** grid.  
   
 ### See also  

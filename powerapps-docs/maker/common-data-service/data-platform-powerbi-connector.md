@@ -26,7 +26,7 @@ Common Data Service allows you to connect directly to your data using Power BI D
 To use Power BI with Common Data Service, you need the following items:
 
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
-* Common Data Service environment with maker permissions to access the portal and read permissions to access data within entities.
+* Common Data Service environment with maker permissions to access the portal and read permissions to access data within tables.
 
 ## Finding your Common Data Service Environment URL
 
@@ -54,19 +54,19 @@ To use Power BI with Common Data Service, you need the following items:
 
    <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport3.png "Power BI Desktop") -->
 
-4. The **Navigator** displays all entities available for your environment grouped into two folders. 
+4. The **Navigator** displays all tables available for your environment grouped into two folders. 
 
-    * Entities - are standard entities and custom entities that you have created or imported in your environment.
-    * System - contains all entities in your environment, including system entities.
+    * tables - are standard tables and custom tables that you have created or imported in your environment.
+    * System - contains all tables in your environment, including system tables.
 
    <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop") -->
 
-5. Select the **Account** entity to see a preview of your data in the right pane. Select **Load**.
+5. Select the **Account** table to see a preview of your data in the right pane. Select **Load**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Load account entity records](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account entity records")
+    > ![Load account table records](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account table records")
 
-6. Your entity is now loaded into your report, and you can begin building reports, or repeat the previous steps to add additional entities. For example, in the **Fields** pane, select the **name** field and then select the **numberofemployees** field. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
+6. Your table is now loaded into your report, and you can begin building reports, or repeat the previous steps to add additional tables. For example, in the **Fields** pane, select the **name** field and then select the **numberofemployees** field. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
 
     > [!div class="mx-imgBorder"] 
     > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
@@ -74,9 +74,9 @@ To use Power BI with Common Data Service, you need the following items:
 
 ## Using option sets
 
-Options sets are used in entities to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector option set fields will be presented as two columns to show both the unique value, and the display value.
+Options sets are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector option set fields will be presented as two columns to show both the unique value, and the display value.
 
-As an example, if you had an option set on your entity called ApprovalStatus, you would see two fields in Power BI:
+As an example, if you had an option set on your table called ApprovalStatus, you would see two fields in Power BI:
 
 * ApprovalStatus - This will show a unique integer value for each item in your option set, this is help when applying filters so they will not be impacted if you make future changes to the display name.
 * ApprovalStatus_display - This will show the friendly display name of the item and is most commonly used when presenting the option in a table or chart.
@@ -90,17 +90,17 @@ As an example, if you had an option set on your entity called ApprovalStatus, yo
 
 ## Navigating Relationships
 
-Relationships in Common Data Service require you to create a relationship within Power BI desktop between the two entities using a GUID field, this is a system-generated unique identifier that ensures relationships are created for the create records where ambiguity or duplication may exist with other fields. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
+Relationships in Common Data Service require you to create a relationship within Power BI desktop between the two tables using a GUID field, this is a system-generated unique identifier that ensures relationships are created for the create records where ambiguity or duplication may exist with other fields. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
 
 While some relationships may be automatically created, you can still review and ensure the correct relationships are established when creating your report:
 
-* The lookup field on the entity will contain the GUID of the record in the related entity.
-* The related entity will have a field in the format "[EntityName]ID" that contains the GUID, for example Accountid or MyCustomEntityid
-* Using the Power BI desktop Manage Relationships feature, you would create a new relationship between your lookup field, and the id field on the related entity.
+* The lookup field on the table will contain the GUID of the record in the related table.
+* The related table will have a field in the format "[tableName]ID" that contains the GUID, for example Accountid or MyCustomtableid
+* Using the Power BI desktop Manage Relationships feature, you would create a new relationship between your lookup field, and the id field on the related table.
 
 
 ## Next steps
-* [Manage fields in an entity](data-platform-manage-fields.md)
-* [Define relationships between entities](data-platform-entity-lookup.md)
+* [Manage fields in an table](data-platform-manage-fields.md)
+* [Define relationships between tables](data-platform-table-lookup.md)
 
 
