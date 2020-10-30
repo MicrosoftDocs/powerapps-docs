@@ -80,7 +80,7 @@ Immediately see the records that you accessed recently when you click inside the
 
 ### See recent records and searches
 
-When you run a search, recent searches and recently accessed records are shown in combined view to help you complete your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
+Before you even start typing in the search box, you will see any recent searches and recently accessed records in combined view to help with your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
@@ -91,10 +91,11 @@ Legend
 2. **Recently accessed records**:  Shows recently accessed records that are grouped by entity type.
 
 
-
 ### View results quickly
 
+Fast and powerful search with suggested results. View search results inline as you type, minimizing keystrokes and simplifying page navigation.
 
+![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
 
 ### Search results page
 
