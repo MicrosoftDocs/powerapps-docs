@@ -83,9 +83,8 @@ The new search experience compliments the performance and intelligence of releva
 
 Legend
 
-1. **Search bar**: Globally discoverable search bar 
-2. **Recent searches**: Shows your recent searches.
-3. **Recently accessed records**:  Shows recently accessed records.
+1. **Recent searches**: Shows your recent searches.
+2. **Recently accessed records**:  Shows recently accessed records that are grouped by entity type.
 
 ### Search results
 
