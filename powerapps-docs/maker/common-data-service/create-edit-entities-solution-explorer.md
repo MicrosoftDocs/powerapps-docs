@@ -67,7 +67,7 @@ In the **Primary Field** tab you can usually accept the default values for the p
 |**Maximum Length**|Enter the maximum length for the column values. The default is 100.|
 
 > [!NOTE]
-> These options do not apply if the table is an activity table. More information:  [Create a custom activity table](#create-custom-activity-entity)
+> These options do not apply if the table is an activity table. More information:  [Create a custom activity table](#create-custom-activity-table)
 
 ### Configure required columns
 
@@ -113,7 +113,7 @@ You can also make the following changes:
 - [Create and design forms](../model-driven-apps/create-design-forms.md)
 - [Create a business process flow to standardize processes](/flow/create-business-process-flow)
 
-## Delete an table
+## Delete a table
 
 As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
   

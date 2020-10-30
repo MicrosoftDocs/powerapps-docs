@@ -65,7 +65,7 @@ For a description of the properties available to edit see, [Create an table](dat
 > [!NOTE]
 > Once enabled, not all table properties can be changed. More information: [table options that can only be enabled](#table-options-that-can-only-be-enabled)
 >
-> The name of many standard tables may also be used in other text in the application. To locate and change text where this name was used, see [Edit standard table messages](edit-system-table-messages.md)
+> The name of many standard tables may also be used in other text in the application. To locate and change text where this name was used, see [Edit standard table messages](edit-system-entity-messages.md)
 
 
 ## Edit an table using Solution Explorer
@@ -81,13 +81,13 @@ When editing an table using the solution explorer you need to find the unmanaged
 Use the **Display Name** and **Plural Name** properties to change the name of the table in the application. 
 
 > [!NOTE]
->  The name of many standard tables may also be used in other text in the application. To locate and change text where this name was used, see [Edit standard table messages](edit-system-table-messages.md)
+>  The name of many standard tables may also be used in other text in the application. To locate and change text where this name was used, see [Edit standard table messages](edit-system-entity-messages.md)
   
 <a name="BKMK_ChangetableIcon"></a>   
 
 ###  Change the icons used for custom tables  
 
-By default, all custom tables in the web application have the same icons. You can create image web resources for the icons you want for your custom tables. More information:  [Change icons for custom tables](../model-driven-apps/change-custom-table-icons.md).  
+By default, all custom tables in the web application have the same icons. You can create image web resources for the icons you want for your custom tables. More information:  [Change icons for custom tables](../model-driven-apps/change-custom-entity-icons.md).  
   
 <a name="BKMK_EnableOptions"></a>  
  
@@ -107,5 +107,5 @@ The following table lists the table options that you can enable or disable at an
 
 ### See also
 
-[Create an table](create-edit-tables.md)<br />
-[Create and edit tables using solution explorer](create-edit-entity-solution-explorer.md)
+[Create an table](create-edit-entities.md)<br />
+[Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
