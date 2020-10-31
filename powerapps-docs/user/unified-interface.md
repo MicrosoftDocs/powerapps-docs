@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/26/2020
-ms.author: mduelae
+ms.date: 10/30/2020
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -21,20 +21,14 @@ search.app:
 
 The Unified Interface for model-driven apps provides a consistent and accessible user experience across devices—whether on a desktop, laptop, tablet, or phone. The apps scale by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have, the more information can be displayed.
 
-> ![Unified Interface adapts to your screen](media/Reflow_1.png "Unified Interface adapts to your screen")
+> ![Unified Interface adapts to the screen](media/Reflow_2.png "Unified Interface adapts to the screen")
 
 For an overview of Unified Interface in model-driven apps, watch this video: [Introduction to Unified Interface](https://www.youtube.com/watch?v=_VPOi_Iq6ko)
 
 > [!NOTE]
 > The legacy web client will be deprecated and customers must transition to Unified Interface before December 1, 2020. To learn more on how to transition, see [Quick start for transitioning](/powerapps/maker/model-driven-apps/transition-web-app) and [FAQs: Transition to Unified Interface](/powerapps/maker/model-driven-apps/faqs-transition-unified-interface).
 
-## Early access feature
 
-If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
-
-Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
-
-> ![Unified Interface adapts to the screen](media/Reflow_2.png "Unified Interface adapts to the screen")
 
 
 ## Reflow 
@@ -55,9 +49,15 @@ In example below, each number corresponds to a control.
 
 The menu options let you swiftly navigate the different apps in the system. They provide quick access to recently viewed records and pinned favorites.
 
-|Current  |Early access  |
-|---------|---------|
-|![Navigation controls showing in expanded view](media/nav-expanded1.png "Navigation controls showing in expanded view") <div></div>  <div></div>  <ol><li>**App selector**: Open this menu to move between apps</li> <li>**Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. </li>  <li>**Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).</li> <li> **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.</li> <li> **Page navigation**: This area lists each entity and dashboard page available for the current work area.</li>  |     ![Navigation controls showing expanded view](media/nav-expanded2.png "Navigation controls showing expanded view")  <div></div> <div></div>  <ol><li>**Click to change app**: Select the current app name to change a differ app. </li> <li>**Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. </li>  <li>**Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).</li> <li> **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.</li> <li> **Page navigation**: This area lists each entity and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that entity.</li>    |
+![Navigation controls showing expanded view](media/nav-expanded2.png "Navigation controls showing expanded view")  
+
+Legend
+  
+1. **Click to change app**: Select the current app name to change a differ app. 
+2. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. 
+3. **Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
+4. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
+5.  **Page navigation**: This area lists each entity and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that entity.
 
 For more information, see [Basic navigation in a model-driven app](navigation.md).
 
