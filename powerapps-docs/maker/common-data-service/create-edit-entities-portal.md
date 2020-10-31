@@ -38,12 +38,12 @@ The portal enables configuring the most common options, but certain options can 
 1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **tables**.
 
     > [!div class="mx-imgBorder"] 
-    > ![View tables](media/view-tables-portal.png)
+    > ![View tables](media/view-entities-portal.png)
 
    You can filter the tables you see using the following views in a list: 
 
    > [!div class="mx-imgBorder"] 
-	 > ![table views](media/table-views-portal.png) 
+	 > ![table views](media/entity-views-portal.png) 
 
  |View|Description|
  |--|--|
@@ -54,12 +54,12 @@ The portal enables configuring the most common options, but certain options can 
 
 You can also select **Group** to group tables by the **Tags** applied to them.
 
-## Create an table
+## Create a table
 
 While [viewing tables](#view-tables), in the menu bar select **New table**. This will open the New table panel.
 
 > [!div class="mx-imgBorder"] 
-> ![New table Panel](media/new-table-panel.png)
+> ![New table Panel](media/new-entity-panel.png)
 
 Enter data for the following columns
 
@@ -91,24 +91,24 @@ The **Primary Name** column of the table is displayed in the list of columns. Se
 > [!div class="mx-imgBorder"] 
 > ![Primary Name panel](media/primary-name-panel.png)
 
-## Edit an table
+## Edit a table
 
 While [viewing tables](#view-tables), select the table you want to edit.
 
 Select **Settings** from the menu if you want to edit the **Display name**, **Plural display name** or **Description** for the table.
 
 > [!div class="mx-imgBorder"] 
-> ![table Settings](media/table-settings-portal.png)
+> ![table Settings](media/entity-settings-portal.png)
 
 For other items choose from the tabs.
 
 ### Fields
 
-See [Create and edit columns](create-edit-columns.md)
+See [Create and edit columns](create-edit-fields.md)
 
 ### Relationships
 
-See [Create and edit relationships between tables](create-edit-table-relationships.md)
+See [Create and edit relationships between tables](create-edit-entity-relationships.md)
 
 ### Business rules
 
@@ -140,16 +140,16 @@ View the data in the table.
 Use the **Select view** menu to choose from available views for the table or to show all columns.
 
 > [!div class="mx-imgBorder"] 
-> ![Select view](media/table-data-select-view.png)
+> ![Select view](media/entity-data-select-view.png)
 
 Use the **Next Page** and **Previous Page** commands at the bottom of the form to see more data.
 
-## Delete an table
+## Delete a table
 
 As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
   
 > [!IMPORTANT]
->  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-table-relationships.md).  
+>  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).  
   
 > [!NOTE]
 > The only way to recover data from an table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
@@ -157,13 +157,11 @@ As someone with the system administrator security role, you can delete custom ta
 While [viewing tables](#view-tables), select the table and select **Delete table** from the menu.
 
 > [!div class="mx-imgBorder"] 
-> ![Delete an table using the Power Apps portal](media/delete-table-powerapps-portal.png)
+> ![Delete an table using the Power Apps portal](media/delete-entity-powerapps-portal.png)
 
-If the table has dependencies that prevent it from being deleted you will see an error message. To identify and remove any dependencies, you will need to use the solution explorer. More information [Identify table dependencies](create-edit-tables-solution-explorer.md#identify-table-dependencies)
+If the table has dependencies that prevent it from being deleted you will see an error message. To identify and remove any dependencies, you will need to use the solution explorer. More information [Identify table dependencies](create-edit-entities-solution-explorer.md#identify-table-dependencies)
 
 ### See also
 
-[Create and edit tables in Common Data Service](create-edit-tables.md)<br />
-[Create and edit tables using solution explorer](create-edit-tables-solution-explorer.md)
-
-
+[Create and edit tables in Common Data Service](create-edit-entities.md)<br />
+[Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
