@@ -50,18 +50,12 @@ Every table has required columns that must exist in your input file. We recommen
     e. Select **Upload**.  
     f. Choose your file. Follow the prompts to upload your file.  
 
-    > [!div class="mx-imgBorder"] 
-    > ![Example of uploading a file to an **Account** table](./media/data-platform-import-export/upload-account.png)
+   <!-- > [!div class="mx-imgBorder"] 
+    > ![Example of uploading a file to an **Account** table](./media/data-platform-import-export/upload-account.png)  -->
 
     g. After the file is uploaded and **Mapping status** is green, select **Import** in the top-right corner. Refer to the next section to navigate and fix any mapping errors.  
 
-    > [!div class="mx-imgBorder"] 
-    > ![Example of a successful **Mapping status** and **Import** button](./media/data-platform-import-export/success-map-imp.png)
-
     h. After the import finishes successfully, you'll see the total number of inserts and updates.  
-
-    > [!div class="mx-imgBorder"] 
-    > ![Example of a successful import that shows the number of inserts and updates](./media/data-platform-import-export/success-imp-insert.png)
 
     > [!NOTE]
     > Use the Upsert (Update or Insert) logic to either update the row, if it already exists, or to insert a new row.
@@ -79,14 +73,14 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
     > [!TIP]
     > Depending on whether you get a Warning or an Error, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Field Mappings**.
 
-    > [!div class="mx-imgBorder"] 
+  <!--  > [!div class="mx-imgBorder"] 
     > ![Example of a partial match due to warnings with column mappings](./media/data-platform-import-export/partial-match.png)
 
     > [!div class="mx-imgBorder"] 
     > ![Example of navigating column mapping issues](./media/data-platform-import-export/navigate-mappings.png)
 
     > [!div class="mx-imgBorder"] 
-    > ![Example of inspecting and rectifying warnings with column mappings](./media/data-platform-import-export/inspect-warnings.png)
+    > ![Example of inspecting and rectifying warnings with column mappings](./media/data-platform-import-export/inspect-warnings.png) -->
 
 2. After you resolve all the errors and warnings, select **Save Changes** in the top-right corner. You'll go back to the **Import Data** screen.
 3. When the **Mapping Status** column shows **Completed** in green, select **Import** in the top-right corner.
@@ -131,8 +125,8 @@ You can do a one-time data export from a standard table or custom table. And you
 
 1. After the export finishes successfully, you can **Download exported data**. This download gives you a link to the downloadable CSV file.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Sample export that shows successful export with link downloadable file](./media/data-platform-import-export/export-success.png)
+  <!--  > [!div class="mx-imgBorder"] 
+    > ![Sample export that shows successful export with link downloadable file](./media/data-platform-import-export/export-success.png) -->
 
 ## Unsupported data types
 
