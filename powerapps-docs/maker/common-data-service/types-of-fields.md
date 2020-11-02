@@ -137,7 +137,7 @@ When you configure a currency column you can choose the precision value. There a
   
 ## Different types of lookups  
 
-When you create a new lookup column you are creating a new Many-to-One (N:1) table relationship between the table you’re working with and the **Target Row Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-table-relationships.md). But all custom lookups can only allow for a reference to a single row for a single target row type.  
+When you create a new lookup column you are creating a new Many-to-One (N:1) table relationship between the table you’re working with and the **Target Row Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-entity-relationships.md). But all custom lookups can only allow for a reference to a single row for a single target row type.  
   
 However, you should be aware that not every lookup behaves this way. There are several different types of system lookups as shown here.  
   
@@ -145,7 +145,7 @@ However, you should be aware that not every lookup behaves this way. There are s
 |-----------------|-----------------|  
 |**Simple**|Allows for a single reference to a specific table. All custom lookups are this type.|  
 |**Customer**|Allows for a single reference to either an account or a contact row.|  
-|**Owner**|Allows for a single reference to either a team or a user row. All team or user-owned tables have one of these. More information: [Add a table as a lookup option in your app](../model-driven-apps/team-table-lookup.md)|  
+|**Owner**|Allows for a single reference to either a team or a user row. All team or user-owned tables have one of these. More information: [Add a table as a lookup option in your app](../model-driven-apps/team-entity-lookup.md)|  
 |**PartyList**|Allows for multiple references to multiple tables. These lookups are found on the Email table **To** and **Cc** columns. They’re also used in the Phone and Appointment tables.|  
 |**Regarding**|Allows for a single reference to multiple tables. These lookups are found in the regarding column used in activities.|  
 
@@ -161,7 +161,7 @@ Even though a table has an image column, displaying that image in a model-driven
 When image display is enabled for an table, any rows that don’t have an image will display a placeholder image. For example:
 
 > [!div class="mx-imgBorder"] 
-> ![Sample table image for an account row](../common-data-service/media/account-row-default-image.png "Default account table image")
+> ![Sample table image for an account row](../common-data-service/media/account-record-default-image.png "Default account table image")
   
 People can choose the default image to upload a picture from their computer. Images must be less than 10 MB and must be in one of the following formats:  
   
@@ -227,11 +227,11 @@ Once a table form has an image column, app users can change the image for a give
 
 1. Open the app that includes the table form, and then select the image on the form. 
    > [!div class="mx-imgBorder"] 
-   > ![Default table image](../common-data-service/media/default-table-image-on-form.png "Default table image")
+   > ![Default table image](../common-data-service/media/default-entity-image-on-form.png "Default table image")
 
 2. Select **Upload image**, browse and select the image you want displayed on the table form, and then select **Change**. The image appears on the row. 
    > [!div class="mx-imgBorder"] 
-   > ![Changed image saved to a row](../common-data-service/media/custom-table-icon-row.png "Changed image saved to a row")
+   > ![Changed image saved to a row](../common-data-service/media/custom-entity-icon-record.png "Changed image saved to a row")
 
 
 More information for developers working with image data:

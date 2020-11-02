@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service columns define the individual data items that can be used to store data in an table. Fields are sometimes called *attributes* by developers. 
+In Common Data Service columns define the individual data items that can be used to store data in an table. Columns are sometimes called *attributes* by developers. 
   
 Before you create a custom column, evaluate whether using an existing column would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -34,19 +34,19 @@ There are two designers you can use to create or edit columns:
 
 |Designer| Description|
 |--|--|
-|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit columns for Common Data Service using Power Apps portal](create-edit-column-portal.md)|
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-column-solution-explorer.md) |
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)|
+|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md) |
 
 > [!NOTE]
 > You can also create columns in your environment using the following:
-> - In model-driven apps, select **New Field** from the form editor.
+> - In model-driven apps, select **New Column** from the form editor.
 > - Import a solution that contains the definition of the columns.
-> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newtable-pq).
+> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
 > - A developer can use [Metadata services](/powerapps/developer/common-data-service/use-web-services#metadata-services) to write a program to create and update columns.
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the Power Apps portal to Create and edit columns for Common Data Service unless you need to address any of the following requirements:
+You should use the Power Apps portal to create and edit columns for Common Data Service unless you need to address any of the following requirements:
 
 - Create a Customer Lookup column. 
    - More information: [Different types of lookups](types-of-columns.md#different-types-of-lookups)
@@ -57,8 +57,8 @@ You should use the Power Apps portal to Create and edit columns for Common Data 
 - Edit multiple columns at once.
 - Enable Auditing. 
    - More information: [Auditing overview](../../developer/common-data-service/auditing-overview.md)
-- Enable Field Level Security. 
-   - More information: [Field security tables](../../developer/common-data-service/column-security-tables.md)
+- Enable Column Level Security. 
+   - More information: [Field security tables](../../developer/common-data-service/field-security-entities.md)
 - Select whether the column appears in global filter in interactive experience. 
    - More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
 - Select whether the column is sortable in interactive experience dashboards. 
@@ -66,7 +66,7 @@ You should use the Power Apps portal to Create and edit columns for Common Data 
 - Set a column Requirement Level as Business Recommended. 
    - More information: [Create business rules and recommendations to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 - Set managed properties for a column. 
-   - More information: [Set managed properties for columns](set-managed-properties-for-column.md)
+   - More information: [Set managed properties for columns](set-managed-properties-for-field.md)
 
 > [!NOTE]
 > You can create a Lookup column in the Power Apps portal or in solution explorer by creating a One-to-many relationship on the table. But only solution explorer offers the option to create this relationship while creating a column.
@@ -80,8 +80,8 @@ You should use the Power Apps portal to Create and edit columns for Common Data 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also  
-[Create and edit columns for Common Data Service using Power Apps portal](create-edit-column-portal.md)<br />
-[Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-column-solution-explorer.md)<br />
-[Types of columns and column data types](types-of-columns.md)<br />
+[Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)<br />
+[Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Types of columns and column data types](types-of-fields.md)<br />
 [Developer Documentation: Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)
  
