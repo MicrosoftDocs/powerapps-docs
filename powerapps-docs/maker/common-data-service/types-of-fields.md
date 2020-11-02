@@ -76,7 +76,7 @@ There are some columns used by the system that you cannot add using the designer
   
 ## MultiSelect Option Set
 
-You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns. When you add a Multi-Select Option Set column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
+You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns. When you add a Multi-Select Choice column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
 
 For example, if an organization operates in multiple areas or countries, you can include multiple locations or countries in an ‘Area of operation’ column. A user can then select one or more locations from the list of available values.
 

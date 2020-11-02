@@ -68,7 +68,7 @@ Use the column editor to specify a calculated column. In this example we will us
 
     These are the types of columns that support calculations:
     - Text
-    - Option Set  
+    - Choice  
     - Two Options  
     - Whole Number  
     - Decimal Number  

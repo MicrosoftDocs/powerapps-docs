@@ -42,7 +42,7 @@ You can create and update one or more custom columns in any table. When you crea
 
 5. Select the **Data type** of your column, this controls the way the information is stored as well as how it is presented in apps. For example, text is stored different to a decimal number or a URL. For more detailed information of the data types available, see [table attribute metadata](../../developer/common-data-service/table-attribute-metadata.md).
 
-    If you're prompted, specify additional information for the data type that you specified. Depending on the data type, different columns will be presented. If you're creating a column of type Option set or Multi Select Option Set, you can select **New Option Set** and create a new Option Set while creating your column. For more information, see [Create Option set](custom-picklists.md)
+    If you're prompted, specify additional information for the data type that you specified. Depending on the data type, different columns will be presented. If you're creating a column of type Choice or Multi Select Option Set, you can select **New Option Set** and create a new Choice while creating your column. For more information, see [Create Option set](custom-picklists.md)
 
     > [!div class="mx-imgBorder"] 
     > ![New Field](./media/data-platform-cds-create-table/newcolumnpanel-2.png "New Field Panel")

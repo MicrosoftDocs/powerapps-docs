@@ -80,7 +80,7 @@ Only these kinds of columns can be used to create alternate keys:
  - Single line of Text (String)
  - Date and Time
  - Lookup
- - Option Set
+ - Choice
 
 ### Number of keys
 

@@ -22,10 +22,10 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# table relationships 
+# Table relationships 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-table relationships define how rows can be related to each other in the database. At the simplest level, adding a lookup column to an table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table row.  
+Table relationships define how rows can be related to each other in the database. At the simplest level, adding a lookup column to an table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table row.  
   
 Beyond simply defining how rows can be related to other rows, 1:N table relationships also provide data to address the following questions:  
   
@@ -34,12 +34,12 @@ Beyond simply defining how rows can be related to other rows, 1:N table relation
 - How can I streamline the data entry process when I create a new related row in the context of an existing row?  
 - How should people viewing a row be able to view the associated rows?  
   
- tables can also participate in a N:N (many-to-many) relationship where any number of rows for two tables can be associated with each other.  
+ Tables can also participate in a N:N (many-to-many) relationship where any number of rows for two tables can be associated with each other.  
 
 <a name="BKMK_Connections"></a>
 
 ## Decide whether to use table relationships or connections 
-table relationships are metadata that make changes to the database. These relationships allow for queries to retrieve related data very efficiently. Use table relationships to define formal relationships that define the table or that most rows can use. For example, an opportunity without a potential customer wouldn't be very useful. The Opportunity table also has a N:N relationship with the Competitor table. This allows for multiple competitors to be added to the opportunity. You may want to capture this data and create a report that shows the competitors.  
+Table relationships are metadata that make changes to the database. These relationships allow for queries to retrieve related data very efficiently. Use table relationships to define formal relationships that define the table or that most rows can use. For example, an opportunity without a potential customer wouldn't be very useful. The Opportunity table also has a N:N relationship with the Competitor table. This allows for multiple competitors to be added to the opportunity. You may want to capture this data and create a report that shows the competitors.  
   
 There are other less formal kinds of relationships between rows that are called *connections*. For example, it may be useful to know if two contacts are married, or perhaps they are friends outside of work, or perhaps a contact used to work for another account. Most businesses won't generate reports using this kind of information or require that it is entered, so it's probably not worthwhile to create table relationships. More information: [Configure connection roles](configure-connection-roles.md)
 
@@ -51,8 +51,8 @@ When you look at the solution explorer you might think that there are three type
   
 |Relationship Type|Description|  
 |-----------------------|-----------------|  
-|**1:N (One-to-Many)**|An table relationship where one table row for the **Primary table** can be associated to many other **Related table** rows because of a lookup column on the related table.<br /><br /> When viewing a primary table row you can see a list of the related table rows that are associated with it.<br /><br /> In the Power Apps portal, **Current table** represents the primary table.|  
-|**N:N (Many-to-Many)**|An table relationship that depends on a special **Relationship table**, sometimes called an Intersect table, so that many rows of one table can be related to many rows of another table.<br /><br /> When viewing rows of either table in a N:N relationship you can see a list of any rows of the other table that are related to it.|  
+|**1:N (One-to-Many)**|A table relationship where one table row for the **Primary table** can be associated to many other **Related table** rows because of a lookup column on the related table.<br /><br /> When viewing a primary table row you can see a list of the related table rows that are associated with it.<br /><br /> In the Power Apps portal, **Current table** represents the primary table.|  
+|**N:N (Many-to-Many)**|A table relationship that depends on a special **Relationship table**, sometimes called an Intersect table, so that many rows of one table can be related to many rows of another table.<br /><br /> When viewing rows of either table in a N:N relationship you can see a list of any rows of the other table that are related to it.|  
   
 The **N:1 (many-to-one)** relationship type exists in the user interface because the designer shows you a view grouped by tables. 1:N relationships actually exist *between* tables and refer to each table as either a **Primary/Current table** or **Related table**. The related table, sometimes called the *child* table, has a lookup column that allows storing a reference to a row from the primary table, sometimes called the *parent* table. A N:1 relationship is just a 1:N relationship viewed from the related table.  
  
@@ -132,7 +132,7 @@ For example, if you create a new custom table and add a 1:N table relationship w
 
 Usually this means that for each table pair there is only one parental relationship. There are some cases where the lookup on the related table may allow for a relationship to more than one type of table.
 
-For example, if an table has a Customer lookup that can refer to either a contact or account table. There are two separate parental 1:N table relationships.
+For example, if a table has a Customer lookup that can refer to either a contact or account table. There are two separate parental 1:N table relationships.
 
 Any activity table has a similar set of parental table relationships for tables that can be associated using the regarding lookup column.
 
@@ -148,7 +148,7 @@ Because of parental relationships there are some limitations you should keep in 
 
 Using Reparent and Share cascading behaviors are helpful when you want to provide access to rows across related tables. But there can be a change in process or design that requires a change of the cascading behavior settings.
 
-When an table relationship uses Reparent or Share, and the cascading behavior is changed from **Cascade All** to **Cascade None**, the table relationship prevents any new permission changes from cascading to the related child tables. In addition, inherited permissions that were granted while the cascading behavior was active must be revoked.
+When a table relationship uses Reparent or Share, and the cascading behavior is changed from **Cascade All** to **Cascade None**, the table relationship prevents any new permission changes from cascading to the related child tables. In addition, inherited permissions that were granted while the cascading behavior was active must be revoked.
 
 Inherited access rights cleanup is a system job that cleans up the legacy inherited access rights that remain after the cascading behavior is changed from **Cascade All** to **Cascade None**. This cleanup will not affect any user that was directly granted access to an table, but will remove access from anyone who received access through inheritance only.
 

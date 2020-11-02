@@ -99,8 +99,8 @@ When creating a column, **Data type** provides the following choices:
 |Option|Description|
 |--|--|
 |**Single Line of Text**|This column can contain up to 4,000 text characters. You can set a maximum length to be less than this. This column has several format options that will change the presentation of the text.  More information: [Single line of text options](#single-line-of-text-options)|
-|**Option Set**|Displays a list of options where one can be selected. More information: [Option set column options](#option-set-column-options)|
-|**MultiSelect Option Set**|Displays a list of options where more than one can be selected. More information: [Option set column options](#option-set-column-options)|
+|**Option Set**|Displays a list of options where one can be selected. More information: [Choice column options](#option-set-column-options)|
+|**MultiSelect Option Set**|Displays a list of options where more than one can be selected. More information: [Choice column options](#option-set-column-options)|
 |**Two Options**|Displays a list of options where one of two can be selected.<br /><br /> Two option columns don’t provide format options at the column level. But when you add one to the form you can choose to display them as radio buttons, a check box, or a select list.|
 |**Image**|Displays a single image per row in the application. Each table can have one image column. Image columns are always named `tableImage`.|
 |**Whole Number**|Integers with a value between -2,147,483,648 and 2,147,483,647 can be in this column.  This column has options that change depending on how the column is presented. More information: [Whole number options](#whole-number-options)|
@@ -127,7 +127,7 @@ The single line of text data type has the following format options:
 
 You can also set a **Maximum length** to so that the system will not allow text values longer than you specify.
 
-### Option set column options
+### Choice column options
 
 Fields that provide a set of options can include their own set of *local* options or refer to a common set of *global* options that can be used by multiple columns.
 

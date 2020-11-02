@@ -189,7 +189,7 @@ Each type of number column has absolute minimum and maximum values. You can set 
 For **Floating Point Number** and **Decimal Number** data types, you can specify a number of  **Decimal places**.
 
 
-## Option Set column options
+## Choice column options
 
 Fields that provide a set of options can include their own set of *local* options or refer to a common set of *global* options that can be used by multiple columns.
 
