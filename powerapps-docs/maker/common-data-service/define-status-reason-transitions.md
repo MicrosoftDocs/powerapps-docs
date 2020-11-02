@@ -39,7 +39,7 @@ Status reason transitions are an optional additional level of filtering to defin
 
 ## What is the connection between Status and Status Reason columns?  
 
-tables that can have different status values have two columns that capture this data:  
+Tables that can have different status values have two columns that capture this data:  
   
 |Display Name|Description|  
 |------------------|-----------------|  
@@ -84,6 +84,6 @@ The screenshot below provides an example that meets the following requirements:
 ### See Also  
 
 [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-column-solution-explorer.md)<br />
-[table metadata > table states](/powerapps/developer/common-data-service/table-metadata#table-states)<br />
+[Table metadata > Table states](/powerapps/developer/common-data-service/table-metadata#table-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 

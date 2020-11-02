@@ -22,12 +22,12 @@ search.app:
 You can delete custom tables, but you can't delete standard tables. Notice that you can't delete a custom table while it has one or more dependent components. More information: [Delete a table that has dependencies](#delete-an-table-that-has-dependencies)
 
 > [!WARNING]
-> When you delete an table, you delete both the table definition and all data that the table contains. tables and the data within them can't be recovered if deleted.
+> When you delete a table, you delete both the table definition and all data that the table contains. Tables and the data within them can't be recovered if deleted.
 
 ## Delete a custom table
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** in the left navigation pane, open the solution that contains the custom table you want to delete, and then select it.
 
-    ![table Details](./media/data-platform-cds-create-table/tablelist.png "table List")
+    ![Table Details](./media/data-platform-cds-create-entity/entitylist.png "Table List")
 
 2. On the command bar select **Remove**, and then select from the following choices:  
    - **Remove from this solution**. Removes the table from the solution. You can still access the table from the Default Solution. 
@@ -45,7 +45,7 @@ There are two ways that you can remove a dependency:
 ### Remove a dependency
 To find the dependencies for a component, see [View dependencies for a component](view-component-dependencies.md). 
 
-Next, remove the component. For example, if you have a business process flow that references a table you want to delete, edit the business process flow to remove that table. Once the business process flow no longer references that table, the table will no longer appear in the show dependencies list and can be deleted. More information: [Delete a custom table](#delete-a-custom-table)   
+Next, remove the component. For example, if you have a business process flow that references a table you want to delete, edit the business process flow to remove that table. Once the business process flow no longer references that table, the table will no longer appear in the show dependencies list and can be deleted. More information: [Delete a custom table](#delete-a-custom-entity)   
 
 > [!IMPORTANT]
 > Removing the dependency, can cause the component to no longer work. For example, removing a table from a model-driven app may cause the model-driven app to no longer work. 
