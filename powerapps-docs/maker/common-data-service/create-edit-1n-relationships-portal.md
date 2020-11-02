@@ -61,8 +61,8 @@ Depending on your choice you will see either:
 
 |Type|Panel|
 |--|--|
-|**Many-to-one**|![Many to one relationship panel](media/many-to-one-relationship-panel.png)|
-|**One-to-many**|![One to many relationship panel](media/one-to-many-relationship-panel.png)|
+|**Many-to-one**|<img src = "media/many-to-one-relationship-panel.png" alt = "Many to one relationship panel" width = "308" height = "725"> |
+|**One-to-many**|<img src = "media/one-to-many-relationship-panel.png" alt = "One to many relationship panel" width = "308" height = "725">|
 
 Choose the **Related table** for the relationship you want to create between the two tables. 
 
@@ -71,8 +71,7 @@ Choose the **Related table** for the relationship you want to create between the
 
 Once you select the table you can edit the details of the relationship. In this example, multiple contact table rows can be associated with a single account.
 
-> [!div class="mx-imgBorder"] 
-> ![One to many relationship account and contact](media/One-to-many-account-contact.png)
+<img src = "media/One-to-many-account-contact.png" alt = "One to many relationship account and contact" width = "308" height = "725">
 
 You can edit the default values provided before you save. Select **More options** to view the **Relationship name** and **Lookup column description** values
 

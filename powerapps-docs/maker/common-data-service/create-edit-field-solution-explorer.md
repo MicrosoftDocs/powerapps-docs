@@ -99,11 +99,11 @@ When creating a column, **Data type** provides the following choices:
 |Option|Description|
 |--|--|
 |**Single Line of Text**|This column can contain up to 4,000 text characters. You can set a maximum length to be less than this. This column has several format options that will change the presentation of the text.  More information: [Single line of text options](#single-line-of-text-options)|
-|**Choice**|Displays a list of options where one can be selected. More information: [Choice column options](#option-set-column-options)|
-|**MultiSelect Choice**|Displays a list of options where more than one can be selected. More information: [Choice column options](#option-set-column-options)|
+|**Choice**|Displays a list of options where one can be selected. More information: [Choice column options](#choice-column-options)|
+|**MultiSelect Choice**|Displays a list of options where more than one can be selected. More information: [Choice column options](#choice-column-options)|
 |**Yes/No**|Displays a list of options where one of two can be selected.<br /><br /> Yes/No columns don’t provide format options at the column level. But when you add one to the form you can choose to display them as radio buttons, a check box, or a select list.|
 |**Image**|Displays a single image per row in the application. Each table can have one image column. Image columns are always named `tableImage`.|
-|**Whole Number**|Integers with a value between -2,147,483,648 and 2,147,483,647 can be in this column.  This column has options that change depending on how the column is presented. More information: [Whole number options](#whole-number-options)|
+|**Whole Number**|Integers with a value between -2,147,483,648 and 2,147,483,647 can be in this column.  This column has options that change depending on how the column is presented. More information: [Whole number options](#whole-number-choices)|
 |**Floating Point Number**|Up to 5 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
 |**Decimal Number**|Up to 10 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
 |**Currency**|Monetary values between -922,337,203,685,477 and 922,337,203,685,477 can be in this column. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization. More information: [Using currency columns](types-of-fields.md#using-currency-columns)|

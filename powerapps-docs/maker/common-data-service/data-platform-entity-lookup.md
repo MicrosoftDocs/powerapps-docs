@@ -33,7 +33,7 @@ Additionally, you can set advanced cascading behaviors on many-to-one and one-to
 
 To add a lookup relation to an table, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
 2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
@@ -57,7 +57,7 @@ To add a lookup relation to an table, create a relation under the **Relationship
 
 To add a One-to-many relationship, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
 2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
@@ -83,7 +83,7 @@ To add a One-to-many relationship, create a relation under the **Relationships**
 ## Add a Many-to-many relationship
 To add a Many-to-many relationship, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
 2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
