@@ -97,7 +97,7 @@ The only columns you can edit are **Lookup column display name** and **Lookup co
 
 ## Delete relationships
 
-While [viewing table relationships](#view-entity-relationships), select the relationship you want to delete.
+While [viewing table relationships](#view-table-relationships), select the relationship you want to delete.
 
 ![Delete table relationship](media/delete-entity-relationship-portal.png)
 
@@ -110,7 +110,7 @@ Deleting the relationship will delete the lookup column on the related table.
 
 ### See also
 
-[Create and edit relationships between tables](create-edit-table-relationships.md)<br />
+[Create and edit relationships between tables](create-edit-entity-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Edit a column](create-edit-field-portal.md#edit-a-column)

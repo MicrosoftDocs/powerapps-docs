@@ -52,7 +52,7 @@ To enable visualizations for a hierarchy you must connect the hierarchy to a qui
 
 The hierarchy settings are associated to a table in the solution explorer. 
 
-1. While [viewing tables](../common-data-service/create-edit-tables-solution-explorer.md#view-tables), select **Hierarchy Settings**.
+1. While [viewing tables](../common-data-service/create-edit-entities-solution-explorer.md#view-tables), select **Hierarchy Settings**.
 2. If an existing hierarchy setting exists you can edit it. Otherwise click **New** to create a new one.
     
     > [!NOTE]
@@ -61,7 +61,7 @@ The hierarchy settings are associated to a table in the solution explorer.
 
 1. Set the data in the following columns:
 
-|Field|Description|
+|Column|Description|
 |--|--|
 |**Name**|*Required.* Add a unique name for the hierarchy settings. This is typically just the name of the table. This value will include the solution publisher's customization prefix.|
 |**Default Quick View Form**|*Required.* Choose from an existing Quick View form or choose **Create New** to open the Quick View form editor to create a new one.|

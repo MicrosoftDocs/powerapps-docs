@@ -80,7 +80,7 @@ Once saved, there nothing that can be changed using [Power Apps portal](https://
 
 While [viewing table relationships](#view-many-to-many-table-relationships), select the relationship you want to delete.
 
-![Delete table relationship](media/delete-table-relationship-portal.png)
+![Delete table relationship](media/delete-entity-relationship-portal.png)
 
 You can use the **Delete relationship** command from the command bar or from the row context menu when you select the ellipses (**...**).
 

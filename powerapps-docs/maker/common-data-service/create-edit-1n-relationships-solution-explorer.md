@@ -60,18 +60,18 @@ Either option will open a form like the following. The difference is whether the
 
 The following columns must be set in order to save the table relationship:
 
-|Required Field|Description|
+|Required Column|Description|
 |--|--|
 |**Primary table**|This table will be the target type for the lookup column created on the related table.|
 |**Related table**|This table will have a lookup column added to associate the table rows with the primary table row.|
 |**Name**|The name of the relationship. A value will be generated based on the primary and related table values. This column will be prefixed by the customization prefix of the solution publisher.|
-|**Lookup Field Display Name**|The localizable text for the lookup column that will be created for the related table. This is usually the same as the display name for the primary table. <br /> This can be changed later.|
-|**Lookup Field Name**|The name of the lookup column that will be created on the related table. A value will be generated based on the **Lookup Field Display Name**. This column will be prefixed by the customization prefix of the solution publisher.|
+|**Lookup Column Display Name**|The localizable text for the lookup column that will be created for the related table. This is usually the same as the display name for the primary table. <br /> This can be changed later.|
+|**Lookup Column Name**|The name of the lookup column that will be created on the related table. A value will be generated based on the **Lookup Column Display Name**. This column will be prefixed by the customization prefix of the solution publisher.|
 
 You can click ![Save table relationship button](media/save-entity-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
 
 > [!NOTE]
-> If either the **Name** or **Lookup Field Name** values already exist in the system you will get an error when you save. Edit the values so that they are unique and try again.
+> If either the **Name** or **Lookup Column Name** values already exist in the system you will get an error when you save. Edit the values so that they are unique and try again.
 
 ## Edit relationships
 
@@ -80,11 +80,11 @@ While [viewing table relationships](#view-table-relationships), select the table
 > [!NOTE]
 > The publisher of a managed solution can prevent some customizations of relationships that are part of their solution.
 
-### table relationship properties
+### Table relationship properties
 
 These properties are about the relationship.
 
-|Field|Description|
+|Column|Description|
 |--|--|
 |**Searchable**|Whether this relationship should be visible within Advanced Find in model-driven apps. Select **No** if this is a relationship that isn't important for your business.|
 |**Hierarchical**|This option is enabled only for self-referential relationships. Whether the table should be considered to define a hierarchy for the table.<br />**Important**: Once you set this property rollup columns, processes, and views may be configured to depend on this property. If you later change this value those capabilities that depend on the hierarchy will not work. <br />More information: [Define and query hierarchically related data](define-query-hierarchical-data.md)|
@@ -93,17 +93,17 @@ These properties are about the relationship.
 
 These are the properties of the lookup column created on the related table. The properties can be edited here or by editing the lookup column directly. Some column properties are not editable from the relationship. More information: [Edit a column](create-edit-field-solution-explorer.md#edit-a-column)
 
-|Field|Description|
+|Column|Description|
 |--|--|
 |**Display Name**|The localizable text for the lookup column that will be created for the related table.|
-|**Field requirement**|Whether the column must have data before a form in a model-driven app can be saved. More information: [Field Requirement options](create-edit-field-solution-explorer.md#column-requirement-options)|
+|**Column requirement**|Whether the column must have data before a form in a model-driven app can be saved. More information: [Column Requirement options](create-edit-field-solution-explorer.md#column-requirement-options)|
 |**Description**|Enter instructions to the user about what the column is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the column.|
 
 ### Navigation Pane Item for Primary table
 
 From the primary table you can navigate to see related rows. This data is used by model-driven apps to control how the related table rows are displayed. These settings can also be edited using the form editor.
 
-|Field|Description|
+|Column|Description|
 |--|--|
 |**Display Option**|How the related table list should be displayed. More information: [Display Options](#display-options)|
 |**Custom Label**|Specify the localizable text to be used instead of the plural name when you select **Use Custom Label** as the **Display Option** .|
@@ -156,7 +156,7 @@ These are the behaviors available to be configured.
 
 These are the actions that can trigger certain behaviors:
 
-|Field|Description|Options|
+|Column|Description|Options|
 |--|--|--|
 |**Assign**|What should happen when the primary table row is assigned to someone else?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 |**Reparent**|What should happen when the lookup value of a related table in a parental relationship is changed?<br />More information: [Parental table relationships](#parental-table-relationships)|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
