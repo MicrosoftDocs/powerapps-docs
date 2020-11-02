@@ -79,7 +79,7 @@ You must enter data and confirm default values set for the following properties 
 
 You can set additional options depending on your choice of **Data type**. More information: [Field Data types](#column-data-types)
 
-## Field Requirement options
+## Column Requirement options
 
 There are three column requirement options:
 - **Optional**: The row can be saved even if there is no data in this column.

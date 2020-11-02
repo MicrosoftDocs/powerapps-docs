@@ -72,7 +72,7 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
     5.  Select **Save** and then close the **Web Resource** window.  
   
-8.  With the **Default Solution** pop-up window still open, expand the **Components** > **tables** tree and locate the table that you want to customize.  
+8.  With the **Default Solution** pop-up window still open, expand the **Components** > **Tables** tree and locate the table that you want to customize.  
   
 9. Expand your table and select its **Views** icon.  
   
@@ -163,13 +163,13 @@ function displayIconTooltip(rowData, userLCID) {
 In the grid list view, custom icons applied to the table primary column replace the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
-> ![Primary column replaces default icon in the custom icon view](media/mobile-primary-column-custom-icon-display.png "Primary column replaces default icon in the custom icon view")
+> ![Primary column replaces default icon in the custom icon view](media/mobile-primary-field-custom-icon-display.png "Primary column replaces default icon in the custom icon view")
 
 ### Other columns 
 In the grid list view, custom icons applied to a column that isn't the table primary column display as a secondary icon in addition to the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
-> ![Not a table primary column custom icon view](media/card-form-not-primary-column.png "Not a table primary column custom icon view")
+> ![Not a table primary column custom icon view](media/card-form-not-primary-field.png "Not a table primary column custom icon view")
 
 ### Card forms
 Custom icons replace the default system-generated icon when the view is configured to use a card form.
@@ -177,7 +177,6 @@ Custom icons replace the default system-generated icon when the view is configur
 > [!div class="mx-imgBorder"] 
 > ![Card view custom icon view](media/card-view-icon-display.png "Card view custom icon view")
 
- 
 ### See also
 
 [Understand model-driven app views](../model-driven-apps/create-edit-views.md)

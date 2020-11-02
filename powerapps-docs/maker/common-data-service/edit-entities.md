@@ -23,15 +23,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Edit an table
+# Edit a table
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 You can edit any custom table that you create. Standard tables or managed custom tables may have limitations about changes you can make.  
 
-You can perform the following edits to an table:
+You can perform the following edits to a table:
 
-- table properties. More information: [Edit table properties using Power Apps](#edit-table-properties-using-power-apps)
+- Table properties. More information: [Edit table properties using Power Apps](#edit-table-properties-using-power-apps)
 
 - **Columns**. More information:  [Create and edit columns for Common Data Service](create-edit-fields.md)
   
@@ -63,7 +63,7 @@ In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkina
 For a description of the properties available to edit see, [Create an table](data-platform-create-entity.md#create-a-table).
 
 > [!NOTE]
-> Once enabled, not all table properties can be changed. More information: [table options that can only be enabled](#table-options-that-can-only-be-enabled)
+> Once enabled, not all table properties can be changed. More information: [Table options that can only be enabled](#table-options-that-can-only-be-enabled)
 >
 > The name of many standard tables may also be used in other text in the application. To locate and change text where this name was used, see [Edit standard table messages](edit-system-entity-messages.md)
 
@@ -91,7 +91,7 @@ By default, all custom tables in the web application have the same icons. You ca
   
 <a name="BKMK_EnableOptions"></a>  
  
-###  table options that can only be enabled  
+###  Table options that can only be enabled  
 
 The following table lists the options that you can enable for an table, but after these items are enabled, they can’t be disabled:  
 

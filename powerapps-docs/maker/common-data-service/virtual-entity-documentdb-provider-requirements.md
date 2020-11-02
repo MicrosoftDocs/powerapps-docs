@@ -62,9 +62,9 @@ This table indicates the data type mappings for the SQL API document in the *Ord
 |`name`|Single Line of Text|
 |`quantity`|Whole Number|
 |`orderid`|Single line of text|
-|`ordertype`|Option Set|
+|`ordertype`|Choice|
 |`amount`|Decimal Number or Currency|
-|`delivered`|Two Options|
+|`delivered`|Yes/No|
 |`datetimeoffset`|Date and Time|
 
 > [!NOTE]
@@ -93,7 +93,7 @@ SQL query filtering supports the following operators.
 ![Select the Azure Cosmos DB for SQL API Data Provider.](media/createdatasource.png)
 1. Enter the following information, and then select **SAVE & CLOSE**.
 
-    |Field|Description|
+    |Column|Description|
     |--|--|
     |**Name**|Type a name that describes the data source.|
     |**Collection Name**|The name of the Azure Cosmos DB *database* containing the collection you want to surface in a virtual table.  |

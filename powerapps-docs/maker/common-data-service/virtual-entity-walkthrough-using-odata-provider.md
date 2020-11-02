@@ -104,7 +104,7 @@ Part of the name of any custom table you create is the customization prefix. Thi
     |**Activities**|selected|
 
 1. Next to **Areas that display this table**, select **Service**, and then select **Save** (but don’t close the table form).
-    ![Ticket table definition](media/ticket-table.png)
+    ![Ticket table definition](media/ticket-entity.png)
 
 ## Create the columns for the virtual table
 
@@ -116,12 +116,12 @@ On the left navigation pane of the **table: Ticket** page, select **Columns**. A
 
 1. Open the **new_ticketid** column, and change the following attribute with the value indicated here:
     **External Name**: TicketID
-    ![TicketID column](media/ticketid-column.png)
+    ![TicketID column](media/ticketid-field.png)
 1. Select **Save and Close**.
 1. Open the **new_name** column, and change the following attributes to have the values indicated here:
     - **Display Name**: Title
     - **External Name**: Title
-    ![Title column](media/title-column.png)
+    ![Title column](media/title-field.png)
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Ticket** page enter the following information:
 
@@ -135,7 +135,7 @@ On the left navigation pane of the **table: Ticket** page, select **Columns**. A
     |**Minimum Value**|0|
     |**Maximum Value**|4|
 
-  ![Severity column](media/severity-column.png)
+  ![Severity column](media/severity-field.png)
 1. Select **Save and Close**.
 
 ## Add the columns to the Main form
@@ -167,7 +167,7 @@ On the left navigation pane of the **table: Ticket** page, select **Columns**. A
 
     ![All Tickets view](media/all-tickets-view.png)
 1. Open a **Ticket** row to view the form that includes the **Title** and **Severity** columns for the given row.
-    ![Ticket row](media/ticket-row.png)
+    ![Ticket row](media/ticket-record.png)
 
 ### See also
 
