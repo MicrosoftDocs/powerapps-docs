@@ -24,11 +24,11 @@ search.app:
   - D365CE
 ---
 
-# Fields overview
+# Columns overview
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Fields define the individual data items that can be used to store information in an table. Create new columns to capture data when existing standard tables don’t have columns that meet your requirements. After you create a new column, be sure to include it on the appropriate forms and views for the table so that they are available in your app.
+Columns define the individual data items that can be used to store information in a table. Create new columns to capture data when existing standard tables don’t have columns that meet your requirements. After you create a new column, be sure to include it on the appropriate forms and views for the table so that they are available in your app.
 
 ## See also
 [Types of columns](types-of-columns.md)

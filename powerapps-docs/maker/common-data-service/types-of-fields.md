@@ -38,9 +38,9 @@ The names used for types depend on the designer used. [Power Apps portal](https:
 |**Image**|**Image**|`ImageType`|
 |**Language**|**Whole Number**<br />*Language* Format|`IntegerType`|
 |**Lookup**|**Lookup**|`LookupType`|
-|**Multi Select Option Set**|**MultiSelect Option Set**|`MultiSelectPicklistType`|
+|**Multi Select Choice**|**MultiSelect Field**|`MultiSelectPicklistType`|
 |**Multiline Text**|**Multiple Lines of Text**|`MemoType`|
-|**Option Set**|**Option Set**|`PicklistType`|
+|**Choice**|**Option Set**|`PicklistType`|
 |**Owner**|**Owner**|`OwnerType`|
 |**Phone**|**Single Line of Text**<br />*Phone* Format|`StringType`|
 |**Status Reason**|**Status Reason**|`StatusType`|
@@ -49,18 +49,18 @@ The names used for types depend on the designer used. [Power Apps portal](https:
 |**Text**|**Single Line of Text**<br />*Text* Format|`StringType`|
 |**Ticker Symbol**|**Single Line of Text**<br />Ticker Symbol Format|`StringType`|
 |**Timezone**|**Whole Number**<br />*Time Zone* Format|`IntegerType`|
-|**Two Options**|**Two Options**|`BooleanType`|
+|**Yes/No**|**Two Options**|`BooleanType`|
 |**Unique Identifier**|**Unique Identifier** or **Primary Key**|`UniqueidentifierType`|
 |**URL**|**Single Line of Text**<br />*URL* Format|`StringType`|
 |**Whole Number**|**Whole Number**<br />*None* Format|`IntegerType`|
 
 For more descriptions for each type you can add or edit, see the article for the corresponding designer:
- - [Create and edit columns for Common Data Service using Power Apps portal: Field Data types](create-edit-column-portal.md#column-data-types)
- - [Create and edit columns for Common Data Service using Power Apps solution explorer: Field Data types](create-edit-column-solution-explorer.md#column-data-types)
+ - [Create and edit columns for Common Data Service using Power Apps portal: Column Data types](create-edit-field-portal.md#column-data-types)
+ - [Create and edit columns for Common Data Service using Power Apps solution explorer: Column Data types](create-edit-field-solution-explorer.md#column-data-types)
 
-For more information about how column data types are defined in the API, see [Attribute metadata](/powerapps/developer/common-data-service/table-attribute-metadata)
+For more information about how column data types are defined in the API, see [Attribute metadata](/powerapps/developer/common-data-service/entity-attribute-metadata)
 
-## Field Types used by the system
+## Column Types used by the system
 
 There are some columns used by the system that you cannot add using the designer.
 
@@ -200,7 +200,7 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 3. On the toolbar, select **New**. 
 4. In the **Type** section in the **Data Type** dropdown list select **Image**. 
 5. Enter a **Display Name**, such as *Custom table image*. 
-6. Complete the remaining columns as appropriate. Notice that the **Name**, **Field Requirement**, and **Searchable** columns can’t be changed. Select **Save and Close**. 
+6. Complete the remaining columns as appropriate. Notice that the **Name**, **Column Requirement**, and **Searchable** columns can’t be changed. Select **Save and Close**. 
 7. On the table definition next to the **Primary Image** property make sure the value is set to the custom image you created in the previous step. If it's not select it.  
     > [!div class="mx-imgBorder"] 
     > ![Primary image property selected](media/primary-image-property.png "Primary image property selected")
@@ -249,7 +249,7 @@ The default **Maximum file size** is 32 MB and the largest size you can set is 1
 >[!NOTE]
 > Once the maximum file size has been saved, it can't be changed.
 
-To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, on the **Columns** tab select **Add Field**, and then in the **Field properties** pane, select **File** as the **Data type**. 
+To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, on the **Columns** tab select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
 
 > [!div class="mx-imgBorder"] 
 > ![File data type](media/file-data-type.png)

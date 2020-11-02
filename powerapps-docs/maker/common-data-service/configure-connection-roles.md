@@ -98,7 +98,7 @@ Once you add the connection role to your solution, you can edit it wherever it i
 
 Set the following columns:
 
-|Field|Description|
+|Column|Description|
 |--|--|
 |**Name**|(Required) The text describing the connection.|
 |**Connection Role Category**|A group describing the category of the connection. More information: [Connection Role Category values](#connection-role-category-values)|
@@ -116,7 +116,7 @@ The default **Connection Role Category** values are:
 - Sales Team
 - Service
 
-You can add new categories or modify existing ones by editing the **Category** global choice . More information: [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)
+You can add new categories or modify existing ones by editing the **Category** global choice. More information: [Create and edit global choices for Common Data Service (picklists)](create-edit-global-option-sets.md)
 
 #### Select row types
 
@@ -149,7 +149,7 @@ If more than one matching connection role is configured, those connection roles 
 
 ### See also
 <!-- This is in the basics guide. It needs to be migrated -->
-[Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-rows)<br />
+[Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
 [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)<br />
 [Create and edit relationships between tables](create-edit-entity-relationships.md)
 

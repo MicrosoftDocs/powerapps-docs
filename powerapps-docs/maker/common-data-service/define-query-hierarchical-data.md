@@ -44,23 +44,21 @@ With Common Data Service, hierarchical data structures are supported by *self-re
 
 When a self-referential one-to-many (1:N) relationship exists, in the relationship definition the **Hierarchical** option is available to be set to **Yes**.
 
-![Hierarchical setting in relationship definition](media/self-referential-relationship-car-solution-explorer.png)
+![Hierarchical setting in relationship definition](media/self-referential-relationship-widget.png)
 
-To query the data as a hierarchy, you must set one of the table’s one-to-many (1:N) self-referential relationships as hierarchical. This can only be done using solution explorer.
-
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+To query the data as a hierarchy, you must set one of the table’s one-to-many (1:N) self-referential relationships as hierarchical. 
 
 To turn the hierarchy on:  
   
 1. While [viewing 1:N relationships](create-edit-1n-relationships-solution-explorer.md#view-table-relationships), select the self-referential relationship  you want to edit.
-2. In the **Relationship definition**, set **Hierarchical** to **Yes**.  
+2. In the relationship definition, set **Hierarchical** to **Yes**.  
   
 > [!NOTE]
-> - Some of the out-of the-box (1:N) relationships can’t be customized. This will prevent you from setting those relationships as hierarchical.  
+> - Some of the out-of the-box (1:N) relationships can’t be customized. This will prevent you from setting those relationships as hierarchical.
 > - You can specify a hierarchical relationship for the system self-referential relationships. This includes the 1:N self-referential relationships of system type,  such as the "contact_master_contact" relationship.  
 
 > [!IMPORTANT]
-> You can have multiple self-referential relationships, but only one relationship per table can be defined as the hierarchical relationship. If you try to change the setting once applied you will get a warning :
+> You can have multiple self-referential relationships, but only one relationship per table can be defined as the hierarchical relationship. If you try to change the setting once applied you will get a warning:
 >
 > - **When disabling:** If you turn off the hierarchy setting for this relationship, all rollup definitions, processes, and views that use this hierarchy won't work. Do you want to continue? 
 > - **When enabling:** If you enable the hierarchy setting for this relationship, all rollup definitions that use the existing hierarchy will become invalid. Do you want to continue?
