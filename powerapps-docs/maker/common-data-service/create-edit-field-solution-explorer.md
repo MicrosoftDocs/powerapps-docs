@@ -92,7 +92,7 @@ There are three column requirement options:
 
 ## Column Data types
 
-There are many different types of columns, but you can only create some of them. For more information about all types of columns, see [Types of columns and column data types](types-of-columns.md).
+There are many different types of columns, but you can only create some of them. For more information about all types of columns, see [Types of columns and column data types](types-of-fields.md).
 
 When creating a column, **Data type** provides the following choices:
 
@@ -104,13 +104,13 @@ When creating a column, **Data type** provides the following choices:
 |**Yes/No**|Displays a list of options where one of two can be selected.<br /><br /> Yes/No columns don’t provide format options at the column level. But when you add one to the form you can choose to display them as radio buttons, a check box, or a select list.|
 |**Image**|Displays a single image per row in the application. Each table can have one image column. Image columns are always named `tableImage`.|
 |**Whole Number**|Integers with a value between -2,147,483,648 and 2,147,483,647 can be in this column.  This column has options that change depending on how the column is presented. More information: [Whole number options](#whole-number-options)|
-|**Floating Point Number**|Up to 5 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-columns.md#using-the-right-type-of-number)|
-|**Decimal Number**|Up to 10 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-columns.md#using-the-right-type-of-number)|
-|**Currency**|Monetary values between -922,337,203,685,477 and 922,337,203,685,477 can be in this column. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization. More information: [Using currency columns](types-of-columns.md#using-currency-columns)|
+|**Floating Point Number**|Up to 5 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
+|**Decimal Number**|Up to 10 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
+|**Currency**|Monetary values between -922,337,203,685,477 and 922,337,203,685,477 can be in this column. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization. More information: [Using currency columns](types-of-fields.md#using-currency-columns)|
 |**Multiple Lines of Text**|This column can contain up to 1,048,576 text characters. You can set the maximum length to be less than this. When you add this column to a model-driven app form, you can specify the dimensions of the column.|
 |**Date and Time**|Use these columns to store time values. You can store values as early as 1/1/1753 12:00 AM. More information: [Date and Time options](#date-and-time-options)|
-|**Lookup**|A column that allows setting a reference to a single row of a specific type of table. Some system lookup columns behave differently. More information: [Different types of lookups](types-of-columns.md#different-types-of-lookups)|
-|**Customer**|A lookup column that you can use to specify a customer, which can be an account or contact.  More information: [Different types of lookups](types-of-columns.md#different-types-of-lookups)|
+|**Lookup**|A column that allows setting a reference to a single row of a specific type of table. Some system lookup columns behave differently. More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)|
+|**Customer**|A lookup column that you can use to specify a customer, which can be an account or contact.  More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)|
 
 ### Single line of text options
 
@@ -181,7 +181,7 @@ You can also set specific **Behavior** for Date Time columns in the **Advanced o
 - **Date only**: This behavior is available for the **Date Only** type. Displays values without time zone conversion. Use this for data like birthdays and anniversaries.
 - **Time zone independent**:  Displays values without time zone conversion.
 
-More information: [Behavior and format of the Date and Time column](behavior-format-date-time-column.md)
+More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
 
 ## Column Type
 
@@ -196,13 +196,13 @@ Simple means that the column is not a calculated or rollup column.
 With a calculated column you can enter a formula to assign a value to the column. 
 These data types can be set to calculated columns: **Currency**, **Date and Time**,  **Decimal Number**,  **Multi Select Choice**, **Choice**, **Single line of text**, **Yes/No**, and **Whole Number**.
 
-More information: [Define calculated columns to automate manual calculations](define-calculated-columns.md)
+More information: [Define calculated columns to automate manual calculations](define-calculated-fields.md)
 
 ### Rollup
 
 With a rollup column you can set aggregation functions that will run periodically to set a number value for the column. These data types can be set to calculated columns: **Currency**, **Date and Time**, **Decimal Number**, and **Whole Number**.
 
-More information: [Define rollup columns that aggregate values](define-rollup-columns.md)
+More information: [Define rollup columns that aggregate values](define-rollup-fields.md)
 
 ## Save new column
 
@@ -272,9 +272,9 @@ IME mode does not restrict the characters that users can enter. For example, whe
 -	**Inactive**: Power Apps will deactivate the IME initially. You can activate it later if desired.
 
 ### See also  
-[Create and edit columns for Common Data Service](create-edit-columns.md)<br />
+[Create and edit columns for Common Data Service](create-edit-fields.md)<br />
 [Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)<br />
-[Types of columns and column data types](types-of-columns.md)<br />
-[Define calculated columns to automate manual calculations](define-calculated-columns.md)<br />
-[Define rollup columns that aggregate values](define-rollup-columns.md)<br />
-[Behavior and format of the Date and Time column](behavior-format-date-time-column.md)
+[Types of columns and column data types](types-of-fields.md)<br />
+[Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
+[Define rollup columns that aggregate values](define-rollup-fields.md)<br />
+[Behavior and format of the Date and Time column](behavior-format-date-time-field.md)

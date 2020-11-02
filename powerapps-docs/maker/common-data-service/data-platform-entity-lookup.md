@@ -125,7 +125,7 @@ As you model your business data by creating custom tables or when using existing
     > [!div class="mx-imgBorder"] 
     > ![Custom behavior](./media/data-platform-cds-newrelationship/advanced-2.png "Custom behavior")
 
-For more information on defaults and custom behaviors: [Configure table relationship behavior](table-relationship-behavior.md).
+For more information on defaults and custom behaviors: [Configure table relationship behavior](entity-relationship-behavior.md).
 
 
 
