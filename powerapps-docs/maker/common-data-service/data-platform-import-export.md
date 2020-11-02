@@ -86,7 +86,7 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 3. When the **Mapping Status** column shows **Completed** in green, select **Import** in the top-right corner.
 4. When you get the **Import completed successfully** message, it shows the total inserts and updates.
 
-## Ensure uniqueness when you import data into an table from Excel or CSV
+## Ensure uniqueness when you import data into a table from Excel or CSV
 
 Common Data Service tables use a primary key to uniquely identify rows within a Common Data Service table table. The primary key for a Common Data Service table is a globally unique identifier (GUID). It forms the default basis for row identification. Data operations, like importing data into Common Data Service tables, surface the default primary keys.
 

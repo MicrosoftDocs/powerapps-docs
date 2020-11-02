@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-When an table is configured to have a hierarchical self-referential relationship you can configure visualizations using that hierarchy. More information: [Define and query hierarchically related data](../common-data-service/define-query-hierarchical-data.md)
+When a table is configured to have a hierarchical self-referential relationship you can configure visualizations using that hierarchy. More information: [Define and query hierarchically related data](../common-data-service/define-query-hierarchical-data.md)
 
 The  tables that have visualizations available by default include [Account](/powerapps/developer/common-data-service/reference/tables/account), [Position](/powerapps/developer/common-data-service/reference/tables/position), and [User](/powerapps/developer/common-data-service/reference/tables/systemuser). In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that are related using the hierarchical relationship.  
 > [!div class="mx-imgBorder"] 
@@ -50,7 +50,7 @@ To enable visualizations for a hierarchy you must connect the hierarchy to a qui
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
-The hierarchy settings are associated to an table in the solution explorer. 
+The hierarchy settings are associated to a table in the solution explorer. 
 
 1. While [viewing tables](../common-data-service/create-edit-tables-solution-explorer.md#view-tables), select **Hierarchy Settings**.
 2. If an existing hierarchy setting exists you can edit it. Otherwise click **New** to create a new one.

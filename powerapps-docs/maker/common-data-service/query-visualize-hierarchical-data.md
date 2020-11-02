@@ -87,7 +87,7 @@ For some tables, such as account and user, the visualizations are provided out-o
  A few other out-of the-box system tables can be enabled for a hierarchy. These tables include `Case`, `Contact`, `Opportunity`, `Order`, `Quote`, `Campaign`, and `Team`. All custom tables can be enabled for a hierarchy.  
   
 > [!TIP]
->  If an table can be enabled for a hierarchy:  
+>  If a table can be enabled for a hierarchy:  
 >  In solution explorer, expand the table that you want. You will see the table component called **Hierarchy Settings**. The tables that can’t be enabled for a hierarchy don’t have this component, with the exception of the Dynamics 365 Sales Territory table. Although **Hierarchy Settings** appears for the Sales Territory table, the table can’t be enabled for a hierarchy.  
   
  Important things to remember when you create visualizations:  

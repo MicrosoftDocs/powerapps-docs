@@ -28,7 +28,7 @@ search.app:
  
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can map attributes between tables that have an table relationship. This lets you set default values for a row that is created in the context of another row. 
+You can map attributes between tables that have a table relationship. This lets you set default values for a row that is created in the context of another row. 
 
 ## Easier way to create new rows in model-driven apps
 

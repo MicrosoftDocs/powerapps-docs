@@ -21,7 +21,7 @@ search.app:
 Data in one table often relates to data in another table. For example, you might have a **Teachers** table and a **Class** table, and the **Class** table might have a lookup relation to the **Teachers** table to show which teacher teaches the class. You can use a lookup column to show data from the **Teachers** table. This is commonly referred to as a lookup column.
 
 ## Define a relationship
-You can create several types of relationships from one table to another (or between an table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table. Some common relationship types are:
+You can create several types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table. Some common relationship types are:
 
 * **Many-to-one** - In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class has a single classroom. This is the most common type of relationship and is shown in the column list as a **Lookup column**
 * **One-to-many** - In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, a single teacher, teaches many classes.
@@ -44,7 +44,7 @@ To add a lookup relation to an table, create a relation under the **Relationship
     > [!div class="mx-imgBorder"] 
     > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-1.png "Many to One Relationship")
 
-5. After selecting an table the Look up columns will be shown on the Primary table, they will default with the table's name (in this example Classroom) but you can change them if needed.
+5. After selecting a table the Look up columns will be shown on the Primary table, they will default with the table's name (in this example Classroom) but you can change them if needed.
 
     ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to One Relationship")
 
@@ -67,7 +67,7 @@ To add a One-to-many relationship, create a relation under the **Relationships**
     > [!div class="mx-imgBorder"] 
     > ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-1.png "One to Many Relationship")
 
-5. After selecting an table the Look up columns will be shown on the Primary table, they will default with the tables name (in this example Class) but you can change them if needed.
+5. After selecting a table the Look up columns will be shown on the Primary table, they will default with the tables name (in this example Class) but you can change them if needed.
 
     > [!NOTE]
     > In the case of a One-to-many relationships, the Look up column will be created on the related table, not the table you currently have selected. If you need the lookup on the current table, please create a Many-to-one relationship.
@@ -130,7 +130,7 @@ For more information on defaults and custom behaviors: [Configure table relation
 
 
 ## Use a lookup column in an app
-If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from an table that contains a lookup column, it appears as a **Drop down** control that contains data from the **Primary name** column of the table.
+If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from a table that contains a lookup column, it appears as a **Drop down** control that contains data from the **Primary name** column of the table.
 
 ## Add 1:N and N:N relationships for canvas apps
 Use the **Relate** function to link two rows through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in Power Apps](../canvas-apps/functions/function-relate-unrelate.md)

@@ -166,7 +166,7 @@ common usage scenarios for dataflows:
 
 -   [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
 
--   [Add data to an table in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
+-   [Add data to a table in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
 
 -   [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
 

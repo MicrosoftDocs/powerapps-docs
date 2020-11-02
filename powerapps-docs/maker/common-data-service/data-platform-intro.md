@@ -74,7 +74,7 @@ Building an app typically involves data from more than one source, while this ca
 * **Transform and import data using PowerQuery** &ndash; Transforming data when importing into the Common Data Service can be done through PowerQuery from many online data sources, a common tool used across Excel and Power BI.
 * **One time import of data** &ndash; Simple import and export of Excel and CSV files can be used for a one time or infrequent import of data into the Common Data Service.
 
-For more information about integrating data into the Common Data Service, see [Add data to an table in Common Data Service by using Power Query](data-platform-cds-newtable-pq.md).
+For more information about integrating data into the Common Data Service, see [Add data to a table in Common Data Service by using Power Query](data-platform-cds-newtable-pq.md).
 
 ## Interacting with tables
 When you develop an app, you can use standard tables, custom tables, or both. Common Data Service provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.

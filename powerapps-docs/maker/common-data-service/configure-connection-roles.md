@@ -31,7 +31,7 @@ When people set a connection between two rows, they can also add a description a
 Anyone with write access to the **Connection Role** table can establish which connection are available for people to use.
 
 > [!IMPORTANT]
-> For an table to be available as a row type for a new or existing connection role, the **Enable connections** property must be enabled for the table. 
+> For a table to be available as a row type for a new or existing connection role, the **Enable connections** property must be enabled for the table. 
 
 ## Enable connection roles for a table
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 

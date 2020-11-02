@@ -215,7 +215,7 @@ For example, if you create a new custom table and add a 1:N table relationship w
 
 Usually this means that for each table pair there is only one parental relationship. There are some cases where the lookup on the related table may allow for a relationship to more than one type of table.
 
-For example, if an table has a Customer lookup that can refer to either a contact or account table. There are two separate parental 1:N table relationships.
+For example, if a table has a Customer lookup that can refer to either a contact or account table. There are two separate parental 1:N table relationships.
 
 Any activity table has a similar set of parental table relationships for tables that can be associated using the regarding lookup column.
 

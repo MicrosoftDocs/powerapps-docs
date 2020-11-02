@@ -1,5 +1,5 @@
 ---
-title: Add data to an table in Common Data Service by using Power Query | Microsoft Docs
+title: Add data to a table in Common Data Service by using Power Query | Microsoft Docs
 description: Step-by-step instructions for how to use Power Query to add data to a new or existing table in Common Data Service from another data source.
 author: mllopis
 manager: kfile
@@ -16,10 +16,10 @@ search.app:
   - D365CE
 ---
 
-# Add data to an table in Common Data Service by using Power Query
+# Add data to a table in Common Data Service by using Power Query
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In this procedure, you'll create an table in [Common Data Service](data-platform-intro.md) and fill that table with data from an OData feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
+In this procedure, you'll create a table in [Common Data Service](data-platform-intro.md) and fill that table with data from an OData feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
 
 * SQL Server
 * Salesforce
@@ -91,7 +91,7 @@ Before you start to follow this topic:
 > [!WARNING]
 > If you use Power Query to add data to an existing table, all data in that table will be overwritten.
 
-If you select **Load to existing table**, you can specify an table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Common Data Service ships. Under **Field mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
+If you select **Load to existing table**, you can specify a table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Common Data Service ships. Under **Field mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
 
   > [!div class="mx-imgBorder"] 
   > ![Specify the name of the new table](./media/data-platform-cds-newtable-pq/existing-table.png)

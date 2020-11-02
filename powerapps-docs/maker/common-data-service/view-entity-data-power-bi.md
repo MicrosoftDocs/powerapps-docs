@@ -72,7 +72,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
     **Connect**.
 
     The environment appears in the Power BI Desktop **Navigator** window. Expand
-    it to view the table tables available to analyze. Select an table to view
+    it to view the table tables available to analyze. Select a table to view
     its data.
 
     > [!div class="mx-imgBorder"] 

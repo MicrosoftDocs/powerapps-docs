@@ -1,6 +1,6 @@
 ---
-title: Manage custom columns in an table | Microsoft Docs
-description: Walkthrough of how to create, read, update, and delete custom columns in an table in Common Data Service.
+title: Manage custom columns in a table | Microsoft Docs
+description: Walkthrough of how to create, read, update, and delete custom columns in a table in Common Data Service.
 author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps

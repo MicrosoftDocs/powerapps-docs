@@ -21,7 +21,7 @@ search.app:
 
 Choices allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice columns in other applications. Similar to tables, there are both standard Option sets, and the ability to create custom Choices to use within your app.
 
-Choices can be created in two ways, either from the **Option Sets** list within the portal or directly within an table while creating a column. For more information on how to create an table, see [Create an table](data-platform-create-table.md).
+Choices can be created in two ways, either from the **Option Sets** list within the portal or directly within a table while creating a column. For more information on how to create an table, see [Create an table](data-platform-create-table.md).
 
 ## Creating an Choice while adding a column
 

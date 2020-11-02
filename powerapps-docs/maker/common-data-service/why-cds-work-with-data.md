@@ -67,7 +67,7 @@ More information: [Types of columns](/powerapps/maker/common-data-service/types-
 
 Data in one table often relates to data in another table. table relationships define how rows can be related to each other in the Common Data Service model.
 
-Common Data Service provides easy-to-use visual designers to define the different types of relationships from one table to another (or between an table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table.
+Common Data Service provides easy-to-use visual designers to define the different types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table.
 
 ![Account table relationships](media/table-relationships.png "Account table relationships")
 

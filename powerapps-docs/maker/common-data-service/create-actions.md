@@ -129,7 +129,7 @@ The following table describes the action process argument types.
 |Decimal|A number value with decimal precision. Used when precision is extremely important.|  
 |Table|A row for the specified table. When you select table, the drop-down list is enabled and allows you to select the table type.|  
 |entityCollection|A collection of table rows.|  
-|entityReference|An object that contains the name, ID, and type of an table row that uniquely identifies it. When you select entityReference, the drop-down list is enabled and allows you to select the table type.|  
+|entityReference|An object that contains the name, ID, and type of a table row that uniquely identifies it. When you select entityReference, the drop-down list is enabled and allows you to select the table type.|  
 |Float|A number value with decimal precision. Used when data comes from a measurement that isn’t absolutely precise.|  
 |Integer|A whole number.|  
 |Money|A value that stores data about an amount of money.|  

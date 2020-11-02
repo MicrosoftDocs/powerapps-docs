@@ -1,6 +1,6 @@
 ---
 title: "Create and edit tables using solution explorer | MicrosoftDocs"
-description: "Learn how to create an table using solution explorer"
+description: "Learn how to create a table using solution explorer"
 ms.custom: ""
 ms.date: 02/26/2019
 ms.reviewer: ""
@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can easily create an table using the Power Apps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing tables using the Solution Explorer.
+You can easily create a table using the Power Apps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing tables using the Solution Explorer.
 
 ## Open solution explorer
 
@@ -121,16 +121,16 @@ As someone with the system administrator security role, you can delete custom ta
 >  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).  
   
 > [!NOTE]
-> The only way to recover data from an table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
+> The only way to recover data from a table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
 
 While [viewing tables](#view-tables), click the ![Delete command](media/delete.gif) command in the toolbar.
 
-While viewing an table use the delete command in the menu bar.
+While viewing a table use the delete command in the menu bar.
 
 ![Delete command](media/delete-custom-entity-solution-explorer.png)
 
 > [!WARNING]
-> Deleting an table that contains data will remove all the data. This data can only be retrieved by backup of the database.
+> Deleting a table that contains data will remove all the data. This data can only be retrieved by backup of the database.
 
 > [!NOTE]
 > If there are any table dependencies you will get a **Cannot Delete Component** error with a **Details** link you can use to discover information about why the table cannot be deleted. In most cases, this will be because of a dependency that has to be removed. 
@@ -141,7 +141,7 @@ While viewing an table use the delete command in the menu bar.
 
 ### Identify table dependencies
 
-You can identify dependencies that will prevent an table from being deleted before you try to delete it. 
+You can identify dependencies that will prevent a table from being deleted before you try to delete it. 
 
 1. In the solution explorer with the table selected, click **Show Dependencies** in the command bar.
 

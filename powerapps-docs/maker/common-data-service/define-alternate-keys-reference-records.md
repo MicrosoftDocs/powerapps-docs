@@ -84,7 +84,7 @@ Only these kinds of columns can be used to create alternate keys:
 
 ### Number of keys
 
-You can define up to five different keys for an table.
+You can define up to five different keys for a table.
  
 ### Valid key size
 

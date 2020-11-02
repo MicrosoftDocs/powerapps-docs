@@ -100,7 +100,7 @@ After you've set up data export to Azure Data Lake Storage Gen2 in your subscrip
 - On the Power Apps maker portal **Export to data lake** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
 - On the Power Apps maker portal **tables** area, select **…** next to an table, and then select the linked data lake where you want to export table data. 
 
-   ![Select an table for export](media/select-table-export.png "Select an table for export")
+   ![Select a table for export](media/select-table-export.png "Select a table for export")
 
 To unlink all linked tables, on the Power Apps maker portal **Export to data lake** area, select **Unlink data lake**.
 

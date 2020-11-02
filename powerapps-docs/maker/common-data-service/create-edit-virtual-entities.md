@@ -31,7 +31,7 @@ A virtual table is a custom table in Common Data Service that has columns contai
   
 In the past, to integrate the disparate data sources you would need to create a connector to move data or develop a custom plug-in, either client or server-side. However, with virtual tables you can connect directly with an external data source  at runtime so that specific data from the external data source is available in an environment, without the need for data replication.  
 
-Virtual tables are made up of three main components, a *data provider*, a *data source* row, and a *virtual table*. The data provider consists of plug-ins and a data source table. The data source is an table row in Common Data Service, which includes metadata that represents the schema of the connection parameters. Each virtual table references a data source in the table definition.  
+Virtual tables are made up of three main components, a *data provider*, a *data source* row, and a *virtual table*. The data provider consists of plug-ins and a data source table. The data source is a table row in Common Data Service, which includes metadata that represents the schema of the connection parameters. Each virtual table references a data source in the table definition.  
   
 Common Data Service includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
   

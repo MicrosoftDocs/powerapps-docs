@@ -115,7 +115,7 @@ Use floating point numbers when you store data that represents fractions or valu
  
 ## Using currency columns
 
-Currency columns allow for an organization to configure multiple currencies that can be used for rows in the organization. When organizations have multiple currencies, they typically want to be able to perform calculations to provide values using their base currency. When you add a currency column to an table that has no other currency columns, two additional columns are added:  
+Currency columns allow for an organization to configure multiple currencies that can be used for rows in the organization. When organizations have multiple currencies, they typically want to be able to perform calculations to provide values using their base currency. When you add a currency column to a table that has no other currency columns, two additional columns are added:  
   
 - A lookup column called **Currency** that you can set to any active currency configured for your organization. You can configure multiple active currencies for your organization in **Settings** > **Business Management** > **Currencies**. There you can specify the currency and an exchange rate with the base currency set for your organization. If you have multiple active currencies, you can add the currency column to the form and allow people to specify which currency should be applied to money values for this row. This will change the currency symbol that is shown for the currency columns in the form.  
   
@@ -145,7 +145,7 @@ However, you should be aware that not every lookup behaves this way. There are s
 |-----------------|-----------------|  
 |**Simple**|Allows for a single reference to a specific table. All custom lookups are this type.|  
 |**Customer**|Allows for a single reference to either an account or a contact row.|  
-|**Owner**|Allows for a single reference to either a team or a user row. All team or user-owned tables have one of these. More information: [Add an table as a lookup option in your app](../model-driven-apps/team-table-lookup.md)|  
+|**Owner**|Allows for a single reference to either a team or a user row. All team or user-owned tables have one of these. More information: [Add a table as a lookup option in your app](../model-driven-apps/team-table-lookup.md)|  
 |**PartyList**|Allows for multiple references to multiple tables. These lookups are found on the Email table **To** and **Cc** columns. They’re also used in the Phone and Appointment tables.|  
 |**Regarding**|Allows for a single reference to multiple tables. These lookups are found in the regarding column used in activities.|  
 
@@ -154,7 +154,7 @@ However, you should be aware that not every lookup behaves this way. There are s
 ## Image columns  
 Use image columns to display a single image per row in the application. Each table can have one image column. You can add an image column to custom tables but not to standard tables. Some standard tables have image columns defined.
   
-Even though an table has an image column, displaying that image in a model-driven app requires that you enable two settings. 
+Even though a table has an image column, displaying that image in a model-driven app requires that you enable two settings. 
 - The standard table definition **Primary Image** property value must be set to **Default Image**. Custom tables require a custom image column. Then, you can select that image column for the **Primary Image** value in the custom table definition.  
 - The table form where the image is to be displayed must have the **Show image in the form** property enabled.  
   
@@ -181,7 +181,7 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
 By default,	when an app user adds an image to display to a form or canvas app, the image displayed is the thumbnail image. To display a full image for a canvas app, see [Display a full-sized image on a canvas app form](../canvas-apps/display-full-image-on-form.md).
 
 
-### Add an image column to an table using the Power Apps site
+### Add an image column to a table using the Power Apps site
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -223,7 +223,7 @@ App users can now select the image to display on the form. When an app user open
 > If the row is a new row that hasn’t been saved the error Invalid Argument is returned when you try to change the image. 
 
 ### Change the image for a row
-Once an table form has an image column, app users can change the image for a given row. 
+Once a table form has an image column, app users can change the image for a given row. 
 
 1. Open the app that includes the table form, and then select the image on the form. 
    > [!div class="mx-imgBorder"] 

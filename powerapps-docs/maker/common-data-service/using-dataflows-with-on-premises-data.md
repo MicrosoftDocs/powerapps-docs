@@ -134,7 +134,7 @@ gateway service for your network, see [Understand on-premises data gateways](../
 
 - [Create and use dataflows in Power Apps](create-and-use-dataflows.md)
 
-- [Add data to an table in Common Data Service by using Power Query](data-platform-cds-newtable-pq.md)
+- [Add data to a table in Common Data Service by using Power Query](data-platform-cds-newtable-pq.md)
 
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
 

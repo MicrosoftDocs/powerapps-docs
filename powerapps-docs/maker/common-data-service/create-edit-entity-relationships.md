@@ -25,7 +25,7 @@ search.app:
 # Table relationships 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Table relationships define how rows can be related to each other in the database. At the simplest level, adding a lookup column to an table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table row.  
+Table relationships define how rows can be related to each other in the database. At the simplest level, adding a lookup column to a table creates a new 1:N (one-to-many) relationship between the two tables and lets you put that lookup column in a form. With the lookup column, users can associate multiple *child* rows of that table to a single *parent* table row.  
   
 Beyond simply defining how rows can be related to other rows, 1:N table relationships also provide data to address the following questions:  
   

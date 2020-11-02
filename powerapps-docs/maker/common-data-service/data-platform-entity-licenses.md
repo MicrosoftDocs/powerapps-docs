@@ -35,7 +35,7 @@ To know whether or not you added complex business logic to your tables, review t
 
 ### Impacting license requirements when adding complex business logic
 
-App makers can add code plug-ins and real-time workflows to tables within Common Data Service, but doing so could change the license requirements for users of apps already deployed. App makers should be cautious when adding complex business logic to an table and should first check which apps use the table and whether users of those apps have the appropriate licenses.
+App makers can add code plug-ins and real-time workflows to tables within Common Data Service, but doing so could change the license requirements for users of apps already deployed. App makers should be cautious when adding complex business logic to a table and should first check which apps use the table and whether users of those apps have the appropriate licenses.
 
 ## Restricted tables
 

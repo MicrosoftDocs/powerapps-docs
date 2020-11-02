@@ -169,7 +169,7 @@ In the grid list view, custom icons applied to the table primary column replace 
 In the grid list view, custom icons applied to a column that isn't the table primary column display as a secondary icon in addition to the default system-generated icon. 
 
 > [!div class="mx-imgBorder"] 
-> ![Not an table primary column custom icon view](media/card-form-not-primary-column.png "Not an table primary column custom icon view")
+> ![Not a table primary column custom icon view](media/card-form-not-primary-column.png "Not a table primary column custom icon view")
 
 ### Card forms
 Custom icons replace the default system-generated icon when the view is configured to use a card form.

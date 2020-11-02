@@ -1,6 +1,6 @@
 ---
-title: "Edit an table in Power Apps | MicrosoftDocs"
-description: "Learn the different ways that an table can be edited"
+title: "Edit a table in Power Apps | MicrosoftDocs"
+description: "Learn the different ways that a table can be edited"
 ms.custom: ""
 ms.date: 10/20/2020
 ms.reviewer: ""
@@ -68,15 +68,15 @@ For a description of the properties available to edit see, [Create an table](dat
 > The name of many standard tables may also be used in other text in the application. To locate and change text where this name was used, see [Edit standard table messages](edit-system-entity-messages.md)
 
 
-## Edit an table using Solution Explorer
+## Edit a table using Solution Explorer
 
-When editing an table using the solution explorer you need to find the unmanaged solution that you want to add it to.
+When editing a table using the solution explorer you need to find the unmanaged solution that you want to add it to.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
   
 <a name="BKMK_ChangetableName"></a> 
   
-## Change the name of an table  
+## Change the name of a table  
 
 Use the **Display Name** and **Plural Name** properties to change the name of the table in the application. 
 

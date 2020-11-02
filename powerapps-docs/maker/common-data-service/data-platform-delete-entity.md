@@ -1,5 +1,5 @@
 ---
-title: Delete an table | Microsoft Docs
+title: Delete a table | Microsoft Docs
 description: Step-by-step instructions for how to delete a custom table and clear all data in Power Apps
 author: lancedMicrosoft
 manager: kvivek
@@ -19,7 +19,7 @@ search.app:
 # Delete an table
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can delete custom tables, but you can't delete standard tables. Notice that you can't delete a custom table while it has one or more dependent components. More information: [Delete an table that has dependencies](#delete-an-table-that-has-dependencies)
+You can delete custom tables, but you can't delete standard tables. Notice that you can't delete a custom table while it has one or more dependent components. More information: [Delete a table that has dependencies](#delete-an-table-that-has-dependencies)
 
 > [!WARNING]
 > When you delete an table, you delete both the table definition and all data that the table contains. tables and the data within them can't be recovered if deleted.
@@ -35,8 +35,8 @@ You can delete custom tables, but you can't delete standard tables. Notice that 
 
 3. In the dialog box that appears, select **Delete** to delete the table. If you receive a message that the *component cannot be deleted because it is referenced by other components*, see the next section in this article. 
 
-## Delete an table that has dependencies
-You can’t delete an table while it has a dependency on another component, such as a business process flow or a model-driven app. 
+## Delete a table that has dependencies
+You can’t delete a table while it has a dependency on another component, such as a business process flow or a model-driven app. 
 
 There are two ways that you can remove a dependency: 
 - Reconfigure the component to remove the dependency. 
@@ -45,10 +45,10 @@ There are two ways that you can remove a dependency:
 ### Remove a dependency
 To find the dependencies for a component, see [View dependencies for a component](view-component-dependencies.md). 
 
-Next, remove the component. For example, if you have a business process flow that references an table you want to delete, edit the business process flow to remove that table. Once the business process flow no longer references that table, the table will no longer appear in the show dependencies list and can be deleted. More information: [Delete a custom table](#delete-a-custom-table)   
+Next, remove the component. For example, if you have a business process flow that references a table you want to delete, edit the business process flow to remove that table. Once the business process flow no longer references that table, the table will no longer appear in the show dependencies list and can be deleted. More information: [Delete a custom table](#delete-a-custom-table)   
 
 > [!IMPORTANT]
-> Removing the dependency, can cause the component to no longer work. For example, removing an table from a model-driven app may cause the model-driven app to no longer work. 
+> Removing the dependency, can cause the component to no longer work. For example, removing a table from a model-driven app may cause the model-driven app to no longer work. 
 
 For more information, see these articles: 
 - [Edit or remove artifacts](../model-driven-apps/add-edit-app-components.md#edit-or-remove-artifacts)

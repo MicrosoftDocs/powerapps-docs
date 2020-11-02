@@ -88,7 +88,7 @@ To view rollup jobs:
 
 ### Calculate Rollup Field 
 
-**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup columns in the existing rows for a specified table. There is only one **Calculate Rollup Field** job per table. The incremental calculations mean that the **Calculate Rollup Field** job processes the rows that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup column on an table is created and deleted when the last rollup column is deleted.  
+**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup columns in the existing rows for a specified table. There is only one **Calculate Rollup Field** job per table. The incremental calculations mean that the **Calculate Rollup Field** job processes the rows that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup column on a table is created and deleted when the last rollup column is deleted.  
 
 ## Online recalculation option
 The rollup column on the form displays a calculator image, rollup value, and the time of the last calculation. To recaclulate, select the calculator image, and then select the **Recalculate** button that appears. 
