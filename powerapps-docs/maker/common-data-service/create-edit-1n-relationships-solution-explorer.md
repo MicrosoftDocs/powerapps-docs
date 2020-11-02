@@ -42,7 +42,7 @@ Part of the name of any custom relationship you create is the customization pref
 
 In solution explorer, expand **tables** an select an table. Within that table, select either **1:N Relationships** or **N:1 Relationships**
 
-![View table relationships](media/view-1n-table-relationships-solution-explorer.png)
+![View table relationships](media/view-1n-entity-relationships-solution-explorer.png)
 
 ## Create relationships
 
@@ -53,7 +53,7 @@ While [viewing table relationships](#view-table-relationships), select either **
 
 Either option will open a form like the following. The difference is whether the **Primary table** or **Related table** column is set.
 
-![New one-to-many relationship form](media/new-1n-table-relationship-form-solution-explorer.png)
+![New one-to-many relationship form](media/new-1n-entity-relationship-form-solution-explorer.png)
 
 - With **1:N Relationship**, the **Primary table** is set to the current table
 - With **N:1 Relationship**, the **Related table** is set to the current table
@@ -68,7 +68,7 @@ The following columns must be set in order to save the table relationship:
 |**Lookup Field Display Name**|The localizable text for the lookup column that will be created for the related table. This is usually the same as the display name for the primary table. <br /> This can be changed later.|
 |**Lookup Field Name**|The name of the lookup column that will be created on the related table. A value will be generated based on the **Lookup Field Display Name**. This column will be prefixed by the customization prefix of the solution publisher.|
 
-You can click ![Save table relationship button](media/save-table-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
+You can click ![Save table relationship button](media/save-entity-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
 
 > [!NOTE]
 > If either the **Name** or **Lookup Field Name** values already exist in the system you will get an error when you save. Edit the values so that they are unique and try again.
@@ -91,12 +91,12 @@ These properties are about the relationship.
 
 ### Lookup column
 
-These are the properties of the lookup column created on the related table. The properties can be edited here or by editing the lookup column directly. Some column properties are not editable from the relationship. More information: [Edit a column](create-edit-column-solution-explorer.md#edit-a-column)
+These are the properties of the lookup column created on the related table. The properties can be edited here or by editing the lookup column directly. Some column properties are not editable from the relationship. More information: [Edit a column](create-edit-field-solution-explorer.md#edit-a-column)
 
 |Field|Description|
 |--|--|
 |**Display Name**|The localizable text for the lookup column that will be created for the related table.|
-|**Field requirement**|Whether the column must have data before a form in a model-driven app can be saved. More information: [Field Requirement options](create-edit-column-solution-explorer.md#column-requirement-options)|
+|**Field requirement**|Whether the column must have data before a form in a model-driven app can be saved. More information: [Field Requirement options](create-edit-field-solution-explorer.md#column-requirement-options)|
 |**Description**|Enter instructions to the user about what the column is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the column.|
 
 ### Navigation Pane Item for Primary table
@@ -230,7 +230,7 @@ Because of parental relationships there are some limitations you should keep in 
 
 ### See also
 
-[Create and edit relationships between tables](create-edit-table-relationships.md)<br />
+[Create and edit relationships between tables](create-edit-entity-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps portal](create-edit-1n-relationships-portal.md)<br />
 [Create N:N (many-to-many) relationships](create-edit-nn-relationships.md)

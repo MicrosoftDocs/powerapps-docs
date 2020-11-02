@@ -41,10 +41,10 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 > [!NOTE]
 > You can also create new table relationship in your environment using the following:
-> - In model-driven apps, select **New Field** from the form editor and create a *Lookup* column. <br />More information: [Add a column to a form](../model-driven-apps/add-column-form.md)
-> - Create a new Lookup column for the related table. <br />More information: [Create and edit columns](create-edit-columns.md)
+> - In model-driven apps, select **New Field** from the form editor and create a *Lookup* column. <br />More information: [Add a column to a form](../model-driven-apps/add-field-form.md)
+> - Create a new Lookup column for the related table. <br />More information: [Create and edit columns](create-edit-fields.md)
 > - Import a solution that contains the definition of the table relationship. <br />More information: [Import, update, and export solutions](import-update-export-solutions.md)
-> - Use Power Query to create new tables and fill them with data. <br />More information: [Add data to a table in Common Data Service by using Power Query](data-platform-cds-newtable-pq.md).
+> - Use Power Query to create new tables and fill them with data. <br />More information: [Add data to a table in Common Data Service by using Power Query](data-platform-cds-newentity-pq.md).
 > - A developer can use [Metadata services](../../developer/common-data-service/metadata-services.md) to write a program to create and update table relationships. <br />More information: [Customize table relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-table-relationship-metadata)
 
 Information in this topic will help you choose which designer you can use. 
@@ -68,10 +68,10 @@ You should use the Power Apps portal to create and edit 1:N (one-to-many) or N:1
 
 ### See also
 
-[Create and edit relationships between tables](create-edit-table-relationships.md)<br />
+[Create and edit relationships between tables](create-edit-entity-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps portal](create-edit-1n-relationships-portal.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
-[Developer documentation: Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-table-relationship-metadata)<br />
-[Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/table-relationship-eligibility)
+[Developer documentation: Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
+[Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)
 
 

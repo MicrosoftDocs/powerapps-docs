@@ -26,7 +26,7 @@ search.app:
 
 With Common Data Service you can define **connections** between table rows without creating a table relationship. In model-driven apps people can establish a named link between rows to establish less a formal relationship which doesn't justify creating an actual table relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocal, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
 
-When people set a connection between two rows, they can also add a description and additional information such as start and end dates for the relationship. More information: [Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-rows)
+When people set a connection between two rows, they can also add a description and additional information such as start and end dates for the relationship. More information: [Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-fields)
 
 Anyone with write access to the **Connection Role** table can establish which connection are available for people to use.
 
@@ -151,6 +151,6 @@ If more than one matching connection role is configured, those connection roles 
 <!-- This is in the basics guide. It needs to be migrated -->
 [Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-rows)<br />
 [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)<br />
-[Create and edit relationships between tables](create-edit-table-relationships.md)
+[Create and edit relationships between tables](create-edit-entity-relationships.md)
 
 

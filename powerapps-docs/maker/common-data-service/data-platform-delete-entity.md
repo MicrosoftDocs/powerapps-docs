@@ -19,7 +19,7 @@ search.app:
 # Delete an table
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can delete custom tables, but you can't delete standard tables. Notice that you can't delete a custom table while it has one or more dependent components. More information: [Delete a table that has dependencies](#delete-an-table-that-has-dependencies)
+You can delete custom tables, but you can't delete standard tables. Notice that you can't delete a custom table while it has one or more dependent components. More information: [Delete a table that has dependencies](#delete-a-table-that-has-dependencies)
 
 > [!WARNING]
 > When you delete a table, you delete both the table definition and all data that the table contains. Tables and the data within them can't be recovered if deleted.
@@ -45,7 +45,7 @@ There are two ways that you can remove a dependency:
 ### Remove a dependency
 To find the dependencies for a component, see [View dependencies for a component](view-component-dependencies.md). 
 
-Next, remove the component. For example, if you have a business process flow that references a table you want to delete, edit the business process flow to remove that table. Once the business process flow no longer references that table, the table will no longer appear in the show dependencies list and can be deleted. More information: [Delete a custom table](#delete-a-custom-entity)   
+Next, remove the component. For example, if you have a business process flow that references a table you want to delete, edit the business process flow to remove that table. Once the business process flow no longer references that table, the table will no longer appear in the show dependencies list and can be deleted. More information: [Delete a custom table](#delete-a-custom-table)   
 
 > [!IMPORTANT]
 > Removing the dependency, can cause the component to no longer work. For example, removing a table from a model-driven app may cause the model-driven app to no longer work. 
