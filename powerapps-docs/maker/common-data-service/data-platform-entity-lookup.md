@@ -35,7 +35,7 @@ To add a lookup relation to an table, create a relation under the **Relationship
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-table.md)
+2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
 3. Click **Relationships**
 
@@ -59,7 +59,7 @@ To add a One-to-many relationship, create a relation under the **Relationships**
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-table.md)
+2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
 3. Click **Relationships**
 
@@ -85,7 +85,7 @@ To add a Many-to-many relationship, create a relation under the **Relationships*
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-table.md)
+2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
 3. Click **Relationships**
 

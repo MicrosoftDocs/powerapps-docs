@@ -56,7 +56,7 @@ When you look at the solution explorer you might think that there are three type
   
 The **N:1 (many-to-one)** relationship type exists in the user interface because the designer shows you a view grouped by tables. 1:N relationships actually exist *between* tables and refer to each table as either a **Primary/Current table** or **Related table**. The related table, sometimes called the *child* table, has a lookup column that allows storing a reference to a row from the primary table, sometimes called the *parent* table. A N:1 relationship is just a 1:N relationship viewed from the related table.  
  
-## table relationship behavior
+## Table relationship behavior
 Behaviors  for related tables is important because it helps ensure data integrity and can automate business processes for your company.
 
 ### Preserve data integrity
@@ -94,7 +94,7 @@ There are several kinds of behaviors that can be applied when certain actions oc
 ### Actions
 These are the actions that can trigger certain behaviors:
 
-|Field|Description|Options|
+|Column|Description|Options|
 |--|--|--|
 |**Assign**|What should happen when the primary table row is assigned to someone else?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 |**Reparent**|What should happen when the lookup value of a related table in a parental relationship is changed?<br />More information: [Parental table relationships](#parental-table-relationships)|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|

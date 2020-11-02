@@ -27,8 +27,8 @@ search.app:
 Solution explorer provides one way to Create and edit columns for Common Data Service.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Create and edit columns for Common Data Service](create-edit-columns.md)
-- [Create and edit columns for Common Data Service using Power Apps portal](create-edit-column-portal.md)
+- [Create and edit columns for Common Data Service](create-edit-fields.md)
+- [Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)
   
 ## Open solution explorer
 
@@ -41,7 +41,7 @@ Part of the name of any custom column you create is the customization prefix. Th
 
 With solution explorer open, under **Components** expand **tables** and select the table where you want to create or edit the column.
 
-![Solution explorer columns view](media/solution-explorer-columns-view.png)
+![Solution explorer columns view](media/solution-explorer-fields-view.png)
 
 You can select the following views: 
 
@@ -56,28 +56,28 @@ You can select the following views:
 While viewing columns, in the command bar, click **New** which will open the new column form.  Some standard tables or custom tables that are included in a managed solution might not allow you to add new columns.
 
 > [!NOTE]
-> For model-driven apps you can also create a new column from the form editor. In the form editor, below the **Field Explorer** click **New Field** to create a new column. More information: [Add a column to a form](../model-driven-apps/add-column-form.md)
+> For model-driven apps you can also create a new column from the form editor. In the form editor, below the **Column Explorer** click **New Column** to create a new column. More information: [Add a column to a form](../model-driven-apps/add-field-form.md)
 
-![Solution explorer new column form](media/solution-explorer-new-column-form.png)
+![Solution explorer new column form](media/solution-explorer-new-field-form.png)
 
 You must enter data and confirm default values set for the following properties before you save.
 
 |Property|Description|
 |--|--|
 |**Display Name**|The text to be displayed for the column in the user interface. You can change this after you save, but the value you enter will generate a value for the **Name** column.|
-|**Field Requirement**|Whether data is required in the column to save the row. More information: [Field Requirement options](#column-requirement-options)|
+|**Column Requirement**|Whether data is required in the column to save the row. More information: [Column Requirement options](#column-requirement-options)|
 |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a column is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for the current solution's publisher prepended to it.|
 |**Searchable**|Set this to **No** for columns for the table that you don’t use.  When a column is searchable it appears in **Advanced Find** in model-driven apps and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
-|**Field Security**|Whether the data in the column is secured at a higher level than the table. More information: [Field level security to control access](/dynamics365/customer-engagement/admin/column-level-security)|
+|**Column Security**|Whether the data in the column is secured at a higher level than the table. More information: [Column level security to control access](/dynamics365/customer-engagement/admin/field-level-security)|
 |**Auditing**|Whether data for this column will be audited when the table is enabled for auditing. More information: [Audit data and user activity for security and compliance](/customer-engagement/admin/audit-data-user-activity)|
 |**Description**|Enter instructions to the user about what the column is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the column.|
 |**Appears in global filter in interactive experience**|More information: [Configure interactive experience dashboards](/dynamics365/customer-engagement/customize/configure-interactive-experience-dashboards) |
 |**Sortable in interactive experience dashboard**|More information: [Configure interactive experience dashboards](/dynamics365/customer-engagement/customize/configure-interactive-experience-dashboards)|
-|**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, you cannot change the data type as it may impact the data in your table. More information: [Field Data types](#column-data-types)|
-|**Field type**|Whether the column is **Simple**, **Calculated**, or **Rollup**. More information: [Field Type](#column-type)|
+|**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, you cannot change the data type as it may impact the data in your table. More information: [Column Data types](#column-data-types)|
+|**Column type**|Whether the column is **Simple**, **Calculated**, or **Rollup**. More information: [Column Type](#column-type)|
 |**Format**|How the column will be formatted. The available formatting options depend on the **Data type**.|
 
-You can set additional options depending on your choice of **Data type**. More information: [Field Data types](#column-data-types)
+You can set additional options depending on your choice of **Data type**. More information: [Column Data types](#column-data-types)
 
 ## Column Requirement options
 
@@ -90,7 +90,7 @@ There are three column requirement options:
 > - When a row is saved programmatically using web services, only the SystemRequired columns are enforced. Failure to set a value for SystemRequired columns will return an error.  You can’t set the SystemRequired level of requirement. <br />Setting a column to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the column has no value. The app user is shown an error and prompted to add data to the required column before they can save the row. There are options within the app to override this behavior and allow operation to proceed if needed.
 > - Be careful when you make columns business required. People will resist using the application if they can’t save rows because they lack the correct information to enter into a required column. People may enter incorrect data simply to save the row and get on with their work. You can use business rules or form scripts to change the requirement level as the data in the row changes as people work on it. More information  [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
-## Field Data types
+## Column Data types
 
 There are many different types of columns, but you can only create some of them. For more information about all types of columns, see [Types of columns and column data types](types-of-columns.md).
 
@@ -99,9 +99,9 @@ When creating a column, **Data type** provides the following choices:
 |Option|Description|
 |--|--|
 |**Single Line of Text**|This column can contain up to 4,000 text characters. You can set a maximum length to be less than this. This column has several format options that will change the presentation of the text.  More information: [Single line of text options](#single-line-of-text-options)|
-|**Option Set**|Displays a list of options where one can be selected. More information: [Choice column options](#option-set-column-options)|
-|**MultiSelect Option Set**|Displays a list of options where more than one can be selected. More information: [Choice column options](#option-set-column-options)|
-|**Two Options**|Displays a list of options where one of two can be selected.<br /><br /> Two option columns don’t provide format options at the column level. But when you add one to the form you can choose to display them as radio buttons, a check box, or a select list.|
+|**Choice**|Displays a list of options where one can be selected. More information: [Choice column options](#option-set-column-options)|
+|**MultiSelect Choice**|Displays a list of options where more than one can be selected. More information: [Choice column options](#option-set-column-options)|
+|**Yes/No**|Displays a list of options where one of two can be selected.<br /><br /> Yes/No columns don’t provide format options at the column level. But when you add one to the form you can choose to display them as radio buttons, a check box, or a select list.|
 |**Image**|Displays a single image per row in the application. Each table can have one image column. Image columns are always named `tableImage`.|
 |**Whole Number**|Integers with a value between -2,147,483,648 and 2,147,483,647 can be in this column.  This column has options that change depending on how the column is presented. More information: [Whole number options](#whole-number-options)|
 |**Floating Point Number**|Up to 5 decimal points of precision can be used for values between -100,000,000,000 and -100,000,000,000 can be in this column. You can specify the level of precision and the maximum and minimum values. More information: [Using the right type of number](types-of-columns.md#using-the-right-type-of-number)|
@@ -129,31 +129,31 @@ You can also set a **Maximum length** to so that the system will not allow text 
 
 ### Choice column options
 
-Fields that provide a set of options can include their own set of *local* options or refer to a common set of *global* options that can be used by multiple columns.
+Columns that provide a set of options can include their own set of *local* options or refer to a common set of *global* options that can be used by multiple columns.
 
-Using a global choice  is valuable when you find yourself creating the same set of options for multiple columns. With a global choice , you only need to maintain the set of options in one place. 
+Using a global choice  is valuable when you find yourself creating the same set of options for multiple columns. With a global choice, you only need to maintain the set of options in one place. 
 
-When you choose **Multi Select Option Set** or **Option Set** data type the solution explorer designer will provide the option for a local choice  by default.
+When you choose **Multi Select Choice** or **Choice** data type the solution explorer designer will provide the option for a local choice by default.
 
 ![Configure a local choice ](media/local-option-set-solution-explorer.png)
 
-#### Configure local options
+#### Configure local choices
 
 [!INCLUDE [cc_configure-option-set-options-solution-explorer](../../includes/cc_configure-option-set-options-solution-explorer.md)]
 
-#### Use Existing Option Set
+#### Use Existing Choice
 
-If you to choose **Use Existing Option Set** the designer will display a list of existing *global choice s* and include an **Edit** and **New** buttons to configure the global options that this column should use.
+If you to choose **Use Existing Choice** the designer will display a list of existing *global choices* and include an **Edit** and **New** buttons to configure the global choices that this column should use.
 
 ![Configure a global choice ](media/global-option-set-solution-explorer.png)
 
-You can also configure global choice s separately. More information: [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)
+You can also configure global choices separately. More information: [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)
 
 > [!NOTE]
-> If you define every choice  as a global choice  your list of global choice s will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local choice .
+> If you define every choice  as a global choice  your list of global choices will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local choice.
 
 
-### Whole number options
+### Whole number choices
 
 Whole number columns have the following format choices:
 
@@ -183,9 +183,9 @@ You can also set specific **Behavior** for Date Time columns in the **Advanced o
 
 More information: [Behavior and format of the Date and Time column](behavior-format-date-time-column.md)
 
-## Field Type
+## Column Type
 
-You can set a custom column **Field Type** to be a **Simple**, **Calculated**, or a **Rollup** column. 
+You can set a custom column **Column Type** to be a **Simple**, **Calculated**, or a **Rollup** column. 
 
 ### Simple
 
@@ -194,7 +194,7 @@ Simple means that the column is not a calculated or rollup column.
 ### Calculated
 
 With a calculated column you can enter a formula to assign a value to the column. 
-These data types can be set to calculated columns: **Currency**, **Date and Time**,  **Decimal Number**,  **Multi Select Option Set**, **Option Set**, **Single line of text**, **Two Options**, and **Whole Number**.
+These data types can be set to calculated columns: **Currency**, **Date and Time**,  **Decimal Number**,  **Multi Select Choice**, **Choice**, **Single line of text**, **Yes/No**, and **Whole Number**.
 
 More information: [Define calculated columns to automate manual calculations](define-calculated-columns.md)
 
@@ -217,10 +217,10 @@ Once you have configured the column, use one of three commands in the command ba
 
 ## Edit a column 
 
-While [viewing columns](#view-columns), click the column you want to edit. Some standard columns or custom columns that are included in a managed solution might not allow you to edit them.
+While [viewing columns](#view-columns), select the column you want to edit. Some standard columns or custom columns that are included in a managed solution might not allow you to edit them.
 
 > [!NOTE]
-> When editing a form, for any column already added to the form you can double-click the column to display the **Field Properties**. On the **Details** tab, click **Edit**. More information: [Add a column to a form](../model-driven-apps/add-column-form.md)
+> When editing a form, for any column already added to the form you can double-click the column to display the **Column Properties**. On the **Details** tab, click **Edit**. More information: [Add a column to a form](../model-driven-apps/add-field-form.md)
 
 After you make changes to a column, you must publish customizations. 
 
@@ -235,7 +235,7 @@ After you make changes to a column, you must publish customizations.
 
 To edit one or more columns, select the column or columns (using the Shift key) you want to modify and then on the **Actions** toolbar, select **Edit**. 
   
-When you select multiple columns to edit, the **Edit Multiple Fields** dialog box appears. You can edit **Field Requirement**, **Searchable**, and **Auditing**. 
+When you select multiple columns to edit, the **Edit Multiple Columns** dialog box appears. You can edit **Column Requirement**, **Searchable**, and **Auditing**. 
 
 ## Delete a column
 
@@ -254,7 +254,7 @@ With the system administrator security role, you can delete any custom columns t
 
 Select the column in the list. In the **More Actions** menu, select **Show Dependencies**.
 
-![Show dependencies for column](media/check-column-dependencies.png)
+![Show dependencies for column](media/check-field-dependencies.png)
 
 Dependencies are any related use of the column that would prevent it from being deleted. For example, if the column is used in a form or view, you must first remove references to the column in those solution components.  
   
@@ -273,7 +273,7 @@ IME mode does not restrict the characters that users can enter. For example, whe
 
 ### See also  
 [Create and edit columns for Common Data Service](create-edit-columns.md)<br />
-[Create and edit columns for Common Data Service using Power Apps portal](create-edit-column-portal.md)<br />
+[Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)<br />
 [Types of columns and column data types](types-of-columns.md)<br />
 [Define calculated columns to automate manual calculations](define-calculated-columns.md)<br />
 [Define rollup columns that aggregate values](define-rollup-columns.md)<br />
