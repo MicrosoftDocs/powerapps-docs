@@ -30,7 +30,7 @@ A choice (picklist) is a type of column that can be included in an table. It def
   
 You can define an choice  to use a set of options defined within itself (locally) or it can use a set of options defined elsewhere (globally) which can be used by other choice  columns. 
 
-Global choices are useful when you have a standard set of categories that can apply to more than one column. Maintaining two separate choices with the same values is difficult and if they are not synchronized you can see errors, especially if you are mapping table columns in a one-to-many table relationship. More information:  [Mapping table columns](map-table-fields.md)
+Global choices are useful when you have a standard set of categories that can apply to more than one column. Maintaining two separate choices with the same values is difficult and if they are not synchronized you can see errors, especially if you are mapping table columns in a one-to-many table relationship. More information:  [Mapping table columns](map-entity-fields.md)
 
 > [!NOTE]
 > If you define every choice as a global choice your list of global choices will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local choice.

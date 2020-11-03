@@ -18,7 +18,7 @@ search.app:
 # Manage custom columns in an table
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can create and update one or more custom columns in any table. When you create a custom column, you specify a set of properties, such as the column's name, its display name, and the type of data that it will contain. For more information, see [table attribute metadata](../../developer/common-data-service/table-attribute-metadata.md).
+You can create and update one or more custom columns in any table. When you create a custom column, you specify a set of properties, such as the column's name, its display name, and the type of data that it will contain. For more information, see [table attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
 
 > [!NOTE]
 > Every table has system columns, such as columns that indicate when a row was last updated, and who updated it. In addition, standard tables have standard (default) columns. You can't modify or delete system columns or standard columns. If you create a custom column, it should provide functionality on top of these built-in columns.
@@ -26,9 +26,9 @@ You can create and update one or more custom columns in any table. When you crea
 ## Create a column
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
 
-    ![table Details](./media/data-platform-cds-create-table/tablelist.png "table List")
+    ![Table Details](./media/data-platform-cds-create-entity/entitylist.png "table List")
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-table.md)
+2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
 3. Add a new column to your table by clicking **Add column**.
 
@@ -38,14 +38,14 @@ You can create and update one or more custom columns in any table. When you crea
     > The **Display name** columns can be updated at anytime to display differently in your apps, the **Name** column cannot be changed after your table has been saved as this could result in breaking an existing app.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-create-table/newcolumnpanel.png "New Field Panel")
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
 
-5. Select the **Data type** of your column, this controls the way the information is stored as well as how it is presented in apps. For example, text is stored different to a decimal number or a URL. For more detailed information of the data types available, see [table attribute metadata](../../developer/common-data-service/table-attribute-metadata.md).
+5. Select the **Data type** of your column, this controls the way the information is stored as well as how it is presented in apps. For example, text is stored different to a decimal number or a URL. For more detailed information of the data types available, see [table attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
 
     If you're prompted, specify additional information for the data type that you specified. Depending on the data type, different columns will be presented. If you're creating a column of type Choice or Multi Select Option Set, you can select **New Option Set** and create a new Choice while creating your column. For more information, see [Create Option set](custom-picklists.md)
 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-create-table/newcolumnpanel-2.png "New Field Panel")
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
 
 
 7. Under **Required**, select the check box if you want to recommended this column as required in your apps. This does not provide hard enforcement through all connections to the Common Data Service. If you need to ensure the column is populated, create a [Business Rule](data-platform-create-business-rule.md)
@@ -57,7 +57,7 @@ You can create and update one or more custom columns in any table. When you crea
     > [!IMPORTANT]
     > Your column is not yet saved and created, until you save the changes to the table.
 
-10. Click or tap **Save table** to finalize your changes and save them to the Common Data Service.
+10. Click or tap **Save Table** to finalize your changes and save them to the Common Data Service.
 
     You're notified when the operation is completed successfully. If the operation is unsuccessful, an error message indicates the issues that occurred and how you can fix them.
 
@@ -72,10 +72,10 @@ Calculated columns let you automate manual calculations used in your business pr
 * Currency
 * Date and Time
 
-For more details on the types of expressions supported and examples, see [Define calculated columns](/dynamics365/customer-engagement/customize/define-calculated-columns)
+For more details on the types of expressions supported and examples, see [Define calculated columns](/dynamics365/customer-engagement/customize/define-calculated-fields)
 
 ## Update or delete a column
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane, and then click or tap an table.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane, and then click or tap an table.
 2. In the list of columns for the table that you selected, click or tap a column, and then follow one of these steps:
    
    * Change one or more properties of the column.
@@ -97,7 +97,7 @@ As you create and modify columns, keep these points in mind:
 * You must give each custom column a name that's unique within the table, and you can't rename a column after you create it.
 
 ## Next steps
-* [Define relationships between tables](data-platform-table-lookup.md)
+* [Define relationships between tables](data-platform-entity-lookup.md)
 * [Create a business rule](data-platform-create-business-rule.md)
 * [Create an app using tables](../canvas-apps/data-platform-create-app.md)
 * [Create an app from scratch using a Common Data Service database](../canvas-apps/data-platform-create-app-scratch.md)
