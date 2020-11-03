@@ -49,7 +49,7 @@ Information in this topic will help you choose which designer you can use.
 You should use the Power Apps portal to create and edit columns for Common Data Service unless you need to address any of the following requirements:
 
 - Create a Customer Lookup column. 
-   - More information: [Different types of lookups](types-of-columns.md#different-types-of-lookups)
+   - More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)
 - Create a column in a solution other than the Common Data Service Default solution. 
    - More information: [Solutions overview](solutions-overview.md)
 - Define status reason transitions. 
