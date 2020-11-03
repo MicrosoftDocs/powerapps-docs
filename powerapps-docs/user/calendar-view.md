@@ -12,6 +12,7 @@ searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-activity
   - D365-UI-*
+  - Power Platform
   - Power Apps
 ---
 
