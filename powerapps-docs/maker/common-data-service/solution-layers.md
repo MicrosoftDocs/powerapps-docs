@@ -47,24 +47,17 @@ The see solution layers feature:
 
 1. Sign in to Power Apps, select **Solutions**, open the solution you want, select **...** next to a component, such as **Account**, and then select **See solution layers**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Solution layers button](media/solution-layers-toolbar.png "Solution layers button")
-
-2. The solution layer page appears. It displays each layer for the component, such as the **Account** table displayed here, with the most recent layer at the top. To view the details for a solution layer, select it. 
+2. The solution layer page appears. It displays each layer for the component, such as the **Account** table displayed here, with the most recent layer at the top, which is typically indicated as the **Active** layer. The active layer determines the runtime behavior of the component. To view the details for a solution layer, select it. 
 
    > [!div class="mx-imgBorder"] 
    > ![Solution layers list](media/solution-layers-list.png "Solution layers list")
 
-3. In the **Solution Layer** dialog box, the **Changed Properties** tab displays only those properties that were modified as part of the specific solution layer. 
+3. In the **Solution Layer** dialog box, the **Updated** tab displays only those properties that were modified as part of the specific solution layer. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer.
 
    > [!div class="mx-imgBorder"] 
    > ![Solution layer changed properties](media/solution-layers-change-prop.png "Solution layer changed properties")
 
-4. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer. 
-
-   > [!div class="mx-imgBorder"] 
-   > ![Solution layer all properties](media/solution-layers-all-prop.png "Solution layer all properties")
-5. Select the **LocalizedLabels** tab to display information for components that have label columns in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. If no labels exist the tab isn't displayed.  
+5. If the component includes translations that have been imported, select the **LocalizedLabels** tab to display information for components that have label columns in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. Note that if no labels exist the tab isn't displayed.  
    > [!div class="mx-imgBorder"] 
    > ![Solution layer localized labels](media/localized-labels.png "Solution layer localized labels")
 

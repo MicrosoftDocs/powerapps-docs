@@ -70,7 +70,7 @@ When you download the log file, you will find an XML file that you can open usin
 
 ### There's an active unmanaged layer created after importing a managed solution
 
-During solution import the system must ensure that there is a fallback form for an table. This requirement is enforced when you create tables or forms. If during import there isn't a fallback form specified for an table, then the import creates an unmanaged active layer for one of the main forms and the unmanaged customization indicates the form as the fallback form. This ensures that users can view a form when they don’t have access to any of the other table forms. More information: [Set the fallback form for an table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-an-table)
+During solution import the system must ensure that there is a fallback form for an table. This requirement is enforced when you create tables or forms. If during import there isn't a fallback form specified for an table, then the import creates an unmanaged active layer for one of the main forms and the unmanaged customization indicates the form as the fallback form. This ensures that users can view a form when they don’t have access to any of the other table forms. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-an-table)
 
 ### The form doesn't appear in target environment after importing the unmanaged solution
 
