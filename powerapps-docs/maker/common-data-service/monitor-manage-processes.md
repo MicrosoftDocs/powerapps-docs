@@ -72,7 +72,7 @@ If your organization uses background workflows or business process flows that ru
    
    - **Completed On Older than X Days 30**: Use the Completed On column to only delete real-time workflow process log rows that are older than 30 days.
    
-   ![View of a page for custom bulk row deletions](media/custom-bulk-row-deletion.png)
+   ![View of a page for custom bulk row deletions](media/custom-bulk-record-deletion.png)
    
 6. Select **Next**.
 

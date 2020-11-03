@@ -66,11 +66,11 @@ Mapping columns is done in the context of a 1:N or N:1 table relationship, so fi
 
 Field mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for an table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table columns. 
 
-![View mappable table relationships](media/mappable-table-relationships.png) 
+![View mappable table relationships](media/mappable-entity-relationships.png) 
 
 When you open a mappable table relationship, select **Mappings** in the left navigation.
 
-![Select Mappings for the table relationship](media/map-table-columns-ui-solution-explorer.png)
+![Select Mappings for the table relationship](media/map-entity-fields-ui-solution-explorer.png)
 
 ## Delete mappings
 
@@ -80,11 +80,11 @@ If there are any mappings that you do not want to apply, you can select them and
 
 To create a new mapping click **New** in the toolbar. This will open the **Create Field Mapping** dialog.
 
-![Create column mapping dialog](media/create-column-mapping-dialog.png)
+![Create column mapping dialog](media/create-field-mapping-dialog.png)
 
 Select one source table column and one target table columns with values you want to map. 
 
-![Configure column mapping](media/configure-column-mapping.png)
+![Configure column mapping](media/configure-field-mapping.png)
 
 Then select **OK** to close the dialog.
 
@@ -119,5 +119,5 @@ Because column mappings are not metadata, you must publish them before changes t
 
 ### See also
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
-[Developer Documentation: Customize table and attribute mappings](/dynamics365/customer-engagement/developer/customize-table-attribute-mappings)<br />
-[Developer Documentation: Web API Create a new table from another table](/dynamics365/customer-engagement/developer/webapi/create-table-web-api#create-a-new-table-from-another-table)
+[Developer Documentation: Customize table and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)<br />
+[Developer Documentation: Web API Create a new table from another table](/dynamics365/customer-engagement/developer/webapi/create-entity-web-api#create-a-new-table-from-another-table)
