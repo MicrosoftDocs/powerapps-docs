@@ -83,7 +83,6 @@ Unmanaged customizations reside at the top layer for a component and subsequentl
     > ![Remove unmanaged layer](media/remove-unmanaged-layer.png)
 3. Save and publish to fully remove the unmanaged layer.
 
-
 -->
 
 ### See also
