@@ -43,7 +43,7 @@ To view your email:
 
 2. Select the **All Activities** drop-down, and then select **My Received Emails**.
 
-    ![view-email](media/view-email.png "Display received emails")
+    ![Display received emails](media/view-email.png "Display received emails")
 
 3. Select the email you want to view to open it. The email will open, where you can then reply to the sender and recipients or forward it.
 
@@ -55,7 +55,7 @@ The following steps detail how to create an email.
 
 2. On the command bar, select **Email**. A new email window opens.
 
-    ![create-email](media/create-email.png "Create a new email")
+    ![Create a new email](media/create-email.png "Create a new email")
 
     The **From** field is automatically populated based on the currently logged-in user.
 
@@ -63,7 +63,7 @@ The following steps detail how to create an email.
 
 4. To compose your email in a full-screen window, select the expand icon.
 
-    ![email-expand-window](media/email-expand-window.png "Expand the email window")
+    ![Expand the email window](media/email-expand-window.png "Expand the email window")
 
     The message box has a rich text editor that enables you to create rich and well-formatted content for the emails with emphasis. The editor brings common word processor features like: 
 
@@ -83,7 +83,7 @@ The following steps detail how to create an email.
     - Remove format
     - Table
 
-    ![email-toolbar](media/email-toolbar.png "Use the rich text editor features")
+    ![Use the rich text editor features](media/email-toolbar.png "Use the rich text editor features")
 
 5. When you're done, select **Send**.
 

@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Import data
+# How to import data
 
 Whether your data is stored in a spreadsheet, on your phone, or in an email program, here’s how to import the data to your app. For example, you might want to import your customer contact list from an Excel spreadsheet into the app so you can keep track of all your customer information in one place.
   

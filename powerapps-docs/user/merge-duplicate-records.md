@@ -24,14 +24,14 @@ Duplicate records can creep into your data when you or others enter data manuall
 For example, let's say you enter a contact record, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar record, and displays this dialog box.  
   
  > [!div class="mx-imgBorder"] 
- > ![Duplicate contact record detectied](media/duplicates-detected.png "Duplicate contact record detectied")  
+ > ![Duplicate record detected](media/duplicates-detected.png "Duplicate record detected")  
   
  You're not sure if this is a new record (one that happens to have the  same name as an existing contact) or a duplicate, so you select **Ignore And Save**.  
   
  Next, you go to the **All Contacts** list and see that now you have two records with the same name. After reviewing the records,  you  determine that they're duplicates that need to be merged.  
  
  > [!div class="mx-imgBorder"] 
- > ![Duplicate contact record detectied](media/duplicates-detected_1.png "Duplicate contact record detectied")  
+ > ![Duplicate contact record detected](media/duplicates-detected_1.png "Duplicate contact record detected")  
  
 Common Data Service includes duplicate detection rules for accounts and contacts. These rules are automatically turned on, so you don’t have to do anything to set up duplicate detection for these record types.  
   
@@ -43,7 +43,7 @@ Common Data Service includes duplicate detection rules for accounts and contacts
 1. Select the duplicate records, and then select **Merge**.  
   
    > [!div class="mx-imgBorder"] 
-   > ![Duplicate contact record detectied](media/duplicates-detected_2.png "Duplicate contact record detectied")  
+   > ![Select the duplicate record](media/duplicates-detected_2.png "Select the duplicate record")  
   
 2. In the **Merge Records** dialog box, select the master record (the one you want to keep), and then select any fields in the new record that you want to merge into the master record. Data in these fields may override the existing data in the master record. Select **OK**.  
   

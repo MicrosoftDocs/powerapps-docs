@@ -62,7 +62,7 @@ To manage a connection role, select  the connection role from a connection entit
 
 
    > [!div class="mx-imgBorder"]
-   > ![Edit connection role](media/connection7.png "Editconnection role") 
+   > ![Manage connection role](media/connection7.png "Manage connection role") 
   
 You can also manage the connection role types that you want associate to the connection role.
 
