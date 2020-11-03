@@ -10,7 +10,7 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Portal extention
+# Return to the Workplace Guest Portals
 
 A seperate offering extends the Return to the Workplace solution with a portal. Allowing people external to your organization to perform attestations.
 
