@@ -94,7 +94,7 @@ To view rollup jobs:
 The rollup column on the form displays a calculator image, rollup value, and the time of the last calculation. To recaclulate, select the calculator image, and then select the **Recalculate** button that appears. 
 
 > [!div class="mx-imgBorder"] 
-> ![Rollup column on the account form](media/rollup-column-on-account-form.png)
+> ![Rollup column on the account form](media/rollup-field-on-account-form.png)
   
 
 There are a few considerations you should keep in mind when using the online recalculation option (manual refresh on the form):  
@@ -132,19 +132,19 @@ Let’s take a look at several rollup column examples. We’ll aggregate data fo
 
 In this example, a hierarchy is not used. The total estimated revenue is calculated for an account, from the related open opportunities.  
 
-![Aggregate the estimated revenue for an account](media/rollup-column-no-hierarchy.png)
+![Aggregate the estimated revenue for an account](media/rollup-field-no-hierarchy.png)
   
 ### Aggregate data for a row from the child rows, over the hierarchy 
  
 In this example, we calculate the total estimated revenue of an opportunity including the child opportunities, over the hierarchy.  
   
-![Aggregate estimated revenue, opportunity hierarchy](media/rollup-column-hierarchy-self.png)
+![Aggregate estimated revenue, opportunity hierarchy](media/rollup-field-hierarchy-self.png)
   
 ### Aggregate data for a row from the related rows, over the hierarchy
 
 In this example, we calculate the total estimated revenue of open opportunities across all accounts, over the hierarchy.  
   
-![Aggregate estimated revenue over account hierarchy](media/rollup-column-hierarchy.png)  
+![Aggregate estimated revenue over account hierarchy](media/rollup-field-hierarchy.png)  
   
 ### Aggregate data for a row from all related activities
   
@@ -158,7 +158,7 @@ In earlier releases, you could define a rollup column for an individual activity
 
 In this example, we count the total number of emails sent to an account, where the account is listed on the email’s “To Recipient” line or “Cc Recipient line. This is done by specifying the **Participation Type** in **FILTERS** for the Activity Party table in the rollup column definition. If you don’t use filtering, then all available participation types for an activity are used in the calculation. 
  
-For more information about the Activity Party table and participation types available for a particular activity, see [ActivityParty table](/dynamics365/customer-engagement/developer/activityparty-table).
+For more information about the Activity Party table and participation types available for a particular activity, see [ActivityParty table](/dynamics365/customer-engagement/developer/activityparty-entity).
 
   
 ![Rollup related activities and activity party](media/rollup-enhancements-indirect-activities.png)  
@@ -188,7 +188,7 @@ You should be aware of certain conditions and restrictions when working with rol
 - A rollup can be done only over related tables with the 1:N relationship. A rollup can’t be done over the N:N relationships.  
 - A rollup can’t be done over the 1:N relationship for the Activity table or the Activity Party table.  
 - The business rules, workflows or calculated columns always use the last calculated value of the rollup column.  
-- A rollup column is aggregated under the system user context. All users are able to see the same rollup column value. You can control the rollup column visibility with the column level security (FLS), by restricting who can access the rollup column. More information  [Field level security to control access](/dynamics365/customer-engagement/admin/column-level-security). 
+- A rollup column is aggregated under the system user context. All users are able to see the same rollup column value. You can control the rollup column visibility with the column level security (FLS), by restricting who can access the rollup column. More information  [Field level security to control access](/dynamics365/customer-engagement/admin/field-level-security). 
 
 ### Precision rounding
  
@@ -211,9 +211,9 @@ Certain table  forms, such as Account or Contact, out-of-the-box, contain the as
   
 ### See also  
 
-[Create and edit columns](create-edit-columns.md)<br />
-[Define calculated columns](define-calculated-columns.md)<br />
-[Behavior and format of the Date and Time column](behavior-format-date-time-column.md)<br />
+[Create and edit columns](create-edit-fields.md)<br />
+[Define calculated columns](define-calculated-fields.md)<br />
+[Behavior and format of the Date and Time column](behavior-format-date-time-field.md)<br />
 [Define and query hierarchically related data](define-query-hierarchical-data.md)<br />
 [Video: Rollup and Calculated Fields](https://www.youtube.com/watch?v=RoahCH1p3T8&list=PLC3591A8FE4ADBE07&index=8)<br />
 [Video: Using Power BI](https://www.youtube.com/watch?v=PkQe4BFlBS8&list=PLC3591A8FE4ADBE07&index=3)

@@ -56,7 +56,7 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 
 ## Create a calculated column
 
-Use the column editor to specify a calculated column. In this example we will use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit columns](create-edit-columns.md)
+Use the column editor to specify a calculated column. In this example we will use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit columns](create-edit-fields.md)
   
 1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Tables**.  
@@ -189,7 +189,7 @@ The following table contains information about the syntax for the functions prov
 |**TRIMRIGHT** (single line of text, whole number)|Returns a string that contains a copy of a specified string without the last N-characters.|String|  
   
 > [!NOTE]
->  All DIFF functions require that the first **Date and Time** column and the second **Date and Time** column have the same behavior: **User Local**, **Date Only** or **Time-Zone Independent**. If the behavior of the second column doesn’t match the behavior of the first column, the error message is shown, indicating that the second column can’t be used in the current function. More information: [Behavior and format of the Date and Time column](behavior-format-date-time-column.md).  
+>  All DIFF functions require that the first **Date and Time** column and the second **Date and Time** column have the same behavior: **User Local**, **Date Only** or **Time-Zone Independent**. If the behavior of the second column doesn’t match the behavior of the first column, the error message is shown, indicating that the second column can’t be used in the current function. More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md).  
   
 > [!NOTE]
 >  You cannot enter a date, such as 01/01/2015, as the Date value in a calculated column. Date and DateTime values can only be set or compared using other DateTime columns.  
