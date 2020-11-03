@@ -22,8 +22,8 @@ App makers can use most of the tables available within Common Data Service (incl
 
 In some cases, tables contain complex business logic or are tied to customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) that require app users to have a specific license. This topic provides licensing information for tables with complex business logic and tables that are tied to Dynamics 365 apps (termed as restricted tables).
 
-## tables with complex business logic
-tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a [Power Apps](https://powerapps.microsoft.com/pricing/) or [Power Automate](https://flow.microsoft.com/pricing/) license:
+## Tables with complex business logic
+Tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a [Power Apps](https://powerapps.microsoft.com/pricing/) or [Power Automate](https://flow.microsoft.com/pricing/) license:
 
 - Code plug-ins (for more information, see [Plug-in development](/powerapps/developer/common-data-service/plug-ins))
 - Real-time workflows (for more information, see [Workflow processes](/flow/workflow-processes))
@@ -31,7 +31,7 @@ tables that include the following complex server-side logic require users of an 
     > [!NOTE]
     >  Only workflows that are converted to a real-time workflow are considered real-time and synchronous. Workflows that are run in the background can still be used with the appropriate Power Apps plan and do not require additional licenses.
 
-To know whether or not you added complex business logic to your tables, review the list of plug-in assemblies and workflows configured in your environment. For the list of tables which may contain server side logic after installing a Dynamics 365 app (such as Dynamics 365 Sales or Dynamics 365 Customer Service), see [Complex tables requiring Power Apps or Power Automate licenses](data-platform-complex-tables.md)  
+To know whether or not you added complex business logic to your tables, review the list of plug-in assemblies and workflows configured in your environment. For the list of tables which may contain server side logic after installing a Dynamics 365 app (such as Dynamics 365 Sales or Dynamics 365 Customer Service), see [Complex tables requiring Power Apps or Power Automate licenses](data-platform-complex-entities.md)  
 
 ### Impacting license requirements when adding complex business logic
 
@@ -44,12 +44,12 @@ Restricted tables are not standard tables within Common Data Service, but are in
 > [!NOTE]
 > Apps and flows that use these tables require the app and flow user to be licensed appropriately-not the maker or developer of the app or flow.
 
-tables that are tied to the functionality of Dynamics 365 apps (such as Dynamics 365 Sales or Dynamics 365 Customer Service) require app users to have the corresponding license for that application if they want to create, update, or delete rows within the tables. For a full list of restricted tables, see [Restricted tables requiring Dynamics 365 licenses](data-platform-restricted-tables.md).
+tables that are tied to the functionality of Dynamics 365 apps (such as Dynamics 365 Sales or Dynamics 365 Customer Service) require app users to have the corresponding license for that application if they want to create, update, or delete rows within the tables. For a full list of restricted tables, see [Restricted tables requiring Dynamics 365 licenses](data-platform-restricted-entities.md).
 
 ## Licensing examples
 Barb and Isaac are creating apps in Power Apps using Common Data Service to store their data.
 
-### table creation
+### Table creation
 
 -	No user can create a new restricted table; Microsoft reserves the right to create and define them for Dynamics 365 apps (such as Dynamics 365 Sales or Dynamics 365 Customer Service)
 

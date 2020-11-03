@@ -50,7 +50,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
 1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the
     appropriate environment from the top-right corner.
 
-2.  On the left navigation pane expand **Data**, select **tables**, and then
+2.  On the left navigation pane expand **Data**, select **Tables**, and then
     select **Analyze in Power BI** on the command bar.
 
     The pbids file for your environment is downloaded to your browser’s default download folder.
@@ -76,7 +76,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
     its data.
 
     > [!div class="mx-imgBorder"] 
-    > ![table rows displayed example](media/table-row-data-displayed.png "table rows displayed example" )
+    > ![table rows displayed example](media/entity-record-data-displayed.png "table rows displayed example" )
 
 > [!NOTE]
 > SQL options, such as a T-SQL queries aren’t supported.

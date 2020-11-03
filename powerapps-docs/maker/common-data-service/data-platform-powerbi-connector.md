@@ -72,9 +72,9 @@ To use Power BI with Common Data Service, you need the following items:
     > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
 
 
-## Using choice s
+## Using choices
 
-Options sets are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector choice  columns will be presented as two columns to show both the unique value, and the display value.
+Choices are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector choice  columns will be presented as two columns to show both the unique value, and the display value.
 
 As an example, if you had an choice  on your table called ApprovalStatus, you would see two columns in Power BI:
 

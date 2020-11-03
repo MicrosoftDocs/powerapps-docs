@@ -25,7 +25,7 @@ search.app:
 > 
 > For the latest information on licensing requirements for tables, see the [Power Apps licensing guide](https://go.microsoft.com/fwlink/p/?linkid=2085130).
 
-tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a Power Apps Plan 2 or Power Automate Plan 2 license:
+Tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a Power Apps Plan 2 or Power Automate Plan 2 license:
 
 * Code plug-ins. More information: [Plug-in development](/powerapps/developer/common-data-service/plug-ins)
 * Real-time workflows. More information: [Workflow processes](/flow/workflow-processes)

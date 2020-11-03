@@ -25,12 +25,12 @@ tables may be restricted to a Dynamics 365 app license for the following reasons
 * The table is used to store and maintain product-specific configuration data that should typically be not used outside of the application.
 * The table is accompanied by advanced logic that creates and maintains data in a specific way when used within a Dynamics 365 product.
 
-If an app or flow only reads information from an table, a Dynamics 365 app license is not required and an appropriate Power Apps or Power Automate license is all that's needed.
+If an app or flow only reads information from a table, a Dynamics 365 app license is not required and an appropriate Power Apps or Power Automate license is all that's needed.
 
 ## Restricted tables for create, update, and delete operations
 The following table lists the restricted tables and the associated Dynamics 365 license requirements for users who create, update, or delete data stored within these tables. 
 
-|table  |Logical name  |License required  |
+|Table  |Logical name  |License required  |
 |---------|---------|---------|
 Actual |msdyn_actual |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Agreement Business Process |msdyn_bpf_baa0a411a239410cb8bded8b5fdd88e3 |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
@@ -44,8 +44,8 @@ Entitlement | entitlement | Dynamics 365 for Customer Service, Enterprise editio
 Estimate Line|msdyn_estimateline|Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Estimate|msdyn_estimate |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Fact|msdyn_fact |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-Field service setting |msdyn_columnservicesetting |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-Field Service System Job |msdyn_columnservicesystemjob |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+Field service setting |msdyn_fieldservicesetting |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+Field Service System Job |msdyn_fieldservicesystemjob |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Goal | goal | Dynamics 365 for Sales Professional, <br>**or** Dynamics 365 for Sales, Enterprise edition, <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Inventory Journal |msdyn_inventoryjournal |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Invoice Process |msdyn_bpf_d8f9dc7f099f44db9d641dd81fbd470d |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
