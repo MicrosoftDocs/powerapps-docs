@@ -38,4 +38,4 @@ search.app:
 
  ## Next steps
 
- [Delete a custom table](data-platform-delete-table.md)
+ [Delete a custom table](data-platform-delete-entity.md)

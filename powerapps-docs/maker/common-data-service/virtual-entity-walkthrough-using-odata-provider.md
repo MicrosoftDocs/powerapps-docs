@@ -142,7 +142,7 @@ On the left navigation pane of the **table: Ticket** page, select **Columns**. A
 
 1. On the Ticket table window, select **Forms**.
 1. Open the main form, drag and drop the **Severity** column from the right pane onto the form in the **General** section under the **Title** column. 
-    ![Severity column added to main form](media/drop-severity-column.png)
+    ![Severity column added to main form](media/drop-severity-field.png)
 1. On the Ticket table window select **Save and Close**.
 
 ## Configure the default view
@@ -171,5 +171,5 @@ On the left navigation pane of the **table: Ticket** page, select **Columns**. A
 
 ### See also
 
-[OData v4 Data Provider configuration, requirements, and best practices](virtual-table-odata-provider-requirements.md)<br />
-[Create and edit virtual tables that contain data from an external data source](create-edit-virtual-tables.md)
+[OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)<br />
+[Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)

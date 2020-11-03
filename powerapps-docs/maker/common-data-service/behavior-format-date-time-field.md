@@ -55,7 +55,7 @@ When you import a solution that contains a Date column using the **User Local** 
 
 ### Prevent changing behavior
 
-If you are distributing a custom date column in a managed solution, you can prevent people using your solution from changing the behavior by setting the **CanChangeDateTimeBehavior** managed property to **False**. More information: [Set  managed properties for columns](set-managed-properties-for-column.md)
+If you are distributing a custom date column in a managed solution, you can prevent people using your solution from changing the behavior by setting the **CanChangeDateTimeBehavior** managed property to **False**. More information: [Set  managed properties for columns](set-managed-properties-for-field.md)
   
 ## Use cases 
 
@@ -109,8 +109,8 @@ The following date and time related query operators are invalid for the **Date O
   
 ### See also
 
-[Create and edit columns](create-edit-columns.md)<br />
-[Define calculated columns to automate manual calculations](define-calculated-columns.md)<br />
+[Create and edit columns](create-edit-fields.md)<br />
+[Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
 [Field managed properties](/power-platform/alm/managed-properties-alm#view-and-edit-column-managed-properties)<br />
 [Managed properties](/power-platform/alm/managed-properties-alm)  
 [Blog: Working with time zones in the Common Data Service](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)

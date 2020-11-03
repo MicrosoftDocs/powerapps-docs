@@ -57,4 +57,4 @@ If you have customized table or column text, such as column labels or drop-down 
 > If you have questions about the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ## Next steps  
- [Export customized table and column text for translation](export-customized-table-column-text-translation.md)
+ [Export customized table and column text for translation](export-customized-entity-field-text-translation.md)

@@ -46,4 +46,4 @@ search.app:
 
  ## Next steps
 
- [Create and edit columns](create-edit-columns.md)
+ [Create and edit columns](create-edit-fields.md)

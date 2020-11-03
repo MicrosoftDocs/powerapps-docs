@@ -30,8 +30,8 @@ search.app:
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit tables for  Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
-- [Create and edit tables in Common Data Service](create-edit-tables.md)
-- [Create and edit tables using solution explorer](create-edit-tables-solution-explorer.md)
+- [Create and edit tables in Common Data Service](create-edit-entities.md)
+- [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
 
 ## View tables
 
@@ -132,7 +132,7 @@ See [Create a system chart](../model-driven-apps/create-edit-system-chart.md)
 
 ### Keys
 
-See [Define alternate keys to reference rows](define-alternate-keys-reference-rows.md)
+See [Define alternate keys to reference rows](define-alternate-keys-reference-records.md)
 
 ### Data
 

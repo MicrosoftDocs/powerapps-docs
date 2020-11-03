@@ -88,5 +88,5 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
 
 ## See also  
 
-[Create and edit virtual tables that contain data from an external data source](create-edit-virtual-tables.md) <br/>
+[Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md) <br/>
 [TechNet Blog: Interact with data from external systems using the new virtual tables](https://blogs.technet.microsoft.com/lystavlen/2017/09/08/virtual-tables/)

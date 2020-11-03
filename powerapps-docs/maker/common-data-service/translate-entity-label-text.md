@@ -33,8 +33,8 @@ When you translate label text for a form, you are modifying the base language of
 
 ## High-level process
 
-1. Export the translations from the solution that contains the tables that you want to translate label text. Then, open the translations XML file and add the translated text. More information: [Translate customized table and column text into other languages](export-customized-table-column-text-translation.md)
-2. Import the translations. More information: [Import translated table and column text back into an app](import-translated-table-column-text.md)
+1. Export the translations from the solution that contains the tables that you want to translate label text. Then, open the translations XML file and add the translated text. More information: [Translate customized table and column text into other languages](export-customized-entity-field-text-translation.md)
+2. Import the translations. More information: [Import translated table and column text back into an app](import-translated-entity-field-text.md)
 
 
 ## Common issues with translating form label text
@@ -67,5 +67,5 @@ This can happen because the label has no translations. The following behavior oc
 - The managed solution is empty, which is seen as non-existent and falls back to the display name: &lt;label description="" languagecode="1033"&gt;
 
 ### See also
-[Translate customized table and column text into other languages](export-customized-table-column-text-translation.md) <br />
-[Import translated table and column text back into an app](import-translated-table-column-text.md)
+[Translate customized table and column text into other languages](export-customized-entity-field-text-translation.md) <br />
+[Import translated table and column text back into an app](import-translated-entity-field-text.md)

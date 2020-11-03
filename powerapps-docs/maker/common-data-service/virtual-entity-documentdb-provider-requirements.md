@@ -116,4 +116,4 @@ SQL query filtering supports the following operators.
 
 ## See also
 
-[Create and edit virtual tables that contain data from an external data source](create-edit-virtual-tables.md)
+[Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)

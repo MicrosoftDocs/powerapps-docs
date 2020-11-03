@@ -72,7 +72,7 @@ To create a custom activity table, open the **More settings** section in the **N
 
 ## Virtual tables
 
-A virtual table is a custom table in Common Data Service that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Common Data Service web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-tables.md)
+A virtual table is a custom table in Common Data Service that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Common Data Service web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create or edit tables](create-edit-tables.md)
+[Create or edit tables](create-edit-entities.md)

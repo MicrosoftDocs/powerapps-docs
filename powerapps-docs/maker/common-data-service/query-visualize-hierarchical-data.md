@@ -60,7 +60,7 @@ For some tables, such as account and user, the visualizations are provided out-o
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-table.md)
+2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
 3. Click **Relationships**
 

@@ -36,4 +36,4 @@ search.app:
   
 ## Next steps
 
-[Create and edit relationships between tables](create-edit-table-relationships.md)
+[Create and edit relationships between tables](create-edit-entity-relationships.md)

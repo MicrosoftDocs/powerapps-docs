@@ -32,5 +32,5 @@ Tables are used to model and manage business data. When you develop an app, you 
 
 ## See also
 [Create a custom table](data-platform-create-entity.md) <br/>
-[Types of tables](types-of-entity.md)
+[Types of tables](types-of-entities.md)
 

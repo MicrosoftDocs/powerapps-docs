@@ -33,5 +33,5 @@ Table relationships define the ways that table rows can be associated with rows 
 - **Many-to-many relationships**. In a many-to-many table relationship many table rows can be associated with many other table rows. Rows related using a many-to-many relationship can be considered peers and the relationship is reciprocal. 
 
 ## See also
-[Create a relationship between tables](data-platform-table-lookup.md) <br/>
+[Create a relationship between tables](data-platform-entity-lookup.md) <br/>
 [Create Many-to-many table relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)

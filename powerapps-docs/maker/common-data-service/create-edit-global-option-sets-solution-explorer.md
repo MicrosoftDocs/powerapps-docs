@@ -48,7 +48,7 @@ With solution explorer open, under **Components** select **Option Sets**.
 ## Create a global choice 
 
 > [!NOTE]
-> You do not need to create a global choice  before you use it within a custom column. When you create a new choice  column you have the option to create a new global choice  or use an existing one. See [Choice column options](create-edit-column-solution-explorer.md#option-set-column-options)
+> You do not need to create a global choice  before you use it within a custom column. When you create a new choice  column you have the option to create a new global choice  or use an existing one. See [Choice column options](create-edit-field-solution-explorer.md#option-set-column-options)
 
 While viewing global choices, click **New** to open a form to define the global choice .
 
@@ -89,5 +89,5 @@ To delete a global choice , while viewing the list select the ![Delete command](
  
 [Create and edit global choices for Common Data Service](create-edit-global-option-sets.md)<br />
 [Create a choice ](custom-picklists.md)<br />
-[Create and edit columns](create-edit-columns.md)<br />
+[Create and edit columns](create-edit-fields.md)<br />
 [Developer documentation: Customize global choices](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)

@@ -54,10 +54,10 @@ Select ![Save](media/save-entity-icon-solution-explorer.png) to save your change
 
 ## Programmatically update table display strings
 
-For developers looking for a way to work with these in code, the display strings are stored in the [DisplayString](../../developer/common-data-service/reference/tables/displaystring.md) table. 
+For developers looking for a way to work with these in code, the display strings are stored in the [DisplayString](../../developer/common-data-service/reference/entities/displaystring.md) table. 
 
-The `DisplayString` table doesn’t contain the default display strings. The two attributes for this table that contain text are [CustomDisplayString](../../developer/common-data-service/reference/tables/displaystring.md#BKMK_CustomDisplayString) and [PublishedDisplayString](../../developer/common-data-service/reference/tables/displaystring.md#BKMK_PublishedDisplayString). By default, these attribute values are null unless the display string has been customized and published. The `PublishedDisplayString` value is read-only and reflects the currently published `CustomDisplayString`.
+The `DisplayString` table doesn’t contain the default display strings. The two attributes for this table that contain text are [CustomDisplayString](../../developer/common-data-service/reference/entities/displaystring.md#BKMK_CustomDisplayString) and [PublishedDisplayString](../../developer/common-data-service/reference/entities/displaystring.md#BKMK_PublishedDisplayString). By default, these attribute values are null unless the display string has been customized and published. The `PublishedDisplayString` value is read-only and reflects the currently published `CustomDisplayString`.
  
 ## See also
-[Edit a table](edit-tables.md)<br />
+[Edit a table](edit-entities.md)<br />
 [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md)

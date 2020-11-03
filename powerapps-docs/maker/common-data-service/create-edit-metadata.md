@@ -60,7 +60,7 @@ For these reasons, we recommend that you look for and use the provided standard 
 
 -->
 
-Remember that you can change the display name of a table so that it matches the nomenclature your organization uses. For example, it is very common for people to change the display name of the Account table to *Company* or the name of the Contact table to *Individual*. This can be done to tables or attributes without changing the behavior of the table. For more information about renaming tables, see [Change the name of a table](edit-entities.md#change-the-name-of-an-table).
+Remember that you can change the display name of a table so that it matches the nomenclature your organization uses. For example, it is very common for people to change the display name of the Account table to *Company* or the name of the Contact table to *Individual*. This can be done to tables or attributes without changing the behavior of the table. For more information about renaming tables, see [Change the name of a table](edit-entities.md#change-the-name-of-a-table).
   
 You can’t delete standard tables, columns, or table relationships. They are considered part of the system solution and every organization is expected to have them. If you want to hide a standard table, change the security role privileges for your organization to remove the read privilege for that table. This will remove the table from most parts of the application. If there is a system column that you don’t need, remove it from the form and any views that use it. Change the **Searchable** value in the column and table relationship definitions so that they do not appear in advanced find. 
   
@@ -78,5 +78,5 @@ Choice columns provide a set of options that will be displayed in a drop-down co
   
 ### Next steps
 
-[Create or edit tables (row types)](create-edit-entity.md)<br />
+[Create or edit tables (row types)](create-edit-entities.md)<br />
 [Create and edit relationships between tables](create-edit-entity-relationships.md)

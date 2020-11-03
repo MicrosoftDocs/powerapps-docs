@@ -21,15 +21,15 @@ search.app:
 
 Choices allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice columns in other applications. Similar to tables, there are both standard Option sets, and the ability to create custom Choices to use within your app.
 
-Choices can be created in two ways, either from the **Option Sets** list within the portal or directly within a table while creating a column. For more information on how to create a table, see [Create a table](data-platform-create-table.md).
+Choices can be created in two ways, either from the **Option Sets** list within the portal or directly within a table while creating a column. For more information on how to create a table, see [Create a table](data-platform-create-entity.md).
 
 ## Creating an Choice while adding a column
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
-    ![table Details](./media/data-platform-cds-create-table/tablelist.png "table List")
+    ![table Details](./media/data-platform-cds-create-entity/entitylist.png "table List")
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-table.md)
+2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
 
 3. Add a new column to your table by clicking **Add column**.
 
@@ -38,7 +38,7 @@ Choices can be created in two ways, either from the **Option Sets** list within 
 5. Click the **Data type** drop down and select **Option Set** or **Multi Select Option set**.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-create-table/newcolumnpanel.png "New Field Panel")
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
 
 6. Click the **Choice** drop down and select **New Option set**
 
@@ -50,20 +50,20 @@ Choices can be created in two ways, either from the **Option Sets** list within 
 7. A new panel will open to create the Option set, the **Display name** and **Name** will default from the name of the column but can be changed if needed. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Option Set](./media/data-platform-cds-newoptionset/column-optionsetpanel.png "New Option Set")
+    > ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "New Option Set")
 
 8. Once you've entered your items, click **Save** to create your Option set.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Option Set](./media/data-platform-cds-newoptionset/column-optionsetpanel-values.png "New Option Set")
+    > ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "New Option Set")
 
-9. Click **Done** to close the column panel, and then **Save table** to save your table to the Common Data Service.
+9. Click **Done** to close the column panel, and then **Save Table** to save your table to Common Data Service.
 
     > [!NOTE]
     > You can select one of your items as the **Default** for this column, and it will be selected by default when users are creating new rows in your table.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-newoptionset/columnpanel-2.png "New Field Panel")
+    > ![New Field](./media/data-platform-cds-newoptionset/fieldpanel-2.png "New Field Panel")
 
 ## Creating an Choice from the Choice list
 

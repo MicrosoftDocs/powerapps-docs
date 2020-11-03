@@ -43,16 +43,16 @@ Part of the name of any custom relationship you create is the customization pref
 
 In solution explorer, expand **Tables** an select a table. Within that table, select  **N:N Relationships**.
 
-![View N:N table relationships](media/view-nn-table-relationships-solution-explorer.png)
+![View N:N table relationships](media/view-nn-entity-relationships-solution-explorer.png)
 
 ## Create relationships
 
-While [viewing table relationships](#view-table-relationships), select **New Many-to-Many Relationship** from the command bar.
+While [viewing table relationships](#view-entity-relationships), select **New Many-to-Many Relationship** from the command bar.
 
 > [!NOTE]
 > If the command is not available, the table is not eligible to create a custom relationship.
 
-![New many-to-many relationship form](media/new-nn-table-relationship-form-solution-explorer.png)
+![New many-to-many relationship form](media/new-nn-entity-relationship-form-solution-explorer.png)
 
 In the **Other table** group, in the **table Name** column, choose the table that you want to create the relationship with. This will populate the **Name** and **Relationship table Name** columns in the **Relationship Definition** group.
 
