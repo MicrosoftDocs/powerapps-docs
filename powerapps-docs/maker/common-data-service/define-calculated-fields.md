@@ -59,17 +59,17 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 Use the column editor to specify a calculated column. In this example we will use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit columns](create-edit-columns.md)
   
 1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
-1. Expand **Data** > **tables**.  
+1. Expand **Data** > **Tables**.  
 1. Select the table you want and choose **Columns**. Choose **Add Field**.  
 1. Provide the required information for the column, including the **Display name**, **Name** and **Data type**. 
 1. If the data type is one of types that support calculated columns, you can make the column a calculated column by selecting **Add** > **Calculation**.
 
-    ![Make column calculated](media/make-column-calculated-maker.png)
+    ![Make column calculated](media/make-field-calculated-maker.png)
 
     These are the types of columns that support calculations:
     - Text
     - Choice  
-    - Two Options  
+    - Yes/No  
     - Whole Number  
     - Decimal Number  
     - Currency  
@@ -77,8 +77,8 @@ Use the column editor to specify a calculated column. In this example we will us
 
 1. Selecting **Calculation** requires that you save the changes to the table. Click **Save** in the **Pending changes** dialog to proceed.
 1. This will open the calculated column definition editor, where the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
-  ![New Field Calculation form](media/empty-column-calculation.png)
-- In the **Condition** section, you can specify an table, column, operator, type, and value. In the dropdown box for the **table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
+  ![New Field Calculation form](media/empty-field-calculation.png)
+- In the **Condition** section, you can specify an table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
 - In the **Action** section, you provide the formula for the calculated column.  
   
 > [!NOTE]
@@ -101,15 +101,15 @@ In the calculated column definition editor, in the **Condition** section, we spe
   
 #### Set the condition on the opportunities:
   
-![Set Weighted Revenue in Dynamics 365](media/calc-column-open-opportunity.png)  
+![Set Weighted Revenue in Dynamics 365](media/calc-field-open-opportunity.png)  
   
 #### Provide the formula for the weighted revenue: 
   
-![Set Weighted Revenue estimated value Dynamics 365](media/calc-column-open-opportunities-3.png)  
+![Set Weighted Revenue estimated value Dynamics 365](media/calc-field-open-opportunities-3.png)  
   
 #### Altogether:
   
-![Weighted revenue to est. revenue in Dynamics 365](media/calculated-column-open-opportunity.png)  
+![Weighted revenue to est. revenue in Dynamics 365](media/calculated-field-open-opportunity.png)  
   
 ### Follow-up date of opportunity 
  
@@ -127,21 +127,21 @@ The following screenshots show step-by-step how to define the **Follow-up date**
   
 #### Set the two conditions on the originating lead:
   
-![Follow up date on an opportunity in Dynamics 365](media/calc-column-follow-update-2.PNG)  
+![Follow up date on an opportunity in Dynamics 365](media/calc-field-follow-update-2.PNG)  
   
-![Follow up date on an opportunity in Dynamics 365](media/calc-column-follow-update-3.PNG)  
+![Follow up date on an opportunity in Dynamics 365](media/calc-field-follow-update-3.PNG)  
   
 #### Provide the formula to follow up in one week:
   
-![Follow up date on an opportunity in Dynamics 365](media/calc-column-follow-update-4.PNG)  
+![Follow up date on an opportunity in Dynamics 365](media/calc-field-follow-update-4.PNG)  
   
 #### Provide the formula to follow up in one month:
   
-![Set Follow up date in Dynamics 365](media/calc-column-follow-update-5.PNG)  
+![Set Follow up date in Dynamics 365](media/calc-field-follow-update-5.PNG)  
   
 #### Altogether:
   
- ![Set Follow up date If&#45;Then & Else in Dynamics 365](media/calc-column-follow-update-6.PNG)  
+ ![Set Follow up date If&#45;Then & Else in Dynamics 365](media/calc-field-follow-update-6.PNG)  
   
 ### Days from a row creation 
  
@@ -151,11 +151,11 @@ Create a new Whole Number column called **Calculated difference in days**.
   
 #### Provide the formula for computing the difference in days
   
-![Calculated column, DIFFINDAYS function](media/custom-calc-column-diff-days.png)  
+![Calculated column, DIFFINDAYS function](media/custom-calc-field-diff-days.png)  
   
 #### Altogether:
   
-![Difference in days since row creation](media/calc-column-diff-days-complete.png)  
+![Difference in days since row creation](media/calc-field-diff-days-complete.png)  
   
 <a name="Syntax"></a> 
   
@@ -228,6 +228,6 @@ You should be aware of certain conditions and limitations when working with calc
   
 ### See also
  
-[Create and edit columns](create-edit-columns.md)<br />
-[Define rollup columns that aggregate values](define-rollup-columns.md)<br />
+[Create and edit columns](create-edit-fields.md)<br />
+[Define rollup columns that aggregate values](define-rollup-fields.md)<br />
 [Video: Rollup and calculated columns](https://go.microsoft.com/fwlink/p/?LinkId=517727)

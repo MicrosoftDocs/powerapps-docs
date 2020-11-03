@@ -28,7 +28,7 @@ The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit columns for Common Data Service](create-edit-fields.md)
-- [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-column-solution-explorer.md)
+- [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)
 
 ## View columns
 
@@ -46,7 +46,7 @@ The portal enables configuring the most common options, but certain options can 
 
 While viewing columns, in the command bar, select **Add column** which will show the **Field properties** panel.
 
-![Field Properties](media/column-properties.png)
+![Field Properties](media/field-properties.png)
 
 Initially, just three column properties are available:
 
@@ -113,7 +113,7 @@ You can also set specific **Behavior** for Date Time columns in the **Advanced o
 - **Date only**: This behavior is available for the **Date Only** type. Displays values without time zone conversion. Use this for data like birthdays and anniversaries.
 - **Time zone independent**:  Displays values without time zone conversion.
 
-More information: [Behavior and format of the Date and Time column](behavior-format-date-time-column.md)
+More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
 
 ### Other Data types
 
@@ -197,7 +197,7 @@ Using a global choice  is valuable when you find yourself creating the same set 
 
 When you choose **Multi Select Choice** or **Choice** data type the designer will list a set of available global choice s for you to choose from and provide the option to create a **New choice**.
 
-![Choose choice type](media/option-set-options.png)
+<img src = "media/option-set-options.png" alt = "Choose choice type" width = "780" height = "973">
 
 If you choose **New choice** the default behavior is to create a new global choice.
 
@@ -206,7 +206,7 @@ If you choose **New choice** the default behavior is to create a new global choi
 
 If you want to create a local choice  you must select **View more** and choose **Local choice**.
 
-![Local choice ](media/local-option-set.png)
+<img src = "media/local-option-set.png" alt = "Local choice" width = "411" height = "705">
 
 > [!NOTE]
 > If you define every choice  as a global choice  your list of global choices will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local choice.
