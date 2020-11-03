@@ -98,4 +98,4 @@ Details about the data model specific to the portal solution have been added to 
 
 To learn more about working, administrating or extending Power Apps portals, go to:
 
-- [Power Apps portals documentation](https://docs.microsoft.com/en-us/powerapps/maker/portals/)
+- [Power Apps portals documentation](https://docs.microsoft.com/powerapps/maker/portals/)
