@@ -21,6 +21,8 @@ searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-lead
   - D365-UI-View
+  - Power Platform
+  - Power Apps
 ---
 # Export data to Excel
 
