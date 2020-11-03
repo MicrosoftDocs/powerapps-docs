@@ -51,7 +51,7 @@ Alternatively, developers can build their own data providers. Data providers are
   
 ## Add a data source to use for virtual tables 
  
- Developers create a custom plug-in to use as the data provider for a virtual table. Alternatively, you can use the provided OData v4 Data Provider. More information: [OData v4 Data Provider configuration, requirements, and best practices](virtual-entities-odata-provider-requirements.md)  
+ Developers create a custom plug-in to use as the data provider for a virtual table. Alternatively, you can use the provided OData v4 Data Provider. More information: [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)  
   
 1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual table Data Sources**.  
 1. On the actions toolbar, select **New**.  
