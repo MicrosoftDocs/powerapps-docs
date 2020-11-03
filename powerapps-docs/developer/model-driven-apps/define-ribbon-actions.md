@@ -3,8 +3,7 @@ title: "Define ribbon actions (model-driven apps) | Microsoft Docs" # Intent and
 description: "Learn about defining the actions to be performed by a command bar or ribbon control in a <CommandDefinition> element together with rules that control whether the control is enabled or visible in the ribbon." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 05/07/2020
-ms.service:
-  - PowerApps
+ms.service: Powerapps
 ms.topic: article
 ms.assetid: fbb7ff68-e4be-d8c2-069f-6a4a69665b56
 author: Nkrb # GitHub ID
