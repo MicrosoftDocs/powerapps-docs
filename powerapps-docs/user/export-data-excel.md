@@ -1,13 +1,13 @@
 ---
 title: "Export data to Excel in Power Apps | MicrosoftDocs"
-ms.custom: ""
+description: How to export data to Excel
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 07/09/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
