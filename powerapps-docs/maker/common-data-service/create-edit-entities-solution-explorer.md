@@ -35,7 +35,7 @@ Part of the name of any table you create is the customization prefix. This is se
 
 ## View tables
 
-In the solution explorer **Components** node, select the **tables** node.
+In the solution explorer **Components** node, select the **Tables** node.
 
 ![View tables in solution explorer](media/view-entities-solution-explorer.png)
 
@@ -135,7 +135,7 @@ While viewing a table use the delete command in the menu bar.
 > [!NOTE]
 > If there are any table dependencies you will get a **Cannot Delete Component** error with a **Details** link you can use to discover information about why the table cannot be deleted. In most cases, this will be because of a dependency that has to be removed. 
 >
-> There may be more than one dependency blocking the deletion of an table. This error message may only show the first one. For an alternate way to discover dependencies, see [Identify table dependencies](#identify-table-dependencies)
+> There may be more than one dependency blocking the deletion of a table. This error message may only show the first one. For an alternate way to discover dependencies, see [Identify table dependencies](#identify-table-dependencies)
 
 
 
@@ -151,7 +151,7 @@ You can identify dependencies that will prevent a table from being deleted befor
 
 ![Published Dependency Type](media/published-entity-dependency.png)
 
-**Published** dependencies will block deleting an table. **Internal** dependencies should be resolved by the system.  
+**Published** dependencies will block deleting a table. **Internal** dependencies should be resolved by the system.  
 
 3. Remove these published dependencies and you should be able to delete the table.
 
@@ -187,13 +187,13 @@ The following options cannot be set:
 - **Single row auditing**
 - **Multiple row auditing**
 
-## Create a Virtual table
+## Create a virtual table
 
 Some options are only used when creating a virtual table.
 
 |Option   |Description  |
 |---------|---------|
-|**Virtual table**|Whether the table is a virtual table.|
+|**Virtual Entity**|Whether the table is a virtual table.|
 |**Data Source**|The data source for the table.|
 
 More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)

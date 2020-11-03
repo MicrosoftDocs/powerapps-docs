@@ -30,9 +30,9 @@ In some cases, integration with an app can be achieved by using business logic c
 
 ## Defining business logic
 
-tables in Common Data Service can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in an table.
+tables in Common Data Service can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in a table.
 
-- **Business rules**: Validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for an table](/powerapps/maker/common-data-service/data-platform-create-business-rule)
+- **Business rules**: Validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for a table](/powerapps/maker/common-data-service/data-platform-create-business-rule)
 
 - **Business process flows**: Guide users to ensure that they enter data consistently and follow the same steps every time. Business process flows are currently only supported for model-driven apps. More information: [Business processes flows overview](/power-automate/business-process-flows-overview)
 

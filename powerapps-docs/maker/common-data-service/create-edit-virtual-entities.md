@@ -90,7 +90,7 @@ Part of the name of any virtual table you create is the customization prefix. Th
 
 ### Create a virtual table
   
-1. In solution explorer, create a new table. To do this, select **tables** in the left navigation pane, and then select **New**.  
+1. In solution explorer, create a new table. To do this, select **Tables** in the left navigation pane, and then select **New**.  
 2. On the **General** tab of the **Entity Definition**, select **Virtual table**, and then in the **Data Source** drop down list, select the data source that you want.  
 
     > [!div class="mx-imgBorder"] 

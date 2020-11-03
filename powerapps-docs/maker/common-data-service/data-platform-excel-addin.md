@@ -111,7 +111,7 @@ For more information about ways to export and view table row data, see these art
 
 
 ### See also
-* [Manage columns in an table](data-platform-manage-columns.md)
+* [Manage columns in a table](data-platform-manage-columns.md)
 * [Define relationships between tables](data-platform-table-lookup.md)
 * [Generate an app by using Common Data Service](../canvas-apps/data-platform-create-app.md)
 * [Create an app from scratch using Common Data Service](../canvas-apps/data-platform-create-app-scratch.md)

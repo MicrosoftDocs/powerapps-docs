@@ -66,7 +66,7 @@ There are some columns used by the system that you cannot add using the designer
 
 |Type|Description|
 |--|--|
-|**Big Integer** or **Time Stamp**|Used by the system to capture a version number manage updates to an table.|
+|**Big Integer** or **Time Stamp**|Used by the system to capture a version number manage updates to a table.|
 |**Customer**|A lookup column that you can use to specify a customer, which can be an account or contact.<br />**Note**: This attribute can be added using solution explorer designer.|
 |**Owner**|A system lookup column that references the user or team that is assigned a user or team owned table row.|
 |**Status Reason**|A system column that has options that provide additional detail about the Status column. Each option is associated with one of the available Status options. You can add and edit the options. <br /><br /> You can also include custom state transitions to control which status options are available for certain tables. More information: [Define status reason transitions for custom tables](define-status-reason-transitions.md)|
@@ -80,7 +80,7 @@ You can customize forms (main, quick create, and quick view) and email templates
 
 For example, if an organization operates in multiple areas or countries, you can include multiple locations or countries in an ‘Area of operation’ column. A user can then select one or more locations from the list of available values.
 
-Multi-select choice s can be used with read-only grids, editable grids, and most forms. Multi-select choice s can't be used with: 
+Multi-select choices can be used with read-only grids, editable grids, and most forms. Multi-select choices can't be used with: 
 - Workflows, business process flows, actions, dialogs, business rules, charts, rollup columns, or calculated columns.
 - Reports, SLA<sup>1</sup>, and routing rules<sup>1</sup>.
 
@@ -96,7 +96,7 @@ Multi-select columns are supported in the following types of forms:
 |**Legacy form**|No|
 |**Bulk Edit form**|No|
 
-You can use global choice s that are defined in your organization to configure values for the multi-select choice s.
+You can use global choices that are defined in your organization to configure values for the multi-select choices.
 
 
 <a name="BKMK_UsingTheRightTypeOfNumber"></a>
@@ -158,7 +158,7 @@ Even though a table has an image column, displaying that image in a model-driven
 - The standard table definition **Primary Image** property value must be set to **Default Image**. Custom tables require a custom image column. Then, you can select that image column for the **Primary Image** value in the custom table definition.  
 - The table form where the image is to be displayed must have the **Show image in the form** property enabled.  
   
-When image display is enabled for an table, any rows that don’t have an image will display a placeholder image. For example:
+When image display is enabled for a table, any rows that don’t have an image will display a placeholder image. For example:
 
 > [!div class="mx-imgBorder"] 
 > ![Sample table image for an account row](../common-data-service/media/account-record-default-image.png "Default account table image")
@@ -186,7 +186,7 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 1. Sign in to [Power Apps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-2.  Select **Data** > **tables** and then select the table where you want to add an image column. 
+2.  Select **Data** > **Tables** and then select the table where you want to add an image column. 
 3. Select **Add column** on the command bar, enter the following properties, and then select **Done**: 
    - **Display name**. Enter a friendly name for the column. 
    - **Data type**. Select **Image**. 
@@ -196,7 +196,7 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 
 ### Add image support for a form in a custom table using solution explorer
 1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). 
-2. In the left navigation pane, expand **tables**, expand the custom table you want, and then select **Columns**. 
+2. In the left navigation pane, expand **Tables**, expand the custom table you want, and then select **Columns**. 
 3. On the toolbar, select **New**. 
 4. In the **Type** section in the **Data Type** dropdown list select **Image**. 
 5. Enter a **Display Name**, such as *Custom table image*. 
@@ -244,7 +244,7 @@ More information for developers working with image data:
 
 The **File** column is used for storing binary data. The primary intended use of this column is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more columns of this data type can be added to an existing standard customizable table or a custom table.
 
-The default **Maximum file size** is 32 MB and the largest size you can set is 128 MB. The file size limit can be set individually for each column of file type added to an table. 
+The default **Maximum file size** is 32 MB and the largest size you can set is 128 MB. The file size limit can be set individually for each column of file type added to a table. 
 
 >[!NOTE]
 > Once the maximum file size has been saved, it can't be changed.

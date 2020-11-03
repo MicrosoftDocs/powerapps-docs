@@ -35,7 +35,7 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View tables
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **tables**.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables**.
 
     > [!div class="mx-imgBorder"] 
     > ![View tables](media/view-entities-portal.png)
@@ -74,7 +74,7 @@ Enter data for the following columns
 
 Select **Enable Attachments** to append notes and files to rows for this table.
 
-Select **More settings**. These settings are optional for an table.
+Select **More settings**. These settings are optional for a table.
 
 |Field|Description|
 |--|--|

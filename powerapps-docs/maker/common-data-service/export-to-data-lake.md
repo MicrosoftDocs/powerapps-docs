@@ -69,7 +69,7 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 
 ## Select and export Common Data Service table data to Azure Data Lake Storage Gen2
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Data**, and then select **tables**. 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Data**, and then select **Tables**. 
 2. On the command bar, select **Export to data lake**, and then on the **Export to data lake** page, select **New link to data lake**. 
 3. Select each of the following settings, and then select **Next**: 
    - **Subscription**. Select your Azure subscription. 
@@ -98,7 +98,7 @@ More information: [Configure Azure Storage firewalls and virtual networks]( /azu
 After you've set up data export to Azure Data Lake Storage Gen2 in your subscription, you can manage the export of table data to the data lake in one of two ways: 
 
 - On the Power Apps maker portal **Export to data lake** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
-- On the Power Apps maker portal **tables** area, select **…** next to an table, and then select the linked data lake where you want to export table data. 
+- On the Power Apps maker portal **Tables** area, select **…** next to a table, and then select the linked data lake where you want to export table data. 
 
    ![Select a table for export](media/select-entity-export.png "Select a table for export")
 

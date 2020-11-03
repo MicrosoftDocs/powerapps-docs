@@ -20,13 +20,13 @@ search.app:
 In Power Apps, a *table* defines information that you want to track in the form of rows, which typically include properties such as company name, location, products, email, and phone. You can then surface that data by developing an app that refers to the table. Power Apps offers standard "out-of-the-box" tables to cover typical scenarios within an organization (such as tracking appointments), but there may be times when you need to create custom tables to store data that's specific to your organization.
 
 ## Prerequisites
-To create an table, you must have either a System Administrator or System Customizer security role within Common Data Service.
+To create a table, you must have either a System Administrator or System Customizer security role within Common Data Service.
 
 ## Sign in to Power Apps
 Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Create a table
-1. In the navigation pane, expand **Data**, and then select **tables**.
+1. In the navigation pane, expand **Data**, and then select **Tables**.
 
 2. On the command bar, select **New table**.
 

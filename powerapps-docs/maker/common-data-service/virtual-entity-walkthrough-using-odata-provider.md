@@ -89,7 +89,7 @@ Part of the name of any custom table you create is the customization prefix. Thi
 
 ## Create the virtual table
 
-1. In the left navigation pane of solution explorer, select **tables**, and then select **New** from the main pane.
+1. In the left navigation pane of solution explorer, select **Tables**, and then select **New** from the main pane.
 2. On the **table: New** form, select the **Virtual table** option, and then enter the following information: 
 
     |Field|Value|

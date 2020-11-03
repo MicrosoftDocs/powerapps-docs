@@ -31,7 +31,7 @@ Additionally, you can set advanced cascading behaviors on many-to-one and one-to
 
 ## Add a lookup column (Many-to-one relationship)
 
-To add a lookup relation to an table, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
+To add a lookup relation to a table, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
@@ -91,7 +91,7 @@ To add a Many-to-many relationship, create a relation under the **Relationships*
 
 4. Click  the down arrow to the right of **Add relationship**, this will give you the choice of both types of relationships. Click **Many-to-many** this will open a new panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop down.
 
-5. After selecting an table, the names for the relationship and relationship table will appear. They will default with the names of the tables combined, but you can change them if needed.
+5. After selecting a table, the names for the relationship and relationship table will appear. They will default with the names of the tables combined, but you can change them if needed.
 
     > [!div class="mx-imgBorder"] 
     > ![Many to Many Relationship](./media/data-platform-cds-newrelationship/manytomany-1.png "Many to Many Relationship")

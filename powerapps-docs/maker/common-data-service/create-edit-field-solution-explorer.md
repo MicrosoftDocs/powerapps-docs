@@ -39,7 +39,7 @@ Part of the name of any custom column you create is the customization prefix. Th
 
 ## View columns
 
-With solution explorer open, under **Components** expand **tables** and select the table where you want to create or edit the column.
+With solution explorer open, under **Components** expand **Tables** and select the table where you want to create or edit the column.
 
 ![Solution explorer columns view](media/solution-explorer-fields-view.png)
 
@@ -147,7 +147,7 @@ If you to choose **Use Existing Choice** the designer will display a list of exi
 
 ![Configure a global choice ](media/global-option-set-solution-explorer.png)
 
-You can also configure global choices separately. More information: [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)
+You can also configure global choices separately. More information: [Create and edit global choices for Common Data Service (picklists)](create-edit-global-option-sets.md)
 
 > [!NOTE]
 > If you define every choice  as a global choice  your list of global choices will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local choice.
@@ -224,7 +224,7 @@ While [viewing columns](#view-columns), select the column you want to edit. Some
 
 After you make changes to a column, you must publish customizations. 
 
-- To publish your changes for one table, under **Components**, select **tables**, and then select the table that you made changes to. On the **Actions** toolbar, select **Publish**.  
+- To publish your changes for one table, under **Components**, select **Tables**, and then select the table that you made changes to. On the **Actions** toolbar, select **Publish**.  
   
 - To publish all changes you have made to multiple tables or components, on the **Actions** toolbar, select **Publish All Customizations**.  
   

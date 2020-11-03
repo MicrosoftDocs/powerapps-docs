@@ -195,7 +195,7 @@ Columns that provide a set of options can include their own set of *local* optio
 
 Using a global choice  is valuable when you find yourself creating the same set of options for multiple columns. With a global choice , you only need to maintain the set of options in one place. 
 
-When you choose **Multi Select Choice** or **Choice** data type the designer will list a set of available global choice s for you to choose from and provide the option to create a **New choice**.
+When you choose **Multi Select Choice** or **Choice** data type the designer will list a set of available global choices for you to choose from and provide the option to create a **New choice**.
 
 <img src = "media/option-set-options.png" alt = "Choose choice type" width = "780" height = "973">
 

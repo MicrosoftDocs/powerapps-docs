@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Manage custom columns in an table
+# Manage custom columns in a table
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 You can create and update one or more custom columns in any table. When you create a custom column, you specify a set of properties, such as the column's name, its display name, and the type of data that it will contain. For more information, see [table attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
@@ -24,7 +24,7 @@ You can create and update one or more custom columns in any table. When you crea
 > Every table has system columns, such as columns that indicate when a row was last updated, and who updated it. In addition, standard tables have standard (default) columns. You can't modify or delete system columns or standard columns. If you create a custom column, it should provide functionality on top of these built-in columns.
 
 ## Create a column
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
     ![Table Details](./media/data-platform-cds-create-entity/entitylist.png "table List")
 
@@ -75,7 +75,7 @@ Calculated columns let you automate manual calculations used in your business pr
 For more details on the types of expressions supported and examples, see [Define calculated columns](/dynamics365/customer-engagement/customize/define-calculated-fields)
 
 ## Update or delete a column
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane, and then click or tap an table.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane, and then click or tap a table.
 2. In the list of columns for the table that you selected, click or tap a column, and then follow one of these steps:
    
    * Change one or more properties of the column.

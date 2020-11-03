@@ -21,11 +21,11 @@ search.app:
 
 Choices allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice columns in other applications. Similar to tables, there are both standard Option sets, and the ability to create custom Choices to use within your app.
 
-Choices can be created in two ways, either from the **Option Sets** list within the portal or directly within a table while creating a column. For more information on how to create an table, see [Create an table](data-platform-create-table.md).
+Choices can be created in two ways, either from the **Option Sets** list within the portal or directly within a table while creating a column. For more information on how to create a table, see [Create a table](data-platform-create-table.md).
 
 ## Creating an Choice while adding a column
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
     ![table Details](./media/data-platform-cds-create-table/tablelist.png "table List")
 
@@ -84,11 +84,11 @@ Choices can be created in two ways, either from the **Option Sets** list within 
     > [!div class="mx-imgBorder"] 
     > ![New Option Set](./media/data-platform-cds-newoptionset/optionset-create-values.png "New Option Set")
 
-5. You can now use this choice  by creating new column on an table.
+5. You can now use this choice  by creating new column on a table.
 
 ## Global and Local Option sets
 
-By default, Choices are created as Global Choices which allows them to be reused across multiple tables. Under the **View more** option when creating a new Choice you can chose to make an Choice **Local**. This option is only available when creating an Choice while adding a column, and not through the **Option Sets** list. Local choice s can only be used by the table and column they are created against, and cannot be reused on other tables. This approach is only recommended for advanced users that a specific need for a local choice .
+By default, Choices are created as Global Choices which allows them to be reused across multiple tables. Under the **View more** option when creating a new Choice you can chose to make an Choice **Local**. This option is only available when creating an Choice while adding a column, and not through the **Option Sets** list. Local choices can only be used by the table and column they are created against, and cannot be reused on other tables. This approach is only recommended for advanced users that a specific need for a local choice .
 
 > [!IMPORTANT]
-> Once an choice  is created as local or global, this cannot be changed.
+> Once a choice  is created as local or global, this cannot be changed.

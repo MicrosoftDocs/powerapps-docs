@@ -150,7 +150,7 @@ If more than one matching connection role is configured, those connection roles 
 ### See also
 <!-- This is in the basics guide. It needs to be migrated -->
 [Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
-[Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)<br />
+[Create and edit global choices for Common Data Service (picklists)](create-edit-global-option-sets.md)<br />
 [Create and edit relationships between tables](create-edit-entity-relationships.md)
 
 

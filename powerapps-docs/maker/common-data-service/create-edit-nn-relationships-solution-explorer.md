@@ -41,7 +41,7 @@ Part of the name of any custom relationship you create is the customization pref
 
 ## View table relationships
 
-In solution explorer, expand **tables** an select an table. Within that table, select  **N:N Relationships**.
+In solution explorer, expand **Tables** an select a table. Within that table, select  **N:N Relationships**.
 
 ![View N:N table relationships](media/view-nn-table-relationships-solution-explorer.png)
 

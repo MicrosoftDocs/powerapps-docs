@@ -67,7 +67,7 @@ The following table lists the OData table Data Model (EDM) data type mappings wi
 
 This procedure shows you how to use the out-of-box OData Data Provider to use as the virtual table data source.   
   
-1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual table Data Sources**.  
+1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual Entity Data Sources**.  
 1. On the actions toolbar, click **New**.  
 1. On the **Select Data Provider** dialog box, select from the following data sources, and then click **OK**.  
   
@@ -83,7 +83,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
         -  **Return inline count**. Returns the total number rows in the result set. This setting is used to enable next page functionality when you return data to a grid. Use a value of false if your OData endpoint doesn't support the OData $inlinecount parameter. The default value is false.
     - **Request Parameters**. Optionally, you can add custom header or query string parameters used to connect to the OData web service, such as authentication parameters to the external service. Click **Query String** to toggle between header and query string parameter and value. Up to 10 header or query strings can be added. 
         > [!div class="mx-imgBorder"] 
-        > ![Virtual table data source row](media/virtual-table-data-source.png) 
+        > ![Virtual table data source row](media/virtual-entity-data-source.png) 
 
 
 ## See also  

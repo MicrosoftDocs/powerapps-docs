@@ -64,7 +64,7 @@ Mapping columns is done in the context of a 1:N or N:1 table relationship, so fi
 
 ## View mappable columns
 
-Field mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for an table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table columns. 
+Field mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for a table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table columns. 
 
 ![View mappable table relationships](media/mappable-entity-relationships.png) 
 
@@ -97,10 +97,10 @@ The following rules show what kinds of data can be mapped.
 - The target column must be a column that a user can enter data into.  
 - Address ID values can’t be mapped.
 - If you map to or from a column that isn’t displayed on a form, the mapping won't be done until the column is added to a form.
-- If the columns are choice s, the integer values for each option should be identical.  
+- If the columns are choices, the integer values for each option should be identical.  
   
 > [!NOTE]
->  If you need to map choice  columns, we recommend you configure both columns to use the same global choice . Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global choice s for Common Data Service (picklists)](create-edit-global-option-sets.md)  
+>  If you need to map choice  columns, we recommend you configure both columns to use the same global choice . Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global choices for Common Data Service (picklists)](create-edit-global-option-sets.md)  
   
 ## Automatically generate column mappings  
 

@@ -44,7 +44,7 @@ There are four different types of standard table ownership. When you create a cu
   
   
 > [!IMPORTANT]
->  After a standard table is created, you can’t change the ownership. Before you create an table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
+>  After a standard table is created, you can’t change the ownership. Before you create a table, make sure that you choose the correct type of ownership. If you later determine that your custom table must be of a different type, you have to delete it and create a new one.
   
 <a name="BKMK_Activitytables"></a>
 

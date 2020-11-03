@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Create a business rule for an table
+# Create a business rule for a table
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -23,7 +23,7 @@ You can create business rules and recommendations to apply logic and validations
 
 > [!IMPORTANT]
 > Business rules defined for a table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
-> Business rules don’t work with multi-select choice s.
+> Business rules don’t work with multi-select choices.
 >
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
 
@@ -52,7 +52,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
 
-2. In the list that appears, click or tap **tables**.
+2. In the list that appears, click or tap **Tables**.
   
 3. Open the table you want to create the business rule for (for example, open the **Account** table), and then click the **Business Rules** tab.  
 

@@ -60,7 +60,7 @@ In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkina
 
 ![Edit table properties](media/edit-entity-properties-powerapps-portal-designer.png)
 
-For a description of the properties available to edit see, [Create an table](data-platform-create-entity.md#create-a-table).
+For a description of the properties available to edit see, [Create a table](data-platform-create-entity.md#create-a-table).
 
 > [!NOTE]
 > Once enabled, not all table properties can be changed. More information: [Table options that can only be enabled](#table-options-that-can-only-be-enabled)
@@ -93,7 +93,7 @@ By default, all custom tables in the web application have the same icons. You ca
  
 ###  Table options that can only be enabled  
 
-The following table lists the options that you can enable for an table, but after these items are enabled, they can’t be disabled:  
+The following table lists the options that you can enable for a table, but after these items are enabled, they can’t be disabled:  
 
 [!INCLUDE [cc_entity-set-once-options-table](../../includes/cc_entity-set-once-options-table.md)] 
   
@@ -107,5 +107,5 @@ The following table lists the table options that you can enable or disable at an
 
 ### See also
 
-[Create an table](create-edit-entities.md)<br />
+[Create a table](create-edit-entities.md)<br />
 [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)

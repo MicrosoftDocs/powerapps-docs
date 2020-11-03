@@ -84,7 +84,7 @@ For a full list of tables, see the [table reference](https://docs.microsoft.com/
 You can extend the functionality of standard tables by creating one or more custom tables to store information that's unique to your organization. For more information, see [How to create a custom table](create-custom-entity.md).
 
 ## Logic and validation
-tables within Common Data Service can leverage rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data within an table.
+tables within Common Data Service can leverage rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data within a table.
 
 * **Business rules** validate data across multiple columns and tables and provide warning and error messages, regardless of the app used to create the data. For more information, see [Create a business rule](./data-platform-create-business-rule.md).
 * **Business process flows** guide users to ensure they enter data consistently and follow the same steps every time. Business process flows are currently only supported for Model driven apps. For more information, see [Business process flows overview](/dynamics365/customer-engagement/customize/business-process-flows-overview).

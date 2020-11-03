@@ -58,7 +58,7 @@ There are two designers you can use to create alternate keys:
 > [!NOTE]
 > You can also create an alternate key in your environment using the following:
 > - Import a solution that contains the definition of the alternate key.
-> - A developer can also write code to create them. More information: [Developer Documentation: Define alternate keys for an table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)
+> - A developer can also write code to create them. More information: [Developer Documentation: Define alternate keys for a table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)
 
 Information in this topic will help you choose which designer you can use. 
 
@@ -119,5 +119,5 @@ If the system job fails, locate the system job to view any errors. The system jo
 
 [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
 [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)<br />
-[Developer Documentation: Define alternate keys for an table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)<br />
+[Developer Documentation: Define alternate keys for a table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)<br />
 [Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-row)

@@ -70,7 +70,7 @@ When you download the log file, you will find an XML file that you can open usin
 
 ### There's an active unmanaged layer created after importing a managed solution
 
-During solution import the system must ensure that there is a fallback form for an table. This requirement is enforced when you create tables or forms. If during import there isn't a fallback form specified for an table, then the import creates an unmanaged active layer for one of the main forms and the unmanaged customization indicates the form as the fallback form. This ensures that users can view a form when they don’t have access to any of the other table forms. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
+During solution import the system must ensure that there is a fallback form for a table. This requirement is enforced when you create tables or forms. If during import there isn't a fallback form specified for a table, then the import creates an unmanaged active layer for one of the main forms and the unmanaged customization indicates the form as the fallback form. This ensures that users can view a form when they don’t have access to any of the other table forms. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
 
 ### The form doesn't appear in target environment after importing the unmanaged solution
 
@@ -82,7 +82,7 @@ This error can occur when the form you are importing doesn’t exist in the targ
 
 ### *Microsoft.Crm.CrmException: You cannot delete this form because it is the only fallback form of type main for the 'table' table. Each table must have at least one fallback form for each form type* message during solution upgrade or uninstall
 
-This error occurs when a solution upgrade or uninstall attempts to delete the last remaining form for an table. This behavior is by design. Each table must be able to display a form for any valid user. Therefore, at least one form must be designated as a fallback form. A fallback form is available to users whose security roles do not have any forms explicitly assigned to them. To work around this issue, create a temporary form configured as the fallback form for the table, and then try the upgrade or uninstall again. More information: [Set the fallback form for an table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
+This error occurs when a solution upgrade or uninstall attempts to delete the last remaining form for a table. This behavior is by design. Each table must be able to display a form for any valid user. Therefore, at least one form must be designated as a fallback form. A fallback form is available to users whose security roles do not have any forms explicitly assigned to them. To work around this issue, create a temporary form configured as the fallback form for the table, and then try the upgrade or uninstall again. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
 
 ### *Solution cannot be deleted due to dependencies from other components in the system* message when uninstalling a solution
 

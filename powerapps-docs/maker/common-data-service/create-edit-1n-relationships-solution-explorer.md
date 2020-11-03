@@ -40,7 +40,7 @@ Part of the name of any custom relationship you create is the customization pref
 
 ## View table relationships
 
-In solution explorer, expand **tables** an select an table. Within that table, select either **1:N Relationships** or **N:1 Relationships**
+In solution explorer, expand **Tables** an select a table. Within that table, select either **1:N Relationships** or **N:1 Relationships**
 
 ![View table relationships](media/view-1n-entity-relationships-solution-explorer.png)
 

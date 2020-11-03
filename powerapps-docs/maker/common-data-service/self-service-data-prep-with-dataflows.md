@@ -137,7 +137,7 @@ your organization can leverage dataflows either via Common Data Service, the
 Power Platform Dataflow connector in Power BI, or via direct access to Dataflow’s
 **Common Data Service** folder in your organization’s Azure Data Lake Storage Gen2
 account. Using a standard data model (schema) defined by the Common Data Model,
-business applications can depend on an table’s schema, and be abstracted from
+business applications can depend on a table’s schema, and be abstracted from
 how the data was created or from which data source. When a dataflow completes a
 scheduled run, the data is ready for modeling and creation of apps, flows, or BI
 insights in a very short period... in what used to take months, or longer, to

@@ -43,7 +43,7 @@ Before you start to follow this topic:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. In the navigation pane, select **Data** to expand it, and then select **tables**. 
+1. In the navigation pane, select **Data** to expand it, and then select **Tables**. 
 
     > [!div class="mx-imgBorder"] 
     > ![Power Apps home page](./media/data-platform-cds-newentity-pq/entities-get-data.png)
@@ -81,7 +81,7 @@ Before you start to follow this topic:
 
 1. Select **Refresh manually** for Power Query - Refresh Settings, and then select **Create**.
 
-1. Under **Data** (near the left edge), select **tables** to show the list of tables in your database.
+1. Under **Data** (near the left edge), select **Tables** to show the list of tables in your database.
 
     The **Customers** table that you created from an OData feed appears as a custom table.
 

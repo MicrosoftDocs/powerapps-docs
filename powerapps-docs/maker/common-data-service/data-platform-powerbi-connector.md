@@ -76,7 +76,7 @@ To use Power BI with Common Data Service, you need the following items:
 
 Choices are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector choice  columns will be presented as two columns to show both the unique value, and the display value.
 
-As an example, if you had an choice  on your table called ApprovalStatus, you would see two columns in Power BI:
+As an example, if you had a choice  on your table called ApprovalStatus, you would see two columns in Power BI:
 
 * ApprovalStatus - This will show a unique integer value for each item in your choice , this is help when applying filters so they will not be impacted if you make future changes to the display name.
 * ApprovalStatus_display - This will show the friendly display name of the item and is most commonly used when presenting the option in a table or chart.
@@ -100,7 +100,7 @@ While some relationships may be automatically created, you can still review and 
 
 
 ## Next steps
-* [Manage columns in an table](data-platform-manage-fields.md)
+* [Manage columns in a table](data-platform-manage-fields.md)
 * [Define relationships between tables](data-platform-entity-lookup.md)
 
 

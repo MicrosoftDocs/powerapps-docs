@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service columns define the individual data items that can be used to store data in an table. Columns are sometimes called *attributes* by developers. 
+In Common Data Service columns define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
   
 Before you create a custom column, evaluate whether using an existing column would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 

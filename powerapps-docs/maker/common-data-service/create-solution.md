@@ -67,7 +67,7 @@ To create a solution:
   
 When you add an existing table, rather than select **Include all components** or **Include table metadata**, use the **Select components** option to only add the table components that have been updated. With solution segmentation, you export solution updates with selected table assets, such as table columns, forms, and views, rather than entire tables with all the assets. [Create a segmented solution with table assets](#create-a-segmented-solution-with-table-assets)
 
- Many of the customizations you’ll want to do will involve tables. You can use the **table** filter to show a list of all the tables in the current solution that can be customized in some way. Once you drill into an table, you can see the components that are part of the table as shown with the account table in the following screenshot. 
+ Many of the customizations you’ll want to do will involve tables. You can use the **table** filter to show a list of all the tables in the current solution that can be customized in some way. Once you drill into a table, you can see the components that are part of the table as shown with the account table in the following screenshot. 
    
 > [!div class="mx-imgBorder"]  
 > ![Demo solution showing expanded account table](media/solution-entity-account.png "Demo solution showing expanded account table")  
@@ -117,7 +117,7 @@ The solution publisher indicates who developed the app. For this reason, you sho
    - **Display Name**. Enter the display name for the publisher. 
    - **Name**. Enter the unique name for the publisher. 
    - **Prefix**. Enter the publisher prefix you want. 
-   -	**Option Value Prefix**. This column generates a number based on the publisher prefix. This number is used when you add options to choice s and provides an indicator of which solution was used to add the option. 
+   -	**Option Value Prefix**. This column generates a number based on the publisher prefix. This number is used when you add options to choices and provides an indicator of which solution was used to add the option. 
    - **Contact Details**. Optionally, you can add contact and address information.
 4. Select **Save and Close**.
 
@@ -125,7 +125,7 @@ The solution publisher indicates who developed the app. For this reason, you sho
 You can change a solution publisher for an unmanaged solution by following these steps:
 1.	In the Power Apps portal, select **Solutions**, select **…** next to the solution you want, and then select **Settings**. 
 2.	In the **Solution settings** pane, select **Edit publisher**. 
-3.	Edit the **Display name** and **Prefix** columns to the values you want. The **Option Value Prefix** column generates a number based on the publisher prefix. This number is used when you add options to choice s and provides an indicator of which solution was used to add the option. 
+3.	Edit the **Display name** and **Prefix** columns to the values you want. The **Option Value Prefix** column generates a number based on the publisher prefix. This number is used when you add options to choices and provides an indicator of which solution was used to add the option. 
 4.	In addition to the prefix, you can also change the solution publisher display name, contact information, and address in the **Contact Details** section. 
 5.	Select **Save and Close**.
 
