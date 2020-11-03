@@ -69,7 +69,7 @@ Data in one table often relates to data in another table. table relationships de
 
 Common Data Service provides easy-to-use visual designers to define the different types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table.
 
-![Account table relationships](media/table-relationships.png "Account table relationships")
+![Account table relationships](media/entity-relationships.png "Account table relationships")
 
 The relationship types are:
 

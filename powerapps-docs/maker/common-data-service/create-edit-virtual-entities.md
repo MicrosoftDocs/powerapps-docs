@@ -35,9 +35,9 @@ Virtual tables are made up of three main components, a *data provider*, a *data 
   
 Common Data Service includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
   
-Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual tables](../../developer/common-data-service/virtual-tables/get-started-ve.md)
+Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual tables](../../developer/common-data-service/virtual-entities/get-started-ve.md)
   
- ![Virtual table diagram](media/virtual-table-diagram.png "Virtual table diagram")  
+ <!-- ![Virtual table diagram](media/virtual-entity-diagram.png "Virtual table diagram")  -->
   
 <a name="benefits"></a> 
   
@@ -51,7 +51,7 @@ Alternatively, developers can build their own data providers. Data providers are
   
 ## Add a data source to use for virtual tables 
  
- Developers create a custom plug-in to use as the data provider for a virtual table. Alternatively, you can use the provided OData v4 Data Provider. More information: [OData v4 Data Provider configuration, requirements, and best practices](virtual-table-odata-provider-requirements.md)  
+ Developers create a custom plug-in to use as the data provider for a virtual table. Alternatively, you can use the provided OData v4 Data Provider. More information: [OData v4 Data Provider configuration, requirements, and best practices](virtual-entities-odata-provider-requirements.md)  
   
 1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual table Data Sources**.  
 1. On the actions toolbar, select **New**.  
@@ -60,7 +60,7 @@ Alternatively, developers can build their own data providers. Data providers are
     |Data Provider|Description|
     |--|--|
     |*Custom data provider*|If you've imported a data  provider plug-in, the data provider will appear here. More Information [Developer Documentation: Get started with virtual tables](/dynamics365/customer-engagement/developer/virtual-tables/get-started-ve)|
-    |**OData v4 Data Provider**|Common Data Service includes an OData Data Provider that can be used with OData v4 web services. More Information [OData v4 Data Provider configuration, requirements, and best practices](virtual-table-odata-provider-requirements.md)|
+    |**OData v4 Data Provider**|Common Data Service includes an OData Data Provider that can be used with OData v4 web services. More Information [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)|
 
   
 ### Add a secured column to a Data Source
@@ -91,12 +91,12 @@ Part of the name of any virtual table you create is the customization prefix. Th
 ### Create a virtual table
   
 1. In solution explorer, create a new table. To do this, select **tables** in the left navigation pane, and then select **New**.  
-2. On the **General** tab of the **table Definition**, select **Virtual table**, and then in the **Data Source** drop down list, select the data source that you want.  
+2. On the **General** tab of the **Entity Definition**, select **Virtual table**, and then in the **Data Source** drop down list, select the data source that you want.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Virtual table option on table definition](media/virtual-table-click-option.png)  
+    > ![Virtual table option on table definition](media/virtual-entity-click-option.png)  
   
-1. On the table Definition, complete the following required columns.
+1. On the Entity Definition, complete the following required columns.
   
     |Field|Description|
     |--|--|
@@ -106,12 +106,12 @@ Part of the name of any virtual table you create is the customization prefix. Th
     Here's an example of a virtual table named *Movie* that uses a Azure Cosmos DB data provider to access document files.  
       
     > [!div class="mx-imgBorder"] 
-    > ![Virtual table definition using the Azure Cosmos DB data provider](media/virtual-table-definition.PNG)  
+    > ![Virtual table definition using the Azure Cosmos DB data provider](media/virtual-entity-definition.PNG)  
       
     > [!IMPORTANT]
     > Several options, such as Access Teams, Queues, and Quick Create,  aren't available with virtual tables. More Information [Considerations when you use virtual tables](#considerations)  
       
-    Complete the additional required and optional properties, such as display and plural names, as necessary. For more information about these properties, see [Create and edit tables](create-edit-tables.md).  
+    Complete the additional required and optional properties, such as display and plural names, as necessary. For more information about these properties, see [Create and edit tables](create-edit-entities.md).  
   
 1. Create and add one or more columns for the virtual table. In addition to the standard column properties required to create a custom column, these optional properties are available for each custom column you create for a virtual table.
 
@@ -121,7 +121,7 @@ Part of the name of any virtual table you create is the customization prefix. Th
     |**External Type Name**|If the column type you create is OptionSet: This property maps to the external name of the set of values in the external service for the choice .  Typically, this can be an enum or name of a string value class. The External Type Name can be used when a fully qualified name is required.  For example, as the *Type Name* with OData where parameters in a query need the fully qualified name, such as [*Type Name*].[*Value*].|
     |**External Value**|If the column type you create is OptionSet: This property maps to the corresponding value in the external data source for the choice  item.  This value entered is used to determine which choice  item to display in the app.  |
 
-    Complete the additional properties as necessary. For more information about these properties, see [Create and edit columns](create-edit-columns.md).  
+    Complete the additional properties as necessary. For more information about these properties, see [Create and edit columns](create-edit-fields.md).  
   
 1. Select **Save and Close** on the **Column** properties page.  
 1. On the solution explorer toolbar, select **Save**.  
@@ -150,6 +150,6 @@ Virtual tables have these restrictions.
   
 ### See also  
 
-[OData v4 Data Provider requirements and best practices](virtual-table-odata-provider-requirements.md)</br> 
-[Create and edit tables](create-edit-tables.md)</br>
-[Create and edit columns](create-edit-columns.md)
+[OData v4 Data Provider requirements and best practices](virtual-entity-odata-provider-requirements.md)</br> 
+[Create and edit tables](create-edit-entities.md)</br>
+[Create and edit columns](create-edit-fields.md)
