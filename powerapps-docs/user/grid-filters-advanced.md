@@ -20,6 +20,8 @@ searchScope:
   - D365-Entity-contact
   - D365-Entity-actity
   - D365-UI-View
+  - Power Platform
+  - Power Apps
 ---
 
 
