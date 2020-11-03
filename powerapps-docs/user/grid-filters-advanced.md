@@ -14,6 +14,12 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+searchScope:
+  - D365-App-msdynce_saleshub
+  - D365-Entity-Account
+  - D365-Entity-Contact
+  - D365-Entity-Actity
+  - D365-UI-View
 ---
 
 
