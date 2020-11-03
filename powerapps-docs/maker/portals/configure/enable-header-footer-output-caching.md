@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/11/2019
+ms.date: 11/02/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -37,8 +37,8 @@ For a user who upgraded to a newer version of portals, output caching is disable
 
         ```
         <li>
-            <a href={% if homeurl%}/{{ homeurl }}{% endif %}/Account/Login/LogOff?returnUrl={{ request.raw_url_encode | escape }} title={{ snippets[links/logout] | default:resx[Sign_Out] | escape }}>
-            {{ snippets[links/logout] | default:resx[Sign_Out] | escape }}
+            <a href={% if homeurl%}/{{ homeurl }}{% endif %}/Account/Login/LogOff?returnUrl={{ request.raw_url_encode | escape }} title={{ snippets["links/logout"] | default:resx["Sign_Out"] | escape }}>
+            {{ snippets["links/logout"] | default:resx["Sign_Out"] | escape }}
             </a>
         </li>
         </ul>
@@ -46,7 +46,7 @@ For a user who upgraded to a newer version of portals, output caching is disable
         {% else %}
         <li>
             <a href={% if homeurl%}/{{ homeurl }}{% endif %}/SignIn?returnUrl={{ request.raw_url_encode }}>
-            {{ snippets[links/login] | default:resx[Sign_In] }}
+            {{ snippets["links/login"] | default:resx["Sign_In"] }}
             </a>
         </li>
         ```
@@ -55,8 +55,8 @@ For a user who upgraded to a newer version of portals, output caching is disable
 
          ```
         <li>
-            <a href={% if homeurl%}/{{ homeurl }}{% endif %}{{ website.sign_out_url_substitution }} title={{ snippets[links/logout] | default:resx[Sign_Out] | escape }}>
-            {{ snippets[links/logout] | default:resx[Sign_Out] | escape }}
+            <a href={% if homeurl%}/{{ homeurl }}{% endif %}{{ website.sign_out_url_substitution }} title={{ snippets["links/logout"] | default:resx["Sign_Out"] | escape }}>
+            {{ snippets["links/logout"] | default:resx["Sign_Out"] | escape }}
             </a>
         </li>
         </ul>
@@ -64,7 +64,7 @@ For a user who upgraded to a newer version of portals, output caching is disable
         {% else %}
         <li>
             <a href={% if homeurl%}/{{ homeurl }}{% endif %}{{ website.sign_in_url_substitution }}>
-            {{ snippets[links/login] | default:resx[Sign_In] }}
+            {{ snippets["links/login"] | default:resx["Sign_In"] }}
             </a>
         </li>
         ```
@@ -81,7 +81,7 @@ For a user who upgraded to a newer version of portals, output caching is disable
 		      <div class=row >
 		        <div class=col-md-12 text-center>
 		          {% if current_page == sr_page %}
-		            <h1 class=section-landing-heading>{% editable snippets 'Search/Title' default: resx['Discover_Contoso'] %}</h1>
+		            <h1 class=section-landing-heading>{% editable snippets 'Search/Title' default: resx["Discover_Contoso"] %}</h1>
 		            {% include 'Search' %}
 		          {% endif %}
 		        </div>
@@ -108,7 +108,7 @@ For a user who upgraded to a newer version of portals, output caching is disable
 		        <div class=row >
 		          <div class=col-md-12 text-center>
 		            {% if current_page == sr_page %}
-		              <h1 class=section-landing-heading>{% editable snippets 'Search/Title' default: resx['Discover_Contoso'] %}</h1>
+		              <h1 class=section-landing-heading>{% editable snippets 'Search/Title' default: resx["Discover_Contoso"] %}</h1>
 		              {% include 'Search' %}
 		            {% endif %}
 		          </div>
