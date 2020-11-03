@@ -70,7 +70,7 @@ When you add an existing table, rather than select **Include all components** or
  Many of the customizations you’ll want to do will involve tables. You can use the **table** filter to show a list of all the tables in the current solution that can be customized in some way. Once you drill into an table, you can see the components that are part of the table as shown with the account table in the following screenshot. 
    
 > [!div class="mx-imgBorder"]  
-> ![Demo solution showing expanded account table](media/solution-table-account.png "Demo solution showing expanded account table")  
+> ![Demo solution showing expanded account table](media/solution-entity-account.png "Demo solution showing expanded account table")  
   
 <!--
 When you do this you may see a **Missing Required Components** dialog.  
@@ -154,11 +154,11 @@ For example, imagine that you've created a new custom table that doesn't exist i
 
       For this example, because *Custom table* has never been imported into the target environment, next to **Custom table** select **Include all components**. Under **Account**, choose **Select components**.  
       > [!div class="mx-imgBorder"] 
-      > ![Add existing tables](media/add-existing-tables1.png)
+      > ![Add existing tables](media/add-existing-entities1.png)
   
 6.  Since only the *topten* custom column is new to the account  table, select **Top Ten**, and then select **Add**.  
      > [!div class="mx-imgBorder"] 
-     > ![Select table components](media/add-existing-tables2.png)
+     > ![Select table components](media/add-existing-entities2.png)
 
 7. Select **Add** to add the components to the solution. 
 
@@ -196,7 +196,7 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
  As a result, the segmented solution that’s created contains three tables, `Account`, `Case`, and `Contact`. Each table contains only the assets that were chosen.  
   
  > [!div class="mx-imgBorder"] 
- > ![Solution with tables.](media/solution-segmentation-solution-tables-admin.png "Solution with tables.")
+ > ![Solution with tables.](media/solution-segmentation-solution-entities-admin.png "Solution with tables.")
 
 ### See also
  [Use solutions](use-solution-explorer.md) <br />

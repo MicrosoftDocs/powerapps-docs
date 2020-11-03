@@ -78,7 +78,7 @@ If your organization uses background workflows or business process flows that ru
 
 7. Set the frequency that your bulk delete job will run. You can schedule your job to run at set intervals or create a one-time bulk deletion job [using the Immediately option](#using-the-immediately-option). In this example, a recurring job is set to run on May 21, 2018, and every 30 days thereafter. 
 
-   ![Bulk row deletion options](media/custom-bulk-row-delete-options.png)
+   ![Bulk row deletion options](media/custom-bulk-record-delete-options.png)
 
 ### Using the Immediately option
 
