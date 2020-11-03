@@ -100,7 +100,7 @@ While some relationships may be automatically created, you can still review and 
 
 
 ## Next steps
-* [Manage columns in an table](data-platform-manage-columns.md)
-* [Define relationships between tables](data-platform-table-lookup.md)
+* [Manage columns in an table](data-platform-manage-fields.md)
+* [Define relationships between tables](data-platform-entity-lookup.md)
 
 

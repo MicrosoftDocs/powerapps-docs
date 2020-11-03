@@ -82,7 +82,7 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 4. Select the tables that you want to export to the data lake, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization)
 
    > [!div class="mx-imgBorder"] 
-   > ![Select tables for export](media/export-data-lake-select-table.png "Select tables for export")
+   > ![Select tables for export](media/export-data-lake-select-entity.png "Select tables for export")
 
 Your Common Data Service environment is linked to the Azure Data Lake Storage Gen2 account. The file system in the Azure storage account is created with a folder for each table selected to be replicated to the data lake. 
 
@@ -100,7 +100,7 @@ After you've set up data export to Azure Data Lake Storage Gen2 in your subscrip
 - On the Power Apps maker portal **Export to data lake** area, select **Manage tables** on the command bar to add or remove one or more linked tables.
 - On the Power Apps maker portal **tables** area, select **…** next to an table, and then select the linked data lake where you want to export table data. 
 
-   ![Select a table for export](media/select-table-export.png "Select a table for export")
+   ![Select a table for export](media/select-entity-export.png "Select a table for export")
 
 To unlink all linked tables, on the Power Apps maker portal **Export to data lake** area, select **Unlink data lake**.
 
@@ -113,7 +113,7 @@ The model.json file, along with its name and version, provides a list of tables 
 
 A folder that includes snapshot comma-delimited (CSV format) files is displayed for each table exported to the data lake.
    > [!div class="mx-imgBorder"] 
-   > ![table data in the data lake](media/table-data-in-lake.png "table data in the data lake") 
+   > ![table data in the data lake](media/entity-data-in-lake.png "table data in the data lake") 
 
 ### Continuous snapshot updates
 
@@ -164,7 +164,7 @@ In the environment where you want to import your solution, in the Power Apps mak
 From the Power Apps maker portal in the environment where you imported the Export to Data Lake configuration, verify that you can see your linked data lake in addition to the tables that you transported from your other environment.
 
 > [!div class="mx-imgBorder"] 
-> ![Imported Export to Data Lake tables](media/imported-export-tables.png "Imported Export to Data Lake tables") 
+> ![Imported Export to Data Lake tables](media/imported-export-entities.png "Imported Export to Data Lake tables") 
 
 ### What's next?
 After successfully using the Export to Data Lake service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, go to **Power Apps** > **Export to data lake**. Select your linked service and then select the **Discover Hub** tab. Here you can find recommended tools and curated documentation to help you get the most value out of your data.
