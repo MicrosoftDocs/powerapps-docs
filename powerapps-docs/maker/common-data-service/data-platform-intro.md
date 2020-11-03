@@ -45,10 +45,10 @@ Responding to customer feedback and data from user research, effective November 
 
 |Legacy term |Current term |
 |--|--|
-|table, tables	|Table, tables|
-|Field, columns<br/>Attribute, attributes|	Column, columns|
-|Row, rows|	Row, rows|
-|Option set, choice s<br/>Picklist, picklists|	Choice, choices
+|Entity, entities	|Table, tables|
+|Field, columns<br/>Attribute, attributes|Column, columns|
+|Record, records|	Row, rows|
+|Option set, Option sets<br/>Picklist, picklists|	Choice, choices
 Two options|	Yes/No|
  
 > [!NOTE]

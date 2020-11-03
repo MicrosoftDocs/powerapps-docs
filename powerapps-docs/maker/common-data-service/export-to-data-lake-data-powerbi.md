@@ -78,7 +78,7 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
 2. On the **Columns** menu, search for and select the columns **ownerid** and **revenue**. The columns will appear on the **Visualizations** menu under **Legend** and **Values**, respectively.
 
-    ![Search for and select the revenue column](media/select-columns.png "Search for and select the revenue column")
+    ![Search for and select the revenue column](media/select-fields.png "Search for and select the revenue column")
 
    A pie chart appears that separates each account owner by color and displays the total revenue of accounts.
 
