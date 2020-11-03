@@ -1,4 +1,3 @@
-
 ---
 title: "Send email using the enhanced email experience in model-driven apps| MicrosoftDocs"
 description: Use the enhanced email experience to compose an email without leaving the context of what you are working on.
