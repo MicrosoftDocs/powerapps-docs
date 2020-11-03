@@ -1,5 +1,6 @@
 ---
 title: "Import data in model-driven apps| MicrosoftDocs"
+description: How to import data
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -7,7 +8,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 08/11/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
