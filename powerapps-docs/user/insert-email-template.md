@@ -1,14 +1,23 @@
 ---
 title: "Insert email template while composing an email in model-driven apps | MicrosoftDocs"
 description: "Insert a preformatted email message while composing an email."
-ms.date: 04/09/2020
-ms.service:
-  - "dynamics-365-sales"
-ms.topic: article
+ms.custom: ""
 author: sbmjais
-ms.author: shjais
 manager: shujoshi
+ms.service: powerapps
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 04/09/2020
+ms.author: shjais
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
+
 
 # Insert an email template
 
