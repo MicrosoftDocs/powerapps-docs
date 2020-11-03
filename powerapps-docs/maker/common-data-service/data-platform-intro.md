@@ -52,7 +52,7 @@ Responding to customer feedback and data from user research, effective November 
 Two options|	Yes/No|
  
 > [!NOTE]
-> These terminology changes aren’t applicable to any APIs or messages in the Common Data Service web services. For example, <xref:Microsoft.Xrm.Sdk.Messages.CreatetableRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> messages will continue to have the same name. 
+> These terminology changes aren’t applicable to any APIs or messages in the Common Data Service web services. For example, <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> messages will continue to have the same name. 
 
 
 ## Dynamics 365 and Common Data Service
@@ -74,14 +74,14 @@ Building an app typically involves data from more than one source, while this ca
 * **Transform and import data using PowerQuery** &ndash; Transforming data when importing into the Common Data Service can be done through PowerQuery from many online data sources, a common tool used across Excel and Power BI.
 * **One time import of data** &ndash; Simple import and export of Excel and CSV files can be used for a one time or infrequent import of data into the Common Data Service.
 
-For more information about integrating data into the Common Data Service, see [Add data to a table in Common Data Service by using Power Query](data-platform-cds-newtable-pq.md).
+For more information about integrating data into the Common Data Service, see [Add data to a table in Common Data Service by using Power Query](data-platform-cds-newentity-pq.md).
 
 ## Interacting with tables
 When you develop an app, you can use standard tables, custom tables, or both. Common Data Service provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
 For a full list of tables, see the [table reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-table-reference).
 
-You can extend the functionality of standard tables by creating one or more custom tables to store information that's unique to your organization. For more information, see [How to create a custom table](create-custom-table.md).
+You can extend the functionality of standard tables by creating one or more custom tables to store information that's unique to your organization. For more information, see [How to create a custom table](create-custom-entity.md).
 
 ## Logic and validation
 tables within Common Data Service can leverage rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data within an table.
@@ -100,9 +100,9 @@ In addition to the features available through the [Power Apps](https://make.powe
 ## Next steps
 To get started using Common Data Service:
 - [Create a canvas app using a Common Data Service database](../canvas-apps/data-platform-create-app-scratch.md).
-- [Create a custom table](create-custom-table.md) and then [create a canvas app that uses the table](../canvas-apps/data-platform-create-app.md).
+- [Create a custom table](create-custom-entity.md) and then [create a canvas app that uses the table](../canvas-apps/data-platform-create-app.md).
 - [Create a model-driven app](/powerapps/maker/model-driven-apps/build-first-model-driven-app) built on Common Data Service.
-- [Use Power Query](./data-platform-cds-newtable-pq.md) to connect to an online or on-premises data source and import the data directly into Common Data Service.
+- [Use Power Query](./data-platform-cds-newentity-pq.md) to connect to an online or on-premises data source and import the data directly into Common Data Service.
 
 ## Privacy notice
 With the Microsoft Power Apps common data model, Microsoft collects and stores custom table and column names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The table and column names that app Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service's standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom table and column names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).

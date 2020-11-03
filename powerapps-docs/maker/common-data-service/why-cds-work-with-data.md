@@ -43,25 +43,25 @@ The following image shows some elements of the standard Common Data Model tables
 
 ![Common Data Model schema](media/common-data-model.png "Common Data Model schema")
 
-## tables
+## Tables
 
 In Common Data Service, tables are used to model and manage business data. To increase productivity, Common Data Service includes a set of tables known as standard tables. These tables are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization. The standard tables adhere to Common Data Model.
 
 A set of tables that are commonly used across industries, such as **User** and **Team**, are included in Common Data Service and referred to as *standard tables*. These out-of-the-box tables can also be customized, such as including additional columns. In addition, you can easily create your own custom tables in Common Data Service.
 
-![View tables](media/standard-tables.png "View tables")
+![View tables](media/standard-entities.png "View tables")
 
-## Fields
+## Columns
 
-Fields define the individual data items that can be used to store data in an table. Fields are sometimes called attributes by developers. An table representing a course at a university might contain columns such as "Name," "Location," "Department," "Registered Students," and so on.
+Columns define the individual data items that can be used to store data in an table. Fields are sometimes called attributes by developers. An table representing a course at a university might contain columns such as "Name," "Location," "Department," "Registered Students," and so on.
 
-Fields might have different types of data such as strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Common Data Service stores the data in the best storage type for the model created.
+Columns might have different types of data such as strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Common Data Service stores the data in the best storage type for the model created.
 
 Each of these columns can be associated with one of many data types supported by Common Data Service.
 
-![Create a column](media/table-column.png "Create a column")
+![Create a column](media/entity-field.png "Create a column")
 
-More information: [Types of columns](/powerapps/maker/common-data-service/types-of-columns)
+More information: [Types of columns](/powerapps/maker/common-data-service/types-of-fields)
 
 ## Relationships
 
@@ -86,7 +86,7 @@ For more information about creating table relationships, see [Create a relations
 Organizations often need to be in compliance with various regulations to ensure the availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations might want to track changes in Common Data Service data for security and analytical purposes.
 
 Common Data Service provides an auditing capability where changes to tables and attribute data in an organization can be rowed over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;tables and attributes. Auditing isn't supported on metadata
-changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](/powerapps/developer/common-data-service/configure-tables-attributes-auditing).
+changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](/powerapps/developer/common-data-service/configure-entities-attributes-auditing).
 
 Common Data Service supports analytics by providing the capability to choose tables for machine learning models to run. It has a prebuilt AI capability through AI Builder.
 
@@ -129,7 +129,7 @@ Common Data Service includes the ability to find rows quickly and has approaches
 
 *Single-table quick find* is used to find rows of only one type. This search option is available from within a view.
 
-![Single-table quick find](media/single-table-quick-find.png "Single-table quick find")
+![Single-table quick find](media/single-entity-quick-find.png "Single-table quick find")
 
 *Multiple-table quick find (categorized search)* is also used to find
 rows, but will find them across different types of tables, such as accounts or contacts.
