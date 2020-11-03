@@ -16,9 +16,9 @@ search.app:
   - D365CE
 searchScope:
   - D365-App-msdynce_saleshub
-  - D365-Entity-Account
-  - D365-Entity-Contact
-  - D365-Entity-Actity
+  - D365-Entity-account
+  - D365-Entity-contact
+  - D365-Entity-actity
   - D365-UI-View
 ---
 
