@@ -22,15 +22,7 @@ Horizontal container control determine the position of the child components so t
 
 **Horizontal** container control distribute the available space to its child components based on the settings, as well as determines alignment of the child components.
 
-## Key properties
-
-**[Color](properties-color-border.md)** – The color of text in a control.
-
-**[Font](properties-text.md)** – The name of the family of fonts in which text appears.
-
-**HtmlText** – Text that appears in an HTML text control and that may contain HTML tags.
-
-## Additional properties
+## Properties
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
