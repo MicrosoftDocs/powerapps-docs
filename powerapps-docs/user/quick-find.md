@@ -1,6 +1,6 @@
 ---
 title: "Quick Find| MicrosoftDocs"
-ms.custom: ""
+description: Learn how to use quick find to search for records
 author: mduelae
 manager: kvivek
 ms.service: powerapps

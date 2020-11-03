@@ -1,13 +1,21 @@
 ---
 title: "View and create email in model-driven apps | MicrosoftDocs"
 description: "View and create email while using a model-driven app."
-ms.date: 04/09/2020
-ms.service:
-  - "dynamics-365"
-ms.topic: article
-author: lalexms
-ms.author: lalexms
-manager: shujoshi
+author: mduelae
+manager: kvivek
+ms.service: powerapps
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 6/19/2020
+ms.author: mkaur
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 

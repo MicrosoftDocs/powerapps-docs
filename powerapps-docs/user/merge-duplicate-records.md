@@ -1,6 +1,6 @@
 ---
 title: "Merge duplicate records| MicrosoftDocs"
-ms.custom: ""
+description: How to merge duplicate records
 author: mduelae
 manager: kvivek
 ms.service: powerapps

@@ -1,6 +1,6 @@
 ---
 title: "Search options in Common Data Service| MicrosoftDocs"
-ms.custom: ""
+description: Learn how to to use the different search option
 author: mduelae
 manager: kvivek
 ms.service: powerapps

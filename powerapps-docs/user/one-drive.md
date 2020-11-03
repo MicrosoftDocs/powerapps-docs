@@ -1,6 +1,6 @@
 ---
 title: "Use OneDrive for Business| MicrosoftDocs"
-ms.custom: ""
+description: How to use OneDrive for Business
 author: mduelae
 manager: kvivek
 ms.service: powerapps
