@@ -18,10 +18,6 @@ This article is for health and safety leads who use the Power BI dashboard to ga
 
 1. Open Power BI Desktop.
 
-
-<!-- editor question: The image shows "case management". Which is correct, care or case? -->
-
-
 2. In the search bar, search for Return to Workplace – **Care management**.
 
     > [!div class="mx-imgBorder"]
@@ -60,11 +56,7 @@ The Investigating page provides a detailed view of active cases being investigat
 
 - Cases per case manager: Average number of cases under investigation per case manager.
 
-
-
-<!-- editor question: Can we say "country or region"? What about "state" in addition to province? -->
-
-The interactive map displays the location of cases in the investigating stage. You can drill into the data by country, province, and facility. The size of the bubble represents the number of cases. 
+The interactive map displays the location of cases in the investigating stage. You can drill into the data by country, state, and facility. The size of the bubble represents the number of cases. 
 
 The case manager overview table contains information about case manager, number of cases, time to start investigating, and time to reach a contact.
 
@@ -82,12 +74,9 @@ The Monitoring page focuses on active cases that are in the monitoring stage. Ke
 - Resolved cases: Total number of cases already resolved.
 
 
-
-<!-- editor note: I don't see "Avg resolution time" in the screenshot (maybe you have to scroll?). Also, can we add region and state, similar to previous question? -->
-
 - Avg resolution time (days): Average time taken for a case from being opened to resolved.
 
-The interactive map displays the location of cases in the monitoring phase. You can drill into the data by country, province, and facility. The size of the bubble represents the number of cases. The case manager overview table contains information about case manager, number of cases, average resolution time, and variance from average.
+The interactive map displays the location of cases in the monitoring phase. You can drill into the data by country, state, and facility. The size of the bubble represents the number of cases. The case manager overview table contains information about case manager, number of cases, average resolution time, and variance from average.
 
 > [!div class="mx-imgBorder"]
 > ![System at a glance - COVID cases](media/pbi-dash-report-fatalcovidcases2.png "System at a glance - COVID cases")
@@ -115,10 +104,6 @@ Users can switch from a map to the table visual, where key metrics are displayed
 > ![Cluster nav table](media/pbi-dash-report-clusternavtable.png "Cluster nav table")
 
 Map displays active cases by facility. To view a cluster, select a facility on the map. 
-
-
-<!-- editor question: Is that a fake address in the New York map? -->
-
 
 > [!div class="mx-imgBorder"]
 > ![Cluster nav map facility selected](media/pbi-dash-report-clusternavmap-facility.png "Cluster nav map facility selected")

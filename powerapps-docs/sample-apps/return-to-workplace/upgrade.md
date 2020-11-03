@@ -103,12 +103,7 @@ Capacity is defined for an area, but it's also bound by the phase your facility 
 
 ### Step 4: Make employee cases inactive
 
-
-<!-- editor note: The second sentence, below, is confusing. You can move "completed" employee cases by "completing" them. How do you complete something that's already completed?Can you revise this? -->
-
-
-
-In the new version of the solution, employee cases become inactive when they're completed. For any employee cases that are completed, you can move them to the inactive state by completing them. More information: [Use the Workplace Care Management app](app-for-health-and-safety-lead.md#manage-employee-cases)
+In the new version of the solution, employee cases become inactive when they're completed. More information: [Use the Workplace Care Management app](app-for-health-and-safety-lead.md#manage-employee-cases)
 
 
 ## Upgrade from version 1.1 to 1.2

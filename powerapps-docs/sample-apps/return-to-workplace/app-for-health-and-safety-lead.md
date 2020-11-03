@@ -68,10 +68,6 @@ The Workplace Care Management app has the following components:
 
 - **Case Managers**: List of all users who have access to the **Employee Cases** area.
 
-
-<!-- editor note: The following image is noticeably larger than the one for Employee cases. -->
-
-
 > [!div class="mx-imgBorder"]
 > ![Master data](media/health-safety-master-data.png "Master data")
 
@@ -83,9 +79,7 @@ At the case level, no additional personal or privacy-related information is stor
 
 ## Manage employee and case managers master data
 
-
-<!-- editor note: There should be some text here introducing this subtopic. -->
-
+This section explains hoe you can manage employees and case managers data.
 
 ### Manage employees
 
@@ -203,9 +197,6 @@ The key piece of data to be captured and recorded before moving to the next stag
   > [!div class="mx-imgBorder"]
   > ![Monitoring](media/health-safety-bpf-monitoring.png "Monitoring")
 
-
-<!-- editor note: Please review the wording changes in the following paragraph. -->
-
 A case manager can inform an employee that the facility is not available to enter for a while. When **Facility Access Available** is set to **No**, the employee won't be able to get a day pass. When you inform an employee that facility access is not available, you'll be able to give **Employee Instructions** that are visible in the app. With the **Facility Access Available Date**, you can inform the employee of when they will be able to get a day pass again. A flow will automatically reset **Facility Access Available** when the date is reached.
 
 #### Resolve
@@ -311,10 +302,6 @@ A case manager can enter additional information. Select **Save & Close** to retu
 
 
 #### Exposure score
-
-
-<!-- editor question: OK to add "time" to entry window? Otherwise, sounds like they came in through a window. -->
-
 
 Exposure score is calculated when the system generates case contacts as suggestions when a case manager links an employee attestation record. The system creates one record per person. If a person shares area, entry time window, or floor through multiple attestations, the exposure score on the existing record is increased. 
 

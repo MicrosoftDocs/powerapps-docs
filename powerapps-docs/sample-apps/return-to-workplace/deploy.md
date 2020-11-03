@@ -39,10 +39,6 @@ After you've purchased Power Apps, create an environment with a Common Data Serv
 
 3. Create appropriate users, and assign security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
-
-<!-- In the example below, is "US" part of the region name? Such as "crm for US"? Or do you mean "crm" for United States? -->
-
-
 After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region—for example, crm for US. Make a note of this environment URL.
 
 ## Step 2: Install the package
@@ -76,12 +72,7 @@ The Return to the Workplace solution has three Power BI dashboards, one for exec
 
 ### Install template app for dashboards
 
-
-
-<!-- editor note: The second link opens "Facility Management," not location management. -->
-
-
-1. Go to AppSource to install the [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi), [Return to the Workplace - Location Management](https://aka.ms/rtw-facilitypbi), and [Return to the Workplace - Workplace Care Management](https://aka.ms/rtw-workplacepbi) dashboards. 
+1. Go to AppSource to install the [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi), [Return to the Workplace - Facility Management](https://aka.ms/rtw-facilitypbi), and [Return to the Workplace - Workplace Care Management](https://aka.ms/rtw-workplacepbi) dashboards. 
 
 2. Select **GET IT NOW** to install the solution in your environment.
     > [!div class="mx-imgBorder"]
@@ -175,11 +166,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 
 1. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
 
-
-<!-- editor question: Do they select "select components," or should "select" not be bold? -->
-
-
-2. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
+2. From the list of entities, select **Facility (msft_facility)** , under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-report1.png "Enable Power BI")
@@ -340,10 +327,6 @@ Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>
 
 2. In the **Properties** dialog box, select the **Unblock** check box, select **Apply**, and then select **OK**.
 
-
-   <!-- editor note: It would help the user if the "Unblock" check box was highlighted in the image. It's hard to find. -->
-
-
     > [!div class="mx-imgBorder"] 
     > ![Solution package properties](media/deploy-deployment-package.png "Solution package properties")
 
@@ -459,25 +442,14 @@ Follow the steps below for each .pbit file.
      > [!div class="mx-imgBorder"] 
      > ![Save the Power BI workspace](media/deploy-gcc-publish.png "Save the Power BI workspace")
 
+9. You'll be prompted to save the file along with your Common Data Service environment information. Enter a name, and save it on your computer. The file name you enter is displayed in your Power BI website.
 
-
-
-<!-- from editor: Just checking to make sure ".pbix" is correct here, because earlier we had ".pbit" files. -->
-
-
-9. You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Enter a name, and save it on your computer. The file name you enter is displayed in your Power BI website.
-
-10. After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then select **Select**.
+10. After saving the file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then select **Select**.
 
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-gcc-select-destination.png "Publish to Power BI")
 
     The report becomes available in your workspace.
-
-
-
-<!-- from editor: When I click the following URL, it says I don't have access. Is that expected behavior? -->
-
 
 11. For the facility manager dashboard, the URL will be in the following format:
     https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
