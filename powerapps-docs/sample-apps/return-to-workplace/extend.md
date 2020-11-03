@@ -135,9 +135,23 @@ These entities are used primarily by the Facility Safety Management model-driven
 | Reopen Phase Transition  | Contains a list of requests to move from one phase to another with relevant process information.              |
 |||
 
+## Portal entities
+
+These entities are used primarily by the Portal extention. This list includes the entities from the other sections that been changed.
+
+
+| **Entity name**          | **Information in the entity**                   |
+|--------------------------|-------------------------------------------------------|
+| Contact                  | Contains individuals and guests.                      |
+| Employee Booking         | Contains associations of employees and specific areas, floors, and facilities for a given time. |
+| Facility                 | Contains geographic information about a physical place and reopen phase planning progress.                      |
+| Guest Attestation        | Contains associations of guests to their attestations                      |
+| Solution Setting         | Contains metadata used to drive platform behavior for specific facility groups.                      |
+|||
+
 ## Data definitions
 
-The data definitions section provides information about a list of entities, data attributes, and the areas of the solution where they're used. System-generated attributes such as **Created On** and **Modified On** aren't displayed.
+The data definitions section provides information about a list of entities, data attributes, and the areas of the solution where they're used. The solution colums indicates if the field is part of the base solution or if its added via the portals extention. System-generated attributes such as **Created On** and **Modified On** aren't displayed.
 
 ### Access Action
 
@@ -209,16 +223,17 @@ The data definitions section provides information about a list of entities, data
 
 ### Employee (Contact)
 
-| Display name     | Data type | Description   | Platform use|
-|------------------|-----------|------------|----------------|
-| Default Facility | Lookup    | Used to associate a facility to the employee. | Model-driven app and canvas app |
-| User ID          | Text      | Used to provide a unique identifier specific to the organization for the employee. | Model-driven app |
-| Default Area     | Lookup    | Used to store the default area for an employee. | Model-driven app and canvas app |
-| Assigned Area    | Lookup    | Could be used to configure a specific area for an employee. | Model-driven app |
-| Contact Type     | Option set | Used to set type of contact (employee, guest). | Model-driven app and canvas app |
-| Host             | Lookup     | Used to associate an employee to a guest. | Model-driven app and canvas app |
-| Company          | Text       | Used to store the company name of a guest. | Model-driven app and canvas app |
-|||||
+| Display name     | Data type | Description   | Platform use| Solution |
+|------------------|-----------|------------|----------------|------------|
+| Assigned Area    | Lookup    | Could be used to configure a specific area for an employee. | Model-driven app | Base |
+| Company          | Text       | Used to store the company name of a guest. | Model-driven app and canvas app | Base |
+| Contact Type     | Option set | Used to set type of contact (employee, guest). | Model-driven app and canvas app | Base |
+| Default Area     | Lookup    | Used to store the default area for an employee. | Model-driven app and canvas app | Base |
+| Default Facility | Lookup    | Used to associate a facility to the employee. | Model-driven app and canvas app | Base |
+| Host             | Lookup     | Used to associate an employee to a guest. | Model-driven app and canvas app | Base |
+| User ID          | Text      | Used to provide a unique identifier specific to the organization for the employee. | Model-driven app | Base |
+| Requires portal access | Two Option | Used to send an invite to the contact | Model-driven app | Portal |
+||||||
 
 ### Employee Attestation
 
@@ -485,23 +500,24 @@ The data definitions section provides information about a list of entities, data
 
 ### Solution Setting
 
-| Display name                            | Data type  | Description                                                              | Platform use                    |
-|-----------------------------------------|------------|--------------------------------------------------------------------------|---------------------------------|
-| Allow Employee Sentiment                | Option Set | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app |
-| Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app |
-| Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app |
-| Allow QR codes                          | Option Set | Indicates if QR codes are displayed on the pass.                         | Model-driven app and canvas app |
-| Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registrations is available               | Model-driven app and canvas app |
-| Company Name                            | Text       | Used to describe the solution settings record.                            | Model-driven app |
-| Facility Group                          | Lookup     | Links solution settings record to specific facility group.               | Model-driven app and canvas app |
-| Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
-| Health Contact Instructions             | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app |
-| Health & Safety Instructions            | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app |
-| General Terms & Agreement               | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app |
-| Guest Health Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest.          | Model-driven app and canvas app |
-| Guest Privacy Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest.           | Model-driven app and canvas app |
-| Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                |
-|||||
+| Display name                            | Data type  | Description                                                              | Platform use                    | Solution |
+|-----------------------------------------|------------|--------------------------------------------------------------------------|---------------------------------|----------|
+| Allow Employee Sentiment                | Option Set | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app | Base |
+| Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app | Base |
+| Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app | Base |
+| Allow QR codes                          | Option Set | Indicates if QR codes are displayed on the pass.                         | Model-driven app and canvas app | Base |
+| Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registrations is available               | Model-driven app and canvas app | Base |
+| Company Name                            | Text       | Used to describe the solution settings record.                            | Model-driven app | Base |
+| Facility Group                          | Lookup     | Links solution settings record to specific facility group.               | Model-driven app and canvas app | Base |
+| Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app | Base |
+| Health Contact Instructions             | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app | Base |
+| Health & Safety Instructions            | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app | Base |
+| General Terms & Agreement               | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app | Base |
+| Guest Health Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest.          | Model-driven app and canvas app | Base |
+| Guest Privacy Terms & Agreement         | Text       | Instructions provided to an employee when registration a guest.           | Model-driven app and canvas app | Base |
+| Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                | Base |
+| Resources Text                          | Text       | instruction provided to resources when registering to the portal         | Model-driven app and Poral      | Portal |
+||||||
 
 ### State
 
