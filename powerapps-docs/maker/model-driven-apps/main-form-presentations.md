@@ -50,7 +50,7 @@ The main form is used by all model-driven app clients. This form provides a cons
   
 |Component|Summary|  
 |---------------|-------------|  
-|**Navigation bar**|Uses the data in the site map to provide the ability to move to different areas of the application.<br /><br /> The navigation pane used in classic forms isn’t included in the updated form. In the context of a record, the navigation bar provides access to views of related rows. Rather than navigating to related records using the navigation pane or by using the navigation bar, adding sub-grids configured to show useful related table records provides a better experience for most people.|  
+|**Navigation bar**|Uses the data in the site map to provide the ability to move to different areas of the application.<br /><br /> The navigation pane used in classic forms isn’t included in the updated form. In the context of a row, the navigation bar provides access to views of related rows. Rather than navigating to related rows using the navigation pane or by using the navigation bar, adding sub-grids configured to show useful related table rows provides a better experience for most people.|  
 |**Command bar**|Uses the data defined for ribbons to provide commands relevant for the row.<br /><br /> The first five commands are displayed followed by an ellipsis (![More commands button](media/not-available.gif "More commands button")) that provides a flyout menu to choose additional commands.|  
 |**Image**|When a table has an image column and the table **Primary Image** option is set to **Default Image**, an image can be displayed in the header when the form is configured to show the image.|  
 |**Header**|Columns placed in the header remain visible when people scroll down through the body of the form.<br /><br /> Up to four columns can be placed in the header. Multiple lines of text, web resources, or iFrames aren’t allowed in the header. The header and footer share some properties with sections.|  
@@ -61,12 +61,12 @@ The main form is used by all model-driven app clients. This form provides a cons
 |**Fields**|Columns display controls people use to view or edit data in a table row. Columns can be formatted to occupy up to four columns within a section.|  
 |**Spacer**|A spacer allows for an empty space to be added to a section column.|  
 |**Sub-grids**|Sub-grids allow for the display of a list within the form. The ability to display charts using a sub-grid isn’t available in forms for updated entities.|  
-|**Quick View Form**|A quick view form displays data from a record referenced by a lookup column on the form. The table that is the target of the lookup must have a quick view form before one can be added to the form. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)|  
+|**Quick View Form**|A quick view form displays data from a row referenced by a lookup column on the form. The table that is the target of the lookup must have a quick view form before one can be added to the form. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)|  
 |**Web Resources**|HTML and Microsoft Silverlight web resources can be added to main forms but they won’t be displayed when using Dynamics 365 for phones and tablets.|  
 |**iFrame**|An inline-frame that you configure to show a webpage from another website. **Important:**  <ul><li>When the page displayed in an iFrame is on another domain, browsers apply a higher level of security. This may complicate the requirements for the contents of an iFrame to interact with data in the form.</li><li>Displaying a table form within an iFrame embedded in another table form is not supported. 
 |**Bing Maps**|When this control is present in a form for an updated table and the system setting **Enable Bing Maps** is enabled with a valid Bing Maps key, this control can be used one time in a form to show the location for one of the addresses in an updated table. More information: [Configuring Bing maps](configure-bing-maps-legacy.md)|  
 |**Footer**|Any number of columns, web resources, or iFrames can be added to the footer. Columns are read-only when displayed in the footer. The header and footer share some properties with sections.|  
-|**Status Bar**|The status bar displays the status column for the record, a notification area, and a save button.|  
+|**Status Bar**|The status bar displays the status column for the row, a notification area, and a save button.|  
   
 <a name="BKMK_CRMforTabletsPresentation"></a>   
 ## Dynamics 365 for phones and tablets forms  

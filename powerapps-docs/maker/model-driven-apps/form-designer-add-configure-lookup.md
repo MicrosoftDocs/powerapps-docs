@@ -24,7 +24,7 @@ search.app:
 ---
 
 # Configure a lookup component on a form  
-A lookup column can be used to link to a record in another table. A lookup component is automatically used when a lookup column is added to a form. Makers can configure a lookup component using the form designer.
+A lookup column can be used to link to a row in another table. A lookup component is automatically used when a lookup column is added to a form. Makers can configure a lookup component using the form designer.
 
 ## Configure a lookup component
 These are the properties available to configure when using a lookup component on a form using the form designer.
@@ -36,7 +36,7 @@ These are the properties available to configure when using a lookup component on
 |Area  |Name  |Description  |
 |---------|---------|---------|
 | **Display options** | **Table** |  The related table that the lookup column connects to. |
-| **Display options** | **Default view** |  The view of the table selected in the **Table** property that can be used to get and display the list of records that app users can select in the lookup drop-down. |
+| **Display options** | **Default view** |  The view of the table selected in the **Table** property that can be used to get and display the list of rows that app users can select in the lookup drop-down. |
 | **Display options** | **Allow users to change view** |  When selected, app users can change from the **Default view** to another view of the table selected in the **Table** property. |
 | **Display options** | **Show all views** |  When selected, app users can change from the **Default view** to all other views of the table selected in the **Table** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
 | **Display options** | **Selected views** |  A list of views of the table selected in the **Table** property that app users can change to from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is unselected. |

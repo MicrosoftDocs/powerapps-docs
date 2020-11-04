@@ -56,4 +56,4 @@ The **Calendar Control V2** control displays scheduled activities and their asso
 
 ### See also
 
-[Work with records in the new calendar view](../../user/calendar-view.md)
+[Work with rows in the new calendar view](../../user/calendar-view.md)

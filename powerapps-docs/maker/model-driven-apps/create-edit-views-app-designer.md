@@ -30,11 +30,11 @@ search.app:
 
 In this article you perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.
 
-In Power Apps, views define how records for a specific table are  displayed. A view defines the following:
+In Power Apps, views define how rows for a specific table are  displayed. A view defines the following:
 -  The columns (attributes) to display
 -  The width of the columns
--  How the records are sorted by default
--  Which filters are applied to determine which records appear in the list by default
+-  How the rows are sorted by default
+-  Which filters are applied to determine which rows appear in the list by default
 
 Typically, views are classified into three types:
 - **Personal:** Individual users can create personal views according to their personal requirements. These views are visible only to the user who created them and anyone they choose to share them with. 
@@ -102,7 +102,7 @@ More information about the app designer: [Design custom business apps by using t
 
 
 ### Add a column to your view in app designer
-Views display records in a table that contains rows and columns. Each row is a record, and the columns you display from the record are determined by the columns you add to the view.
+Views display rows in a table that contains rows and columns. Each row is a row, and the columns you display from the row are determined by the columns you add to the view.
 
 1. In app designer, select the table view that you want and then on the right pane next to the view that you want select edit (pencil button).  
 2. On the **Components** tab, select the **Column Attributes** list for either the **Primary Table** or **Related Table**.
@@ -116,7 +116,7 @@ As you add attributes, you can drag them to any position among existing column h
 
 
 ### Define filter criteria in app designer
-You can set filter criteria so that only a subset of the records is displayed in a view. When a user opens the view, only the records that meet the defined filter criteria are displayed. You can select columns from both the primary and related tables to filter on.
+You can set filter criteria so that only a subset of the rows is displayed in a view. When a user opens the view, only the rows that meet the defined filter criteria are displayed. You can select columns from both the primary and related tables to filter on.
 1. In the app designer, expand the **Filter Criteria** section.
    
     ![Set Filter Criteria](media/ViewAppDesigner_FilterCriteria.png "Set filter criteria") 
@@ -140,18 +140,18 @@ You can filter data based on the attributes of related tables in addition to the
 More information: [Create and edit relationships between tables](../common-data-service/create-edit-entity-relationships.md)
 
 #### Group multiple filters in app designer
-You can add multiple filters to your view if you want to filter records by using more than one column. 
+You can add multiple filters to your view if you want to filter rows by using more than one column. 
 
 1. Select the filters that you want to group.
     ![Set Group Filter](media/ViewAppDesigner_GroupFilter.png "Set group filter")
 2. Select Group And or Group Or to group the filters.
     ![Group Filter Selection](media/ViewAppDesigner_GroupFilterSelection.png "Select a group filter")
-When you select **Group And**, only records that meet both criteria are displayed in the view. When you select **Group Or**, records that meet any of the filter criteria are displayed. For example, to show only records that have priority of High or Normal, and status of Active, select **Group And**.
+When you select **Group And**, only rows that meet both criteria are displayed in the view. When you select **Group Or**, rows that meet any of the filter criteria are displayed. For example, to show only rows that have priority of High or Normal, and status of Active, select **Group And**.
 
 To remove the filter from a group, select the group, and then select **Ungroup**. 
 
 ### Set primary and secondary sort order for columns in app designer
-When a view is opened, the records it displays are sorted in the order you set when you created the view.   By default, records will be sorted according to the first column in a view when no sort order is selected. You can choose to sort on a single column, or you can choose two columns—one primary and one secondary—to sort by. When the view is opened, the records will first be sorted by the column you want to use for primary sort order, and then by the column you want to use for secondary sort order. 
+When a view is opened, the rows it displays are sorted in the order you set when you created the view.   By default, rows will be sorted according to the first column in a view when no sort order is selected. You can choose to sort on a single column, or you can choose two columns—one primary and one secondary—to sort by. When the view is opened, the rows will first be sorted by the column you want to use for primary sort order, and then by the column you want to use for secondary sort order. 
 
 > [!NOTE]
 > You can only set primary and secondary sort order for column attributes you added  from the primary table.
@@ -159,7 +159,7 @@ When a view is opened, the records it displays are sorted in the order you set w
 1. Select the column you want to use for sorting.
 2. Select the down arrow, and then choose **Primary Sort** or **Secondary Sort**.
  
-    ![Sort Record](media/ViewAppDesigner_SortRecords.png "Sort records based on primary and secondary sort orders") 
+    ![Sort Record](media/ViewAppDesigner_SortRecords.png "Sort rows based on primary and secondary sort orders") 
 
 If you remove the column you chose for the primary sort order, the column you chose for the secondary sort order becomes the primary.
 

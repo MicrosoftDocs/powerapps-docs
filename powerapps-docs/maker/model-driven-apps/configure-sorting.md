@@ -1,5 +1,5 @@
 ---
-title: "Sort records in a model-driven app view in Power Apps | MicrosoftDocs"
+title: "Sort rows in a model-driven app view in Power Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 04/17/2020
 ms.reviewer: ""
@@ -22,7 +22,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sort records in a model-driven app view
+# Sort rows in a model-driven app view
 
 
 When you create or edit a view you can configure the sort order for either ascending or descending.

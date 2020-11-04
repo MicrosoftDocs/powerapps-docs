@@ -43,25 +43,25 @@ To migrate an embedded canvas app on a model-driven form created using the publi
     7. Use **Ctrl + V** to paste the controls on the selected screen.
     8. Repeat the steps to copy each screen.
 5. When you are done copying all the screens, select the browser tab from Step 3, that has the new embedded canvas app created using the latest release.
-6. Update all the places where the record from the host model-driven form is being accessed. Replace **First(ModelDrivenFormIntegration.Data)** with **ModelDrivenFormIntegration.Item**.
+6. Update all the places where the row from the host model-driven form is being accessed. Replace **First(ModelDrivenFormIntegration.Data)** with **ModelDrivenFormIntegration.Item**.
 7. Add any missing datasources in the new embedded canvas app.
 8. Update all broken references in the new embedded canvas app. 
 9. When you are done making changes, select the **File** tab, and then select **Save**.
 10. To make your changes available to end-users select **Publish** and then select **Publish this version**.
 
-## Migrating embedded canvas apps on model-driven forms that use a list of records related to the current (main form) record
+## Migrating embedded canvas apps on model-driven forms that use a list of rows related to the current (main form) row
 
-In the preview release, to embed a canvas app on a model-driven form, makers had to decide up front if they wanted to pass the current (main form) record as data context or a list of records related to the current (main form) row. They then had to add the canvas app control to either the column or sub-grid control.
+In the preview release, to embed a canvas app on a model-driven form, makers had to decide up front if they wanted to pass the current (main form) row as data context or a list of rows related to the current (main form) row. They then had to add the canvas app control to either the column or sub-grid control.
 
-With the latest release, adding an embedded canvas app on a model-driven form is simplified and streamlined to the column only. Makers can still easily access the list of related records directly in the canvas app using the Common Data Service connector. 
+With the latest release, adding an embedded canvas app on a model-driven form is simplified and streamlined to the column only. Makers can still easily access the list of related rows directly in the canvas app using the Common Data Service connector. 
 
-To migrate an embedded canvas app on a model-driven form that uses a list of records related to the current (main form) record, please follow the steps below.
+To migrate an embedded canvas app on a model-driven form that uses a list of rows related to the current (main form) row, please follow the steps below.
 
 1. Follow the steps in the section above to migrate embedded canvas apps on model-driven forms created using the public preview release to the latest.
 2. Using the Common Data Service connector, add a datasource for the related table to the app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in Power Apps](../canvas-apps/add-data-connection.md).
-3. When using the datasource of the related table for a control such as [Gallery](../canvas-apps/controls/control-gallery.md) or [Data table](../canvas-apps/controls/control-data-table.md), use the **[Filter](../canvas-apps/functions/function-filter-lookup.md)** function to filter the records to the ones that are related to the current (main form) row. The current (main form) record is available via **ModelDrivenFormIntegration.Item**.
+3. When using the datasource of the related table for a control such as [Gallery](../canvas-apps/controls/control-gallery.md) or [Data table](../canvas-apps/controls/control-data-table.md), use the **[Filter](../canvas-apps/functions/function-filter-lookup.md)** function to filter the rows to the ones that are related to the current (main form) row. The current (main form) row is available via **ModelDrivenFormIntegration.Item**.
 	> [!NOTE]
-	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. 
+	> The embedded canvas app has full access to row from the host model-driven form via ModelDrivenFormIntegration.Item. 
 	> As an example, to get the value of a column with the name **accountnumber** and display name **Account Number**, you can use **ModelDrivenFormIntegration.Item.accountnumber** or **ModelDrivenFormIntegration.Item.'Account Number'**.
 4. With recent updates Common Data Service now also provides support to use table views as a filter. See this blog post for details: [Improved data source selection and Common Data Service views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/). 
 

@@ -42,7 +42,7 @@ You can set the following chart properties from the **Set Properties** dialog bo
   
 - **Display label on the Dashboard**. Select or clear this check box to display or hide the chart label.  
   
-- **Table**. Select the table (record type) to base the chart on. This setting determines the available values for the Default View and Default Chart properties.  
+- **Table**. Select the table (row type) to base the chart on. This setting determines the available values for the Default View and Default Chart properties.  
   
 - **Default View**. Select the view used to retrieve the data for the chart.  
   
@@ -60,13 +60,13 @@ You can set the following list properties from the **Set Properties** dialog box
   
 - **Display label on the Dashboard**. Select or clear this check box to display or hide the list label.  
   
-- **Table**. Select the table (record type) to base the list on. This setting determines the available values for the Default View property.  
+- **Table**. Select the table (row type) to base the list on. This setting determines the available values for the Default View property.  
   
 - **Default View**. Select the view used to retrieve the data in the list. A user can change the view, but the list will revert to Default View the next time the dashboard is opened.  
   
-- **Display Search Box**. Select this check box if you want to display a search box at the top of the list. If the search box is included, you or other users can search for records in the list at runtime.  
+- **Display Search Box**. Select this check box if you want to display a search box at the top of the list. If the search box is included, you or other users can search for rows in the list at runtime.  
   
-- **Display Index**. Select this check box if you want to display the A to Z filters at the bottom of the list. When the A to Z filters are displayed, you or other users can select a letter to jump to records that start with that letter.  
+- **Display Index**. Select this check box if you want to display the A to Z filters at the bottom of the list. When the A to Z filters are displayed, you or other users can select a letter to jump to rows that start with that letter.  
   
 - **View Selector**. Select from the following values:  
   

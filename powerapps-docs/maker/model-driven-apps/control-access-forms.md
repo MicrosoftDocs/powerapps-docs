@@ -31,7 +31,7 @@ You can access form settings from the **Forms** tab in Power Apps or command bar
 
 ## Set security roles for a form
   
- Different people in your organization may interact with the same data in different ways. Managers may depend on being able to quickly scan information in a record and service people may require a form that streamlines data entry. You can accommodate different requirements by assigning forms to the security roles that different groups of people belong to.  
+ Different people in your organization may interact with the same data in different ways. Managers may depend on being able to quickly scan information in a row and service people may require a form that streamlines data entry. You can accommodate different requirements by assigning forms to the security roles that different groups of people belong to.  
   
  When you have more than one main or other form type defined for a table, you can select which forms users will be able to use based on their security roles. Because each table must be able to display a form for any user, at least one form must be designated as a ”fallback” form – a form visible to users whose security roles do not have any forms explicitly assigned to them.  
   

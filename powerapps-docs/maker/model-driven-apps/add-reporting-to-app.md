@@ -76,7 +76,7 @@ To find if a report is viewable to the organization: In the list of reports, ope
 > [!div class="mx-imgBorder"] 
 > ![Organization level report visibility](media/report-scope.png "Organization level report visibility")
 
-You can add, import, or export snapshots of reports as part of a solution. In model-driven apps, reports, sub reports, report category, report display area, and report-related record type are considered as components of a report set. When you import a solution update in non-overwrite mode, any updates by the solution to a report will be ignored if any component of the report set has been customized.
+You can add, import, or export snapshots of reports as part of a solution. In model-driven apps, reports, sub reports, report category, report display area, and report-related row type are considered as components of a report set. When you import a solution update in non-overwrite mode, any updates by the solution to a report will be ignored if any component of the report set has been customized.
 
 ## Related topics
 

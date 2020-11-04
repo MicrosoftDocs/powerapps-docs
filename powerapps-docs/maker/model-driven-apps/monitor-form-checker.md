@@ -27,9 +27,9 @@ When you filter on model-driven app form-related events in Monitor, you can get 
 
 There are many situations that you might encounter where access to the information provided by Monitor will help you better understand why a form behaves a certain way. Many form issues are based on business rules, JavaScript, form events, or client API that admins and makers have set. Monitor can also help identify whether the issue you experience is designed out-of-the-box or is due to a customization. It provides details that can help you answer the following questions:
 
-- Why aren't records showing in the related menu of a table?
+- Why aren't rows showing in the related menu of a table?
 - Why is a control not editable?
-- Why is a record in a read-only state?
+- Why is a row in a read-only state?
 
 ## Filter Monitor for form-related issues
 
@@ -54,7 +54,7 @@ There are many situations that you might encounter where access to the informati
 
 ## Use Monitor to understand form behavior
 
-For each record, you can open and view detailed information about the form event. For example, imagine you have a question about the options in the related menu tab of a form. You go to that form in the app and select the appropriate form component. In this example, the **RelatedMenu** record in the **Operation** column is selected. Next, the **Details** tab, and then **…** are selected to display additional information.
+For each row, you can open and view detailed information about the form event. For example, imagine you have a question about the options in the related menu tab of a form. You go to that form in the app and select the appropriate form component. In this example, the **RelatedMenu** row in the **Operation** column is selected. Next, the **Details** tab, and then **…** are selected to display additional information.
 
 > [!div class="mx-imgBorder"] 
 > ![Monitoring a related menu](media/monitor-formchecker-related-menu.png)

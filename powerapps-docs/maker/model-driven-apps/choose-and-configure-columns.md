@@ -65,9 +65,9 @@ search.app:
 ### Add columns  
  You can include columns from the current table or any of the related tables that have a 1:N table relationship with the current table.  
   
- For example, perhaps you want to display the owner of a user-owned table in a column. You can choose the **Owner** column of the current table to display the name of the owner. This will appear as a link to open the **User** record for the person who is the owner.  
+ For example, perhaps you want to display the owner of a user-owned table in a column. You can choose the **Owner** column of the current table to display the name of the owner. This will appear as a link to open the **User** row for the person who is the owner.  
   
- If you want to display the phone number for the owner of the record, you must select **Owning User (User)** from the **Record type** drop-down and then select the **Main Phone** column.  
+ If you want to display the phone number for the owner of the row, you must select **Owning User (User)** from the **Row type** drop-down and then select the **Main Phone** column.  
   
 #### Add columns to views  
   
@@ -83,7 +83,7 @@ search.app:
  As you add columns, you will increase the width of the view. If the width of the view exceeds the space available to show it in the page, horizontal scrollbars will allow people to scroll and see the hidden columns.  
   
 > [!TIP]
->  If your view filters on data for a certain column so that only records with a certain value are shown, don’t include that column in the view. For example, if you are only showing active records, don’t include the status column in the view. Instead, name the view to indicate that all the records shown in the view are active.  
+>  If your view filters on data for a certain column so that only rows with a certain value are shown, don’t include that column in the view. For example, if you are only showing active rows, don’t include the status column in the view. Instead, name the view to indicate that all the rows shown in the view are active.  
   
 > [!NOTE]
 >  When you add columns to Lookup views for updated tables, only the first three columns will be displayed.  

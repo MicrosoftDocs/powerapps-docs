@@ -16,7 +16,7 @@ search.app:
 
 # FAQs for timeline control
 
-## Why do I receive the message "Records could not be loaded because of unexpected error"?
+## Why do I receive the message "Rows could not be loaded because of unexpected error"?
 
 The **Timeline** section retrieves data about and displays in the form cards. By default, the timeline retrieves data for the 10 standard activity tables, which are:
 
@@ -36,10 +36,10 @@ When you perform the following procedures as an administrator, users will see an
 -    Enable custom activities for mobile
 -    Select a **Card Form** for all the custom activities 
 
-**Error:** Records could not be loaded because of an unexpected error.
+**Error:** Rows could not be loaded because of an unexpected error.
 
    > [!div class="mx-imgBorder"] 
-   > ![Records could not be loaded because of an unexpected error.](media/timeline-error1.png "Records could not be loaded because of an unexpected error.")
+   > ![Rows could not be loaded because of an unexpected error.](media/timeline-error1.png "Rows could not be loaded because of an unexpected error.")
 
 This error is caused because the number of activity tables for the data retrieval has exceeded the maximum limit of 10.
 
@@ -60,7 +60,7 @@ To work around the issue, you must reduce the number of tables to 10 or fewer. T
 
 5.   Select a table and select **Forms**. For example, select the **Account** table.
 
-6.   Select the **Account for Interactive experience** record that is a **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
+6.   Select the **Account for Interactive experience** row that is a **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
 
       > [!div class="mx-imgBorder"] 
       > ![Select the table form with interactive experience in the name](media/account-interactive-experience.png "Select the table form with interactive experience in the name")
@@ -90,9 +90,9 @@ If you use the **HideCustomActions** rule to hide buttons, such as **Assign** an
 To mitigate the issue, unhide the buttons in the command bar definitions.
 
 
-## Why my users see different activities and records in their My activities stream in the dashboard?
+## Why my users see different activities and rows in their My activities stream in the dashboard?
 
-**My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
+**My activities** stream in the dashboard shows the rows and activities that are owned by a particular user. For example, user **A** see rows and activities that are owned by **A**, and user **B** see rows and activities that are owned by **B**.
 
 
 ## Why my agents see the filter pane even when the Expand filter pane by default check box is cleared?

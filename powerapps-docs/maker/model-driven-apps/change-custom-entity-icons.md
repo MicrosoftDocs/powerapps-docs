@@ -42,7 +42,7 @@ When you create a custom table, it is automatically assigned a default icon. All
 >
 > When you use a scalable vector graphic (.svg) image as the **Icon in Web application** or **Icon for table forms**, it must have the default size set. Since SVG is an XML document, you can edit the [svg](https://developer.mozilla.org/docs/Web/SVG/Element/svg) element [width](https://developer.mozilla.org/docs/Web/SVG/Attribute/width) and [height](https://developer.mozilla.org/docs/Web/SVG/Attribute/height) values with a text editor to define the default size for the image.
 
-Each type of icon is stored as a Web Resource. You can create the web resources first and then set the icons to use them, or you can create the new web resource within the **Lookup Record** dialog by selecting **New** while setting the value. More information: [Create or edit web resources to extend an app](create-edit-web-resources.md)
+Each type of icon is stored as a Web Resource. You can create the web resources first and then set the icons to use them, or you can create the new web resource within the **Lookup Row** dialog by selecting **New** while setting the value. More information: [Create or edit web resources to extend an app](create-edit-web-resources.md)
 
 ## Set the icons for a custom table.
 

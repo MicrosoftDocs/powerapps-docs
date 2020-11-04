@@ -29,7 +29,7 @@ Makers can control the density of model-driven app form headers to match the nee
 
 ## High-density header
 
-High-density form header ensures that key information is always visible to users. Using high-density header, the record title never truncates. Even long record titles are displayed using multiple lines. Similarly, high-density header also ensures that up to four column values are directly visible in the header and never truncated or hidden.  
+High-density form header ensures that key information is always visible to users. Using high-density header, the row title never truncates. Even long row titles are displayed using multiple lines. Similarly, high-density header also ensures that up to four column values are directly visible in the header and never truncated or hidden.  
 
 To ensure that key information is always visible, the framework displays read-only column values and users can't directly edit the column values in the header. Visualizations such as custom components or web resources also aren't allowed.
 
@@ -41,7 +41,7 @@ When a form does not specify header density or when a new form is created, the f
 ## Low density header
 Low density form header allows users to directly edit the column values in the header. It also allows visualizations such as custom components and web resources.  
   
-However, often this comes at the cost of key information being truncated or not readily visible. Low-density header truncates the record title as well as column values displayed in the header. Often only one or two columns are directly visible in the header and the rest overflow and are displayed in a flyout requiring an extra click.
+However, often this comes at the cost of key information being truncated or not readily visible. Low-density header truncates the row title as well as column values displayed in the header. Often only one or two columns are directly visible in the header and the rest overflow and are displayed in a flyout requiring an extra click.
 
 > [!div class="mx-imgBorder"] 
 > ![Low-density form header](media/form-header-low-density.png "Low-density form header")

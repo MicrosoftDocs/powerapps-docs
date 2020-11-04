@@ -49,7 +49,7 @@ search.app:
 
 5. From the view editor you can perform several tasks: 
  
-- [Sort records in a view](configure-sorting.md)
+- [Sort rows in a view](configure-sorting.md)
 - [Choose and configure columns in views](choose-and-configure-columns.md)
 
 ## Open a view for editing from a legacy web app

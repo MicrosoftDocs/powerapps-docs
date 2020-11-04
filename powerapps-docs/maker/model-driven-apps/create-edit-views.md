@@ -27,16 +27,16 @@ search.app:
 
 <a name="BKMK_CreatingAndEditingViews"></a>   
 
-With Power Apps apps, use views to define how a list of records for a specific table is displayed in the application. A view defines:
+With Power Apps apps, use views to define how a list of rows for a specific table is displayed in the application. A view defines:
 
 - The columns to display
 - How wide each column should be
-- How the list of records should be sorted by default
-- What default filters should be applied to restrict which records will appear in the list
+- How the list of rows should be sorted by default
+- What default filters should be applied to restrict which rows will appear in the list
 
 A drop-down list of views is frequently displayed in the application so that people have options for different views of table data.
 
-The records that are visible in individual views are displayed in a list, sometimes called a grid, which frequently provides options so that people can change the default sorting, column widths, and filters to more easily see the data that's important to them. Views also define the data source for charts that are used in the application.  
+The rows that are visible in individual views are displayed in a list, sometimes called a grid, which frequently provides options so that people can change the default sorting, column widths, and filters to more easily see the data that's important to them. Views also define the data source for charts that are used in the application.  
   
 ## Types of Views  
   
@@ -59,11 +59,11 @@ As a system administrator or system customizer, you can edit system views. Syste
 |Quick Find     | The default view used when searches are performed using Quick Find. This view also defines which columns are searched when using search capabilities of Quick Find and Lookup views.        |
 |Advanced Find     |  The default view used to display results when using Advanced Find. This view also defines the columns used by default when new custom public views or personal views are created without defining a view to use as a template.       |
 |Associated     |  The default view that lists the related tables for a row.       |
-|Lookup     | The view you see when you select a record to set for a lookup column.        |
+|Lookup     | The view you see when you select a row to set for a lookup column.        |
 
 These views are not shown in the view selector and you can't use them in sublists in a form or as a list in a dashboard. You cannot delete or deactivate these views. More information: [Remove views](remove-views.md)
 
-System views are owned by the organization so that everyone can see them. For example, everyone has organization-level access to read records for the View (savedquery) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table.
+System views are owned by the organization so that everyone can see them. For example, everyone has organization-level access to read rows for the View (savedquery) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table.
 
 ### Public views
 

@@ -28,7 +28,7 @@ search.app:
 
 In this topic you learn how to create a quick view form and how to add a quick view control to a main form. 
 
-A quick view form can be added to another form as a quick view control. It provides a template to view information about a related table record within a form for another table row. This means your app users do not need to navigate to a different record to see the information needed to do their work.  
+A quick view form can be added to another form as a quick view control. It provides a template to view information about a related table row within a form for another table row. This means your app users do not need to navigate to a different row to see the information needed to do their work.  
   
  Quick view controls are associated with a lookup column that is included in a form. If the lookup column value is not set, the quick view control will not be visible. Data in quick view controls cannot be edited and quick view forms do not support form scripts.  
   
@@ -49,7 +49,7 @@ A quick view form can be added to another form as a quick view control. It provi
 6. In the form designer drag any columns from the **Columns Explorer** into the section on the form.
 
     > [!IMPORTANT]
-    > Required columns cannot be removed from a form. If you add a Required column to the form and want to remove it, you have to delete the form and then recreate it. When you set the Required property for a column, a record can't be saved without data in this column.
+    > Required columns cannot be removed from a form. If you add a Required column to the form and want to remove it, you have to delete the form and then recreate it. When you set the Required property for a column, a row can't be saved without data in this column.
 
 7. To save the form select **Save**.  
 
@@ -86,7 +86,7 @@ A quick view form can be added to another form as a quick view control. It provi
 7.  To save the form select **Save**.  
 
     > [!IMPORTANT]
-    > Be aware of the behavior that occurs when you create a parent relationship with the same table. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent record, the first record will not be saved with the lookup that has the parent record value. This is because of the circular reference introduced by using the same table. If you experience this issue you can resolve it by removing the parent record id on the quick create form before saving the row.
+    > Be aware of the behavior that occurs when you create a parent relationship with the same table. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent row, the first row will not be saved with the lookup that has the parent row value. This is because of the circular reference introduced by using the same table. If you experience this issue you can resolve it by removing the parent row id on the quick create form before saving the row.
 
 ## Next steps   
  [Create and design forms](create-design-forms.md)   

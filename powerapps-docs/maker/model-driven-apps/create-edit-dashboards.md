@@ -26,7 +26,7 @@ search.app:
 
 There are two types of dashboards, user dashboards and system dashboards. An app user can create a dashboard visible only to them in the app areas that they have privileges to. An admin or customizer creates or customizes system dashboards that, when published, are visible to all app users. A user can choose to set their user dashboard as their default dashboard and override the system dashboard.   
 
-Dashboards can be standard or interactive. Standard dashboards support adding one or more unrelated components such as charts or lists. Interactive dashboards provide the capability for users to act on a particular record directly from the dashboard. This topic focuses on standard system dashboards. For information about interactive dashboards, see [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md).
+Dashboards can be standard or interactive. Standard dashboards support adding one or more unrelated components such as charts or lists. Interactive dashboards provide the capability for users to act on a particular row directly from the dashboard. This topic focuses on standard system dashboards. For information about interactive dashboards, see [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md).
   
 <a name="BKMK_createdashboard"></a>   
 ## Create a new standard dashboard  
@@ -43,7 +43,7 @@ Dashboards can be standard or interactive. Standard dashboards support adding on
   
      You can have up to six components in the dashboard.  
   
-6.  For example, to add a chart, select the chart icon on the tile of the dashboard canvas where you want the chart to appear. Then, in the **Add Component** dialog box select values for **Record Type**, **View**, and **Chart**, and then select **Add** to add the chart to the dashboard. For information about how to create a chart, see [Create a model-driven app system chart](create-edit-system-chart.md).
+6.  For example, to add a chart, select the chart icon on the tile of the dashboard canvas where you want the chart to appear. Then, in the **Add Component** dialog box select values for **Row Type**, **View**, and **Chart**, and then select **Add** to add the chart to the dashboard. For information about how to create a chart, see [Create a model-driven app system chart](create-edit-system-chart.md).
   
 7.  When you are finished adding components to your dashboard, select **Save** and then **Close**.  
 

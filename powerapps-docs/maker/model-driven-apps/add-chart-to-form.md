@@ -36,8 +36,8 @@ You can add a chart to a form or change an existing list to a chart. For example
 
 5. On the **Set Properties** page for the sub-grid, consider from the following options that affect how the chart is displayed, and then select **OK**. For more information about these properties, see [Set properties for a model-driven app chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md).  
     - **Records**: 
-         - **Only Related Records**: Shows the records based on the selected view, but only with records related to the table row.  
-         - **All Record Types**: Shows all the records based on the selected view. 
+         - **Only Related Records**: Shows the rows based on the selected view, but only with rows related to the table row.  
+         - **All Row Types**: Shows all the rows based on the selected view. 
     - **View Selector**: When enabled, users can change to a different view, which displays the chart with different data and filtering that are associated with the view:
          -  **Off**. Don’t display the view selector. You or other users won’t be able to change views at runtime.
          - **Show All Views**. Provide a full list of views associated with the value set in the **Table** property.

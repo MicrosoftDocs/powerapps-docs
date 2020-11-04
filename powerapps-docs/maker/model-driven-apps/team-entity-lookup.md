@@ -25,12 +25,12 @@ search.app:
 ---
 # Add a table as a lookup option in your app
 
-With Unified Interface apps, for a table to be available in a lookup it must be added to the app. For example, contact records have the ability to be assigned to a user or a team.  
+With Unified Interface apps, for a table to be available in a lookup it must be added to the app. For example, contact rows have the ability to be assigned to a user or a team.  
 
 > [!div class="mx-imgBorder"] 
 > ![Entity lookup with both users and teams available](media/entity-lookup-teams.png "Entity lookup with both users and teams available")
 
-However, if the user table is included in the app but the team table is not, only user records will appear in a lookup. 
+However, if the user table is included in the app but the team table is not, only user rows will appear in a lookup. 
 
 > [!div class="mx-imgBorder"] 
 > ![Entity lookup with users only](media/entity-lookup-user-only.png "Entity lookup with users only")

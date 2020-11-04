@@ -39,7 +39,7 @@ If you’re viewing a managed solution, you can’t create new forms or edit exi
 There are different types of forms, and each type has a specific functionality or use. More information: [Type of forms in Power Apps](types-forms.md).  
 
 ## Main form dialogs (Preview)
-With the client API, you can use main form dialogs so users can open a related record table on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api) 
+With the client API, you can use main form dialogs so users can open a related row table on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api) 
   
 <a name="BKMK_FormDifferencesByEntity"></a>   
 ## Updated versus classic tables  

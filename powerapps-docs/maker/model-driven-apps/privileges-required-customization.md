@@ -36,9 +36,9 @@ App users can personalize the system and even share some of their customizations
 |System Administrator|System Customizer|  
 |--------------------------|-----------------------|  
 |Has full permission to customize the system|Has full permission to customize the system|  
-|Can view all data in the system|Can only view records for system tables that they create|  
+|Can view all data in the system|Can only view rows for system tables that they create|  
   
- The difference between the System Administrator and System Customizer security roles is that a system administrator has read privileges on most records in the system and can see everything. Assign the System Customizer role to someone who needs to perform customization tasks but shouldn’t see any data in the system tables. However, testing is an important part of customizing the system. If system customizers can’t see any data, they will need to create records to test their customizations. By default, system customizers have full access to custom tables. If you want to have the same limitations that exist for system tables, you’ll need to adjust the system customizer security role so that the access level is **User** rather than **Organization** for custom tables.  
+ The difference between the System Administrator and System Customizer security roles is that a system administrator has read privileges on most rows in the system and can see everything. Assign the System Customizer role to someone who needs to perform customization tasks but shouldn’t see any data in the system tables. However, testing is an important part of customizing the system. If system customizers can’t see any data, they will need to create rows to test their customizations. By default, system customizers have full access to custom tables. If you want to have the same limitations that exist for system tables, you’ll need to adjust the system customizer security role so that the access level is **User** rather than **Organization** for custom tables.  
   
 <a name="BKMK_DelegatingCustomizationTasks"></a>   
 ## Delegate customization tasks  

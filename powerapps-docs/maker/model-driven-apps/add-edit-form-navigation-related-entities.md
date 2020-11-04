@@ -25,7 +25,7 @@ search.app:
 ---
 # Add model-driven app form navigation for related entities
 
-In this topic, you use the form navigation pane that is used to add links to related tables. When an app user clicks one of these links in a record, the associated view for the table is displayed.   
+In this topic, you use the form navigation pane that is used to add links to related tables. When an app user clicks one of these links in a row, the associated view for the table is displayed.   
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 

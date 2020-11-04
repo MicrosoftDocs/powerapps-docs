@@ -72,7 +72,7 @@ search.app:
   
         3.  Select **Save** and close the web resource dialog.  
   
-        4.  The web resource you created is now selected in the **Look Up Record** dialog. Select **Add** to close the dialog.  
+        4.  The web resource you created is now selected in the **Look Up Row** dialog. Select **Add** to close the dialog.  
 6.  In the **Event Handlers** section, select the event you want to set an event handler for.  
   
 7.  Select **Add** to open the **Handler Properties** dialog.  

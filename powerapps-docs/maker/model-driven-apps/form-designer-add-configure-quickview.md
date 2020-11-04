@@ -24,7 +24,7 @@ search.app:
 ---
 
 # Add and configure a quick view component on a form  
-A main form that displays the details of a record can use a quick view component to display read-only details of a related record (lookup). The data displayed by the quick view component is defined by the quick view form of the related table. When there is no related record, such as a lookup, the quick view component is automatically hidden.
+A main form that displays the details of a row can use a quick view component to display read-only details of a related row (lookup). The data displayed by the quick view component is defined by the quick view form of the related table. When there is no related row, such as a lookup, the quick view component is automatically hidden.
 
 ## Add a quick view component
 You add a quick view component in the same way as you add any other component. More information: [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)

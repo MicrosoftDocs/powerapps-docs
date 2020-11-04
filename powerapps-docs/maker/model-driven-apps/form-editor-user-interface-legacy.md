@@ -70,7 +70,7 @@ You can use the **New 1:N** and **New N:N buttons** as a shortcut to add new tab
 Select the **File** tab to add/view the following options:
 
 - **New Activity** Add a new activity
-- **New Record** Add a new record
+- **New Row** Add a new row
 - **Tools** Utilize options like Import data, Duplicate detection, and Bulk delete wizard
 - **Options** Change the default display settings to personalize the default solution, and manage your email templates
     - General

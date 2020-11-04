@@ -25,7 +25,7 @@ search.app:
 ---
 # Make model-driven app grids (lists) editable using the Editable Grid custom control
 
-In previous releases of Dynamics CRM, users couldn't enter data directly in grids (sometimes called lists) or sub-grids on forms. They had to select the record in the grid to open a form, edit the data, and then save, which required multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
+In previous releases of Dynamics CRM, users couldn't enter data directly in grids (sometimes called lists) or sub-grids on forms. They had to select the row in the grid to open a form, edit the data, and then save, which required multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
   
  ![Editable grid examples](media/editable-grid-example.png "Editable grid examples")  
   
@@ -33,7 +33,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
 
 **Editable grids support:**
   
--   In-line editing of records at the table or sub-grid level (includes custom entities)  
+-   In-line editing of rows at the table or sub-grid level (includes custom entities)  
   
 -   System views and personal views  
   
@@ -41,7 +41,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
 -   Navigation with a keyboard or mouse  
   
--   Grouping and sorting (you can group by/sort records on the client-side by any column in the current view)  
+-   Grouping and sorting (you can group by/sort rows on the client-side by any column in the current view)  
   
 -   Filtering  
   
@@ -88,7 +88,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
     3.  In the **Default View** list, select the data source for the lookup column.  
   
-    4.  If you want to limit the records displayed, select the **Only show records where** check box, and then select your criteria from the list, and then select **OK**.  
+    4.  If you want to limit the rows displayed, select the **Only show rows where** check box, and then select your criteria from the list, and then select **OK**.  
   
          ![Add lookup in Editable Grid control](media/add-lookup-in-editable-grid-control.png "Add lookup in Editable Grid control")  
      

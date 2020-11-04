@@ -40,7 +40,7 @@ These components determine how users interact with the app.
 |App     | Determines the application fundamentals such as components, properties, client type, and URL for your app.      | App designer   |
 |Site map     | Specifies the navigation for your app.        | Site map designer        |
 |Form     | A set of data-entry columns for a given table that matches the items that your organization tracks for the table. For example, a set of data-entry columns that where user's input relevant information to track a customer's previous orders along with specific requested reorder dates.        | Form designer        |
-|View     | Views define how a list of records for a specific table is displayed in your application. A view defines the columns to display, width of each column, sort behavior, and the default filters.   |  View designer       |
+|View     | Views define how a list of rows for a specific table is displayed in your application. A view defines the columns to display, width of each column, sort behavior, and the default filters.   |  View designer       |
 
 > [!div class="mx-imgBorder"] 
 > ![App designer and form designer](media/model-driven-app-overview/app-and-form-designers.png "App designer and form designer")

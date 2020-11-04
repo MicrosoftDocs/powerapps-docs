@@ -131,11 +131,11 @@ To know in detail about the common column properties, see [Common column propert
   
 ## Sub-grid properties  
 
-You can configure a sub-grid on a form to display a list of records or a chart. To know in detail about the sub-grid properties, see [Sub-grid properties](sub-grid-properties-legacy.md).
+You can configure a sub-grid on a form to display a list of rows or a chart. To know in detail about the sub-grid properties, see [Sub-grid properties](sub-grid-properties-legacy.md).
 
 ## Quick view control properties  
 
-A quick view control on a form displays data from a record that is selected in a lookup on the form. To explore the quick view control properties, see [Quick view control properties](quick-view-control-properties-legacy.md).
+A quick view control on a form displays data from a row that is selected in a lookup on the form. To explore the quick view control properties, see [Quick view control properties](quick-view-control-properties-legacy.md).
   
 ## Web resource properties  
 

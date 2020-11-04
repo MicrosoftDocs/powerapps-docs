@@ -32,14 +32,14 @@ This topic explains the properties and actions available on the ModelDrivenFormI
 | Property or action | Description |
 |:--------------|:-------------------------|
 |**DataSource** | Should be set to the data source connected to the parent table of the host model-driven form. <br />Automatically set when [embedding a new canvas app](embedded-canvas-app-add-classic-designer.md). |
-|**Item** | Read-only property that enables the embedded canvas app to access the record from the host model-driven form. <br />As an example, to get the value of a column with the name accountnumber and display name Account Number, you can use ModelDrivenFormIntegration.Item.accountnumber or ModelDrivenFormIntegration.Item.'Account Number'. |
+|**Item** | Read-only property that enables the embedded canvas app to access the row from the host model-driven form. <br />As an example, to get the value of a column with the name accountnumber and display name Account Number, you can use ModelDrivenFormIntegration.Item.accountnumber or ModelDrivenFormIntegration.Item.'Account Number'. |
 |**OnDataRefresh** | The formula in this property is evaluated when the host model-driven form saves data. <br />Use it to refresh the data source connected to the parent table of the host model-driven form and to perform other actions like setting or updating variables. <br /> As an example, setting it to the formula below will refresh the Accounts data source and set a variable named CurrentAccountNumber to the value of the Account Number column of the current row. <br /> Refresh(Accounts); Set(CurrentAccountNumber, ModelDrivenFormIntegration.Item.'Account Number') |
 |**RefreshForm** | Refreshes the data on the host model-driven form. <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#refreshformshowprompt) for details. |
 |**SaveForm** | Saves the data on the host model-driven form. <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#saveform) for details.  |
 |**NavigateToMainForm** | Navigates the host model-driven form to a main form and displays the specified row. <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#navigatetomainformentityname-mainformname-recordid) for details. |
 |**NavigateToView** | Navigates the host model-driven form to a view. <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#navigatetoviewentityname-viewname) for details.  |
 |**OpenQuickCreateForm** | Opens the default quick create form for an table.  <br />See [Perform predefined actions on the host form](embedded-canvas-app-actions.md#openquickcreateformentityname) for details.  |
-|**Data** | Read-only property used by the framework to send some key data from the host model-driven form to the embedded canvas app.  <br /> Do not use this property. Use Item to access the record from the host model-driven form.  |
+|**Data** | Read-only property used by the framework to send some key data from the host model-driven form to the embedded canvas app.  <br /> Do not use this property. Use Item to access the row from the host model-driven form.  |
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />

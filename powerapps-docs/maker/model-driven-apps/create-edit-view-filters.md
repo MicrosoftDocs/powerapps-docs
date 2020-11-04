@@ -30,7 +30,7 @@ search.app:
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 
-The filters in a Power Apps view are important to the value provided by the view. The filters you apply determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any columns of the table in the current view or any columns in a related table. 
+The filters in a Power Apps view are important to the value provided by the view. The filters you apply determine which rows appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any columns of the table in the current view or any columns in a related table. 
 
 In this topic, you create or edit filters by performing the following tasks:
 

@@ -46,7 +46,7 @@ To view IFrame properties, follow these steps.
 |---------|--------------|-----------------|  
 |**General**|**Name**|**Required**: A unique name for the iFrame. The name can contain only alphanumeric characters and underscores.|  
 ||**URL**|**Required**: The URL for the page to display in the iFrame.|  
-||**Pass record object-type code and unique identifiers as parameters**|Data about the organization, user, and the record can be passed to the iFrame. More information: [Pass parameters to iFrames](#pass-parameters-to-iframes) |  
+||**Pass row object-type code and unique identifiers as parameters**|Data about the organization, user, and the row can be passed to the iFrame. More information: [Pass parameters to iFrames](#pass-parameters-to-iframes) |  
 ||**Label**|**Required**: A label to display for the iFrame.|  
 ||**Display label on the Form**|Whether the label should be displayed.|  
 ||**Restrict cross-frame scripting, where supported**|It is considered a security risk to allow pages from a different web site to interact with the Dynamics 365 application using scripts. Use this option to restrict cross frame scripting for pages you do not have control over.<br /><br />|  
@@ -60,7 +60,7 @@ To view IFrame properties, follow these steps.
 |**Dependencies**|**Dependent fields**|An iFrame may interact with columns in the form using script. If a column is removed from the form the script in the iFrame may break. Add any columns referenced by scripts in the iFrames to the **Dependent fields** so that they cannot be removed accidentally.|  
   
 ## Pass parameters to iFrames  
- Information about the record can be passed by enabling the **Pass record object-type code and unique identifiers as parameters** option. The values passed are:  
+ Information about the row can be passed by enabling the **Pass row object-type code and unique identifiers as parameters** option. The values passed are:  
   
 |Parameter|Description|  
 |---------------|-----------------|  
@@ -69,7 +69,7 @@ To view IFrame properties, follow these steps.
 |`userlcid`|The user's preferred language LCID|  
 |`type`|The table type code. This value can be different for custom tables in different organizations. Use `typename` instead.|  
 |`typename`|The table type name.|  
-|`id`|The id value of the row. this parameter has no value until the table record is saved.|  
+|`id`|The id value of the row. this parameter has no value until the table row is saved.|  
 
 ## Next steps
 
