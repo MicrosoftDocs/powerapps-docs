@@ -553,6 +553,7 @@ This section describes the different flows in the solution and explains their pu
 | Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations. |
 | Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. |
 | Guest Attestation - Disable earlier pass | Guest Attestation | Disables earlier attestations and guest registrations for that person so number of guests stays correct. |
+| Guest Registration - Disable earlier pass | Guest Registration | Disables earlier registrations for that person on the same day so number of guest stays correct. |
 | Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. |
 | Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility. |
 | Share Guest Registration - Email | Share Guest Registration | Shares the guest registration details with the host and the guest. |
