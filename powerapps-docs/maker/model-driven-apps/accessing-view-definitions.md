@@ -75,7 +75,7 @@ On any list view for a table in a legacy web app, on the command bar you will fi
 4.  Double-click the view you want to open. This will open the classic view designer.
     
     > [!div class="mx-imgBorder"] 
-    > ![All Accounts view](media/all-accounts-view.png)
+    > ![All Accounts view in the classic designer](media/all-accounts-view.png)
 
  This list of views has four filters you can use to find the views you want more easily:  
   

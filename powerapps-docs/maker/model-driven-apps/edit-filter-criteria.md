@@ -57,7 +57,7 @@ You can also change the sort order by using the view properties panel.
 1.  Select a column, and from the column menu, select **Filter by**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit filters](media/edit-filter-criteria.png "Edit filters")
+    > ![Filter by](media/edit-filter-criteria.png "Filter by")
 
 2.  Select the conditional operator that you want to use.
 

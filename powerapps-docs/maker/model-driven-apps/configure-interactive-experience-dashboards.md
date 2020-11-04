@@ -142,7 +142,7 @@ The following illustration shows the flyout dialog with the list of the availabl
 
 4.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
 
-     ![Enable security roles](media/security-roles.png "Enable security roles")    
+     ![Select display only these selected security roles](media/security-roles.png "Select display only these selected security roles")    
   
 5.  Select **Publish** for your changes to take effect.    
   
@@ -269,7 +269,7 @@ In the following example, we’re changing the color for the **IsEscalated** col
   
 When the **Modify List Value** dialog box opens, enter the hexadecimal color code, such as #800000 shown here:  
   
- ![Modify the dashboard color](media/modify-color.png "Modify the dashboard color")  
+ ![Enter the hexadecimal color code](media/modify-color.png "Enter the hexadecimal color code")  
 
 Similarly, if you go to the **Priority** column to modify the colors of the case priority options, choose the color in the **Options** sub-area of the **General** tab, as shown below:
 
