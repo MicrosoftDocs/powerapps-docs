@@ -1,6 +1,6 @@
 ---
-title: "Add the Documents tab to the main form for an entity | MicrosoftDocs"
-description: "Learn how to add the Documents tab to the main form for an entity"
+title: "Add the Documents tab to the main form for a table | MicrosoftDocs"
+description: "Learn how to add the Documents tab to the main form for a table"
 s.custom: 
 ms.date: 01/06/2020
 ms.reviewer: 
@@ -18,10 +18,10 @@ search.audienceType:
 search.app: 
   - D365CE
 ---
-# Add or remove the SharePoint documents tab to the main form for any entity
+# Add or remove the SharePoint documents tab to the main form for any table
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Adding a tab on an entity main form to display SharePoint documents helps users discover and use the SharePoint integration features that are available in a model-driven app. 
+Adding a tab on a table main form to display SharePoint documents helps users discover and use the SharePoint integration features that are available in a model-driven app. 
 
 ![Document files tab](media/document-files-tab.png)
 
@@ -30,14 +30,14 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 
 ## Add the documents tab in the FormXML 
 1.	Create a new solution. Sign-in to Power Apps and go to **Solutions**, select **New solution** and then enter the required and optional information. More information: [Create a solution](../common-data-service/create-solution.md)
-2. Add the entity to the solution where you want to add the documents tab on the main form. All standard and custom entities are supported. More information: [Add an existing component to a solution](/powerapps/maker/common-data-service/use-solution-explorer#add-an-existing-component-to-a-solution)
-3. Include the form for the entity in the solution, such as the main form for the account entity. Next to the entity, select **...**, and then select **Edit**. Select the **Forms** tab. If the form you want is missing, add it.   
+2. Add the table to the solution where you want to add the documents tab on the main form. All standard and custom tables are supported. More information: [Add an existing component to a solution](/powerapps/maker/common-data-service/use-solution-explorer#add-an-existing-component-to-a-solution)
+3. Include the form for the table in the solution, such as the main form for the account table. Next to the table, select **...**, and then select **Edit**. Select the **Forms** tab. If the form you want is missing, add it.   
 
 4. Add a one-column tab to the main form. To do this, in the form designer select an area on the form canvas, select **Add Component**, and then select **1 Column Tab**.  
    ![Insert one column tab](media/insert-one-column-tab.png)
 
-5. In the form designer select the **New Tab** on the form designer canvas, select **Add Field**, and add a field such as *Address 1: City* from the left pane. You can use any text or numeric field for the tab.
-   ![Add a field to the tab](media/add-field-to-tab.png)
+5. In the form designer select the **New Tab** on the form designer canvas, select **Add Column**, and add a column such as *Address 1: City* from the left pane. You can use any text or numeric column for the tab.
+   ![Add a column to the tab](media/add-field-to-tab.png)
 6. Rename the tab label. To do this, select **New Tab**, and in the right properties pane replace **New Tab** with something more descriptive, such as *Files*.
 7. Select **Save**, select **Publish**, and then close the form designer. 
 8. From the Power Apps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as an unmanaged solution. More information: [Export solutions](../common-data-service/export-solutions.md) 
@@ -50,7 +50,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 
 12. Make these modifications to the XML sample. 
     
-     a. Locate the **RelationshipName** element and replace it with the schema name that appears as *entityLogicalName*_SharePointDocument. For example, for the accounts entity the schema name for the relationship is Account_SharePointDocument, which is the schema name for the XML sample in this topic. To find the name for a different entity, go to **Settings** > **Customizations** > **Customize the System** > **Entities** > select the entity > select **1:N Relationships**. Locate the **Related Entity** of type **SharePointDocument**. 
+     a. Locate the **RelationshipName** element and replace it with the schema name that appears as *entityLogicalName*_SharePointDocument. For example, for the accounts table the schema name for the relationship is Account_SharePointDocument, which is the schema name for the XML sample in this topic. To find the name for a different table, go to **Settings** > **Customizations** > **Customize the System** > **Tables** > select the table > select **1:N Relationships**. Locate the **Related Table** of type **SharePointDocument**. 
 
       ![Account relationship SharePoint document](media/account-sharepointdocument.png)
 
@@ -84,8 +84,8 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 ```
 
 ## Remove the documents tab
-1.	 Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), in the left pane expand **Data**, and then select **Entities**. 
-2.	Select the entity you want, select the **Forms** tab, and then open the form where the file tab needs to be removed. 
+1.	 Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), in the left pane expand **Data**, and then select **Tables**. 
+2.	Select the table you want, select the **Forms** tab, and then open the form where the file tab needs to be removed. 
 3. Select the **Files** tab, and then on the form designer toolbar, select **Delete**. 
 
     ![Delete files tab](media/delete-files-tab.png)

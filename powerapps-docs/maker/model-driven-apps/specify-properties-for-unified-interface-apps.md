@@ -41,7 +41,7 @@ Adding the Read Only Grid control to your controls list allows you to  configure
 - Specify the rendering mode as grid-only or list-only.  
 
 1. Open [solution explorer](advanced-navigation.md#solution-explorer).
-2. In navigation pane expand **Entities**, select the appropriate entity (such as **Account** or **Contact**), and then on the **Controls** tab, select **Add Control**.
+2. In navigation pane expand **Tables**, select the appropriate table (such as **Account** or **Contact**), and then on the **Controls** tab, select **Add Control**.
 
     ![Open add control](media/UnifiedInterface_ReadOnlyGrid_AddControl.png "Open Add Control")
 
@@ -63,7 +63,7 @@ Adding the Read Only Grid control to your controls list allows you to  configure
 
     ![Edit card form](media/UnifiedInterface_ReadOnlyGrid_CardForm.png "Edit card form")
 
-    b.	Select the **Entity** and **Card Form** types.
+    b.	Select the **Table** and **Card Form** types.
 
     ![Card form properties](media/UnifiedInterface_ReadOnlyGrid_CardFormProperties.png "Card form properties")
 

@@ -87,7 +87,7 @@ In this step you will create a new app that leverages your existing customizatio
 5. The App Designer opens, displaying all the app components that were in the default solution. Select **Publish**.  
 6. After the publishing process completes, select **Play**.  
 
-A new window opens in the browser with your new model-driven app that contains all of the entities, sitemap, and sitemap customizations that were in your default Dynamics 365 application.  
+A new window opens in the browser with your new model-driven app that contains all of the tables, sitemap, and sitemap customizations that were in your default Dynamics 365 application.  
 
 > [!div class="mx-imgBorder"] 
 > ![New Unified Interface app](media/new-unified-interface-app.png "New Unified Interface app")
