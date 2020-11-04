@@ -52,7 +52,7 @@ Timer control **Data Source** properties use columns for the table.
   
 -   The **Failure Time Column** uses a date-time column to set the time.  
   
--   The three condition columns use one of the **Option Set**, **Two Options**, **Status**, or **Status Reason** columns for the table.  
+-   The three condition columns use one of the **Choice**, **Two Options**, **Status**, or **Status Reason** columns for the table.  
 
 <a name="BKMK_TimerControlProperties"></a>
 

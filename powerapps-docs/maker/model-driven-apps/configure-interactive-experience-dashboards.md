@@ -244,7 +244,7 @@ For example, instead of selecting a table, some columns in the table-specific da
   
 <a name="BKMK_ConfigureColors"></a>   
 ## Configure dashboard colors  
-For all **Option Set** and **Two Options** type columns, such as the **Case Type**, **IsEscalated** or **Priority** of the **Case** table, you can configure a particular color that will appear in the charts and streams for specific column values. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
+For all **Choice** and **Two Options** type columns, such as the **Case Type**, **IsEscalated** or **Priority** of the **Case** table, you can configure a particular color that will appear in the charts and streams for specific column values. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
   
 > [!NOTE]
 >  The color coding isn’t available for the tag charts and doughnut charts. These charts appear on the dashboard in white, gray, and black shades.  

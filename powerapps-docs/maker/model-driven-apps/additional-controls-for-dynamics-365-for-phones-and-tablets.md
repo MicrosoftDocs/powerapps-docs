@@ -89,8 +89,8 @@ To use these controls in the form editor:
 |Value|The value to display on the slider.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
   
-## Option sets  
- The option set control presents a set of choices for your users to choose from when entering data. Use this control for option sets with two or three choices only.  
+## Choices  
+ The option set control presents a set of choices for your users to choose from when entering data. Use this control for choices with two or three choices only.  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -156,8 +156,8 @@ To use these controls in the form editor:
 |Property|Description|  
 |--------------|-----------------|  
 |Column|Shows the column the control is mapped to.|  
-|Source|Set the source for the data (Grouped Options, Option Set, or View).|  
-|Option Set|Select the option set for this column.|  
+|Source|Set the source for the data (Grouped Options, Choice, or View).|  
+|Choice|Select the option set for this column.|  
 |View|Select the table and view for this column.|  
 |Column|Select the column of the view’s primary table to use as the data source.|  
   

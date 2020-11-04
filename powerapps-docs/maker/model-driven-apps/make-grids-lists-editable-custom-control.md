@@ -29,7 +29,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
  ![Editable grid examples](media/editable-grid-example.png "Editable grid examples")  
   
- When editable grids are enabled through the Editable Grids custom control, users can edit most types of columns, including basic Lookup columns and option sets.  
+ When editable grids are enabled through the Editable Grids custom control, users can edit most types of columns, including basic Lookup columns and choices.  
 
 **Editable grids support:**
   
