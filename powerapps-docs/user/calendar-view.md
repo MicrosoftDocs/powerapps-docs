@@ -12,13 +12,13 @@ manager: shujoshi
 
 # Work with rows in the new calendar view
 
-The new calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to an entity view by a system customizer or a system administrator. The **Calendar Control V2** control can be added to any entity.
+The new calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to a table view by a system customizer or a system administrator. The **Calendar Control V2** control can be added to any table.
 
-By default, rows are displayed in a read-only grid. When the **Calendar Control V2** control is added to an entity and the view is changed to the calendar view, rows associated with the entity will be displayed in an interactive calendar.
+By default, rows are displayed in a read-only grid. When the **Calendar Control V2** control is added to a table and the view is changed to the calendar view, rows associated with the table will be displayed in an interactive calendar.
 
 ## Switch to the new calendar view
 
-The calendar view is made available when the calendar control is added to an entity view. If the calendar view isn't visible, contact your system customizer or a system administrator.
+The calendar view is made available when the calendar control is added to a table view. If the calendar view isn't visible, contact your system customizer or a system administrator.
 
 **To switch to the new calendar view**
 
@@ -98,11 +98,11 @@ The new calendar view allows you to create and delete rows from the calendar.
     > [!div class="mx-imgBorder"]
     > ![Select a time slot in Day or Week view](media/time-slot.png "Select a time slot in Day or Week view") 
 
-    Depending on the entity on which the calendar control was added, an appropriate **New** form is opened. For example, if you're viewing leads, a form to create a new lead is opened. If you're viewing opportunities, a form to create a new opportunity is opened.
+    Depending on the table on which the calendar control was added, an appropriate **New** form is opened. For example, if you're viewing leads, a form to create a new lead is opened. If you're viewing opportunities, a form to create a new opportunity is opened.
 
     > [!NOTE]
-    > - When you add the new calendar control on the Activity entity, an appointment is created when you create a row from the calendar. The start and end times are filled-in automatically as per the selected date tile or time slots. By default, the duration is set to 30 minutes.
-    > - When you add the new calendar control on an entity other than Activity, the corresponding entity row is created when you create a row from the calendar.
+    > - When you add the new calendar control on the Activity table, an appointment is created when you create a row from the calendar. The start and end times are filled-in automatically as per the selected date tile or time slots. By default, the duration is set to 30 minutes.
+    > - When you add the new calendar control on a table other than Activity, the corresponding table row is created when you create a row from the calendar.
     > - You can also create a new row by selecting and dragging across time slots in **Day** or **Week** view.
 
 2.  Enter the detail, and then save the row. 
@@ -125,4 +125,4 @@ You can use the Search box to filter the rows in the calendar based on a search 
 
 ### See also
 
-[Add the calendar control to entities](../maker/model-driven-apps/add-calendar-control.md)
+[Add the calendar control to tables](../maker/model-driven-apps/add-calendar-control.md)

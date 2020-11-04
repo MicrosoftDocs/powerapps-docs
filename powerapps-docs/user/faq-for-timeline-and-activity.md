@@ -29,17 +29,17 @@ When you save an appointment in the legacy Web Client as a draft the title does 
 
 ## Can I add activities to read only rows?
 
-Yes. You can add activities to entities that are read only such as, notes, phone calls, tasks, and more. 
+Yes. You can add activities to tables that are read only such as, notes, phone calls, tasks, and more. 
 
 ## Are HTML tags supported in **Notes**?
 
-No. When creating a note activity for any row or entity, HTML tags are not supported. For example, if you add `<TAG> </TAG>` to a note column it will be displayed as `<TAG_XXX="XX"> </TAG>`.
+No. When creating a note activity for any row or table, HTML tags are not supported. For example, if you add `<TAG> </TAG>` to a note column it will be displayed as `<TAG_XXX="XX"> </TAG>`.
 
 ## How can I improve performance on timeline wall?
 
-Timeline Wall performance can be improved by optimizing how much data is returned by a specific entity row. 
+Timeline Wall performance can be improved by optimizing how much data is returned by a specific table row. 
 
-1.	Configure entity forms to only show activities that are in use.  This can be done at the form level to only show useful activities.  For example, if you don’t use tasks for cases you can configure the timeline wall on the case form to not show tasks.
+1.	Configure table forms to only show activities that are in use.  This can be done at the form level to only show useful activities.  For example, if you don’t use tasks for cases you can configure the timeline wall on the case form to not show tasks.
 2.	Reduce the number of default rows that are shown by the timeline wall.  By default, it is set to return 10, beyond 10 it can cause performance issues.  It is recommended to not exceed the default. 
 
 ## Activity Wall is not supported in Print Preview.
@@ -60,6 +60,6 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 
 [Add an appointment, email, phone call, note, or task activity to the timeline](add-activities.md)
 
-[Dynamics 365 Sales: Frequently asked questions](https://docs.microsoft.com/dynamics365/sales-enterprise/faqs-sales#entity-activity)
+[Dynamics 365 Sales: Frequently asked questions](https://docs.microsoft.com/dynamics365/sales-enterprise/faqs-sales#table-activity)
 
     

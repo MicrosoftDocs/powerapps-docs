@@ -20,23 +20,23 @@ search.app:
 
 # Using quick find to search for rows
 
-## Single-entity quick find
+## Single-table quick find
 
-Single-entity quick find is used to find rows of only one type. This search option is available from within a view. 
+Single-table quick find is used to find rows of only one type. This search option is available from within a view. 
 
    > [!div class="mx-imgBorder"]
-   > ![Single-entity Quick Find](media/single-quick-find-search-box.png "Single-entity quick find search box") 
+   > ![Single-table Quick Find](media/single-quick-find-search-box.png "Single-table quick find search box") 
 
-## Multiple-entity quick find (categorized search)
+## Multiple-table quick find (categorized search)
 
-Multiple-entity quick find is also known as categorized search. 
+Multiple-table quick find is also known as categorized search. 
 
 1.  To start a categorized search, from the top nav bar, select **Search**.  
 
      > [!div class="mx-imgBorder"]
      > ![Global Search Button](media/global-search-button.png "Global search")
   
-2.  Type your search words in the search box, and then select **Search**. Categorized search returns results grouped by entity types, such as accounts or contacts.
+2.  Type your search words in the search box, and then select **Search**. Categorized search returns results grouped by table types, such as accounts or contacts.
 
      > [!div class="mx-imgBorder"]
      > ![Categorized Search Results](media/categorized-search-results.png "Categorized search results page") 
@@ -48,7 +48,7 @@ With categorized search, you can search for rows that begin with a specific word
 - **Wildcard**: For example, *ski or *ski\*. 
 
   > [!NOTE]
-  >  Using a wildcard at the beginning of your quick find (single or multiple-entity) search query might result in slower performance.
+  >  Using a wildcard at the beginning of your quick find (single or multiple-table) search query might result in slower performance.
   
 ## Filter categorized search results 
   

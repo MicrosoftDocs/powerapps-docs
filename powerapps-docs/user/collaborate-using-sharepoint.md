@@ -140,5 +140,5 @@ You can create new or edit existing SharePoint locations from your app in Common
 *With the change, will subfolders in SharePoint still be created automatically?*
 - Yes. The behavior is similar to that of the **Documents** link under the **Related** menu. When a user selects the **Files** tab for the first time, the corresponding SharePoint subfolder is created by the system. 
 
-*Is there a way to add the Files tab to other entities, or remove it?*
-- Yes. To add or remove the **Files** tab, follow the steps in this article: [Add the SharePoint documents tab to the main form for an entity](../maker/model-driven-apps/add-documents-tab-entity-main-form.md)  
+*Is there a way to add the Files tab to other tables, or remove it?*
+- Yes. To add or remove the **Files** tab, follow the steps in this article: [Add the SharePoint documents tab to the main form for a table](../maker/model-driven-apps/add-documents-tab-table-main-form.md)  

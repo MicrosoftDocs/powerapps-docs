@@ -77,7 +77,7 @@ You can use the **Tab** key or **Shift+Tab** keys to move between interactive da
 To navigate through each element of a dashboard stream, use the Up/Down arrow keys. Narrator will read the type of control and the title of the control.
 
 #### Business process flows
-You can navigate a business process flow, such as the one found at the top of the Lead form, by pressing the **Tab** key to move forward, and **Shift+Tab** to move backward between the entities. Use the **Enter** key on the **Move to the Left** or **Move to the Right** buttons to display additional entities in the process flow. Narrator reads the entity type, stage, status, title, element number out of total elements, and whether it is currently selected.
+You can navigate a business process flow, such as the one found at the top of the Lead form, by pressing the **Tab** key to move forward, and **Shift+Tab** to move backward between the tables. Use the **Enter** key on the **Move to the Left** or **Move to the Right** buttons to display additional tables in the process flow. Narrator reads the table type, stage, status, title, element number out of total elements, and whether it is currently selected.
 
 #### Dialog boxes
 

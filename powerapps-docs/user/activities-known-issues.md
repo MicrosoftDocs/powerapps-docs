@@ -37,13 +37,13 @@ search.app:
  
 To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the environment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
 
-## Error message: Unable to find many-to-one relationship,entity: phonecall, referenced Entity: undefined, column: regardingobjectid.
+## Error message: Unable to find many-to-one relationship,table: phonecall, referenced Table: undefined, column: regardingobjectid.
 
 **Issue**: When you open an existing phone call activity row, and on the **Phone Number** column select the phone icon, the system opens a new **Quick Create: Phone Call** activity. 
 
 > ![Create a phone call activity row](media/error_phonecallactivity.png "Create a phone call activity row")
 
-If you attempt to save the new phone call activity row, you will get this error, **Unable to find many-to-one relationship,entity: phonecall, referenced Entity: undefined, column: regardingobjectid**. 
+If you attempt to save the new phone call activity row, you will get this error, **Unable to find many-to-one relationship,table: phonecall, referenced Table: undefined, column: regardingobjectid**. 
 
 
 > ![Create a phone call row](media/error_phonecallactivity_1.png "Create a phone call row")

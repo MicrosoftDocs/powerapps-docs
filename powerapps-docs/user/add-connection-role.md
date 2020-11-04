@@ -19,7 +19,7 @@ search.app:
 ---
 # Add a connection role to link rows to each other
 
-Connections enable you to easily associate users, contacts, quotes, sales orders, and many other entity rows with each other. The rows in the association can be assigned particular roles that help define the purpose of the relationship.
+Connections enable you to easily associate users, contacts, quotes, sales orders, and many other table rows with each other. The rows in the association can be assigned particular roles that help define the purpose of the relationship.
 
 It's a quick way to create multiple connections and roles for a particular row. For example, a contact may have many relationships with other contacts, accounts, or contracts. In each relationship a contact may play a different role.
 
@@ -58,7 +58,7 @@ Before you can add connection roles, it needs to be enabled by your admin. For m
   
 ## Manage Connection Roles
 
-To manage a connection role, select  the connection role from a connection entity. This will open the connection role entity row.  You can edit the name, select a connection role category, and add a description.
+To manage a connection role, select  the connection role from a connection table. This will open the connection role table row.  You can edit the name, select a connection role category, and add a description.
 
 
    > [!div class="mx-imgBorder"]

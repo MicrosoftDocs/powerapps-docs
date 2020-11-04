@@ -24,21 +24,21 @@ There are three ways to search rows in Common Data Service:
 
 -   Relevance Search   
   
--   Quick Find (single-entity or multi-entity)  
+-   Quick Find (single-table or multi-table)  
 
 -   Advanced Find
 
 > [!NOTE]
-> Multi-entity Quick Find is also called Categorized Search. 
+> Multi-table Quick Find is also called Categorized Search. 
   
 The following table provides a brief comparison of the three options.
 
 |Functionality|[Relevance Search](relevance-search.md)|[Quick Find](quick-find.md)|[Advanced Find](advanced-find.md)|  
 |-------------------|---------------------------|----------------|-------------------|  
 |Enabled by default?|No. An administrator must manually enable it.|Yes|Yes|  
-|Single-entity search scope|Not available in an entity grid. You can filter the search results by an entity on the results page.|Available in an entity grid.|Available in an entity grid.|  
-|Multi-entity search scope|There is no maximum limit on the number of entities you can search. **Note:**  While there is no maximum limit on the number of entities you can search, the Row Type filter shows data for only 10 entities.|Searches up to 10 entities, grouped by an entity.|Multi-entity search not available.|  
-|Search behavior|Finds matches to any word in the search term in any column in the entity.|Finds matches to all words in the search term in one column in an entity; however, the words can be matched in any order in the column.|Query builder where you can define search criteria for the selected row type. Can also be used to prepare data for export to Office Excel so that you analyze, summarize,or aggregate data, or create PivotTables to view your data from different perspectives.|  
+|Single-table search scope|Not available in a table grid. You can filter the search results by a table on the results page.|Available in a table grid.|Available in a table grid.|  
+|Multi-table search scope|There is no maximum limit on the number of tables you can search. **Note:**  While there is no maximum limit on the number of tables you can search, the Row Type filter shows data for only 10 tables.|Searches up to 10 tables, grouped by a table.|Multi-table search not available.|  
+|Search behavior|Finds matches to any word in the search term in any column in the table.|Finds matches to all words in the search term in one column in a table; however, the words can be matched in any order in the column.|Query builder where you can define search criteria for the selected row type. Can also be used to prepare data for export to Office Excel so that you analyze, summarize,or aggregate data, or create PivotTables to view your data from different perspectives.|  
 |Searchable columns|Text columns like Single Line of Text, Multiple Lines of Text, Lookups, and Option Sets. Doesn't support searching in columns of Numeric or Date data type.|All searchable columns.|All searchable columns.|  
-|Search results|Returns the search results in order of their relevance, in a single list.|For single-entity, returns the search results in an entity grid. For multi-entity, returns the search results grouped by categories, such as accounts, contacts, or leads.|Returns search results of the selected row type with the columns you have specified, in the sort order you have configured.|
+|Search results|Returns the search results in order of their relevance, in a single list.|For single-table, returns the search results in a table grid. For multi-table, returns the search results grouped by categories, such as accounts, contacts, or leads.|Returns search results of the selected row type with the columns you have specified, in the sort order you have configured.|
 |Wildcards (*)|Trailing wildcard supported for word completion.|Leading wildcard supported. Trailing wildcard added by default.|Not supported.|  

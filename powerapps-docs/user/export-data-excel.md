@@ -69,11 +69,11 @@ The error message occurs due to a setting in Excel. To fix the issue, do this:
 
 ## Limit the number of rows that can be exported to Excel using Web API
 
-Update the `maxrecordsforexporttoexcel` attribute of the Organization entity using the Web API.
+Update the `maxrecordsforexporttoexcel` column of the Organization table using the Web API.
 
 ## Example
 
-The Web API request given below will set the value of `maxrecordsforexporttoexcel` attribute to 100.
+The Web API request given below will set the value of `maxrecordsforexporttoexcel` column to 100.
 
 ```html
 PUT [Organization URI]/api/data/v9.1/organizations(df617a54-bc85-48bf-a4f2-3c4208a405e1)
@@ -87,7 +87,7 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
-> The default value of `maxrecordsforexporttoexcel` attribute is 100000. If the value of `maxrecordsforexporttoexcel` attribute is increased to more than 100000, then timeouts may occur and export may fail. It is recommended to split the rows into multiple views and then upload.
+> The default value of `maxrecordsforexporttoexcel` column is 100000. If the value of `maxrecordsforexporttoexcel` column is increased to more than 100000, then timeouts may occur and export may fail. It is recommended to split the rows into multiple views and then upload.
 
 ### See also
 

@@ -96,7 +96,7 @@ To find an app, search your phone’s online store.
 
 2. Select **Next**.
 
-3. (Optional) If you have to update the existing rows in Dynamics 365 through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the entity.
+3. (Optional) If you have to update the existing rows in Dynamics 365 through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the table.
 
     The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference Dynamics 365 rows](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn949335(v=crm.8)?redirectedfrom=MSDN).
 
@@ -108,11 +108,11 @@ To find an app, search your phone’s online store.
    > [!div class="mx-imgBorder"]
    > ![Map XML columns with Dynamics 365](media/import-xml-mapping.png "Map XML columns with Dynamics 365")
 
-    - On the left side, by default the **Primary Columns** section of the **Review Mapping** page shows all the required columns for the entity that must be mapped for the data to be imported successfully.
+    - On the left side, by default the **Primary Columns** section of the **Review Mapping** page shows all the required columns for the table that must be mapped for the data to be imported successfully.
     - If you've selected an alternate key, all the columns of the alternate key also become required columns and must be mapped.
     - If the column headings of your source file match the column display names, these columns will be automatically mapped. All the mapped columns will be shown with a green check mark.
     - If the column headings don't match, the unmapped columns will be shown with a red exclamation point. Select a Dynamics 365 field to map to the unmapped column heading of your file.
-    - To quickly filter on only the unmapped columns, select **Unmapped** from the **Map Attributes** drop-down list.
+    - To quickly filter on only the unmapped columns, select **Unmapped** from the **Map Columns** drop-down list.
 
 5.  In the **Optional Columns** section of the **Review Mapping** page, the left side shows the column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists.
 
@@ -141,12 +141,12 @@ To find an app, search your phone’s online store.
 
 7. If some data in your source file references other existing rows in Dynamics 365 Sales, you must map the column in the source file to a lookup column of Dynamics 365 Sales.
 
-    For example, you might want to import a file named Leads.csv, which contains customer rows. The **Customer** column in Leads.csv contains the associated account or contact data. To map this, select the **Lookup Reference** button next to the lookup column. The **Lookup Reference** section opens and lists the entities related to the current entity.
+    For example, you might want to import a file named Leads.csv, which contains customer rows. The **Customer** column in Leads.csv contains the associated account or contact data. To map this, select the **Lookup Reference** button next to the lookup column. The **Lookup Reference** section opens and lists the tables related to the current table.
 
     > [!div class="mx-imgBorder"]
     > ![The Lookup Reference section](media/import-lookup-reference-section.png "The Lookup Reference section")
 
-    For each entity, select the columns to search during import to retain the relationships between the rows, and then select **OK**.
+    For each table, select the columns to search during import to retain the relationships between the rows, and then select **OK**.
 
 8. To save your mapping settings for next time, enter a name in the **Name your data map** box. This way, the next time you need to import a similar set of data, you'll be able to use this mapping again.
 

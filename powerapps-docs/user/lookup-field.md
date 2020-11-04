@@ -18,7 +18,7 @@ search.app:
 ---
 #  Use the lookup column on a row
 
-Lookup helps you to choose rows from a related entity. When you select a related entity and enter search criteria, such as a name or email address, lookup automatically begins to resolve the partial text and displays any matching rows. If no rows are displayed after you have typed the full text of your search criteria, a message is displayed specifying that there are no rows.
+Lookup helps you to choose rows from a related table. When you select a related table and enter search criteria, such as a name or email address, lookup automatically begins to resolve the partial text and displays any matching rows. If no rows are displayed after you have typed the full text of your search criteria, a message is displayed specifying that there are no rows.
 
 For example, you might search for the name **Adrian Dumitrascu**. When you type **ad**, possible matching rows are automatically populated and displayed.
 
@@ -37,11 +37,11 @@ along with seven of your favorite rows. If you have not pinned any favorites, on
 
 Lookups are classified into the following: 
 
-- **Simple lookup:** Select a single row in a column from a single entity. 
+- **Simple lookup:** Select a single row in a column from a single table. 
 
-- **PartyList-type columns:** Use to select multiple rows from multiple entities in a lookup. Use partylist-type columns to select multiple rows. This allows you to add each row by performing a new search, multiple times. Every time you select a row, you will be able to perform a new search for another row.
+- **PartyList-type columns:** Use to select multiple rows from multiple tables in a lookup. Use partylist-type columns to select multiple rows. This allows you to add each row by performing a new search, multiple times. Every time you select a row, you will be able to perform a new search for another row.
   
-- **Regarding-type columns:** Use to select a single row from multiple entities in a lookup. 
+- **Regarding-type columns:** Use to select a single row from multiple tables in a lookup. 
 
 ## Search in a lookup column 
 To search a lookup, select the textbox and type your search criteria. If recent rows are enabled for your lookup, your recent rows will be displayed when you select the textbox.
@@ -73,7 +73,7 @@ The most recently used list of rows shows an image to help distinguish between r
 When results span multiple row types, you can see how many types of rows there are and select them from the list. The **Lookup Row** option is not available in the Unified Interface. Instead use the following to search:
 
 - To look for rows, enter text in the search box. 
-- To search by entity type select **types of rows**. 
+- To search by table type select **types of rows**. 
 - Select **Change View** to select a view.
 
   > [!div class="mx-imgBorder"]

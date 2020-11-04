@@ -56,7 +56,7 @@ You can also open primary column and lookup columns in a new tab or window.
 
 When you filter on a lookup column, you can select from a list of rows to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of rows to filter by.
 
-The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the entity being looked up and will include all rows with no filter.
+The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the table being looked up and will include all rows with no filter.
 
    > [!div class="mx-imgBorder"]
    > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
@@ -115,13 +115,13 @@ The system searches for data in the **My Active Contacts** view and displays sea
 
 ## Use the quick-find search experience
 
-To switch back to the old quick-find search experience that uses an entity's quick-find view definition to perform searches, you'll need admin permissions.
+To switch back to the old quick-find search experience that uses a table's quick-find view definition to perform searches, you'll need admin permissions.
 
 1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Advanced Settings**.
 
 2. Go to **Settings** > **Administration** > **System Settings**.
 
-3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
+3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of a table for searching on grids and sub-grids**.
 
 
 

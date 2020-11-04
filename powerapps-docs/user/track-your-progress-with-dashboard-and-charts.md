@@ -117,12 +117,12 @@ When you add a chart on a dashboard, you can edit the chart properties and modif
 Legend:
 
  1. View title with **View Selector** turned off. You cannot toggle between different views. You only see the title.
- 2. Chart title with **Display Chart Selection** turned off. You cannot toggle between different charts for the entity. You only see the title.
+ 2. Chart title with **Display Chart Selection** turned off. You cannot toggle between different charts for the table. You only see the title.
  
  
  
  3. Only **View Selector** is turned on. You can toggle to a different view and the chart will render based on the underlying data for the selected view.
- 4. Both **View Selector** and **Display Chart Selection** is turned on. You can toggle to a different view and chart for the entity.
+ 4. Both **View Selector** and **Display Chart Selection** is turned on. You can toggle to a different view and chart for the table.
 
 
 To edit the chart properties, you need to edit the dashboard that the chart is in. If you're in the process of adding a new chart on a dashboard, then you're already in edit mode and can skip to step 2.
@@ -154,7 +154,7 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
    > ![Select view selector.](media/charts_select_views.png "Select view selector")
 
 
-5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity and see  different visualizations of the data. If the box is unchecked, then you only see the chart title.
+5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the table and see  different visualizations of the data. If the box is unchecked, then you only see the chart title.
 
    > [!div class="mx-imgBorder"]
    > ![Display chart selection.](media/chart_options_1.png "Display chart selection")
@@ -199,7 +199,7 @@ You can continue drilling further into the chart data. As you drill down deeper,
 
 
 
-In the chart designer, adding an order on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using other calculated columns, a related entity column, or a local column on the entity.
+In the chart designer, adding an order on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using other calculated columns, a related table column, or a local column on the table.
 
 
 

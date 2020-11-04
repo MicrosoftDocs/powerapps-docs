@@ -28,7 +28,7 @@ Find the rows you want in your app by using the Advanced Find search option. You
   
    1.  In the **Look for** list, select a row type.  
   
-   2.  Choose **Select** to define search criteria: column (for example, Account Name or City), the query relational operator (part of an expression such as "is equal to" or "contains" that defines how a specified attribute should be compared with a value.), and the values to locate (for example, "Seattle" or "Email").  
+   2.  Choose **Select** to define search criteria: column (for example, Account Name or City), the query relational operator (part of an expression such as "is equal to" or "contains" that defines how a specified column should be compared with a value.), and the values to locate (for example, "Seattle" or "Email").  
   
        You can select columns from the current row type, or from related rows. For example, an account might have many related contact rows.  
   

@@ -20,17 +20,17 @@ search.app:
 
 # Using relevance search to search for rows
 
-Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
+Relevance search delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance. 
   
 Relevance search brings the following enhancements and benefits:  
 
 - Improved performance compared to Categorized search.  
   
-- Finds matches to any word in the search term in any column in the entity, compared to quick find where all words from the search term must be found in one column. 
+- Finds matches to any word in the search term in any column in the table, compared to quick find where all words from the search term must be found in one column. 
 
 - Finds matches that include inflectional words like **stream**, **streaming**, or **streamed**.  
   
-- Returns results from all searchable entities in a single list sorted by relevance, so the better the match, the higher the result appears in the list. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than finding the same words in a long article, far apart from each other.
+- Returns results from all searchable tables in a single list sorted by relevance, so the better the match, the higher the result appears in the list. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than finding the same words in a long article, far apart from each other.
   
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results. 
 
@@ -51,7 +51,7 @@ Relevance search brings the following enhancements and benefits:
   > [!NOTE]
   > - Relevance search is text-based, and can search only on columns of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in columns of Numeric or Date data type.
   
-- Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search).
+- Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across table data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search).
   
   > [!NOTE]
   > Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.<!--note from editor: Via style guide, it's always capital "Boolean," and it's "might" instead of "may.-->
@@ -113,7 +113,7 @@ Facets are available in the leftmost pane. Immediately after you perform a searc
   
 ### Row Type facets
 
-To narrow your search results to a specific entity, select the entity under the **Row Type** section.  
+To narrow your search results to a specific table, select the table under the **Row Type** section.  
  
   > [!div class="mx-imgBorder"]
   > ![Row Type facet to narrow the search results](media/relevance-search-row-type-facet.png "Row Type facet used to narrow search results")  
@@ -123,9 +123,9 @@ When you filter on a specific row type, you can include activities and notes tha
   > [!div class="mx-imgBorder"]
   > ![Include notes and activities related to a row type in the search results](media/relevance-search-row-type-facet-related-notes-activities.png "Include notes and activities related to a row type in the search results")  
   
-Search results that are found in email attachments or appointment entities are shown in the search results under their parent row, either Email or Appointment.  
+Search results that are found in email attachments or appointment tables are shown in the search results under their parent row, either Email or Appointment.  
   
-When you refine by row type, the facet scope switches to the selected entity, and up to four facets that are specific to the entity are shown. For example, if you select the Account entity, you'll see the **Primary Contact** facet in addition to the global facets.  
+When you refine by row type, the facet scope switches to the selected table, and up to four facets that are specific to the table are shown. For example, if you select the Account table, you'll see the **Primary Contact** facet in addition to the global facets.  
   
 In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator or customer has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
   
@@ -150,7 +150,7 @@ Like other facets, you can use date and time facets to filter and see search res
 ## Configure facets and filters
   
 > [!NOTE]
->  A system customizer can set the default experience for all entities, but you can configure your own facets and filters.  
+>  A system customizer can set the default experience for all tables, but you can configure your own facets and filters.  
   
 1. In the upper-right corner, select **Settings**, and then select **Personalization Settings**.  
   
@@ -162,13 +162,13 @@ Like other facets, you can use date and time facets to filter and see search res
    > [!div class="mx-imgBorder"]
    > ![Configure Facets and Filters](media/configure-facets-filters.png "Configure Facets and Filters")  
   
-3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for an entity. Your system administrator or customizer can set a default experience for all entities, but you can set your own here.  
+3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for a table. Your system administrator or customizer can set a default experience for all tables, but you can set your own here.  
   
-   - In the **Select Entity** drop-down list, select an entity you want to configure facets for. This drop-down list contains only the entities that are enabled for relevance search.  
+   - In the **Select Table** drop-down list, select a table you want to configure facets for. This drop-down list contains only the tables that are enabled for relevance search.  
   
-   - For the selected entity, select up to four facet columns. By default, the first four "facet-able" columns in the **Quick Find** view for the selected entity are selected in the list. At any time, you can only have four columns selected as facets.  
+   - For the selected table, select up to four facet columns. By default, the first four "facet-able" columns in the **Quick Find** view for the selected table are selected in the list. At any time, you can only have four columns selected as facets.  
   
-   You can update multiple entities at one time. When you select **OK**, the changes for all entities that you've configured are saved. To revert to the default behavior for an entity that you previously configured, select **Default**.  
+   You can update multiple tables at one time. When you select **OK**, the changes for all tables that you've configured are saved. To revert to the default behavior for a table that you previously configured, select **Default**.  
   
    > [!NOTE]
    > - If a system customizer deletes a column or makes it no longer searchable, and you've saved a facet for that column, it will no longer show up as a facet.  
