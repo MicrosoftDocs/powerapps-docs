@@ -93,7 +93,7 @@ Legend
 
 ### View quick suggestions
 
-View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary field of an entity record. The suggested results supports misspelled text up to 1 character off. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
+View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary field of an entity record, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
 
 ![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
 
