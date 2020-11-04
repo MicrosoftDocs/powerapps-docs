@@ -28,8 +28,8 @@ In addition to creating a model-driven app using the Power Apps app designer, yo
   
 Creating a model-driven app involves the following steps:
 
-1. Create an [AppModule Entity](../common-data-service/reference/entities/appmodule.md) instance to define your app and its properties.
-2. Add or remove components to your app such as entity, sitemap, and other components for your custom app using the <xref:Microsoft.Dynamics.CRM.AddAppComponents> and <xref:Microsoft.Dynamics.CRM.RemoveAppComponents> actions.
+1. Create an [AppModule Table](../common-data-service/reference/entities/appmodule.md) instance to define your app and its properties.
+2. Add or remove components to your app such as table, sitemap, and other components for your custom app using the <xref:Microsoft.Dynamics.CRM.AddAppComponents> and <xref:Microsoft.Dynamics.CRM.RemoveAppComponents> actions.
 3. Check your app for any required components thats missing by using the <xref:Microsoft.Dynamics.CRM.ValidateApp> function.
 4. Publish your app.
 5. Associate appropriate security roles to your model-driven app to provide access to users.
@@ -71,12 +71,12 @@ OData-EntityId: [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-8
 
 ## Add or remove components from your model-driven app
 
-You can add or remove components in an app such as sitemap, entity, dashboard, business process flows, views, and forms that you want to be included in your model-driven app. For detailed information about components that can be added to a model-driven app, see [Add or edit app components in the app designer](../../maker/model-driven-apps/add-edit-app-components.md).
+You can add or remove components in an app such as sitemap, table, dashboard, business process flows, views, and forms that you want to be included in your model-driven app. For detailed information about components that can be added to a model-driven app, see [Add or edit app components in the app designer](../../maker/model-driven-apps/add-edit-app-components.md).
 
 Use the <xref:Microsoft.Dynamics.CRM.AddAppComponents> action or the <xref:Microsoft.Crm.Sdk.Messages.AddAppComponentsRequest> message to add components to your model-driven app. The action requires you to specify the following:
 
 - **AppId**: ID of the app where you want to add components
-- **Components** A collection of components to be added. You need to specify the ID and the entity type of the component you want to add. For a list of entity types in Common Data Service Web API, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
+- **Components** A collection of components to be added. You need to specify the ID and the table type of the component you want to add. For a list of table types in Common Data Service Web API, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
 
 The following Web API request adds a view (savedquery) and a form (systemform) to your app:
 
@@ -209,7 +209,7 @@ Accept: application/json
 
 To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your model-driven apps. Users assigned to the associated security roles and can see and use your model-driven apps in Common Data Service. 
 
-Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../common-data-service/reference/entities/appmodule.md) entity to associate a model-driven app with a security role. The following request shows how to associate a model-driven app with a security role:
+Use the **appmoduleroles_association** navigation property of the [AppModule Table](../common-data-service/reference/entities/appmodule.md) table to associate a model-driven app with a security role. The following request shows how to associate a model-driven app with a security role:
 
 ```http
 POST [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)appmoduleroles_association/$ref HTTP/1.1

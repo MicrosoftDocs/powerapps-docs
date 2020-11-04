@@ -64,7 +64,7 @@ Use the **data** and **ui** objects under the **formContext** object to programm
 
 ### data object
 
-Provides access to the entity data and methods to manage the data in the form as well as in the business process flow control. Contains the following objects:
+Provides access to the table data and methods to manage the data in the form as well as in the business process flow control. Contains the following objects:
 
 | **Object**  | **Description**|
 |-----------------|----------------|
@@ -96,10 +96,10 @@ reference)](reference/collections.md).
 
 | **Collection**  | **Description**|
 |-----------------|----------------|
-| [attributes](reference/attributes.md)  | Two objects contain an attributes collection:<br/><br/>- **formContext.data.attributes** collection provides access to non-entity bound attributes.<br/><br/>- **formContext.data.entity.attributes** collection provides access to each entity attribute that is available on the form. Only those attributes that correspond to fields added to the form are available.| 
+| [attributes](reference/attributes.md)  | Two objects contain an attributes collection:<br/><br/>- **formContext.data.attributes** collection provides access to non-entity bound attributes.<br/><br/>- **formContext.data.entity.attributes** collection provides access to each table attribute that is available on the form. Only those attributes that correspond to fields added to the form are available.| 
 | [controls](reference/controls.md)  | Three objects contain a controls collection:<br/><br/> - **formContext.ui.controls**: Provides access to each control present on the form.<br/><br/>- **formContext.data.entity.attribute.controls**: Because an attribute may have more than one control on the form, this collection provides access to each of them. This collection will contain only one item unless multiple controls for the attribute are added to the form.<br/><br/>- **formContext.ui.tabs.sections.controls**: This collection only contains the controls found in the section.|
 |**formContext.data.process.**[stages](reference/formContext-data-process/process/getStages.md) and **formContext.data.process**.[steps](reference/formContext-data-process/stage/getSteps.md)| Provides access to stages and steps collection in a business process flow. These also allow for adding and removing of items from the collection.|
-|**formContext.ui.formSelector.**[items](reference/formContext-ui-formselector.md)|When multiple forms are provided for an entity, you can associate each form with security roles. When the security roles associated with a user enable them to see more than one form, the **formContext.ui.formSelector.items** collection provides access to each form definition available to that user.|
+|**formContext.ui.formSelector.**[items](reference/formContext-ui-formselector.md)|When multiple forms are provided for a table, you can associate each form with security roles. When the security roles associated with a user enable them to see more than one form, the **formContext.ui.formSelector.items** collection provides access to each form definition available to that user.|
 |**formContext.ui.navigation.**[items](reference/formContext-ui-navigation.md)|The **formContext.ui.navigation.items** collection provides access to navigation items that are defined using the navigation area of the form editor. People navigate to these using the command bar.|
 | **formContext.ui.**[quickForms](reference/formContext-ui-quickForms.md) | Provides methods to access all the quick view controls and its constituent controls on the Customer Enagagement forms.| **Xrm.Page.ui.tabs** collection provides access to each of these tabs.|
 | **formContext.ui.**[tabs](reference/formContext-ui-tabs.md) | You can organize each form by using one or more tabs. This collection provides access to each of these tabs.|

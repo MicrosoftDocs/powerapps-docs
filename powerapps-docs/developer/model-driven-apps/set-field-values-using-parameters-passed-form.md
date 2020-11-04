@@ -31,7 +31,7 @@ You can set default values for new records created by users by specifying attrib
   
 - You must encode the parameters passed in the `extraqs` parameter. To encode the parameters, use [encodeURIComponent](https://msdn.microsoft.com/library/aeh9cef7\(VS.85\).aspx).  To use special characters like "=" or "&" in the parameter values, you must double encode (e.g. to set `name` to `A=B&C`, it would be `extraqs=name%3DA%253DB%2526C`).
   
-- The names of the query string arguments must match or include the names of attributes for the entity.  
+- The names of the query string arguments must match or include the names of attributes for the table.  
   
 - The values passed must be valid.  
   
@@ -61,11 +61,11 @@ You can set default values for new records created by users by specifying attrib
   
 |Lookup Type|Description|  
 |-----------------|-----------------|  
-|simple lookup|Allows for a single reference to one type of entity.|  
+|simple lookup|Allows for a single reference to one type of table.|  
 |customer lookup|Allows for a single reference to either an account or a contact record.|  
 |owner lookup|Allows for a single reference to either a team or a system user record.|  
-|partylist lookup|Allows for multiple references to multiple entities.|  
-|regarding lookup|Allows for a single reference to multiple entities.|  
+|partylist lookup|Allows for multiple references to multiple tables.|  
+|regarding lookup|Allows for a single reference to multiple tables.|  
   
  The following guidelines apply when setting the value of a lookup on a form using a query string argument:  
   
@@ -73,7 +73,7 @@ You can set default values for new records created by users by specifying attrib
   
      Don’t use any other arguments.  
   
--   For customer and owner lookups you must set the value and the name in the same way you set them for simple lookups. In addition you must use the suffix “type” to specify the type of entity. Allowable values are account, contact, systemuser, and team.  
+-   For customer and owner lookups you must set the value and the name in the same way you set them for simple lookups. In addition you must use the suffix “type” to specify the type of table. Allowable values are account, contact, systemuser, and team.  
   
 -   You can’t set the values for partylist or regarding lookups.  
   
@@ -146,7 +146,7 @@ function OpenNewContact() {
  //Set Do not allow E-mails to "Do Not Allow".  
  parameters["donotemail"] = "1";  
   
- // Define the entity name to open the form  
+ // Define the table name to open the form  
  var entityFormOptions = {};
  entityFormOptions["entityName"] = "contact";
 

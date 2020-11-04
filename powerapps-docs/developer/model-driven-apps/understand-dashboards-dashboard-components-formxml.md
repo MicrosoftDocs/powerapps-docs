@@ -37,7 +37,7 @@ Dashboards are one of the different types of forms in model-driven apps. You can
  An organization-owned dashboard can contain only organization-owned charts. However, a user-owned dashboard can contain user-owned and organization-owned charts. More information [Charts (Visualizations) for model-driven apps](view-data-with-visualizations-charts.md)  
 
 ### Grids  
- Grids fetch data from queries (views) in model-driven apps. An organization-owned dashboard can contain only the grids that fetch data from saved queries. However, a user-owned dashboard can contain grids that fetch data from user and saved queries. More information: [SavedQuery Entity](../common-data-service/reference/entities/savedquery.md) 
+ Grids fetch data from queries (views) in model-driven apps. An organization-owned dashboard can contain only the grids that fetch data from saved queries. However, a user-owned dashboard can contain grids that fetch data from user and saved queries. More information: [SavedQuery Table](../common-data-service/reference/entities/savedquery.md) 
 
 ### IFRAMEs  
  When you add an IFRAME to an organization-owned dashboard, you can specify whether to restrict or allow cross-frame scripting. 

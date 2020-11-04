@@ -37,13 +37,13 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>Logical name of the entity you want to create. For example: "account".</td>
+<td>Logical name of the table you want to create. For example: "account".</td>
 </tr>
 <tr>
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>A JSON object defining the attributes and values for the new entity record.</p>
+<td><p>A JSON object defining the attributes and values for the new table record.</p>
 <p>See examples later in this topic to see how you can define the <code>data</code> object for various create scenarios.</td>
 </tr>
 <tr>
@@ -52,7 +52,7 @@ search.app:
 <td>No</td>
 <td><p>A function to call when a record is created. An object with the following properties will be passed to identify the new record:</p>
 <ul>
-<li><b>entityType</b>: String. The entity logical name of the new record.</li>
+<li><b>entityType</b>: String. The table logical name of the new record.</li>
 <li><b>id</b>: String. GUID of the new record.</li>
 </ul></td>
 </tr>
@@ -74,7 +74,7 @@ On success, returns a promise object containing the attributes specified earlier
 
 ## Examples
 
-These examples use the same request objects as demonstrated in [Create an entity using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) to define the data object for creating an entity record.
+These examples use the same request objects as demonstrated in [Create a table using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) to define the data object for creating a table record.
 
 ### Basic create 
 
@@ -105,15 +105,15 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-### Create related entity records along with the primary record
+### Create related table records along with the primary record
 
  You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account record along with the primary contact record and an associated opportunity record.
 
 > [!NOTE]
-> Creating related entity records in a single create operation is not supported for offline mode.
+> Creating related table records in a single create operation is not supported for offline mode.
 
 ```JavaScript
-// define data to create primary and related entity records
+// define data to create primary and related table records
 var data =
     {
         "name": "Sample Account",
@@ -149,7 +149,7 @@ Xrm.WebApi.createRecord("account", data).then(
 
 ### Associate entities on creating new records
 
-To associate new entity records to existing entity records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios: 
+To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios: 
 
 
 **For online scenario (connected to server)**
@@ -206,6 +206,6 @@ Xrm.WebApi.offline.createRecord("account", data).then(
  
 ### Related topics
 
-[Create an entity using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) 
+[Create a table using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) 
 
 [Xrm.WebApi](../xrm-webapi.md)

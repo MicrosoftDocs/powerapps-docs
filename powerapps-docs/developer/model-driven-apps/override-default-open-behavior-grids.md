@@ -16,23 +16,23 @@ search.app:
   - D365CE
 ---
 
-# Override the default open behavior of data rows in an entity-bound grid
+# Override the default open behavior of data rows in a table-bound grid
 
-By default, performing any of the following actions in a data row in an entity-bound grid opens the entity record:
+By default, performing any of the following actions in a data row in a table-bound grid opens the table record:
 
 - Double-clicking the data row, or selecting the primary attribute link in the row.
 - Selecting a data row, and then pressing the Enter key.
 - On a touch-enabled device, selecting a data row.
 
-There might be situations where you don't want the entity record to open (which is the default behavior), but want a custom action to be performed such as opening a URL using JavaScript functions. You can override the default behavior and define your own custom behavior by creating a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the ID attribute `CommandDefinition`, and defining a custom action on the **Actions** tab. The application looks for the `Mscrm.OpenRecordItem` command ID for an entity when you try to open a record from the entity-bound grid and&mdash;if one is present&mdash;will execute the custom action instead of performing the default behavior of opening the entity record.
+There might be situations where you don't want the table record to open (which is the default behavior), but want a custom action to be performed such as opening a URL using JavaScript functions. You can override the default behavior and define your own custom behavior by creating a command definition for a table with `Mscrm.OpenRecordItem` as the value of the ID attribute `CommandDefinition`, and defining a custom action on the **Actions** tab. The application looks for the `Mscrm.OpenRecordItem` command ID for a table when you try to open a record from the table-bound grid and&mdash;if one is present&mdash;will execute the custom action instead of performing the default behavior of opening the table record.
 
 > [!NOTE] 
 > - This feature is supported only for Unified Interface.
 > - You can also use Ribbon Workbench, a community tool, to visually edit ribbons by using the UI. Note that tools created by the community aren't supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
-To specify a custom action when an entity record is selected, you'll do the following:
+To specify a custom action when a table record is selected, you'll do the following:
 1. Create a web resource to perform the action.
-2. Create a custom button on the entity form by editing the customization.xml file
+2. Create a custom button on the table form by editing the customization.xml file
 3. Import the customization.xml file
 
 ## Step 1: Create a web resource
@@ -74,9 +74,9 @@ Create a web resource to change the default behavior. In the following example<!
 
 ## Step 2: Create a custom button
 
-Create a custom button on the entity form where you want to change the default behavior. For example, if you have a subgrid on the accounts form that displays contact records in the subgrid, you need to create a button and add it to the contact form. You can create a button by editing the customization.xml file.
+Create a custom button on the table form where you want to change the default behavior. For example, if you have a subgrid on the accounts form that displays contact records in the subgrid, you need to create a button and add it to the contact form. You can create a button by editing the customization.xml file.
 
-1. Open the solution that you created in step 1, and add the entity where you want to create the button. 
+1. Open the solution that you created in step 1, and add the table where you want to create the button. 
 
 2. Select **Add existing** > **Other** > **Site map** to add the site map. 
 

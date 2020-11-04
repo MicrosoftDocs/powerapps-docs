@@ -79,7 +79,7 @@ The following is a list of unsupported action types that are frequently asked ab
     - Editing web resource files exported with a solution is not supported.
     - Except for the steps documented in [Maintain managed solutions](/power-platform/alm/maintain-managed-solutions), editing the contents of a managed solution is not supported.
 
-- Displaying an entity form within an IFrame embedded in another entity form is not supported.
+- Displaying a table form within an IFrame embedded in another table form is not supported.
 
 ### See also
 

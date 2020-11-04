@@ -6,12 +6,12 @@
   href: supported-customizations.md
 - name: Design app interface using code
   items:
-  - name: Customize entity forms
+  - name: Customize table forms
     href: customize-entity-forms.md
     items:
     - name: Use IFRAME and web resource controls on a form
       href: use-iframe-and-web-resource-controls-on-a-form.md
-  - name: Customize entity views
+  - name: Customize table views
     href: customize-entity-views.md
   - name: Open forms, views, dialogs, and reports with a URL
     href: open-forms-views-dialogs-reports-url.md

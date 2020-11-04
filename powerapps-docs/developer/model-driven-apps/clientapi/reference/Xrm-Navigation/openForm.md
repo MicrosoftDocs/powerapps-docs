@@ -36,14 +36,14 @@ search.app:
     <td>Object</td> 
     <td>Yes</td>
     <td>Entity form options for opening the form. The object contains the following attributes:<ul>
-<li><b>entityName</b>: String. Logical name of the entity to display the form for.</li>
-<li><b>entityId</b>: (Optional) String. ID of the entity record to display the form for.</li>
+<li><b>entityName</b>: String. Logical name of the table to display the form for.</li>
+<li><b>entityId</b>: (Optional) String. ID of the table record to display the form for.</li>
 <li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
 <li><b>cmdbar</b>: (Optional) Boolean. Indicates whether to display the command bar. If you do not specify this parameter, the command bar is displayed by default.</li>
 <li><b>createFromEntity</b>: (Optional) Lookup. Designates a record that will provide default values based on mapped attribute values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
 <li><b>height</b>: (Optional) Number. Height of the form window to be displayed in pixels.</li>
 <li><b>navbar</b>: (Optional) String. Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid values are: "on", "off", or "entity".<ul><li><code>on</code>: The navigation bar is displayed. This is the default behavior if the <b>navbar</b> parameter is not used.</li>
-<li><code>off</code>: The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.</li><li><code>entity</code>: On an entity form, only the navigation options for related entities are available. After navigating to a related entity, a back button is displayed in the navigation bar to allow returning to the original record.</li></ul></li>
+<li><code>off</code>: The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.</li><li><code>entity</code>: On a table form, only the navigation options for related entities are available. After navigating to a related table, a back button is displayed in the navigation bar to allow returning to the original record.</li></ul></li>
 <li><b>openInNewWindow</b>: (Optional) Boolean. Indicates whether to display form in a new window.</li>
 <li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>
 This does not apply to opening a new browser window.  
@@ -83,7 +83,7 @@ This does not apply to opening a new browser window.
 </table>
 </li>
 <li><b>selectedStageId</b>: (Optional) String. ID of the selected stage in business process instance.</li>
-<li><b>useQuickCreateForm</b>: (Optional) Boolean. Indicates whether to open a quick create form.  The entity must have the <b>Allow Quick Create</b> option enabled for the quick create form to be displayed and you must also add the entity and the quick create form to your app. If you do not specify the value of <code>useQuickCreateForm</code>, the default will be set to <b>false</b>.</li>
+<li><b>useQuickCreateForm</b>: (Optional) Boolean. Indicates whether to open a quick create form.  The table must have the <b>Allow Quick Create</b> option enabled for the quick create form to be displayed and you must also add the table and the quick create form to your app. If you do not specify the value of <code>useQuickCreateForm</code>, the default will be set to <b>false</b>.</li>
 <li><b>width</b>: (Optional) Number. Width of the form window to be displayed in pixels.</li>
 </ul>
 </tr>
@@ -102,7 +102,7 @@ This does not apply to opening a new browser window.
 
 This function is passed an object as a parameter. The object has a <b>savedEntityReference</b> array with the following properties to identify the record(s) displayed or created:
 <ul>
-<li><b>entityType</b>: The logical name of the entity.</li>
+<li><b>entityType</b>: The logical name of the table.</li>
 <li><b>id</b>: A string representation of a GUID value for the record.</li>
 <li><b>name</b>: The primary attribute value of the record displayed or created.</li></ul>
 
@@ -124,13 +124,13 @@ This function is passed an object as a parameter. The object has a <b>savedEntit
 
 ## Remarks
 
-You must use this method to open entity or quick create forms instead of the deprecated  [Xrm.Utility.openEntityForm](https://msdn.microsoft.com/library/jj602956.aspx#openEntityForm) and  [Xrm.Utility.openQuickCreate](https://msdn.microsoft.com/library/jj602956.aspx#openQuickCreate) methods. 
+You must use this method to open table or quick create forms instead of the deprecated  [Xrm.Utility.openEntityForm](https://msdn.microsoft.com/library/jj602956.aspx#openEntityForm) and  [Xrm.Utility.openQuickCreate](https://msdn.microsoft.com/library/jj602956.aspx#openQuickCreate) methods. 
 Use [setActiveProcess](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-data-process/activeprocess/setactiveprocess) to display a particular business process and [setActiveProcessInstance](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-data-process/setactiveprocessinstance) to display a particular business process instance on the form.
  
 
 ## Examples
 
-### Example 1: Open an entity form for existing record
+### Example 1: Open a table form for existing record
 
 The following sample code opens a contact form to display an existing contact record:
 
@@ -149,7 +149,7 @@ Xrm.Navigation.openForm(entityFormOptions).then(
     });
 ```
 
-### Example 2: Open an entity form for new record
+### Example 2: Open a table form for new record
 
 The following sample code opens a contact form with some pre-populated values to create a new record:
 

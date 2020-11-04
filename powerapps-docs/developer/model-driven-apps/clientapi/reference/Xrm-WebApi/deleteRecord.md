@@ -37,13 +37,13 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to delete. For example: "account". </td>
+<td>The table logical name of the record you want to delete. For example: "account". </td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to delete.</td>
+<td>GUID of the table record you want to delete.</td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -51,7 +51,7 @@ search.app:
 <td>No</td>
 <td><p>A function to call when a record is deleted. An object with the following properties will be passed to identify the deleted record:</p>
 <ul>
-<li><b>entityType</b>: String. The entity type of the record.</li>
+<li><b>entityType</b>: String. The table type of the record.</li>
 <li><b>id</b>: String. GUID of the record.</li>
 <li><b>name</b>: String. Name of the record.</li>
 </ul></td>
@@ -70,7 +70,7 @@ On success, returns a promise object containing the attributes specified earlier
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../../common-data-service/webapi/update-delete-entities-using-web-api.md) to define the data object for updating an entity record.
+These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../../common-data-service/webapi/update-delete-entities-using-web-api.md) to define the data object for updating a table record.
 
 Deletes an account with record ID = 5531d753-95af-e711-a94e-000d3a11e605.
 

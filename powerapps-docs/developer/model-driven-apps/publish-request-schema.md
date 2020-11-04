@@ -36,7 +36,7 @@ The following is the schema definition for the <xref:Microsoft.Crm.Sdk.Messages.
      <xs:complexType>  
       <xs:sequence minOccurs="0"  
                    maxOccurs="unbounded">  
-       <!-- Name of the entity to publish-->  
+       <!-- Name of the table to publish-->  
        <xs:element maxOccurs="unbounded"  
                    name="entity"  
                    type="xs:string" />  

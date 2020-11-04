@@ -109,7 +109,7 @@ function mySampleFunction(primaryControl) {
  
  For a `<Url>` action, you can also use the `PassParams` attribute to include contextual information.  
   
- The `Value` options `PrimaryEntityTypeName` and `FirstPrimaryItemId` provide information for an entity record. You can use `PrimaryItemIds` for a `HomepageGrid` ribbon to get a list of all the displayed items.
+ The `Value` options `PrimaryEntityTypeName` and `FirstPrimaryItemId` provide information for a table record. You can use `PrimaryItemIds` for a `HomepageGrid` ribbon to get a list of all the displayed items.
   
 ### See also  
  [Customize the Ribbon](customize-commands-ribbon.md)   

@@ -45,7 +45,7 @@ When configuring Ribbon elements you can define specific rules to control when t
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `Modern`  |                                       The command bar is presented using [!INCLUDE[pn_moca_full](../../includes/pn-moca-full.md)].                                       |
 | `Refresh` |                                                      The command bar is presented using the updated user interface.                                                      |
-| `Legacy`  | The ribbon is presented in forms for entities that were not updated or in a list view in [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. |
+| `Legacy`  | The ribbon is presented in forms for tables that were not updated or in a list view in [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. |
 
 ### Crm Client Type Rule
 Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending on the type of client used. Type options are as follows:  
@@ -118,9 +118,9 @@ function EnableRule() {
 
 
 ### Entity Rule
- Uses the `<EntityRule>` element. Entity rules allow for evaluation of the current entity. This is useful when you define custom actions that apply to the Entity Template instead of for specific entities. For example, you may want to add a ribbon element to all entities except for several specific entities. It is easier to define the custom action for the Entity Template that applies to all entities and then use an Entity Rule to filter out those that should be excluded.  
+ Uses the `<EntityRule>` element. Entity rules allow for evaluation of the current table. This is useful when you define custom actions that apply to the Entity Template instead of for specific tables. For example, you may want to add a ribbon element to all tables except for several specific tables. It is easier to define the custom action for the Entity Template that applies to all tables and then use an Entity Rule to filter out those that should be excluded.  
 
- The entity rule also includes an optional Context attribute to specify whether the entity is being displayed in the Form or a list (HomePageGrid). The optional `AppliesTo` attribute can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the entity is being displayed in a subgrid.  
+ The table rule also includes an optional Context attribute to specify whether the table is being displayed in the Form or a list (HomePageGrid). The optional `AppliesTo` attribute can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
 
 ### Form State Rule
  Uses the `<FormStateRule>` element. Use the `FormState` rule to determine the current type of form that is displaying a record. State options are as follows:  
@@ -154,7 +154,7 @@ function EnableRule() {
  Uses the `<PageRule>` element. This type of rule checks the URL of the page being displayed. It returns true if the `Address` matches.  
 
 ### Record Privilege Rule
- Uses the `<RecordPrivilegeRule>` element. Use this rule to determine whether the current user has privileges on a specific record. These privileges differ from an Entity privilege because they can include privileges gained by another user sharing the record with the current user.  
+ Uses the `<RecordPrivilegeRule>` element. Use this rule to determine whether the current user has privileges on a specific record. These privileges differ from  a Table privilege because they can include privileges gained by another user sharing the record with the current user.  
 
 ### Selection Count Rule
  Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of records in the grid are selected. For example, if your button merges records, you should make sure at least two records are selected before enabling the ribbon control.  

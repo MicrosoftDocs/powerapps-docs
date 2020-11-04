@@ -33,8 +33,8 @@ Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>`
   
 |Parameter|Name|Description|  
 |---------------|----------|-----------------|  
-|`typename`|Entity Name|Name of the entity. For custom entities, this includes the customization prefix, for example, new_entityname.|  
-|`type`|Entity Type Code|Integer that uniquely identifies the entity in the current organization. **Note:**  `Entity Type Code` values are determined by the order in which an entity is created in an organization. `Entity Type Codes` for custom entities are usually different in different organizations.|  
+|`typename`|Entity Name|Name of the table. For custom tables, this includes the customization prefix, for example, new_entityname.|  
+|`type`|Entity Type Code|Integer that uniquely identifies the table in the current organization. **Note:**  `Entity Type Code` values are determined by the order in which a table is created in an organization. `Entity Type Codes` for custom tables are usually different in different organizations.|  
 |`id`|Object GUID|Globally unique identifier (GUID) that represents a record.|  
 |`orgname`|Organization Name|Unique name of the organization.|  
 |`userlcid`|User Language Code|Language code identifier that is used by the current user.|  
@@ -43,7 +43,7 @@ Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>`
 [!INCLUDE[languagecode](../../includes/languagecode.md)]
   
 > [!NOTE]
->  We recommend that you use the entity name instead of the entity type code because the entity type code may be different between model-driven apps installations.  
+>  We recommend that you use the table name instead of the table type code because the table type code may be different between model-driven apps installations.  
   
 ### Example  
  The following sample shows the URL without parameters:  
@@ -52,7 +52,7 @@ Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>`
 https://myserver/mypage.aspx  
 ```  
   
- The following sample shows the parameters included when the ribbon control is presented for the account entity, for an organization called ‘AdventureWorksCycle’, when the user’s language and the organization base language is English, and the GUID for the account record is DBD5DBFB-0666-DC11-A5D9-0003FF9CE217:  
+ The following sample shows the parameters included when the ribbon control is presented for the account table, for an organization called ‘AdventureWorksCycle’, when the user’s language and the organization base language is English, and the GUID for the account record is DBD5DBFB-0666-DC11-A5D9-0003FF9CE217:  
   
 ```  
 https://myserver/mypage.aspx?orgname=AdventureWorksCycle&userlcid=1033&orglcid=1033&type=1&typename=account&id=%7BDBD5DBFB-0666-DC11-A5D9-0003FF9CE217%7D  

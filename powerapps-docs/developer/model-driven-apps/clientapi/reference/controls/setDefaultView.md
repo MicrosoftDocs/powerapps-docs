@@ -36,7 +36,7 @@ Lookup
 
 ## Example
 
-This **setDefaultViewSample** function will set the **account** entity form primary contact lookup default view to the **My Active Contacts** view.
+This **setDefaultViewSample** function will set the **account** table form primary contact lookup default view to the **My Active Contacts** view.
 
 ```JavaScript
 function setDefaultViewSample(executionContext) {

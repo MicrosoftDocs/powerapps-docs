@@ -23,7 +23,7 @@ The Client API object model for model-driven apps provides you objects and metho
 - Get or set attribute values.
 - Show and hide user interface elements.
 - Reference multiple controls per attribute.
-- Access multiple forms per entity.
+- Access multiple forms per table.
 - Manipulate form navigation items.
 - Interact with the business process flow control.
 

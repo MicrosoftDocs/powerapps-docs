@@ -28,7 +28,7 @@ search.app:
 
 **Type**: Boolean
 
-**Description**: true if all of the entity data is valid; false otherwise.
+**Description**: true if all of the table data is valid; false otherwise.
 
 ### Related topics
 

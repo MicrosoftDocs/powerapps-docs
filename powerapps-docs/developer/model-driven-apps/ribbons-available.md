@@ -34,20 +34,20 @@ Because of this requirement to reference the definitions of existing ribbon elem
 
 To help you get started, you can download the default ribbon definitions for model-driven apps from [Export Ribbon Definitions sample](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportRibbonDefinitions). `The ExportedRibbonXml` file includes the output files you would have for an organization.  
 
-Within the exported ribbon XML files, the applicationRibbon.xml file includes all the ribbons that are not defined for a specific entity. These correspond to the **Application Ribbons** solution component. For each entity, you will find an *entity name*ribbon.xml file. This corresponds to the `RibbonDiffXml` that is included in each entity. If you want to edit the ribbon for a specific entity, you should locate the ribbon XML file for that entity.  
+Within the exported ribbon XML files, the applicationRibbon.xml file includes all the ribbons that are not defined for a specific table. These correspond to the **Application Ribbons** solution component. For each table, you will find an *entity name*ribbon.xml file. This corresponds to the `RibbonDiffXml` that is included in each table. If you want to edit the ribbon for a specific table, you should locate the ribbon XML file for that table.  
 
 <a name="entity_ribbons"></a>  
 
 ## Entity ribbons  
 
-All entities use a common ribbon definition called the *Entity Ribbon Template*. The entity ribbon template definition is located in the `applicationribbon.xml` file. When you create a custom entity, the ribbon you see is the default ribbon defined by the entity ribbon template. 
- Each system entity has a separate `<RibbonDiffXml>` definition that builds upon the entity ribbon template definition.  
+All tables use a common ribbon definition called the *Entity Ribbon Template*. The table ribbon template definition is located in the `applicationribbon.xml` file. When you create a custom table, the ribbon you see is the default ribbon defined by the table ribbon template. 
+ Each system table has a separate `<RibbonDiffXml>` definition that builds upon the table ribbon template definition.  
 
- Within the applicationribbon.xml file, you can see the following tabs that apply to all entities:  
+ Within the applicationribbon.xml file, you can see the following tabs that apply to all tables:  
 
 - `Mscrm.Form.{!EntityLogicalName}.MainTab`  
 
-   Tab displays the entity display name in the label.  
+   Tab displays the table display name in the label.  
 
 - `Mscrm.Form.{!EntityLogicalName}.Related`  
 
@@ -59,7 +59,7 @@ All entities use a common ribbon definition called the *Entity Ribbon Template*.
 
 - `Mscrm.HomepageGrid.{!EntityLogicalName}.MainTab`  
 
-   Tab displays the plural entity display name in the label.  
+   Tab displays the plural table display name in the label.  
 
 - `Mscrm.HomepageGrid.{!EntityLogicalName}.View`  
 
@@ -79,31 +79,31 @@ All entities use a common ribbon definition called the *Entity Ribbon Template*.
 
   -   `Mscrm.SubGrid.{!EntityLogicalName}.MainTab`  
 
-       Tab displays the plural entity display name.  
+       Tab displays the plural table display name.  
 
-  When you view the ribbon definitions for a specific entity, you will see that the name of the entity usually replaces the `{!EntityLogicalName}` token. When you see the `{!EntityLogicalName}` token in the ribbon definition for a specific entity, that means there is no specific definition for that entity and it simply uses the definition from the entity ribbon template. When you define ribbons for a specific entity, always use the actual entity name. Ribbon modifications for a specific entity must be defined in the `//ImportExportXml/Entities/Entity/RibbonDiffXml` node.  
+  When you view the ribbon definitions for a specific table, you will see that the name of the table usually replaces the `{!EntityLogicalName}` token. When you see the `{!EntityLogicalName}` token in the ribbon definition for a specific table, that means there is no specific definition for that table and it simply uses the definition from the table ribbon template. When you define ribbons for a specific table, always use the actual table name. Ribbon modifications for a specific table must be defined in the `//ImportExportXml/Entities/Entity/RibbonDiffXml` node.  
 
-  You can make changes that apply to all entities by defining the changes to the application ribbons substituting the token `{!EntityLogicalName}` in place of an entity logical name in your RibbonDiffXml node. Changes to application ribbons that are defined for all entities must be defined in the `ImportExportXml/RibbonDiffXml` node. They cannot be defined in the RibbonDiffXml node for a specific entity.  
+  You can make changes that apply to all tables by defining the changes to the application ribbons substituting the token `{!EntityLogicalName}` in place of a table logical name in your RibbonDiffXml node. Changes to application ribbons that are defined for all tables must be defined in the `ImportExportXml/RibbonDiffXml` node. They cannot be defined in the RibbonDiffXml node for a specific table.  
 
 ### Grid ribbons  
- The entity grid ribbon is a collection of tabs that have an Id attribute value beginning with `Mscrm.HomepageGrid.<entity logical name>`. For example, the tab with the text "Accounts" on an account entity grid is `Mscrm.HomepageGrid.account.MainTab`. All the tabs displayed on the account entity grid will have an Id value that begins with `Mscrm.HomepageGrid.account`.  
+ The table grid ribbon is a collection of tabs that have an Id attribute value beginning with `Mscrm.HomepageGrid.<entity logical name>`. For example, the tab with the text "Accounts" on an account table grid is `Mscrm.HomepageGrid.account.MainTab`. All the tabs displayed on the account table grid will have an Id value that begins with `Mscrm.HomepageGrid.account`.  
 
 <a name="BKMK_SubGridRibbons"></a>   
 ### Subgrid ribbons  
- The entity subgrid ribbon is a contextual group with a collection of tabs that have an Id attribute value beginning with `Mscrm.SubGrid.<entity logical name>`. For example, the tab with the text "Accounts" on account entity sub grid is `Mscrm.SubGrid.account.MainTab`.  
+ The table subgrid ribbon is a contextual group with a collection of tabs that have an Id attribute value beginning with `Mscrm.SubGrid.<entity logical name>`. For example, the tab with the text "Accounts" on account table sub grid is `Mscrm.SubGrid.account.MainTab`.  
 
- When a list of records for an entity is displayed within a sub grid on the form of another entity or in a chart, there will be only three controls available directly above or within the subgrid. The behaviors for these controls can be modified by changing the commands that they are associated with.  
+ When a list of records for a table is displayed within a sub grid on the form of another table or in a chart, there will be only three controls available directly above or within the subgrid. The behaviors for these controls can be modified by changing the commands that they are associated with.  
 
 - **Add** The default behavior of the command with the ![Add button](media/customization-subgrid-add.PNG "Add button") icon depends on whether the records in the subgrid are related to the current record.  
 
      If the records are related to the current record, the default behavior is look for existing records. If an existing record cannot be found, or if the user simply wants to create a new record, they can click **Add New**.  
 
-     If the records are not related to the current record, the default behavior is to add a new record. If the entity has a Quick Create form this will be displayed, otherwise a new full form will be shown.  
+     If the records are not related to the current record, the default behavior is to add a new record. If the table has a Quick Create form this will be displayed, otherwise a new full form will be shown.  
 
      Activities are the exception to this pattern. The add command will always prompt for the type of activity first.
 
      > [!NOTE]
-     >  Offline mode in Dynamics 365 does not support many-to-many relationship on custom entities. Due to this, the **Add New** button on a sub grid in Dynamics 365 offline mode will not be displayed.
+     >  Offline mode in Dynamics 365 does not support many-to-many relationship on custom tables. Due to this, the **Add New** button on a sub grid in Dynamics 365 offline mode will not be displayed.
 
 - **Show List** The command with the ![Open view button](media/customization-open-view.PNG "Open view button") icon will open the full list where all available commands can be used.  
 
@@ -123,15 +123,15 @@ All entities use a common ribbon definition called the *Entity Ribbon Template*.
   You can hide these commands by using `<HideCustomAction>`.  
 
 ### Form ribbons  
- Each entity can have multiple forms. You can define changes to the form ribbon for all forms for that entity by adding your definition at the entity level (`//ImportExportXml/Entities/Entity/RibbonDiffXml`).  
+ Each table can have multiple forms. You can define changes to the form ribbon for all forms for that table by adding your definition at the table level (`//ImportExportXml/Entities/Entity/RibbonDiffXml`).  
 
- Each entity form can have a specific ribbon definition. In the exported customizations.xml file, you must add your modified `<RibbonDiffXml>` to this location:`//ImportExportXml/Entities/Entity/FormXml/forms/systemform/form/RibbonDiffXml`.  
+ Each table form can have a specific ribbon definition. In the exported customizations.xml file, you must add your modified `<RibbonDiffXml>` to this location:`//ImportExportXml/Entities/Entity/FormXml/forms/systemform/form/RibbonDiffXml`.  
 
- The entity form ribbon is a collection of tabs that have an Id attribute value beginning with `Mscrm.Form.<entity logical name>`. For example, the tab with the label **Account** on account entity form is `Mscrm.Form.account.MainTab`. All the tabs displayed on the account entity form will have an Id value that begins with `Mscrm.Form.account`.  
+ The table form ribbon is a collection of tabs that have an Id attribute value beginning with `Mscrm.Form.<entity logical name>`. For example, the tab with the label **Account** on account table form is `Mscrm.Form.account.MainTab`. All the tabs displayed on the account table form will have an Id value that begins with `Mscrm.Form.account`.  
 
 <a name="BKMK_BasicHomeTab"></a>   
 ## Basic home tab  
- The basic home tab is displayed on the main application ribbon whenever an alternative tab is not defined because of entity context or a display rule that suppresses it for specific pages. For example, this tab is displayed when you view the model-driven apps **Help**. The Id of the basic home tab is `Mscrm.BasicHomeTab`.  
+ The basic home tab is displayed on the main application ribbon whenever an alternative tab is not defined because of table context or a display rule that suppresses it for specific pages. For example, this tab is displayed when you view the model-driven apps **Help**. The Id of the basic home tab is `Mscrm.BasicHomeTab`.  
 
 <!-- [!NOTE]-->
 <!-- >  The Jewel that was shown in [!INCLUDE[pn_crm2011_and_online](../../includes/pn-crm2011-and-online.md)] is no longer displayed. Changes to the Jewel will not appear in [!INCLUDE[pn_dynamics_crm_online](../../includes/pn-dynamics-crm-online.md)]  -->
@@ -155,16 +155,16 @@ All entities use a common ribbon definition called the *Entity Ribbon Template*.
 |                 Tab                  |             Root Id              |                                                              Description                                                              |
 |--------------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 |     Web Resource Edit page tab.      |    `Mscrm.WebResourceEditTab`    |                                        Displays when editing Web resources within a solution.                                         |
-|           Form Editor tab            |      `Mscrm.FormEditorTab`       |                               Provides Save, Edit, Select, and View groups of actions for entity forms.                               |
-|        Form Editor Insert tab        |   `Mscrm.FormEditorInsertTab`    |                               Provides buttons to insert Sections, Tabs, and Controls in entity forms.                                |
+|           Form Editor tab            |      `Mscrm.FormEditorTab`       |                               Provides Save, Edit, Select, and View groups of actions for table forms.                               |
+|        Form Editor Insert tab        |   `Mscrm.FormEditorInsertTab`    |                               Provides buttons to insert Sections, Tabs, and Controls in table forms.                                |
 |        Dashboard Homepage tab        |       `Mscrm.DashboardTab`       |                                                    Displays in the Workplace area.                                                    |
-| Visualization Tools Contextual Group |    `Mscrm.VisualizationTools`    |             Displays when the **New Chart** button is clicked on the **Charts** tab displayed in the entity grid ribbon.              |
+| Visualization Tools Contextual Group |    `Mscrm.VisualizationTools`    |             Displays when the **New Chart** button is clicked on the **Charts** tab displayed in the table grid ribbon.              |
 |       AptbookTab Homepage tab        |        `Mscrm.AptbookTab`        |                                    Displays when viewing the Service Calendar in the Service area.                                    |
 |          Advanced Find tab           |       `Mscrm.AdvancedFind`       |                                               Displays in the **Advanced Find** window.                                               |
 |         Dashboard Editor tab         |    `Mscrm.DashboardEditorTab`    |                                                  Displays when editing a dashboard.                                                   |
 |            Documents tab             |       `Mscrm.DocumentsTab`       | Displays if SharePoint integration has been enabled for the organization. |
 |           Chart Editor tab           | `Mscrm.VisualizationDesignerTab` |                                       Displays when editing a chart from the solutions window.                                        |
-|    Search Tools Contextual Group     |      `Mscrm.ArticleSearch`       |                                             Displays when viewing the `KBarticle` entity.                                             |
+|    Search Tools Contextual Group     |      `Mscrm.ArticleSearch`       |                                             Displays when viewing the `KBarticle` table.                                             |
 
 <a name="BKMK_RibbonsForCustomPages"></a>
 

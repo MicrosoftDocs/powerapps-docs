@@ -49,7 +49,7 @@ Charts display data visually by mapping textual values on two axes: horizontal (
   
 ### The \<FetchCollection> element 
  
- The `<FetchCollection>` element uses FetchXML to retrieve data for the chart. The FetchXML query specifies information about the entity attributes, aggregate functions, and the group by clauses for the data to be displayed in a chart. All the FetchXML aggregate functions are supported for charts. For more information about the FetchXML aggregate functions, see [Use FetchXML aggregation](../common-data-service/use-fetchxml-aggregation.md).  
+ The `<FetchCollection>` element uses FetchXML to retrieve data for the chart. The FetchXML query specifies information about the table attributes, aggregate functions, and the group by clauses for the data to be displayed in a chart. All the FetchXML aggregate functions are supported for charts. For more information about the FetchXML aggregate functions, see [Use FetchXML aggregation](../common-data-service/use-fetchxml-aggregation.md).  
   
  The FetchXML query enables you to filter your data. Also, filters are applied on charts through views. Therefore, if a filter condition is already specified in the FetchXML query in the `<FetchCollection>` element, and additionally a filter is applied through a view, the chart will display data that is returned after it applies all the filters. For more information about how to use the FetchXML query to filter data, see [Use FetchXML to construct a query](../common-data-service/use-fetchxml-construct-query.md).  
   

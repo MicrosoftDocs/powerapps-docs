@@ -37,7 +37,7 @@ search.app:
 <td>stageId</td>
 <td>String</td>
 <td>Yes</td>
-<td>The ID of the completed stage for the entity to make the active stage. </td>
+<td>The ID of the completed stage for the table to make the active stage. </td>
 </tr>
 <tr>
 <td>callbackFunction</td>

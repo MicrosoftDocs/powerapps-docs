@@ -25,7 +25,7 @@ The ability to pass values to a Web page by using query strings represents a con
   
  By default, model-driven Apps allows a specified set of query string parameters to be passed to a form. You use these parameters to set default values when you create a new record in the application. Each parameter must use a standard naming convention that includes a reference to the attribute logical name. For more information, see [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md).  
   
- In your applications, you may want to pass custom query string parameters to an entity form. This topic provides information about how you can define a set of specific parameter names and data types that can be accepted for a specific entity form.  
+ In your applications, you may want to pass custom query string parameters to a table form. This topic provides information about how you can define a set of specific parameter names and data types that can be accepted for a specific table form.  
   
 ## Define allowed query string parameters  
 
@@ -37,7 +37,7 @@ The ability to pass values to a Web page by using query strings represents a con
   
 ### Edit form properties  
 
- When you edit an entity form, on the **Home** tab in the **Form** group, click **Form Properties**. In the **Form Properties** dialog box, select the **Parameters** tab.  
+ When you edit a table form, on the **Home** tab in the **Form** group, click **Form Properties**. In the **Form Properties** dialog box, select the **Parameters** tab.  
   
  Use this tab to modify the names and data types that the form allows.  
   

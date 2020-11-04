@@ -23,7 +23,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/define-scaling-ribbon-elements -->
 
-For application ribbons and updated entity form ribbons there is no scaling. Scaling only applies to forms for entities that weren’t updated and list ribbons displayed using Dynamics 365 for Outlook.  
+For application ribbons and updated table form ribbons there is no scaling. Scaling only applies to forms for tables that weren’t updated and list ribbons displayed using Dynamics 365 for Outlook.  
   
  The goal of the Ribbon is to maintain visibility of relevant controls even when the horizontal size of the window changes. To achieve this, the UI definition allows you to control how controls in a group change size in response to changes in the size of the window. This is known as *scaling*.  
   

@@ -37,19 +37,19 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to update. For example: "account".</td>
+<td>The table logical name of the record you want to update. For example: "account".</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to update.</td>
+<td>GUID of the table record you want to update.</td>
 </tr>
 <tr>
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>A JSON object containing <code>key: value</code> pairs, where `key` is the property of the entity and <code>value</code> is the value of the property you want to update.</p>
+<td><p>A JSON object containing <code>key: value</code> pairs, where `key` is the property of the table and <code>value</code> is the value of the property you want to update.</p>
 <p>See examples later in this topic to see how you can define the <code>data</code> object for various update scenarios.</td>
 </tr>
 <tr>
@@ -58,7 +58,7 @@ search.app:
 <td>No</td>
 <td><p>A function to call when a record is updated. An object with the following properties will be passed to identify the updated record:</p>
 <ul>
-<li><b>entityType</b>: String. The entity type of the updated record.</li>
+<li><b>entityType</b>: String. The table type of the updated record.</li>
 <li><b>id</b>: String. GUID of the updated record.</li>
 </ul></td>
 </tr>
@@ -80,7 +80,7 @@ On success, returns a promise object containing the attributes specified earlier
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../../common-data-service/webapi/update-delete-entities-using-web-api.md) to define the data object for updating an entity record.
+These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../../common-data-service/webapi/update-delete-entities-using-web-api.md) to define the data object for updating a table record.
 
 ### Basic update 
 
@@ -112,7 +112,7 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 
 ### Update associations to the related entities
 
-To update association to the related entity records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another record. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios:
+To update association to the related table records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another record. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios:
 
 **For online scenario (connected to server)**
 

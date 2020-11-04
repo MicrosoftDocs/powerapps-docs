@@ -25,7 +25,7 @@ Publishing customizations makes the Web application aware of changes to the data
 ## When to publish customizations  
  Customizations are automatically published when new items are created or existing items are deleted.  
   
- You must publish changes after updating schema metadata or entities that affect the user interface. You can decide to wait and publish a set of related changes together.  
+ You must publish changes after updating schema metadata or tables that affect the user interface. You can decide to wait and publish a set of related changes together.  
   
  Only published customizations are exported with a solution. You should always publish customizations before exporting a solution.  
   
@@ -51,7 +51,7 @@ Publishing customizations makes the Web application aware of changes to the data
  Use the following two methods to retrieve unpublished metadata:  
   
  **RetrieveAsIfPublished parameter**  
- Retrieves entity, attribute, entity relationship, and option set data by using the following messages:  
+ Retrieves table, attribute, table relationship, and option set data by using the following messages:  
   
 - <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>  
   
@@ -76,7 +76,7 @@ Publishing customizations makes the Web application aware of changes to the data
 
  [Extend the Metadata Model](https://docs.microsoft.com/powerapps/developer/common-data-service/metadata-services)<br/>
  [Publish request schema](publish-request-schema.md)<br/>
- [Customize entity forms](customize-entity-forms.md)<br/>
- [Customize entity views](customize-entity-views.md)<br/>
+ [Customize table forms](customize-entity-forms.md)<br/>
+ [Customize table views](customize-entity-views.md)<br/>
  [Change application navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)
 

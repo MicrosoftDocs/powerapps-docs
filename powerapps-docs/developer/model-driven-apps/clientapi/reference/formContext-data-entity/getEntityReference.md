@@ -30,9 +30,9 @@ search.app:
 
 **Description**: The returned object has following three attributes:
 
-- **entityType**: String. Logical name of the entity record. For example, "account".
-- **id**: String. GUID value of the entity record.
-- **name**: (Optional) String. Name of the entity record. 
+- **entityType**: String. Logical name of the table record. For example, "account".
+- **id**: String. GUID value of the table record.
+- **name**: (Optional) String. Name of the table record. 
 
 
 

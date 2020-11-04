@@ -53,7 +53,7 @@ The **HideActionId** element provides a unique ID for the action. For consistenc
 > [!NOTE]
 > Because the `HideCustomAction` element removes a specified node from the ribbon, removing ribbon elements in this manner may not be the best option for every situation.  
 > 
-> - If you want to remove a button that is associated with a specific privilege, you should adjust the privileges for the entity in the security roles in your implementation. This will allow the default ribbon display and enables rules to hide or disable ribbon elements from users who do not have the necessary privileges to perform those actions.  
+> - If you want to remove a button that is associated with a specific privilege, you should adjust the privileges for the table in the security roles in your implementation. This will allow the default ribbon display and enables rules to hide or disable ribbon elements from users who do not have the necessary privileges to perform those actions.  
 >   -   If you want to replace an existing ribbon element with a custom ribbon element, you can overwrite that element by specifying a `CustomAction.Location` value identical to the existing element.  
 > - To remove the `HideCustomAction` element you need to create a new updated version of the same solution that installed the `HideCustomAction` element. A new patch of the solution cannot remove the `HideCustomAction` element.
 

@@ -1,6 +1,6 @@
 ---
-title: "Customize entity views (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about customizing the entity views." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Customize table views (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
+description: "Learn about customizing the table views." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
@@ -17,20 +17,20 @@ search.app:
   - D365CE
 ---
 
-# Customize entity views
+# Customize table views
 
-Entity views are special saved queries that retrieve data by using a specific filter. They also contain information about how the data in the view should be displayed in the application. Entity views are `SavedQuery` records that you can create programmatically. You can also define them as XML, and import them with an unmanaged solution.  
+Table views are special saved queries that retrieve data by using a specific filter. They also contain information about how the data in the view should be displayed in the application. Table views are `SavedQuery` records that you can create programmatically. You can also define them as XML, and import them with an unmanaged solution.  
   
- An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [Saved queries](../common-data-service/saved-queries.md) 
+ A Table  view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span table types and queries that perform aggregation. More information: [Saved queries](../common-data-service/saved-queries.md) 
   
  You can also use the customization tool to customize views. More information: [Create and edit views](../../maker/model-driven-apps/create-edit-views.md)
   
 <a name="BKMK_TypesOfViews"></a>  
  
 ## Types of views  
- The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` attribute. Note that there are other valid values for the `QueryType` attribute not listed here because this entity is also used to store Office Outlook filters and templates. For more information, see [Offline and Outlook Filters and Templates](../common-data-service/outlook-client/offline-outlook-filters-templates.md). 
+ The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` attribute. Note that there are other valid values for the `QueryType` attribute not listed here because this table is also used to store Office Outlook filters and templates. For more information, see [Offline and Outlook Filters and Templates](../common-data-service/outlook-client/offline-outlook-filters-templates.md). 
   
- When views are defined for a specific entity, the `SavedQuery.ReturnedTypeCode` attribute returns the entity logical name.  
+ When views are defined for a specific table, the `SavedQuery.ReturnedTypeCode` attribute returns the table logical name.  
   
 |View Type|Type Code|Description|  
 |---------------|---------------|-----------------|  
@@ -46,7 +46,7 @@ Entity views are special saved queries that retrieve data by using a specific fi
   
 - `SavedQuery.Name`: A unique identifier for the saved query.
   
-- `SavedQuery.ReturnedTypeCode`: Matches the logical name of the entity. 
+- `SavedQuery.ReturnedTypeCode`: Matches the logical name of the table. 
   
 - `SavedQuery.FetchXml`: See [Use FetchXML to Construct a Query](../common-data-service/use-fetchxml-construct-query.md).  
   
@@ -54,7 +54,7 @@ Entity views are special saved queries that retrieve data by using a specific fi
   
 - `SavedQuery.QueryType`: Must always be zero (0).  
   
-  The following sample creates a new public view for the opportunity entity:  
+  The following sample creates a new public view for the opportunity table:  
   
   ```csharp
   System.String layoutXml =
@@ -121,7 +121,7 @@ Entity views are special saved queries that retrieve data by using a specific fi
 ## Retrieve views  
  Use a <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> to retrieve saved query records.  
   
- The following sample retrieves all the public views for the opportunity entity:  
+ The following sample retrieves all the public views for the opportunity table:  
   
  ```csharp
  QueryExpression mySavedQuery = new QueryExpression
@@ -163,7 +163,7 @@ Entity views are special saved queries that retrieve data by using a specific fi
   
 <a name="BKMK_DeactivateViews"></a>   
 ## Deactivate views  
- If you do not want a public view to appear in the application, you can deactivate it. You cannot deactivate a public view that is set as the default view. The following sample deactivates the **Closed Opportunities in Current Fiscal Year** view for the Opportunity entity:  
+ If you do not want a public view to appear in the application, you can deactivate it. You cannot deactivate a public view that is set as the default view. The following sample deactivates the **Closed Opportunities in Current Fiscal Year** view for the Opportunity table:  
   
  ```csharp
  System.String SavedQueryName = "Closed Opportunities in Current Fiscal Year";
@@ -228,7 +228,7 @@ service.Execute(ssreq);
   
 <a name="BKMK_EditColumns"></a>   
 ## Edit columns  
- The columns that you want to display in views can be taken from the entity or related entities. 
+ The columns that you want to display in views can be taken from the table or related tables. 
  For more information about how to specify the columns to display, see the `layoutxml` element in the [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md).  
   
 <a name="BKMK_CustomIcons"></a>   

@@ -1,1 +1,1 @@
-Deletes an entity record.
+Deletes a table record.

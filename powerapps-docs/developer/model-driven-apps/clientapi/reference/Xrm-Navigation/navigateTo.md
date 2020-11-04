@@ -44,8 +44,8 @@ search.app:
 <p>The object contains the following attributes:</p>
 <ul>
 <li><strong>pageType</strong>: String. Specify "entitylist".</li>
-<li><strong>entityName</strong>: String. The logical name of the entity to load in the list control.</li>
-<li><strong>viewId</strong>: (Optional) String. The ID of the view to load. If you don't specify it, navigates to the default main view for the entity.</li>
+<li><strong>entityName</strong>: String. The logical name of the table to load in the list control.</li>
+<li><strong>viewId</strong>: (Optional) String. The ID of the view to load. If you don't specify it, navigates to the default main view for the table.</li>
 <li><strong>viewType</strong>: (Optional) String. Type of view to load. Specify "savedquery" or "userquery".</li>
 </ul>
 <p>----------------------------------------------------------------</p>
@@ -53,13 +53,13 @@ search.app:
 <p>The object contains the following attributes:</p>
 <ul>
 <li><strong>pageType</strong>: String. Specify "entityrecord".</li>
-<li><b>entityName</b>: String. Logical name of the entity to display the form for.</li>
-<li><b>entityId</b>: (Optional) String. ID of the entity record to display the form for. If you don't specify this value, the form will be opened in create mode.</li>
+<li><b>entityName</b>: String. Logical name of the table to display the form for.</li>
+<li><b>entityId</b>: (Optional) String. ID of the table record to display the form for. If you don't specify this value, the form will be opened in create mode.</li>
 <li><b>createFromEntity</b>: (Optional) Lookup. Designates a record that will provide default values based on mapped attribute values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
 <li><b>data</b>: (Optional) Object. A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
 ">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a>.</li>
 <li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
-<li><b>isCrossEntityNavigate</b>: (Optional) Boolean. Indicates whether the form is navigated to from a different entity using cross-entity business process flow.</li>
+<li><b>isCrossEntityNavigate</b>: (Optional) Boolean. Indicates whether the form is navigated to from a different table using cross-entity business process flow.</li>
 <li><b>isOfflineSyncError</b>: (Optional) Boolean. Indicates whether there are any offline sync errors.</li>
 <li><b>processId</b>: (Optional) String. ID of the business process to be displayed on the form.</li>
 <li><b>processInstanceId</b>: (Optional) String. ID of the business process instance to be displayed on the form.</li>
@@ -151,14 +151,14 @@ search.app:
 
 Returns a promise. The value passed when the promise resolves is dependent on the target:
 - *inline*: Promise resolves right away, and does not return any value.
-- *dialog*: Promise resolves when the dialog is closed. An object is passed only if the **pageType** = **entityRecord** and you opened the form in create mode. The object has a <b>savedEntityReference</b> array with the following properties to identify the entity record created:
-    - **entityType**: The logical name of the entity.
+- *dialog*: Promise resolves when the dialog is closed. An object is passed only if the **pageType** = **entityRecord** and you opened the form in create mode. The object has a <b>savedEntityReference</b> array with the following properties to identify the table record created:
+    - **entityType**: The logical name of the table.
     - **id**: A string representation of a GUID value for the record.
     - **name**: The primary attribute value of the record displayed or created.
 
 ## Example
 
-### Example 1: Open account entity list
+### Example 1: Open account table list
 
 ```javascript
 var pageInput = {
@@ -174,7 +174,7 @@ Xrm.Navigation.navigateTo(pageInput).then(
     }
 );
 ```
-### Example 2: Open an existing account entity record within a dialog
+### Example 2: Open an existing account table record within a dialog
 
 ```javascript
 var pageInput = {

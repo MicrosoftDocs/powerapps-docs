@@ -44,7 +44,7 @@ Ensure that each solution component that is deactivated, or disabled, has been d
 - Record Creation and Update Rules
 - SLAs
 
-As well as Entity components such as:
+As well as Table components such as:
 
 - Forms
 - Views

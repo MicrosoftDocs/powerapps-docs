@@ -25,7 +25,7 @@ IFRAME and web resource controls embed content from another location in pages by
 > [!NOTE]
 >  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren’t displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
 
- You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying an entity form within an IFrame embedded in another entity form is not supported.  
+ You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying a table form within an IFrame embedded in another table form is not supported.  
 
  You can use one of the following web resources to display the contents of web resources in a form:  
 
@@ -65,8 +65,8 @@ IFRAME and web resource controls embed content from another location in pages by
 
 | Parameter  |        Name        |                                 Description                                 |
 |------------|--------------------|-----------------------------------------------------------------------------|
-| `typename` |    Entity Name     |                           The name of the entity.                           |
-|   `type`   |  Entity Type Code  | The integer that uniquely identifies the entity in a specific organization. |
+| `typename` |    Entity Name     |                           The name of the table.                           |
+|   `type`   |  Entity Type Code  | The integer that uniquely identifies the table in a specific organization. |
 |    `id`    |    Object GUID     |                      A GUID that represents a record.                       |
 | `orgname`  | Organization Name  |                    The unique name of the organization.                     |
 | `userlcid` | User Language Code |    The language code identifier that is being used by the current user.     |
@@ -74,7 +74,7 @@ IFRAME and web resource controls embed content from another location in pages by
  [!INCLUDE[languagecode](../../includes/languagecode.md)]  
 
 > [!NOTE]
->  We suggest that you use the entity name instead of the type code because the entity type code for custom entities may be different between Common Data Service organizations.  
+>  We suggest that you use the table name instead of the type code because the table type code for custom tables may be different between Common Data Service organizations.  
 
 ### Example  
  The following sample shows the URL without parameters.  

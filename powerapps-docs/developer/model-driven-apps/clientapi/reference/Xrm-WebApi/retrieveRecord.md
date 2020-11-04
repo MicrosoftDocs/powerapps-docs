@@ -37,13 +37,13 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the record you want to retrieve. For example: "account".</td>
+<td>The table logical name of the record you want to retrieve. For example: "account".</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the entity record you want to retrieve.</td>
+<td>GUID of the table record you want to retrieve.</td>
 </tr>
 <tr>
 <td>options</td>
@@ -99,7 +99,7 @@ The above example displays the following in your console; you might see other va
 
 `Retrieved values: Name: Sample Account, Revenue: 5000000`
 
-### Retrieve related entities for an entity instance by expanding single-valued navigation properties
+### Retrieve related entities for a table instance by expanding single-valued navigation properties
 
  The following example demonstrates how to retrieve the contact for an account record with record ID = a8a19cdd-88df-e311-b8e5-6c3be5a8b200. For the related contact record, we are only retrieving the **contactid** and **fullname** properties.
 
