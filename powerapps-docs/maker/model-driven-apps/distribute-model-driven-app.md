@@ -41,7 +41,7 @@ In order to distribute your app, you create a solution so the app can be package
 
     ![Select solution components](media/select-solution-components.png)
 
-5. If a **Missing Required Components** page appears we recommend that you select **Yes, include required components** to add necessary components such as entities, views, forms, charts, and site map that are part of the app. Select **OK**.
+5. If a **Missing Required Components** page appears we recommend that you select **Yes, include required components** to add necessary components such as tables, views, forms, charts, and site map that are part of the app. Select **OK**.
 6. On the **Solution** page select **Save and Close**.
 
 ## Export a solution

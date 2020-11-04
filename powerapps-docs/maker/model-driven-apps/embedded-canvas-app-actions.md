@@ -30,7 +30,7 @@ The **ModelDrivenFormIntegration** object now includes the following new methods
   
 ### NavigateToMainForm(entityName, mainFormName, recordId)
 Navigates the host model-driven form to a main form and displays the specified record.  
-* **entityName** - A required string parameter that specifies the parent entity of the main form.  
+* **entityName** - A required string parameter that specifies the parent table of the main form.  
 * **formName** - A required string parameter that specifies the name of the main form to navigate to.  
 * **recordId** - A required string parameter, that specifies the ID of the record to display in the main form.  
  
@@ -38,33 +38,33 @@ Calling the NavigateToMainForm method can show the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
-|**Entity not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
 |**Form not found: *[FormName]*** | Please check the value of the *mainFormName* parameter and ensure it is a valid main form name and that the user has access to it. |
 |**There was a problem loading the record.** | Please check the value of the *recordId* parameter and ensure it is a valid record ID and that the user has access to it. |
   
   
 ### NavigateToView(entityName, viewName)
 Navigates the host model-driven form to a view.  
-* **entityName** - A required string parameter that specifies the parent entity of the view.  
+* **entityName** - A required string parameter that specifies the parent table of the view.  
 * **viewName** - A required string parameter that specifies the name of the main form to navigate to.  
  
 Calling the NavigateToView method can show the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
-|**Entity not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
 |**View not found: *[ViewName]*** | Please check the value of the *viewName* parameter and ensure it is a valid view name and that the user has access to it. |
   
   
 ### OpenQuickCreateForm(entityName)  
-Opens the default quick create form for an entity.  
-* **entityName** - A required string parameter that specifies the parent entity of the quick create form.  
+Opens the default quick create form for an table.  
+* **entityName** - A required string parameter that specifies the parent table of the quick create form.  
  
 Calling the OpenQuickCreateForm method can show the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
-|**Entity not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
   
   
 ### RefreshForm(showPrompt)  

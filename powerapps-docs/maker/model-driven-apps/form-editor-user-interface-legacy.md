@@ -30,7 +30,7 @@ The form editor is divided into three areas: **Navigation**, **Body**, and **Exp
 > ![Form editor user interface](media/form-user-interface.png)
   
 **Navigation**  
-Located on the left side, use the navigation area to control access to related entities or to add links to URLs to be displayed in the main pane of the form. To edit navigation, you must first select the **Navigation** command in the **Select** group of the **Home** tab.
+Located on the left side, use the navigation area to control access to related tables or to add links to URLs to be displayed in the main pane of the form. To edit navigation, you must first select the **Navigation** command in the **Select** group of the **Home** tab.
 
 Main forms provide navigation options through the navigation bar, but use the same data in the navigation area to control what navigation options are available. More information: [Edit Navigation](use-the-form-editor-legacy.md)  
 
@@ -38,7 +38,7 @@ Main forms provide navigation options through the navigation bar, but use the sa
 **Body** <br>
 Located in the center, use the body area to control the layout of the form. You can select and drag form elements to position them. Double-clicking on an element will open the properties for the element. 
 
-By default, for the Case, Contact, and Account Main forms, the first section under the **Summary** tab shows the account or contact card form of type **Quick View**. For custom entities, this section is not available by default. You can insert a new section and a quick view form in it. The card form shows a maximum of five fields. Other than fields, it isn’t possible to show other controls in the Blue tile even if the quick view form contains it. 
+By default, for the Case, Contact, and Account Main forms, the first section under the **Summary** tab shows the account or contact card form of type **Quick View**. For custom tables, this section is not available by default. You can insert a new section and a quick view form in it. The card form shows a maximum of five fields. Other than fields, it isn’t possible to show other controls in the Blue tile even if the quick view form contains it. 
  
 >[!NOTE] 
 > To preserve the card format (as shown in the following image), we recommend that you do not move the quick view form to any other section on the form.
@@ -61,9 +61,9 @@ Located on the right side, the content of the explorer area depends on the conte
   
 When you select **Body**, **Header**, or **Footer** in the **Select** group of the **Home** tab, you’ll see the **Field Explorer**. Use the **Field Explorer** to drag fields you want to display into a section in the form or within the header or footer. You can include the same field multiple times in a form. Use the **New Field** button as a shortcut to create a new field.  
   
-When you select **Navigation** in the **Select** group of the **Home** tab you’ll see the **Relationship Explorer**. Drag any of the relationships into one of the groups within the navigation area. You cannot add the same relationship twice. Relationships are available based on how they are configured. If you configure a relationship to not display, it won’t display in the **Relationship Explorer**. For information about how to configure default display options for relationships, see [Navigation pane item for primary entity](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-entity).
+When you select **Navigation** in the **Select** group of the **Home** tab you’ll see the **Relationship Explorer**. Drag any of the relationships into one of the groups within the navigation area. You cannot add the same relationship twice. Relationships are available based on how they are configured. If you configure a relationship to not display, it won’t display in the **Relationship Explorer**. For information about how to configure default display options for relationships, see [Navigation pane item for primary table](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-entity).
   
-You can use the **New 1:N** and **New N:N buttons** as a shortcut to add new entity relationships.  
+You can use the **New 1:N** and **New N:N buttons** as a shortcut to add new table relationships.  
 
 ## File tab
 
@@ -123,7 +123,7 @@ The Insert tab displays the commands in the following table:
 
 |Group|Command|Description|
 |-----------|-------------|-----------------| 
-||**Section**|Add a section to a selected tab. You can include a section with one to four columns.<br /><br /> You can also insert a Reference panel in the interactive forms. Reference panel is also added as a section to the Main - Interactive experience form. By default the Reference panel section is added to the Case, Account, Contact and custom entity forms.<br /><br /> More information: [Section properties](section-properties-legacy.md)|  
+||**Section**|Add a section to a selected tab. You can include a section with one to four columns.<br /><br /> You can also insert a Reference panel in the interactive forms. Reference panel is also added as a section to the Main - Interactive experience form. By default the Reference panel section is added to the Case, Account, Contact and custom table forms.<br /><br /> More information: [Section properties](section-properties-legacy.md)|  
 |**3 Tabs**|**Three Columns**|Insert a three-column tab with equal widths.<br /><br /> More information: [Tab Properties](tab-properties-legacy.md)|  
 ||**Three Columns**|Insert a three-column tab with a wider middle column.|  
 |**2 Tabs**|**Two Columns**|Insert a two-column tab with a wider right column.|  
@@ -135,9 +135,9 @@ The Insert tab displays the commands in the following table:
 ||**Quick View Form**|Insert a Quick View Form.<br /><br /> More information: [Quick view control properties](quick-view-control-properties-legacy.md)|  
 ||**Web Resource**|Insert a web resource to embed content from other locations in one page.<br /><br /> More information: [Web Resource properties](web-resource-properties-legacy.md)|  
 ||**IFRAME**|You can add an IFRAME to a form to integrate content from another website within a form.| 
-||**Timeline**|Insert a timeline control in the form. This control shows the timeline of activities related to the entity on a form.|  
+||**Timeline**|Insert a timeline control in the form. This control shows the timeline of activities related to the table on a form.|  
 ||**Navigation Link**|Using this option, you can insert a link into a form navigation.|  
-||**Timer**|Insert a timer control to an entity form to track time against an SLA. More information: [Add a timer control](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
+||**Timer**|Insert a timer control to a table form to track time against an SLA. More information: [Add a timer control](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
 ||**Knowledge Base Search**|Insert a search control that users can use to search knowledge articles. More information:  [Knowledge Base Search control](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-knowledge-base-search-control-forms)|  
 ||**Relationship Assistant**|Using this option, you can insert a relationship assistant control in the form.|
 

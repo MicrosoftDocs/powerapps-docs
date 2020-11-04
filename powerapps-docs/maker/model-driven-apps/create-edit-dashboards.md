@@ -58,7 +58,7 @@ Dashboards can be standard or interactive. Standard dashboards support adding on
 
 3. In the list of solution components, open the dashboard, select one of the component areas, and then on the toolbar select **Edit Component**.  
   
-4.  In the **Set Properties** dialog box, you can make changes to a chart or list such as change the entity, default view, add a chart selector, or make the dashboard available on the mobile apps. When you’re done, select **OK**.  
+4.  In the **Set Properties** dialog box, you can make changes to a chart or list such as change the table, default view, add a chart selector, or make the dashboard available on the mobile apps. When you’re done, select **OK**.  
   
      For more information about setting dashboard component properties, see [Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md).  
   

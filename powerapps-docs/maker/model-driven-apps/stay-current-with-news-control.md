@@ -37,7 +37,7 @@ and the behavior of the PCF control. For more information, see the [readme in th
 
 The steps in this article add the company news control to the account main form
 already configured to query news topics collected from Bing News. You can use
-similar steps to add the control to the main form for other entities, such as
+similar steps to add the control to the main form for other tables, such as
 contact and competitor.
 
 ### Get the Bing News API key and URL
@@ -72,7 +72,7 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
 2. Go to **Settings** > **Customizations** > **Customize the System**.
 
-3. In the left navigation tree, expand **Entities** > **Account**, select **Forms**, and then open the **Account Main** form.
+3. In the left navigation tree, expand **Tables** > **Account**, select **Forms**, and then open the **Account Main** form.
 
 4. In the form editor, add two new text fields, which will be used to pass the key and base URL to the news component.
 

@@ -27,7 +27,7 @@ search.app:
 Ensure you have a [security role](https://docs.microsoft.com/power-platform/admin/security-roles-privileges) with equal or greater permissions than the role you're assigning to the app and to other users. 
 
 ## Create a security role for your app
-Generally model-driven apps contain custom entities and other custom configuration. It's important to first [create a security role](#create-a-security-role-for-your-app) with permission for all the components used in your app.  
+Generally model-driven apps contain custom tables and other custom configuration. It's important to first [create a security role](#create-a-security-role-for-your-app) with permission for all the components used in your app.  
 > [!NOTE]
 > This step can be skipped if existing roles grant access to the data in your app. 
 
@@ -54,8 +54,8 @@ To get the direct link to an app:
 
 
 ## Create or configure a security role
-The [!INCLUDE [powerapps](../../includes/powerapps.md)] environment includes [predefined security roles](#about-predefined-security-roles) that reflect common user tasks with access levels defined to match the security best-practice goal of providing access to the minimum amount of business data required to use the app. For example, if your app is based on a custom entity, the entity privileges must be explicitly specified before users may work in it. To do this, you can choose to do one of the following.
-- Expand an existing predefined security role, so that it includes privileges on records based on the custom entity. 
+The [!INCLUDE [powerapps](../../includes/powerapps.md)] environment includes [predefined security roles](#about-predefined-security-roles) that reflect common user tasks with access levels defined to match the security best-practice goal of providing access to the minimum amount of business data required to use the app. For example, if your app is based on a custom table, the table privileges must be explicitly specified before users may work in it. To do this, you can choose to do one of the following.
+- Expand an existing predefined security role, so that it includes privileges on records based on the custom table. 
 - Create a custom security role for the purpose of managing privileges for users of the app. 
 
 For more information about access and scope privileges, see [Security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
@@ -69,14 +69,14 @@ For more information about access and scope privileges, see [Security roles](htt
 
 4. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. Scope determines how deep or high within the environments hierarchy the user can perform a particular action. In the **Role Name** box enter *Pet Grooming Technicians*.
 
-5. Select the **Custom Entities** tab, and then locate the custom entity that you want. For this example, the custom entity named **Pet** is used. 
+5. Select the **Custom Tables** tab, and then locate the custom table that you want. For this example, the custom table named **Pet** is used. 
 
 6. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected: **Read, Write, Append**
 
    > [!div class="mx-imgBorder"] 
    > ![New security role](media/share-model-driven-app/custom-security-role.png)
 
-7. Because the pet grooming app also has a relationship with the account entity, select the **Core Records** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
+7. Because the pet grooming app also has a relationship with the account table, select the **Core Records** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
 
 8. Select the **Customization** tab, and then in the privileges list select the **Read** privilege next to **Model-driven App** so that organization scope ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) is selected.
 
@@ -87,12 +87,12 @@ For more information about access and scope privileges, see [Security roles](htt
 
 10. On the security role designer, in the **Role Name** box enter *Pet Grooming Schedulers*. 
 
-11. Select the **Custom Entities** tab, and then locate the **Pet** entity. 
+11. Select the **Custom Tables** tab, and then locate the **Pet** table. 
 
 12. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected:
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
 
-13. Because the pet grooming app also has a relationship with the account entity and schedulers must be able to create and modify account records, select the **Core Records** tab, and on the **Account** row select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
+13. Because the pet grooming app also has a relationship with the account table and schedulers must be able to create and modify account records, select the **Core Records** tab, and on the **Account** row select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
 
 14. Select **Save and Close**.
@@ -117,11 +117,11 @@ Security roles control a user’s access to data through a set of access levels 
 
 7. From the security role designer, you select the actions, such as read, write, or delete, and the [access levels](https://docs.microsoft.com/power-platform/admin/security-roles-privileges#security-roles). Access levels determine how deep or high within the environments hierarchy the user can perform a particular action. 
 
-8. Select the **Custom Entities** tab, and then locate the custom entity used in your app. 
+8. Select the **Custom Tables** tab, and then locate the custom table used in your app. 
 
-9.  On the row for your custom entity, set access levels for each permission.  
+9.  On the row for your custom table, set access levels for each permission.  
 
-10. Repeat for other entities used in your app. 
+10. Repeat for other tables used in your app. 
 
 11. Select the **Customization** tab, and ensure **Read** privilege is set for **Model-driven App** so that organization access level ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) is selected.
 
@@ -140,7 +140,7 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 |---------|---------|---------|
 |Environment Maker     |  None       | Can create new resources associated with an environment including apps, connections, custom APIs, gateways, and flows using Power Automate. However, does not have any privileges to access data within an environment. More information: [Environments overview](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
 |System Administrator     |  Create, Read, Write, Delete, Customizations, Security Roles       | Has full permission to customize or administer the environment, including creating, modifying, and assigning security roles. Can view all data in the environment. More information: [Privileges required for customization](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
-|System Customizer     | Create (self), Read (self), Write (self), Delete (self), Customizations         | Has full permission to customize the environment. However, can only view records for environment entities that they create. More information: [Privileges required for customization](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
+|System Customizer     | Create (self), Read (self), Write (self), Delete (self), Customizations         | Has full permission to customize the environment. However, can only view records for environment tables that they create. More information: [Privileges required for customization](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Common Data Service User     |  Read, Create (self), write (self), delete (self)       | Can run an app within the environment and perform common tasks for the records that they own.        |
 |Delegate     | Act on behalf of another user        | Allows code to run as another user or impersonate.  Typically used with another security role to allow access to records. More information: [Impersonate another user](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 

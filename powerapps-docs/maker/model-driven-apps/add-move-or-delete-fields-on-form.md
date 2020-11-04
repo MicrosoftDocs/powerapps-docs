@@ -67,7 +67,7 @@ These are the properties available to configure a field when you create or edite
 |Area  |Name  |Description  |
 |---------|---------|---------|
 |**Display options** | **Field label** | By default the label will match the display name of the field. You can override that name for the form by entering a different label here. <br /><br />This property is required. |
-|**Display options** |  **Field name** | The name of the field. This comes from the field properties on the entity and is read-only. |
+|**Display options** |  **Field name** | The name of the field. This comes from the field properties on the table and is read-only. |
 |**Display options** | **Hide label** | When selected, the field label is hidden. |
 |**Display options** | **Read-only field** | When selected, the field value is not editable. |
 |**Display options** | **Lock field** |  Lock this field so it can't be removed. |
@@ -114,7 +114,7 @@ You can move a field on a form using drag and drop or cut and paste actions.
      >   -  If you delete a field by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
      >   -  You can't delete a field that is locked or is required and not present anywhere else on the form. 
 
-## Create a new field on the entity when editing a form 
+## Create a new field on the table when editing a form 
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. On the command bar, select **Add field**, or in the left pane, select **Fields**. The **Fields** pane is open by default when the form designer is opened. 
 3. In the **Fields** pane, select **+ New field**.
@@ -124,11 +124,11 @@ You can move a field on a form using drag and drop or cut and paste actions.
      > [!NOTE]
      >   -  Some field types are not available when you create a field from within the form designer. If a field type you want is not available, you can follow the steps outlined in [Create and edit fields for Common Data Service using Power Apps portal](../common-data-service/create-edit-field-portal.md)
 
-6. Select **Done** to create a new field on the entity. The field appears in the **Fields** pane.
+6. Select **Done** to create a new field on the table. The field appears in the **Fields** pane.
 7. If you want to add the newly created field to the form, follow the steps outlined in the [**Add fields to a form**](add-move-or-delete-fields-on-form.md#add-fields-to-a-form) section.
 
      > [!NOTE]
-     >  When a field is created on the entity, it is not limited to the current form and will be available for use in other places.
+     >  When a field is created on the table, it is not limited to the current form and will be available for use in other places.
 
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  

@@ -32,10 +32,10 @@ You can edit a canvas app embedded on a model-driven form just like any other ca
 ## Edit the canvas app via the host model-driven form
 An alternate option is to edit the embedded canvas app via the host model-driven form.
 
-Imagine that you want to edit a canvas app embedded on a form named Account Main Form for the Accounts entity. To do this, follow these steps: 
+Imagine that you want to edit a canvas app embedded on a form named Account Main Form for the Accounts table. To do this, follow these steps: 
 
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2.  [Edit the form](create-and-edit-forms.md) named Account Main Form for the Accounts entity. 
+2.  [Edit the form](create-and-edit-forms.md) named Account Main Form for the Accounts table. 
 3.  In the command bar, select **Switch to classic** to open the form in the classic form designer.
 4.	In the classic form designer, select the field that is customized to display the embedded canvas app.
 5.	With the field selected, on the **Home** tab in the **Edit** group, select **Change Properties**.

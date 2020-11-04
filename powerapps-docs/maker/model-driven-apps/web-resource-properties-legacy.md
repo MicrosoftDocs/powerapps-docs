@@ -105,9 +105,9 @@ Information about the record can be passed by enabling the **Pass record object-
 |`orglcid`|The Organization default language LCID.|  
 |`orgname`|The name of the organization.|  
 |`userlcid`|The user’s preferred language LCID|  
-|`type`|**Don't use this.** The entity type code. This numeric value can be different for custom entities in different organizations. Use entity type name instead.|  
-|`typename`|The entity type name.|  
-|`id`|The id value of the record. This parameter has no value until the entity record is saved.|  
+|`type`|**Don't use this.** The table type code. This numeric value can be different for custom tables in different organizations. Use table type name instead.|  
+|`typename`|The table type name.|  
+|`id`|The id value of the record. This parameter has no value until the table record is saved.|  
   
 Any other parameters are not allowed and the web resource will not open if other parameters are used. If you need to pass multiple values, the data parameter can be overloaded to include more parameters within it.
 

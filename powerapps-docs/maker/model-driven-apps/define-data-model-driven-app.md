@@ -1,7 +1,7 @@
 ---
 title: Define data for your model-driven app in Power Apps | MicrosoftDocs
 description: "Understand how to define data for your model-driven app"
-Keywords: data, entity, fields, relationship, attributes, model-driven app
+Keywords: data, table, fields, relationship, attributes, model-driven app
 author: Mattp123
 applies_to: 
   - "Dynamics 365 (online)"
@@ -28,7 +28,7 @@ For detailed information about working with these components in Common Data Serv
 
 |Component |Topic|
 |-----|----|
-|Entity| [Work with entities](../common-data-service/entity-overview.md)|
+|Entity| [Work with tables](../common-data-service/entity-overview.md)|
 |Field| [Work with fields](../common-data-service/fields-overview.md)|
 |Relationships| [Work with relationships](../common-data-service/relationships-overview.md)|
 

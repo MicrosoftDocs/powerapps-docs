@@ -23,7 +23,7 @@ search.app:
   - D365CE
 ---
 # Configure a map on a form
-By default, the Bing maps control is configured on the main form for both the account and contact entities, which provides the ability to display a map on entity records. Although not configured by default, the Bing maps control can be added to the system user entity. The Bing maps control can also be used with some entities included with Dynamics 365 apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service. For example, the lead, quote, order, invoice, and competitor entities. The Bing maps control can't be used with custom entities.  
+By default, the Bing maps control is configured on the main form for both the account and contact tables, which provides the ability to display a map on table records. Although not configured by default, the Bing maps control can be added to the system user table. The Bing maps control can also be used with some tables included with Dynamics 365 apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service. For example, the lead, quote, order, invoice, and competitor tables. The Bing maps control can't be used with custom tables.  
 
 When enabled, the map displays the location specified in the address composite fields for the given record. 
 
@@ -44,7 +44,7 @@ You can remove the maps area in the form editor or add it back by using the **Bi
 
 ## Configure a map 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. Go to **Data** > **Entities**, and then select the entity that you want to configure a map on the main form. 
+2. Go to **Data** > **Tables**, and then select the table that you want to configure a map on the main form. 
 3. Select the **Forms** tab, and then select the main form, and then on the command bar select **Switch to classic**. 
 4. On the classic form designer double-click the **Map View** control to view and edit the properties. More information: [View and edit map properties](#view-and-edit-map-properties)
 

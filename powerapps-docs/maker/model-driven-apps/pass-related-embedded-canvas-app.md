@@ -32,18 +32,18 @@ This topic explains how to add an embedded canvas app and pass a list of records
 
 Let's say you want to add an embedded canvas app on an account main form and pass a list of contacts related to the current account record to the embedded canvas app. To do this, follow these steps:
 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity.
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of a table, such as the account table.
 2.	Select the section on the form where you want the embedded canvas app to appear.
 3.	With the section selected, on the **Insert** tab, in the **Control** group, select **Sub-Grid**.
 4.	In the **Set Properties** dialog box, select the **Display** tab, and then in the **Name** box enter a name for the grid control.
-5.  In the **Data Source** section, select an **Entity** and **Default View** that corresponds to the list of records that you want to pass as data context to the embedded canvas app.
+5.  In the **Data Source** section, select an **Table** and **Default View** that corresponds to the list of records that you want to pass as data context to the embedded canvas app.
 6. Select the **Controls** tab, and then select **Add Control…**
 7. In the **Add Control** dialog box, in the list of available controls, select **Canvas app** and then select **Add**.
 8. In the **Set Properties** dialog box, in the list of controls select **Canvas app** and then select the **Web** option.
 9. In the section below the controls list, see the list of properties corresponding to the Canvas app control and note the following:
-     - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that you selected earlier.
+     - The **Table name** property specifies the table that will provide the data to your embedded canvas app. It will be set to the table that you selected earlier.
          -  Even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
-     -  The **View name** property specifies the view of the entity that will be used to filter the data provided to your embedded canvas app. It will be set to the **Default View** you selected earlier.
+     -  The **View name** property specifies the view of the table that will be used to filter the data provided to your embedded canvas app. It will be set to the **Default View** you selected earlier.
          -  The data (fields and values) sent to the embedded canvas app at runtime are determined by this view. Only use fields in your canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view display as empty values at runtime.
          -  The filter criteria for a view are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simply a list of top few records that you have access to. At runtime, the filter criteria for the view are applied as expected so users only see relevant data.
      -  The **App ID** property specifies the ID of the embedded canvas app. It is automatically generated and filled-in for you when the canvas app is created.

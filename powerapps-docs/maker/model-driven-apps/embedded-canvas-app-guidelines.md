@@ -44,7 +44,7 @@ This topic provides guidelines on working with embedded canvas apps as well as h
     - This makes it easier for makers since they don't have to decide up front whether to pass the current (main form) record as data context or a list of records related to the current (main form) record. 
     - Makers always start with a field and can access both the current (main form) record or a list of records related to the current (main form) record.
     - To access the list of related records in the canvas app, makers can use the Common Data Service connector and [Filter](../canvas-apps/functions/function-filter-lookup.md) function with the [Improve data sources experience and Common Data Service views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/) capability enabled in the canvas app.  
-    For example, to access the *Active Contacts* view of the *Contacts* entity, makers can use: *Filter(Contacts, 'Contacts (Views)'.'Active Contacts')*.
+    For example, to access the *Active Contacts* view of the *Contacts* table, makers can use: *Filter(Contacts, 'Contacts (Views)'.'Active Contacts')*.
     - Existing canvas apps that use the sub-grid control will continue to work. However, we recommend that you migrate these apps to use a field instead. More information: [Migrating embedded canvas apps on model-driven forms that use a list of records related to the current (main form) record](embedded-canvas-app-migrate-from-preview.md#migrating-embedded-canvas-apps-on-model-driven-forms-that-use-a-list-of-records-related-to-the-current-main-form-record) for details.
 
 ## Enable an embedded canvas app
@@ -61,9 +61,9 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 
 ## Known issues and limitations with embedded canvas apps
 - The canvas app custom control is only supported for use with the **Web** client type. Currently, the **Phone** and **Tablet** client types aren't supported.
-- The ModelDrivenFormIntegration control does not provide a value for fields of a related entity. 
-  - For example, when the ModelDrivenFormIntegration control is connected to the Accounts entity, using *ModelDrivenFormIntegration.Item.’Primary Contact’.’Full Name’* will not return a value. 
-  - To access fields of a related entity makers can use either of the expressions listed here:
+- The ModelDrivenFormIntegration control does not provide a value for fields of a related table. 
+  - For example, when the ModelDrivenFormIntegration control is connected to the Accounts table, using *ModelDrivenFormIntegration.Item.’Primary Contact’.’Full Name’* will not return a value. 
+  - To access fields of a related table makers can use either of the expressions listed here:
     - *LookUp(Accounts, Account = GUID(First(ModelDrivenFormIntegration.Data).ItemId)).'Primary Contact'.'Full Name'*  
       - *ItemId* is empty at authoring time but will have a value at runtime.
     - *LookUp(Accounts, Account = ModelDrivenFormIntegration.Item.Account).'Primary Contact'.'Full Name'* (This expression is easier to read, but the previous expression will perform slightly better.)

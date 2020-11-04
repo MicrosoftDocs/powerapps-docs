@@ -27,10 +27,10 @@ search.app:
 # Add an embedded canvas app on a model-driven form
 This article explains how to embed a new canvas app on a model-driven form.
 
-Imagine that you want to create a new canvas app and embed it on a main form for the Accounts entity. To do this, follow these steps: 
+Imagine that you want to create a new canvas app and embed it on a main form for the Accounts table. To do this, follow these steps: 
 
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2.  [Create or edit the main form](create-and-edit-forms.md) of an entity, Accounts entity in our example. 
+2.  [Create or edit the main form](create-and-edit-forms.md) of a table, Accounts table in our example. 
 3.  In the command bar, select **Switch to classic** to open the form in the classic form designer.
 4.	In the classic form designer, select the section on the form where you want the embedded canvas app to appear.
 5.	Using the field pane, add a required field, such as **Account Name**.
@@ -42,7 +42,7 @@ Imagine that you want to create a new canvas app and embed it on a main form for
 9.	On the **Add Control** dialog box, in the list of available controls, select **Canvas app** and then select **Add**.
 10.	On the **Field Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
 11.	In the section below the controls list, the list of properties available to the canvas app control are displayed.
-     - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that contains the field you added in an earlier step.
+     - The **Table name** property specifies the table that will provide the data to your embedded canvas app. It will be set to the table that contains the field you added in an earlier step.
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
      - The **App Name** property specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control will use the App ID to load the canvas app. Enter the App Name for an existing canvas app.
      - The **App ID** property specifies the ID of the embedded canvas app. You can enter an App ID for an existing canvas app or an App ID will be automatically generated and filled-in for you when you create or edit a canvas app by selecting **Customize**. The canvas App ID can be found on Power Apps, go to **Apps**, select the canvas app, and then select **Details** on the command bar.
@@ -58,7 +58,7 @@ Imagine that you want to create a new canvas app and embed it on a main form for
 13.	Observe the following: 
     - In Power Apps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
     - Observe that a [canvas app form control](../canvas-apps/controls/control-form-detail.md) was automatically added to your embedded canvas app and displays the data being passed to it from the host model-driven form via the ModelDrivenFormIntegration control. 
-    - Select the **View** tab, and then select **Data sources**. Notice that a data source for the parent entity of your host model-driven form, Accounts in this case, was automatically added to your embedded canvas app. - Select the **Form1** control and observe that the **DataSource** property is set to **Accounts**.
+    - Select the **View** tab, and then select **Data sources**. Notice that a data source for the parent table of your host model-driven form, Accounts in this case, was automatically added to your embedded canvas app. - Select the **Form1** control and observe that the **DataSource** property is set to **Accounts**.
     - With the **Form1** control still selected, observe that the **Item** property is set to **ModelDrivenFormIntegration.Item**.
   	> [!NOTE]
   	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. 

@@ -54,7 +54,7 @@ search.app:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab. 
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab. 
 
     > [!div class="mx-imgBorder"] 
     > ![Views](media/available-views.png)
@@ -63,9 +63,9 @@ search.app:
 
 <a name="BKMK_AddColumns"></a>   
 ### Add columns  
- You can include columns from the current entity or any of the related entities that have a 1:N entity relationship with the current entity.  
+ You can include columns from the current table or any of the related tables that have a 1:N table relationship with the current table.  
   
- For example, perhaps you want to display the owner of a user-owned entity in a column. You can choose the **Owner** field of the current entity to display the name of the owner. This will appear as a link to open the **User** record for the person who is the owner.  
+ For example, perhaps you want to display the owner of a user-owned table in a column. You can choose the **Owner** field of the current table to display the name of the owner. This will appear as a link to open the **User** record for the person who is the owner.  
   
  If you want to display the phone number for the owner of the record, you must select **Owning User (User)** from the **Record type** drop-down and then select the **Main Phone** field.  
   
@@ -78,7 +78,7 @@ search.app:
 
 2.  Select the fields you want to add to the view designer. This adds the field as a column on the right-hand of the view.
 
-3.  Select the **Related** tab to see related entities and their corresponding fields.
+3.  Select the **Related** tab to see related tables and their corresponding fields.
   
  As you add columns, you will increase the width of the view. If the width of the view exceeds the space available to show it in the page, horizontal scrollbars will allow people to scroll and see the hidden columns.  
   
@@ -86,7 +86,7 @@ search.app:
 >  If your view filters on data for a certain field so that only records with a certain value are shown, don’t include that column in the view. For example, if you are only showing active records, don’t include the status column in the view. Instead, name the view to indicate that all the records shown in the view are active.  
   
 > [!NOTE]
->  When you add columns to Lookup views for updated entities, only the first three columns will be displayed.  
+>  When you add columns to Lookup views for updated tables, only the first three columns will be displayed.  
   
 <a name="BKMK_RemoveColumns"></a>   
 ### Remove columns  

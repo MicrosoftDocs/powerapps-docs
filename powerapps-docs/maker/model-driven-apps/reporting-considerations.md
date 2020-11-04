@@ -43,7 +43,7 @@ Model-driven apps have a number of capabilities that allow customers to surface 
   
 - When you create custom reports or dashboards, design them to query smaller datasets over shorter periods of time by adding a time-based filter in the report, such as the current month or quarter, to limit the results.  
   
-- We recommend that you limit the number of entities that are needed to return the result. This helps reduce the time required to run the query and return the result set.  
+- We recommend that you limit the number of tables that are needed to return the result. This helps reduce the time required to run the query and return the result set.  
   
 - We recommend that you reduce the number of records shown in detailed reports. Suitable filtering can be used to reduce the number of records returned by the query to reduce timeouts.  
   

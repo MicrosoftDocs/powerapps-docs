@@ -102,7 +102,7 @@ You can add or edit web resources on a form to make it more appealing or useful 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 ### Navigate to a form
-With solution explorer open, under **Components**, expand **Entities**, and then expand the entity you want to work with.
+With solution explorer open, under **Components**, expand **Tables**, and then expand the table you want to work with.
 
 Choose **Forms**, in the list locate a form of type Main, and then double-click or tap the entry to open and edit the form.
 
@@ -123,8 +123,8 @@ When you finish editing the form, on the **Home** tab, select **Save and Close**
 ### Publish
 
 When your customizations are complete, publish them:
-- To publish customizations for only the component that you are currently editing, in the navigation pane, select the entity you have been working on, and then select **Publish**.
-- To publish customizations for all unpublished components at one time, in the navigation pane, select **Entities**, and then on the **Actions** toolbar, select **Publish All Customizations**.
+- To publish customizations for only the component that you are currently editing, in the navigation pane, select the table you have been working on, and then select **Publish**.
+- To publish customizations for all unpublished components at one time, in the navigation pane, select **Tables**, and then on the **Actions** toolbar, select **Publish All Customizations**.
    
   
 ### See also  

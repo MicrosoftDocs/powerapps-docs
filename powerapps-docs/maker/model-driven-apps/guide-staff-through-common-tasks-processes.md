@@ -34,14 +34,14 @@ Business rules provide a simple interface to implement and maintain fast-changin
 |||  
 |-|-|  
 |**If you select this item...**|**The scope is set to...**|  
-|**Entity**|All forms and server|  
+|**Table**|All forms and server|  
 |**All Forms**|All forms|  
 |Specific form (**Account** form, for example)|Just that form| 
 
 For more information about defining business rules for a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](create-business-rules-recommendations-apply-logic-form.md)
 
 > [!NOTE]
-> To define a business rule for an entity so that it applies at the server level to both *canvas apps* and *model-driven apps*, see [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule).
+> To define a business rule for a table so that it applies at the server level to both *canvas apps* and *model-driven apps*, see [Create a business rule for a table](/powerapps/maker/common-data-service/data-platform-create-business-rule).
 
 ## Flows  
   

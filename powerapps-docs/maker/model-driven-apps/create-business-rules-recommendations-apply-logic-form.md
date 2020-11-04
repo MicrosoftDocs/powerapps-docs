@@ -46,7 +46,7 @@ This topic shows you how to create business rules and recommendations to apply f
 -   Create business recommendations based on business intelligence.  
 
 > [!NOTE]
-> To define a business rule for an entity so that it applies to all forms, see [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule).
+> To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](/powerapps/maker/common-data-service/data-platform-create-business-rule).
 >
 > Business rules don’t work with multi-select option sets.
   
@@ -54,7 +54,7 @@ This topic shows you how to create business rules and recommendations to apply f
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, select the entity you want, and then select the **Business rules** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Business rules** tab.
 
 3.  On the command bar, select **Add business rule**.
 
@@ -72,7 +72,7 @@ This topic shows you how to create business rules and recommendations to apply f
     |||  
     |-|-|  
     |**If you select this item...**|**The scope is set to...**|  
-    |**Entity**|All forms and server|  
+    |**Table**|All forms and server|  
     |**All Forms**|All forms|  
     |Specific form (**Account** form, for example)|Just that form|  
   
@@ -141,13 +141,13 @@ Entity scoped business rules will not fire on an editable grid when the editable
 
 ### Is your business rule not firing for a form?
 A business rule may not execute because the field referenced in the business rule isn't included with the form. 
-1.    Open solution explorer. Expand the entity that you want and then select **Forms**. 
+1.    Open solution explorer. Expand the table that you want and then select **Forms**. 
 2.    Open the form that you want and then on the form designer ribbon select **Business Rules**. 
 3.    In the form designer, open the business rule. 
 4.    In the business rule designer select each condition and action to verify all the fields referenced in each condition and action. 
 
         > [!div class="mx-imgBorder"] 
-        > ![Field referenced in business rule exists in entity](media/business-rule-field.png "Field referenced in business rule exists in entity")
+        > ![Field referenced in business rule exists in table](media/business-rule-field.png "Field referenced in business rule exists in table")
 
  5.    Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
 

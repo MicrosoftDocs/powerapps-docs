@@ -24,13 +24,13 @@ search.app:
 ---
 # Add a field to a model-driven app form 
 
-If a Power Apps form for a standard entity doesn't meet your organization's business requirements, you can customize the form by changing existing fields or by adding new fields. While it might be simpler to edit the existing fields on a form, sometimes it's better to add a field to address a specific business scenario.
+If a Power Apps form for a standard table doesn't meet your organization's business requirements, you can customize the form by changing existing fields or by adding new fields. While it might be simpler to edit the existing fields on a form, sometimes it's better to add a field to address a specific business scenario.
 
 In this topic, you add a field on to a form.   
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
 3.  In the list, open a form with the type of **Main** to edit it.  
   
@@ -44,7 +44,7 @@ In this topic, you add a field on to a form.
 6.  When you're done editing the form, click **Save and Close**.  
   
 > [!IMPORTANT]
->  In the Unified Interface, when you set field level security, we don’t recommend that you set read-only on a required field using field level security rules.  When the record is created, the save pipeline will ignore the read-only setting on the required field and will save the record. We recommend that you set the entity to read-only using role-based security. This helps ensure there is no conflict when creating or saving a record.
+>  In the Unified Interface, when you set field level security, we don’t recommend that you set read-only on a required field using field level security rules.  When the record is created, the save pipeline will ignore the read-only setting on the required field and will save the record. We recommend that you set the table to read-only using role-based security. This helps ensure there is no conflict when creating or saving a record.
   
   
 > [!NOTE]

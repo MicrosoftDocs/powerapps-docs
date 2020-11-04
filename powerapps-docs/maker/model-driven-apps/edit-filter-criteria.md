@@ -33,7 +33,7 @@ Along with the columns displayed in a view, the filter criteria applied to a vie
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, select the entity you want, and then select the **Views** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Views** tab.
 
 3.  Select a view to open it in the view designer.
 
@@ -71,13 +71,13 @@ You can also change the sort order by using the view properties panel.
 
 6.  To remove a filter expression, select the **X** button. 
 
-You can also use the expression builder in the view designer to add or edit filters for any fields of the entity in the current view or any fields in a related entity. More information: [Create or edit filters in model-driven app views](create-edit-view-filters.md)
+You can also use the expression builder in the view designer to add or edit filters for any fields of the table in the current view or any fields in a related table. More information: [Create or edit filters in model-driven app views](create-edit-view-filters.md)
 
 ## Use solution explorer to edit filter criteria and change sort order
 
 Change the sort order for a view.
 
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the entity you want, select **Views**, and then open the view you want.
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Tables**, select the table you want, select **Views**, and then open the view you want.
 
 2.  In the view designer, select **Configure Sorting**.  
 

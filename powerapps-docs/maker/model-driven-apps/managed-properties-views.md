@@ -33,7 +33,7 @@ search.app:
   
 ## Set managed properties for a view  
   
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the entity that you want, and then select **Views**.  
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Tables**, select the table that you want, and then select **Views**.  
   
 2.  Select a custom public view.  
   

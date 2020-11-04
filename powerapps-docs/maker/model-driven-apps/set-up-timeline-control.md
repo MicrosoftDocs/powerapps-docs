@@ -21,7 +21,7 @@ search.app:
 
 # Set up the timeline control
 
-The timeline control provides an easy and immersive experience to view information related to an entity, such as accounts or contacts, which gives users a better understanding and helps them deliver more personalized service in an efficient and effective manner.
+The timeline control provides an easy and immersive experience to view information related to a table, such as accounts or contacts, which gives users a better understanding and helps them deliver more personalized service in an efficient and effective manner.
 
 This experience gives app makers the ability to configure the information displayed in each timeline to help users access information and create new activity records, such as tasks and emails directly from the timeline quickly so they can deliver more personalized service.
 
@@ -38,12 +38,12 @@ This experience gives app makers the ability to configure the information displa
 
 ## Add the timeline control to a model-driven app main form
 
-Timelines are located on forms within entities. By default, the account and contact standard entity main forms already include a timeline control.
+Timelines are located on forms within tables. By default, the account and contact standard table main forms already include a timeline control.
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select your environment.
 2. Select **Solutions**, and then open the solution that you want.
-3. In the list of solution assets, select the entity that you want, and then select the **Forms** tab where you want to add the timeline control. For example, select the **Account** entity, and then select the **Forms** tab.
-4. The **Forms** tab displays all the forms available for the entity. Select the main form where you want to add a timeline control. Notice that, the timeline control can only be used with **Main** form types.
+3. In the list of solution assets, select the table that you want, and then select the **Forms** tab where you want to add the timeline control. For example, select the **Account** table, and then select the **Forms** tab.
+4. The **Forms** tab displays all the forms available for the table. Select the main form where you want to add a timeline control. Notice that, the timeline control can only be used with **Main** form types.
 5. In the form editor, select **Components** on the command bar. Then, on the left navigation pane, scroll down to the **Timeline** control, and then drag and drop it to a section on the form.
 
     ![Adding the timeline control to the form](media/add-timeline-main-form.gif "Adding the timeline control to the form")
@@ -79,7 +79,7 @@ The following sections describe how to configure display options, advanced setti
     - **Activities**. There are multiple customizable activity types to support business needs. You can create, add, and display a number of different activity types under the **Activities** section of timeline properties.
       > [!IMPORTANT]
       > You only want to enable activities that you need on this form. When working with 10 or more **Activity types**, you will receive a warning that the number of activity types you have selected impacts the performance speed on the timeline. To improve timeline performance speed, consider limiting activity types to 10 or less. 
-    - **Notes**. This allows users to capture notes related to the entity record. Notes are typically used to grab thoughts, summary information, and provide feedback on a record—for example, a contact.
+    - **Notes**. This allows users to capture notes related to the table record. Notes are typically used to grab thoughts, summary information, and provide feedback on a record—for example, a contact.
 
     > [!NOTE]
     > If you have a Dynamics 365 customer engagement app, such as Dynamics 365 Field Service installed, **Posts** will be another record type available. There are two types of posts, Auto and User.
@@ -90,7 +90,7 @@ The following sections describe how to configure display options, advanced setti
 
     ![Option to create the record types that are selected in timeline properties](media/timeline-record-type-to-show-runtime.png "Record types shown based on the record types selected in timeline properties")  
        
-    The timeline shows an icon before the activity, note, post, and custom entity making it easy for you to identify the record type. Dates and timestamps are shown for each activity, note, or post in the timeline. 
+    The timeline shows an icon before the activity, note, post, and custom table making it easy for you to identify the record type. Dates and timestamps are shown for each activity, note, or post in the timeline. 
 
 ### Advanced section
 
@@ -125,7 +125,7 @@ The **Record settings** section allows you to define detailed settings for the r
 
 After you select **Activities** in the **Records types to show** section, you can also select which type of activities, such as appointment, email, fax, and custom activities that you want to enable to be shown on the timeline.
 
-1. Expand **Activities** under **Record settings**. A list of all the activity types that can be either enabled or disabled on the entity form is shown.
+1. Expand **Activities** under **Record settings**. A list of all the activity types that can be either enabled or disabled on the table form is shown.
 
 2. Select the activity type that you want to enable—for example, select **Email**.  A fly-out menu appears.
 
@@ -152,7 +152,7 @@ After you select **Activities** in the **Records types to show** section, you ca
 
        > [!NOTE]
        > - Default is the only option available for activity types that do not support creating forms of type Form.
-       > - If you create a new card form, you must go to the parent entity and add the new form of type Card before it starts appearing in the configuration for timeline. If **Default** is displayed, you are not using the card form.
+       > - If you create a new card form, you must go to the parent table and add the new form of type Card before it starts appearing in the configuration for timeline. If **Default** is displayed, you are not using the card form.
 
 ### Set date in the sort activities by feature in the timeline
 
@@ -170,7 +170,7 @@ How you view data is important and setting a default display view of your data v
 
     > [!IMPORTANT]
     > - Sort date is intended for users to programmatically map each activity with a date of choice to have more control. It’s a customization option that allows you to sort activities any way you want by whatever date you want. You will have to populate each field and it requires that you update all activities to populate the **Sort date** with a value. However, after you complete the configuration, you have flexibility to sort any way you want.  
-    > - Sort dates have to be configured for each timeline instance and setup must be completed in all three main forms for the account entity in order to work.
+    > - Sort dates have to be configured for each timeline instance and setup must be completed in all three main forms for the account table in order to work.
 
 ### Set create activities using form type in the timeline
 
@@ -178,7 +178,7 @@ The **Create activities using** property allows you to choose which type of form
 
 - **Quick create form** if enabled, let's users create an activity record using a quick create form. There are some activities, such as email, that don't support quick create forms. For more information, see [Create or edit model-driven app quick create forms for a streamlined data entry experience](create-edit-quick-create-forms.md).
 
-- **Main form** navigates you to the activity entity main form. For more information, see [Create or edit a model-driven app main form for an entity](create-edit-main-forms.md).
+- **Main form** navigates you to the activity table main form. For more information, see [Create or edit a model-driven app main form for a table](create-edit-main-forms.md).
 
 Select **Create activities using** to select either a **Quick create form** or **Main form**.
 
@@ -195,7 +195,7 @@ All card forms are broken out into the following four sections:
 |b | **Header** | This section is displayed on the timeline record; however, only the first two fields are displayed. For this example, only the **Subject** and **Modified On** fields are visible. |
 |c | **Details** | This section is displayed on the timeline record; however, only the first three fields are displayed. For this example, only the **To**, **CC**, and **Description** fields are visible.|
 | d | **Footer** | This section is not displayed on the timeline record. | 
-| e | **Entity Fields** | You can select which fields you want to add to your card form from the field options listed on the right.  You can customize your card form by dragging and dropping the fields you want to use into the sections you want that field to appear in on the timeline record. |
+| e | **Table Fields** | You can select which fields you want to add to your card form from the field options listed on the right.  You can customize your card form by dragging and dropping the fields you want to use into the sections you want that field to appear in on the timeline record. |
 
 ![Advanced display options about how to customize a card form in the timeline](media/timeline-card-form-advanced-1.png "Advanced display options about how to customize a card form in the timeline")
 
@@ -235,15 +235,15 @@ This section is not visible on the timeline record.
 ![Advanced display options how to customize a card form in timeline](media/timeline-activity-record-types-advanced2.png "Advanced display options how to customize a card form in timeline")
 
 ## Enable a custom activity in a timeline
-When you create a custom entity, you might want to show the custom entity as an activity for your users in the timeline. 
-1. To show the custom entity as an activity, you need to enable these options when you create the entity. 
-   - Entity type: **Activity entity**
+When you create a custom table, you might want to show the custom table as an activity for your users in the timeline. 
+1. To show the custom table as an activity, you need to enable these options when you create the table. 
+   - Table type: **Activity table**
    - **Display in Activity menus**
    - **Enable quick create forms**
     
     ![Custom activity](media/timeline-custom-activity.png)
 
-    More information: [Create a custom entity](../common-data-service/data-platform-create-entity.md)
+    More information: [Create a custom table](../common-data-service/data-platform-create-entity.md)
 
 2. Make sure the custom activity is enabled in the timeline properties. More information: [Configure activity record types](#configure-activity-record-types)
 

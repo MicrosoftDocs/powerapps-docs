@@ -35,10 +35,10 @@ Located on the right-pane of the model-driven form designer, the property pane l
 
 |Name  |Description  |
 |---------|---------|
-|**Title**     | Enter a name that will be meaningful to people. This name will be shown to people when they use the form. If they can use multiple forms configured for the entity they will use this name to differentiate between available forms. <br /> This property is required.        |
-|**Description**     |  Enter a description that explains how this form is different from other main forms. This description is only shown in the list of forms for an entity in the solution explorer.        |
+|**Title**     | Enter a name that will be meaningful to people. This name will be shown to people when they use the form. If they can use multiple forms configured for the table they will use this name to differentiate between available forms. <br /> This property is required.        |
+|**Description**     |  Enter a description that explains how this form is different from other main forms. This description is only shown in the list of forms for a table in the solution explorer.        |
 |**Max Width**     | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900. <br /> This property is required.       |
-|**Show image**      | Show the entity’s **Primary Image** if it has one set. This setting will enable showing the image field in the header of this form. <br /> See Enable or disable entity options for more information about entity options.         |
+|**Show image**      | Show the tables’s **Primary Image** if it has one set. This setting will enable showing the image field in the header of this form. <br /> See Enable or disable table options for more information about table options.         |
 
 
 ## Tab properties
@@ -70,7 +70,7 @@ Located on the right-pane of the model-driven form designer, the property pane l
 |Area  |Name  |Description  |
 |---------|---------|---------|
 |**Display options**     | **Field label**    | By default the label will match the display name of the field. You can override that name for the form by entering a different label here.       |
-|**Display options**     |  **Field name**    | The name of the field. This comes from the field properties on the entity and is read-only.     |
+|**Display options**     |  **Field name**    | The name of the field. This comes from the field properties on the table and is read-only.     |
 |**Display options**     | **Hide label**     | When selected, the field label is hidden.      |
 |**Display options**     | **Read-only field**    | When selected, the field value is not editable.      |
 |**Display options**     |  **Lock field**   |  Lock this field to keep it from being removed.     |

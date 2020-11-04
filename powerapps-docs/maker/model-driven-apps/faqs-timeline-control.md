@@ -18,7 +18,7 @@ search.app:
 
 ## Why do I receive the message "Records could not be loaded because of unexpected error"?
 
-The **Timeline** section retrieves data about and displays in the form cards. By default, the timeline retrieves data for the 10 standard activity entities, which are:
+The **Timeline** section retrieves data about and displays in the form cards. By default, the timeline retrieves data for the 10 standard activity tables, which are:
 
 -    Email
 -    Task
@@ -41,14 +41,14 @@ When you perform the following procedures as an administrator, users will see an
    > [!div class="mx-imgBorder"] 
    > ![Records could not be loaded because of an unexpected error.](media/timeline-error1.png "Records could not be loaded because of an unexpected error.")
 
-This error is caused because the number of activity entities for the data retrieval has exceeded the maximum limit of 10.
+This error is caused because the number of activity tables for the data retrieval has exceeded the maximum limit of 10.
 
    > [!div class="mx-imgBorder"] 
-   > ![Number of link entities in query exceeded maximum limit](media/timeline-error2.png "[Number of link entities in query exceeded maximum limit")
+   > ![Number of link tables in query exceeded maximum limit](media/timeline-error2.png "[Number of link tables in query exceeded maximum limit")
 
 ### Workaround
 
-To work around the issue, you must reduce the number of entities to 10 or fewer. To do this, follow the steps below.
+To work around the issue, you must reduce the number of tables to 10 or fewer. To do this, follow the steps below.
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -56,14 +56,14 @@ To work around the issue, you must reduce the number of entities to 10 or fewer.
 
 3.   Go to **Settings** > **Customization** > **Customize the System**. The solution explorer page opens in a new browser window.
 
-4.   Expand **Entities** under **Components** in the default solution pane.
+4.   Expand **Tables** under **Components** in the default solution pane.
 
-5.   Select an entity and select **Forms**. For example, select the **Account** entity.
+5.   Select a table and select **Forms**. For example, select the **Account** table.
 
 6.   Select the **Account for Interactive experience** record that is a **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
 
       > [!div class="mx-imgBorder"] 
-      > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
+      > ![Select the table form with interactive experience in the name](media/account-interactive-experience.png "Select the table form with interactive experience in the name")
 
       For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`.
 

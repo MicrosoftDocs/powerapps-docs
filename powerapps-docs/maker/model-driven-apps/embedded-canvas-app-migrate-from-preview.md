@@ -58,12 +58,12 @@ With the latest release, adding an embedded canvas app on a model-driven form is
 To migrate an embedded canvas app on a model-driven form that uses a list of records related to the current (main form) record, please follow the steps below.
 
 1. Follow the steps in the section above to migrate embedded canvas apps on model-driven forms created using the public preview release to the latest.
-2. Using the Common Data Service connector, add a datasource for the related entity to the app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in Power Apps](../canvas-apps/add-data-connection.md).
-3. When using the datasource of the related entity for a control such as [Gallery](../canvas-apps/controls/control-gallery.md) or [Data table](../canvas-apps/controls/control-data-table.md), use the **[Filter](../canvas-apps/functions/function-filter-lookup.md)** function to filter the records to the ones that are related to the current (main form) record. The current (main form) record is available via **ModelDrivenFormIntegration.Item**.
+2. Using the Common Data Service connector, add a datasource for the related table to the app. To learn how add a data source in a canvas app please refer to [Add a data connection to a canvas app in Power Apps](../canvas-apps/add-data-connection.md).
+3. When using the datasource of the related table for a control such as [Gallery](../canvas-apps/controls/control-gallery.md) or [Data table](../canvas-apps/controls/control-data-table.md), use the **[Filter](../canvas-apps/functions/function-filter-lookup.md)** function to filter the records to the ones that are related to the current (main form) record. The current (main form) record is available via **ModelDrivenFormIntegration.Item**.
 	> [!NOTE]
 	> The embedded canvas app has full access to record from the host model-driven form via ModelDrivenFormIntegration.Item. 
 	> As an example, to get the value of a field with the name **accountnumber** and display name **Account Number**, you can use **ModelDrivenFormIntegration.Item.accountnumber** or **ModelDrivenFormIntegration.Item.'Account Number'**.
-4. With recent updates Common Data Service now also provides support to use entity views as a filter. See this blog post for details: [Improved data source selection and Common Data Service views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/). 
+4. With recent updates Common Data Service now also provides support to use table views as a filter. See this blog post for details: [Improved data source selection and Common Data Service views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/). 
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />

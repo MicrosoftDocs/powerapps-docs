@@ -45,13 +45,13 @@ Or the editable grid control can be configured on a view.
 You can set one type of custom control to appear in the web browser client while having a different custom control appear in your Dynamics 365 phone or  tablet mobile apps. For example, you could use a number input custom control for a field in web browser clients and a slider custom control for the phone app. After the customization is published, users can fully interact with the control to change the value, such as by sliding the control when using the linear slider custom control. Changes are automatically saved when the form is closed just as they are when the user changes a traditional  field on a form.  
   
 ### Use a custom control to add visualizations to a field  
- Following the steps in this procedure will change the default label and text box field  of the **Budget Amount** field to the slider custom control on the Opportunity entity. You can use similar steps to replace an existing field with a custom control or configure a custom control for a custom field.  
+ Following the steps in this procedure will change the default label and text box field  of the **Budget Amount** field to the slider custom control on the Opportunity table. You can use similar steps to replace an existing field with a custom control or configure a custom control for a custom field.  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
   
-2.  Open a form such as the **Main** form for the opportunity entity. 
+2.  Open a form such as the **Main** form for the opportunity table. 
   
 3.  In the form editor, double-click the field where you want to add a custom control, such as the **Budget Amount** field on the opportunity main form. Alternatively, you can create a custom field. 
   
@@ -98,7 +98,7 @@ You can set one type of custom control to appear in the web browser client while
   
 8.  Select **OK**, to close the **Field Properties** page.  
   
-9. To activate the customization, on the entity form select **Save**, and then select **Publish**.  
+9. To activate the customization, on the table form select **Save**, and then select **Publish**.  
   
 10. Select **Save and Close** to close the form editor.  
   

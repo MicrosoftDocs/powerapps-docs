@@ -32,7 +32,7 @@ This topic explains how to add an embedded canvas app and pass the current (main
 
 Imagine that you want to add an embedded canvas app on an account main form and pass the current account record to the embedded canvas app. To do this, follow these steps: 
 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity. 
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of a table, such as the account table. 
 2.	Select the section on the form where you want the embedded canvas app to appear.
 3.	Using the field explorer pane, add a required field, such as **Account Name**.
       > [!IMPORTANT]
@@ -43,7 +43,7 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 7.	On the **Add Control** dialog box, in the list of available controls, select **Canvas app** and then select **Add**.
 8.	In the **Field Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
 9.	In the section below the controls list, the list of properties available to the canvas app control are displayed.
-     - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that contains the field you added in an earlier step.
+     - The **Table name** property specifies the table that will provide the data to your embedded canvas app. It will be set to the table that contains the field you added in an earlier step.
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
      - The **App ID** property specifies the ID of the embedded canvas app. It will be automatically generated and filled-in for you when the canvas app is created.
          - Notice that any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.

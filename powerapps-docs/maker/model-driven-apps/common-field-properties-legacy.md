@@ -21,12 +21,12 @@ search.app:
 ---
 # Model-driven app common field properties
 
-You can view and edit common properties of entity fields for a model-driven app using Power Apps solution explorer or   Power Apps portal. The Power Apps portal provides an easy way to create and edit entity fields with the Common Data Service.
+You can view and edit common properties of table fields for a model-driven app using Power Apps solution explorer or   Power Apps portal. The Power Apps portal provides an easy way to create and edit table fields with the Common Data Service.
 The portal enables configuring the most common options, but certain options can only be set using solution explorer.
 
 ## Common field properties in Power Apps portal
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Entities** and select the entity that has the fields you want to view.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables** and select the table that has the fields you want to view.
 
 2. Select the field that you want to view.
 
@@ -50,9 +50,9 @@ There are many different types of fields, but you can only create some of them. 
 
 ## Common field properties in solution explorer
  
-Fields in a form display controls people use to view or edit data in an entity record. Fields can be formatted to occupy up to four columns within a section.  
+Fields in a form display controls people use to view or edit data in a table record. Fields can be formatted to occupy up to four columns within a section.  
 
-You can access **Common field properties** in solution explorer. Under **Components**, expand **Entities**, expand the entity you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then double-click one of the fields to view Common field properties.
+You can access **Common field properties** in solution explorer. Under **Components**, expand **Tables**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then double-click one of the fields to view Common field properties.
 
 ![Common field properties in solution explorer](media/common-field-properties.png "Common field properties in solution explorer")
   

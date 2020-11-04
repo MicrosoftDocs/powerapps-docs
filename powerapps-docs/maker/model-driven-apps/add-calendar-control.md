@@ -1,6 +1,6 @@
 ---
-title: "Add the calendar control to entities in model-driven apps | MicrosoftDocs"
-description: "Learn how to add the calendar control to entities in model-driven apps."
+title: "Add the calendar control to tables in model-driven apps | MicrosoftDocs"
+description: "Learn how to add the calendar control to tables in model-driven apps."
 ms.date: 05/11/2020
 ms.service: powerapps
 ms.topic: article
@@ -26,7 +26,7 @@ The **Calendar Control V2** control displays scheduled activities and their asso
 
 3.  Select **Customize the System**.
 
-4.  Under **Components** in the solution explorer, expand **Entities**, and then select an entity. For example, **Activity**.
+4.  Under **Components** in the solution explorer, expand **Tables**, and then select an table. For example, **Activity**.
 
 5.  On the **Controls** tab, select **Add Control**.
 
@@ -43,7 +43,7 @@ The **Calendar Control V2** control displays scheduled activities and their asso
     > [!div class="mx-imgBorder"]
     > ![Calendar control added](media/cal-control-added.png "Calendar control added")
 
-8.  **Read-only grid** is the default option, so when users select an entity from the site map, they'll see a read-only grid of opportunities. To make the calendar view the default view instead, select the corresponding **Calendar Control V2** option buttons.
+8.  **Read-only grid** is the default option, so when users select a table from the site map, they'll see a read-only grid of opportunities. To make the calendar view the default view instead, select the corresponding **Calendar Control V2** option buttons.
 
 9.  Select the edit icon for each of the mandatory fields, and then select the binding values.
 

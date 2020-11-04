@@ -23,11 +23,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create or edit a model-driven app main form for an entity 
+# Create or edit a model-driven app main form for a table 
 
-In this topic you learn how to create or edit a main form for an entity.
+In this topic you learn how to create or edit a main form for an table.
 
-When you create a new form for an entity, its form type is Main. When the new form opens, it is identical to the form named Information. You can add or edit fields, sections, tabs, navigation, and properties associated with the form, and then save the form.
+When you create a new form for a table, its form type is Main. When the new form opens, it is identical to the form named Information. You can add or edit fields, sections, tabs, navigation, and properties associated with the form, and then save the form.
 
 Each main form is composed of one or more tabs. Each tab can have one or more sections. Each section contains one or more fields. If you want to base your new form on an existing one, you can clone a form. 
 
@@ -37,7 +37,7 @@ Make sure that you have the System Administrator or System Customizer security r
   
 1.   Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
 
 3. To create a new main form, on the toolbar select **Add form** > **Main Form**.  
     \-OR-

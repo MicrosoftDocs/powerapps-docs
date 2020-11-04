@@ -16,7 +16,7 @@ search.app:
 ---
 
 # Build your first model-driven app from scratch
-Model-driven app design is a component-focused approach to app development. In this topic, you simplify how to create a model-driven app by using one of the standard entities that's available in your Power Apps environment.
+Model-driven app design is a component-focused approach to app development. In this topic, you simplify how to create a model-driven app by using one of the standard tables that's available in your Power Apps environment.
 
 > [!TIP]
 > Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction).<br/> 
@@ -53,8 +53,8 @@ From the app designer you add components to your app.
       > ![Create-new-sitemap](media/build-first-model-driven-app/new-sitemap.png "Site Map Designer")
 
 2. On the sitemap designer select **New Subarea**, in the right pane select the **Properties** tab, and then select the following properties.
-  - **Type**: Entity
-  - **Entity**: Account
+  - **Type**: Table
+  - **Table**: Account
 
     > [!div class="mx-imgBorder"] 
     > ![Add components to sitemap](media/build-first-model-driven-app/sitemap.png "New Subarea")
@@ -82,7 +82,7 @@ On the app designer toolbar, select **Publish**.
 After publishing the app it's ready for you to run or share with others.
 
   > [!div class="mx-imgBorder"] 
-  > ![Simple account entity app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
+  > ![Simple account table app](media/build-first-model-driven-app/accounts-quickstart-app.png "Run the app")
 
 ## Next steps
 In this topic, you built a simple model-driven app. 

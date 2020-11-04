@@ -31,7 +31,7 @@ To change the sort order in the view designer, see [Create a public view in Powe
 
 ## Change the sort order using solution explorer
 
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the entity you want, select **Views**, and then open the view you want.
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Tables**, select the table you want, select **Views**, and then open the view you want.
 
 2.  In the view designer, select **Configure Sorting**.  
 

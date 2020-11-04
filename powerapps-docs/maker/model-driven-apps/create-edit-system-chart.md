@@ -29,7 +29,7 @@ In this topic you learn how to create a system chart. System charts are organiza
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Charts** tab.  
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Charts** tab.  
   
 3.  On the toolbar, select **Add chart**.  
   
@@ -49,7 +49,7 @@ In this topic you learn how to create a system chart. System charts are organiza
 5.  Select **Save and Close**.  
 
 ## Known issues  
-In the chart designer, adding a order by on certain calculated fields are not supported and will cause an error.  The calculated fields causing this are using another calculated fields, a related entity field, or a local field on the entity.
+In the chart designer, adding a order by on certain calculated fields are not supported and will cause an error.  The calculated fields causing this are using another calculated fields, a related table field, or a local field on the table.
 
 ## Next steps  
 [Create or edit dashboards](create-edit-dashboards.md)

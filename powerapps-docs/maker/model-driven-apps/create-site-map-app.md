@@ -38,9 +38,9 @@ A default site map is available. You can edit this site map or configure site ma
 
 ## Prerequisites
 Make sure that you have the System Administrator or System Customizer security role or equivalent permissions.  Specifically, any user with the following privileges can also create apps:  
--   Create, Read, and Write privileges for the App entity  
--   Read and Write privileges for the Customizations entity  
--   Read privileges for the Solution entity
+-   Create, Read, and Write privileges for the App table  
+-   Read and Write privileges for the Customizations table  
+-   Read privileges for the Solution table
 
 You can view or set these privileges on the **Customization** tab of a security role.
   
@@ -170,11 +170,11 @@ You can view or set these privileges on the **Customization** tab of a security 
   
      Under **General**, do the following:  
   
-    - **Type**: Select whether the subarea you are adding is a dashboard, entity, web resource, or URL.  
+    - **Type**: Select whether the subarea you are adding is a dashboard, table, web resource, or URL.  
   
-    - **Entity**: Select the entity that the subarea is for. This field is disabled if the subarea type is other than **Entity** in the **Type** drop-down list.  
+    - **Table**: Select the table that the subarea is for. This field is disabled if the subarea type is other than **Table** in the **Type** drop-down list.  
   
-    - **URL**: Specify a URL for the main page of the application to show when this subarea is selected. This field is disabled if you've selected **Entity** in the **Type** drop-down list.  
+    - **URL**: Specify a URL for the main page of the application to show when this subarea is selected. This field is disabled if you've selected **Table** in the **Type** drop-down list.  
  
       > [!IMPORTANT]
       > Site map subarea URLs that link to an .aspx page aren’t supported.
@@ -191,7 +191,7 @@ You can view or set these privileges on the **Customization** tab of a security 
   
      Under **Advanced**, do the following:  
  
-    - **Privileges**: This defines whether a subarea is displayed based on privileges available in any security roles that are assigned to the user. Select the name of the entity to check privileges for, and then select the check boxes to assign privileges. 
+    - **Privileges**: This defines whether a subarea is displayed based on privileges available in any security roles that are assigned to the user. Select the name of the table to check privileges for, and then select the check boxes to assign privileges. 
   
     - **More Titles**: If your organization uses multiple languages, select a language for the title, enter the title for the subarea, and then select **Add**. You can create, edit, or delete titles for as many languages as your organization uses. However, you can have only one title per language.  
   

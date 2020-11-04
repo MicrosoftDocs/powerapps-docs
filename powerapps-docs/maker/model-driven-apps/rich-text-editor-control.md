@@ -38,10 +38,10 @@ Some of the format options available are:
 
 You can create a new text field and configure the control, or replace an existing text field. The rich text editor control can be used with single or multi-line text fields.
 
-1. Sign in to Power Apps. Go to **Solutions**, open the solution that you want, open the entity that you want, and then select the **Forms** tab. 
+1. Sign in to Power Apps. Go to **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab. 
 2. Select the form, and then select **Edit form**.
 3. In the form designer on the command bar, select **Switch to classic**.
-4. On the legacy form designer canvas, add or create a text field or select an existing text field, such as the account entity **Description** field. On the **Home** tab, select **Change Properties**.
+4. On the legacy form designer canvas, add or create a text field or select an existing text field, such as the account table **Description** field. On the **Home** tab, select **Change Properties**.
 5. On the **Field Properties** page, select the **Controls** tab, and then select **Add control**.
 6. Select **Rich Text Editor Control**, and then select **Add**.
 7. Select **Web**, **Phone**, and **Tablet** if you want all client apps to have the ability to use rich text in the field. Then select **OK** to use the default rich text editor control configuration. If you want to change the rich text editor control configuration, see [Rich text editor control configuration options](#rich-text-editor-control-configuration-options).
@@ -102,12 +102,12 @@ Example:
 
 ### imageEntity
 
-By setting this property, you can avoid using the default entity for images so that you can enforce additional security if needed.
+By setting this property, you can avoid using the default table for images so that you can enforce additional security if needed.
 
 
 |Attribute  |Description  |
 |---------|---------|
-|ImageEntityName      |  The name of the image entity.    |
+|ImageEntityName      |  The name of the image table.    |
 |ImageFileAttributeName      | The attribute name of the blob reference.      |
 
 ### disableImages

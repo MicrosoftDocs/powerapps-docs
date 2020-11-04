@@ -24,11 +24,11 @@ search.app:
   - D365CE
 ---
 
-# Create a model-driven app quick view form to view information about a related entity
+# Create a model-driven app quick view form to view information about a related table
 
 In this topic you learn how to create a quick view form and how to add a quick view control to a main form. 
 
-A quick view form can be added to another form as a quick view control. It provides a template to view information about a related entity record within a form for another entity record. This means your app users do not need to navigate to a different record to see the information needed to do their work.  
+A quick view form can be added to another form as a quick view control. It provides a template to view information about a related table record within a form for another table record. This means your app users do not need to navigate to a different record to see the information needed to do their work.  
   
  Quick view controls are associated with a lookup field that is included in a form. If the lookup field value is not set, the quick view control will not be visible. Data in quick view controls cannot be edited and quick view forms do not support form scripts.  
   
@@ -40,7 +40,7 @@ A quick view form can be added to another form as a quick view control. It provi
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
   
 3. On the toolbar, select **Add form** > **Quick View Form**.  
   
@@ -66,11 +66,11 @@ A quick view form can be added to another form as a quick view control. It provi
   
 <a name="BKMK_AddQVF"></a>   
 ## Add a quick view control to a main form  
- Quick view forms can only be added to a main form where a lookup field exists that targets the entity of the quick view form.  
+ Quick view forms can only be added to a main form where a lookup field exists that targets the table of the quick view form.  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
 3. Select a form, which **Type** is **Main**.
 
@@ -86,7 +86,7 @@ A quick view form can be added to another form as a quick view control. It provi
 7.  To save the form select **Save**.  
 
     > [!IMPORTANT]
-    > Be aware of the behavior that occurs when you create a parent relationship with the same entity. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent record, the first record will not be saved with the lookup that has the parent record value. This is because of the circular reference introduced by using the same entity. If you experience this issue you can resolve it by removing the parent record id on the quick create form before saving the record.
+    > Be aware of the behavior that occurs when you create a parent relationship with the same table. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent record, the first record will not be saved with the lookup that has the parent record value. This is because of the circular reference introduced by using the same table. If you experience this issue you can resolve it by removing the parent record id on the quick create form before saving the record.
 
 ## Next steps   
  [Create and design forms](create-design-forms.md)   

@@ -23,11 +23,11 @@ search.app:
 
 Monitor can help you debug and diagnose problems, which helps you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as it runs.
 
-When you filter on model-driven app form-related events in Monitor, you can get information about related tables, entities, controls, and components on a form in Monitor as your app runs.  
+When you filter on model-driven app form-related events in Monitor, you can get information about related tables, tables, controls, and components on a form in Monitor as your app runs.  
 
 There are many situations that you might encounter where access to the information provided by Monitor will help you better understand why a form behaves a certain way. Many form issues are based on business rules, JavaScript, form events, or client API that admins and makers have set. Monitor can also help identify whether the issue you experience is designed out-of-the-box or is due to a customization. It provides details that can help you answer the following questions:
 
-- Why aren't records showing in the related menu of an entity?
+- Why aren't records showing in the related menu of a table?
 - Why is a control not editable?
 - Why is a record in a read-only state?
 
@@ -59,9 +59,9 @@ For each record, you can open and view detailed information about the form event
 > [!div class="mx-imgBorder"] 
 > ![Monitoring a related menu](media/monitor-formchecker-related-menu.png)
 
-To see the full details, select **+** next to the line that displays the word **data** in the title, which is line **5** in the previous screenshot. The expanded details displays all items in the related menu with information that can help you understand why an entity is, or isn't, included in the related menu options. There are many types of events that are monitored, including the standard form events like onload, onsave, and onclose.
+To see the full details, select **+** next to the line that displays the word **data** in the title, which is line **5** in the previous screenshot. The expanded details displays all items in the related menu with information that can help you understand why a table is, or isn't, included in the related menu options. There are many types of events that are monitored, including the standard form events like onload, onsave, and onclose.
 
-As you continue to use the app that's being monitored, Monitor updates the information in the list of events. For forms, there are many different scenarios that you can troubleshoot and find additional information on the form, control, or entity you're working with. 
+As you continue to use the app that's being monitored, Monitor updates the information in the list of events. For forms, there are many different scenarios that you can troubleshoot and find additional information on the form, control, or table you're working with. 
 
 ## Supported form checking areas and events
 

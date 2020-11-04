@@ -158,8 +158,8 @@ To use these controls in the form editor:
 |Field|Shows the field the control is mapped to.|  
 |Source|Set the source for the data (Grouped Options, Option Set, or View).|  
 |Option Set|Select the option set for this field.|  
-|View|Select the entity and view for this field.|  
-|Field|Select the field of the view’s primary entity to use as the data source.|  
+|View|Select the table and view for this field.|  
+|Field|Select the field of the view’s primary table to use as the data source.|  
   
 ## Multimedia  
  You can embed videos to provide a richer customer experience for sales and field people on the go. Use this control to map to a URL field that contains the audio or video link to play in the control.  

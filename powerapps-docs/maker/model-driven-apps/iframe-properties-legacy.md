@@ -27,7 +27,7 @@ To view IFrame properties, follow these steps.
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab. 
 
 3. In the list of forms, open a form of type **Main**.
 
@@ -67,9 +67,9 @@ To view IFrame properties, follow these steps.
 |`orglcid`|The Organization default language LCID.|  
 |`orgname`|The name of the organization.|  
 |`userlcid`|The user's preferred language LCID|  
-|`type`|The entity type code. This value can be different for custom entities in different organizations. Use `typename` instead.|  
-|`typename`|The entity type name.|  
-|`id`|The id value of the record. this parameter has no value until the entity record is saved.|  
+|`type`|The table type code. This value can be different for custom tables in different organizations. Use `typename` instead.|  
+|`typename`|The table type name.|  
+|`id`|The id value of the record. this parameter has no value until the table record is saved.|  
 
 ## Next steps
 
