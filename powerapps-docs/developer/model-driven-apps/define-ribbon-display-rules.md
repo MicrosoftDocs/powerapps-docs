@@ -171,7 +171,7 @@ When configuring ribbon elements, you can define specific rules to control when 
   This type of rule checks the URL of the page being displayed. It returns true if the address matches.  
 
   `<RelationshipTypeRule>` 
-  This type of rule is applied to records selected in a grid. It lets you determine the type of relationship, as follows:  
+  This type of rule is applied to rows selected in a grid. It lets you determine the type of relationship, as follows:  
 
 - OneToMany  
 

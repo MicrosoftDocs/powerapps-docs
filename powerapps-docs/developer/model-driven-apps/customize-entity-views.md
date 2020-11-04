@@ -19,7 +19,7 @@ search.app:
 
 # Customize table views
 
-Table views are special saved queries that retrieve data by using a specific filter. They also contain information about how the data in the view should be displayed in the application. Table views are `SavedQuery` records that you can create programmatically. You can also define them as XML, and import them with an unmanaged solution.  
+Table views are special saved queries that retrieve data by using a specific filter. They also contain information about how the data in the view should be displayed in the application. Table views are `SavedQuery` rows that you can create programmatically. You can also define them as XML, and import them with an unmanaged solution.  
   
  A Table  view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span table types and queries that perform aggregation. More information: [Saved queries](../common-data-service/saved-queries.md) 
   
@@ -36,8 +36,8 @@ Table views are special saved queries that retrieve data by using a specific fil
 |---------------|---------------|-----------------|  
 |**Public**|0|- **Occurrence**: Many<br />- **Actions**: Create, Update, Delete<br />- **Comments**: You can set one of these views as the default public view by setting `SavedQuery.IsDefault` to true.|  
 |**Advanced Find**|1|- **Occurrence**: 1<br />- **Actions**: Update only.<br />- **Comments**: By default, this view is displayed when results are shown in **Advanced Find**.|  
-|**Associated**|2|- **Occurrence**: 1<br />- **Actions**: Update only,<br />- **Comments**: By default, this view is displayed when a grid of related records appears in the navigation pane of a row.|  
-|**Quick Find**|4|- **Occurrence**: 1<br />- **Actions**: Update only.<br />- **Comments**: This view defines the columns that will be searched when a user searches for records by using the search column in a list view.|  
+|**Associated**|2|- **Occurrence**: 1<br />- **Actions**: Update only,<br />- **Comments**: By default, this view is displayed when a grid of related rows appears in the navigation pane of a row.|  
+|**Quick Find**|4|- **Occurrence**: 1<br />- **Actions**: Update only.<br />- **Comments**: This view defines the columns that will be searched when a user searches for rows by using the search column in a list view.|  
 |**Lookup**|64|- **Occurrence**: 1<br />- **Actions**: Update only.<br />- **Comments**: This is the default view that will be used to look up a row when no other view has been configured for the lookup column.|  
   
 <a name="BKMK_CreateViews"></a>   
@@ -119,7 +119,7 @@ Table views are special saved queries that retrieve data by using a specific fil
   
 <a name="BKMK_RetrieveViews"></a>   
 ## Retrieve views  
- Use a <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> to retrieve saved query records.  
+ Use a <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> to retrieve saved query rows.  
   
  The following sample retrieves all the public views for the opportunity table:  
   
@@ -243,7 +243,7 @@ service.Execute(ssreq);
  and a JavaScript function name to display custom icons and tooltip text for a column. 
  The JavaScript code gets executed when the page loads.  
   
- You can also use the new **Web Resource** and **Function Name** fields in the **Column Properties** page while modifying the property of an column (column) in a view definition to specify the web resource name and JavaScript function name.  
+ You can also use the new **Web Resource** and **Function Name** columns in the **Column Properties** page while modifying the property of an column (column) in a view definition to specify the web resource name and JavaScript function name.  
   
  The following sample code demonstrates how you can programmatically specify a web resource and a JavaScript function name for adding custom icons and tooltip for the `opportunityratingcode` column in layoutxml:  
   
@@ -267,7 +267,7 @@ System.String layoutXml =
   
  The JavaScript function for displaying custom icons and tooltip text expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text for the icon in multiple languages. For more information about the languages supported, see [Enable additional languages](/dynamics365/customer-engagement/customize/enable-additional-languages) <!-- TODO need to update the link in the powerapps repo--> and [Install or upgrade Language Packs](https://technet.microsoft.com/library/hh699674.aspx). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?linkid=829588).  
   
- Assuming you will most likely be adding custom icons for an option set type of column as it has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid breaking the code due to changes in the localized label string. Also, in your JavaScript function, specify just the name of an image web resource that you want to use as an icon for a value in the column. The image should be of 16x16 pixels size; larger images will be automatically scaled down to 16x16 pixels size.  
+ Assuming you will most likely be adding custom icons for a choice type of column as it has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid breaking the code due to changes in the localized label string. Also, in your JavaScript function, specify just the name of an image web resource that you want to use as an icon for a value in the column. The image should be of 16x16 pixels size; larger images will be automatically scaled down to 16x16 pixels size.  
   
  The following sample code displays different icons and tooltip text based on one of the values (1: Hot, 2: Warm, 3: Cold) in the `opportunityratingcode (Rating)` column. The sample code also shows how to display localized tooltip text. For this sample to work, you must create three image web resources each with 16x16 images (![Hot rating button](media/dynamics365hotgridicon.png "Hot rating button"), ![Warm rating symbol](media/dynamics365warmgridicon.png "Warm rating symbol"), and ![Cold rating button](media/dynamics365coldgridicon.png "Cold rating button")) in your instance with the following names respectively: `new_Hot`, `new_Warm`, and `new_Cold`.  
   

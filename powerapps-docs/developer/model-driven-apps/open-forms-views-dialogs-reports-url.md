@@ -20,7 +20,7 @@ search.app:
 URL addressable elements enable you to include links to forms, views, dialogs, and reports in other applications. In this manner, you can easily extend other applications, reports, or websites so that users can view information and perform actions without switching applications.  
 
 > [!NOTE]
-> - URL addressable forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the records they see.  
+> - URL addressable forms, views, dialogs, and reports cannot bypass the security. Only licensed users, based on their security roles, can access the data and the rows they see.  
 >   -   Use `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) when you open table forms programmatically within the application by using web resources. Do not use `window.open`.  
 >   -   Outside the application, where pages do not have access to the `Xrm.Navigation.`[openForm](clientapi/reference/Xrm-Navigation/openForm.md) function, use `window.open` or a link to open a specific row or form for a table.  
 
@@ -110,7 +110,7 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
 When you customize the application navigation using the site map, do not use the view URL that you copied from the application using the steps in [Copy the URL for a View](open-forms-views-dialogs-reports-url.md#BKMK_CopyViewURL) to set as the URL.
 That URL displays a page that includes the ribbon and produces undesirable results if used in a `<SubArea>` Url column.  
 
-To display a list of table records within the application for a SubArea set the Table column value. This displays the default view for that table and provides the correct title and icon.  
+To display a list of table rows within the application for a SubArea set the Table column value. This displays the default view for that table and provides the correct title and icon.  
 
 However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 

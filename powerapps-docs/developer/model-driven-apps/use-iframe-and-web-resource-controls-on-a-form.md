@@ -114,13 +114,13 @@ https://myserver/mypage.aspx?id=%7bB2232821-A775-DF11-8DD1-00155DBA3809%7d&orglc
 
 ### Example  
 
- The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of an option set column.  
+ The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of a choice column.  
 
 ```javascript  
-//Get the value of an option set column  
+//Get the value of a choice column  
 var value = Xrm.Page.data.entity.attributes.get("new_pagechooser").getValue();  
 var newTarget = "";  
-//Set the target based on the value of the option set  
+//Set the target based on the value of the choice 
 switch (value) {  
     case 100000001:  
         newTarget = "https://myServer/test/pageOne.aspx";  

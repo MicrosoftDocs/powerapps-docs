@@ -157,7 +157,7 @@ function EnableRule() {
  Uses the `<RecordPrivilegeRule>` element. Use this rule to determine whether the current user has privileges on a specific row. These privileges differ from  a Table privilege because they can include privileges gained by another user sharing the row with the current user.  
 
 ### Selection Count Rule
- Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of records in the grid are selected. For example, if your button merges records, you should make sure at least two records are selected before enabling the ribbon control.  
+ Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of rows in the grid are selected. For example, if your button merges rows, you should make sure at least two rows are selected before enabling the ribbon control.  
 
 ### Value Rule
 Uses the `<ValueRule>` element. Use this rule to check the value of a specific column in the row being displayed in the form. You must specify the `Field` and the `Value` to check.

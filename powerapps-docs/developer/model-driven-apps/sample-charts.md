@@ -146,7 +146,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="AreaChart"></a>   
 ## Area Chart  
- The following is an area chart that shows the number of records generated between a given date range.  
+ The following is an area chart that shows the number of rows generated between a given date range.  
   
  ![Sample area chart](media/charts-count-of-records-areachart.gif "Sample area chart")  
   

@@ -73,7 +73,7 @@ Let's look at the code in detail:
     ```
 - **Code to execute on the OnChange event**: Code in this section will be associated with the **Account Name** column in the account form so that it gets executed **only** when you change the account name value.
 
-    The code performs a case-insensitive search for "Contoso" in the account name, and if present, automatically sets values for some fields in the account form.
+    The code performs a case-insensitive search for "Contoso" in the account name, and if present, automatically sets values for some columns in the account form.
 
     ```JavaScript
     // Code to run in the column OnChange event 
@@ -180,7 +180,7 @@ Its recommended that you refresh your browser for the changes to take effect in 
 
       ![Form level notification](../media/clientapi_walkThrough-img11.png)
 
-1. Edit the account name to add "Contoso" in the name and move to the next column by pressing TAB. This will fire the OnChange event, and will automatically update the **Phone**, **Website** and **Description** fields with the value specified in the code.
+1. Edit the account name to add "Contoso" in the name and move to the next column by pressing TAB. This will fire the OnChange event, and will automatically update the **Phone**, **Website** and **Description** columns with the value specified in the code.
 
       ![Values set automatically](../media/clientapi_walkThrough-img12.png)
 

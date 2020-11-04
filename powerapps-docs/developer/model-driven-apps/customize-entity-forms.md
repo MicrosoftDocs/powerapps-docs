@@ -1,6 +1,6 @@
 ---
 title: "Customize table forms (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Forms provide the user interface (UI) that people use to create, view, or edit table records. Use the form designer in the customization tools to create and edit table forms. This topic will provide information necessary to create or edit forms programmatically." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Forms provide the user interface (UI) that people use to create, view, or edit table rows. Use the form designer in the customization tools to create and edit table forms. This topic will provide information necessary to create or edit forms programmatically." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 03/10/2020
 ms.service: powerapps
@@ -21,7 +21,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/customize-entity-forms -->
 
-Forms provide the user interface (UI) that people use to create, view, or edit table records. Use the form designer in the customization tools to create and edit table forms. More information: [Create and design forms](../../maker/model-driven-apps/create-design-forms.md) for information about tasks related to working with forms in the application.  
+Forms provide the user interface (UI) that people use to create, view, or edit table rows. Use the form designer in the customization tools to create and edit table forms. More information: [Create and design forms](../../maker/model-driven-apps/create-design-forms.md) for information about tasks related to working with forms in the application.  
 
  This topic will provide information necessary to create or edit forms programmatically.  
 

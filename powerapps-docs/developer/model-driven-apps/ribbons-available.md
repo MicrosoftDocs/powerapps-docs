@@ -92,13 +92,13 @@ All tables use a common ribbon definition called the *Entity Ribbon Template*. T
 ### Subgrid ribbons  
  The table subgrid ribbon is a contextual group with a collection of tabs that have an Id column value beginning with `Mscrm.SubGrid.<entity logical name>`. For example, the tab with the text "Accounts" on account table sub grid is `Mscrm.SubGrid.account.MainTab`.  
 
- When a list of records for a table is displayed within a sub grid on the form of another table or in a chart, there will be only three controls available directly above or within the subgrid. The behaviors for these controls can be modified by changing the commands that they are associated with.  
+ When a list of rows for a table is displayed within a sub grid on the form of another table or in a chart, there will be only three controls available directly above or within the subgrid. The behaviors for these controls can be modified by changing the commands that they are associated with.  
 
-- **Add** The default behavior of the command with the ![Add button](media/customization-subgrid-add.PNG "Add button") icon depends on whether the records in the subgrid are related to the current row.  
+- **Add** The default behavior of the command with the ![Add button](media/customization-subgrid-add.PNG "Add button") icon depends on whether the rows in the subgrid are related to the current row.  
 
-     If the records are related to the current row, the default behavior is look for existing records. If an existing row cannot be found, or if the user simply wants to create a new row, they can click **Add New**.  
+     If the rows are related to the current row, the default behavior is look for existing rows. If an existing row cannot be found, or if the user simply wants to create a new row, they can click **Add New**.  
 
-     If the records are not related to the current row, the default behavior is to add a new row. If the table has a Quick Create form this will be displayed, otherwise a new full form will be shown.  
+     If the rows are not related to the current row, the default behavior is to add a new row. If the table has a Quick Create form this will be displayed, otherwise a new full form will be shown.  
 
      Activities are the exception to this pattern. The add command will always prompt for the type of activity first.
 
@@ -111,11 +111,11 @@ All tables use a common ribbon definition called the *Entity Ribbon Template*. T
 
      If the subgrid is not associated with the current row, the default behavior of this command is to open the view in the main list view.  
 
-- **Delete** The ![Sublist delete icon](media/customization-subgrid-delete.PNG "Sublist delete icon") icon is shown on the right side of the row when people hover over the records in the list.  
+- **Delete** The ![Sublist delete icon](media/customization-subgrid-delete.PNG "Sublist delete icon") icon is shown on the right side of the row when people hover over the rows in the list.  
 
-     For records with a 1:N relationship or no relationship, the default behavior is to delete the row. The delete may be blocked if it is not allowed due to relationship configurations. Open activities and invoices are common examples of records that may not be deleted due to relationship configurations.  
+     For rows with a 1:N relationship or no relationship, the default behavior is to delete the row. The delete may be blocked if it is not allowed due to relationship configurations. Open activities and invoices are common examples of rows that may not be deleted due to relationship configurations.  
 
-     For relationships displaying N:N relationships the default behavior is to remove the relationship joining the records rather than the row itself.  
+     For relationships displaying N:N relationships the default behavior is to remove the relationship joining the rows rather than the row itself.  
 
   You can change the default behavior by changing the actions associated with the command using `<CommandDefinition>`, but you cannot change the name of the command. For example, you could change the delete action so that it deactivates the row rather than deleting it.  
 

@@ -106,7 +106,7 @@ OData-Version: 4.0
 |SelectedLinkEffect|String|#F8FAFC|The color that commands or lists will use to indicate selected items.| 
 |TransactionCurrencyId|Lookup|null|Exchange rate for the currency associated with the Theme with respect to the base currency.| 
  
- After you have applied changes, use the <xref href="Microsoft.Dynamics.CRM.PublishTheme?text=PublishTheme Action" /> or <xref:Microsoft.Crm.Sdk.Messages.PublishThemeRequest> class to make one of the theme records the current theme.  
+ After you have applied changes, use the <xref href="Microsoft.Dynamics.CRM.PublishTheme?text=PublishTheme Action" /> or <xref:Microsoft.Crm.Sdk.Messages.PublishThemeRequest> class to make one of the theme rows the current theme.  
 
 <a name="BKMK_ExportingAndImportingThemes"></a>
 

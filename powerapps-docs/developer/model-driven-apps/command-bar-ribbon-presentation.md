@@ -39,11 +39,11 @@ There are three different ways that command data can be displayed.
   
  Enable rules will hide commands that should not be used.  
   
- Subgrids have a limited number of controls. Only controls to allow adding records, deleting records, or opening a view of the grid are available. But these commands are still defined by ribbon data and can be customized.  
+ Subgrids have a limited number of controls. Only controls to allow adding rows, deleting rows, or opening a view of the grid are available. But these commands are still defined by ribbon data and can be customized.  
   
  ![Contact sub-grid](media/customization-contract-subgrid.PNG "Contact sub-grid in Dynamics 365")  
   
- To perform more actions on the list of records displayed in a subgrid, select the option to open a view of the grid.  
+ To perform more actions on the list of rows displayed in a subgrid, select the option to open a view of the grid.  
   
  For more information about the behavior of subgrid controls and how they can be customized, see [Sub Grid Ribbons](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365#BKMK_SubGridRibbons).  
   

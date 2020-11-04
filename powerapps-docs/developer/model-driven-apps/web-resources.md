@@ -32,7 +32,7 @@ Web resources are *virtual files* that are stored in the Common Data Service dat
   
  You can use the form editor to add and configure form-enabled web resources into your table forms.  
   
- Because web resources are stored as records in the database, they can be managed programmatically by using the standard techniques to create, retrieve, and update records. Text-based web resources (JScript, CSS, XML, XSL, RESX, and HTML) can be edited and saved in the application.  
+ Because web resources are stored as rows in the database, they can be managed programmatically by using the standard techniques to create, retrieve, and update rows. Text-based web resources (JScript, CSS, XML, XSL, RESX, and HTML) can be edited and saved in the application.  
   
 <a name="BKMK_LimitationsOfWebResources"></a>   
 ### Limitations of web resources  

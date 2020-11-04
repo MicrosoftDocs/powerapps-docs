@@ -1,6 +1,6 @@
 ---
 title: "Override the default open behavior of data rows in grids (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Provides information on how to override the default open behavior of the records in grids" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Provides information on how to override the default open behavior of the rows in grids" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/13/2020
 ms.reviewer: ""
@@ -41,7 +41,7 @@ Create a web resource to change the default behavior. In the following example<!
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select **Solutions** from the left pane. 
   
-2. Select **New solution**, and then complete the required fields for the solution.
+2. Select **New solution**, and then complete the required columns for the solution.
   
     |Field|Description|  
     |-----------|-----------------|  
@@ -74,7 +74,7 @@ Create a web resource to change the default behavior. In the following example<!
 
 ## Step 2: Create a custom button
 
-Create a custom button on the table form where you want to change the default behavior. For example, if you have a subgrid on the accounts form that displays contact records in the subgrid, you need to create a button and add it to the contact form. You can create a button by editing the customization.xml file.
+Create a custom button on the table form where you want to change the default behavior. For example, if you have a subgrid on the accounts form that displays contact rows in the subgrid, you need to create a button and add it to the contact form. You can create a button by editing the customization.xml file.
 
 1. Open the solution that you created in step 1, and add the table where you want to create the button. 
 

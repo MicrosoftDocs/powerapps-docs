@@ -28,7 +28,7 @@ However, if your business requirement can't be achieved using a business rule, y
 
 ## Use client scripting in model-driven apps
 
-Forms in model-driven apps help display data to the user. A form in model-driven apps can contain items such as fields, a quick form, or a grid. An [event](clientapi/events-forms-grids.md) occurs in model-driven apps forms whenever:
+Forms in model-driven apps help display data to the user. A form in model-driven apps can contain items such as columns, a quick form, or a grid. An [event](clientapi/events-forms-grids.md) occurs in model-driven apps forms whenever:
 
 - A form loads
 - Data is changed in a column or an item within the form

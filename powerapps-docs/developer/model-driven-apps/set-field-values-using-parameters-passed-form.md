@@ -1,6 +1,6 @@
 ---
 title: "Set column values using parameters passed to a form (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can set default values for new records created by users by specifying column values in the URL that is used to open the form." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "You can set default values for new rows created by users by specifying column values in the URL that is used to open the form." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -19,7 +19,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/set-field-values-using-parameters-passed-form -->
 
-You can set default values for new records created by users by specifying column values in the URL that is used to open the form. By default, these values are set in the form, but can be changed by users before they save the row.  
+You can set default values for new rows created by users by specifying column values in the URL that is used to open the form. By default, these values are set in the form, but can be changed by users before they save the row.  
   
 <a name="BKMK_PassingParameters"></a>   
 ## Pass parameters to set column row values  
@@ -39,13 +39,13 @@ You can set default values for new records created by users by specifying column
   
 - Any attempt to pass an invalid parameter or value will result in an error.  
   
-- For Boolean fields, use either an integer value of `0` or `1`, or a text value of `true` or `false` to set the value.  
+- For Boolean columns, use either an integer value of `0` or `1`, or a text value of `true` or `false` to set the value.  
   
-- For DateTime fields, use the text value of the date.  
+- For DateTime columns, use the text value of the date.  
   
 <a name="BKMK_ExampleSetValueStringFields"></a>   
 
-## Example: Set the value for string fields  
+## Example: Set the value for string columns  
  The following sample sets the value for the **Name** column of a new account row to "New Account".  
   
  The unencoded value for the `extraqs` parameter is “name=New Account”.  
@@ -56,8 +56,8 @@ You can set default values for new records created by users by specifying column
   
 <a name="BKMK_SetLookupFieldValues"></a>   
 
-## Set values for lookup fields  
- The following table describes five types of lookup fields. For examples using lookup fields, see [Example: Set the Value for Lookup Fields](set-field-values-using-parameters-passed-form.md#BKMK_setValueLookupfields) and [Example: Use Xrm.Navigation.openForm to Open a New Window](set-field-values-using-parameters-passed-form.md#BKMK_ExampleXrmNavigationOpentForm).  
+## Set values for lookup columns  
+ The following table describes five types of lookup columns. For examples using lookup columns, see [Example: Set the Value for Lookup Fields](set-field-values-using-parameters-passed-form.md#BKMK_setValueLookupfields) and [Example: Use Xrm.Navigation.openForm to Open a New Window](set-field-values-using-parameters-passed-form.md#BKMK_ExampleXrmNavigationOpentForm).  
   
 |Lookup Type|Description|  
 |-----------------|-----------------|  
@@ -79,8 +79,8 @@ You can set default values for new records created by users by specifying column
   
 <a name="BKMK_setValueLookupfields"></a>   
 
-## Example: Set the value for lookup fields  
- To set values for lookup fields, use the data value, the name value, and for customer or owner lookups only, specify the type value for the respective column. The following sample sets the owner column to a user named “Mark Folkerts”.  
+## Example: Set the value for lookup columns  
+ To set values for lookup columns, use the data value, the name value, and for customer or owner lookups only, specify the type value for the respective column. The following sample sets the owner column to a user named “Mark Folkerts”.  
   
  The unencoded value for the `extraqs` parameter is “**ownerid**={B8C6E040-656E-DF11-B414-00155DB1891A}&**owneridname**=Mark Folkerts&**owneridtype**=systemuser”.  
   
@@ -99,7 +99,7 @@ You can set default values for new records created by users by specifying column
   
 <a name="BKMK_SetValueDateFields"></a>   
 
-## Example: Set the value for date fields  
+## Example: Set the value for date columns  
  The following sample sets the **Est. Close Date** column for a new opportunity to January 31, 2011. The unencoded value for the `extraqs` parameter is “estimatedclosedate=01/31/11”.  
   
 ```  
@@ -108,7 +108,7 @@ You can set default values for new records created by users by specifying column
   
 <a name="BKMK_SampleSEtValueOptionSetFields"></a>   
 
-## Example: Set the value for option set fields  
+## Example: Set the value for choice columns  
  To set the value for an **Option set** column, set the integer value for the option. The following sample sets the **Role** column value to “Decision Maker” in a new contact row.  
   
  The unencoded value for the `extraqs` parameter is “accountrolecode=1”.  
@@ -119,9 +119,9 @@ You can set default values for new records created by users by specifying column
 
 <a name="BKMK_SampleSEtValueMultiSelectOptionSetFields"></a> 
   
-## Example: Set the value for multi-select option set fields
+## Example: Set the value for multi-select choice columns
 
-To set the value for **multi-select option set** column, Specify integer values for the options in the URL that is used to open the form. For example, to set the options for the **Hobbies** column, the unencoded value for the extraqs parameter will be “hobbies=[1,3,4]”.   
+To set the value for **multi-select choice** column, Specify integer values for the options in the URL that is used to open the form. For example, to set the options for the **Hobbies** column, the unencoded value for the extraqs parameter will be “hobbies=[1,3,4]”.   
 
 ```  
 /main.aspx?etn=contact&extraqs=hobbies%3D%5B1%2C3%2C4%5D&pagetype=entityrecord   
@@ -130,7 +130,7 @@ To set the value for **multi-select option set** column, Specify integer values 
 <a name="BKMK_ExampleXrmNavigationOpentForm"></a>   
 
 ## Example: Use Xrm.Navigation.openForm to open a new window  
- The following sample sets default values on several different fields and shows how to use the `Xrm.Navigation`.[openForm](clientapi/reference/Xrm-Navigation/openForm.md) function. It is equivalent to the previous example that used the `window.open` method.  
+ The following sample sets default values on several different columns and shows how to use the `Xrm.Navigation`.[openForm](clientapi/reference/Xrm-Navigation/openForm.md) function. It is equivalent to the previous example that used the `window.open` method.  
   
 ```Javascript  
 function OpenNewContact() {  
@@ -164,7 +164,7 @@ function OpenNewContact() {
 <a name="BKMK_ExampleWindowOpen"></a>   
 
 ## Example: Use window.open to open a new window  
- The following sample sets default values on several different fields and shows how to use [encodeURIComponent](https://msdn.microsoft.com/library/aeh9cef7\(VS.85\).aspx) to encode the value of the `extraqs` parameter. If you use the [window.open](https://msdn.microsoft.com/library/ms536651\(VS.85\).aspx) method, you can control the features of the window that is opened.  
+ The following sample sets default values on several different columns and shows how to use [encodeURIComponent](https://msdn.microsoft.com/library/aeh9cef7\(VS.85\).aspx) to encode the value of the `extraqs` parameter. If you use the [window.open](https://msdn.microsoft.com/library/ms536651\(VS.85\).aspx) method, you can control the features of the window that is opened.  
   
 ```Javascript  
 function OpenNewContact() {  
