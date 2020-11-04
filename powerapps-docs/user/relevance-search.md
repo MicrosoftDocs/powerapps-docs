@@ -127,7 +127,7 @@ Legend
 
 ### Feedback link
 
-On the search results page, the **Did you find what you were looking for? Yes No** feedback is collected in our product telemetry. Search parameters like the query text that user enters into the search box is not collected. We only collect data for the **Yes** or **No** response. Currently there isn't an option to disable the feedback link.
+On the search results page, the **Did you find what you were looking for? Yes No** feedback is collected in our product telemetry. Search parameters like the query text that user enters into the search box is not collected irrespective of the response to the question. We only **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. Currently there isn't an option to disable the feedback question prompt.
 
    > [!div class="mx-imgBorder"]
    > ![Feedback link](media/feedbacklink.png "Feedback link")  
