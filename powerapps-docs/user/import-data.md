@@ -1,5 +1,6 @@
 ---
 title: "Import data in model-driven apps| MicrosoftDocs"
+description: How to import data
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -7,7 +8,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 08/11/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -16,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Import data
+# How to import data
 
 Whether your data is stored in a spreadsheet, on your phone, or in an email program, here’s how to import the data to your app. For example, you might want to import your customer contact list from an Excel spreadsheet into the app so you can keep track of all your customer information in one place.
   

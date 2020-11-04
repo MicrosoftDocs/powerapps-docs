@@ -1,13 +1,13 @@
 ---
 title: "Quick Find| MicrosoftDocs"
-ms.custom: ""
+description: Learn how to use quick find to search for records
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 1/28/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 

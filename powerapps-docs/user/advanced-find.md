@@ -1,13 +1,13 @@
 ---
 title: "Advanced Find| MicrosoftDocs"
-ms.custom: ""
+description: How to use advanced find search
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+ms.service: powerapps 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 1/27/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 

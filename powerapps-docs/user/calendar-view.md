@@ -1,19 +1,21 @@
 ---
 title: "Work with records in the new calendar view in model-driven apps | MicrosoftDocs"
-description: "Learn how to view, create, and delete activities in the new calendar view."
+description: Learn how to view, create, and delete activities in the new calendar view.
+author: mduelae
+manager: kvivek
+ms.service: powerapps
+ms.component: pa-user
+ms.topic: conceptual
 ms.date: 06/23/2020
-ms.service:
-  - "dynamics-365-sales"
-ms.topic: article
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
-searchScope:
-  - D365-App-msdynce_saleshub
-  - D365-Entity-activity
-  - D365-UI-*
-  - Power Platform
-  - Power Apps
+ms.author: mkaur
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Work with records in the new calendar view
