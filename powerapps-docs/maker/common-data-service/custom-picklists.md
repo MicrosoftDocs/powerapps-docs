@@ -45,7 +45,7 @@ Choices can be created in two ways, either from the **Option Sets** list within 
     > [!NOTE]
     > If an existing choice  could be used for your table, you can select it from this list without creating a new one.
 
-    ![Choice List](./media/data-platform-cds-newoptionset/columnpanel-1.png "Choice list")
+    ![Choice List](./media/data-platform-cds-newoptionset/fieldpanel-1.png "Choice list")
 
 7. A new panel will open to create the Option set, the **Display name** and **Name** will default from the name of the column but can be changed if needed. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
 
