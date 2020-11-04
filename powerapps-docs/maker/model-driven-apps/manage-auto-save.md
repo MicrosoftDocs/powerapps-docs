@@ -30,9 +30,9 @@ Auto-save helps app users focus on their work without having to manage saving da
 ## How auto-save works  
  By default all main forms for [Updated tables and classic tables](create-design-forms.md#updated-versus-classic-tables) will have auto-save enabled. After a record is created (initially saved), any changes made to a form will automatically be saved thirty seconds after the change is made. If no changes are made in the form, the automatic save won't occur while the form is open. After a change is made the 30-second period before an auto-save begins again. If someone else has updated the same record while you're editing it, those changes will be retrieved and displayed in the form when auto-save occurs.  
   
- With auto-save enabled, the save button only appears for the initial save of the record. After the record is created, the save button in the command bar isn't shown, but you can see a ![Auto save button](media/auto-save-icon.png "Auto save button") button in the lower right corner that will show if there are any unsaved changes. This control is also displayed if auto-save is disabled.  
+ With auto-save enabled, the save button only appears for the initial save of the row. After the record is created, the save button in the command bar isn't shown, but you can see a ![Auto save button](media/auto-save-icon.png "Auto save button") button in the lower right corner that will show if there are any unsaved changes. This control is also displayed if auto-save is disabled.  
   
- You can select this button to save the record and refresh data in the form immediately. When  auto-save is enabled the record will be saved whenever you navigate away from a record or close a separate window displaying a record. There is no need for the **Save & Close** button that appears in forms for tables that aren't updated.  
+ You can select this button to save the record and refresh data in the form immediately. When  auto-save is enabled the record will be saved whenever you navigate away from a record or close a separate window displaying a row. There is no need for the **Save & Close** button that appears in forms for tables that aren't updated.  
   
 <a name="BKMK_AutoSave"></a>   
 ## Should you disable auto-save?  

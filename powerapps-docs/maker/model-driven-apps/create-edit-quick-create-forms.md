@@ -29,7 +29,7 @@ In this topic, you create and edit a quick create form.
 
  With quick create forms, your app can have a streamlined data entry experience with full support for logic defined by form scripts and business rules. In a Power Apps model-driven app, quick create forms appear when you select the **Create** button in the navigation bar or when you choose **+ New** when creating a new record from a lookup or sub-grid.
   
- Dynamics 365 mobile apps use quick create forms for creating new records. If a table already has a quick create form configured for it, the mobile apps use that form. If a table doesn't have a configured quick create form, Power Apps generates a quick create form  for creating records in the mobile apps based on the main form definition.  
+ Dynamics 365 mobile apps use quick create forms for creating new rows. If a table already has a quick create form configured for it, the mobile apps use that form. If a table doesn't have a configured quick create form, Power Apps generates a quick create form  for creating records in the mobile apps based on the main form definition.  
   
 <a name="BKMK_QuickCreateFormEntities"></a>   
 ## Tables with quick create forms  
@@ -159,7 +159,7 @@ If there is a customization made in a version 9.0 solution to tables where **Ena
 
 > [!IMPORTANT]
 > - If a quick create form exists for a table but is not included in the app, the Unified Interface runtime will still open the quick create form.  This behavior occurs with lookup controls and subgrids. If you don’t want a quick create form to appear in your app you must delete it.
-> - Be aware of the behavior that occurs when you create a parent relationship with the same table. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent record, the first record will not be saved with the lookup that has the parent record value. This is because of the circular reference introduced by using the same table. If you experience this issue you can resolve it by removing the parent record id on the quick create form before saving the record.
+> - Be aware of the behavior that occurs when you create a parent relationship with the same table. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent record, the first record will not be saved with the lookup that has the parent record value. This is because of the circular reference introduced by using the same table. If you experience this issue you can resolve it by removing the parent record id on the quick create form before saving the row.
 
   
 ### See also  

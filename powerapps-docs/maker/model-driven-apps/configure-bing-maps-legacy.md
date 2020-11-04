@@ -23,9 +23,9 @@ search.app:
   - D365CE
 ---
 # Configure a map on a form
-By default, the Bing maps control is configured on the main form for both the account and contact tables, which provides the ability to display a map on table records. Although not configured by default, the Bing maps control can be added to the system user table. The Bing maps control can also be used with some tables included with Dynamics 365 apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service. For example, the lead, quote, order, invoice, and competitor tables. The Bing maps control can't be used with custom tables.  
+By default, the Bing maps control is configured on the main form for both the account and contact tables, which provides the ability to display a map on table rows. Although not configured by default, the Bing maps control can be added to the system user table. The Bing maps control can also be used with some tables included with Dynamics 365 apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service. For example, the lead, quote, order, invoice, and competitor tables. The Bing maps control can't be used with custom tables.  
 
-When enabled, the map displays the location specified in the address composite columns for the given record. 
+When enabled, the map displays the location specified in the address composite columns for the given row. 
 
 > [!div class="mx-imgBorder"] 
 > ![Bing map control in an app](media/bing-map-example.png "Bing map control in an app")

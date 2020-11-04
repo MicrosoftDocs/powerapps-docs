@@ -59,7 +59,7 @@ In this topic, you use the form navigation pane that is used to add links to rel
   
 9. In the **Relationship Properties** dialog box, on the **Display** tab, type a new display label.  
   
-10. On the **Name** tab, choose **Edit** to view or edit the details associated with the relationship record.  
+10. On the **Name** tab, choose **Edit** to view or edit the details associated with the relationship row.  
   
 11. Choose **OK**.  
   

@@ -172,7 +172,7 @@ The following sample rich text editor configuration code sample data can be used
 
 ## Find the current setting for a rich text editor configuration
 
-1. In a Microsoft Edge or Google Chrome web browser, run your model-driven app and open a form that has the rich text editor control, such as an account record.
+1. In a Microsoft Edge or Google Chrome web browser, run your model-driven app and open a form that has the rich text editor control, such as an account row.
 1. Hold down **Ctrl** while clicking the rich text editor control area, and then select **Inspect**.
 1. In the inspection pane, select the **Console** tab, and then select the parent **Main.aspx** page in the drop-down list box on the command bar.
 

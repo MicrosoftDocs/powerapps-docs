@@ -50,7 +50,7 @@ There are many different types of columns, but you can only create some of them.
 
 ## Common column properties in solution explorer
  
-Fields in a form display controls people use to view or edit data in a table record. Fields can be formatted to occupy up to four columns within a section.  
+Columns in a form display controls people use to view or edit data in a table row. Columns can be formatted to occupy up to four columns within a section.  
 
 You can access **Common column properties** in solution explorer. Under **Components**, expand **Tables**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then double-click one of the columns to view Common column properties.
 

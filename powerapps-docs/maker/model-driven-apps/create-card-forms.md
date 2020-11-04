@@ -25,7 +25,7 @@ search.app:
   - D365CE
 ---
 # Create a card form
-Card forms are used in views for Unified Interface apps. Card forms are designed to present information in a compact format that is suitable for mobile devices. For example, the default card form for the My Active Accounts view defines the information displayed for each account record. 
+Card forms are used in views for Unified Interface apps. Card forms are designed to present information in a compact format that is suitable for mobile devices. For example, the default card form for the My Active Accounts view defines the information displayed for each account row. 
 
 > [!div class="mx-imgBorder"] 
 > ![Account card form for my active accounts view](media/account-cardform-for-myactiveaccounts-view.png "Account card form for my active accounts view")

@@ -69,7 +69,7 @@ To view IFrame properties, follow these steps.
 |`userlcid`|The user's preferred language LCID|  
 |`type`|The table type code. This value can be different for custom tables in different organizations. Use `typename` instead.|  
 |`typename`|The table type name.|  
-|`id`|The id value of the record. this parameter has no value until the table record is saved.|  
+|`id`|The id value of the row. this parameter has no value until the table record is saved.|  
 
 ## Next steps
 

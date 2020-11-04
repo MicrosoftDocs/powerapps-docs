@@ -31,7 +31,7 @@ Add, configure, move, or delete columns using the form designer.
 To add columns to a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find columns. It also includes the option to show only unused columns. 
 
 > [!div class="mx-imgBorder"] 
->    ![Fields pane](media/FormDesignerFieldsPane.png "Fields pane")
+>    ![Columns pane](media/FormDesignerFieldsPane.png "Columns pane")
 
 ### Add columns to a form using drag and drop
 > [!NOTE]
@@ -41,8 +41,8 @@ To add columns to a form, use the **Fields** pane. The **Fields** pane lets you 
 3. In the **Fields** pane, search, filter, or scroll to find the column you want to add. If you can't find a column, it might already be on the form. Clear **Show only unused fields** to view all columns, including those already added to the form. 
 4. In the **Fields** pane, select a column and drag it onto the form preview. As you drag the column on the form preview, you will see drop targets where you can add the column. 
 5. Drop the column in the location you want. Note the following: 
-    - Fields can be dropped before or after any existing column or component.
-    - Fields can also be dropped in the empty area within a section. In this case the column will be added in an available space so as to evenly distribute columns and components across the section columns.
+    - Columns can be dropped before or after any existing column or component.
+    - Columns can also be dropped in the empty area within a section. In this case the column will be added in an available space so as to evenly distribute columns and components across the section columns.
     - Hovering over a tab header when dragging a column changes the currently selected tab, allowing you to add the column to a different tab.   
 6. Repeat steps 3-5 above if you want to add more columns.
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
@@ -85,8 +85,8 @@ You can move a column on a form using drag and drop or cut and paste actions.
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 2. In the form preview, select the column that you want to move and drag and drop it. As you drag the column on the form preview, you will see drop targets where you can move the column to. 
    Note the following:
-    - Fields can be dropped before or after any existing column or component.
-    - Fields can also be dropped in the empty area within a section. In this case the column will be added in an available space so as to evenly distribute columns and components across the section columns.
+    - Columns can be dropped before or after any existing column or component.
+    - Columns can also be dropped in the empty area within a section. In this case the column will be added in an available space so as to evenly distribute columns and components across the section columns.
     - Hovering over a tab header when dragging a column changes the currently selected tab, allowing you to add the column to a different tab.   
 3. Repeat step 2 above if you want to move more columns.
 4. On the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
@@ -125,7 +125,7 @@ You can move a column on a form using drag and drop or cut and paste actions.
      >   -  Some column types are not available when you create a column from within the form designer. If a column type you want is not available, you can follow the steps outlined in [Create and edit columns for Common Data Service using Power Apps portal](../common-data-service/create-edit-field-portal.md)
 
 6. Select **Done** to create a new column on the table. The column appears in the **Fields** pane.
-7. If you want to add the newly created column to the form, follow the steps outlined in the [**Add columns to a form**](add-move-or-delete-fields-on-form.md#add-fields-to-a-form) section.
+7. If you want to add the newly created column to the form, follow the steps outlined in the [**Add columns to a form**](add-move-or-delete-fields-on-form.md#add-columns-to-a-form) section.
 
      > [!NOTE]
      >  When a column is created on the table, it is not limited to the current form and will be available for use in other places.

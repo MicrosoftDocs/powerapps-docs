@@ -31,7 +31,7 @@ search.app:
 |Form type|Description|More information|  
 |---------------|-----------------|-----------------|  
 |**Main**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> These forms provide the main user interface for interacting with table data.|[Design considerations for main forms](design-considerations-main-forms.md)|    
-|**Quick Create**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> For updated tables, these forms provide a basic form optimized for creating new records.|[Create and edit quick create forms](create-edit-quick-view-forms.md) |  
+|**Quick Create**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> For updated tables, these forms provide a basic form optimized for creating new rows.|[Create and edit quick create forms](create-edit-quick-view-forms.md) |  
 |**Quick View**|Used in model-driven apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> For updated tables, these forms appear within the main form to display additional data for a record that is referenced by a lookup column in the form.|[Create and edit quick view forms](create-edit-quick-view-forms.md)|  
 |**Card** | Used in views for Power Apps apps. Card forms are designed to present information in a compact format that is suitable for mobile devices. | [Create a card form](create-card-forms.md) |
 

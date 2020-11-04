@@ -97,7 +97,7 @@ To mitigate the issue, unhide the buttons in the command bar definitions.
 
 ## Why my agents see the filter pane even when the Expand filter pane by default check box is cleared?
 
-When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. Even though you've cleared **Expand filter pane by default** check box in the Timeline configurations, the filter pane will always be displayed to your agents.
+When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline rows. Even though you've cleared **Expand filter pane by default** check box in the Timeline configurations, the filter pane will always be displayed to your agents.
 
 ## See also
 

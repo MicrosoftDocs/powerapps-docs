@@ -28,7 +28,7 @@ Forms that load slowly can reduce productivity and user adoption. Follow these r
  Think about the interaction the user will have with the form and the amount of data that must be displayed within it.  
   
  **Keep the number of columns to a minimum**  
- The more columns you have in a form, the more data that needs to be transferred over the Internet or intranet to view each record.
+ The more columns you have in a form, the more data that needs to be transferred over the Internet or intranet to view each row.
  
  **Design for performance**  
  When designing forms and pages, put what is most important at the top to make it most easily accessible for your users. Move infrequently used components to other tabs on a form, use role-based forms instead of showing and hiding components, and make sure that different workflows have dedicated dashboards and views. Feel free to use sections to organize your controls – this won’t make your forms slower.

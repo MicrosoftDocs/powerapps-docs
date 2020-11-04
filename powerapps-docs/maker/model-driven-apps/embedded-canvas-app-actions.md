@@ -29,7 +29,7 @@ Embedded canvas apps provide the ability to perform predefined actions on the ho
 The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host model-driven form.  
   
 ### NavigateToMainForm(entityName, mainFormName, recordId)
-Navigates the host model-driven form to a main form and displays the specified record.  
+Navigates the host model-driven form to a main form and displays the specified row.  
 * **entityName** - A required string parameter that specifies the parent table of the main form.  
 * **formName** - A required string parameter that specifies the name of the main form to navigate to.  
 * **recordId** - A required string parameter, that specifies the ID of the record to display in the main form.  
@@ -40,7 +40,7 @@ Calling the NavigateToMainForm method can show the following error messages.
 |:--------------|:-------------------------|
 |**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
 |**Form not found: *[FormName]*** | Please check the value of the *mainFormName* parameter and ensure it is a valid main form name and that the user has access to it. |
-|**There was a problem loading the record.** | Please check the value of the *recordId* parameter and ensure it is a valid record ID and that the user has access to it. |
+|**There was a problem loading the row.** | Please check the value of the *recordId* parameter and ensure it is a valid record ID and that the user has access to it. |
   
   
 ### NavigateToView(entityName, viewName)

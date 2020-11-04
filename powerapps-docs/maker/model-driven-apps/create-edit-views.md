@@ -58,7 +58,7 @@ As a system administrator or system customizer, you can edit system views. Syste
 |---------|---------|
 |Quick Find     | The default view used when searches are performed using Quick Find. This view also defines which columns are searched when using search capabilities of Quick Find and Lookup views.        |
 |Advanced Find     |  The default view used to display results when using Advanced Find. This view also defines the columns used by default when new custom public views or personal views are created without defining a view to use as a template.       |
-|Associated     |  The default view that lists the related tables for a record.       |
+|Associated     |  The default view that lists the related tables for a row.       |
 |Lookup     | The view you see when you select a record to set for a lookup column.        |
 
 These views are not shown in the view selector and you can't use them in sublists in a form or as a list in a dashboard. You cannot delete or deactivate these views. More information: [Remove views](remove-views.md)

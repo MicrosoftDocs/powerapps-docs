@@ -53,7 +53,7 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 11.	In Power Apps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
       > [!NOTE]
-      > ModelDrivenFormIntegration.Data is a list of records. In this example it has only one record. To directly reference the record you can use the First function. For example, *First(ModelDrivenFormIntegration.Data).Name*.
+      > ModelDrivenFormIntegration.Data is a list of rows. In this example it has only one row. To directly reference the record you can use the First function. For example, *First(ModelDrivenFormIntegration.Data).Name*.
 13.	In the property pane on the right, next to **Fields**, select **Edit**.
 14.	In the data pane, change the column mapped to the **Title1** control to **Name** or another column that has data.
 15.	Observe that the gallery displays the data being passed to it from the host model-driven form via the ModelDrivenFormIntegration control. Close the data pane.

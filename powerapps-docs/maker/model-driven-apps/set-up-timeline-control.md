@@ -68,7 +68,7 @@ The following sections describe how to configure display options, advanced setti
 
     This column has character limitations. For example, you can’t have spaces and you must use underscores (_).
 
-- **Records shown in page**: This column allows you to define the number of records to show in the timeline section at runtime. If there are more records than the number you define here, users will see an option to load more records. By default, this column is set to 10.
+- **Records shown in page**: This column allows you to define the number of records to show in the timeline section at runtime. If there are more records than the number you define here, users will see an option to load more rows. By default, this column is set to 10.
 
   The following image shows the timeline at runtime when the **Records shown on page** column is set to 10.
 
@@ -79,7 +79,7 @@ The following sections describe how to configure display options, advanced setti
     - **Activities**. There are multiple customizable activity types to support business needs. You can create, add, and display a number of different activity types under the **Activities** section of timeline properties.
       > [!IMPORTANT]
       > You only want to enable activities that you need on this form. When working with 10 or more **Activity types**, you will receive a warning that the number of activity types you have selected impacts the performance speed on the timeline. To improve timeline performance speed, consider limiting activity types to 10 or less. 
-    - **Notes**. This allows users to capture notes related to the table record. Notes are typically used to grab thoughts, summary information, and provide feedback on a record—for example, a contact.
+    - **Notes**. This allows users to capture notes related to the table row. Notes are typically used to grab thoughts, summary information, and provide feedback on a record—for example, a contact.
 
     > [!NOTE]
     > If you have a Dynamics 365 customer engagement app, such as Dynamics 365 Field Service installed, **Posts** will be another record type available. There are two types of posts, Auto and User.
@@ -106,14 +106,14 @@ Expand the **Advanced** section in the **Timeline** **Properties** for settings 
 
     When the **Enable filter pane** check box is selected, a filter icon is shown on the timeline. More information: [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md)
 
-- **Expand filter pane**: This setting is used to display an expanded filter pane at the top of the timeline anytime a record is opened. This setting is disabled by default. The Expand filter pane feature provides quick access to filtering options for timeline records. 
+- **Expand filter pane**: This setting is used to display an expanded filter pane at the top of the timeline anytime a record is opened. This setting is disabled by default. The Expand filter pane feature provides quick access to filtering options for timeline rows. 
 
 - **Enable search bar**: Define whether you want to enable or disable the search bar on the timeline. When you select this check box, a **Search timeline** box appears in the **Timeline** section allowing users to easily search for records in the timeline. When you search for a phrase in the timeline, it searches in the title of the record or body and description columns of the record, and then displays the search results. This setting is enabled by default. More information: [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md)
 
 - **Expand all records by default**: When this check box is selected, all records in the timeline are shown in an expanded view. This option is disabled by default.
 
   > [!NOTE]
-  > The records in a timeline might contain images, but they won't display when the record is collapsed. Records with images must be expanded to be viewed. Use the caret icons (˅ or ^) to expand or collapse a record. Records with images will often display the message "The email has been blocked due to potentially harmful content. View full Email content." When you select this message, the warning goes away. If you don't see a message and still don't see the image displaying, see [FAQs for timeline control](faqs-timeline-control.md).
+  > The records in a timeline might contain images, but they won't display when the record is collapsed. Records with images must be expanded to be viewed. Use the caret icons (˅ or ^) to expand or collapse a row. Records with images will often display the message "The email has been blocked due to potentially harmful content. View full Email content." When you select this message, the warning goes away. If you don't see a message and still don't see the image displaying, see [FAQs for timeline control](faqs-timeline-control.md).
 
 - **Enable "What you've missed" summary**: This setting lets users know there are new records they haven't seen. The setting is disabled by default. To enable, select the check box. When enabled, a notification is displayed.
 
@@ -191,38 +191,38 @@ All card forms are broken out into the following four sections:
 
 | Labels | Section | Description |
 |--------|---------|-------------|
-|a | **ColorStrip** | This section does not appear on the timeline record. The **ColorStrip** is located on the left of the card form.|
+|a | **ColorStrip** | This section does not appear on the timeline row. The **ColorStrip** is located on the left of the card form.|
 |b | **Header** | This section is displayed on the timeline record; however, only the first two columns are displayed. For this example, only the **Subject** and **Modified On** columns are visible. |
 |c | **Details** | This section is displayed on the timeline record; however, only the first three columns are displayed. For this example, only the **To**, **CC**, and **Description** columns are visible.|
-| d | **Footer** | This section is not displayed on the timeline record. | 
-| e | **Table Fields** | You can select which columns you want to add to your card form from the column options listed on the right.  You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline record. |
+| d | **Footer** | This section is not displayed on the timeline row. | 
+| e | **Table Fields** | You can select which columns you want to add to your card form from the column options listed on the right.  You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline row. |
 
 ![Advanced display options about how to customize a card form in the timeline](media/timeline-card-form-advanced-1.png "Advanced display options about how to customize a card form in the timeline")
 
 Each individual card form has to be customized for each activity record such as email, tasks, and so on.
 
 **Header Section**<br>
-This displays the title/subject in your timeline email form. You can have up to six columns in the **Header** section. Only the first two columns will be seen on the timeline record. Also, empty columns will be ignored by the form in all sections.<br>
+This displays the title/subject in your timeline email form. You can have up to six columns in the **Header** section. Only the first two columns will be seen on the timeline row. Also, empty columns will be ignored by the form in all sections.<br>
 
 <ol>
-<b>a. Header - Column 1.</b> Regardless of the column you choose, it will appear as a bold header at the top of your timeline record. For this example we selected <b>Subject</b> for this column.<br>
+<b>a. Header - Column 1.</b> Regardless of the column you choose, it will appear as a bold header at the top of your timeline row. For this example we selected <b>Subject</b> for this column.<br>
 
-**b.**	**Header - Column 2.** Again, regardless of the column you choose, this column appears in the bottom-right corner of the timeline record. For this example, we selected **Modified On** for this column.
+**b.**	**Header - Column 2.** Again, regardless of the column you choose, this column appears in the bottom-right corner of the timeline row. For this example, we selected **Modified On** for this column.
 </ol>
 
 **Details Section** <br>
-This displays in the body of the timeline email record. You can have up to four columns in the **Detail** section, but only the first three columns are seen on the timeline record.
+This displays in the body of the timeline email row. You can have up to four columns in the **Detail** section, but only the first three columns are seen on the timeline row.
 
 <ol>
-<b>c.	Details - Column 1.</b> As before, regardless of the column you choose, this column will always appear below the Header - Column 1 as a subheader on the timeline record. For this example we selected <b>To</b> for this column.<br>
+<b>c.	Details - Column 1.</b> As before, regardless of the column you choose, this column will always appear below the Header - Column 1 as a subheader on the timeline row. For this example we selected <b>To</b> for this column.<br>
 
-**d.**	**Details - Column 2.** This column will display one line of text in a summary view on the timeline record. When you expand your timeline record, content in this column is fully displayed with format. In the diagram below, **CC** is selected for this column.<br>
+**d.**	**Details - Column 2.** This column will display one line of text in a summary view on the timeline row. When you expand your timeline record, content in this column is fully displayed with format. In the diagram below, **CC** is selected for this column.<br>
 
-**e.**	**Details - Column 3.** This column follows the content in Details - Column 2 and is part of the main body of your timeline record that is only viewable when you expand the record. For this example, **Description** is selected for this column.
+**e.**	**Details - Column 3.** This column follows the content in Details - Column 2 and is part of the main body of your timeline record that is only viewable when you expand the row. For this example, **Description** is selected for this column.
 </ol>
 
 **Footer Section**<br>
-This section is not visible on the timeline record.  
+This section is not visible on the timeline row.  
 
 <ol>
 <b>f.	Footer – Column 1.</b> For this example, we selected **Owner** for this column.<br>

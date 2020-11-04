@@ -48,7 +48,7 @@ If you create any new solution components in the process of editing the form, fo
 
 ## Access the form editor through the command bar within a model-driven app 
   
-1.  Open a record.  
+1.  Open a row.  
   
 2.  If there are multiple main forms for the table, verify that the form is the one you want to edit. If it isn't, use the form selector to choose the form you want to edit.  
   

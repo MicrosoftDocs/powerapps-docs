@@ -65,7 +65,7 @@ For HTML web resources you will see these:
 |--|--|
 |**Custom Parameter(data)**|Usually configuration data that will be passed to the HTML web resource as a `data` query string parameter. Scripts associated with the HTML page can access this data and use it to change the behavior of the page.|
 |**Restrict cross-frame scripting where supported**|Use this option if you don't fully trust the content in the HTML web resource. More information: [Developer Documentation: Select whether to restrict cross-frame scripting](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#select-whether-to-restrict-cross-frame-scripting)|
-|**Pass record object-type code and unique identifier as parameters**|Data about the current record visible in the form can be passed to the HTML web resource page so that script running in the page can access data about the record. More information: <br />[Pass parameters to web resources](#pass-parameters-to-web-resources)<br />[Developer Documentation: Pass contextual information about the record](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#pass-contextual-information-about-the-record)|
+|**Pass record object-type code and unique identifier as parameters**|Data about the current record visible in the form can be passed to the HTML web resource page so that script running in the page can access data about the row. More information: <br />[Pass parameters to web resources](#pass-parameters-to-web-resources)<br />[Developer Documentation: Pass contextual information about the record](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#pass-contextual-information-about-the-record)|
 
 For Image web resources you have the option to specify **Alternative Text** that is important for assistive technologies that make the page accessible to everyone.
 
@@ -107,7 +107,7 @@ Information about the record can be passed by enabling the **Pass record object-
 |`userlcid`|The user’s preferred language LCID|  
 |`type`|**Don't use this.** The table type code. This numeric value can be different for custom tables in different organizations. Use table type name instead.|  
 |`typename`|The table type name.|  
-|`id`|The id value of the record. This parameter has no value until the table record is saved.|  
+|`id`|The id value of the row. This parameter has no value until the table record is saved.|  
   
 Any other parameters are not allowed and the web resource will not open if other parameters are used. If you need to pass multiple values, the data parameter can be overloaded to include more parameters within it.
 

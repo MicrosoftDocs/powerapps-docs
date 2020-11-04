@@ -44,7 +44,7 @@ In this topic, you add a column on to a form.
 6.  When you're done editing the form, click **Save and Close**.  
   
 > [!IMPORTANT]
->  In the Unified Interface, when you set column level security, we don’t recommend that you set read-only on a required column using column level security rules.  When the record is created, the save pipeline will ignore the read-only setting on the required column and will save the record. We recommend that you set the table to read-only using role-based security. This helps ensure there is no conflict when creating or saving a record.
+>  In the Unified Interface, when you set column level security, we don’t recommend that you set read-only on a required column using column level security rules.  When the record is created, the save pipeline will ignore the read-only setting on the required column and will save the row. We recommend that you set the table to read-only using role-based security. This helps ensure there is no conflict when creating or saving a row.
   
   
 > [!NOTE]

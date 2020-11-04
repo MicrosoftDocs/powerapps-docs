@@ -21,7 +21,7 @@ search.app:
 ---
 # Sub-grid properties for model-driven app main forms overview
 
-You can configure a sub-grid on a form to display a list of records.  
+You can configure a sub-grid on a form to display a list of rows.  
 
 You can access **Sub-Grid properties** from the Power Apps site. 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
@@ -52,7 +52,7 @@ You can access **Sub-Grid properties** from the Power Apps site.
 |**Label**|**Required**: The localizable label for the sub-grid visible to users.|  
 |**Hide label**|Whether the label should be displayed on the form. This is required if you enable **Display Search Box**. You can also choose to have the panel header color.|  
 |**Hide on phone**|Specify whether the section should be available on phone.|
-|**Show related records**| Sub-grid will display only records related to the current record.<br /> If you do not select this property, the sub-grid will display records filtered only by the default view or, if the view selector is enabled, any views the user chooses.<br /><br /> The option you choose will affect the behavior of the show list control. More information: [Show list behavior](#show-list-behavior) |  
+|**Show related records**| Sub-grid will display only records related to the current row.<br /> If you do not select this property, the sub-grid will display records filtered only by the default view or, if the view selector is enabled, any views the user chooses.<br /><br /> The option you choose will affect the behavior of the show list control. More information: [Show list behavior](#show-list-behavior) |  
 |**Table**|Depending on the option you choose for **Show related records**, this list displays either:<br /><br /> - Only related records: A list of tables that are related to this table with the name of the lookup column on that table which defines the relationship in parentheses.<br />- All record types: A list of all entities.|  
 |**Default view**|Choose the view that will be applied by default. If you do not enable any other views using the **View Selector** property. This will be the only view.<br /><br /> Use the **Edit** button to open the default view for editing. Use the **New** button to create a new view to use for this sub-grid.|  
 |**Allow users to change view**|When selected, app users can change from the Default view to another view of the table selected in the Table property.|
@@ -71,7 +71,7 @@ These are the properties available to configure when using a sub-grid component 
 |**Display**|**Name**|**Required**: The unique name for the sub-grid that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores.|  
 ||**Label**|**Required**: The localizable label for the sub-grid visible to users.|  
 ||**Display label on the Form**|Whether the label should be displayed on the form. This is required if you enable **Display Search Box**. You can also choose to have the panel header color.|  
-||**Records**|Choose from two options:<br /><br /> - **Only Related Records**: Sub-grid will display only records related to the current record.<br />- **All Record Types**: Sub-grid will display records filtered only by the default view or, if the view selector is enabled, any views the user chooses.<br /><br /> The option you choose will affect the behavior of the show list control. More information: [Show list behavior](#show-list-behavior) |  
+||**Records**|Choose from two options:<br /><br /> - **Only Related Records**: Sub-grid will display only records related to the current row.<br />- **All Record Types**: Sub-grid will display records filtered only by the default view or, if the view selector is enabled, any views the user chooses.<br /><br /> The option you choose will affect the behavior of the show list control. More information: [Show list behavior](#show-list-behavior) |  
 ||**Table**|Depending on the option you choose for **Records**, this list displays either:<br /><br /> - **Only Related Records**: A list of tables that are related to this table with the name of the lookup column on that table which defines the relationship in parentheses.<br />- **All Record Types**: A list of all entities.|  
 ||**Default View**|Choose the view that will be applied by default. If you do not enable any other views using the **View Selector** property. This will be the only view.<br /><br /> Use the **Edit** button to open the default view for editing. Use the **New** button to create a new view to use for this sub-grid.|  
 ||**Display Search Box**|Display the search box. When this option is chosen the **Display Label on the Form** option is required.|  
@@ -82,12 +82,12 @@ These are the properties available to configure when using a sub-grid component 
 ||**Display Chart Selection**|If **Show Chart Only** is selected, allow people to choose different charts.|  
 ||**Availability**|Specify whether the section should be available on phone.|
 |**Formatting**|**Layout**|**Select the number of columns the control occupies**.<br /><br /> When the section containing the sub-grid has more than one column you can set the column to occupy up to the number of columns that the section has.|  
-||**Row Layout**|**Number of Rows** will determine how many records are shown on a page of a sub-grid.<br /><br /> If **Automatically expand to use available space** is chosen the form will allow space for two records and will expand the space as the number of records increases. If the number exceeds the **Number of Rows**, people can navigate to additional pages to view the records.<br /><br /> If **Automatically expand to use available space** is not chosen the form will provide space for the number of records defined by **Number of Rows** and people can navigate to additional pages to view any additional records.|  
+||**Row Layout**|**Number of Rows** will determine how many records are shown on a page of a sub-grid.<br /><br /> If **Automatically expand to use available space** is chosen the form will allow space for two records and will expand the space as the number of records increases. If the number exceeds the **Number of Rows**, people can navigate to additional pages to view the rows.<br /><br /> If **Automatically expand to use available space** is not chosen the form will provide space for the number of records defined by **Number of Rows** and people can navigate to additional pages to view any additional rows.|  
 |**Controls**|**Controls**|Choose to add controls and select the radio button to have them for Web, Phone or Tablet.|
   
  In forms using the [Classic forms](main-form-presentations.md#classic-forms), actions performed on a sub-grid were available in the ribbon. Developers can customize the behavior of these actions or add additional actions by customizing the ribbon.  
   
- In forms using the [Updated forms](main-form-presentations.md#updated-forms) actions for sub-grids are placed near the sub-grid, making them easier to access. However the command bar does not allow for custom actions to be added. Developers can edit the ribbon to modify the actions for the remaining three actions: show list, add record, and delete record.  
+ In forms using the [Updated forms](main-form-presentations.md#updated-forms) actions for sub-grids are placed near the sub-grid, making them easier to access. However the command bar does not allow for custom actions to be added. Developers can edit the ribbon to modify the actions for the remaining three actions: show list, add record, and delete row.  
   
 
 ## Show list behavior  
@@ -98,18 +98,18 @@ These are the properties available to configure when using a sub-grid component 
  When you select **All Record Types** the view will open in a new window.  
 
 ## Add record behavior  
- When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each sub-grid displays the **Add record** button ![Add button](media/crm-itpro-cust-subgridadd.PNG "Add button") in the top right side of the sub-grid. Choosing this button will allow you to add a record. This behavior will change depending on the option chosen for the **Records** property and if the lookup is for activity records.  
+ When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each sub-grid displays the **Add record** button ![Add button](media/crm-itpro-cust-subgridadd.PNG "Add button") in the top right side of the sub-grid. Choosing this button will allow you to add a row. This behavior will change depending on the option chosen for the **Records** property and if the lookup is for activity rows.  
   
- When you select **Only Related Records** the default behavior is the behavior to add existing records. People see an in-line lookup to search for an existing record first. This helps prevent creating duplicate records.  If they can't find an existing record, they can choose the **New** option. When a new record is created any of the column mappings defined in the relationship will be applied. More information: [Map table fields](../common-data-service/map-entity-fields.md)   
+ When you select **Only Related Records** the default behavior is the behavior to add existing rows. People see an in-line lookup to search for an existing record first. This helps prevent creating duplicate rows.  If they can't find an existing record, they can choose the **New** option. When a new record is created any of the column mappings defined in the relationship will be applied. More information: [Map table fields](../common-data-service/map-entity-fields.md)   
   
- When you select **All Record Types** the default behavior is to add a new record. The quick create form will be shown if the target table has one. If not, the default table main form is shown.  
+ When you select **All Record Types** the default behavior is to add a new row. The quick create form will be shown if the target table has one. If not, the default table main form is shown.  
   
  If the sub-grid displays activities, people will first need to choose the type of activity and then they will see the "add new record" behavior.  
   
 ## Delete record behavior  
  When you select a record in a sub-grid the **Delete** button ![Sublist delete icon](media/crm-itpro-cust-subgriddelete.PNG "Sublist delete icon") appears on the right side of the row. The behavior of this delete action is different depending on the type of relationship with the current table.  
   
- When the sub-grid uses a 1:N (one-to-many) relationship, the normal record delete behavior is to show a confirmation dialog before deleting the record.  
+ When the sub-grid uses a 1:N (one-to-many) relationship, the normal record delete behavior is to show a confirmation dialog before deleting the row.  
   
  When the sub-grid uses a N:N (many-to-many) relationship, the record in the relationship (or intersect) table relating to two records is deleted without a confirmation and the record will no longer be displayed in the sub-grid. But the record that was displayed is not deleted.  
 
