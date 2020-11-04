@@ -24,7 +24,7 @@ search.app:
 
 You can access **Form properties** in solution explorer. Under **Components**, expand **Tables**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then on the **Home** tab, select **Form Properties**.
 
-![form-properties](media/form-properties.png)
+![Form properties](media/form-properties.png)
 
 The following table lists the form properties:  
   

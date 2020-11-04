@@ -1,5 +1,6 @@
 ---
 title: "Pass the current row as data context with an embedded canvas app | MicrosoftDocs"
+description: Learn how to pass the current row as data context in an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""

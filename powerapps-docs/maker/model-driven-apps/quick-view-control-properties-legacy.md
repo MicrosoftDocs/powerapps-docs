@@ -65,7 +65,7 @@ A quick view control on a model-driven app form displays data from a row that is
 5.  Then on the **Insert** tab, select **Quick View Form** to view quick view control properties.
 
     > [!div class="mx-imgBorder"] 
-    > ![quick-view-control](media/quick-view-control.png)
+    > ![Quick view control](media/quick-view-control.png)
   
 |Property|Description|  
 |--------------|-----------------|  

@@ -1,5 +1,6 @@
 ---
 title: "Create or edit model-driven app dashboards | MicrosoftDocs"
+description: Learn how to create and edit dashboards for model-driven apps
 ms.custom: ""
 ms.date: 04/08/2020
 ms.reviewer: ""

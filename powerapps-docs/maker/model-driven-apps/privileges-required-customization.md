@@ -1,5 +1,6 @@
 ---
 title: "Privileges required for model-driven app customizing | MicrosoftDocs"
+description: Understand the privileges required to build model-driven apps
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""

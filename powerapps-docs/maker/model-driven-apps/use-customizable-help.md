@@ -1,6 +1,6 @@
 ---
 title: "Enable and use customizable help (model-driven apps) | MicrosoftDocs"
-description: ""
+description: "Learn how to enable and use customizable help in model-driven apps"
 keywords: 
 ms.date: 10/22/2019
 ms.service: powerapps

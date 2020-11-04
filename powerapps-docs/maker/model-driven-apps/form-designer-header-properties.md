@@ -1,5 +1,6 @@
 ---
 title: "Configure header properties in the form designer | MicrosoftDocs"
+description: Learn how to configure form header properties for a model-driven app
 ms.custom: ""
 ms.date: 06/26/2020
 ms.reviewer: ""

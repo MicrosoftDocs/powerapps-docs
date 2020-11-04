@@ -1,5 +1,6 @@
 ---
 title: "Share an embedded canvas app | MicrosoftDocs"
+description: Learn how to share an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""

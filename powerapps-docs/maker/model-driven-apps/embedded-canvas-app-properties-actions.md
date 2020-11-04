@@ -1,5 +1,6 @@
 ---
 title: "ModelDrivenFormIntegration control properties and actions | MicrosoftDocs"
+description: Learn about ModelDrivenFormIntegration control properties and actions
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""

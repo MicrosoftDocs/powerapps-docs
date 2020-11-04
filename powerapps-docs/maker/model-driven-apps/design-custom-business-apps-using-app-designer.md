@@ -1,5 +1,6 @@
 ---
 title: "Design model-driven apps by using the app designer | MicrosoftDocs"
+description: Learn how to design model-driven apps
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""

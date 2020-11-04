@@ -1,5 +1,6 @@
 ---
 title: "Perform actions on the host model-driven form from within an embedded canvas app | MicrosoftDocs"
+description: Learn how to perform predefined actions in an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""

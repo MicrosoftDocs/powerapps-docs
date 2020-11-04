@@ -36,7 +36,7 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 3.  Select **More commands** ![More Commands button](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select **Set as default view**. You can also select **Set as default view** on the menu bar.
 
     > [!div class="mx-imgBorder"] 
-    > ![Set as default](media/set-as-default-menu-maker.png)
+    > ![Set as default view](media/set-as-default-menu-maker.png)
 
 ## Set the default view for a table in solution explorer 
   

@@ -38,7 +38,7 @@ search.app:
 4.  Select one of the sections to see the section properties.
 
     > [!div class="mx-imgBorder"]
-    > ![section-properties](media/new-section-properties.png "Section properties in Form designer")
+    > ![Section properties in Form designer](media/new-section-properties.png "Section properties in Form designer")
 
 |Property|Description|  
 |---------|--------------|  
@@ -65,7 +65,7 @@ You can access **Section properties** in solution explorer from the Power Apps s
 5.  Double-click inside one of the sections to see the section properties. 
 
     > [!div class="mx-imgBorder"]
-    > ![section-properties](media/section-properties.png "Section properties in solution explorer")
+    > ![Section properties in solution explorer](media/section-properties.png "Section properties in solution explorer")
   
 |Tab|Property|Description|  
 |---------|--------------|-----------------|  

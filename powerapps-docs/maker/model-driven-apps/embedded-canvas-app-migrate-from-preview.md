@@ -1,5 +1,6 @@
 ---
 title: "Migrate embedded canvas apps on model-driven forms created using the public preview release | MicrosoftDocs"
+description: Learn how to migrate your embedded canvas apps created with the public preview release
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""

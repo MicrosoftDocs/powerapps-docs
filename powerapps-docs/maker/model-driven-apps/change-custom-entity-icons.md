@@ -1,6 +1,6 @@
 ---
 title: "Change model-driven app custom table icons in Power Apps | MicrosoftDocs"
-definition: "Learn how to change the icon for a custom table"
+description: "Learn how to change the icon for a custom table"
 ms.custom: ""
 ms.date: 05/04/2020
 ms.reviewer: ""

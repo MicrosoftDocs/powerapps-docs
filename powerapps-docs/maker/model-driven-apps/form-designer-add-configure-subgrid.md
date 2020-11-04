@@ -1,5 +1,6 @@
 ---
 title: "Add and configure a sub-grid component on a form | MicrosoftDocs"
+description: Learn how to add a sub-grid on a model-driven app form
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""

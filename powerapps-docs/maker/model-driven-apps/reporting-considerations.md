@@ -1,5 +1,6 @@
 ---
 title: "Reporting considerations | MicrosoftDocs"
+description: Learn about what the considerations are when you use reporting in model-driven apps
 ms.custom: 
 ms.date: 09/27/2019
 ms.reviewer: 

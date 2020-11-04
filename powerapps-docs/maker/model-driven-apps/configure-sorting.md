@@ -1,5 +1,6 @@
 ---
 title: "Sort rows in a model-driven app view in Power Apps | MicrosoftDocs"
+description: Learn how to sort rows in a model-driven app
 ms.custom: ""
 ms.date: 04/17/2020
 ms.reviewer: ""

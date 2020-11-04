@@ -1,5 +1,6 @@
 ---
 title: "Add a column to a model-driven app form in Power Apps | MicrosoftDocs"
+description: Learn how to add a field to a model-driven app form
 ms.custom: ""
 ms.date: 05/04/2020
 ms.reviewer: ""

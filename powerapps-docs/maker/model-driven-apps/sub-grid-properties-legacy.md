@@ -62,7 +62,7 @@ You can access **Sub-Grid properties** from the Power Apps site.
 You can configure a sub-grid on a form using the classic form designer to display a list of rows or a chart. Select **Show Chart Only** on the **Display** tab to show a chart instead of a list.
 
   > [!div class="mx-imgBorder"] 
-  > ![sub-grid properties](media/sub-grid-properties.png "sub-grid properties")
+  > ![sub-grid properties for show chart only](media/sub-grid-properties.png "sub-grid properties for show chart only")
 
 These are the properties available to configure when using a sub-grid component on a form using the classic form designer.
 

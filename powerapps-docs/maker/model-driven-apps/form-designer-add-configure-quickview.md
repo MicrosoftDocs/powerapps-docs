@@ -1,5 +1,6 @@
 ---
 title: "Add and configure a quick view component on a form | MicrosoftDocs"
+description: Learn how to add a quick view component on a model-driven app form
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""

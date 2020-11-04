@@ -1,5 +1,6 @@
 ---
 title: Configure a lookup component on a form | MicrosoftDocs"
+description: Learn how to create a lookup for a form
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
