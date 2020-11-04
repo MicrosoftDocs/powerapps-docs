@@ -19,7 +19,7 @@ search.app:
 
 # Edit or create personal views using advanced grid filters 
 
-Use the advanced filter options to create a personal view to see the records that are important to you. The advanced filter options let you create a wide range of views from simple to complex. It also lets you add grouped and nested conditions to the filters.
+Use the advanced filter options to create a personal view to see the rows that are important to you. The advanced filter options let you create a wide range of views from simple to complex. It also lets you add grouped and nested conditions to the filters.
 
 
 > [!NOTE]

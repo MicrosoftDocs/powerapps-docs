@@ -31,10 +31,10 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
 
 ## Where do you access the documents from?
 
-1. For record types that support document management, open the record, select the **Related** tab, and then select **Documents**.
+1. For row types that support document management, open the row, select the **Related** tab, and then select **Documents**.
 
    > [!div class="mx-imgBorder"]
-   > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+   > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
 
 2. Select **Document Location** > **Documents on Default Site 1**. When SharePoint is enabled, the location is set to  **Documents on Default Site 1** by default.
 
@@ -44,12 +44,12 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
 
 ## Create a new document and save it to SharePoint
 
-1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
+1. Open a row and go to the **Document Associated Grid** view. For example, open a contact row.
 
-2. On the open record, select the **Related** tab, and then select **Documents**.
+2. On the open row, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
-    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+    > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
 
 2. Select **Document Location**, and change the location to **Documents on Default Site 1**.
 
@@ -62,12 +62,12 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
 
 ## Create a new folder in the default SharePoint site location
 
-1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
+1. Open a row and go to the **Document Associated Grid** view. For example, open a contact row.
 
-2. On the open record, select the **Related** tab, and then select **Documents**.
+2. On the open row, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
-    > ![Open the Documents tab in a record](media/onedrive_nav.png "Open the Documents tab in a record")
+    > ![Open the Documents tab in a row](media/onedrive_nav.png "Open the Documents tab in a row")
 
 2. Select **Document Location**, and change the location to **Documents on Default Site 1**.
 
@@ -81,7 +81,7 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
  
  ## Upload an existing document to SharePoint from your app
 
-1. Go to the record you want to create the document for, select the **Related** tab, and then select **Documents**.
+1. Go to the row you want to create the document for, select the **Related** tab, and then select **Documents**.
  
 2. Select **Upload.**
 
@@ -105,7 +105,7 @@ You can create new or edit existing SharePoint locations from your app in Common
 
 ### Edit a location
 
-1. Open a record, select the **Related** tab, and then select **Documents**.
+1. Open a row, select the **Related** tab, and then select **Documents**.
 
 2. Select **Edit Location**, and then select a SharePoint site location.
 
@@ -118,7 +118,7 @@ You can create new or edit existing SharePoint locations from your app in Common
 
 ### Add a new location
 
-1. Open a record, select the **Related** tab, and then select **Documents**.
+1. Open a row, select the **Related** tab, and then select **Documents**.
 
 2. Select **Add Location**. 
 
@@ -135,7 +135,7 @@ You can create new or edit existing SharePoint locations from your app in Common
 - We moved the command to make documents easier to find with fewer clicks.
 
 *Has the Documents tab gone away?*
-- No, it hasn’t gone away. Users can still access the documents associated with the record in question the old way, simply by selecting the **Related** menu and then the **Documents** link.
+- No, it hasn’t gone away. Users can still access the documents associated with the row in question the old way, simply by selecting the **Related** menu and then the **Documents** link.
 
 *With the change, will subfolders in SharePoint still be created automatically?*
 - Yes. The behavior is similar to that of the **Documents** link under the **Related** menu. When a user selects the **Files** tab for the first time, the corresponding SharePoint subfolder is created by the system. 

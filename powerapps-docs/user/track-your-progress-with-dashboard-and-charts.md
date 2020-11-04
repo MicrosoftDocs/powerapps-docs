@@ -21,7 +21,7 @@ search.app:
 
 A dashboard is made up of a collection of easy-to-read charts and graphs that provide visual representation of filtered app data. The interactive charts and graphs on a dashboard display important data that gives you a 360-degree view of your business and helps you to understand key performance indicators (KPI).
 
-Dashboards are available for all record types. Charts are available on the Dashboard page, Grid page, Associated Home page, and Edit Form page. 
+Dashboards are available for all row types. Charts are available on the Dashboard page, Grid page, Associated Home page, and Edit Form page. 
 
 > [!div class="mx-imgBorder"]
 > ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
@@ -41,7 +41,7 @@ Legend:
 
 
 
-## Expand, refresh, and view records
+## Expand, refresh, and view rows
 
 
 ![Expand chart view.](media/chart_more_button.png "Expand chart view")
@@ -50,8 +50,8 @@ Legend:
 Legend:
 
 1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
-2. **Refresh**: Refreshes the records in the chart.
-3. **View Records**: See the chart and the underlying records together. This opens the chart for the corresponding records.
+2. **Refresh**: Refreshes the rows in the chart.
+3. **View Rows**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
@@ -82,8 +82,8 @@ Legend:
  
       |  |  |
       | --- | --- |
-      | **Record Type** |Select a record.  |
-      | **View** |Select a view for the record.  |
+      | **Row Type** |Select a row.  |
+      | **View** |Select a view for the row.  |
       | **Chart** |Select the type of chart that you want use. |
 
 
@@ -199,7 +199,7 @@ You can continue drilling further into the chart data. As you drill down deeper,
 
 
 
-In the chart designer, adding an order on certain calculated fields is not supported and will cause an error. The calculated fields causing this are using other calculated fields, a related entity field, or a local field on the entity.
+In the chart designer, adding an order on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using other calculated columns, a related entity column, or a local column on the entity.
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Assign or share records| MicrosoftDocs"
+title: "Assign or share rows| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -17,36 +17,36 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Assign or share records
+# Assign or share rows
 
-If you would like another person in your organization to handle a customer record, you can assign the record to that person. You can also assign a record to a team, or to yourself.  
+If you would like another person in your organization to handle a customer row, you can assign the row to that person. You can also assign a row to a team, or to yourself.  
 
-Use the **Share** option if you want to keep ownership of the record but let someone else work on it with you. 
+Use the **Share** option if you want to keep ownership of the row but let someone else work on it with you. 
 
-1. From the left navigation pane, select a record type. For example, **Contacts**.
+1. From the left navigation pane, select a row type. For example, **Contacts**.
 
-2. From the list of records, select the record that you want to reassign.  
+2. From the list of rows, select the row that you want to reassign.  
   
 3. On the command bar, select **Assign**.
 
    > [!div class="mx-imgBorder"]
-   > ![Reassign a record](media/assign1.png "Reassign a record")
+   > ![Reassign a row](media/assign1.png "Reassign a row")
 
    > [!NOTE]
-   > If you want to keep ownership of the record but let someone else work with it, select **Share**. Then use the tooltips to guide you through the **Share** option. 
+   > If you want to keep ownership of the row but let someone else work with it, select **Share**. Then use the tooltips to guide you through the **Share** option. 
    
 4. In the assign dialog box, in the **Assign to** area, choose **Me** or **User or Team**.
 
    > [!div class="mx-imgBorder"]
-   > ![Reassign a record to me or team](media/assign2.png "Reassign a record me team")
+   > ![Reassign a row to me or team](media/assign2.png "Reassign a row me team")
   
-   If you select **User or Team**, in the **Look for Records** box, enter the name of the user or team. If you need to create a new record, select **+ New**.
+   If you select **User or Team**, in the **Look for Rows** box, enter the name of the user or team. If you need to create a new row, select **+ New**.
   
 5. When you're done, select **Assign**.
 
-## Use advanced find to reassign records
+## Use advanced find to reassign rows
 
-Use advanced find to search for records and then reassign them to someone else. For more information on advanced find, see [Create, edit, or save an Advanced Find search](advanced-find.md).
+Use advanced find to search for rows and then reassign them to someone else. For more information on advanced find, see [Create, edit, or save an Advanced Find search](advanced-find.md).
 
 
 1. On the command bar, select **Advanced Find**.
@@ -54,32 +54,32 @@ Use advanced find to search for records and then reassign them to someone else. 
    > [!div class="mx-imgBorder"]
    > ![Advanced find](media/assign3.png "advacned find")
    
-2. From the list of records, select the records that you want to reassign and then select the assign option.
+2. From the list of rows, select the rows that you want to reassign and then select the assign option.
 
    > [!div class="mx-imgBorder"]
-   > ![Reassign a record using advanced find](media/assign4.png "Reassign a record using advacned find")
+   > ![Reassign a row using advanced find](media/assign4.png "Reassign a row using advacned find")
    
  
- ## Reassign all records (for admins)
+ ## Reassign all rows (for admins)
  
- A admin can reassign all record for a user from the admin Setting area.
+ A admin can reassign all row for a user from the admin Setting area.
  
  1. Go to **Settings** > **Security**.
  2. Select **Users** and select a user name to open the user's profile.
  3. On the command bar, select **REASSIGN RECORDS**.
  
    > [!div class="mx-imgBorder"]
-   > ![Reassign all records](media/assign5.png "Reassign all records")
+   > ![Reassign all rows](media/assign5.png "Reassign all rows")
    
- 4. On the **Reassign Records** dialog box choose how to want to reassign all the records and then select **OK**.
+ 4. On the **Reassign Rows** dialog box choose how to want to reassign all the rows and then select **OK**.
  
   > [!NOTE]
-   > - The **Reassign Records** option will reassign all records regardless of their status. Inactive and active records will be reassigned to the other user or team. This will also deactivate all activated processes including business rules and workflows when the record is reassigned to another user or team. The new owner must activate the processes that was deactivated when the record is reassigned.  
-   > - When there is a large amount records to reassign, the system may take a while to process. 
-   > - If there is an issue during the reassignment process such as the user that the records are being reassigned to doesn't have the required privileges then the **Reassign Records** process will stop. The records that are processed before the issue will be updated and saved. For the records that were not saved, you will need reassign the records again using the **Reassign Records** option.
+   > - The **Reassign Rows** option will reassign all rows regardless of their status. Inactive and active rows will be reassigned to the other user or team. This will also deactivate all activated processes including business rules and workflows when the row is reassigned to another user or team. The new owner must activate the processes that was deactivated when the row is reassigned.  
+   > - When there is a large amount rows to reassign, the system may take a while to process. 
+   > - If there is an issue during the reassignment process such as the user that the rows are being reassigned to doesn't have the required privileges then the **Reassign Rows** process will stop. The rows that are processed before the issue will be updated and saved. For the rows that were not saved, you will need reassign the rows again using the **Reassign Rows** option.
    
  
    > [!div class="mx-imgBorder"]
-   > ![Reassign all records to user or team](media/assign6.png "Reassign all records to user or team")
+   > ![Reassign all rows to user or team](media/assign6.png "Reassign all rows to user or team")
  
 

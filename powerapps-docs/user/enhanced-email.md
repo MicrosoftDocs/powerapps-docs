@@ -12,10 +12,10 @@ manager: annbe
 
 # Send email using the enhanced email experience
 
-The enhanced email experience in model-driven apps allows you to compose an email without leaving the record that you’re working on. With the enhanced email experience, you can:
+The enhanced email experience in model-driven apps allows you to compose an email without leaving the row that you’re working on. With the enhanced email experience, you can:
 
 - Navigate to different pages without losing the email content.
-- Minimize the email window to get back to the records you were working on.
+- Minimize the email window to get back to the rows you were working on.
 - Expand the email editor pop-up window to see more email options.
 - Simultaneously open three email compose pop-up windows.
 - Search for and apply a predefined template to an email you're composing.
@@ -30,14 +30,14 @@ The enhanced email experience in model-driven apps allows you to compose an emai
 
 Compose an email using the enhanced experience:
 
-1. In the **Timeline** section of records such as account or contact, select **+** and then under **Activities**, select **Email**.
+1. In the **Timeline** section of rows such as account or contact, select **+** and then under **Activities**, select **Email**.
 
    A new email pop-up window opens. 
 
    > [!div class="mx-imgBorder"]
    > ![Enhanced email pop-up window](media/enhanced-email-pop-up.png "Enhanced email pop-up window")
 
-   The **From** and **To** fields are automatically populated based on the user and the account and contact of the original record.
+   The **From** and **To** columns are automatically populated based on the user and the account and contact of the original row.
 
 2. Write your email from scratch or select **Insert Template** to search for and apply a template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md).
 

@@ -18,7 +18,7 @@ You can send an email to multiple recipients by using email templates. This is k
   
 1. In the site map for the model-driven app, select an entity to which you want to send email. For example, **Contacts**.  
   
-2. In the list of records, select the contacts you want to send an email to.  
+2. In the list of rows, select the contacts you want to send an email to.  
   
 3. On the command bar, select **Send Direct Email**.  
 
@@ -28,10 +28,10 @@ You can send an email to multiple recipients by using email templates. This is k
 4. In the **Send Email** pane, select an email template from the **Template** list.
 
     > [!NOTE]
-    > - If you have multiple records that span multiple pages, you can select one of following options from the **To** list:
-    >   - **All records on current page**: Sends the email to all records displayed on the current page.
-    >   - **All records on all pages**: Sends the email to all the stored records.
-    > - If a few records don't have an email address or they have an invalid email address, those records will be skipped from sending the email.
+    > - If you have multiple rows that span multiple pages, you can select one of following options from the **To** list:
+    >   - **All rows on current page**: Sends the email to all rows displayed on the current page.
+    >   - **All rows on all pages**: Sends the email to all the stored rows.
+    > - If a few rows don't have an email address or they have an invalid email address, those rows will be skipped from sending the email.
 
 5. Select **Send**.
 

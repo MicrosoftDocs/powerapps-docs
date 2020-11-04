@@ -21,34 +21,34 @@ search.app:
 
 ## Is a title required when adding a new note?
 
-No. When adding a note to an activity, the title field is marked as a mandatory field but is not required. This is a known issue in the legacy Web Client.
+No. When adding a note to an activity, the title column is marked as a mandatory column but is not required. This is a known issue in the legacy Web Client.
 
 ## For an appointment, when I choose the option to *Save as Draft* it doesn't show that the appointment has been saved as a draft.
 
 When you save an appointment in the legacy Web Client as a draft the title does not display **[DRAFT]** to indicate that the appointment has been saved as a draft.
 
-## Can I add activities to read only records?
+## Can I add activities to read only rows?
 
 Yes. You can add activities to entities that are read only such as, notes, phone calls, tasks, and more. 
 
 ## Are HTML tags supported in **Notes**?
 
-No. When creating a note activity for any record or entity, HTML tags are not supported. For example, if you add `<TAG> </TAG>` to a note field it will be displayed as `<TAG_XXX="XX"> </TAG>`.
+No. When creating a note activity for any row or entity, HTML tags are not supported. For example, if you add `<TAG> </TAG>` to a note column it will be displayed as `<TAG_XXX="XX"> </TAG>`.
 
 ## How can I improve performance on timeline wall?
 
-Timeline Wall performance can be improved by optimizing how much data is returned by a specific entity record. 
+Timeline Wall performance can be improved by optimizing how much data is returned by a specific entity row. 
 
 1.	Configure entity forms to only show activities that are in use.  This can be done at the form level to only show useful activities.  For example, if you don’t use tasks for cases you can configure the timeline wall on the case form to not show tasks.
-2.	Reduce the number of default records that are shown by the timeline wall.  By default, it is set to return 10, beyond 10 it can cause performance issues.  It is recommended to not exceed the default. 
+2.	Reduce the number of default rows that are shown by the timeline wall.  By default, it is set to return 10, beyond 10 it can cause performance issues.  It is recommended to not exceed the default. 
 
 ## Activity Wall is not supported in Print Preview.
 
 When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall** will not show in the available list. You will see **Notes** but it will not show tasks or emails.
 
-## Why I can't see other users activities and records in the My activities stream in the dashboard?
+## Why I can't see other users activities and rows in the My activities stream in the dashboard?
 
-**My activities** stream in the dashboard shows the records and activities that are owned by you (user). For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
+**My activities** stream in the dashboard shows the rows and activities that are owned by you (user). For example, user **A** see rows and activities that are owned by **A**, and user **B** see rows and activities that are owned by **B**.
 
 
 
