@@ -10,25 +10,46 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure the Azure Active Directory B2C provider
+# Configure the Azure Active Directory B2C provider (Preview)
+
+[This topic is pre-release documentation and is subject to change.]
 
 [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Microsoft 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C is an extension to that authentication model that enables external customer signs in through local credentials and federation with various common social identity providers.
 
 A portal owner can configure the portal to accept [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports Open ID Connect for federation.
 
 > [!NOTE]
-> - This article explains how to configure Azure Active Directory B2C as the identity provider automatically. Using these steps, you can create new Azure AD B2C tenant, register application and configure user flows from within Power Apps portals. If you want to configure the Azure AD B2C provider manually, go to [Configure Azure AD B2C provider manually](configure-azure-ad-b2c-provider-manual.md).
+> - This feature is in preview. For more information, see [Experimental and preview features](../../canvas-apps/working-with-experimental-preview.md).
+> - This article explains how to configure Azure Active Directory B2C as the identity provider automatically using a feature in preview. Using these steps, you can create new Azure AD B2C tenant, register application and configure user flows from within Power Apps portals. For production environments, or if you want to configure the Azure AD B2C provider manually, go to [Configure Azure AD B2C provider manually](configure-azure-ad-b2c-provider-manual.md).
 > - Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
 
 Follow these steps to configure Azure AD B2C as the OpenID Connect provider.
 
 ## Step 1 - Select provider
 
-1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
+1. Go to [Power Apps preview](https://make.preview.powerapps.com).
 
-    ![Azure AD B2C provider name](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
+1. Select **Apps** from the left navigation pane.
+
+    ![Select Apps](media/use-simplified-authentication-configuration/select-apps.png "Select Apps")
+
+1. Select your portal from the list of available apps.
+
+1. Select **Settings** from the top menu. You can also select **More Commands** (**...**), and then select **Settings**.
+
+    ![Select Settings](media/use-simplified-authentication-configuration/select-settings.png "Select Settings")
+
+1. From the settings on the right side of your workspace, select **Authentication Settings**.
+
+    ![Authentication Settings](media/use-simplified-authentication-configuration/portal-settings-right-pane.png "Authentication Settings")
+
+1. Select **Configure** for **Azure Active Directory B2C**.
+
+    ![Configure Azure AD B2C](media/authentication/configure-adb2c.png "Configure Azure AD B2C")
 
 1. If necessary, update the name.
+
+    ![Azure AD B2C provider name](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
 
 1. Select **Next**.
 
