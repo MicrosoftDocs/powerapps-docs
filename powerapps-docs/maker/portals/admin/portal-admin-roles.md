@@ -37,6 +37,8 @@ The following table lists different administrative tasks for portals, and the ro
 
 ## Manage membership of the required roles
 
+This section explains about managing the membership of the required roles listed above for different kinds of administrative tasks in Power Apps portals.
+
 ### Portal app owner
 
 Portal app owner is a user who owns [portal application registration](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-ap) in the [Azure portal](https://portal.azure.com)
