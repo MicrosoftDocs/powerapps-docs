@@ -33,12 +33,12 @@ search.audienceType:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Workflows have numerous capabilities supporting business scenarios. Calling basic data operation actions for a record, such as create, update, and delete, from within a workflow solves quite a few business scenarios. However, if you couple the capabilities of the workflows with the power of the custom actions invoked directly from within a workflow, you add a whole new range of business scenarios to your application without needing to write code.  
+Workflows have numerous capabilities supporting business scenarios. Calling basic data operation actions for a row, such as create, update, and delete, from within a workflow solves quite a few business scenarios. However, if you couple the capabilities of the workflows with the power of the custom actions invoked directly from within a workflow, you add a whole new range of business scenarios to your application without needing to write code.  
   
 Let’s look at the scenario in which a custom action is invoked from a workflow. We’ll invoke a custom action to request the manager’s approval when a discount for a particular opportunity exceeds 20 percent.  
   
 <a name="action"></a>   
-## Example: Create a custom action using the opportunity entity
+## Example: Create a custom action using the opportunity table
   
 1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer), select **Processes**.  
   
