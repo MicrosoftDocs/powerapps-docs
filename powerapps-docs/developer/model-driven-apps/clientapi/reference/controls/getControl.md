@@ -38,6 +38,19 @@ When the `arg` value is not provided, it returns an array of all the controls on
 **Description**: Object if you use the method with parameter; object collection if you use the method without any parameters.
 
 
+## Pro Tip
+**Modify multiple controls:**
+If you want to modify the all the controls bound to an attribute on a form, use the controls collection inside the attribute type.
+For example, to add a notification to each control bound to the "name" attribute, you can do the following:
+
+const notification = {
+  messages: ['Sample Notification on Name Controls'],
+  notificationLevel: 'RECOMMENDATION',
+  uniqueId: 'my_unique_id'
+>};
+
+formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification))
+
 
 ### Related topics
 
