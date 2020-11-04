@@ -124,7 +124,7 @@ To find an app, search your phone’s online store.
     > [!div class="mx-imgBorder"]
     > ![Ignore optional fields](media/import-csv-ignore.png "Ignore optional fields")
 
-6. If any column in your source file includes a fixed set of values, you must map the column to a field of type **Option Set**. A column of this type has values such as "Yes" or "No," or "Hot," "Warm," or "Cold." To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set field. The **Option set mapping** section opens:
+6. If any column in your source file includes a fixed set of values, you must map the column to a field of type **Option Set**. A column of this type has values such as "Yes" or "No," or "Hot," "Warm," or "Cold." To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set field. The **Choice mapping** section opens:
 
     > [!div class="mx-imgBorder"]
     > ![The option-set value mapping menu](media/import-option-set-values.png "The option-set value mapping menu")

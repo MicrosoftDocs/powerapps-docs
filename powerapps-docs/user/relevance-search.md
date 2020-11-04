@@ -46,7 +46,7 @@ Relevance search brings the following enhancements and benefits:
   > [!NOTE]
   >  Hierarchical security models aren't supported. Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in relevance search.  
   
-- Lets you also search for option sets and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.
+- Lets you also search for choices and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.
 
   > [!NOTE]
   > - Relevance search is text-based, and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type.
@@ -131,7 +131,7 @@ In the **Set Personal Options** dialog box, you can also choose other facets fro
   
 ### Text-based facets
 
-All lookups, option sets, and record types are text-based facets. For example, the text-based facet Owner consists of a list of field values and their corresponding counts.  
+All lookups, choices, and record types are text-based facets. For example, the text-based facet Owner consists of a list of field values and their corresponding counts.  
  
   > [!div class="mx-imgBorder"]
   > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in relevance search")  

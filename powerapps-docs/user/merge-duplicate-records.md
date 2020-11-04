@@ -66,7 +66,7 @@ There are a few situations when duplicates may be found:
 >   - The attribute's metadata `ValidForUpdate` is False.
 >   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
 >   - The attribute's metadata `ValidForUpdate` is False. 
->   - The attribute is `Picklist` or `MultiSelectPickList` and it has either a parent picklist or child picklist attribute.
+>   - The attribute is `Choice` or `MultiSelectPickList` and it has either a parent Choice or child Choice attribute.
 >   - The attribute is ` parentaccountid` on the Account entity; this is a system setting and cannot be changed. 
 >   - The attribute is ` parentcustomerid` on the  Contact Entity; this is a system setting and cannot be changed
 
