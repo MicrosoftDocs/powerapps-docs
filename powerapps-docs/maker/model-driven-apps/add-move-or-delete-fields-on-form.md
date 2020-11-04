@@ -30,8 +30,7 @@ Add, configure, move, or delete columns using the form designer.
 ## Add columns to a form
 To add columns to a form, use the **Columns** pane. The **Columns** pane lets you search and filter to help you quickly find columns. It also includes the option to show only unused columns. 
 
-> [!div class="mx-imgBorder"] 
->    ![Columns pane](media/FormDesignerFieldsPane.png "Columns pane")
+<img src = "media/FormDesignerFieldsPane.png" alt = "Columns pane" width = "350" height = "557">
 
 ### Add columns to a form using drag and drop
 > [!NOTE]

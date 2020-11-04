@@ -30,7 +30,7 @@ search.app:
 ## Lookup column properties  
   
 > [!NOTE]
->  The options described in the table below are available only for single-entity lookup columns.  
+>  The options described in the table below are available only for single-table lookup columns.  
   
 |Section|Property|Description|  
 |-------------|--------------|-----------------|  
@@ -55,8 +55,8 @@ search.app:
   
 <a name="BKMK_TwoOptionProperties"></a>   
 
-### Two option column properties  
- On the formatting tab, two option columns have the following formatting choices:  
+### Yes/No column properties  
+ On the formatting tab, Yes/No columns have the following formatting choices:  
   
 - **Two radio buttons**: Two labeled controls with labels. Only one may be selected.  
   

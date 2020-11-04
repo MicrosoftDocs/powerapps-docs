@@ -57,7 +57,7 @@ As an app maker, you can create and edit public views by using Power Apps.
 
 4. On the **Create a view** dialog box, enter a name and, optionally, a description, and then select **Create**. 
     
-5. In the view designer, select **Add column** to add additional columns you want to display in the view. 
+5. In the view designer, select **+ View column** to add additional columns you want to display in the view. 
 
    ![Add column](../common-data-service/media/add-column-to-view.png)
 
