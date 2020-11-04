@@ -91,9 +91,9 @@ Legend
 2. **Recently accessed records**:  Shows recently accessed records that are grouped by entity type.
 
 
-### View results quickly
+### View quick suggestions
 
-Fast and powerful search with suggested results. View search results inline as you type, minimizing keystrokes and simplifying page navigation.
+View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary field of an entity record. The suggested results also supports misspelled text up to 1 character off. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
 
 ![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
 
@@ -125,6 +125,14 @@ Legend
 10. **Modified on**: Filter the search results by when the record was last modified.
 11. **Created on**: Select a time range to find records created in the selected time range.
 
+### Feedback
+
+On the search results page, the **Did youfind what you were look for? Yes No** feedback is collected in our product telemetry. Search parameters like the query text that user enters into the search box is not collected. We only collect data for the **Yes** or **No** response. Currently there isn't an option to disable the feedback link.
+
+   > [!div class="mx-imgBorder"]
+   > ![Feedback link](media/feedbacklink.png "Feedback link")  
+
+
 ## Set default search experience
 
 If your organization has turned on both Relevance Search and categorized search, you can select a default search experience in your personal settings.
@@ -142,6 +150,7 @@ If your organization has turned on both Relevance Search and categorized search,
 
 > [!IMPORTANT]
 > If you have the new Relevance Search experience available but you set your default search experience to Categorized Search, then the old Relevance Searchh experience and categorized is available. To use the new Relevance Search experience, you must set your default search experience to, Relevance Search. 
+
 
 ## Use the old Relevance Search experience 
 
