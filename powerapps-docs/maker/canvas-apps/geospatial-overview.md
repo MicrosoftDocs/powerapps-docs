@@ -32,7 +32,7 @@ The following prebuilt components can be used for geospatial and mapping scenari
 ## Prerequisites
 
 1. An admin must [enable the geospatial features in the Power Platform admin center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
-2. An admin must ensure the geospatial components will not be blocked by the environment's data loss prevention policies.
+2. An admin must [ensure the geospatial components will not be blocked by the environment's data loss prevention policies](#review-the-environments-data-loss-prevention-policies).
 3. [Enable the geospatial features for each app](#enable-the-geospatial-features-for-each-app).
 
     >[!IMPORTANT]
