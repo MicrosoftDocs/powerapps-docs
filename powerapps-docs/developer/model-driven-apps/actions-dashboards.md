@@ -29,7 +29,7 @@ You can perform actions such as create, retrieve, update, or delete, on organiza
   
 - Create, retrieve, update, and delete. You can create or update an organization-owned dashboard by using the Common Data Service web services or by customizing the table form. For detailed information about creating a dashboard, see [Create a Dashboard](create-dashboard.md).  
   
-- Set an organization-owned dashboard as the default dashboard for an organization by setting the `SystemForm.IsDefault` attribute value to `true` while creating or updating the dashboard.  
+- Set an organization-owned dashboard as the default dashboard for an organization by setting the `SystemForm.IsDefault` column value to `true` while creating or updating the dashboard.  
   
   > [!IMPORTANT]
   >  Using the methods available in the Common Data Service Web Services, it is possible to set two dashboards as the default. Make sure that no other dashboard is the default dashboard for the organization before updating this setting programmatically.  

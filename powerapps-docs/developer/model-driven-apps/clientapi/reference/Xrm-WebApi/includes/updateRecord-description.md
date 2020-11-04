@@ -1,1 +1,1 @@
-Updates a table record.
+Updates a table row.

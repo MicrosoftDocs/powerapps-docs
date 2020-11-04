@@ -20,10 +20,10 @@ search.app:
 
 [!INCLUDE[./includes/setActiveProcess-description.md](./includes/setActiveProcess-description.md)]
 
-If there is an active instance of the process, the table record is loaded with the process instance ID. If there is no active instance of the process, a new process instance is created and the table record is loaded with the process instance ID. If there are multiple instances of the current process, the record is loaded with the first instance of the active process as per the defaulting logic, that is the most recently used process instance per user.
+If there is an active instance of the process, the table row is loaded with the process instance ID. If there is no active instance of the process, a new process instance is created and the table row is loaded with the process instance ID. If there are multiple instances of the current process, the row is loaded with the first instance of the active process as per the defaulting logic, that is the most recently used process instance per user.
 
 > [!NOTE]
-> The `setActiveProcess` method should be used while creating or editing a record. Use the `setActiveProcess` method to set the active process for a business process flow instead of `processId` and `porocessInstanceId` with `Xrm.Navigation.openForm` method . 
+> The `setActiveProcess` method should be used while creating or editing a row. Use the `setActiveProcess` method to set the active process for a business process flow instead of `processId` and `porocessInstanceId` with `Xrm.Navigation.openForm` method . 
 
 ## Syntax
 

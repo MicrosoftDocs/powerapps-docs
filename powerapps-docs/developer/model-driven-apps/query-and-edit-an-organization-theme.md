@@ -91,7 +91,7 @@ OData-Version: 4.0
 |GlobalLinkColor|String|#1160B7|The color for links, such as email addresses or lookups.|  
 |HeaderColor|String|#1160B7|The color for header text, such as form tab labels.|  
 |HoverLinkEffect|String|#E7EFF7|The color that commands or lists will use when you hover over the items.|  
-|ImportSequenceNumber|Integer|null|Sequence number of the import that created this record.|
+|ImportSequenceNumber|Integer|null|Sequence number of the import that created this row.|
 |IsDefaultTheme|Boolean|True|The default value for a custom theme is false.|
 |LogoId|String|null|The name of a web resource to use as a logo. Recommended dimensions are a height of 50 pixels and a maximum width of 400 pixels.|  
 |LogoToolTip|String|Model-driven apps|The text that will be used as the tooltip and alt text for the logo.| 
@@ -99,7 +99,7 @@ OData-Version: 4.0
 |Name|String|Model-driven apps Default Theme|The name of the Theme table.|  
 |NavBarBackgroundColor|String|#002050|The primary navigation bar color.|  
 |NavBarShelfColor|String|#DFE2E8|The secondary navigation bar color.|  
-|OverriddenCreatedOn|DateTime|null|Date and time that the record was migrated.|  
+|OverriddenCreatedOn|DateTime|null|Date and time that the row was migrated.|  
 |PageHeaderBackgroundColor|String|#E0E0E0|The page header background color.|  
 |PanelHeaderBackgroundColor|String|#F3F3F3|The panel header background color.|  
 |ProcessControlColor|String|#41A053|The primary color for process controls.|  

@@ -43,7 +43,7 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 
  The data description XML string defines the data that is displayed on the chart. The contents of the XML string are validated against the visualization data description schema. For more information about the schema, see [Visualization Data Description Schema](visualization-data-description-schema.md).  
   
- You can specify the data description XML string while you are creating a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` attribute for the organization-owned or user-owned chart respectively.  
+ You can specify the data description XML string while you are creating a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` column for the organization-owned or user-owned chart respectively.  
   
  The data description XML string contains the following two elements: `<FetchCollection>` and `<CategoryCollection>`.  
   
@@ -94,7 +94,7 @@ For more sample data description XML strings, see [Sample Charts](sample-charts.
 
 The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx) class in Microsoft Chart Controls. More information: [Chart Controls](https://go.microsoft.com/fwlink/p/?LinkId=128301)  
 
-You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.
+You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` column for the organization-owned or user-owned chart, respectively.
 
 > [!IMPORTANT]
 > In Unified Interface, only a subset of properties are supported. More information: [Supported methods and properties in Unified Interface](#methods-and-properties-supported-in-unified-interface)

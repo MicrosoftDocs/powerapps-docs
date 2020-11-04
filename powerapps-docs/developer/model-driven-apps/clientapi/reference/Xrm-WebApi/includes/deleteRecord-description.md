@@ -1,1 +1,1 @@
-Deletes a table record.
+Deletes a table row.

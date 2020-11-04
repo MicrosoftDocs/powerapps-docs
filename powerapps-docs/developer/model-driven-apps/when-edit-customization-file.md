@@ -87,7 +87,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
   
 -   Security Roles  
   
--   Field Security Profiles  
+-   Column Security Profiles  
   
 
 ### See also  

@@ -61,7 +61,7 @@ function preventAutoSave(executionContext) {
 }
 ```
 
-To save a record the user must click the **Save** icon at the bottom of the form or a custom **Save** command needs to be added to the command bar.
+To save a row the user must click the **Save** icon at the bottom of the form or a custom **Save** command needs to be added to the command bar.
 
 ### Related topics
 

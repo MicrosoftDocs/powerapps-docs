@@ -53,7 +53,7 @@ search.app:
 <tr>
 <td>AutoRouteToOwnerQueue</td>
 <td>Boolean</td>
-<td>Indicates whether to automatically move records to the owner’s default queue when a record of this type is created or assigned. </td>
+<td>Indicates whether to automatically move records to the owner’s default queue when a row of this type is created or assigned. </td>
 </tr>
 
 <tr>
@@ -109,7 +109,7 @@ search.app:
 <tr>
 <td>IsActivityParty</td>
 <td>Boolean</td>
-<td>Indicates whether the email messages can be sent to an email address stored in a record of this type.</td>
+<td>Indicates whether the email messages can be sent to an email address stored in a row of this type.</td>
 </tr>
 <tr>
 <td>IsBusinessProcessEnabled</td>

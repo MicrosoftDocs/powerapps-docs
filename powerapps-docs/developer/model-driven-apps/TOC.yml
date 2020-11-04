@@ -16,7 +16,7 @@
   - name: Open forms, views, dialogs, and reports with a URL
     href: open-forms-views-dialogs-reports-url.md
     items:
-    - name: Set field values using parameters passed to a form
+    - name: Set column values using parameters passed to a form
       href: set-field-values-using-parameters-passed-form.md
     - name: Configure a form to accept custom querystring parameters
       href: configure-form-accept-custom-querystring-parameters.md

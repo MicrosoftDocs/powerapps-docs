@@ -1,1 +1,1 @@
-Retrieves a table record.
+Retrieves a table row.

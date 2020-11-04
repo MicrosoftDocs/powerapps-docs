@@ -31,7 +31,7 @@ However, if your business requirement can't be achieved using a business rule, y
 Forms in model-driven apps help display data to the user. A form in model-driven apps can contain items such as fields, a quick form, or a grid. An [event](clientapi/events-forms-grids.md) occurs in model-driven apps forms whenever:
 
 - A form loads
-- Data is changed in a field or an item within the form
+- Data is changed in a column or an item within the form
 - Data is saved in a form
 
 You can attach your JavaScript code to "react" to these events so that your code gets executed when the event occurs on the form. You attach your JavaScript code (scripts) to these events by using a [Script web resource](script-jscript-web-resources.md) in model-driven apps. 

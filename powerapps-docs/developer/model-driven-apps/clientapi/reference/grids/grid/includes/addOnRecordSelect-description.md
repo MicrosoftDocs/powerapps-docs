@@ -1,1 +1,1 @@
-Adds a function to run when the user selects record (row) in the Grid.
+Adds a function to run when the user selects row (row) in the Grid.

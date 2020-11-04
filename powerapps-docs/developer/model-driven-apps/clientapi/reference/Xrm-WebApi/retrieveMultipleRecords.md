@@ -47,7 +47,7 @@ search.app:
 <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
 <li>To specify a FetchXML query, use the <code>fetchXml</code> attribute to specify the query.</li>
 </ul>
-<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
+<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table row by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple system query options by using <code>&</code> to separate the query options.
 <p>When you specify a FetchXML query for the <code>options</code> parameter, the query should not be encoded.
 <p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve multiple scenarios.</td>
@@ -65,7 +65,7 @@ search.app:
 <td>No</td>
 <td><p>A function to call when table records are retrieved. An object with the following attributes is passed to the function:</p>
 <ul>
-<li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table record containing attributes and their values as <code>key: value</code> pairs. The Id of the table record is retrieved by default.</li>
+<li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table row containing attributes and their values as <code>key: value</code> pairs. The Id of the table row is retrieved by default.</li>
 <li><b>nextLink</b>: String. If the number of records being retrieved is more than the value specified in the <code>maxPageSize</code> parameter in the request, this attribute returns the URL to return next set of records.</li>
 </ul>
 </td>
@@ -80,7 +80,7 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved table records and the **nextLink** attribute (optional) with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
+On success, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved table records and the **nextLink** attribute (optional) with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the row count returned exceeds the paging value.
 
 ## Examples
 
@@ -254,7 +254,7 @@ The above piece of code returns a result with a schema like:
 ```
 
 #### For mobile offline scenario
-**$expand** for the mobile offline scenario is different from the online scenario and is a multi-part process. An offline **\$expand** operation returns a `@odata.nextLink` annotation containing information on how to get to the related record's information. We use the `id`, `entityType`, and `options` parameter of that annotation to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
+**$expand** for the mobile offline scenario is different from the online scenario and is a multi-part process. An offline **\$expand** operation returns a `@odata.nextLink` annotation containing information on how to get to the related row's information. We use the `id`, `entityType`, and `options` parameter of that annotation to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
 
 ```JavaScript
 Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)").then(function(resultSet) {

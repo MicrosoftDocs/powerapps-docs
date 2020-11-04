@@ -27,7 +27,7 @@ Tab display rules control whether a specific tab is displayed for a ribbon or no
   
  Unlike other ribbon elements like groups or specific controls, you must explicitly provide a tab display rule for a tab to be displayed in the ribbon. By default, other ribbon elements will always display unless a display rule removes them.  
   
- `<TabDisplayRule>` elements require that the `TabCommand` attribute matches a `<Tab>` `Command` attribute value.  
+ `<TabDisplayRule>` elements require that the `TabCommand` column matches a `<Tab>` `Command` column value.  
   
  In the `RibbonDiffXml`, tabs can be defined for specific tables or defined globally. 
  If the tab is defined for a table, the only valid type of rule is `<EntityRule>`. 

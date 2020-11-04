@@ -232,7 +232,7 @@ Sdk.CalculateRollupFieldRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create variables to point to a quote record and to a specific field
+// Create variables to point to a quote row and to a specific field
 var quoteId = {
     "@odata.type": "Microsoft.Dynamics.CRM.quote",
     "quoteid": "7bb01e55-2394-ea11-a811-000d3ad97943"
@@ -294,7 +294,7 @@ Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create a variable to point to a contact record and with specific data in the needed fields
+// Create a variable to point to a contact row and with specific data in the needed fields
 var contactRecord = {
     "@odata.type": "Microsoft.Dynamics.CRM.contact",
     "firstname": "Test",
@@ -328,7 +328,7 @@ Xrm.WebApi.online.execute(retrieveDuplicatesRequest).then(
 
 ### Perform CRUD operations
 
-#### Create a record
+#### Create a row
 
 The following example demonstrates how to perform a create operation.
 
@@ -374,7 +374,7 @@ Xrm.WebApi.online.execute(createRequest).then(
 );
  ```
  
-#### Retrieve a record
+#### Retrieve a row
 
 The following example demonstrates how to perform a retrieve operation.
 
@@ -425,7 +425,7 @@ Xrm.WebApi.online.execute(retrieveRequest).then(
 );
 ```
 
-#### Update a record
+#### Update a row
 
 The following example demonstrates how to perform a update operation.
 
@@ -474,7 +474,7 @@ Xrm.WebApi.online.execute(updateRequest).then(
 );
 ```
 
-#### Delete a record
+#### Delete a row
 
 The following example demonstrates how to perform a delete operation.
 

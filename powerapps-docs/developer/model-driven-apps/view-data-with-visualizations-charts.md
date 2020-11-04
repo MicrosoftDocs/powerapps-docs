@@ -43,7 +43,7 @@ These charts are integrated with the grids in the web application. When you appl
   
 A chart attached to a table is available for all the views for the table. A chart displays data according to the currently selected (or displayed) view of a table. A chart can display data from both a saved query (organization-owned view) and a user query (user-owned view).  
   
-Charts display data for only those saved queries (organization-owned views) that use FetchXML (`SavedQuery.FetchXml` attribute) to filter the records. If a saved query uses the query API (`SavedQuery.QueryAPI` attribute) to filter the records, the chart will not appear for that saved query. This limitation is not applicable for user queries (user-owned views) because the user query table does not use the `QueryAPI` attribute to filter the records.  
+Charts display data for only those saved queries (organization-owned views) that use FetchXML (`SavedQuery.FetchXml` column) to filter the records. If a saved query uses the query API (`SavedQuery.QueryAPI` column) to filter the records, the chart will not appear for that saved query. This limitation is not applicable for user queries (user-owned views) because the user query table does not use the `QueryAPI` column to filter the records.  
   
 For more information about how to work with charts, see [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md).  
   

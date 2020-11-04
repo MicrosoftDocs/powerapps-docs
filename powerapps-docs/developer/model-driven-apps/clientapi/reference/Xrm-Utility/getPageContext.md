@@ -35,8 +35,8 @@ The method returns an object with the `input` property. The `input` property is 
 |--|--|--|
 |pageType|String|The current page type. The value returned is "entityrecord".|
 |entityName|String|Logical name of the table currently displayed.|
-|entityId|String|ID of the table record currently displayed in the form.|
-|createFromEntity|Lookup|The parent record that provides default values based on mapped attribute values. The lookup object has the following String properties: `entityType`, `id`, and `name`.|
+|entityId|String|ID of the table row currently displayed in the form.|
+|createFromEntity|Lookup|The parent row that provides default values based on mapped attribute values. The lookup object has the following String properties: `entityType`, `id`, and `name`.|
 |formId|String|ID of the currently displayed form.|
 
 

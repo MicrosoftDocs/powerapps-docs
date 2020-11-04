@@ -1,1 +1,1 @@
-Creates a table record.
+Creates a table row.

@@ -18,7 +18,7 @@ search.app:
 
 
 
-Sets whether data is required or recommended for the attribute before the record can be saved.
+Sets whether data is required or recommended for the attribute before the row can be saved.
 
 > [!IMPORTANT]
 > Reducing the required level of an attribute can cause an error when the page is saved. If the attribute is required by the server, an error will occur if there is no value for the attribute. 

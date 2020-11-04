@@ -31,7 +31,7 @@ When configuring Ribbon elements you can define specific rules to control when t
 ## Control when ribbon elements are enabled  
  Enable rules are intended to be re-used. By defining them with rule definitions, you can use the same enable rule for many command definitions. When more than one enable rule is defined for a command definition, all of the enable rules must evaluate as true for the ribbon element to be enabled.  
 
- All Enable rules provide an optional attribute to specify whether the default value of the rule is true or false and an optional `InvertResult` attribute to allow for returning a negative result when the item being tested returns true.  
+ All Enable rules provide an optional column to specify whether the default value of the rule is true or false and an optional `InvertResult` column to allow for returning a negative result when the item being tested returns true.  
 
  The `/RuleDefinitions/EnableRules/EnableRule` element supports the following types of rules:  
 
@@ -120,10 +120,10 @@ function EnableRule() {
 ### Entity Rule
  Uses the `<EntityRule>` element. Entity rules allow for evaluation of the current table. This is useful when you define custom actions that apply to the Entity Template instead of for specific tables. For example, you may want to add a ribbon element to all tables except for several specific tables. It is easier to define the custom action for the Entity Template that applies to all tables and then use an Entity Rule to filter out those that should be excluded.  
 
- The table rule also includes an optional Context attribute to specify whether the table is being displayed in the Form or a list (HomePageGrid). The optional `AppliesTo` attribute can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
+ The table rule also includes an optional Context column to specify whether the table is being displayed in the Form or a list (HomePageGrid). The optional `AppliesTo` column can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
 
 ### Form State Rule
- Uses the `<FormStateRule>` element. Use the `FormState` rule to determine the current type of form that is displaying a record. State options are as follows:  
+ Uses the `<FormStateRule>` element. Use the `FormState` rule to determine the current type of form that is displaying a row. State options are as follows:  
 
 -   `Create`  
 
@@ -139,7 +139,7 @@ function EnableRule() {
  Uses the `<OrRule>` element. The `OrRule` lets you override the default AND comparison for multiple enable rule types. Use the `OrRule` element to define several possible valid combinations to check.
 
 ### Outlook Item Tracking Rule
- Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` attribute for this element to determine whether the record is being tracked in Power Apps.  
+ Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` column for this element to determine whether the row is being tracked in Power Apps.  
 
 ### Outlook Version Rule
  Uses the `<OutlookVersionRule>` element. Use this to enable a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] as follows:  
@@ -154,13 +154,13 @@ function EnableRule() {
  Uses the `<PageRule>` element. This type of rule checks the URL of the page being displayed. It returns true if the `Address` matches.  
 
 ### Record Privilege Rule
- Uses the `<RecordPrivilegeRule>` element. Use this rule to determine whether the current user has privileges on a specific record. These privileges differ from  a Table privilege because they can include privileges gained by another user sharing the record with the current user.  
+ Uses the `<RecordPrivilegeRule>` element. Use this rule to determine whether the current user has privileges on a specific row. These privileges differ from  a Table privilege because they can include privileges gained by another user sharing the row with the current user.  
 
 ### Selection Count Rule
  Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of records in the grid are selected. For example, if your button merges records, you should make sure at least two records are selected before enabling the ribbon control.  
 
 ### Value Rule
-Uses the `<ValueRule>` element. Use this rule to check the value of a specific field in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
+Uses the `<ValueRule>` element. Use this rule to check the value of a specific column in the row being displayed in the form. You must specify the `Field` and the `Value` to check.
 
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   

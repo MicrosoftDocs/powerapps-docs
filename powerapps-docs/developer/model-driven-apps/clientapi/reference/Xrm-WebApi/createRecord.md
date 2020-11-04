@@ -43,17 +43,17 @@ search.app:
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>A JSON object defining the attributes and values for the new table record.</p>
+<td><p>A JSON object defining the attributes and values for the new table row.</p>
 <p>See examples later in this topic to see how you can define the <code>data</code> object for various create scenarios.</td>
 </tr>
 <tr>
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when a record is created. An object with the following properties will be passed to identify the new record:</p>
+<td><p>A function to call when a row is created. An object with the following properties will be passed to identify the new row:</p>
 <ul>
-<li><b>entityType</b>: String. The table logical name of the new record.</li>
-<li><b>id</b>: String. GUID of the new record.</li>
+<li><b>entityType</b>: String. The table logical name of the new row.</li>
+<li><b>id</b>: String. GUID of the new row.</li>
 </ul></td>
 </tr>
 <tr>
@@ -74,11 +74,11 @@ On success, returns a promise object containing the attributes specified earlier
 
 ## Examples
 
-These examples use the same request objects as demonstrated in [Create a table using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) to define the data object for creating a table record.
+These examples use the same request objects as demonstrated in [Create a table using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) to define the data object for creating a table row.
 
 ### Basic create 
 
-Creates a sample account record.
+Creates a sample account row.
 
 ```JavaScript
 // define the data to create new account
@@ -92,11 +92,11 @@ var data =
         "accountcategorycode": 1
     }
 
-// create account record
+// create account row
 Xrm.WebApi.createRecord("account", data).then(
     function success(result) {
         console.log("Account created with ID: " + result.id);
-        // perform operations on record creation
+        // perform operations on row creation
     },
     function (error) {
         console.log(error.message);
@@ -105,9 +105,9 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-### Create related table records along with the primary record
+### Create related table records along with the primary row
 
- You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account record along with the primary contact record and an associated opportunity record.
+ You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account row along with the primary contact row and an associated opportunity row.
 
 > [!NOTE]
 > Creating related table records in a single create operation is not supported for offline mode.
@@ -134,11 +134,11 @@ var data =
         ]
     }
 
-// create account record
+// create account row
 Xrm.WebApi.createRecord("account", data).then(
     function success(result) {
         console.log("Account created with ID: " + result.id);
-        // perform operations on record creation
+        // perform operations on row creation
     },
     function (error) {
         console.log(error.message);
@@ -149,12 +149,12 @@ Xrm.WebApi.createRecord("account", data).then(
 
 ### Associate entities on creating new records
 
-To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios: 
+To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target row. Here are code examples for both the scenarios: 
 
 
 **For online scenario (connected to server)**
 
-The following example creates an account record, and associates it to an existing contact record to set the latter as the primary contact for the new account record:
+The following example creates an account row, and associates it to an existing contact row to set the latter as the primary contact for the new account row:
 
 ```JavaScript
 var data =
@@ -163,11 +163,11 @@ var data =
         "primarycontactid@odata.bind": "/contacts(465b158c-541c-e511-80d3-3863bb347ba8)"
     }
 
-// create account record
+// create account row
 Xrm.WebApi.createRecord("account", data).then(
     function success(result) {
         console.log("Account created with ID: " + result.id);
-        // perform operations on record creation
+        // perform operations on row creation
     },
     function (error) {
         console.log(error.message);
@@ -178,7 +178,7 @@ Xrm.WebApi.createRecord("account", data).then(
 
 **For mobile offine scenario**
 
-Here is the updated sample code to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
+Here is the updated sample code to create an account row, and associate it to an existing contact row to set the latter as the primary contact for the new account row from mobile clients when working in the offline mode:
 
 ```JavaScript
 var data =
@@ -191,11 +191,11 @@ var data =
         } 
     }
 
-// create account record
+// create account row
 Xrm.WebApi.offline.createRecord("account", data).then(
     function success(result) {
         console.log("Account created with ID: " + result.id);
-        // perform operations on record creation
+        // perform operations on row creation
     },
     function (error) {
         console.log(error.message);

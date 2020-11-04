@@ -51,7 +51,7 @@ Publishing customizations makes the Web application aware of changes to the data
  Use the following two methods to retrieve unpublished metadata:  
   
  **RetrieveAsIfPublished parameter**  
- Retrieves table, attribute, table relationship, and option set data by using the following messages:  
+ Retrieves table, column, table relationship, and option set data by using the following messages:  
   
 - <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>  
   

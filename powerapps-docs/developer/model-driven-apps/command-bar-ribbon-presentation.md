@@ -90,7 +90,7 @@ There are three different ways that command data can be displayed.
   
  With this release there is a new element that can be used in display and enable rules to adapt the commands you display with the presentation.  
   
- `<CommandClientTypeRule>` contains a `Type` attribute that will be evaluated based on the presentation. The following valid options correspond to the presentation:  
+ `<CommandClientTypeRule>` contains a `Type` column that will be evaluated based on the presentation. The following valid options correspond to the presentation:  
   
 - `Refresh`: Updated user experience  
   
@@ -100,7 +100,7 @@ There are three different ways that command data can be displayed.
   
   Use this element as you define commands to control whether they display in the different presentations.  
   
-  There is also a pre-existing `<CrmClientTypeRule>` element, but the `Type` attribute for element can only differentiate between `Web` and `Outlook` clients. This rule will evaluate the Dynamics 365 for tablets client as the web client.  
+  There is also a pre-existing `<CrmClientTypeRule>` element, but the `Type` column for element can only differentiate between `Web` and `Outlook` clients. This rule will evaluate the Dynamics 365 for tablets client as the web client.  
   
 ### See also  
 

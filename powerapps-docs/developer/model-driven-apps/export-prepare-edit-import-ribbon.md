@@ -137,7 +137,7 @@ You export the ribbon by including it in a solution and then exporting the solut
 3.  Select the **Components** worksheet and note any messages in the **ErrorText** column.  
   
     > [!TIP]
-    >  The most common type of failure is an error when referencing a dependent element in the RibbonDiffXml. Perhaps you forgot to include a LocLabel that was referenced somewhere. Perhaps there is an extra blank character included at the end of an XML attribute referencing another element. All references must match exactly.  
+    >  The most common type of failure is an error when referencing a dependent element in the RibbonDiffXml. Perhaps you forgot to include a LocLabel that was referenced somewhere. Perhaps there is an extra blank character included at the end of an XML column referencing another element. All references must match exactly.  
   
 4.  After you have corrected the error, complete the steps to import the Ribbon again.  
 

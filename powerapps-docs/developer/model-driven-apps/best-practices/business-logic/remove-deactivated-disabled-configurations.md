@@ -41,7 +41,7 @@ Ensure that each solution component that is deactivated, or disabled, has been d
 
 - SDK Message Processing Steps
 - Processes
-- Record Creation and Update Rules
+- Row Creation and Update Rules
 - SLAs
 
 As well as Table components such as:

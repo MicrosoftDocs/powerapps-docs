@@ -37,13 +37,13 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The table logical name of the record you want to retrieve. For example: "account".</td>
+<td>The table logical name of the row you want to retrieve. For example: "account".</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>Yes</td>
-<td>GUID of the table record you want to retrieve.</td>
+<td>GUID of the table row you want to retrieve.</td>
 </tr>
 <tr>
 <td>options</td>
@@ -61,7 +61,7 @@ search.app:
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when a record is retrieved. A JSON object with the retrieved properties and values will be passed to the function.</p>
+<td><p>A function to call when a row is retrieved. A JSON object with the retrieved properties and values will be passed to the function.</p>
 </td>
 </tr>
 <tr>
@@ -80,13 +80,13 @@ On success, returns a promise containing a JSON object with the retrieved attrib
 
 ### Basic retrieve 
 
-Retrieves the name and revenue of an account record with record ID = 5531d753-95af-e711-a94e-000d3a11e605.
+Retrieves the name and revenue of an account row with row ID = 5531d753-95af-e711-a94e-000d3a11e605.
 
 ```JavaScript
 Xrm.WebApi.retrieveRecord("account", "a8a19cdd-88df-e311-b8e5-6c3be5a8b200", "?$select=name,revenue").then(
     function success(result) {
         console.log("Retrieved values: Name: " + result.name + ", Revenue: " + result.revenue);
-        // perform operations on record retrieval
+        // perform operations on row retrieval
     },
     function (error) {
         console.log(error.message);
@@ -101,14 +101,14 @@ The above example displays the following in your console; you might see other va
 
 ### Retrieve related entities for a table instance by expanding single-valued navigation properties
 
- The following example demonstrates how to retrieve the contact for an account record with record ID = a8a19cdd-88df-e311-b8e5-6c3be5a8b200. For the related contact record, we are only retrieving the **contactid** and **fullname** properties.
+ The following example demonstrates how to retrieve the contact for an account row with row ID = a8a19cdd-88df-e311-b8e5-6c3be5a8b200. For the related contact row, we are only retrieving the **contactid** and **fullname** properties.
 
 ```JavaScript
 Xrm.WebApi.retrieveRecord("account", "a8a19cdd-88df-e311-b8e5-6c3be5a8b200", "?$select=name&$expand=primarycontactid($select=contactid,fullname)").then(
     function success(result) {
         console.log("Retrieved values: Name: " + result.name + ", Primary Contact ID: " + result.primarycontactid.contactid +
                 ", Primary Contact Name: " + result.primarycontactid.fullname);
-        // perform operations on record retrieval
+        // perform operations on row retrieval
     },
     function (error) {
         console.log(error.message);

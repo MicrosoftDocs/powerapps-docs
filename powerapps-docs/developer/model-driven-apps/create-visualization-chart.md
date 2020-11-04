@@ -19,7 +19,7 @@ search.app:
 
 # Create a visualization (chart)
 
-To create a visualization programmatically, you must create a record for the [SavedQueryVisualization Table](../common-data-service/reference/entities/savedqueryvisualization.md) or [UserQueryVisualization Table](../common-data-service/reference/entities/userqueryvisualization.md) table to create an organization-owned or user-owned chart respectively. This topic shows how to create a chart visualization and a web resource visualization.  
+To create a visualization programmatically, you must create a row for the [SavedQueryVisualization Table](../common-data-service/reference/entities/savedqueryvisualization.md) or [UserQueryVisualization Table](../common-data-service/reference/entities/userqueryvisualization.md) table to create an organization-owned or user-owned chart respectively. This topic shows how to create a chart visualization and a web resource visualization.  
   
 <a name="Before"></a>   
 
@@ -32,7 +32,7 @@ To create a visualization programmatically, you must create a record for the [Sa
     > [!NOTE]
     >  Organization-owned visualizations can only be created by those users who have the System Administrator or System Customizer role.  
   
-- **Associated Table**: Visualizations are attached to tables. More information: [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). You can attach a chart to a supported table by using the [SavedQueryVisualization.PrimaryEntityTypeCode](../common-data-service/reference/entities/savedqueryvisualization.md#BKMK_PrimaryEntityTypeCode) or [UserQueryVisualization.PrimaryEntityTypeCode](../common-data-service/reference/entities/userqueryvisualization.md#BKMK_PrimaryEntityTypeCode) attribute.  
+- **Associated Table**: Visualizations are attached to tables. More information: [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). You can attach a chart to a supported table by using the [SavedQueryVisualization.PrimaryEntityTypeCode](../common-data-service/reference/entities/savedqueryvisualization.md#BKMK_PrimaryEntityTypeCode) or [UserQueryVisualization.PrimaryEntityTypeCode](../common-data-service/reference/entities/userqueryvisualization.md#BKMK_PrimaryEntityTypeCode) column.  
   
 <a name="CreateChart"></a>   
 

@@ -24,7 +24,7 @@ search.app:
 A *Ribbon* command creates a reusable definition that can be referenced by ribbon control elements.  
   
 ## Ribbon command elements  
- The `<CommandDefinition>` element defines a command in the ribbon. The `Id` attribute specifies a unique identifier for the command that can be referenced by ribbon control elements by using the `Command` parameter.  
+ The `<CommandDefinition>` element defines a command in the ribbon. The `Id` column specifies a unique identifier for the command that can be referenced by ribbon control elements by using the `Command` parameter.  
   
  A ribbon command defines three things:  
   

@@ -30,7 +30,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 ## Control when ribbon elements are displayed  
  By defining display rules in rule definitions, you can use the same display rule for many command definitions. When more than one display rule is defined for a command definition, all of the display rules must evaluate as true for the ribbon element to be displayed.  
 
- All display rules provide an optional attribute to specify whether the default value of the rule is true or false and an optional `InvertResult` attribute to enable returning a negative result when the item being tested returns true.  
+ All display rules provide an optional column to specify whether the default value of the rule is true or false and an optional `InvertResult` column to enable returning a negative result when the item being tested returns true.  
 
  The `/RuleDefinitions/DisplayRules/DisplayRule` element supports the following types of rules:  
 
@@ -101,13 +101,13 @@ When configuring ribbon elements, you can define specific rules to control when 
   `<EntityRule>`  
   Entity rules allow for evaluation of the current table. This is useful when you define custom actions that apply to the table template instead of for specific tables. For example, you may want to add a ribbon element to all tables except for some specific tables. It is easier to define the custom action for the table template that applies to all tables and then use a table rule to filter out those that should be excluded.  
 
-  The table rule also includes an optional context attribute to specify whether the table is being displayed in the form or a list (HomePageGrid). The optional `AppliesTo` attribute can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
+  The table rule also includes an optional context column to specify whether the table is being displayed in the form or a list (HomePageGrid). The optional `AppliesTo` column can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
 
   `<FormEntityContextRule>`  
   [!INCLUDE[ribbon_element_FormEntityContextRule](../../includes/ribbon-element-formentitycontextrule.md)]
 
   `<FormStateRule`  
-  Use the form state rule to determine the current type of form that is displaying a record. `State` options are as follows:  
+  Use the form state rule to determine the current type of form that is displaying a row. `State` options are as follows:  
 
 - Create  
 
@@ -189,7 +189,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 - Spla  
 
   `<ValueRule>`  
-  Use this rule to check the value of a specific field in the record being displayed in the form.  
+  Use this rule to check the value of a specific column in the row being displayed in the form.  
 
 > [!NOTE]
 >  For commands defined for subgrid for forms using the updated user experience, value rules cannot be used within display rules. Use this element within an `<EnableRule>` to hide an element.  

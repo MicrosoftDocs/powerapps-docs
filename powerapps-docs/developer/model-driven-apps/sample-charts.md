@@ -21,9 +21,9 @@ search.app:
 
 This topic contains sample charts along with the respective data description and presentation XML strings. You can specify the:  
   
--   *Data description XML string* for a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` attribute for the organization-owned or user-owned chart respectively.  
+-   *Data description XML string* for a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` column for the organization-owned or user-owned chart respectively.  
   
--   *Presentation description XML string* for a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization. PresentationDescription` attribute for the organization-owned or user-owned chart respectively.  
+-   *Presentation description XML string* for a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization. PresentationDescription` column for the organization-owned or user-owned chart respectively.  
   
 <a name="ColumnChart"></a>   
 ## Column Chart  

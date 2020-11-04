@@ -86,19 +86,19 @@ All tables use a common ribbon definition called the *Entity Ribbon Template*. T
   You can make changes that apply to all tables by defining the changes to the application ribbons substituting the token `{!EntityLogicalName}` in place of a table logical name in your RibbonDiffXml node. Changes to application ribbons that are defined for all tables must be defined in the `ImportExportXml/RibbonDiffXml` node. They cannot be defined in the RibbonDiffXml node for a specific table.  
 
 ### Grid ribbons  
- The table grid ribbon is a collection of tabs that have an Id attribute value beginning with `Mscrm.HomepageGrid.<entity logical name>`. For example, the tab with the text "Accounts" on an account table grid is `Mscrm.HomepageGrid.account.MainTab`. All the tabs displayed on the account table grid will have an Id value that begins with `Mscrm.HomepageGrid.account`.  
+ The table grid ribbon is a collection of tabs that have an Id column value beginning with `Mscrm.HomepageGrid.<entity logical name>`. For example, the tab with the text "Accounts" on an account table grid is `Mscrm.HomepageGrid.account.MainTab`. All the tabs displayed on the account table grid will have an Id value that begins with `Mscrm.HomepageGrid.account`.  
 
 <a name="BKMK_SubGridRibbons"></a>   
 ### Subgrid ribbons  
- The table subgrid ribbon is a contextual group with a collection of tabs that have an Id attribute value beginning with `Mscrm.SubGrid.<entity logical name>`. For example, the tab with the text "Accounts" on account table sub grid is `Mscrm.SubGrid.account.MainTab`.  
+ The table subgrid ribbon is a contextual group with a collection of tabs that have an Id column value beginning with `Mscrm.SubGrid.<entity logical name>`. For example, the tab with the text "Accounts" on account table sub grid is `Mscrm.SubGrid.account.MainTab`.  
 
  When a list of records for a table is displayed within a sub grid on the form of another table or in a chart, there will be only three controls available directly above or within the subgrid. The behaviors for these controls can be modified by changing the commands that they are associated with.  
 
-- **Add** The default behavior of the command with the ![Add button](media/customization-subgrid-add.PNG "Add button") icon depends on whether the records in the subgrid are related to the current record.  
+- **Add** The default behavior of the command with the ![Add button](media/customization-subgrid-add.PNG "Add button") icon depends on whether the records in the subgrid are related to the current row.  
 
-     If the records are related to the current record, the default behavior is look for existing records. If an existing record cannot be found, or if the user simply wants to create a new record, they can click **Add New**.  
+     If the records are related to the current row, the default behavior is look for existing records. If an existing row cannot be found, or if the user simply wants to create a new row, they can click **Add New**.  
 
-     If the records are not related to the current record, the default behavior is to add a new record. If the table has a Quick Create form this will be displayed, otherwise a new full form will be shown.  
+     If the records are not related to the current row, the default behavior is to add a new row. If the table has a Quick Create form this will be displayed, otherwise a new full form will be shown.  
 
      Activities are the exception to this pattern. The add command will always prompt for the type of activity first.
 
@@ -107,17 +107,17 @@ All tables use a common ribbon definition called the *Entity Ribbon Template*. T
 
 - **Show List** The command with the ![Open view button](media/customization-open-view.PNG "Open view button") icon will open the full list where all available commands can be used.  
 
-     If the subgrid is associated with the current record, the default behavior of this command is to open the associated  view.  
+     If the subgrid is associated with the current row, the default behavior of this command is to open the associated  view.  
 
-     If the subgrid is not associated with the current record, the default behavior of this command is to open the view in the main list view.  
+     If the subgrid is not associated with the current row, the default behavior of this command is to open the view in the main list view.  
 
 - **Delete** The ![Sublist delete icon](media/customization-subgrid-delete.PNG "Sublist delete icon") icon is shown on the right side of the row when people hover over the records in the list.  
 
-     For records with a 1:N relationship or no relationship, the default behavior is to delete the record. The delete may be blocked if it is not allowed due to relationship configurations. Open activities and invoices are common examples of records that may not be deleted due to relationship configurations.  
+     For records with a 1:N relationship or no relationship, the default behavior is to delete the row. The delete may be blocked if it is not allowed due to relationship configurations. Open activities and invoices are common examples of records that may not be deleted due to relationship configurations.  
 
-     For relationships displaying N:N relationships the default behavior is to remove the relationship joining the records rather than the record itself.  
+     For relationships displaying N:N relationships the default behavior is to remove the relationship joining the records rather than the row itself.  
 
-  You can change the default behavior by changing the actions associated with the command using `<CommandDefinition>`, but you cannot change the name of the command. For example, you could change the delete action so that it deactivates the record rather than deleting it.  
+  You can change the default behavior by changing the actions associated with the command using `<CommandDefinition>`, but you cannot change the name of the command. For example, you could change the delete action so that it deactivates the row rather than deleting it.  
 
   It is not possible to change the icons displayed for these commands. 
   You can hide these commands by using `<HideCustomAction>`.  
@@ -127,7 +127,7 @@ All tables use a common ribbon definition called the *Entity Ribbon Template*. T
 
  Each table form can have a specific ribbon definition. In the exported customizations.xml file, you must add your modified `<RibbonDiffXml>` to this location:`//ImportExportXml/Entities/Entity/FormXml/forms/systemform/form/RibbonDiffXml`.  
 
- The table form ribbon is a collection of tabs that have an Id attribute value beginning with `Mscrm.Form.<entity logical name>`. For example, the tab with the label **Account** on account table form is `Mscrm.Form.account.MainTab`. All the tabs displayed on the account table form will have an Id value that begins with `Mscrm.Form.account`.  
+ The table form ribbon is a collection of tabs that have an Id column value beginning with `Mscrm.Form.<entity logical name>`. For example, the tab with the label **Account** on account table form is `Mscrm.Form.account.MainTab`. All the tabs displayed on the account table form will have an Id value that begins with `Mscrm.Form.account`.  
 
 <a name="BKMK_BasicHomeTab"></a>   
 ## Basic home tab  

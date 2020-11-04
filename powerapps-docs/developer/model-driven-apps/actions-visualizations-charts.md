@@ -32,12 +32,12 @@ To perform actions on an organization-owned visualization (`SavedQueryVisualizat
   > [!NOTE]
   >  After updating an organization-owned visualization, you must publish the metadata changes to make it visible across the organization by using the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message. Alternatively, whenever you publish a table, all the unpublished organization-owned visualizations that are attached to the table are published automatically.  
   
-- Query and retrieve all the organization-owned visualizations that are attached to a table using the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute. Multiple organization-owned visualizations can be attached to a single table. For a list of tables with which you can attach a visualization, see [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to a table, see [Sample: Retrieve all Charts Attached to  a Table](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveChartsAttachedToEntity).
+- Query and retrieve all the organization-owned visualizations that are attached to a table using the `SavedQueryVisualization.PrimaryEntityTypeCode` column. Multiple organization-owned visualizations can be attached to a single table. For a list of tables with which you can attach a visualization, see [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to a table, see [Sample: Retrieve all Charts Attached to  a Table](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveChartsAttachedToEntity).
   
   > [!NOTE]
-  >  You cannot change or update a visualization to attach it with a different table after you have created the visualization. It implies that the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute is not valid for the update action on the organization-owned visualization.
+  >  You cannot change or update a visualization to attach it with a different table after you have created the visualization. It implies that the `SavedQueryVisualization.PrimaryEntityTypeCode` column is not valid for the update action on the organization-owned visualization.
   
-- Specify an organization-owned visualization as the default visualization for the associated table by setting the `SavedQueryVisualization.IsDefault` attribute to `true`. When you set an organization-owned visualization as the default visualization for a table, the visualization is displayed by default when you select to view the visualizations for this table in Common Data Service.
+- Specify an organization-owned visualization as the default visualization for the associated table by setting the `SavedQueryVisualization.IsDefault` column to `true`. When you set an organization-owned visualization as the default visualization for a table, the visualization is displayed by default when you select to view the visualizations for this table in Common Data Service.
   
   > [!NOTE]
   >  Using the Common Data Service Web Services, if you set an organization-owned visualization as default for a table that already has another visualization set as default, both the visualizations are marked as default visualizations for the table.  To set a visualization as a default visualization for a table, make sure that no other visualization is set as the default visualization for the table.  
@@ -50,10 +50,10 @@ To perform actions on an organization-owned visualization (`SavedQueryVisualizat
   
 - Create, retrieve, update, and delete a user-owned visualization. More information: [Create a Visualization](create-visualization-chart.md)  
   
-- Query and retrieve all the user-owned visualizations that are attached to a table using the `UserQueryVisualization.PrimaryEntityTypeCode` attribute. Multiple user-owned visualizations can be attached to a table. For a list of tables with which you can attach a visualization, see [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities).  
+- Query and retrieve all the user-owned visualizations that are attached to a table using the `UserQueryVisualization.PrimaryEntityTypeCode` column. Multiple user-owned visualizations can be attached to a table. For a list of tables with which you can attach a visualization, see [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities).  
   
   > [!NOTE]
-  >  You cannot change or update a visualization to attach it with a different table after you have created the visualization. It implies that the `UserQueryVisualization.PrimaryEntityTypeCode` attribute is not valid for the update action on the user-owned visualization.
+  >  You cannot change or update a visualization to attach it with a different table after you have created the visualization. It implies that the `UserQueryVisualization.PrimaryEntityTypeCode` column is not valid for the update action on the user-owned visualization.
   
 - Change the ownership of a user-owned visualization by assigning it to another user or team using <xref:Microsoft.Crm.Sdk.Messages.AssignRequest>.  
   

@@ -31,24 +31,24 @@ The default, an application command bar or ribbon is defined by Common Data Serv
   
 ### Custom actions  
 
- A custom action is a statement of how you want to change the default ribbon definition. It is evaluated and applied to the ribbon at runtime. To set the context for a custom action, you must include information about the location of the items that you want to change. Use the `Location` attribute to specify where your change applies.  
+ A custom action is a statement of how you want to change the default ribbon definition. It is evaluated and applied to the ribbon at runtime. To set the context for a custom action, you must include information about the location of the items that you want to change. Use the `Location` column to specify where your change applies.  
   
  When you add a new ribbon element, you refer to the containing element, for example, an existing tab or group. You then include the suffix `._children` to indicate that this custom action will add something to an existing item.  
   
  When you change the definition of an existing item, the `Location` value will match the ID of that item.  
   
- You must also specify a unique identifier for the custom action. Use the **Id** attribute to set this value. We strongly recommend that you use a naming convention that will guarantee a unique value. For consistency and readability, we recommend that you use a period to separate consistent components. The first item in your naming convention should be something related to your solutions publisher or solution, for example, `Contoso.contact.form.CustomButton.CustomAction`.  
+ You must also specify a unique identifier for the custom action. Use the **Id** column to set this value. We strongly recommend that you use a naming convention that will guarantee a unique value. For consistency and readability, we recommend that you use a period to separate consistent components. The first item in your naming convention should be something related to your solutions publisher or solution, for example, `Contoso.contact.form.CustomButton.CustomAction`.  
   
 > [!TIP]
-> Consistently applying your `Id` attribute naming conventions will greatly enhance your productivity while editing RibbonDiffXml.  
+> Consistently applying your `Id` column naming conventions will greatly enhance your productivity while editing RibbonDiffXml.  
   
- Based on the location information that you provide, the `Sequence` attribute value determines the order in which to render items. If you want a custom control to appear between two existing controls, you must select a sequence value that is in between the sequence values of the existing items.  
+ Based on the location information that you provide, the `Sequence` column value determines the order in which to render items. If you want a custom control to appear between two existing controls, you must select a sequence value that is in between the sequence values of the existing items.  
   
 ### Hide custom actions  
 
  A `<HideCustomAction>` is a statement that you use when you want to remove an existing ribbon element so that it is not rendered. This does not hide the ribbon element, it actually removes the ribbon element at runtime so that it doesn’t exist in the ribbon.  
 
-The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** attribute must match the Id of the ribbon element you want to remove.  
+The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** column must match the Id of the ribbon element you want to remove.  
   
 > [!NOTE]
 > Because the `HideCustomAction` element removes a specified node from the ribbon, removing ribbon elements in this manner may not be the best option for every situation.  

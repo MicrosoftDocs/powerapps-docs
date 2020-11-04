@@ -37,7 +37,7 @@ The **offlineWebApi** object provides the following methods. When in the offline
 - [updateRecord](updateRecord.md)
 
 > [!IMPORTANT]
-> While creating or updating record in the offline mode, only basic validation is performed on the input data. Basic validation includes things such as ensuring that the table attribute name specified is in lower case and does exist for a table, checking for data type mismatch for the specified attribute value, preventing records getting created with the same GUID value, checking whether the related table is offline enabled when retrieving related table records, and validating if the record that you want to retrieve, update, or delete actually exists in the offline data store. Business-level validations happen only when you are connected to the server and the data is synchronized. A record is created or updated only if the input data is completely valid.
+> While creating or updating row in the offline mode, only basic validation is performed on the input data. Basic validation includes things such as ensuring that the table attribute name specified is in lower case and does exist for a table, checking for data type mismatch for the specified attribute value, preventing records getting created with the same GUID value, checking whether the related table is offline enabled when retrieving related table records, and validating if the row that you want to retrieve, update, or delete actually exists in the offline data store. Business-level validations happen only when you are connected to the server and the data is synchronized. A row is created or updated only if the input data is completely valid.
 
 ### Related topics
 

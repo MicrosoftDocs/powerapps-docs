@@ -28,7 +28,7 @@ Provides properties and methods to work with the data on a form.
 |Name|Description|
 |--|--|
 |attributes|Collection of non-entity data on the form. Items in this collection are of the same type as the attributes collection, but they are not attributes of the form table. <br/>More information: [Collections](collections.md)|
-|entity|Provides methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the attributes included on the form. Attribute data is limited to attributes represented by fields on the form. <br/>More information: [formContext.data.entity](formContext-data-entity.md)|
+|entity|Provides methods to retrieve information specific to the row displayed on the page, the save method, and a collection of all the attributes included on the form. Attribute data is limited to attributes represented by fields on the form. <br/>More information: [formContext.data.entity](formContext-data-entity.md)|
 |process|Provides objects and methods to interact with the business process flow data on a form.<br/>More information: [formContext.data.process](formContext-data-process.md)|
 
 

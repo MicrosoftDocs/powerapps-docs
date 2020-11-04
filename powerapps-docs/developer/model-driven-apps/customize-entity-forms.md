@@ -41,7 +41,7 @@ Forms provide the user interface (UI) that people use to create, view, or edit t
  Only definitions of system table forms that have been customized are included in exported managed solution. To view the definition of a system table form, you must either change it in some way, or create a new form by saving the existing form with a new name.  
 
  After you export the solution, extract the contents and view the customizations.xml file. You'll find the definition of the forms in `ImportExportXml` > `Entities` > `Entity` > `FormXml`. 
- In the `<FormXml>` node, you'll find each type of form is grouped in a `<forms>` element with the `type` attribute specifying the type of form.  
+ In the `<FormXml>` node, you'll find each type of form is grouped in a `<forms>` element with the `type` column specifying the type of form.  
 
 <a name="BKMK_FormProperties"></a>   
 
@@ -90,9 +90,9 @@ To open the main form in a dialog using client API, you need to invoke the call 
 
 ## Examples
 
-### Open a new record
+### Open a new row
 
-In this example, the dialog opens a new account form for creating a new record. The dialog pops up in the center using up to 50% of the available window as a modal on top of the form it was invoked or called from.
+In this example, the dialog opens a new account form for creating a new row. The dialog pops up in the center using up to 50% of the available window as a modal on top of the form it was invoked or called from.
 
 ```JavaScript
 var pageInput = {
@@ -108,11 +108,11 @@ var navigationOptions = {
 Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
-> ![Open a new record](media/open-new-record-mfd.png "Open a new record")
+> ![Open a new row](media/open-new-record-mfd.png "Open a new row")
 
-### Open an existing record
+### Open an existing row
 
-In this example, the dialog opens an existing account record using the account table id value over the contact form. Replace the table id with any record id value you want to open the record in the dialog.
+In this example, the dialog opens an existing account row using the account table id value over the contact form. Replace the table id with any row id value you want to open the row in the dialog.
 
 ```JavaScript
 var pageInput = {
@@ -129,11 +129,11 @@ var navigationOptions = {
 Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
-> ![Open an existing record](media/open-existing-record-mfd.png "Open an existing record")
+> ![Open an existing row](media/open-existing-record-mfd.png "Open an existing row")
 
-### Open a new record on the side pane
+### Open a new row on the side pane
 
-In this example, the dialog opens a new record in the right corner of the window. This can be achieved by using the pixel options.
+In this example, the dialog opens a new row in the right corner of the window. This can be achieved by using the pixel options.
 
 ```JavaScript
 var pageInput = {
@@ -149,11 +149,11 @@ var navigationOptions = {
 Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
-> ![Open an existing record on side pane](media/open-record-side-pane-mfd.png "Open an existing record on side pane")
+> ![Open an existing row on side pane](media/open-record-side-pane-mfd.png "Open an existing row on side pane")
 
 ### Open main form in a dialog with callback method
 
-This example shows how a main form dialog is invoked with a callback method after saving a record and closing the dialog.
+This example shows how a main form dialog is invoked with a callback method after saving a row and closing the dialog.
 
 ```Javascript
 var pageInput = {
@@ -168,7 +168,7 @@ var navigationOptions = {
 };
 Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
     function success(result) {
-            console.log("Record created with ID: " + result.savedEntityReference[0].id + 
+            console.log("Row created with ID: " + result.savedEntityReference[0].id + 
             " Name: " + result.savedEntityReference[0].name)
             // Handle dialog closed
     },

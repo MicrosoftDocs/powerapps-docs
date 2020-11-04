@@ -125,7 +125,7 @@ Because of the capability for the HTML in web resources to be changed by using t
 |---------------|----------|-----------------|
 |typename|Entity Name|The name of the table.|
 |type|Entity Type Code|An integer that uniquely identifies the table in a specific organization.|
-|id|Object GUID|The GUID that represents a record.|
+|id|Object GUID|The GUID that represents a row.|
 |orgname|Organization Name|The unique name of the organization.|
 |userlcid|User Language Code|The language code identifier being used by the current user.|
 |orglcid|Organization Language Code|The language code identifier that represents the base language for the organization.|

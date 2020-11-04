@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[./includes/getActivePath-description.md](./includes/getActivePath-description.md)]
 
-The active path represents stages currently rendered in the process control based on the branching rules and current data in the record.
+The active path represents stages currently rendered in the process control based on the branching rules and current data in the row.
 
 ## Syntax
 

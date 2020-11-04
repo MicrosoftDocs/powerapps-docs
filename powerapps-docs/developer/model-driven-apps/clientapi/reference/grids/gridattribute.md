@@ -25,7 +25,7 @@ GridAttribute represents the data in the cell of an editable grid, and contains 
 GridAttribute also supports the **controls** collection for attributes of a selected grid row, which provides methods to work with a collection of cells associated with the attribute. Each cell ([GridCell](gridcell.md)) of a selected grid row is analogous to a control on a form that is tied to an attribute in an editable grid. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
 
 >[!TIP]
->For performance reasons, a row (record) in an editable grid is not editable until the record is selected. Users must select a single record in a grid to edit it. Once a record is selected in an editable grid, Dynamics 365 internally evaluates a number of things including user access to the record, whether the record is active, and field validations to ensure that data security and validity are honored when you edit data. Consider using the [OnRecordSelect](../events/grid-onrecordselect.md) event with the [getFormContext](../executioncontext/getFormContext.md) method to access records in the grid that are in the editable state.
+>For performance reasons, a row (record) in an editable grid is not editable until the row is selected. Users must select a single row in a grid to edit it. Once a row is selected in an editable grid, Dynamics 365 internally evaluates a number of things including user access to the row, whether the row is active, and field validations to ensure that data security and validity are honored when you edit data. Consider using the [OnRecordSelect](../events/grid-onrecordselect.md) event with the [getFormContext](../executioncontext/getFormContext.md) method to access records in the grid that are in the editable state.
 
 ## Methods
 
@@ -35,7 +35,7 @@ GridAttribute supports the following methods for attributes of a selected grid r
 |--|--|
 |[getName](../attributes/getName.md)|Returns the logical name of the attribute of a selected grid row.|
 |[getRequiredLevel](../attributes/getRequiredLevel.md)| Returns a string value indicating whether a value for the attribute is required or recommended.|
-|[setRequiredLevel](../attributes/setRequiredLevel.md)| Sets whether data is required or recommended for the attribute of a selected grid row before the record can be saved.|
+|[setRequiredLevel](../attributes/setRequiredLevel.md)| Sets whether data is required or recommended for the attribute of a selected grid row before the row can be saved.|
 |[getValue](../attributes/getValue.md)| Retrieves the data value for an attribute.|
 |[setValue](../attributes/setValue.md)| Sets the data value for an attribute.|
 

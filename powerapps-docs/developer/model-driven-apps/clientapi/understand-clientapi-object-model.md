@@ -20,9 +20,9 @@ search.app:
 
 
 The Client API object model for model-driven apps provides you objects and methods that you can use to apply custom business logic in model-driven apps using JavaScript, such as:
-- Get or set attribute values.
+- Get or set column values.
 - Show and hide user interface elements.
-- Reference multiple controls per attribute.
+- Reference multiple controls per column.
 - Access multiple forms per table.
 - Manipulate form navigation items.
 - Interact with the business process flow control.
