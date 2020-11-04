@@ -58,9 +58,9 @@ The main form is used by all model-driven app clients. This form provides a cons
 |**Body**|The body is the scrollable part of the form that contains the tabs.|  
 |**Tabs**|In the body of the form, tabs provide horizontal separation. Tabs have a label that can be displayed. If the label is displayed, tabs can be expanded or collapsed to show or hide their content by selecting the label.<br /><br /> Tabs contain up to three columns and the width of each column can be set to a percentage of the total width. When you create a new tab, each column is prepopulated with a section.|  
 |**Sections**|A section occupies the space available in a tab column. Sections have a label that can be displayed and a line may be shown below the label.<br /><br /> Sections can have up to four columns and include options for displaying how labels for columns in the section are displayed.|  
-|**Fields**|Columns display controls people use to view or edit data in a table row. Columns can be formatted to occupy up to four columns within a section.|  
+|**Columns**|Columns display controls people use to view or edit data in a table row. Columns can be formatted to occupy up to four columns within a section.|  
 |**Spacer**|A spacer allows for an empty space to be added to a section column.|  
-|**Sub-grids**|Sub-grids allow for the display of a list within the form. The ability to display charts using a sub-grid isn’t available in forms for updated entities.|  
+|**Sub-grids**|Sub-grids allow for the display of a list within the form. The ability to display charts using a sub-grid isn’t available in forms for updated tables.|  
 |**Quick View Form**|A quick view form displays data from a row referenced by a lookup column on the form. The table that is the target of the lookup must have a quick view form before one can be added to the form. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)|  
 |**Web Resources**|HTML and Microsoft Silverlight web resources can be added to main forms but they won’t be displayed when using Dynamics 365 for phones and tablets.|  
 |**iFrame**|An inline-frame that you configure to show a webpage from another website. **Important:**  <ul><li>When the page displayed in an iFrame is on another domain, browsers apply a higher level of security. This may complicate the requirements for the contents of an iFrame to interact with data in the form.</li><li>Displaying a table form within an iFrame embedded in another table form is not supported. 
@@ -120,7 +120,7 @@ The main form is used by all model-driven app clients. This form provides a cons
   
  For Contact and User forms, the top item displays a communication card for the row. The communication card provides buttons to initiate communication with the person. For other tables, a communication card is displayed if there is a Contact quick view form embedded in the main form.  
   
- You can show additional tiles based on table relationships, but you can’t customize the tiles for the following entities:  
+ You can show additional tiles based on table relationships, but you can’t customize the tiles for the following tables:  
   
 |Entity|Tiles|  
 |------------|-----------|  

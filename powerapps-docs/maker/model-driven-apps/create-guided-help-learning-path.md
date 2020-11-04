@@ -67,7 +67,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 
 4. On the **General** tab, under **Set custom Help URL**, select **Yes** for **Enable Learning Path** and **Enable Learning Path Authoring**.  
 
-    You can enable Learning Path or customizable Help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are set to **No**.  
+    You can enable Learning Path or customizable Help, but not both at the same time. Confirm that **Use custom Help for customizable tables** and **Append parameters to URL** are set to **No**.  
 
      ![System Settings dialog showing the options to select to enable Learning Path authoring](media/lp-system-settings.png "System Settings dialog box showing the options to select to enable Learning Path authoring")  
 

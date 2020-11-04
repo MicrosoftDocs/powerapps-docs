@@ -111,7 +111,7 @@ Flows](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsof
 
 - **Dynamics 365 Customer Service**:
     -   Service scheduling: Consider using [Universal Resource Scheduling](https://docs.microsoft.com/dynamics365/common-scheduler/schedule-anything-with-universal-resource-scheduling) instead of legacy service scheduling.
-    - [Deprecated knowledge management tables](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn265924(v=crm.8)#some-knowledge-management-entities-are-deprecated): See this topic to work with the latest knowledge management entities: [Work with knowledge articles](https://docs.microsoft.com/dynamics365/customer-service/work-knowledge-articles).
+    - [Deprecated knowledge management tables](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn265924(v=crm.8)#some-knowledge-management-entities-are-deprecated): See this topic to work with the latest knowledge management tables: [Work with knowledge articles](https://docs.microsoft.com/dynamics365/customer-service/work-knowledge-articles).
     - [Deprecated contract tables](https://docs.microsoft.com/power-platform/important-changes-coming#contracts-contract-line-items-and-contract-templates-entities-are-deprecated): See this topic to migrate to entitlements: [Contracts to entitlements migration strategy](https://docs.microsoft.com/dynamics365/customer-service/contract-to-entitlement-migration). 
 
 ## Test your application in Unified Interface
@@ -250,7 +250,7 @@ processes for each group or role.
 
 -   Create a **Welcome Page** that users see when they access each of your app. This is a great opportunity to guide users in their first steps.
 
--   Use existing **Custom Controls** to improve the usability of most field
+-   Use existing **Custom Controls** to improve the usability of most column
     types, especially on mobile. For example, replace a 0 to 5 column rating with stars, replace a view of
     appointments with a calendar view, replace a sub-grid view with card forms.
 

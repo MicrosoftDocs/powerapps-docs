@@ -98,7 +98,7 @@ In this example there are two interactive dashboard options available in the Cas
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
 3. Under **Components**, expand **Tables**, and then expand the table you want.
-4. In the navigation pane, select **Fields** and in the grid, double-click the column you want to enable.
+4. In the navigation pane, select **Columns** and in the grid, double-click the column you want to enable.
 5. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
 6. Select **Publish All Customizations** for your changes to take effect.
   
@@ -106,7 +106,7 @@ In this example there are two interactive dashboard options available in the Cas
   
  The global filter flyout window is shown here:  
   
- ![Add two global filter fields](media/global-filter-escalated.png "Global filter fields")  
+ ![Add two global filter columns](media/global-filter-escalated.png "Global filter columns")  
   
 > [!TIP]
 >  When you configure a visual filter based on the columns like priority or status, a best practice is to also enable these columns (priority, status) to appear in the global filter.  
@@ -116,7 +116,7 @@ In this example there are two interactive dashboard options available in the Cas
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
 3. Under **Components**, expand **Tables**, and then expand the table you want.
-4. In the navigation pane, select **Fields** and in the grid, double-click the column you want to enable.
+4. In the navigation pane, select **Columns** and in the grid, double-click the column you want to enable.
 5. In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.
 6. Select **Publish All Customizations** for your changes to take effect.
   
@@ -252,7 +252,7 @@ For all **Option Set** and **Two Options** type columns, such as the **Case Type
 1.  Open [solution explorer](advanced-navigation.md#solution-explorer).  
 2.  Under **Components**, expand **Tables**, and then expand the table you want. If the table you want isn't displayed select **Add Existing** to add it.  
   
-3.  In the navigation pane, select **Fields**. In the grid, double-click the column that you want to configure the color for.  
+3.  In the navigation pane, select **Columns**. In the grid, double-click the column that you want to configure the color for.  
   
 4.  In the **General** tab, in the **Type** sub-area, select **Yes** and then select **Edit**.  
   

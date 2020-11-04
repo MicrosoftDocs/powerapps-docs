@@ -29,7 +29,7 @@ For detailed information about working with these components in Common Data Serv
 |Component |Topic|
 |-----|----|
 |Entity| [Work with tables](../common-data-service/entity-overview.md)|
-|Column| [Work with fields](../common-data-service/fields-overview.md)|
+|Column| [Work with columns](../common-data-service/fields-overview.md)|
 |Relationships| [Work with relationships](../common-data-service/relationships-overview.md)|
 
 ## Next step

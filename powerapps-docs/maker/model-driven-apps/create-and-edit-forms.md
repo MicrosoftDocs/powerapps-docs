@@ -57,7 +57,7 @@ These are the properties available to configure a form when you create or edit a
 |**Title**  | Enter a name that is meaningful to other makers and app users. This name is shown to app users. If users have access to multiple forms for a table they will use this name to differentiate between the available forms. <br /><br />This property is required. |
 |**Description** |  Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the list of forms for a table in the solution explorer. |
 |**Max Width** | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900. <br /><br />This property is required. |
-|**Show image** | Show the entity’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of the form. <br /><br /> See Enable or disable table options for more information about table options. |
+|**Show image** | Show the table’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of the form. <br /><br /> See Enable or disable table options for more information about table options. |
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
@@ -70,4 +70,4 @@ These are the properties available to configure a form when you create or edit a
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../common-data-service/create-edit-field-portal.md)  

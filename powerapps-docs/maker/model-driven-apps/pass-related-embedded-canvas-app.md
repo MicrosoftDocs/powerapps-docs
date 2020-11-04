@@ -53,7 +53,7 @@ Let's say you want to add an embedded canvas app on an account main form and pas
      > If opening Power Apps Studio is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
 11.	In Power Apps Studio, notice that there is a **ModelDrivenFormIntegration** control located in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app. 
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
-13.	In the property pane on the right, next to **Fields**, select **Edit**.
+13.	In the property pane on the right, next to **Columns**, select **Edit**.
 14.	In the data pane, change the column mapped to the **Title1** control to **FullName** or another column that has data.
 15.	Observe that the gallery displays the data being passed to it from the host model-driven form via the **ModelDrivenFormIntegration** control. Close the data pane.
 16.	Select the **File** tab, and select **App settings**.

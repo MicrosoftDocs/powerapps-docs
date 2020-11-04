@@ -87,7 +87,7 @@ On the **Formatting** tab, the options that display vary based on the type of we
 
 ### Dependencies tab
 
-A web resource may interact with columns in the form using script. If a column is removed from the form the script in the web resource may break. Add any columns referenced by scripts in the web resource to the **Dependent fields** so that they cannot be removed accidentally.
+A web resource may interact with columns in the form using script. If a column is removed from the form the script in the web resource may break. Add any columns referenced by scripts in the web resource to the **Dependent columns** so that they cannot be removed accidentally.
 
 ![Web Resource dependency properties](media/web-resource-dependency-properties.png)
   

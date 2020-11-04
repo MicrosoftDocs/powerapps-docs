@@ -85,7 +85,7 @@ search.app:
   
      Some functions can accept a set of parameters to control the behavior of a function. If these are required, enter them in the **Comma separated list of parameters that will be passed to the function**.  
   
-10. On the **Dependencies** tab, add any columns that the script depends on into the **Dependent Fields** area.  
+10. On the **Dependencies** tab, add any columns that the script depends on into the **Dependent Columns** area.  
   
 11. Select **OK** to close the **Handler Properties** dialog.  
   

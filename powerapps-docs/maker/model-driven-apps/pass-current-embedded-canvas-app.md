@@ -54,7 +54,7 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
       > [!NOTE]
       > ModelDrivenFormIntegration.Data is a list of rows. In this example it has only one row. To directly reference the row you can use the First function. For example, *First(ModelDrivenFormIntegration.Data).Name*.
-13.	In the property pane on the right, next to **Fields**, select **Edit**.
+13.	In the property pane on the right, next to **Columns**, select **Edit**.
 14.	In the data pane, change the column mapped to the **Title1** control to **Name** or another column that has data.
 15.	Observe that the gallery displays the data being passed to it from the host model-driven form via the ModelDrivenFormIntegration control. Close the data pane.
 16.	Select the **File** tab, and then select **App settings**.

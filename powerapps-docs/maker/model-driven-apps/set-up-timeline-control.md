@@ -161,7 +161,7 @@ How you view data is important and setting a default display view of your data v
 1. The **Sort activities by** feature in the **Activities row settings** allows you to control how data is sorted in the timeline.  
 2. When you select the **Sort activities by** column, a list appears. You can select from this list how you want your data to be sorted and displayed on the timeline in the form.
 
-    There are some unique date fields; for example:
+    There are some unique date columns; for example:
 
     | Labels | Section | Description |
     |--------|---------|-------------|
@@ -195,7 +195,7 @@ All card forms are broken out into the following four sections:
 |b | **Header** | This section is displayed on the timeline row; however, only the first two columns are displayed. For this example, only the **Subject** and **Modified On** columns are visible. |
 |c | **Details** | This section is displayed on the timeline row; however, only the first three columns are displayed. For this example, only the **To**, **CC**, and **Description** columns are visible.|
 | d | **Footer** | This section is not displayed on the timeline row. | 
-| e | **Table Fields** | You can select which columns you want to add to your card form from the column options listed on the right.  You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline row. |
+| e | **Table Columns** | You can select which columns you want to add to your card form from the column options listed on the right.  You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline row. |
 
 ![Advanced display options about how to customize a card form in the timeline](media/timeline-card-form-advanced-1.png "Advanced display options about how to customize a card form in the timeline")
 

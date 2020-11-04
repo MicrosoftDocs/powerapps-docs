@@ -86,7 +86,7 @@ To show or hide the header flyout for a model-driven form, follow these steps:
 > [!NOTE]
 > - Use the new form designer. The classic form designer does not provide the ability to show or hide the header flyout.   
 > - The visibility of header flyout can only be controlled when using high-density form header. When using low-density header, the header flyout is automatically displayed or hidden based on the number of columns in the header and the width of the form.
-> - An image for a table will be displayed in the header only if the **Primary Imagine** attribute is defined for the table and the form property **Show image in the form** is enabled. More information: [Image fields](../common-data-service/types-of-fields.md#image-columns). <br />
+> - An image for a table will be displayed in the header only if the **Primary Imagine** attribute is defined for the table and the form property **Show image in the form** is enabled. More information: [Image columns](../common-data-service/types-of-fields.md#image-columns). <br />
     Developers can specify an image for a table by using the [EntityMetadata.PrimaryImageAttribute](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute?view=dynamics-general-ce-9) attribute.
 > - When using a high-density header on a form, controls are limited in what is displayed that include a checkbox, datetime, decimal, duration, emailaddress, float, integer, languagepicker, lookup, money, phonenumber, picklist, radio, regarding, textbox, ticker and timezonepicklist.  Any other type of control, including custom Power Apps control framework controls, will not be displayed.  You'll need to switch to the high-density header with flyout to ensure your users can access controls in the header that aren't in the supported list. 
 
@@ -166,4 +166,4 @@ The message informs the maker that when editing a form that is using high-densit
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../common-data-service/create-edit-field-portal.md)  

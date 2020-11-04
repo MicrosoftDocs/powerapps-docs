@@ -63,7 +63,7 @@ Imagine that you want to create a new canvas app and embed it on a main form for
   	> [!NOTE]
   	> The embedded canvas app has full access to row from the host model-driven form via ModelDrivenFormIntegration.Item. 
   	> As an example, to get the value of a column with the name **accountnumber** and display name **Account Number**, you can use **ModelDrivenFormIntegration.Item.accountnumber** or **ModelDrivenFormIntegration.Item.'Account Number'**.
-18.	In the property pane on the right, next to **Fields**, select **Edit fields**.
+18.	In the property pane on the right, next to **Columns**, select **Edit columns**.
 19.	Select **+ Add column** to add another column to the canvas app form or reorder existing columns using drag and drop. Close the data pane when you are done adding and reordering columns.
 20.	Select the **File** tab, and then select **Save**.
 21.	Select the **The cloud** tab. Provide a unique name for the app and then select **Save** located on the lower right. Note the following behavior: 

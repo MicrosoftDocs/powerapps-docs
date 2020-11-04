@@ -1,6 +1,6 @@
 ---
 title: "Use custom controls for model-driven app data visualizations in Power Apps | MicrosoftDocs"
-description: "Learn how to use custom controls for fields"
+description: "Learn how to use custom controls for columns"
 ms.custom: ""
 ms.date: 04/29/2020
 ms.reviewer: ""
@@ -35,7 +35,7 @@ Custom controls let you transform app user interface components, such as a colum
 For example, a slider control can be configured on a number column.
 
    > [!div class="mx-imgBorder"] 
-   > ![Custom slider control](media/slider-control.PNG "Slider control for a field")
+   > ![Custom slider control](media/slider-control.PNG "Slider control for a column")
 
 Or the editable grid control can be configured on a view. 
 
@@ -115,4 +115,4 @@ You can set one type of custom control to appear in the web browser client while
 With editable grids, users can do rich in-line editing directly from views and sub-grids whether they’re using a web app, tablet, or phone. More information: [Make grids (lists) editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md) 
   
 ## Next steps  
-[Create and edit fields](../common-data-service/create-edit-fields.md)
+[Create and edit columns](../common-data-service/create-edit-fields.md)

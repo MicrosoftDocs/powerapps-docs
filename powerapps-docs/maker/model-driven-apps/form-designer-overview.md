@@ -31,7 +31,7 @@ The designer shows a real-time WYSIWYG preview (Unified Interface only) while yo
 The form designer interface has the following areas: 
 - Command bar – Displays available actions such as **Save**, **Publish**, **Undo**, and **Redo**. 
 - Panes – Displays panes with specific functions
-  - **Fields** pane to add columns to a form.
+  - **Columns** pane to add columns to a form.
   - **Components** pane to add components to a form.
   - **Tree view** to see the hierarchy of components on the form and select them.
 - Form preview – Displays a real-time preview of the form as it will appear to users when published. 
@@ -54,4 +54,4 @@ The form designer interface has the following areas:
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../common-data-service/create-edit-field-portal.md)  

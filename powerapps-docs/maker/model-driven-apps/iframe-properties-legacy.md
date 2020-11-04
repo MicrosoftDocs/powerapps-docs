@@ -57,7 +57,7 @@ To view IFrame properties, follow these steps.
 ||**Automatically expand to use available space**|Instead of setting the height by a number of rows, you can allow the iFrame height to expand to available space.|  
 ||**Select the scrolling type for the iFrame**|You have three options:<br /><br /> - **As Necessary**: Show scrollbars when the size of the iFrame is larger than the available space.<br />- **Always**: Always show scrollbars.<br />- **Never**:  Never show scrollbars.|  
 ||**Display border**|Display a border around the iFrame.|  
-|**Dependencies**|**Dependent fields**|An iFrame may interact with columns in the form using script. If a column is removed from the form the script in the iFrame may break. Add any columns referenced by scripts in the iFrames to the **Dependent fields** so that they cannot be removed accidentally.|  
+|**Dependencies**|**Dependent columns**|An iFrame may interact with columns in the form using script. If a column is removed from the form the script in the iFrame may break. Add any columns referenced by scripts in the iFrames to the **Dependent columns** so that they cannot be removed accidentally.|  
   
 ## Pass parameters to iFrames  
  Information about the row can be passed by enabling the **Pass row object-type code and unique identifiers as parameters** option. The values passed are:  

@@ -1,6 +1,6 @@
 ---
 title: "Add model-driven app form navigation for related tables in Power Apps | MicrosoftDocs"
-description: Learn how to add form navigation for related entities
+description: Learn how to add form navigation for related tables
 ms.custom: ""
 ms.date: 03/18/2020
 ms.reviewer: ""
@@ -23,7 +23,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Add model-driven app form navigation for related entities
+# Add model-driven app form navigation for related tables
 
 In this topic, you use the form navigation pane that is used to add links to related tables. When an app user clicks one of these links in a row, the associated view for the table is displayed.   
   

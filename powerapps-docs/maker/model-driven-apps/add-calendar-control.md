@@ -9,7 +9,7 @@ ms.author: shjais
 manager: shujoshi
 ---
 
-# Add the calendar control to entities
+# Add the calendar control to tables
 
 The **Calendar Control V2** control displays scheduled activities and their associated details in a calendar. You can view, create, and delete your activities in a day, week, or month view. You must be a system customizer or a system administrator to add the **Calendar Control V2** control.
 
@@ -48,7 +48,7 @@ The **Calendar Control V2** control displays scheduled activities and their asso
 9.  Select the edit icon for each of the mandatory columns, and then select the binding values.
 
     > [!div class="mx-imgBorder"]
-    > ![Binding values for mandatory fields](media/bind-values.png "Binding values for mandatory fields")
+    > ![Binding values for mandatory columns](media/bind-values.png "Binding values for mandatory columns")
 
 10. Select **Save** to save your changes.
 

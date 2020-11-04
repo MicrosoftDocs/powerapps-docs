@@ -49,7 +49,7 @@ Make sure that you have the System Administrator or System Customizer security r
     - Add a column to a form
     - Add or edit a sub-grid on a form
     - Edit form headers and footers
-    - Remove a tab section field
+    - Remove a tab section column
     
 4.  Edit the properties for parts of the form, as needed:
     - Edit form properties

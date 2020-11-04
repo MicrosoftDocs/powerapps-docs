@@ -71,7 +71,7 @@ search.app:
   
 #### Add columns to views  
   
-1.  While creating and editing views, ensure that the **Fields** panel is open. If it is not, select **Add fields** on the toolbar. 
+1.  While creating and editing views, ensure that the **Columns** panel is open. If it is not, select **Add columns** on the toolbar. 
 
     > [!div class="mx-imgBorder"] 
     > ![View editor add columns](media/fields-drawer-view-designer.png)

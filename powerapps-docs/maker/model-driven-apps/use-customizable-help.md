@@ -32,7 +32,7 @@ People with the system administrator security role can use the settings to overr
 2. Go to **Settings** > **Administration**.
 3. Select **System Settings**, and then select the **General** tab. 
 4. Under **Set custom Help URL**, select and define the following customizable Help global settings: 
-     - **Use custom Help for customizable entities**. Select to enable.  
+     - **Use custom Help for customizable tables**. Select to enable.  
      - **Global custom Help URL**. Enter the URL to your custom Help. 
      - **Append Parameters to URL**. Select **Yes** to allow for parameters such as language code or table name to be appended to the **Help URL** that you specify in the table definition. More information: [Append parameters to URL](#append-parameters-to-url)  
 

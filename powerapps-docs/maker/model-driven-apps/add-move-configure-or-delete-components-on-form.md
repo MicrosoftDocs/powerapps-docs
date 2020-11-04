@@ -119,4 +119,4 @@ You can move components on a form by either drag-and-drop or cut-and-paste actio
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../common-data-service/create-edit-field-portal.md)  

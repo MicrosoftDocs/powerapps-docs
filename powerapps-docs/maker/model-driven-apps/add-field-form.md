@@ -34,7 +34,7 @@ In this topic, you add a column on to a form.
 
 3.  In the list, open a form with the type of **Main** to edit it.  
   
-4.  In the form, click the section you want to add a column to, and then in the **Fields** pane, click the column you want added to the form.  
+4.  In the form, click the section you want to add a column to, and then in the **Columns** pane, click the column you want added to the form.  
   
     > [!TIP]
     >  When you add an option set column on the form, the drop-down list that contains the option set values can only display two values. Users must scroll to see more values in the list. If you want to show more than two values without users having to scroll, add one or more **Spacer** controls below the option set column on the form. Each **Spacer** control provides a space for one additional option set value. For example, if you want to display four values in the drop-down list without scrolling, add two **Spacer** controls below the option set column on the form.  
