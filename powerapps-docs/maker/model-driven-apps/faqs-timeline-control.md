@@ -67,12 +67,12 @@ To work around the issue, you must reduce the number of tables to 10 or fewer. T
 
       For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`.
 
-7.    Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
+7.    Double-click the **Conversation Tabs** column in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
 
       > [!div class="mx-imgBorder"] 
-      > ![Double-click the field in the social pane](media/timeline-conversation-tabs-field.png "Double-click the field in the social pane")  
+      > ![Double-click the column in the social pane](media/timeline-conversation-tabs-field.png "Double-click the column in the social pane")  
 
-8.    Select the **Show selected** option for the **Show these activities** field in the **Filter by** container.
+8.    Select the **Show selected** option for the **Show these activities** column in the **Filter by** container.
 
 9.    Select the activities you want to display to the users.
 

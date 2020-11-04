@@ -25,7 +25,7 @@ search.app:
 ---
 # Translate localizable text for model-driven apps
 
-If you have customized table or field text, such as field labels or drop-down list values, you can provide the users in your environment who are not working with the base language version of your environment with this customized text in their preferred languages. 
+If you have customized table or column text, such as column labels or drop-down list values, you can provide the users in your environment who are not working with the base language version of your environment with this customized text in their preferred languages. 
 
 The process has the following steps:
 1. Enable other languages for your environment
@@ -85,16 +85,16 @@ When you view the data in Excel, look at the **Localized Labels** tab.
 
 ![Exported text for localization](media/localized-labels-tab-exported-languages.png "Exported text for localization")
 
-Any custom tables or fields will have empty cells for the localizable text. Add the localized values for those items.
+Any custom tables or columns will have empty cells for the localizable text. Add the localized values for those items.
 
 > [!NOTE]
-> If you have changed the display name or description for any standard table or table field, the localized strings will still reflect the translations for the original value. Those should be localized to reflect the new value.
+> If you have changed the display name or description for any standard table or table column, the localized strings will still reflect the translations for the original value. Those should be localized to reflect the new value.
 
 The **Display Strings** tab contains text that is displayed for other UI elements such as Ribbon commands, error messages, and form labels.
 
 ### Updating localizable text in the base language
 
-If you change the display name for any standard table or table field which is included in any special message, you can update information in the **Display Strings** tab to use the customized name.
+If you change the display name for any standard table or table column which is included in any special message, you can update information in the **Display Strings** tab to use the customized name.
 
 > [!TIP]
 > Although the UI exposed to edit system table messages includes many references to table names, it doesn't include all of them. Using this technique may find more. More information: [Edit system table messages](../common-data-service/edit-system-entity-messages.md)

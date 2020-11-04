@@ -52,21 +52,21 @@ The main form is used by all model-driven app clients. This form provides a cons
 |---------------|-------------|  
 |**Navigation bar**|Uses the data in the site map to provide the ability to move to different areas of the application.<br /><br /> The navigation pane used in classic forms isn’t included in the updated form. In the context of a record, the navigation bar provides access to views of related records. Rather than navigating to related records using the navigation pane or by using the navigation bar, adding sub-grids configured to show useful related table records provides a better experience for most people.|  
 |**Command bar**|Uses the data defined for ribbons to provide commands relevant for the record.<br /><br /> The first five commands are displayed followed by an ellipsis (![More commands button](media/not-available.gif "More commands button")) that provides a flyout menu to choose additional commands.|  
-|**Image**|When a table has an image field and the table **Primary Image** option is set to **Default Image**, an image can be displayed in the header when the form is configured to show the image.|  
-|**Header**|Fields placed in the header remain visible when people scroll down through the body of the form.<br /><br /> Up to four fields can be placed in the header. Multiple lines of text, web resources, or iFrames aren’t allowed in the header. The header and footer share some properties with sections.|  
+|**Image**|When a table has an image column and the table **Primary Image** option is set to **Default Image**, an image can be displayed in the header when the form is configured to show the image.|  
+|**Header**|Fields placed in the header remain visible when people scroll down through the body of the form.<br /><br /> Up to four columns can be placed in the header. Multiple lines of text, web resources, or iFrames aren’t allowed in the header. The header and footer share some properties with sections.|  
 |**Process Control**|When a table has active business process flows, the process control displays below the header. More information: [Business process flows](/flow/business-process-flows-overview)|  
 |**Body**|The body is the scrollable part of the form that contains the tabs.|  
 |**Tabs**|In the body of the form, tabs provide horizontal separation. Tabs have a label that can be displayed. If the label is displayed, tabs can be expanded or collapsed to show or hide their content by selecting the label.<br /><br /> Tabs contain up to three columns and the width of each column can be set to a percentage of the total width. When you create a new tab, each column is prepopulated with a section.|  
-|**Sections**|A section occupies the space available in a tab column. Sections have a label that can be displayed and a line may be shown below the label.<br /><br /> Sections can have up to four columns and include options for displaying how labels for fields in the section are displayed.|  
+|**Sections**|A section occupies the space available in a tab column. Sections have a label that can be displayed and a line may be shown below the label.<br /><br /> Sections can have up to four columns and include options for displaying how labels for columns in the section are displayed.|  
 |**Fields**|Fields display controls people use to view or edit data in a table record. Fields can be formatted to occupy up to four columns within a section.|  
 |**Spacer**|A spacer allows for an empty space to be added to a section column.|  
 |**Sub-grids**|Sub-grids allow for the display of a list within the form. The ability to display charts using a sub-grid isn’t available in forms for updated entities.|  
-|**Quick View Form**|A quick view form displays data from a record referenced by a lookup field on the form. The table that is the target of the lookup must have a quick view form before one can be added to the form. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)|  
+|**Quick View Form**|A quick view form displays data from a record referenced by a lookup column on the form. The table that is the target of the lookup must have a quick view form before one can be added to the form. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)|  
 |**Web Resources**|HTML and Microsoft Silverlight web resources can be added to main forms but they won’t be displayed when using Dynamics 365 for phones and tablets.|  
 |**iFrame**|An inline-frame that you configure to show a webpage from another website. **Important:**  <ul><li>When the page displayed in an iFrame is on another domain, browsers apply a higher level of security. This may complicate the requirements for the contents of an iFrame to interact with data in the form.</li><li>Displaying a table form within an iFrame embedded in another table form is not supported. 
 |**Bing Maps**|When this control is present in a form for an updated table and the system setting **Enable Bing Maps** is enabled with a valid Bing Maps key, this control can be used one time in a form to show the location for one of the addresses in an updated table. More information: [Configuring Bing maps](configure-bing-maps-legacy.md)|  
-|**Footer**|Any number of fields, web resources, or iFrames can be added to the footer. Fields are read-only when displayed in the footer. The header and footer share some properties with sections.|  
-|**Status Bar**|The status bar displays the status field for the record, a notification area, and a save button.|  
+|**Footer**|Any number of columns, web resources, or iFrames can be added to the footer. Fields are read-only when displayed in the footer. The header and footer share some properties with sections.|  
+|**Status Bar**|The status bar displays the status column for the record, a notification area, and a save button.|  
   
 <a name="BKMK_CRMforTabletsPresentation"></a>   
 ## Dynamics 365 for phones and tablets forms  
@@ -114,7 +114,7 @@ The main form is used by all model-driven app clients. This form provides a cons
 ### Form elements  
  The form elements displayed are taken from the main form and presented as a series of panels that users see through the view port.  
   
- In Dynamics 365 for tablets, the first panel displays contact information about relationships that exist for the record. In Dynamics 365 for phones, the first panel also displays header fields from the form above the relationship tiles.  
+ In Dynamics 365 for tablets, the first panel displays contact information about relationships that exist for the record. In Dynamics 365 for phones, the first panel also displays header columns from the form above the relationship tiles.  
   
  ![Dynamics 365 for tablets relationships panel](media/mobile-app-form-relationships.png "Dynamics 365 for tablets relationships panel")  
   
@@ -131,7 +131,7 @@ The main form is used by all model-driven app clients. This form provides a cons
   
  You can customize the remaining tiles with the form editor. The order is fixed, but you can set which elements are visible in the relationship panel.  
   
- In Dynamics 365 for tablets, the second panel begins with the name of the first tab on the form. Any fields that are included within the header are included and then the contents of the first tab. In Dynamics 365 for phones, headers appear in the first column.  
+ In Dynamics 365 for tablets, the second panel begins with the name of the first tab on the form. Any columns that are included within the header are included and then the contents of the first tab. In Dynamics 365 for phones, headers appear in the first column.  
   
  ![CRM for Tablets Form First Panel](media/mobile-app-form-first-panel.png "CRM for Tablets Form First Panel")  
   
@@ -142,7 +142,7 @@ The main form is used by all model-driven app clients. This form provides a cons
  The Dynamics 365 for phones and tablets form always displays the labels for tabs and sub-grids. The **Display Label on the Form** setting is not applied.  
   
 > [!NOTE]
->  To optimize performance on mobile devices, the number of objects is limited to 5 tabs or 75 fields and 10 subgrids.  
+>  To optimize performance on mobile devices, the number of objects is limited to 5 tabs or 75 columns and 10 subgrids.  
   
  Forms for Dynamics 365 for phones and tablets don’t support the following:  
    

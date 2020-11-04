@@ -44,7 +44,7 @@ These are the properties available to configure when using a sub-grid component 
 | **Display options** |  **Name** |  The unique name for the sub-grid that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /><br />This property is required. |
 | **Display options** | **Hide on phone** |  The sub-grid can be hidden to render a condensed version of the form on phone screens. |
 | **Display options** | **Show related records** |  When selected, the sub-grid displays only records related to the current record that is displayed on the form. <br /><br />The **Table** drop-down list is also filtered to only list tables that are related to the current table. |
-| **Display options** | **Table** |  The table whose records you want to display in the sub-grid. <br /><br />When **Show related records** is selected, the list of tables is filtered to show only tables that are related to the current table. In addition to the table name, the name of the lookup field is also displayed in parentheses. |
+| **Display options** | **Table** |  The table whose records you want to display in the sub-grid. <br /><br />When **Show related records** is selected, the list of tables is filtered to show only tables that are related to the current table. In addition to the table name, the name of the lookup column is also displayed in parentheses. |
 | **Display options** | **Default view** |  The view of the table selected in the **Table** property that will be used to get and display the list of records in the sub-grid. |
 | **Display options** | **Allow users to change view** |  When selected, app users can change from the **Default view** to another view of the table selected in the **Table** property. |
 | **Display options** | **Show all views** |  When selected, app users can change from the **Default view** to all other views of the table selected in the **Table** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
@@ -53,7 +53,7 @@ These are the properties available to configure when using a sub-grid component 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
-[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
 [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  

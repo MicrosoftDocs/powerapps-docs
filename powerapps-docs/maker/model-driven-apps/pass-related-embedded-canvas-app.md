@@ -44,7 +44,7 @@ Let's say you want to add an embedded canvas app on an account main form and pas
      - The **Table name** property specifies the table that will provide the data to your embedded canvas app. It will be set to the table that you selected earlier.
          -  Even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
      -  The **View name** property specifies the view of the table that will be used to filter the data provided to your embedded canvas app. It will be set to the **Default View** you selected earlier.
-         -  The data (fields and values) sent to the embedded canvas app at runtime are determined by this view. Only use fields in your canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view display as empty values at runtime.
+         -  The data (fields and values) sent to the embedded canvas app at runtime are determined by this view. Only use columns in your canvas app that are included in the view or add them to the view if needed. Any columns that are not included in the view display as empty values at runtime.
          -  The filter criteria for a view are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simply a list of top few records that you have access to. At runtime, the filter criteria for the view are applied as expected so users only see relevant data.
      -  The **App ID** property specifies the ID of the embedded canvas app. It is automatically generated and filled-in for you when the canvas app is created.
          - 	Notice that any change to the App ID value breaks the link from the model-driven form to the embedded canvas app.
@@ -54,7 +54,7 @@ Let's say you want to add an embedded canvas app on an account main form and pas
 11.	In Power Apps Studio, notice that there is a **ModelDrivenFormIntegration** control located in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app. 
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
 13.	In the property pane on the right, next to **Fields**, select **Edit**.
-14.	In the data pane, change the field mapped to the **Title1** control to **FullName** or another field that has data.
+14.	In the data pane, change the column mapped to the **Title1** control to **FullName** or another column that has data.
 15.	Observe that the gallery displays the data being passed to it from the host model-driven form via the **ModelDrivenFormIntegration** control. Close the data pane.
 16.	Select the **File** tab, and select **App settings**.
 17.	On the **Advanced settings** tab, in the **Experimental features** section, set **Enable app embedding user experience** to **On**.

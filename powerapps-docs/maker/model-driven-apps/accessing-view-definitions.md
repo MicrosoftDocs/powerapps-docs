@@ -87,7 +87,7 @@ On any list view for a table in a legacy web app, on the command bar you will fi
 
 - **Active System-Defined Views**  
   
- If the table that the view is associated with is part of an unmanaged solution, you can still create or edit views for that table in the default solution. System views are associated with a table and are not available as separate solution components. Unlike fields, views do not use a customization prefix in a unique name that should be consistent in a solution, so you do not need to create views in the context of a solution. 
+ If the table that the view is associated with is part of an unmanaged solution, you can still create or edit views for that table in the default solution. System views are associated with a table and are not available as separate solution components. Unlike columns, views do not use a customization prefix in a unique name that should be consistent in a solution, so you do not need to create views in the context of a solution. 
  
 ## Next steps
 [Understand views](create-edit-views.md)

@@ -45,7 +45,7 @@ The **Calendar Control V2** control displays scheduled activities and their asso
 
 8.  **Read-only grid** is the default option, so when users select a table from the site map, they'll see a read-only grid of opportunities. To make the calendar view the default view instead, select the corresponding **Calendar Control V2** option buttons.
 
-9.  Select the edit icon for each of the mandatory fields, and then select the binding values.
+9.  Select the edit icon for each of the mandatory columns, and then select the binding values.
 
     > [!div class="mx-imgBorder"]
     > ![Binding values for mandatory fields](media/bind-values.png "Binding values for mandatory fields")

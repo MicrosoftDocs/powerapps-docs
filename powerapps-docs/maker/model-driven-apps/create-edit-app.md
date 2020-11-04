@@ -49,7 +49,7 @@ Verify the following prerequisites before you start creating an app:
     - **Unique Name**: The unique name is automatically populated based on the app name that you specify. It is prefixed with a publisher prefix. You can change the part of the unique name that's editable. The unique name can only contain English characters and numbers.  
   
         > [!NOTE]
-        >  The publisher prefix is the text that's added to any table or field created for a solution that has this publisher.   
+        >  The publisher prefix is the text that's added to any table or column created for a solution that has this publisher.   
   
     - **Description**: Type a short description of what the app is or does.  
   

@@ -98,7 +98,7 @@ To understand in detail about the form editor user interface, see [Overview of t
 To know in detail about the form properties, see [Form properties](form-properties-legacy.md).
 
 ## Visibility options  
- Several types of form elements have the option to be shown or hidden by default. Tabs, sections, and fields all provide this option. Using form scripts or business rules, the visibility of these elements can be controlled to create a dynamic form to provide a user interface that adapts to conditions in the form. 
+ Several types of form elements have the option to be shown or hidden by default. Tabs, sections, and columns all provide this option. Using form scripts or business rules, the visibility of these elements can be controlled to create a dynamic form to provide a user interface that adapts to conditions in the form. 
   
 > [!NOTE]
 >  Hiding form elements is not a recommended way to enforce security. There are several ways people can view all the elements and data in the form when elements are hidden. To learn more, see [Show or hide form elements](visibility-options-legacy.md). 
@@ -117,16 +117,16 @@ A section in a form occupies the space available in a tab column. Sections have 
   
  The following types of activities are supported: Task, appointment, phone call, email, social activity, custom activity.  
   
- The Timeline also shows notes and, system and user posts. It shows those activities that have **Regarding** field set to the table you’re viewing. For notes, the **Regarding** field isn’t shown to the user; It is implicit when created from the Timeline.  
+ The Timeline also shows notes and, system and user posts. It shows those activities that have **Regarding** column set to the table you’re viewing. For notes, the **Regarding** column isn’t shown to the user; It is implicit when created from the Timeline.  
   
  Each activity that’s shown in the Timeline, will have the same quick actions that are available on the activity’s command bar.  
 
-## Common field properties  
+## Common column properties  
 
-To know in detail about the common field properties, see [Common field properties](common-field-properties-legacy.md). 
+To know in detail about the common column properties, see [Common column properties](common-field-properties-legacy.md). 
   
-## Special field properties  
- All fields have the properties listed in [Common field properties](common-field-properties-legacy.md), but certain fields have additional properties. To know more, see [Special Field Properties](special-field-properties-legacy.md).
+## Special column properties  
+ All columns have the properties listed in [Common column properties](common-field-properties-legacy.md), but certain columns have additional properties. To know more, see [Special Column Properties](special-field-properties-legacy.md).
 
   
 ## Sub-grid properties  

@@ -57,11 +57,11 @@ These are the properties available to configure a form when you create or edit a
 |**Title**  | Enter a name that is meaningful to other makers and app users. This name is shown to app users. If users have access to multiple forms for a table they will use this name to differentiate between the available forms. <br /><br />This property is required. |
 |**Description** |  Enter a description that explains how the form is different from other main forms. This description is only shown to makers in the list of forms for a table in the solution explorer. |
 |**Max Width** | Set a maximum width (in pixels) to limit the width of the form. The default value is 1900. <br /><br />This property is required. |
-|**Show image** | Show the entity’s **Primary Image** if it has one set. This setting will enable showing the image field in the header of the form. <br /><br /> See Enable or disable table options for more information about table options. |
+|**Show image** | Show the entity’s **Primary Image** if it has one set. This setting will enable showing the image column in the header of the form. <br /><br /> See Enable or disable table options for more information about table options. |
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
-[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
 [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  

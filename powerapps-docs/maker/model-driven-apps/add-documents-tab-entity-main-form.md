@@ -36,8 +36,8 @@ Adding a tab on a table main form to display SharePoint documents helps users di
 4. Add a one-column tab to the main form. To do this, in the form designer select an area on the form canvas, select **Add Component**, and then select **1 Column Tab**.  
    ![Insert one column tab](media/insert-one-column-tab.png)
 
-5. In the form designer select the **New Tab** on the form designer canvas, select **Add Field**, and add a field such as *Address 1: City* from the left pane. You can use any text or numeric field for the tab.
-   ![Add a field to the tab](media/add-field-to-tab.png)
+5. In the form designer select the **New Tab** on the form designer canvas, select **Add Column**, and add a column such as *Address 1: City* from the left pane. You can use any text or numeric column for the tab.
+   ![Add a column to the tab](media/add-field-to-tab.png)
 6. Rename the tab label. To do this, select **New Tab**, and in the right properties pane replace **New Tab** with something more descriptive, such as *Files*.
 7. Select **Save**, select **Publish**, and then close the form designer. 
 8. From the Power Apps maker home page, select **Solutions**, select the solution, and the select **Export** to export the solution as an unmanaged solution. More information: [Export solutions](../common-data-service/export-solutions.md) 

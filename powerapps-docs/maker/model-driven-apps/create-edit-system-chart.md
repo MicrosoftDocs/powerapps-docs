@@ -37,9 +37,9 @@ In this topic you learn how to create a system chart. System charts are organiza
   
     -   Enter the chart name, such as *Number of employees by account*.  
   
-    -   In the **Select Field** dropdowns: 
-        - In the **Select Field** **Series** axis dropdown select a field such as **Number of Employees**.  
-        - In the **Select Field** **Category** axis dropdown select a field such as **Account Name**.
+    -   In the **Select Column** dropdowns: 
+        - In the **Select Column** **Series** axis dropdown select a column such as **Number of Employees**.  
+        - In the **Select Column** **Category** axis dropdown select a column such as **Account Name**.
   
     -   Add a description to identify the purpose of the chart, such as *This column chart displays the number of employees by account name*. 
 
@@ -49,7 +49,7 @@ In this topic you learn how to create a system chart. System charts are organiza
 5.  Select **Save and Close**.  
 
 ## Known issues  
-In the chart designer, adding a order by on certain calculated fields are not supported and will cause an error.  The calculated fields causing this are using another calculated fields, a related table field, or a local field on the table.
+In the chart designer, adding a order by on certain calculated columns are not supported and will cause an error.  The calculated columns causing this are using another calculated columns, a related table column, or a local column on the table.
 
 ## Next steps  
 [Create or edit dashboards](create-edit-dashboards.md)

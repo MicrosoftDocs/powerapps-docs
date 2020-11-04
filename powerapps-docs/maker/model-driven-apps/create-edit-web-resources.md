@@ -62,7 +62,7 @@ Part of the name of any web resource you create is the solution publisher prefix
 
     ![Create a web resource](media/new-web-resource-form.png)
   
-|Field|Description|  
+|Column|Description|  
 |-----------|-----------------|  
 |**Name**|*Required*. This is the unique name for this web resource. You can’t change this after you save the web resource.<br />&bull; This name can only include letters, numbers, periods, and nonconsecutive forward slash (“/”) characters.<br /> &bull; The solution publisher customization prefix will be prepended to the name of the web resource.|  
 |**Display Name**|The name displayed if you view a list of web resources.|  

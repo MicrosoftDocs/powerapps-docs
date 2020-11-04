@@ -27,9 +27,9 @@ search.app:
 
 In this topic you learn how to create or edit a main form for an table.
 
-When you create a new form for a table, its form type is Main. When the new form opens, it is identical to the form named Information. You can add or edit fields, sections, tabs, navigation, and properties associated with the form, and then save the form.
+When you create a new form for a table, its form type is Main. When the new form opens, it is identical to the form named Information. You can add or edit columns, sections, tabs, navigation, and properties associated with the form, and then save the form.
 
-Each main form is composed of one or more tabs. Each tab can have one or more sections. Each section contains one or more fields. If you want to base your new form on an existing one, you can clone a form. 
+Each main form is composed of one or more tabs. Each tab can have one or more sections. Each section contains one or more columns. If you want to base your new form on an existing one, you can clone a form. 
 
 Make sure that you have the System Administrator or System Customizer security role or equivalent permissions to perform this task.
 
@@ -46,14 +46,14 @@ Make sure that you have the System Administrator or System Customizer security r
 3.  Change the form design in any of the following ways, as needed:
     - Add a tab to a form
     - Add a section to a form
-    - Add a field to a form
+    - Add a column to a form
     - Add or edit a sub-grid on a form
     - Edit form headers and footers
     - Remove a tab section field
     
 4.  Edit the properties for parts of the form, as needed:
     - Edit form properties
-    - Edit form field properties
+    - Edit form column properties
     - Edit tab properties
     - Edit section properties
 

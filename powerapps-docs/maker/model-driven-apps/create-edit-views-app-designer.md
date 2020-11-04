@@ -102,7 +102,7 @@ More information about the app designer: [Design custom business apps by using t
 
 
 ### Add a column to your view in app designer
-Views display records in a table that contains rows and columns. Each row is a record, and the fields you display from the record are determined by the columns you add to the view.
+Views display records in a table that contains rows and columns. Each row is a record, and the columns you display from the record are determined by the columns you add to the view.
 
 1. In app designer, select the table view that you want and then on the right pane next to the view that you want select edit (pencil button).  
 2. On the **Components** tab, select the **Column Attributes** list for either the **Primary Table** or **Related Table**.
@@ -116,7 +116,7 @@ As you add attributes, you can drag them to any position among existing column h
 
 
 ### Define filter criteria in app designer
-You can set filter criteria so that only a subset of the records is displayed in a view. When a user opens the view, only the records that meet the defined filter criteria are displayed. You can select fields from both the primary and related tables to filter on.
+You can set filter criteria so that only a subset of the records is displayed in a view. When a user opens the view, only the records that meet the defined filter criteria are displayed. You can select columns from both the primary and related tables to filter on.
 1. In the app designer, expand the **Filter Criteria** section.
    
     ![Set Filter Criteria](media/ViewAppDesigner_FilterCriteria.png "Set filter criteria") 
@@ -131,7 +131,7 @@ You can set filter criteria so that only a subset of the records is displayed in
 
 You can filter data based on the attributes of related tables in addition to the primary table. 
 
-1. On the **Components** tab, select the **Column Attributes** list for **Related Table**, select the **Choose a Table** down arrow in the topmost field, and then choose the table you want.
+1. On the **Components** tab, select the **Column Attributes** list for **Related Table**, select the **Choose a Table** down arrow in the topmost column, and then choose the table you want.
 
     This will add a separate section.
 
@@ -140,7 +140,7 @@ You can filter data based on the attributes of related tables in addition to the
 More information: [Create and edit relationships between tables](../common-data-service/create-edit-entity-relationships.md)
 
 #### Group multiple filters in app designer
-You can add multiple filters to your view if you want to filter records by using more than one field. 
+You can add multiple filters to your view if you want to filter records by using more than one column. 
 
 1. Select the filters that you want to group.
     ![Set Group Filter](media/ViewAppDesigner_GroupFilter.png "Set group filter")

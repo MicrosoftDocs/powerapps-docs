@@ -38,7 +38,7 @@ Main forms provide navigation options through the navigation bar, but use the sa
 **Body** <br>
 Located in the center, use the body area to control the layout of the form. You can select and drag form elements to position them. Double-clicking on an element will open the properties for the element. 
 
-By default, for the Case, Contact, and Account Main forms, the first section under the **Summary** tab shows the account or contact card form of type **Quick View**. For custom tables, this section is not available by default. You can insert a new section and a quick view form in it. The card form shows a maximum of five fields. Other than fields, it isn’t possible to show other controls in the Blue tile even if the quick view form contains it. 
+By default, for the Case, Contact, and Account Main forms, the first section under the **Summary** tab shows the account or contact card form of type **Quick View**. For custom tables, this section is not available by default. You can insert a new section and a quick view form in it. The card form shows a maximum of five columns. Other than columns, it isn’t possible to show other controls in the Blue tile even if the quick view form contains it. 
  
 >[!NOTE] 
 > To preserve the card format (as shown in the following image), we recommend that you do not move the quick view form to any other section on the form.
@@ -48,9 +48,9 @@ By default, for the Case, Contact, and Account Main forms, the first section und
    
 More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)  
  
--   To add a field, select it from the **Field Explorer** and drag it into a section.  
+-   To add a column, select it from the **Column Explorer** and drag it into a section.  
   
-    -   To add an element that is not a field, select where you want to place it and use the appropriate command from the **Insert** tab add it.  
+    -   To add an element that is not a column, select where you want to place it and use the appropriate command from the **Insert** tab add it.  
   
     -   To remove an element, select it and use the **Remove** command in the **Edit** group of the **Home** tab.  
   
@@ -59,7 +59,7 @@ More information: [Create and edit quick view forms](create-edit-quick-view-form
 **Explorer**  
 Located on the right side, the content of the explorer area depends on the context.  
   
-When you select **Body**, **Header**, or **Footer** in the **Select** group of the **Home** tab, you’ll see the **Field Explorer**. Use the **Field Explorer** to drag fields you want to display into a section in the form or within the header or footer. You can include the same field multiple times in a form. Use the **New Field** button as a shortcut to create a new field.  
+When you select **Body**, **Header**, or **Footer** in the **Select** group of the **Home** tab, you’ll see the **Column Explorer**. Use the **Column Explorer** to drag columns you want to display into a section in the form or within the header or footer. You can include the same column multiple times in a form. Use the **New Column** button as a shortcut to create a new column.  
   
 When you select **Navigation** in the **Select** group of the **Home** tab you’ll see the **Relationship Explorer**. Drag any of the relationships into one of the groups within the navigation area. You cannot add the same relationship twice. Relationships are available based on how they are configured. If you configure a relationship to not display, it won’t display in the **Relationship Explorer**. For information about how to configure default display options for relationships, see [Navigation pane item for primary table](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table).
   
@@ -98,7 +98,7 @@ Select the **File** tab to add/view the following options:
 ||**Save As**|Create a copy of this form with a different name.|
 ||**Save and Close**|Save the form and close the form editor.|
 ||**Publish**|Publish the form. More information: Publishing customizations|
-|**Edit**|**Change properties**|Change properties of the selected item in the body.<br /><br /> See the following sections depending on the selected item:<br /><br /> -   [Tab Properties](tab-properties-legacy.md)<br />-   [Section properties](section-properties-legacy.md)<br />-   [Common Field properties](common-field-properties-legacy.md)<br />-   [Special field properties](special-field-properties-legacy.md)<br />-  [Sub-grid properties](sub-grid-properties-legacy.md)<br />-   [Quick view control properties](quick-view-control-properties-legacy.md)|
+|**Edit**|**Change properties**|Change properties of the selected item in the body.<br /><br /> See the following sections depending on the selected item:<br /><br /> -   [Tab Properties](tab-properties-legacy.md)<br />-   [Section properties](section-properties-legacy.md)<br />-   [Common Column properties](common-field-properties-legacy.md)<br />-   [Special column properties](special-field-properties-legacy.md)<br />-  [Sub-grid properties](sub-grid-properties-legacy.md)<br />-   [Quick view control properties](quick-view-control-properties-legacy.md)|
 ||**Remove**|Remove the selected item.|
 ||**Undo** **(Ctrl+Z)**|Undo the previous action.|
 ||**Redo** **(Ctrl+Y)**|Redo the previous action.|

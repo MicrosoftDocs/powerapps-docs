@@ -34,17 +34,17 @@ Some of the format options available are:
 
 <img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app" height="500" width="520"> 
 
-## Add or replace a text field for rich text editing
+## Add or replace a text column for rich text editing
 
-You can create a new text field and configure the control, or replace an existing text field. The rich text editor control can be used with single or multi-line text fields.
+You can create a new text column and configure the control, or replace an existing text column. The rich text editor control can be used with single or multi-line text columns.
 
 1. Sign in to Power Apps. Go to **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** tab. 
 2. Select the form, and then select **Edit form**.
 3. In the form designer on the command bar, select **Switch to classic**.
-4. On the legacy form designer canvas, add or create a text field or select an existing text field, such as the account table **Description** field. On the **Home** tab, select **Change Properties**.
-5. On the **Field Properties** page, select the **Controls** tab, and then select **Add control**.
+4. On the legacy form designer canvas, add or create a text column or select an existing text column, such as the account table **Description** column. On the **Home** tab, select **Change Properties**.
+5. On the **Column Properties** page, select the **Controls** tab, and then select **Add control**.
 6. Select **Rich Text Editor Control**, and then select **Add**.
-7. Select **Web**, **Phone**, and **Tablet** if you want all client apps to have the ability to use rich text in the field. Then select **OK** to use the default rich text editor control configuration. If you want to change the rich text editor control configuration, see [Rich text editor control configuration options](#rich-text-editor-control-configuration-options).
+7. Select **Web**, **Phone**, and **Tablet** if you want all client apps to have the ability to use rich text in the column. Then select **OK** to use the default rich text editor control configuration. If you want to change the rich text editor control configuration, see [Rich text editor control configuration options](#rich-text-editor-control-configuration-options).
 
     <img src="media/rich-text-control2.png" alt="Rich text control editor configuration" height="497" width="485">
 8. Save and then publish the form.
@@ -55,11 +55,11 @@ The rich text editor control comes with a rich set of configuration options that
 
 1. Create a JSON file that includes the defaultSupportedProps structure and configuration with the changes you want. More information: [Sample rich text editor configurations](#sample-rich-text-editor-configurations) and [Rich text editor properties](#rich-text-editor-properties)
 2. In Power Apps, create a JavaScript web resource using the JSON file created in step 1. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)
-3. Open the **Field Properties** page for the text field with the rich text editor control, and then next to **RichTextEditorControl_URL** select **Edit**.
+3. Open the **Column Properties** page for the text column with the rich text editor control, and then next to **RichTextEditorControl_URL** select **Edit**.
    > [!div class="mx-imgBorder"] 
    > ![Rich text editor control URL](media/richtexteditorcontrol-url.png)
 4. Select **Bind to static value**, enter the relative URL to the JavaScript web resource in the box next to **SingleLine.URL**, and then select **OK**. The relative URL is located on the web resource definition.
-5. Select **OK** to close the **Field Properties** page.
+5. Select **OK** to close the **Column Properties** page.
 6. On the form editor command bar, select **Publish**.
 
 ## Rich text editor properties
@@ -219,10 +219,10 @@ The following sample sets several of the options in the rich text editor&mdash;s
 
 ## Known issue
 
-HTML markup is displayed for fields configured to use the rich text editor control that are displayed in components other than a field on a form. For example, this occurs in views, subgrids, paginated reports, and portals.
+HTML markup is displayed for columns configured to use the rich text editor control that are displayed in components other than a column on a form. For example, this occurs in views, subgrids, paginated reports, and portals.
 > [!div class="mx-imgBorder"] 
-> ![HTML markup displayed in a field on a subgrid.](media/html-markup-issue.png)
+> ![HTML markup displayed in a column on a subgrid.](media/html-markup-issue.png)
 
 ### See also
 
-[Create and edit fields for Common Data Service using Power Apps portal](../common-data-service/create-edit-field-portal.md)
+[Create and edit columns for Common Data Service using Power Apps portal](../common-data-service/create-edit-field-portal.md)

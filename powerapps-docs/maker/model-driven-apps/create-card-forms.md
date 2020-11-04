@@ -36,7 +36,7 @@ Although card forms can be created and edited in the same way as other form type
 1. To create a card form, sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** tab.
 3. On the toolbar select **Add form**, and then select **Card form**. Alternatively, you can open an existing **Form type** that's a **Card** form to edit it.
-4. Add the fields that you want. We recommend that you limit the number of fields so that the form displays well on small screens. 
+4. Add the columns that you want. We recommend that you limit the number of columns so that the form displays well on small screens. 
 5. Select **Save** and then select **Publish**. 
 
 ## Add a card form to a view 

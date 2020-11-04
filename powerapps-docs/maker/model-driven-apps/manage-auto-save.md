@@ -81,9 +81,9 @@ Auto-save helps app users focus on their work without having to manage saving da
         |**Display Name**|Prevent Auto Save|  
         |**Type**|Script (JScript)|  
   
-    5.  Next to the **Type** field, choose **Text Editor**.  
+    5.  Next to the **Type** column, choose **Text Editor**.  
   
-    6.  In the **Source** field, paste the following code:  
+    6.  In the **Source** column, paste the following code:  
   
         ```javascript  
         function preventAutoSave(econtext) {  
@@ -109,7 +109,7 @@ Auto-save helps app users focus on their work without having to manage saving da
   
     3.  In the **Handler Properties** window, set **Library** to the web resource you added in the previous step.  
   
-    4.  Type '`preventAutoSave`' in the **Function** field. This is case sensitive. Do not include quotation marks.  
+    4.  Type '`preventAutoSave`' in the **Function** column. This is case sensitive. Do not include quotation marks.  
   
     5.  Make sure that **Enabled** is checked.  
   

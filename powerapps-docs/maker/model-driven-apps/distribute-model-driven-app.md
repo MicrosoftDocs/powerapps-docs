@@ -36,7 +36,7 @@ In order to distribute your app, you create a solution so the app can be package
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2. Select **Solutions** and then select **New solution**.
-3. Complete the fields on the **New Solution** page, and then select **Save**. More information: [Create a solution](../common-data-service/create-solution.md)
+3. Complete the columns on the **New Solution** page, and then select **Save**. More information: [Create a solution](../common-data-service/create-solution.md)
 4. The **Solution** page appears. Select **Add Existing**, select **App**, select the app that you want to add to the solution, and then select **OK**. 
 
     ![Select solution components](media/select-solution-components.png)

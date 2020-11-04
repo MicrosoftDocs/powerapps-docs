@@ -162,7 +162,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 
     Make sure to include the slash (/) after .com.  
 
-3. Determine the unique name for the org (also called instance) you want to create Learning Path controls for. To get the unique  name, on the site map, select **Settings** > **Customizations**, and then on the **Customization** page, select **Developer Resources**. Copy the value for the **Unique Name** field displayed in the **Instance Reference** section.  
+3. Determine the unique name for the org (also called instance) you want to create Learning Path controls for. To get the unique  name, on the site map, select **Settings** > **Customizations**, and then on the **Customization** page, select **Developer Resources**. Copy the value for the **Unique Name** column displayed in the **Instance Reference** section.  
 
    ![Dynamics org name displayed in the user info pane](media/lp-org-name.png "Dynamics org name displayed in the user info pane")  
 
@@ -434,7 +434,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 
  When you embed videos that are displayed within a Sidebar or Guided Task, you'll use the link that you get from YouTube. Learning Path will automatically update the link to embed the video and size it to fit in Sidebar or Guided Task tile. A user can select **Full screen** to view the video in full screen mode. If a user pauses the playback, or when the playback is finished, YouTube might automatically display links to other videos the user may be interested in. You can prevent this from happening by modifying the link in your control to include **?rel=0** at the end.  
 
- For example, after you create and upload a video to your channel, you copy the video URL provided by YouTube, which is **https://youtu.be/4TrYMB4pjyw**. To embed this video in a control, you enter that URL into the **Enter video URL** field for your control.  
+ For example, after you create and upload a video to your channel, you copy the video URL provided by YouTube, which is **https://youtu.be/4TrYMB4pjyw**. To embed this video in a control, you enter that URL into the **Enter video URL** column for your control.  
 
  When you save the control, Learning Path changes the URL to **https://www.youtube.com/embed/4TrYMB4pjyw**. To turn off the display of links to other videos when the video is paused or finished playing, edit the URL to append **?rel=0** to the end so that your URL looks similar to the following: **https://www.youtube.com/embed/4TrYMB4pjyw?rel=0**.  
 

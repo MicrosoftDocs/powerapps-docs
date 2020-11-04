@@ -47,12 +47,12 @@ This will open the **Add Web Resource** or **Web Resource Properties** dialog bo
 
 These properties define the web resource to use and how it should behave.
 
-|Field|Description|
+|Column|Description|
 |--|--|
 |**Web resource**|*Required.* Look up an existing web resource or create a new one. Use the **Form Enabled Web Resource** view to include only HTML and image web resources that can be added as visual elements in a form.|
 |**Name**|*Required.* Specify a name for the web resource control that will be added to the form. This value uniquely identifies the control in the form.|
-|**Label**|*Required.* Automatically generated based on the **Name** field value. Specify localizable text for the web resource control that will be added to the form. Select **Display label on the form** if you want to make this visible.|
-|**Visible by default**|While this is enabled the web resource will be visible when the form loads. If you have a business rule or form script that will show the web resource as needed, uncheck this field. More information: [Show or hide form elements](visibility-options-legacy.md)|
+|**Label**|*Required.* Automatically generated based on the **Name** column value. Specify localizable text for the web resource control that will be added to the form. Select **Display label on the form** if you want to make this visible.|
+|**Visible by default**|While this is enabled the web resource will be visible when the form loads. If you have a business rule or form script that will show the web resource as needed, uncheck this column. More information: [Show or hide form elements](visibility-options-legacy.md)|
 |**Enable for mobile**|Select this option to allow this web resource to be visible in mobile apps.|
 
 Depending on the type of web resource you select, set additional properties.
@@ -61,7 +61,7 @@ For HTML web resources you will see these:
 
 ![HTML web resource properties](media/web-resource-general-html-properties.png)
 
-|Field|Description|
+|Column|Description|
 |--|--|
 |**Custom Parameter(data)**|Usually configuration data that will be passed to the HTML web resource as a `data` query string parameter. Scripts associated with the HTML page can access this data and use it to change the behavior of the page.|
 |**Restrict cross-frame scripting where supported**|Use this option if you don't fully trust the content in the HTML web resource. More information: [Developer Documentation: Select whether to restrict cross-frame scripting](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#select-whether-to-restrict-cross-frame-scripting)|
@@ -79,7 +79,7 @@ On the **Formatting** tab, the options that display vary based on the type of we
 
 |Property|Description|  
 |--------------|-----------------|
-|**Select the number of columns the control occupies**|When the section containing the web resource has more than one column you can set the field to occupy up to the number of columns that the section has.|  
+|**Select the number of columns the control occupies**|When the section containing the web resource has more than one column you can set the column to occupy up to the number of columns that the section has.|  
 |**Select the number of rows the control occupies**|You can control the height of the web resource by specifying a number of rows or select **Automatically expand to use available space** to allow the web resource height to expand to available space.|  
 |**Select the scrolling type for the IFRAME**|An HTML web resource is added to the form using an IFRAME.<br /><br /> - **As Necessary**: Show scrollbars when the size of the web resource is larger than the available.<br />- **Always**: Always show scrollbars.<br />- **Never**:  Never show scrollbars.|  
 |**Display border**|Display a border around the web resource.|  
@@ -87,7 +87,7 @@ On the **Formatting** tab, the options that display vary based on the type of we
 
 ### Dependencies tab
 
-A web resource may interact with fields in the form using script. If a field is removed from the form the script in the web resource may break. Add any fields referenced by scripts in the web resource to the **Dependent fields** so that they cannot be removed accidentally.
+A web resource may interact with columns in the form using script. If a column is removed from the form the script in the web resource may break. Add any columns referenced by scripts in the web resource to the **Dependent fields** so that they cannot be removed accidentally.
 
 ![Web Resource dependency properties](media/web-resource-dependency-properties.png)
   
@@ -97,7 +97,7 @@ A web resource may interact with fields in the form using script. If a field is 
 
 An HTML web resource can accept parameters to be passed as query string parameters.  
   
-Information about the record can be passed by enabling the **Pass record object-type code and unique identifiers as parameters** option. If information is typed into the **Custom Parameter(data)** field it will be passed using the data parameter. The values passed are:  
+Information about the record can be passed by enabling the **Pass record object-type code and unique identifiers as parameters** option. If information is typed into the **Custom Parameter(data)** column it will be passed using the data parameter. The values passed are:  
   
 |Parameter|Description|  
 |---------------|-----------------|  

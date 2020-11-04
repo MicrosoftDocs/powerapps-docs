@@ -101,14 +101,14 @@ You can move a tab on a form using drag and drop or cut and paste actions.
     > [!NOTE]
     >   - Tabs can only be deleted on main forms. More information: [Form types](types-forms.md)
     >   - If you delete a tab by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
-    >   - You can't delete a tab that contains sections with required or locked fields. 
+    >   - You can't delete a tab that contains sections with required or locked columns. 
     >   - You can't delete a tab that has locked sections. 
     >   - A form must have at least one tab. You can't delete the last remaining tab on the form. 
 
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
-[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
 [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
 [Add, configure, move, or delete sections on a form](add-move-or-delete-sections-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  

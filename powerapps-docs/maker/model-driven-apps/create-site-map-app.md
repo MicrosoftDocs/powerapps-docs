@@ -172,14 +172,14 @@ You can view or set these privileges on the **Customization** tab of a security 
   
     - **Type**: Select whether the subarea you are adding is a dashboard, table, web resource, or URL.  
   
-    - **Table**: Select the table that the subarea is for. This field is disabled if the subarea type is other than **Table** in the **Type** drop-down list.  
+    - **Table**: Select the table that the subarea is for. This column is disabled if the subarea type is other than **Table** in the **Type** drop-down list.  
   
-    - **URL**: Specify a URL for the main page of the application to show when this subarea is selected. This field is disabled if you've selected **Table** in the **Type** drop-down list.  
+    - **URL**: Specify a URL for the main page of the application to show when this subarea is selected. This column is disabled if you've selected **Table** in the **Type** drop-down list.  
  
       > [!IMPORTANT]
       > Site map subarea URLs that link to an .aspx page aren’t supported.
  
-    - **Default Dashboard**: Select the default dashboard to be displayed for this subarea. This field is disabled if you haven't selected **Dashboard** in the **Type** drop-down list.  
+    - **Default Dashboard**: Select the default dashboard to be displayed for this subarea. This column is disabled if you haven't selected **Dashboard** in the **Type** drop-down list.  
   
     - **Title**: Enter the title for the subarea in the base language of the organization.  
   

@@ -1,7 +1,7 @@
 ---
 title: Understand model-driven app components in Power Apps | MicrosoftDocs
 description: "Understand various components of a model-driven app such as data, UI, logic, and visualization."
-Keywords: fields, attributes, model-driven app
+Keywords: columns, attributes, model-driven app
 author: Mattp123
 ms.author: matp
 manager: kvivek
@@ -26,9 +26,9 @@ These components determine what data the app will be based upon and what designe
 |Component  |Description  |Designer  |
 |---------|---------|---------|
 |Entity     |An item with properties that you track, such as a contact or account. Many standard tables are available. You can customize a non-system standard table (production table) or create a custom table from scratch.     | Power Apps table designer        |
-|Relationship     | Table relationships define how tables can be related to each other. There are 1:N (one-to-many), N:1 (many-to-one), and N:N (many-to-many) types of relationships . For example, adding a lookup field to a table creates a new 1:N relationship between the two tables and lets you put that lookup field on a form.   | Power Apps table designer        |
-|Field     | A property that is associated with an table. A field is defined by a data type, which determines the type of data that can be entered or selected. Examples include text, number, date and time, currency, or lookup (creates a relationship with another table). Fields typically are used with forms, views, and searches.        | Power Apps table designer   |
-|Option set field     | This is a special type of field, which provides the user a set of predetermined options. Each option has a number value and label. When added to a form, this field displays a control for the user to select an option.  There are two kinds of option sets; option sets, where the user can only select one option, and multi-select options sets, which allow more than one selection.  | Power Apps option set designer     |
+|Relationship     | Table relationships define how tables can be related to each other. There are 1:N (one-to-many), N:1 (many-to-one), and N:N (many-to-many) types of relationships . For example, adding a lookup column to a table creates a new 1:N relationship between the two tables and lets you put that lookup column on a form.   | Power Apps table designer        |
+|Column     | A property that is associated with an table. A column is defined by a data type, which determines the type of data that can be entered or selected. Examples include text, number, date and time, currency, or lookup (creates a relationship with another table). Fields typically are used with forms, views, and searches.        | Power Apps table designer   |
+|Option set column     | This is a special type of column, which provides the user a set of predetermined options. Each option has a number value and label. When added to a form, this column displays a control for the user to select an option.  There are two kinds of option sets; option sets, where the user can only select one option, and multi-select options sets, which allow more than one selection.  | Power Apps option set designer     |
 
 More information: [Define data for your model-driven app](define-data-model-driven-app.md) 
 
@@ -39,7 +39,7 @@ These components determine how users interact with the app.
 |---------|---------|---------|
 |App     | Determines the application fundamentals such as components, properties, client type, and URL for your app.      | App designer   |
 |Site map     | Specifies the navigation for your app.        | Site map designer        |
-|Form     | A set of data-entry fields for a given table that matches the items that your organization tracks for the table. For example, a set of data-entry fields that where user's input relevant information to track a customer's previous orders along with specific requested reorder dates.        | Form designer        |
+|Form     | A set of data-entry columns for a given table that matches the items that your organization tracks for the table. For example, a set of data-entry columns that where user's input relevant information to track a customer's previous orders along with specific requested reorder dates.        | Form designer        |
 |View     | Views define how a list of records for a specific table is displayed in your application. A view defines the columns to display, width of each column, sort behavior, and the default filters.   |  View designer       |
 
 > [!div class="mx-imgBorder"] 
@@ -54,7 +54,7 @@ Determines the business processes, rules, and automation the app will have. Powe
 |Business process flow     | An online process that walks users through a standard business process. For example, use a business process flow if you want everyone to handle customer service requests the same way, or to require staff to gain approval for an invoice before submitting an order.        | Business process flow designer        |
 |Workflow     |  Workflows automate business processes without a user interface. Designers use workflows to initiate automation that doesn't require any user interaction.       | Workflow designer        |
 |Actions    |  Actions are a type of process that let you manually invoke actions, including custom actions, directly from a workflow.       |  Process designer       |
-|Business rule     | Used to apply rule or recommendation logic to a form, such as to set field requirements, hide fields, or validate data. App designers use a simple interface to implement and maintain fast-changing and commonly used rules.         |  Business rule designer       |
+|Business rule     | Used to apply rule or recommendation logic to a form, such as to set column requirements, hide columns, or validate data. App designers use a simple interface to implement and maintain fast-changing and commonly used rules.         |  Business rule designer       |
 |Flow     | Power Automate is a cloud-based service that lets you create automated flows between apps and services to get notifications, synchronize files, collect data, and more.        | Power Automate        |
 
 > [!div class="mx-imgBorder"]

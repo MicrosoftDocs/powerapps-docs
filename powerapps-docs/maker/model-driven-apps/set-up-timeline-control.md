@@ -64,13 +64,13 @@ The following sections describe how to configure display options, advanced setti
 
 ### Display options 
 
-- **Name**: Use this field to change the unique name of the timeline control. Changing this field doesn’t change the name displayed in the timeline at runtime. 
+- **Name**: Use this column to change the unique name of the timeline control. Changing this column doesn’t change the name displayed in the timeline at runtime. 
 
-    This field has character limitations. For example, you can’t have spaces and you must use underscores (_).
+    This column has character limitations. For example, you can’t have spaces and you must use underscores (_).
 
-- **Records shown in page**: This field allows you to define the number of records to show in the timeline section at runtime. If there are more records than the number you define here, users will see an option to load more records. By default, this field is set to 10.
+- **Records shown in page**: This column allows you to define the number of records to show in the timeline section at runtime. If there are more records than the number you define here, users will see an option to load more records. By default, this column is set to 10.
 
-  The following image shows the timeline at runtime when the **Records shown on page** field is set to 10.
+  The following image shows the timeline at runtime when the **Records shown on page** column is set to 10.
 
    ![Records shown on page](media/timeline-records-shown-on-page-runtime.png "Records shown on page")
 
@@ -108,7 +108,7 @@ Expand the **Advanced** section in the **Timeline** **Properties** for settings 
 
 - **Expand filter pane**: This setting is used to display an expanded filter pane at the top of the timeline anytime a record is opened. This setting is disabled by default. The Expand filter pane feature provides quick access to filtering options for timeline records. 
 
-- **Enable search bar**: Define whether you want to enable or disable the search bar on the timeline. When you select this check box, a **Search timeline** box appears in the **Timeline** section allowing users to easily search for records in the timeline. When you search for a phrase in the timeline, it searches in the title of the record or body and description fields of the record, and then displays the search results. This setting is enabled by default. More information: [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md)
+- **Enable search bar**: Define whether you want to enable or disable the search bar on the timeline. When you select this check box, a **Search timeline** box appears in the **Timeline** section allowing users to easily search for records in the timeline. When you search for a phrase in the timeline, it searches in the title of the record or body and description columns of the record, and then displays the search results. This setting is enabled by default. More information: [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md)
 
 - **Expand all records by default**: When this check box is selected, all records in the timeline are shown in an expanded view. This option is disabled by default.
 
@@ -159,17 +159,17 @@ After you select **Activities** in the **Records types to show** section, you ca
 How you view data is important and setting a default display view of your data varies based on the needs of your business. Makers can choose how data is sorted and create a default sort setting for **Activity types** in **Record settings**. **Last Updated** is on all activities, which is why it is set as the default in ascending order.
 
 1. The **Sort activities by** feature in the **Activities record settings** allows you to control how data is sorted in the timeline.  
-2. When you select the **Sort activities by** field, a list appears. You can select from this list how you want your data to be sorted and displayed on the timeline in the form.
+2. When you select the **Sort activities by** column, a list appears. You can select from this list how you want your data to be sorted and displayed on the timeline in the form.
 
     There are some unique date fields; for example:
 
     | Labels | Section | Description |
     |--------|---------|-------------|
     |a | **Date Sent** | This only occurs in email activities. If you sort by **Date Sent**, most activities will not contain a date sent and therefore will be grouped together without any ordering. |
-    |b | **Sort Date** | You can't create a custom date field. If you create one, it will not display, so in answer to this, **Sort Date** was created. It does not have a value and therefore allows you to choose your own. It is empty by default. |
+    |b | **Sort Date** | You can't create a custom date column. If you create one, it will not display, so in answer to this, **Sort Date** was created. It does not have a value and therefore allows you to choose your own. It is empty by default. |
 
     > [!IMPORTANT]
-    > - Sort date is intended for users to programmatically map each activity with a date of choice to have more control. It’s a customization option that allows you to sort activities any way you want by whatever date you want. You will have to populate each field and it requires that you update all activities to populate the **Sort date** with a value. However, after you complete the configuration, you have flexibility to sort any way you want.  
+    > - Sort date is intended for users to programmatically map each activity with a date of choice to have more control. It’s a customization option that allows you to sort activities any way you want by whatever date you want. You will have to populate each column and it requires that you update all activities to populate the **Sort date** with a value. However, after you complete the configuration, you have flexibility to sort any way you want.  
     > - Sort dates have to be configured for each timeline instance and setup must be completed in all three main forms for the account table in order to work.
 
 ### Set create activities using form type in the timeline
@@ -192,44 +192,44 @@ All card forms are broken out into the following four sections:
 | Labels | Section | Description |
 |--------|---------|-------------|
 |a | **ColorStrip** | This section does not appear on the timeline record. The **ColorStrip** is located on the left of the card form.|
-|b | **Header** | This section is displayed on the timeline record; however, only the first two fields are displayed. For this example, only the **Subject** and **Modified On** fields are visible. |
-|c | **Details** | This section is displayed on the timeline record; however, only the first three fields are displayed. For this example, only the **To**, **CC**, and **Description** fields are visible.|
+|b | **Header** | This section is displayed on the timeline record; however, only the first two columns are displayed. For this example, only the **Subject** and **Modified On** columns are visible. |
+|c | **Details** | This section is displayed on the timeline record; however, only the first three columns are displayed. For this example, only the **To**, **CC**, and **Description** columns are visible.|
 | d | **Footer** | This section is not displayed on the timeline record. | 
-| e | **Table Fields** | You can select which fields you want to add to your card form from the field options listed on the right.  You can customize your card form by dragging and dropping the fields you want to use into the sections you want that field to appear in on the timeline record. |
+| e | **Table Fields** | You can select which columns you want to add to your card form from the column options listed on the right.  You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline record. |
 
 ![Advanced display options about how to customize a card form in the timeline](media/timeline-card-form-advanced-1.png "Advanced display options about how to customize a card form in the timeline")
 
 Each individual card form has to be customized for each activity record such as email, tasks, and so on.
 
 **Header Section**<br>
-This displays the title/subject in your timeline email form. You can have up to six fields in the **Header** section. Only the first two fields will be seen on the timeline record. Also, empty fields will be ignored by the form in all sections.<br>
+This displays the title/subject in your timeline email form. You can have up to six columns in the **Header** section. Only the first two columns will be seen on the timeline record. Also, empty columns will be ignored by the form in all sections.<br>
 
 <ol>
-<b>a. Header - Field 1.</b> Regardless of the field you choose, it will appear as a bold header at the top of your timeline record. For this example we selected <b>Subject</b> for this field.<br>
+<b>a. Header - Column 1.</b> Regardless of the column you choose, it will appear as a bold header at the top of your timeline record. For this example we selected <b>Subject</b> for this column.<br>
 
-**b.**	**Header - Field 2.** Again, regardless of the field you choose, this field appears in the bottom-right corner of the timeline record. For this example, we selected **Modified On** for this field.
+**b.**	**Header - Column 2.** Again, regardless of the column you choose, this column appears in the bottom-right corner of the timeline record. For this example, we selected **Modified On** for this column.
 </ol>
 
 **Details Section** <br>
-This displays in the body of the timeline email record. You can have up to four fields in the **Detail** section, but only the first three fields are seen on the timeline record.
+This displays in the body of the timeline email record. You can have up to four columns in the **Detail** section, but only the first three columns are seen on the timeline record.
 
 <ol>
-<b>c.	Details - Field 1.</b> As before, regardless of the field you choose, this field will always appear below the Header - Field 1 as a subheader on the timeline record. For this example we selected <b>To</b> for this field.<br>
+<b>c.	Details - Column 1.</b> As before, regardless of the column you choose, this column will always appear below the Header - Column 1 as a subheader on the timeline record. For this example we selected <b>To</b> for this column.<br>
 
-**d.**	**Details - Field 2.** This field will display one line of text in a summary view on the timeline record. When you expand your timeline record, content in this field is fully displayed with format. In the diagram below, **CC** is selected for this field.<br>
+**d.**	**Details - Column 2.** This column will display one line of text in a summary view on the timeline record. When you expand your timeline record, content in this column is fully displayed with format. In the diagram below, **CC** is selected for this column.<br>
 
-**e.**	**Details - Field 3.** This field follows the content in Details - Field 2 and is part of the main body of your timeline record that is only viewable when you expand the record. For this example, **Description** is selected for this field.
+**e.**	**Details - Column 3.** This column follows the content in Details - Column 2 and is part of the main body of your timeline record that is only viewable when you expand the record. For this example, **Description** is selected for this column.
 </ol>
 
 **Footer Section**<br>
 This section is not visible on the timeline record.  
 
 <ol>
-<b>f.	Footer – Field 1.</b> For this example, we selected **Owner** for this field.<br>
+<b>f.	Footer – Column 1.</b> For this example, we selected **Owner** for this column.<br>
 
-**g.**	**Footer – Field 2.** For this example, we selected **Regarding** for this field.<br>
+**g.**	**Footer – Column 2.** For this example, we selected **Regarding** for this column.<br>
 
-**h.**	**Footer – Field 3.** For this example, we selected **Priority** for this field.
+**h.**	**Footer – Column 3.** For this example, we selected **Priority** for this column.
 </ol>
 
 ![Advanced display options how to customize a card form in timeline](media/timeline-activity-record-types-advanced2.png "Advanced display options how to customize a card form in timeline")
@@ -257,7 +257,7 @@ The feature is enabled by default. If you want to disable and enable later for y
 
 2. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Administration** > **System Settings**.
 
-3. In the **System Settings** dialog, under the **General** tab, scroll down and select or unselect the check box for the **Use rich text to make it easier to format notes created in Timeline.** field.
+3. In the **System Settings** dialog, under the **General** tab, scroll down and select or unselect the check box for the **Use rich text to make it easier to format notes created in Timeline.** column.
 
 4. Select **OK**.
 

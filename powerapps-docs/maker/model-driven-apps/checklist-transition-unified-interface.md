@@ -251,7 +251,7 @@ processes for each group or role.
 -   Create a **Welcome Page** that users see when they access each of your app. This is a great opportunity to guide users in their first steps.
 
 -   Use existing **Custom Controls** to improve the usability of most field
-    types, especially on mobile. For example, replace a 0 to 5 field rating with stars, replace a view of
+    types, especially on mobile. For example, replace a 0 to 5 column rating with stars, replace a view of
     appointments with a calendar view, replace a sub-grid view with card forms.
 
 -   Leverage **Reference Panels** on forms to bundle multiple views, quick

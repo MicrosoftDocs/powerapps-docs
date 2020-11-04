@@ -21,7 +21,7 @@ search.app:
 ---
 # Unified Interface Playbook
 
-This playbook is intended to help customers, partners and Microsoft field roles plan and execute transitions from the legacy web client to the Unified Interface.
+This playbook is intended to help customers, partners and Microsoft column roles plan and execute transitions from the legacy web client to the Unified Interface.
 
 In summary, the Unified Interface Playbook documents will help you:
 - Understand the Unified Interface. 

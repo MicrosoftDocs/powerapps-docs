@@ -27,7 +27,7 @@ search.app:
 
 <a name="BKMK_EditFilterCriteria"></a>   
 
-Along with the columns displayed in a view, the filter criteria applied to a view is a critical part of the value provided by the view. You can add or edit filter criteria and change the sort order for the columns that you include in a view. If a sort order is not set for a view, by default the view is sorted by the primary field in the view in ascending order (A to Z).
+Along with the columns displayed in a view, the filter criteria applied to a view is a critical part of the value provided by the view. You can add or edit filter criteria and change the sort order for the columns that you include in a view. If a sort order is not set for a view, by default the view is sorted by the primary column in the view in ascending order (A to Z).
 
 ## Change the sort order of a view
 
@@ -40,7 +40,7 @@ Along with the columns displayed in a view, the filter criteria applied to a vie
     > [!div class="mx-imgBorder"] 
     > ![Edit filters](media/view-column-menu.png "Edit filters")
 
-4.  Select a field name in the column head, and from the column menu, select **Sort A to Z** or **Sort Z to A**. The sort order is indicated in the column head with an up arrow or a down arrow.
+4.  Select a column name in the column head, and from the column menu, select **Sort A to Z** or **Sort Z to A**. The sort order is indicated in the column head with an up arrow or a down arrow.
 
 You can also change the sort order by using the view properties panel. 
 
@@ -71,7 +71,7 @@ You can also change the sort order by using the view properties panel.
 
 6.  To remove a filter expression, select the **X** button. 
 
-You can also use the expression builder in the view designer to add or edit filters for any fields of the table in the current view or any fields in a related table. More information: [Create or edit filters in model-driven app views](create-edit-view-filters.md)
+You can also use the expression builder in the view designer to add or edit filters for any columns of the table in the current view or any columns in a related table. More information: [Create or edit filters in model-driven app views](create-edit-view-filters.md)
 
 ## Use solution explorer to edit filter criteria and change sort order
 

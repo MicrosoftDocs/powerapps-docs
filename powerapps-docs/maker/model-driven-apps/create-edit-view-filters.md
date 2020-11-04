@@ -30,7 +30,7 @@ search.app:
 
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 
-The filters in a Power Apps view are important to the value provided by the view. The filters you apply determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any fields of the table in the current view or any fields in a related table. 
+The filters in a Power Apps view are important to the value provided by the view. The filters you apply determine which records appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any columns of the table in the current view or any columns in a related table. 
 
 In this topic, you create or edit filters by performing the following tasks:
 
@@ -81,13 +81,13 @@ In this topic, you create or edit filters by performing the following tasks:
 
 1. In the expression builder, select **Add** > **Add row**.
 
-2. Select a field for the condition.
+2. Select a column for the condition.
 
 3. Select a conditional operator.
 
 4. Select a comparison value.  
 
-    Some filter conditions don't require a comparison value for the condition. For example, the operator **Contains data** doesn't require a comparison value. With other filter conditions, you choose the comparison value from an option set. For example, the **Status** field has an option set that contains the values **Active** and **Inactive**.
+    Some filter conditions don't require a comparison value for the condition. For example, the operator **Contains data** doesn't require a comparison value. With other filter conditions, you choose the comparison value from an option set. For example, the **Status** column has an option set that contains the values **Active** and **Inactive**.
 
     > [!div class="mx-imgBorder"] 
     > ![Filter condition](media/add-condition-filter.png "Filter condition")
@@ -100,7 +100,7 @@ In this topic, you create or edit filters by performing the following tasks:
 
 2. Select the relational operator **Or** for the group. **And** is the default relational operator.
 
-3. Specify the first clause of the grouped condition. Select the field, conditional operator, and comparison value.
+3. Specify the first clause of the grouped condition. Select the column, conditional operator, and comparison value.
 
 4. Select **Add** > **Add group**
 
@@ -115,9 +115,9 @@ In this topic, you create or edit filters by performing the following tasks:
 
 1. In the expression builder, select **Add** > **Add related table**.
 
-2. Select a field from the current table that is related to another table. The table related to the field is shown in parenthesis. You can select fields that have a many-to-one, one-to-many, or many-to-many relationship with the related table.
+2. Select a column from the current table that is related to another table. The table related to the column is shown in parenthesis. You can select columns that have a many-to-one, one-to-many, or many-to-many relationship with the related table.
 
-3. Select a field of the related table for the condition.
+3. Select a column of the related table for the condition.
 
 4. Select a conditional operator.
 

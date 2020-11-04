@@ -48,7 +48,7 @@ You can enable custom activity tables to support quick create forms, and you can
 > [!NOTE]
 >  - The table must have the **Enable quick create forms** option enabled for the quick create form to be displayed. 
 >  - You must also add the table and the quick create form to your app.
->  - Some fields, such as the CREATEDON field, aren't available to add to a quick create form.  
+>  - Some columns, such as the CREATEDON column, aren't available to add to a quick create form.  
   
 ### How to create a quick create form  
   
@@ -58,7 +58,7 @@ You can enable custom activity tables to support quick create forms, and you can
 
 3.  On the toolbar select **Add form** > **Quick Create Form**.  
   
-4.  In the form designer drag any fields from the **Field Explorer** into the sections on the form.  
+4.  In the form designer drag any columns from the **Column Explorer** into the sections on the form.  
   
 5.  When you are finished, select **Save**.  
   
@@ -82,7 +82,7 @@ You can enable custom activity tables to support quick create forms, and you can
   
 -   Bing Maps  
   
-If you add a composite field to a quick create form, it will be displayed as separate fields.  
+If you add a composite column to a quick create form, it will be displayed as separate columns.  
   
 ### To edit a quick create form  
   
@@ -92,7 +92,7 @@ If you add a composite field to a quick create form, it will be displayed as sep
 
 3. In the form list, select a form where the form **Type** is **Quick Create**.  
   
-3.  Drag any fields from the **Field Explorer** into the sections in the form.  
+3.  Drag any columns from the **Column Explorer** into the sections in the form.  
   
      See [Configure event handlers](configure-event-handlers-legacy.md) for information about editing event handlers for form scripts.  
   
