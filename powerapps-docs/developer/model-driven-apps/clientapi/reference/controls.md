@@ -330,6 +330,15 @@ The Sliverlight web resource has these additional methods:
 </tr>
 </table>
 
+## Pro Tip
+Modify multiple controls: If you want to modify the all the controls bound to an attribute on a form, use the controls collection inside the attribute type. For example, to add a notification to each control bound to the "name" attribute, you can do the following:
+
+const notification = { messages: ['Sample Notification on Name Controls'], notificationLevel: 'RECOMMENDATION', uniqueId: 'my_unique_id'
+
+};
+
+formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification))
+
 
 ### Related topics
 
