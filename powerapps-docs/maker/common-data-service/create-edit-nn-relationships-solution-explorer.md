@@ -1,6 +1,6 @@
 ---
 title: "Create N:N (many-to-many) table relationships in Common Data Service using solution explorer | MicrosoftDocs"
-description: "Learn how to create many-to-may relationships"
+description: "Learn how to create many-to-may relationships using solution explorer"
 ms.custom: ""
 ms.date: 05/29/2018
 ms.reviewer: ""
@@ -47,7 +47,7 @@ In solution explorer, expand **Tables** an select a table. Within that table, se
 
 ## Create relationships
 
-While [viewing table relationships](#view-entity-relationships), select **New Many-to-Many Relationship** from the command bar.
+While [viewing table relationships](#view-table-relationships), select **New Many-to-Many Relationship** from the command bar.
 
 > [!NOTE]
 > If the command is not available, the table is not eligible to create a custom relationship.

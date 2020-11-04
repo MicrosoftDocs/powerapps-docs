@@ -1,5 +1,6 @@
 ---
 title: "Create and edit global choices for Common Data Service using solution explorer | MicrosoftDocs"
+description: Learn how to create and edit choices using solution explorer
 ms.custom: ""
 ms.date: 05/26/2018
 ms.reviewer: ""
@@ -48,7 +49,7 @@ With solution explorer open, under **Components** select **Option Sets**.
 ## Create a global choice 
 
 > [!NOTE]
-> You do not need to create a global choice  before you use it within a custom column. When you create a new choice  column you have the option to create a new global choice  or use an existing one. See [Choice column options](create-edit-field-solution-explorer.md#option-set-column-options)
+> You do not need to create a global choice  before you use it within a custom column. When you create a new choice  column you have the option to create a new global choice  or use an existing one. See [Choice column options](create-edit-field-solution-explorer.md#choice-column-options)
 
 While viewing global choices, click **New** to open a form to define the global choice .
 

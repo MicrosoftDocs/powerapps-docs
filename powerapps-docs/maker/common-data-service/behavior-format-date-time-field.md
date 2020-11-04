@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service, the Date and Time data type is used in many standard table columns. Depending on what kind of date the column represents, you can choose different column behaviors: **User Local**, **Date Only** or **Time-Zone Independent**.  
+In Common Data Service, the Date and Time data type is used in many standard table columns. Depending on what kind of date the column represents, you can choose different column behaviors: **User Local**, **Date Only**, or **Time-Zone Independent**.  
   
 <a name="Behavior"></a>   
 
@@ -51,7 +51,7 @@ Changing the column behavior affects the column values that are added or modifie
 
 ### Change behavior during a solution import
 
-When you import a solution that contains a Date column using the **User Local** behavior you may have the option to change the behavior to **Date Only** or **Time Zone Independent**.  
+When you import a solution that contains a Date column using the User Local behavior, you may have the option to change the behavior to **Date Only** or **Time Zone Independent**.  
 
 ### Prevent changing behavior
 
@@ -65,7 +65,7 @@ Consider the following use cases for **Date Only** and **Time-Zone Independent**
 
 The Date Only behavior is good for cases when information about the time of the day and the time zone isn't required, such as birthdays or anniversaries. With this selection, all app users around the world see the exact same date value.  
   
-### Time-Zone Independent scenario: hotel check-in
+### Time-Zone-Independent scenario: hotel check-in
 
 You can use this behavior when time zone information isn't required, such as the hotel check-in time. With this selection, all app users around the world see the same date and time value.  
 
@@ -81,11 +81,11 @@ This tells the form how to interpret the data it receives from the Common Data S
 ### I picked Date Only in my table column, but my form is showing a time picker along with the date
 
 This would happen if you chose a behavior of time zone independent or user local for your date only column. In the Common Data Service it will store a time of 00:00:00 by default, but if you add the column to a form it will assume you need to set the time as well. If you leave the time pickers in the form, users can enter a time and it will be saved as something other than 00:00:00. How can you fix this
-* Edit the form and remove the time picker and associated formulas. This will save the time as 00:00:00 and will still allow for time zone based date calculations.
-* If your column is currently set to user local, and you don’t need the date to be time zone calculated, you can change it to date only. This is a permanent change and cannot be undone. This change cannot be made to time zone independent behavior columns. Always be careful changing behaviors as other apps, plugins, or workflows may be relying on the data.
+* Edit the form and remove the time picker and associated formulas. This will save the time as 00:00:00 and will still allow for time zone-based date calculations.
+* If your column is currently set to user local, and you don’t need the date to be time zone calculated, you can change it to date only. This is a permanent change and cannot be undone. This change cannot be made to time zone-independent behavior columns. Always be careful changing behaviors as other apps, plugins, or workflows may be relying on the data.
 
 ### I have a date only column, but it is showing the wrong date for some users
-If this happens, check the behavior that is set up for the date only column. If the column is set to time zone independent or user local, the included timestamp will cause the date to appear differently for different users. The form display settings of UTC or Local will determine if the date displayed is calculated using the user’s time zone settings or if it displays it as the UTC value. Changing the form values to UTC instead of user local will prevent time zone offset calculations and will display the UTC date for the saved row. Alternately, if you need this to be a static date that does not change and the column is currently user local, you can change the column behavior to Date Only. Be cautious though, this is cannot be undone.
+If this happens, check the behavior that is set up for the date only column. If the column is set to time zone independent or user local, the included timestamp will cause the date to appear differently for different users. The form display settings of UTC or Local will determine if the date displayed is calculated using the user’s time zone settings or if it displays it as the UTC value. Changing the form values to UTC instead of user local will prevent time zone offset calculations and will display the UTC date for the saved row. Alternately, if you need this to be a static date that does not change and the column is currently user local, you can change the column behavior to Date Only. Be cautious though, this can't be undone.
 
 ### My (script/plug-in) is supposed to intercept the date submitted using the Universal Client before the user local conversion occurs, but instead it is being treated as User Local data 
 
