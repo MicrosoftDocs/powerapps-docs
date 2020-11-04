@@ -121,6 +121,14 @@ The Azure AD B2C provider configuration is complete. You can view the summary of
 
 ![View summary and close](media/authentication/b2c-summary.png "View summary and close")
 
+## Edit configuration
+
+If you want to change the configuration, select **Edit configuration** for the **Azure Active Directory B2C** identity provider from the providers list. More information: [Edit a provider](use-simplified-authentication-configuration.md#edit-a-provider).
+
+## Delete configuration
+
+If you want to delete the configuration, select **Delete** for the **Azure Active Directory B2C** identity provider from the providers list. More information: [Delete a provider](use-simplified-authentication-configuration.md#delete-a-provider).
+
 ### See also
 
 [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
