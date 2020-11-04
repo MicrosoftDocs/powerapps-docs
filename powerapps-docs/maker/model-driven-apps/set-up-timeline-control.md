@@ -245,7 +245,7 @@ When you create a custom table, you might want to show the custom table as an ac
 
     More information: [Create a custom table](../common-data-service/data-platform-create-entity.md)
 
-2. Make sure the custom activity is enabled in the timeline properties. More information: [Configure activity row types](#configure-activity-record-types)
+2. Make sure the custom activity is enabled in the timeline properties. More information: [Configure activity row types](#configure-activity-row-types)
 
 ## Enable or disable rich-text editor for notes in timeline
 
