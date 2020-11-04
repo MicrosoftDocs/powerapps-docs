@@ -22,10 +22,7 @@ You can use the **Measure in MR** component in your app to let users measure dis
 
 The component creates a button in your app. When app users click the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distances of measured segments are shown directly on the live camera feed.
 
-An example of how the component works inside an app is shown in the following video:
 
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vyoW]
 
 
 When the user exits the component, the measurements that were taken are captured in the **Measurements** and **MeasurementsDetailed** properties so they can be saved or stored.
@@ -69,13 +66,13 @@ Note that some properties are only available under **More options** in the **Adv
 
 Property | Description | Type | Location
 - | - | - | -
-Text | Label for the button | String | **Properties** (also in **Advanced**)
-Display type | Whether the button shows just an icon, text, or both | Drop-down selection | **Properties** (also in **Advanced**)
-Unit of measurement | What unit the measurements should be shown and returned in | Drop-down selection | **Properties** (also in **Advanced**)
+Text | Label for the button. | String | **Properties** (also in **Advanced**)
+Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | **Properties** (also in **Advanced**)
+Unit of measurement | What unit the measurements should be shown and returned in. | Drop-down selection | **Properties** (also in **Advanced**)
 Measurement type | What type of measurement the user can make, whether point-to-point distance, a complete area, or a three-dimensional volume (area plus height or depth). | Drop-down selection | **Properties** (also in **Advanced**)
 Measurements | Table containing the measured segments, composed of: <ul><li>Length - Number representing the length of the segment</li><li>Unit - String describing the unit of this measurement</li></ul> | String | Not applicable (output property only)
 MeasurementsDetailed | Table describing the measured volumes and areas, composed of:<ul><li>Units - String describing the base unit of this measurement</li><li>Height - Number representing the height of the captured volume, or 0 if not a completed volume or 2D area</li><li>PathLength - Number representing the total length of the path</li><li>Segments - Table describing all segments in the given measurement object with the following properties:<ul><li>Distance - Number representing the total distance of a given segment in the given units of measure (for example, .52)</li><li>Direction - Vector describing the direction of the segment, normalized</li><li>X - Number specifying the X direction of the segment in world space (for example, 0.5)</li><li>Y - Number specifying the Y direction of the measurement in world space (typically 0)</li><li>Z - Number specifying the Z direction of the measurement in world space (for example, 0.5)</li></ul></li></li> | | Not applicable (output property only)
-Photos | The photos captured during the mixed reality session | | Not applicable (output property only)
+Photos | The photos captured during the mixed reality session.<br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | | Not applicable (output property only)
 
 ### Additional properties
 
