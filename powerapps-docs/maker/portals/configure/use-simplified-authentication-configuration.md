@@ -130,7 +130,7 @@ The configuration steps after you select **Next** depend on the type of identity
 
 | Available providers | Available protocols | Description |
 | - | - | - |
-| Azure Active Directory B2C | OpenID Connect | Allows configuration of Azure AD B2C for authentication in portals using OpenID Connect protocol. <br> More information: [Configure the Azure AD B2C provider](configure-azure-ad-b2c-provider.md) |
+| Azure Active Directory B2C | OpenID Connect | Allows configuration of Azure AD B2C for authentication in portals using OpenID Connect protocol. <br> More information: [Configure the Azure AD B2C provider](configure-azure-ad-b2c-provider.md), [Configure the Azure AD B2C provider manually](configure-azure-ad-b2c-provider-manual.md) |
 | Facebook | OAuth 2.0 | Allows configuration of Facebook as the authentication provider in portals using OAuth 2.0 protocol. <br> More information: [Configure Facebook provider](configure-oauth2-facebook.md) |
 | LinkedIn | OAuth 2.0 | Allows configuration of LinkedIn as the authentication provider in portals using OAuth 2.0 protocol. <br> More information: [Configure LinkedIn provider](configure-oauth2-linkedin.md) |
 | Google | OAuth 2.0 | Allows configuration of Google as the authentication provider in portals using OAuth 2.0 protocol. <br> More information: [Configure Google provider](configure-oauth2-google.md) |

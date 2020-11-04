@@ -1461,6 +1461,8 @@
             items:
                 - name: Configure
                   href: ./portals/configure/configure-azure-ad-b2c-provider.md
+                - name: Configure manually
+                  href: ./portals/configure/configure-azure-ad-b2c-provider-manual.md
                 - name: Customize the Azure AD B2C user interface
                   href: ./portals/configure/azure-ad-b2c.md
           - name: OAuth 2.0
