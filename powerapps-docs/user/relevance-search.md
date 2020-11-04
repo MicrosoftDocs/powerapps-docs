@@ -125,7 +125,7 @@ Legend
 10. **Modified on**: Filter the search results by when the record was last modified.
 11. **Created on**: Select a time range to find records created in the selected time range.
 
-### Feedback
+### Feedback link
 
 On the search results page, the **Did you find what you were looking for? Yes No** feedback is collected in our product telemetry. Search parameters like the query text that user enters into the search box is not collected. We only collect data for the **Yes** or **No** response. Currently there isn't an option to disable the feedback link.
 
