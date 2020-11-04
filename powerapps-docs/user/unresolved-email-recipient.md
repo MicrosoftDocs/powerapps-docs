@@ -1,13 +1,21 @@
 ---
 title: "Resolve an unresolved email recipient | MicrosoftDocs"
 description: "Learn how to resolve an unresolved email recipient."
-ms.date: 05/11/2020
-ms.service:
-  - "dynamics-365-sales"
-ms.topic: article
 author: sbmjais
-ms.author: shjais
 manager: shujoshi
+ms.service: powerapps
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 05/11/2020
+ms.author: shjais
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Resolve an unresolved email recipient

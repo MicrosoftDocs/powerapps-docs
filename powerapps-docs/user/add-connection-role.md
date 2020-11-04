@@ -1,13 +1,13 @@
 ---
 title: "Add a connection role to link records to each other| MicrosoftDocs"
-ms.custom: ""
+description: How to add a connection role linke to records
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 8/01/2019
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -62,7 +62,7 @@ To manage a connection role, select  the connection role from a connection entit
 
 
    > [!div class="mx-imgBorder"]
-   > ![Edit connection role](media/connection7.png "Editconnection role") 
+   > ![Manage connection role](media/connection7.png "Manage connection role") 
   
 You can also manage the connection role types that you want associate to the connection role.
 
