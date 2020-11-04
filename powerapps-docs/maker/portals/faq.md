@@ -104,7 +104,7 @@ If you don't have sufficient privileges to create a portal in an environment, yo
 > [!div class=mx-imgBorder]
 > ![Create portal error](media/portal-create-error.png "Create portal error")
 
-For information on creating a portal and the required privileges, see [Create a portal](create-portal.md).
+More information: [Create a portal](create-portal.md), [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md)
 
 ### I'm getting the message: "Your data isn't quite ready".
 
