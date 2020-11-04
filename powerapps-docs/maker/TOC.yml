@@ -57,19 +57,19 @@
         href: ../user/screen-reader.md
       - name: Keyboard shortcuts
         href: ../user/keyboard-shortcuts.md
-    - name: Work with records 
+    - name: Work with rows 
       items:
-      - name: Create a record
+      - name: Create a row
         href: ../user/create-a-record.md
-      - name: Work with records in the new calendar view
+      - name: Work with rows in the new calendar view
         href: ../user/calendar-view.md
-      - name: Use the lookup field on a record
+      - name: Use the lookup field on a row
         href: ../user/lookup-field.md
       - name: View a profile card
         href: ../user/profile-cards.md
-      - name: Assign or share records
+      - name: Assign or share rows
         href: ../user/assign-or-share-records.md
-      - name: Share records using Access Team
+      - name: Share rows using Access Team
         href: ../user/Access-team.md
       - name: Add a connection role
         href: ../user/add-connection-role.md
@@ -143,7 +143,7 @@
         href: ../user/export-excel-static-worksheet.md
       - name: Export to an Excel PivotTable
         href: ../user/export-excel-pivottable.md
-      - name: Merge duplicate records
+      - name: Merge duplicate rows
         href: ../user/merge-duplicate-records.md
       - name: Troubleshoot export to Excel
         href: ../user/ts-export-to-excel.md
