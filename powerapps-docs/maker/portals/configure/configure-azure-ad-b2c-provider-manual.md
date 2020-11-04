@@ -12,21 +12,23 @@ ms.reviewer: tapanm
 
 # Configure the Azure Active Directory B2C provider
 
-[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Microsoft 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C is an extension to that authentication model that enables external customer signs in through local credentials and federation with various common social identity providers.
-
-A portal owner can configure the portal to accept [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports Open ID Connect for federation.
+In this article, learn how to configure Azure Active Directory B2C as the identity provider manually. Use these steps to manually create new Azure AD B2C tenant, register application and configure user flows.
 
 > [!NOTE]
-> - This article explains how to configure Azure Active Directory B2C as the identity provider manually. Use these steps to manually create new Azure AD B2C tenant, register application and configure user flows. If you want to configure the Azure AD B2C provider automatically using Power Apps portals, go to [Configure Azure AD B2C provider](configure-azure-ad-b2c-provider.md).
+> - If you want to configure the Azure AD B2C provider automatically using Power Apps portals, go to [Configure Azure AD B2C provider](configure-azure-ad-b2c-provider.md).
 > - Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
 
-To configure Azure AD B2C as the OpenID Connect provider:
+To configure Azure AD B2C as the OpenID Connect provider manually:
 
 1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
 
     ![Azure AD B2C provider name](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
 
 1. If necessary, update the name.
+
+1. Select **Skip to manual configuration** from the bottom of the screen.
+
+    ![Skip to manual configuration](media/authentication/skip-to-manual.png "Skip to manual configuration")
 
 1. Select **Next**.
 
