@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/01/2020
+ms.date: 11/04/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -93,7 +93,7 @@ Legend
 
 ### View quick suggestions
 
-View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary field of an entity record. The suggested results also supports misspelled text up to 1 character off. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
+View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary field of an entity record. The suggested results supports misspelled text up to 1 character off. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
 
 ![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
 
@@ -127,7 +127,7 @@ Legend
 
 ### Feedback
 
-On the search results page, the **Did youfind what you were look for? Yes No** feedback is collected in our product telemetry. Search parameters like the query text that user enters into the search box is not collected. We only collect data for the **Yes** or **No** response. Currently there isn't an option to disable the feedback link.
+On the search results page, the **Did you find what you were looking for? Yes No** feedback is collected in our product telemetry. Search parameters like the query text that user enters into the search box is not collected. We only collect data for the **Yes** or **No** response. Currently there isn't an option to disable the feedback link.
 
    > [!div class="mx-imgBorder"]
    > ![Feedback link](media/feedbacklink.png "Feedback link")  
