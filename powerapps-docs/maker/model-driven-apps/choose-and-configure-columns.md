@@ -57,7 +57,7 @@ search.app:
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Views](media/available-views.png)
+    > ![Account view definitions](media/account-view-definitions.png)
 
 3. Select an existing view to open it or on the toolbar select **Add view**. 
 
@@ -71,7 +71,7 @@ search.app:
   
 #### Add columns to views  
   
-1.  While creating and editing views, ensure that the **Columns** panel is open. If it is not, select **Add columns** on the toolbar. 
+1.  While creating and editing views, ensure that the **Table columns** panel is open. If it is not, select **View column** on the toolbar. 
 
     > [!div class="mx-imgBorder"] 
     > ![View editor add columns](media/fields-drawer-view-designer.png)
