@@ -30,7 +30,6 @@ Use the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-drive
 > - Most of the tools are available in production environments. Some of the tools mentioned in the guide may not have been deployed to your organization yet as new tools are added periodically.
 > - The tools listed in this article can be used independently to troubleshoot a certain category of issues.
 
-The following sections include information on what you will need to complete the troubleshooting scenarios included in this guide.
 
 ## Utilizing URL parameters to disable various form components
 
@@ -73,14 +72,14 @@ To see registered form event handles and libraries you can view the `FormEvents`
 > [!div class="mx-imgBorder"]
 > ![Form events](media/registered-form-events.png "Form events")
 
-You'll need the "eventIndex" and "libraryIndex" when using **DisableFormHandlers** or **DisableFormLibraries** URL flags. Once an event or library is disabled the **disabledByConfigFlag** will be true, and you'll also see such events in the actual event handling.
+You'll need the `eventIndex` and `libraryIndex` parameter values when using the **DisableFormHandlers** or **DisableFormLibraries** URL flags. Once an event or library is disabled the **disabledByConfigFlag** will be true, and you'll also see such events in the actual event handling.
 
 > [!div class="mx-imgBorder"]
 > ![Form events OnLoad](media/form-events-onload.png "Form events ONLoad")
 
 ## Disable form handlers
 
-The following disables form handlers but does not prevent the containing web resource files from being loaded.
+The following flags disable the form handlers but does not prevent the containing web resource files from being loaded.
 
 - **&flags=DisableFormHandlers=\<event name\>**: Disables the form handlers by specifying the event name, such as `DisableFormHandlers=OnLoad`. If you use `DisableFormHandlers=true`, it disables the following event handlers: [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload), [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave), businessrule, [OnChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/attribute-onchange), and [TabStateChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/tabstatechange).
 
@@ -90,7 +89,7 @@ The following disables form handlers but does not prevent the containing web res
 
 ## Disabling form libraries
 
-To disable form libraries, use the following methods:
+To disable form libraries, use the following:
 
 - **&flags=DisableFormLibraries=true**:  Disables all the form libraries.
 
@@ -98,7 +97,7 @@ To disable form libraries, use the following methods:
 
 - **&flags=DisableFormLibraries=\<starting index\>_\<ending index\>**: Disables the form libraries by specifying the library index range. For example, `DisableFormLibraries=0_2` disables the form libraries at index from 0 to 2 (0 and 2 are included).
 
-### Differences between **DisableFormHandlers** and **DisableFormLibraries**
+### Differences between DisableFormHandlers and DisableFormLibraries
 
 The main difference between disabling form libraries and form handlers are:
 
@@ -111,18 +110,18 @@ The main difference between disabling form libraries and form handlers are:
 
 ### Disable web resource controls
 
-To disable web resource controls on a form, use the following method: 
+To disable web resource controls on a form, use the following: 
 
 **&flags=DisableWebResourceControls=true** : Disables all the web resource controls.
 
-Here is a screenshot of what it will look like in your application.
+Here is the screenshot of what it looks like in your application.
 
 > [!div class="mx-imgBorder"]
 > ![Disable web resource](media/disable-web-resource-control.png "Disable web resource")
 
 ### Disable controls on a form
 
-To disable controls on a form, use the following method: 
+To disable controls on a form, use the following: 
 
 **&flags=DisableFormControl=true**: Disables all the controls on a form.
 
@@ -131,7 +130,7 @@ To disable controls on a form, use the following method:
 
 ## Disable business process flow
 
-To disable a business process flow on the form, use the following method:
+To disable a business process flow on the form, use the following:
 
 **&flags=DisableBusinessProcessFlow=true**: Disables a business process flow on the form.
 
@@ -183,30 +182,21 @@ This is caused by unsupported scripting. Follow up with the script owner to fix 
 
 ## **Save in Progress** error dialog
 
-When the form saves, you see the **Save in Progress** error dialog:
-
-**Root cause**
-
-This error occurs when the form [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is triggered before the previous [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is complete. This is not supported and the error dialog is by design because calling the `OnSave` event before the previous `OnSave` event is complete would cause recursive save loops with unintended behaviors.
+When the form saves, you see the **Save in Progress** error dialog. This error occurs when the form [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is triggered before the previous [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is complete. This is not supported and the error dialog is by design because calling the `OnSave` event before the previous `OnSave` event is complete would cause recursive save loops with unintended behaviors.
 
 A typical cause of this error is the script that calls `save]()` in [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) handler. Another possible cause is the concurrent `save()` calls in `setTimeout()`, and which could cause the error dialog to intermittently show up, depending on whether the prior `save()` call is completed when another save() call is made.
 
 **Resolution**:
 
 Below is a sample Form Checker monitor event (the callstack has been modified for demonstration purpose). The callstack tells what exact web resource,
-function, and line and the row number is causing this error. Form Checker will NOT be able to detect this error when this issue is not reproducing.
+function, line and the row number is causing the error. Form Checker won't be able to detect the error when this issue is not reproducing.
 
 > [!div class="mx-imgBorder"]
 > ![Save in progress error](media/save-in-progress-error.png "Save in progress error")
 
-This is caused by unsupported scripting. Please follow-up with the script owner to fix the problematic script code.
-
 ## The form/record is not saved when you try to save the form
 
-### Root Cause
-
-A very common cause is an OnSave handler that has called executionContext.getEventArgs().preventDefault()  to cancel the save
-operation.
+A very common cause is an [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) handler that has called `executionContext.getEventArgs().preventDefault()` method to cancel the save operation.
 
 **Resolution**:
 
@@ -215,18 +205,13 @@ Below is a sample Form Checker monitor event to explain why the save is canceled
 > [!div class="mx-imgBorder"]
 > ![Record is not saved error](media/record-not-saved-error.png "Record is not saved error")
 
-Please follow-up with the script owner to fix or change the OnSave handler script.
-
 ## Form script errors
 
-### Root Cause
-
-If you see a form script error during form OnLoad, OnSave, OnChange, business rule execution, or other events, the error dialog itself may not contain
-sufficient information to help to troubleshoot.
+If you see a form script error during form OnLoad, [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave), OnChange, business rule execution, or other events, the error dialog itself may not contain sufficient information to troubleshoot.
 
 **Resolution**:
 
-For example, the customer has an onload handler, say "onload(controlName)", and they checked "Pass execution context as first parameter" option in the event handler editor in the form designer. In their code:
+For example, the customer has an onload handler, say `onload(controlName)`, and they checked "Pass execution context as first parameter" option in the event handler editor in the form designer. In their code:
 
 ```javascript
 function onload(controlName)
@@ -246,24 +231,15 @@ Once you launch Form Checker, you'll be able to see more details including the f
 > [!div class="mx-imgBorder"]
 > ![Launch form checker](media/see-form-checker-for-details.png "Launch form checker")
 
-Please follow up with the owner of the problematic script to further root cause the issue.
-
 ## Form freezes or is very slow or throws unexplained errors
 
-Please read through the overview section if you have not already done so to help familiarize you with the various tools and options to help troubleshoot your
-issue.
-
-### Symptoms
-
-- Form is very slow
+- Form loads very slow
 
 - Form throws unexplainable errors
 
-- Form throws "Web resource method does not exist" script error
+- Form throws **Web resource method does not exist** script error
 
-### Root Cause
-
-There are many possible reasons a form freezes or is slow, or throws an error that is not a typical script error dialog. Some of the many possible reasons are:
+There are many possible reasons for a form to freeze or is slow, or throws an error that is not a typical script error dialog. Some of the many possible reasons are:
 
 1. It's not only slow or freezes on forms, it also occurs in other places such as sitemap/navigation pane, grids, or dashboards
 
@@ -294,75 +270,11 @@ Also, check for and fix synchronous network requests as described here:
 
 - <https://docs.microsoft.com//powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously> 
 
-Please follow-up with the owner of the control to further troubleshoot the issue.
-
-## Save in Progress error dialog
-
-Please read through the overview section if you have not already done so to help familiarize you with the various tools and options to help troubleshoot your
-issue.
-
-When the form saves, and you see the "Save in Progress" informational dialog.
-
-> [!div class="mx-imgBorder"]
-> ![Save in progress error dialog](media/save-in-progress-error-dialog.png "Save in progress error dialog")
-
-The nature of this dialog is that another form save action is triggered before the previous save action is complete. This is not supported, and is by design because calling save before save is complete would cause recursive save loops with unintended behaviors.
-
-A typical (but not only) cause of this error is a script that calls save() in an OnSave handler. Another possible reason this can occur is if there are concurrent save() calls in setTimeout(). which could cause the error dialog to, intermittently show up, depending on whether the prior save() call is complete when another save() call is made.
-
-Below is a sample from the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker)
-for a form onSave event (the callstack has been modified for demonstration purpose). The callstack will include the web resource, function, and the line and row number when the error occurs.
-
-> [!div class="mx-imgBorder"]
-> ![Save progress error details](media/save-in-progress-error.png "Save progress error details")
-
-This is caused by unsupported scripting. You will need to follow up with the script owner to fix the problematic script code.
-
-## A record does not save
-
-A very common cause is an OnSave handler that has called *executionContext.getEventArgs().preventDefault()*  to cancel the save operation.
-
-Below is a sample from the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker)
-for the form onSave event that can help determine why the save is canceled when the error is not explicit enough from the UI.
-
-> [!div class="mx-imgBorder"]
-> ![Record not saved](media/record-not-saved-error.png "Record not saved")
-
-You will need to follow up with the script owner to fix or change the OnSave handler script.
-
-## Form script errors
-
-If you see a form script error during a form OnLoad, OnSave, OnChange, business rule execution, or other events, the error dialog itself may not have enough
-information to help to troubleshoot the issue.
-
-For example, you have an onload handler, "onload(controlName)", and have checked "Pass execution context as first parameter" option in the event handler editor in the form designer. In their code:
-
-```javascript
-function onload(controlName)
-{
-  Xrm.Page.getControl(controlName);
-}
-```
-
-This causes a problem because the first parameter for the onload function is executionContext, however, the script incorrectly uses it as a control name for getControl().
-
-The Client API code will throw this error:
-
-> [!div class="mx-imgBorder"]
-> ![Record script error](media/form-script-error.png "Record script error")
-
-Once you launch the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker), you will be able to see more details including the full callstack. The monitoring tool will provide you more details that can help find the web resource and code location that caused the error.
-
-> [!div class="mx-imgBorder"]
-> ![See error details](media/see-form-checker-for-details.png "See error details")
-
-You will need to follow up with the script owner to further troubleshoot and resolve any issues identified in the call stack from the monitoring tool.
-
 ## Business rule or custom script is not working
 
-This can happen if a business rule/custom script used to work in web client, stopped working in Unified Client. One of the main reasons this can occur is when a business rule or script Unified Client is referencing a control that is not available in the Unified Interface.
+This can happen if a business rule/custom script used to work in web client, stopped working in Unified Interface. One of the main reasons this can occur is when a business rule or script in Unified Interface is referencing a control that is not available in the Unified Interface.
 
-An example of a common issue where this can happen is when a composite control is included in a script that exists in web client, but in the Unified Interface the composite control is broken down into parts and is stored this way. For example, if a field "fullname" is part of the business rule or custom script, the fields "firstname", "middlename" or "lastname" should be used instead.
+An example of a common issue where this can happen is when a composite control is included in a script that exists in web client, but in the Unified Interface the composite control is broken down into parts and is stored this way. For example, if a field `fullname` is part of the business rule or custom script, the fields `firstname`, `middlename`, or `lastname` should be used instead.
 
 Once you launch the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker), you'll be able to see more details including the composite control that is causing the problem, the fields that can be used in the business rule or custom script instead, and a full callstack (the callstack has been modified for
 demonstration purpose).
@@ -370,17 +282,12 @@ demonstration purpose).
 > [!div class="mx-imgBorder"]
 > ![Custom script not working](media/custom-script-error.png "Custom script not working")
 
-You will need to follow up with the owner of the business rule or custom script to make the change to use controls suggested in the monitoring tool.
+## Related Menu/Related tab
 
-## Related Menu / Related tab
-
-Please read through the overview section if you have not already done so to help familiarize you with the various tools and options to help troubleshoot your
-issue.
-
-There are many reasons why a related menu item doesn't show in the tab or have incorrect labels. Below is an example where you can use the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker)to check the RelatedMenu event.
+There are many reasons why a related menu item doesn't show in the tab or have incorrect labels. Below is an example where you can use the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker)to check the `RelatedMenu` event.
 
 In this example, it shows the reasons why a related entity "role" (Security Role) does not show in the "team" form is because "role" is not available in
-Unified Client.
+Unified Interface.
 
 > [!div class="mx-imgBorder"]
 > ![Related menu](media/related-menu-error.png "Related menu")
