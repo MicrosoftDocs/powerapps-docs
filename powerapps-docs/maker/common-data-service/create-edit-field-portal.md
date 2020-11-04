@@ -1,5 +1,5 @@
 ---
-title: "Create and edit fields for Common Data Service using Power Apps portal | MicrosoftDocs"
+title: "Create and edit columns for Common Data Service using Power Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 07/23/2020
 ms.reviewer: ""
@@ -20,76 +20,75 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit fields for Common Data Service using Power Apps portal
+# Create and edit columns for Common Data Service
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entity fields with the Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit table columns with the Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Create and edit fields for Common Data Service](create-edit-fields.md)
-- [Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)
+- [Create and edit columns for Common Data Service](create-edit-fields.md)
+- [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)
 
-## View fields
+## View columns
 
-1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Entities** and select the entity that has the fields you want to view.
-2. With the **Fields** tab selected, you can select the following views: 
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables** and select the table that has the columns you want to view.
+2. With the **Columns** tab selected, you can select the following views: 
 
  |View|Description|
  |--|--|
- |**All**| Shows all the fields for the entity|
- |**Managed**| Shows only managed and standard fields for the entity|
- |**Custom**|Shows only custom fields for the entity|
- |**Default**|Shows only the standard fields for the entity|
-<!-- TODO: What is the actual difference between All and Default? -->
+ |**All**| Shows all the columns for the table|
+ |**Managed**| Shows only managed and standard columns for the table|
+ |**Custom**|Shows only custom columns for the table|
+ |**Default**|Shows only the standard columns for the table|
 
-## Create a field
+## Create a column
 
-While viewing fields, in the command bar, select **Add field** which will show the **Field properties** panel.
+While viewing columns, in the command bar, select **Add column** which will show the **Field properties** panel.
 
 ![Field Properties](media/field-properties.png)
 
-Initially, just three field properties are available:
+Initially, just three column properties are available:
 
  |Property|Description|
  |--|--|
- |**Display Name**|The text to be displayed for the field in the user interface.|
- |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a field is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Common Data Service Default Publisher** prepended to it.|
- |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a field is saved, you cannot change the data type with the exception of converting text fields to autonumber fields.|
- |**Required**| A record can't be saved without data in this field. More information: [Saving records programmatically for required fields](#saving-records-programmatically-for-required-fields) |
- |**Searchable**| This field appears in Advanced Find and is available when customizing views. |
+ |**Display Name**|The text to be displayed for the column in the user interface.|
+ |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a column is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Common Data Service Default Publisher** prepended to it.|
+ |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, you cannot change the data type with the exception of converting text columns to autonumber columns.|
+ |**Required**| A row can't be saved without data in this column. More information: [Saving rows programmatically for required columns](#saving-rows-programmatically-for-required-columns) |
+ |**Searchable**| This column appears in Advanced Find and is available when customizing views. |
  |**Calculated or Rollup**| Use to automate manual calculations. Use values, dates, or text.|
- |**Advanced Options**| Add a description, and specify a maximum length and IME mode for the field.
+ |**Advanced Options**| Add a description, and specify a maximum length and IME mode for the column.
 
 You can set additional options depending on your choice of **Data type**.
 
-## Field Data types
+## Column Data types
 
-There are many different types of fields, but you can only create some of them. For more information about all types of fields, see [Types of fields and field data types](types-of-fields.md).
+There are many different types of columns, but you can only create some of them. For more information about all types of columns, see [Types of columns and column data types](types-of-fields.md).
 
-When creating a field, **Data type** provides the following choices:
+When creating a column, **Data type** provides the following choices:
 
 ### Text 
 
-Standard text fields can store up to 4,000 characters. The default [Max Length](#max-length) option is set to a lower value you can adjust.
+Standard text columns can store up to 4,000 characters. The default [Max Length](#max-length) option is set to a lower value you can adjust.
 
 |Data type|Description|
 |--|--|
 |**Text**|A text value intended to be displayed in a single-line textbox.|
-|**Text Area**|A text value intended to be displayed in a multi-line textbox. If you require more than 4,000 characters, use a [Multiline Text](#multi-line-field) data type.|
-|**Email**|A text value validated as an e-mail address and rendered as a mailto link in the field. |
+|**Text Area**|A text value intended to be displayed in a multi-line textbox. If you require more than 4,000 characters, use a [Multiline Text](#multi-line-column) data type.|
+|**Email**|A text value validated as an e-mail address and rendered as a mailto link in the column. |
 |**URL**|A text value validated as a URL and rendered as a link to open the URL.|
 |**Ticker Symbol**|A text value for a ticker symbol that will display a link that will open to show a quote for the stock ticker symbol. |
 |**Phone**|A text value validated as a phone number rendered as link to initiate a phone call by using Skype. |
-|**Autonumber**|A customizable combination of numbers and letters that is automatically generated by the server whenever the record is created. More information: [Autonumber fields](autonumber-fields.md) |
+|**Autonumber**|A customizable combination of numbers and letters that is automatically generated by the server whenever the row is created. More information: [Autonumber columns](autonumber-fields.md) |
 
 #### Max Length
 
-Fields that store text have an absolute maximum depending on the type. The **Max Length** option sets a value lower than the maximum specific to your environment. You can increase this max length but you should not lower it if you have data in the system that exceeds the lower value.
+Columns that store text have an absolute maximum depending on the type. The **Max Length** choices a value lower than the maximum specific to your environment. You can increase this max length but you should not lower it if you have data in the system that exceeds the lower value.
 
 ### Whole Number
 
-These fields store data as a number but include different presentation and validation options.
+These columns store data as a number but include different presentation and validation options.
 
 |Data type|Description|
 |--|--|
@@ -101,139 +100,140 @@ These fields store data as a number but include different presentation and valid
 
 ### Date Time
 
-Use these fields to store time values. You can store values as early as 1/1/1753 12:00 AM.
+Use these columns to store time values. You can store values as early as 1/1/1753 12:00 AM.
 
 |Data type|Description|
 |--|--|
 |**Date and Time**|A date and time value.|
 |**Date Only**|A date and time value that only displays a date. The time value is stored as 12:00 AM (00:00:00) in the system.|
 
-You can also set specific **Behavior** for Date Time fields in the **Advanced options**.
+You can also set specific **Behavior** for Date Time columns in the **Advanced options**.
 
-- **User local** : Displays values converted to in the current user’s local time zone. This is the default for new fields.
+- **User local** : Displays values converted to in the current user’s local time zone. This is the default for new columns.
 - **Date only**: This behavior is available for the **Date Only** type. Displays values without time zone conversion. Use this for data like birthdays and anniversaries.
 - **Time zone independent**:  Displays values without time zone conversion.
 
-More information: [Behavior and format of the Date and Time field](behavior-format-date-time-field.md)
+More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
 
 ### Other Data types
 
 |Data type|Description|
 |--|--|
-|**Currency**|A money value for any currencies configured for the environment. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization.More information: [Using currency fields](types-of-fields.md#using-currency-fields)|
+|**Currency**|A money value for any currencies configured for the environment. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization.More information: [Using currency columns](types-of-fields.md#using-currency-columns)|
 |**Decimal Number**| A decimal value with up to 10 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
 |**File**| For storing binary data.|
 |**Floating Point Number**|A floating point number with up to 5 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
-|**Image**|Displays a single image per record in the application. Each entity can have one image field. The **Name** you enter when creating an image field will be ignored. Image fields are always named 'EntityImage'.|
-|**Lookup**| Creates a reference to a single record for a single target record type.|
-|**Multi Select Option Set**|Displays a list of options where more than one can be selected.|
-|<a name="multi-line-field"></a> **Multiline Text**|A text value intended to be displayed in a multi-line textbox. Limited to a maximum of 1,048,576 characters. You can also set a lower [Max Length](#max-length). |
-|**Option Set**|Displays a list of options where only one can be selected.|
-|**Two Options**|Displays two options where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
+|**Image**|Displays a single image per row in the application. Each table can have one image column. The **Name** you enter when creating an image column will be ignored. Image columns are always named 'tableImage'.|
+|**Lookup**| Creates a reference to a single row for a single target row type.|
+|**Multi Select Choice**|Displays a list of options where more than one can be selected.|
+|<a name="multi-line-column"></a> **Multiline Text**|A text value intended to be displayed in a multi-line textbox. Limited to a maximum of 1,048,576 characters. You can also set a lower [Max Length](#max-length). |
+|**Choice**|Displays a list of options where only one can be selected.|
+|**Yes/No**|DisplaysYes/No where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
 
-## Save new field
+## Save new column
 
-Once you have set the **Display Name**, **Name** and **Data type** properties you can select **Done** to close the **Field properties** panel. 
+Once you have set the **Display Name**, **Name** and **Data type** properties you can select **Done** to close the **Column properties** panel. 
 
-You can continue to edit the entity and add additional fields or return and continue editing this field. The fields will not be created until you select **Save Entity** to save all the changes to the entity.
+You can continue to edit the table and add additional columns or return and continue editing this column. The columns will not be created until you select **Save Table** to save all the changes to the table.
 
-![Save Entity Button](media/save-entity-button.png)
+![Save Table button](media/save-entity-button.png)
 
 You can also select **Discard** to discard the changes you have made.
  
-## Edit a field
+## Edit a column
 
-While viewing fields, select the field you want to edit. You can modify the **Display Name** but you cannot change the **Name** and **Data type** if you have saved changes to the entity to add the field.
+While viewing columns, select the column you want to edit. You can modify the **Display Name** but you cannot change the **Name** and **Data type** if you have saved changes to the table to add the column.
 
 ### General Properties
-Every field has the following properties you can change:
+Every column has the following properties you can change:
 
 |Property|Description|
 |--|--|
-|**Required**|When this is selected a record can't be saved without data in this field. More information: [Saving records programmatically for required fields](#saving-records-programmatically-for-required-fields) |
-|**Searchable**|De-select this for fields for the entity that you don’t use.  When a field is searchable it appears in **Advanced Find** and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
-|**Description**|Found within **Advanced Options**. Enter instructions to the user about what the field is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the field.|
+|**Required**|When this is selected a row can't be saved without data in this column. More information: [Saving rows programmatically for required columns](#saving-rows-programmatically-for-required-columns) |
+|**Searchable**|De-select this for columns for the table that you don’t use.  When a column is searchable it appears in **Advanced Find** and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
+|**Description**|Found within **Advanced Options**. Enter instructions to the user about what the column is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the column.|
 
 > [!NOTE]
->**Making fields required**: Be careful when you make fields required. People will resist using the application if they can’t save records because they lack the correct information to enter into a required field. People may enter incorrect data simply to save the record and get on with their work.
+>**Making columns required**: Be careful when you make columns required. People will resist using the application if they can’t save rows because they lack the correct information to enter into a required column. People may enter incorrect data simply to save the row and get on with their work.
 >
->**Set requirement dynamically**: In model-driven apps you can use business rules or form scripts to change the requirement level as the data in the record changes as people work on it. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+>**Set requirement dynamically**: In model-driven apps you can use business rules or form scripts to change the requirement level as the data in the row changes as people work on it. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 >
 >**Advanced Find availability**: Advanced Find is currently only available for model-driven apps using the Web Client. Advanced find is not currently available in Unified Interface clients.
 
-### Saving records programmatically for required fields 
-When a record is saved programmatically using web services, only the SystemRequired fields are enforced. Failure to set a value for SystemRequired fields will return an error.  You can’t set the SystemRequired level of requirement. 
+### Saving rows programmatically for required columns 
+When a row is saved programmatically using web services, only the SystemRequired columns are enforced. Failure to set a value for SystemRequired columns will return an error.  You can’t set the SystemRequired level of requirement. 
 
-Setting a field to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the field has no value. The app user is shown an error and prompted to add data to the required field before they can save the record. There are options within the app to override this behavior and allow operation to proceed if needed.
+Setting a column to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the column has no value. The app user is shown an error and prompted to add data to the required column before they can save the row. There are options within the app to override this behavior and allow operation to proceed if needed.
+
 ## Calculated or Rollup
 
-You can set a custom field to be a **Calculated** or a **Rollup** field. Fields that are not calculated or rollup fields are sometimes referred to as *simple* fields.
+You can set a custom column to be a **Calculated** or a **Rollup** column. Columns that are not calculated or rollup columns are sometimes referred to as *simple* columns.
 
 ### Calculated
 
-With a calculated field you can enter a formula to assign a value to the field. 
-These data types can be set to calculated fields: **Currency**, **Date and Time**, **Date Only**, **Decimal Number**, **Duration**, **Email**, **Language**, **Multi Select Option Set**, **Option Set**, **Text**, **Text Area**, **Ticker Symbol**, **Timezone**, **Two Options**, **URL**, and **Whole Number**.
+With a calculated column you can enter a formula to assign a value to the column. 
+These data types can be set to calculated columns: **Currency**, **Date and Time**, **Date Only**, **Decimal Number**, **Duration**, **Email**, **Language**, **Multi Select Option Set**, **Option Set**, **Text**, **Text Area**, **Ticker Symbol**, **Timezone**, **Two Options**, **URL**, and **Whole Number**.
 
-More information: [Define calculated fields to automate manual calculations](define-calculated-fields.md)
+More information: [Define calculated columns to automate manual calculations](define-calculated-fields.md)
 
 ### Rollup
 
-With a rollup field you can set aggregation functions that will run periodically to set a number value for the field. These data types can be set to calculated fields: **Currency**, **Date and Time**, **Date Only**, **Decimal Number**, **Duration**, **Language**, **Timezone**, and **Whole Number**.
+With a rollup column you can set aggregation functions that will run periodically to set a number value for the column. These data types can be set to calculated columns: **Currency**, **Date and Time**, **Date Only**, **Decimal Number**, **Duration**, **Language**, **Timezone**, and **Whole Number**.
 
-More information: [Define rollup fields that aggregate values](define-rollup-fields.md)
+More information: [Define rollup columns that aggregate values](define-rollup-fields.md)
 
-## Number field options
+## Number column options
 
-Each type of number field has absolute minimum and maximum values. You can set appropriate **Minimum value** and **Maximum value** within these absolute values. Do this to have Common Data Service validate the values for the data you want to store in the field.
+Each type of number column has absolute minimum and maximum values. You can set appropriate **Minimum value** and **Maximum value** within these absolute values. Do this to have Common Data Service validate the values for the data you want to store in the column.
 
 For **Floating Point Number** and **Decimal Number** data types, you can specify a number of  **Decimal places**.
 
 
-## Option Set field options
+## Choice column options
 
-Fields that provide a set of options can include their own set of *local* options or refer to a common set of *global* options that can be used by multiple fields.
+Columns that provide a set of options can include their own set of *local* options or refer to a common set of *global* options that can be used by multiple columns.
 
-Using a global option set is valuable when you find yourself creating the same set of options for multiple fields. With a global option set, you only need to maintain the set of options in one place. 
+Using a global choice  is valuable when you find yourself creating the same set of options for multiple columns. With a global choice , you only need to maintain the set of options in one place. 
 
-When you choose **Multi Select Option Set** or **Option Set** data type the designer will list a set of available global option sets for you to choose from and provide the option to create a **New option set**.
+When you choose **Multi Select Choice** or **Choice** data type the designer will list a set of available global choices for you to choose from and provide the option to create a **New choice**.
 
-![Choose  option set type](media/option-set-options.png)
+<img src = "media/option-set-options.png" alt = "Choose choice type" width = "780" height = "973">
 
-If you choose **New option set** the default behavior is to create a new global option set.
-
-> [!NOTE]
-> While you are editing options for a new global option set, the **Display name** and **Name** values are for the global option set rather than for the field. The default values match the field values, but you can edit them while you edit the global option set to be different from the field you are currently creating.
-
-If you want to create a local option set you must select **View more** and choose **Local option set**.
-
-![Local option set](media/local-option-set.png)
+If you choose **New choice** the default behavior is to create a new global choice.
 
 > [!NOTE]
-> If you define every option set as a global option set your list of global option sets will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local option set.
+> While you are editing options for a new global choice, the **Display name** and **Name** values are for the global choice rather than for the column. The default values match the column values, but you can edit them while you edit the global choice  to be different from the column you are currently creating.
+
+If you want to create a local choice  you must select **View more** and choose **Local choice**.
+
+<img src = "media/local-option-set.png" alt = "Local choice" width = "411" height = "705">
+
+> [!NOTE]
+> If you define every choice  as a global choice  your list of global choices will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local choice.
 
 [!INCLUDE [cc_remove-option-warning](../../includes/cc_remove-option-warning.md)]
 
-## Delete a field
+## Delete a column
 
-With the system administrator security role, you can delete any custom fields that aren’t part of a managed solution. When you delete a field, any data stored in the field is lost. The only way to recover data from a field that was deleted is to restore the database from a point before the field was deleted.
-
-> [!NOTE]
-> Before you can delete a custom field, you must remove any dependencies that may exist in other solution components. 
-
-While [viewing fields](#view-fields), if you select a custom field that can be deleted in the list, the **Delete field** command appears and is enabled.
-
-![Delete a field using the portal](media/delete-field-portal.png)
-
-Use the **Delete field** command to delete the field. After deleting the field you must save the changes to the entity.
-
-![Save entity after deleting field](media/delete-field-portal-save-entity.png)
+With the system administrator security role, you can delete any custom columns that aren’t part of a managed solution. When you delete a column, any data stored in the column is lost. The only way to recover data from a column that was deleted is to restore the database from a point before the column was deleted.
 
 > [!NOTE]
-> If you get an error related to dependencies, you must use solution explorer to detect dependencies. More information: [Check field dependencies](create-edit-field-solution-explorer.md#check-field-dependencies)
+> Before you can delete a custom column, you must remove any dependencies that may exist in other solution components. 
+
+While [viewing columns](#view-columns), if you select a custom column that can be deleted in the list, the **Delete column** command appears and is enabled.
+
+![Delete a column using the portal](media/delete-field-portal.png)
+
+Use the **Delete column** command to delete the column. After deleting the column you must save the changes to the table.
+
+![Save table after deleting column](media/delete-field-portal-save-entity.png)
+
+> [!NOTE]
+> If you get an error related to dependencies, you must use solution explorer to detect dependencies. More information: [Check column dependencies](create-edit-field-solution-explorer.md#check-column-dependencies)
 
 ## IME Mode
 
-IME (input method editor) mode specifies how a physical keyboard can be used to enter characters for text fields. IMEs are tools provided by the operating system for composing text. They are commonly used to enter Chinese, Japanese, and Korean words. 
+IME (input method editor) mode specifies how a physical keyboard can be used to enter characters for text columns. IMEs are tools provided by the operating system for composing text. They are commonly used to enter Chinese, Japanese, and Korean words. 
 IME mode does not restrict the characters that users can enter. For example, when IME mode is disabled, users can still enter Japanese characters by pasting in a text input.
 > [!IMPORTANT]
 > IME Mode is used for backward compatibility with the legacy web client and the IME Mode settings described here don’t apply to Unified Interface apps. Additionally, IME mode is supported only in Internet Explorer and partially supported in Firefox.
@@ -243,9 +243,9 @@ IME mode does not restrict the characters that users can enter. For example, whe
 -	**Inactive**: Power Apps will deactivate the IME initially. You can activate it later if desired.
 
 ### See also  
-[Create and edit fields for Common Data Service](create-edit-fields.md)<br />
-[Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
-[Types of fields and field data types](types-of-fields.md)<br />
-[Define calculated fields to automate manual calculations](define-calculated-fields.md)<br />
-[Define rollup fields that aggregate values](define-rollup-fields.md)<br />
-[Behavior and format of the Date and Time field](behavior-format-date-time-field.md)
+[Create and edit columns for Common Data Service](create-edit-fields.md)<br />
+[Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Types of columns and column data types](types-of-fields.md)<br />
+[Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
+[Define rollup columns that aggregate values](define-rollup-fields.md)<br />
+[Behavior and format of the Date and Time column](behavior-format-date-time-field.md)

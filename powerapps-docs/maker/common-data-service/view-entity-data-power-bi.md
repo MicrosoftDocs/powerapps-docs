@@ -1,6 +1,6 @@
 ---
-title: "View entity data in Power BI Desktop (Preview) | MicrosoftDocs"
-description: "Learn how access and view entity data in Power BI Desktop"
+title: "View table data in Power BI Desktop (Preview) | MicrosoftDocs"
+description: "Learn how access and view table data in Power BI Desktop"
 ms.custom: ""
 ms.date: 09/25/2020
 ms.reviewer: "matp"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# View entity data in Power BI Desktop (Preview)
+# View table data in Power BI Desktop (Preview)
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -27,10 +27,10 @@ search.app:
 > 
 > While this feature is disabled, the existing Common Data Service connector still works using the import connection mode.
 
-You can use Power BI Desktop to view entities in Common Data Service. The entity
-record data that you can access from your environment is read-only. Data access
+You can use Power BI Desktop to view tables in Common Data Service. The table
+row data that you can access from your environment is read-only. Data access
 uses the Common Data Service security model that is the same used to access
-entity record data using a Power Apps app.
+table row data using a Power Apps app.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
@@ -45,12 +45,12 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
       
 3. Enable the TDS endpoint. For more information, see the **TDS endpoint (Preview)** setting in this topic [Manage feature settings](/power-platform/admin/settings-features).
           
-## View entity data
+## View table data
 
 1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the
     appropriate environment from the top-right corner.
 
-2.  On the left navigation pane expand **Data**, select **Entities**, and then
+2.  On the left navigation pane expand **Data**, select **Tables**, and then
     select **Analyze in Power BI** on the command bar.
 
     The pbids file for your environment is downloaded to your browser’s default download folder.
@@ -72,11 +72,11 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
     **Connect**.
 
     The environment appears in the Power BI Desktop **Navigator** window. Expand
-    it to view the entity tables available to analyze. Select an entity to view
+    it to view the table tables available to analyze. Select a table to view
     its data.
 
     > [!div class="mx-imgBorder"] 
-    > ![Entity records displayed example](media/entity-record-data-displayed.png "Entity records displayed example" )
+    > ![table rows displayed example](media/entity-record-data-displayed.png "table rows displayed example" )
 
 > [!NOTE]
 > SQL options, such as a T-SQL queries aren’t supported.
