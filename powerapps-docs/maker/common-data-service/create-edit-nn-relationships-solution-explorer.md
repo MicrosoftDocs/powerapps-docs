@@ -56,7 +56,7 @@ While [viewing table relationships](#view-entity-relationships), select **New Ma
 
 In the **Other table** group, in the **table Name** column, choose the table that you want to create the relationship with. This will populate the **Name** and **Relationship table Name** columns in the **Relationship Definition** group.
 
-You can click ![Save table relationship button](media/save-table-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
+You can click ![Save table relationship button](media/save-entity-icon-solution-explorer.png) to save the table and continue editing. More information: [Edit relationships](#edit-relationships)
 
 > [!NOTE]
 > If either the **Name** or **Relationship table Name** values already exist in the system you will get an error when you save. Edit the values so that they are unique and try again.
