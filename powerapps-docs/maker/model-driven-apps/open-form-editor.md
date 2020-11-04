@@ -65,7 +65,7 @@ If you create any new solution components in the process of editing the form, fo
   
 2.  Select the unmanaged solution you want to work with.  
   
-3.  Open the table with the form you want to edit. If the table isn't there, you'll need to add it. More information: [Add a table to an unmanaged solution](#add-an-entity-to-an-unmanaged-solution)
+3.  Open the table with the form you want to edit. If the table isn't there, you'll need to add it. More information: [Add a table to an unmanaged solution](#add-an-table-to-an-unmanaged-solution)
 
 4.  Select the **Forms** tab, and then open the form you want to edit.
   

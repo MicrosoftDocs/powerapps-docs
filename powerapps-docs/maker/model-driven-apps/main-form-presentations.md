@@ -33,7 +33,7 @@ The main form is used by all model-driven app clients. This form provides a cons
   
 |Presentation|Description|  
 |------------------|-----------------|  
-|**Updated**|For the [Updated tables and classic tables](create-design-forms.md#updated-versus-classic-entities) and any custom tables in Dynamics 365 (online) and Dynamics 365 on-premises, the updated form provides a new user experience. These forms have the newer command bar design, and enable additional features such as auto-save and business process flows.|  
+|**Updated**|For the [Updated tables and classic tables](create-design-forms.md#updated-versus-classic-tables) and any custom tables in Dynamics 365 (online) and Dynamics 365 on-premises, the updated form provides a new user experience. These forms have the newer command bar design, and enable additional features such as auto-save and business process flows.|  
 |**Dynamics 365 for tablets**| Dynamics 365 for tablets presents the content of the main form in a manner optimized for a tablet.|  
 |**Dynamics 365 for phones**| Dynamics 365 for phones presents the content of the main form in a manner optimized for a phone.|  
 |**Classic**|These forms are for the tables that haven't been updated. They use the ribbon rather than the command bar and the navigation pane on the left side of the form.<br /><br /> These forms have a two-column layout.|  

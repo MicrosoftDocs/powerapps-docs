@@ -42,7 +42,7 @@ In this topic, you create or edit filters by performing the following tasks:
 
 -   [Add a group condition to a filter](create-edit-view-filters.md#add-a-group-condition-to-a-filter)
 
--   [Add a related table to a condition](create-edit-view-filters.md#add-a-related-entity-to-a-condition)
+-   [Add a related table to a condition](create-edit-view-filters.md#add-a-related-table-to-a-condition)
 
 -   [Group conditions of a filter](create-edit-view-filters.md#group-conditions-of-a-filter)
 

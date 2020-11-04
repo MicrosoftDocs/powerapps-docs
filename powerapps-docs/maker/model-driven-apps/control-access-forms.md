@@ -25,7 +25,7 @@ search.app:
 Power Apps forms settings are a set of capabilities that make it easy for model-driven app makers to configure how users will access forms in a solution or application. From **Form settings**, there are three different areas a maker can choose from: 
 - [Set security roles for a form](#set-security-roles-for-a-form).  
 - [Set the form order](#set-the-form-order).
-- [Set the fallback form for a table](#set-the-fallback-form-for-an-entity). 
+- [Set the fallback form for a table](#set-the-fallback-form-for-a-table). 
 
 You can access form settings from the **Forms** tab in Power Apps or command bar in the form designer. 
 
