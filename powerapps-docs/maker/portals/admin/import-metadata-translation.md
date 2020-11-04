@@ -16,6 +16,9 @@ When you provision a portal, the portal-related solutions are installed on the o
 
 ## To import metadata translation
 
+> [!TIP]
+> To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
 1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Portal Actions** > **Get latest metadata translations**. A confirmation window is displayed asking whether to update the portal solutions.
