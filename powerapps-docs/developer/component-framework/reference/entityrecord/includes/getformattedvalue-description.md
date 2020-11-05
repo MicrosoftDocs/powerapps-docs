@@ -16,4 +16,4 @@ applies_to:
 ms.assetid: 5e559598-c465-483b-a993-33909a66d70c
 ---
 
-Gets the current formatted value of the record column.
+Gets the current formatted value of the row column.

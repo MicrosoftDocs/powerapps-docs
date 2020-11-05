@@ -146,9 +146,9 @@ export class TSTableControl
   /**
    * Event handler for 'lookup objects' button
    *
-   * This method invokes the lookup dialog for the table name specified by the buttons attribute
+   * This method invokes the lookup dialog for the table name specified by the buttons column
    * Once the user selects an item in the lookup, the selected item is passed back to our callback method.
-   * Our callback method retrieves the id, name, table type fields from the selected item and injects the
+   * Our callback method retrieves the id, name, table type columns from the selected item and injects the
    * values into a resultDiv on the control to showcase the selected values.
    *
    * @param event : OnClick Event
@@ -342,7 +342,7 @@ export class TSTableControl
     return cellElement;
   }
   /**
-   * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+   * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {

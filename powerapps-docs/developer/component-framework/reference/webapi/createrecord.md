@@ -41,23 +41,23 @@ Model-driven apps
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>Logical name of the entity you want to create. For example: &quot;account&quot;.</td>
+<td>Logical name of the table you want to create. For example: &quot;account&quot;.</td>
 </tr>
 <tr>
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>A JSON object defining the attributes and values for the new entity record.</p>
+<td><p>A JSON object defining the columns and values for the new table row.</p>
 <p>See examples later in this topic to see how you can define the <code>data</code> object for various create scenarios.</td>
 </tr>
 <tr>
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when a record is created. An object with the following properties will be passed to identify the new record:</p>
+<td><p>A function to call when a row is created. An object with the following properties will be passed to identify the new row:</p>
 <ul>
-<li><b>entityType</b>: String. The entity logical name of the new record.</li>
-<li><b>id</b>: String. GUID of the new record.</li>
+<li><b>entityType</b>: String. The table logical name of the new row.</li>
+<li><b>id</b>: String. GUID of the new row.</li>
 </ul></td>
 </tr>
 <tr>
@@ -76,7 +76,7 @@ Model-driven apps
 
 Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global_Objects/Promise)<[Entityreference](../entityreference.md)>
 
-Description: On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+Description: On success, returns a promise object containing the columns specified earlier in the description of the **successCallback** parameter.
 
 ### Related topics
 
