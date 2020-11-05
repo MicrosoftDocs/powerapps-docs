@@ -33,15 +33,15 @@ If you receive an email that has email addresses that aren't associated with a t
 
 3. Select the row type to create. For example, **Contacts**.
 
-    ![Select a row type](media/unresolved-email-select-row-type.png "Select a row type")
+    ![Select a row type](media/unresolved-email-select-record-type.png "Select a row type")
 
 4. In the **Quick Create: Contact** pane, enter the required details, and select **Save and Close**.
 
-    ![Enter contact details](media/unresolved-email-create-row.png "Enter contact details")
+    ![Enter contact details](media/unresolved-email-create-record.png "Enter contact details")
 
 5. The contact is created and selected in the **Lookup Rows** pane. Select **Add**.
 
-    ![Add the contact](media/unresolved-email-add-row.png "Add the contact")
+    ![Add the contact](media/unresolved-email-add-record.png "Add the contact")
 
 6. The unresolved email recipient is resolved and shown in the **To** column in the email editor.
 
