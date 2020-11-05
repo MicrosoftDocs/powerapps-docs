@@ -34,6 +34,9 @@ All
 |--|--|--|--|
 |bool|Boolean|Yes|Specify **true** to show the control; **false** to hide the control.|
 
+>[!NOTE}
+> If a control is set to false and is in a section that is hidden, if you set it to true it will also unhide the section.
+
 ### Related topics
 
 [getVisible](getVisible.md)
