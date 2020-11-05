@@ -18,7 +18,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Add the rich text editor control to a model-driven app (Preview)
+# Add the rich text editor control to a model-driven app
 
 The rich text editor control provides the app user a WYSIWYG editing area for formatting text. The control's input and output format is HTML. The control allows copied rich text, such as from a web browser or Word, to be pasted into the control. 
 
