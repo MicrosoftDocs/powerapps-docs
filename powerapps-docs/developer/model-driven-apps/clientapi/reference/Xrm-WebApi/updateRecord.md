@@ -76,11 +76,11 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+On success, returns a promise object containing the columns specified earlier in the description of the **successCallback** parameter.
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../../common-data-service/webapi/update-delete-entities-using-web-api.md) to define the data object for updating a table row.
+These examples use some of the same request objects as demonstrated in [Update and delete tables using the Web API](../../../../common-data-service/webapi/update-delete-entities-using-web-api.md) to define the data object for updating a table row.
 
 ### Basic update 
 
@@ -110,9 +110,9 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 );
 ```
 
-### Update associations to the related entities
+### Update associations to the related tables
 
-To update association to the related table records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another row. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target row. Here are code examples for both the scenarios:
+To update association to the related table rows (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another row. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target row. Here are code examples for both the scenarios:
 
 **For online scenario (connected to server)**
 
@@ -163,11 +163,11 @@ Xrm.WebApi.offline.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605
     }
 );
 ```
-### Update associations to the related entities of type Activity
+### Update associations to the related tables of type Activity
 
-To update association to the related entities of type Activity, set the value of single-valued navigation properties using the `@odata.bind` annotation to another row.
+To update association to the related tables of type Activity, set the value of single-valued navigation properties using the `@odata.bind` annotation to another row.
 
-**Update related opportunity field on task**
+**Update related opportunity column on task**
 
 ```JavaScript
 // define the data to update a row
@@ -187,7 +187,7 @@ Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).th
     }
 );
 ```
-**Update Regarding field on task**
+**Update Regarding column on task**
 
  ```JavaScript
 // define the data to update a row

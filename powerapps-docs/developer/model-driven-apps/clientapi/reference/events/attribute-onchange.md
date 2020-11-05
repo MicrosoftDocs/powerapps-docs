@@ -16,19 +16,17 @@ search.app:
 ---
 # Attribute OnChange Event (Client API reference)
 
-
-
 The `OnChange` event occurs in the following situations:
-- Data in a form field has changed and focus is lost. There is an exception to this behavior that applies to Two-Option (Boolean) fields that are formatted to use radio buttons or check boxes. In these cases the event occurs immediately.
-- Data changes on the server are retrieved to update a field when the form is refreshed, such as after a row is saved.
+- Data in a form column has changed and focus is lost. There is an exception to this behavior that applies to Yes/No (Boolean) columns that are formatted to use radio buttons or check boxes. In these cases the event occurs immediately.
+- Data changes on the server are retrieved to update a column when the form is refreshed, such as after a row is saved.
 - The attribute.[fireOnchange](../attributes/fireOnChange.md) method is used.
 
-All fields support the `OnChange` event. Data in the field is validated before and after the `OnChange` event.
+All columns support the `OnChange` event. Data in the column is validated before and after the `OnChange` event.
 
-The `OnChange` event does not occur if the field is changed programmatically using the attribute.[setValue](../attributes/setValue.md) method. If you want event handlers for the `OnChange` event to run after you set the value you must use the `formContext.data.entity attribute.`[fireOnchange](../attributes/fireOnChange.md) method in your code. 
+The `OnChange` event does not occur if the column is changed programmatically using the attribute.[setValue](../attributes/setValue.md) method. If you want event handlers for the `OnChange` event to run after you set the value you must use the `formContext.data.entity attribute.`[fireOnchange](../attributes/fireOnChange.md) method in your code. 
 
 > [!NOTE]
-> Although the **Status** field supports the`OnChange` event, the field is read-only on the form so the event cannot occur through user interaction. Another script could cause this event to occur by using the [fireOnchange](../attributes/fireOnChange.md) method on the field.
+> Although the **Status** column supports the`OnChange` event, the column is read-only on the form so the event cannot occur through user interaction. Another script could cause this event to occur by using the [fireOnchange](../attributes/fireOnChange.md) method on the column.
 
 > [!NOTE]
 > `OnChange` events are synchronous. You should **not** use asynchronous code in an `OnChange` event handler that needs an action to be taken or handled on the resolution of the async code. This causes issues if the resolution handler expects the app context to remain the same as it was when the asynchronous code was started. You should also **not** make synchronous network requests in an OnChange event handler. This can cause an unresponsive app.

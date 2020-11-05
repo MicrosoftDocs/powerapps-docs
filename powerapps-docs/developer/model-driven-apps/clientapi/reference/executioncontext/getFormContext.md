@@ -33,7 +33,7 @@ Returns a reference to the form or an item on the form depending on where the me
 
 ## Example
 
-The following sample code demonstrates how you can create a method that sets notification on a form field or editable grid cell depending on where you registered the script ([Field OnChange](../events/attribute-onchange.md) event or editable grid [OnChange](../events/grid-onchange.md) event):
+The following sample code demonstrates how you can create a method that sets notification on a form column or editable grid cell depending on where you registered the script ([Field OnChange](../events/attribute-onchange.md) event or editable grid [OnChange](../events/grid-onchange.md) event):
 
 ```JavaScript
 function commonEventHandler(executionContext) {

@@ -29,7 +29,7 @@ Model-driven apps
 
 |Parameter Name|Type|Required|description|
 |----|----|----|----|
-|ids|`string`|Yes|List of record id's|
+|ids|`string`|Yes|List of row id's|
 
 
 ### Related topics

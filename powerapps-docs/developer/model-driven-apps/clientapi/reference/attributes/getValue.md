@@ -16,9 +16,9 @@ search.app:
 ---
 # getValue (Client API reference)
 
-Retrieves the data value for an attribute.
+Retrieves the data value for an column.
 
-## Attribute types supported
+## Column types supported
 
 All
 
@@ -28,7 +28,7 @@ All
 
 ## Return Value
 
-**Type**: Depends on the type of attaribute. 
+**Type**: Depends on the type of columns. 
 
 | Attribute Type | Return Type| 
 |----|-----|
@@ -41,7 +41,7 @@ All
 | memo  | [String](https://msdn.microsoft.com/library/ecczf11c.aspx)  |
 | money| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)  |
 |multiselectoptionset|[Array](https://msdn.microsoft.com/library/k4h76zbx.aspx) <br/> An array of numbers.|
-| optionset | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)  |
+| choices | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)  |
 | string | [String](https://msdn.microsoft.com/library/ecczf11c.aspx) |
 
 

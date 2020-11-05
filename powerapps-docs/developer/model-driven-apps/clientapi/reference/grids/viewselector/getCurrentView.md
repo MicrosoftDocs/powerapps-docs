@@ -32,7 +32,7 @@ Read-only grid
 
 **Type**: Lookup object
 
-**Description**: The Lookup object has the following attributes:
+**Description**: The Lookup object has the following columns:
 
 - **entityType**: Number. The object type code for the SavedQuery (1039) or UserQuery (4230) that represents the view the user can select.
 - **id**: String. The Id for the view the user can select.

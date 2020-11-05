@@ -18,7 +18,7 @@ search.app:
 
 
 
-Returns the `formContext.data.entity` object that is the parent to all attributes. 
+Returns the `formContext.data.entity` object that is the parent to all columns. 
 
 ## Attribute types supported
 

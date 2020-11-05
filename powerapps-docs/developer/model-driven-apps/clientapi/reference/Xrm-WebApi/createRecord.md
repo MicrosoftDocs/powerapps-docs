@@ -43,7 +43,7 @@ search.app:
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>A JSON object defining the attributes and values for the new table row.</p>
+<td><p>A JSON object defining the columns and values for the new table row.</p>
 <p>See examples later in this topic to see how you can define the <code>data</code> object for various create scenarios.</td>
 </tr>
 <tr>
@@ -70,7 +70,7 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+On success, returns a promise object containing the columns specified earlier in the description of the **successCallback** parameter.
 
 ## Examples
 
@@ -105,15 +105,15 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-### Create related table records along with the primary row
+### Create related table rows along with the primary row
 
- You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account row along with the primary contact row and an associated opportunity row.
+ You can create tables related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account row along with the primary contact row and an associated opportunity row.
 
 > [!NOTE]
-> Creating related table records in a single create operation is not supported for offline mode.
+> Creating related table rows in a single create operation is not supported for offline mode.
 
 ```JavaScript
-// define data to create primary and related table records
+// define data to create primary and related table rows
 var data =
     {
         "name": "Sample Account",
@@ -147,9 +147,9 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-### Associate entities on creating new records
+### Associate tables on creating new rows
 
-To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target row. Here are code examples for both the scenarios: 
+To associate new table rows to existing table rows, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target row. Here are code examples for both the scenarios: 
 
 
 **For online scenario (connected to server)**

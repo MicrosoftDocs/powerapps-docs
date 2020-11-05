@@ -39,9 +39,9 @@ All
 <td>notification</td>
 <td>Object</td>
 <td>Yes</td>
-<td>The notification to add. The object contains the following attributes:
+<td>The notification to add. The object contains the following columns:
 <ul>
-<li><b>actions</b>: (Optional) Array of objects. A collection of objects with the following attributes:
+<li><b>actions</b>: (Optional) Array of objects. A collection of objects with the following columns:
 <ul>
 <li><b>message</b>: (Optional) String. The body message of the notification to be displayed to the user. Limit your message to 100 characters for optimal user experience.</li>
 <li><b>actions</b>: (Optional) Array of functions. The corresponding actions for the message.</li>
@@ -72,7 +72,7 @@ In the Unified Interface:
 
 ## Example
 
-The following sample code displays a notification on the **Account Name** field of the account form to set the **Ticker Symbol** if the **Account Name** field contains "Microsoft", and the ticker symbol is not already set to "MSFT". Clicking **Apply** in the notification will set the **Ticker Symbol** field to "MSFT".
+The following sample code displays a notification on the **Account Name** column of the account form to set the **Ticker Symbol** if the **Account Name** column contains "Microsoft", and the ticker symbol is not already set to "MSFT". Clicking **Apply** in the notification will set the **Ticker Symbol** column to "MSFT".
 
 ```JavaScript
 function addTickerSymbolRecommendation(executionContext) {

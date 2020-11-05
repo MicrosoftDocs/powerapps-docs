@@ -25,7 +25,7 @@ The **getTagValue** method returns an object with the following properties:
 - **name**. String. Name of the tag.
 - **id**: String. ID of the tag.
 - **entityType**. String. Entity type of the tag.
-- **fieldName**. String. The originating lookup field that raised the event.
+- **fieldName**. String. The originating lookup column that raised the event.
 
 ## Methods supported for this event
 - [addOnLookupTagClick](../controls/addOnLookupTagClick.md) method to add event handlers for this event.
