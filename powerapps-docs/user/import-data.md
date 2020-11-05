@@ -103,22 +103,22 @@ To find an app, search your phone’s online store.
    > [!div class="mx-imgBorder"]
    > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
 
-4. Select **Review Mapping** option and then on the **Review Mapping** page, review how your column headings are mapped to the columns in Dynamics 365. 
+4. Select **Review Mapping** option and then on the **Review Mapping** page, review how your column headings are mapped to the columns in your app.
 
    > [!div class="mx-imgBorder"]
-   > ![Map XML columns with Dynamics 365](media/import-xml-mapping.png "Map XML columns with Dynamics 365")
+   > ![Map XML columns with your app](media/import-xml-mapping.png "Map XML columns with your app")
 
     - On the left side, by default the **Primary Columns** section of the **Review Mapping** page shows all the required columns for the table that must be mapped for the data to be imported successfully.
     - If you've selected an alternate key, all the columns of the alternate key also become required columns and must be mapped.
     - If the column headings of your source file match the column display names, these columns will be automatically mapped. All the mapped columns will be shown with a green check mark.
-    - If the column headings don't match, the unmapped columns will be shown with a red exclamation point. Select a Dynamics 365 field to map to the unmapped column heading of your file.
+    - If the column headings don't match, the unmapped columns will be shown with a red exclamation point. Select a column to map to the unmapped column heading of your file.
     - To quickly filter on only the unmapped columns, select **Unmapped** from the **Map Columns** drop-down list.
 
 5.  In the **Optional Columns** section of the **Review Mapping** page, the left side shows the column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists.
 
     - If the column headings don't match, the unmapped columns will be shown with a red exclamation point.
-    - Select a Dynamics 365 field to map to the unmapped column heading of your file.
-    - You can also choose **Ignore** from the drop-down list for one or more optional columns. Data from ignored columns won't be imported into Dynamics 365 Sales.
+    - Select a column to map to the unmapped column heading of your file.
+    - You can also choose **Ignore** from the drop-down list for one or more optional columns. Data from ignored columns won't be imported into your app.
     - A column set to be ignored during import.
 
     > [!div class="mx-imgBorder"]
