@@ -245,7 +245,7 @@ export class TSIncrementControl
 When you click on the button, the value in the text box is increased by 1. The updated value will flow to Power Apps component framework through `notifyOutputChanged` method.
 
 > [!NOTE]
-> You can change the increment value when you are configuring the component to the field on the form.
+> You can change the increment value when you are configuring the component to the column on the form.
 
 Edit the value in the text box, and if it is a valid integer, then it updates the value to Power Apps component framework. You can continuously click the `Increment` button and update it. If it’s an invalid integer, an error message pops out.
 

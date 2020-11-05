@@ -12,7 +12,7 @@ author: Nkrb
 
 # Implementing map component
 
-This sample component changes the user experience of interacting with address fields on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_MapControl).
+This sample component changes the user experience of interacting with address columns on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_MapControl).
 
 > [!div class="mx-imgBorder"]
 > ![Map component](../media/map-control.png "Map component")
@@ -142,7 +142,7 @@ export class TSMapControl
 }
 ```
 
-In the manifest file, we defined property of type `Single line of Text`. We use this to bind it to the address field on the form.  
+In the manifest file, we defined property of type `Single line of Text`. We use this to bind it to the address column on the form.  
 
 > [!NOTE]
 > You can use any of the map API’s that are available in the market. In this example, we are going to show how to do it with the Google Map API. 
