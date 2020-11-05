@@ -35,11 +35,11 @@ search.app:
 
 **Type**: Promise
 
-**Description**: Returns a promise containing the default main form descriptor with the following attributes.
+**Description**: Returns a promise containing the default main form descriptor with the following columns.
 
-|Attribute Name| Type| Description|
+|Column Name| Type| Description|
 |-------------|-------|-----------|
-|Attributes| Array of strings| List of all the attributes on the main form.|
+|Columns| Array of strings| List of all the columns on the main form.|
 |EntityLogicalName| String| The logical name of the specified table.|
 |Id| string| The form ID of the specified table.|
 |Label| String| The label of the specified table.|

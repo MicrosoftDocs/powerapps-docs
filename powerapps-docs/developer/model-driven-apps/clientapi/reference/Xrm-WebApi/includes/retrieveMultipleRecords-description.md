@@ -1,1 +1,1 @@
-Retrieves a collection of table records.
+Retrieves a collection of table rows.

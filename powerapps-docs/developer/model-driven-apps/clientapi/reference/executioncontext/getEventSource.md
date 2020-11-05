@@ -27,7 +27,7 @@ Returns a reference to the object that the event occurred on.
 
 **Type**: Object
 
-**Description**: Returns the object from the **Xrm** object model that is the source of the event, not an HTML DOM object. For example, in an [OnChange](../events/attribute-onchange.md) event, this method returns the **formContext.data.entity** attribute object that represents the changed attribute.
+**Description**: Returns the object from the **Xrm** object model that is the source of the event, not an HTML DOM object. For example, in an [OnChange](../events/attribute-onchange.md) event, this method returns the **formContext.data.entity** column object that represents the changed column.
 
 |Events|Return Object|
 |-------|------------|

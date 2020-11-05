@@ -16,15 +16,13 @@ search.app:
 ---
 # Grids and subgrids in model-driven apps (Client API reference)
 
-
-
 Grids present data in a tabular format in model-driven apps. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*.
 
 ## Types of grids
 
 There are two types of grids in model-driven apps:
 - **Read-only grids**: Display data in a tabular format. To edit the data displayed in a read-only grid, you have to click the row in the grid to open the form, edit the data, and then save.
--  **Editable grids**: In addition to displaying data in a tabular format, provides rich inline editing capabilities on web and mobile clients including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views. The editable grid is a custom control, and is supported in the main grid and subgrids on a form in the web client and in dashboards and on form grids on the mobile clients. Although the editable grid control provides editing capability, it honors the read-only grid metadata and field-level security settings.
+-  **Editable grids**: In addition to displaying data in a tabular format, provides rich inline editing capabilities on web and mobile clients including the ability to group, sort, and filter data within the same grid so that you do not have to switch rows or views. The editable grid is a custom control, and is supported in the main grid and subgrids on a form in the web client and in dashboards and on form grids on the mobile clients. Although the editable grid control provides editing capability, it honors the read-only grid metadata and field-level security settings.
 
 <a name="bkmk_gridcontext"></a>
 ## Getting the grid context
@@ -51,9 +49,9 @@ Grid context is the grid or subgrid instance on a form against which you want to
 |[Grid](grids/grid.md)|Provides methods to access information about data in the grid.|Read-only and editable grids|
 |[GridRow](grids/gridrow.md)|Provides methods to work with rows or selected rows in the grid.|Read-only and editable grids|
 |[GridRowData](grids/gridrowdata.md)|Provides methods to work with rows or selected rows in the grid.|Read-only and editable grids|
-|[GridEntity](grids/gridentity.md)|Provides methods to access data about the specific records in the rows.|Read-only and editable grids|
+|[GridEntity](grids/gridentity.md)|Provides methods to access data about the specific rows in the rows.|Read-only and editable grids|
 |[GridAttribute](grids/gridattribute.md)|Provides methods to access the data in the cell of an editable grid.|Editable grid|
-|[GridCell](grids/gridcell.md)|Provides methods to access the data related to control on a form that is tied to an attribute in an editable grid.|Editable grid|
+|[GridCell](grids/gridcell.md)|Provides methods to access the data related to control on a form that is tied to an column in an editable grid.|Editable grid|
 |[ViewSelector](grids/viewselector.md)|Provides methods to get or set information about the view selector of the subgrid control.|Read-only grid|
 
 

@@ -24,9 +24,9 @@ Returns information about the current organization settings.
 
 The **organizationSettings** object provides following properties.
 
-## attributes
+## columns
 
-Returns attributes and their values as `key:value` pairs that are available for the organization table. Additional values will be available as attributes if they are specified as attribute dependencies in the web resource dependency list. The `key` will be the attribute logical name.
+Returns columns and their values as `key:value` pairs that are available for the organization table. Additional values will be available as columns if they are specified as column dependencies in the web resource dependency list. The `key` will be the column logical name.
 
 ### Syntax
 
@@ -36,7 +36,7 @@ Returns attributes and their values as `key:value` pairs that are available for 
 
 **Type**: Object
 
-**Description**: An object with attributes and their values.
+**Description**: An object with columns and their values.
 
 ## baseCurrencyId 
 

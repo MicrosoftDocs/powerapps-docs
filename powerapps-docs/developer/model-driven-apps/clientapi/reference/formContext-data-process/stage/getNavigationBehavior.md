@@ -39,7 +39,7 @@ For example, here is the **Create** button in the **Develop** stage of the **Acc
 
 ![Create button in the Develop stage](../../../../media/clientapi_getNavigationBehavior.png)
 
-The `allowCreateNew` property will return **undefined** for business process flow records that do not implement cross-entity navigation.
+The `allowCreateNew` property will return **undefined** for business process flow rows that do not implement cross-entity navigation.
 
 ## Example
 

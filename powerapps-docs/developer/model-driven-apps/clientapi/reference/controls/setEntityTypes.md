@@ -18,7 +18,7 @@ search.app:
 
 
 
-Sets the types of entities allowed in the lookup control.
+Sets the types of tables allowed in the lookup control.
 
 ## Control types supported
 
@@ -32,7 +32,7 @@ Lookup control
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|entityLogicalNames|Array of String|Yes|Specify the logical name of the entities allowed in the lookup control.|
+|entityLogicalNames|Array of String|Yes|Specify the logical name of the tables allowed in the lookup control.|
 
 ### Related topics
 

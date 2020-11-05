@@ -18,13 +18,13 @@ search.app:
 
 
 
-Provides properties and methods to retrieve information specific to the row displayed on the page, the save method, and a collection of all the attributes included in the form. Attribute data is limited to attributes represented by fields on the form.
+Provides properties and methods to retrieve information specific to the row displayed on the page, the save method, and a collection of all the columns included in the form. Column data is limited to columns represented by columns on the form.
 
 ## Properties
 
 |Name|Description|
 |--|--|
-|attributes|Collection of attributes for a row displayed on the form. <br/>More information: [Collections](collections.md) and [Attributes](attributes.md).
+|attributes|Collection of columns for a row displayed on the form. <br/>More information: [Collections](collections.md) and [Columns](attributes.md).
 
 ## Methods
 

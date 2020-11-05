@@ -18,7 +18,6 @@ search.app:
 # formContext.data.process (Client API reference)
 
 
-
 Provides events, methods, and objects to interact with the business process flow data on a form. See [formContext.ui.process (Client API reference)](formContext-ui-process.md) for methods to interact with the business process flow control on the form.
 
 ## Process events and event handler methods
