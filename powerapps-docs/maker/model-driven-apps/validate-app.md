@@ -28,6 +28,8 @@ search.app:
 
 # Validate and publish a model-driven app using the app designer
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Validate an app to check for asset dependencies that are required for the app to work, but haven't yet been added to the app. After a successful validation, you publish the app. 
   
 For example, you've added a Customer Service Performance dashboard to the app, which uses charts like Case Mix (By Priority) or Case Resolution Trend (By Day) that you haven't added. When you validate this app, you'll get a list of all missing, required assets.  
