@@ -22,6 +22,8 @@ search.app:
 ---
 # Add a chart to a form
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can add a chart to a form or change an existing list to a chart. For example, you can change the Child Accounts filtered sub-grid to display a chart instead of a list on the account main form.
 
 > [!div class="mx-imgBorder"] 

@@ -25,6 +25,8 @@ search.app:
 ---
 # Add a table as a lookup option in your app
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 With Unified Interface apps, for a table to be available in a lookup it must be added to the app. For example, contact rows have the ability to be assigned to a user or a team.  
 
 > [!div class="mx-imgBorder"] 
@@ -38,7 +40,7 @@ However, if the user table is included in the app but the team table is not, onl
 ## Add the team table to an app
 
 1. Open the app in the App Designer. 
-2. Select the **Components** tab, select **Tables**, and then select **Team**.    
+2. Select the **Components** tab, select **Entities**, and then select **Team**.    
 
     > [!div class="mx-imgBorder"] 
     > ![Add the team table to the app](media/add-team-entity-app.png "Add the team table to the app")

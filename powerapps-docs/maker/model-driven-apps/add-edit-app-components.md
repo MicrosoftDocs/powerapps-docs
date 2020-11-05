@@ -25,7 +25,9 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Add or edit model-driven app components in the Power Apps app designer
+# Add or edit model-driven app components in the Power Apps app designer
+
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 In this tutorial you learn how to add components to and remove components from a model-driven app. 
 
@@ -81,7 +83,7 @@ The app designer refers to existing metadata in the default solution. You can us
 
      Those dashboards will be added to the **Dashboard** tile on the app designer canvas. The **Dashboard** tile also shows a count of the number of dashboards you added to the app. If you don't select a dashboard, **All** will appear instead of the dashboard count, and all dashboards will be available to users when they use the app.  
   
-     All tables the dashboard uses are also added to the **Table View** area. For example, if you add the Customer Service Manager dashboard, the Case, Entitlement, and Queue Item tables are added to the Table View area. For each table, tiles for its assets are also added. You can use these tiles to add forms, views, and charts. More information: [Add or edit app components in the Power Apps app designer](add-edit-app-components.md#bkmk_AddEntityAssets)   
+     All tables the dashboard uses are also added to the **Entity View** area. For example, if you add the Customer Service Manager dashboard, the Case, Entitlement, and Queue Item tables are added to the Table View area. For each table, tiles for its assets are also added. You can use these tiles to add forms, views, and charts. More information: [Add or edit app components in the Power Apps app designer](add-edit-app-components.md#bkmk_AddEntityAssets)   
   
     > [!div class="mx-imgBorder"]
     > ![Add table to the app designer canvas](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add a table to the app designer canvas")  
@@ -114,10 +116,10 @@ The app designer refers to existing metadata in the default solution. You can us
     >  Alternatively, you can also do one of the following:  
     >   
     > - Select **Add** ![Add button on the designer](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Forms**.  
-    > - On the **Components** tab, under **Table Assets**, select **Forms**.  
+    > - On the **Components** tab, under **Entity Assets**, select **Forms**.  
   
     > [!TIP]
-    >  For all tables selected for the app, a **More Options** button (**...**) appears in the **Select Tables** list on the **Components** tab. To add all assets for the selected table, select **More Options** (**...**), and then select **Add All Assets**.  
+    >  For all tables selected for the app, a **More Options** button (**...**) appears in the **Select Entities** list on the **Components** tab. To add all assets for the selected table, select **More Options** (**...**), and then select **Add All Assets**.  
   
 2.  If you want your app users to use only selected forms, select the check boxes for the forms you want to add. The forms define how users will see and interact with data in the app. 
  

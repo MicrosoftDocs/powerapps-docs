@@ -24,6 +24,8 @@ search.app:
 ---
 # Custom controls available 
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can use a rich set of additional controls to create a more touch-friendly experience on model-driven apps. These include sliders, switches, multimedia player, input masks, calendar, and other controls.  
 
 To use these controls in the form editor:  

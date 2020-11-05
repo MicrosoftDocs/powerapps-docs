@@ -17,6 +17,9 @@ search.app:
 ---
 
 # Embed a Power BI report in a model-driven system form
+
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single row.
  
 ## Prerequisites

@@ -21,6 +21,9 @@ search.app:
   - D365CE
 ---
 # Set up and use the news control
+
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Gain valuable insights from the latest news about your customers, competitors,
 and contacts. Staying on top of the news helps you stay ahead of your
 competition by showing you real-time contextual information about your customers

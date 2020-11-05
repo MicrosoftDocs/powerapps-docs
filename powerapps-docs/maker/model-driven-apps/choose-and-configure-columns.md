@@ -28,6 +28,8 @@ search.app:
 
 # Choose and configure columns in model-driven app views
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_ChooseAndConfigureColumns"></a>   
 
  Along with the filter criteria, the columns visible in a Power Apps view are very important to the value provided by the view. In this topic, you create or edit views by performing the following tasks:  

@@ -28,6 +28,8 @@ search.app:
 
 # Create or edit filters in model-driven app views
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_CreateOrEditViewFilters"></a>   
 
 The filters in a Power Apps view are important to the value provided by the view. The filters you apply determine which rows appear in the list by default. You can add or edit a filter for the columns that you include in a view by selecting the column and selecting **Filter by**. You can also use the expression builder in the view designer. Use the expression builder to add or edit filters for any columns of the table in the current view or any columns in a related table. 

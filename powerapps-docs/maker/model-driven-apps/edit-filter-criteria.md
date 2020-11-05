@@ -25,6 +25,8 @@ search.app:
 ---
 # Edit filter criteria and change sort order in model-driven app views
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_EditFilterCriteria"></a>   
 
 Along with the columns displayed in a view, the filter criteria applied to a view is a critical part of the value provided by the view. You can add or edit filter criteria and change the sort order for the columns that you include in a view. If a sort order is not set for a view, by default the view is sorted by the primary column in the view in ascending order (A to Z).

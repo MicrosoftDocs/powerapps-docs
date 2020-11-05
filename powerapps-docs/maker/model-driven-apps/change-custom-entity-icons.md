@@ -27,6 +27,8 @@ search.app:
 ---
 # Change model-driven app custom table icons 
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 When you create a custom table, it is automatically assigned a default icon. All custom tables use the same icon by default. Use custom icons to differentiate how your custom tables look. You can’t modify the icons assigned to system tables.  
   
  You can upload three types of table icons for each custom table. 
@@ -58,7 +60,7 @@ You must use solution explorer to set table icons.
 
 1. On the command bar, select **Update Icons**.  
   
-2. In the **Select New Icons** dialog box, in the **Web Client** tab, under **Icon in Web application** or **Icon for Table Forms**, to the right of **New Icon**, select the **Browse** button ![Lookup button](media/lookup-button-4.gif).
+2. In the **Select New Icons** dialog box, in the **Web Client** tab, under **Icon in Web application** or **Icon for Entity Forms**, to the right of **New Icon**, select the **Browse** button ![Lookup button](media/lookup-button-4.gif).
 3. Select or create the appropriate web resource, and then select **OK**. 
 4. In the **Unified Interface** tab, do the same for the **New Icon** column.
 5. Select **OK** to close the **Select New Icons** dialog

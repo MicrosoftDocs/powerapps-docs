@@ -11,6 +11,8 @@ manager: shujoshi
 
 # Add the calendar control to tables
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The **Calendar Control V2** control displays scheduled activities and their associated details in a calendar. You can view, create, and delete your activities in a day, week, or month view. You must be a system customizer or a system administrator to add the **Calendar Control V2** control.
 
 **To add the control**

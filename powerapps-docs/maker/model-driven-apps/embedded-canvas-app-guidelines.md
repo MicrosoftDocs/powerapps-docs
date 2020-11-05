@@ -22,6 +22,8 @@ search.app:
 
 # Guidelines on working with embedded canvas apps
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This topic provides guidelines on working with embedded canvas apps as well as helpful tips to troubleshoot any issues you might encounter.
 
 -	Embedded canvas apps are only supported with Unified Interface model-driven apps.

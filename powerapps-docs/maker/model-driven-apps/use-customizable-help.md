@@ -16,6 +16,9 @@ search.app:
 ---
 
 # Enable and use customizable help
+
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Customizable help lets you provide your own contextual information to model-driven app users filling in forms. 
 
 > [!NOTE]
@@ -45,7 +48,7 @@ People with the system administrator security role can use the settings to overr
 After you enable custom Help at the global level, system customizers can override the global Help URL for a table in the table definition. 
 
 1. Open solution explorer.
-2. Expand **Tables**, and then select the table you want. 
+2. Expand **Entities**, and then select the table you want. 
 3. On the **General** tab under the **Help** section of the table definition, in the **Help URL** box enter the URL of your custom Help page. 
 
     > [!div class="mx-imgBorder"] 

@@ -18,6 +18,8 @@ search.app:
 ---
 # Add reporting features to your model-driven app
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Power Apps apps can include reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
 
 > [!div class="mx-imgBorder"] 
@@ -44,8 +46,8 @@ You can add fetch-based reporting functionality to your app so that users can ru
 5. Select the area that you named in the previous step, select **Add**, select **Group**, and then in the group **Title** box enter a name for the group title, such as *Reports*. 
 6. Select the group that you named in the previous step, select **Add**, select **Subarea** and then include the following properties: 
 
-   - **Type**. Select **Table**.
-   - **Table**. From the list of tables, select the **Report** table.  
+   - **Type**. Select **Entity**.
+   - **Entity**. From the list of tables, select the **Report** table.  
    - **Title**. Enter a descriptive title, such as *Reports*.
 
       ![Add report table to site map](media/report-entity-sitemap.png)

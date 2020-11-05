@@ -21,6 +21,8 @@ search.app:
 
 # Set up the timeline control
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The timeline control provides an easy and immersive experience to view information related to a table, such as accounts or contacts, which gives users a better understanding and helps them deliver more personalized service in an efficient and effective manner.
 
 This experience gives app makers the ability to configure the information displayed in each timeline to help users access information and create new activity rows, such as tasks and emails directly from the timeline quickly so they can deliver more personalized service.
