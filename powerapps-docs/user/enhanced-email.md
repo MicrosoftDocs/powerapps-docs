@@ -30,7 +30,7 @@ The enhanced email experience in model-driven apps allows you to compose an emai
 
 Compose an email using the enhanced experience:
 
-1. In the **Timeline** section of rows such as account or contact, select **+** and then under **Activities**, select **Email**.
+1. In the **Timeline** section of a row, select **+** and then under **Activities**, select **Email**.
 
    A new email pop-up window opens. 
 
