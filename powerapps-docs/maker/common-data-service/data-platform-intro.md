@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
-ms.date: 06/16/2020
+ms.date: 11/09/2020
 ms.reviewer: matp
 ms.author: matp
 search.audienceType: 
@@ -37,7 +37,7 @@ Standard and custom tables within Common Data Service provide a secure and cloud
 * **Logic and validation** &ndash; Define calculated columns, business rules, workflows, and business process flows to ensure data quality and drive business processes.
 * **Productivity tools** &ndash; tables are available within the add-ins for Microsoft Excel to increase productivity and ensure data accessibility.
 
-For more information, see [Why choose Common Data Service?](why-cds-overview.md).
+For more information, see [Why choose Common Data Service?](why-cds-overview.md)
 
 ## Terminology updates
 
