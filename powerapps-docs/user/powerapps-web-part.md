@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 11/16/2018
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 

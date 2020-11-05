@@ -14,6 +14,9 @@ ms.reviewer: tapanm
 
 As a portal administrator or developer, you can use Power Apps portals to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
 
+> [!TIP]
+> To learn about the roles required to perform tasks in this article, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
 ## Custom error
 
 If any server-side exception occurs in your portal, a customized error page with a user-friendly error message is shown by default. To configure the error message, see [Display a custom error message](#display-a-custom-error-message).

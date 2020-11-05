@@ -6,9 +6,9 @@ ms.date: 05/07/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 201f5db9-be65-7c3b-8202-822d78338bd6
-author: HaoZhou 
-ms.author: hazhouMSFT 
-manager: annbe 
+author: Nkrb 
+ms.author: nabuthuk
+manager: kvivek 
 ms.reviewer: kvivek 
 search.audienceType: 
   - developer

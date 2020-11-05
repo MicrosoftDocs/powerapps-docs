@@ -1,18 +1,18 @@
 ---
 title: "Use OneNote in Common Data Service| MicrosoftDocs"
-ms.custom: ""
+description: Learn how to use OneNote to take notes 
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/02/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
-  - enduser
+  - enduserS
 search.app: 
   - PowerApps
   - D365CE
