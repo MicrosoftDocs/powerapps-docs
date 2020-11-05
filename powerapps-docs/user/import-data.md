@@ -96,7 +96,7 @@ To find an app, search your phone’s online store.
 
 2. Select **Next**.
 
-3. (Optional) If you have to update the existing rows in Dynamics 365 through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the table.
+3. (Optional) If you have to update the existing rows in your app through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the table.
 
     The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference Dynamics 365 rows](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn949335(v=crm.8)?redirectedfrom=MSDN).
 
