@@ -12,8 +12,6 @@ ms.reviewer:
 
 # Create your first app in Microsoft Teams
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 You can create, edit, and delete [canvas apps](/powerapps/maker/canvas-apps/getting-started) in Teams.
 
 If you're creating an app by using Power Apps in a Teams team for the first time, a new Project Oakdale environment will be created for you. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment)

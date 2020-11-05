@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Employee ideas app
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 In this tutorial, learn about the Employee ideas app, and how to use them effectively.
 
 ## Overview

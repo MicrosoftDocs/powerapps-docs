@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Overview of the Power Apps app
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 You can use the Power Apps app to create and manage apps across the available environments for the applicable teams. Select the Power Apps app from the left pane in Microsoft Teams to open the Power Apps interface.
 
 > [!NOTE]

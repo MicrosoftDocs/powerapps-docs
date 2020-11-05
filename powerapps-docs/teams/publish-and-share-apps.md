@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Publish and share your app in Teams
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 In this article, learn about how you can publish and add apps to Microsoft Teams team.
 
 ## Publish and add an app to Teams

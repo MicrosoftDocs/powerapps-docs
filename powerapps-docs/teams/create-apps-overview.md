@@ -1,5 +1,5 @@
 ---
-title: Create apps in Microsoft Teams by using Power Apps (Preview) | Microsoft Docs
+title: Create apps in Microsoft Teams by using Power Apps | Microsoft Docs
 description: Provides an overview of creating apps in Microsoft Teams.
 author: KumarVivek
 ms.service: powerapps
@@ -9,9 +9,7 @@ ms.date: 09/22/2020
 ms.author: kvivek
 ms.reviewer: 
 ---
-# Create apps in Microsoft Teams by using Power Apps (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+# Create apps in Microsoft Teams by using Power Apps
 
 With the significant number of enterprise employees working remotely, and millions of them meeting and collaborating through Microsoft Teams, there's significant interest in building low-code and no-code applications that can make remote work easier and more productive.
 
@@ -20,10 +18,6 @@ Introducing [Project Oakdale](overview-data-platform.md), a built-in, low-code d
 The new Power Apps app in Teams provides an integrated experience for app makers to create and edit apps and workflows within Teams, and quickly publish and share them for anyone on the team to use, without having to switch between multiple apps and services. With Power Apps Studio embedded in the Power Apps app in Teams and the new built-in data platform providing an easy-to-use, editable data table, you can quickly build apps based on custom data tables that are Teams-specific and scenario-specific.
 
 ![The app creation experience in Teams](media/overview.png "The app creation experience in Teams, including the embedded Power Apps Studio experience")
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 To help organizations realize value faster, you can use *templates*, which are purpose-built apps for common application patterns that can be easily discovered and installed by members of the team. Although these templates can work without modification, members of the team can customize and extend them to meet the specific needs of their business.
 
