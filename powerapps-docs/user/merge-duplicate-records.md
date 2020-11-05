@@ -49,7 +49,7 @@ Common Data Service includes duplicate detection rules for accounts and contacts
   
      
    > [!div class="mx-imgBorder"] 
-   > ![Dialog box for merging rows](media/merge-rows-dialog.png "Dialog box for merging rows")  
+   > ![Dialog box for merging rows](media/merge-records-dialog.png "Dialog box for merging rows")  
   
 
 There are a few situations when duplicates may be found:  
@@ -66,7 +66,7 @@ There are a few situations when duplicates may be found:
 >   - The column's metadata `ValidForUpdate` is False.
 >   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
 >   - The column's metadata `ValidForUpdate` is False. 
->   - The column is `Choice` or `MultiSelectPickList` and it has either a parent Choice or child Choice column.
+>   - The column is `Choice` or `MultiSelectPickList` and it has either a parent choice or child choice column.
 >   - The column is ` parentaccountid` on the Account table; this is a system setting and cannot be changed. 
 >   - The column is ` parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed
 
