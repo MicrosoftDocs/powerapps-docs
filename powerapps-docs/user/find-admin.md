@@ -1,13 +1,13 @@
 ---
 title: "Find your administrator or support person| MicrosoftDocs"
-ms.custom: ""
+description: how to find your admin
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 10/25/2019
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 

@@ -1,13 +1,21 @@
 ---
-title: "Troubleshoot export to Excel | MicrosoftDocs"
-description: "Troubleshoot export to Excel."
-ms.date: 06/30/2020
-ms.service:
-  - "dynamics-365-sales"
-ms.topic: article
+title: Troubleshoot export to Excel  | Microsoft Docs
+description: Troubleshoot export to Excel
 author: udaykirang
-ms.author: udag
 manager: shujoshi
+ms.service: powerapps
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 06/30/2020
+ms.author: udag
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Troubleshoot export to Excel
