@@ -23,7 +23,7 @@ Add 3D content to your canvas apps. Use the **View in 3D** component to rotate a
 
 You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](#define-where-the-3d-content-is-stored).
 
-:::image type="content" source="/media/augmented-overview/view-in-3d.png" alt-text="Photo showing a 3D object being viewed in a mobile device":::
+:::image type="content" source="./media/augmented-overview/view-in-3d.png" alt-text="Photo showing a 3D object being viewed in a mobile device.":::
 
 
 > [!IMPORTANT]
