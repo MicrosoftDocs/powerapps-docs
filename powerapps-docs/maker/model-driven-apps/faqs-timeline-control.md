@@ -16,6 +16,8 @@ search.app:
 
 # FAQs for timeline control
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 ## Why do I receive the message "Rows could not be loaded because of unexpected error"?
 
 The **Timeline** section retrieves data about and displays in the form cards. By default, the timeline retrieves data for the 10 standard activity tables, which are:

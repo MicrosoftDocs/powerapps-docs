@@ -25,6 +25,8 @@ search.app:
 ---
 # Create or edit model-driven app dashboards
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 There are two types of dashboards, user dashboards and system dashboards. An app user can create a dashboard visible only to them in the app areas that they have privileges to. An admin or customizer creates or customizes system dashboards that, when published, are visible to all app users. A user can choose to set their user dashboard as their default dashboard and override the system dashboard.   
 
 Dashboards can be standard or interactive. Standard dashboards support adding one or more unrelated components such as charts or lists. Interactive dashboards provide the capability for users to act on a particular row directly from the dashboard. This topic focuses on standard system dashboards. For information about interactive dashboards, see [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md).

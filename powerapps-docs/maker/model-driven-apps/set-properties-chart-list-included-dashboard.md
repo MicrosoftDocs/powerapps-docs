@@ -25,6 +25,8 @@ search.app:
 ---
 # Set properties for a model-driven app chart or list included in a dashboard
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 To edit a chart or list component from the dashboard designer, select the chart or list you want and then select Edit Component on the dashboard designer toolbar.   
   > [!div class="mx-imgBorder"] 
   > ![Dashboard designer chart edit component](media/dashboard-chart-select.png)
@@ -42,7 +44,7 @@ You can set the following chart properties from the **Set Properties** dialog bo
   
 - **Display label on the Dashboard**. Select or clear this check box to display or hide the chart label.  
   
-- **Table**. Select the table (row type) to base the chart on. This setting determines the available values for the Default View and Default Chart properties.  
+- **Entity**. Select the table (row type) to base the chart on. This setting determines the available values for the Default View and Default Chart properties.  
   
 - **Default View**. Select the view used to retrieve the data for the chart.  
   

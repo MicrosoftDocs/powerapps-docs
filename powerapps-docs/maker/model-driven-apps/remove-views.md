@@ -25,6 +25,8 @@ search.app:
 ---
 # Delete or deactivate a model-driven app view 
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_RemoveViews"></a>   
 
  You may have a view that you don't want people to see. Depending on the type of view, you can either delete it or deactivate it. If you don't want to delete the view permanently, you can deactivate it instead.
