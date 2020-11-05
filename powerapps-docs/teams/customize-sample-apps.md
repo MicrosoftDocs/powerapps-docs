@@ -25,7 +25,8 @@ Before using this app:
 For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
 > [!NOTE]
-> Sections of this article uses one of the available sample apps from the Teams store as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
+> - Sections of this article uses one of the available sample apps from the Teams store as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
+> - Read [Sample app updates](use-sample-apps-from-teams-store.md#sample-app-updates) before you customize sample apps to understand the impact of new releases to the sample app versions.
 
 ## Open the sample app in Power Apps Studio
 

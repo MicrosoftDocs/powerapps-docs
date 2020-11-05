@@ -115,7 +115,7 @@ You can further customize and edit the components of an installed Power Apps app
 
 If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively by selecting **Ctrl**+**Alt**+**A** on the keyboard to get the session details. For more information about session details, go to [About tab](overview-of-the-power-apps-app.md#about-tab).
 
-## Update sample apps
+## Sample app updates
 
 Updates to the sample apps are published immediately. If you already have a sample app in use when this happens, a new version of the app is created and published as the live version. If you have any customizations to the sample app, you can [restore the app to a previous version](manage-your-apps?#restore-an-app) for customization, or recreate the customizations on top of the live version.
 
