@@ -52,7 +52,7 @@ There are many different types of columns, but you can only create some of them.
  
 Columns in a form display controls people use to view or edit data in a table row. Columns can be formatted to occupy up to four columns within a section.  
 
-You can access **Common column properties** in solution explorer. Under **Components**, expand **Tables**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then double-click one of the columns to view Common column properties.
+You can access common **Field properties** in solution explorer. Under **Components**, expand **Entities**, expand the table you want, and then select **Forms**. In the list of forms, open the form of type **Main**. Then double-click one of the columns to view common column properties.
 
 ![Common column properties in solution explorer](media/common-field-properties.png "Common column properties in solution explorer")
   
@@ -62,11 +62,11 @@ The following table describes properties that all columns have. Certain types of
 |---------|--------------|-----------------|  
 |**Display**|**Label**|**Required**: By default the label will match the display name of the column. You can override that name for the form by entering a different label here.|  
 ||**Display label on the form**|You can choose not to display the label at all.|  
-||**Column Behavior**|Specify the column level behavior using the check boxes.|  
+||**Field Behavior**|Specify the column level behavior using the check boxes.|  
 ||**Locking**|This will prevent the column from being removed from the form accidentally. This will prevent any configuration you have applied to the column, such as event handlers, from being cleared if the column were removed. To remove this column a customizer would need to clear this setting first.|  
 ||**Visibility**|Showing the column is optional and can be controlled using scripts. More information: [Visibility options](visibility-options-legacy.md)|  
 ||**Availability**|Choose if you want the tab to be available on the phone.|
-|**Formatting**|**Select the number of columns the control occupies**|When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has.|  
+|**Formatting**|**Select the number of fields the control occupies**|When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has.|  
 |**Details**|**Display Name**, **Name**, and **Description**|These read-only columns are for reference. Click the **Edit** button for convenient access to the column definition if you want to edit it.<br /><br /> Each instance of a column in the form has a name property so that they can be referenced in form scripts, but this name is managed by the application. The first instance of the column is the name of the column specified when it was created. More information: [Create and edit columns](../common-data-service/create-edit-fields.md)<br /><br /> For each additional time that a column is included in a form, the name appends a number starting with 1 to the end. So if the column name is 'new_cost', the first instance is 'new_cost', the second is 'new_cost1', and so on for each instance of the column in the form.<br /><br />**Note:** The column **Description** value provides tooltip text for the column when people place their cursor over it.|  
 |**Events**|**Form Libraries**|Specify any JavaScript web resources that will be used in the column `OnChange` event handler.<br /><br />|  
 ||**Event Handlers**|Configure the functions from the form libraries that should be called for the column `OnChange` event. More information: [Configure Event Handlers](configure-event-handlers-legacy.md)|  

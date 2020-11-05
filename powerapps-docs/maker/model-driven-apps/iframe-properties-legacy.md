@@ -21,6 +21,8 @@ search.app:
 ---
 # iFrame properties for model-driven app main forms
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can add iFrames to a form to integrate content from another website within a form. 
 
 To view IFrame properties, follow these steps.

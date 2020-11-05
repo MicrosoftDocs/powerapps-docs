@@ -28,6 +28,8 @@ search.app:
 
 # Create a model-driven app site map using the site map designer
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In this tutorial you perform several site map tasks such as creating a new site map, and adding an area, group, and subarea.
 
 Site maps define the navigation for your app. Create a site map for your app with ease by using the tile-based site map designer. Use the designer to drag components onto the design canvas, preview your work, and instantly publish the site map. System customizers or any user with the required privileges can quickly create site maps for apps.  
@@ -172,9 +174,9 @@ You can view or set these privileges on the **Customization** tab of a security 
   
     - **Type**: Select whether the subarea you are adding is a dashboard, table, web resource, or URL.  
   
-    - **Table**: Select the table that the subarea is for. This column is disabled if the subarea type is other than **Table** in the **Type** drop-down list.  
+    - **Entity**: Select the table that the subarea is for. This column is disabled if the subarea type is other than **Entity** in the **Type** drop-down list.  
   
-    - **URL**: Specify a URL for the main page of the application to show when this subarea is selected. This column is disabled if you've selected **Table** in the **Type** drop-down list.  
+    - **URL**: Specify a URL for the main page of the application to show when this subarea is selected. This column is disabled if you've selected **Entity** in the **Type** drop-down list.  
  
       > [!IMPORTANT]
       > Site map subarea URLs that link to an .aspx page aren’t supported.
