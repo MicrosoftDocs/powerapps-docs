@@ -504,9 +504,11 @@ The data definitions section provides information about a list of entities, data
 |-----------------------------------------|------------|--------------------------------------------------------------------------|---------------------------------|----------|
 | Allow Employee Sentiment                | Option Set | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app | Base |
 | Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app | Base |
+| Allow on behalf of attestations         | option set | Indicates if guest are allowed to register other guest.                  | Model-driven app                | Portal |
 | Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app | Base |
 | Allow QR codes                          | Option Set | Indicates if QR codes are displayed on the pass.                         | Model-driven app and canvas app | Base |
 | Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registrations is available               | Model-driven app and canvas app | Base |
+| Allow Unauthenticated Guests to Create a Pass | Option Set | Indicates if unauthenticated persons can book a pass on the portal | Model-driven app                | Portal |
 | Company Name                            | Text       | Used to describe the solution settings record.                            | Model-driven app | Base |
 | Facility Group                          | Lookup     | Links solution settings record to specific facility group.               | Model-driven app and canvas app | Base |
 | Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app | Base |
