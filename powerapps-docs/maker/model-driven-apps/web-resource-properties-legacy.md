@@ -21,6 +21,8 @@ search.app:
 ---
 # Web resource properties for model-driven app forms
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can add or edit web resources on a form to make it more appealing or useful to app users. Form enabled web resources are images or HTML files controls.
 
 > [!NOTE]
