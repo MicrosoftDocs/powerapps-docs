@@ -1,1 +1,1 @@
-Gets the form type for the record.
+Gets the form type for the row.

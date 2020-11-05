@@ -26,7 +26,7 @@ search.app:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|myFunction|function reference|Yes|The function to be executed when the record is saved. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../clientapi-execution-context.md) for more information.
+|myFunction|function reference|Yes|The function to be executed when the row is saved. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [Execution context](../../clientapi-execution-context.md) for more information.
 
 ### Related topics
 

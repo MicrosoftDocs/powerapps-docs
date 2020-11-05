@@ -20,7 +20,7 @@ search.app:
 
 The `OnChange` event occurs in the following situations:
 - Data in a form field has changed and focus is lost. There is an exception to this behavior that applies to Two-Option (Boolean) fields that are formatted to use radio buttons or check boxes. In these cases the event occurs immediately.
-- Data changes on the server are retrieved to update a field when the form is refreshed, such as after a record is saved.
+- Data changes on the server are retrieved to update a field when the form is refreshed, such as after a row is saved.
 - The attribute.[fireOnchange](../attributes/fireOnChange.md) method is used.
 
 All fields support the `OnChange` event. Data in the field is validated before and after the `OnChange` event.

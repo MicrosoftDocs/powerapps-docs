@@ -1,2 +1,2 @@
-Invokes the device camera to record video.
+Invokes the device camera to row video.
 

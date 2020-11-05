@@ -55,7 +55,7 @@ A process contains the data for a business process flow. Use the methods to acce
 
 ## ProcessInstance methods
 
-Use these methods to retrieve information about all the process instances for an entity record and to set a process instance as the active instance.
+Use these methods to retrieve information about all the process instances for a table row and to set a process instance as the active instance.
 
 |Name | Description |
 |--|--|

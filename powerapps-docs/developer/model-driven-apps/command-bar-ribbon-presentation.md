@@ -1,6 +1,6 @@
 ---
 title: "Command bar or ribbon presentation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some tables are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
@@ -21,7 +21,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/command-bar-ribbon-presentation -->
 
-Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
+Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some tables are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
   
 <a name="BKMK_DifferentPresentations"></a>
 
@@ -31,7 +31,7 @@ There are three different ways that command data can be displayed.
   
 ### Updated user experience  
 
- This is the presentation of the command bar throughout the application and for forms for entities that have the updated user experience.  
+ This is the presentation of the command bar throughout the application and for forms for tables that have the updated user experience.  
   
  ![Account command bar](media/customization-account-grid-command-bar.PNG "Account command bar in Dynamics 365")
   
@@ -39,17 +39,17 @@ There are three different ways that command data can be displayed.
   
  Enable rules will hide commands that should not be used.  
   
- Subgrids have a limited number of controls. Only controls to allow adding records, deleting records, or opening a view of the grid are available. But these commands are still defined by ribbon data and can be customized.  
+ Subgrids have a limited number of controls. Only controls to allow adding rows, deleting rows, or opening a view of the grid are available. But these commands are still defined by ribbon data and can be customized.  
   
  ![Contact sub-grid](media/customization-contract-subgrid.PNG "Contact sub-grid in Dynamics 365")  
   
- To perform more actions on the list of records displayed in a subgrid, select the option to open a view of the grid.  
+ To perform more actions on the list of rows displayed in a subgrid, select the option to open a view of the grid.  
   
  For more information about the behavior of subgrid controls and how they can be customized, see [Sub Grid Ribbons](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365#BKMK_SubGridRibbons).  
   
 ### Classic user experience  
 
- This is the presentation using the ribbon. It is used for lists within the Outlook client and for the forms of entities that do not use the updated user experience.  
+ This is the presentation using the ribbon. It is used for lists within the Outlook client and for the forms of tables that do not use the updated user experience.  
   
  ![Article ribbon](media/customization-article-ribbon.PNG "Article ribbon in Dynamics 365")  
   
@@ -78,7 +78,7 @@ There are three different ways that command data can be displayed.
   
 <a name="BKMK_CommandData"></a>   
 ## Command data  
- Despite these very different presentations, the data that defines the commands for entities is consistent regardless of how the commands are presented. It contains definitions for tabs and groups with scaling, but the visible parts of these containers for controls are only displayed in the classic user interface.  
+ Despite these very different presentations, the data that defines the commands for tables is consistent regardless of how the commands are presented. It contains definitions for tabs and groups with scaling, but the visible parts of these containers for controls are only displayed in the classic user interface.  
   
  In both the updated user experience and Dynamics 365 for tablets, tabs and groups still act as containers for controls, but there is no visual indication of these containers and scaling is not applied.  
   
@@ -90,7 +90,7 @@ There are three different ways that command data can be displayed.
   
  With this release there is a new element that can be used in display and enable rules to adapt the commands you display with the presentation.  
   
- `<CommandClientTypeRule>` contains a `Type` attribute that will be evaluated based on the presentation. The following valid options correspond to the presentation:  
+ `<CommandClientTypeRule>` contains a `Type` column that will be evaluated based on the presentation. The following valid options correspond to the presentation:  
   
 - `Refresh`: Updated user experience  
   
@@ -100,7 +100,7 @@ There are three different ways that command data can be displayed.
   
   Use this element as you define commands to control whether they display in the different presentations.  
   
-  There is also a pre-existing `<CrmClientTypeRule>` element, but the `Type` attribute for element can only differentiate between `Web` and `Outlook` clients. This rule will evaluate the Dynamics 365 for tablets client as the web client.  
+  There is also a pre-existing `<CrmClientTypeRule>` element, but the `Type` column for element can only differentiate between `Web` and `Outlook` clients. This rule will evaluate the Dynamics 365 for tablets client as the web client.  
   
 ### See also  
 

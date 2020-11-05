@@ -38,7 +38,7 @@ Lookup
     </filter>
     ```
 
-- **entityLogicalName**: (Optional) String. If this is set, the filter only applies to that entity type. Otherwise, it applies to all types of entities returned.
+- **entityLogicalName**: (Optional) String. If this is set, the filter only applies to that table type. Otherwise, it applies to all types of entities returned.
 
 ## Remarks
 

@@ -42,8 +42,8 @@ search.app:
 <ul>
 <li><b>boundParameter</b>: (Optional) String. The name of the bound parameter for the action or function to execute.
 <ul><li>Specify <code>undefined</code> if you are executing a CRUD request.</li>
-<li>Specify <code>null</code> if the action or function to execute is not bound to any entity.</li>
-<li>Specify <code>entity</code> in case the action or function to execute is bound to an entity. </li></ul>
+<li>Specify <code>null</code> if the action or function to execute is not bound to any table.</li>
+<li>Specify <code>entity</code> in case the action or function to execute is bound to a table. </li></ul>
 <li><b>operationName</b>: (Optional). String. Name of the action, function, or one of the following values if you are executing a CRUD request: "Create", "Retrieve", "Update", or "Delete".</li>
 <li><b>operationType</b>: (Optional). Number. Indicates the type of operation you are executing; specify one of the following values:
 <br/><code>0: Action</code>
@@ -232,7 +232,7 @@ Sdk.CalculateRollupFieldRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create variables to point to a quote record and to a specific field
+// Create variables to point to a quote row and to a specific field
 var quoteId = {
     "@odata.type": "Microsoft.Dynamics.CRM.quote",
     "quoteid": "7bb01e55-2394-ea11-a811-000d3ad97943"
@@ -294,7 +294,7 @@ Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create a variable to point to a contact record and with specific data in the needed fields
+// Create a variable to point to a contact row and with specific data in the needed fields
 var contactRecord = {
     "@odata.type": "Microsoft.Dynamics.CRM.contact",
     "firstname": "Test",
@@ -328,7 +328,7 @@ Xrm.WebApi.online.execute(retrieveDuplicatesRequest).then(
 
 ### Perform CRUD operations
 
-#### Create a record
+#### Create a row
 
 The following example demonstrates how to perform a create operation.
 
@@ -374,7 +374,7 @@ Xrm.WebApi.online.execute(createRequest).then(
 );
  ```
  
-#### Retrieve a record
+#### Retrieve a row
 
 The following example demonstrates how to perform a retrieve operation.
 
@@ -425,7 +425,7 @@ Xrm.WebApi.online.execute(retrieveRequest).then(
 );
 ```
 
-#### Update a record
+#### Update a row
 
 The following example demonstrates how to perform a update operation.
 
@@ -474,7 +474,7 @@ Xrm.WebApi.online.execute(updateRequest).then(
 );
 ```
 
-#### Delete a record
+#### Delete a row
 
 The following example demonstrates how to perform a delete operation.
 

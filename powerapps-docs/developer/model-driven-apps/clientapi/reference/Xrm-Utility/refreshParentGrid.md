@@ -26,13 +26,13 @@ search.app:
 
 ## Parameters
 
-**lookupOptions**: An object with the following properties to specify the record:
+**lookupOptions**: An object with the following properties to specify the row:
 
 |Property Name |Type |Required  |Description |
 |---|---|---|---|
-|entityType|String|Yes |Entity type of the record.|
-|id|String|Yes |ID of the record.|
-|name|String|No |Name of the record.|
+|entityType|String|Yes |Entity type of the row.|
+|id|String|Yes |ID of the row.|
+|name|String|No |Name of the row.|
 
 ### Related topics
 

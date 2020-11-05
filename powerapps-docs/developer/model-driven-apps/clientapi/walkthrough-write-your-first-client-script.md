@@ -55,7 +55,7 @@ Let's look at the code in detail:
     var currentUserName = Xrm.Utility.getGlobalContext().userSettings.userName; // get current user name
     var message = currentUserName + ": Your JavaScript code in action!";
     ```
-- **Code to execute on the OnLoad event**: This section contains the code that will be executed when the account form loads. For example, when you create a new account record or when you open an existing account record.
+- **Code to execute on the OnLoad event**: This section contains the code that will be executed when the account form loads. For example, when you create a new account row or when you open an existing account row.
 
     The code uses the `executionContext` object to get the `formContext` object. When we attach our code with the form event later, we will remember to select the option to pass the [execution context](clientapi-execution-context.md) to this function. Next, we display a form level notification using the [setFormNotification](reference/formContext-ui/setFormNotification.md) method. Next, we use the **setTimeOut** method to delay the execution of the [clearFormNotification](reference/formContext-ui/clearFormNotification.md) method to clear the notification after 5 seconds.
 
@@ -71,16 +71,16 @@ Let's look at the code in detail:
         window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);        
     }
     ```
-- **Code to execute on the OnChange event**: Code in this section will be associated with the **Account Name** field in the account form so that it gets executed **only** when you change the account name value.
+- **Code to execute on the OnChange event**: Code in this section will be associated with the **Account Name** column in the account form so that it gets executed **only** when you change the account name value.
 
-    The code performs a case-insensitive search for "Contoso" in the account name, and if present, automatically sets values for some fields in the account form.
+    The code performs a case-insensitive search for "Contoso" in the account name, and if present, automatically sets values for some columns in the account form.
 
     ```JavaScript
-    // Code to run in the attribute OnChange event 
+    // Code to run in the column OnChange event 
     this.attributeOnChange = function (executionContext) {
         var formContext = executionContext.getFormContext();
 
-        // Automatically set some field values if the account name contains "Contoso"
+        // Automatically set some column values if the account name contains "Contoso"
         var accountName = formContext.getAttribute("name").getValue();
         if (accountName.toLowerCase().search("contoso") != -1) {
             formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
@@ -98,7 +98,7 @@ Let's look at the code in detail:
     // Code to run in the form OnSave event 
     this.formOnSave = function () {
         // Display an alert dialog
-        Xrm.Navigation.openAlertDialog({ text: "Record saved." });
+        Xrm.Navigation.openAlertDialog({ text: "Row saved." });
     }
     ```
 
@@ -118,10 +118,10 @@ Now that your code is ready, you want to associate it with events in model-drive
 
 ## Step 3: Associate Script web resource to a form
 
-Associate the web resource containing your JavaScript code to model-driven apps forms to be able to associate functions in your code with events. As the JavaScript code in this walkthrough is targeted at the account record, we will associate the web resource with the account form.
+Associate the web resource containing your JavaScript code to model-driven apps forms to be able to associate functions in your code with events. As the JavaScript code in this walkthrough is targeted at the account row, we will associate the web resource with the account form.
 
 1. Navigate to your model-driven apps instance in browser, and go to **Sales** > **Accounts** or **Service** > **Accounts**.
-2. Open an account record, and select **Form** to open the form editor.
+2. Open an account row, and select **Form** to open the form editor.
 
     ![Open the form editor](../media/clientapi_walkThrough-img2.png)
 1. In the form editor, select **Form Properties**.
@@ -130,7 +130,7 @@ Associate the web resource containing your JavaScript code to model-driven apps 
     ![Add](../media/clientapi_walkThrough-img3.png)
 1. In the next dialog box, search for your web resource name, select it, and then click **Add** to add it as a JavaScript library for the account form.
 
-    ![Lookup record](../media/clientapi_walkThrough-img4.png)
+    ![Lookup row](../media/clientapi_walkThrough-img4.png)
 
 This makes the web resource available to be selected under the **Event Handlers** section in the **Form Properties** dialog. Remember that we have three functions in our JavaScript code to be associated with appropriate events in the form.
 
@@ -139,7 +139,7 @@ This makes the web resource available to be selected under the **Event Handlers*
    ![Form OnLoad](../media/clientapi_walkThrough-img5.png)
 1. In the **Handler Properties** dialog box:   
 
-    - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnLoad** in the **Function** field. The function name is [Namespace].[Function] from your JavaScript code.
+    - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnLoad** in the **Function** column. The function name is [Namespace].[Function] from your JavaScript code.
     - Select **Pass execution context as first parameter** to pass in the execution context as a parameter to this function. If you review the function definition in the code, we are passing an **executionContext** object to our function definition, and selecting this option wires them up.
     
       ![Form OnLoad](../media/clientapi_walkThrough-img6.png)
@@ -149,7 +149,7 @@ This makes the web resource available to be selected under the **Event Handlers*
 
     ![Form OnSave](../media/clientapi_walkThrough-img7.png)
 
-1. In the **Handler Properties** dialog box, select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnSave** in the **Function** field. We won't pass the execution context to the function this time as the **Sdk.formOnSave** function code does not require it.
+1. In the **Handler Properties** dialog box, select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnSave** in the **Function** column. We won't pass the execution context to the function this time as the **Sdk.formOnSave** function code does not require it.
 
     ![Form OnSave](../media/clientapi_walkThrough-img8.png)
 
@@ -160,7 +160,7 @@ This makes the web resource available to be selected under the **Event Handlers*
 
 1. In the **Handler Properties** dialog box:   
 
-    - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.attributeOnChange** in the **Function** field.
+    - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.attributeOnChange** in the **Function** column.
     - Select **Pass execution context as first parameter** to pass in the execution context as a parameter to this function. If you review the function definition in the code, we are passing an **executionContext** object to our function definition, and selecting this option wires them up.
     
       ![Attribute OnChange](../media/clientapi_walkThrough-img10.png) 
@@ -180,7 +180,7 @@ Its recommended that you refresh your browser for the changes to take effect in 
 
       ![Form level notification](../media/clientapi_walkThrough-img11.png)
 
-1. Edit the account name to add "Contoso" in the name and move to the next field by pressing TAB. This will fire the OnChange event, and will automatically update the **Phone**, **Website** and **Description** fields with the value specified in the code.
+1. Edit the account name to add "Contoso" in the name and move to the next column by pressing TAB. This will fire the OnChange event, and will automatically update the **Phone**, **Website** and **Description** columns with the value specified in the code.
 
       ![Values set automatically](../media/clientapi_walkThrough-img12.png)
 
@@ -212,11 +212,11 @@ var Sdk = window.Sdk || {};
         window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);
     }
 
-    // Code to run in the attribute OnChange event 
+    // Code to run in the column OnChange event 
     this.attributeOnChange = function (executionContext) {
         var formContext = executionContext.getFormContext();
 
-        // Automatically set some field values if the account name contains "Contoso"
+        // Automatically set some column values if the account name contains "Contoso"
         var accountName = formContext.getAttribute("name").getValue();
         if (accountName.toLowerCase().search("contoso") != -1) {
             formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
@@ -228,7 +228,7 @@ var Sdk = window.Sdk || {};
     // Code to run in the form OnSave event 
     this.formOnSave = function () {
         // Display an alert dialog
-        Xrm.Navigation.openAlertDialog({ text: "Record saved." });
+        Xrm.Navigation.openAlertDialog({ text: "Row saved." });
     }
 }).call(Sdk);
 ```

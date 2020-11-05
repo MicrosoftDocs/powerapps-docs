@@ -49,7 +49,7 @@ Model-driven apps
 <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
 <li>To specify a FetchXML query, use the <code>fetchXml</code> attribute to specify the query.</li>
 </ul>
-<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for an entity record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
+<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple system query options by using <code>&amp;</code> to separate the query options.
 <p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve multiple scenarios.</td>
 </tr>

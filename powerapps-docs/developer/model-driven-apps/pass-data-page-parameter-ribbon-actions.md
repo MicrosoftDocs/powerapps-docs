@@ -53,16 +53,16 @@ You can also specify **CommandProperties** as `<CrmParameter>` value in your rib
 
 ## Form values
 
-With a form ribbon, you can use the `data.entity`.[attributes](clientapi/reference/attributes.md) collection and the `ui`.[controls](clientapi/reference/controls.md) collection to retrieve and set values for known fields. 
+With a form ribbon, you can use the `data.entity`.[attributes](clientapi/reference/attributes.md) collection and the `ui`.[controls](clientapi/reference/controls.md) collection to retrieve and set values for known columns. 
 
-For example, the following sample code shows how to retrieve the account name field on the account form, and then set a value in the websiteurl field based on the account name value:
+For example, the following sample code shows how to retrieve the account name column on the account form, and then set a value in the websiteurl column based on the account name value:
 
 ```JavaScript
 function mySampleFunction(primaryControl) {
     var formContext = primaryControl;    
     var accountName = formContext.getControl("name").getAttribute().getValue();    
 
-    // Set the WebSiteURL field if account name contains "Contoso"
+    // Set the WebSiteURL column if account name contains "Contoso"
     if (accountName.toLowerCase().search("contoso") != -1) {
         formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
     }
@@ -74,7 +74,7 @@ function mySampleFunction(primaryControl) {
 
   
 ## Grid values  
- The majority of the values available for the `<CrmParameter>` element are related to working with data displayed in a grid or hierarchy chart. By using the `Value` attribute enumeration options, you can easily isolate items by:  
+ The majority of the values available for the `<CrmParameter>` element are related to working with data displayed in a grid or hierarchy chart. By using the `Value` column enumeration options, you can easily isolate items by:  
   
 - **Selected items**  
   
@@ -107,9 +107,9 @@ function mySampleFunction(primaryControl) {
 ## Other context information  
  In addition to data values, you can retrieve client context information by using [\<CrmParameter\>](https://msdn.microsoft.com/library/gg309332.aspx).  You can use the following options as the value for the `CrmParameter` element: `OrgName`, `OrgLcid`, and `UserLcid`.
  
- For a `<Url>` action, you can also use the `PassParams` attribute to include contextual information.  
+ For a `<Url>` action, you can also use the `PassParams` column to include contextual information.  
   
- The `Value` options `PrimaryEntityTypeName` and `FirstPrimaryItemId` provide information for an entity record. You can use `PrimaryItemIds` for a `HomepageGrid` ribbon to get a list of all the displayed items.
+ The `Value` options `PrimaryEntityTypeName` and `FirstPrimaryItemId` provide information for a table row. You can use `PrimaryItemIds` for a `HomepageGrid` ribbon to get a list of all the displayed items.
   
 ### See also  
  [Customize the Ribbon](customize-commands-ribbon.md)   

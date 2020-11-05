@@ -30,16 +30,16 @@ search.app:
 |Property Name |Type |Required |Description |
 |---|---|---|---|
 |allowMultiSelect|Boolean|No|Indicates whether the lookup allows more than one item to be selected.|
-|defaultEntityType|String|No|The default entity type to use.|
+|defaultEntityType|String|No|The default table type to use.|
 |defaultViewId|String|No|The default view to use.|
 |disableMru|Boolean|No|Decides whether to display the most recently used(MRU) item.<br />Available only for Unified Interface.|
-|entityTypes|Array|Yes|The entity types to display.|
-|filters|Array of objects|No|Used to filter the results. Each object in the array contains the following attributes:<br /><ul><li>**filterXml**: String. The FetchXML filter element to apply.</li><li>**entityLogicalName**: String. The entity type to which to apply this filter.</li></ul>|
+|entityTypes|Array|Yes|The table types to display.|
+|filters|Array of objects|No|Used to filter the results. Each object in the array contains the following attributes:<br /><ul><li>**filterXml**: String. The FetchXML filter element to apply.</li><li>**entityLogicalName**: String. The table type to which to apply this filter.</li></ul>|
 |searchText|String|No|Indicates the default search term for the lookup control. This is supported only on [Unified Interface](https://docs.microsoft.com/power-platform/admin/about-unified-interface).|
 |showBarcodeScanner|Boolean|No|Indicates whether the lookup control should show the barcode scanner in mobile clients.|
 |viewIds|Array|No|The views to be available in the view picker. Only system views are supported.|
 
-**successCallback**: Function. A function to call when the lookup control is invoked. An array of objects with the following properties is passed:<br/><ul><li>**entityType**: String. Entity type of the record selected in the lookup control.</li><li>**id**: String. ID of the record selected in the lookup control.</li><li>**name**: String. Name of the record selected in the lookup control.</li></ul>
+**successCallback**: Function. A function to call when the lookup control is invoked. An array of objects with the following properties is passed:<br/><ul><li>**entityType**: String. Entity type of the row selected in the lookup control.</li><li>**id**: String. ID of the row selected in the lookup control.</li><li>**name**: String. Name of the row selected in the lookup control.</li></ul>
 
 
 **errorCallback**: Function. A function to call when you cancel the lookup control or the operation fails.  

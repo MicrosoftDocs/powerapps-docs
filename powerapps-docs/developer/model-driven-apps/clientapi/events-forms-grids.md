@@ -24,7 +24,7 @@ You can associate event handlers to only some events using the UI. For events th
 
 ## Add or remove event handler function to event using UI
 
-Use the **Event Handlers** section of the **Form Properties** dialog box to associate your script with an event for forms and fields.
+Use the **Event Handlers** section of the **Form Properties** dialog box to associate your script with an event for forms and columns.
 
 ![Event Handler section in Form Properties](../media/Form-EventHandlers.png)
 

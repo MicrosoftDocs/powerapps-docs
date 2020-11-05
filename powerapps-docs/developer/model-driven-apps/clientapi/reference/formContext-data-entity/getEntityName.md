@@ -28,7 +28,7 @@ search.app:
 
 **Type**: String.
 
-**Description**: The name of the entity.
+**Description**: The name of the table.
 
 
 

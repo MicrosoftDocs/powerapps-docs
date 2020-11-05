@@ -17,7 +17,7 @@ Code components are a type of solution components, which means they can be inclu
 > [!div class="mx-imgBorder"] 
 > ![Code components](media/code-components.gif "Code components")
 
-You add code components by including them in a solution and then import it into Common Data Service. Once the components are in Common Data Service, system administrators and system customizers can configure fields, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
+You add code components by including them in a solution and then import it into Common Data Service. Once the components are in Common Data Service, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
 
 Code components consist of three elements:
 
@@ -33,12 +33,12 @@ Code components consist of three elements:
 Manifest is the metadata file that defines a component. It is an XML document that describes:
 
 - The name of the component.
-- The kind of data that can be configured, either a field or a data-set.
+- The kind of data that can be configured, either a column or a data-set.
 - Any properties that can be configured in the application when the component is added.
 - A list of resource files that the component needs. 
 - The name of the TypeScript function in the component implementation library that returns an object that applies the required component interface.
 
-When a user configures a code component, the data in the manifest file filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration fields so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest schema reference](manifest-schema-reference/index.md)
+When a user configures a code component, the data in the manifest file filters out the available components so that only valid components for the context are available for configuration. The properties defined in the manifest file for a component are rendered as configuration columns so that the user configuring the component can specify the values. These property values are then available to the component  at runtime. More information: [Manifest schema reference](manifest-schema-reference/index.md)
 
 ## Component implementation
 
@@ -82,7 +82,7 @@ controlObj.init(context,notifyOutputChanged,state,container);
 
 ### User changes data
 
-When the page loads, the component displays the data until the user interacts with the component to change the data. When this occurs, you must call the method passed in as *notifyOutputChanged* parameter in the [init](reference/control/init.md) method. When you use this method, the platform then responds by calling the [getOutputs](reference/control/getoutputs.md) method. The [getOutputs](reference/control/getoutputs.md) method returns values that have the changes made by the user. For a field component, this would typically be the new value for the component.
+When the page loads, the component displays the data until the user interacts with the component to change the data. When this occurs, you must call the method passed in as *notifyOutputChanged* parameter in the [init](reference/control/init.md) method. When you use this method, the platform then responds by calling the [getOutputs](reference/control/getoutputs.md) method. The [getOutputs](reference/control/getoutputs.md) method returns values that have the changes made by the user. For a column component, this would typically be the new value for the component.
 
 ### App changes data
 

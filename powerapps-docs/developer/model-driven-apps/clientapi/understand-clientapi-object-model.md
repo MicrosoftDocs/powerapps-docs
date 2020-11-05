@@ -20,10 +20,10 @@ search.app:
 
 
 The Client API object model for model-driven apps provides you objects and methods that you can use to apply custom business logic in model-driven apps using JavaScript, such as:
-- Get or set attribute values.
+- Get or set column values.
 - Show and hide user interface elements.
-- Reference multiple controls per attribute.
-- Access multiple forms per entity.
+- Reference multiple controls per column.
+- Access multiple forms per table.
 - Manipulate form navigation items.
 - Interact with the business process flow control.
 
@@ -38,7 +38,7 @@ At the root of the Client API object model are the following contexts and the Xr
 |**executionContext**|Represents the execution context for an event in model-driven apps forms and grids.<br/>More information: [Client API execution context](clientapi-execution-context.md)|
 |**formContext** |Provides a reference to a form or an item on the form against which the current code executes. To get the **formContext** object, use the **executionContext**.[getFormContext](reference/executioncontext/getFormContext.md) method.<br/>More information: [Client API form context](clientapi-form-context.md)|
 |**gridContext** |Provides a reference to a grid or a subgrid on a form against which the current code executes.<br/>More information: [Client API grid context](clientapi-grid-context.md)|
-|**Xrm**| Provides a global object for performing operations that do not directly impact the data and UI in forms, grids, subgrids, controls, or attributes. For example, navigate forms, create and manage records using Web API.<br/>More information: [Client API Xrm object](clientapi-xrm.md)|
+|**Xrm**| Provides a global object for performing operations that do not directly impact the data and UI in forms, grids, subgrids, controls, or attributes. For example, navigate forms, create and manage rows using Web API.<br/>More information: [Client API Xrm object](clientapi-xrm.md)|
 
 ### Related topics
 

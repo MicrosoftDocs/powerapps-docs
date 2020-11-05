@@ -32,7 +32,7 @@ Read-only and editable grids
 
 **Type**: String
 
-**Description**: The logical name for the record in the row.
+**Description**: The logical name for the row in the row.
 
 ## Remarks
 

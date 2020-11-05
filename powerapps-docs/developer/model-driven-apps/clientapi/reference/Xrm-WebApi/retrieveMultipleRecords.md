@@ -36,7 +36,7 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>The entity logical name of the records you want to retrieve. For example: "account".</td>
+<td>The table logical name of the records you want to retrieve. For example: "account".</td>
 </tr>
 <tr>
 <td>options</td>
@@ -47,7 +47,7 @@ search.app:
 <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
 <li>To specify a FetchXML query, use the <code>fetchXml</code> attribute to specify the query.</li>
 </ul>
-<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for an entity record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
+<p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table row by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple system query options by using <code>&</code> to separate the query options.
 <p>When you specify a FetchXML query for the <code>options</code> parameter, the query should not be encoded.
 <p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve multiple scenarios.</td>
@@ -56,16 +56,16 @@ search.app:
 <td>maxPageSize</td>
 <td>Number</td>
 <td>No</td>
-<td><p>Specify a positive number that indicates the number of entity records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p> 
+<td><p>Specify a positive number that indicates the number of table records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p> 
 <p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value or 5000 records, <code>nextLink</code> attribute in the returned promise object will contain a link to retrieve the next set of entities. </td>
 </tr>
 <tr>
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when entity records are retrieved. An object with the following attributes is passed to the function:</p>
+<td><p>A function to call when table records are retrieved. An object with the following attributes is passed to the function:</p>
 <ul>
-<li><b>entities</b>: An array of JSON objects, where each object represents the retrieved entity record containing attributes and their values as <code>key: value</code> pairs. The Id of the entity record is retrieved by default.</li>
+<li><b>entities</b>: An array of JSON objects, where each object represents the retrieved table row containing attributes and their values as <code>key: value</code> pairs. The Id of the table row is retrieved by default.</li>
 <li><b>nextLink</b>: String. If the number of records being retrieved is more than the value specified in the <code>maxPageSize</code> parameter in the request, this attribute returns the URL to return next set of records.</li>
 </ul>
 </td>
@@ -80,7 +80,7 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved entity records and the **nextLink** attribute (optional) with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
+On success, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved table records and the **nextLink** attribute (optional) with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the row count returned exceeds the paging value.
 
 ## Examples
 
@@ -88,7 +88,7 @@ Most of the scenarios/examples mentioned in [Query Data using the Web API](../..
 
 ### Basic retrieve multiple
 
-This example queries the accounts entity set and uses the `$select` and `$top` system query options to return the name property for the first three accounts:
+This example queries the accounts table set and uses the `$select` and `$top` system query options to return the name property for the first three accounts:
 
 ```JavaScript
 Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
@@ -114,7 +114,7 @@ Here are code examples for both the scenarios:
 
 #### For online scenario (connected to server)
 
-This example queries the accounts entity set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a particular primary contact:
+This example queries the accounts table set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a particular primary contact:
 
 ```JavaScript
 Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,_primarycontactid_value&$filter=primarycontactid/contactid eq a0dbf27c-8efb-e511-80d2-00155db07c77").then(
@@ -133,7 +133,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,_primarycontactid_v
 
 #### For mobile offline scenario
 
-This example queries the accounts entity set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a particular primary contact when working in the offline mode:
+This example queries the accounts table set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a particular primary contact when working in the offline mode:
 
 ```JavaScript
 Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,primarycontactid&$filter=primarycontactid eq a0dbf27c-8efb-e511-80d2-00155db07c77").then(
@@ -254,7 +254,7 @@ The above piece of code returns a result with a schema like:
 ```
 
 #### For mobile offline scenario
-**$expand** for the mobile offline scenario is different from the online scenario and is a multi-part process. An offline **\$expand** operation returns a `@odata.nextLink` annotation containing information on how to get to the related record's information. We use the `id`, `entityType`, and `options` parameter of that annotation to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
+**$expand** for the mobile offline scenario is different from the online scenario and is a multi-part process. An offline **\$expand** operation returns a `@odata.nextLink` annotation containing information on how to get to the related row's information. We use the `id`, `entityType`, and `options` parameter of that annotation to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
 
 ```JavaScript
 Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)").then(function(resultSet) {

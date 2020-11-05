@@ -1,4 +1,4 @@
-Refreshes the parent grid containing the specified record. 
+Refreshes the parent grid containing the specified row. 
 
 
 

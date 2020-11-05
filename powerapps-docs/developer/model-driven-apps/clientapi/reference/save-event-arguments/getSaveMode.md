@@ -28,7 +28,7 @@ search.app:
 
 **Type**: Number
 
-**Description**: The following table describes the supported values returned to detect different ways entity records may be saved by the user.
+**Description**: The following table describes the supported values returned to detect different ways table records may be saved by the user.
 
 |Value |Save mode |Entity|
 |---|---|---|
@@ -61,7 +61,7 @@ function preventAutoSave(executionContext) {
 }
 ```
 
-To save a record the user must click the **Save** icon at the bottom of the form or a custom **Save** command needs to be added to the command bar.
+To save a row the user must click the **Save** icon at the bottom of the form or a custom **Save** command needs to be added to the command bar.
 
 ### Related topics
 

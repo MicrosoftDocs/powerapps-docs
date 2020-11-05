@@ -29,15 +29,15 @@ If the Ribbon for your organization has been modified, you should export the cur
   
  The applicationRibbon.xml file contains the definition of the core application ribbons.  
   
- The remaining files contain the definitions used by entities that have ribbon definitions that differ from the entity template. Each file is named according to the name of the entity: logical entity name + Ribbon.xml.  
+ The remaining files contain the definitions used by tables that have ribbon definitions that differ from the table template. Each file is named according to the name of the table: logical table name + Ribbon.xml.  
   
  These files represent the output of two messages using the [Sample: Export Ribbon Definitions](sample-export-ribbon-definitions.md):  
   
  <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest>  
- This message retrieves the core application ribbons including the entity template.  
+ This message retrieves the core application ribbons including the table template.  
   
  <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>  
- This message retrieves the ribbon definition used for a specific entity.  
+ This message retrieves the ribbon definition used for a specific table.  
   
 ### Decompress the ribbon data  
 
@@ -83,14 +83,14 @@ System.String applicationRibbonPath = Path.GetFullPath(exportFolder + "\\applica
 File.WriteAllBytes(applicationRibbonPath, unzipRibbon(appribResp.CompressedApplicationRibbonXml)); 
 ```
   
-### Retrieve entity ribbons  
+### Retrieve table ribbons  
 
- To retrieve the ribbon definition for entities, you can just include the name of the entity as a parameter to the <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>.  
+ To retrieve the ribbon definition for tables, you can just include the name of the table as a parameter to the <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>.  
   
- To retrieve the ribbon definitions for all entities that support the ribbon, you need a list of those system entities that have ribbon definitions that vary from the entity ribbon template. The following sample shows an array of all the system entities that have ribbon definitions.  
+ To retrieve the ribbon definitions for all tables that support the ribbon, you need a list of those system tables that have ribbon definitions that vary from the table ribbon template. The following sample shows an array of all the system tables that have ribbon definitions.  
 
  ```C# 
- //This array contains all of the system entities that use the ribbon.
+ //This array contains all of the system tables that use the ribbon.
 public System.String[] entitiesWithRibbons = {"account",
 "activitymimeattachment",
 "activitypointer",
@@ -172,7 +172,7 @@ public System.String[] entitiesWithRibbons = {"account",
 "userquery"};
  ```
   
-The following sample shows how to retrieve the ribbon definitions for a set of entities. 
+The following sample shows how to retrieve the ribbon definitions for a set of tables. 
 
 ```csharp
 //Retrieve system Entity Ribbons
@@ -188,10 +188,10 @@ foreach (System.String entityName in entitiesWithRibbons)
  Console.WriteLine(entityRibbonPath);
 } 
 ``` 
-Any custom entities also support ribbon customizations. To get a list of custom entities, use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest> and retrieve the names of custom entities. The following sample shows how to retrieve ribbon definitions for all custom entities.  
+Any custom tables also support ribbon customizations. To get a list of custom tables, use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest> and retrieve the names of custom tables. The following sample shows how to retrieve ribbon definitions for all custom tables.  
 
 ```csharp 
-//Check for custom entities
+//Check for custom tables
  var raer = new RetrieveAllEntitiesRequest() { EntityFilters = EntityFilters.Entity };
  var resp = (RetrieveAllEntitiesResponse)service.Execute(raer);
  foreach (EntityMetadata em in resp.EntityMetadata)

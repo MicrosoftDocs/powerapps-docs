@@ -27,8 +27,8 @@ search.app:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|entityName|String|Yes|The logical name of the entity.|
-|formId|String|No|The form ID of the entity.|
+|entityName|String|Yes|The logical name of the table.|
+|formId|String|No|The form ID of the table.|
 ||||
 
 ## Returns
@@ -40,25 +40,25 @@ search.app:
 |Attribute Name| Type| Description|
 |-------------|-------|-----------|
 |Attributes| Array of strings| List of all the attributes on the main form.|
-|EntityLogicalName| String| The logical name of the specified entity.|
-|Id| string| The form ID of the specified entity.|
-|Label| String| The label of the specified entity.|
-|Name| String| The display name of the specified entity.|
-|Sections| String| The sections name of the specified entity.|
-|ShowLabel| Boolean| Indicates whether to show the label of the specified entity or not.|
+|EntityLogicalName| String| The logical name of the specified table.|
+|Id| string| The form ID of the specified table.|
+|Label| String| The label of the specified table.|
+|Name| String| The display name of the specified table.|
+|Sections| String| The sections name of the specified table.|
+|ShowLabel| Boolean| Indicates whether to show the label of the specified table or not.|
 |Visible| Boolean| Indicates whether the form is visible or not.|
 ||||
 
 ## Example
 
-The following sample code shows how to get the main form descriptor for a specified entity. 
+The following sample code shows how to get the main form descriptor for a specified table. 
 
 ```javascript
-  // Define the entity and form ID
+  // Define the table and form ID
   var entityName = "account";
   var formId = "8448b78f-8f42-454e-8e2a-f8196b0419af";
 
-  // Get the entity main form descriptor 
+  // Get the table main form descriptor 
   Xrm.Utility.getEntityMainFormDescriptor(entityName, formId);
 ```
 

@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[./includes/moveNext-description.md](./includes/moveNext-description.md)]
 
-You can also move to a next stage in a different entity. 
+You can also move to a next stage in a different table. 
 
 ## Syntax
 
@@ -51,7 +51,7 @@ You can also move to a next stage in a different entity.
 </tr>
 <tr>
 <td>crossEntity</td>
-<td>The next stage is for a different entity.</td>
+<td>The next stage is for a different table.</td>
 </tr>
 <tr>
 <td>end</td>

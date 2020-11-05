@@ -6,17 +6,17 @@
   href: supported-customizations.md
 - name: Design app interface using code
   items:
-  - name: Customize entity forms
+  - name: Customize table forms
     href: customize-entity-forms.md
     items:
     - name: Use IFRAME and web resource controls on a form
       href: use-iframe-and-web-resource-controls-on-a-form.md
-  - name: Customize entity views
+  - name: Customize table views
     href: customize-entity-views.md
   - name: Open forms, views, dialogs, and reports with a URL
     href: open-forms-views-dialogs-reports-url.md
     items:
-    - name: Set field values using parameters passed to a form
+    - name: Set column values using parameters passed to a form
       href: set-field-values-using-parameters-passed-form.md
     - name: Configure a form to accept custom querystring parameters
       href: configure-form-accept-custom-querystring-parameters.md
@@ -854,7 +854,7 @@
     href: define-ribbon-display-rules.md
   - name: Define ribbon actions
     href: define-ribbon-actions.md
-  - name: Override the default behavior to open records in grids
+  - name: Override the default behavior to open rows in grids
     href: override-default-open-behavior-grids.md
   - name: Pass data from a page as a parameter to Ribbon Actions
     href: pass-data-page-parameter-ribbon-actions.md

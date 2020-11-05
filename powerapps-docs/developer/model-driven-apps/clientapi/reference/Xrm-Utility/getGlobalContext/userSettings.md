@@ -154,7 +154,7 @@ Deprecated; use [userSettings.roles](#roles) instead to view the display names o
 
 ## transactionCurrency 
 
-Returns a lookup object containing the ID, display name, and entity type of the transaction currency for the current user. This method is supported only on the Unified Interface.
+Returns a lookup object containing the ID, display name, and table type of the transaction currency for the current user. This method is supported only on the Unified Interface.
 
 ### Syntax
 

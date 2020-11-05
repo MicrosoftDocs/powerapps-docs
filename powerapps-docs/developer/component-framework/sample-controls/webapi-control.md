@@ -49,7 +49,7 @@ export class TSWebAPI
   private _container: HTMLDivElement;
   // reference to ComponentFramework Context object
   private _context: ComponentFramework.Context<IInputs>;
-  // Name of entity to use for example Web API calls performed by this control
+  // Name of table to use for example Web API calls performed by this control
   private static _entityName: string = "account";
   // Required field on _entityName of type 'single line of text'
   // Example Web API calls performed by example custom control will set this field for new record creation examples
@@ -608,9 +608,9 @@ export class TSWebAPI
 }
 ```
 
-By default, in the sample, the component is configured to perform the create, retrieve, update actions on the `Account` entity and set the name and revenue fields in the web API examples.
+By default, in the sample, the component is configured to perform the create, retrieve, update actions on the `Account` table and set the name and revenue columns in the web API examples.
 
-To change the default configuration to any entity or field, update the below configuration values as shown  
+To change the default configuration to any table or column, update the below configuration values as shown  
 
  ```TypeScript
   private static _entityName:string = "account";  
@@ -619,17 +619,17 @@ To change the default configuration to any entity or field, update the below con
   private static _currencyAttributeName: string = "revenue";  
  ```
 
-The `createRecord` method renders three buttons, which allows you to create an account record with the revenue field set to different values (100, 200, 300).
+The `createRecord` method renders three buttons, which allows you to create an account record with the revenue column set to different values (100, 200, 300).
 
-When you click one of the create buttons, the button’s `onClick` event handler checks the value of the button clicked and use the web API action to create an account record with the revenue field set to the button’s value. The name field of the account record will be set to `Web API code component (Sample)` with a random `int` appended to the end of the string. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
+When you click one of the create buttons, the button’s `onClick` event handler checks the value of the button clicked and use the web API action to create an account record with the revenue column set to the button’s value. The name column of the account record will be set to `Web API code component (Sample)` with a random `int` appended to the end of the string. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
  
 The `deleteRecord` method renders a button which opens a lookup dialog when clicked. The lookup dialog allows you to select the account record you want to delete. Once an account record is selected from the lookup dialog, it is passed to the `deleteRecord` to delete the record from the database. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
 
-The FetchXML `retrieveMultiple` method renders a button in the code component. `onClick` of this button, FetchXML is generated and passed to the `retrieveMultiple` function to calculate the average value of the revenue field for all the accounts records. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
+The FetchXML `retrieveMultiple` method renders a button in the code component. `onClick` of this button, FetchXML is generated and passed to the `retrieveMultiple` function to calculate the average value of the revenue column for all the accounts records. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
 
-The OData `retrieveMultiple` method renders a button in the code component. `onClick` of this button, OData string is generated and passed to the `retrieveMultiple` function to retrieve all account records with a name field that is like ‘code component Web API (Sample)’, which is true for all account records created by this code component example.  
+The OData `retrieveMultiple` method renders a button in the code component. `onClick` of this button, OData string is generated and passed to the `retrieveMultiple` function to retrieve all account records with a name column that is like ‘code component Web API (Sample)’, which is true for all account records created by this code component example.  
 
-On successful retrieve of the records, the code component has logic to count how many account records have the revenue field set to 100, 200 or 300, and display this count into an odata status container div on the code component.  The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
+On successful retrieve of the records, the code component has logic to count how many account records have the revenue column set to 100, 200 or 300, and display this count into an odata status container div on the code component.  The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
 
 ### Related topics
 

@@ -37,7 +37,7 @@ search.app:
 <td>stageId</td>
 <td>String</td>
 <td>Yes</td>
-<td>The ID of the completed stage for the entity to make the active stage. </td>
+<td>The ID of the completed stage for the table to make the active stage. </td>
 </tr>
 <tr>
 <td>callbackFunction</td>
@@ -59,7 +59,7 @@ search.app:
 <ul>
 <li>The *stageId* parameter is a non-existent stage ID value.</li>
 <li>The active stage isn’t the selected stage.</li>
-<li>The record hasn’t been saved yet.</li>
+<li>The row hasn’t been saved yet.</li>
 </ul>
 </td>
 </tr>

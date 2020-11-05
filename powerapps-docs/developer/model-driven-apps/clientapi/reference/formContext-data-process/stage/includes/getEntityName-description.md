@@ -1,1 +1,1 @@
-Returns the logical name of the entity associated with the stage.
+Returns the logical name of the table associated with the stage.

@@ -168,7 +168,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
      The parameters you want to pass are: `first=First Value&second=Second Value&third=Third Value`  
   
     > [!NOTE]
-    >  If you’re adding static parameters using the Web Resource Properties dialog box from the form editor, you can simply paste the parameters without encoding them into the **Custom Parameter(data)** field. These values will be encoded for you, but you’ll still need to decode them and extract the values in your page.  
+    >  If you’re adding static parameters using the Web Resource Properties dialog box from the form editor, you can simply paste the parameters without encoding them into the **Custom Parameter(data)** column. These values will be encoded for you, but you’ll still need to decode them and extract the values in your page.  
   
 2.  For dynamic values generated in code, use the `encodeURIComponent` method on the parameters. The encoded values should be:  
   
@@ -181,7 +181,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
     ```  
   
     > [!NOTE]
-    >  If you have added the web resource to a form and have pasted the un-encoded parameters into the **Custom Parameters(data)** field, you can just preview the form.  
+    >  If you have added the web resource to a form and have pasted the un-encoded parameters into the **Custom Parameters(data)** column, you can just preview the form.  
   
 3.  The `new_/ShowDataParams.htm` will display a dynamically generated table:  
   

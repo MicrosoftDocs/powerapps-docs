@@ -31,7 +31,7 @@ As the image above shows, the browser window opens with four sections. The code 
 
 ## Test code components with mock data
 
-- For *field* type components, you can input value and type for every property defined in your **ControlManifest.Input.xml** as shown here:
+- For *column* type components, you can input value and type for every property defined in your **ControlManifest.Input.xml** as shown here:
 
    > [!div class="mx-imgBorder"]
    > ![Test harness 2.5](media/test-harness-2.5.png "Test harness 2.5")

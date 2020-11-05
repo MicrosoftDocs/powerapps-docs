@@ -30,7 +30,7 @@ To begin, open **Developer Command Prompt for VS 2017 or higher** after installi
     ```
  
    > [!NOTE]
-   > Currently, Power Apps CLI supports two types of components: **field** and **dataset** for model-driven apps.  For canvas apps, only the **field** type is supported for this experimental preview.
+   > Currently, Power Apps CLI supports two types of components: **column** and **dataset** for model-driven apps.  For canvas apps, only the **column** type is supported for this experimental preview.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
 5. Open your project folder `C:\Users\<your name>\Documents\<My_code_Component>` in any developer environment of your choice and get started with your code component development. The quickest way to get started is by running `code .` from your command prompt once you are in the `C:\Users\<your name>\Documents\<My_code_Component>` directory. This command opens your component project in Visual Studio Code.
@@ -51,7 +51,7 @@ Finally when you're done implementing the component logic in TypeScript, you nee
 
 [Debug code components](debugging-custom-controls.md)<br/>
 [Package a code component](import-custom-controls.md)<br/>
-[Add code components to a field or entity](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Add code components to a column or table](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Updating existing code components](updating-existing-controls.md)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)

@@ -25,7 +25,7 @@ IFRAME and web resource controls embed content from another location in pages by
 > [!NOTE]
 >  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren’t displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
 
- You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying an entity form within an IFrame embedded in another entity form is not supported.  
+ You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying a table form within an IFrame embedded in another table form is not supported.  
 
  You can use one of the following web resources to display the contents of web resources in a form:  
 
@@ -43,8 +43,8 @@ IFRAME and web resource controls embed content from another location in pages by
 
 |        Attribute        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `security="restricted"` |                                                                                                                                                                                                                                                                                                    This attribute is supported only by versions of Internet Explorer no earlier than version 6. The security attribute applies the user security setting Restricted Sites to the source file of the IFRAME. (Zone settings are found on the **Security** tab of the **Internet Options** dialog box.) By default, scripting isn’t enabled in the Restricted Sites zone. By changing the security settings of the zone, various negative results can occur, including allowing scripts to run. For more information, see [security attribute](https://msdn.microsoft.com/library/ie/ms534622.aspx).                                                                                                                                                                                                                                                                                                     |
-|      `sandbox=""`       | For browsers that support this attribute, the content in the IFRAME is essentially limited to only displaying information. The following restrictions could be applied:<br /><br /> -   Browser plug-ins are disabled.<br />-   Forms and scripts are disabled.<br />-   Links to other browsing contexts are disabled.<br />-   Content is treated as from a different domain even if the domain is the same.<br /><br /> This attribute is defined by W3C and is supported by the following browsers:<br /><br /> - Internet Explorer 10, Internet Explorer 11, and Microsoft Edge <br />- Google Chrome<br />- Apple Safari<br />- Mozilla Firefox<br /><br /> For more information about the sandbox attribute see:<br /><br /> -   [How to Safeguard your Site with HTML5 Sandbox](https://msdn.microsoft.com/hh563496)<br />-   [WC3 Sandbox attribute](https://dev.w3.org/html5/spec-author-view/the-iframe-element.html)<br />-   [Sandbox](https://msdn.microsoft.com/library/ie/hh673561.aspx) |
+| `security="restricted"` |                                                                                                                                                                                                                                                                                                    This column is supported only by versions of Internet Explorer no earlier than version 6. The security column applies the user security setting Restricted Sites to the source file of the IFRAME. (Zone settings are found on the **Security** tab of the **Internet Options** dialog box.) By default, scripting isn’t enabled in the Restricted Sites zone. By changing the security settings of the zone, various negative results can occur, including allowing scripts to run. For more information, see [security column](https://msdn.microsoft.com/library/ie/ms534622.aspx).                                                                                                                                                                                                                                                                                                     |
+|      `sandbox=""`       | For browsers that support this column, the content in the IFRAME is essentially limited to only displaying information. The following restrictions could be applied:<br /><br /> -   Browser plug-ins are disabled.<br />-   Forms and scripts are disabled.<br />-   Links to other browsing contexts are disabled.<br />-   Content is treated as from a different domain even if the domain is the same.<br /><br /> This column is defined by W3C and is supported by the following browsers:<br /><br /> - Internet Explorer 10, Internet Explorer 11, and Microsoft Edge <br />- Google Chrome<br />- Apple Safari<br />- Mozilla Firefox<br /><br /> For more information about the sandbox column see:<br /><br /> -   [How to Safeguard your Site with HTML5 Sandbox](https://msdn.microsoft.com/hh563496)<br />-   [WC3 Sandbox attribute](https://dev.w3.org/html5/spec-author-view/the-iframe-element.html)<br />-   [Sandbox](https://msdn.microsoft.com/library/ie/hh673561.aspx) |
 
 <a name="BKMK_EnableIFrameCommunicationAcrossDomains"></a>   
 
@@ -57,24 +57,24 @@ IFRAME and web resource controls embed content from another location in pages by
 
 <a name="BKMK_PassContextualInformation"></a>   
 
-## Pass contextual information about the record  
- You can provide contextual information by passing parameters to the URL defined in the control. The page that is displayed in the frame must be able to process parameters passed to it. All the parameters in the following table are passed if the IFRAME or web resource is configured by using the **Pass record object-type code and unique identifier as parameters** option.  
+## Pass contextual information about the row  
+ You can provide contextual information by passing parameters to the URL defined in the control. The page that is displayed in the frame must be able to process parameters passed to it. All the parameters in the following table are passed if the IFRAME or web resource is configured by using the **Pass row object-type code and unique identifier as parameters** option.  
 
  You can specify whether all the parameters in the following table will be passed.  
 
 
 | Parameter  |        Name        |                                 Description                                 |
 |------------|--------------------|-----------------------------------------------------------------------------|
-| `typename` |    Entity Name     |                           The name of the entity.                           |
-|   `type`   |  Entity Type Code  | The integer that uniquely identifies the entity in a specific organization. |
-|    `id`    |    Object GUID     |                      A GUID that represents a record.                       |
+| `typename` |    Entity Name     |                           The name of the table.                           |
+|   `type`   |  Entity Type Code  | The integer that uniquely identifies the table in a specific organization. |
+|    `id`    |    Object GUID     |                      A GUID that represents a row.                       |
 | `orgname`  | Organization Name  |                    The unique name of the organization.                     |
 | `userlcid` | User Language Code |    The language code identifier that is being used by the current user.     |
 
  [!INCLUDE[languagecode](../../includes/languagecode.md)]  
 
 > [!NOTE]
->  We suggest that you use the entity name instead of the type code because the entity type code for custom entities may be different between Common Data Service organizations.  
+>  We suggest that you use the table name instead of the type code because the table type code for custom tables may be different between Common Data Service organizations.  
 
 ### Example  
  The following sample shows the URL without parameters.  
@@ -114,13 +114,13 @@ https://myserver/mypage.aspx?id=%7bB2232821-A775-DF11-8DD1-00155DBA3809%7d&orglc
 
 ### Example  
 
- The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of an option set field.  
+ The following sample shows you how to set the `src` property for the IFRAME and any parameters by using the `onChange` event of a choice column.  
 
 ```javascript  
-//Get the value of an option set attribute  
+//Get the value of a choice column  
 var value = Xrm.Page.data.entity.attributes.get("new_pagechooser").getValue();  
 var newTarget = "";  
-//Set the target based on the value of the option set  
+//Set the target based on the value of the choice 
 switch (value) {  
     case 100000001:  
         newTarget = "https://myServer/test/pageOne.aspx";  

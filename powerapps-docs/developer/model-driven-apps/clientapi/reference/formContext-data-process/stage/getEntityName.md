@@ -28,7 +28,7 @@ search.app:
 
 **Type**: String. 
 
-**Description**: Logical name of the entity associated with the stage.
+**Description**: Logical name of the table associated with the stage.
 
 ### Related topics
  

@@ -32,10 +32,10 @@ Read-only and editable grids
 
 **Type**: Lookup
 
-**Description**: Lookup object that references the record in the row. The object has the following attributes:
-- **entityType**: String. The logical name for the record in the row. The same data returned by the **GridEntity**.[getEntityName](getEntityName.md) method.
-- **id**: String. The Id for the record in the row. The same data returned by the **GridEntity**.[getId](getId.md) method.
-- **name**: String. The primary attribute value for the record in the row. The same data returned by the **GridEntity**.[getPrimaryAttributeValue](getPrimaryAttributeValue.md) method.
+**Description**: Lookup object that references the row in the row. The object has the following attributes:
+- **entityType**: String. The logical name for the row in the row. The same data returned by the **GridEntity**.[getEntityName](getEntityName.md) method.
+- **id**: String. The Id for the row in the row. The same data returned by the **GridEntity**.[getId](getId.md) method.
+- **name**: String. The primary attribute value for the row in the row. The same data returned by the **GridEntity**.[getPrimaryAttributeValue](getPrimaryAttributeValue.md) method.
 
 ## Remarks
 

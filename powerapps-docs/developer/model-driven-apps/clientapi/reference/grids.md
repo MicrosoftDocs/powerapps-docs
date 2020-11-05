@@ -23,7 +23,7 @@ Grids present data in a tabular format in model-driven apps. Grids can span the 
 ## Types of grids
 
 There are two types of grids in model-driven apps:
-- **Read-only grids**: Display data in a tabular format. To edit the data displayed in a read-only grid, you have to click the record in the grid to open the form, edit the data, and then save.
+- **Read-only grids**: Display data in a tabular format. To edit the data displayed in a read-only grid, you have to click the row in the grid to open the form, edit the data, and then save.
 -  **Editable grids**: In addition to displaying data in a tabular format, provides rich inline editing capabilities on web and mobile clients including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views. The editable grid is a custom control, and is supported in the main grid and subgrids on a form in the web client and in dashboards and on form grids on the mobile clients. Although the editable grid control provides editing capability, it honors the read-only grid metadata and field-level security settings.
 
 <a name="bkmk_gridcontext"></a>
@@ -38,10 +38,10 @@ Grid context is the grid or subgrid instance on a form against which you want to
 |[Subgrid OnLoad Event](events/subgrid-onload.md)|Occurs every time the subgrid refreshes. This includes when users sort values in subgrid by clicking the column headings.|Read-only grid|
 |[Grid OnChange](events/grid-onchange.md)|Occurs when a value is changed in a cell in the editable grid and the cell loses focus|Editable grid|
 |[Grid OnRecordSelect](events/grid-onrecordselect.md)|Occurs when a single row (record) is selected in the editable grid|Editable grid|
-|[Grid OnSave](events/grid-onsave.md)|Occurs before sending the updated information to the server, and when any of the following occurs: there is a change in the record selection, the user explicitly triggers a save operation using the editable grid’s save button, or the user applies a sort, filter, group, pagination, or navigation operation from the editable grid while there are pending changes.|Editable grid|
+|[Grid OnSave](events/grid-onsave.md)|Occurs before sending the updated information to the server, and when any of the following occurs: there is a change in the row selection, the user explicitly triggers a save operation using the editable grid’s save button, or the user applies a sort, filter, group, pagination, or navigation operation from the editable grid while there are pending changes.|Editable grid|
 
 >[!NOTE]
->You can register for the **OnChange**, **OnRecordSelect**, and **OnSave** events using the **Events** tab of the model-driven apps page that is used to enable editable grids for an entity or a read-only grid.
+>You can register for the **OnChange**, **OnRecordSelect**, and **OnSave** events using the **Events** tab of the model-driven apps page that is used to enable editable grids for a table or a read-only grid.
 
 ## Methods
 

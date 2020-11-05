@@ -42,10 +42,10 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
  For more information, see [Change Application Navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)  
   
  **Editing FormXml**  
- FormXml is used to define entity forms and dashboards. The form editor and dashboard designer in the application are the most commonly used tools for this purpose. Editing the customizations.xml file is an alternative method. For more information, see [Customize Entity Forms](customize-entity-forms.md) and [Create a Dashboard](create-dashboard.md).  
+ FormXml is used to define table forms and dashboards. The form editor and dashboard designer in the application are the most commonly used tools for this purpose. Editing the customizations.xml file is an alternative method. For more information, see [Customize Table Forms](customize-entity-forms.md) and [Create a Dashboard](create-dashboard.md).  
   
  **Editing saved queries**  
- Definitions of views for entities are included in the customizations.xml file and may be manually edited. The view editor in the application is the most commonly used tool for this purpose. Editing customizations.xml is an alternative method. For more information, see [Customize Entity Views](customize-entity-views.md).  
+ Definitions of views for tables are included in the customizations.xml file and may be manually edited. The view editor in the application is the most commonly used tool for this purpose. Editing customizations.xml is an alternative method. For more information, see [Customize Table Views](customize-entity-views.md).  
   
  **Editing the ISV.config**  
   For Common Data Service, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see  [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration).  
@@ -57,9 +57,9 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
   
 -   Attributes  
   
--   Entity Relationships  
+-   Table Relationships  
   
--   Entity Messages  
+-   Table Messages  
   
 -   Option Sets  
   
@@ -87,7 +87,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
   
 -   Security Roles  
   
--   Field Security Profiles  
+-   Column Security Profiles  
   
 
 ### See also  
