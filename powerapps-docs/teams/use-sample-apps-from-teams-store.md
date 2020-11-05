@@ -117,7 +117,7 @@ If you get any errors during the installation process, you can help us troublesh
 
 ## Sample app updates
 
-Updates to the sample apps are published immediately. If you already have a sample app in use when this happens, a new version of the app is created and published as the live version. If you have any customizations to the sample app, you can [restore the app to a previous version](manage-your-apps?#restore-an-app) for customization, or recreate the customizations on top of the live version.
+Updates to the sample apps are published immediately. If you already have a sample app in use when this happens, a new version of the app is created with these updates and published as the live version. If you [customized a sample app](customize-sample-apps.md), you can [restore the app to a previous version](manage-your-apps?#restore-an-app) with your customizations, or recreate the customizations on top of the updated live version. When restoring the app to preserve your customizations, ensure to check the app functionality for compatibility with the updates.
 
 ## Sample apps FAQs
 
