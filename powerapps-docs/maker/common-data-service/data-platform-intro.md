@@ -1,7 +1,7 @@
 ---
 title: What is Common Data Service? | Microsoft Docs
 description: Introduction to Common Data Service, tables, server-side logic, security, and developer capabilities.
-author: clwesene
+author: mattp123
 manager: kvivek
 ms.service: powerapps
 ms.topic: overview
@@ -21,38 +21,38 @@ searchScope:
 # What is Common Data Service?
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Common Data Service lets you securely store and manage data that's used by business applications. Data within Common Data Service is stored within a set of tables. An *table* is a set of rows used to store data, similar to how a table stores data within a database. Common Data Service includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization and populate them with data using Power Query. App makers can then use Power Apps to build rich applications using this data.
+Common Data Service lets you securely store and manage data that's used by business applications. Data within Common Data Service is stored within a set of tables. A *table* is a set of rows used to store data, similar to how a table stores data within a database. Common Data Service includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization and populate them with data by using Power Query. App makers can then use Power Apps to build rich applications that use this data.
 
-![Screenshot showing overview of Power Platform.](./media/data-platform-cds-intro/platform.png "Common Data Service in Power Platform")
+![Screenshot showing overview of Microsoft Power Platform.](./media/data-platform-cds-intro/platform.png "Common Data Service in Microsoft Power Platform")
 
-For information on purchasing a plan to use Common Data Service, see [Pricing info](../../administrator/pricing-billing-skus.md).
+For information about purchasing a plan to use Common Data Service, go to [Pricing info](../../administrator/pricing-billing-skus.md).
 
 ## Why use Common Data Service?
-Standard and custom tables within Common Data Service provide a secure and cloud-based storage option for your data. tables let you create a business-focused definition of your organization's data for use within apps. If you're not sure if tables are your best option, consider these benefits:
+Standard and custom tables within Common Data Service provide a secure and cloud-based storage option for your data. Tables let you create a business-focused definition of your organization's data for use within apps. If you're not sure whether tables are your best option, consider these benefits:
 
-* **Easy to manage** &ndash; Both the metadata and data are stored in the cloud. You don't need to worry about the details of how they're stored.
-* **Easy to secure** &ndash; Data is securely stored so that users can see it only if you grant them access. Role-based security allows you to control access to tables for different users within your organization.
-* **Access your Dynamics 365 Data** &ndash; Data from your Dynamics 365 applications is also stored within the Common Data Service allowing you to quickly build apps which leverage your Dynamics 365 data and extend your apps using Power Apps.
-* **Rich metadata** &ndash; Data types and relationships are leveraged directly within Power Apps.
-* **Logic and validation** &ndash; Define calculated columns, business rules, workflows, and business process flows to ensure data quality and drive business processes.
-* **Productivity tools** &ndash; tables are available within the add-ins for Microsoft Excel to increase productivity and ensure data accessibility.
+- **Easy to manage** &ndash; Both the metadata and data are stored in the cloud. You don't need to worry about the details of how they're stored.
+- **Easy to secure** &ndash; Data is securely stored so that users can see it only if you grant them access. Role-based security allows you to control access to tables for different users within your organization.
+- **Access your Dynamics 365 Data** &ndash; Data from your Dynamics 365 applications is also stored within Common Data Service, allowing you to quickly build apps that use your Dynamics 365 data and extend your apps with Power Apps.
+- **Rich metadata** &ndash; Data types and relationships are used directly within Power Apps.
+- **Logic and validation** &ndash; Define calculated columns, business rules, workflows, and business process flows to ensure data quality and drive business processes.
+- **Productivity tools** &ndash; Tables are available within the add-ins for Microsoft Excel to increase productivity and ensure data accessibility.
 
-For more information, see [Why choose Common Data Service?](why-cds-overview.md)
+More information: [Why choose Common Data Service?](why-cds-overview.md)
 
 ## Terminology updates
 
-Responding to customer feedback and data from user research, effective November 2020, we are making terminology updates to make the usage more intuitive and productive. The terminology updates are reflected below, and are in the process of rolling out across Microsoft Power Platform.
+Responding to customer feedback and data from user research, effective November 2020 we're updating some terminology in Common Data Service to be more intuitive and make its usage more productive. The terminology updates are listed below, and we're in the process of rolling them out across Microsoft Power Platform.
 
 |Legacy term |Current term |
 |--|--|
 |Entity, entities	|Table, tables|
-|Field, columns<br/>Attribute, attributes|Column, columns|
+|Field, fields<br/>Attribute, attributes|Column, columns|
 |Record, records|	Row, rows|
-|Option set, Option sets<br/>Picklist, picklists|	Choice, choices
-Two options|	Yes/No|
- 
+|Option set, option sets<br/>Picklist, picklists|	Choice, choices |
+| Two Options|	Yes/No|
+
 > [!NOTE]
-> These terminology updates aren’t applicable to any APIs or messages in the Common Data Service web services. For example, <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> messages will continue to have the same name. 
+> These terminology updates aren’t applicable to any APIs or messages in the Common Data Service web services. For example, the names of the messages <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> won't change. 
 
 
 ## Dynamics 365 and Common Data Service
@@ -79,7 +79,7 @@ For more information about integrating data into the Common Data Service, see [A
 ## Interacting with tables
 When you develop an app, you can use standard tables, custom tables, or both. Common Data Service provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
-For a full list of tables, see the [table reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-table-reference).
+For a full list of tables, see the [table reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
 
 You can extend the functionality of standard tables by creating one or more custom tables to store information that's unique to your organization. For more information, see [How to create a custom table](create-custom-entity.md).
 
