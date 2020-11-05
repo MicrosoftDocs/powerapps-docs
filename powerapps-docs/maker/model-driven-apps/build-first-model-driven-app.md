@@ -16,6 +16,9 @@ search.app:
 ---
 
 # Build your first model-driven app from scratch
+
+!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Model-driven app design is a component-focused approach to app development. In this topic, you simplify how to create a model-driven app by using one of the standard tables that's available in your Power Apps environment.
 
 > [!TIP]
