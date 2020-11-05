@@ -116,12 +116,12 @@ Facets are available in the leftmost pane. Immediately after you perform a searc
 To narrow your search results to a specific table, select the table under the **Row Type** section.  
  
   > [!div class="mx-imgBorder"]
-  > ![Row Type facet to narrow the search results](media/relevance-search-row-type-facet.png "Row Type facet used to narrow search results")  
+  > ![Row Type facet to narrow the search results](media/relevance-search-record-type-facet.png "Row Type facet used to narrow search results")  
   
 When you filter on a specific row type, you can include activities and notes that are related to the selected row in your search results. To do that, select the **Related Notes & Activities** check box. The activities and notes will appear in top-level results.
  
   > [!div class="mx-imgBorder"]
-  > ![Include notes and activities related to a row type in the search results](media/relevance-search-row-type-facet-related-notes-activities.png "Include notes and activities related to a row type in the search results")  
+  > ![Include notes and activities related to a row type in the search results](media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a row type in the search results")  
   
 Search results that are found in email attachments or appointment tables are shown in the search results under their parent row, either Email or Appointment.  
   
