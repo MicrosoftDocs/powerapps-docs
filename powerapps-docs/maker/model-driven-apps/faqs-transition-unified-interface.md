@@ -180,13 +180,14 @@ Yes, you will still be able to switch back to the legacy web client for up to 10
 
 ### I want to transition after December 4, 2020. Is that possible?
 
-The legacy web client won't be available after December 4, 2020. We don't have the ability to defer the date beyond that period.
+If you haven't transitioned before December 4, 2020, you will be automatically switched to Unified Interface. This will be applied dependant on your environment location over a multi-week schedule. To view the final date when your environment will be switched to Unified Interface, use the scheduling portal (<https://runone.powerappsportals.com>). After the final date, the legacy web client won't be available. We don't have the ability to defer the date beyond the final date.
 
-If you encounter any blocking items, log them using your standard support process as soon as possible.
+If you face any blocking items, log them using your standard support process as soon as possible. For more information, see this blog: [Unified Interface transition starts December 4th 2020](https://powerapps.microsoft.com/en-us/blog/unified-interface-transition-starts-december-4th-2020/).
+
 
 ### What is the standard reminder procedure throughout this process?
 
-Communication will be in waves, at least 30 days prior to the suggested time frame, but you can sign in to the portal (<https://runone.powerappsportals.com>) at any time to view the status. Microsoft will send the following communication:
+Communication will be in waves, at least 30 days prior to the suggested time frame, but you can sign in to the scheduling portal (<https://runone.powerappsportals.com>) at any time to view the status. Microsoft will send the following communication:
 
 -    Initial message for each environment that has a suggested transition date.
 -    If you have approved the date, you will receive a reminder message two days before the dates are locked within the portal. 
