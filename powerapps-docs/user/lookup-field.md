@@ -23,7 +23,7 @@ Lookup helps you to choose rows from a related table. When you select a related 
 For example, you might search for the name **Adrian Dumitrascu**. When you type **ad**, possible matching rows are automatically populated and displayed.
 
   > [!div class="mx-imgBorder"]
-  > ![Automatically populates matching rows](media/automatically-populate-matching-rows.png "Automatically populates matching rows")
+  > ![Automatically populates matching rows](media/automatically-populate-matching-records.png "Automatically populates matching rows")
   
 >[!NOTE] 
 >An administrator can define the criteria that lookup uses for resolving partial search text.
