@@ -32,14 +32,14 @@ It's easy to get around in the Power Apps mobile app. The following illustration
 
 Legend:
 
-1. **Site map**: Open the menu and move between apps, get to your favorite and recently used records, access settings, and more.
-2. **Search**: Search for app records in Common Data Service.
-3. **New**: Create a new record and quickly enter almost any type of information into the system.
+1. **Site map**: Open the menu and move between apps, get to your favorite and recently used rows, access settings, and more.
+2. **Search**: Search for app rows in Common Data Service.
+3. **New**: Create a new row and quickly enter almost any type of information into the system.
 4. **Relationship Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
 
 ## Site map 
 
-From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to access entities, favorite or most-used records, other apps, and settings.
+From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to access tables, favorite or most-used rows, other apps, and settings.
 
  
    > [!div class="mx-imgBorder"]
@@ -56,37 +56,37 @@ Legend
 1. **App selector**: Open this menu to close your app and switch to another app.
 2. **Home screen**: Select this to go back to the Home screen.
 3. **Profile**: Go to the Profile screen to sign out or reconfigure the app. 
-4. **Recent records**: View a list of records you were recently using. 
-5. **Pinned records**: View and open your favorite (pinned) records. 
-6. **Entity navigator**: This area lists the entity available in the app.
+4. **Recent rows**: View a list of rows you were recently using. 
+5. **Pinned rows**: View and open your favorite (pinned) rows. 
+6. **Table navigator**: This area lists the table available in the app.
 7. **Help**: Access help content for more information about how to use the Power Apps mobile app.
 8. **Offline status**: Work with your data in offline mode, even when you don't have internet access. More information: [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode)
 9. **Settings**: Access settings.
 
-## Pin favorite records
+## Pin favorite rows
 
-The **Pinned** and **Recent** lists provide quick access to records that you've recently used or pinned to favorites. Use the **Recent** list to pin favorite records.  
+The **Pinned** and **Recent** lists provide quick access to rows that you've recently used or pinned to favorites. Use the **Recent** list to pin favorite rows.  
 
-1. From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon"), select **Recent** ![Recent record icon](media/pa_mobile_recent_icon.png "Recent records icon").
+1. From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon"), select **Recent** ![Recent row icon](media/pa_mobile_recent_icon.png "Recent rows icon").
 
-2. On the **Recent** records screen, select the push-pin icon next to a record to add it to your favorites (pinned records).
+2. On the **Recent** rows screen, select the push-pin icon next to a row to add it to your favorites (pinned rows).
 
-3. To view the newly pinned records, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon"), and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
+3. To view the newly pinned rows, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon"), and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
    
    > [!div class="mx-imgBorder"]
-   > ![Pin a record to favorites](media/pin_to_fav.gif "This image demonstrates how to pin favorite records")
+   > ![Pin a row to favorites](media/pin_to_fav.gif "This image demonstrates how to pin favorite rows")
    
 
-### Unpin a record
+### Unpin a row
 
 1. From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon"), select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
-2. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
+2. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a row to remove it from favorites (pinned rows).
 
 
    > [!div class="mx-imgBorder"]
-   > ![Unpin a record](media/unpin_favs.gif "This image demonstrates how to unpin a record")
+   > ![Unpin a row](media/unpin_favs.gif "This image demonstrates how to unpin a row")
    
 
 ## Change views
@@ -98,49 +98,49 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > ![Change views](media/change_views_iphone.gif "This image demonstrates how to select a different view")
 
 
-## Add a record quickly
+## Add a row quickly
 
-1. From the Home screen, select **New** ![Create record button](media/pa1_create-record-button.png "Create record button").
-2. Fill in the fields, and then select **Save**.
-3. After the record is created, you can view the new record. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Create a record](media/pamobile_add_record_1.gif "This image demonstrates how create a new record")
-
-
--  To save and open the record that you created, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon"), and then select **Save and Open**.
-
-- To save and create another record, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commands icon"), and then select **Save and Create new**.
-
+1. From the Home screen, select **New** ![Create row button](media/pa1_create-record-button.png "Create row button").
+2. Fill in the columns, and then select **Save**.
+3. After the row is created, you can view the new row. 
 
    > [!div class="mx-imgBorder"]
-   > ![Create a record](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a record and open it or save and create a new record")
+   > ![Create a row](media/pamobile_add_record_1.gif "This image demonstrates how create a new row")
 
 
-## View commands for a record (Android)
+-  To save and open the row that you created, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon"), and then select **Save and Open**.
 
-1. From the Home screen, open a record.
-2. On the open record, select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
+- To save and create another row, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commands icon"), and then select **Save and Create new**.
 
 
    > [!div class="mx-imgBorder"]
-   > ![Commands on a record](media/pa_mobile_view_record_commands.gif "This image demonstrates how to access more commands on a record")
+   > ![Create a row](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a row and open it or save and create a new row")
 
 
-## Edit a record
+## View commands for a row (Android)
 
-1. From the Home screen, open a record that you want to edit. 
-2. When you're done editing the record, select **Save**. To cancel your changes, select **Discard**.
+1. From the Home screen, open a row.
+2. On the open row, select **More** ![More row commands icon"](media/access_record_commands_icon.png "More row commands icon") to access more commands.
 
 
    > [!div class="mx-imgBorder"]
-   > ![Edit a record](media/save_on_iphone.gif "This image demonstrates how to edit and then save a record")
+   > ![Commands on a row](media/pa_mobile_view_record_commands.gif "This image demonstrates how to access more commands on a row")
+
+
+## Edit a row
+
+1. From the Home screen, open a row that you want to edit. 
+2. When you're done editing the row, select **Save**. To cancel your changes, select **Discard**.
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Edit a row](media/save_on_iphone.gif "This image demonstrates how to edit and then save a row")
 
 
 
 ## Go back to the Home screen
 
-- To get back to the Home screen when you're in a record, select **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon").
+- To get back to the Home screen when you're in a row, select **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon").
 - At any point, press and hold **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home screen. 
 
    > [!div class="mx-imgBorder"]
