@@ -25,6 +25,8 @@ search.app:
 ---
 # Understand model-driven app views
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_CreatingAndEditingViews"></a>   
 
 With Power Apps apps, use views to define how a list of rows for a specific table is displayed in the application. A view defines:

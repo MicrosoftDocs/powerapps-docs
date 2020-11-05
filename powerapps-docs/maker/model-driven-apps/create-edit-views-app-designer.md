@@ -28,6 +28,8 @@ search.app:
 
 # Create and edit public or system model-driven app views
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In this article you perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.
 
 In Power Apps, views define how rows for a specific table are  displayed. A view defines the following:

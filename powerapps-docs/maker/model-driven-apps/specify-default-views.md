@@ -25,9 +25,11 @@ search.app:
 ---
 # Specify a model-driven app default view
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_SetDefaultView"></a>   
 
-Unless someone has 'pinned' a different view in your app as their personal default, they will see the default view that you specify as the app maker. You can set any of the public views as the default view for an table.  
+Unless someone has 'pinned' a different view in your app as their personal default, they will see the default view that you specify as the app maker. You can set any of the public views as the default view for a table.  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
@@ -40,7 +42,7 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 
 ## Set the default view for a table in solution explorer 
   
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Tables**, select the table that you want, and then select **Views**.    
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the table that you want, and then select **Views**.    
   
 2.  Select a public view.  
   
