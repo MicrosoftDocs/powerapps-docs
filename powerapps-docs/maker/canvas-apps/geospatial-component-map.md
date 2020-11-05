@@ -109,7 +109,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
 
-    :::image type="content" source="media/select-excel.png" alt-text=" ":::
+    :::image type="content" source="/media/geospatial/select-excel.png" alt-text=" ":::
 
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
@@ -130,7 +130,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
     ![](./media/geospatial/map-expanded.png)
 
-    ![A screenshot of the map component with custom icons and different colors ](./media/geospatial/geospatial-custom-pins-formula.png)
+    ![A screenshot of the map component with custom icons and different colors ](./media/geospatial/geospatial-custom-pins-display.png)
 
 >[!TIP]
 >You can assign the same custom icon to all pins. For the **ItemsIcons** field in the Advanced Properties pane, enter the icon you want to use. For example, set **ItemsIcons** to *MarkerSquare*.
