@@ -28,7 +28,7 @@ The [create your first code component](implementing-controls-using-typescript.md
 
 ## Add code components to model-driven apps
 
-To add code components to a column or a table in model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-column-or-entity.md).
+To add code components to a column or a table in model-driven apps, see [Add code components to model-driven apps](add-custom-controls-to-a-field-or-entity.md).
 
 > [!div class="mx-imgBorder"] 
 > ![Add linear slider control](../../maker/model-driven-apps/media/add-slider.PNG "Add linear slider control")

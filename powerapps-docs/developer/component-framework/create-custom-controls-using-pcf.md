@@ -51,7 +51,7 @@ Finally when you're done implementing the component logic in TypeScript, you nee
 
 [Debug code components](debugging-custom-controls.md)<br/>
 [Package a code component](import-custom-controls.md)<br/>
-[Add code components to a column or table](add-custom-controls-to-a-column-or-entity.md)<br/>
+[Add code components to a column or table](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Updating existing code components](updating-existing-controls.md)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
