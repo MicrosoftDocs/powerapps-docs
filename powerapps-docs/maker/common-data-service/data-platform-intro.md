@@ -41,7 +41,7 @@ For more information, see [Why choose Common Data Service?](why-cds-overview.md)
 
 ## Terminology updates
 
-Responding to customer feedback and data from user research, effective November 2020, we are making terminology updates to make usage more intuitive and more productive. The terminology updates are reflected below and are in the process of rolling out across Microsoft Power Platform.
+Responding to customer feedback and data from user research, effective November 2020, we are making terminology updates to make the usage more intuitive and productive. The terminology updates are reflected below, and are in the process of rolling out across Microsoft Power Platform.
 
 |Legacy term |Current term |
 |--|--|
@@ -52,7 +52,7 @@ Responding to customer feedback and data from user research, effective November 
 Two options|	Yes/No|
  
 > [!NOTE]
-> These terminology changes aren’t applicable to any APIs or messages in the Common Data Service web services. For example, <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> messages will continue to have the same name. 
+> These terminology updates aren’t applicable to any APIs or messages in the Common Data Service web services. For example, <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> messages will continue to have the same name. 
 
 
 ## Dynamics 365 and Common Data Service
