@@ -100,7 +100,7 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
 
 ## Add a row quickly
 
-1. From the Home screen, select **New** ![Create row button](media/pa1_create-row-button.png "Create row button").
+1. From the Home screen, select **New** ![Create row button](media/pa1_create-record-button.png "Create row button").
 2. Fill in the columns, and then select **Save**.
 3. After the row is created, you can view the new row. 
 
