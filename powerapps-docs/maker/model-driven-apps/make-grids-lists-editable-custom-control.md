@@ -25,15 +25,15 @@ search.app:
 ---
 # Make model-driven app grids (lists) editable using the Editable Grid custom control
 
-In previous releases of Dynamics CRM, users couldn't enter data directly in grids (sometimes called lists) or sub-grids on forms. They had to select the record in the grid to open a form, edit the data, and then save, which required multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
+In previous releases of Dynamics CRM, users couldn't enter data directly in grids (sometimes called lists) or sub-grids on forms. They had to select the row in the grid to open a form, edit the data, and then save, which required multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
   
  ![Editable grid examples](media/editable-grid-example.png "Editable grid examples")  
   
- When editable grids are enabled through the Editable Grids custom control, users can edit most types of fields, including basic Lookup fields and option sets.  
+ When editable grids are enabled through the Editable Grids custom control, users can edit most types of columns, including basic Lookup columns and choices.  
 
 **Editable grids support:**
   
--   In-line editing of records at the entity or sub-grid level (includes custom entities)  
+-   In-line editing of rows at the table or sub-grid level (includes custom tables)  
   
 -   System views and personal views  
   
@@ -41,7 +41,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
 -   Navigation with a keyboard or mouse  
   
--   Grouping and sorting (you can group by/sort records on the client-side by any column in the current view)  
+-   Grouping and sorting (you can group by/sort rows on the client-side by any column in the current view)  
   
 -   Filtering  
   
@@ -53,9 +53,9 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
 -   Lookup configuration  
   
--   Calculated fields and rollup fields  
+-   Calculated columns and rollup columns  
   
--   Business rules (Show error message, Set field value, Set business required, Set default value, Lock or unlock field)  
+-   Business rules (Show error message, Set column value, Set business required, Set default value, Lock or unlock column)  
   
 -   JavaScript events  
   
@@ -67,7 +67,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
 1.  Open [solution explorer](advanced-navigation.md#solution-explorer).  
   
-2.  In the **Entities** list, open the appropriate entity, select the **Controls** tab, and then select **Add Control**.  
+2.  In the **Tables** list, open the appropriate table, select the **Controls** tab, and then select **Add Control**.  
   
      ![Add Editable Grids custom control](media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
   
@@ -86,13 +86,13 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
     2.  In the **Available Columns** list, select the lookup column to add (for example, select **Primary Contact**).  
   
-    3.  In the **Default View** list, select the data source for the lookup field.  
+    3.  In the **Default View** list, select the data source for the lookup column.  
   
-    4.  If you want to limit the records displayed, select the **Only show records where** check box, and then select your criteria from the list, and then select **OK**.  
+    4.  If you want to limit the rows displayed, select the **Only show rows where** check box, and then select your criteria from the list, and then select **OK**.  
   
          ![Add lookup in Editable Grid control](media/add-lookup-in-editable-grid-control.png "Add lookup in Editable Grid control")  
      
-6.  If you have a nested grid, select the pencil button for **Nested grid view**, and then select the entity and view for the nested grid. For the **Nested grid parent ID** select the relationship for the entities. For example, the ParentAccountID field connects the **Account** and **Contact** entities.  
+6.  If you have a nested grid, select the pencil button for **Nested grid view**, and then select the table and view for the nested grid. For the **Nested grid parent ID** select the relationship for the tables. For example, the ParentAccountID column connects the **Account** and **Contact** tables.  
   
     > [!NOTE]
     >  Nested grids are only available for phones and tablets, not the web.  
@@ -102,7 +102,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
     > [!TIP]
     >  This is mostly useful for sub-grids on forms.  
   
-8.  If you want to add JavaScript events, select the **Events** tab, and then select the appropriate entities, fields, and events. More information: [Developer Documentation: Use editable grids](/dynamics365/customer-engagement/developer/customize-dev/use-editable-grids-dynamics-365.md)  
+8.  If you want to add JavaScript events, select the **Events** tab, and then select the appropriate tables, columns, and events. More information: [Developer Documentation: Use editable grids](/dynamics365/customer-engagement/developer/customize-dev/use-editable-grids-dynamics-365.md)  
   
      ![Add events in Editable Grid control](media/add-events-in-editable-grid-control.png "Add events in Editable Grid control")  
   
@@ -126,20 +126,20 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
   
 4.  In the **Set Properties** dialog box, select **Controls**, select **Add Control**, and then follow the same steps listed above.  
   
-## Supported standard entities  
+## Supported standard tables  
 
 |**Web/tablet/phone**|**Tablet/phone only**|**Web only**|
 |---------|---------|---------|
 |Account<br /><br /> Appointment<br /><br /> Bookable Resource<br /><br /> Bookable Resource Booking<br /><br /> Bookable Resource Booking Header<br /><br /> Bookable Resource Category<br /><br /> Bookable Resource Category Assn<br /><br /> Bookable Resource Characteristic<br /><br /> Bookable Resource Group<br /><br /> Booking Status<br /><br /> Case<br /><br /> Category<br /><br /> Characteristic<br /><br /> Competitor<br /><br /> Contact<br /><br /> Email<br /><br /> Entitlement<br /><br /> Feedback<br /><br /> Invoice<br /><br /> Knowledge Article<br /><br /> Knowledge Article Views<br /><br /> Knowledge Base Record<br /><br /> Lead<br /><br /> Opportunity<br /><br /> Order<br /><br /> Phone Call<br /><br /> Price List<br /><br /> Product<br /><br /> Queue<br /><br /> Quote<br /><br /> Rating Model<br /><br /> Rating Value<br /><br /> SLA KPI Instance<br /><br /> Social Activity<br /><br /> Social Profile<br /><br /> Sync Error<br /><br /> Task<br /><br /> Team<br /><br /> User|Activity<br /><br /> Attachment<br /><br /> Channel Access Profile Rule Item<br /><br /> Competitor Address<br /><br /> Connection<br /><br /> Connection Role<br /><br /> Email Signature<br /><br /> Email Template<br /><br /> Expired Process<br /><br /> Invoice Product<br /><br /> Knowledge Article Incident<br /><br /> Lead To Opportunity Sales<br /><br /> Process<br /><br /> Mailbox<br /><br /> New Process<br /><br /> Note<br /><br /> Opportunity Product<br /><br /> Opportunity Sales Process<br /><br /> Order Product<br /><br /> Organization<br /><br /> Phone to Case Process<br /><br /> Price List Item<br /><br /> Queue Item<br /><br /> Quote Product<br /><br /> Sharepoint Document<br /><br /> Translation Process|Campaign<br /><br /> Campaign Activity<br /><br /> Campaign Response<br /><br /> Channel Access Profile<br /><br /> Channel Access Profile Rule<br /><br /> Contract<br /><br /> Entitlement Template<br /><br /> External Party<br /><br /> Fax<br /><br /> Letter<br /><br /> Marketing List<br /><br /> Position<br /><br /> Quick Campaign<br /><br /> Recurring Appointment<br /><br /> Sales Literature<br /><br /> SLA|  
  
 ##  Data types that aren't editable in an editable grid
-The following data types aren't editable in editable grids: Customer and Partylist Lookup fields; Composite (address) fields; State/Status fields; Lookup entity-related fields (for example, the Account entity includes a contact lookup, where the Contact field is editable but the EmailAddress(Contact) field is not editable). 
+The following data types aren't editable in editable grids: Customer and Partylist Lookup columns; Composite (address) columns; State/Status columns; Lookup table-related columns (for example, the Account table includes a contact lookup, where the Contact column is editable but the EmailAddress(Contact) column is not editable). 
 
 ## Group by views work on client side only
 Grouping behavior works only on the client side and does not span pages. Group by is a client only function and works only on one page of data. Group by does not show you all options based on your complete data set on the server. Group by shows grouping only on the current page. You can disable the grouping by using the property on custom control configuration. More information: [Make main grids editable](#make-main-grids-editable)
 
-## Business rules work only if conditional field is a column on the grid
-Business Rules on an editable grid are supported only if the conditional field is also a column on the grid. If the field is not a column the business rules won’t work. Verify that each field referenced in the business rule is also included on the form. Note that business rules on an editable grid do not fire if the editable grid is configured on a dashboard.
+## Business rules work only if conditional column is a column on the grid
+Business Rules on an editable grid are supported only if the conditional column is also a column on the grid. If the column is not a column the business rules won’t work. Verify that each column referenced in the business rule is also included on the form. Note that business rules on an editable grid do not fire if the editable grid is configured on a dashboard.
 
 ## Next steps  
  [Use keyboard shortcuts in editable grids](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)

@@ -74,7 +74,7 @@ There are some columns used by the system that you cannot add using the designer
 |**Unique Identifier**|A system column stores a globally unique identifier (GUID) value for each row.|
 
   
-## MultiSelect Option Set
+## MultiSelect Choice
 
 You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns. When you add a Multi-Select Choice column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
 

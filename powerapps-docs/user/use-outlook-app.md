@@ -30,15 +30,15 @@ Use the Dynamics 365 App for Outlook to manage your Dynamics 365 data using Outl
 
 With Dynamics 365 App for Outlook, you can:  
   
-- View information about Common Data Service contacts and accounts while you’re working in Outlook. You can view this info in the context of an email message, meeting, or appointment. For example, view phone numbers, company name, last and next activities, and recent records. 
+- View information about Common Data Service contacts and accounts while you’re working in Outlook. You can view this info in the context of an email message, meeting, or appointment. For example, view phone numbers, company name, last and next activities, and recent rows. 
   
-- Link email messages, meetings, and appointments to a record with a single click. For example, link an email message to a specific account or contact. Dynamics 365 App for Outlook also supports custom entities.  
+- Link email messages, meetings, and appointments to a row with a single click. For example, link an email message to a specific account or contact. Dynamics 365 App for Outlook also supports custom tables.  
   
-- Open records directly to find or enter more detailed information.  
+- Open rows directly to find or enter more detailed information.  
   
 - Add a phone call, task, or appointment activity.  
   
-- Create a new record for any entity (record type).  
+- Create a new row for any table (row type).  
   
 - Track Outlook contacts in Common Data Service.  
 

@@ -1,5 +1,6 @@
 ---
 title: "Embed a Power BI report in a model-driven system form | MicrosoftDocs"
+description: Learn how to embed a Power BI report in a model-driven app form
 ms.custom: ""
 ms.date: 08/04/2020
 ms.service: powerapps
@@ -16,7 +17,7 @@ search.app:
 ---
 
 # Embed a Power BI report in a model-driven system form
-You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
+You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single row.
  
 ## Prerequisites
 Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards).
@@ -24,7 +25,7 @@ Embedding Power BI content is an optional feature and is disabled on all environ
 This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) for guidance on installing an update to an existing managed solution.
 
 ## Embed without contextual filtering
-You can use your Power BI reports and tiles by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all records of the entity. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
+You can use your Power BI reports and tiles by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all rows of the table. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
 
 > [!div class="mx-imgBorder"] 
 > ![Embeded  Power BI report without contextual filtering](media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png "Embeded  Power BI report without contextual filtering")
@@ -67,12 +68,12 @@ You can embed a section that hosts Power BI reports and tiles in your system for
 |                                       **TileUrl**                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        The Power BI report or tile URL that you want to embed. Be sure to use the correct Power BI instance name (replace msit.powerbi.com with your own) and report Id (replace reportId=544c4162-6773-4944-900c-abfd075f6081 with your own). For example, https://xyz.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ## Embed with contextual filtering
-You can make the Power BI reports and tiles more meaningful by applying contextual filters to the current model-driven form, so that the report or tile is filtered based on attributes of the current record. For example, the following report shows the geographic location of an account, by filtering the Power BI report using the account name. This allows a single report to show contextualized information for all records of the entity.
+You can make the Power BI reports and tiles more meaningful by applying contextual filters to the current model-driven form, so that the report or tile is filtered based on attributes of the current row. For example, the following report shows the geographic location of an account, by filtering the Power BI report using the account name. This allows a single report to show contextualized information for all rows of the table.
 
 > [!div class="mx-imgBorder"] 
 > ![Embeded Power BI report with contextual filtering](media/embed-powerbi/embed-powerbi-report-in-system-form-filtered.png "Embeded Power BI report with contextual filtering")
 
-The filtering is done by adding a `<PowerBIFilter>` element in the `<parameter>` block as shown here. You can use any attribute of the form's entity to construct the filter expression. More information: [Constructing Filters](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Filters#contructingfilters) to understand how to create your own filters.
+The filtering is done by adding a `<PowerBIFilter>` element in the `<parameter>` block as shown here. You can use any attribute of the form's table to construct the filter expression. More information: [Constructing Filters](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Filters#contructingfilters) to understand how to create your own filters.
 	
 ```xml
 <control id="filteredreport" classid="{8C54228C-1B25-4909-A12A-F2B968BB0D62}">
@@ -112,7 +113,7 @@ This table describes any additional properties used in the previous example.
 	}
 ```
 
-The target part of the previous expression identifies the table and the column to apply the filters on. The operator identifies the logic and values identify the data passed from the Power Apps model-driven app. To parameterize in a generic way, the values are constructed by aliasing. In the previous expression, the value of an account's **firstname** and **lastname** are passed, and either of them is searched in the **Account Name** column in the Power BI report. Note that **firstname** and **lastname** are the unique names of attributes of the account entity, whose value will be passed here. 
+The target part of the previous expression identifies the table and the column to apply the filters on. The operator identifies the logic and values identify the data passed from the Power Apps model-driven app. To parameterize in a generic way, the values are constructed by aliasing. In the previous expression, the value of an account's **firstname** and **lastname** are passed, and either of them is searched in the **Account Name** column in the Power BI report. Note that **firstname** and **lastname** are the unique names of attributes of the account table, whose value will be passed here. 
 
 You can create more complex filter expressions by looking at examples from [Constructing Filters](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Filters#contructingfilters) and providing the appropriate values for $schema and filterType. Be sure to escape every literal in the filter part using *\"*, so that the JSON is generated correctly.
 

@@ -28,7 +28,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 <a name="CustomHelp"></a>   
 
 ## How is Learning Path different from customizable Help?  
- Customizable Help allows you to override the default [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] apps Help and point users in your organization to a different URL for Help. Or you can override the Help for a highly customized entity so that you can better describe your workflow. 
+ Customizable Help allows you to override the default [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] apps Help and point users in your organization to a different URL for Help. Or you can override the Help for a highly customized table so that you can better describe your workflow. 
 
  Learning Path lets you add customizable Help that users see in the app when they open a page, perform an action, or select the Help button (?).   
 
@@ -67,7 +67,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 
 4. On the **General** tab, under **Set custom Help URL**, select **Yes** for **Enable Learning Path** and **Enable Learning Path Authoring**.  
 
-    You can enable Learning Path or customizable Help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are set to **No**.  
+    You can enable Learning Path or customizable Help, but not both at the same time. Confirm that **Use custom Help for customizable tables** and **Append parameters to URL** are set to **No**.  
 
      ![System Settings dialog showing the options to select to enable Learning Path authoring](media/lp-system-settings.png "System Settings dialog box showing the options to select to enable Learning Path authoring")  
 
@@ -162,7 +162,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 
     Make sure to include the slash (/) after .com.  
 
-3. Determine the unique name for the org (also called instance) you want to create Learning Path controls for. To get the unique  name, on the site map, select **Settings** > **Customizations**, and then on the **Customization** page, select **Developer Resources**. Copy the value for the **Unique Name** field displayed in the **Instance Reference** section.  
+3. Determine the unique name for the org (also called instance) you want to create Learning Path controls for. To get the unique  name, on the site map, select **Settings** > **Customizations**, and then on the **Customization** page, select **Developer Resources**. Copy the value for the **Unique Name** column displayed in the **Instance Reference** section.  
 
    ![Dynamics org name displayed in the user info pane](media/lp-org-name.png "Dynamics org name displayed in the user info pane")  
 
@@ -434,7 +434,7 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 
  When you embed videos that are displayed within a Sidebar or Guided Task, you'll use the link that you get from YouTube. Learning Path will automatically update the link to embed the video and size it to fit in Sidebar or Guided Task tile. A user can select **Full screen** to view the video in full screen mode. If a user pauses the playback, or when the playback is finished, YouTube might automatically display links to other videos the user may be interested in. You can prevent this from happening by modifying the link in your control to include **?rel=0** at the end.  
 
- For example, after you create and upload a video to your channel, you copy the video URL provided by YouTube, which is **https://youtu.be/4TrYMB4pjyw**. To embed this video in a control, you enter that URL into the **Enter video URL** field for your control.  
+ For example, after you create and upload a video to your channel, you copy the video URL provided by YouTube, which is **https://youtu.be/4TrYMB4pjyw**. To embed this video in a control, you enter that URL into the **Enter video URL** column for your control.  
 
  When you save the control, Learning Path changes the URL to **https://www.youtube.com/embed/4TrYMB4pjyw**. To turn off the display of links to other videos when the video is paused or finished playing, edit the URL to append **?rel=0** to the end so that your URL looks similar to the following: **https://www.youtube.com/embed/4TrYMB4pjyw?rel=0**.  
 

@@ -21,7 +21,7 @@ search.app:
 ---
 # Use a theme to create a custom look for your app
 
-You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing entity-specific coloring. A theme is created by using the customization tools in the user interface, without requiring a developer to write code. You can create, change or delete themes that are used in your organization. The theme customization is supported in the Web forms in Dynamics 365 for Outlook. You can define multiple themes, but only one can be set and published as the default theme.  
+You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing table-specific coloring. A theme is created by using the customization tools in the user interface, without requiring a developer to write code. You can create, change or delete themes that are used in your organization. The theme customization is supported in the Web forms in Dynamics 365 for Outlook. You can define multiple themes, but only one can be set and published as the default theme.  
   
 <a name="UseThemes"></a>   
 ## Use themes to enhance the user interface and create your product branding  
@@ -31,7 +31,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
   
 -   Adjust accent colors, such as hover or selection colors  
   
--   Provide entity-specific coloring  
+-   Provide table-specific coloring  
     
 -   Logo  
   
@@ -51,9 +51,9 @@ You can create a custom look and feel (a theme), for your app by making changes 
   
 -   Legacy accent color (primary background for process controls)  
   
--   Default entity color  
+-   Default table color  
   
--   Default custom entity color  
+-   Default custom table color  
   
 -   Control shade  
   
@@ -61,7 +61,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
   
 <a name="Solution"></a>   
 ## Solution awareness  
- The theme is not solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme entity that can be exported and re-imported in other environment. The imported theme must be published to take effect.  
+ The theme is not solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and re-imported in other environment. The imported theme must be published to take effect.  
   
 <a name="CloneAlter"></a>   
 ## Copy and alter the existing theme  
@@ -85,7 +85,7 @@ The following screenshot shows a portion of the default theme setup.
  > [!div class="mx-imgBorder"] 
  > ![Gentle green theme colors](media/theme-gentle-green.png "Gentle green theme colors")  
   
- The following screenshot shows the account entity grid with the new highlight color.  
+ The following screenshot shows the account table grid with the new highlight color.  
  
  > [!div class="mx-imgBorder"] 
  > ![Gentle green theme account grid](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
@@ -116,11 +116,11 @@ The following screenshot shows a portion of the default theme setup.
 -   For high contrast mode, use the default color settings.  
   
 ### Theme colors  
- We recommend that you don’t use a large number of different colors. Although you can set a different color for every entity, we recommend one of two patterns:  
+ We recommend that you don’t use a large number of different colors. Although you can set a different color for every table, we recommend one of two patterns:  
   
--   Make all entities in neutral colors and highlight the key entities.  
+-   Make all tables in neutral colors and highlight the key tables.  
   
--   Use the same color for similar entities or related entities, such as queue and queue item, or product catalog entities. Keep the total number of groups low.  
+-   Use the same color for similar tables or related tables, such as queue and queue item, or product catalog tables. Keep the total number of groups low.  
   
 <a name="Considerations"></a>   
 ## Custom theme considerations  
@@ -132,7 +132,7 @@ The following screenshot shows a portion of the default theme setup.
   
 -   Certain areas must use dark or light colors to contrast with the default icon colors. The icon color isn’t customizable.  
   
--   An entity can’t be displayed in different colors under different Sitemap nodes.  
+-   An table can’t be displayed in different colors under different Sitemap nodes.  
   
 -   The Sitemap nodes colors aren’t customizable.  
   
