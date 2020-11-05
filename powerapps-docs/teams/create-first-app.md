@@ -127,9 +127,9 @@ new table that describes this dataset, and then select
 **Create**.
 
 1. After the table is created, you can add columns of different types, add rows, and
-work with data in the Visual Editor.
+work with data in the visual editor.
 
-   ![Visual Editor](media/table-designer-1.png "Visual Editor")
+   ![Visual editor](media/table-designer-1.png "Visual editor")
 
 ### Add columns to the table
 
@@ -144,7 +144,7 @@ To add a new column to track new data:
     > [!TIP]
     > For more information about column types supported by the table
     designer, go to [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns that aren't supported by
-    the Visual Editor, create a table by using the **Build** tab. More information: [Create tables](create-table.md)
+    the visual editor, create a table by using the **Build** tab. More information: [Create tables](create-table.md)
 
 1. If required, change **Advanced options** for the selected column type.
 

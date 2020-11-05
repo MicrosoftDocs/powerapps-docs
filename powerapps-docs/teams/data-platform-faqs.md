@@ -65,7 +65,7 @@ During public preview, the User table is included in Project Oakdale. A broader 
  
 Applications can include data from environments that the maker has access to within the current tenant.
 
-### Where can I use the new Visual Editor?
+### Where can I use the new visual editor?
 
 In addition to the table designer experience previously found in Common Data Service, Project Oakdale includes a new, easy-to-use editable grid that helps user be even more productive. You can also use tables from other environments subject to the normal permission model. The new visual editor is currently available only in Project Oakdale.
 

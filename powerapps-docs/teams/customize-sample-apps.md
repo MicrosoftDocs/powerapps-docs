@@ -76,7 +76,7 @@ To remove data from the sample apps:
 
     ![Delete rows](media/customize-sample-apps/delete-rows.png "Delete rows")
 
-1. Close the Visual Editor.
+1. Close the visual editor.
 
 1. Repeat the previous steps for the remaining tables.
 
@@ -201,7 +201,7 @@ If you want to quickly edit the data in the app, you can open the table and modi
 
 1. Replace the text with the value you want.
 
-1. Close the Visual Editor.
+1. Close the visual editor.
 
     Data in the app should reflect the updated value, such as the location name in this example.
 
@@ -228,7 +228,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Select **Create**.
 
-1. Close the Visual Editor.
+1. Close the visual editor.
 
     ![Add Store Name column](media/customize-sample-apps/add-store-name.png "Add Store Name column")
 

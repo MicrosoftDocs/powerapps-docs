@@ -57,15 +57,19 @@ Select the **Build** tab to see the list of environments for each team that you'
 
     ![Expand and collapse the list](media/power-apps-overview-8.png "Expand and collapse the list")
 
-1. **Built by this team**: This list shows all Power Apps objects such as apps, flows, and tables created in the selected environment (the Teams team). Select **New app** to create a new app. Select **See all** to open the build hub for the environment. More information: [Build hub](#    build-hub)
+1. **Built by this team**: This list shows all Power Apps objects such as apps, flows, and tables created in the selected environment (the Teams team). Select **New app** to create a new app. Select **See all** to open the build hub for the environment. More information: [Build hub](#build-hub)
 
     Select **See all** to view the all the components in the selected environment, and to create new apps or components.
 
     ![Built by this team](media/power-apps-overview-5.png "Built by this team")
 
+    In the *Items created for* list, select an app, or a table to directly open the selection in the respective editor.
+
 1. **Installed apps**: Shows a list of installed apps in the environment (Teams team) from the Teams app store.
 
     ![Installed apps](media/power-apps-overview-9.png "Installed apps")
+
+    Select an app, or a table to directly open the selection in the respective editor.
 
 ## Build hub
 

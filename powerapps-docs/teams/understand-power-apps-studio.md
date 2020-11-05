@@ -334,23 +334,23 @@ More information: [List of all Power Apps connectors](/connectors/connector-refe
 
 ### Visual editor
 
-When you select **Create new table** and enter a name for the new table, you open Visual Editor where you can design the table, add columns of different data types, enter data in rows, and save the changes.
+When you select **Create new table** and enter a name for the new table, you open visual editor where you can design the table, add columns of different data types, enter data in rows, and save the changes.
 
-![Visual Editor](media/studio-table-designer.png "Visual Editor")
+![Visual editor](media/studio-table-designer.png "Visual editor")
 
-To get started with Visual Editor, select **Create a table** and enter
+To get started with visual editor, select **Create a table** and enter
 the table name. You can also expand the *Advanced settings* to update the table's plural name. For example, a table name can be *Shape*, and the plural table name can be *Shapes*.
 
 ![Create table](media/studio-create-table.png "Create table")
 
 > [!NOTE]
-> You can use Visual Editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
+> You can use visual editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
 
-#### Understand Visual Editor
+#### Understand visual editor
 
-Visual Editor allows you to work with table rows, columns and data.
+Visual editor allows you to work with table rows, columns and data.
 
-![Authoring a table in Visual Editor](media/studio-table-1.png "Authoring a table in Visual Editor")
+![Authoring a table in visual editor](media/studio-table-1.png "Authoring a table in visual editor")
 
 ##### Table name
 
@@ -367,12 +367,12 @@ Select **Add row** to add a new row to the table.
 ##### Add columns
 
 Select **Add columns** to add new columns of the available column types
-supported by Visual Editor.
+supported by visual editor.
 
 ###### Supported column types
 
 Visual editor supports specific data types as columns. The following options
-are available when creating a new column using Visual Editor inside Power Apps Studio:
+are available when creating a new column using visual editor inside Power Apps Studio:
 
 - Text
 - Email
@@ -387,7 +387,7 @@ are available when creating a new column using Visual Editor inside Power Apps S
 - Yes/No
 
 > [!IMPORTANT]
-> To add columns of types that aren't supported by Visual Editor, such as file or image, [create a table](create-table.md) by using the build hub instead.
+> To add columns of types that aren't supported by visual editor, such as file or image, [create a table](create-table.md) by using the build hub instead.
 
 ###### Advanced options
 
@@ -422,7 +422,7 @@ available data sources in **Data** on the left pane.
 
 ##### Visual editor view
 
-Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change Visual Editor layout.
+Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change visual editor layout.
 
 ##### Row count
 
@@ -452,14 +452,14 @@ Select the drop-down menu next to the column heading to view column-related opti
 
 After you add rows and columns, and add data, you can close the table and use it as
 the data source in your app. To edit content in the table, you can use
-the app controls or go back to Visual Editor.
+the app controls or go back to visual editor.
 
 To edit the table, select the table data source, and then select **Edit data** to
-open the table in Visual Editor.
+open the table in visual editor.
 
 ![Edit table data](media/studio-edit-2.png "Edit table data")
 
-After you close Visual Editor, the data source is automatically refreshed
+After you close visual editor, the data source is automatically refreshed
 to reflect the updated data in Power Apps Studio. You can also select **Refresh**
 to manually refresh Power Apps Studio to reflect the data in the controls you added on the canvas.
 

@@ -85,12 +85,12 @@ The following controls aren't supported:
 
 Connections in the Power Apps Studio that require an authentication dialog fails in the [Teams desktop client](https://docs.microsoft.com/microsoftteams/get-clients#desktop-client). Open the Studio in the [Teams web client](https://docs.microsoft.com/microsoftteams/get-clients#web-client) to add these connectors.
 
-### Studio and Visual Editor synchronization
+### Studio and visual editor synchronization
 
 Power Apps Studio doesn't reflect the changes to tables after:
 
 1. Renaming tables.
-1. Adding relationships within the inline [Visual editor](understand-power-apps-studio.md#visual-editor).
+1. Adding relationships within the inline [visual editor](understand-power-apps-studio.md#visual-editor).
 
 To see the new changes, refresh Power Apps Studio.
 
@@ -98,9 +98,9 @@ To see the new changes, refresh Power Apps Studio.
 
 It's currently not possible to change your Studio version.
 
-### Visual Editor
+### Visual editor
 
-Currency, Duration, Language, Ticker, and Timezone fields can't be added using Visual Editor. To create these fields, use the experience to work with tables as available using [build hub](create-table.md).
+Currency, Duration, Language, Ticker, and Timezone fields can't be added using visual editor. To create these fields, use the experience to work with tables as available using [build hub](create-table.md).
 
 ## Theme
 
