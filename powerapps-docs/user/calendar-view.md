@@ -114,7 +114,7 @@ The new calendar view allows you to create and delete rows from the calendar.
 2.  Select **Delete** in the pop-up window.
 
     > [!div class="mx-imgBorder"]
-    > ![Delete a calendar item](media/delete-row-cal.png "Delete a calendar item")
+    > ![Delete a calendar item](media/delete-record-cal.png "Delete a calendar item")
 
 ### Search through rows
 
