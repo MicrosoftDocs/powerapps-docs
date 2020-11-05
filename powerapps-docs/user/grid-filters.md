@@ -52,7 +52,7 @@ You can also open primary column and lookup columns in a new tab or window.
    > ![Open in a new window](media/newtab.png "[Open in a new window")
   
   
-## Lookup column column
+## Lookup column 
 
 When you filter on a lookup column, you can select from a list of rows to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of rows to filter by.
 
