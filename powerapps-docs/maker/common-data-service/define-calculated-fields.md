@@ -52,7 +52,7 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 - **Follow Up By**: Follow up on an activity by a specified number of days based on priority  
   
 > [!IMPORTANT]
->  To create a calculated column you must have the Write privilege on the [Field Security Profile table](/powerapps/developer/common-data-service/reference/tables/columnsecurityprofile). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Field level security to control access](/dynamics365/customer-engagement/admin/column-level-security).  
+>  To create a calculated column you must have the Write privilege on the [Column Security Profile table](/powerapps/developer/common-data-service/reference/tables/columnsecurityprofile). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Column level security to control access](/dynamics365/customer-engagement/admin/column-level-security).  
 
 ## Create a calculated column
 
@@ -77,7 +77,7 @@ Use the column editor to specify a calculated column. In this example we will us
 
 1. Selecting **Calculation** requires that you save the changes to the table. Click **Save** in the **Pending changes** dialog to proceed.
 1. This will open the calculated column definition editor, where the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
-  ![New Field Calculation form](media/empty-field-calculation.png)
+  ![New Column Calculation form](media/empty-field-calculation.png)
 - In the **Condition** section, you can specify a table, column, operator, type, and value. In the dropdown box for the **Table**, you can choose a current table or a related table. In the **Column** dropdown box, you have a selection of all available columns for the table. Depending on the operator you choose, you may need to provide type and value. You can specify multiple conditions using the `AND` or `OR` operators.  
 - In the **Action** section, you provide the formula for the calculated column.  
   
@@ -220,7 +220,7 @@ You should be aware of certain conditions and limitations when working with calc
 - Calculated columns can span two tables only.  
   - A calculated column can contain a column from another table (spanning two tables – current table and parent row).  
   - A calculated column can’t contain a calculated column from another table that also contains another column from a different table (spanning three tables):   
-    (Current table) Calculated Field &larr; (Parent Row) Calculated Field 1 &larr; (Parent Row) Calculated Field 2.  
+    (Current table) Calculated Column &larr; (Parent Row) Calculated Column 1 &larr; (Parent Row) Calculated Column 2.  
 - You can’t trigger workflows or plug-ins on calculated columns.  
 - You can’t change an existing simple column to a calculated column. If your current application is using JavaScript or plug-ins to calculate a column, you would not be able to use the calculated columns feature without creating a new column.  
 - Duplicate detection rules are not triggered on calculated columns.  

@@ -64,7 +64,7 @@ Mapping columns is done in the context of a 1:N or N:1 table relationship, so fi
 
 ## View mappable columns
 
-Field mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for a table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table columns. 
+Column mappings aren’t actually defined within the table relationships, but they are exposed in the relationship user interface. Not every 1:N table relationship has them. When you view a list of 1:N (or N:1) table relationships for a table, you can filter the relationships shown by type. You can select either **All**, **Custom**, **Customizable**, or **Mappable**. Mappable table relationships provide access to allow mapping table columns. 
 
 ![View mappable table relationships](media/mappable-entity-relationships.png) 
 
@@ -78,7 +78,7 @@ If there are any mappings that you do not want to apply, you can select them and
 
 ## Add new mappings
 
-To create a new mapping click **New** in the toolbar. This will open the **Create Field Mapping** dialog.
+To create a new mapping click **New** in the toolbar. This will open the **Create Column Mapping** dialog.
 
 ![Create column mapping dialog](media/create-field-mapping-dialog.png)
 

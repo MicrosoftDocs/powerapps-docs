@@ -23,7 +23,7 @@ Choices allow you to include drop down lists of fixed values to a user within yo
 
 Choices can be created in two ways, either from the **Option Sets** list within the portal or directly within a table while creating a column. For more information on how to create a table, see [Create a table](data-platform-create-entity.md).
 
-## Creating an Choice while adding a column
+## Creating a Choice while adding a column
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
 
@@ -35,12 +35,12 @@ Choices can be created in two ways, either from the **Option Sets** list within 
 
 4. In the new column panel, enter the **Display name** for your column, **Name** will be automatically populated and is used as the unique name for your column. The **Display name** is used when presenting this column to your users, the **Name** is used when building your app, in expressions and formulas.
 
-5. Click the **Data type** drop down and select **Option Set** or **Multi Select Option set**.
+5. Click the **Data type** drop down and select **Choice** or **Multi Select Choice**.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Column Panel")
 
-6. Click the **Choice** drop down and select **New Option set**
+6. Click the **Choice** drop down and select **New Choice**
 
     > [!NOTE]
     > If an existing choice  could be used for your table, you can select it from this list without creating a new one.
@@ -63,7 +63,7 @@ Choices can be created in two ways, either from the **Option Sets** list within 
     > You can select one of your items as the **Default** for this column, and it will be selected by default when users are creating new rows in your table.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-newoptionset/fieldpanel-2.png "New Field Panel")
+    > ![New Field](./media/data-platform-cds-newoptionset/fieldpanel-2.png "New Column Panel")
 
 ## Creating an Choice from the Choice list
 
@@ -72,7 +72,7 @@ Choices can be created in two ways, either from the **Option Sets** list within 
     > [!div class="mx-imgBorder"] 
     > ![Option sets](./media/data-platform-cds-newoptionset/optionsetlist.png "Choice List")
 
-2. Click **New Option set**
+2. Click **New Choice**
 
 3. A new panel will open to create the Option Set, enter the **Display name** and **Name**. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
 

@@ -32,27 +32,27 @@ You can create and update one or more custom columns in any table. When you crea
 
 3. Add a new column to your table by clicking **Add column**.
 
-4. In the New Field panel, enter the **Display name** for your column, **Name** will be automatically populated and is used as the unique name for your column. The **Displayname** is used when presenting this column to your users, the **Name** is used when building your app, in expressions and formulas.
+4. In the New Column panel, enter the **Display name** for your column, **Name** will be automatically populated and is used as the unique name for your column. The **Displayname** is used when presenting this column to your users, the **Name** is used when building your app, in expressions and formulas.
 
     > [!NOTE]
     > The **Display name** columns can be updated at anytime to display differently in your apps, the **Name** column cannot be changed after your table has been saved as this could result in breaking an existing app.
 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Column Panel")
 
 5. Select the **Data type** of your column, this controls the way the information is stored as well as how it is presented in apps. For example, text is stored different to a decimal number or a URL. For more detailed information of the data types available, see [table attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
 
     If you're prompted, specify additional information for the data type that you specified. Depending on the data type, different columns will be presented. If you're creating a column of type Choice or Multi Select Option Set, you can select **New Option Set** and create a new Choice while creating your column. For more information, see [Create Option set](custom-picklists.md)
 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Column Panel")
 
 
 7. Under **Required**, select the check box if you want to recommended this column as required in your apps. This does not provide hard enforcement through all connections to the Common Data Service. If you need to ensure the column is populated, create a [Business Rule](data-platform-create-business-rule.md)
 
 8. Under **Searchable**, select the check box if you need this column to be available in Views, Charts, Dashboards and Advanced Find. In most cases this checkbox should be checked.
 
-9. Click or tap **Done** to close the Field panel and return to the table. You can repeat steps 3-9 for each additional column.
+9. Click or tap **Done** to close the Column panel and return to the table. You can repeat steps 3-9 for each additional column.
    
     > [!IMPORTANT]
     > Your column is not yet saved and created, until you save the changes to the table.

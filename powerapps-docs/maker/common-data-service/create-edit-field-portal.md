@@ -44,9 +44,9 @@ The portal enables configuring the most common options, but certain options can 
 
 ## Create a column
 
-While viewing columns, in the command bar, select **Add column** which will show the **Field properties** panel.
+While viewing columns, in the command bar, select **Add column** which will show the **Column properties** panel.
 
-![Field Properties](media/field-properties.png)
+![Column Properties](media/field-properties.png)
 
 Initially, just three column properties are available:
 
@@ -172,7 +172,7 @@ You can set a custom column to be a **Calculated** or a **Rollup** column. Colum
 ### Calculated
 
 With a calculated column you can enter a formula to assign a value to the column. 
-These data types can be set to calculated columns: **Currency**, **Date and Time**, **Date Only**, **Decimal Number**, **Duration**, **Email**, **Language**, **Multi Select Option Set**, **Option Set**, **Text**, **Text Area**, **Ticker Symbol**, **Timezone**, **Two Options**, **URL**, and **Whole Number**.
+These data types can be set to calculated columns: **Currency**, **Date and Time**, **Date Only**, **Decimal Number**, **Duration**, **Email**, **Language**, **Multi Select Option Set**, **Choice**, **Text**, **Text Area**, **Ticker Symbol**, **Timezone**, **Two Options**, **URL**, and **Whole Number**.
 
 More information: [Define calculated columns to automate manual calculations](define-calculated-fields.md)
 

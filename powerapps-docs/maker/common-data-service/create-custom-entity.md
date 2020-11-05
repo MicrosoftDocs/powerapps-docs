@@ -63,7 +63,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 4. Select **Done**.
 
-5. On the **Columns** tab on the table designer toolbar select **Add column**. On the **Field properties** pane, enter or select the following values and options.
+5. On the **Columns** tab on the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values and options.
     - **Display name**. *Species*
     - **Data type**. *Option Set*
     - **Choice**. *New choice*
@@ -85,7 +85,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 6. Select **Searchable**, and then select **Done**.
 
-7. On the table designer toolbar select **Add column**. On the **Field properties** pane, enter or select the following values, and then select **Done**.
+7. On the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values, and then select **Done**.
     - **Display name**. *Breed*
     - **Data type**. *Text*
 
@@ -93,7 +93,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 8. On the table designer toolbar select **Add column**. 
 
-9. On the **Field properties** pane, enter or select the following values, and then select **Done**. 
+9. On the **Column properties** pane, enter or select the following values, and then select **Done**. 
     -	**Display name**. *Appointment date*
     - **Data type**. *Date and time*
 
@@ -143,7 +143,7 @@ Skip this step if you only want to use the Pet table in a canvas app.
     > [!div class="mx-imgBorder"] 
     > ![Edit main form](media/create-custom-entity/main-form-edit.png)
 
-3. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** columns located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
+3. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** columns located on the Column Explorer pane on to the General section of the form canvas until the form looks like this.
 
     > [!div class="mx-imgBorder"] 
     > ![Select columns for main form](media/create-custom-entity/main-form-edit2.png) 

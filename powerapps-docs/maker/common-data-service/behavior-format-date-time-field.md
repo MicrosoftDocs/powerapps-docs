@@ -111,7 +111,7 @@ The following date and time related query operators are invalid for the **Date O
 
 [Create and edit columns](create-edit-fields.md)<br />
 [Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
-[Field managed properties](/power-platform/alm/managed-properties-alm#view-and-edit-column-managed-properties)<br />
+[Column managed properties](/power-platform/alm/managed-properties-alm#view-and-edit-column-managed-properties)<br />
 [Managed properties](/power-platform/alm/managed-properties-alm)  
 [Blog: Working with time zones in the Common Data Service](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)
 

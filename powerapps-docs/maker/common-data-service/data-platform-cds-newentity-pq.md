@@ -91,7 +91,7 @@ Before you start to follow this topic:
 > [!WARNING]
 > If you use Power Query to add data to an existing table, all data in that table will be overwritten.
 
-If you select **Load to existing table**, you can specify a table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Common Data Service ships. Under **Field mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
+If you select **Load to existing table**, you can specify a table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Common Data Service ships. Under **Column mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
 
   > [!div class="mx-imgBorder"] 
   > ![Specify the name of the new table](./media/data-platform-cds-newentity-pq/existing-entity.png)

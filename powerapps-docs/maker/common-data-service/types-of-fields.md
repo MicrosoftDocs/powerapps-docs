@@ -1,5 +1,5 @@
 ---
-title: "Field data types in Common Data Service | MicrosoftDocs"
+title: "Column data types in Common Data Service | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
 keywords: ""
 ms.date: 05/27/2020

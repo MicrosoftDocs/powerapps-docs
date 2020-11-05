@@ -71,7 +71,7 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 1. Use the drop-down menu on the right, under **Show**, to walk through the **Unmapped columns**, **Fields with error**, or **Required Fields**.
 
     > [!TIP]
-    > Depending on whether you get a Warning or an Error, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Field Mappings**.
+    > Depending on whether you get a Warning or an Error, inspect **Unmapped columns** or **Fields with error** through the drop-down menu in **Column Mappings**.
 
   <!--  > [!div class="mx-imgBorder"] 
     > ![Example of a partial match due to warnings with column mappings](./media/data-platform-import-export/partial-match.png)

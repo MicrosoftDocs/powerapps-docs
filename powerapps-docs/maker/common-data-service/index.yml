@@ -44,7 +44,7 @@ landingContent:
             url: types-of-entities.md
           - text: Table relationships
             url: relationships-overview.md
-          - text: Fields
+          - text: Columns
             url: fields-overview.md
           - text: Choices
             url: create-edit-global-option-sets.md
