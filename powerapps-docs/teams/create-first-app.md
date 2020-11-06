@@ -163,9 +163,48 @@ select **Add row**.
 
 After you close the table, the app template that was added to the app screen by default is automatically refreshed to use the new table.
 
+> [!NOTE]
+> If you add additional data sources, such as a new table, or if you reopened the app, refer to [Manually connect data to the app](#manually-connect-data-to-the-app) to manually refresh the app with the new data.
+
 ![Updated app template](media/updated-gallery.png "Updated app template")
 
 Depending on the number of fields you added to your table, the app template might need updates to the form and the gallery.
+
+#### Manually connect data to the app
+
+The gallery and the edit form components on the screen automatically refresh with the data only for the first data source. If you add additional data sources, such as a new table, or if you reopened the app, you'll have to manually connect the data to the template gallery and form.
+
+> [!TIP]
+> Skip these steps if the app screen is already connected to the table that you created.
+
+To manually connect to the new data:
+
+1. Select the gallery, and then select the correct data source.
+
+    ![Change the gallery data source](media/select-gallery-source.png "Change the gallery data source")
+
+1. Select the form, and then select the correct data source.
+
+    ![Change the form data source](media/select-form-source.png "Change the form data source")
+
+1. If you see any formula error, select **Edit in the formula bar**, and update the formula with the data source name.
+
+    ![Edit the formula](media/edit-formula.png "Edit the formula")
+
+    For example, to change from using *MyRecipes* as the data source name for the edit form to *Recipes*, replace the name of the data source.
+
+    Change from:
+
+    ```powerapps-dot
+    Remove(NewRecipes, selectedRecord); If(IsEmpty(Errors(NewRecipes, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(NewRecipes)););
+    ```
+    Change to:
+
+    ```powerapps-dot
+    Remove(Recipes, selectedRecord); If(IsEmpty(Errors(Recipes, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(Recipes)););
+    ```
+
+1. Repeat the earlier step to fix any additional formula errors.
 
 #### Update background color for the selected gallery record
 
