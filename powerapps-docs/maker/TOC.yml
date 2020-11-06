@@ -71,6 +71,8 @@
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
         href: ../user/Access-team.md
+      - name: Check your user access to a record
+        href: ../user/access-checker.md
       - name: Add a connection role
         href: ../user/add-connection-role.md
       - name: Deactivate accounts or contacts
@@ -1331,6 +1333,8 @@
           href: ./portals/admin/portal-details.md
         - name: Portal administration from Power Platform admin center
           href: ./portals/admin/power-platform-admin-center.md
+        - name: Roles required for portal administration
+          href: ./portals/admin/portal-admin-roles.md
         - name: Download public key of portal
           href: ./portals/admin/get-public-key.md
         - name: View portal error logs
