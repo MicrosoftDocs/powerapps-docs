@@ -59,9 +59,11 @@ Responding to customer feedback and data from user research, effective November 
 
 Dynamics 365 applications&mdash;such as Dynamics 365 Sales, Dynamics 365 Customer Service, or Dynamics 365 Talent&mdash;also use Common Data Service to store and secure the data they use. This enables you to build apps by using Power Apps and Common Data Service directly against your core business data, which is already used within Dynamics 365, without the need for integration.
 
-* **Build apps against your Dynamics 365 Data** &ndash; Build apps quickly against your business data within Power Apps or by using the Pro Developer SDK.<!--note from editor: I don't find this term anywhere; is it okay as-is? -->
-* **Manage reusable business logic and rules** &ndash; Business rules and logic already defined in your Dynamics 365 tables are applied to apps made with Power Apps to ensure data consistency, regardless of how your users access the data or which app they use.
-* **Reusable skills across Dynamics 365 and Power Apps** &ndash; Users who are skilled in Power Apps or Dynamics 365 can now take advantage of those skills across the Common Data Service platform. Creating tables, forms, and charts are now common tasks you perform across your applications.
+- **Build apps against your Dynamics 365 data** &ndash; Build apps quickly against your business data within Power Apps or by using the extensible platform that lets pro developers programmatically interact with data and metadata, apply business logic, create custom connectors, and integrate with external data.
+
+- **Manage reusable business logic and rules** &ndash; Business rules and logic already defined in your Common Data Service tables are applied to apps created with Power Apps to ensure data consistency, regardless of how your users access the data or which app they use.
+
+- **Reusable skills across Dynamics 365 and Power Apps** &ndash; Users who are skilled in Power Apps or Dynamics 365 can now take advantage of those skills across the Common Data Service platform. Creating tables, forms, and charts are now common tasks you perform across your applications.
 
     > [!NOTE]
     > Finance and Operations apps currently require the configuration of the [Data Integrator](/power-platform/admin/data-integrator) to make your business data from Finance and Operations apps available in Common Data Service.
