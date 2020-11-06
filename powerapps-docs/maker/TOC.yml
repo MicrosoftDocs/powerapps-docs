@@ -1878,11 +1878,11 @@
       href: ../teams/create-additional-apps.md
     - name: Use Teams integration object
       href: ../teams/use-teams-integration-object.md
-    - name: Work with Project Oakdale
+    - name: Work with Dataverse for Teams
       items:
         - name: Overview
           href: ../teams/overview-data-platform.md
-        - name: Project Oakdale vs Common Data Service
+        - name: Dataverse for Teams vs Dataverse
           href: ../teams/data-platform-compare.md
         - name: Create a table
           href: ../teams/create-table.md
@@ -1892,7 +1892,7 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md
-        - name: Project Oakdale FAQs
+        - name: Dataverse for Teams FAQs
           href: ../teams/data-platform-faqs.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
