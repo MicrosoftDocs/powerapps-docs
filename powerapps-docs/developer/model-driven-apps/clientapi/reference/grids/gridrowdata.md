@@ -20,7 +20,7 @@ search.app:
 
 GridRowData is returned by the [GridRow](gridrow.md).[getData](gridrow/getData.md) method.
 
-GridRowData also provides methods for retrieving information specific to a row displayed in an editable grid row, including a collection of all the attributes included in the row. Attribute data is limited to the columns presented by the editable grid. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
+GridRowData also provides methods for retrieving information specific to a row displayed in an editable grid row, including a collection of all the columns included in the row. Column data is limited to the columns presented by the editable grid. See [Collections (Client API reference)](../collections.md) for information on the methods available to access data in a collection.
 
 ```JavaScript
 var myRows = gridContext.getGrid().getRows();

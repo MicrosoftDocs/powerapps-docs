@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 8/21/2020
-ms.author: mduelae
+ms.date: 10/30/2020
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -19,20 +19,18 @@ search.app:
 ---
 # Set personal options
 
-
+!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 
 Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone.  
     
 ## To set personal options  
   
-1.  Select the **Settings** button ![Options button for Power Apps](media/user-profile-settings-button.png "Options button for Power Apps") in the upper-right corner of the screen.  
+1. In the upper-right corner of the screen, select **Settings** ![Options button for Power Apps](media/user-profile-settings-button.png "Options button for Power Apps") > **Personalization Settings**.  
   
-2.  Select **Personalization Settings**.  
+2. Fill in the information, as required.
   
-3.  Fill in the information, as required.   
-  
-4.  When you’re done, select **OK**.  
+3. When you’re done, select **OK**.  
 
 
 
@@ -47,6 +45,8 @@ Change your display settings in an app to suit your preferences. For example, yo
 |                          Rows Per Page                           |                                                                                                                                                                                                                                          Select the maximum number of rows you want to see in a list on a page. You can set a value from 25 to 250.                                                                                                                                                                                                                                           |
 |            **Select the default mode in Advanced Find**             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                         Advanced Find Mode                          |                                                                                                                                  By default, every time you open the **Advanced Find Mode** dialog box, the query details are hidden. To see the query details every time, select **Detailed**.                                                                                                                                  |
+|            **Select the default search experience**             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 
+|                         Default Search Experience                          |                                                                                                                                  Select your default search experience. For more information, see [Compare search options](https://docs.microsoft.com/powerapps/user/search) 
 |                  **Set the time zone you are in**                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                              Time Zone                              |                                                                                                                                             Select the time zone that you want to display for your region.                                                                                                                                          |
 |                    **Select a default currency**                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -74,7 +74,7 @@ Change your display settings in an app to suit your preferences. For example, yo
 |-------------|-----------------|  
 |**Default view**||  
 |Default Calendar|Select the default view for your calendar.|   
-|Start Time|Select your default work hours.|
+|Start your default work hours|Select your default start and end time for your work hours.|
 ## Formats tab options  
   
 |Options|Description|  

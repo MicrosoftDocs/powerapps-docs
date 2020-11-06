@@ -32,7 +32,7 @@ Read-only grid
 
 **Type**: String
 
-**Description**: The primary attribute value for the row in the row.
+**Description**: The primary column value for the row in the row.
 
 ## Remarks
 

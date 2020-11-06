@@ -41,7 +41,7 @@ search.app:
 <td><p>Input about the page to navigate to. The object definition changes depending on the type of page to navigate to: <i>entity list</i>, <i>entity row</i>, <i> dashboard</i>, or <i>HTML web resource</i>.</p>
 <p>----------------------------------------------------------------</p>
 <p><strong>entity list</strong>
-<p>The object contains the following attributes:</p>
+<p>The object contains the following columns:</p>
 <ul>
 <li><strong>pageType</strong>: String. Specify "entitylist".</li>
 <li><strong>entityName</strong>: String. The logical name of the table to load in the list control.</li>
@@ -50,20 +50,20 @@ search.app:
 </ul>
 <p>----------------------------------------------------------------</p>
 <p><strong>entity row</strong>
-<p>The object contains the following attributes:</p>
+<p>The object contains the following columns:</p>
 <ul>
 <li><strong>pageType</strong>: String. Specify "entityrecord".</li>
 <li><b>entityName</b>: String. Logical name of the table to display the form for.</li>
 <li><b>entityId</b>: (Optional) String. ID of the table row to display the form for. If you don't specify this value, the form will be opened in create mode.</li>
-<li><b>createFromEntity</b>: (Optional) Lookup. Designates a row that will provide default values based on mapped attribute values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
+<li><b>createFromEntity</b>: (Optional) Lookup. Designates a row that will provide default values based on mapped column values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
 <li><b>data</b>: (Optional) Object. A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
-">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a>.</li>
+">Set column values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a>.</li>
 <li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
 <li><b>isCrossEntityNavigate</b>: (Optional) Boolean. Indicates whether the form is navigated to from a different table using cross-entity business process flow.</li>
 <li><b>isOfflineSyncError</b>: (Optional) Boolean. Indicates whether there are any offline sync errors.</li>
 <li><b>processId</b>: (Optional) String. ID of the business process to be displayed on the form.</li>
 <li><b>processInstanceId</b>: (Optional) String. ID of the business process instance to be displayed on the form.</li>
-<li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related records on the form. The object has the following attributes.
+<li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related rows on the form. The object has the following columns.
 <table style="width:100%">
   <tr>
     <th>Name</th>
@@ -72,7 +72,7 @@ search.app:
 <tr>
 <td>attributeName</td>
 <td>String</td>
-<td>Name of the attribute used for relationship.</td>
+<td>Name of the column used for relationship.</td>
 </tr>
 <tr>
 <td>name</td>
@@ -102,7 +102,7 @@ search.app:
 </ul>
 <p>----------------------------------------------------------------</p>
 <p><strong>HTML web resource</strong>
-<p>The object contains the following attributes:</p>
+<p>The object contains the following columns:</p>
 <ul>
 <li><strong>pageType</strong>: String. Specify "webresource".</li>
 <li><strong>webresourceName</strong>: String. The name of the web resource to load.</li>
@@ -110,7 +110,7 @@ search.app:
 </ul>
 <p>----------------------------------------------------------------</p>
 <p><strong>dashboard</strong>
-<p>The object contains the following attributes:</p>
+<p>The object contains the following columns:</p>
 <ul>
 <li><strong>pageType</strong>: String. Specify "dashboard".</li>
 <li><strong>dashboardId</strong>: String. The ID of the dashboard to load. If you don't specify the ID, navigates to the default dashboard.</li>
@@ -121,9 +121,9 @@ search.app:
 <td>navigationOptions</td>
 <td>Object</td>
 <td>No</td>
-<td><p>Options for navigating to a page: whether to open inline or in a dialog. If you don't specify this parameter, page is opened inline by default. The object contains the following attributes:</p>
+<td><p>Options for navigating to a page: whether to open inline or in a dialog. If you don't specify this parameter, page is opened inline by default. The object contains the following columns:</p>
 <ul>
-<li><strong>target</strong>: Number. Specify <strong>1</strong> to open the page inline; <strong>2</strong> to open the page in a dialog. Also, rest of the attributes (<b>width</b>, <b>height</b>, and <b>position</b>) are valid only if you have specified <strong>2</strong> in this attribute (open page in a dialog). <p><b>NOTE</b>: <i>Entity lists</i> can only be opened inline; <i>entity records</i> and <i>web resources</i> can be opened either inline or in a dialog.</p></li>
+<li><strong>target</strong>: Number. Specify <strong>1</strong> to open the page inline; <strong>2</strong> to open the page in a dialog. Also, rest of the columns (<b>width</b>, <b>height</b>, and <b>position</b>) are valid only if you have specified <strong>2</strong> in this column (open page in a dialog). <p><b>NOTE</b>: <i>Entity lists</i> can only be opened inline; <i>entity records</i> and <i>web resources</i> can be opened either inline or in a dialog.</p></li>
 <li><strong>width</strong>: (Optional) Number or Object. The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type <b>SizeValue</b> with the following properties:
 <ul><li><b>value</b>: Number. The numerical value.</li>
 <li><b>unit</b>: String. The unit of measurement. Specify "%" or "px". Default value is "px".</li></ul></li>
@@ -154,7 +154,7 @@ Returns a promise. The value passed when the promise resolves is dependent on th
 - *dialog*: Promise resolves when the dialog is closed. An object is passed only if the **pageType** = **entityRecord** and you opened the form in create mode. The object has a <b>savedEntityReference</b> array with the following properties to identify the table row created:
     - **entityType**: The logical name of the table.
     - **id**: A string representation of a GUID value for the row.
-    - **name**: The primary attribute value of the row displayed or created.
+    - **name**: The primary column value of the row displayed or created.
 
 ## Example
 

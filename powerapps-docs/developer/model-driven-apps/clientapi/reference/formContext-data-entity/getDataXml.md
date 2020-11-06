@@ -28,7 +28,7 @@ search.app:
 
 **Type**: String.
 
-**Description**: In this example, the following three fields for an account row were updated: name, accountnumber, telephone2.
+**Description**: In this example, the following three columns for an account row were updated: name, accountnumber, telephone2.
 
 ```"<account><name>Contoso</name><accountnumber>55555</accountnumber><telephone2>425 555-1234</telephone2></account>"```
 

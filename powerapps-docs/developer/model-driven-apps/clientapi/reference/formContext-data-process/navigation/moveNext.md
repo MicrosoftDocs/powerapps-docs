@@ -67,7 +67,7 @@ You can also move to a next stage in a different table.
 </tr>
 <tr>
 <td>stageGate</td>
-<td>One or more required field on the current stage is empty.</td>
+<td>One or more required column on the current stage is empty.</td>
 </tr>
 </table>
 </td>

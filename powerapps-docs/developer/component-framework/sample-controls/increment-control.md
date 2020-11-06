@@ -51,7 +51,7 @@ Model-driven apps and canvas apps (public preview)
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSIncrementControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Value of the field is stored and used inside the control
+  // Value of the column is stored and used inside the control
   private _value: number;
   // Power Apps component framework framework delegate which will be assigned to this object which would be called whenever an update happens.
   private _notifyOutputChanged: () => void;
@@ -120,12 +120,12 @@ export class TSIncrementControl
     this._notifyOutputChanged();
   }
   /**
-   * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+   * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
     // This method would render the control with the updated values after we call NotifyOutputChanged
-    //set the value of the field control to the raw value from the configured field
+    //set the value of the column control to the raw value from the configured column
     this._value = context.parameters.value.raw;
     this.label.value = this._value != null ? this._value.toString() : "";
     if (context.parameters.value.error) {

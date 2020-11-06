@@ -1,13 +1,13 @@
 ---
-title: "Assign or share rows| MicrosoftDocs"
-ms.custom: ""
+title: "Assign or share records| MicrosoftDocs"
+description: How to assign or share records
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 

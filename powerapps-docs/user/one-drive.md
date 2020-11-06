@@ -1,13 +1,13 @@
 ---
 title: "Use OneDrive for Business| MicrosoftDocs"
-ms.custom: ""
+description: How to use OneDrive for Business
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/02/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 

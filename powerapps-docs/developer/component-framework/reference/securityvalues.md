@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # Security Values
 
-Provides all the information about entity metadata security values. 
+Provides all the information about table metadata security values. 
 
 ## Properties
 

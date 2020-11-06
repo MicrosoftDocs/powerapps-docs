@@ -17,9 +17,9 @@ search.app:
 
 
 
-A control represents an HTML element present on the form. Some controls are bound to a specific attribute, whereas others may represent unbound controls such as an IFRAME, Web resource, or a sub grid that has been added to the form. 
+A control represents an HTML element present on the form. Some controls are bound to a specific column, whereas others may represent unbound controls such as an IFRAME, Web resource, or a sub grid that has been added to the form. 
 
-The **control** object provides methods to change the presentation or behavior of a control and identify the corresponding attribute. You access controls using one of the following collections: 
+The **control** object provides methods to change the presentation or behavior of a control and identify the corresponding column. You access controls using one of the following collections: 
 - **formContext.ui.controls**
 - **formContext.ui Section.controls**
 - **formContext.data.entity** **Attribute.controls**
@@ -196,9 +196,9 @@ These are the methods available for a lookup control.
 </tr>
 </table>
 
-## multiselectoptionset and optionset control types
+## multiselectoptionset and choice control types
 
-Both multi-select option set and option set controls have the same set of methods available.
+Both multi-select option set and choice controls have the same set of methods available.
 
 <table>
 <tr>
@@ -330,7 +330,14 @@ The Sliverlight web resource has these additional methods:
 </tr>
 </table>
 
+> [!TIP]
+> If you want to modify all the controls bound to an attribute on a form, use the controls collection inside the attribute type. For example, to add notification to each control bound to the `name` attribute, you can do the following:
+ >  ```JavaScript
+ >   const notification = { messages: ['Sample Notification on Name Controls'], notificationLevel: 'RECOMMENDATION', uniqueId: 'my_unique_id'};
+ >  formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification));
+ > ```
+
 
 ### Related topics
 
-[Attributes](attributes.md)
+[Columns](attributes.md)

@@ -2,12 +2,15 @@
 title: "Work with rows in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
 ms.date: 06/23/2020
-ms.service:
-  - "dynamics-365-sales"
-ms.topic: article
-author: sbmjais
-ms.author: shjais
-manager: shujoshi
+ms.author: mkaur
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Work with rows in the new calendar view

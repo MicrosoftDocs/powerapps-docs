@@ -26,7 +26,7 @@ The `OnSave` event occurs before sending the updated information to the server, 
 Some important points to consider for the `OnSave` event: 
 - If a user edits multiple columns of the same row in sequence, the OnSave event will only be fired once to ensure optimal performance and form behavior compatibility.
 - Editable grid and the parent form have separate save buttons. Clicking the save button in one will not save changes in the other.
-- Editable grid does not save pending changes when navigation operations are performed outside of its context. If the control has unsaved data, that data may be lost. Consequently, the `OnSave` event may not fire. For example, this could happen when navigating to a different row using a form lookup field or through the ribbon.
+- Editable grid does not save pending changes when navigation operations are performed outside of its context. If the control has unsaved data, that data may be lost. Consequently, the `OnSave` event may not fire. For example, this could happen when navigating to a different row using a form lookup column or through the ribbon.
 - Pressing the refresh button in the editable grid causes it to discard any pending changes, and the `OnSave` event won't be fired.
 - Editable grid control does not implement an auto-save timer.
 Editable grid suppresses duplicate detection rules.

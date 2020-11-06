@@ -28,7 +28,7 @@ search.app:
 
 **Type**: Boolean
 
-**Description**: true if any fields in the form have been changed; false otherwise.
+**Description**: true if any columns in the form have been changed; false otherwise.
 
 ### Related topics
 

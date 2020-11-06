@@ -18,7 +18,7 @@ search.app:
 
 
 
-Returns a Boolean value indicating whether the lookup represents a partylist lookup. Partylist lookups allow for multiple records to be set, such as the **To:** field for an email table row.
+Returns a Boolean value indicating whether the lookup represents a partylist lookup. Partylist lookups allow for multiple rows to be set, such as the **To:** column for an email table row.
 
 ## Attribute types supported
 
@@ -32,5 +32,5 @@ Lookup
 
 **Type**: Boolean. 
 
-**Description**: True if the lookup attribute is a partylist, otherwise false.
+**Description**: True if the lookup column is a partylist, otherwise false.
 

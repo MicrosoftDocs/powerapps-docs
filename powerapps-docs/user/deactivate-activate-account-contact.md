@@ -1,13 +1,13 @@
 ---
 title: "Deactivate or activate an account or contact in a Model-driven app| MicrosoftDocs"
-ms.custom: ""
+description: How to deactivate and activate an account or contact
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 11/16/2018
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 

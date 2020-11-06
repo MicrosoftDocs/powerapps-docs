@@ -29,7 +29,7 @@ search.app:
 |Name |Type |Required |Description |
 |---|---|---|---|
 |entityName|String|Yes|The logical name of the table.|
-|attributes|array of strings|No|The attributes to get metadata for.|
+|attributes|array of strings|No|The columns to get metadata for.|
 |successCallback|function|No|A function to call when the table metadata is returned.|
 |errorCallback|function|No|A function to call when the operation fails.|
 
@@ -37,7 +37,7 @@ search.app:
 
 **Type**: Object
 
-**Description**: An object containing the table metadata information with the following attributes.
+**Description**: An object containing the table metadata information with the following columns.
 
 <table>
 <tr>
@@ -53,7 +53,7 @@ search.app:
 <tr>
 <td>AutoRouteToOwnerQueue</td>
 <td>Boolean</td>
-<td>Indicates whether to automatically move records to the owner’s default queue when a row of this type is created or assigned. </td>
+<td>Indicates whether to automatically move rows to the owner’s default queue when a row of this type is created or assigned. </td>
 </tr>
 
 <tr>
@@ -244,22 +244,22 @@ search.app:
 <tr>
 <td>PrimaryIdAttribute</td>
 <td>String</td>
-<td>The name of the attribute that is the primary id for the table.</td>
+<td>The name of the column that is the primary id for the table.</td>
 </tr>
 <tr>
 <td>PrimaryImageAttribute</td>
 <td>String</td>
-<td>The name of the primary image attribute for a table.</td>
+<td>The name of the primary image column for a table.</td>
 </tr>
 <tr>
 <td>PrimaryNameAttribute</td>
 <td>String</td>
-<td>The name of the primary attribute for a table.</td>
+<td>The name of the primary column for a table.</td>
 </tr>
 <tr>
 <td>Privileges</td>
 <td>Array of objects</td>
-<td>The privilege metadata for the table where *each* object contains the following attributes to define the security privilege for access to a table:
+<td>The privilege metadata for the table where *each* object contains the following columns to define the security privilege for access to a table:
 <ul>
 <li><b>CanBeBasic</b>: Boolean. Whether the privilege can be basic access level.</li>
 <li><b>CanBeDeep</b>: Boolean. Whether the privilege can be deep access level.</li>
@@ -286,45 +286,45 @@ search.app:
 <tr>
 <td>Attributes</td>
 <td>Collection</td>
-<td>A collection of attribute metadata objects. The object returned depends on the type of attribute metadata.
+<td>A collection of column metadata objects. The object returned depends on the type of column metadata.
 <p><b>Attribute metadata for the <i>base</i> type</b><br/>
 An object returned with the following properties:</p>
 <ul>
-<li><b>AttributeType</b>: Number. Type of an attribute. For a list of attribute type values, see <a href="https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.attributetypecode">AttributeTypeCode</a></li>
-<li><b>DisplayName</b>: String. Display name for the attribute.</li>
-<li><b>EntityLogicalName</b>: String. Logical name of the table that contains the attribute.</li>
-<li><b>LogicalName</b>: String. Logical name for the attribute.</li></ul>
+<li><b>AttributeType</b>: Number. Type of an column. For a list of column type values, see <a href="https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.attributetypecode">AttributeTypeCode</a></li>
+<li><b>DisplayName</b>: String. Display name for the column.</li>
+<li><b>EntityLogicalName</b>: String. Logical name of the table that contains the column.</li>
+<li><b>LogicalName</b>: String. Logical name for the column.</li></ul>
 
 <p><b>Attribute metadata for the <i>boolean</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> attribute metadata type properties:</p>
+An object returned with the following properties in addition to the <i>base</i> column metadata type properties:</p>
 <ul>
 <li><b>DefaultFormValue</b>: Boolean. Default value for a Boolean option set.</li>
-<li><b>OptionSet</b>: Object. Options for the boolean attribute where each option is a key:value pair.</li></ul>
+<li><b>OptionSet</b>: Object. Options for the boolean column where each option is a key:value pair.</li></ul>
 
 <p><b>Attribute metadata for the <i>enum</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> attribute metadata type properties:</p>
+An object returned with the following properties in addition to the <i>base</i> column metadata type properties:</p>
 <ul>
-<li><b>OptionSet</b>: Object. Options for the attribute where each option is a key:value pair.</li></ul>
+<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
 
 <p><b>Attribute metadata for the <i>picklist</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> attribute metadata type properties:</p>
+An object returned with the following properties in addition to the <i>base</i> column metadata type properties:</p>
 <ul>
-<li><b>DefaultFormValue</b>: Number. Default form value for the attribute.</li>
-<li><b>OptionSet</b>: Object. Options for the attribute where each option is a key:value pair.</li></ul>
+<li><b>DefaultFormValue</b>: Number. Default form value for the column.</li>
+<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
 
 <p><b>Attribute metadata for the <i>state</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> attribute metadata type properties:</p>
+An object returned with the following properties in addition to the <i>base</i> column metadata type properties:</p>
 <ul>
-<li><b>OptionSet</b>: Object. Options for the attribute where each option is a key:value pair.</li></ul>
+<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
 <p>The object also contains the following methods:</p>
 <ul>
 <li><b>getDefaultStatus(arg)</b>: Returns the default status (number) based on the passed in state value for a table. For default state and status values for a table, see table metadata information of the table in <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference">entity reference</a>.</li>
 <li><b>getStatusValuesForState(arg)</b>: Returns possible status values (array of numbers) for a specified state value. For state and status values for a table, see table metadata information of the table in <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference">entity reference</a>.</li></ul>
 
 <p><b>Attribute metadata for the <i>status</i> type</b><br/>
-An object returned with the following properties in addition to the <i>base</i> attribute metadata type properties:</p>
+An object returned with the following properties in addition to the <i>base</i> column metadata type properties:</p>
 <ul>
-<li><b>OptionSet</b>: Object. Options for the attribute where each option is a key:value pair.</li></ul>
+<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
 <p>The object also contains the following method:</p>
 <ul>
 <li><b>getState(arg)</b>: Returns the state value (number) for the specified status value (number). For default state and status values for a table, see table metadata information of the table in <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference">entity reference</a>.</li>
