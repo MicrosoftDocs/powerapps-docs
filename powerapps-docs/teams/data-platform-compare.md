@@ -14,20 +14,9 @@ ms.reviewer: matp
 
 Applications within a team in Microsoft Teams have access to a Dataverse for Teams environment. Dataverse for Teams is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataverse for Teams delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataverse for Teams environment can contain, Dataverse for Teams can be promoted to Dataverse.
 
-## Key terminology changes
+## Table features
 
-Some terminology has changed between Dataverse and Dataverse for Teams to make it easier for a broader audience. The table below provides a mapping between Dataverse and Dataverse for Teams terms.
-
-|Dataverse for Teams  |Dataverse  |
-|---------|---------|
-|Table, tables     | Entity, entities        |
-|Column, columns     |  Field, fields <br /> attribute, attributes       |
-
-Most of the processes for creating and managing tables in Dataverse for Teams are the same as creating and managing entities in Dataverse. Where applicable, these articles about Dataverse for Teams link you to Dataverse articles that provide more detail.
-
-## Entity features
-
-This table describes the differences between a Dataverse for Teams table and Dataverse entity features.
+Following are the differences between a Dataverse for Teams and Dataverse table features.
 
 |Feature  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
@@ -35,11 +24,11 @@ This table describes the differences between a Dataverse for Teams table and Dat
 |Advanced data types​ (customer, multiple transaction currencies)      |  No       |  Yes       |
 |Common Data Model    |  Coming Soon       |  Yes       |
 |Relational storage      | Yes       |  Yes       |
-|Non-relational​ storage (logs)   |  No       |  Yes       |
-|Managed data lake​      |  No       | Yes        |
+|Non-relational storage (logs)   |  No       |  Yes       |
+|Managed data lake      |  No       | Yes        |
 |File and image support     | Yes        |  Yes       |
 |Find, filter, sort     |   Yes      |  Yes       |
-|Advanced and relevance search​      |   No      | Yes        |
+|Advanced and relevance search      |   No      | Yes        |
 |Mobile offline     |  No       |  Yes       |
 
 Note that most of the standard tables that are provided with a Dataverse environment won't be present as part of Dataverse for Teams.
