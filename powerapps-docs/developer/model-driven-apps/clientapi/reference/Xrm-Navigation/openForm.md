@@ -35,19 +35,19 @@ search.app:
     <td>entityFormOptions</td>
     <td>Object</td> 
     <td>Yes</td>
-    <td>Entity form options for opening the form. The object contains the following attributes:<ul>
+    <td>Entity form options for opening the form. The object contains the following columns:<ul>
 <li><b>entityName</b>: String. Logical name of the table to display the form for.</li>
 <li><b>entityId</b>: (Optional) String. ID of the table row to display the form for.</li>
 <li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
 <li><b>cmdbar</b>: (Optional) Boolean. Indicates whether to display the command bar. If you do not specify this parameter, the command bar is displayed by default.</li>
-<li><b>createFromEntity</b>: (Optional) Lookup. Designates a row that will provide default values based on mapped attribute values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
+<li><b>createFromEntity</b>: (Optional) Lookup. Designates a row that will provide default values based on mapped column values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
 <li><b>height</b>: (Optional) Number. Height of the form window to be displayed in pixels.</li>
 <li><b>navbar</b>: (Optional) String. Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid values are: "on", "off", or "entity".<ul><li><code>on</code>: The navigation bar is displayed. This is the default behavior if the <b>navbar</b> parameter is not used.</li>
-<li><code>off</code>: The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.</li><li><code>entity</code>: On a table form, only the navigation options for related entities are available. After navigating to a related table, a back button is displayed in the navigation bar to allow returning to the original row.</li></ul></li>
+<li><code>off</code>: The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.</li><li><code>entity</code>: On a table form, only the navigation options for related tables are available. After navigating to a related table, a back button is displayed in the navigation bar to allow returning to the original row.</li></ul></li>
 <li><b>openInNewWindow</b>: (Optional) Boolean. Indicates whether to display form in a new window.</li>
 <li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>
 This does not apply to opening a new browser window.  
-<li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related records on the form. The object has the following attributes.
+<li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related rows on the form. The object has the following columns.
 <table style="width:100%">
   <tr>
     <th>Name</th>
@@ -56,7 +56,7 @@ This does not apply to opening a new browser window.
 <tr>
 <td>attributeName</td>
 <td>String</td>
-<td>Name of the attribute used for relationship.</td>
+<td>Name of the column used for relationship.</td>
 </tr>
 <tr>
 <td>name</td>
@@ -92,7 +92,7 @@ This does not apply to opening a new browser window.
 <td>Object</td>
 <td>No</td>
 <td>A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/><br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
-">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a></td>
+">Set column values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a></td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -104,7 +104,7 @@ This function is passed an object as a parameter. The object has a <b>savedEntit
 <ul>
 <li><b>entityType</b>: The logical name of the table.</li>
 <li><b>id</b>: A string representation of a GUID value for the row.</li>
-<li><b>name</b>: The primary attribute value of the row displayed or created.</li></ul>
+<li><b>name</b>: The primary column value of the row displayed or created.</li></ul>
 
 <b>NOTE</b>:
   <ul>
@@ -167,11 +167,11 @@ formParameters["jobtitle"] = "Sr. Marketing Manager";
 formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this row were set programmatically.";
 
-// Set lookup field
+// Set lookup column
 formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
 formParameters["preferredsystemuseridname"] = "Admin user"; // Name of the user.
 formParameters["preferredsystemuseridtype"] = "systemuser"; // Entity name. 
-// End of set lookup field
+// End of set lookup column
 
 // Open the form.
 Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
@@ -202,11 +202,11 @@ formParameters["jobtitle"] = "Sr. Marketing Manager";
 formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this row were set programmatically.";
 
-// Set lookup field
+// Set lookup column
 formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
 formParameters["preferredsystemuseridname"] = " Admin user"; // Name of the user.
 formParameters["preferredsystemuseridtype"] = "systemuser"; // Entity name.
-// End of set lookup field
+// End of set lookup column
 
 // Open the form.
 Xrm.Navigation.openForm(entityFormOptions, formParameters).then(

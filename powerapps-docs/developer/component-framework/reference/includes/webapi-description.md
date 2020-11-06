@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e4a8b275-0db1-4025-aa97-c9e55b84d6c6
 ---
 
-Provides properties and methods to use Web API to create and manage records.
+Provides properties and methods to use Web API to create and manage rows.

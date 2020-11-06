@@ -46,11 +46,11 @@ This method will return one of the following **string** values or "null":
 - url
 
 > [!NOTE]
-> This format information generally represents the format options of the application field. Format options for Boolean fields are not provided.
+> This format information generally represents the format options of the application column. Format options for Boolean columns are not provided.
 
-The following table lists the format string values to expect for each type of attribute schema type and format option.
+The following table lists the format string values to expect for each type of column schema type and format option.
 
-| Application Field Type | Format Option | Attribute Type | Format Value|
+| Application Column Type | Format Option | Column Type | Format Value|
 |----------------------------|-------------------|--------------------|------------------|
 | Date and Time              | Date Only         | datetime           | date             |
 | Date and Time              | Date and Time     | datetime           | datetime         |

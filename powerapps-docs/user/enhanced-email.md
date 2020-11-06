@@ -1,13 +1,21 @@
 ---
-title: "Preview  Send email using the enhanced email experience in model-driven apps | MicrosoftDocs"
-description: "Use the enhanced email experience to compose an email without leaving the context of what you are working on."
-ms.date: 04/09/2020
-ms.service:
-  - "dynamics-365-sales"
-ms.topic: article
-author: shubhadaj
-ms.author: shujoshi
+title: "Send email using the enhanced email experience in model-driven apps| MicrosoftDocs"
+description: Use the enhanced email experience to compose an email without leaving the context of what you are working on.
+author: mduelae
 manager: annbe
+ms.service: powerapps
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 04/09/2020
+ms.author: shujoshi
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Send email using the enhanced email experience

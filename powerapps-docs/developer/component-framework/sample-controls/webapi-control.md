@@ -51,16 +51,16 @@ export class TSWebAPI
   private _context: ComponentFramework.Context<IInputs>;
   // Name of table to use for example Web API calls performed by this control
   private static _entityName: string = "account";
-  // Required field on _entityName of type 'single line of text'
-  // Example Web API calls performed by example custom control will set this field for new record creation examples
+  // Required column on _entityName of type 'single line of text'
+  // Example Web API calls performed by example custom control will set this column for new record creation examples
   private static _requiredAttributeName: string = "name";
-  // Value the _requiredAttributeName field will be set to for new created records
+  // Value the _requiredAttributeName column will be set to for new created records
   private static _requiredAttributeValue: string =
     "Web API Custom Control (Sample)";
-  // Name of currency field on _entityName to populate during record create
-  // Example Web API calls performed by example custom control will set and read this field
+  // Name of currency column on _entityName to populate during record create
+  // Example Web API calls performed by example custom control will set and read this column
   private static _currencyAttributeName: string = "revenue";
-  // Friendly name of currency field (only used for control UI - no functional impact)
+  // Friendly name of currency column (only used for control UI - no functional impact)
   private static _currencyAttributeNameFriendlyName: string = "annual revenue";
   // Flag if control view has been rendered
   private _controlViewRendered: Boolean;
@@ -95,7 +95,7 @@ export class TSWebAPI
     container.appendChild(this._container);
   }
   /**
-   * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+   * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -134,7 +134,7 @@ export class TSWebAPI
       "Click to create " + TSWebAPI._entityName + " record"
     );
     this._container.appendChild(headerDiv);
-    // Create button 1 to create record with revenue field set to 100
+    // Create button 1 to create record with revenue column set to 100
     let value1: string = "100";
     this._createEntity1Button = this.createHTMLButtonElement(
       this.getCreateRecordButtonLabel(value1),
@@ -142,7 +142,7 @@ export class TSWebAPI
       value1,
       this.createButtonOnClickHandler.bind(this)
     );
-    // Create button 2 to create record with revenue field set to 200
+    // Create button 2 to create record with revenue column set to 200
     let value2: string = "200";
     this._createEntity2Button = this.createHTMLButtonElement(
       this.getCreateRecordButtonLabel(value2),
@@ -150,7 +150,7 @@ export class TSWebAPI
       value2,
       this.createButtonOnClickHandler.bind(this)
     );
-    // Create button 3 to create record with revenue field set to 300
+    // Create button 3 to create record with revenue column set to 300
     let value3: string = "300";
     this._createEntity3Button = this.createHTMLButtonElement(
       this.getCreateRecordButtonLabel(value3),
@@ -268,15 +268,15 @@ export class TSWebAPI
    * @param event : click event
    */
   private createButtonOnClickHandler(event: Event): void {
-    // Retrieve the value to set the currency field to from the button's attribute
+    // Retrieve the value to set the currency column to from the button's column
     let currencyAttributeValue: Number = parseInt(
       event.srcElement!.attributes.getNamedItem("buttonvalue")!.value
     );
     // Generate unique record name by appending timestamp to _requiredAttributeValue
     let recordName: string =
       TSWebAPI._requiredAttributeValue + "_" + Date.now();
-    // Set the values for the attributes we want to set on the new record
-    // If you want to set additional attributes on the new record, add to data dictionary as key/value pair
+    // Set the values for the column we want to set on the new record
+    // If you want to set additional columns on the new record, add to data dictionary as key/value pair
     var data: any = {};
     data[TSWebAPI._requiredAttributeName] = recordName;
     data[TSWebAPI._currencyAttributeName] = currencyAttributeValue;
@@ -288,7 +288,7 @@ export class TSWebAPI
         // Callback method for successful creation of new record
         // Get the ID of the new record created
         let id: string = response.id;
-        // Generate HTML to inject into the result div to showcase the fields and values of the new record created
+        // Generate HTML to inject into the result div to showcase the columns and values of the new record created
         let resultHtml: string =
           "Created new " + TSWebAPI._entityName + " record with below values:";
         resultHtml += "<br />";
@@ -361,7 +361,7 @@ export class TSWebAPI
    * @param event : click event
    */
   private calculateAverageButtonOnClickHandler(): void {
-    // Build FetchXML to retrieve the average value of _currencyAttributeName field for all _entityName records
+    // Build FetchXML to retrieve the average value of _currencyAttributeName column for all _entityName records
     // Add a filter to only aggregate on records that have _currencyAttributeName not set to null
     let fetchXML: string =
       "<fetch distinct='false' mapping='logical' aggregate='true'>";
@@ -408,8 +408,8 @@ export class TSWebAPI
    * @param event : click event
    */
   private refreshRecordCountButtonOnClickHandler(): void {
-    // Generate OData query string to retrieve the _currencyAttributeName field for all _entityName records
-    // Add a filter to only retrieve records with _requiredAttributeName field which contains _requiredAttributeValue
+    // Generate OData query string to retrieve the _currencyAttributeName column for all _entityName records
+    // Add a filter to only retrieve records with _requiredAttributeName column which contains _requiredAttributeValue
     let queryString: string =
       "?$select=" +
       TSWebAPI._currencyAttributeName +
@@ -431,9 +431,9 @@ export class TSWebAPI
           let count3: number = 0;
           // Loop through each returned record
           for (let entity of response.entities) {
-            // Retrieve the value of _currencyAttributeName field
+            // Retrieve the value of _currencyAttributeName column
             let value: Number = entity[TSWebAPI._currencyAttributeName];
-            // Check the value of _currencyAttributeName field and increment the correct counter
+            // Check the value of _currencyAttributeName column and increment the correct counter
             if (value == 100) {
               count1++;
             } else if (value == 200) {
@@ -507,7 +507,7 @@ export class TSWebAPI
   }
   /**
    * Helper method to generate Label for Create Buttons
-   * @param entityNumber : value to set _currencyAttributeNameFriendlyName field to for this button
+   * @param entityNumber : value to set _currencyAttributeNameFriendlyName column to for this button
    */
   private getCreateRecordButtonLabel(entityNumber: string): string {
     return (
@@ -519,7 +519,7 @@ export class TSWebAPI
   }
   /**
    * Helper method to generate ID for Create Button
-   * @param entityNumber : value to set _currencyAttributeNameFriendlyName field to for this button
+   * @param entityNumber : value to set _currencyAttributeNameFriendlyName column to for this button
    */
   private getCreateButtonId(entityNumber: string): string {
     return "create_button_" + entityNumber;
@@ -528,7 +528,7 @@ export class TSWebAPI
    * Helper method to create HTML Button used for CreateRecord Web API Example
    * @param buttonLabel : Label for button
    * @param buttonId : ID for button
-   * @param buttonValue : value of button (attribute of button)
+   * @param buttonValue : value of button (column of button)
    * @param onClickHandler : onClick event handler to invoke for the button
    */
   private createHTMLButtonElement(
@@ -619,17 +619,17 @@ To change the default configuration to any table or column, update the below con
   private static _currencyAttributeName: string = "revenue";  
  ```
 
-The `createRecord` method renders three buttons, which allows you to create an account record with the revenue column set to different values (100, 200, 300).
+The `createRecord` method renders three buttons, which allows you to create an account row with the revenue column set to different values (100, 200, 300).
 
-When you click one of the create buttons, the button’s `onClick` event handler checks the value of the button clicked and use the web API action to create an account record with the revenue column set to the button’s value. The name column of the account record will be set to `Web API code component (Sample)` with a random `int` appended to the end of the string. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
+When you click one of the create buttons, the button’s `onClick` event handler checks the value of the button clicked and use the web API action to create an account row with the revenue column set to the button’s value. The name column of the account row will be set to `Web API code component (Sample)` with a random `int` appended to the end of the string. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
  
-The `deleteRecord` method renders a button which opens a lookup dialog when clicked. The lookup dialog allows you to select the account record you want to delete. Once an account record is selected from the lookup dialog, it is passed to the `deleteRecord` to delete the record from the database. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
+The `deleteRecord` method renders a button which opens a lookup dialog when clicked. The lookup dialog allows you to select the account row you want to delete. Once an account row is selected from the lookup dialog, it is passed to the `deleteRecord` to delete the row from the database. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
 
-The FetchXML `retrieveMultiple` method renders a button in the code component. `onClick` of this button, FetchXML is generated and passed to the `retrieveMultiple` function to calculate the average value of the revenue column for all the accounts records. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
+The FetchXML `retrieveMultiple` method renders a button in the code component. `onClick` of this button, FetchXML is generated and passed to the `retrieveMultiple` function to calculate the average value of the revenue column for all the accounts rows. The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
 
-The OData `retrieveMultiple` method renders a button in the code component. `onClick` of this button, OData string is generated and passed to the `retrieveMultiple` function to retrieve all account records with a name column that is like ‘code component Web API (Sample)’, which is true for all account records created by this code component example.  
+The OData `retrieveMultiple` method renders a button in the code component. `onClick` of this button, OData string is generated and passed to the `retrieveMultiple` function to retrieve all account rows with a name column that is like ‘code component Web API (Sample)’, which is true for all account rows created by this code component example.  
 
-On successful retrieve of the records, the code component has logic to count how many account records have the revenue column set to 100, 200 or 300, and display this count into an odata status container div on the code component.  The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
+On successful retrieve of the rows, the code component has logic to count how many account rows have the revenue column set to 100, 200 or 300, and display this count into an odata status container div on the code component.  The callback method from the web API call injects the result of the web API call (success or failure) into the custom control’s result div.  
 
 ### Related topics
 

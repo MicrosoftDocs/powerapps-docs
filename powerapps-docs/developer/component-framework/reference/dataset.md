@@ -34,7 +34,7 @@ This method accept two parameters.
 |Name|Type|Required|Description|
 |------|-----|------|-----|
 |name|`string`|Yes|Column name to be added to the dataset.|
-|entityAlias|`string`|No| Entity alias for which the column name needs to be added.|
+|entityAlias|`string`|No| Table alias for which the column name needs to be added.|
 
 ### columns
 
@@ -62,7 +62,7 @@ The column filtering for the current query.
 
 ### linking
 
-Defines the linked entity information.
+Defines the linked table information.
 
 **Type**: [Linking](linking.md)
 
@@ -80,13 +80,13 @@ Pagination status and actions.
 
 ### records
 
-Map of IDs to the full record object.
+Map of IDs to the full row object.
 
 **Type**: [EntityRecord](entityrecord.md)
 
 ### sortedRecordIds
 
-IDs of the records in the dataset, order by the query response result.
+IDs of the rows in the dataset, order by the query response result.
 
 **Type**: `string[]`
 

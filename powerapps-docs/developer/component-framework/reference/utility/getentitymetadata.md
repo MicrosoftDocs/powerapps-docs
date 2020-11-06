@@ -29,8 +29,8 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|entityName|`String`|Yes|The logical name of the entity.|
-|attributes|`String[]`|No|The attributes to get metadata for.|
+|entityName|`String`|Yes|The logical name of the table.|
+|attributes|`String[]`|No|The columns to get metadata for.|
 
 ## Return Value
 

@@ -123,7 +123,7 @@ The next step after implementing the manifest file is to implement the component
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSLinearInputComponent
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Value of the field is stored and used inside the component
+  // Value of the column is stored and used inside the component
   private _value: number;
   // Power Apps component framework delegate which will be assigned to this object which would be called whenever any update happens.
   private _notifyOutputChanged: () => void;

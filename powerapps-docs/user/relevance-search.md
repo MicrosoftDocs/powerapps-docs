@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 9/09/2020
+ms.date: 11/04/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -19,6 +19,8 @@ search.app:
 ---
 
 # Using relevance search to search for rows
+
+!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Relevance search delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance. 
   
@@ -34,6 +36,8 @@ Relevance search brings the following enhancements and benefits:
   
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results. 
 
+- Relevance Search can comb through the text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.
+- Relevance Search enables you to search for records that are shared with you and records that you own.
     > [!NOTE]
     > - Certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify rows. Because they're ignored during search, these words are also not highlighted in results.
     > - Highlighted terms are often returned as a portion of the full value in a column because only the matched terms are highlighted.
@@ -54,26 +58,98 @@ Relevance search brings the following enhancements and benefits:
 - Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across table data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search).
   
   > [!NOTE]
-  > Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.<!--note from editor: Via style guide, it's always capital "Boolean," and it's "might" instead of "may.-->
+  > Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.
 
-## Enable relevance search
+## Turn on Relevance Search
 
-Relevance search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing relevance search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+Relevance Search needs to be enabled on by the administrator for your organization, thus allowing all users in the organization to use it. After Relevance Search is enabled, you might have to wait up to an hour or more, depending on the size of your organization before it is available in your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
-## Switch between relevance search and categorized search
+### Turn on the new Relevance Search experience 
 
-If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
+The new search experience is available as a feature setting in the Power Platform admin Center. It combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. When the **Use new search experience** setting is turned on, it will enable the new experience to all the apps in the environment.
 
-1. To switch between search types, on the navigation bar, select **Search**.
+ > [!div class="mx-imgBorder"]
+ > ![Turn on new search experience](media/admin-enable-search.jpg) 
 
-2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
+> [!NOTE]
+> The **Use new search experience** feature setting is only available for environments where Relevance Search is already turned on. For environments where Relevance Search has never been not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default.
+
+## Use the new Relevance Search experience 
+
+The new search experience compliments the performance and intelligence of Relevance Search service and is intuitive and easy to use. 
+
+### Prominent search bar
+
+The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
+
+> [!div class="mx-imgBorder"]
+> ![Search box on header](media/new-search-exp.png)
+
+
+### No search required to see recent records
+
+Immediately see the records that you accessed recently when you click inside the search box.
+
+![Suggested search results on first click](media/relevance-search-first-click.gif) 
+
+### See recent records and searches
+
+Before you even start typing in the search box, you will see any recent searches and recently accessed records in combined view to help with your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
+
+> [!div class="mx-imgBorder"]
+> ![Legend for new search experience](media/legend-for-new-exp.png) 
+
+Legend
+
+1. **Recent searches**: Shows your recent searches.
+2. **Recently accessed records**:  Shows recently accessed records that are grouped by entity type.
+
+
+### View quick suggestions
+
+View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary field of an entity record, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
+
+![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
+
+### Search results page
+
+Search results are ranked and grouped by entity, with more fields that are displayed to help distinguish records and filter to take further action.
+
+The **Top results** tab displays the top 20 results for the search term, with records grouped by entity type.
+
+The full result set is grouped by entity, with the entity type displayed as a horizontal list of tabs along the top of the screen.
+
+Each of the tabs lets you drill into a specific entity type, with the filter panel updating to show the set of facets and filters configured for that entity.
+
 
    > [!div class="mx-imgBorder"]
-   > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
-    
-## Set a default search experience
+   > ![Legend the search results page](media/legend-for-new-exp-2.png) 
 
-If your organization has turned on both search options, you can select a default search experience in your personal settings.
+Legend
+
+1. **Top results**: Show records that best matches the search query.
+2. **Record type**: To narrow your search results to a specific page (entity), select the page (entity) tab.
+3. **Name**: Shows the name of the record.
+4. **Created on**: Shows when the record was created.
+5. **Show more**: Select to show more results.
+6. **Filters**: Refine the search results by using filters. Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search you can filter by record type, owner, created on, and modified on.
+7. **Clear all**: Select to clear all the filters. 
+8. **Owner**: Select your user name to find records that you are the owner of.
+9. **Clear**: Only clears the **Owner** filter. Note, you only see this filter when the **Owner** filter is selected.
+10. **Modified on**: Filter the search results by when the record was last modified.
+11. **Created on**: Select a time range to find records created in the selected time range.
+
+### Feedback link
+
+On the search results page, the **Did you find what you were looking for? Yes No** feedback is collected in our product telemetry. Search parameters like the query text that user enters into the search box is not collected irrespective of the response to the question. We only **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. Currently there isn't an option to disable the feedback question prompt.
+
+   > [!div class="mx-imgBorder"]
+   > ![Feedback link](media/feedbacklink.png "Feedback link")  
+
+
+## Set default search experience
+
+If your organization has turned on both Relevance Search and categorized search, you can select a default search experience in your personal settings.
 
 1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
   
@@ -85,12 +161,36 @@ If your organization has turned on both search options, you can select a default
    > [!div class="mx-imgBorder"]
    > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
 
-## Start a search 
+
+> [!IMPORTANT]
+> If you have the new Relevance Search experience available but you set your default search experience to Categorized Search, then the old Relevance Searchh experience and categorized is available. To use the new Relevance Search experience, you must set your default search experience to, Relevance Search. 
+
+
+## Use the old Relevance Search experience 
+
+If you're organization has Relevance Search enabled but your administrator has not turned on the [new relevance search experience](https://docs.microsoft.com/powerapps/user/relevance-search#use-the-new-relevance-search-experience) then you will see the old search experience.
+
+
+### Switch between the old Relevance Search experience and Categorized Search
+
+If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
+
+1. To switch between search types, on the navigation bar, select **Search**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Search button on the commmandbar](media/commandbar-search-button.png) 
+
+2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
+   
+### Start a search using the old Relevance Search experience
  
 1.  From the top nav bar, select **Search**.  
 
     > [!div class="mx-imgBorder"]
-    > ![Global Search Button](media/global-search-button.png "Global search") 
+    > ![Global Search Button](media/commandbar-search-button.png "Global search") 
   
 2.  Enter your search words in the search box, and then select **Search**.
 
@@ -127,9 +227,9 @@ Search results that are found in email attachments or appointment tables are sho
   
 When you refine by row type, the facet scope switches to the selected table, and up to four facets that are specific to the table are shown. For example, if you select the Account table, you'll see the **Primary Contact** facet in addition to the global facets.  
   
-In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator or customer has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
+In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
   
-### Text-based facets
+#### Text-based facets
 
 All lookups, choices, and row types are text-based facets. For example, the text-based facet Owner consists of a list of column values and their corresponding counts.  
  
@@ -138,7 +238,7 @@ All lookups, choices, and row types are text-based facets. For example, the text
   
 Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only rows where the column has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all rows where the owner is Jim Glynn. When you select a lookup or option set facet value, search results are filtered to only include rows with the value that you specified.  
   
-### Date and Time facets
+#### Date and Time facets
 
 Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
  
