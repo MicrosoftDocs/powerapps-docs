@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Overview
+# Troubleshoot model-driven apps form issues
 
 Troubleshooting issues in Unified Interface is very important when you're working with forms and trying to fix the issues that happen when loading a form, running a script, working with events, or saving data. 
 
@@ -25,7 +25,7 @@ This article helps fix some common issues that you might encounter while working
 Use the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) to open up form events.
 
 > [!IMPORTANT]
-> - The tools mentioned in this article are only designed for troubleshooting purposes and are not intended to be used in the production scenarios. For example, the URL flags that disable some form components should only be used to narrow down the source of the issue, and should not be leveraged to permanently disable these form components when using the app in your daily operations.
+> - The workarounds mentioned in this article are only designed for troubleshooting purposes and are not intended to be used in the production scenarios. For example, the URL flags that disable some form components should only be used to narrow down the source of the issue, and should not be leveraged to permanently disable these form components when using the app in your daily operations.
 > - The tools affect the current user session unless otherwise called out (such as the browser tab that's accessing the model-driven app). They do not change system customizations or affect any other users or sessions. Once the current session is closed, the effect is no longer applied.
 > - Most of the tools are available in production environments. Some of the tools mentioned in the guide may not have been deployed to your organization yet as new tools are added periodically.
 > - The tools listed in this article can be used independently to troubleshoot a certain category of issues.
@@ -144,7 +144,7 @@ You see unexpected behaviors when you open a form. Some of the common issues inc
 
 - Controls are not shown/hidden.
 
-Any of the above behavior appears after the form is opened,for example, you see a value or control for a second, and then the value changes or the control disappears.
+Any of the above behavior appears after the form is opened, for example, you see a value or control for a second, and then the value changes or the control disappears.
 
 There are many possible causes for the unexpected behaviors when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) script that runs synchronously or asynchronously to change the field/control behavior. To determine if your script is causing the issue you can disable the form handlers using the URL parameters by appending `**&flags=DisableFormHandlers=true**` flag at the end of your app URL.
 
@@ -178,68 +178,60 @@ The below sample event shows the call stack of the unsupported script (the call 
 > [!div class="mx-imgBorder"]
 > ![Unsupported client api method](media/unsupported-client-api-method.png "Unsupported client api method")
 
-This is caused by unsupported scripting. Follow up with the script owner to fix the problematic script code.
-
 ## **Save in Progress** error dialog
 
-When the form saves, you see the **Save in Progress** error dialog. This error occurs when the form [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is triggered before the previous [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is complete. This is not supported and the error dialog is by design because calling the `OnSave` event before the previous `OnSave` event is complete would cause recursive save loops with unintended behaviors.
+Sometimes when you save the form, you see the **Save in Progress** error dialog. This error occurs when the form [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is triggered before the previous [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is completed. This is not supported and the error dialog is by design because calling the `OnSave` event before the previous `OnSave` event is complete would cause recursive save loops with unintended behaviors.
 
 A typical cause of this error is the script that calls `save]()` in [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) handler. Another possible cause is the concurrent `save()` calls in `setTimeout()`, and which could cause the error dialog to intermittently show up, depending on whether the prior `save()` call is completed when another save() call is made.
 
 **Resolution**:
 
-Below is a sample Form Checker monitor event (the callstack has been modified for demonstration purpose). The callstack tells what exact web resource,
-function, line and the row number is causing the error. Form Checker won't be able to detect the error when this issue is not reproducing.
+Below is a sample monitor event (the callstack has been modified for demonstration purpose). The callstack tells what exact web resource,
+function, line and the row number is causing the error. Form Checker won't be able to detect the error when the issue cannot be reproduced.
 
 > [!div class="mx-imgBorder"]
 > ![Save in progress error](media/save-in-progress-error.png "Save in progress error")
 
 ## The form/record is not saved when you try to save the form
 
-A very common cause is an [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) handler that has called `executionContext.getEventArgs().preventDefault()` method to cancel the save operation.
+A very common cause is an [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event handler that calls the `executionContext.getEventArgs().preventDefault()` method to cancel the save operation.
 
 **Resolution**:
 
-Below is a sample Form Checker monitor event to explain why the save is canceled that's not explicit enough from the form UI itself:
+Below is a sample monitor event to explain why the save is canceled that's not explicit enough from the form UI itself:
 
 > [!div class="mx-imgBorder"]
 > ![Record is not saved error](media/record-not-saved-error.png "Record is not saved error")
 
 ## Form script errors
 
-If you see a form script error during form OnLoad, [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave), OnChange, business rule execution, or other events, the error dialog itself may not contain sufficient information to troubleshoot.
+If you see a form script error during form [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload), [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave), [OnChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/attribute-onchange), business rule execution, or other events, the error dialog itself may not contain sufficient information to troubleshoot.
 
 **Resolution**:
 
-For example, the customer has an onload handler, say `onload(controlName)`, and they checked "Pass execution context as first parameter" option in the event handler editor in the form designer. In their code:
+For example, the customer has an onload handler, say `onload(controlName)`, and they checked **Pass execution context as first parameter** option in the event handler editor in the form designer. In their code:
 
 ```javascript
 function onload(controlName)
 {
-  Xrm.Page.getControl(controlName);
+  formContext.getControl(controlName);
 
 }
 ```
 
-This causes a problem because the first parameter for the onload function is executionContext, however, the script incorrectly uses it as the control name for getControl(). Client API code thus throws this error:
+This causes a problem because the first parameter for the `OnLoad` function is `executionContext`, however, the script incorrectly uses it as the control name for the `getControl()` method. Client API code throws the following error:
 
 > [!div class="mx-imgBorder"]
 > ![Form script error](media/form-script-error.png "Form script error")
 
-Once you launch Form Checker, you'll be able to see more details including the full callstack (the callstack has been modified for demonstration purpose) because callstack may be truncated if you're not in a monitor session which discloses the exact web resource and code location that causes this error.
+Once you launch Form Checker, you'll be able to see more details including the full callstack (the callstack has been modified for demonstration purpose) because callstack may be truncated if you're not in a monitor session which discloses the exact web resource and code location that causes the error.
 
 > [!div class="mx-imgBorder"]
 > ![Launch form checker](media/see-form-checker-for-details.png "Launch form checker")
 
 ## Form freezes or is very slow or throws unexplained errors
 
-- Form loads very slow
-
-- Form throws unexplainable errors
-
-- Form throws **Web resource method does not exist** script error
-
-There are many possible reasons for a form to freeze or is slow, or throws an error that is not a typical script error dialog. Some of the many possible reasons are:
+There are many possible reasons for a form to freeze, loads very slow, throws **Web resource method does not exist** script error, or throws an error that is not a regular script error dialog. Some of the possible reasons are:
 
 1. It's not only slow or freezes on forms, it also occurs in other places such as sitemap/navigation pane, grids, or dashboards
 
@@ -254,8 +246,6 @@ There are many possible reasons for a form to freeze or is slow, or throws an er
 6. Custom plugins
 
 7. Business Process Flow errors
-
-This troubleshooting guide details these reasons which would help narrow down the troubleshooting scope.
 
 **Resolution**:
 
@@ -272,11 +262,11 @@ Also, check for and fix synchronous network requests as described here:
 
 ## Business rule or custom script is not working
 
-This can happen if a business rule/custom script used to work in web client, stopped working in Unified Interface. One of the main reasons this can occur is when a business rule or script in Unified Interface is referencing a control that is not available in the Unified Interface.
+This issue happens if a business rule/custom script used to work in the web client and stopped working in Unified Interface. One of the main reasons for this error to occur is when a business rule or script in Unified Interface is referencing a control that is not available in the Unified Interface.
 
-An example of a common issue where this can happen is when a composite control is included in a script that exists in web client, but in the Unified Interface the composite control is broken down into parts and is stored this way. For example, if a field `fullname` is part of the business rule or custom script, the fields `firstname`, `middlename`, or `lastname` should be used instead.
+An example of a common issue where this can happen is when a composite control is included in a script that exists in web client, but in the Unified Interface the composite control is broken down into parts and is stored different way. For example, if the field `fullname` is part of the business rule or custom script in web client, the fields `firstname`, `middlename`, or `lastname` should be used in Unified Interface.
 
-Once you launch the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker), you'll be able to see more details including the composite control that is causing the problem, the fields that can be used in the business rule or custom script instead, and a full callstack (the callstack has been modified for
+You can use the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) to see more details including the composite control that is causing the problem, the fields that can be used in the business rule or custom script instead, and a full callstack (the callstack has been modified for
 demonstration purpose).
 
 > [!div class="mx-imgBorder"]
@@ -292,21 +282,20 @@ Unified Interface.
 > [!div class="mx-imgBorder"]
 > ![Related menu](media/related-menu-error.png "Related menu")
 
-There are also a few sources where a record can be included as an option for the related menu tab. The following example includes details the indicate the label "Activities" in account form related menu comes from the related entity's plural display name.
+There are also a few sources where a record can be included as an option for the related menu tab. The following example includes details that indicate the label "Activities" in account form related menu comes from the related entity's plural display name.
 
 > [!div class="mx-imgBorder"]
 > ![Related menu details](media/related-menu-error-details.png "Related menu details")
 
-You will need to follow up with the owner of the related menu item indicated in the Related Menu event in the monitoring tool.
 
 ## Why a control is disabled/enabled/visible/hidden
 
-There're many possible reasons why a control is disabled or hidden when the form loads. In the example below, you can use the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) to view the "FormControls" event will include details on the initial control state as demonstrated below
+There're many possible reasons why a control is disabled or hidden when the form loads. In the example below, you can use the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) to view the `FormControls` event will include details on the initial control state as demonstrated below
 
 > [!div class="mx-imgBorder"]
 > ![Forms controls check](media/form-controls-check.png "Form controls check")
 
-Another example is a "ControlStateChange" operation that explains why a control's disabled/visible state is changed by client Api or Business Rules. This can occur during a form load or triggered after the form is loaded using an onchange handler (the callstack has been modified for demonstration purpose). The details in the callstack will include the web resource, function, and line and row number causing the control state change.
+Another example is a `ControlStateChange` operation that explains why a control is in disabled/visible state is changed by client Api or Business Rules. This can occur during a form load or triggered after the form is loaded using an onchange handler (the callstack has been modified for demonstration purpose). The details in the callstack will include the web resource, function, and line and row number causing the control state change.
 
 > [!div class="mx-imgBorder"]
 > ![Control state changed](media/control-state-changed.png "Control state changed")
