@@ -57,45 +57,50 @@ Responding to customer feedback and data from user research, effective November 
 
 ## Dynamics 365 and Common Data Service
 
-Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Service or Dynamics 365 Talent, also use the Common Data Service to store and secure data used by the applications. This enables you to build apps using Power Apps and the Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration.
+Dynamics 365 applications&mdash;such as Dynamics 365 Sales, Dynamics 365 Customer Service, or Dynamics 365 Talent&mdash;also use Common Data Service to store and secure the data they use. This enables you to build apps by using Power Apps and Common Data Service directly against your core business data, which is already used within Dynamics 365, without the need for integration.
 
-* **Build Apps against your Dynamics 365 Data** &ndash; Build apps quickly against your business data within Power Apps or using the Pro Developer SDK.
-* **Manage reusable Business logic and rules** &ndash; Business Rules and logic already defined in your Dynamics 365 tables are applied to your Power Apps to ensure data consistency regardless of how your users are accessing the data or through which app.
-* **Reusable skills across Dynamics 365 and Power Apps** &ndash; Users with skills previously in Power Apps or Dynamics 365 can now leverage those skills across the Common Data Service platform. Creating tables, forms, charts, etc are now common across your applications.
+- **Build apps against your Dynamics 365 data** &ndash; Build apps quickly against your business data within Power Apps or by using the extensible platform that lets pro developers programmatically interact with data and metadata, apply business logic, create custom connectors, and integrate with external data.
+
+- **Manage reusable business logic and rules** &ndash; Business rules and logic already defined in your Common Data Service tables are applied to apps created with Power Apps to ensure data consistency, regardless of how your users access the data or which app they use.
+
+- **Reusable skills across Dynamics 365 and Power Apps** &ndash; Users who are skilled in Power Apps or Dynamics 365 can now take advantage of those skills across the Common Data Service platform. Creating tables, forms, and charts are now common tasks you perform across your applications.
 
     > [!NOTE]
-    > Finance and Operations apps currently requires the configuration of the [Data Integrator](/power-platform/admin/data-integrator) to make your business data from Finance and Operations apps available in Common Data Service.
+    > Finance and Operations apps currently require the configuration of the [Data Integrator](/power-platform/admin/data-integrator) to make your business data from Finance and Operations apps available in Common Data Service.
 
-## Integrating Data into the Common Data Service
+## Integrating data into Common Data Service
 
-Building an app typically involves data from more than one source, while this can sometimes be done at the application level, there are also cases where integrating this data together into a common store allows for an easier app building experience, and a single set of logic to maintain and operate over the data. Common Data Service allows data to be integrated from multiple sources into a single store which can then be used in Power Apps, Power Automate, Power BI, and Power Virtual Agents along with data already available from the Dynamics 365 applications.
+Building an app typically involves data from more than one source. Although this can sometimes be done at the application level, there are cases where integrating this data into a common store allows for an easier app-building experience and a single set of logic to maintain and operate over the data. Common Data Service allows data to be integrated from multiple sources into a single store, which can then be used in Power Apps, Power Automate, Power BI, and Power Virtual Agents along with data that's already available from the Dynamics 365 applications.
 
-* **Scheduled integration with other systems** &ndash; Data which is kept within another application can be regularly synchronized with the Common Data Service to allow you to leverage other applications data in Power Apps.
-* **Transform and import data using PowerQuery** &ndash; Transforming data when importing into the Common Data Service can be done through PowerQuery from many online data sources, a common tool used across Excel and Power BI.
-* **One time import of data** &ndash; Simple import and export of Excel and CSV files can be used for a one time or infrequent import of data into the Common Data Service.
+* **Scheduled integration with other systems** &ndash; Data that's kept within another application can be regularly synchronized with Common Data Service to allow you to take advantage of data from other applications in Power Apps.
+* **Transform and import data using Power Query** &ndash; Transforming data when importing into Common Data Service can be done through Power Query&mdash;a tool commonly used across Excel and Power BI&mdash;from many online data sources.
+* **One-time import of data** &ndash; Simple import and export of Excel and CSV files can be used for a one-time (or infrequent) import of data into Common Data Service.
 
-For more information about integrating data into the Common Data Service, see [Add data to a table in Common Data Service by using Power Query](data-platform-cds-newentity-pq.md).
+For more information about integrating data into the Common Data Service, go to [Add data to a table in Common Data Service by using Power Query](data-platform-cds-newentity-pq.md).
 
 ## Interacting with tables
 When you develop an app, you can use standard tables, custom tables, or both. Common Data Service provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
-For a full list of tables, see the [table reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
+For a full list of tables, go to the [table reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
 
-You can extend the functionality of standard tables by creating one or more custom tables to store information that's unique to your organization. For more information, see [How to create a custom table](create-custom-entity.md).
+You can extend the functionality of standard tables by creating one or more custom tables to store information that's unique to your organization. More information: [How to create a custom table](create-custom-entity.md)
 
 ## Logic and validation
-tables within Common Data Service can leverage rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data within a table.
+Tables within Common Data Service can take advantage of rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data within a table.
 
-* **Business rules** validate data across multiple columns and tables and provide warning and error messages, regardless of the app used to create the data. For more information, see [Create a business rule](./data-platform-create-business-rule.md).
-* **Business process flows** guide users to ensure they enter data consistently and follow the same steps every time. Business process flows are currently only supported for Model driven apps. For more information, see [Business process flows overview](/dynamics365/customer-engagement/customize/business-process-flows-overview).
-* **Workflows** allow you to automate business processes without user interaction. For more information, see [Workflows overview](/dynamics365/customer-engagement/customize/workflow-processes).
-* **Business logic with code** supports advanced developer scenarios to extend the application directly through code. For more information, see [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md).
+- **Business rules** validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule](./data-platform-create-business-rule.md)
+
+- **Business process flows** guide users to ensure they enter data consistently and follow the same steps every time. Business process flows are currently only supported for model-driven apps. More information: [Business process flows overview](/power-automate/business-process-flows-overview)
+
+- **Workflows** allow you to automate business processes without user interaction. More information: [Workflows overview](/powerapps/maker/common-data-service/overview-realtime-workflows)
+
+- **Business logic with code** supports advanced developer scenarios to extend the application directly through code. More information: [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md)
 
 ## Security
-Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) 
+Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) in the Power Platform admin guide 
 
 ## Developer capabilities
-In addition to the features available through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service also includes features for developers to programmatically access metadata and data to create tables and business logic, as well as interact with data. For more information, see [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)
+In addition to the features available through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service includes features for developers to programmatically access metadata and data to create tables and business logic, in addition to interacting with data. More information: [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)
 
 ## Next steps
 To get started using Common Data Service:
