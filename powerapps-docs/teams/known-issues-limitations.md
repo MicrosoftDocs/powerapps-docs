@@ -1,5 +1,5 @@
 ---
-title: Known issues and limitations for Project Oakdale | Microsoft Docs
+title: Known issues and limitations for Dataverse for Teams | Microsoft Docs
 description: Provides an overview of known issues and limitations when using Power Apps with Microsoft Teams.
 author: matthewbolanos
 ms.service: powerapps
@@ -11,7 +11,7 @@ ms.reviewer: tapanm
 ---
 # Known issues and limitations
 
-This article provides details about the known issues and limitations when using [**Project Oakdale environments**](/power-platform/admin/about-teams-environment) during the preview release.
+This article provides details about the known issues and limitations when using [**Dataverse for Teams environments**](/power-platform/admin/about-teams-environment) during the preview release.
 
 ## Additional components
 
@@ -36,16 +36,16 @@ Use one of the following options to play an app:
 
 ## Government Community Cloud (GCC)
 
-Project Oakdale currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
+Dataverse for Teams currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
 
 ## Hidden membership groups
 
-Project Oakdale doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options). You'll receive the following error when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
+Dataverse for Teams doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options). You'll receive the following error when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
 
 `Existing limits on this team` <br>
 `You're unable to continue due to an administrative setting on this team. You can try again with another team.`
 
-The group may have hidden membership enabled by your administrator. Try using Project Oakdale on a new Teams team, an existing team that does not have hidden membership enabled, or contact your administrator.
+The group may have hidden membership enabled by your administrator. Try using Dataverse for Teams on a new Teams team, an existing team that does not have hidden membership enabled, or contact your administrator.
 
 ## Localization
 

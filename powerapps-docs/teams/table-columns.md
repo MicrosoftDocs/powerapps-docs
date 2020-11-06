@@ -1,6 +1,6 @@
 ---
-title: Work with Project Oakdale table columns | Microsoft Docs
-description: Explains how to create and use Project Oakdale table columns.
+title: Work with Dataverse for Teams table columns | Microsoft Docs
+description: Explains how to create and use Dataverse for Teams table columns.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,11 +14,11 @@ ms.reviewer: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-With the exception of the Customer field, all field types in Common Data Service are available in Project Oakdale as *columns*. This article covers the content you'll need for working with table columns in Project Oakdale.
+With the exception of the Customer field, all field types in Dataverse are available in Dataverse for Teams as *columns*. This article covers the content you'll need for working with table columns in Dataverse for Teams.
 
-Notice that the currency feature will always use the default currency for the country that was selected during Project Oakdale environment creation. This can't be changed, and additional transaction currencies or exchange rates can't be added. However, you can upgrade from Project Oakdale to Common Data Service for full currency functionality.
+Notice that the currency feature will always use the default currency for the country that was selected during Dataverse for Teams environment creation. This can't be changed, and additional transaction currencies or exchange rates can't be added. However, you can upgrade from Dataverse for Teams to Dataverse for full currency functionality.
 
-For more information about the columns available, see these Common Data Service articles:
+For more information about the columns available, see these Dataverse articles:
 
 - [Fields overview](../maker/common-data-service/fields-overview.md)
 - [Create and edit global option sets overview](../maker/common-data-service/create-edit-global-option-sets.md)
@@ -33,17 +33,17 @@ For more information about the columns available, see these Common Data Service 
     > [!div class="mx-imgBorder"] 
     > ![Create a table column](media/create-table-column.png "Create a table column")
 
-The rest of the process to add and manage columns is the same as in Common Data Service, which is documented in these articles:
-- [Create and edit fields for Common Data Service using Power Apps portal](../maker/common-data-service/create-edit-field-portal.md)
+The rest of the process to add and manage columns is the same as in Dataverse, which is documented in these articles:
+- [Create and edit fields for Dataverse using Power Apps portal](../maker/common-data-service/create-edit-field-portal.md)
 - [Manage custom fields in an entity](../maker/common-data-service/data-platform-manage-fields.md)
 
 ## Choice columns
 
-In Project Oakdale, choices can only be created as a column within a table. Creating choices is otherwise the same as creating an option set in Common Data Service. More information: [Create an Option set](../maker/common-data-service/custom-picklists.md)
+In Dataverse for Teams, choices can only be created as a column within a table. Creating choices is otherwise the same as creating an option set in Dataverse. More information: [Create an Option set](../maker/common-data-service/custom-picklists.md)
 
 ## Calculated and rollup columns
 
-The calculated columns and rollup columns that are available in Project Oakdale are equivalent to what's available in Common Data Service. More information: [Define calculated fields to automate manual calculations](../maker/common-data-service/define-calculated-fields.md) and [Define rollup fields that aggregate values](../maker/common-data-service/define-rollup-fields.md)
+The calculated columns and rollup columns that are available in Dataverse for Teams are equivalent to what's available in Dataverse. More information: [Define calculated fields to automate manual calculations](../maker/common-data-service/define-calculated-fields.md) and [Define rollup fields that aggregate values](../maker/common-data-service/define-rollup-fields.md)
 
 ### See also
 

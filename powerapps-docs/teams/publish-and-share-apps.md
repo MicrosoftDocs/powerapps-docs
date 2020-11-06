@@ -70,7 +70,7 @@ permissions. If you are not an owner, the **Manage permission** and **Share with
 
 ### Assign table permissions
 
-By default, the **Colleagues with access** role has no access to the data inside any of the custom tables you built using Project Oakdale. If you would like users outside of your team to access this data, you'll need to change the default access to one of these four permission sets:
+By default, the **Colleagues with access** role has no access to the data inside any of the custom tables you built using Dataverse for Teams. If you would like users outside of your team to access this data, you'll need to change the default access to one of these four permission sets:
 
 - **Full access** – Allows end users to see and edit all records in the table.
 
