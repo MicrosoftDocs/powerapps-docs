@@ -109,7 +109,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
 
-    :::image type="content" source="/media/geospatial/select-excel.png" alt-text=" ":::
+    :::image type="content" source="media/geospatial/select-excel.png" alt-text=" ":::
 
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
