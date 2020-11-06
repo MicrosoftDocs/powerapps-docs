@@ -191,12 +191,12 @@ To manually connect to the new data:
 
     ![Edit the formula](media/edit-formula.png "Edit the formula")
 
-    For example, to change from using *MyRecipes* as the data source name for the edit form to *Recipes*, replace the name of the data source.
+    For example, to change from using *Instructions* as the data source name for the edit form to *Recipes*, replace the name of the data source.
 
     Change from:
 
     ```powerapps-dot
-    Remove(NewRecipes, selectedRecord); If(IsEmpty(Errors(NewRecipes, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(NewRecipes)););
+    Remove(Instructions, selectedRecord); If(IsEmpty(Errors(Instructions, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(Instructions)););
     ```
     Change to:
 
