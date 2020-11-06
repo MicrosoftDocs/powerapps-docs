@@ -26,6 +26,8 @@ search.app:
 ---
 # Map entity fields
  
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can map attributes between entities that have an entity relationship. This lets you set default values for a record that is created in the context of another record. 
 
 ## Easier way to create new records in model-driven apps

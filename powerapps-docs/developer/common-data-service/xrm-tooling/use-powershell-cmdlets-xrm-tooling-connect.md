@@ -3,13 +3,9 @@ title: "Use PowerShell cmdlets for XRM tooling to connect to Common Data Service
 description: "Learn how to use Powershell cmdlets for XRM tooling like Get-CrmConnection and Get-CrmOrganizations to connect to Common Data Service and retrieve organizations that the current user has access to"
 ms.custom: ""
 ms.date: 03/27/2019
-ms.reviewer: "pehecke"
+ms.reviewer: "nkrb"
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-applies_to: 
-  - "Dynamics 365 (online)"
 ms.assetid: 81816457-c963-46ca-b350-615fa75f56a7
 caps.latest.revision: 27
 author: "MattB-msft"
@@ -22,6 +18,8 @@ search.app:
   - D365CE
 ---
 # Use PowerShell cmdlets for XRM tooling to connect to Common Data Service
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 XRM tooling provides you with the following **Windows PowerShell** cmdlets that you can use to connect to Common Data Service and retrieve organizations that the current user has access to: `Get-CrmConnection` and `Get-CrmOrganizations`.  
 
@@ -147,4 +145,4 @@ Use the `Get-CrmConnection` cmdlet to connect to a Common Data Service instance.
   
 [Use XRM Tooling API to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
 [Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)<br />
-[Blog: PowerShell module for performing data operations and manipulating user and system settings in Common Data Service](https://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)
+[Blog: PowerShell module for performing data operations and manipulating user and system settings in Common Data Service](https://cloudblogs.microsoft.com/dynamics365/no-audience/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm/)

@@ -2,7 +2,7 @@
 title: "View entity data in Power BI Desktop (Preview) | MicrosoftDocs"
 description: "Learn how access and view entity data in Power BI Desktop"
 ms.custom: ""
-ms.date: 05/26/2020
+ms.date: 09/25/2020
 ms.reviewer: "matp"
 ms.service: powerapps
 author: "Mattp123"
@@ -17,7 +17,15 @@ search.app:
 ---
 # View entity data in Power BI Desktop (Preview)
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!WARNING]
+> A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is globally disabled, and we are working urgently to address the issue. 
+> A fix for the issue found is being being deployed. It will be deployed and the feature re-enabled to all public regions the first week of November. The safe deployment practice is being followed so the feature may be available in your region earlier. Thank you for your patience. 
+> 
+> While this feature is disabled, the existing Common Data Service connector still works using the import connection mode.
 
 You can use Power BI Desktop to view entities in Common Data Service. The entity
 record data that you can access from your environment is read-only. Data access
@@ -58,7 +66,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
     the browser window that appears enter your credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/power-bi-environment-signin.png)
+    > ![Sign in to connect to your environment](media/power-bi-environment-signin.png "Sign in to connect to your environment")
 
 5.  In the **SQL Server database** dialog box in Power BI Desktop, select
     **Connect**.
@@ -68,7 +76,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
     its data.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/entity-record-data-displayed.png)
+    > ![Entity records displayed example](media/entity-record-data-displayed.png "Entity records displayed example" )
 
 > [!NOTE]
 > SQL options, such as a T-SQL queries aren’t supported.

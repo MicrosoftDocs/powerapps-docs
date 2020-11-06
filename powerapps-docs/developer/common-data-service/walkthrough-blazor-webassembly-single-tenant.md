@@ -2,7 +2,7 @@
 title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service | Microsoft Docs"
 description: ""
 keywords: ""
-ms.date: 07/08/2020
+ms.date: 08/17/2020
 ms.service: powerapps
 ms.topic: article
 author: JimDaly # GitHub ID
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Use the steps in this tutorial to create a Blazor WebAssembly app that connects to the Common Data Service. The focus of this topic is to understand the necessary steps to authenticate a user with a specific Common Data Service instance and retrieve data.
 
@@ -37,7 +39,6 @@ To complete this tutorial, you must have:
 
 - Access to a [Common Data Service environment with a database](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database)
 - A Common Data Service user with a security role that provides read access to the Account and Contact entities
-- Application Administrator, Application Developer, Cloud Application Administrator, or Hybrid Identity Administrator role access to the Azure AD tenant that the Common Data Service environment uses.
 - Understanding of the C# programming language
 - Understanding of ASP.NET Core Blazor is helpful but not required
 - The latest version of Visual Studio 2019 with the **ASP.NET and web development** workload installed.
@@ -499,6 +500,7 @@ In Visual Studio, press F5 to launch the app with the code changes.
 
 ### See also
 
+[Use the Global Discovery Service from a Blazor web assembly](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/BlazorCDS)  
 [Quickstart: Blazor Server Web API sample (C#)](./webapi/quick-start-blazor-server-app.md)  
 [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
 [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)<br />

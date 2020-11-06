@@ -25,6 +25,8 @@ search.app:
 ---
 # Define calculated fields to automate manual calculations
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Use calculated fields to automate manual calculations used in your business processes. 
 
 For example, a salesperson may want to know the weighted revenue for an opportunity which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated field can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. You can accomplish all this by using Power Apps, no need to write code.  
@@ -205,7 +207,7 @@ The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functi
  
 You should be aware of certain conditions and limitations when working with calculated fields:  
   
-- Saved queries, charts, and visualizations can have a maximum of 10 unique calculated fields.  
+- [Saved queries](/powerapps/developer/common-data-service/saved-queries), charts, and visualizations can have a maximum of 10 unique calculated fields.  
 - The calculated field values are not displayed in the Outlook Client Offline mode in the tile views or on entity main forms.  
 - A maximum number of chained calculated fields is 5.  
 - A calculated field can’t refer to itself or have cyclic chains.  

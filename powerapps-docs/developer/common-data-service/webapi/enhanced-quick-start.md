@@ -23,6 +23,8 @@ search.app:
 ---
 # Enhanced quick start
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you begin this topic.
 
 ## Enable passing credentials in a connection string
@@ -66,9 +68,9 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.2" />
     </startup>
   <connectionStrings>
-    <!--Online using Office 365-->
+    <!--Online using Microsoft 365-->
     <add name="Connect"
-         connectionString="Url=https://yourorg.api.crm.dynamics.com;Username=yourname@yourorg.onmicrosoft.com;Password=y0urp455w0rd; />
+         connectionString="Url=https://yourorg.api.crm.dynamics.com;Username=yourname@yourorg.onmicrosoft.com;Password=mypassword;" />
   </connectionStrings>
 </configuration>
 ```

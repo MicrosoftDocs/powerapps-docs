@@ -17,6 +17,8 @@ search.app:
 ---
 # Web API CDSWebApiService Basic Operations Sample (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Common Data Service entity instances, using the Common Data Service Web API.  
   
 > [!NOTE]
@@ -422,6 +424,6 @@ namespace PowerApps.Samples
 [Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)
-[Web API Query Data Sample (C#)](query-data-csharp.md)<br />
-[Web API Conditional Operations Sample (C#)](conditional-operations-csharp.md)<br />
+[Web API Query Data Sample (C#)](cdswebapiservice-query-data.md)<br />
+[Web API Conditional Operations Sample (C#)](cdswebapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](functions-actions-csharp.md)

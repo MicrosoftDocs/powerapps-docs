@@ -24,6 +24,8 @@ search.app:
 ---
 # How to create and edit fields
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service fields define the individual data items that can be used to store data in an entity. Fields are sometimes called *attributes* by developers. 
   
 Before you create a custom field, evaluate whether using an existing field would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)

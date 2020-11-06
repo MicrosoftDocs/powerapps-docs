@@ -17,6 +17,8 @@ search.app:
 ---
 # Audit user access
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service support the ability to audit user access. The information that is recorded includes when the user started accessing Common Data Service and if access originated from the Common Data Service web application, Dynamics 365 for Outlook, or SDK calls to the web services.  
   
 ## Enable user access auditing  

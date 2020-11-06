@@ -2,6 +2,18 @@
   items: 
   - name: Power Apps guidance documentation
     href: index.yml
+  - name: Power Apps patterns
+    items:
+    - name: Patterns overview
+      href: patterns/overview.md
+    - name: Calculation or Transformation pattern
+      href: patterns/calculator-pattern.md
+    - name: Communication or Announcement pattern
+      href: patterns/communication-pattern.md
+    - name: Inspection or Audit pattern
+      href: patterns/inspection-pattern.md
+    - name: More patterns
+      href: patterns/more-patterns.md
   - name: Planning a Power Apps project
     items:
     - name: Introduction

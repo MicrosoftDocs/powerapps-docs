@@ -23,6 +23,8 @@ search.app:
 ---
 # Perform conditional operations using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Common Data Service provides support for a set of conditional operations that rely upon the standard HTTP resource versioning mechanism known as *ETags*.  
   
 <a name="bkmk_ETags"></a>
@@ -242,7 +244,7 @@ OData-Version: 4.0
   
 ### See also
 
-[Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)<br />
+[Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)<br />
 [Web API Conditional Operations Sample (Client-side JavaScript)](samples/conditional-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

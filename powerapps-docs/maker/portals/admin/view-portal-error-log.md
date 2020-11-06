@@ -14,6 +14,9 @@ ms.reviewer: tapanm
 
 As a portal administrator or developer, you can use Power Apps portals to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
 
+> [!TIP]
+> To learn about the roles required to perform tasks in this article, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
 ## Custom error
 
 If any server-side exception occurs in your portal, a customized error page with a user-friendly error message is shown by default. To configure the error message, see [Display a custom error message](#display-a-custom-error-message).
@@ -121,7 +124,7 @@ After developing and publishing the portal, you still need to be able to access 
 
 4. Click **Configure**.
 
-Once diagnostic logging is configured, a new **telemetry-logs** blob container is created in your Azure storage account and the logs are written into the blob files stored in the container. The following screenshot shows the **telemetry-logs** blob container in Azure storage explorer:
+Once diagnostic logging is configured, a new **telemetry-logs** blob container is created in your Azure storage account and the logs are written into the blob files stored in the container. The following screenshot shows the **telemetry-logs** blob container in Azure Storage Explorer:
 
 > [!div class=mx-imgBorder]
 > ![Azure blog storage account](../media/azure-blob-storage.png "Azure blog storage account")
@@ -186,3 +189,7 @@ Following are the screens where custom plugin errors will appear:
     - Create/Update and so on
 
 If the site setting is not present, then it will be treated as false by default and plugin errors will not render.
+
+### See also
+
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)

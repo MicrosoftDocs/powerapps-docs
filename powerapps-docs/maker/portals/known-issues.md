@@ -30,7 +30,7 @@ ms.reviewer: tapanm
 
 - Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want, you can [disable the rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) for the Common Data Service model-driven app.
 
-- Because of the ongoing compatibility issues between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with [Yahoo identity provider](./configure/configure-oauth2-settings.md#yahoo-ydn-app-settings).
+- Because of the ongoing compatibility issues between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with Yahoo identity provider.
 
 - The **Modified Date** for the app might be incorrect because these apps are pre-provisioned apps and could have been provisioned earlier.
 
@@ -58,7 +58,7 @@ ms.reviewer: tapanm
 
 - A few template pages on the Employee Self Service portal aren't able to render correct breadcrumb.
 
-- A few Power Apps portals templates, especially bound to model-driven apps in Dynamics 365, don't have default menu items as per their hierarchy of pages. The reason is that there isn't page order available in all or few of the webpages. Any portal without the display order of webpages will have this issue.
+- A few Power Apps portals templates, especially bound to customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), don't have default menu items as per their hierarchy of pages. The reason is that there isn't page order available in all or few of the webpages. Any portal without the display order of webpages will have this issue.
 
 - An error message is displayed when the page content (page copy) exceeds its limit of 65536 characters and page summary exceed its default limit of 2000 characters.
 
@@ -98,3 +98,6 @@ ms.reviewer: tapanm
     - The selection of component isn't correct and hovering on a component provides incorrect target indication.
     - Two or three column sections don't render properly in Power Apps portals Studio but works fine on the website.
 
+### See also
+
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)

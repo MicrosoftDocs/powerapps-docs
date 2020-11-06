@@ -1,5 +1,5 @@
 ---
-title: "Use of Office365 authentication with the WS-Trust security protocol (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use of Microsoft 365 authentication with the WS-Trust security protocol (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes deprecation of the WS-Trust security protocol and the authentication code changes required in applications."
 ms.custom: ""
 ms.date: 02/05/2020
@@ -16,7 +16,9 @@ search.app:
   - D365CE
 ---
 
-# Use of Office365 authentication with the WS-Trust security protocol
+# Use of Microsoft 365 authentication with the WS-Trust security protocol
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Use of the WS-Trust authentication security protocol when connecting to Common
 Data Service is no longer recommended and has been
@@ -85,7 +87,7 @@ Service.
     Password=passcode;Url=https://contosotest.crm.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
     RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;LoginPrompt=Auto"`
 
-        This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Office 365 behavior worked.
+        This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Microsoft 365 behavior worked.
 
         The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to create your own application registration in Azure Active Directory (AAD) for applications running in your tenant.<p/>
 

@@ -22,6 +22,8 @@ search.app:
 ---
 # Web API Query Data Sample (Client-side JavaScript)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample demonstrates how to perform basic query requests using the Common Data Service Web API using client-side JavaScript  
   
 > [!NOTE]
@@ -761,7 +763,7 @@ distinct=\"false\" page=\"3\" count=\"4\"> \
 [Query Data using the Web API](../query-data-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Query Data Sample](../web-api-query-data-sample.md)<br />
-[Web API Query Data Sample (C#)](query-data-csharp.md)<br />
+[Web API Query Data Sample (C#)](cdswebapiservice-query-data.md)<br />
 [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)<br />
 [Web API Basic Operations Sample (Client-side JavaScript)](basic-operations-client-side-javascript.md)<br />
 [Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)<br />

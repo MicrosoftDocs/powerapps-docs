@@ -17,6 +17,8 @@ search.app:
 ---
 # Step 3: Create an AppSource package for your app
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You must create an AppSource package (.zip file) to include your solution and demo data files along with other required files. An AppSource package consists of the following files:
 
 |File|Description|
@@ -44,7 +46,7 @@ A package lets you bundle and deploy multiple files related to your app at once.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
-    <Types xmlns="https://schemas.openxmlformats.org/package/2006/content-types">
+    <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
       <Default Extension="xml" ContentType="application/octet-stream" />
       <Default Extension="xaml" ContentType="application/octet-stream" />
       <Default Extension="dll" ContentType="application/octet-stream" />

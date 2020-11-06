@@ -2,7 +2,7 @@
 title: "Generate early-bound classes for the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "CrmSvcUtil.exe is a command-line code generation tool for use with Common Data Service. This tool generates early-bound .NET Framework  classes that represent the entity data model used by Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 09/02/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Generate early-bound classes for the Organization service
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 **CrmSvcUtil.exe** is a command-line code generation tool for use with Common Data Service. This tool generates early-bound .NET Framework  classes that represent the entity data model used by Common Data Service. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. 
 
@@ -169,6 +171,11 @@ For more information on supported tracing options see [Configure tracing for XRM
 
 ### See Also
 
-[Developer tools and resources](../developer-tools.md)<br />
-[Create an Extensions for the Code Generation Tool](extend-code-generation-tool.md)<br />
+[Late-bound and Early-bound programming using the Organization service](early-bound-programming.md)  
+[Sample: Early-bound entity operations](samples/early-bound-entity-operations.md)
+
+[Create extensions for the Code Generation Tool](extend-code-generation-tool.md)  
+[Developer tools and resources](../developer-tools.md)  
 [Download tools from NuGet](../download-tools-NuGet.md)
+
+[Create early bound entity classes with the code generation tool (CrmSvcUtil.exe)](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool) \[Dynamics 365 Customer Engagement (on-premises)\]

@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app quick create forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
-ms.date: 03/23/2020
+ms.date: 08/28/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -33,13 +33,10 @@ In this topic, you create and edit a quick create form.
   
 <a name="BKMK_QuickCreateFormEntities"></a>   
 ## Entities with quick create forms  
- By default only the following system entities have quick create forms.  
-  
-|||||  
-|-|-|-|-|  
-|Account|Campaign Response|Case|Competitor|  
-|Contact|Lead|Opportunity||  
-  
+ By default only these system entities have quick create forms: account, <sup>1</sup>campaign response, <sup>1</sup>case, <sup>1</sup>competitor, contact, <sup>1</sup>lead, <sup>1</sup>opportunity.  
+ 
+<sup>1</sup>Requires a Dynamics 365 customer engagement app.
+ 
 Although you can create quick create forms for system activity entities, with the exception of the appointment entity, they do not support quick create forms. Currently, the option to disable the quick create form for the appointment entity is not supported. Any of the other [updated entities](create-design-forms.md) and any custom entities can be enabled to support these forms by selecting **Enable quick create forms** in the entity definition and creating a quick create form for the entity. 
 
 You can enable custom activity entities to support quick create forms, and you can create quick create forms for those entities. However, the quick create form for custom activity entities will not be used when people select **Create** on the navigation bar. These quick create forms can be used only when people add a new record for a sub-grid that displays that specific custom activity entity.  
@@ -107,7 +104,7 @@ If you add a composite field to a quick create form, it will be displayed as sep
 The **Enable quick create forms** property can be enabled or disabled for all standard activities except recurring appointments. This property lets you change the form that is displayed by default for most activities. By default, the **Enable quick create forms** property is enabled and the quick create form is the form displayed in the app areas and activity entities that support it. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/allow-quick-create.png "Allow Quick Create property on appointment entity")
+> ![Allow Quick Create property on appointment entity](media/allow-quick-create.png "Allow Quick Create property on appointment entity")
 
 
 ### Unified interface client form display behavior
@@ -158,7 +155,12 @@ The social pane is a special case because it doesn't use the **Enable quick crea
 
 When you import a solution from version 8.2 regardless of the value of the **Enable quick create forms** property in the solution, the following entities will be reset to the default form display value and the main form will display: task, phone call, email, and appointment. In this situation, you'll need to reset the **Enable quick create forms** option back to *enabled* for those activity entities after the import.
  
-If there is a customization made in a version 9.0 solution to entities where **Enable quick create forms** is enabled, the value will not change after import.  However, if you have set the **Enable quick create forms** option to *disabled* for the task, phone call, email, and appointment entities, the value will be overwritten to enabled. In this situation, you'll need to reset the **Enable quick create forms** option back to disabled for those activity entities after the import. 
+If there is a customization made in a version 9.0 solution to entities where **Enable quick create forms** is enabled, the value will not change after import.  However, if you have set the **Enable quick create forms** option to *disabled* for the task, phone call, email, and appointment entities, the value will be overwritten to enabled. In this situation, you'll need to reset the **Enable quick create forms** option back to disabled for those activity entities after the import.
+
+> [!IMPORTANT]
+> - If a quick create form exists for an entity but is not included in the app, the Unified Interface runtime will still open the quick create form.  This behavior occurs with lookup controls and subgrids. If you don’t want a quick create form to appear in your app you must delete it.
+> - Be aware of the behavior that occurs when you create a parent relationship with the same entity. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent record, the first record will not be saved with the lookup that has the parent record value. This is because of the circular reference introduced by using the same entity. If you experience this issue you can resolve it by removing the parent record id on the quick create form before saving the record.
+
   
 ### See also  
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)

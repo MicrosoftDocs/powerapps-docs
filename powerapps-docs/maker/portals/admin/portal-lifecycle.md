@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2020
+ms.date: 08/05/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -19,6 +19,8 @@ As an administrator, you can convert a trial or suspended portal to a production
 The first portal is free to be created in an environment in a tenant. If you need to create more than one portal, you must have 1 GB of unused storage space in the tenant.
 
 ## Stages in the portal lifecycle
+
+![Portal lifecycle stages](./media/portal-lifecycle/portal-lifecycle.png "Portal lifecycle stages")
 
 ### Trial portal
 
@@ -44,6 +46,7 @@ You can convert a trial portal to a production portal from the notifications dis
 > You must be assigned one of the following roles to convert a portal from trial to production:
 > - Global administrator
 > - System administrator
+> <br> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
 
 When you open the [Power Apps Portals admin center](admin-overview.md) and go to the **[Portal Details](portal-details.md)** tab, you'll see the notification about the trial expiration displayed below the **Type** field.
 
@@ -67,6 +70,9 @@ To convert your portal from trial to production:
 ## Convert an existing portal to a capacity-based model
 
 You can convert your existing portal license to [capacity-based licensing model](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). To change your portal license to capacity-based model:
+
+> [!TIP]
+> To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
 1. Go to [Portal details](portal-details.md).
 1. Select **Change License**.
@@ -101,4 +107,5 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 
 ### See also
 
-[Power Apps portals FAQ](../faq.md)
+- [Microsoft Learn: Portal application lifecycle management](https://docs.microsoft.com/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
+- [Power Apps portals FAQ](../faq.md)

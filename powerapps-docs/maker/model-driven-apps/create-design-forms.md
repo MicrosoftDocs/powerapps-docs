@@ -1,7 +1,8 @@
 ---
 title: "Create and design model-driven app forms | MicrosoftDocs"
+description: "Overview of model-driven forms in Power Apps"
 ms.custom: ""
-ms.date: 01/30/2020
+ms.date: 09/03/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -55,7 +56,20 @@ There are still a number of entities, referred to here as classic entities, that
 |Saved View|Service|Service Activity|SharePoint Site|Site|  
 |Territory|Unit|Unit Group|||  
 
-  
+## Create or edit a form
+
+Create or edit forms for model-driven apps. More information: [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)
+
+## Delete a form
+To delete a form, sign in to Power Apps and the go to **Solutions** > Open the solution your want > select the entity that you want > **Forms** tab. Select the form, and then select **Delete** on the command bar.
+
+There are a couple reasons you may not be able to delete a form.
+
+|Reason  |Work around  |
+|---------|---------|
+| Every entity requires at least one main form and it is the only main form for the entity.   |  Create a new main form for the entity. Then delete the main form you tried earlier.  More information: [Create a form](create-and-edit-forms.md#create-a-form)   |
+| Every entity requires one designated fallback form and it is the only fallback form.   | Create a new form for the entity and set as the fallback. Or designate another existing form as the fallback form. Then delete the form you tried earlier. More information: [Set the fallback form for an entity](control-access-forms.md#set-the-fallback-form-for-an-entity)     |
+
 ## Form display FAQ
 
 ### Why is my form not visible in the form selector drop down in my app?
@@ -65,7 +79,7 @@ A form may not be available because it hasn’t been added to the app.
 3. On the **Components** tab verify the main forms that are included for the app. Verify that the form you want to display is checked. If not, select it, save, and then publish the app.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/forms-included-in-app.png "Forms included with app")
+   > ![Forms included with app](media/forms-included-in-app.png "Forms included with app")
    
 ### Why isn't my form displayed as the default form in the app?
 A form can be set as the default form through the form order configuration or when a user sets the default form as a personalization setting.
@@ -73,12 +87,12 @@ A form can be set as the default form through the form order configuration or wh
 2. On the toolbar select **Form Order** > **Main Form Set**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/form-order-toolbar.png "Form Order toolbar command")
+   > ![Form Order toolbar command](media/form-order-toolbar.png "Form Order toolbar command")
    
 3. The form order is displayed. Select the form and use the up and down arrows to move the form within the form order. The form at the top of the list is the default form. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/form-order-dialog.png "Form order dialog")
+   > ![Form order dialog](media/form-order-dialog.png "Form order dialog")
    
 4. Select **OK** to save the form order changes.
 5. On the form designer toolbar, select **Publish** to make the form order available in apps.
@@ -87,8 +101,8 @@ A form can be set as the default form through the form order configuration or wh
 Notice that, when an app user changes the form selection in the form selector drop down of an app, that form becomes the default form for the user. This personalization overrides the default form specified for the entity in the app.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/change-form-user-setting.png "User setting to change default form")
-   
+   > ![User setting to change default form](media/change-form-user-setting.png "User setting to change default form")
+
 ### Related topics  
     
 [Assign form order](assign-form-order.md) <br />

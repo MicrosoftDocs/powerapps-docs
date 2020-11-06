@@ -17,6 +17,8 @@ search.app:
 ---
 # Query data using the Organization service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The SDK assemblies for the organization service provide several styles to query data. Each provides different advantages.
 
 |Style|Advantages|
@@ -97,8 +99,10 @@ results.Entities.ToList().ForEach(x => {
 
 
 More information:
+
 - [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
 - [FetchXML schema](../fetchxml-schema.md)
+- [Work with Quick Find’s search item limit](../quick-find-limit.md)
 - [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
 - [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
 - [Fiscal date and older than datetime query operators in FetchXML](../use-fetchxml-fiscal-date-older-datetime-query-operators.md)

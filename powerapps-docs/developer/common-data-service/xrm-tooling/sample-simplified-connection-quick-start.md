@@ -22,6 +22,8 @@ search.app:
 ---
 # Sample: Simplified connection quick start using Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to connect to the Common Data Service web services using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and perform basic create, update, retrieve, and delete operations on an entity. For more information about the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, see [Use CrmServiceClient constructors to connect to Common Data Service](use-crmserviceclient-constructors-connect.md).
 
 ## Requirements
@@ -44,7 +46,7 @@ The following shows a sample `app.config file`. To use this, remove the comment 
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <connectionStrings>  
-    <!-- Online using Office 365 -->  
+    <!-- Online using Microsoft 365 -->  
     <!-- <add name="Server=CRM Online, organization=contoso, user=someone"  
          connectionString="Url=https://contoso.crm.dynamics.com; Username=someone@contoso.onmicrosoft.com; Password=password; authtype=Office365"/> -->  
   </connectionStrings>  
@@ -110,7 +112,7 @@ The following shows a sample `app.config file`. To use this, remove the comment 
 </configuration>  
 ```
 
-## Example
+## Another Example
 
 ```csharp
 using Microsoft.Crm.Sdk.Messages;

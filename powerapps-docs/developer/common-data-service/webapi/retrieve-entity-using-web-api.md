@@ -24,6 +24,8 @@ search.app:
 
 # Retrieve an entity record using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Use a `GET` request to retrieve data for an entity specified as the resource with a unique identifier. When retrieving an entity record you can also request specific properties and expand navigation properties to return properties from related entities.  
 
 > [!NOTE]
@@ -437,7 +439,7 @@ Requesting formatted values for individual record retrievals is done the same wa
 
 ### See also
 
-[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)<br />
+[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
 [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

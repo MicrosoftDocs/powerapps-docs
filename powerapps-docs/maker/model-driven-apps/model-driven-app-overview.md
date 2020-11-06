@@ -12,6 +12,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+searchScope:
+  - "Power Apps"
 ---
 # What are model-driven apps in Power Apps?
 
@@ -24,6 +26,8 @@ Model-driven app design provides the following benefits:
 - Create complex responsive apps with a similar UI across a variety of devices from desktop to mobile
 - Rich design capability 
 - Your app can be distributed as a solution
+
+
  
 ## The approach to model-driven app making
 At a fundamental level, model-driven app making consists of three key focus areas.

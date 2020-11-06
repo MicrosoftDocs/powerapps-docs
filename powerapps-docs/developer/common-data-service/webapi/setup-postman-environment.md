@@ -10,9 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 955BA444-A53D-4843-9429-833B1636E2B4
 caps.latest.revision: 7
-author: susikka
-ms.author: susikka
-manager: shujoshi
+author: JimDaly
+ms.author: jdaly
+manager: ryjones
 search.audienceType: 
   - developer
 search.app: 
@@ -20,6 +20,8 @@ search.app:
 ---
 
 # Set up a Postman environment
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 You can use Postman to connect to your Common Data Service instance and to compose Web API requests, send them, and view responses. Managing authentication challenges many people. This topic describes how to configure a Postman environment to work for your Common Data Service environments.
 
@@ -58,11 +60,14 @@ Use these steps to create a Postman environment that you can use to connect with
     |`webapiurl`|`{{url}}/api/data/v{{version}}/`|
     |`callback`|`https://callbackurl`|
     |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`|
+    > [!NOTE]
+    > For [relevance search](relevance-search.md), specify a version of 1.0 and a webapiurl of {{url}}/api/search/v{{version}}/.
 
-    ![Create a new Postman environment to connect with Online instance](media/postman-add-online-env.png "Create a new Postman   environment to connect with Online instance")<br>
-1. Replace the instance URL placeholder value with the URL of your Common Data Service instance, and select **Add** to save the environment.
+    ![Create a new Postman environment to connect with Online instance](media/postman-add-online-env.png "Create a new Postman   environment to connect with Online instance")
 
-1. Close the **Manage environments** dialog box.  
+2. Replace the instance URL placeholder value with the URL of your Common Data Service instance, and select **Add** to save the environment.
+
+3. Close the **Manage environments** dialog box.  
 
 ### Generate an access token to use with your environment
 

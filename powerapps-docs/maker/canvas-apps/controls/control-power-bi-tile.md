@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/07/2016
+ms.date: 09/11/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -53,6 +53,7 @@ The parameter will filter a value in the dataset of the report where the tile or
 - Only one filter can be applied.
 - Only the `eq` operator is supported.
 - Field type must be string.
+- Filtering is only available on pinned visualizations.
 
 You can use computed fields in the Power BI report to convert other value types to string or combines multiple fields into one.
 
@@ -80,7 +81,7 @@ You can use computed fields in the Power BI report to convert other value types 
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control. By default, the Power BI report that's associated with the tile opens.
 
-**TileUrl** – The URL by which the tile is requested from the Power BI service. You can pass a single parameter into the Power BI tile by appending the parameter to the URL (for example: … & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). You can use only the equals operator in the parameter.
+**TileUrl** – The URL by which the tile is requested from the Power BI service. You can pass a single parameter into the Power BI tile by appending the parameter to the URL (for example: … & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). You can use only the equals operator in the parameter.  Filtering is only available on pinned visualizations.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
@@ -92,7 +93,7 @@ You can use computed fields in the Power BI report to convert other value types 
 
 ## Example
 
-1. On the **Insert** tab, open the **Controls** menu, and then add a **Power BI tile** control.
+1. On the **Insert** tab, open the **Charts** menu, and then add a **Power BI tile** control.
 
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 

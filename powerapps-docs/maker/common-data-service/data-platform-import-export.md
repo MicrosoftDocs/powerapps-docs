@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.component: cds
-ms.date: 05/14/2018
+ms.date: 08/27/2020
 ms.author: sabinn
 search.audienceType: 
   - maker
@@ -14,6 +14,8 @@ search.app:
   - D365CE
 ---
 # Import or export data from Common Data Service
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 To bulk import and export data from Microsoft Excel or CSV files, use the Get Data from Excel file and Export Data features for updated Common Data Service environments.
 
@@ -139,3 +141,6 @@ The following data types aren't currently supported.
 - Timezone
 - Multiselect option set
 - Image
+
+    > [!NOTE]
+    > Get Data from Excel and Export Data features are currently not included in the Power Apps Community Plan.

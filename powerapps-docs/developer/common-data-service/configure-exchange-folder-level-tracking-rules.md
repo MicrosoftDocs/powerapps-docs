@@ -6,7 +6,7 @@ ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+author: "revachauhan" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Configure Exchange folder-level tracking rules
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Configure folder-level tracking rules to map a Microsoft Exchange inbox folder to a Common Data Service record so that all the emails in the Microsoft Exchange folder get automatically tracked against the mapped record in Common Data Service. Folder-level tracking of emails will work only if:  
 

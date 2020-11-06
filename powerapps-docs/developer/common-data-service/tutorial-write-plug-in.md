@@ -2,7 +2,7 @@
 title: "Tutorial: Write and register a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This tutorial is the first in a series that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 02/23/2019
+ms.date: 11/03/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Tutorial: Write and register a plug-in
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 This tutorial is the first in a series that will show you how to work with plug-ins. This tutorial is a pre-requisite for the following tutorials:
 
@@ -68,6 +70,12 @@ You need to use Visual Studio to write a plug-in. Use these steps to write a bas
     ![Install Microsoft.CrmSdk.CoreAssemblies NuGet Package](media/tutorial-write-plug-in-install-microsoft.crmsdk.coreassemblies.png)
 
 1. You must select **I Accept** in the **License Acceptance** dialog.
+
+    > [!NOTE]
+    > Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package will include these assemblies in the build folder for your assembly, but you will not upload these assemblies with the assembly that includes your logic. These assemblies are already present in the sandbox runtime.
+    >  
+    > Do not include any other NuGet packages or assemblies to the build folder of your project. You cannot include these assemblies when you register the assembly with your logic. You cannot assume that the assemblies other than those included in the  `Microsoft.CrmSdk.CoreAssemblies` NuGet package will be present and compatible with your code.
+
 1. In **Solution Explorer**, right-click the `Class1.cs` file and choose **Rename** in the context menu.
 
     ![Rename class](media/tutorial-write-plug-in-rename-class.png)
@@ -234,7 +242,7 @@ To register a plug-in, you will need the plug-in registration tool
 
     ![Register new assembly dialog](media/tutorial-write-plug-in-register-new-assembly-dialog.png)
 
-1. For Office 365 users, verify that the **isolation mode** is **sandbox** and the **location** to store the assembly is **Database**.
+1. For Microsoft 365 users, verify that the **isolation mode** is **sandbox** and the **location** to store the assembly is **Database**.
 
     > [!NOTE]
     > Other options for **isolation mode** and **location** apply to on-premises Dynamics 365 deployments. For the location, you can specify the D365 server's database, the server's local storage (disk), or the server's Global Assembly Cache. For more information see [Plug-in Storage](/dynamics365/customer-engagement/developer/register-deploy-plugins#plug-in-storage).

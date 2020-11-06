@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 07/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -51,7 +51,7 @@ The table below explains many of the standard web file attributes used by portal
 | Display Order       | An integer value indicating the order in which the file will be placed, relative to other entities with the same Parent Page. This controls the ordering of files and other site map entities when, for example, a list of links to the child entities of a given page are rendered on the portal.      |
 | Cloud Blob Address  | A text value in the format `<container>/<filename>`, indicating that the content for this file is stored in Azure Blob Storage.        |
 | Content-Disposition | Options are inline or attachment. If inline is specified, the browser should attempt to render it within the browser window and if it cannot, it will prompt the user to download or open the file. If attachment is specified, it will immediately prompt the user to download or open the file, and not try to load it in the browser, whether it can or not.                                                                                        |
-| Enable Tracking     | If enabled, every request for this web file will be logged. A Web File Log record will be created with the date & time, IP Address, and the contact record if the user is authenticated.      |
+| Enable Tracking (Deprecated)     | If enabled, every request for this web file will be logged. A Web File Log record will be created with the date & time, IP Address, and the contact record if the user is authenticated. Web file tracking is deprecated. For more information, go to [Web file tracking FAQ](../faq.md#web-file-tracking-enabled).     |
 |||
 
 

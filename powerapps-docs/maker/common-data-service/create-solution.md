@@ -19,6 +19,8 @@ search.app:
 ---
 # Create a solution
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, always remember to work in the context of the custom solution as you add, edit, and create components. This makes it easy to export your solution so that it can be backed up or imported to another environment. 
 
 > [!NOTE]
@@ -197,4 +199,5 @@ Start by opening an unmanaged solution you created. Choose the **Entity** compon
  > ![Solution with entities.](media/solution-segmentation-solution-entities-admin.png "Solution with entities.")
 
 ### See also
- [Use solutions](use-solution-explorer.md)
+ [Use solutions](use-solution-explorer.md) <br />
+[For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)

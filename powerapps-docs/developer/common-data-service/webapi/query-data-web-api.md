@@ -23,6 +23,8 @@ search.app:
 ---
 # Query Data using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 If you want to retrieve data for an entity set, use a `GET` request. When retrieving data, you can apply query options to set criteria for the data you want and the entity properties that should be returned.  
     
 <a name="bkmk_basicQuery"></a>
@@ -873,7 +875,9 @@ More information: [Use column comparison in queries](../column-comparison.md)
 
 ### See also
 
-[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
+[Search across entity data using relevance search](relevance-search.md)  
+[Work with Quick Find’s search item limit](../quick-find-limit.md)  
+[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

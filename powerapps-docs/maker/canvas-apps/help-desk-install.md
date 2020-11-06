@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/20/2020
+ms.date: 08/27/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -21,7 +21,7 @@ Step-by-step instructions for, in Power Apps, installing and configuring the Hel
 Estimated time to complete these steps: **10-15 minutes**
 
 > [!TIP]
-> For a demonstration of this process, please watch this [video](https://youtu.be/z4cdtD6hB_4).
+> For a demonstration of installation and setup process, watch this [video](https://youtu.be/z4cdtD6hB_4).
 
 ## Overview of the sample
 
@@ -30,7 +30,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 ![Opening screen of the Help Desk Tickets app](./media/help-desk-install/login-screen.png)
 
 > [!TIP]
-> Watch this [video](https://youtu.be/sl5fXwwnvzI) to see how to use the Help Desk Tickets sample app.
+> For an end-to-end demonstration of how to use the Help Desk sample app, watch this [video](https://youtu.be/sl5fXwwnvzI).
 
 ## Prerequisites
 
@@ -41,20 +41,20 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 This list stores the Help Desk tickets.
 
-1. Open a web browser and go to https://admin.microsoft.com.
-2. Sign in with an account that has permission to create SharePoint lists.
-3. Go to the site collection where you want to create the HelpDesk list.
-4. Select the **gear icon** in the top-right portion of the web page.
-5. Select **Add an app**.
-6. In the **Find an app** textbox, enter **Custom**.
-7. Select the **search icon**.
-8. Select the **Custom List** app.
-9. In the **Name** textbox, enter **HelpDesk**.
+1. Open a web browser.
+1. Go to the SharePoint site where you want to create the HelpDesk list.
+1. Sign in with an account that has permission to create lists.
+1. Select the **gear icon** in the top-right portion of the web page.
+1. Select **Add an app**.
+1. In the **Find an app** textbox, enter **Custom**.
+1. Select the **search icon**.
+1. Select the **Custom List** app.
+1. In the **Name** textbox, enter **HelpDesk**.
 
 	> [!IMPORTANT]
 	> If you choose a different name for the list make sure you write it down because you will need to substitute it for HelpDesk everywhere you see it during the installation and configuration process.
 
-10. Select **Create**.
+1. Select **Create**.
 
 ### Create Description column
 
@@ -179,29 +179,29 @@ This list stores the Help Desk tickets.
 6. For the **App** and **Flow** resource types, set **IMPORT SETUP** to **Create as new**.
 7. For the **SharePoint** and **Outlook** connections, set **IMPORT SETUP** to **Select during import**.
 	
-   ![Import settings screen](./media/help-desk-install/import-settings.png)
+   ![Import settings for SharePoint and Outlook](./media/help-desk-install/import-settings.png)
 
 8. Select the **red icon** for the **SharePoint Connection**.
 9. In the connections list, select the item with your username.
 
-   ![Import settings screen](./media/help-desk-install/import-settings-sharepoint.png)
+   ![Import settings for SharePoint](./media/help-desk-install/import-settings-sharepoint.png)
 
 10. Select **Save**.
 11. Select the **red icon** for the **Office 365 Outlook Connection**.
 12. In the connections list, select the item with your username.
 
-	![Import settings screen](./media/help-desk-install/import-settings-office365outlook.png)
+	![Import settings for Outlook](./media/help-desk-install/import-settings-office365outlook.png)
 
 13. Select **Save**.
 
 	> [!TIP] 
 	> When you are done, it will look like this.
 
-	![Import settings screen](./media/help-desk-install/import-settings-done.png)
+	![Import settings review](./media/help-desk-install/import-settings-done.png)
 
 14.	Select **Import** and wait until the process is complete.
 
-	![Import settings screen](./media/help-desk-install/import-done.png)
+	![Import settings complete](./media/help-desk-install/import-done.png)
 
 ## Configure the app to use the SharePoint list
 
@@ -226,7 +226,7 @@ This list stores the Help Desk tickets.
 1. In the **Data** pane, select **Add data source**.
 1. Select the SharePoint connection created [earlier](#create-sharepoint-connection).
 
-    ![Remove SharePoint connection](./media/help-desk-install/sharepoint-connection.png)
+    ![SharePoint connection](./media/help-desk-install/sharepoint-connection.png)
 
 1. In the **Recent sites** list, select the SharePoint site where you created the HelpDesk List.
 
@@ -263,7 +263,7 @@ This list stores the Help Desk tickets.
 1.	Sign in to [Power Apps](https://make.powerapps.com).
 1.  Select **Flows** from left pane.
 
-    ![Flows](./media/help-desk-install/flows.png)
+    ![Flows list](./media/help-desk-install/flows.png)
 
 4.	Next to the **HelpDeskFlow** Flow, select the pencil icon to edit the flow.
  
@@ -275,7 +275,7 @@ This list stores the Help Desk tickets.
  
 6.	Change the **Site Address** and **List Name** to match the HelpDesk SharePoint list you created.
 	
-	![Edit Flow screen](./media/help-desk-install/edit-flow-getitems.png)
+	![Edit Flow screen for site address and list name](./media/help-desk-install/edit-flow-getitems.png)
 
 1.  Expand **Apply to each** action.
 
@@ -292,7 +292,7 @@ This list stores the Help Desk tickets.
 
 10.	Change the **To** to match the HelpDesk admin email.
 
-	![Edit Flow screen](./media/help-desk-install/edit-flow-condition-send-email.png)
+	![Edit Flow screen for To field](./media/help-desk-install/edit-flow-condition-send-email.png)
 
 11.	Select **Save** to save the changes to the flow.
 
@@ -314,6 +314,7 @@ This list stores the Help Desk tickets.
 
 ### See also
 
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
 - [Customize a SharePoint list form](customize-list-form.md)
 - [Add and configure a control](add-configure-controls.md)
 - [Edit and manage permissions for a SharePoint list or library](https://support.office.com/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)

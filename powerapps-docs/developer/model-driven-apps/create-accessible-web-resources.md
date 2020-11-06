@@ -84,8 +84,6 @@ However, semantic HTML can only go so far. Modern web applications typically inc
 
  The following resources provide a starting point for defining requirements for making your web resources accessible:  
   
-- [CRM, Accessibility, and 508](https://blogs.msdn.com/b/devkeydet/archive/2013/01/29/crm-accessibility-and-508.aspx)  
-  
 - [Introduction to web accessibility](https://docs.microsoft.com/previous-versions/windows/apps/hh452681(v=win.10))  
   
 - [Accessibility in Visual Studio and ASP.NET](https://msdn.microsoft.com/library/ms228004)  <!--TODO No relevant microsoft docs link-->

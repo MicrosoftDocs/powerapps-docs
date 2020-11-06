@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Retrieve valid status transitions
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to retrieve valid state transitions regardless of whether custom state transitions have been defined for the entity. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveValidTransitions).
  
 ## How to run this sample

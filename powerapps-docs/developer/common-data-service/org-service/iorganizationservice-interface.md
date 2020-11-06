@@ -17,6 +17,8 @@ search.app:
 ---
 # IOrganizationService Interface
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface provides a set of methods used to perform the most common operations on system and custom entities and on the metadata for your organization.
 
 ## Client applications

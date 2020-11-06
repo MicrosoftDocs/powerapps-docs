@@ -17,6 +17,8 @@ search.app:
 ---
 # Administer the deployment using the deployment web service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 > [!NOTE]
 > Common Data Service is not available for on-premises deployments.
 

@@ -1,11 +1,11 @@
 ---
-title: 
-description: 
+title: Add Geospatial components to apps made with Microsoft Power Apps
+description: Geospatial components let you view and manipulate 3D objects and images in the real world, in augmented reality. 
 author: iaanw
 manager: shellha
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 6/12/2020
 ms.author: iawilt
@@ -13,7 +13,6 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
-ms.custom: ce06122020
 
 ---
 
@@ -34,15 +33,12 @@ The following prebuilt components can be used for geospatial and mapping scenari
 
 1. An admin must [enable the geospatial features in the Power Platform admin center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
 2. [Enable the geospatial features for each app](#enable-the-geospatial-features-for-each-app).
-    
+
     >[!IMPORTANT]
     >The components require the default **Organizations** data source to be present. This data source is included whenever you insert the components into an app, but if you manually delete it you'll need to add it before the components will work:
+    >
     >1. With the component selected, go to the **Data sources** tab on the side navigation menu.
     >2. In the search field, enter **Organizations**, and then select the data source that appears. This will add it to the component.
-
-
->[!NOTE]
-> These geospatial components are currently an experimental preview feature that's only available in [https://preview.create.powerapps.com](https://preview.create.powerapps.com) on a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
 
 ### Enable the geospatial features for the environment
 
@@ -65,7 +61,9 @@ The geospatial features require additional terms of use that must be reviewed an
     ![Screenshot of the terms of service](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
 
     >[!IMPORTANT]
-    >You must read and agree to the terms of service before you can use geospatial features. The following are the terms of service:  
+    >You must read and agree to the terms of service before you can use geospatial features. 
+    >
+    >The following are the terms of service:  
     >  
     >These features use mapping capabilities that are powered by a third party, TomTom(tm), and operate outside your tenant's geographic region, compliance boundary, or national cloud instance.  
     >
@@ -76,6 +74,12 @@ The geospatial features require additional terms of use that must be reviewed an
     >Additional licensing requirements might be required to enable this feature.  
 
     ![Screenshot of the geospatial services toggle switch to On](./media/geospatial/ppac-geo-on.png "Screenshot of the geospatial services toggle switch to On")
+    
+    >[!NOTE]
+    >Requests sent between TomTom(tm) and the Azure Maps service are not exposed over the public Internet.
+    >
+    >Requests between apps you create with the component and the Azure Maps service are sent over HTTPS.
+    
 
 1. Select **Save** at the bottom of the settings page.
 

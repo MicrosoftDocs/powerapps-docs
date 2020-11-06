@@ -18,6 +18,8 @@ search.app:
 
 # Authentication with .NET Framework applications
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 If you are using the .NET Framework you can use classes within the [Xrm.Tooling](/dotnet/api/?view=dynamics-xrmtooling-ce-9) namespace to authenticate and connect to the Organization service and the Web API.
 
 With `Xrm.Tooling` classes you can use the SDK assemblies using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface methods. This is the same style of programming used by plug-ins and workflow activities, making it one style that you can use everywhere for .NET Framework applications.
@@ -29,7 +31,7 @@ With the `Xrm.Tooling` classes, use the <xref:Microsoft.Xrm.Tooling.Connector>.<
 
 The `Xrm.Tooling` classes provide many benefits including:
 - You can define connection information using a connection string.
-- Supports both OAuth and Office 365 claims-based authentication.
+- Supports both OAuth and Microsoft 365 claims-based authentication.
 - Thread safety for actions performed in a multithreaded environment. 
 - A common Windows Presentation Foundation (WPF) login control for a consistent sign-in experience from your Windows client applications.
 - Supports for secure storage of the sign-in credentials and reuse of the stored credentials to automatically sign in after initial sign in.

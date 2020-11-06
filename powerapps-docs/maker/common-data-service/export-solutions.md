@@ -24,6 +24,8 @@ search.app:
 ---
 
 # Export solutions  
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can manually export solutions using the steps in this article. We recommend that you create an unmanaged solution to use for exporting your customizations, and then export your customizations periodically so that you have a backup in case anything happens. You can't export [managed](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) solutions or the [Default Solution](solutions-overview.md#default-solutions). 
  
 > [!NOTE]
@@ -36,7 +38,7 @@ You can manually export solutions using the steps in this article. We recommend 
 2.  In the list of solutions, select the unmanaged solution you want to export, and then select **Export**. Notice that you can't export managed solutions. 
 
 3. The **Before you export** right pane appears. Choose from the following options, and then select **Next**:  
-    - **Publish all changes**. Notice that, when you export a managed or unmanaged solution, only published components are exported. We recommend that you select **Publish all changes** to make sure all components are included in the exported solution. 
+    - **Publish all changes**. Notice that, when you export an unmanaged solution, only published components are exported. We recommend that you select **Publish all changes** to make sure all components are included in the exported solution. 
     - **Check for issues**. Run the solution checker against the solution to detect performance and stability issues.
 
 4.  The **Export this solution** right pane appears. Enter or select from the following options, and then select **Export**:  
@@ -127,4 +129,5 @@ More information:   [Service Calendar Appearance Configuration](https://docs.mic
 
 ### See also
 [Import solutions](import-update-export-solutions.md) <br />
-[Update solutions](update-solutions.md)
+[Update solutions](update-solutions.md) <br />
+[For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)

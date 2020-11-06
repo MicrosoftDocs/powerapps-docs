@@ -17,6 +17,8 @@ search.app:
 ---
 # Use connection strings in XRM tooling to connect to Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 With Common Data Service, XRM tooling enables you to connect to your Common Data Service environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Common Data Service connections at deployment time, and not hard code in your application to connect to your Common Data Service environment.  
 
 
@@ -70,6 +72,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 |`StoreName` or `CertificateStoreName`|Specifies the store name where the certificate identified by thumbprint can be found. When set, Thumbprint is required.|
 |`Thumbprint` or `CertThumbprint`| Specifies the thumbprint of the certificate to be utilized during an S2S connection. When set, AppID is required and UserID and Password values are ignored.|
 |`SkipDiscovery`|Specifies whether to call instance discovery to determine the connection uri for a given instance. As of NuGet release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.0.2.7, default = true. Older versions default to false. <br/> Note: If set to true, it is important that the user provide the correct and accurate URI for the target instance.|
+|`Integrated Security`|Specifies to use current windows credentials to attempt to create a token for the instances. As of NuGet release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.1.0.21|
 
 > [!NOTE]
 > <b>When using the `OAuth` AuthType\AuthenticationType</b><br/>
@@ -84,7 +87,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
  
 The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customerengagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) 
 
-### Named account using Office 365  
+### Named account using Microsoft 365  
   
 ```xml
 <add name="MyCDSServer" 
@@ -95,7 +98,7 @@ The following examples show how you can use connection strings for connecting to
   Url=https://contoso.crm.dynamics.com"/>  
 ```  
   
-### OAuth using named account in Office 365 with UX to prompt for authentication  
+### OAuth using named account in Microsoft 365 with UX to prompt for authentication  
 
 Create a new connection to Common Data Service using a UserID or Password via OAuth.
 
@@ -131,7 +134,7 @@ Create a new connection to Common Data Service using the current logged in user 
   Url=https://contosotest.crm.dynamics.com;
   AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
   RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;
-  TokenCacheStorePath=c:\MyTokenCache;
+  TokenCacheStorePath=c:\MyTokenCache\msal_cache.data;
   LoginPrompt=Auto"/>  
 ```  
 
@@ -145,7 +148,7 @@ Create a new connection to Common Data Service using a Application or Client Id 
   AuthType=Certificate;
   url=https://contosotest.crm.dynamics.com;
   thumbprint={CertThumbPrintId};
-  ClientId={AppId};
+  ClientId={AppId};"
   />
 ```
 
@@ -158,7 +161,7 @@ Create a new connection to Common Data Service using a Application or Client Id 
   AuthType=ClientSecret;
   url=https://contosotest.crm.dynamics.com;
   ClientId={AppId};
-  ClientSecret={ClientSecret}
+  ClientSecret={ClientSecret}"
   />
 ```
 

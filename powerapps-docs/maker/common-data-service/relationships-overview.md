@@ -1,6 +1,6 @@
 ---
-title: "Entity overview in Power Apps | MicrosoftDocs"
-description: "Learn how to create and edit entities using Power Apps portal"
+title: "Entity relationships in Power Apps | MicrosoftDocs"
+description: "Learn about entity relationships in Power Apps"
 ms.custom: ""
 ms.date: 07/25/2018
 ms.reviewer: ""
@@ -25,6 +25,8 @@ search.app:
 ---
 
 # Entity relationships overview
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Entity relationships define the ways that entity records can be associated with records from other entities or the same entity. There are two types of entity relationships.
 - **One-to-many relationships**. In a one-to-many entity relationship, many referencing (related) entity records can be associated with a single referenced (primary) entity record. The referenced entity record is sometimes referred to as the ”parent” and records of the referencing entity are referred to as ”children.”  A many-to-one relationship is just the child perspective of a one-to-many relationship.

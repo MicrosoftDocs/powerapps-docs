@@ -17,6 +17,8 @@ search.app:
 ---
 # Work with data using code in Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service has [entities](entities.md) that are used to model and manage business data. You can use standard entities or create your own custom entities to store data. 
 
 ## Use web services to work with data

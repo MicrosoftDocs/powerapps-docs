@@ -1,5 +1,6 @@
 ---
 title: "Add reporting features to your model-driven app" 
+description: Learn how to add reporting to your model-driven app in Power Apps.
 ms.custom: ""
 ms.date: 08/16/2019
 ms.reviewer: ""
@@ -20,7 +21,7 @@ search.app:
 Power Apps apps can include reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
 
 > [!div class="mx-imgBorder"] 
-> ![](media/progress-against-goals-report.png "Progress against goals standard report")
+> ![Progress against goals standard report](media/progress-against-goals-report.png "Progress against goals standard report")
 
 System reports are available to all users. Individuals who create or otherwise own reports can share them with specific colleagues or teams, or can make the reports available to the organization, so that all users can run them. These reports use FetchXML queries that are proprietary to Common Data Service and retrieve data to build the report. Reports that you create in a Power Apps app are Fetch-based reports.
 
@@ -57,7 +58,7 @@ You can add fetch-based reporting functionality to your app so that users can ru
 Now the app displays a **Reports** area where users can view, run, assign, share, and edit the reports they have permission to as well as create new reports using the report wizard. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/report-feature-in-app.png "Report view")
+> ![Report view](media/report-feature-in-app.png "Report view")
 
 ## Options for creating new reports
 You can create a new report in one of two ways:
@@ -73,11 +74,12 @@ Reports are solution aware. Adding a report as a component to a solution makes i
 To find if a report is viewable to the organization: In the list of reports, open a model-driven app, select a report, and then select **Edit**. On the **Administration** tab, see if **Viewable By** is set to **Organization**. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/report-scope.png "Organization level report visibility")
+> ![Organization level report visibility](media/report-scope.png "Organization level report visibility")
 
 You can add, import, or export snapshots of reports as part of a solution. In model-driven apps, reports, sub reports, report category, report display area, and report-related record type are considered as components of a report set. When you import a solution update in non-overwrite mode, any updates by the solution to a report will be ignored if any component of the report set has been customized.
 
 ## Related topics
+
 [Work with reports](/powerapps/user/work-with-reports)<br/>
 [Create a report using the Report Wizard](/powerapps/user/create-report-with-wizard)<br/>
 [Add a report from outside Power Apps](/powerapps/user/add-existing-report)<br/>

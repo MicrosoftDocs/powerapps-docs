@@ -17,6 +17,8 @@ search.app:
 ---
 # Query hierarchical data
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can define specific self-referencing one-to-many entity relationships as hierarchical. You can write queries that return related data in these hierarchies.  
   
 You can take advantage of new query condition operators to query entities with explicit hierarchical relationships. These operators only apply for the entity relationship specifically defined as a hierarchical relationship. You can use new condition operators to retrieve this hierarchical data when you query using <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> or <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>.  
@@ -59,6 +61,8 @@ You can take advantage of new query condition operators to query entities with e
 ```  
   
 > [!NOTE]
->  The aggregate value returned represents all the child records, including any that the user may not have access to read.  
+> The aggregate value returned represents all the child records, including any that the user may not have access to read.  
   
- 
+### See Also
+
+[Work with Quick Find’s search item limit](quick-find-limit.md)

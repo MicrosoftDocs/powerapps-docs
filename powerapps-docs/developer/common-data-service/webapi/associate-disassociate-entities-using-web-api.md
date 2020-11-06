@@ -23,6 +23,8 @@ search.app:
 ---
 # Associate and disassociate entities using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 There are several methods you can use to associate and disassociate entities. Which method you apply depends on whether you’re creating or updating the entities and whether you’re operating in the context of the referenced entity or the referencing entity.  
 
 <a name="bkmk_Addareferencetoacollection"></a>
@@ -195,7 +197,7 @@ OData-Version: 4.0
 
 ### See also
 
- [Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)   
+ [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)   
  [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)   
  [Perform operations using the Web API](perform-operations-web-api.md)   
  [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)   

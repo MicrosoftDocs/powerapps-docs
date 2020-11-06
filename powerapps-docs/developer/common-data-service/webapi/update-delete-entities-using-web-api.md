@@ -23,6 +23,8 @@ search.app:
 ---
 # Update and delete entities using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Operations to modify data are a core part of the Web API. In addition to a simple update and delete, you can perform operations on single attributes and compose *upsert* requests that will either update or insert an entity depending on whether it exists.  
   
 > [!NOTE]
@@ -216,7 +218,7 @@ See [Detect duplicates during Update operation using the Web API](manage-duplica
 
 ### See also
 
-[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)<br />
+[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
 [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

@@ -1,5 +1,5 @@
-- name: Model-driven apps
-  href: ../../maker/model-driven-apps/model-driven-app-overview.md
+- name: Model-driven apps developer guide
+  href: index.yml
 - name: Developer overview
   href: overview.md
 - name: Get started
@@ -488,6 +488,13 @@
         href: clientapi/reference/formcontext-ui/setFormEntityName.md
       - name: setFormNotification
         href: clientapi/reference/formcontext-ui/setFormNotification.md
+    - name: formContext.ui.footerSection
+      href: clientapi/reference/formcontext-ui-footerSection.md
+      items: 
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-footerSection/getVisible.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-footerSection/setVisible.md
     - name: formContext.ui.formSelector
       href: clientapi/reference/formcontext-ui-formselector.md
       items:
@@ -501,6 +508,21 @@
         href: clientapi/reference/formcontext-ui-formselector/navigate.md
       - name: setVisible
         href: clientapi/reference/formcontext-ui-formselector/setVisible.md
+    - name: formContext.ui.headerSection
+      href: clientapi/reference/formContext-ui-headerSection.md
+      items:
+      - name: getBodyVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getBodyVisible.md
+      - name: getCommandBarVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getCommandBarVisible.md
+      - name: getTabNavigatorVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getTabNavigatorVisible.md
+      - name: setBodyVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setBodyVisible.md
+      - name: setCommandBarVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setCommandBarVisible.md
+      - name: setTabNavigatorVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setTabNavigatorVisible.md
     - name: formContext.ui.navigation
       href: clientapi/reference/formcontext-ui-navigation.md
       items:
@@ -563,6 +585,8 @@
       items:
       - name: addtabStateChange
         href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
+      - name: getContentType
+        href: clientapi/reference/formContext-ui-tabs/getContentType.md
       - name: getDisplayState
         href: clientapi/reference/formcontext-ui-tabs/getDisplayState.md
       - name: getLabel
@@ -575,6 +599,8 @@
         href: clientapi/reference/formcontext-ui-tabs/getVisible.md
       - name: removeTabStateChange
         href: clientapi/reference/formcontext-ui-tabs/removeTabStateChange.md
+      - name: setContentType
+        href: clientapi/reference/formContext-ui-tabs/setContentType.md
       - name: setDisplayState
         href: clientapi/reference/formcontext-ui-tabs/setDisplayState.md
       - name: setFocus
@@ -739,6 +765,8 @@
         href: clientapi/reference/xrm-utility/getAllowedStatusTransitions.md
       - name: getEntityMetadata
         href: clientapi/reference/xrm-utility/getEntityMetadata.md
+      - name: getEntityMainFormDescriptor
+        href: clientapi/reference/xrm-utility/getEntityMainFormDescriptor.md
       - name: getGlobalContext
         href: clientapi/reference/xrm-utility/getGlobalContext.md
         items:
@@ -826,6 +854,8 @@
     href: define-ribbon-display-rules.md
   - name: Define ribbon actions
     href: define-ribbon-actions.md
+  - name: Override the default behavior to open records in grids
+    href: override-default-open-behavior-grids.md
   - name: Pass data from a page as a parameter to Ribbon Actions
     href: pass-data-page-parameter-ribbon-actions.md
   - name: Define custom actions to modify the ribbon
