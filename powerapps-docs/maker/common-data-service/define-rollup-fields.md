@@ -171,7 +171,7 @@ In this example, we calculate an average estimated revenue from all opportunitie
   
 The following example shows how to calculate an average estimated revenue from related opportunities over a hierarchy of accounts. An average estimated revenue can be seen at each level in the hierarchy.  
   
-![Average estimated revenue in Dynamics 365](media/cust-rollup-enhancements-avg-over-hierarchy.png)  
+![Average estimated revenue over hierarchy in Dynamics 365](media/cust-rollup-enhancements-avg-over-hierarchy.png)  
   
 <a name="BKMK_considerations"></a> 
 

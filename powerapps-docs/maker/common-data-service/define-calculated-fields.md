@@ -127,13 +127,13 @@ The following screenshots show step-by-step how to define the **Follow-up date**
   
 #### Set the two conditions on the originating lead:
   
-![Follow up date on an opportunity in Dynamics 365](media/calc-field-follow-update-2.PNG)  
+![Follow up date on an opportunity in Dynamics 365 one ](media/calc-field-follow-update-2.PNG)  
   
-![Follow up date on an opportunity in Dynamics 365](media/calc-field-follow-update-3.PNG)  
+![Follow up date on an opportunity in Dynamics 365 two](media/calc-field-follow-update-3.PNG)  
   
 #### Provide the formula to follow up in one week:
   
-![Follow up date on an opportunity in Dynamics 365](media/calc-field-follow-update-4.PNG)  
+![Follow up date on an opportunity in Dynamics 365 three](media/calc-field-follow-update-4.PNG)  
   
 #### Provide the formula to follow up in one month:
   

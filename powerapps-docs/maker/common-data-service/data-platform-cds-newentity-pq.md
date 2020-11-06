@@ -46,7 +46,7 @@ Before you start to follow this topic:
 1. In the navigation pane, select **Data** to expand it, and then select **Tables**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Power Apps home page](./media/data-platform-cds-newentity-pq/entities-get-data.png)
+    > ![Tables area](./media/view-entities-portal.png)
 
 1. In the command menu, select **Get data**.
 
@@ -71,7 +71,7 @@ Before you start to follow this topic:
 1. Under **Load settings**, select **Load to new table**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Specify the name of the new table](./media/data-platform-cds-newentity-pq/new-entity-name.png)
+    > ![Load to new table](./media/data-platform-cds-newentity-pq/new-entity-name.png)
 
     You can give the new table a different name or display name, but leave the default values to follow this tutorial exactly.
 

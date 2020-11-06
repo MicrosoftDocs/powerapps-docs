@@ -1,5 +1,6 @@
 ---
 title: "Create and edit columns for Common Data Service using Power Apps | MicrosoftDocs"
+description: Learn how to create and edit columns with Power Apps
 ms.custom: ""
 ms.date: 07/23/2020
 ms.reviewer: ""
