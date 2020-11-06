@@ -14,15 +14,15 @@ ms.reviewer: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-In Teams, data is defined by *tables*, which are the same as *[entities](/powerapps/maker/common-data-service/entity-overview)* in Dataverse. To create a table, you must be a member of a team.
+In Teams, data is defined by *tables*. To create a table, you must be a member of a team.
 
 ## Types of tables
 
-Whereas Dataverse has two types of entities that can be created (a standard entity with ownership defined and an activity entity), you can only create standard tables in Dataverse for Teams.
+Whereas Dataverse has two types of tables (a standard table with ownership defined and an activity table), you can only create standard tables in Dataverse for Teams.
 
 You define the type of table by selecting **More settings** when you create a table.
 
-There are four different types of table ownership. When you create a table, the only options are **user**, **team owned**, or **organization-owned**, but you should be aware that other tables have different ownership types. More information: [Types of entities in Dataverse](../maker/common-data-service/types-of-entities.md)
+There are four different types of table ownership. When you create a table, the only options are **user**, **team owned**, or **organization-owned**, but you should be aware that other tables have different ownership types. More information: [Types of tables in Dataverse](../maker/common-data-service/types-of-entities.md)
 
 ## Create a table
 
