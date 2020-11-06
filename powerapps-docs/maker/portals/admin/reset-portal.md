@@ -20,6 +20,9 @@ It is important to note that resetting your portal doesn't remove portal configu
 
 You can reset a completely configured portal, or a portal for which provisioning or updating of an instance has failed.
 
+> [!TIP]
+> To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
 To reset a configured portal:
 
 1.    Open [Power Apps Portals admin center](admin-overview.md).

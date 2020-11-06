@@ -1219,7 +1219,11 @@
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
-    href: ./model-driven-apps/share-model-driven-app.md
+    items:
+       - name: Share a model-driven app
+         href: ./model-driven-apps/share-model-driven-app.md
+       - name: Privileges to view and access apps
+         href: ./model-driven-apps/app-visibility-privileges.md
   - name: Manage an app
     items:
     - name: Manage app properties
@@ -1327,6 +1331,8 @@
           href: ./portals/admin/portal-details.md
         - name: Portal administration from Power Platform admin center
           href: ./portals/admin/power-platform-admin-center.md
+        - name: Roles required for portal administration
+          href: ./portals/admin/portal-admin-roles.md
         - name: Download public key of portal
           href: ./portals/admin/get-public-key.md
         - name: View portal error logs
@@ -1985,12 +1991,14 @@
       href: ../sample-apps/return-to-workplace/app-for-employee.md
     - name: Extend the solutions
       href: ../sample-apps/return-to-workplace/extend.md
-- name: Learn from others
+- name: Resources
   items:
   - name: Blog
     href: https://powerapps.microsoft.com/blog/
   - name: Forums
     href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
+  - name: Webinars
+    href: ../webinars.md
 - name: Troubleshoot
   items:
   - name: Performance tips for canvas apps
