@@ -3,7 +3,6 @@ title: CaptureImage | Microsoft Docs
 description: Provides information for captureImage method.
 keywords:
 ms.author: nabuthuk
-manager: 
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"

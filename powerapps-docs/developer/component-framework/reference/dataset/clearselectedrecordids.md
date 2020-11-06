@@ -4,7 +4,7 @@ description: Provides information for clearSelectedRecordIds method.
 keywords:
 manager: kvivek
 ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.author: "nabuthuk"
 ms.reviewer: "nabuthuk"
 author: Nkrb
 ms.service: "powerapps"
