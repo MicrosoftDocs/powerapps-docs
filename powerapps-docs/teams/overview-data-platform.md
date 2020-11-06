@@ -1,5 +1,5 @@
 ---
-title: Dataverse for Teams overview | Microsoft Docs
+title: Microsoft Dataverse for Teams overview | Microsoft Docs
 description: Provides an overview of Dataverse for Teams.
 author: NHelgren
 ms.service: powerapps
@@ -9,11 +9,9 @@ ms.date: 09/22/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---
-# Overview of Dataverse for Teams
+# Overview of Microsoft Dataverse for Teams
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
-Dataverse for Teams delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps.
+Microsoft Dataverse for Teams delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps.
 
 :::image type="content" source="media/tables-in-teams.png" alt-text="Dataverse for Teams table in Teams":::
 
@@ -50,7 +48,7 @@ A solution often has multiple tables that are used together in an application. F
 You can create and populate these tables with a new visual editor that makes it even easier to work with these tables.
 
 > [!NOTE]
-> All the capabilities found in tables are powered by Dataverse for Teams. Although this will satisfy many situations, in some situations an organization might want to have additional capacity, capabilities, or control over their solution. In these scenarios, Dataverse for Teams environments can be upgraded to Dataverse. The upgrade process, referred to as *promotion*, has several considerations discussed in [Promotion process](/power-platform/admin/about-teams-environment?branch=teams-preview#promotion-process) in the Microsoft Power Platform admin guide.
+> All the capabilities found in tables are powered by Dataverse for Teams. Although this will satisfy many situations, in some situations an organization might want to have additional capacity, capabilities, or control over their solution. In these scenarios, Dataverse for Teams environments can be upgraded to Microsoft Dataverse. The upgrade process, referred to as *promotion*, has several considerations discussed in [Promotion process](/power-platform/admin/about-teams-environment?branch=teams-preview#promotion-process) in the Microsoft Power Platform admin guide.
 
 ## Security in Dataverse for Teams
 
