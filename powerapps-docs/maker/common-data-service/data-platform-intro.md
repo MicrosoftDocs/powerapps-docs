@@ -88,13 +88,16 @@ You can extend the functionality of standard tables by creating one or more cust
 ## Logic and validation
 Tables within Common Data Service can take advantage of rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data within a table.
 
-* **Business rules** validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule](./data-platform-create-business-rule.md)
-* **Business process flows** guide users to ensure they enter data consistently and follow the same steps every time. Business process flows are currently only supported for model-driven apps. More information: [Business process flows overview](/dynamics365/customer-engagement/customize/business-process-flows-overview)
-* **Workflows** allow you to automate business processes without user interaction. More information: [Workflows overview](/dynamics365/customer-engagement/customize/workflow-processes)
-* **Business logic with code** supports advanced developer scenarios to extend the application directly through code. More information: [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md)
+- **Business rules** validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule](./data-platform-create-business-rule.md)
+
+- **Business process flows** guide users to ensure they enter data consistently and follow the same steps every time. Business process flows are currently only supported for model-driven apps. More information: [Business process flows overview](/power-automate/business-process-flows-overview)
+
+- **Workflows** allow you to automate business processes without user interaction. More information: [Workflows overview](/powerapps/maker/common-data-service/overview-realtime-workflows)
+
+- **Business logic with code** supports advanced developer scenarios to extend the application directly through code. More information: [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md)
 
 ## Security
-Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) 
+Common Data Service has a rich security model to protect the data integrity and privacy of users while promoting efficient data access and collaboration. You can combine business units, role-based security, row-based security, and column-based security to define the overall access to information that users have in a Common Data Service environment. More information: [Security in Common Data Service](/power-platform/admin/wp-security) in the Power Platform admin guide 
 
 ## Developer capabilities
 In addition to the features available through the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) portal, Common Data Service includes features for developers to programmatically access metadata and data to create tables and business logic, in addition to interacting with data. More information: [Common Data Service Developer Overview](../../developer/common-data-service/overview.md)
