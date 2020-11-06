@@ -1,6 +1,6 @@
 ---
 title: getFormattedValue | Microsoft Docs
-description: 
+description: Provides information for getFormattedValue method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

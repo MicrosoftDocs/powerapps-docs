@@ -1,6 +1,6 @@
 ---
 title: refresh | Microsoft Docs
-description: 
+description: Provides information for refresh method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

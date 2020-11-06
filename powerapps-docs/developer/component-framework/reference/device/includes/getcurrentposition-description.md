@@ -1,6 +1,6 @@
 ---
 title: getCurrentPosition | Microsoft Docs
-description: 
+description: Provides information for getCurrentPosition method.
 keywords:
 ms.author: nabuthuk
 manager: kvivek

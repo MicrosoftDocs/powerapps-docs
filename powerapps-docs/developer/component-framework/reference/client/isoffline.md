@@ -1,6 +1,6 @@
 ---
 title: isOffline | Microsoft Docs
-description: 
+description: Provides information for isOffline method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

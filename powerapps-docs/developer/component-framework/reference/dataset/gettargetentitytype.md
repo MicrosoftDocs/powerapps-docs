@@ -1,6 +1,6 @@
 ---
 title: getTargetEntityType | Microsoft Docs
-description: 
+description: Provides information for getTargetEntityType method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

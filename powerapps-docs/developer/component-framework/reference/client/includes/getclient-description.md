@@ -1,6 +1,6 @@
 ---
 title: getClient | Microsoft Docs
-description: 
+description: Provides information for getClient method.
 keywords:
 ms.author: nabuthuk
 manager: kvivek

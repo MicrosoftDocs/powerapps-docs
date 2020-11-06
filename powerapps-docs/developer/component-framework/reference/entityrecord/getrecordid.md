@@ -1,6 +1,6 @@
 ---
 title: GetRecordId | Microsoft Docs
-description: 
+description: Provides information for getRecordId method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

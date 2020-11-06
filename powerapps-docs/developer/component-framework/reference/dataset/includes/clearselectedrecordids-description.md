@@ -1,6 +1,6 @@
 ---
 title: ClearSelectedRecordIds | Microsoft Docs
-description: 
+description: Provides information for clearSelectedRecordIds method.
 keywords:
 ms.author: nabuthuk
 manager: kvivek

@@ -1,6 +1,6 @@
 ---
 title: Destroy | Microsoft Docs
-description: 
+description: Provides information for destroy method.
 keywords:
 ms.author: nabuthuk
 manager: kvivek

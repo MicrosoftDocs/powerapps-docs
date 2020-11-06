@@ -1,12 +1,11 @@
 ---
 title: CaptureAudio | Microsoft Docs
-description: 
+description: Provides information for captureAudio method.
 keywords:
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.reviewer: ""
-ms.service: "crm-online"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

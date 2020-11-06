@@ -1,6 +1,6 @@
 ---
 title: CaptureAudio | Microsoft Docs
-description: 
+description: Provides information for captureAudio method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
