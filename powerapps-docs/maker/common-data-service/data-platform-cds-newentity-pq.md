@@ -46,7 +46,7 @@ Before you start to follow this topic:
 1. In the navigation pane, select **Data** to expand it, and then select **Tables**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Power Apps home page](./media/data-platform-cds-newentity-pq/entities-get-data.png)
+    > ![Tables area](./media/view-entities-portal.png)
 
 1. In the command menu, select **Get data**.
 
@@ -71,7 +71,7 @@ Before you start to follow this topic:
 1. Under **Load settings**, select **Load to new table**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Specify the name of the new table](./media/data-platform-cds-newentity-pq/new-entity-name.png)
+    > ![Load to new table](./media/data-platform-cds-newentity-pq/new-entity-name.png)
 
     You can give the new table a different name or display name, but leave the default values to follow this tutorial exactly.
 
@@ -91,7 +91,7 @@ Before you start to follow this topic:
 > [!WARNING]
 > If you use Power Query to add data to an existing table, all data in that table will be overwritten.
 
-If you select **Load to existing table**, you can specify a table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Common Data Service ships. Under **Field mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
+If you select **Load to existing table**, you can specify a table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Common Data Service ships. Under **Column mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
 
   > [!div class="mx-imgBorder"] 
   > ![Specify the name of the new table](./media/data-platform-cds-newentity-pq/existing-entity.png)

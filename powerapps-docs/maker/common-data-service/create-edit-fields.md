@@ -1,5 +1,6 @@
 ---
 title: "How to create and edit columns for Common Data Service| MicrosoftDocs"
+description: Learn how to create and edit columns
 ms.custom: ""
 ms.date: 02/08/2019
 ms.reviewer: ""
@@ -58,7 +59,7 @@ You should use the Power Apps portal to create and edit columns for Common Data 
 - Enable Auditing. 
    - More information: [Auditing overview](../../developer/common-data-service/auditing-overview.md)
 - Enable Column Level Security. 
-   - More information: [Field security tables](../../developer/common-data-service/field-security-entities.md)
+   - More information: [Column security tables](../../developer/common-data-service/field-security-entities.md)
 - Select whether the column appears in global filter in interactive experience. 
    - More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
 - Select whether the column is sortable in interactive experience dashboards. 

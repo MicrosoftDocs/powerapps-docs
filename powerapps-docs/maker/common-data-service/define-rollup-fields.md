@@ -38,7 +38,7 @@ In more complex scenarios, you can aggregate data over the hierarchy of rows. As
 
 The benefits and capabilities of rollup columns include the following:  
   
-- Visual editing is easy. You can create rollup columns by using the Field Editor, just like you do when you create a regular column.  
+- Visual editing is easy. You can create rollup columns by using the Column Editor, just like you do when you create a regular column.  
 - Wide selection of aggregate functions. You can aggregate data by using the following functions: `SUM`, `COUNT`, `MIN`, `MAX` and `AVG`.  
 - Full filter support for aggregation. You can set various filters for the source table or related table while setting multiple conditions.  
 - Seamless integration with the user interface. You can include the rollup columns in forms, views, charts and reports.  
@@ -86,7 +86,7 @@ To view rollup jobs:
 
 **Mass Calculate Rollup Field** is a recurring job, created per a rollup column. It runs once, after you created or updated a rollup column. The job recalculates the specified rollup column value in all existing rows that contain this column. By default, the job will run 12 hours after you created or updated a column. After the job completes, it is automatically scheduled to run in the distant future, approximately, in 10 years. If the column is modified, the job resets to run again in 12 hours after the update. The 12-hour delay is needed to assure that the **Mass Calculate Rollup Field** runs during the non-operational hours of the environment. It is recommended that an administrator adjusts the start time of a **Mass Calculate Rollup Field** job after the rollup column is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup columns.  
 
-### Calculate Rollup Field 
+### Calculate Rollup Column 
 
 **Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup columns in the existing rows for a specified table. There is only one **Calculate Rollup Field** job per table. The incremental calculations mean that the **Calculate Rollup Field** job processes the rows that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup column on a table is created and deleted when the last rollup column is deleted.  
 
@@ -120,7 +120,7 @@ For the **Calculate Rollup Field** job, the available selections are: **Modify R
  
 ## Examples 
 
-Let’s take a look at several rollup column examples. We’ll aggregate data for a row from the related rows with and without using a hierarchy. We’ll also aggregate data for a row from related activities and activities indirectly related to a row via the ActivityParty table. In each example, we define the rollup column by using the Field Editor. To open the Field Editor, open solution explorer and expand **Components** > **Tables**. Select the table you want and select **Columns**. Choose **New**. In the editor, provide the required information for the column, including the **Field Type** and **Data Type**. In the **Field Type**, select **Rollup**, after you have selected the data type. The data types include decimal or whole numbers, currency, and date/time. Choose the **Edit** button next to the **Field Type**. This takes you to the rollup column definition editor. The rollup column definition consists of three sections: **Source table**, **Related table** and **Aggregation**.  
+Let’s take a look at several rollup column examples. We’ll aggregate data for a row from the related rows with and without using a hierarchy. We’ll also aggregate data for a row from related activities and activities indirectly related to a row via the ActivityParty table. In each example, we define the rollup column by using the Column Editor. To open the Column Editor, open solution explorer and expand **Components** > **Tables**. Select the table you want and select **Columns**. Choose **New**. In the editor, provide the required information for the column, including the **Column Type** and **Data Type**. In the **Column Type**, select **Rollup**, after you have selected the data type. The data types include decimal or whole numbers, currency, and date/time. Choose the **Edit** button next to the **Column Type**. This takes you to the rollup column definition editor. The rollup column definition consists of three sections: **Source table**, **Related table** and **Aggregation**.  
   
 -   In the **Source table** section, you specify the table for which the rollup column is defined and whether or not you aggregate over a hierarchy. You can add filters with multiple conditions to specify the rows in the hierarchy you want to use for rollup.  
   
@@ -171,7 +171,7 @@ In this example, we calculate an average estimated revenue from all opportunitie
   
 The following example shows how to calculate an average estimated revenue from related opportunities over a hierarchy of accounts. An average estimated revenue can be seen at each level in the hierarchy.  
   
-![Average estimated revenue in Dynamics 365](media/cust-rollup-enhancements-avg-over-hierarchy.png)  
+![Average estimated revenue over hierarchy in Dynamics 365](media/cust-rollup-enhancements-avg-over-hierarchy.png)  
   
 <a name="BKMK_considerations"></a> 
 
@@ -188,7 +188,7 @@ You should be aware of certain conditions and restrictions when working with rol
 - A rollup can be done only over related tables with the 1:N relationship. A rollup can’t be done over the N:N relationships.  
 - A rollup can’t be done over the 1:N relationship for the Activity table or the Activity Party table.  
 - The business rules, workflows or calculated columns always use the last calculated value of the rollup column.  
-- A rollup column is aggregated under the system user context. All users are able to see the same rollup column value. You can control the rollup column visibility with the column level security (FLS), by restricting who can access the rollup column. More information  [Field level security to control access](/dynamics365/customer-engagement/admin/field-level-security). 
+- A rollup column is aggregated under the system user context. All users are able to see the same rollup column value. You can control the rollup column visibility with the column level security (FLS), by restricting who can access the rollup column. More information  [Column level security to control access](/dynamics365/customer-engagement/admin/field-level-security). 
 
 ### Precision rounding
  
