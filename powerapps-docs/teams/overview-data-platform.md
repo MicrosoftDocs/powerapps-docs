@@ -11,8 +11,6 @@ ms.reviewer: matp
 ---
 # Overview of Project Oakdale
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 Project Oakdale delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Project Oakdale enables everyone to easily build and deploy apps.
 
 :::image type="content" source="media/tables-in-teams.png" alt-text="Project Oakdale table in Teams":::
