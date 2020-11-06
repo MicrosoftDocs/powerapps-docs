@@ -1,6 +1,6 @@
 ---
 title: GetOutputs | Microsoft Docs
-description: 
+description: Provides information for getOutputs method.
 keywords:
 ms.author: nabuthuk
 manager: kvivek

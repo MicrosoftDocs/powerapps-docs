@@ -1,6 +1,6 @@
 ---
 title: setSelectedRecordIds | Microsoft Docs
-description: 
+description: Provides information for setSelectedRecordIds method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

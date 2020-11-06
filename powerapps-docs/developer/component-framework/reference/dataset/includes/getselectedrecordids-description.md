@@ -1,6 +1,6 @@
 ---
 title: GetSelectedRecordIds | Microsoft Docs
-description: 
+description: Provides information for getSelectedRecordIds method.
 keywords:
 ms.author: nabuthuk
 manager: kvivek

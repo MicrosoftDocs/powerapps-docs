@@ -1,6 +1,6 @@
 ---
 title: GetNamedreference | Microsoft Docs
-description: 
+description: Provides information for GetNamedReference method.
 keywords:
 ms.author: nabuthuk
 manager: kvivek

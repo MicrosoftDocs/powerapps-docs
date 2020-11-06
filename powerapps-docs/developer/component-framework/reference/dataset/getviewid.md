@@ -1,6 +1,6 @@
 ---
 title: getViewId | Microsoft Docs
-description: 
+description: Provides information for getViewId method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -1,6 +1,6 @@
 ---
 title: getFormFactor | Microsoft Docs
-description: 
+description: Provides information for getFormFactor method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

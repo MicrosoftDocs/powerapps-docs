@@ -1,6 +1,6 @@
 ---
 title: getTitle | Microsoft Docs
-description: 
+description: Provides information for getTitle method.
 keywords:
 ms.author: nabuthuk
 author: Nkrb

@@ -1,6 +1,6 @@
 ---
 title: UpdateView | Microsoft Docs
-description: 
+description: Provides information for updateView method.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
