@@ -1333,6 +1333,8 @@
           href: ./portals/admin/portal-details.md
         - name: Portal administration from Power Platform admin center
           href: ./portals/admin/power-platform-admin-center.md
+        - name: Roles required for portal administration
+          href: ./portals/admin/portal-admin-roles.md
         - name: Download public key of portal
           href: ./portals/admin/get-public-key.md
         - name: View portal error logs
