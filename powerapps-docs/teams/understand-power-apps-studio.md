@@ -130,7 +130,7 @@ More information: [Change screen size and orientation](../maker/canvas-apps/set-
 Allows you to configure advanced settings for the app.
 
 - **Data row limit for non-delegable views** - Set the delegable data row limit. More information: [Understand delegation in canvas apps](../maker/canvas-apps/delegation-overview.md)
-- **Improve data source experience and Common Data Service views** - Use the improved data source experience when working with Common Data Service. More information: [Common Data Service and the improved data source experience](../maker/canvas-apps/use-native-cds-connector.md)
+- **Improve data source experience and Dataverse views** - Use the improved data source experience when working with Dataverse. More information: [Dataverse and the improved data source experience](../maker/canvas-apps/use-native-cds-connector.md)
 - **Preview, experimental and deprecated features** - Features that are in preview or experimental phases, or deprecated. More information: [Understand experimental, preview, and deprecated features in Power Apps](../maker/canvas-apps/working-with-experimental-preview.md)
 
 ### Power Automate
@@ -291,7 +291,7 @@ To insert controls on the canvas, you can drag the control to the canvas,
 select the control, or select **(...)** and then select **Add to canvas**.
 
 > [!TIP]
-> Project Oakdale provides new components built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/). More information: [Fluent UI controls](use-the-fluent-ui-controls.md).
+> Dataverse for Teams provides new components built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/). More information: [Fluent UI controls](use-the-fluent-ui-controls.md).
 
 #### Popular controls
 | **Name**      | **Description**                                                                                      |
@@ -322,7 +322,7 @@ In addition to data stored within tables, there are a number of connectors avail
 
 ![Add data - select data source](media/studio-add-1.png "Add data - select data source")
 
-Select **Create new table** to create a new table in the Project Oakdale
+Select **Create new table** to create a new table in the Dataverse for Teams
 environment.
 
 To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can

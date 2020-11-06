@@ -1,6 +1,6 @@
 ---
-title: Delete or edit a table in Project Oakdale| Microsoft Docs
-description: Explains how to delete or edit a table in Project Oakdale.
+title: Delete or edit a table in Dataverse for Teams| Microsoft Docs
+description: Explains how to delete or edit a table in Dataverse for Teams.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.reviewer: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-With Project Oakdale, you can perform the following types of operations on a table:
+With Dataverse for Teams, you can perform the following types of operations on a table:
 
 - Create table columns.
 - Delete a table.
@@ -31,6 +31,8 @@ In Microsoft Teams, you can edit four table properties:
 
 > [!NOTE]
 > Each Project Oakdale environment is assigned a prefix when it's created, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
+> - You can also edit a table using the visual editor. More information: [Create your first table](create-first-app.md#create-your-first-table)
+> - Each Dataverse for Teams environment is assigned a prefix when it's created, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
 
 1. On the left pane, select **Tables**.
 2. Select the table you want, select **Edit** on the command bar, and then select **Settings** on the command bar to display the **Edit table** dialog box.  

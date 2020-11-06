@@ -111,7 +111,7 @@ products, email, and phone. You can then surface that data by creating an app th
 
 ### Other - Connection references
 
-Lists connections available to the environment. Data is stored in a data source, and you bring that data into your app by creating a connection. A Power Apps connection connects your app to such a data source. You can use several other types of connections to connect to the Project Oakdale environment within the team. More information: [Overview of canvas-app connectors](../maker/canvas-apps/connections-list.md)
+Lists connections available to the environment. Data is stored in a data source, and you bring that data into your app by creating a connection. A Power Apps connection connects your app to such a data source. You can use several other types of connections to connect to the Dataverse for Teams environment within the team. More information: [Overview of canvas-app connectors](../maker/canvas-apps/connections-list.md)
 
 ![Connection references](media/power-apps-overview-13.png "Connection references")
 
@@ -139,8 +139,8 @@ useful information that you can then share with others when investigating an iss
 - **Object ID**: Object ID of the user account in Azure Active Directory.
 - **Build name**: Build and version details of the Power Apps app.
 - **Resource ID**: ID of the resource.
-- **Unique name**: Unique name of the Common Data Service organization.
-- **Instance url**: URL of the Common Data Service instance.
+- **Unique name**: Unique name of the Dataverse organization.
+- **Instance url**: URL of the Dataverse instance.
 
 > [!NOTE]
 > Session details are only used when you reach out to Microsoft Support to investigate an issue.
@@ -153,7 +153,7 @@ While creating canvas aps using Power Apps from the Teams interface, you need to
 |----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Power Apps Studio](https://docs.microsoft.com/powerapps/powerapps-overview#power-apps-for-app-makerscreators) | An application used to make or author a canvas app.                                                                                                             |
 | [Canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started)                           | An app that you can create from scratch or by using any available template through Power Apps Studio.                                                                                             |
-| [Model-driven app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)     | An application based on Common Data Service forms, views, tables, columns, and other components.                                                                                                                     |
+| [Model-driven app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)     | An application based on Dataverse forms, views, tables, columns, and other components.                                                                                                                     |
 | [Connector](https://docs.microsoft.com/connectors/connectors)                                                  | A connection object that connects an app with a data source. For example, a connector for SharePoint or a connector for OneDrive.                                                                                |
 | [Control](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties#controls)                | An object that can be added on the canvas to provide certain app functionality.                                                                                                                              |
 | [Property](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties#all-properties)         | Behaviors representing the controls available in an app.                                                                                                                                                     |
