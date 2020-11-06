@@ -145,8 +145,7 @@ Any of the above behaviors appears after the form is opened, for example, you se
 
 There are many possible causes for the unexpected behaviors when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) script that runs synchronously or asynchronously to change the field/control behavior. To determine if your script is causing the issue, you can disable the form handlers using the URL parameters by appending `**&flags=DisableFormHandlers=true**` flag at the end of your app URL.
 
-If the form loads normally after you disable the form handler, this indicates that there is an issue with the script that is blocking or causing an
-error when a form is loading.
+If the form loads normally after you disable the form handler, it indicates that there is an issue with the script that is blocking or causing an error when a form is loading.
 
 ## Intermittent form errors
 
@@ -170,20 +169,18 @@ There are many ways to write unsupported client API methods and all share a comm
 
 Using the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker), you can access information that helps you determine when the unsupported client access occurs and when the access happens at the wrong time due to race condition.
 
-The below sample event shows the call stack of the unsupported script (the call stack has been modified for demonstration purposes). The call stack tells what exact web resource, function, line, and the row number is causing the error.
-
 > [!div class="mx-imgBorder"]
 > ![Unsupported client api method](media/unsupported-client-api-method.png "Unsupported client api method")
 
 
 > [!NOTE]
-> The `callStack` has been modified for demo purpose. The `callStack` provides you with all the details like what web resource, function, line, and the row number that is causing the error.
+> The `callStack` has been modified for demo purpose. The `callStack` provides you with all the details like what web resource, function, and line that is causing the error.
 
 ## **Save in Progress** error dialog
 
 Sometimes when you save the form, you see the **Save in Progress** error dialog. This error occurs when the form [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is triggered before the previous [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is completed. This is not supported and the error dialog is by design because calling the `OnSave` event before the previous `OnSave` event is complete would cause recursive save loops with unintended behaviors.
 
-A typical cause of this error is the script that calls `save]()` in [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) handler. Another possible cause is the concurrent `save()` calls in `setTimeout()`, and which could cause the error dialog to intermittently show up, depending on whether the prior `save()` call is completed when another save() call is made.
+A typical cause of this error is the script that calls `save()` in [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) handler. Another possible cause is the concurrent `save()` calls in `setTimeout()`, and which could cause the error dialog to intermittently show up, depending on whether the prior `save()` call is completed when another save() call is made.
 
 **Resolution**:
 
@@ -192,7 +189,7 @@ In the monitoring tool, the `FormEvent.onsave` operation provides all the detail
 > [!div class="mx-imgBorder"]
 > ![Save in progress error](media/save-in-progress-error.png "Save in progress error")
 
-## The form/record is not saved when you try to save the form
+## The form/record is not saved when you try to save
 
 A common cause is an [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event handler that calls the `executionContext.getEventArgs().preventDefault()` method to cancel the save operation.
 
@@ -289,13 +286,17 @@ You can use the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/mod
 
 ## Related Menu/Related tab
 
-There are many reasons why a related menu item doesn't show in the tab or have incorrect labels. Below is an example where you can use the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker)to check the `RelatedMenu` event.
+There are many reasons why a related menu item doesn't show in the tab or have incorrect labels.
 
+**Resolution**:
+ 
 In this example, it shows the reasons why a related entity "role" (Security Role) does not show in the "team" form is because "role" is not available in
 Unified Interface.
 
 > [!div class="mx-imgBorder"]
 > ![Related menu](media/related-menu-error.png "Related menu")
+
+In the [Monitoring Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) the `RelatedMenu` operation provides all the details that is causing the issue.
 
 There are also a few sources where a record can be included as an option for the related menu tab. The following example includes details that indicate the label "Activities" in account form related menu comes from the related entity's plural display name.
 
