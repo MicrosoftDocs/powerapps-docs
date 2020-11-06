@@ -23,7 +23,7 @@ You can use the **View in MR** component in your app to let users see how a part
 
 The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
 
-:::image type="content" source="/media/augmented-overview/view-in-mixed-reality.png" alt-text="Photo showing a 3D model of a forklift being overlaid onto the real world through a mobile device.":::
+:::image type="content" source="./media/augmented-overview/view-in-mixed-reality.png" alt-text="Photo showing a 3D model of a forklift being overlaid onto the real world through a mobile device.":::
 
 You can also take photos and [upload them to OneDrive](mixed-reality-take-upload-photos.md).
 

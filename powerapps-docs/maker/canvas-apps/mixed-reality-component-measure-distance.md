@@ -23,7 +23,7 @@ You can use the **Measure in MR** component in your app to let users measure dis
 The component creates a button in your app. When app users click the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distances of measured segments are shown directly on the live camera feed.
 
 
-:::image type="content" source="/media/augmented-overview/measure-in-mixed-reality.png" alt-text="Photo showing a corner between two construction walls being measured with a mobile device.":::
+:::image type="content" source="./media/augmented-overview/measure-in-mixed-reality.png" alt-text="Photo showing a corner between two construction walls being measured with a mobile device.":::
 
 When the user exits the component, the measurements that were taken are captured in the **Measurements** and **MeasurementsDetailed** properties so they can be saved or stored.
 
