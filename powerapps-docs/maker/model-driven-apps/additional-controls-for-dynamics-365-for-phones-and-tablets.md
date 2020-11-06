@@ -100,7 +100,7 @@ To use these controls in the form editor:
  The flip switch is like an on/off switch, providing a choice between two values.  
  
 > [!NOTE]
->  This control is being deprecated in April 2021, please use the Toggle control.
+>  This control will be deprecated in April 2021. Instead, you can start using the toggle control.
  
 |Property|Description|  
 |--------------|-----------------|  
