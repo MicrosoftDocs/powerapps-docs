@@ -32,7 +32,7 @@ For more information about actions, see [Use actions](/powerapps/maker/common-da
 |---|---|---|---|
 |name|String|Yes|Name of the process action to invoke.|
 |parameters|object|No|An object containing input parameters for the action. You define an object using `key:value` pairs of items, where `key` is of **String** type.|
-|successCallback |Function |Yes |A function to call when the action is invoked.  |
+|successCallback |Function |Yes |A function to call when the action is invoked. An object will be passed with outputs from the process action. |
 |errorCallback |Function |Yes |A function to call when the operation fails.  |
 
 ## Returns
