@@ -89,7 +89,7 @@ The following controls aren't supported:
 - [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md)
 - [Video control](../maker/canvas-apps/controls/control-audio-video.md)
 
-The [Image control](../maker/canvas-apps/controls/control-image.md) only supports external media URLs with HTTPS.
+The [Image control](../maker/canvas-apps/controls/control-image.md) only supports external media URLs using HTTPS.
 
 ### New connections
 
