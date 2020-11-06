@@ -24,6 +24,9 @@ Some terminology has changed between Common Data Service and Project Oakdale to 
 |---------|---------|
 |Table, tables     | Entity, entities        |
 |Column, columns     |  Field, fields <br /> attribute, attributes       |
+|Row, rows   | Record, records |
+| Choice, choices   | Option set, option sets <br /> picklist, picklists  |
+| Yes/No  | Two options  |
 
 Most of the processes for creating and managing tables in Project Oakdale are the same as creating and managing entities in Common Data Service. Where applicable, these articles about Project Oakdale link you to Common Data Service articles that provide more detail.
 

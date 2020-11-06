@@ -46,7 +46,7 @@ You can edit table columns using the visual editor.
 1. On the left pane, select **Tables**.
 2. Select the table you want, select **Quick Edit** on the command bar to display the visual editor.
 
-:::image type="content" source="media/edit-table2.png" alt-text="Quick edit visual editor":::
+   :::image type="content" source="media/edit-table2.png" alt-text="Quick edit visual editor":::
 
 More information: [Create your first table](create-first-app.md#create-your-first-table)
 
