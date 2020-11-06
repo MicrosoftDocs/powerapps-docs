@@ -567,12 +567,12 @@ var relatedEntities = [
     }
 ];
 
-// The name of the relationship to use for this association.
+// The name of the existing relationship to associate on.
 var relationship = "new_account_contact";
 
-var m2mAssociateRequest = new Sdk.AssociateRequest(target, relatedEntities, relationship)
+var manyToManyAssociateRequest = new Sdk.AssociateRequest(target, relatedEntities, relationship)
 
-Xrm.WebApi.online.execute(m2mAssociateRequest).then(
+Xrm.WebApi.online.execute(manyToManyAssociateRequest).then(
     function(result) {
         if (result.ok) {
             console.log("Status: %s %s", result.status, result.statusText);
@@ -590,7 +590,7 @@ Xrm.WebApi.online.execute(m2mAssociateRequest).then(
 The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup fields), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 > [!NOTE]
-> Unlike the Associate operation which allows adding references to multiple related entity records, the Disassociate operation is limited to only one related record's entity reference per operation.
+> Unlike the Associate operation which allows associating the target entity record with multiple related entity records in a single operation, the Disassociate operation is limited to only disassociating one entity record from the target entity record per operation.
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -610,7 +610,7 @@ Sdk.DisassociateRequest.prototype.getMetadata = function() {
     return {
         boundParameter: null,
         parameterTypes: {},
-        operationType: 2,
+        operationType: 2, // Associate and Disassociate fall under the CRUD umbrella
         operationName: "Disassociate"
     }
 };
@@ -624,12 +624,12 @@ var target = {
 // The GUID of the related entity record to disassociate.
 var relatedEntityId = "180a9aad-7619-eb11-8dff-000d3ac5c7f9";
 
-// The relationship to use for this disassociation.
+// The name of the existing relationship to disassociate from.
 var relationship = "new_account_contact";
 
-var m2mDisassociateRequest = new Sdk.DisassociateRequest(target, relatedEntityId, relationship)
+var manyToManyDisassociateRequest = new Sdk.DisassociateRequest(target, relatedEntityId, relationship)
 
-Xrm.WebApi.online.execute(m2mDisassociateRequest).then(
+Xrm.WebApi.online.execute(manyToManyDisassociateRequest).then(
     function(result) {
         if (result.ok) {
             console.log("Status: %s %s", result.status, result.statusText);
