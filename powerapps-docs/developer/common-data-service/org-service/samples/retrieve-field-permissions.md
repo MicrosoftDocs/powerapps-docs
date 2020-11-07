@@ -47,17 +47,17 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 1. Gets the user information that you have created manually in **Microsoft 365**.
 1. The `QueryExpression` method retrieves the security role needed to assign to the user.
-1. The `Team` method instantiate a team entity record and set its property values.
+1. The `Team` method instantiate a team table row and set its property values.
 
 ### Demonstrate
 
 1. The `FieldSecurityProfile` method creates field security profile.
 1. The `AssociateRequest` method adds team and user to the profile.
-1. The `CreateEntityRequest` method creates a new custom activity entity for the sample.
-1. The `RolePrivilege` method adds privileges for the new custom entity.
+1. The `CreateEntityRequest` method creates a new custom activity table for the sample.
+1. The `RolePrivilege` method adds privileges for the new custom table.
 1. The `AddPrivilegeRoleRequest` method creates and execute the `RolePrivilege` method.
 1. The `FieldPermission` method creates field permission object for identity.
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.

@@ -19,18 +19,18 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-**CrmSvcUtil.exe** is a command-line code generation tool for use with Common Data Service. This tool generates early-bound .NET Framework  classes that represent the entity data model used by Common Data Service. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. 
+**CrmSvcUtil.exe** is a command-line code generation tool for use with Common Data Service. This tool generates early-bound .NET Framework  classes that represent the table data model used by Common Data Service. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. 
 
 > [!NOTE]
 > For information about downloading the code generation tool (CrmSvcUtil.exe), see [Download tools from NuGet](../download-tools-NuGet.md).
 
-## Generate entity classes
+## Generate table classes
 
-The **CrmSvcUtil.exe** tool creates a Microsoft Visual C# or Visual Basic .NET  output file that contains strongly-typed classes for entities in your organization. This includes custom entities and attributes. This output file contains one class for each entity, providing early binding and IntelliSense  support in Visual Studio to aid you as you write code. The generated classes are partial classes that can be extended with custom business logic in separate files. You can also create extensions to this tool. For more information, see [Create Extensions for the Code Generation Tool](extend-code-generation-tool.md).  
+The **CrmSvcUtil.exe** tool creates a Microsoft Visual C# or Visual Basic .NET  output file that contains strongly-typed classes for entities in your organization. This includes custom entities and columns. This output file contains one class for each table, providing early binding and IntelliSense  support in Visual Studio to aid you as you write code. The generated classes are partial classes that can be extended with custom business logic in separate files. You can also create extensions to this tool. For more information, see [Create Extensions for the Code Generation Tool](extend-code-generation-tool.md).  
 
 ## Generate an OrganizationServiceContext class
 
-The tool can also be used to generate a class derived from the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext> class that acts as an entity container in the entity data model. This service context provides the facilities for tracking changes and managing identities, concurrency, and relationships. This class also exposes a <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.SaveChanges> method that writes inserts, updates, and deletes records in Common Data Service. For more information, see [Use OrganizationServiceContext](organizationservicecontext.md).  
+The tool can also be used to generate a class derived from the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext> class that acts as an table container in the table data model. This service context provides the facilities for tracking changes and managing identities, concurrency, and relationships. This class also exposes a <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.SaveChanges> method that writes inserts, updates, and deletes rows in Common Data Service. For more information, see [Use OrganizationServiceContext](organizationservicecontext.md).  
 
 ## Use generated classes
 
@@ -172,10 +172,10 @@ For more information on supported tracing options see [Configure tracing for XRM
 ### See Also
 
 [Late-bound and Early-bound programming using the Organization service](early-bound-programming.md)  
-[Sample: Early-bound entity operations](samples/early-bound-entity-operations.md)
+[Sample: Early-bound table operations](samples/early-bound-entity-operations.md)
 
 [Create extensions for the Code Generation Tool](extend-code-generation-tool.md)  
 [Developer tools and resources](../developer-tools.md)  
 [Download tools from NuGet](../download-tools-NuGet.md)
 
-[Create early bound entity classes with the code generation tool (CrmSvcUtil.exe)](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool) \[Dynamics 365 Customer Engagement (on-premises)\]
+[Create early bound table classes with the code generation tool (CrmSvcUtil.exe)](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool) \[Dynamics 365 Customer Engagement (on-premises)\]

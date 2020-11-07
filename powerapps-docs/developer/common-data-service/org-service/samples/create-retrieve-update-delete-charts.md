@@ -44,17 +44,17 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `CreateRequiredRecords` method creates entity records that is required for the sample.
+1. The `CreateRequiredRecords` method creates table rows that is required for the sample.
 
 ### Demonstrate
 
 1. The `presentationXml` method sets the presentation XML string. 
 2. The `dataXml` method sets the data XML string.
-3. The `newUserOwnedVisualization` method creates the visualization entity instance.
+3. The `newUserOwnedVisualization` method creates the visualization table instance.
 4. The `retrievedOrgOwnedVisualization` method retrieves the visualization.
 5. The `newDataXml` method updates the name and the data description string.
 
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.

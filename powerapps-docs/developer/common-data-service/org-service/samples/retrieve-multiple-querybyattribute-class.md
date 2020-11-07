@@ -40,7 +40,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Account` method creates 2 account records.
+1. The `Account` method creates 2 account rows.
 
 ### Demonstrate
 

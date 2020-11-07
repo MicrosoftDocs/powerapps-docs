@@ -23,11 +23,11 @@ When you work with the Organization service assemblies you have two styles you c
 
 The key difference between early and late binding involves type conversion. While early binding provides compile-time checking of all types so that no implicit casts occur, late binding checks types only when the object is created or an action is performed on the type. The <xref:Microsoft.Xrm.Sdk.Entity> class requires types to be explicitly specified to prevent implicit casts.
 
-Late binding allows you to work with custom entities or attributes that weren't available when your code was compiled.
+Late binding allows you to work with custom entities or columns that weren't available when your code was compiled.
 
 ## Late-Bound
 
-Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class and you need to refer to entities, and attributes using their `LogicalName` property values: 
+Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class and you need to refer to entities, and columns using their `LogicalName` property values: 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>
 
@@ -37,8 +37,8 @@ The main advantage for late-bound programming is that you don't need to generate
 
 The main disadvantages are:
 
-- You don't get compile time validation of names of entities, attributes, and relationships.
-- You need to know the names of the attributes and relationships in the metadata. 
+- You don't get compile time validation of names of entities, columns, and relationships.
+- You need to know the names of the columns and relationships in the metadata. 
 
 > [!TIP]
 > A tool that you can use to find this information easily is the Metadata Browser. This is an app you can download and install in your organization. More information: [Browse the metadata for your environment](../browse-your-metadata.md)
@@ -48,13 +48,13 @@ The main disadvantages are:
 The following example creates an account using the late-bound style.
 
 ```csharp
-//Use Entity class with entity logical name
+//Use Table class with table logical name
 var account = new Entity("account");
 
-// set attribute values
+// set column values
     // string primary name
     account["name"] = "Contoso";            
-    // Boolean (Two option)
+    // Boolean (Yes/No)
     account["creditonhold"] = false;
     // DateTime
     account["lastonholdtime"] = new DateTime(2017, 1, 1);
@@ -65,7 +65,7 @@ var account = new Entity("account");
     account["numberofemployees"] = 500;
     // Money
     account["revenue"] = new Money(new decimal(5000000.00));
-    // Picklist (Option set)
+    // Choice (Option set)
     account["accountcategorycode"] = new OptionSetValue(1); //Preferred customer
                 
 //Create the account
@@ -76,7 +76,7 @@ Guid accountid = svc.Create(account);
 
 Early-bound programming requires that you first generate a set of classes based on the metadata for a specific organization using the code generation tool (CrmSvcUtil.exe). More information: [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
 
-When you have generated early-bound entity classes using the code generation tool you will enjoy a better experience while you write code because classes and attribute properties using the respective `SchemaName` property values:
+When you have generated early-bound table classes using the code generation tool you will enjoy a better experience while you write code because classes and column properties using the respective `SchemaName` property values:
 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName>
@@ -88,7 +88,7 @@ The classes generated for early-bound programming can also include definitions f
 
 There is also an option to extend the code generation tool to change the output. One extension creates enums for each optionset option value. This provides a better experience because you don't have to look up the integer value for each option. More information: [Create extensions for the code generation tool](extend-code-generation-tool.md)
 
-However, because the classes are generated using metadata from a specific instance, and each instance may have different entities and attributes, and these can change over time. You may need to write code to work for entities that are not present when you generate the strongly typed classes.
+However, because the classes are generated using metadata from a specific instance, and each instance may have different entities and columns, and these can change over time. You may need to write code to work for entities that are not present when you generate the strongly typed classes.
 
 > [!IMPORTANT]
 > If you are using the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> to provide the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods you will use, you must call the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.EnableProxyTypes> method to enable early bound types.
@@ -100,10 +100,10 @@ The following example creates an account using the early-bound style.
 
 ```csharp
 var account = new Account();
-// set attribute values
+// set column values
     // string primary name
     account.Name = "Contoso";
-    // Boolean (Two option)
+    // Boolean (Yes/No)
     account.CreditOnHold = false;
     // DateTime
     account.LastOnHoldTime = new DateTime(2017, 1, 1);
@@ -114,7 +114,7 @@ var account = new Account();
     account.NumberOfEmployees = 500;
     // Money
     account.Revenue = new Money(new decimal(5000000.00));
-    // Picklist (Option set)
+    // Choice
     account.AccountCategoryCode = new OptionSetValue(1); //Preferred customer
 
 //Create the account
@@ -127,8 +127,8 @@ Which style you choose to use is up to you. The following table provides the adv
 
 |Early-bound|Late-bound|
 |--|--|
-|You can verify entity, attribute, and relationship names at compile time|No compile time verification of entity, attribute, and relationship names|
-|You must generate entity classes|You don't need to generate entity classes|
+|You can verify table, column, and relationship names at compile time|No compile time verification of table, column, and relationship names|
+|You must generate table classes|You don't need to generate table classes|
 |Better IntelliSense support|Less IntelliSense support|
 |Less, more readable code| More, less readable code|
 |Very slightly less performant|Very slightly more performant|
@@ -136,7 +136,7 @@ Which style you choose to use is up to you. The following table provides the adv
 
 ## Mix early and late bound
 
-Because all the generated classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class used with late-bound programming, you can work with entities, attributes, and relationships not defined within classes.
+Because all the generated classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class used with late-bound programming, you can work with entities, columns, and relationships not defined within classes.
 
 ### Examples
 
@@ -146,28 +146,28 @@ The following example shows one way to mix early and late binding methods using 
 // Create an organization service context object  
 AWCServiceContext context = new AWCServiceContext(_serviceProxy);  
   
-// Instantiate an account object using the Entity class.  
+// Instantiate an account object using the table class.  
 Entity testaccount = new Entity("account");  
   
-// Set several attributes. For account, only the name is required.   
+// Set several columns. For account, only the name is required.   
 testaccount["name"] = "Fourth Coffee";  
 testaccount["emailaddress1"] = "marshd@contoso.com";  
   
-// Save the entity using the organization service context object.  
+// Save the table using the organization service context object.  
 context.AddToAccountSet(testaccount);  
 context.SaveChanges();  
   
 ```  
 
-If a custom attribute was not included in the generated classes, you can still use it.
+If a custom column was not included in the generated classes, you can still use it.
 
 
 ```csharp
 var account = new Account();
-// set attribute values
+// set column values
     // string primary name
     account.Name = "Contoso";
-    // A custom boolean attribute not included in the generated classes.
+    // A custom boolean column not included in the generated classes.
     account["sample_customboolean"] = false;
 
 
@@ -188,11 +188,11 @@ new EntityCollection(new Entity[] { relatedEntity.ToEntity<Entity>() });
 
 ### See also
 
-[Entity Operations using the Organization service](entity-operations.md)<br />
-[Create entities using the Organization Service](entity-operations-create.md)<br />
-[Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
+[Table Operations using the Organization service](entity-operations.md)<br />
+[Create tables using the Organization Service](entity-operations-create.md)<br />
+[Retrieve an table using the Organization Service](entity-operations-retrieve.md)<br />
 [Query data using the Organization service](entity-operations-query-data.md)<br />
-[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Update and Delete tables using the Organization Service](entity-operations-update-delete.md)<br />
+[Associate and disassociate tablea using the Organization Service](entity-operations-associate-disassociate.md)<br />
 [IOrganizationService Interface](iorganizationservice-interface.md)<br />
 [Using OrganizationServiceContext](organizationservicecontext.md)<br />

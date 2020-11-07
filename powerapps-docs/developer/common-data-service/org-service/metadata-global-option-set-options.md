@@ -39,7 +39,7 @@ InsertOptionValueRequest insertOptionValueRequest =
     new InsertOptionValueRequest
     {
         OptionSetName = _globalOptionSetName,
-        Label = new Label("New Picklist Label", _languageCode)
+        Label = new Label("New Choice Label", _languageCode)
     };
 
 // Execute the request and store the newly inserted option value 

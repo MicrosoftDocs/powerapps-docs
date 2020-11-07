@@ -1,6 +1,6 @@
 ---
 title: "Sample: Enable duplicate detection and retrieve duplicates (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to enable duplicate detection and retrieve duplicate records." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample shows how to enable duplicate detection and retrieve duplicate rows." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -21,7 +21,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-enable-duplicate-detection-and-retrieve-duplicates -->
 
-This sample shows how to enable duplicate detection and retrieve duplicate records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/EnableDuplicateDetection).
+This sample shows how to enable duplicate detection and retrieve duplicate rows. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/EnableDuplicateDetection).
 
 ## How to run this sample
 
@@ -38,8 +38,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Account` method creates some account records to retrieve duplicates.
-1. The `RetrieveDuplicateRequest` method retrieves the duplicate records. 
+1. The `Account` method creates some account rows to retrieve duplicates.
+1. The `RetrieveDuplicateRequest` method retrieves the duplicate rows. 
 1. The `EnableDuplicateDetectionForOrg` class enables duplicate detection for an organization. 
 1. To enable duplicate detection set `IsDuplicateDetectionEnabled = true`.
 1. The `RetrieveEntityRequest` method retrieves the entity metadata. 
@@ -48,4 +48,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.

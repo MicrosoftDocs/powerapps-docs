@@ -19,24 +19,24 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Entity records are associated to each other using lookup attributes on the related entity. The simplest way to associate two entity records in a one-to-many relationship is to use an <xref:Microsoft.Xrm.Sdk.EntityReference> to set the value of a lookup attribute on the related entity.
+Table rows are associated to each other using lookup columns on the related table. The simplest way to associate two table rows in a one-to-many relationship is to use an <xref:Microsoft.Xrm.Sdk.EntityReference> to set the value of a lookup column on the related table.
 
-The simplest way to disassociate two entity records in a one-to-many relationship is to set the value of the lookup attribute to null.
+The simplest way to disassociate two table rows in a one-to-many relationship is to set the value of the lookup column to null.
 
-Relationships using an many-to-many relationship also depend on lookup attributes on the *intersect entity* that supports the many-to-many relationship. These relationship are defined by the existence of entity records in that intersect entity. While you can interact with the intersect entity directly, it is much easier to use the API to do this for you.
+Relationships using an many-to-many relationship also depend on lookup columns on the *intersect table* that supports the many-to-many relationship. These relationship are defined by the existence of table rows in that intersect table. While you can interact with the intersect table directly, it is much easier to use the API to do this for you.
 
 ## Use the Associate method or AssociateRequest
 
 The main value in using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*> method or the <xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method is that you can:
 
-- Associate multiple records in one operation
-- Easily associate records using a Many-to-many relationship without concerning yourself with the intersect entity.
+- Associate multiple rows in one operation
+- Easily associate rows using a Many-to-many relationship without concerning yourself with the intersect table.
 
-To associate entity records with these APIs you need three things:
+To associate table rows with these APIs you need three things:
 
-- An entity reference to the entity you want to associate
+- An table reference to the table you want to associate
 - The name of the relationship
-- One or more references that you want to associate the entity to
+- One or more references that you want to associate the table to
 
 Whether the relationship is a one-to-many or many-to-many relationship doesn't matter. The parameters or properties are equivalent.
 
@@ -44,10 +44,10 @@ You can discover the names of the relationships by viewing the customization UI 
 More information: 
 
 - [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](../../../maker/common-data-service/create-edit-1n-relationships.md)
-- [Create and edit Many-to-many (N:N) entity relationships](../../../maker/common-data-service/create-edit-nn-relationships.md)
+- [Create and edit Many-to-many (N:N) table relationships](../../../maker/common-data-service/create-edit-nn-relationships.md)
 - [Browse the metadata for your environment](../browse-your-metadata.md)
 
-The following example will set a specific contact entity (`jimGlynn`) as the primary contact for all accounts that are in Redmond.
+The following example will set a specific contact table (`jimGlynn`) as the primary contact for all accounts that are in Redmond.
 
 
 ```csharp
@@ -93,14 +93,14 @@ Target = jimGlynn
 svc.Execute(request);
 ```
 
-This operation is the same as three separate update operations to the [Account](../reference/entities/account.md).[PrimaryContactId](../reference/entities/account.md#BKMK_PrimaryContactId) lookup attribute, but it is using the [account_primary_contact](../reference/entities/contact.md#BKMK_account_primary_contact) relationship, which is a many-to-one entity relationship on the account entity and a one-to-many entity relationship on the contact entity.
+This operation is the same as three separate update operations to the [Account](../reference/entities/account.md).[PrimaryContactId](../reference/entities/account.md#BKMK_PrimaryContactId) lookup column, but it is using the [account_primary_contact](../reference/entities/contact.md#BKMK_account_primary_contact) relationship, which is a many-to-one table relationship on the account table and a one-to-many table relationship on the contact table.
 
 If you examine the properties of the relationship metadata, you can see that the `ReferencingEntity` value is `account` and the `ReferencingAttribute` value is `primarycontactid`.
 
 
 ## Use the Disassociate method or DisassociateRequest
 
-The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> method or the <xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method are just the reverse of the way that you associate entity records.
+The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> method or the <xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method are just the reverse of the way that you associate table rows.
 
 The following code reverses the associations made in the sample above.
 
@@ -149,5 +149,5 @@ svc.Execute(request);
 ### See also
 
 [Create entities using the Organization Service](entity-operations-create.md)<br />
-[Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
+[Retrieve an table using the Organization Service](entity-operations-retrieve.md)<br />
 [Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />

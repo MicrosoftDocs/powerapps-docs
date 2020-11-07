@@ -1,6 +1,6 @@
 ---
-title: " Create and update records with related records (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to create and update records with related records." # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Create and update rows with related rows (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to create and update rows with related rows." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
@@ -16,11 +16,11 @@ search.app:
   - D365CE
 ---
 
-# Create and update records with related records (early bound)
+# Create and update rows with related rows (early bound)
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to create and update a record and related records in one call by using the following methods:
+This sample shows how to create and update a row and related rows in one call by using the following methods:
 
 - [IOrganizationService.Create](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9)
 - [IOrganizationService.Update](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dynamics-general-ce-9)
@@ -45,11 +45,11 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `Account` method creates a account record for which we will add letters. 
+1. The `Account` method creates a account row for which we will add letters. 
 1. The `Relationship` method creates the reference between letter and account.
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.
 
 

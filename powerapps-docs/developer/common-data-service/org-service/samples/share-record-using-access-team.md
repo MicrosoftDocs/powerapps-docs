@@ -1,6 +1,6 @@
 ---
-title: "Sample: Share a record using an access team(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to allow access to a record using an access team." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Share a row using an access team(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to allow access to a row using an access team." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -15,13 +15,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Share a record using an access team
+# Sample: Share a row using an access team
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-share-record-using-access-team -->
 
-This sample shows how to allow access to a record using an access team. All the members of the team will receive the same access to the record that is granted to the team. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ShareRecordUsingAccessTeam).
+This sample shows how to allow access to a row using an access team. All the members of the team will receive the same access to the row that is granted to the team. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ShareRecordUsingAccessTeam).
 
 This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. Replace `yourorg` with the organization name.
 
@@ -50,7 +50,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. Creates a test account record for the sample.
+2. Creates a test account row for the sample.
 
 ### Demonstrate
 
@@ -58,9 +58,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. The `WhoAMIRequest` gets the ID's of the current user and business unit.
 1. Creates a sample access team. The `AddMembersTeamRequest`adds two sales persons to the access team.
 1. The `GrantAccessRequest` grants the team read/write access to the account created in the Setup(#setup).
-1. The `RetrieveAndDisplayEntityAccess` retrieves and displays entity access information.
+1. The `RetrieveAndDisplayEntityAccess` retrieves and displays table access information.
 1. The `RetrieveAndDisplayPrincipalAccess` retrieves and displays principal access information.
 
 ### Clean up
 
-Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.

@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Typically, you use *global* option sets to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike *local* options sets which are defined only for a specific attribute, you can reuse global option sets. You will also see them used in request parameters in a manner similar to an enumeration.  
+Typically, you use *global* option sets to set columns so that different columns can share the same set of options, which are maintained in one location. Unlike *local* options sets which are defined only for a specific column, you can reuse global option sets. You will also see them used in request parameters in a manner similar to an enumeration.  
   
 When you define a global option set by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>, 
 we recommend that you let the system assign a value. You do this by passing a **null** value when you create the 
@@ -78,7 +78,7 @@ Console.WriteLine("Retrieved {0}.",
 OptionSetMetadata retrievedOptionSetMetadata =
     (OptionSetMetadata)retrieveOptionSetResponse.OptionSetMetadata;
 
-// Get the current options list for the retrieved attribute.
+// Get the current options list for the retrieved column.
 OptionMetadata[] optionList =
     retrievedOptionSetMetadata.Options.ToArray();
 ```
@@ -122,13 +122,13 @@ CreateOptionSetResponse optionsResp =
  
 ## Create a picklist that uses a global option set  
 
- The following sample shows how to create a picklist attribute that uses a global option set by using 
+ The following sample shows how to create a choice column that uses a global option set by using 
  <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>:  
   
 
 ```csharp
-// Create a Picklist linked to the option set.
-// Specify which entity will own the picklist, and create it.
+// Create a Choice linked to the option set.
+// Specify which table will own the Choice, and create it.
 CreateAttributeRequest createRequest = new CreateAttributeRequest
 {
     EntityName = Contact.EntityLogicalName,
@@ -139,8 +139,8 @@ CreateAttributeRequest createRequest = new CreateAttributeRequest
         DisplayName = new Label("Example Picklist", _languageCode),
         RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
 
-        // In order to relate the picklist to the global option set, be sure
-        // to specify the two attributes below appropriately.
+        // In order to relate the Choice to the global option set, be sure
+        // to specify the two columns below appropriately.
         // Failing to do so will lead to errors.
         OptionSet = new OptionSetMetadata
         {
@@ -284,7 +284,7 @@ RetrieveDependentComponentsResponse dependencyResponse =
 // Here you would check the dependencyResponse.EntityCollection property
 // and act as appropriate. However, we know there is exactly one 
 // dependency so this example deals with it directly and deletes 
-// the previously created attribute.
+// the previously created column.
 DeleteAttributeRequest deleteAttributeRequest =
     new DeleteAttributeRequest
 {
@@ -294,10 +294,10 @@ DeleteAttributeRequest deleteAttributeRequest =
 
 svc.Execute(deleteAttributeRequest);
 
-Console.WriteLine("Referring attribute deleted.");
+Console.WriteLine("Referring column deleted.");
   
 // Finally, delete the global option set. Attempting this before deleting
-// the picklist above will result in an exception being thrown.
+// the Choice above will result in an exception being thrown.
 DeleteOptionSetRequest deleteRequest = new DeleteOptionSetRequest
 {
     Name = _globalOptionSetName

@@ -35,7 +35,7 @@ This sample requires an additional user that isn't available in your system. Cre
 
 ## What this sample does
 
-The [AssignRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.assignrequest?view=dynamics-general-ce-9) message is intended to be used in a scenario where it contains the data that is needed to assign the specified record to a new owner (user or team) by changing the OwnerId attribute of the record.
+The [AssignRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.assignrequest?view=dynamics-general-ce-9) message is intended to be used in a scenario where it contains the data that is needed to assign the specified row to a new owner (user or team) by changing the OwnerId column of the row.
 
 ## How this sample works
 
@@ -44,7 +44,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. The `CreateRequiredRecords` method creates entity records that this sample requires.
+2. The `CreateRequiredRecords` method creates table rows that this sample requires.
 3. The `mySavedQuery` method grabs the default public view for the opportunities.
 4. The `visualizationQuery` method retrieves the visualizations out of the system. This sample assumes that you have the **Top opportunities**. 
 5. The `_otherUSerId` method creates the user to whom the dashboard will be assigned.
@@ -55,4 +55,4 @@ The `AssignRequest` method assigns the visualization or chart to the newly creat
 
 ### Clean up
 
-Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.

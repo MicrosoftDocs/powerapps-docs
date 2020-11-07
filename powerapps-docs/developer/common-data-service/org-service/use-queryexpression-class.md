@@ -21,11 +21,11 @@ search.app:
 
 In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to build complex queries for use with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method or the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> message. You can set query parameters to the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> by using the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>, <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>, and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> classes.  
   
- The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class lets you create complex queries. The <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> class is designed to be a simple way to search for entities where attributes match specified values.  
+ The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class lets you create complex queries. The <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> class is designed to be a simple way to search for entities where columns match specified values.  
   
 <a name="record_count"></a>   
-## Record count  
- To find out how many records the query returned, set the <xref:Microsoft.Xrm.Sdk.Query.PagingInfo.ReturnTotalRecordCount> property to true before executing the query. When you do this, the <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> will be set. Otherwise, this value will be -1.  
+## Row count  
+ To find out how many rows the query returned, set the <xref:Microsoft.Xrm.Sdk.Query.PagingInfo.ReturnTotalRecordCount> property to true before executing the query. When you do this, the <xref:Microsoft.Xrm.Sdk.EntityCollection.TotalRecordCount> will be set. Otherwise, this value will be -1.  
   
 ## Example  
  The following sample shows how to use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class.  

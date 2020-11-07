@@ -41,7 +41,7 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
   
 ### Lightweight query
   
- An example of a lightweight query is when you have a custom web resource UI that provides a select control to display the current options in a Dynamics 365 Option Set (Picklist) attribute. You do not want to hard-code these options because you would have to update that code if the available options are ever changed. Instead you can construct a query to just retrieve those options values and labels from the metadata.  
+ An example of a lightweight query is when you have a custom web resource UI that provides a select control to display the current options in a Dynamics 365 Choice (Picklist) column. You do not want to hard-code these options because you would have to update that code if the available options are ever changed. Instead you can construct a query to just retrieve those options values and labels from the metadata.  
   
  You do not have to cache this data because you can use the <xref:Microsoft.Xrm.Sdk.Metadata.Query> classes to retrieve this data directly from the Dynamics 365 application cache.  
   
@@ -61,11 +61,11 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
 
  Metadata is frequently retrieved or synchronized when an application starts and can affect the time the application takes to load. This is particularly true for mobile applications retrieving metadata for the first time. Retrieving only the metadata you need is very important to create an application that performs well.  
   
- The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> class provides a structure consistent with the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class you use to create complex queries to retrieve entity data. Unlike the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>, <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest>,  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipRequest> classes, the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> contains a `Query` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> instance that you can use to specify specific criteria for the data to return in addition to which properties you want. You can use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> to return the full set of metadata that you get using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>, or just a label for a specific attribute.  
+ The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> class provides a structure consistent with the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class you use to create complex queries to retrieve table data. Unlike the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>, <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest>,  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipRequest> classes, the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> contains a `Query` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> instance that you can use to specify specific criteria for the data to return in addition to which properties you want. You can use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> to return the full set of metadata that you get using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>, or just a label for a specific column.  
   
 ### Specify your filter criteria  
 
- The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression> that contains a collection of <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataConditionExpression> objects that allow for defining conditions for filtering entity properties based on their value. These conditions use a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataConditionOperator> that allows for the following operators:  
+ The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression> that contains a collection of <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataConditionExpression> objects that allow for defining conditions for filtering table properties based on their value. These conditions use a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataConditionOperator> that allows for the following operators:  
   
 -   <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataConditionOperator>.Equals  
   
@@ -153,7 +153,7 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
   
  The strongly typed objects returned will include all properties, but only those that you request will have data. All other properties will be null, with the following few exceptions: every item of metadata will include the <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId> ,`LogicalName` and <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.HasChanged> values if they exist for that item. You do not have to specify them in the <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> you request.  
   
- If you are not using managed code and are actually parsing the `responseXML` returned from the XMLHttpRequest you will get elements for each property but only those you request will contain data. The following XML shows the contact entity metadata xml that will be returned when `IsVisibleInMobile` is the only property requested.  
+ If you are not using managed code and are actually parsing the `responseXML` returned from the XMLHttpRequest you will get elements for each property but only those you request will contain data. The following XML shows the contact table metadata xml that will be returned when `IsVisibleInMobile` is the only property requested.  
   
 ```xml  
 <a:EntityMetadata>  
@@ -232,9 +232,9 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
 </a:EntityMetadata>  
 ```  
   
- Metadata is returned in a hierarchical structure just as it is using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>. To access a specific attribute or relationship you must create a query that returns the entity they are part of. If you want to retrieve data about a specific attribute, you must include the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Attributes> property in your <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>. For the entity relationships to be returned, you must include one or more of the following <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> properties:  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToManyRelationships>,  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToOneRelationships>, or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OneToManyRelationships>.  
+ Metadata is returned in a hierarchical structure just as it is using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>. To access a specific column or relationship you must create a query that returns the table they are part of. If you want to retrieve data about a specific column, you must include the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Attributes> property in your <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>. For the table relationships to be returned, you must include one or more of the following <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> properties:  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToManyRelationships>,  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToOneRelationships>, or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OneToManyRelationships>.  
   
- The following example will return the `Attributes` property for requested entities:  
+ The following example will return the `Columns` property for requested entities:  
   
 ```csharp
 //A properties expression to limit the properties to be included with entities
@@ -245,9 +245,9 @@ MetadataPropertiesExpression EntityProperties = new MetadataPropertiesExpression
 EntityProperties.PropertyNames.AddRange(new string[] { "Attributes" });
 ```
 
-### Retrieve attribute metadata 
+### Retrieve column metadata 
  
- The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.AttributeQuery> property accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.AttributeQueryExpression> that defines <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> for attributes to be returned for the entities that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
+ The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.AttributeQuery> property accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.AttributeQueryExpression> that defines <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> for columns to be returned for the entities that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
   
  The following table lists <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> properties that cannot be used in a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression>  
   
@@ -256,10 +256,10 @@ EntityProperties.PropertyNames.AddRange(new string[] { "Attributes" });
 |<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.Description>|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.DisplayName>|  
 |<xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet>|<xref:Microsoft.Xrm.Sdk.Metadata.LookupAttributeMetadata.Targets>|  
   
- The following example will limit Attributes returned to only those that have an `OptionSet` and will only return the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet> and <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AttributeType> properties for those attributes:  
+ The following example will limit Attributes returned to only those that have an `OptionSet` and will only return the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet> and <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AttributeType> properties for those columns:  
   
 ```csharp
-//A condition expresson to return optionset attributes
+//A condition expresson to return optionset columns
 MetadataConditionExpression[] optionsetAttributeTypes = new MetadataConditionExpression[] { 
 new MetadataConditionExpression("AttributeType", MetadataConditionOperator.Equals, AttributeTypeCode.Picklist),
 new MetadataConditionExpression("AttributeType", MetadataConditionOperator.Equals, AttributeTypeCode.State),
@@ -271,7 +271,7 @@ new MetadataConditionExpression("AttributeType", MetadataConditionOperator.Equal
 MetadataFilterExpression AttributeFilter = new MetadataFilterExpression(LogicalOperator.Or);
 AttributeFilter.Conditions.AddRange(optionsetAttributeTypes);
 
-//A Properties expression to limit the properties to be included with attributes
+//A Properties expression to limit the properties to be included with columns
 MetadataPropertiesExpression AttributeProperties = new MetadataPropertiesExpression() { AllProperties = false };
 AttributeProperties.PropertyNames.Add("OptionSet");
 AttributeProperties.PropertyNames.Add("AttributeType");
@@ -344,7 +344,7 @@ labelQuery.FilterLanguages.Add(_languageCode);
  The following example makes an initial request by defining an <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression> and executing a request with a <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.ClientVersionStamp> set to null.  
   
 ```csharp
-//An entity query expression to combine the filter expressions and property expressions for the query.
+//An table query expression to combine the filter expressions and property expressions for the query.
 EntityQueryExpression entityQueryExpression = new EntityQueryExpression()
 {
 
@@ -390,9 +390,9 @@ protected RetrieveMetadataChangesResponse getMetadataChanges(
   
  Use the <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters> enumeration with the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.DeletedMetadataFilters> to limit the information to only those types of metadata you are interested in. The <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters> enumeration provides the following options:  
   
--   <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters>.Entity (Default)  
+-   <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters>.Table (Default)  
   
--   <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters>.Attribute  
+-   <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters>.Column  
   
 -   <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters>.Relationship  
   
@@ -461,7 +461,7 @@ protected String updateOptionLabelList(EntityQueryExpression entityQueryExpressi
  [Offline Use of the Dynamics 365 Services](/dynamics365/customer-engagement/developer/org-service/offline-use-services)   
  [Sample: Query Metadata and Detect Changes](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MetadataQuery)   
  [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
- [Customize Entity Metadata](/dynamics365/customer-engagement/developer/customize-entity-metadata)   
- [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
- [Customize Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
+ [Customize table Metadata](/dynamics365/customer-engagement/developer/customize-entity-metadata)   
+ [Customize table column Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
+ [Customize table Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
  [Query Metadata Using JavaScript](https://msdn.microsoft.com/library/jj919080.aspx)
