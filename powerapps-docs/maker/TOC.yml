@@ -1576,7 +1576,7 @@
           href: ./portals/configure/configure-contacts.md
         - name: Invite contacts
           href: ./portals/configure/invite-contacts.md
-        - name: Create web roles
+        - name: Manage page permissions
           href: ./portals/configure/create-web-roles.md
         - name: Assign entity permissions
           href: ./portals/configure/assign-entity-permissions.md
