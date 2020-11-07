@@ -319,6 +319,21 @@ Another way is to check the `ControlStateChange` operation that explains why a c
 > [!div class="mx-imgBorder"]
 > ![Control state changed](media/control-state-changed.png "Control state changed")
 
+A control is disabled following the order of the below list of rules. If a rule is met, the result is final and all following rules are ignored. If you want to change whether a control is disabled or not, you must change the input to the rule used for the final result, or a rule earlier in the list.
+
+If flag "DisableWebResourceControls=true" or "DisableFormControl=<control name>" are passed in and this control is impacted by these flags, control is disabled.
+If the owning entity is marked as read-only in UCI in entity metadata, the control is disabled.
+If the entity is not available in offline, the control is disabled.
+If the current user doesn't have write permissions on the record, the control is disabled.
+If the attribute metadata has IsValidforCreate marked as false, the control is disabled in an create form.
+If the attribute metadata has IsValidforUpdate marked as false, the control is disabled in an edit form.
+If the field for the control is the Owner field and the current user doesn't have an "assign to" privilege, the Owner field is disabled.
+If the user does not have write permissions on the field of the control defined by Field-level Security, the control is disabled.
+If the control is disabled or enabled by a Client API script, the control disabled state will honor that setting.
+If the control is disabled in form designer, the control is disabled.
+Finally, if the control passes all of the above checks, the record state determines whether control is disabled. The control is enabled by default on an active record and disabled on an inactive record.
+
+
 > [!NOTE]
 > The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form loads, while the `ControlStateChange`operation reflects the state change at any time on the form. For example, if control is disabled for security reasons, it's very unlikely to be enabled after the form is loaded, so the initial state can be found in `FormControls` and not likely found in `ControlStateChange`. Even if a `Client API` function tries to enable the control, it will not be effective, and you'll see `ControlStateChange` event of the disabled state change intention by the script without success, and you'll be able to find out why the intention is unsuccessful in `FormControls`.
 
