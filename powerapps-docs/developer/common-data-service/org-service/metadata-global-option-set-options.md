@@ -47,7 +47,7 @@ InsertOptionValueRequest insertOptionValueRequest =
 _insertedOptionValue = ((InsertOptionValueResponse)_serviceProxy.Execute(
     insertOptionValueRequest)).NewOptionValue;
 
-//Publish the OptionSet
+//Publish the Choice
 PublishXmlRequest pxReq2 = new PublishXmlRequest { ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) };
 _serviceProxy.Execute(pxReq2);
 ```
@@ -74,7 +74,7 @@ UpdateOptionValueRequest updateOptionValueRequest =
 
 _serviceProxy.Execute(updateOptionValueRequest);
 
-//Publish the OptionSet
+//Publish the Choice
 PublishXmlRequest pxReq3 = new PublishXmlRequest { ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) };
 _serviceProxy.Execute(pxReq3);
 ```
@@ -129,7 +129,7 @@ OrderOptionRequest orderOptionRequest = new OrderOptionRequest
 // Execute the request
 _serviceProxy.Execute(orderOptionRequest);
 
-//Publish the OptionSet
+//Publish the Choice
 PublishXmlRequest pxReq4 = new PublishXmlRequest { ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) };
 _serviceProxy.Execute(pxReq4);
 ``` 

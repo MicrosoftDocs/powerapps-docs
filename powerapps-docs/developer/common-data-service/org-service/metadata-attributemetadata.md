@@ -342,7 +342,7 @@ _serviceProxy.Execute(req);
 
 ## Create a customer lookup column
 
- Unlike a lookup column, a customer lookup column is created using the <xref:Microsoft.Xrm.Sdk.Messages.CreateCustomerRelationshipsRequest> message, which adds two relationships to the lookup column: one to the `Account` table and the other one to the `Contact` table. You cannot add relationship to any other table except for `Account` and `Contact` entities for a customer lookup column.  
+ Unlike a lookup column, a customer lookup column is created using the <xref:Microsoft.Xrm.Sdk.Messages.CreateCustomerRelationshipsRequest> message, which adds two relationships to the lookup column: one to the `Account` table and the other one to the `Contact` table. You cannot add relationship to any other table except for `Account` and `Contact` tables for a customer lookup column.  
 
 ```csharp
 CreateCustomerRelationshipsRequest createCustomerReq = new CreateCustomerRelationshipsRequest

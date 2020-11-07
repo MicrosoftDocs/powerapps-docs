@@ -99,7 +99,7 @@
     href: metadata-relationshipmetadata.md
   - name: Retrieve and detect changes to metadata
     href: metadata-retrieve-detect-changes.md
-  - name: Retrieve, update, and delete entities
+  - name: Retrieve, update, and delete tables
     href: metadata-retrieve-update-delete-entities.md 
   - name: Create an table to send email activities
     href: create-update-entity-emailed.md

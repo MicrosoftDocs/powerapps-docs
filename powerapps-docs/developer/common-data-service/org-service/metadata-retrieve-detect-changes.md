@@ -90,10 +90,10 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
 |<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Attributes>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Description>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DisplayCollectionName>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DisplayName>|  
 |<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToManyRelationships>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToOneRelationships>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OneToManyRelationships>|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Privileges>|  
   
- The following example shows a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression> that will return a set of non-intersect, user-owned entities not included in a list of entities to exclude:  
+ The following example shows a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression> that will return a set of non-intersect, user-owned tables not included in a list of tables to exclude:  
   
  ```csharp
-   // An array SchemaName values for non-intersect, user-owned entities that should not be returned.
+   // An array SchemaName values for non-intersect, user-owned tables that should not be returned.
      String[] excludedEntities = {
 "WorkflowLog",
 "Template",
@@ -138,7 +138,7 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
 "List",
 "ServiceAppointment"};
 
-     //A filter expression to limit entities returned to non-intersect, user-owned entities not found in the list of excluded entities.
+     //A filter expression to limit tables returned to non-intersect, user-owned tables not found in the list of excluded tables.
      MetadataFilterExpression EntityFilter = new MetadataFilterExpression(LogicalOperator.And);
      EntityFilter.Conditions.Add(new MetadataConditionExpression("IsIntersect", MetadataConditionOperator.Equals, false));
      EntityFilter.Conditions.Add(new MetadataConditionExpression("OwnershipType", MetadataConditionOperator.Equals, OwnershipTypes.UserOwned));
@@ -234,10 +234,10 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
   
  Metadata is returned in a hierarchical structure just as it is using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>. To access a specific column or relationship you must create a query that returns the table they are part of. If you want to retrieve data about a specific column, you must include the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Attributes> property in your <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>. For the table relationships to be returned, you must include one or more of the following <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> properties:  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToManyRelationships>,  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ManyToOneRelationships>, or <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.OneToManyRelationships>.  
   
- The following example will return the `Columns` property for requested entities:  
+ The following example will return the `Columns` property for requested tables:  
   
 ```csharp
-//A properties expression to limit the properties to be included with entities
+//A properties expression to limit the properties to be included with tables
 MetadataPropertiesExpression EntityProperties = new MetadataPropertiesExpression()
 {
  AllProperties = false
@@ -247,7 +247,7 @@ EntityProperties.PropertyNames.AddRange(new string[] { "Attributes" });
 
 ### Retrieve column metadata 
  
- The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.AttributeQuery> property accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.AttributeQueryExpression> that defines <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> for columns to be returned for the entities that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
+ The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.AttributeQuery> property accepts an <xref:Microsoft.Xrm.Sdk.Metadata.Query.AttributeQueryExpression> that defines <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> for columns to be returned for the tables that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
   
  The following table lists <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> properties that cannot be used in a <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression>  
   
@@ -256,10 +256,10 @@ EntityProperties.PropertyNames.AddRange(new string[] { "Attributes" });
 |<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.Description>|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.DisplayName>|  
 |<xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet>|<xref:Microsoft.Xrm.Sdk.Metadata.LookupAttributeMetadata.Targets>|  
   
- The following example will limit Attributes returned to only those that have an `OptionSet` and will only return the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet> and <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AttributeType> properties for those columns:  
+ The following example will limit columns returned to only those that have a `Choice` and will only return the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet> and <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AttributeType> properties for those columns:  
   
 ```csharp
-//A condition expresson to return optionset columns
+//A condition expression to return choices columns
 MetadataConditionExpression[] optionsetAttributeTypes = new MetadataConditionExpression[] { 
 new MetadataConditionExpression("AttributeType", MetadataConditionOperator.Equals, AttributeTypeCode.Picklist),
 new MetadataConditionExpression("AttributeType", MetadataConditionOperator.Equals, AttributeTypeCode.State),
@@ -279,7 +279,7 @@ AttributeProperties.PropertyNames.Add("AttributeType");
   
 ### Retrieve relationship metadata
   
- The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.RelationshipQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.RelationshipQueryExpression> to specify the entity relationship <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> you want for the entities that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
+ The <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.RelationshipQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.RelationshipQueryExpression> to specify the entity relationship <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties> you want for the tables that match the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression><xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Criteria> and <xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataQueryExpression.Properties>.  
   
  Use the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.RelationshipType> property in your criteria to specify whether you want to return ManyToMany Relationships or OneToMany Relationships.  
   
@@ -398,7 +398,7 @@ protected RetrieveMetadataChangesResponse getMetadataChanges(
   
 -   <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters>.Label  
   
--   <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters>.OptionSet  
+-   <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters>.Choice  
   
  You will also use <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters> enumeration as a key to the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse.DeletedMetadata> to filter the `GUID` values found in the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse.DeletedMetadata> property.  
   

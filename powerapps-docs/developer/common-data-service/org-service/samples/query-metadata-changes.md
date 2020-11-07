@@ -41,7 +41,7 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `MetadataFilterExpression` method creates the filter expression to limit entities returned to non-intersect, user-owned entities not found in the list of excluded entities. 
+1. The `MetadataFilterExpression` method creates the filter expression to limit tables returned to non-intersect, user-owned tables not found in the list of excluded tables. 
 2. The `MetadataConditionExpression` method returns the option set columns.
 3. The `MetadataPropertiesExpression` method limits the properties to be included with the columns.
 4. The `LabelQueryExpression` method limits the labels returned to only those for user's preferred language.
@@ -50,4 +50,4 @@ Checks for the current version of the org.
 
 ### Clean up
 
-Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.

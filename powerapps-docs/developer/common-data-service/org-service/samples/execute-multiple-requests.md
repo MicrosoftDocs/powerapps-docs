@@ -45,9 +45,9 @@ Checks for the current version of the org.
 1. The `ExecutingMultipleSettings` method assigns settings that define execution behavior: continue on error, return responses.
 1. The `OrganizationRequestCollection` method creates an empty organization request collection.
 1. The `CreateRequest` method is added for each table to the request collection.
-1. The `GetCollectionOdEntitiesToUpdate` class updates the entities that are previously created.
+1. The `GetCollectionOdEntitiesToUpdate` class updates the tables that are previously created.
 
 
 ### Clean up
 
-Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.

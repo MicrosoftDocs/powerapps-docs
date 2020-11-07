@@ -26,7 +26,7 @@ search.app:
 
 ## Generate table classes
 
-The **CrmSvcUtil.exe** tool creates a Microsoft Visual C# or Visual Basic .NET  output file that contains strongly-typed classes for entities in your organization. This includes custom entities and columns. This output file contains one class for each table, providing early binding and IntelliSense  support in Visual Studio to aid you as you write code. The generated classes are partial classes that can be extended with custom business logic in separate files. You can also create extensions to this tool. For more information, see [Create Extensions for the Code Generation Tool](extend-code-generation-tool.md).  
+The **CrmSvcUtil.exe** tool creates a Microsoft Visual C# or Visual Basic .NET  output file that contains strongly-typed classes for tables in your organization. This includes custom tables and columns. This output file contains one class for each table, providing early binding and IntelliSense  support in Visual Studio to aid you as you write code. The generated classes are partial classes that can be extended with custom business logic in separate files. You can also create extensions to this tool. For more information, see [Create Extensions for the Code Generation Tool](extend-code-generation-tool.md).  
 
 ## Generate an OrganizationServiceContext class
 

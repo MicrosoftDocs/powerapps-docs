@@ -21,7 +21,7 @@ search.app:
 
 The .NET Language-Integrated Query(LINQ) query provider in Common Data Service uses standard LINQ syntax. The first step in creating a LINQ query is to identify the relevant table types and the relationships between them. You can then specify the data source and the other query parameters.  
 
- The `from` clause is used to return a single “root” table. The query provider can only return entities of a single table type. The `orderby` and `select` clauses must reference this root table. You can use `join` clauses to add entities with a relationship to the “root” table.  
+ The `from` clause is used to return a single “root” table. The query provider can only return tables of a single table type. The `orderby` and `select` clauses must reference this root table. You can use `join` clauses to add tables with a relationship to the “root” table.  
 
 <a name="bkmk_operators"></a>   
 
@@ -31,7 +31,7 @@ The .NET Language-Integrated Query(LINQ) query provider in Common Data Service u
 ### from  
  When using the generated service context and early binding, use the `IQueryable` table set, such as `AccountSet`, in the generated context.  
 
- When not using the generated context, the `CreateQuery` method on the organization service context object gives you access to Common Data Service entities.  
+ When not using the generated context, the `CreateQuery` method on the organization service context object gives you access to Common Data Service tables.  
 
  Example:  
 
@@ -50,7 +50,7 @@ select c;
 ```  
 
 ### join  
- The `join` clause represents an inner join. You use the clause to work with two or more entities that can be joined with a common column value.  
+ The `join` clause represents an inner join. You use the clause to work with two or more tables that can be joined with a common column value.  
 
  Example:  
 
@@ -60,7 +60,7 @@ join a in context.AccountSet on c.ContactId equals a.PrimaryContactId.Id
 ```  
 
 ### where  
- The `where` clause applies a filter to the results, often using a Boolean expression. The filter specifies which elements to exclude from the source sequence. Each `where` clause can only contain conditions against a single table type. A composite condition involving multiple entities is not valid. Instead, each table should be filtered in separate `where` clauses.  
+ The `where` clause applies a filter to the results, often using a Boolean expression. The filter specifies which elements to exclude from the source sequence. Each `where` clause can only contain conditions against a single table type. A composite condition involving multiple tables is not valid. Instead, each table should be filtered in separate `where` clauses.  
 
  Example:  
 
@@ -120,11 +120,11 @@ select new Contact
 
 <a name="filter"></a>   
 
-## Filter multiple entities  
+## Filter multiple tables  
 
- You can create complex .NET Language Integrated Query(LINQ) queries in Common Data Service. You use multiple `Join` clauses with filter clauses to create a result that is filtered on columns from several entities.  
+ You can create complex .NET Language Integrated Query(LINQ) queries in Common Data Service. You use multiple `Join` clauses with filter clauses to create a result that is filtered on columns from several tables.  
 
- The following sample shows how to create a LINQ query that works with two entities and filters the result based on values from each of the entities.  
+ The following sample shows how to create a LINQ query that works with two tables and filters the result based on values from each of the tables.  
 
  ```csharp
  using (ServiceContext svcContext = new ServiceContext(_serviceProxy))

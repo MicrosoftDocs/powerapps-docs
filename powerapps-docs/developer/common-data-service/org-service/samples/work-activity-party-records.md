@@ -45,8 +45,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Retrieves the contact rows that are created in the [Setup](#setup). 
 2. Creates the activity party rows for each contact.
-3. Also creates Letter activity and set **From** and **To** columns to the respective Activity Party entities.
+3. Also creates Letter activity and set **From** and **To** columns to the respective Activity Party tables.
 
 ### Clean up
 
-Display an option to delete the rows created during [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the rows created during [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.

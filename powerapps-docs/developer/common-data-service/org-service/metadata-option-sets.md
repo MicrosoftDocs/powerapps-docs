@@ -177,7 +177,7 @@ UpdateOptionSetRequest updateOptionSetRequest = new UpdateOptionSetRequest
 
 svc.Execute(updateOptionSetRequest);
 
-//Publish the OptionSet
+//Publish the Choice
 PublishXmlRequest pxReq1 = new PublishXmlRequest { ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) };
 svc.Execute(pxReq1);
 ```
@@ -217,7 +217,7 @@ OrderOptionRequest orderOptionRequest = new OrderOptionRequest
 // Execute the request
 svc.Execute(orderOptionRequest);
 
-//Publish the OptionSet
+//Publish the Choice
 PublishXmlRequest pxReq4 = new PublishXmlRequest { 
 ParameterXml = String.Format("<importexportxml><optionsets><optionset>{0}</optionset></optionsets></importexportxml>", _globalOptionSetName) 
 };

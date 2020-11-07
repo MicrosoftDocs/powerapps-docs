@@ -168,8 +168,8 @@ Listed below are some suggestions for improving ordering of paging results, alon
 
 ### Ordering and multiple table queries
 
-Sometimes data is needed that spans multiple entities and must be queried with a
-table JOIN. In these cases, ordering can be included for both entities in the
+Sometimes data is needed that spans multiple tables and must be queried with a
+table JOIN. In these cases, ordering can be included for both tables in the
 query. Make sure to use at least one column with a unique ID per table to
 ensure the paging provides the best results. However, the query will be
 downgraded to legacy paging, where no paging cookie will be returned, in these

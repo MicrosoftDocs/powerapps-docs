@@ -25,7 +25,7 @@ This topic shows how to create and retrieve table relationships. You can downloa
 
 ## Create a 1:N table relationship  
 
- The following sample uses the [EligibleCreateOneToManyRelationship](#eligiblecreateonetomanyrelationship) method to verify that the `Account` and `Campaign` entities can participate in a 1:N table relationship and then creates the table relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest>.  
+ The following sample uses the [EligibleCreateOneToManyRelationship](#eligiblecreateonetomanyrelationship) method to verify that the `Account` and `Campaign` tables can participate in a 1:N table relationship and then creates the table relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest>.  
   
 ```csharp
 bool eligibleCreateOneToManyRelationship =
@@ -88,11 +88,11 @@ if (eligibleCreateOneToManyRelationship)
 
 ### EligibleCreateOneToManyRelationship  
 
- The following sample creates a `EligibleCreateOneToManyRelationship` method that uses <xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencedRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencingRequest> to verify whether two entities can participate in a 1:N table relationship.  
+ The following sample creates a `EligibleCreateOneToManyRelationship` method that uses <xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencedRequest> and <xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencingRequest> to verify whether two tables can participate in a 1:N table relationship.  
   
 ```csharp
 /// <summary>
-/// Determines whether two entities are eligible to participate in a relationship
+/// Determines whether two tables are eligible to participate in a relationship
 /// </summary>
 /// <param name="referencedEntity">Primary Entity</param>
 /// <param name="referencingEntity">Referencing Entity</param>
@@ -151,7 +151,7 @@ public bool EligibleCreateOneToManyRelationship(string referencedEntity,
 
 ## Create an N:N table relationship  
 
- The following sample uses a [EligibleCreateManyToManyRelationship](#BKMK_EligibleCreateManyToManyRelationship) method to verify that the `Account` and `Campaign` entities can participate in a N:N table relationship and then creates the table relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateManyToManyRequest>.  
+ The following sample uses a [EligibleCreateManyToManyRelationship](#BKMK_EligibleCreateManyToManyRelationship) method to verify that the `Account` and `Campaign` tables can participate in a N:N table relationship and then creates the table relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateManyToManyRequest>.  
   
 ```csharp
 bool accountEligibleParticipate =

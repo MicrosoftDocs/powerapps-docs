@@ -1,6 +1,6 @@
 ---
-title: "Associate and disassociate entities using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to associate and disassociate entities using the Organization Service" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Associate and disassociate tables using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to associate and disassociate tables using the Organization Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Associate and disassociate entities using the Organization Service
+# Associate and disassociate tables using the Organization Service
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
@@ -148,6 +148,6 @@ svc.Execute(request);
 
 ### See also
 
-[Create entities using the Organization Service](entity-operations-create.md)<br />
+[Create tables using the Organization Service](entity-operations-create.md)<br />
 [Retrieve an table using the Organization Service](entity-operations-retrieve.md)<br />
-[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
+[Update and Delete tables using the Organization Service](entity-operations-update-delete.md)<br />

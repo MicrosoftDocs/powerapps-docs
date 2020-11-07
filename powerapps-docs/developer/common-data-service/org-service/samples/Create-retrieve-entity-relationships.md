@@ -51,10 +51,10 @@ Checks for the current version of the org.
 
 1. The `CreateOneToManyRequest` method creates a new One-to-Many (1:N) relationship. 
 2. The `CreateManyToManyRequest` method creates a new Many-To-Many (N:N) relationship.
-3. The `EligibleCreateManyToManyRelationship` method verifies whether entities can participate in N:N relationship.
+3. The `EligibleCreateManyToManyRelationship` method verifies whether tables can participate in N:N relationship.
 4. The `RetrieveRelationshipRequest` method retrieves the two table relationships previously created.
 
 
 ### Clean up
 
-Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.

@@ -21,9 +21,9 @@ search.app:
 
 This sample shows how to write a plug-in that modifies a query defined within the `PreOperation` stage of a `RetrieveMultiple` request.
 
-Data filtering in a plug-in is commonly done in the `PostOperation` stage. The <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> data can be examined and entities that should not be returned are removed from the collection. But this pattern introduces issues where the number of rows returned within a page may not match the expected paging sizes.
+Data filtering in a plug-in is commonly done in the `PostOperation` stage. The <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> data can be examined and tables that should not be returned are removed from the collection. But this pattern introduces issues where the number of rows returned within a page may not match the expected paging sizes.
 
-The approach described by this sample is different. Rather than filter entities after they have been retrieved, this plug-in will apply changes to the query in the `PreOperation` stage before it is executed. 
+The approach described by this sample is different. Rather than filter tables after they have been retrieved, this plug-in will apply changes to the query in the `PreOperation` stage before it is executed. 
 
 A key point demonstrated by this sample is that the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> can be one of three different types that are derived from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase>. To accommodate queries of any type, the plug-in code
 must detect the type of query and implement the appropriate type of filter.

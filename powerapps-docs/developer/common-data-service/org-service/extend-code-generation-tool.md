@@ -55,7 +55,7 @@ using Microsoft.Xrm.Sdk.Metadata;
 
 /// <summary>
 /// Sample extension for the CrmSvcUtil.exe tool that generates early-bound
-/// classes for custom entities.
+/// classes for custom tables.
 /// </summary>
 public sealed class BasicFilteringService : ICodeWriterFilterService
 {

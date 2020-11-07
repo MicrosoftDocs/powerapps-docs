@@ -22,7 +22,7 @@ search.app:
 The Common Data Service Organization service allows you to detect duplicate rows to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md). 
 
 > [!NOTE]
-> Make sure there are appropriate duplicate detection rules in place. Common Data Service includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of rows. If you want the system to detect duplicates for other row types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule entities](../duplicaterule-entities.md)
+> Make sure there are appropriate duplicate detection rules in place. Common Data Service includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of rows. If you want the system to detect duplicates for other row types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule tables](../duplicaterule-entities.md)
 
 
 ## Use RetrieveDuplicatesRequest message to detect duplicates before you create or update row

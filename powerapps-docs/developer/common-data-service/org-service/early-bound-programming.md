@@ -23,11 +23,11 @@ When you work with the Organization service assemblies you have two styles you c
 
 The key difference between early and late binding involves type conversion. While early binding provides compile-time checking of all types so that no implicit casts occur, late binding checks types only when the object is created or an action is performed on the type. The <xref:Microsoft.Xrm.Sdk.Entity> class requires types to be explicitly specified to prevent implicit casts.
 
-Late binding allows you to work with custom entities or columns that weren't available when your code was compiled.
+Late binding allows you to work with custom tables or columns that weren't available when your code was compiled.
 
 ## Late-Bound
 
-Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class and you need to refer to entities, and columns using their `LogicalName` property values: 
+Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class and you need to refer to tables, and columns using their `LogicalName` property values: 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>
 
@@ -37,7 +37,7 @@ The main advantage for late-bound programming is that you don't need to generate
 
 The main disadvantages are:
 
-- You don't get compile time validation of names of entities, columns, and relationships.
+- You don't get compile time validation of names of tables, columns, and relationships.
 - You need to know the names of the columns and relationships in the metadata. 
 
 > [!TIP]
@@ -86,9 +86,9 @@ Simply instantiate the class and let IntelliSense in Visual Studio provide the n
 
 The classes generated for early-bound programming can also include definitions for any custom actions that are defined for the environment. This will provide you with a pair of request and response classes to use with these custom actions. More information: [Custom Actions](../custom-actions.md)
 
-There is also an option to extend the code generation tool to change the output. One extension creates enums for each optionset option value. This provides a better experience because you don't have to look up the integer value for each option. More information: [Create extensions for the code generation tool](extend-code-generation-tool.md)
+There is also an option to extend the code generation tool to change the output. One extension creates enums for each choice value. This provides a better experience because you don't have to look up the integer value for each option. More information: [Create extensions for the code generation tool](extend-code-generation-tool.md)
 
-However, because the classes are generated using metadata from a specific instance, and each instance may have different entities and columns, and these can change over time. You may need to write code to work for entities that are not present when you generate the strongly typed classes.
+However, because the classes are generated using metadata from a specific instance, and each instance may have different tables and columns, and these can change over time. You may need to write code to work for tables that are not present when you generate the strongly typed classes.
 
 > [!IMPORTANT]
 > If you are using the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> to provide the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods you will use, you must call the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.EnableProxyTypes> method to enable early bound types.
@@ -136,7 +136,7 @@ Which style you choose to use is up to you. The following table provides the adv
 
 ## Mix early and late bound
 
-Because all the generated classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class used with late-bound programming, you can work with entities, columns, and relationships not defined within classes.
+Because all the generated classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class used with late-bound programming, you can work with tables, columns, and relationships not defined within classes.
 
 ### Examples
 

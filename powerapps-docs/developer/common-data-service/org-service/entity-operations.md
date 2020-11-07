@@ -159,10 +159,10 @@ Any table column value that can be displayed in the UI and is not a string will 
 
 - Money values will have a string value with the appropriate currency and precision formatting.
 - Date values will have the formatting set depending on how the system is configured
-- OptionSet values will display the localized label that represents the integer value
+- Choices values will display the localized label that represents the integer value
 
 > [!NOTE]
-> Formatted values only apply to entities that have been retrieved. Once you set the value, a new formatted value is not calculated until you save the table and retrieve the table again. The formatted value is generated on the server.
+> Formatted values only apply to tables that have been retrieved. Once you set the value, a new formatted value is not calculated until you save the table and retrieve the table again. The formatted value is generated on the server.
 
 You can access the formatted values using the <xref:Microsoft.Xrm.Sdk.Entity.FormattedValues> collection using an indexer or with the entity <xref:Microsoft.Xrm.Sdk.Entity.GetFormattedAttributeValue(System.String)> method.
 
@@ -177,11 +177,11 @@ More information: [Access formatted values](entity-operations-query-data.md#acce
 
 ## Entity.RelatedEntities 
 
-When you create an table you can also define a set of related table rows to create in the same operation. More information: [Create related entities in one operation](entity-operations-create.md#create-related-entities-in-one-operation)
+When you create an table you can also define a set of related table rows to create in the same operation. More information: [Create related tables in one operation](entity-operations-create.md#create-related-entities-in-one-operation)
 
-When you retrieve an table you can compose use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> to by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> with a query to include related entities in the results. More information: [Retrieve with related records](entity-operations-retrieve.md#retrieve-with-related-records)
+When you retrieve an table you can compose use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> to by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> with a query to include related tables in the results. More information: [Retrieve with related records](entity-operations-retrieve.md#retrieve-with-related-records)
 
-If you include related entities in the results, you can also update values on those related entities and include them when you update the table. More information: [Update related entities in one operation](entity-operations-update-delete.md#update-related-entities-in-one-operation)
+If you include related tables in the results, you can also update values on those related tables and include them when you update the table. More information: [Update related tables in one operation](entity-operations-update-delete.md#update-related-entities-in-one-operation)
 
 ## Convert to an EntityReference
 

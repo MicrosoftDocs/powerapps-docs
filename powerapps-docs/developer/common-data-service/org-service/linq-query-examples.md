@@ -610,7 +610,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
   
 <a name="BKMK_RetrievingFormattedValues"></a>   
 ## Retrieving formatted values  
- The following sample shows how to retrieve the label for an optionset option, in this case the value for the current row status.  
+ The following sample shows how to retrieve the label for a choice, in this case the value for the current row status.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))

@@ -21,7 +21,7 @@ search.app:
 
 This topic shows how to programmatically create a custom user-owned table called **Bank Account** and add four different types of columns to it.  
   
-You can also create organization-owned custom entities. More information: [Table ownership](/dynamics365/customer-engagement/developer/introduction-entities#entity-ownership)  
+You can also create organization-owned custom tables. More information: [Table ownership](/dynamics365/customer-engagement/developer/introduction-entities#entity-ownership)  
   
 > [!NOTE]
 >  You won’t be able to see this table in the application navigation unless the table properties are edited to set the **Areas that display this table** are set.  
@@ -188,7 +188,7 @@ _serviceProxy.Execute(req);
  [Use the IOrganizationService Sample and Helper Code](/dynamics365/customer-engagement/developer/use-sample-helper-code)   
  <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>   
  [Customize table metadata](../customize-entity-metadata.md)   
- [Which Entities are Customizable?](/dynamics365/customer-engagement/developer/which-entities-are-customizable)   
+ [Which tables are Customizable?](/dynamics365/customer-engagement/developer/which-entities-are-customizable)   
  [Retrieve, update, and delete tables](/dynamics365/customer-engagement/developer/retrieve-update-delete-entities)   
  [Create and update an table than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
  [Create a custom activity table](/dynamics365/customer-engagement/developer/create-custom-activity-entity)   

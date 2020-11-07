@@ -62,7 +62,7 @@ Checks for the current version of the org.
 ### Demonstrate
 
 1. The `CreateOptionSetRequest` method creates a global option set. You need to set the parameter `IsGlobal=true`.  
-2. The `CreateAttributeRequest` method creates a picklist linked to the option set.
+2. The `CreateAttributeRequest` method creates a choice linked to the option set.
 3. The `UpdateOptionSetRequest` method updates the basic information of an option set.
 4. The `PublishXmlRequest` method publishes the option set.
 5. The `InsertOptionValueRequest` method inserts a new option into a global option set.
@@ -70,4 +70,4 @@ Checks for the current version of the org.
 
 ### Clean up
 
-Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.

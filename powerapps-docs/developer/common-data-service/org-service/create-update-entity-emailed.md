@@ -45,7 +45,7 @@ CreateEntityRequest createrequest = new CreateEntityRequest
         IsActivityParty = true
     },
 
-    // As with built-in emailable entities, the Primary Column will
+    // As with built-in emailable tables, the Primary Column will
     // be used in the activity party screens. Be sure to choose descriptive
     // columns.
     PrimaryAttribute = new StringAttributeMetadata
@@ -111,5 +111,5 @@ Console.WriteLine("A second email column has been added to the emailable table."
 
 ### See Also
 
-[Create entities using the Organization Service](entity-operations-create.md)  
-[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)
+[Create tables using the Organization Service](entity-operations-create.md)  
+[Update and Delete tables using the Organization Service](entity-operations-update-delete.md)

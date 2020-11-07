@@ -48,7 +48,7 @@ In order to simulate the scenario described above, the sample will do the follow
 
 ### Clean up
 
-Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
 
 
 ### See Also
@@ -59,5 +59,5 @@ Display an option to delete the rows created in the [Setup](#setup). The deletio
 [Add transformation mappings for import](../../add-transformation-mappings-import.md)<br />
 [Configure data import](../../configure-data-import.md)<br />
 [Run data import](../../run-data-import.md)<br />
-[Data import entities](../../data-import-entities.md)<br />
+[Data import tables](../../data-import-entities.md)<br />
 [Sample: Export and import a data map](export-import-data-map.md)<br />

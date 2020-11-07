@@ -53,7 +53,7 @@ requestWithResults = new ExecuteMultipleRequest()
     Requests = new OrganizationRequestCollection()
 };
 
-// Create several (local, in memory) entities in a collection. 
+// Create several (local, in memory) tables in a collection. 
 EntityCollection input = GetCollectionOfEntitiesToCreate();
 
 // Add a CreateRequest for each table to the request collection.

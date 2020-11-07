@@ -1,5 +1,5 @@
 ---
-title: "Retrieve, update and delete entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Retrieve, update and delete tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Retrieve, update, and delete entities
+# Retrieve, update, and delete tables
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 

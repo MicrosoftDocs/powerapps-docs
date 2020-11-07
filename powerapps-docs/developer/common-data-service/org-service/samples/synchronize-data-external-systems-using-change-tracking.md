@@ -43,7 +43,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Import a managed solution (ChangeTrackingSample_1_0_0_0_managed.zip) that creates a `sample_book` table that has an alternate key named `sample_bookcode`. Verify that the indexes to support the alternate key are active
-1. 10 initial sample_book table rows are created so that changes to those entities can be tracked.
+1. 10 initial sample_book table rows are created so that changes to those tables can be tracked.
 
 ### Demonstrate
 
@@ -54,4 +54,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the managed solution imported in [Setup](#setup), which removes the `sample_book` table and all the data created in the sample. The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the `ChangeTrackingSample` to achieve the same result.
+Display an option to delete the managed solution imported in [Setup](#setup), which removes the `sample_book` table and all the data created in the sample. The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the `ChangeTrackingSample` to achieve the same result.

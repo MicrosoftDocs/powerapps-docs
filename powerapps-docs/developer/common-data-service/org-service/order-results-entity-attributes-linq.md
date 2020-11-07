@@ -1,6 +1,6 @@
 ---
 title: "Order results using table columns with LINQ (Common Data Service) | Microsoft Docs" 
-description: "Read how you can use lookup or OptionSet (Picklist) columns to order results within a LINQ query"
+description: "Read how you can use lookup or choice columns to order results within a LINQ query"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service(Common Data Service) for Apps, you can use lookup or OptionSet (Picklist) columns to order results within a LINQ query. This topic shows several examples of this type of query.  
+In Common Data Service(Common Data Service) for Apps, you can use lookup or choice columns to order results within a LINQ query. This topic shows several examples of this type of query.  
   
 ## Using a Lookup Value to Order By  
 

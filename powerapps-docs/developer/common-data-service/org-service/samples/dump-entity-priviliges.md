@@ -30,7 +30,7 @@ The following sample creates a new file at `\DumpEntityPriviliges\bin\Debug\Enti
 
 ## What this sample does
 
-The `RetrieveAllEntitiesRequest` message is intended to be used in a scenario that contains data that is needed to retrieve metadata information about all the entities.
+The `RetrieveAllEntitiesRequest` message is intended to be used in a scenario that contains data that is needed to retrieve metadata information about all the tables.
 
 ## How this sample works
 

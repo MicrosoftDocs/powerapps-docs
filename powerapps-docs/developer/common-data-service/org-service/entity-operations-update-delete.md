@@ -1,6 +1,6 @@
 ---
-title: "Update and Delete entities using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to update and delete entities using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Update and Delete tables using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to update and delete tables using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/21/2019
 ms.reviewer: "pehecke"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Update and Delete entities using the Organization Service
+# Update and Delete tables using the Organization Service
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
@@ -122,14 +122,14 @@ You must use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you wa
 
 You must also use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you want to specify an optimistic concurrency behavior. More information: [Optimistic concurrency behavior](#optimistic-concurrency-behavior)
 
-## Update related entities in one operation
+## Update related tables in one operation
 
-In a similar manner to how you can [Create related entities in one operation](entity-operations-create.md#create-related-entities-in-one-operation), you can also update related entities.
+In a similar manner to how you can [Create related tables in one operation](entity-operations-create.md#create-related-entities-in-one-operation), you can also update related tables.
 
 To do this, you have to retrieve an table with the related rows so that you can access the id values. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-records)
 
 > [!IMPORTANT]
-> Updates to rows are made in a specific order. First, primary entities are processed, and then related entities are processed. If a change is made by the primary table for a lookup or related table column, and then a related table updates the same column, the related table value is retained. In general, a lookup column value and its equivalent in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.RelatedEntities> for the same relationship should not be used at the same time.
+> Updates to rows are made in a specific order. First, primary tables are processed, and then related tables are processed. If a change is made by the primary table for a lookup or related table column, and then a related table updates the same column, the related table value is retained. In general, a lookup column value and its equivalent in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.RelatedEntities> for the same relationship should not be used at the same time.
 
 ### Late-bound example
 
@@ -231,7 +231,7 @@ If you want to use early bound types, you can convert the <xref:Microsoft.Xrm.Sd
 The following example shows how to update an `Account` table using an alternate key defined for the `accountnumber` column.
 
 > [!IMPORTANT]
-> By default there are no alternate keys defined for any entities. This method can only be used when the environment is configured to define an alternate key for an table.
+> By default there are no alternate keys defined for any tables. This method can only be used when the environment is configured to define an alternate key for an table.
 
 ```csharp
 var accountNumberKey = new KeyAttributeCollection();
@@ -297,7 +297,7 @@ Or you can use the values:
 svc.Delete("account", new Guid("e5fa5509-2582-e811-a95e-000d3af40ae7"));
 ```
 > [!IMPORTANT]
-> Delete operations can initiate cascading operations that may delete child rows to maintain data integity depending on logic defined for the relationships in the environment. More information: [Table relationship behavior](../../../maker/common-data-service/entity-relationship-behavior.md)
+> Delete operations can initiate cascading operations that may delete child rows to maintain data integrity depending on logic defined for the relationships in the environment. More information: [Table relationship behavior](../../../maker/common-data-service/entity-relationship-behavior.md)
 
 ## Use the DeleteRequest class
 
@@ -391,6 +391,6 @@ More information: [Behavior of specialized update operations](../special-update-
 
 ### See also
 
-[Create entities using the Organization Service](entity-operations-create.md)<br />
+[Create tables using the Organization Service](entity-operations-create.md)<br />
 [Retrieve an table using the Organization Service](entity-operations-retrieve.md)<br />
 [Associate and disassociate tables using the Organization Service](entity-operations-associate-disassociate.md)<br />

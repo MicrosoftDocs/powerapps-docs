@@ -1,5 +1,5 @@
 ---
-title: "Create entities using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create tables using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create entities using the Organization Service
+# Create tables using the Organization Service
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
@@ -183,7 +183,7 @@ account.Account_Tasks = new List<Task>() {
 Guid accountid = svc.Create(account);
 ```
 
-## Associate entities on create
+## Associate tables on create
 
 You can associate any new row with an existing row when you create it in the same way you would when updating it. You must use an <xref:Microsoft.Xrm.Sdk.EntityReference> to set the value of a lookup column.
 

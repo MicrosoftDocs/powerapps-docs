@@ -49,4 +49,4 @@ Code in the `Demonstrate` region of the `Main`() method performs one or more LIN
 
 Displays an option to delete the rows created in [Setup](#setup).
 
-The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the rows to achieve the same result.
+The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
