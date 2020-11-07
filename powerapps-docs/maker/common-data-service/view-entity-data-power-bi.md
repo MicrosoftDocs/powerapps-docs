@@ -21,11 +21,8 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!WARNING]
-> A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is globally disabled, and we are working urgently to address the issue. 
-> A fix for the issue found is being being deployed. It will be deployed and the feature re-enabled to all public regions the first week of November. The safe deployment practice is being followed so the feature may be available in your region earlier. Thank you for your patience. 
-> 
-> While this feature is disabled, the existing Common Data Service connector still works using the import connection mode.
+> [!IMPORTANT]
+> This feature has been re-enabled in the majority of regions. Please resume testing and providing feedback. We thank you for your patience and feedback.
 
 You can use Power BI Desktop to view entities in Common Data Service. The entity
 record data that you can access from your environment is read-only. Data access
