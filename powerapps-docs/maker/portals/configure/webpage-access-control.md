@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Manage page permissions
 
-## Overview
-
 Page permissions control access to the webpages to portal users. For example, you can allow pages to be available anonymously for public access, or restrict access to users from the specific roles. Depending on business requirements, you can manage the inheritance of page permissions from a parent page to a child page. A page can have child [web files](web-files.md), such as downloadable documents. You can also manage the inheritance of page permissions from a page to such child web files.
 
 You can manage page permissions in two ways:
