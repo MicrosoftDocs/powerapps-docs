@@ -22,9 +22,8 @@ search.app:
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!WARNING]
-> A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is presently globally disabled as we work to address a security issue. A fix for the issue has been developed. Deployment of the fix and feature re-enablement to all public regions is planned for the first week of November 2020. A safe deployment practice is being followed so the feature may be available in your region earlier. Thank you for your patience on this matter.
-
+> [!IMPORTANT]
+> This feature has been re-enabled in the majority of regions. Please resume testing and providing feedback. We thank you for your patience and feedback.
 
 
 A SQL data connection is available on the Common Data Service endpoint. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
