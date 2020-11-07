@@ -1,6 +1,6 @@
 ---
-title: " Rollup records related to specified record (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to rollup records related to specified record." # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Rollup rows related to specified row (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to rollup rows related to specified row." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Rollup records related to a specific record
+# Rollup rows related to a specific row
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
@@ -37,7 +37,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. Creates sample account and opportunity records.
+2. Creates sample account and opportunity rows.
 
 ### Demonstrate
 
@@ -46,4 +46,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the rows in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.

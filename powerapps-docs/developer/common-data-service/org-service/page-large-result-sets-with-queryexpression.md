@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service, you can use the paging cookie feature to make paging in an application faster for large datasets. The feature is available in both FetchXML and <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> queries. When you use the paging cookie feature when querying a set of records, the result contains a value for the paging cookie. To improve system performance, you can then pass that value when you retrieve the next set of records.  
+In Common Data Service, you can use the paging cookie feature to make paging in an application faster for large datasets. The feature is available in both FetchXML and <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> queries. When you use the paging cookie feature when querying a set of rows, the result contains a value for the paging cookie. To improve system performance, you can then pass that value when you retrieve the next set of rows.  
   
  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and FetchXML use different formats for their paging cookies. If you convert from one query format to the other by using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> message or the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message, the paging cookie value is ignored. In addition, if you request nonconsecutive pages, the paging cookie value is ignored.  
   
@@ -29,23 +29,23 @@ In Common Data Service, you can use the paging cookie feature to make paging in 
   
 ```csharp
 // Query using the paging cookie.
-// Define the paging attributes.
-// The number of records per page to retrieve.
+// Define the paging columns.
+// The number of rows per page to retrieve.
 int queryCount = 3;
 
 // Initialize the page number.
 int pageNumber = 1;
 
-// Initialize the number of records.
+// Initialize the number of rows.
 int recordCount = 0;
 
-// Define the condition expression for retrieving records.
+// Define the condition expression for retrieving rows.
 ConditionExpression pagecondition = new ConditionExpression();
 pagecondition.AttributeName = "parentaccountid";
 pagecondition.Operator = ConditionOperator.Equal;
 pagecondition.Values.Add(_parentAccountId);
 
-// Define the order expression to retrieve the records.
+// Define the order expression to retrieve the rows.
 OrderExpression order = new OrderExpression();
 order.AttributeName = "name";
 order.OrderType = OrderType.Ascending;
@@ -65,7 +65,7 @@ pagequery.PageInfo.PageNumber = pageNumber;
 // The current paging cookie. When retrieving the first page, 
 // pagingCookie should be null.
 pagequery.PageInfo.PagingCookie = null;
-Console.WriteLine("Retrieving sample account records in pages...\n");
+Console.WriteLine("Retrieving sample account rows in pages...\n");
 Console.WriteLine("#\tAccount Name\t\tEmail Address"); 
 
 while (true)
@@ -74,7 +74,7 @@ while (true)
     EntityCollection results = _serviceProxy.RetrieveMultiple(pagequery);
     if (results.Entities != null)
     {
-        // Retrieve all records from the result set.
+        // Retrieve all rows from the result set.
         foreach (Account acct in results.Entities)
         {
             Console.WriteLine("{0}.\t{1}\t{2}", ++recordCount, acct.Name,
@@ -82,7 +82,7 @@ while (true)
         }
     }
 
-    // Check for more records, if it returns true.
+    // Check for more rows, if it returns true.
     if (results.MoreRecords)
     {
         Console.WriteLine("\n****************\nPage number {0}\n****************", pagequery.PageInfo.PageNumber);
@@ -96,7 +96,7 @@ while (true)
     }
     else
     {
-        // If no more records are in the result nodes, exit the loop.
+        // If no more rows are in the result nodes, exit the loop.
         break;
     }
 }

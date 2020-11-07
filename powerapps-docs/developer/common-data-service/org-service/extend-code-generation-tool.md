@@ -1,6 +1,6 @@
 ---
 title: "Create extensions for the code generation tool (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The SDK download package includes an extension to the CrmSvcUtil code generation tool that you can use to generate enumerations for all option set values including global option sets, picklist, state, and status values." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The SDK download package includes an extension to the CrmSvcUtil code generation tool that you can use to generate enumerations for all option set values including global option sets, choice, state, and status values." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 09/02/2020
 ms.reviewer: "pehecke"
@@ -25,7 +25,7 @@ The following table lists the parameters that you can use.
 
 |Parameter name|Interface Name|Description|  
 |--------------------|--------------------|-----------------|  
-|/codecustomization|ICustomizeCodeDomService|Called after the CodeDOM generation has been completed, assuming the default instance of `ICodeGenerationService`. It is useful for generating additional classes, such as the constants in picklists.|  
+|/codecustomization|ICustomizeCodeDomService|Called after the CodeDOM generation has been completed, assuming the default instance of `ICodeGenerationService`. It is useful for generating additional classes, such as the constants in choices.|  
 |/codewriterfilter|ICodeWriterFilterService|Called during the process of CodeDOM generation, assuming the default instance of `ICodeGenerationService`, to determine whether a specific object or property should be generated.|  
 |/codewritermessagefilter|ICodeWriterMessageFilterService|Called during the process of CodeDOM generation, assuming the default instance of `ICodeGenerationService`, to determine whether a specific message should be generated. This should not be used for requests/responses as these are already generated in Microsoft.Crm.Sdk.Proxy.dll and Microsoft.Xrm.Sdk.dll.|  
 |/metadataproviderservice|IMetadataProviderService|Called to retrieve the metadata from the server. This may be called multiple times during the generation process, so the data should be cached.|  
@@ -55,7 +55,7 @@ using Microsoft.Xrm.Sdk.Metadata;
 
 /// <summary>
 /// Sample extension for the CrmSvcUtil.exe tool that generates early-bound
-/// classes for custom entities.
+/// classes for custom tables.
 /// </summary>
 public sealed class BasicFilteringService : ICodeWriterFilterService
 {
@@ -107,11 +107,11 @@ The **GeneratePicklistEnums** sample extension outputs a source code file that c
 
 In addition, it includes a helper code file that contains the enumerations generated for all out-of-the-box values. These enumerations can be used in your code by adding the file `SampleCode\CS\HelperCode\OptionSets.cs` or `SampleCode\VB\HelperCode\OptionSets.vb` to your project.
 
-Each enumeration can be used to test or set the value for a property. Typically this property is an entity attribute but there are a few that are used for other properties.
+Each enumeration can be used to test or set the value for a property. Typically this property is an table column but there are a few that are used for other properties.
 
 ### Usage Example
 
-The following example shows how to use one of these enumerations to set a value in the `Account` entity.
+The following example shows how to use one of these enumerations to set a value in the `Account` table.
 
 ```csharp
 // Instantiate an account object. Note the use of the option set enumerations defined
@@ -120,8 +120,8 @@ Account account = new Account { Name = "Fourth Coffee" };
 account.AccountCategoryCode = new OptionSetValue((int)AccountAccountCategoryCode.PreferredCustomer);
 account.CustomerTypeCode = new OptionSetValue((int)AccountCustomerTypeCode.Investor);
 
-// Create an account record named Fourth Coffee.
-// Save the record reference so we can delete it during cleanup later.
+// Create an account row named Fourth Coffee.
+// Save the row reference so we can delete it during cleanup later.
 Guid accountId = service.Create(account);
 ```
 

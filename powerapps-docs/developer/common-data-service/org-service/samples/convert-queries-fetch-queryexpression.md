@@ -36,7 +36,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org. 
-1. The `CreateRequireRecords` method creates an account and two contact records that are used by the sample.
+1. The `CreateRequireRecords` method creates an account and two contact rows that are used by the sample.
 1. The `QueryExpression` builds a query expression that we will convert into FetchXML.
 1. The `DoFetchXmlToQueryExpressionConversion` class creates a Fetch query that we will convert into a query expression.
 1. The `conversionRequest` method converts the generated query expression into FetchXML and vice versa.
@@ -44,4 +44,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.

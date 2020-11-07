@@ -121,7 +121,7 @@ Sync workflow 'Name of Entity Scope Business Rule returning Error' terminated wi
 </OrganizationServiceFault>  
 ```  
   
-More information: [Create a business rule for an entity](../../../maker/common-data-service/data-platform-create-business-rule.md)  
+More information: [Create a business rule for an table](../../../maker/common-data-service/data-platform-create-business-rule.md)  
   
 <a name="BKMK_AdditionalInfo"></a>
 

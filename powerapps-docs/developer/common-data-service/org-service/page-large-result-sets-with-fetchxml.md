@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-You can page the results of a FetchXML query by using the paging cookie. The paging cookie is a performance feature that makes paging in the application faster for very large datasets. When you query for a set of records, the result will contain a value for the paging cookie. For better performance, you can pass that value when you retrieve the next set of records.  
+You can page the results of a FetchXML query by using the paging cookie. The paging cookie is a performance feature that makes paging in the application faster for very large datasets. When you query for a set of rows, the result will contain a value for the paging cookie. For better performance, you can pass that value when you retrieve the next set of rows.  
   
  FetchXML and <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> use different formats for their paging cookies. If you convert from one query format to the other by using the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message or the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> message, the paging cookie value is ignored. In addition, if you request nonconsecutive pages, the paging cookie value is ignored.  
   
@@ -38,12 +38,12 @@ strQueryXML = @"
  The following example shows how to use the paging cookie with a FetchXML query. For the complete sample code, see [Sample: Use FetchXML with a Paging Cookie](samples/use-fetchxml-paging-cookie.md).  
   
 ```csharp
-// Define the fetch attributes.
-// Set the number of records per page to retrieve.
+// Define the fetch columns.
+// Set the number of rows per page to retrieve.
 int fetchCount = 3;
 // Initialize the page number.
 int pageNumber = 1;
-// Initialize the number of records.
+// Initialize the number of rows.
 int recordCount = 0;
 // Specify the current paging cookie. For retrieving the first page, 
 // pagingCookie should be null.
@@ -90,7 +90,7 @@ while (true)
         System.Console.WriteLine("{0}.\t{1}\t\t{2}", ++recordCount, c.Attributes["name"], c.Attributes["emailaddress1"] );
     }                        
     
-    // Check for morerecords, if it returns 1.
+    // Check for more rows, if it returns 1.
     if (returnCollection.MoreRecords)
     {
         Console.WriteLine("\n****************\nPage number {0}\n****************", pageNumber);
@@ -104,7 +104,7 @@ while (true)
     }
     else
     {
-        // If no more records in the result nodes, exit the loop.
+        // If no more rows in the result nodes, exit the loop.
         break;
     }
 }

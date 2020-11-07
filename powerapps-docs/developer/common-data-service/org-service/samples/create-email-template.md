@@ -1,6 +1,6 @@
 ---
 title: "Sample: Create am email using a template (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to instantiate an email record" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample shows how to instantiate an email row" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to instantiate an email record by using [InstantiateTemplateRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.instantiatetemplaterequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/EmailTemplate). 
+This sample shows how to instantiate an email row by using [InstantiateTemplateRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.instantiatetemplaterequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/EmailTemplate). 
 
 ## How to run this sample
 
@@ -27,7 +27,7 @@ This sample shows how to instantiate an email record by using [InstantiateTempla
 
 ## What this sample does
 
-The `InstantiateTemplateRequest` message is intended to be used in a scenario where it instantiates an email record.
+The `InstantiateTemplateRequest` message is intended to be used in a scenario where it instantiates an email row.
 
 ## How this sample works
 
@@ -36,7 +36,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. Creates an account record. 
+1. Creates an account row. 
 2. Defines the body and subject of the email template in **XML** format.
 3. Creates an email template.
 
@@ -48,4 +48,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the record created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the row created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.

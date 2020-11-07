@@ -1,6 +1,6 @@
 ---
-title: "Sample: Use duplicate detection when creating and updating records(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to invoke duplicate detection for creating and updating entity records" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Use duplicate detection when creating and updating rows(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to invoke duplicate detection for creating and updating table rows" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -15,12 +15,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Use duplicate detection when creating and updating records
+# Sample: Use duplicate detection when creating and updating rows
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-duplicate-detection-when-creating-and-updating-records -->
-This sample shows how to invoke duplicate detection for creating and updating entity records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseDuplicatedetectionforCRUD).
+This sample shows how to invoke duplicate detection for creating and updating table rows. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseDuplicatedetectionforCRUD).
 
 ## How to run this sample
 
@@ -38,15 +38,15 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Account` method creates an account record. 
+1. The `Account` method creates an account row. 
 1. The `DuplicateRule` method creates a duplicate detection rule.
 1. The `DuplicateRuleCondition` method creates a duplicate detection rule conditions.
 1. The `PublishDuplicateRuleRequest` method publishes the duplicate detection rule created earlier. You need to wait for publishing operation to complete, so we keep polling the state of the rule until it becomes `Published`.
 
 ### Demonstrate
-1. The `Account` method creates an account record. 
+1. The `Account` method creates an account row. 
 1. The `CreateRequest` method creates operation by suppressing duplicate detection.
-1. The `UpdateRequest` method updates the retrieved account record with new account number.
+1. The `UpdateRequest` method updates the retrieved account row with new account number.
 
 ### Clean up
 

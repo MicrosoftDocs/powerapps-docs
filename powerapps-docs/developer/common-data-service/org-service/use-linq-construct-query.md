@@ -19,9 +19,9 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-The .NET Language-Integrated Query(LINQ) query provider in Common Data Service uses standard LINQ syntax. The first step in creating a LINQ query is to identify the relevant entity types and the relationships between them. You can then specify the data source and the other query parameters.  
+The .NET Language-Integrated Query(LINQ) query provider in Common Data Service uses standard LINQ syntax. The first step in creating a LINQ query is to identify the relevant table types and the relationships between them. You can then specify the data source and the other query parameters.  
 
- The `from` clause is used to return a single “root” entity. The query provider can only return entities of a single entity type. The `orderby` and `select` clauses must reference this root entity. You can use `join` clauses to add entities with a relationship to the “root” entity.  
+ The `from` clause is used to return a single “root” table. The query provider can only return tables of a single table type. The `orderby` and `select` clauses must reference this root table. You can use `join` clauses to add tables with a relationship to the “root” table.  
 
 <a name="bkmk_operators"></a>   
 
@@ -29,9 +29,9 @@ The .NET Language-Integrated Query(LINQ) query provider in Common Data Service u
  All LINQ query expressions have a similar format. The following table shows the most common clauses in a LINQ query expression when using the Common Data Service LINQ query provider.  
 
 ### from  
- When using the generated service context and early binding, use the `IQueryable` entity set, such as `AccountSet`, in the generated context.  
+ When using the generated service context and early binding, use the `IQueryable` table set, such as `AccountSet`, in the generated context.  
 
- When not using the generated context, the `CreateQuery` method on the organization service context object gives you access to Common Data Service entities.  
+ When not using the generated context, the `CreateQuery` method on the organization service context object gives you access to Common Data Service tables.  
 
  Example:  
 
@@ -50,7 +50,7 @@ select c;
 ```  
 
 ### join  
- The `join` clause represents an inner join. You use the clause to work with two or more entities that can be joined with a common attribute value.  
+ The `join` clause represents an inner join. You use the clause to work with two or more tables that can be joined with a common column value.  
 
  Example:  
 
@@ -60,7 +60,7 @@ join a in context.AccountSet on c.ContactId equals a.PrimaryContactId.Id
 ```  
 
 ### where  
- The `where` clause applies a filter to the results, often using a Boolean expression. The filter specifies which elements to exclude from the source sequence. Each `where` clause can only contain conditions against a single entity type. A composite condition involving multiple entities is not valid. Instead, each entity should be filtered in separate `where` clauses.  
+ The `where` clause applies a filter to the results, often using a Boolean expression. The filter specifies which elements to exclude from the source sequence. Each `where` clause can only contain conditions against a single table type. A composite condition involving multiple tables is not valid. Instead, each table should be filtered in separate `where` clauses.  
 
  Example:  
 
@@ -70,7 +70,7 @@ where (a.Name.StartsWith("Contoso") && a.Address1_StateOrProvince == "WA")
 ```  
 
 ### orderby  
- The `orderby` operator puts the returned query attributes in a specified order.  
+ The `orderby` operator puts the returned query columns in a specified order.  
 
  Example:  
 
@@ -110,9 +110,9 @@ select new Contact
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |      `join`       |                                                                                                                Represents an inner or outer join. Only left outer joins are supported.                                                                                                                |
 |      `from`       |                                                                                                                                 Supports one `from` clause per query.                                                                                                                                 |
-|      `where`      | The left side of the clause must be an attribute name and the right side of the clause must be a value. You cannot set the left side to a constant. Both the sides of the clause cannot be constants.<br /><br /> Supports the `String` functions `Contains`, `StartsWith`, `EndsWith`, and `Equals`. |
+|      `where`      | The left side of the clause must be an column name and the right side of the clause must be a value. You cannot set the left side to a constant. Both the sides of the clause cannot be constants.<br /><br /> Supports the `String` functions `Contains`, `StartsWith`, `EndsWith`, and `Equals`. |
 |     `groupBy`     |                               Not supported. FetchXML supports grouping options that are not available with the LINQ query provider. More information: [Use FetchXML Aggregation](/dynamics365/customer-engagement/developer/use-fetchxml-aggregation)                               |
-|     `orderBy`     |                                                                                                                  Supports ordering by entity attributes, such as `Contact.FullName`.                                                                                                                  |
+|     `orderBy`     |                                                                                                                  Supports ordering by table columns, such as `Contact.FullName`.                                                                                                                  |
 |     `select`      |                                                                                                                       Supports anonymous types, constructors, and initializers.                                                                                                                       |
 |      `last`       |                                                                                                                                 The `last` operator is not supported.                                                                                                                                 |
 | `skip` and `take` |                                                                                       Supports `skip` and `take` using server-side paging. The `skip` value must be greater than or equal to the `take` value.                                                                                        |
@@ -120,11 +120,11 @@ select new Contact
 
 <a name="filter"></a>   
 
-## Filter multiple entities  
+## Filter multiple tables  
 
- You can create complex .NET Language Integrated Query(LINQ) queries in Common Data Service. You use multiple `Join` clauses with filter clauses to create a result that is filtered on attributes from several entities.  
+ You can create complex .NET Language Integrated Query(LINQ) queries in Common Data Service. You use multiple `Join` clauses with filter clauses to create a result that is filtered on columns from several tables.  
 
- The following sample shows how to create a LINQ query that works with two entities and filters the result based on values from each of the entities.  
+ The following sample shows how to create a LINQ query that works with two tables and filters the result based on values from each of the tables.  
 
  ```csharp
  using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -154,5 +154,5 @@ select new Contact
  [Sample: Create a LINQ Query](/dynamics365/customer-engagement/developer/org-service/sample-create-linq-query)   
  [Sample: LINQ Query Examples](/dynamics365/customer-engagement/developer/org-service/sample-complex-linq-queries)   
  [Build Queries with LINQ (.NET Language-Integrated Query)](/dynamics365/customer-engagement/developer/org-service/build-queries-with-linq-net-language-integrated-query)   
- [Use Late-Bound Entity Class with a LINQ Query](/dynamics365/customer-engagement/developer/org-service/use-late-bound-entity-class-linq-query)   
+ [Use Late-Bound table class with a LINQ Query](/dynamics365/customer-engagement/developer/org-service/use-late-bound-entity-class-linq-query)   
  [Blog: LINQPad 4 Driver for Dynamics CRM REST/Web API are available on CodePlex](https://blogs.msdn.com/b/crminthefield/archive/2015/06/11/linqpad-4-driver-for-dynamics-crm-rest-webapi-are-available-on-codeplex.aspx)

@@ -1,6 +1,6 @@
 ---
-title: " Assign a record to a new owner (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to assign records to a new owner." # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Assign a row to a new owner (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to assign rows to a new owner." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# Assign a record to a new owner
+# Assign a row to a new owner
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
@@ -32,7 +32,7 @@ You can download the sample from [here](https://github.com/microsoft/PowerApps-S
 
 ## What this sample does
 
-The [IOrganizationService.Update](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dynamics-general-ce-9) message is intended to be used in a scenario where it contains the data that is needed to update existing record.
+The [IOrganizationService.Update](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dynamics-general-ce-9) message is intended to be used in a scenario where it contains the data that is needed to update existing row.
 
 ## How this sample works
 
@@ -45,8 +45,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `Retrieve` method retrieves the account records created in the setup(#setup).
-1. The `Update` message updates the `ownerid` attribute to the user who you want to own the record. 
+1. The `Retrieve` method retrieves the account rows created in the setup(#setup).
+1. The `Update` message updates the `ownerid` attribute to the user who you want to own the row. 
 
 ### Clean up
 

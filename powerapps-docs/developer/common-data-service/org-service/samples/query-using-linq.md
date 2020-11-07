@@ -1,6 +1,6 @@
 ---
 title: "Query data using LINQ (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to assign records to a team." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample showcases how to assign rows to a team." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/05/2020
 ms.reviewer: "pehecke"
@@ -29,8 +29,8 @@ See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/mas
 
 Read each sample's comments to find out what each sample does. There are samples that:
 * Create a simple LINQ query
-* Create a LINQ query using entity late binding
-* Retrieve multiple records using condition operators
+* Create a LINQ query using table late binding
+* Retrieve multiple rows using condition operators
 * Complex queries - a wide assortment of LINQ examples
 
 ## How this sample works
@@ -39,7 +39,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-Creates any entity instances required by the `Demonstrate` region of each `Main`() method.
+Creates any table instances required by the `Demonstrate` region of each `Main`() method.
 
 ### Demonstrate
 
@@ -47,6 +47,6 @@ Code in the `Demonstrate` region of the `Main`() method performs one or more LIN
 
 ### Clean up
 
-Displays an option to delete the records created in [Setup](#setup).
+Displays an option to delete the rows created in [Setup](#setup).
 
-The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.

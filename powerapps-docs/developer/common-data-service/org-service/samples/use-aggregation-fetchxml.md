@@ -1,6 +1,6 @@
 ---
 title: "Sample: Use aggregation in FetchXML(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to retrieve aggregate record data using FetchXML." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample shows how to retrieve aggregate row data using FetchXML." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -21,7 +21,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-aggregation-fetchxml -->
 
-This sample shows how to retrieve aggregate record data using FetchXML. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseAggregationInFetchXML).
+This sample shows how to retrieve aggregate row data using FetchXML. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseAggregationInFetchXML).
 
 ## What this sample does
 
@@ -34,18 +34,18 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `CreateRequiredRecords` class creates 3 opportunity records and account record.
+1. The `CreateRequiredRecords` class creates 3 opportunity rows and account row.
 
 ### Demonstrate
 
 1. The `estimatedvalue_avg` fetches the average of estimatedvalue for all the opportunities. The `EntityCollection` method returns the results of the `RetrieveMultiple` request.
-1. The `opportunity_count` fetches the count of all opportunites.
-1. The `estimatedvalue_max` fetches the maximum estimatedvalue of all opportunites.
+1. The `opportunity_count` fetches the count of all opportunities.
+1. The `estimatedvalue_max` fetches the maximum estimatedvalue of all opportunities.
 1. The `estimatedvalue_min` fetches the minimum estimatedvalue of all opportunities.
 1. The `estimatedvalue_sum` fetches the sum of estimatedvalue for all opportunities.
 1. The `estimatedvalue_avg2` fetches the multiple aggregate values within a single query.
-1. The `groupby1` fetches a list of users with a count of all the opportunites they own using the groupby.
-1. The `byyear` fetches the aggregate information about all the opportunites that have been won by year.
+1. The `groupby1` fetches a list of users with a count of all the opportunities they own using the groupby.
+1. The `byyear` fetches the aggregate information about all the opportunities that have been won by year.
 1. The `byquarter` fetches the aggregate information about the opportunities that have been won by quarter.
 1. The `bymonth` fetches the aggregate information about the opportunities that have been won by month.
 1. The `byweek` fetches the aggregate information about the opportunities that have been won by week.

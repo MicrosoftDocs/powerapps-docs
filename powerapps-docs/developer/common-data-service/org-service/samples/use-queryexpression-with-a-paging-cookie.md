@@ -29,7 +29,7 @@ This sample shows how to use the paging cookie in a QueryExpression query to ret
 
 ## What this sample does
 
-The `IOrganizationService.RetreiveMultiple` method is intended to be used in a scenario where it retrieves a collection of records.
+The `IOrganizationService.RetreiveMultiple` method is intended to be used in a scenario where it retrieves a collection of rows.
 ## How this sample works
 
 In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
@@ -37,12 +37,12 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Account` method creates a parent account record and 10 child account records.
+1. The `Account` method creates a parent account row and 10 child account rows.
 
 ### Demonstrate
 
-1. The `ConditionExpress` defines the condition expression for retrieving records.
-1. The `OrderExpression` method defines the order expression to retrieve the records.
+1. The `ConditionExpress` defines the condition expression for retrieving rows.
+1. The `OrderExpression` method defines the order expression to retrieve the rows.
 
 ### Clean up
 

@@ -1,6 +1,6 @@
 ---
-title: "Sample: Bulk delete records in bulk that match common criteria (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to delete records in bulk that match common criteria" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Bulk delete rows in bulk that match common criteria (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to delete rows in bulk that match common criteria" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -15,13 +15,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Bulk delete records that match common criteria
+# Sample: Bulk delete rows that match common criteria
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-bulk-delete-records-match-common-criteria -->
 
-This sample shows how to delete records, in bulk, that match common criteria. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/BulkDeleteMatchCriteria).
+This sample shows how to delete rows, in bulk, that match common criteria. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/BulkDeleteMatchCriteria).
 
 ## How to run this sample
 
@@ -38,7 +38,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. Creates an sample account record.
+2. Creates an sample account row.
 3. Queries for a system user to send an email to, after the bulk delete operation completes.
 4. The `BulkDeleteRequest` creates the bulk delete process and set the request properties.
 5. The `InspectBulkDeleteOperation` method inspects and display the information about the created `BulkDeleteOperation`.
@@ -51,4 +51,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
