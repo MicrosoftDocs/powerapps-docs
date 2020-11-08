@@ -1,8 +1,8 @@
 ---
-title: "Activity entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Activity tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Activities are tasks that you or your teams perform when they contact customers, for example, sending letters or making telephone calls." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/08/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Activity entities
+# Activity tables
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -25,33 +25,24 @@ In Common Data Service, activities are tasks that you or your teams perform when
   
  ![Activity diagram](media/entity-model-activity.gif "Activity diagram")  
   
- To support the communication needs of the modern-day business, such as instant messaging (IM) and SMS, you can create custom activities in Common Data Service.  
+ To support the communication needs of the modern-day business, such as instant messaging (IM) and SMS, you can create [custom activities](custom-activities.md) in Common Data Service.  
   
- **Other activity entities**  
+ ## Other activity tables  
   
--   The scheduling activities enables you to schedule your services and resources, and thus define work schedules. The scheduling activity entities are `Appointment`, `ServiceAppointment`, and `RecurringAppointmentMaster`. For more information, see [Schedule and Appointment Entities](/dynamics365/customer-engagement/developer/schedule-appointment-entities).  
+The scheduling activities enables you to schedule your services and resources, and thus define work schedules. The scheduling activity tables are [Appointment](reference/entities/appointment.md) and [RecurringAppointmentMaster](reference/entities/recurringappointmentmaster.md) 
   
--   The marketing activity, `CampaignResponse`, enables you to capture responses from the customers for a marketing campaign, while the `CampaignActivity` entity represents a step in a campaign. For more information, see [Campaign Entities](/dynamics365/customer-engagement/developer/campaign-entities).  
+## Related topics  
+ [Custom Activities](custom-activities.md)<br/>
+ [E-mail Activity tables](email-activity-entities.md)<br/>
+ [Task, Fax, Phone Call, and Letter activity tables](task-fax-phone-call-letter-activity-entities.md)<br/>
+ [Activity Party table](activityparty-entity.md)<br/>
+ [Activity Pointer (Activity) table](activitypointer-activity-entity.md) 
+ [Recurring appointments](recurring-appointment-partial-expansion-model.md)
   
--   The sales force automation entities `OpportunityClose`, `OrderClose`, and `QuoteClose` activities capture information about each of these events. For more information, see [Sales Entities (Lead, Opportunity, Competitor, Quote, Order, Invoice)](/dynamics365/customer-engagement/developer/sales-entities-lead-opportunity-competitor-quote-order-invoice).  
+### See also  
+ 
+ [Sample Code for Activity tables](/powerapps/developer/common-data-service/org-service/samples/convert-fax-task)
+ 
+ [Server-side synchronization tables](server-side-synchronization-entities.md)  
   
--   The customer service entity `IncidentResolution` activity captures information about the resolution of a case. For more information, see [Incident (Case) Entities](/dynamics365/customer-engagement/developer/incident-case-entities).  
-  
-## In This Section  
- [Custom Activities in Dynamics 365](custom-activities.md)  
-  
- [Activity Pointer (Activity) Entity](activitypointer-activity-entity.md)  
-  
- [Activity Party Entity](activityparty-entity.md)  
-  
- [Task, Fax, Phone Call, and Letter Activity Entities](task-fax-phone-call-letter-activity-entities.md)  
-  
- [E-mail Activity Entities](email-activity-entities.md)  
-  
- [Sample Code for Activity Entities](/dynamics365/customer-engagement/developer/sample-code-activity-entities)  
-  
-## Related Sections  
-   
- [Server-side Synchronization Entities](server-side-synchronization-entities.md)  
-  
- [Customize Entity Metadata](customize-entity-metadata.md)
+ [Customize table metadata](customize-entity-metadata.md)
