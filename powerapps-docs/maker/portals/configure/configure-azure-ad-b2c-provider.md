@@ -150,7 +150,7 @@ In this step, configure the user flows for sign up, sign in and password reset p
 - **Existing policy** - Select an already created policy from the Azure AD B2C tenant.
 
 > [!NOTE]
-> Only email claim is configured in these user flows. You can enable more claims like *first name*, and *last name* in the flow's **User attributes** and **Application claims** configuration using the Azure Portal. If you enable more claims, ensure you [edit the authentication provider](#edit-configuration) and add them to the *Registration claims mapping* and *Login claims mapping* in the **Additional settings**. More information: [Step 6 - additional settings for Azure AD B2C provider configuration](configure-azure-ad-b2c-provider.md)
+> Only email claim is configured in these user flows. You can enable more claims like *first name*, and *last name* in the flow's **User attributes** and **Application claims** configuration using the Azure Portal. If you enable more claims, ensure you [edit the authentication provider](#edit-configuration) and add them to the *Registration claims mapping* and *Login claims mapping* in the **Additional settings**. More information: [Step 6 - additional settings for Azure AD B2C provider configuration](configure-azure-ad-b2c-provider-manual.md)
 
 Select **Create** to create the identity provider configuration.
 
