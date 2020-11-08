@@ -1,7 +1,6 @@
 ---
 title: Common Data Service tables | Microsoft Docs
 description: Learn about the tables available in Common Data Service.
-services: ''
 suite: powerapps
 documentationcenter: na
 author: "mayadumesh" # GitHub ID
@@ -38,8 +37,8 @@ There are several ways to edit table metadata using designers.
 
 |Designer  |Description  |
 |---------|---------|
-|powerapps.com|The easiest and most common approach to modify the schema is to use the [powerapps.com](https://make.powerapps.com/) site to edit Common Data Service associated with an environment. Changes applied here are performed in the context of an unmanaged Common Data Service Default solution. <!-- TODO: Add link to topic that describes this -->|
-|Common Data Service Default solution explorer|There is another designer available from the [powerapps.com](https://make.powerapps.com/) site when editing Common Data Service. In the lower left-hand corner, the **Advanced** button will open the solution explorer to the Common Data Service Default solution. |
+|make.powerapps.com|The easiest and most common approach to modify the schema is to use the [make.powerapps.com](https://make.powerapps.com/) site to edit Common Data Service associated with an environment. Changes applied here are performed in the context of an unmanaged Common Data Service Default solution.|
+|Common Data Service Default solution explorer|There is another designer available from the [make.powerapps.com](https://make.powerapps.com/) site when editing Common Data Service. In the lower left-hand corner, the **Advanced** button will open the solution explorer to the Common Data Service Default solution. |
 |Solution explorer for your solution |If you will distribute a solution you should create any new tables, columns, or relationships in the context of the unmanaged solution that you will use to develop your solution. <br /> More information: [Solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher)|
 |From the form editor|When editing a model-driven app form for a table, you can click the **New Field** button in the **Field Explorer**. If you create a lookup field, you will create a new table relationship to support it.|
 
