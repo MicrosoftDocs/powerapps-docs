@@ -12,11 +12,11 @@ ms.reviewer: tapanm
 
 # Configure the Azure Active Directory B2C provider (Preview)
 
-[This topic is pre-release documentation and is subject to change.]
+[This article is pre-release documentation and is subject to change.]
 
-[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Microsoft 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C is an extension to that authentication model that enables external customer signs in through local credentials and federation with various common social identity providers.
+[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Microsoft 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C is an extension to that authentication model that enables external customer sign in through local credentials and federation with various common social identity providers.
 
-A portal owner can configure the portal to accept [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports Open ID Connect for federation.
+A portal owner can configure the portal [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports Open ID Connect for federation.
 
 In this article, learn about how to configure Azure Active Directory B2C as the identity provider automatically using a feature in preview. Using these steps, you can create new Azure AD B2C tenant, register application and configure user flows from within Power Apps portals. If you want to configure the Azure AD B2C provider manually, go to [Configure Azure AD B2C provider manually](configure-azure-ad-b2c-provider-manual.md).
 
@@ -65,7 +65,10 @@ In this step, select an existing Azure AD B2C tenant, or create a new B2C tenant
 
 ### Option 1: Use existing Azure AD B2C tenant
 
-Select this option if you already have an existing Azure AD B2C tenant. The other details such as the initial domain name, country/region and location are automatically updated.
+Select this option if you already have an existing Azure AD B2C tenant. Other details such as the initial domain name, country/region, and location are automatically updated.
+
+> [!NOTE]
+> Ensure the account you use to sign in to Power Apps has access to the Azure AD tenant that you want to use for configuring the B2C authentication.
 
 ![Select an existing Azure AD B2C tenant](media/authentication/b2c-tenant-select.png "Select an existing Azure AD B2C tenant")
 
@@ -74,6 +77,9 @@ Select **Next** to continue.
 ### Option 2: Create a new Azure AD B2C tenant
 
 Select this option to create a new Azure AD B2C tenant for the selected Azure Active Directory.
+
+> [!NOTE]
+> Ensure the account you use to sign in to Power Apps has been assigned at least the [Contributor role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) for the subscription, or a resource group within the subscription.
 
 ![Create new Azure AD B2C tenant](media/authentication/new-b2c-tenant.png "Create new Azure AD B2C tenant")
 
@@ -89,6 +95,11 @@ To create a new Azure AD B2C tenant:
 
 1. Select **Country/Region** for the tenant.
 
+    > [!NOTE]
+    > - You can't change the Country/Region after you create your directory.
+    > - Ensure you select the correct Country/Region since your choice determines the Datacenter location for your directory.
+    > - Microsoft doesn't control the location from which you or your end users may access or move directory data through the use of apps or services. To see Microsoft's data location commitments for its services, see the [Online Service Terms](https://go.microsoft.com/fwlink?linkid=2009014).
+
 1. Select the available **Datacenter location**.
 
     ![New Azure AD B2C tenant details](media/authentication/create-new-b2c-tenant.png "New Azure AD B2C tenant details")
@@ -97,7 +108,7 @@ To create a new Azure AD B2C tenant:
 
 ## Step 3 - Register application
 
-In this step, register your portal as an application with the Azure Active Directory. For this step, you can create a new application, or select an already created application from Azure Active Directory.
+In this step, register your portal as an application with the Azure Active Directory. You can create a new application, or select an already created application from Azure Active Directory.
 
 ![Register application](media/authentication/register-app-b2c.png "Register application")
 
@@ -134,9 +145,12 @@ In this step, configure the user flows for sign up, sign in and password reset p
 
 ![Configure user flows](media/authentication/b2c-user-flows.png "Configure user flows")
 
-Select **New policy** if you want to create a new policy, or **Existing policy** to select an already created policy from the Azure AD B2C tenant.
+- **New policy** - Select if you want to create a new policy. Also allows you to change the name of the policy.
+    <br> If you select **New policy**, flows are created by default with *local account* identity provider using email address. If you want, you can configure more flows, or other identity providers for your B2C tenant later using the Azure portal.
+- **Existing policy** - Select an already created policy from the Azure AD B2C tenant.
 
-If you want, you can also change the name of the policy when you select **New policy**.
+> [!NOTE]
+> Only email claim is configured in these user flows. You can enable more claims like *first name*, and *last name* in the flow's **User attributes** and **Application claims** configuration using the Azure Portal. If you enable more claims, ensure you [edit the authentication provider](#edit-configuration) and add them to the *Registration claims mapping* and *Login claims mapping* in the **Additional settings**. More information: [Step 6 - additional settings for Azure AD B2C provider configuration](configure-azure-ad-b2c-provider.md)
 
 Select **Create** to create the identity provider configuration.
 
