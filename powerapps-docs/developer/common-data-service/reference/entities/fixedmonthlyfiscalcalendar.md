@@ -1,20 +1,22 @@
 ---
-title: "FixedMonthlyFiscalCalendar Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the FixedMonthlyFiscalCalendar entity."
-ms.date: 04/12/2020
+title: "FixedMonthlyFiscalCalendar table reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the FixedMonthlyFiscalCalendar table."
+ms.date: 11/07/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# FixedMonthlyFiscalCalendar Entity Reference
+# FixedMonthlyFiscalCalendar table reference
+
+> [!NOTE]
+> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 Fixed monthly fiscal calendar of an organization. A span of time during which the financial activities of an organization are calculated.
 
@@ -29,7 +31,7 @@ Fixed monthly fiscal calendar of an organization. A span of time during which th
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/fixedmonthlyfiscalcalendars<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/fixedmonthlyfiscalcalendars(*userfiscalcalendarid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Table Properties
 
 |Property|Value|
 |--------|-----|
@@ -47,9 +49,9 @@ Fixed monthly fiscal calendar of an organization. A span of time during which th
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable Columns
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [EffectiveOn](#BKMK_EffectiveOn)
 - [Period1](#BKMK_Period1)
@@ -386,9 +388,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only Columns
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [BusinessUnitId](#BKMK_BusinessUnitId)
 - [BusinessUnitIdName](#BKMK_BusinessUnitIdName)
@@ -1049,6 +1051,6 @@ See systemuser Entity [lk_fixedmonthlyfiscalcalendar_modifiedonbehalfby](systemu
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About table reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.fixedmonthlyfiscalcalendar?text=fixedmonthlyfiscalcalendar EntityType" />

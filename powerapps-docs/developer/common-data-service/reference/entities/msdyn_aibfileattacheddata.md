@@ -1,20 +1,22 @@
 ---
-title: "msdyn_AIBFileAttachedData Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_AIBFileAttachedData entity."
-ms.date: 04/12/2020
+title: "msdyn_AIBFileAttachedData table reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_AIBFileAttachedData table."
+ms.date: 11/07/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_AIBFileAttachedData Entity Reference
+# msdyn_AIBFileAttachedData table reference
+
+> [!NOTE]
+> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 
 
@@ -39,8 +41,7 @@ search.app:
 |SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_aibfileattacheddatas(*msdyn_aibfileattacheddataid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/msdyn_aibfileattacheddatas(*msdyn_aibfileattacheddataid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-
-## Entity Properties
+## Table Properties
 
 |Property|Value|
 |--------|-----|
@@ -58,15 +59,16 @@ search.app:
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable Columns
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [msdyn_AIBDatasetFileId](#BKMK_msdyn_AIBDatasetFileId)
 - [msdyn_AIBFileAttachedDataId](#BKMK_msdyn_AIBFileAttachedDataId)
 - [msdyn_Data](#BKMK_msdyn_Data)
 - [msdyn_Key](#BKMK_msdyn_Key)
+- [msdyn_Type](#BKMK_msdyn_Type)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -148,6 +150,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_key|
+|MaxLength|850|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_Type"></a> msdyn_Type
+
+|Property|Value|
+|--------|-----|
+|Description|The attachment type|
+|DisplayName|Type|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_type|
 |MaxLength|850|
 |RequiredLevel|None|
 |Type|String|
@@ -276,9 +294,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only Columns
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -872,6 +890,6 @@ See msdyn_aibdatasetfile Entity [msdyn_AIBFileAttachedData_msdyn_AIB](msdyn_aibd
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About table reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata?text=msdyn_aibfileattacheddata EntityType" />

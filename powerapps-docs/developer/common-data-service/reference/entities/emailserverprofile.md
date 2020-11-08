@@ -1,20 +1,22 @@
 ---
-title: "EmailServerProfile Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the EmailServerProfile entity."
-ms.date: 04/12/2020
+title: "EmailServerProfile table reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the EmailServerProfile table."
+ms.date: 11/07/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# EmailServerProfile Entity Reference
+# EmailServerProfile table reference
+
+> [!NOTE]
+> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 Holds the Email Server Profiles of an organization
 
@@ -36,7 +38,7 @@ Holds the Email Server Profiles of an organization
 |SetState|PATCH [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/emailserverprofiles(*emailserverprofileid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Table Properties
 
 |Property|Value|
 |--------|-----|
@@ -54,9 +56,9 @@ Holds the Email Server Profiles of an organization
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable Columns
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [DefaultServerLocation](#BKMK_DefaultServerLocation)
 - [Description](#BKMK_Description)
@@ -85,6 +87,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [MinPollingIntervalInMinutes](#BKMK_MinPollingIntervalInMinutes)
 - [MoveUndeliveredEmails](#BKMK_MoveUndeliveredEmails)
 - [Name](#BKMK_Name)
+- [OauthClientId](#BKMK_OauthClientId)
+- [OauthClientSecret](#BKMK_OauthClientSecret)
 - [OutgoingAuthenticationProtocol](#BKMK_OutgoingAuthenticationProtocol)
 - [OutgoingAutoGrantDelegateAccess](#BKMK_OutgoingAutoGrantDelegateAccess)
 - [OutgoingCredentialRetrieval](#BKMK_OutgoingCredentialRetrieval)
@@ -250,6 +254,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |1|Negotiate|
 |2|NTLM|
 |3|Basic|
+|4|OAuth|
 
 
 
@@ -274,6 +279,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |2|Server to Server Authentication|
 |3|Windows Integrated Authentication|
 |4|Without Credentials (Anonymous)|
+|5|Gmail OAuth|
 
 
 
@@ -600,6 +606,38 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_OauthClientId"></a> OauthClientId
+
+|Property|Value|
+|--------|-----|
+|Description|ClientId used for OAuth athentication scheme|
+|DisplayName|Oauth ClientId|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|oauthclientid|
+|MaxLength|1024|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_OauthClientSecret"></a> OauthClientSecret
+
+|Property|Value|
+|--------|-----|
+|Description|Client secret used for the OAuth authentication scheme|
+|DisplayName|OAuth Client Secret|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|False|
+|LogicalName|oauthclientsecret|
+|MaxLength|1024|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_OutgoingAuthenticationProtocol"></a> OutgoingAuthenticationProtocol
 
 |Property|Value|
@@ -620,6 +658,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |1|Negotiate|
 |2|NTLM|
 |3|Basic|
+|4|OAuth|
 
 
 
@@ -667,6 +706,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |2|Server to Server Authentication|
 |3|Windows Integrated Authentication|
 |4|Without Credentials (Anonymous)|
+|5|Gmail OAuth|
 
 
 
@@ -1069,9 +1109,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only Columns
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -1087,6 +1127,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [IncomingPartnerApplication](#BKMK_IncomingPartnerApplication)
 - [IncomingPartnerApplicationName](#BKMK_IncomingPartnerApplicationName)
 - [IsIncomingPasswordSet](#BKMK_IsIncomingPasswordSet)
+- [IsOauthClientSecretSet](#BKMK_IsOauthClientSecretSet)
 - [IsOutgoingPasswordSet](#BKMK_IsOutgoingPasswordSet)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -1318,6 +1359,29 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |Type|Boolean|
 
 #### IsIncomingPasswordSet Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsOauthClientSecretSet"></a> IsOauthClientSecretSet
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isoauthclientsecretset|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsOauthClientSecretSet Options
 
 |Value|Label|
 |-----|-----|
@@ -1818,6 +1882,6 @@ See businessunit Entity [business_unit_emailserverprofile](businessunit.md#BKMK_
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About table reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.emailserverprofile?text=emailserverprofile EntityType" />

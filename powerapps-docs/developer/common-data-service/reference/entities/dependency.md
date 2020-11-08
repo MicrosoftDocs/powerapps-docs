@@ -1,20 +1,22 @@
 ---
-title: "Dependency Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Dependency entity."
-ms.date: 04/12/2020
+title: "Dependency table reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Dependency table."
+ms.date: 11/07/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Dependency Entity Reference
+# Dependency table reference
+
+> [!NOTE]
+> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 A component dependency in CRM.
 
@@ -31,7 +33,7 @@ A component dependency in CRM.
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/dependencies<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveRequiredComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveRequiredComponents?text=RetrieveRequiredComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRequiredComponentsRequest>|
 
-## Entity Properties
+## Table Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +51,9 @@ A component dependency in CRM.
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only Columns
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [DependencyId](#BKMK_DependencyId)
 - [DependencyType](#BKMK_DependencyType)
@@ -463,6 +465,6 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About table reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.dependency?text=dependency EntityType" />

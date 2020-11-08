@@ -1,20 +1,22 @@
 ---
-title: "ServicePlan Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ServicePlan entity."
-ms.date: 04/12/2020
+title: "ServicePlan table reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ServicePlan table."
+ms.date: 11/07/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ServicePlan Entity Reference
+# ServicePlan table reference
+
+> [!NOTE]
+> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 Service Plan
 
@@ -27,7 +29,7 @@ Service Plan
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/serviceplans(*serviceplanid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 
-## Entity Properties
+## Table Properties
 
 |Property|Value|
 |--------|-----|
@@ -45,9 +47,9 @@ Service Plan
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable Columns
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AccessMode](#BKMK_AccessMode)
 - [DisplayName](#BKMK_DisplayName)
@@ -126,7 +128,6 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |--------|-----|
 |Description|For internal use only.|
 |DisplayName|Is Customizable|
-|IsValidForCreate|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|iscustomizable|
@@ -213,9 +214,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only Columns
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
@@ -824,6 +825,6 @@ IntersectEntityName: serviceplanappmodules<br />
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About table reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.serviceplan?text=serviceplan EntityType" />

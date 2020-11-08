@@ -1,20 +1,22 @@
 ---
-title: "CallbackRegistration Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CallbackRegistration entity."
-ms.date: 04/12/2020
+title: "CallbackRegistration table reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the CallbackRegistration table."
+ms.date: 11/07/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# CallbackRegistration Entity Reference
+# CallbackRegistration table reference
+
+> [!NOTE]
+> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 Callback Registration that stores configuration.
 
@@ -29,7 +31,7 @@ Callback Registration that stores configuration.
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/callbackregistrations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Table Properties
 
 |Property|Value|
 |--------|-----|
@@ -47,9 +49,9 @@ Callback Registration that stores configuration.
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable Columns
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [CallbackRegistrationId](#BKMK_CallbackRegistrationId)
 - [EntityName](#BKMK_EntityName)
@@ -296,9 +298,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only Columns
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -582,9 +584,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 - [lk_callbackregistration_modifiedonbehalfby](#BKMK_lk_callbackregistration_modifiedonbehalfby)
 - [lk_callbackregistration_modifiedby](#BKMK_lk_callbackregistration_modifiedby)
+- [lk_callbackregistration_createdonbehalfby](#BKMK_lk_callbackregistration_createdonbehalfby)
 - [lk_callbackregistration_createdby](#BKMK_lk_callbackregistration_createdby)
 - [businessunit_callbackregistration](#BKMK_businessunit_callbackregistration)
-- [lk_callbackregistration_createdonbehalfby](#BKMK_lk_callbackregistration_createdonbehalfby)
 
 
 ### <a name="BKMK_lk_callbackregistration_modifiedonbehalfby"></a> lk_callbackregistration_modifiedonbehalfby
@@ -595,6 +597,10 @@ See systemuser Entity [lk_callbackregistration_modifiedonbehalfby](systemuser.md
 
 See systemuser Entity [lk_callbackregistration_modifiedby](systemuser.md#BKMK_lk_callbackregistration_modifiedby) One-To-Many relationship.
 
+### <a name="BKMK_lk_callbackregistration_createdonbehalfby"></a> lk_callbackregistration_createdonbehalfby
+
+See systemuser Entity [lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby) One-To-Many relationship.
+
 ### <a name="BKMK_lk_callbackregistration_createdby"></a> lk_callbackregistration_createdby
 
 See systemuser Entity [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_callbackregistration_createdby) One-To-Many relationship.
@@ -603,12 +609,8 @@ See systemuser Entity [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_
 
 See businessunit Entity [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration) One-To-Many relationship.
 
-### <a name="BKMK_lk_callbackregistration_createdonbehalfby"></a> lk_callbackregistration_createdonbehalfby
-
-See systemuser Entity [lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby) One-To-Many relationship.
-
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About table reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.callbackregistration?text=callbackregistration EntityType" />

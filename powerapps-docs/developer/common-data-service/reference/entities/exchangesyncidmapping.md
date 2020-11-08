@@ -1,20 +1,22 @@
 ---
-title: "ExchangeSyncIdMapping Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ExchangeSyncIdMapping entity."
-ms.date: 04/12/2020
+title: "ExchangeSyncIdMapping table reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ExchangeSyncIdMapping table."
+ms.date: 11/07/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ExchangeSyncIdMapping Entity Reference
+# ExchangeSyncIdMapping table reference
+
+> [!NOTE]
+> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 The mapping used to keep track of the IDs for items synced between CRM and Exchange.
 
@@ -29,7 +31,7 @@ The mapping used to keep track of the IDs for items synced between CRM and Excha
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/exchangesyncidmappings<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/exchangesyncidmappings(*exchangesyncidmappingid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Table Properties
 
 |Property|Value|
 |--------|-----|
@@ -47,9 +49,9 @@ The mapping used to keep track of the IDs for items synced between CRM and Excha
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable Columns
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ExchangeEntryId](#BKMK_ExchangeEntryId)
 - [ExchangeSyncIdmappingId](#BKMK_ExchangeSyncIdmappingId)
@@ -331,9 +333,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only Columns
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedOn](#BKMK_CreatedOn)
 - [ModifiedOn](#BKMK_ModifiedOn)
@@ -488,6 +490,6 @@ See businessunit Entity [business_unit_exchangesyncidmapping](businessunit.md#BK
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About table reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.exchangesyncidmapping?text=exchangesyncidmapping EntityType" />

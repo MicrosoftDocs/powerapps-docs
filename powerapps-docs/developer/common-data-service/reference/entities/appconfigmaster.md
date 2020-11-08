@@ -1,20 +1,22 @@
 ---
-title: "AppConfigMaster Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AppConfigMaster entity."
-ms.date: 04/12/2020
+title: "AppConfigMaster table reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the AppConfigMaster table."
+ms.date: 11/07/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# AppConfigMaster Entity Reference
+# AppConfigMaster table reference
+
+> [!NOTE]
+> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 Contains the master list of all properties that can be customized for apps in Dynamics 365. For internal use only.
 
@@ -26,7 +28,7 @@ Contains the master list of all properties that can be customized for apps in Dy
 |Retrieve|GET [*org URI*]/api/data/v9.0/appconfigmasters(*appconfigmasterid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/appconfigmasters<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity Properties
+## Table Properties
 
 |Property|Value|
 |--------|-----|
@@ -44,9 +46,9 @@ Contains the master list of all properties that can be customized for apps in Dy
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable Columns
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -66,9 +68,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only Columns
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AppConfigMasterId](#BKMK_AppConfigMasterId)
 - [ConfigType](#BKMK_ConfigType)
@@ -501,6 +503,6 @@ See organization Entity [organization_appconfigmaster](organization.md#BKMK_orga
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About table reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appconfigmaster?text=appconfigmaster EntityType" />
