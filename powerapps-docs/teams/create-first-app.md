@@ -31,7 +31,7 @@ After installing the Power Apps app from the Teams store:
     
     ![Power Apps](media/power-apps.png "Power Apps")
 
-1. You'll be prompted to select a team where you want to create the app. Select the team that will be responsible for customizing and maintaining the app. You will have an opportunity to share the app to other teams once you’re done building the app.
+1. You'll be prompted to select a team where you want to create the app. Select a team to create the app.
 
     ![Select a team to create the app](media/create-app-2.png "Select a team to create the app")
 

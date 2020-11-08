@@ -55,6 +55,12 @@ Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't suppo
 
 There is no enforcement of user-created required table fields. Rows that have empty values in those fields can be saved successfully. System required fields are enforced and cannot be saved without a value.
 
+## Sharing
+
+You can't share apps or data outside of a team currently.
+
+![Share with your colleagus](media/share-with-colleagues.png "Share with your colleagues")
+
 ## Studio
 
 ### Classic controls
