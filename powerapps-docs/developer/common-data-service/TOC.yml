@@ -2,6 +2,7 @@
   href: index.yml
 - name: Overview
   href: overview.md
+  displayName: Common Data Service overview
 - name: Get started
   href: get-started-cds-developers.md
   items:
@@ -56,7 +57,7 @@
   - name: Audit data changes
     href: auditing-overview.md
     items:
-    - name: Configure entities and attributes for auditing
+    - name: Configure tables and columns for auditing
       href: configure-entities-attributes-auditing.md
     - name: Retrieve and delete the history of audited data changes
       href: retrieve-and-delete-the-history-of-audited-data-changes.md
@@ -71,7 +72,7 @@
       href: run-duplicate-detection.md
     - name: Duplicate detection messages
       href: duplicate-detection-messages.md
-    - name: Duplicate Rule entities
+    - name: Duplicate Rule tables
       href: duplicaterule-entities.md
   - name: Delete data in bulk
     href: delete-data-bulk.md
@@ -204,23 +205,23 @@
       href: register-web-hook.md
     - name: Test webhook registration
       href: test-webhook-registration.md
-- name: Work with Common Data Service entities
+- name: Work with Common Data Service tables
   href: entities.md
   items:
-  - name: Customer entities
+  - name: Customer tables
     href: customer-entities-account-contact.md
-  - name: Activity entities
+  - name: Activity tables
     href: activity-entities.md
     items:
     - name: Custom activities
       href: custom-activities.md
-    - name: Email activity entities
+    - name: Email activity tables
       href: email-activity-entities.md
-    - name: Task, fax, phone call, and letter activity entities
+    - name: Task, fax, phone call, and letter activity tables
       href: task-fax-phone-call-letter-activity-entities.md
-    - name: ActivityParty entity
+    - name: ActivityParty table
       href: activityparty-entity.md
-    - name: ActivityPointer (activity) entity
+    - name: ActivityPointer (activity) table
       href: activitypointer-activity-entity.md
     - name: Recurring Appointments
       items:
@@ -232,42 +233,42 @@
         href: update-recurring-appointment.md
       - name: Link custom attributes of the recurring appointment master and appointment entities
         href: link-custom-attributes-recurring-master-appointment-entities.md
-  - name: Annotation (note) entity
+  - name: Annotation (note) table
     href: annotation-note-entity.md
-  - name: Calendar entities
+  - name: Calendar tables
     href: calendar-entities.md
     items:
     - name: Types of calendars
       href: types-calendars.md
-  - name: Queue entities
+  - name: Queue tables
     href: queue-entities.md
-  - name: Subject entity
+  - name: Subject table
     href: subject-entity.md
   - name: Apply Service Level Agreements (SLAs)
     href: apply-slas-entities.md
-  - name: Transaction Currency (currency) entity
+  - name: Transaction Currency (currency) table
     href: transaction-currency-currency-entity.md
-  - name: Category entity
+  - name: Category table
     href: use-category-entity.md
-  - name: Feedback entity
+  - name: Feedback table
     href: use-feedback-entity-manage-feedback-ratings-records.md
-  - name: Security entities
+  - name: Security tables
     href: security-model.md 
     items:
-    - name: User and team entities
+    - name: User and team tables
       href: user-team-entities.md
       items:
       - name: Specify time zone settings for a user
         href: specify-time-zone-settings-user.md
-      - name: Time zone entities
+      - name: Time zone tables
         href: time-zone-entities.md
-      - name: BusinessUnit entity
+      - name: BusinessUnit table
         href: businessunit-entity.md
-      - name: Field security entities
+      - name: Field security tables
         href: field-security-entities.md
       - name: Use access teams and owner teams to collaborate and share information
         href: use-access-teams-owner-teams-collaborate-share-information.md
-  - name: Template entities
+  - name: Template tables
     href: upload-manage-document-templates.md
 - name: Work with metadata using code
   href: metadata-services.md
@@ -314,7 +315,7 @@
   - name: Use connections to link records to each other
     href: connection-entities.md
     items:
-    - name: Describe a relationship between entities with connection roles
+    - name: Describe a relationship between tables with connection roles
       href: describe-relationship-entities-connection-roles.md
   - name: Customize labels to support multiple languages
     href: customize-labels-support-multiple-languages.md
@@ -417,7 +418,7 @@
     href: testing-tools-server.md
 - name: Reference
   items:
-  - name: Entity reference
+  - name: Table reference
     href: reference/entities/toc.yml
   - name: Web API Reference
     href: /dynamics365/customer-engagement/web-api/about
