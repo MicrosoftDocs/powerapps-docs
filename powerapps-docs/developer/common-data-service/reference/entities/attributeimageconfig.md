@@ -1,20 +1,22 @@
 ---
-title: "AttributeImageConfig Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AttributeImageConfig entity."
-ms.date: 04/12/2020
+title: "AttributeImageConfig table reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the AttributeImageConfig table."
+ms.date: 11/07/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# AttributeImageConfig Entity Reference
+# AttributeImageConfig table reference
+
+> [!NOTE]
+> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 Store configuration for each image attribute
 
@@ -33,8 +35,7 @@ Store configuration for each image attribute
 |SetState|PATCH [*org URI*]/api/data/v9.0/attributeimageconfigs(*attributeimageconfigid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/attributeimageconfigs(*attributeimageconfigid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-
-## Entity Properties
+## Table Properties
 
 |Property|Value|
 |--------|-----|
@@ -52,9 +53,9 @@ Store configuration for each image attribute
 
 <a name="writable-attributes"></a>
 
-## Writable attributes
+## Writable Columns
 
-These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AttributeImageConfigId](#BKMK_AttributeImageConfigId)
 - [AttributeLogicalName](#BKMK_AttributeLogicalName)
@@ -67,7 +68,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Property|Value|
 |--------|-----|
 |Description|Unique identifier for entity instances|
-|DisplayName|AttributeImageConfig|
+|DisplayName|Image Attribute Configuration|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -80,8 +81,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Logical name of image attribute|
-|DisplayName|AttributeLogicalName|
+|Description|Logical Name of Image Attribute|
+|DisplayName|Logical Name of Image Attribute|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -98,7 +99,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Property|Value|
 |--------|-----|
 |Description|Indicates if an image attribute can store full image|
-|DisplayName|CanStoreFullImage|
+|DisplayName|Can Store Full Image|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|canstorefullimage|
@@ -120,8 +121,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Parent entity logical name|
-|DisplayName|ParentEntityLogicalName|
+|Description|Parent Entity Logical Name|
+|DisplayName|Parent Entity Logical Name|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
@@ -134,9 +135,9 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 <a name="read-only-attributes"></a>
 
-## Read-only attributes
+## Read-only Columns
 
-These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
@@ -361,6 +362,6 @@ Same as principalobjectattributeaccess entity [attributeimageconfig_PrincipalObj
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About table reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.attributeimageconfig?text=attributeimageconfig EntityType" />

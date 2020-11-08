@@ -2,7 +2,7 @@
 title: "Supported Customizations for Common Data Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can customize Common Data Service by using tools that are available in the Power Apps portal or the ones described in docs." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 01/25/2019
+ms.date: 11/08/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,43 +16,30 @@ search.app:
   - D365CE
 ---
 
-<!-- This is the portion of the old topic that applies to Common Data Service
-https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions
- -->
-
-
 # Supported Customizations for Common Data Service
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can customize Common Data Service by using tools that are available in the Power Apps portal or that are described in the official documentation. These customizations are supported and can be upgraded.
+You can customize Common Data Service by using tools that are available in Power Apps or that are described in the official documentation. These customizations are supported and can be upgraded.
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Common Data Service. For more information, see [Unsupported Customizations](#unsupported-customizations).
 
-Topics covered in technical articles published on Microsoft sites such as docs.microsoft.com, msdn.microsoft.com or technet.microsoft.com are supported, but might not be upgradable.
+## Customizations using Power Apps
 
-
-## Customizations using Power Apps portal
-
-There are a variety of tools included with Common Data Service that you can use to customize it. Customizations made using the Power Apps portal tools and web application are fully supported and fully upgradeable.
+There are a variety of tools included with Common Data Service that you can use to customize it. Customizations made using Power Apps are fully supported and fully upgradeable.
 
 The following customization methods can be used to produce fully supported customizations:
 
-- Customization in the Power Apps portal or solution explorer. For more information, see [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md)
+- Customization in [Power Apps](https://make.powerapps.com). More information: [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md)
 
-- Settings in the web application. For more information, see [Administer Power Apps](../../administrator/admin-guide.md).
-
-- Reporting Services. For more information, see [Add reporting to your model-driven app](/powerapps/maker/model-driven-apps/add-reporting-to-app).
+- Reporting Services. More information: [Add reporting to your model-driven app](/powerapps/maker/model-driven-apps/add-reporting-to-app).
 
 > [!NOTE]
 > Fully supported means that developer support can provide assistance for customizations and that application support can help customers running those modifications.
 
-For more information about using the customization tools in the web application, see the [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md).
-
-
 ## Customizations applied using code
 
-The documentation on this site for developers, technical articles, and sample code published on this site, and information released by the Common Data Service Developer Support Team are included in the area of customizations applied using code. The specific actions and levels of supportability and upgradeability are described later in this topic.
+The documentation on this site for developers, technical articles, sample code, and information released by the Common Data Service developer support team are included in the area of customizations applied using code. The specific actions and levels of supportability and upgradeability are described later in this topic.
 
 ### Common Data Service web services
 
@@ -100,7 +87,7 @@ The following describes the support considerations for custom code written the M
 
 ## Unsupported customizations
 
-Modifications to Common Data Service that are made without using either the methods described in this documentation or Common Data Service tools are not supported and are not preserved during updates or upgrades of Common Data Service. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade Common Data Service. 
+Modifications to Common Data Service that are made without using either the methods described in this documentation are not supported and are not preserved during updates or upgrades of Common Data Service. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade Common Data Service. 
 
 The following is a list of unsupported action types that are frequently asked about:
 
@@ -119,7 +106,7 @@ The following is a list of unsupported action types that are frequently asked ab
 
 - The use of application programming interfaces (APIs) other than the documented APIs in the web services: Web API, Organization Service, Deployment Service, Discovery Service, Organization Data Service.
 
-- Plugin and Workflow Assemblies must contain all the necessary logic within the respective dll. Plugins may reference some core .Net assemblies. However, we do not support dependencies on .Net assemblies that interact with low-level Windows APIs, such as the graphics design interface. Previously, Dynamics 365 allowed for assemblies to refer to these interfaces, but to adhere to our security standards, changes to this behavior are required.
+- Plug-in and Workflow assemblies must contain all the necessary logic within the respective dll. Plug-ins may reference some core .NET assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface. Previously, Dynamics 365 allowed for assemblies to refer to these interfaces, but to adhere to our security standards, changes to this behavior are required.
 
 - Creating a plug-in assembly for a standard Common Data Service assembly (Microsoft.Crm.*.dll) or performing an update or delete of a platform created `pluginassembly` is not supported.
 

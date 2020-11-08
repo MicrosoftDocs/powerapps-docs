@@ -39,33 +39,30 @@ Data management capabilities in Common Data Service not only lets you work with 
 - [Synchronize data](/powerapps/developer/common-data-service/data-synchronization)
 - [Virtual entities](/powerapps/developer/common-data-service/virtual-entities/get-started-ve)
 - [Azure Integration](/powerapps/developer/common-data-service/azure-integration)
-- [Webhooks](/powerapps/developer/common-data-service/use-webhooks
-)
+- [Webhooks](/powerapps/developer/common-data-service/use-webhooks)
 
-## Common Data Service entities
+## Common Data Service tables
 
-Entities store the business data you will work with. An understanding what they are and how to work with them is essential.
-More information:
+Tables store the business data you will work with. An understanding what they are and how to work with them is essential. More information:
 
-- [Common Data Service entities](entities.md)
-- [About the Entity Reference](reference/about-entity-reference.md)
+- [Common Data Service tables](entities.md)
+- [Common Data Service table reference](reference/about-entity-reference.md)
 
 ## Work with metadata
 
-Developing a good working understanding of the metadata in the system can help you understand how Common Data Service platform works. Generally you will use designers to add, update, or delete entity schema that defines metadata, but both the Web API and the Organization service web services provide capabilities to perform CRUD operations on the entity schema. More information: [Work with metadata using code](metadata-services.md) 
+Developing a good working understanding of the metadata in the system can help you understand how Common Data Service platform works. Generally you will use designers to add, update, or delete table schema that defines metadata, but both the Web API and the Organization service web services provide capabilities to perform CRUD operations on the table schema. More information: [Work with metadata using code](metadata-services.md) 
 
 ## Use solutions to package and distribute extensions
 
-If you are going to distribute the extensions you create or any customizations that they depend on, you will need to understand solutions. Solutions created by an individual are relatively simple to work with and don't require the skills of a developer. But for a team of developers to work productively with solutions and use effective application lifecycle management principles requires a more sophisticated approach. More information:
+If you are going to distribute the extensions you create or any customizations that they depend on, you will need to understand solutions. Solutions created by an individual are relatively simple to work with and don't require the skills of a developer. But for a team of developers to work productively with solutions and use effective application lifecycle management (ALM) principles requires a more sophisticated approach. More information:
 
  - [Introduction to solutions](introduction-solutions.md)
- - [SolutionPackager tool](compress-extract-solution-file-solutionpackager.md)
- - [Package Deployer tool](/power-platform/alm/package-deployer-tool)
+ - [Microsoft Power Platform ALM guide](/power-platform/alm/)
  - [Publish your app on AppSource](publish-app-appsource.md)
 
 ## Create client applications and authentication
 
-When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are [creating a client application](/powerapps/developer/common-data-service/connect-cds). A simple console client application is a good way to familiarize yourself with the Common Data Service APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
+When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are [creating a client application](/powerapps/developer/common-data-service/connect-cds). A simple console client application is a good way to familiarize yourself with the Common Data Service APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The `Xrm.Tooling` connector provides capabilities to make authentication simpler. More information:
 
 - [Authentication](authentication.md)
 - [Build web applications using Server-to-Server (S2S) authentication](/powerapps/developer/common-data-service/build-web-applications-server-server-s2s-authentication)
