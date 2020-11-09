@@ -2,7 +2,7 @@
 title: "Apply SLAs to tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about applying SLAs to custom tables by enabling tables for applying SLAs. Also, you can create SLA KPIs."
 ms.custom: ""
-ms.date: 11/30/2020
+ms.date: 11/09/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -38,7 +38,10 @@ Service level agreements (SLAs) in Common Data Service help you define the level
 -   Lead  
   
 -   SalesOrder (Order)  
-  
+
+> [!NOTE]
+> For detailed information about working with SLAs, see [Define service-level agreements](/dynamics365/customer-service/define-service-level-agreements) in the Dynamics 365 Customer Service docs.
+
 <a name="EnableSLAs"></a> 
   
 ## Enable tables for applying SLAs  
@@ -47,7 +50,7 @@ Service level agreements (SLAs) in Common Data Service help you define the level
   
  You can also use the customization tool to enable entities for SLAs. More information: [Enable entities for service level agreements](/dynamics365/customer-engagement/customer-service/enable-entities-service-level-agreements)  
   
- After you have enabled an entity forSLAs, new SLA-related attributes, such as `SLAId` and `SLAInvokedId`, will be automatically added to the entity.  
+ After you have enabled an entity for SLAs, new SLA-related columns, such as `SLAId` and `SLAInvokedId`, will be automatically added to the entity.  
   
 <a name="CreateSLAKPI"></a>   
 
@@ -57,11 +60,11 @@ Service level agreements (SLAs) in Common Data Service help you define the level
   
 <a name="ApplySLA"></a>
    
-## Apply SLAs to entity records  
+## Apply SLAs to table records  
 
- Using the Common Data Service web client, you can create SLAs for an SLA-enabled entity, and set an SLA as default for the entity so that it is applied automatically to any new entity records.  
+You can create SLAs for an SLA-enabled entity, and set an SLA as default for the entity so that it is applied automatically to any new entity records.  
   
- However, if you want to manually apply SLAs to entity records based on any custom business requirement, you can programmatically update the entity record to set the `SLAId` attribute value to the desired active SLA record.  
+However, if you want to manually apply SLAs to entity records based on any custom business requirement, you can programmatically update the entity record to set the `SLAId` attribute value to the desired active SLA record.  
   
 <a name="Limitations"></a>   
 
