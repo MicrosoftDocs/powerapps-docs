@@ -2,7 +2,7 @@
 title: "Retrieve an table using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes options available when retrieving a row programmatically" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/09/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -62,7 +62,7 @@ Console.WriteLine("account name: {0}", entity["name"]);
 >
 > Use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method for special circumstances as described below. 
 > More information: 
-> - [Retrieve with related rows](#retrieve-with-related-records)
+> - [Retrieve with related rows](#retrieve-with-related-rows)
 > - [Retrieve with an alternate key](#retrieve-with-an-alternate-key)
 
 
