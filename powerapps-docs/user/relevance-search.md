@@ -94,7 +94,7 @@ Immediately see the rows that you accessed recently when you click inside the se
 
 ### See recent rows and searches
 
-Before you even start typing in the search box, you will see any recent searches and recently accessed rows in combined view to help with your search. Recently accessed rows are also grouped by entity type, allowing you to quickly scan and understand the list of results.
+Before you even start typing in the search box, you will see any recent searches and recently accessed rows in combined view to help with your search. Recently accessed rows are also grouped by table type, allowing you to quickly scan and understand the list of results.
 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
@@ -102,26 +102,26 @@ Before you even start typing in the search box, you will see any recent searches
 Legend
 
 1. **Recent searches**: Shows your recent searches.
-2. **Recently accessed rows**:  Shows recently accessed rows that are grouped by entity type.
+2. **Recently accessed rows**:  Shows recently accessed rows that are grouped by table type.
 
 
 ### View quick suggestions
 
-View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary column of an entity row, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
+View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary column of an table row, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
 
 ![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
 
 ### Search results page
 
-Search results are ranked and grouped by entity, with more columns that are displayed to help distinguish rows and filter to take further action.
+Search results are ranked and grouped by table, with more columns that are displayed to help distinguish rows and filter to take further action.
 
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by entity type. Tables that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched entity types outside of the top results in desending ordered by number of rows matched.
+The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Tables that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched table types in desending ordered by number of rows matched.
 
 
 
-The full result set is grouped by entity, with the entity type displayed as a horizontal list of tabs along the top of the screen.
+The full result set is grouped by table, with the table type displayed as a horizontal list of tabs along the top of the screen.
 
-Each of the tabs lets you drill into a specific entity type, with the filter panel updating to show the set of facets and filters configured for that entity.
+Each of the tabs lets you drill into a specific table type, with the filter panel updating to show the set of facets and filters configured for that table.
 
 
    > [!div class="mx-imgBorder"]
@@ -130,7 +130,7 @@ Each of the tabs lets you drill into a specific entity type, with the filter pan
 Legend
 
 1. **Top results**: Show rows that best matches the search query.
-2. **Row type**: To narrow your search results to a specific page (entity), select the page (entity) tab.
+2. **Row type**: To narrow your search results to a specific table, select the table tab.
 3. **Name**: Shows the name of the row.
 4. **Created on**: Shows when the row was created.
 5. **Show more**: Select to show more results.
