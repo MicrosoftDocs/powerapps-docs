@@ -1,8 +1,8 @@
 ---
-title: "Apply SLAs to entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about applying SLAs to custom entities by enabling entities for applying SLAs. Also, you can create SLA KPIs."
+title: "Apply SLAs to tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about applying SLAs to custom tables by enabling tables for applying SLAs. Also, you can create SLA KPIs."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/30/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,13 +15,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Apply SLAs to entities
+# Apply SLAs to tables
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Service level agreements (SLAs) in Common Data Service help you define the level of service or support that your organization agrees to offer a customer by including items to define metrics or key performance indicators (KPIs) to attain the service level. You can apply SLAs to custom entities and the following system entities:  
   
--   All activity entities (such as Email, Task, and Appointment) except recurring appointments (RecurringAppointmentMaster)  
+-   All activity tables (such as Email, Task, and Appointment) except recurring appointments (RecurringAppointmentMaster)  
   
 -   Account  
   
@@ -41,9 +41,9 @@ Service level agreements (SLAs) in Common Data Service help you define the level
   
 <a name="EnableSLAs"></a> 
   
-## Enable entities for applying SLAs  
+## Enable tables for applying SLAs  
 
- To apply SLAs to an entity, you must set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsSLAEnabled> attribute to true for the entity. You can’t change this setting after it’s been enabled. By default, the `Incident` entity is enabled for SLAs.  
+ To apply SLAs to a table, you must set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsSLAEnabled> column to true for the table. You can’t change this setting after it’s been enabled. By default, the `Incident` table is enabled for SLAs.  
   
  You can also use the customization tool to enable entities for SLAs. More information: [Enable entities for service level agreements](/dynamics365/customer-engagement/customer-service/enable-entities-service-level-agreements)  
   
