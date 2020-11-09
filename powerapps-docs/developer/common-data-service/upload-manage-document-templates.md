@@ -21,7 +21,7 @@ search.app:
 
 In Common Data Service, the *template* tables help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word).
 
-These are the types of template entites:
+These are the types of template tables:
 - [DocumentTemplate](reference/entities/documenttemplate.md)
 - [KbArticleTemplate](reference/entities/kbarticletemplate.md) 
 - [MailMergeTemplate](reference/entities/mailmergetemplate.md) 
