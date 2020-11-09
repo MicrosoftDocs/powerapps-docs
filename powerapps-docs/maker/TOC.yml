@@ -1815,7 +1815,7 @@
       href: ./common-data-service/connect-azure-data-lake-storage-for-dataflow.md
     - name: Use an on-premises data gateway
       href: ./common-data-service/using-dataflows-with-on-premises-data.md
-  - name: License requirements for entities
+  - name: License requirements for tables
     href: ./common-data-service/data-platform-entity-licenses.md
     items:
     - name: Complex tables and licensing
