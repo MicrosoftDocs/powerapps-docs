@@ -57,7 +57,7 @@ The following steps detail how to create an email.
 
     ![Create a new email](media/create-email.png "Create a new email")
 
-    The **From** field is automatically populated based on the currently logged-in user.
+    The **From** column is automatically populated based on the currently logged-in user.
 
 3. Write your email directly in the composer or select **Insert Template** to search for and apply a template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md).
 

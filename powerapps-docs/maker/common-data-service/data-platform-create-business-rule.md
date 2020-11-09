@@ -15,25 +15,25 @@ search.app:
   - D365CE
 ---
 
-# Create a business rule for an entity
+# Create a business rule for a table
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules.
 
 > [!IMPORTANT]
-> Business rules defined for an entity apply to both *canvas apps* and *model-driven apps* if the entity is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
-> Business rules don’t work with multi-select option sets.
+> Business rules defined for a table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
+> Business rules don’t work with multi-select choices.
 >
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
 
 By combining conditions and actions, you can do any of the following with business rules:  
   
-* Set field values  
-* Clear field values  
-* Set field requirement levels  
-* Show or hide fields  
-* Enable or disable fields  
+* Set column values  
+* Clear column values  
+* Set column requirement levels  
+* Show or hide columns  
+* Enable or disable columns  
 * Validate data and show error messages  
 * Create business recommendations based on business intelligence.  
   
@@ -41,20 +41,20 @@ By combining conditions and actions, you can do any of the following with busine
 
 Model driven apps can use all actions available on business rules, however not all business rule actions are available for canvas apps at this time. The following actions are **not** available on Canvas apps :
 
-* Show or hide fields  
-* Enable or disable fields  
+* Show or hide columns  
+* Enable or disable columns  
 * Create business recommendations based on business intelligence.  
 
 ## Prerequisites
-To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create and edit entities.
+To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create and edit tables.
 
 ## Create a business rule
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
 
-2. In the list that appears, click or tap **Entities**.
+2. In the list that appears, click or tap **Tables**.
   
-3. Open the entity you want to create the business rule for (for example, open the **Account** entity), and then click the **Business Rules** tab.  
+3. Open the table you want to create the business rule for (for example, open the **Account** table), and then click the **Business Rules** tab.  
 
 4. Click **New**.  
   
@@ -70,12 +70,12 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
     |||  
     |-|-|  
     |**If you select this item...**|**The scope is set to...**|  
-    |**Entity**|Model Driven forms and server|  
+    |**table**|Model Driven forms and server|  
     |**All Forms**|Model Driven forms|  
     |Specific form (**Account** form, for example)|Just that Model Driven form|  
 
     > [!TIP]
-    > If you're building a Canvas app, you must use Entity as the scope.
+    > If you're building a Canvas app, you must use table as the scope.
   
 7. **Add conditions.** To add more conditions to your business rule:  
   
@@ -85,7 +85,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
   
     2. To set properties for the condition, click the **Condition** component in the designer window, and then set the properties in the **Properties** tab on the right side of the screen. As you set properties, the Common Data Service creates an expression at the bottom of the **Properties** tab.  
   
-    3. To add an additional clause (an AND or OR)  to the  condition, click **New** in the **Properties** tab to create a new rule, and then set the properties for that rule. In the **Rule Logic** field, you can specify whether to add the new rule as an AND or an OR.  
+    3. To add an additional clause (an AND or OR)  to the  condition, click **New** in the **Properties** tab to create a new rule, and then set the properties for that rule. In the **Rule Logic** column, you can specify whether to add the new rule as an AND or an OR.  
   
         ![Add a new rule to a condition](./media/data-platform-cds-create-business-rule/add-new-rule-condition.png "Add a new rule to a condition")  
   

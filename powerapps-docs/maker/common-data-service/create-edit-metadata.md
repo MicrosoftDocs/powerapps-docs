@@ -1,6 +1,6 @@
 ---
-title: "Entities and metadata in Common Data Service | MicrosoftDocs"
-description: "Learn about entities and metadata in Common Data Service"
+title: "tables and metadata in Common Data Service | MicrosoftDocs"
+description: "Learn about tables and metadata in Common Data Service"
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
@@ -24,60 +24,59 @@ search.app:
   - D365CE
 ---
 
-# Entities and metadata in Common Data Service
+# Tables and metadata in Common Data Service
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Common Data Service is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Common Data Service work or you are evaluating what is possible, understanding the metadata used by Common Data Service may provide you insight.
 
-*Metadata* means data about data. Common Data Service provides a flexible platform for you because it is relatively easy to edit the definitions of the data that the environment will use. In Common Data Service, the metadata is a collection of entities. Entities describe the kinds of data which is stored in the database.  Each entity corresponds to a database table and each field (also known as attribute) within an entity represents a column in that table. Entity metadata is what controls the kinds of records you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit entities, fields, and entity relationships, you are editing this metadata. 
+*Metadata* means data about data. Common Data Service provides a flexible platform for you because it is relatively easy to edit the definitions of the data that the environment will use. In Common Data Service, the metadata is a collection of tables. tables describe the kinds of data which is stored in the database.  Each table corresponds to a database table and each column (also known as attribute) within a table represents a column in that table. table metadata is what controls the kinds of rows you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit tables, columns, and table relationships, you are editing this metadata. 
   
-Different clients people use to interact with the data in your environment depend on the entity metadata and adapt as you customize the metadata. But these clients also depend on other data to control what visual elements to display, any custom logic to apply, and how to apply security. This system data is also stored within entities but the entities themselves are not available for customization.
+Different clients people use to interact with the data in your environment depend on the table metadata and adapt as you customize the metadata. But these clients also depend on other data to control what visual elements to display, any custom logic to apply, and how to apply security. This system data is also stored within tables but the tables themselves are not available for customization.
 
-You can learn about standard entities, attributes, and entity relationships included by default in Common Data Service by reviewing the [Entity Reference](/powerapps/developer/common-data-service/reference/about-entity-reference).
+You can learn about standard tables, attributes, and table relationships included by default in Common Data Service by reviewing the [table Reference](/powerapps/developer/common-data-service/reference/about-table-reference).
 
 > [!TIP]
-> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the entities and metadata properties that are found in the system. More information: [Browse the metadata for your environment](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
+> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the tables and metadata properties that are found in the system. More information: [Browse the metadata for your environment](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
   
 <a name="BKMK_CreateNewOrUseExistingMetadata"></a>
 
 ## Create new metadata or use existing metadata?
 
-Common Data Service comes with a number of standard entities that support core business application capabilities. For example, data about your customers or potential customers is intended to be stored using the account or contact entities.  
+Common Data Service comes with a number of standard tables that support core business application capabilities. For example, data about your customers or potential customers is intended to be stored using the account or contact tables.  
   
-Each of these entities also contain a number of fields that represent common data that the system may need to store for the respective entity.  
+Each of these tables also contain a number of columns that represent common data that the system may need to store for the respective table.  
   
-For most organizations it is to your advantage to use the standard entities and attributes for the purposes they were provided. 
+For most organizations it is to your advantage to use the standard tables and attributes for the purposes they were provided. 
   
-If you install a solution you can expect that the solution developer has leveraged the standard entities and attributes. Creating a new custom entity that replaces a system entity or attribute will mean that any solutions available may not work for your organization.  
+If you install a solution you can expect that the solution developer has leveraged the standard tables and attributes. Creating a new custom table that replaces a system table or attribute will mean that any solutions available may not work for your organization.  
   
-For these reasons, we recommend that you look for and use the provided standard entities, fields, and entity relationships when they make sense for your organization. If they don’t make sense and can’t be edited to match your need, you should evaluate if creating a new entity, field, or entity relationships is required. 
+For these reasons, we recommend that you look for and use the provided standard tables, columns, and table relationships when they make sense for your organization. If they don’t make sense and can’t be edited to match your need, you should evaluate if creating a new table, column, or table relationships is required. 
 
 <!--  Can we say this yet? 
     
 > [!NOTE]
-> The [Common Data Model](/powerapps/common-data-model/overview) will provide a capability to add additional standard entities. 
+> The [Common Data Model](/powerapps/common-data-model/overview) will provide a capability to add additional standard tables. 
 
 -->
 
-Remember that you can change the display name of an entity so that it matches the nomenclature your organization uses. For example, it is very common for people to change the display name of the Account entity to *Company* or the name of the Contact entity to *Individual*. This can be done to entities or attributes without changing the behavior of the entity. For more information about renaming entities, see [Change the name of an entity](edit-entities.md#change-the-name-of-an-entity).
+Remember that you can change the display name of a table so that it matches the nomenclature your organization uses. For example, it is very common for people to change the display name of the Account table to *Company* or the name of the Contact table to *Individual*. This can be done to tables or attributes without changing the behavior of the table. For more information about renaming tables, see [Change the name of a table](edit-entities.md#change-the-name-of-a-table).
   
-You can’t delete standard entities, fields, or entity relationships. They are considered part of the system solution and every organization is expected to have them. If you want to hide a standard entity, change the security role privileges for your organization to remove the read privilege for that entity. This will remove the entity from most parts of the application. If there is a system field that you don’t need, remove it from the form and any views that use it. Change the **Searchable** value in the field and entity relationship definitions so that they do not appear in advanced find. 
+You can’t delete standard tables, columns, or table relationships. They are considered part of the system solution and every organization is expected to have them. If you want to hide a standard table, change the security role privileges for your organization to remove the read privilege for that table. This will remove the table from most parts of the application. If there is a system column that you don’t need, remove it from the form and any views that use it. Change the **Searchable** value in the column and table relationship definitions so that they do not appear in advanced find. 
   
 <a name="BKMK_LimitationsOnMetadata"></a>   
 
 ## Limitations on creating metadata items  
 
-There is a limit to the number of entities you can create. You can find information about the maximum number in the **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Resources In Use** page. If you need more custom entities, contact technical support. This upper limit can be adjusted.  
+There is a limit to the number of tables you can create. You can find information about the maximum number in the **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Resources In Use** page. If you need more custom tables, contact technical support. This upper limit can be adjusted.  
   
-Within each entity there is an upper limit on the number of fields you can create. This limit is based on the technical limitations on the amount of data that can be stored in a row of a database table. It is difficult to provide a specific number because each type of field can use a different amount of space. The upper limit depends on the total space used by all the fields for the entity.  
+Within each table there is an upper limit on the number of columns you can create. This limit is based on the technical limitations on the amount of data that can be stored in a row of a database table. It is difficult to provide a specific number because each type of column can use a different amount of space. The upper limit depends on the total space used by all the columns for the table.  
   
-Most people do not create enough custom fields to reach the limit, but if you find yourself planning to add hundreds of custom fields to an entity, you should consider if this is the best design. Do all the fields you plan to add describe properties for a record for that entity? Do you really expect that people using your organization will be able to manage a form that includes such a high number of fields? The number of fields you add to a form increase the amount of data that has to be transferred each time a record is edited and will affect the performance of the system. Take these factors into consideration when you are adding custom fields to an entity.  
+Most people do not create enough custom columns to reach the limit, but if you find yourself planning to add hundreds of custom columns to a table, you should consider if this is the best design. Do all the columns you plan to add describe properties for a row for that table? Do you really expect that people using your organization will be able to manage a form that includes such a high number of columns? The number of columns you add to a form increase the amount of data that has to be transferred each time a row is edited and will affect the performance of the system. Take these factors into consideration when you are adding custom columns to a table.  
   
-Option set fields provide a set of options that will be displayed in a drop-down control on a form or in picklist control when using advanced find. Your environment can support thousands of options within an Option set, but you shouldn’t consider this as the upper limit. Usability studies have shown that people have trouble using a system where a drop-down control provides large numbers of options. Use option set field to define categories for data. Don’t use option set fields to select categories that actually represent separate items of data. For example, rather than maintain an option set field that stores each of hundreds of possible manufacturers of a type of equipment, consider creating an entity that stores references to each manufacturer and use a lookup field instead of an option set.  
+Choice columns provide a set of options that will be displayed in a drop-down control on a form or in picklist control when using advanced find. Your environment can support thousands of options within an Option set, but you shouldn’t consider this as the upper limit. Usability studies have shown that people have trouble using a system where a drop-down control provides large numbers of options. Use choice  column to define categories for data. Don’t use choice  columns to select categories that actually represent separate items of data. For example, rather than maintain a choice  column that stores each of hundreds of possible manufacturers of a type of equipment, consider creating a table that stores references to each manufacturer and use a lookup column instead of a choice .  
   
-## Next steps 
+### Next steps
 
-[Create or edit entities (record types)](create-edit-entities.md)<br />
-[Create and edit relationships between entities](create-edit-entity-relationships.md)
-
+[Create or edit tables (row types)](create-edit-entities.md)<br />
+[Create and edit relationships between tables](create-edit-entity-relationships.md)

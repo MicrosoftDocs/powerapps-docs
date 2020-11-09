@@ -18,6 +18,8 @@ search.app:
 ---
 # Add reporting features to your model-driven app
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Power Apps apps can include reports that provide useful business information to the user. These reports are based on SQL Server Reporting Services and provide the same set of features that are available for typical SQL Server Reporting Services reports.
 
 > [!div class="mx-imgBorder"] 
@@ -35,7 +37,7 @@ System reports are available to all users. Individuals who create or otherwise o
 
 
 ## Add reporting to a Unified Interface app
-You can add fetch-based reporting functionality to your app so that users can run, share, create, and edit reports. To do this, you add the report entity to your app's site map. 
+You can add fetch-based reporting functionality to your app so that users can run, share, create, and edit reports. To do this, you add the report table to your app's site map. 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open an existing app for editing. 
 2. In App Designer, select ![Pencil icon for editing site map](media/ccf-pencil-icon.png) next to **Site Map**. 
@@ -45,10 +47,10 @@ You can add fetch-based reporting functionality to your app so that users can ru
 6. Select the group that you named in the previous step, select **Add**, select **Subarea** and then include the following properties: 
 
    - **Type**. Select **Entity**.
-   - **Entity**. From the list of entities, select the **Report** entity.  
+   - **Entity**. From the list of tables, select the **Report** table.  
    - **Title**. Enter a descriptive title, such as *Reports*.
 
-      ![Add report entity to site map](media/report-entity-sitemap.png)
+      ![Add report table to site map](media/report-entity-sitemap.png)
 
 7. Select **Save and Close** to return to the app designer. 
 
@@ -66,7 +68,7 @@ You can create a new report in one of two ways:
 - Use the Report Authoring Extension. You can write new or customize existing fetch-based Reporting Services reports with Visual Studio, SQL Server Data Tools, and the Report Authoring Extension. More information: [Create a new report using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/create-a-new-report-using-sql-server-data-tools)
 
 ## Report visibility
-Standard entity reports, such as the Accounts Summary report for the account entity, are available to all app users. Users who own reports can share them with specific colleagues or teams. System administrators and system customizers can make reports available with organization-wide visibility, so that all users can use them. For information about how to share a report, see [Share a report with other users and teams](../../user/work-with-reports.md#share-a-report-with-other-users-or-teams). 
+Standard table reports, such as the Accounts Summary report for the account table, are available to all app users. Users who own reports can share them with specific colleagues or teams. System administrators and system customizers can make reports available with organization-wide visibility, so that all users can use them. For information about how to share a report, see [Share a report with other users and teams](../../user/work-with-reports.md#share-a-report-with-other-users-or-teams). 
 
 ## Reports in solutions
 Reports are solution aware. Adding a report as a component to a solution makes it become a single unit of software that extends Power Apps functionality and the user interface. Only reports that are visible to the organization can be added to solutions.
@@ -76,7 +78,7 @@ To find if a report is viewable to the organization: In the list of reports, ope
 > [!div class="mx-imgBorder"] 
 > ![Organization level report visibility](media/report-scope.png "Organization level report visibility")
 
-You can add, import, or export snapshots of reports as part of a solution. In model-driven apps, reports, sub reports, report category, report display area, and report-related record type are considered as components of a report set. When you import a solution update in non-overwrite mode, any updates by the solution to a report will be ignored if any component of the report set has been customized.
+You can add, import, or export snapshots of reports as part of a solution. In model-driven apps, reports, sub reports, report category, report display area, and report-related row type are considered as components of a report set. When you import a solution update in non-overwrite mode, any updates by the solution to a report will be ignored if any component of the report set has been customized.
 
 ## Related topics
 
