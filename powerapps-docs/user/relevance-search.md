@@ -117,7 +117,7 @@ Search results are ranked and grouped by table, with more columns that are displ
 
 The full result set is grouped by table, with the table type displayed as a horizontal list of tabs along the top of the screen.
 
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Tables that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched table types in desending ordered by number of matched rows.
+The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Tables that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched table types in descending ordered by number of matched rows.
 
 Each of the tabs lets you drill into a specific table type, with the filter panel updating to show the set of facets and filters configured for that table.
 
