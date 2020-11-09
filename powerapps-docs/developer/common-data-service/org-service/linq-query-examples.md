@@ -203,7 +203,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```
   
 <a name="JoinUsingEntityFields"></a>   
-## Join using table columns  
+## Join using entity fields  
  The following sample shows how to retrieve information about accounts from a list  
   
 ```csharp
@@ -591,7 +591,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
   
 <a name="BKMK_UsingFirstAndSingleOperators"></a>   
 ## Use the First and Single operators  
- The following sample shows how to retrieve only the first contact row returned and retrieve only one contact row that matches the criterion.  
+ The following sample shows how to retrieve only the first contact record returned and retrieve only one contact record that matches the criterion.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -610,7 +610,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
   
 <a name="BKMK_RetrievingFormattedValues"></a>   
 ## Retrieving formatted values  
- The following sample shows how to retrieve the label for a choice, in this case the value for the current row status.  
+ The following sample shows how to retrieve the label for an optionset option, in this case the value for the current record status.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -629,7 +629,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 <a name="BKMK_UsingTheSkipAndTakeOperatorsWithoutPaging"></a>   
 ## Use the Skip and Take operators without paging 
 
- The following sample shows how to retrieve just two rows after skipping two rows where the LastName is not “Parker” using the [Skip](https://msdn.microsoft.com/library/bb358985.aspx) and [Take](https://msdn.microsoft.com/library/bb503062.aspx)operators.  
+ The following sample shows how to retrieve just two records after skipping two records where the LastName is not “Parker” using the [Skip](https://msdn.microsoft.com/library/bb358985.aspx) and [Take](https://msdn.microsoft.com/library/bb503062.aspx)operators.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -675,7 +675,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
   
 <a name="BKMK_UsingASelfJoinWithConditionOnLinkedEntity"></a>   
-## Use a self-join with a condition on the linked table  
+## Use a self-join with a condition on the linked entity  
  The following sample shows how to retrieve the names of two accounts where one account is the parent account of the other.  
   
 ```csharp
@@ -755,7 +755,7 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
 
   
- The following sample shows how to retrieve just the first 10 rows.  
+ The following sample shows how to retrieve just the first 10 records.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -780,8 +780,8 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 
   
 <a name="BKMK_RetrievingRelatedEntityColumns"></a>   
-## Retrieve related table columns for 1 to N relationships  
- The following sample shows how to retrieve columns from related account and contact rows.  
+## Retrieve related entity columns for 1 to N relationships  
+ The following sample shows how to retrieve columns from related account and contact records.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -800,8 +800,8 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ```  
   
 <a name="BKMK_UsingValueToRetrieveTheValueOfAnAttribute"></a>   
-## Use .value to retrieve the value of an column  
- The following sample shows usage of Value to access the value of an column.  
+## Use .value to retrieve the value of an attribute  
+ The following sample shows usage of Value to access the value of an attribute.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
@@ -1000,8 +1000,8 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ``` 
   
 <a name="BKMK_UseLoadProperty"></a>   
-## Use LoadProperty to retrieve related rows  
- The following sample shows how to [Relationship)]<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.LoadProperty(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship)> to access related rows.  
+## Use LoadProperty to retrieve related records  
+ The following sample shows how to [Relationship)]<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.LoadProperty(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship)> to access related records.  
   
 ```csharp
 Contact benAndrews = svcContext.ContactSet.Where(c => c.FullName == "Ben Andrews").FirstOrDefault();

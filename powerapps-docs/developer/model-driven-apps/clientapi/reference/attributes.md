@@ -1,6 +1,6 @@
 ---
-title: "Columns in model-driven apps| MicrosoftDocs"
-description: "Learn about working with columns in model-driven apps using client API."
+title: "Attributes in model-driven apps| MicrosoftDocs"
+description: "Learn about working with attributes in model-driven apps using client API."
 ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: "reference"
@@ -15,15 +15,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Columns (Client API reference)
+# Attributes (Client API reference)
 
 
 
-Columns contain data in the model-driven apps form or grids. Use the `formContext.data.entity.attributes` collection or the `formContext.getAttribute` shortcut method to access a collection of columns. For more information about collections, see [Collections (Client API reference)](collections.md). 
+Attributes contain data in the model-driven apps form or grids. Use the `formContext.data.entity.attributes` collection or the `formContext.getAttribute` shortcut method to access a collection of attributes. For more information about collections, see [Collections (Client API reference)](collections.md). 
 
 To access an attribute within the collection, you pass either the name (string) or the index value (number) of the attribute as an argument to the method. For example: `formContext.getAttribute(arg)`
 
-Columns are categorized by type. You can determine the type of an attribute by using the [getAttributeType](attributes/getAttributeType.md) method. Certain attribute methods are only available for specific types of columns.
+Attributes are categorized by type. You can determine the type of an attribute by using the [getAttributeType](attributes/getAttributeType.md) method. Certain attribute methods are only available for specific types of attributes.
 
 This topic provides information about the methods available per attribute type. 
 
@@ -66,20 +66,20 @@ This topic provides information about the methods available per attribute type.
 </table>
 
 
-## Boolean column type
+## Boolean attribute type
 
-In addition to the methods available for all column types as explained earlier, the following method is available only for the **boolean** column:
+In addition to the methods available for all attribute types as explained earlier, the following method is available only for the **boolean** attribute:
 
 - [getInitialValue](attributes/getInitialValue.md)
 
-## Lookup column type
-In addition to the methods available for all column types as explained earlier, the following method is available only for the **lookup** column:
+## Lookup attribute type
+In addition to the methods available for all attribute types as explained earlier, the following method is available only for the **lookup** attribute:
 
 - [getIsPartyList](attributes/getIsPartyList.md)
 
-## MultiSelectOptionSet and choices column types
+## MultiSelectOptionSet and OptionSet attribute types
 
-In addition to the methods available for all column types as explained earlier, the following methods are available only for the **multiselectoption** and **optionset** columns:
+In addition to the methods available for all attribute types as explained earlier, the following methods are available only for the **multiselectoption** and **optionset** attributes:
 
 <table>
 <tr>
@@ -95,8 +95,8 @@ In addition to the methods available for all column types as explained earlier, 
 </tr>
 </table>
 
-## Number column type (decimal, double, integer, money)
-The following methods are available only for the **decimal**,  **double**, and **integer** columns:
+## Number attribute type (decimal, double, integer, money)
+The following methods are available only for the **decimal**,  **double**, and **integer** attributes:
 
 <table>
 <tr>
@@ -111,15 +111,15 @@ The following methods are available only for the **decimal**,  **double**, and *
 </tr>
 </table>
 
-## String column type
-In addition to the methods available for all column types as explained earlier, the following method is available only for the **string** column:
+## String attribute type
+In addition to the methods available for all attribute types as explained earlier, the following method is available only for the **string** attribute:
 
 - [getMaxLength](attributes/getMaxLength.md)
 
 
 ### Related topics
 
-[Composite column](composite-attributes.md)
+[Composite attributes](composite-attributes.md)
 
 [Understand Xrm object model](../understand-clientapi-object-model.md)
 

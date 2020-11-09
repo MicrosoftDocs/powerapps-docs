@@ -1,1 +1,1 @@
-Gets a string for the value of the primary attribute of the table.
+Gets a string for the value of the primary attribute of the entity.

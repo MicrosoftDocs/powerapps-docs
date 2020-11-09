@@ -42,16 +42,16 @@ search.app:
 <ul>
 <li><b>boundParameter</b>: (Optional) String. The name of the bound parameter for the action or function to execute.
 <ul><li>Specify <code>undefined</code> if you are executing a CRUD request.</li>
-<li>Specify <code>null</code> if the action or function to execute is not bound to any table.</li>
-<li>Specify <code>entity</code> in case the action or function to execute is bound to a table. </li></ul>
+<li>Specify <code>null</code> if the action or function to execute is not bound to any entity.</li>
+<li>Specify <code>entity</code> in case the action or function to execute is bound to an entity. </li></ul>
 <li><b>operationName</b>: (Optional). String. Name of the action, function, or one of the following values if you are executing a CRUD request: "Create", "Retrieve", "Update", or "Delete".</li>
 <li><b>operationType</b>: (Optional). Number. Indicates the type of operation you are executing; specify one of the following values:
 <br/><code>0: Action</code>
 <br/><code>1: Function</code>
 <br/><code>2: CRUD</code></li>
-<li><b>parameterTypes</b>: Object. The metadata for parameter types. The object has the following columns:
+<li><b>parameterTypes</b>: Object. The metadata for parameter types. The object has the following attributes:
 <ul>
-<li><b>enumProperties</b>: (Optional) Object. The metadata for enum types. The object has two string columns: <b>name</b> and <b>value</b></li>
+<li><b>enumProperties</b>: (Optional) Object. The metadata for enum types. The object has two string attributes: <b>name</b> and <b>value</b></li>
 <li><b>structuralProperty</b>: Number. The category of the parameter type. Specify one of the following values:
 <br/><code>0: Unknown</code>
 <br/><code>1: PrimitiveType</code>
@@ -69,7 +69,7 @@ search.app:
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following columns:</p>
+<td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following attributes:</p>
 <ul>
 <li><b>body (Deprecated)</b>: Object. Response body.</li>
 <li><b>headers</b>: Object. Response headers.</li>
@@ -93,7 +93,7 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise object with the columns specified earlier in the description of **successCallback** function.
+On success, returns a promise object with the attributes specified earlier in the description of **successCallback** function.
 
 ## Examples
 
@@ -232,13 +232,13 @@ Sdk.CalculateRollupFieldRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create variables to point to a quote row and to a specific column
+// Create variables to point to a quote record and to a specific field
 var quoteId = {
     "@odata.type": "Microsoft.Dynamics.CRM.quote",
     "quoteid": "7bb01e55-2394-ea11-a811-000d3ad97943"
 };
 
-// The roll-up column for which we want to force a re-calculation
+// The roll-up field for which we want to force a re-calculation
 var fieldName = "new_test_rollup";
 
 // Create variable calculateRollupFieldRequest and pass those variables created above
@@ -294,14 +294,14 @@ Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function() {
     };
 };
 
-// Create a variable to point to a contact row and with specific data in the needed columns
+// Create a variable to point to a contact record and with specific data in the needed fields
 var contactRecord = {
     "@odata.type": "Microsoft.Dynamics.CRM.contact",
     "firstname": "Test",
     "lastname": "Account"
 };
 
-// Create a paging object to keep track of the current page and how many rows we get per page
+// Create a paging object to keep track of the current page and how many records we get per page
 var pagingInfo = {
     "PageNumber": 1,
     "Count": 10
@@ -328,7 +328,7 @@ Xrm.WebApi.online.execute(retrieveDuplicatesRequest).then(
 
 ### Perform CRUD operations
 
-#### Create a row
+#### Create a record
 
 The following example demonstrates how to perform a create operation.
 
@@ -374,7 +374,7 @@ Xrm.WebApi.online.execute(createRequest).then(
 );
  ```
  
-#### Retrieve a row
+#### Retrieve a record
 
 The following example demonstrates how to perform a retrieve operation.
 
@@ -425,7 +425,7 @@ Xrm.WebApi.online.execute(retrieveRequest).then(
 );
 ```
 
-#### Update a row
+#### Update a record
 
 The following example demonstrates how to perform a update operation.
 
@@ -474,7 +474,7 @@ Xrm.WebApi.online.execute(updateRequest).then(
 );
 ```
 
-#### Delete a row
+#### Delete a record
 
 The following example demonstrates how to perform a delete operation.
 

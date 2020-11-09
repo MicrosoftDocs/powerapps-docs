@@ -1,8 +1,8 @@
 ---
-title: "Use the Category table (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about categorizing the table rows using category table." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use the Category entity (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about categorizing the entity records using category entity." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/09/2020
+ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,11 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use the Category table
+# Use the Category entity
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Categorizing entity records in Common Data Service helps you tag the rows so that you can easily search them. Use the  `Category` table to create and manage a hierarchical structure of categories in Common Data Service, and then associate entity records to one or more categories.  
+Categorizing entity records in Common Data Service helps you tag the records so that you can easily search them. Use the  `Category` entity to create and manage a hierarchical structure of categories in Common Data Service, and then associate entity records to one or more categories.  
   
  A category can have multiple child categories, but a child category can have only one parent category. Deleting a parent `Category` record automatically deletes all its child records and entity associations. You define a parent category for a category using the `Category.ParentCategoryId` attribute.  
   

@@ -1,8 +1,8 @@
 ---
-title: "ActivityParty table (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "ActivityParty entity (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "An activity party represents a person or group associated with an activity. An activity can have multiple activity parties"
 ms.custom: ""
-ms.date: 11/09/2020
+ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# ActivityParty table
+# ActivityParty entity
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 

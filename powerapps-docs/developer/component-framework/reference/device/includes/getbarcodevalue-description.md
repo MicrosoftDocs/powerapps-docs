@@ -1,6 +1,6 @@
 ---
 title: GetBarcodeValue | Microsoft Docs
-description: Provides information for getBarcodeValue method.
+description: 
 keywords:
 ms.author: nabuthuk
 manager: kvivek

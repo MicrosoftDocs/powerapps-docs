@@ -175,7 +175,7 @@ If you want to remove a code component from a solution file:
 
 ### See also
 
-[Add code components to a column or table in model-driven apps](add-custom-controls-to-a-field-or-entity.md)<br/>
+[Add code components to a field or entity in model-driven apps](add-custom-controls-to-a-field-or-entity.md)<br/>
 [Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)

@@ -1,6 +1,6 @@
 ---
-title: "Sample: Work with columns (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to work with columns" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Work with attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to work with attributes" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -16,11 +16,11 @@ search.app:
   - D365CE
 ---
 
-# Work with columns metadata
+# Work with attribute metadata
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to perform various actions on columns. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithAttributes).
+This sample shows how to perform various actions on attributes. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithAttributes).
 
 ## How to run this sample
 
@@ -28,7 +28,7 @@ This sample shows how to perform various actions on columns. You can download th
 
 ## What this sample does
 
-This sample shows how to create different types of columns in Common Data Service.
+This sample shows how to create different types of attributes in Common Data Service.
 
 ## How this sample works
 
@@ -40,13 +40,13 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `BooleanAttributeMetadata` method creates an column of type boolean.
-2. The `DateTimeAttributeMetadata` message creates an column of type date time.
-3. The `DecimalAttributeMetadata` message creates an column of type decimal.
-4. The `IntegerAttributeMetadata` message creates an column of type integer.
-5. The `MemoAttributeMetadata` message creates an column of type memo.
-6. The `MoneyAttributeMetadata` message creates an column of type money.
-7. The `PicklistAttributeMetadata` message creates an column of type picklist.
+1. The `BooleanAttributeMetadata` method creates an attribute of type boolean.
+2. The `DateTimeAttributeMetadata` message creates an attribute of type date time.
+3. The `DecimalAttributeMetadata` message creates an attribute of type decimal.
+4. The `IntegerAttributeMetadata` message creates an attribute of type integer.
+5. The `MemoAttributeMetadata` message creates an attribute of type memo.
+6. The `MoneyAttributeMetadata` message creates an attribute of type money.
+7. The `PicklistAttributeMetadata` message creates an attribute of type picklist.
 
 ### Clean up
 

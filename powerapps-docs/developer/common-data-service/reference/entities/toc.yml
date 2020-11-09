@@ -1,4 +1,4 @@
-- name: "About table reference"
+- name: "About Entity Reference"
   href: ../about-entity-reference.md
 - name: Account
   href: account.md
@@ -24,8 +24,6 @@
   href: appconfiginstance.md
 - name: AppConfigMaster
   href: appconfigmaster.md
-- name: ApplicationUser
-  href: applicationuser.md
 - name: AppModule
   href: appmodule.md
 - name: AppModuleComponent
@@ -38,10 +36,6 @@
   href: attributeimageconfig.md
 - name: Audit
   href: audit.md
-- name: bot
-  href: bot.md
-- name: botcomponent
-  href: botcomponent.md
 - name: BulkDeleteFailure
   href: bulkdeletefailure.md
 - name: BulkDeleteOperation
@@ -56,10 +50,6 @@
   href: callbackregistration.md
 - name: CanvasApp
   href: canvasapp.md
-- name: Catalog
-  href: catalog.md
-- name: CatalogAssignment
-  href: catalogassignment.md
 - name: Category
   href: category.md
 - name: ColumnMapping
@@ -74,14 +64,6 @@
   href: connector.md
 - name: Contact
   href: contact.md
-- name: conversationtranscript
-  href: conversationtranscript.md
-- name: CustomAPI
-  href: customapi.md
-- name: CustomAPIRequestParameter
-  href: customapirequestparameter.md
-- name: CustomAPIResponseProperty
-  href: customapiresponseproperty.md
 - name: CustomControl
   href: customcontrol.md
 - name: CustomControlDefaultConfig
@@ -90,14 +72,6 @@
   href: customcontrolresource.md
 - name: CustomerAddress
   href: customeraddress.md
-- name: datalakefolder
-  href: datalakefolder.md
-- name: datalakefolderpermission
-  href: datalakefolderpermission.md
-- name: datalakeworkspace
-  href: datalakeworkspace.md
-- name: datalakeworkspacepermission
-  href: datalakeworkspacepermission.md
 - name: DataPerformance
   href: dataperformance.md
 - name: Dependency
@@ -120,6 +94,8 @@
   href: entityanalyticsconfig.md
 - name: EntityDataProvider
   href: entitydataprovider.md
+- name: EntityDataSource
+  href: entitydatasource.md
 - name: EntityImageConfig
   href: entityimageconfig.md
 - name: EnvironmentVariableDefinition
@@ -130,8 +106,6 @@
   href: exchangesyncidmapping.md
 - name: ExpiredProcess
   href: expiredprocess.md
-- name: ExportSolutionUpload
-  href: exportsolutionupload.md
 - name: Fax
   href: fax.md
 - name: Feedback
@@ -240,32 +214,14 @@
   href: msdyn_componentlayerdatasource.md
 - name: msdyn_dataflow
   href: msdyn_dataflow.md
-- name: msdyn_federatedarticle
-  href: msdyn_federatedarticle.md
-- name: msdyn_federatedarticleincident
-  href: msdyn_federatedarticleincident.md
 - name: msdyn_helppage
   href: msdyn_helppage.md
-- name: msdyn_kmfederatedsearchconfig
-  href: msdyn_kmfederatedsearchconfig.md
 - name: msdyn_knowledgearticleimage
   href: msdyn_knowledgearticleimage.md
 - name: msdyn_knowledgearticletemplate
   href: msdyn_knowledgearticletemplate.md
-- name: msdyn_knowledgeinteractioninsight
-  href: msdyn_knowledgeinteractioninsight.md
-- name: msdyn_knowledgesearchinsight
-  href: msdyn_knowledgesearchinsight.md
-- name: msdyn_nonrelationalds
-  href: msdyn_nonrelationalds.md
 - name: msdyn_odatav4ds
   href: msdyn_odatav4ds.md
-- name: msdyn_richtextfile
-  href: msdyn_richtextfile.md
-- name: msdyn_serviceconfiguration
-  href: msdyn_serviceconfiguration.md
-- name: msdyn_slakpi
-  href: msdyn_slakpi.md
 - name: msdyn_solutioncomponentdatasource
   href: msdyn_solutioncomponentdatasource.md
 - name: msdyn_solutioncomponentsummary
@@ -280,8 +236,6 @@
   href: msdyn_solutionhistory.md
 - name: msdyn_solutionhistorydatasource
   href: msdyn_solutionhistorydatasource.md
-- name: msdynce_botcontent
-  href: msdynce_botcontent.md
 - name: NavigationSetting
   href: navigationsetting.md
 - name: NewProcess
@@ -292,8 +246,6 @@
   href: organization.md
 - name: OwnerMapping
   href: ownermapping.md
-- name: package
-  href: package.md
 - name: PersonalDocumentTemplate
   href: personaldocumenttemplate.md
 - name: PhoneCall
@@ -330,8 +282,6 @@
   href: processstageparameter.md
 - name: ProcessTrigger
   href: processtrigger.md
-- name: ProvisionLanguageForUser
-  href: provisionlanguageforuser.md
 - name: Publisher
   href: publisher.md
 - name: PublisherAddress
@@ -372,8 +322,6 @@
   href: sdkmessageprocessingstepimage.md
 - name: SdkMessageProcessingStepSecureConfig
   href: sdkmessageprocessingstepsecureconfig.md
-- name: searchtelemetry
-  href: searchtelemetry.md
 - name: SemiAnnualFiscalCalendar
   href: semiannualfiscalcalendar.md
 - name: ServiceEndpoint
@@ -404,8 +352,6 @@
   href: solutioncomponentattributeconfiguration.md
 - name: solutioncomponentconfiguration
   href: solutioncomponentconfiguration.md
-- name: solutioncomponentrelationshipconfiguration
-  href: solutioncomponentrelationshipconfiguration.md
 - name: SolutionHistoryData
   href: solutionhistorydata.md
 - name: StageSolutionUpload

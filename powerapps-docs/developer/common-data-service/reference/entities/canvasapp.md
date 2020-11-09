@@ -1,22 +1,20 @@
 ---
-title: "CanvasApp table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CanvasApp table."
-ms.date: 11/07/2020
+title: "CanvasApp Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the CanvasApp entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# CanvasApp table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# CanvasApp Entity Reference
 
 An application built through a canvas-based editing experience.
 
@@ -31,12 +29,10 @@ An application built through a canvas-based editing experience.
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/canvasapps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/canvasapps(*canvasappid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -54,24 +50,20 @@ An application built through a canvas-based editing experience.
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AADCreatedById](#BKMK_AADCreatedById)
 - [AADLastModifiedById](#BKMK_AADLastModifiedById)
 - [AADLastPublishedById](#BKMK_AADLastPublishedById)
 - [AdminControlBypassConsent](#BKMK_AdminControlBypassConsent)
-- [AppComponentDependencies](#BKMK_AppComponentDependencies)
-- [AppComponents](#BKMK_AppComponents)
 - [AppOpenUri](#BKMK_AppOpenUri)
 - [AppVersion](#BKMK_AppVersion)
 - [AuthorizationReferences](#BKMK_AuthorizationReferences)
 - [BackgroundColor](#BKMK_BackgroundColor)
 - [BypassConsent](#BKMK_BypassConsent)
-- [CanConsumeAppPass](#BKMK_CanConsumeAppPass)
 - [CanvasAppId](#BKMK_CanvasAppId)
-- [CanvasAppType](#BKMK_CanvasAppType)
 - [CdsDependencies](#BKMK_CdsDependencies)
 - [CommitMessage](#BKMK_CommitMessage)
 - [ConnectionReferences](#BKMK_ConnectionReferences)
@@ -84,7 +76,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [GalleryItemId](#BKMK_GalleryItemId)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCdsUpgraded](#BKMK_IsCdsUpgraded)
-- [IsCustomizable](#BKMK_IsCustomizable)
 - [IsFeaturedApp](#BKMK_IsFeaturedApp)
 - [IsHeroApp](#BKMK_IsHeroApp)
 - [IsHidden](#BKMK_IsHidden)
@@ -168,38 +159,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 **DefaultValue**: False
 
-
-
-### <a name="BKMK_AppComponentDependencies"></a> AppComponentDependencies
-
-|Property|Value|
-|--------|-----|
-|Description|The app component dependencies.|
-|DisplayName||
-|Format|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|appcomponentdependencies|
-|MaxLength|768000|
-|RequiredLevel|None|
-|Type|Memo|
-
-
-### <a name="BKMK_AppComponents"></a> AppComponents
-
-|Property|Value|
-|--------|-----|
-|Description|The app components.|
-|DisplayName||
-|Format|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|appcomponents|
-|MaxLength|768000|
-|RequiredLevel|None|
-|Type|Memo|
 
 
 ### <a name="BKMK_AppOpenUri"></a> AppOpenUri
@@ -289,29 +248,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 
 
-### <a name="BKMK_CanConsumeAppPass"></a> CanConsumeAppPass
-
-|Property|Value|
-|--------|-----|
-|Description|The type of the canvas app.|
-|DisplayName|Can Consume App Pass|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|canconsumeapppass|
-|RequiredLevel|None|
-|Type|Boolean|
-
-#### CanConsumeAppPass Options
-
-|Value|Label|
-|-----|-----|
-|1|True|
-|0|False|
-
-**DefaultValue**: False
-
-
-
 ### <a name="BKMK_CanvasAppId"></a> CanvasAppId
 
 |Property|Value|
@@ -323,29 +259,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |LogicalName|canvasappid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
-
-
-### <a name="BKMK_CanvasAppType"></a> CanvasAppType
-
-|Property|Value|
-|--------|-----|
-|Description|The type of the canvas app.|
-|DisplayName|Canvas App Type|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|canvasapptype|
-|RequiredLevel|None|
-|Type|Picklist|
-
-#### CanvasAppType Options
-
-|Value|Label|
-|-----|-----|
-|0|Classic Canvas App|
-|1|App Component Library|
-|2|Custom Canvas Page|
-|3|Unified App|
-
 
 
 ### <a name="BKMK_CdsDependencies"></a> CdsDependencies
@@ -547,21 +460,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 
 
-### <a name="BKMK_IsCustomizable"></a> IsCustomizable
-
-**Added by**: Canvas App Metadata Extension Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Information that specifies whether this component can be customized.|
-|DisplayName|Customizable|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|iscustomizable|
-|RequiredLevel|SystemRequired|
-|Type|ManagedProperty|
-
-
 ### <a name="BKMK_IsFeaturedApp"></a> IsFeaturedApp
 
 |Property|Value|
@@ -687,7 +585,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|IsValidForUpdate|False|
 |LogicalName|name|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
@@ -770,66 +667,22 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
-- [Assets_Name](#BKMK_Assets_Name)
-- [BackgroundImage_Name](#BKMK_BackgroundImage_Name)
 - [CanvasAppRowId](#BKMK_CanvasAppRowId)
 - [ComponentState](#BKMK_ComponentState)
-- [Document_Name](#BKMK_Document_Name)
 - [IsManaged](#BKMK_IsManaged)
-- [LargeIcon_Name](#BKMK_LargeIcon_Name)
-- [MediumIcon_Name](#BKMK_MediumIcon_Name)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [SmallIcon_Name](#BKMK_SmallIcon_Name)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
-- [TeamsIcon_Name](#BKMK_TeamsIcon_Name)
 - [VersionNumber](#BKMK_VersionNumber)
-- [WideIcon_Name](#BKMK_WideIcon_Name)
-
-
-### <a name="BKMK_Assets_Name"></a> Assets_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|assets_name|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_BackgroundImage_Name"></a> BackgroundImage_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|backgroundimage_name|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
 
 
 ### <a name="BKMK_CanvasAppRowId"></a> CanvasAppRowId
@@ -868,24 +721,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 
 
 
-### <a name="BKMK_Document_Name"></a> Document_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|document_name|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 |Property|Value|
@@ -907,42 +742,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 
 **DefaultValue**: False
 
-
-
-### <a name="BKMK_LargeIcon_Name"></a> LargeIcon_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|largeicon_name|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_MediumIcon_Name"></a> MediumIcon_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|mediumicon_name|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
 
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
@@ -1034,24 +833,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |Type|Lookup|
 
 
-### <a name="BKMK_SmallIcon_Name"></a> SmallIcon_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|smallicon_name|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 |Property|Value|
@@ -1078,24 +859,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |Type|Uniqueidentifier|
 
 
-### <a name="BKMK_TeamsIcon_Name"></a> TeamsIcon_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|teamsicon_name|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 |Property|Value|
@@ -1109,24 +872,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |MinValue|-9223372036854775808|
 |RequiredLevel|None|
 |Type|BigInt|
-
-
-### <a name="BKMK_WideIcon_Name"></a> WideIcon_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|wideicon_name|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
 
 <a name="manytoone"></a>
 
@@ -1148,6 +893,6 @@ See solution Entity [FK_CanvasApp_Solution](solution.md#BKMK_FK_CanvasApp_Soluti
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.canvasapp?text=canvasapp EntityType" />

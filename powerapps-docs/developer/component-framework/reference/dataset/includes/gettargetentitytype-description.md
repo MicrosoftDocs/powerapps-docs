@@ -1,6 +1,6 @@
 ---
 title: GetTargetEntityType | Microsoft Docs
-description: Provides information for getTargetEntityType method.
+description: 
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 6c9ba34d-579a-4378-b47b-ba1205e9bdf1
 ---
 
-Returns the target table type name.
+Returns the target entity type name.

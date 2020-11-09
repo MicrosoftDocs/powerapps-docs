@@ -1,22 +1,20 @@
 ---
-title: "ActivityPointer table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ActivityPointer table."
-ms.date: 11/07/2020
+title: "ActivityPointer Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ActivityPointer entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ActivityPointer table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# ActivityPointer Entity Reference
 
 Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar.
 
@@ -29,7 +27,7 @@ Task performed, or to be performed, by a user. An activity is any action for whi
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activitypointers<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Rollup|<xref href="Microsoft.Dynamics.CRM.Rollup?text=Rollup Function" />|<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -47,9 +45,9 @@ Task performed, or to be performed, by a user. An activity is any action for whi
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActivityAdditionalParams](#BKMK_ActivityAdditionalParams)
 - [ActivityId](#BKMK_ActivityId)
@@ -702,9 +700,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ActivityTypeCode](#BKMK_ActivityTypeCode)
 - [allparties](#BKMK_allparties)
@@ -1671,6 +1669,6 @@ See systemuser Entity [user_activity](systemuser.md#BKMK_user_activity) One-To-M
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.activitypointer?text=activitypointer EntityType" />

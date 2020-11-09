@@ -1,22 +1,20 @@
 ---
-title: "TeamTemplate table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the TeamTemplate table."
-ms.date: 11/07/2020
+title: "TeamTemplate Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the TeamTemplate entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# TeamTemplate table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# TeamTemplate Entity Reference
 
 Team template for an entity enabled for automatically created access teams.
 
@@ -33,7 +31,7 @@ Team template for an entity enabled for automatically created access teams.
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/teamtemplates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/teamtemplates(*teamtemplateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -51,9 +49,9 @@ Team template for an entity enabled for automatically created access teams.
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [DefaultAccessRightsMask](#BKMK_DefaultAccessRightsMask)
 - [Description](#BKMK_Description)
@@ -86,7 +84,7 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |DisplayName|Description|
 |Format|TextArea|
 |IsLocalizable|False|
-|IsValidForForm|True|
+|IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|description|
 |MaxLength|2000|
@@ -141,9 +139,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -158,7 +156,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [versionnumber](#BKMK_versionnumber)
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -365,23 +362,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |RequiredLevel|None|
 |Type|String|
 
-
-### <a name="BKMK_versionnumber"></a> versionnumber
-
-**Added by**: Access Team Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Version number for team template.|
-|DisplayName|Version Number|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|versionnumber|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
-|RequiredLevel|None|
-|Type|BigInt|
-
 <a name="onetomany"></a>
 
 ## One-To-Many Relationships
@@ -451,6 +431,6 @@ See systemuser Entity [lk_teamtemplate_modifiedonbehalfby](systemuser.md#BKMK_lk
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.teamtemplate?text=teamtemplate EntityType" />

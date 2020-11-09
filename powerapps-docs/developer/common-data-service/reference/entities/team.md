@@ -1,22 +1,20 @@
 ---
-title: "Team table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Team table."
-ms.date: 11/07/2020
+title: "Team Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Team entity."
+ms.date: 09/16/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Team table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# Team Entity Reference
 
 Collection of system users that routinely collaborate. Teams can be used to simplify record sharing and provide team members with common access to organization data when team members belong to different Business Units.
 
@@ -37,7 +35,7 @@ Collection of system users that routinely collaborate. Teams can be used to simp
 |SetParentTeam|[Associate and disassociate entities](/powerapps/developer/common-data-service/webapi/associate-disassociate-entities-using-web-api)|<xref:Microsoft.Crm.Sdk.Messages.SetParentTeamRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/teams(*teamid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -55,9 +53,9 @@ Collection of system users that routinely collaborate. Teams can be used to simp
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AdministratorId](#BKMK_AdministratorId)
 - [AzureActiveDirectoryObjectId](#BKMK_AzureActiveDirectoryObjectId)
@@ -174,12 +172,10 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 ### <a name="BKMK_MembershipType"></a> MembershipType
 
-**Added by**: AuthorizationCore Solution
-
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName|Membership Type|
+|Description|Information about team membership type.|
+|DisplayName|Team Membership Type|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |IsValidForUpdate|False|
@@ -268,7 +264,7 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|knowledgearticle|
+|Targets|knowledgearticle,opportunity|
 |Type|Lookup|
 
 
@@ -399,9 +395,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AdministratorIdName](#BKMK_AdministratorIdName)
 - [AdministratorIdYomiName](#BKMK_AdministratorIdYomiName)
@@ -887,33 +883,10 @@ Listed by **SchemaName**.
 - [team_DuplicateRules](#BKMK_team_DuplicateRules)
 - [team_workflow](#BKMK_team_workflow)
 - [team_stagesolutionupload](#BKMK_team_stagesolutionupload)
-- [team_exportsolutionupload](#BKMK_team_exportsolutionupload)
-- [team_connector](#BKMK_team_connector)
-- [team_environmentvariabledefinition](#BKMK_team_environmentvariabledefinition)
-- [team_environmentvariablevalue](#BKMK_team_environmentvariablevalue)
-- [team_processstageparameter](#BKMK_team_processstageparameter)
-- [team_flowsession](#BKMK_team_flowsession)
-- [team_workflowbinary](#BKMK_team_workflowbinary)
-- [team_connectionreference](#BKMK_team_connectionreference)
-- [team_msdynce_botcontent](#BKMK_team_msdynce_botcontent)
-- [team_conversationtranscript](#BKMK_team_conversationtranscript)
-- [team_bot](#BKMK_team_bot)
-- [team_botcomponent](#BKMK_team_botcomponent)
-- [team_msdyn_serviceconfiguration](#BKMK_team_msdyn_serviceconfiguration)
-- [team_msdyn_slakpi](#BKMK_team_msdyn_slakpi)
-- [team_msdyn_federatedarticle](#BKMK_team_msdyn_federatedarticle)
-- [team_msdyn_kmfederatedsearchconfig](#BKMK_team_msdyn_kmfederatedsearchconfig)
 - [team_msdyn_knowledgearticleimage](#BKMK_team_msdyn_knowledgearticleimage)
-- [team_msdyn_knowledgeinteractioninsight](#BKMK_team_msdyn_knowledgeinteractioninsight)
-- [team_msdyn_knowledgesearchinsight](#BKMK_team_msdyn_knowledgesearchinsight)
 - [team_msdyn_knowledgearticletemplate](#BKMK_team_msdyn_knowledgearticletemplate)
-- [team_customapi](#BKMK_team_customapi)
-- [team_customapirequestparameter](#BKMK_team_customapirequestparameter)
-- [team_customapiresponseproperty](#BKMK_team_customapiresponseproperty)
-- [team_datalakefolder](#BKMK_team_datalakefolder)
-- [team_datalakefolderpermission](#BKMK_team_datalakefolderpermission)
 - [team_msdyn_dataflow](#BKMK_team_msdyn_dataflow)
-- [team_msdyn_richtextfile](#BKMK_team_msdyn_richtextfile)
+- [team_connector](#BKMK_team_connector)
 - [team_msdyn_aiconfiguration](#BKMK_team_msdyn_aiconfiguration)
 - [team_msdyn_aimodel](#BKMK_team_msdyn_aimodel)
 - [team_msdyn_aitemplate](#BKMK_team_msdyn_aitemplate)
@@ -928,6 +901,12 @@ Listed by **SchemaName**.
 - [team_msdyn_aiodlabel](#BKMK_team_msdyn_aiodlabel)
 - [team_msdyn_aiodtrainingboundingbox](#BKMK_team_msdyn_aiodtrainingboundingbox)
 - [team_msdyn_aiodtrainingimage](#BKMK_team_msdyn_aiodtrainingimage)
+- [team_environmentvariabledefinition](#BKMK_team_environmentvariabledefinition)
+- [team_environmentvariablevalue](#BKMK_team_environmentvariablevalue)
+- [team_processstageparameter](#BKMK_team_processstageparameter)
+- [team_flowsession](#BKMK_team_flowsession)
+- [team_workflowbinary](#BKMK_team_workflowbinary)
+- [team_connectionreference](#BKMK_team_connectionreference)
 - [team_msdyn_analysiscomponent](#BKMK_team_msdyn_analysiscomponent)
 - [team_msdyn_analysisjob](#BKMK_team_msdyn_analysisjob)
 - [team_msdyn_analysisresult](#BKMK_team_msdyn_analysisresult)
@@ -1718,278 +1697,6 @@ Same as stagesolutionupload entity [team_stagesolutionupload](stagesolutionuploa
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_team_exportsolutionupload"></a> team_exportsolutionupload
-
-**Added by**: Active Solution Solution
-
-Same as exportsolutionupload entity [team_exportsolutionupload](exportsolutionupload.md#BKMK_team_exportsolutionupload) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|exportsolutionupload|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_exportsolutionupload|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_connector"></a> team_connector
-
-**Added by**: Active Solution Solution
-
-Same as connector entity [team_connector](connector.md#BKMK_team_connector) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|connector|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_connector|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_environmentvariabledefinition"></a> team_environmentvariabledefinition
-
-**Added by**: Active Solution Solution
-
-Same as environmentvariabledefinition entity [team_environmentvariabledefinition](environmentvariabledefinition.md#BKMK_team_environmentvariabledefinition) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|environmentvariabledefinition|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_environmentvariabledefinition|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_environmentvariablevalue"></a> team_environmentvariablevalue
-
-**Added by**: Active Solution Solution
-
-Same as environmentvariablevalue entity [team_environmentvariablevalue](environmentvariablevalue.md#BKMK_team_environmentvariablevalue) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|environmentvariablevalue|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_environmentvariablevalue|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_processstageparameter"></a> team_processstageparameter
-
-**Added by**: Active Solution Solution
-
-Same as processstageparameter entity [team_processstageparameter](processstageparameter.md#BKMK_team_processstageparameter) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|processstageparameter|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_processstageparameter|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_flowsession"></a> team_flowsession
-
-**Added by**: Active Solution Solution
-
-Same as flowsession entity [team_flowsession](flowsession.md#BKMK_team_flowsession) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|flowsession|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_flowsession|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_workflowbinary"></a> team_workflowbinary
-
-**Added by**: Active Solution Solution
-
-Same as workflowbinary entity [team_workflowbinary](workflowbinary.md#BKMK_team_workflowbinary) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|workflowbinary|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_workflowbinary|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_connectionreference"></a> team_connectionreference
-
-**Added by**: Active Solution Solution
-
-Same as connectionreference entity [team_connectionreference](connectionreference.md#BKMK_team_connectionreference) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|connectionreference|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_connectionreference|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_msdynce_botcontent"></a> team_msdynce_botcontent
-
-**Added by**: Active Solution Solution
-
-Same as msdynce_botcontent entity [team_msdynce_botcontent](msdynce_botcontent.md#BKMK_team_msdynce_botcontent) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdynce_botcontent|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_msdynce_botcontent|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_conversationtranscript"></a> team_conversationtranscript
-
-**Added by**: Active Solution Solution
-
-Same as conversationtranscript entity [team_conversationtranscript](conversationtranscript.md#BKMK_team_conversationtranscript) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|conversationtranscript|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_conversationtranscript|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_bot"></a> team_bot
-
-**Added by**: Active Solution Solution
-
-Same as bot entity [team_bot](bot.md#BKMK_team_bot) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|bot|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_bot|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_botcomponent"></a> team_botcomponent
-
-**Added by**: Active Solution Solution
-
-Same as botcomponent entity [team_botcomponent](botcomponent.md#BKMK_team_botcomponent) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|botcomponent|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_botcomponent|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_msdyn_serviceconfiguration"></a> team_msdyn_serviceconfiguration
-
-**Added by**: Active Solution Solution
-
-Same as msdyn_serviceconfiguration entity [team_msdyn_serviceconfiguration](msdyn_serviceconfiguration.md#BKMK_team_msdyn_serviceconfiguration) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_serviceconfiguration|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_msdyn_serviceconfiguration|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_msdyn_slakpi"></a> team_msdyn_slakpi
-
-**Added by**: Active Solution Solution
-
-Same as msdyn_slakpi entity [team_msdyn_slakpi](msdyn_slakpi.md#BKMK_team_msdyn_slakpi) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_slakpi|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_msdyn_slakpi|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_msdyn_federatedarticle"></a> team_msdyn_federatedarticle
-
-**Added by**: Active Solution Solution
-
-Same as msdyn_federatedarticle entity [team_msdyn_federatedarticle](msdyn_federatedarticle.md#BKMK_team_msdyn_federatedarticle) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_federatedarticle|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_msdyn_federatedarticle|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_msdyn_kmfederatedsearchconfig"></a> team_msdyn_kmfederatedsearchconfig
-
-**Added by**: Active Solution Solution
-
-Same as msdyn_kmfederatedsearchconfig entity [team_msdyn_kmfederatedsearchconfig](msdyn_kmfederatedsearchconfig.md#BKMK_team_msdyn_kmfederatedsearchconfig) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_kmfederatedsearchconfig|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_msdyn_kmfederatedsearchconfig|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_team_msdyn_knowledgearticleimage"></a> team_msdyn_knowledgearticleimage
 
 **Added by**: Active Solution Solution
@@ -2003,40 +1710,6 @@ Same as msdyn_knowledgearticleimage entity [team_msdyn_knowledgearticleimage](ms
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|team_msdyn_knowledgearticleimage|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_msdyn_knowledgeinteractioninsight"></a> team_msdyn_knowledgeinteractioninsight
-
-**Added by**: Active Solution Solution
-
-Same as msdyn_knowledgeinteractioninsight entity [team_msdyn_knowledgeinteractioninsight](msdyn_knowledgeinteractioninsight.md#BKMK_team_msdyn_knowledgeinteractioninsight) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_knowledgeinteractioninsight|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_msdyn_knowledgeinteractioninsight|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_msdyn_knowledgesearchinsight"></a> team_msdyn_knowledgesearchinsight
-
-**Added by**: Active Solution Solution
-
-Same as msdyn_knowledgesearchinsight entity [team_msdyn_knowledgesearchinsight](msdyn_knowledgesearchinsight.md#BKMK_team_msdyn_knowledgesearchinsight) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_knowledgesearchinsight|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_msdyn_knowledgesearchinsight|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -2058,91 +1731,6 @@ Same as msdyn_knowledgearticletemplate entity [team_msdyn_knowledgearticletempla
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_team_customapi"></a> team_customapi
-
-**Added by**: Active Solution Solution
-
-Same as customapi entity [team_customapi](customapi.md#BKMK_team_customapi) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|customapi|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_customapi|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_customapirequestparameter"></a> team_customapirequestparameter
-
-**Added by**: Active Solution Solution
-
-Same as customapirequestparameter entity [team_customapirequestparameter](customapirequestparameter.md#BKMK_team_customapirequestparameter) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|customapirequestparameter|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_customapirequestparameter|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_customapiresponseproperty"></a> team_customapiresponseproperty
-
-**Added by**: Active Solution Solution
-
-Same as customapiresponseproperty entity [team_customapiresponseproperty](customapiresponseproperty.md#BKMK_team_customapiresponseproperty) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|customapiresponseproperty|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|team_customapiresponseproperty|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_datalakefolder"></a> team_datalakefolder
-
-**Added by**: Active Solution Solution
-
-Same as datalakefolder entity [team_datalakefolder](datalakefolder.md#BKMK_team_datalakefolder) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|datalakefolder|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_datalakefolder|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_team_datalakefolderpermission"></a> team_datalakefolderpermission
-
-**Added by**: Active Solution Solution
-
-Same as datalakefolderpermission entity [team_datalakefolderpermission](datalakefolderpermission.md#BKMK_team_datalakefolderpermission) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|datalakefolderpermission|
-|ReferencingAttribute|owningteam|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_datalakefolderpermission|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_team_msdyn_dataflow"></a> team_msdyn_dataflow
 
 **Added by**: Active Solution Solution
@@ -2160,19 +1748,19 @@ Same as msdyn_dataflow entity [team_msdyn_dataflow](msdyn_dataflow.md#BKMK_team_
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_team_msdyn_richtextfile"></a> team_msdyn_richtextfile
+### <a name="BKMK_team_connector"></a> team_connector
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_richtextfile entity [team_msdyn_richtextfile](msdyn_richtextfile.md#BKMK_team_msdyn_richtextfile) Many-To-One relationship.
+Same as connector entity [team_connector](connector.md#BKMK_team_connector) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|msdyn_richtextfile|
+|ReferencingEntity|connector|
 |ReferencingAttribute|owningteam|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|team_msdyn_richtextfile|
+|ReferencedEntityNavigationPropertyName|team_connector|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -2411,6 +1999,108 @@ Same as msdyn_aiodtrainingimage entity [team_msdyn_aiodtrainingimage](msdyn_aiod
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|team_msdyn_aiodtrainingimage|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_environmentvariabledefinition"></a> team_environmentvariabledefinition
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariabledefinition entity [team_environmentvariabledefinition](environmentvariabledefinition.md#BKMK_team_environmentvariabledefinition) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariabledefinition|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_environmentvariabledefinition|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_environmentvariablevalue"></a> team_environmentvariablevalue
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariablevalue entity [team_environmentvariablevalue](environmentvariablevalue.md#BKMK_team_environmentvariablevalue) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariablevalue|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_environmentvariablevalue|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_processstageparameter"></a> team_processstageparameter
+
+**Added by**: Active Solution Solution
+
+Same as processstageparameter entity [team_processstageparameter](processstageparameter.md#BKMK_team_processstageparameter) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|processstageparameter|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_processstageparameter|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_flowsession"></a> team_flowsession
+
+**Added by**: Active Solution Solution
+
+Same as flowsession entity [team_flowsession](flowsession.md#BKMK_team_flowsession) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowsession|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_flowsession|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_workflowbinary"></a> team_workflowbinary
+
+**Added by**: Active Solution Solution
+
+Same as workflowbinary entity [team_workflowbinary](workflowbinary.md#BKMK_team_workflowbinary) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|workflowbinary|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_workflowbinary|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_connectionreference"></a> team_connectionreference
+
+**Added by**: Active Solution Solution
+
+Same as connectionreference entity [team_connectionreference](connectionreference.md#BKMK_team_connectionreference) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|connectionreference|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_connectionreference|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -2665,6 +2355,6 @@ IntersectEntityName: teamprofiles<br />
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.team?text=team EntityType" />

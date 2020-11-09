@@ -69,7 +69,7 @@ export class TSTableControl
   // Prefix for label displayed
   // NOTE: See localization sample control for information on how to localize strings into multiple languages
   private BUTTON_LABEL_CLICK_STRING: string = "Click to invoke:";
-  // Name of table to use for metadata retrieve example (this table needs to exist in your org)
+  // Name of entity to use for metadata retrieve example (this entity needs to exist in your org)
   private ENTITY_LOGICAL_NAME_FOR_METADATA_EXAMPLE = "account";
   /**
    * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -146,18 +146,18 @@ export class TSTableControl
   /**
    * Event handler for 'lookup objects' button
    *
-   * This method invokes the lookup dialog for the table name specified by the buttons column
+   * This method invokes the lookup dialog for the entity name specified by the buttons attribute
    * Once the user selects an item in the lookup, the selected item is passed back to our callback method.
-   * Our callback method retrieves the id, name, table type columns from the selected item and injects the
+   * Our callback method retrieves the id, name, entity type fields from the selected item and injects the
    * values into a resultDiv on the control to showcase the selected values.
    *
    * @param event : OnClick Event
    */
   private onLookupObjectsButtonClick(event: Event): void {
-    // Get the table name for the button
+    // Get the entity name for the button
     let entityName: string = event.srcElement!.getAttribute("entityName")!;
     var lookUpOptions: any = {
-      // Note: lookup can support multiple table types with the below syntax
+      // Note: lookup can support multiple entity types with the below syntax
       // entityTypes: ["account", "contact"]
       entityTypes: [entityName]
     };
@@ -266,7 +266,7 @@ export class TSTableControl
     value = this._context.formatting.formatDateLong(new Date());
     tableElement.appendChild(this.createHTMLTableRowElement(key, value, false));
     // Example of getEntityMetadata
-    // Retrieve the table Metadata for the entityName parameter. In the callback method, retrieve the primaryNameAttribute, logicalName,
+    // Retrieve the Entity Metadata for the entityName parameter. In the callback method, retrieve the primaryNameAttribute, logicalName,
     // and isCustomEntity attributes and inject the results into the Example HTML Table
     this._context.utils
       .getEntityMetadata(this.ENTITY_LOGICAL_NAME_FOR_METADATA_EXAMPLE)
@@ -342,7 +342,7 @@ export class TSTableControl
     return cellElement;
   }
   /**
-   * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+   * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -431,9 +431,9 @@ export class TSTableControl
 
 This sample provides examples on how to use methods from the `Client`, `UserSettings`, `Utility`, `Formatting` interfaces.
 
-This component also showcases two utility functions, `setFullScreen` and `lookupObjects`. These functions are invoked by clicking the button rendered as part of the code component. The `setFullScreen` button toggles the component in and out of full screen mode. The `lookupObjects` button opens a lookup dialog, and then inject the selected row as text into div.
+This component also showcases two utility functions, `setFullScreen` and `lookupObjects`. These functions are invoked by clicking the button rendered as part of the code component. The `setFullScreen` button toggles the component in and out of full screen mode. The `lookupObjects` button opens a lookup dialog, and then inject the selected record as text into div.
 
-In this sample, we render an HTML button and attach an `onClick` event handler `onLookupObjectsButtonClick` to the button. On click of this button, we invoke `context.utils.lookupObjects()` method and pass as a parameter an array of table names. 
+In this sample, we render an HTML button and attach an `onClick` event handler `onLookupObjectsButtonClick` to the button. On click of this button, we invoke `context.utils.lookupObjects()` method and pass as a parameter an array of entity names. 
 
 This method returns a `Promise` object, representing the completion or failure of the call to the lookup dialog. If the p`Promise` is resolved successfully, the lookup object which the user selected is passed as a parameter into the callback method and can be referenced as `data.id`, `data.name`, `data.entityType`.
 

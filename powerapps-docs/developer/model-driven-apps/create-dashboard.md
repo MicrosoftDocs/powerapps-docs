@@ -1,6 +1,6 @@
 ---
 title: "Create a dashboard (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Organization-owned dashboards can be created by using the Common Data Service web services (SDK) or by customizing the table form in Common Data Service by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Organization-owned dashboards can be created by using the Common Data Service web services (SDK) or by customizing the entity form in Common Data Service by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
@@ -19,10 +19,10 @@ search.app:
 
 # Create a dashboard
 
-Organization-owned dashboards can be created by using the Common Data Service or by customizing the table form in Common Data Service by editing the customizations.xml file.  
+Organization-owned dashboards can be created by using the Common Data Service or by customizing the entity form in Common Data Service by editing the customizations.xml file.  
   
 > [!NOTE]
->  Some dashboards that are created by using the SDK or by customizing the table form are not supported by the Dashboard Designer in the Web application. For more information, see [Limitations: Creating dashboards by using the SDK or through form customization](#Limitations) later in this topic.  
+>  Some dashboards that are created by using the SDK or by customizing the entity form are not supported by the Dashboard Designer in the Web application. For more information, see [Limitations: Creating dashboards by using the SDK or through form customization](#Limitations) later in this topic.  
   
  Before creating a dashboard, consider the following:  
   
@@ -144,11 +144,11 @@ _dashboardId = service.Create(dashboard);
   
 <a name="UsingFormCustomization"></a>   
 
-## Create an organization-owned dashboard by customizing the table form  
+## Create an organization-owned dashboard by customizing the entity form  
 
- The customizations.xml file that is exported with an unmanaged solution contains definitions for table forms and dashboards. You can add or modify the customizations.xml file to add or update a dashboard.  
+ The customizations.xml file that is exported with an unmanaged solution contains definitions for entity forms and dashboards. You can add or modify the customizations.xml file to add or update a dashboard.  
   
-#### Create a dashboard by customizing a table form  
+#### Create a dashboard by customizing an entity form  
   
 1. Log in to Common Data Service.  
   
@@ -212,4 +212,4 @@ _dashboardId = service.Create(dashboard);
  [Actions on dashboards](actions-dashboards.md)   
  [Sample dashboards](sample-dashboards.md)   
  [Sample: Create, Retrieve, Update and Delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboardd)   
- [Customize table forms](customize-entity-forms.md)
+ [Customize entity forms](customize-entity-forms.md)

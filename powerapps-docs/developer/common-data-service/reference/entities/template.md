@@ -1,22 +1,20 @@
 ---
-title: "Template table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Template table."
-ms.date: 11/07/2020
+title: "Template Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Template entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Template table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# Template Entity Reference
 
 Template for an email message that contains the standard attributes of an email message.
 
@@ -41,7 +39,7 @@ Template for an email message that contains the standard attributes of an email 
 |SendTemplate|<xref href="Microsoft.Dynamics.CRM.SendTemplate?text=SendTemplate Action" />|<xref:Microsoft.Crm.Sdk.Messages.SendTemplateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/templates(*templateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,13 +57,12 @@ Template for an email message that contains the standard attributes of an email 
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Body](#BKMK_Body)
 - [Description](#BKMK_Description)
-- [EntityImage](#BKMK_EntityImage)
 - [GenerationTypeCode](#BKMK_GenerationTypeCode)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
@@ -76,10 +73,8 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [PresentationXml](#BKMK_PresentationXml)
-- [SafeHtml](#BKMK_SafeHtml)
 - [Subject](#BKMK_Subject)
 - [SubjectPresentationXml](#BKMK_SubjectPresentationXml)
-- [SubjectSafeHtml](#BKMK_SubjectSafeHtml)
 - [TemplateId](#BKMK_TemplateId)
 - [TemplateTypeCode](#BKMK_TemplateTypeCode)
 - [Title](#BKMK_Title)
@@ -115,24 +110,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |MaxLength|2000|
 |RequiredLevel|None|
 |Type|Memo|
-
-
-### <a name="BKMK_EntityImage"></a> EntityImage
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Shows the default image for the record.|
-|DisplayName|Default Image|
-|IsPrimaryImage|True|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|entityimage|
-|MaxHeight|144|
-|MaxWidth|144|
-|RequiredLevel|None|
-|Type|Image|
 
 
 ### <a name="BKMK_GenerationTypeCode"></a> GenerationTypeCode
@@ -297,24 +274,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |Type|Memo|
 
 
-### <a name="BKMK_SafeHtml"></a> SafeHtml
-
-**Added by**: Activities Patch Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Safe html of email template.|
-|DisplayName|Safe HTML of email template|
-|Format|TextArea|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|safehtml|
-|MaxLength|1073741823|
-|RequiredLevel|None|
-|Type|Memo|
-
-
 ### <a name="BKMK_Subject"></a> Subject
 
 |Property|Value|
@@ -342,24 +301,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|subjectpresentationxml|
-|MaxLength|1073741823|
-|RequiredLevel|None|
-|Type|Memo|
-
-
-### <a name="BKMK_SubjectSafeHtml"></a> SubjectSafeHtml
-
-**Added by**: Activities Patch Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Safe html of email template subject.|
-|DisplayName|Safe HTML of email template subject|
-|Format|TextArea|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|subjectsafehtml|
 |MaxLength|1073741823|
 |RequiredLevel|None|
 |Type|Memo|
@@ -409,9 +350,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -421,9 +362,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [EntityImage_Timestamp](#BKMK_EntityImage_Timestamp)
-- [EntityImage_URL](#BKMK_EntityImage_URL)
-- [EntityImageId](#BKMK_EntityImageId)
 - [IsManaged](#BKMK_IsManaged)
 - [IsRecommended](#BKMK_IsRecommended)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -578,56 +516,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
-
-
-### <a name="BKMK_EntityImage_Timestamp"></a> EntityImage_Timestamp
-
-**Added by**: Activities Patch Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|entityimage_timestamp|
-|MaxValue|9223372036854775807|
-|MinValue|-9223372036854775808|
-|RequiredLevel|None|
-|Type|BigInt|
-
-
-### <a name="BKMK_EntityImage_URL"></a> EntityImage_URL
-
-**Added by**: Activities Patch Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Url|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|entityimage_url|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_EntityImageId"></a> EntityImageId
-
-**Added by**: Activities Patch Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|entityimageid|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
@@ -1169,6 +1057,6 @@ See systemuser Entity [lk_templatebase_createdonbehalfby](systemuser.md#BKMK_lk_
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.template?text=template EntityType" />

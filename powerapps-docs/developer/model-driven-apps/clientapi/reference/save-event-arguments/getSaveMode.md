@@ -28,9 +28,9 @@ search.app:
 
 **Type**: Number
 
-**Description**: The following table describes the supported values returned to detect different ways table rows may be saved by the user.
+**Description**: The following table describes the supported values returned to detect different ways entity records may be saved by the user.
 
-|Value |Save mode |Table|
+|Value |Save mode |Entity|
 |---|---|---|
 |1|Save|All|
 |2|Save and Close|All|
@@ -39,7 +39,7 @@ search.app:
 |7|Send|Email|
 |15|Disqualify|Lead|
 |16|Qualify|Lead|
-|47|Assign|User or Team owned tables|
+|47|Assign|User or Team owned entities|
 |58|Save as Completed|Activities|
 |59|Save and New|All|
 |70|Auto Save|All|
@@ -61,7 +61,7 @@ function preventAutoSave(executionContext) {
 }
 ```
 
-To save a row the user must click the **Save** icon at the bottom of the form or a custom **Save** command needs to be added to the command bar.
+To save a record the user must click the **Save** icon at the bottom of the form or a custom **Save** command needs to be added to the command bar.
 
 ### Related topics
 

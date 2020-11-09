@@ -29,7 +29,7 @@ This sample shows how to create an email activity instance from the specified em
 
 ## What this sample does
 
-The `DeliverPromoteEmailRequest` message is intended to be used in a scenario where it contains data that is needed to create an email activity row from the specified email message.
+The `DeliverPromoteEmailRequest` message is intended to be used in a scenario where it contains data that is needed to create an email activity record from the specified email message.
 
 ## How this sample works
 
@@ -41,12 +41,12 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. Creates a contact to send an email to (To: column).
-2. The `WhoAmIRequest` retrieves the system user to send the email (From: column).
+1. Creates a contact to send an email to (To: field).
+2. The `WhoAmIRequest` retrieves the system user to send the email (From: field).
 3. The `DeliverPromoteEmailRequest` message creates the request and also executes it.
 4. Verify the success by defining anonymous types that define possible values for email status. 
 5. Queries the delivered email, and verify the status code is `sent`.
 
 ### Clean up
 
-Display an option to delete the rows created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the records created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

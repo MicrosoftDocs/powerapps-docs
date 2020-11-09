@@ -1,22 +1,20 @@
 ---
-title: "SLAItem table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SLAItem table."
-ms.date: 11/07/2020
+title: "SLAItem Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SLAItem entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SLAItem table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# SLAItem Entity Reference
 
 Contains information about a tracked support KPI for a specific customer.
 
@@ -31,7 +29,7 @@ Contains information about a tracked support KPI for a specific customer.
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/slaitems<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/slaitems(*slaitemid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +47,9 @@ Contains information about a tracked support KPI for a specific customer.
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [actionflowuniquename](#BKMK_actionflowuniquename)
 - [ActionURL](#BKMK_ActionURL)
@@ -62,7 +60,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [ChangedAttributeList](#BKMK_ChangedAttributeList)
 - [Description](#BKMK_Description)
 - [FailureAfter](#BKMK_FailureAfter)
-- [msdyn_slakpiid](#BKMK_msdyn_slakpiid)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -240,23 +237,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |MinValue|0|
 |RequiredLevel|None|
 |Type|Integer|
-
-
-### <a name="BKMK_msdyn_slakpiid"></a> msdyn_slakpiid
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for SLAKPI associated with SLA Item.|
-|DisplayName|SLA KPI|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|msdyn_slakpiid|
-|RequiredLevel|None|
-|Targets|msdyn_slakpi|
-|Type|Lookup|
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -442,9 +422,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [businesshoursidName](#BKMK_businesshoursidName)
 - [ComponentState](#BKMK_ComponentState)
@@ -464,7 +444,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [msdyn_slakpiidName](#BKMK_msdyn_slakpiidName)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [SLAIdName](#BKMK_SLAIdName)
@@ -770,24 +749,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |Type|String|
 
 
-### <a name="BKMK_msdyn_slakpiidName"></a> msdyn_slakpiidName
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|msdyn_slakpiidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
 |Property|Value|
@@ -922,9 +883,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 
 Listed by **SchemaName**.
 
-- [SLAItem_SyncErrors](#BKMK_SLAItem_SyncErrors)
-- [msdyn_slaitem_slakpiinstance](#BKMK_msdyn_slaitem_slakpiinstance)
-
 
 ### <a name="BKMK_SLAItem_SyncErrors"></a> SLAItem_SyncErrors
 
@@ -940,23 +898,6 @@ Same as syncerror entity [SLAItem_SyncErrors](syncerror.md#BKMK_SLAItem_SyncErro
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
-
-### <a name="BKMK_msdyn_slaitem_slakpiinstance"></a> msdyn_slaitem_slakpiinstance
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-Same as slakpiinstance entity [msdyn_slaitem_slakpiinstance](slakpiinstance.md#BKMK_msdyn_slaitem_slakpiinstance) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|slakpiinstance|
-|ReferencingAttribute|msdyn_slaitemid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_slaitem_slakpiinstance|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -971,7 +912,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_slaitembase_modifiedby](#BKMK_lk_slaitembase_modifiedby)
 - [slaitembase_workflowid](#BKMK_slaitembase_workflowid)
 - [calendar_slaitem](#BKMK_calendar_slaitem)
-- [msdyn_msdyn_slakpi_slaitem](#BKMK_msdyn_msdyn_slakpi_slaitem)
 
 
 ### <a name="BKMK_lk_slaitembase_createdby"></a> lk_slaitembase_createdby
@@ -1006,14 +946,8 @@ See workflow Entity [slaitembase_workflowid](workflow.md#BKMK_slaitembase_workfl
 
 See calendar Entity [calendar_slaitem](calendar.md#BKMK_calendar_slaitem) One-To-Many relationship.
 
-### <a name="BKMK_msdyn_msdyn_slakpi_slaitem"></a> msdyn_msdyn_slakpi_slaitem
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-See msdyn_slakpi Entity [msdyn_msdyn_slakpi_slaitem](msdyn_slakpi.md#BKMK_msdyn_msdyn_slakpi_slaitem) One-To-Many relationship.
-
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.slaitem?text=slaitem EntityType" />

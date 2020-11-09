@@ -1,22 +1,20 @@
 ---
-title: "msdyn_componentlayerdatasource table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_componentlayerdatasource table."
-ms.date: 11/07/2020
+title: "msdyn_componentlayerdatasource Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_componentlayerdatasource entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_componentlayerdatasource table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# msdyn_componentlayerdatasource Entity Reference
 
 
 
@@ -30,11 +28,11 @@ search.app:
 |Create|POST [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -52,9 +50,9 @@ search.app:
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [msdyn_componentlayerdatasourceId](#BKMK_msdyn_componentlayerdatasourceId)
 - [msdyn_name](#BKMK_msdyn_name)
@@ -93,6 +91,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_componentlayerdatasource?text=msdyn_componentlayerdatasource EntityType" />

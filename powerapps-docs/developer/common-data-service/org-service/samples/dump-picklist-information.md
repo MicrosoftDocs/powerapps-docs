@@ -47,4 +47,4 @@ Checks for the current version of the org.
 
 ### Clean up
 
-This sample creates no rows. No cleanup is required.
+This sample creates no records. No cleanup is required.

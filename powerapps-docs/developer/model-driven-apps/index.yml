@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Model-driven apps developer documentation
-summary: Model-driven apps are primarily a no-code or low-code component focused approach to app development. Extend model-driven apps by applying business logic using client scripting, web resources. Customize table forms, views, dashboards, chart, commands and ribbons. 
+summary: Model-driven apps are primarily a no-code or low-code component focused approach to app development. Extend model-driven apps by applying business logic using client scripting, web resources. Customize entity forms, views, dashboards, chart, commands and ribbons. 
 
 metadata:
   title: Model-driven apps developer documentation
@@ -38,9 +38,9 @@ landingContent:
     linkLists:
        - linkListType: overview
          links:
-          - text: Customize table forms
+          - text: Customize entity forms
             url: customize-entity-forms.md
-          - text: Customize table views
+          - text: Customize entity views
             url: customize-entity-views.md
           - text: Customize visualizations and dashboards
             url: customize-visualizations-dashboards.md

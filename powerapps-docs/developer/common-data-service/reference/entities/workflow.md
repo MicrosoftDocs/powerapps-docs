@@ -1,22 +1,20 @@
 ---
-title: "Workflow table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Workflow table."
-ms.date: 11/07/2020
+title: "Workflow Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Workflow entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Workflow table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# Workflow Entity Reference
 
 Set of logical rules that define the steps necessary to automate a specific business process, task, or set of actions to be performed.
 
@@ -31,7 +29,6 @@ Set of logical rules that define the steps necessary to automate a specific busi
 |Delete|DELETE [*org URI*]/api/data/v9.0/workflows(*workflowid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |ExecuteWorkflow|<xref href="Microsoft.Dynamics.CRM.ExecuteWorkflow?text=ExecuteWorkflow Action" />|<xref:Microsoft.Crm.Sdk.Messages.ExecuteWorkflowRequest>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
-|InitializeModernFlowFromAsyncWorkflow|<xref href="Microsoft.Dynamics.CRM.InitializeModernFlowFromAsyncWorkflow?text=InitializeModernFlowFromAsyncWorkflow Action" />|<xref:Microsoft.Crm.Sdk.Messages.InitializeModernFlowFromAsyncWorkflowRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/workflows(*workflowid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/workflows<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
@@ -41,7 +38,7 @@ Set of logical rules that define the steps necessary to automate a specific busi
 |SetState|PATCH [*org URI*]/api/data/v9.0/workflows(*workflowid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/workflows(*workflowid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +56,9 @@ Set of logical rules that define the steps necessary to automate a specific busi
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AsyncAutoDelete](#BKMK_AsyncAutoDelete)
 - [BusinessProcessType](#BKMK_BusinessProcessType)
@@ -75,7 +72,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [InputParameters](#BKMK_InputParameters)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
-- [IsCustomProcessingStepAllowedForOtherPublishers](#BKMK_IsCustomProcessingStepAllowedForOtherPublishers)
 - [IsTransacted](#BKMK_IsTransacted)
 - [LanguageCode](#BKMK_LanguageCode)
 - [Mode](#BKMK_Mode)
@@ -324,21 +320,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|iscustomizable|
-|RequiredLevel|SystemRequired|
-|Type|ManagedProperty|
-
-
-### <a name="BKMK_IsCustomProcessingStepAllowedForOtherPublishers"></a> IsCustomProcessingStepAllowedForOtherPublishers
-
-**Added by**: MessageProcessorExtension Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Defines whether other publishers can attach custom processing steps to this action|
-|DisplayName|Allow custom processing step for other publishers|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|iscustomprocessingstepallowedforotherpublishers|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
 
@@ -887,9 +868,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ActiveWorkflowId](#BKMK_ActiveWorkflowId)
 - [ActiveWorkflowIdName](#BKMK_ActiveWorkflowIdName)
@@ -1539,11 +1520,9 @@ Listed by **SchemaName**.
 - [lk_newprocess_processid](#BKMK_lk_newprocess_processid)
 - [Workflow_SyncErrors](#BKMK_Workflow_SyncErrors)
 - [workflow_active_workflow](#BKMK_workflow_active_workflow)
+- [msdyn_retrainworkflow_msdyn_toaimodel](#BKMK_msdyn_retrainworkflow_msdyn_toaimodel)
 - [regardingobjectid_process](#BKMK_regardingobjectid_process)
 - [workflow_workflowbinary_Process](#BKMK_workflow_workflowbinary_Process)
-- [catalogassignment_workflow](#BKMK_catalogassignment_workflow)
-- [msdyn_retrainworkflow_msdyn_toaimodel](#BKMK_msdyn_retrainworkflow_msdyn_toaimodel)
-- [msdyn_scheduleinferenceworkflow_msdyn_toaimodel](#BKMK_msdyn_scheduleinferenceworkflow_msdyn_toaimodel)
 - [msdyn_workflow_msdyn_solutionhealthrule_Workflow](#BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow)
 - [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](#BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction)
 
@@ -1743,6 +1722,23 @@ Same as workflow entity [workflow_active_workflow](workflow.md#BKMK_workflow_act
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_msdyn_retrainworkflow_msdyn_toaimodel"></a> msdyn_retrainworkflow_msdyn_toaimodel
+
+**Added by**: AISolution Solution
+
+Same as msdyn_aimodel entity [msdyn_retrainworkflow_msdyn_toaimodel](msdyn_aimodel.md#BKMK_msdyn_retrainworkflow_msdyn_toaimodel) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aimodel|
+|ReferencingAttribute|msdyn_retrainworkflowid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_retrainworkflow_msdyn_toaimodel|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
 
 **Added by**: Microsoft Flow Extensions core package Solution
@@ -1777,57 +1773,6 @@ Same as workflowbinary entity [workflow_workflowbinary_Process](workflowbinary.m
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_catalogassignment_workflow"></a> catalogassignment_workflow
-
-**Added by**: CatalogFramework Solution
-
-Same as catalogassignment entity [catalogassignment_workflow](catalogassignment.md#BKMK_catalogassignment_workflow) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|catalogassignment|
-|ReferencingAttribute|object|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|CatalogAssignments|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_retrainworkflow_msdyn_toaimodel"></a> msdyn_retrainworkflow_msdyn_toaimodel
-
-**Added by**: AISolution Solution
-
-Same as msdyn_aimodel entity [msdyn_retrainworkflow_msdyn_toaimodel](msdyn_aimodel.md#BKMK_msdyn_retrainworkflow_msdyn_toaimodel) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_aimodel|
-|ReferencingAttribute|msdyn_retrainworkflowid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|msdyn_retrainworkflow_msdyn_toaimodel|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_scheduleinferenceworkflow_msdyn_toaimodel"></a> msdyn_scheduleinferenceworkflow_msdyn_toaimodel
-
-**Added by**: AISolution Solution
-
-Same as msdyn_aimodel entity [msdyn_scheduleinferenceworkflow_msdyn_toaimodel](msdyn_aimodel.md#BKMK_msdyn_scheduleinferenceworkflow_msdyn_toaimodel) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|msdyn_aimodel|
-|ReferencingAttribute|msdyn_scheduleinferenceworkflowid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|msdyn_scheduleinferenceworkflow_msdyn_toaimodel|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow"></a> msdyn_workflow_msdyn_solutionhealthrule_Workflow
 
 **Added by**: Power Apps Checker Solution
@@ -1841,7 +1786,7 @@ Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|msdyn_workflow_msdyn_solutionhealthrule_Workflow|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
@@ -1858,7 +1803,7 @@ Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|msdyn_workflow_msdyn_solutionhealthrule_resolutionaction|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
@@ -1913,19 +1858,9 @@ See workflow Entity [workflow_parent_workflow](workflow.md#BKMK_workflow_parent_
 ### <a name="BKMK_workflow_modifiedonbehalfby"></a> workflow_modifiedonbehalfby
 
 See systemuser Entity [workflow_modifiedonbehalfby](systemuser.md#BKMK_workflow_modifiedonbehalfby) One-To-Many relationship.
-<a name="manytomany"></a>
-
-## Many-To-Many Relationships
-
-Relationship details provided where the Workflow entity is the first entity in the relationship. Listed by **SchemaName**.
-
-
-### <a name="BKMK_botcomponent_workflow"></a> botcomponent_workflow
-
-See botcomponent Entity [botcomponent_workflow](botcomponent.md#BKMK_botcomponent_workflow) Many-To-Many Relationship.
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.workflow?text=workflow EntityType" />

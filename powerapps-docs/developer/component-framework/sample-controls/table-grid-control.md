@@ -12,8 +12,8 @@ author: Nkrb
 
 # Implementing table grid component
 
-This sample showcases how to create a simple dataset component, view’s column metadata binding, row binding, more rows from paging and row navigation to form.
-The component header columns and internal row values are bound to the existing views. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_TableGrid).
+This sample showcases how to create a simple dataset component, view’s column metadata binding, record binding, more records from paging and record navigation to form.
+The component header columns and internal record values are bound to the existing views. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_TableGrid).
 
 > [!div class="mx-imgBorder"]
 > ![Table Grid component](../media/table-grid-control.png "Table Grid component")
@@ -113,7 +113,7 @@ type DataSet = ComponentFramework.PropertyTypes.DataSet;
 
 
 		/**
-		 * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+		 * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
 		 */
 		public updateView(context: ComponentFramework.Context<IInputs>): void
@@ -501,9 +501,9 @@ View column info lies at `context.parameters.[dataset_property_name].columns`. I
 
 Record binding :
 
-- The sorted row Ids are at `context.parameters.[dataset_property_name].sortedRecordIds`
-- All row info is at `context.parameters.[dataset_property_name].records` 
-- For each row object, `context.parameters.[dataset_property_name].records[record_Id]` 
+- The sorted record Ids are at `context.parameters.[dataset_property_name].sortedRecordIds`
+- All records info is at `context.parameters.[dataset_property_name].records` 
+- For each record object, `context.parameters.[dataset_property_name].records[record_Id]` 
 - Formatted value could be retrieved at `getFormattedValue` 
 
 Load more page of data if needed :

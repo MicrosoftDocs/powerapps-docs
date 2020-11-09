@@ -35,11 +35,11 @@ stageObj.getNavigationBehavior().allowCreateNew = function () {
 
 **Description**: An object with the `allowCreateNew` property that lets you define whether the **Create** button will be available in a stage so that user can create an instance of entityB from the entityA form in a cross-entity business process flow navigation scenario. 
 
-For example, here is the **Create** button in the **Develop** stage of the **AccountToContactProcess** sample business process flow that lets you create a Contact row from the Account form.
+For example, here is the **Create** button in the **Develop** stage of the **AccountToContactProcess** sample business process flow that lets you create a Contact record from the Account form.
 
 ![Create button in the Develop stage](../../../../media/clientapi_getNavigationBehavior.png)
 
-The `allowCreateNew` property will return **undefined** for business process flow rows that do not implement cross-entity navigation.
+The `allowCreateNew` property will return **undefined** for business process flow records that do not implement cross-entity navigation.
 
 ## Example
 

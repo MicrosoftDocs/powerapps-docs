@@ -44,7 +44,7 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
 <script type="text/jscript" src="../scripts/myScript.js"></script>  
 ```  
   
- To reference a JavaScript from a different publisher, the path must include the customization prefix for that publisher. For example, for the `new_/content/contentpage.htm` page to reference the `MyIsv_/scripts/customscripts.js` page, the `src` column value should be `../../MyIsv_/scripts/customscripts.js`.  
+ To reference a JavaScript from a different publisher, the path must include the customization prefix for that publisher. For example, for the `new_/content/contentpage.htm` page to reference the `MyIsv_/scripts/customscripts.js` page, the `src` attribute value should be `../../MyIsv_/scripts/customscripts.js`.  
   
 ### See also  
  [Client scripting using JavaScript](client-scripting.md)   

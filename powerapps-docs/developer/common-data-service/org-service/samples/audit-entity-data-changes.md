@@ -1,6 +1,6 @@
 ---
-title: "Sample: Audit table data changes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to audit table data changes" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Audit entity data changes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to audit entity data changes" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -15,11 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Audit table data changes
+# Sample: Audit entity data changes
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to enable and disable auditing on an table and its columns, retrieve the data change history of the audited table, and delete the audit rows. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AuditEntityData).
+This sample shows how to enable and disable auditing on an entity and its attributes, retrieve the data change history of the audited entity, and delete the audit records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AuditEntityData).
 
 ## How to run this sample
 
@@ -27,7 +27,7 @@ This sample shows how to enable and disable auditing on an table and its columns
 
 ## What this sample does
 
-The `RetrieveRecordChangeHistoryRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve the audit history for an table.
+The `RetrieveRecordChangeHistoryRequest` message is intended to be used in a scenario where it contains data that is needed to retrieve the audit history for an entity.
 
 
 ## How this sample works
@@ -37,14 +37,14 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. Creates an sample account table.
+2. Creates an sample account entity.
 
 ### Demonstrate
 
-1. Gets the organization's ID from the system user row.
-2. Enabling auditing on organization and also on the sample account table.
-3. The `RetrieveRecordChangeHistoryRequest` retrieves the audit history for the account table and displays the result.
+1. Gets the organization's ID from the system user record.
+2. Enabling auditing on organization and also on the sample account entity.
+3. The `RetrieveRecordChangeHistoryRequest` retrieves the audit history for the account entity and displays the result.
 
 ### Clean up
 
-Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

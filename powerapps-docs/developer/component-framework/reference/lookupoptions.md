@@ -31,7 +31,7 @@ Whether the lookup allows more than one item to be selected.
 
 ### defaultEntityType
 
-The default table type.
+The default entity type.
 
 **Type**: `string`
 
@@ -43,7 +43,7 @@ The default view to use.
 
 ### entityTypes
 
-The table types to display.
+The entity types to display.
 
 **Type**: `string[]`
 

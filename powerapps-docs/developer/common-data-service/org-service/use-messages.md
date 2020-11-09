@@ -23,7 +23,7 @@ All data operations in the organization service are defined as messages. While t
 
 To make your experience better when you write code, all the standard system data operations have a pair of `*Request` and `*Response` classes defined in the SDK assemblies. Each of these classes inherit from the respective <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes and provide a more productive experience for you when you write code.
 
-The following examples show three different ways to create an account table row defined this way:
+The following examples show three different ways to create an account entity record defined this way:
 
 ```csharp
 var account = new Account();
@@ -89,7 +89,7 @@ You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.O
 |Parameter|Description|Messages|  
 |-----------------|-----------------|--------------|  
 |`SolutionUniqueName`|A `String` that specifies the unique name of the solution to which the operation applies. More information: [Dependency tracking for solution components](../dependency-tracking-solution-components.md).|<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> <br /> <xref:Microsoft.Crm.Sdk.Messages.MakeAvailableToOrganizationTemplateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|  
-|`SuppressDuplicateDetection`|A `Boolean` used to disable duplicate detection on a create or update operation. More information: [Use SuppressDuplicateDetection parameter to throw errors when you create or update row](detect-duplicate-data.md#use-suppressduplicatedetection-parameter-to-throw-errors-when-you-create-or-update-row) .|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|
+|`SuppressDuplicateDetection`|A `Boolean` used to disable duplicate detection on a create or update operation. More information: [Use SuppressDuplicateDetection parameter to throw errors when you create or update record](detect-duplicate-data.md#use-suppressduplicatedetection-parameter-to-throw-errors-when-you-create-or-update-record) .|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|
 |`tag`|A value to include within the `ExecutionContext` `SharedVariables` collection. |Any message that can have a plug-in step registered. More information: [Add a Shared Variable from the Organization Service](#add-a-shared-variable-from-the-organization-service)|
   
  The following sample shows how to pass an optional parameter:  
@@ -140,7 +140,7 @@ More information: [Create and use Custom APIs](../custom-api.md)
 
 ### See also
 
-[Table Operations using the Organization service](entity-operations.md)<br />
+[Entity Operations using the Organization service](entity-operations.md)<br />
 [Use ExecuteAsync to execute messages asynchronously](use-executeAsync.md)<br />
 [Execute messages in a single database transaction](use-executetransaction.md)<br />
 [Execute multiple requests using the Organization service](execute-multiple-requests.md)

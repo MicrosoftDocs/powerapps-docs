@@ -30,7 +30,7 @@ This sample shows how to use the paging cookie in a FetchXML query to retrieve s
 
 ## What this sample does
 
-The `IOrganizationService.Retrieve` method is intended to be used in a scenario where it contains data that retrieves all the rows.
+The `IOrganizationService.Retrieve` method is intended to be used in a scenario where it contains data that retrieves all the records.
 
 ## How this sample works
 
@@ -39,7 +39,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Account` method creates an parent account row and also 10 child account rows.
+1. The `Account` method creates an parent account record and also 10 child account records.
 
 ### Demonstrate
 

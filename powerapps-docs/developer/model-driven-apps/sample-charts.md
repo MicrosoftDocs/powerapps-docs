@@ -21,13 +21,13 @@ search.app:
 
 This topic contains sample charts along with the respective data description and presentation XML strings. You can specify the:  
   
--   *Data description XML string* for a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` column for the organization-owned or user-owned chart respectively.  
+-   *Data description XML string* for a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` attribute for the organization-owned or user-owned chart respectively.  
   
--   *Presentation description XML string* for a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization. PresentationDescription` column for the organization-owned or user-owned chart respectively.  
+-   *Presentation description XML string* for a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization. PresentationDescription` attribute for the organization-owned or user-owned chart respectively.  
   
 <a name="ColumnChart"></a>   
 ## Column Chart  
- The following is a column chart that shows the account by industry. We modified the presentation description of the existing Account By Industry default chart available in model-driven apps for the `Account` table to change it to a column chart.  
+ The following is a column chart that shows the account by industry. We modified the presentation description of the existing Account By Industry default chart available in model-driven apps for the `Account` entity to change it to a column chart.  
   
  ![Sample column chart: Accounts by Industry](media/charts-accounts-by-industry.gif "Sample column chart: Accounts by Industry")  
   
@@ -86,7 +86,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="BarChart"></a>   
 ## Bar Chart  
- The following is a bar chart that shows the top 10 customers. This is one of the default charts available in model-driven apps for the `Opportunity` table.  
+ The following is a bar chart that shows the top 10 customers. This is one of the default charts available in model-driven apps for the `Opportunity` entity.  
   
  ![Sample bar chart: Top 10 Customers](media/charts-top-10-customers.gif "Sample bar chart: Top 10 Customers")  
   
@@ -146,7 +146,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="AreaChart"></a>   
 ## Area Chart  
- The following is an area chart that shows the number of rows generated between a given date range.  
+ The following is an area chart that shows the number of records generated between a given date range.  
   
  ![Sample area chart](media/charts-count-of-records-areachart.gif "Sample area chart")  
   
@@ -206,7 +206,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="LineChart"></a>   
 ## Line Chart  
- The following is a line chart that shows the number of leads generated in the last five months. This is one of the default charts available in model-driven apps for the `Lead` table. 
+ The following is a line chart that shows the number of leads generated in the last five months. This is one of the default charts available in model-driven apps for the `Lead` entity. 
   
 ![Sample line chart: Lead Generation Rate](media/lead-generation-rate-chart.png "Sample line chart: Lead Generation Rate") --> 
   
@@ -263,7 +263,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="PieChart"></a>   
 ## Pie Chart  
- The following is a pie chart that shows the total number of leads and their importance. This is one of the default charts available in model-driven apps for the `Lead` table.  
+ The following is a pie chart that shows the total number of leads and their importance. This is one of the default charts available in model-driven apps for the `Lead` entity.  
   
  ![Sample pie chart: Leads by Rating](media/leads-by-source-chart.png "Sample pie chart: Leads by Rating")  
   
@@ -317,7 +317,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="FunnelChart"></a>   
 ## Funnel Chart  
- The following is a funnel chart that shows the sum of estimated revenue in each stage of the sales pipeline. This is one of the default charts available in model-driven apps for the `Opportunity` table.  
+ The following is a funnel chart that shows the sum of estimated revenue in each stage of the sales pipeline. This is one of the default charts available in model-driven apps for the `Opportunity` entity.  
   
  ![Sample funnel chart: Sales Pipeline](media/charts-sales-pipeline-chart.png "Sample funnel chart: Sales Pipeline")  
   

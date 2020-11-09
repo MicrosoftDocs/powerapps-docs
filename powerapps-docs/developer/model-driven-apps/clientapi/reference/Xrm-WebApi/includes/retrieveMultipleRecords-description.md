@@ -1,1 +1,1 @@
-Retrieves a collection of table rows.
+Retrieves a collection of entity records.

@@ -1,22 +1,20 @@
 ---
-title: "msdyn_solutionhealthrule table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_solutionhealthrule table."
-ms.date: 11/07/2020
+title: "msdyn_solutionhealthrule Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_solutionhealthrule entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_solutionhealthrule table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# msdyn_solutionhealthrule Entity Reference
 
 
 
@@ -41,7 +39,8 @@ search.app:
 |SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules(*msdyn_solutionhealthruleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules(*msdyn_solutionhealthruleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -59,9 +58,9 @@ search.app:
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [msdyn_Description](#BKMK_msdyn_Description)
@@ -358,9 +357,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -1018,6 +1017,6 @@ See workflow Entity [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](w
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_solutionhealthrule?text=msdyn_solutionhealthrule EntityType" />

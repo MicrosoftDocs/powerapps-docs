@@ -12,7 +12,7 @@ author: Nkrb
 
 # Create your first component 
 
- In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the column. 
+ In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the field. 
 
 The following steps are required to build a linear slider code component:
 
@@ -66,13 +66,13 @@ Make changes to the predefined manifest file, as shown here:
       <control namespace="SampleNameSpace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="TSLinearInputComponent_Display_Key" description-key="TSLinearInputComponent_Desc_Key" control-type="standard">
      ```
 
-2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of column. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
+2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
 
    - **name**: Name of the property.
    - **display-name-key**: Display name of the property that is displayed on the UI.
    - **description-name-key**: Description of the property that is displayed on the UI. 
-   - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type columns. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
-   - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the column. Input properties are either bound to a column or allow a static value.
+   - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type fields. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
+   - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the field. Input properties are either bound to a field or allow a static value.
    - **required**: Defines whether the property is required.
 
      ```XML
@@ -123,7 +123,7 @@ The next step after implementing the manifest file is to implement the component
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 export class TSLinearInputComponent
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Value of the column is stored and used inside the component
+  // Value of the field is stored and used inside the component
   private _value: number;
   // Power Apps component framework delegate which will be assigned to this object which would be called whenever any update happens.
   private _notifyOutputChanged: () => void;
@@ -388,7 +388,7 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
 
 ## Adding code components in model-driven apps
 
-To add a code component like a linear input component, follow the steps mentioned in the article [Add components to columns and tables](add-custom-controls-to-a-field-or-entity.md).
+To add a code component like a linear input component, follow the steps mentioned in the article [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
 
 ## Adding code components to a canvas app
 

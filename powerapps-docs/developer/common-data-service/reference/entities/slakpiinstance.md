@@ -1,22 +1,20 @@
 ---
-title: "SLAKPIInstance table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SLAKPIInstance table."
-ms.date: 11/07/2020
+title: "SLAKPIInstance Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SLAKPIInstance entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SLAKPIInstance table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# SLAKPIInstance Entity Reference
 
 Service level agreement (SLA) key performance indicator (KPI) instance that is tracked for an individual case
 
@@ -37,7 +35,7 @@ Service level agreement (SLA) key performance indicator (KPI) instance that is t
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/slakpiinstances(*slakpiinstanceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -55,9 +53,9 @@ Service level agreement (SLA) key performance indicator (KPI) instance that is t
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ApplicableFromValue](#BKMK_ApplicableFromValue)
 - [ComputedFailureTime](#BKMK_ComputedFailureTime)
@@ -66,10 +64,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [ElapsedTime](#BKMK_ElapsedTime)
 - [FailureTime](#BKMK_FailureTime)
 - [LastResumeTime](#BKMK_LastResumeTime)
-- [msdyn_ActionExecutionStatus](#BKMK_msdyn_ActionExecutionStatus)
-- [msdyn_calendarid](#BKMK_msdyn_calendarid)
-- [msdyn_prevslakpiinstanceid](#BKMK_msdyn_prevslakpiinstanceid)
-- [msdyn_slaitemid](#BKMK_msdyn_slaitemid)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
@@ -202,82 +196,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |LogicalName|lastresumetime|
 |RequiredLevel|None|
 |Type|DateTime|
-
-
-### <a name="BKMK_msdyn_ActionExecutionStatus"></a> msdyn_ActionExecutionStatus
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|Action Execution Status|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_actionexecutionstatus|
-|RequiredLevel|None|
-|Type|Picklist|
-
-#### msdyn_ActionExecutionStatus Options
-
-|Value|Label|
-|-----|-----|
-|0|None|
-|1|Warning|
-|2|Success|
-
-
-
-### <a name="BKMK_msdyn_calendarid"></a> msdyn_calendarid
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|Applicable Calendar|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_calendarid|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_prevslakpiinstanceid"></a> msdyn_prevslakpiinstanceid
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName|Previous SLAKPI Instance|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_prevslakpiinstanceid|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_msdyn_slaitemid"></a> msdyn_slaitemid
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for SLA KPI Instance associated with SLA Item.|
-|DisplayName|SLAItem|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|msdyn_slaitemid|
-|RequiredLevel|None|
-|Targets|slaitem|
-|Type|Lookup|
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -592,9 +510,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -611,7 +529,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
-- [msdyn_slaitemidName](#BKMK_msdyn_slaitemidName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [RegardingIdName](#BKMK_RegardingIdName)
@@ -850,24 +767,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |Type|String|
 
 
-### <a name="BKMK_msdyn_slaitemidName"></a> msdyn_slaitemidName
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|msdyn_slaitemidname|
-|MaxLength|100|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 |Property|Value|
@@ -1005,7 +904,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [slakpiinstance_contact](#BKMK_slakpiinstance_contact)
 - [lk_slakpiinstancebase_createdby](#BKMK_lk_slakpiinstancebase_createdby)
 - [slakpiinstance_appointment](#BKMK_slakpiinstance_appointment)
-- [msdyn_slaitem_slakpiinstance](#BKMK_msdyn_slaitem_slakpiinstance)
 
 
 ### <a name="BKMK_slakpiinstance_activitypointer"></a> slakpiinstance_activitypointer
@@ -1072,12 +970,8 @@ See systemuser Entity [lk_slakpiinstancebase_createdby](systemuser.md#BKMK_lk_sl
 
 See appointment Entity [slakpiinstance_appointment](appointment.md#BKMK_slakpiinstance_appointment) One-To-Many relationship.
 
-### <a name="BKMK_msdyn_slaitem_slakpiinstance"></a> msdyn_slaitem_slakpiinstance
-
-See slaitem Entity [msdyn_slaitem_slakpiinstance](slaitem.md#BKMK_msdyn_slaitem_slakpiinstance) One-To-Many relationship.
-
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.slakpiinstance?text=slakpiinstance EntityType" />

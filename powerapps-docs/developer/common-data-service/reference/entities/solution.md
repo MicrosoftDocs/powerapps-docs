@@ -1,22 +1,20 @@
 ---
-title: "Solution table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Solution table."
-ms.date: 11/07/2020
+title: "Solution Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Solution entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Solution table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# Solution Entity Reference
 
 A solution which contains CRM customizations.
 
@@ -34,7 +32,7 @@ A solution which contains CRM customizations.
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/solutions(*solutionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -52,9 +50,9 @@ A solution which contains CRM customizations.
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ConfigurationPageId](#BKMK_ConfigurationPageId)
 - [Description](#BKMK_Description)
@@ -63,7 +61,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [SolutionId](#BKMK_SolutionId)
 - [SolutionPackageVersion](#BKMK_SolutionPackageVersion)
 - [SolutionType](#BKMK_SolutionType)
-- [TemplateSuffix](#BKMK_TemplateSuffix)
 - [UniqueName](#BKMK_UniqueName)
 - [Version](#BKMK_Version)
 
@@ -181,25 +178,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 
 
-### <a name="BKMK_TemplateSuffix"></a> TemplateSuffix
-
-**Added by**: Solutions Framework Metadata Solution
-
-|Property|Value|
-|--------|-----|
-|Description|The template suffix of this solution|
-|DisplayName|Suffix|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|templatesuffix|
-|MaxLength|65|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_UniqueName"></a> UniqueName
 
 |Property|Value|
@@ -234,9 +212,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ConfigurationPageIdName](#BKMK_ConfigurationPageIdName)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -781,59 +759,14 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 
 Listed by **SchemaName**.
 
-- [solution_solutioncomponent](#BKMK_solution_solutioncomponent)
-- [solution_parent_solution](#BKMK_solution_parent_solution)
-- [Solution_SyncErrors](#BKMK_Solution_SyncErrors)
 - [FK_CanvasApp_Solution](#BKMK_FK_CanvasApp_Solution)
 - [solution_fieldpermission](#BKMK_solution_fieldpermission)
-- [solution_fieldsecurityprofile](#BKMK_solution_fieldsecurityprofile)
+- [solution_solutioncomponent](#BKMK_solution_solutioncomponent)
 - [solution_privilege](#BKMK_solution_privilege)
+- [solution_parent_solution](#BKMK_solution_parent_solution)
 - [solution_role](#BKMK_solution_role)
-
-
-### <a name="BKMK_solution_solutioncomponent"></a> solution_solutioncomponent
-
-Same as solutioncomponent entity [solution_solutioncomponent](solutioncomponent.md#BKMK_solution_solutioncomponent) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|solutioncomponent|
-|ReferencingAttribute|solutionid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|solution_solutioncomponent|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_solution_parent_solution"></a> solution_parent_solution
-
-Same as solution entity [solution_parent_solution](solution.md#BKMK_solution_parent_solution) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|solution|
-|ReferencingAttribute|parentsolutionid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|solution_parent_solution|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
-
-
-### <a name="BKMK_Solution_SyncErrors"></a> Solution_SyncErrors
-
-Same as syncerror entity [Solution_SyncErrors](syncerror.md#BKMK_Solution_SyncErrors) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|syncerror|
-|ReferencingAttribute|regardingobjectid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|Solution_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+- [Solution_SyncErrors](#BKMK_Solution_SyncErrors)
+- [solution_fieldsecurityprofile](#BKMK_solution_fieldsecurityprofile)
 
 
 ### <a name="BKMK_FK_CanvasApp_Solution"></a> FK_CanvasApp_Solution
@@ -866,19 +799,19 @@ Same as fieldpermission entity [solution_fieldpermission](fieldpermission.md#BKM
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_solution_fieldsecurityprofile"></a> solution_fieldsecurityprofile
+### <a name="BKMK_solution_solutioncomponent"></a> solution_solutioncomponent
 
-Same as fieldsecurityprofile entity [solution_fieldsecurityprofile](fieldsecurityprofile.md#BKMK_solution_fieldsecurityprofile) Many-To-One relationship.
+Same as solutioncomponent entity [solution_solutioncomponent](solutioncomponent.md#BKMK_solution_solutioncomponent) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|fieldsecurityprofile|
+|ReferencingEntity|solutioncomponent|
 |ReferencingAttribute|solutionid|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|solution_fieldsecurityprofile|
+|ReferencedEntityNavigationPropertyName|solution_solutioncomponent|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
 ### <a name="BKMK_solution_privilege"></a> solution_privilege
@@ -896,6 +829,21 @@ Same as privilege entity [solution_privilege](privilege.md#BKMK_solution_privile
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_solution_parent_solution"></a> solution_parent_solution
+
+Same as solution entity [solution_parent_solution](solution.md#BKMK_solution_parent_solution) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solution|
+|ReferencingAttribute|parentsolutionid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|solution_parent_solution|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
 ### <a name="BKMK_solution_role"></a> solution_role
 
 Same as role entity [solution_role](role.md#BKMK_solution_role) Many-To-One relationship.
@@ -907,6 +855,36 @@ Same as role entity [solution_role](role.md#BKMK_solution_role) Many-To-One rela
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|solution_role|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_Solution_SyncErrors"></a> Solution_SyncErrors
+
+Same as syncerror entity [Solution_SyncErrors](syncerror.md#BKMK_Solution_SyncErrors) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|syncerror|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|Solution_SyncErrors|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_solution_fieldsecurityprofile"></a> solution_fieldsecurityprofile
+
+Same as fieldsecurityprofile entity [solution_fieldsecurityprofile](fieldsecurityprofile.md#BKMK_solution_fieldsecurityprofile) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|fieldsecurityprofile|
+|ReferencingAttribute|solutionid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|solution_fieldsecurityprofile|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -957,19 +935,9 @@ See systemuser Entity [lk_solutionbase_createdonbehalfby](systemuser.md#BKMK_lk_
 ### <a name="BKMK_publisher_solution"></a> publisher_solution
 
 See publisher Entity [publisher_solution](publisher.md#BKMK_publisher_solution) One-To-Many relationship.
-<a name="manytomany"></a>
-
-## Many-To-Many Relationships
-
-Relationship details provided where the Solution entity is the first entity in the relationship. Listed by **SchemaName**.
-
-
-### <a name="BKMK_package_solution"></a> package_solution
-
-See package Entity [package_solution](package.md#BKMK_package_solution) Many-To-Many Relationship.
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.solution?text=solution EntityType" />

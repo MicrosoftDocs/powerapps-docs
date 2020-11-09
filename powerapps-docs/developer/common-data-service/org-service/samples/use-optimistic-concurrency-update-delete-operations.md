@@ -30,7 +30,7 @@ This sample shows how to use optimistic concurrency for update and delete operat
 
 ## What this sample does
 
-The `UpdateRequest` class is intended to be used in a scenario where it contains data that is needed to update an existing row.
+The `UpdateRequest` class is intended to be used in a scenario where it contains data that is needed to update an existing record.
 
 ## How this sample works
 
@@ -39,13 +39,13 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Account` method creates an account row.
+1. The `Account` method creates an account record.
 
 ### Demonstrate
 
-1. Retrieves the account row that is created in the [Setup](#setup).
-1. Updates the account row by increasing the `creditlimit` attribute.
-1. The `UpdateRequest` method sets the request's concurrency behavior to check for a row version match.
+1. Retrieves the account record that is created in the [Setup](#setup).
+1. Updates the account record by increasing the `creditlimit` attribute.
+1. The `UpdateRequest` method sets the request's concurrency behaviour to check for a row version match.
 
 ### Clean up
 

@@ -1,6 +1,6 @@
 ---
 title: ClearSelectedRecordIds | Microsoft Docs
-description: Provides information for clearSelectedRecordIds method.
+description: 
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: e8c9f86c-55cd-45ad-92a7-985d61040b34
 ---
 
-Clears the selected row ids list.
+Clears the selected record ids list.

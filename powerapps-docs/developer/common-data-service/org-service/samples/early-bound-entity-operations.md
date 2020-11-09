@@ -1,5 +1,5 @@
 ---
-title: "Sample: Create, update related rows early bound(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Create, update related records early bound(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create, retrieve, update, and delete operations on an account using the early bound class. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Early-bound table operations
+# Sample: Early-bound entity operations
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
@@ -58,17 +58,17 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks the current version of the org.
-1. Creates the sample account rows required for this sample.
+1. Creates the sample account records required for this sample.
 
 ### Demonstrate
 
 1. Instantiate an account object.
-1. Retrieves the account containing its columns .
-1. Retrieves the version number of the account.
-1. Updates the account with postal1 code column. 
+1. Retrieves the account containing its attributes .
+1. Rettrieves the version number of the account.
+1. Updates the account with postal1 code attribute. 
 
 
 ### Clean up
 
-Display an option to delete the rows created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
 

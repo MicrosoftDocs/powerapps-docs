@@ -24,9 +24,9 @@ Returns information about the current organization settings.
 
 The **organizationSettings** object provides following properties.
 
-## columns
+## attributes
 
-Returns columns and their values as `key:value` pairs that are available for the organization table. Additional values will be available as columns if they are specified as column dependencies in the web resource dependency list. The `key` will be the column logical name.
+Returns attributes and their values as `key:value` pairs that are available for the organization entity. Additional values will be available as attributes if they are specified as attribute dependencies in the web resource dependency list. The `key` will be the attribute logical name.
 
 ### Syntax
 
@@ -36,7 +36,7 @@ Returns columns and their values as `key:value` pairs that are available for the
 
 **Type**: Object
 
-**Description**: An object with columns and their values.
+**Description**: An object with attributes and their values.
 
 ## baseCurrencyId 
 
@@ -56,7 +56,7 @@ Deprecated; use [organizationSettings.baseCurrency](#basecurrency) instead to ac
 
 ## baseCurrency 
 
-Returns a lookup object containing the ID, name, and table type of the base currency for the current organization. This method is supported only on the Unified Interface.
+Returns a lookup object containing the ID, name, and entity type of the base currency for the current organization. This method is supported only on the Unified Interface.
 
 ### Syntax
 

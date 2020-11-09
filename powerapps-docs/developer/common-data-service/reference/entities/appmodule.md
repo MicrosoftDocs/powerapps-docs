@@ -1,22 +1,20 @@
 ---
-title: "AppModule table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AppModule table."
-ms.date: 11/07/2020
+title: "AppModule Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the AppModule entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# AppModule table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# AppModule Entity Reference
 
 A role-based, modular business app that provides task-based functionality for a particular area of work.
 
@@ -36,7 +34,7 @@ A role-based, modular business app that provides task-based functionality for a 
 |Update|PATCH [*org URI*]/api/data/v9.0/appmodules(*appmoduleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |ValidateApp|<xref href="Microsoft.Dynamics.CRM.ValidateApp?text=ValidateApp Function" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateAppRequest>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -54,9 +52,9 @@ A role-based, modular business app that provides task-based functionality for a 
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AppModuleId](#BKMK_AppModuleId)
 - [AppModuleIdUnique](#BKMK_AppModuleIdUnique)
@@ -77,9 +75,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PublishedOn](#BKMK_PublishedOn)
 - [PublisherId](#BKMK_PublisherId)
-- [statecode](#BKMK_statecode)
-- [statuscode](#BKMK_statuscode)
-- [UniqueName](#BKMK_UniqueName)
 - [URL](#BKMK_URL)
 - [WebResourceId](#BKMK_WebResourceId)
 - [WelcomePageId](#BKMK_WelcomePageId)
@@ -402,71 +397,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |Type|Lookup|
 
 
-### <a name="BKMK_statecode"></a> statecode
-
-**Added by**: App Module Metadata Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Status of the Model-driven App|
-|DisplayName|Status|
-|IsValidForCreate|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|statecode|
-|RequiredLevel|SystemRequired|
-|Type|State|
-
-#### statecode Options
-
-|Value|Label|DefaultStatus|InvariantName|
-|-----|-----|-------------|-------------|
-|0|Active|1|Active|
-|1|Inactive|2|Inactive|
-
-
-
-### <a name="BKMK_statuscode"></a> statuscode
-
-**Added by**: App Module Metadata Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Reason for the status of the Model-driven App|
-|DisplayName|Status Reason|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|statuscode|
-|RequiredLevel|SystemRequired|
-|Type|Status|
-
-#### statuscode Options
-
-|Value|Label|State|
-|-----|-----|-----|
-|1|Active|0|
-|2|Inactive|1|
-|3|Deleted|1|
-
-
-
-### <a name="BKMK_UniqueName"></a> UniqueName
-
-|Property|Value|
-|--------|-----|
-|Description|Unique Name of App Module|
-|DisplayName|Unique Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|uniquename|
-|MaxLength|100|
-|RequiredLevel|SystemRequired|
-|Type|String|
-
-
 ### <a name="BKMK_URL"></a> URL
 
 |Property|Value|
@@ -510,9 +440,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -998,6 +928,6 @@ See serviceplan Entity [serviceplan_appmodule](serviceplan.md#BKMK_serviceplan_a
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appmodule?text=appmodule EntityType" />

@@ -1,22 +1,20 @@
 ---
-title: "ImportMap table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ImportMap table."
-ms.date: 11/07/2020
+title: "ImportMap Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ImportMap entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ImportMap table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# ImportMap Entity Reference
 
 Data map used in import.
 
@@ -40,7 +38,7 @@ Data map used in import.
 |SetState|PATCH [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -58,9 +56,9 @@ Data map used in import.
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Description](#BKMK_Description)
 - [EntitiesPerFile](#BKMK_EntitiesPerFile)
@@ -386,9 +384,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -1128,8 +1126,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |9810|Entity Key|
 |9811|Entity Relationship|
 |9812|Managed Property|
-|9813|Relationship Entity|
-|9814|Relationship Attribute|
 |9866|Mobile Offline Profile|
 |9867|Mobile Offline Profile Item|
 |9868|Mobile Offline Profile Item Association|
@@ -1171,74 +1167,37 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |10001|Solution History Data Source|
 |10002|Solution Component Attribute Configuration|
 |10003|Solution Component Configuration|
-|10004|Solution Component Relationship Configuration|
-|10005|Component Layer|
-|10006|Component Layer Data Source|
-|10007|Package|
-|10009|StageSolutionUpload|
-|10010|ExportSolutionUpload|
-|10011|Solution Component Summary|
-|10012|Solution Component Data Source|
-|10013|ProvisionLanguageForUser|
-|10014|CascadeGrantRevokeAccessRecordsTracker|
-|10015|CascadeGrantRevokeAccessVersionTracker|
-|10017|ApplicationUser|
-|10020|Model-Driven App Element|
-|10021|Model-Driven App Component Node's Edge|
-|10022|Model-Driven App Component Node|
-|10023|Model-Driven App Setting|
-|10024|Setting Definition|
-|10025|CanvasApp Extended Metadata|
-|10026|OData v4 Data Source|
-|10027|ProcessStageParameter|
-|10028|Workflow Binary|
-|10029|Connection Reference|
-|10030|Help Page|
-|10031|BotContent|
-|10032|ConversationTranscript|
-|10033|Chatbot|
-|10034|Chatbot subcomponent|
-|10038|PDF Setting|
-|10039|Service Configuration|
-|10040|SLAKPI|
-|10041|Knowledge Federated Article|
-|10042|Knowledge FederatedArticle Incident|
-|10043|Search provider|
-|10044|Knowledge Article Image|
-|10045|Knowledge Interaction Insight|
-|10046|Knowledge Search Insight|
-|10047|Knowledge Article Template|
-|10048|Catalog|
-|10049|Catalog Assignment|
-|10050|Internal Catalog Assignment|
-|10051|Custom API|
-|10052|Custom API Request Parameter|
-|10053|Custom API Response Property|
-|10054|Data Lake Folder|
-|10055|Data Lake Folder Permission|
-|10056|Data Lake Workspace|
-|10057|Data Lake Workspace Permission|
-|10058|Rich Text Attachment|
-|10059|NonRelational Data Source|
-|10060|Search Telemetry|
-|10061|AI Builder Dataset|
-|10062|AI Builder Dataset File|
-|10063|AI Builder Dataset Record|
-|10064|AI Builder Datasets Container|
-|10065|AI Builder File|
-|10066|AI Builder File Attached Data|
-|10067|AI Form Processing Document|
-|10068|AI Object Detection Image|
-|10069|AI Object Detection Label|
-|10070|AI Object Detection Bounding Box|
-|10071|AI Object Detection Image Mapping|
-|10073|Analysis Component|
-|10074|Analysis Job|
-|10075|Analysis Result|
-|10076|Analysis Result Detail|
-|10077|Solution Health Rule|
-|10078|Solution Health Rule Argument|
-|10079|Solution Health Rule Set|
+|10004|Component Layer|
+|10005|Component Layer Data Source|
+|10006|StageSolutionUpload|
+|10008|Solution Component Summary|
+|10009|Solution Component Data Source|
+|10010|Knowledge Article Image|
+|10011|Knowledge Article Template|
+|10012|ApiSettings|
+|10013|OData v4 Data Source|
+|10014|AI Builder Dataset|
+|10015|AI Builder Dataset File|
+|10016|AI Builder Dataset Record|
+|10017|AI Builder Datasets Container|
+|10018|AI Builder File|
+|10019|AI Builder File Attached Data|
+|10020|AI Form Processing Document|
+|10021|AI Object Detection Image|
+|10022|AI Object Detection Label|
+|10023|AI Object Detection Bounding Box|
+|10024|AI Object Detection Image Mapping|
+|10026|ProcessStageParameter|
+|10027|Workflow Binary|
+|10028|Connection Reference|
+|10029|Help Page|
+|10030|Analysis Component|
+|10031|Analysis Job|
+|10032|Analysis Result|
+|10033|Analysis Result Detail|
+|10034|Solution Health Rule|
+|10035|Solution Health Rule Argument|
+|10036|Solution Health Rule Set|
 
 
 <a name="onetomany"></a>
@@ -1421,6 +1380,6 @@ See systemuser Entity [lk_importmapbase_modifiedby](systemuser.md#BKMK_lk_import
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.importmap?text=importmap EntityType" />

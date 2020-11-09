@@ -1,2 +1,2 @@
-Invokes the device microphone to row audio.
+Invokes the device microphone to record audio.
 

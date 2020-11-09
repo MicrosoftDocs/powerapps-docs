@@ -34,12 +34,12 @@ There are 5 types of image web resources:
 ## Capabilities of image web resources  
  With image web resources you can add images where you need them. Common uses include the following:  
   
-- Custom table icons  
+- Custom entity icons  
 - Icons for custom Ribbon controls and `SiteMap` subareas  
-- Decorative graphics for table forms and webpage web resources.  
+- Decorative graphics for entity forms and webpage web resources.  
 - Background images that are used by CSS web resources.  
 
-Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. The advantage of vector images over other image web resources is that they scale. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom table instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.
+Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. The advantage of vector images over other image web resources is that they scale. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom entity instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.
 
 > [!NOTE]
 > Vector Format (SVG) web resources are treated like the [Script (JScript)](/powerapps/developer/model-driven-apps/script-jscript-web-resources) web resources, and carry the same security risks as Script (JScript) web resources because SVG files allow JScript embedding.
@@ -60,9 +60,9 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
 <a name="BKMK_ReferenceFromForm"></a>   
 ## Reference an image web resource from a  form  
   
-#### Add an image to a table form  
+#### Add an image to an entity form  
   
-1.  Navigate to the form editor for a table.  
+1.  Navigate to the form editor for an entity.  
   
 2.  Select where you want to add the image in the form.  
   

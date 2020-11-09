@@ -25,7 +25,7 @@ In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpr
   
 |Property|Description|
 |-|-|
-|<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Conditions>|Gets or sets condition expressions that include columns, condition operators, and column values.|  
+|<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Conditions>|Gets or sets condition expressions that include attributes, condition operators, and attribute values.|  
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.FilterOperator>|Gets or sets logical `AND/OR` filter operators. This is set by using the <xref:Microsoft.Xrm.Sdk.Query.LogicalOperator> enumeration.|  
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters>|Gets or sets a hierarchy of condition and logical filter expressions that filter the results of the query.|  
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter>|Gets or sets a value that indicates whether the expression is part of a quick find query.|  
@@ -68,21 +68,21 @@ Console.WriteLine("---------------------------------------");
   
 ## About the IsQuickFindFilter property  
 
- You can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property, that is analogous to the `isquickfindfields` column that exists on the `filter` node in Fetch XML. When a Fetch query is saved, this is stored in the `SavedQuery` and `UserQuery` entities `IsQuickFind` properties. The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property was added to provide consistency between Query Expression and Fetch XML queries.  
+ You can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property, that is analogous to the `isquickfindfields` attribute that exists on the `filter` node in Fetch XML. When a Fetch query is saved, this is stored in the `SavedQuery` and `UserQuery` entities `IsQuickFind` properties. The <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property was added to provide consistency between Query Expression and Fetch XML queries.  
   
  The following rules apply to the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property:  
   
--   This column can only be set to `true` for filter expressions with a logical operator of type <xref:Microsoft.Xrm.Sdk.Query.LogicalOperator>.`Or`. If it is set for expressions with a logical operator of type <xref:Microsoft.Xrm.Sdk.Query.LogicalOperator>.`And`, the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property is ignored.  
+-   This field can only be set to `true` for filter expressions with a logical operator of type <xref:Microsoft.Xrm.Sdk.Query.LogicalOperator>.`Or`. If it is set for expressions with a logical operator of type <xref:Microsoft.Xrm.Sdk.Query.LogicalOperator>.`And`, the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> property is ignored.  
   
 -   Only one filter expression in a filter expression hierarchy can be set with <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> = **true**. If more than one is found, an exception is thrown.  
   
 -   If a filter expression has <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> set to **true**, it cannot have any child filter expression properties, it can only have <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> properties. If you add a child filter expression, an exception is thrown.  
   
--   All condition expressions related to a filter expression with <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> set to **true** must be single non-null value conditions. In other words, given that a condition is made up of column, operator, and value, only conditions where the value property is a single value that is not **null** are supported. In addition, the only condition operators supported on these condition expressions are ones that work with a single value that is not null. If a **null** value or multiple values are detected, an exception is thrown.  
+-   All condition expressions related to a filter expression with <xref:Microsoft.Xrm.Sdk.Query.FilterExpression.IsQuickFindFilter> set to **true** must be single non-null value conditions. In other words, given that a condition is made up of attribute, operator, and value, only conditions where the value property is a single value that is not **null** are supported. In addition, the only condition operators supported on these condition expressions are ones that work with a single value that is not null. If a **null** value or multiple values are detected, an exception is thrown.  
   
 ### See also  
 
  [Building Queries with QueryExpression](build-queries-with-queryexpression.md)   
- [Use a left outer join in QueryExpression to query for rows "not in"](use-left-outer-join-queryexpression-query-records-not-in.md)   
+ [Use a left outer join in QueryExpression to query for records "not in"](use-left-outer-join-queryexpression-query-records-not-in.md)   
  [Using the ConditionExpression Class](use-conditionexpression-class.md)   
  <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>

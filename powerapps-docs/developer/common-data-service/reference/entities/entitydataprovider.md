@@ -1,22 +1,20 @@
 ---
-title: "EntityDataProvider table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the EntityDataProvider table."
-ms.date: 11/07/2020
+title: "EntityDataProvider Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the EntityDataProvider entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# EntityDataProvider table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# EntityDataProvider Entity Reference
 
 Developers can register plug-ins on a data provider to enable data access for virtual entities in the system.
 
@@ -31,7 +29,7 @@ Developers can register plug-ins on a data provider to enable data access for vi
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/entitydataproviders<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/entitydataproviders(*entitydataproviderid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,11 +47,10 @@ Developers can register plug-ins on a data provider to enable data access for vi
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [CreateMultiplePlugin](#BKMK_CreateMultiplePlugin)
 - [CreatePlugin](#BKMK_CreatePlugin)
 - [DataSourceLogicalName](#BKMK_DataSourceLogicalName)
 - [DeletePlugin](#BKMK_DeletePlugin)
@@ -62,28 +59,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
-- [RetrieveEntityChangesPlugin](#BKMK_RetrieveEntityChangesPlugin)
 - [RetrieveMultiplePlugin](#BKMK_RetrieveMultiplePlugin)
 - [RetrievePlugin](#BKMK_RetrievePlugin)
-- [UpdateMultiplePlugin](#BKMK_UpdateMultiplePlugin)
 - [UpdatePlugin](#BKMK_UpdatePlugin)
-- [UpsertMultiplePlugin](#BKMK_UpsertMultiplePlugin)
-- [UpsertPlugin](#BKMK_UpsertPlugin)
-
-
-### <a name="BKMK_CreateMultiplePlugin"></a> CreateMultiplePlugin
-
-**Added by**: EntityDataProviderExtensions Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Contains the createmultipleplugin id that should be run when CreateMultiple is invoked|
-|DisplayName|Contains the createmultipleplugin id that should be run when CreateMultiple is invoked|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|createmultipleplugin|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_CreatePlugin"></a> CreatePlugin
@@ -204,21 +182,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |Type|String|
 
 
-### <a name="BKMK_RetrieveEntityChangesPlugin"></a> RetrieveEntityChangesPlugin
-
-**Added by**: EntityDataProviderExtensions Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Contains the retrieveentitychangesplugin id that should be run when RetrieveEntityChanges is invoked|
-|DisplayName|Contains the retrieveentitychangesplugin id that should be run when RetrieveEntityChanges is invoked|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|retrieveentitychangesplugin|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
-
 ### <a name="BKMK_RetrieveMultiplePlugin"></a> RetrieveMultiplePlugin
 
 |Property|Value|
@@ -245,21 +208,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |Type|Uniqueidentifier|
 
 
-### <a name="BKMK_UpdateMultiplePlugin"></a> UpdateMultiplePlugin
-
-**Added by**: EntityDataProviderExtensions Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Contains the updatemultipleplugin id that should be run when UpdateMultiple is invoked|
-|DisplayName|Contains the updatemultipleplugin id that should be run when UpdateMultiple is invoked|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|updatemultipleplugin|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
-
 ### <a name="BKMK_UpdatePlugin"></a> UpdatePlugin
 
 |Property|Value|
@@ -272,41 +220,11 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
-
-### <a name="BKMK_UpsertMultiplePlugin"></a> UpsertMultiplePlugin
-
-**Added by**: EntityDataProviderExtensions Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Contains the upsertmultipleplugin id that should be run when UpsertMultiple is invoked|
-|DisplayName|Contains the upsertmultipleplugin id that should be run when UpsertMultiple is invoked|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|upsertmultipleplugin|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
-
-### <a name="BKMK_UpsertPlugin"></a> UpsertPlugin
-
-**Added by**: EntityDataProviderExtensions Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Contains the upsertplugin id that should be run when Upsert is invoked|
-|DisplayName|Contains the upsertplugin id that should be run when Upsert is invoked|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|upsertplugin|
-|RequiredLevel|None|
-|Type|Uniqueidentifier|
-
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [EntityDataProviderIdUnique](#BKMK_EntityDataProviderIdUnique)
@@ -442,6 +360,6 @@ See organization Entity [organization_entitydataprovider](organization.md#BKMK_o
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.entitydataprovider?text=entitydataprovider EntityType" />

@@ -1,22 +1,20 @@
 ---
-title: "Role table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Role table."
-ms.date: 11/07/2020
+title: "Role Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Role entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Role table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# Role Entity Reference
 
 Grouping of security privileges. Users are assigned roles that authorize their access to the Microsoft CRM system.
 
@@ -35,7 +33,7 @@ Grouping of security privileges. Users are assigned roles that authorize their a
 |RetrieveRolePrivilegesRole|<xref href="Microsoft.Dynamics.CRM.RetrieveRolePrivilegesRole?text=RetrieveRolePrivilegesRole Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRolePrivilegesRoleRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -53,9 +51,9 @@ Grouping of security privileges. Users are assigned roles that authorize their a
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [BusinessUnitId](#BKMK_BusinessUnitId)
 - [CanBeDeleted](#BKMK_CanBeDeleted)
@@ -141,7 +139,7 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 |Value|Label|
 |-----|-----|
-|0|Team privileges only|
+|0|Default - Team privileges only|
 |1|Direct User (Basic) access level and Team privileges|
 
 
@@ -193,9 +191,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [BusinessUnitIdName](#BKMK_BusinessUnitIdName)
 - [ComponentState](#BKMK_ComponentState)
@@ -775,8 +773,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_role_createdonbehalfby](#BKMK_lk_role_createdonbehalfby)
 - [lk_role_modifiedonbehalfby](#BKMK_lk_role_modifiedonbehalfby)
 - [role_parent_root_role](#BKMK_role_parent_root_role)
-- [lk_rolebase_createdby](#BKMK_lk_rolebase_createdby)
 - [solution_role](#BKMK_solution_role)
+- [lk_rolebase_createdby](#BKMK_lk_rolebase_createdby)
 
 
 ### <a name="BKMK_lk_rolebase_modifiedby"></a> lk_rolebase_modifiedby
@@ -807,13 +805,13 @@ See systemuser Entity [lk_role_modifiedonbehalfby](systemuser.md#BKMK_lk_role_mo
 
 See role Entity [role_parent_root_role](role.md#BKMK_role_parent_root_role) One-To-Many relationship.
 
-### <a name="BKMK_lk_rolebase_createdby"></a> lk_rolebase_createdby
-
-See systemuser Entity [lk_rolebase_createdby](systemuser.md#BKMK_lk_rolebase_createdby) One-To-Many relationship.
-
 ### <a name="BKMK_solution_role"></a> solution_role
 
 See solution Entity [solution_role](solution.md#BKMK_solution_role) One-To-Many relationship.
+
+### <a name="BKMK_lk_rolebase_createdby"></a> lk_rolebase_createdby
+
+See systemuser Entity [lk_rolebase_createdby](systemuser.md#BKMK_lk_rolebase_createdby) One-To-Many relationship.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -824,7 +822,6 @@ Relationship details provided where the Role entity is the first entity in the r
 - [roleprivileges_association](#BKMK_roleprivileges_association)
 - [appmoduleroles_association](#BKMK_appmoduleroles_association)
 - [teamroles_association](#BKMK_teamroles_association)
-- [applicationuserrole](#BKMK_applicationuserrole)
 
 
 ### <a name="BKMK_systemuserroles_association"></a> systemuserroles_association
@@ -843,12 +840,8 @@ See appmodule Entity [appmoduleroles_association](appmodule.md#BKMK_appmodulerol
 
 See team Entity [teamroles_association](team.md#BKMK_teamroles_association) Many-To-Many Relationship.
 
-### <a name="BKMK_applicationuserrole"></a> applicationuserrole
-
-See applicationuser Entity [applicationuserrole](applicationuser.md#BKMK_applicationuserrole) Many-To-Many Relationship.
-
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.role?text=role EntityType" />

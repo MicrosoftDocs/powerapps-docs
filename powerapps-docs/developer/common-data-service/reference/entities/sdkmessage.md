@@ -1,22 +1,20 @@
 ---
-title: "SdkMessage table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SdkMessage table."
-ms.date: 11/07/2020
+title: "SdkMessage Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SdkMessage entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SdkMessage table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# SdkMessage Entity Reference
 
 Message that is supported by the SDK.
 
@@ -28,7 +26,7 @@ Message that is supported by the SDK.
 |Retrieve|GET [*org URI*]/api/data/v9.0/sdkmessages(*sdkmessageid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sdkmessages<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -46,14 +44,13 @@ Message that is supported by the SDK.
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AutoTransact](#BKMK_AutoTransact)
 - [Availability](#BKMK_Availability)
 - [CategoryName](#BKMK_CategoryName)
-- [ExecutePrivilegeName](#BKMK_ExecutePrivilegeName)
 - [Expand](#BKMK_Expand)
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsActive](#BKMK_IsActive)
@@ -116,24 +113,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |LogicalName|categoryname|
 |MaxLength|25|
 |RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_ExecutePrivilegeName"></a> ExecutePrivilegeName
-
-**Added by**: API messages extension solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Name of the privilege that allows execution of the SDK message|
-|DisplayName|Execute Privilege Name|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|executeprivilegename|
-|MaxLength|100|
-|RequiredLevel|None|
 |Type|String|
 
 
@@ -301,9 +280,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
@@ -727,7 +706,6 @@ Listed by **SchemaName**.
 
 - [sdkmessageid_sdkmessageprocessingstep](#BKMK_sdkmessageid_sdkmessageprocessingstep)
 - [sdkmessageid_sdkmessagefilter](#BKMK_sdkmessageid_sdkmessagefilter)
-- [sdkmessage_customapi](#BKMK_sdkmessage_customapi)
 
 
 ### <a name="BKMK_sdkmessageid_sdkmessageprocessingstep"></a> sdkmessageid_sdkmessageprocessingstep
@@ -758,23 +736,6 @@ Same as sdkmessagefilter entity [sdkmessageid_sdkmessagefilter](sdkmessagefilter
 |ReferencedEntityNavigationPropertyName|sdkmessageid_sdkmessagefilter|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_sdkmessage_customapi"></a> sdkmessage_customapi
-
-**Added by**: Custom API Framework Solution
-
-Same as customapi entity [sdkmessage_customapi](customapi.md#BKMK_sdkmessage_customapi) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|customapi|
-|ReferencingAttribute|sdkmessageid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|CustomAPIId|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -811,6 +772,6 @@ See systemuser Entity [modifiedby_sdkmessage](systemuser.md#BKMK_modifiedby_sdkm
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sdkmessage?text=sdkmessage EntityType" />

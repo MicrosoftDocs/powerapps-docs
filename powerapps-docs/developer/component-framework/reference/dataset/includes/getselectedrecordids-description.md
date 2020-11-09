@@ -1,6 +1,6 @@
 ---
 title: GetSelectedRecordIds | Microsoft Docs
-description: Provides information for getSelectedRecordIds method.
+description: 
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: b360d5aa-4cfb-4504-a404-62a7913c803f
 ---
 
-Retrieves all the selected row ids.
+Retrieves all the selected record ids.

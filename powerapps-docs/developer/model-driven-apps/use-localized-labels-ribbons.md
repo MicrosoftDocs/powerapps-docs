@@ -37,7 +37,7 @@ Although Ribbon elements that display text allow for direct entry of text, it is
  <LocLabel Id="MyISV.account.SendToOtherSystem.ToolTip">  
   <Titles>  
    <Title languagecode="1033"  
-          description="Sends this Row to another system" />  
+          description="Sends this Record to another system" />  
   </Titles>  
  </LocLabel>  
 </LocLabels>  

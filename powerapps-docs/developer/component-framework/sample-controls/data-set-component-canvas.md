@@ -15,7 +15,7 @@ ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 
 # Implementing data-set component for canvas apps
 
-This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get column metadata, row data, page through data, and handle navigation. 
+This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get column metadata, record data, page through data, and handle navigation. 
 
  You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_PropertySetTableControl).
 
@@ -124,7 +124,7 @@ export class TSPropertySetTableControl implements ComponentFramework.StandardCon
 		container.appendChild(this.mainContainer);
 	}
 /**
- * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+ * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
  * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
  */
 public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -555,13 +555,13 @@ The `context.parameters.[dataset_property_name].paging` method provides paging f
 
 ### PropertySets
 
-In this sample component, two property sets are defined in its manifest, `samplePropertySet` and `samplePropertySet2`. Users can see two empty columns before adding any column columns to the component. These are the property-set columns, which can be used to access columns defined in the corresponding property using the expression input. For a property-set, the corresponding column order will be 0.
+In this sample component, two property sets are defined in its manifest, `samplePropertySet` and `samplePropertySet2`. Users can see two empty columns before adding any column fields to the component. These are the property-set columns, which can be used to access columns defined in the corresponding property using the expression input. For a property-set, the corresponding column order will be 0.
 
 > [!div class="mx-imgBorder"]
 > ![Property Set Configuration](../media/property-set-configuration.png)
 
 > [!div class="mx-imgBorder"]
-> ![Property Set view columns](../media/property-set-view-fields.png)
+> ![Property Set view fields](../media/property-set-view-fields.png)
 
 ### Sizing
 

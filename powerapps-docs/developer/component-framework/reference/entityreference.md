@@ -25,13 +25,13 @@ Model-driven apps
 
 ### etn
 
-The table type name. Read-only.
+The entity type name. Read-only.
 
 **Type**: `string`
 
 ### id
 
-The row id. Read-only.
+The record id. Read-only.
 
 **Type**: `object`
 
@@ -43,7 +43,7 @@ The `id` object contains the following property:
 
 ### name
 
-The name of the table reference. Read-only.
+The name of the entity reference. Read-only.
 
 **Type**: `string`
 

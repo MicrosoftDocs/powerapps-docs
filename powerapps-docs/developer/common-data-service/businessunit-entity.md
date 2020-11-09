@@ -1,8 +1,8 @@
 ---
-title: "BusinessUnit table (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "BusinessUnit entity (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "An organization in Common Data Service, such as a holding company or a corporation, is made up of business units." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/09/2020
+ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# BusinessUnit table
+# BusinessUnit entity
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -31,5 +31,5 @@ An organization in Common Data Service, such as a holding company or a corporati
 
 ### See also
 
-[BusinessUnit table reference](reference/entities/businessunit.md)
+[BusinessUnit Entity Reference](reference/entities/businessunit.md)
 [Security entities](security-model.md)

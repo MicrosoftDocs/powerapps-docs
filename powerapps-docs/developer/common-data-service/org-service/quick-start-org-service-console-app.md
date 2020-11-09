@@ -129,10 +129,10 @@ You have successfully connected to the organization service.
 
 ## Next Steps
 
-These articles will explain how to work with Common Data Service tables:
+These articles will explain how to work with Common Data Service entities:
 
-[Table Operations using the Organization service](entity-operations.md)<br />
-[Create tables using the Organization Service](entity-operations-create.md)<br />
-[Retrieve an table using the Organization Service](entity-operations-retrieve.md)<br />
-[Update and Delete tables using the Organization Service](entity-operations-update-delete.md)<br />
-[Associate and disassociate tables using the Organization Service](entity-operations-associate-disassociate.md)
+[Entity Operations using the Organization service](entity-operations.md)<br />
+[Create entities using the Organization Service](entity-operations-create.md)<br />
+[Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
+[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
+[Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)

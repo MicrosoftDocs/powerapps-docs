@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[./includes/getActivePath-description.md](./includes/getActivePath-description.md)]
 
-The active path represents stages currently rendered in the process control based on the branching rules and current data in the row.
+The active path represents stages currently rendered in the process control based on the branching rules and current data in the record.
 
 ## Syntax
 
@@ -76,7 +76,7 @@ var Sdk = window.Sdk || {};
 }).call(Sdk);
 ```
 
-When the sample runs in the browser, you can use the developer tools of the browser to view the text written to the console. For example, when this sample is run in the Opportunity table form with the Opportunity Sales Process, the following is written to the console:
+When the sample runs in the browser, you can use the developer tools of the browser to view the text written to the console. For example, when this sample is run in the Opportunity entity form with the Opportunity Sales Process, the following is written to the console:
 
 ```
 Stage Index: 0

@@ -28,11 +28,11 @@ search.app:
 
 **Type**: Lookup object.
 
-**Description**: The returned object has following three columns:
+**Description**: The returned object has following three attributes:
 
-- **entityType**: String. Logical name of the table row. For example, "account".
-- **id**: String. GUID value of the table row.
-- **name**: (Optional) String. Name of the table row. 
+- **entityType**: String. Logical name of the entity record. For example, "account".
+- **id**: String. GUID value of the entity record.
+- **name**: (Optional) String. Name of the entity record. 
 
 
 

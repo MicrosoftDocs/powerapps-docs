@@ -1,6 +1,6 @@
 ---
 title: getValue | Microsoft Docs
-description: Provides information for getValue method.
+description: 
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -29,7 +29,7 @@ getvalue-description.md
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|`columnName`|`String`|Yes|Logical name of the table column.|
+|`columnName`|`String`|Yes|Logical name of the entity attribute.|
 
 ## Return Value
 

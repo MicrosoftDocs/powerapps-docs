@@ -1,1 +1,1 @@
-Opens a table form or a quick create form.
+Opens an entity form or a quick create form.

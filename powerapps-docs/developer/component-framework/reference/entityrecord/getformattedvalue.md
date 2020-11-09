@@ -1,6 +1,6 @@
 ---
 title: getFormattedValue | Microsoft Docs
-description: Provides information for getFormattedValue method.
+description: 
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -29,7 +29,7 @@ Model-driven apps
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|`columnName`|`string`|Yes|Column name of the row.|
+|`columnName`|`string`|Yes|Column name of the record|
 
 ## Return Value
 

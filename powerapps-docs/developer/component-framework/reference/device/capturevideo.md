@@ -1,6 +1,6 @@
 ---
 title: CaptureVideo | Microsoft Docs
-description: Provides information for captureVideo method.
+description: 
 keywords:
 ms.author: nabuthuk
 author: Nkrb

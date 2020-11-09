@@ -34,7 +34,7 @@ When you develop a large number of files to use as Web resources you can save yo
  The sample code included in the SDK download package includes the following files required by this sample:  
   
  **ImportJob.xml**  
- This file provides data about the Web Resource rows that will be created. For each file it contains the following data:  
+ This file provides data about the Web Resource records that will be created. For each file it contains the following data:  
   
 - **path:** The path to each file from the FilesToImport folder.  
   
@@ -45,7 +45,7 @@ When you develop a large number of files to use as Web resources you can save yo
 - **name:** The name that will be used for the Web Resource.  
   
   > [!NOTE]
-  > - Each of these names begin with an underscore character. The customization prefix of the solution publisher will be prepended to the name when the Web resource is created. Rather than hard-coding a specific customization prefix, this sample will detect the current customization prefix for a publisher row that may already exist in the organization.  
+  > - Each of these names begin with an underscore character. The customization prefix of the solution publisher will be prepended to the name when the Web resource is created. Rather than hard-coding a specific customization prefix, this sample will detect the current customization prefix for a publisher record that may already exist in the organization.  
   >   - Because each of these files was developed outside of Model-driven apps and depend on relative paths to access each other, the names include backslash “/” characters to create a virtual folder structure so the relative links will continue to function within Model-driven apps.  
   
 - **type:** Specifies the type of Web Resource to create using the integer values found in [Web Resource Types](web-resources.md#BKMK_WebResourceTypes).
@@ -78,7 +78,7 @@ When you develop a large number of files to use as Web resources you can save yo
   
 ### Creating Web Resources in the Context of a Solution  
 
-Web Resources are organization-owned rows so they can be created using either the<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method or by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message and the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. This sample will show how to use the `SolutionUniqueName` optional parameter to associate a Web resource with a specific solution when it is created. This requires using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message.  
+Web Resources are organization-owned records so they can be created using either the<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method or by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message and the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. This sample will show how to use the `SolutionUniqueName` optional parameter to associate a Web resource with a specific solution when it is created. This requires using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message.  
   
 ### Uploading Files from Disk  
  The WebResource.Content property requires a Base 64 string representing the binary contents of the file. The following sample is the method used to convert the file into the required type.  
@@ -95,7 +95,7 @@ static public string getEncodedFileContents(String pathToFile)
 }
 ```
   
-### Combining Web Resource Row Data with File Data  
+### Combining Web Resource Record Data with File Data  
  The ImportJob.xml file demonstrates how the data about the files being imported and the data about the Web Resource to create are combined. In particular, in order for relative links between related files to continue to function, the name of the Web resources you create must preserve information about the relative position of the files on disk using simulated directories in the file name. Because of the data in the ImportJob.xml file all these related Web resource files will be created under a common virtual folder.  
   
 > [!NOTE]

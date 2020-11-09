@@ -16,7 +16,9 @@ search.app:
 ---
 # Xrm.WebApi (Client API reference)
 
-Provides properties and methods to use Web API to create and manage rows and execute Web API actions and functions in model-driven apps. 
+
+
+Provides properties and methods to use Web API to create and manage records and execute Web API actions and functions in model-driven apps. 
 
 ## Properties
 

@@ -1,6 +1,6 @@
 ---
 title: openDatasetItem | Microsoft Docs
-description: Provides information for openDataSetItem method.
+description: 
 keywords:
 ms.author: nabuthuk
 author: Nkrb

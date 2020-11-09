@@ -1,6 +1,6 @@
 ---
 title: getValue | Microsoft Docs
-description: Provides information for getValue method.
+description: 
 keywords:
 ms.author: nabuthuk
 author: Nkrb

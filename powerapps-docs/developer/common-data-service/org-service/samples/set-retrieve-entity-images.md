@@ -1,6 +1,6 @@
 ---
-title: " Set and retrieve table images (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to set and retrieve table images." # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Set and retrieve entity images (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample showcases how to set and retrieve entity images." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
@@ -16,11 +16,11 @@ search.app:
   - D365CE
 ---
 
-# Set and retrieve table images
+# Set and retrieve entity images
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to set and retrieve data for table images. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SetRetrieveImages).
+This sample shows how to set and retrieve data for entity images. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SetRetrieveImages).
 
 ## How to run this sample
 
@@ -40,17 +40,17 @@ Checks the current version of the org.
 
 ### Demonstrate
 
-1. Uses the CreateImageAttributeDemoEntity method to create a custom table with the schema name `sample_ImageAttributeDemo` and a primary column with the schema name `sample_Name`.
-2. Create an image column with the schema name `EntityImage`. All image columns use this name.
+1. Uses the CreateImageAttributeDemoEntity method to create a custom entity with the schema name `sample_ImageAttributeDemo` and a primary attribute with the schema name `sample_Name`.
+2. Create an image attribute with the schema name `EntityImage`. All image attributes use this name.
 
-3. Retrieve and update the main form for the `sample_ImageAttributeDemo` table to set the `showImage` column to true so that the image is displayed in the form.
+3. Retrieve and update the main form for the `sample_ImageAttributeDemo` entity to set the `showImage` attribute to true so that the image is displayed in the form.
 
-4. Publish the `sample_ImageAttributeDemo` table.
+4. Publish the `sample_ImageAttributeDemo` entity.
 
-5. Creates five new rows for the `sample_ImageAttributeDemo` table using five different sized images located in the Images folder as shown here.After each row is created you have the opportunity to view the row in the web browser application using the `ShowEntityFormInBrowser` method so that you can see how the source images are resized to fit the space available in the form.
-6. Retrieves the rows with the `entityimage` column and saves the resized files. After you run the sample you can find the files saved in the `\bin\Debug` folder.
-7. Retrieves the rows with the `entityimage_url` column and displays the relative URL values you can include in your application to access the images. This query should be more responsive because the amount of data transferred is smaller.
+5. Creates five new records for the `sample_ImageAttributeDemo` entity using five different sized images located in the Images folder as shown here.After each record is created you have the opportunity to view the record in the web browser application using the `ShowEntityFormInBrowser` method so that you can see how the source images are resized to fit the space available in the form.
+6. Retrieves the records with the `entityimage` attribute and saves the resized files. After you run the sample you can find the files saved in the `\bin\Debug` folder.
+7. Retrieves the records with the `entityimage_url` attribute and displays the relative URL values you can include in your application to access the images. This query should be more responsive because the amount of data transferred is smaller.
 
 ### Clean up
 
-Display an option to delete the rows in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

@@ -28,7 +28,7 @@ search.app:
 
 **Type**: String.
 
-**Description**: The GUID value for the row.
+**Description**: The GUID value for the record.
 
 
 

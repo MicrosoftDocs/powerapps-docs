@@ -1,8 +1,8 @@
 ---
-title: "Work with column metadata (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes common operations on column metadata." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Work with attribute metadata (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes common operations on attribute metadata." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/09/2020
+ms.date: 04/05/2019
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,26 +15,26 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Work with column metadata
+# Work with attribute metadata
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-This topic describes a number of common operations that can be applied to column metadata.
+This topic describes a number of common operations that can be applied to attribute metadata.
 
-<a name="BKMK_CreateColumns"></a>   
-## Create columns
+<a name="BKMK_CreateAttributes"></a>   
+## Create attributes
 
- You create columns by defining one of the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> types and then passing it to the <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> message.  
+ You create attributes by defining one of the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> types and then passing it to the <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> message.  
   
- The following sample defines the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for a number of different types of columns and adds them to a `List<AttributeMetadata>`. At the end of the code the column definitions are passed to an instance of the <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> class and the column is created using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.  
+ The following sample defines the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for a number of different types of attributes and adds them to a `List<AttributeMetadata>`. At the end of the code the attribute definitions are passed to an instance of the <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> class and the attribute is created using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.  
   
  The following sample code assumes that the current customization prefix is ‘new’ because that is the default customization prefix for the organization solution publisher. You should use the customization prefix for the solution publisher that makes sense for your solution context.  
 
 ```csharp
-// Create storage for new columns being created
+// Create storage for new attributes being created
 addedAttributes = new List<AttributeMetadata>();
 
-// Create a boolean column
+// Create a boolean attribute
 BooleanAttributeMetadata boolAttribute = new BooleanAttributeMetadata
 {
     // Set base properties
@@ -53,7 +53,7 @@ BooleanAttributeMetadata boolAttribute = new BooleanAttributeMetadata
 // Add to list
 addedAttributes.Add(boolAttribute);
 
-// Create a date time column
+// Create a date time attribute
 DateTimeAttributeMetadata dtAttribute = new DateTimeAttributeMetadata
 {
     // Set base properties
@@ -70,7 +70,7 @@ DateTimeAttributeMetadata dtAttribute = new DateTimeAttributeMetadata
 // Add to list
 addedAttributes.Add(dtAttribute);
 
-// Create a decimal column	
+// Create a decimal attribute	
 DecimalAttributeMetadata decimalAttribute = new DecimalAttributeMetadata
 {
     // Set base properties
@@ -88,7 +88,7 @@ DecimalAttributeMetadata decimalAttribute = new DecimalAttributeMetadata
 // Add to list
 addedAttributes.Add(decimalAttribute);
 
-// Create a integer column	
+// Create a integer attribute	
 IntegerAttributeMetadata integerAttribute = new IntegerAttributeMetadata
 {
     // Set base properties
@@ -106,7 +106,7 @@ IntegerAttributeMetadata integerAttribute = new IntegerAttributeMetadata
 // Add to list
 addedAttributes.Add(integerAttribute);
 
-// Create a memo column 
+// Create a memo attribute 
 MemoAttributeMetadata memoAttribute = new MemoAttributeMetadata
 {
     // Set base properties
@@ -124,15 +124,15 @@ MemoAttributeMetadata memoAttribute = new MemoAttributeMetadata
 // Add to list
 addedAttributes.Add(memoAttribute);
 
-// Create a money column	
+// Create a money attribute	
 MoneyAttributeMetadata moneyAttribute = new MoneyAttributeMetadata
 {
     // Set base properties
     SchemaName = "new_Money",
     LogicalName = "new_money",
-    DisplayName = new Label("Money Choice", _languageCode),
+    DisplayName = new Label("Money Picklist", _languageCode),
     RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-    Description = new Label("Money Column", _languageCode),
+    Description = new Label("Money Attribue", _languageCode),
     // Set extended properties
     MaxValue = 1000.00,
     MinValue = 0.00,
@@ -144,18 +144,18 @@ MoneyAttributeMetadata moneyAttribute = new MoneyAttributeMetadata
 // Add to list
 addedAttributes.Add(moneyAttribute);
 
-// Create a Choice column	
+// Create a picklist attribute	
 PicklistAttributeMetadata pickListAttribute =
     new PicklistAttributeMetadata
     {
         // Set base properties
         SchemaName = "new_Picklist",
         LogicalName = "new_picklist",
-        DisplayName = new Label("Sample Choice", _languageCode),
+        DisplayName = new Label("Sample Picklist", _languageCode),
         RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-        Description = new Label("Choice Column", _languageCode),
+        Description = new Label("Picklist Attribute", _languageCode),
         // Set extended properties
-        // Build local Choices
+        // Build local picklist options
         OptionSet = new OptionSetMetadata
         {
             IsGlobal = false,
@@ -175,7 +175,7 @@ PicklistAttributeMetadata pickListAttribute =
 // Add to list
 addedAttributes.Add(pickListAttribute);
 
-// Create a string column
+// Create a string attribute
 StringAttributeMetadata stringAttribute = new StringAttributeMetadata
 {
     // Set base properties
@@ -192,7 +192,7 @@ StringAttributeMetadata stringAttribute = new StringAttributeMetadata
 // Add to list
 addedAttributes.Add(stringAttribute);
 
-//Multi-select column requires version 9.0 or higher.
+//Multi-select attribute requires version 9.0 or higher.
 if (_productVersion > new Version("9.0"))
 {
 
@@ -220,7 +220,7 @@ if (_productVersion > new Version("9.0"))
 }
 
 // NOTE: LookupAttributeMetadata cannot be created outside the context of a relationship.
-// Refer to the WorkWithRelationships.cs reference SDK sample for an example of this column type.
+// Refer to the WorkWithRelationships.cs reference SDK sample for an example of this attribute type.
 
 // NOTE: StateAttributeMetadata and StatusAttributeMetadata cannot be created via the SDK.
 
@@ -236,18 +236,18 @@ foreach (AttributeMetadata anAttribute in addedAttributes)
     // Execute the request.
     _serviceProxy.Execute(createAttributeRequest);
 
-    Console.WriteLine("Created the column {0}.", anAttribute.SchemaName);
+    Console.WriteLine("Created the attribute {0}.", anAttribute.SchemaName);
 }
 ```
 
-<a name="BKMK_RetrieveColumn"></a>
+<a name="BKMK_RetrieveAttribute"></a>
 
-## Retrieve an column
+## Retrieve an attribute
 
- This sample shows how to retrieve the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for an column using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>. This sample retrieves the metadata for a custom <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> column called ‘new_string’ from the Contact table that was created in [Create Columns](#BKMK_CreateColumns).
+ This sample shows how to retrieve the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> for an attribute using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>. This sample retrieves the metadata for a custom <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> attribute called ‘new_string’ from the Contact entity that was created in [Create Attributes](#BKMK_CreateAttributes).
   
 > [!NOTE]
-> Because <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest.RetrieveAsIfPublished> is true, this request returns the current unpublished definition of this column. You might use this if you are creating an Attribute editor and you want to retrieve the unpublished definition of the column. Otherwise, you should not specify `RetrieveAsIfPublished`. More information: [Retrieving unpublished metadata](/dynamics365/customer-engagement/developer/customize-dev/publish-customizations#retrieving-unpublished-metadata).  
+> Because <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest.RetrieveAsIfPublished> is true, this request returns the current unpublished definition of this attribute. You might use this if you are creating an Attribute editor and you want to retrieve the unpublished definition of the attribute. Otherwise, you should not specify `RetrieveAsIfPublished`. More information: [Retrieving unpublished metadata](/dynamics365/customer-engagement/developer/customize-dev/publish-customizations#retrieving-unpublished-metadata).  
 
 ```csharp
 // Create the request
@@ -262,24 +262,24 @@ RetrieveAttributeRequest attributeRequest = new RetrieveAttributeRequest
 RetrieveAttributeResponse attributeResponse =
     (RetrieveAttributeResponse)_serviceProxy.Execute(attributeRequest);
 
-Console.WriteLine("Retrieved the column {0}.",
+Console.WriteLine("Retrieved the attribute {0}.",
     attributeResponse.AttributeMetadata.SchemaName);
 ```
 
-<a name="BKMK_UpdateColumn"></a>
+<a name="BKMK_UpdateAttribute"></a>
 
-## Update an column
+## Update an attribute
 
- This sample code shows how to update an column. This sample uses the <xref:Microsoft.Xrm.Sdk.Messages.UpdateAttributeRequest> to change the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.DisplayName> property of a previously retrieved custom column for the `Contact` table.  
+ This sample code shows how to update an attribute. This sample uses the <xref:Microsoft.Xrm.Sdk.Messages.UpdateAttributeRequest> to change the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.DisplayName> property of a previously retrieved custom attribute for the `Contact` entity.  
 
 ```csharp
-// Modify the retrieved column
+// Modify the retrieved attribute
 AttributeMetadata retrievedAttributeMetadata =
     attributeResponse.AttributeMetadata;
 retrievedAttributeMetadata.DisplayName =
     new Label("Update String Attribute", _languageCode);
 
-// Update an column retrieved via RetrieveAttributeRequest
+// Update an attribute retrieved via RetrieveAttributeRequest
 UpdateAttributeRequest updateRequest = new UpdateAttributeRequest
 {
     Attribute = retrievedAttributeMetadata,
@@ -290,15 +290,15 @@ UpdateAttributeRequest updateRequest = new UpdateAttributeRequest
 // Execute the request
 _serviceProxy.Execute(updateRequest);
 
-Console.WriteLine("Updated the column {0}.",
+Console.WriteLine("Updated the attribute {0}.",
     retrievedAttributeMetadata.SchemaName);
 ```
 
-<a name="BKMK_CreateLookupColumn"></a>
+<a name="BKMK_CreateLookupAttribute"></a>
 
-## Create a lookup column
+## Create a lookup attribute
 
- A lookup column is created by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest>.  
+ A lookup attribute is created by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest>.  
 
 ```csharp
 CreateOneToManyRequest req = new CreateOneToManyRequest()
@@ -340,9 +340,9 @@ _serviceProxy.Execute(req);
 
 <a name="BKMK_createcustlookup"></a>
 
-## Create a customer lookup column
+## Create a customer lookup attribute
 
- Unlike a lookup column, a customer lookup column is created using the <xref:Microsoft.Xrm.Sdk.Messages.CreateCustomerRelationshipsRequest> message, which adds two relationships to the lookup column: one to the `Account` table and the other one to the `Contact` table. You cannot add relationship to any other table except for `Account` and `Contact` tables for a customer lookup column.  
+ Unlike a lookup attribute, a customer lookup attribute is created using the <xref:Microsoft.Xrm.Sdk.Messages.CreateCustomerRelationshipsRequest> message, which adds two relationships to the lookup attribute: one to the `Account` entity and the other one to the `Contact` entity. You cannot add relationship to any other entity except for `Account` and `Contact` entities for a customer lookup attribute.  
 
 ```csharp
 CreateCustomerRelationshipsRequest createCustomerReq = new CreateCustomerRelationshipsRequest
@@ -377,13 +377,13 @@ _serviceProxy.Execute(createCustomerReq);
 
 ## Create a picklist that uses a global option set
 
- This sample code shows how to create a <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> column that is associated with a global option set.  
+ This sample code shows how to create a <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> attribute that is associated with a global option set.  
   
- The following sample uses <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> to set the options for a <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> column to use a global option set with a name represented by the string variable `_globalOptionSetName`. More information: [Customize option sets](metadata-option-sets.md)  
+ The following sample uses <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest> to set the options for a <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> attribute to use a global option set with a name represented by the string variable `_globalOptionSetName`. More information: [Customize option sets](metadata-option-sets.md)  
  
 ```csharp
-// Create a Choice linked to the option set.
-// Specify which table will own the Choice, and create it.
+// Create a Picklist linked to the option set.
+// Specify which entity will own the picklist, and create it.
 CreateAttributeRequest createRequest = new CreateAttributeRequest
 {
     EntityName = Contact.EntityLogicalName,
@@ -394,8 +394,8 @@ CreateAttributeRequest createRequest = new CreateAttributeRequest
         DisplayName = new Label("Example Picklist", _languageCode),
         RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
 
-        // In order to relate the Choice to the global option set, be sure
-        // to specify the two columns below appropriately.
+        // In order to relate the picklist to the global option set, be sure
+        // to specify the two attributes below appropriately.
         // Failing to do so will lead to errors.
         OptionSet = new OptionSetMetadata
         {
@@ -412,15 +412,15 @@ _serviceProxy.Execute(createRequest);
 
 ## Insert a new status value
 
- This sample code shows how to insert a new **Status Reason** option for <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> column.  
+ This sample code shows how to insert a new **Status Reason** option for <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> attribute.  
   
- The following sample code uses the <xref:Microsoft.Xrm.Sdk.Messages.InsertStatusValueRequest> to specify a new option for the `Contact` table `Contact.StatusCode` column that is valid when the `Contact.StateCode` is 0 (Active). The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method processes the request.  
+ The following sample code uses the <xref:Microsoft.Xrm.Sdk.Messages.InsertStatusValueRequest> to specify a new option for the `Contact` entity `Contact.StatusCode` attribute that is valid when the `Contact.StateCode` is 0 (Active). The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method processes the request.  
   
  The following sample code allows two valid **Status Reason** options for active contacts: **Active** and **Dormant**.  
   
 ```csharp
 // Use InsertStatusValueRequest message to insert a new status 
-// in an existing status column. 
+// in an existing status attribute. 
 // Create the request.
 InsertStatusValueRequest insertStatusValueRequest =
     new InsertStatusValueRequest
@@ -445,7 +445,7 @@ Console.WriteLine("Created {0} with the value of {1}.",
 
 ## Update a state value
 
- This sample code shows how to change the label for an option in a <xref:Microsoft.Xrm.Sdk.Metadata.StateAttributeMetadata> column.  
+ This sample code shows how to change the label for an option in a <xref:Microsoft.Xrm.Sdk.Metadata.StateAttributeMetadata> attribute.  
   
  The following sample code uses <xref:Microsoft.Xrm.Sdk.Messages.UpdateStateValueRequest> to change the `Contact.StateCode` option label from **Active** to **Open**.  
 
@@ -464,7 +464,7 @@ UpdateStateValueRequest updateStateValue = new UpdateStateValueRequest
 _serviceProxy.Execute(updateStateValue);
 
 Console.WriteLine(
-    "Updated {0} state column of {1} table from 'Active' to '{2}'.",
+    "Updated {0} state attribute of {1} entity from 'Active' to '{2}'.",
     updateStateValue.AttributeLogicalName,
     updateStateValue.EntityLogicalName,
     updateStateValue.Label.LocalizedLabels[0].Label
@@ -477,7 +477,7 @@ Console.WriteLine(
 
 ## Insert a new option in a local option set
 
- This sample code shows how to add a new option to a local option set. The following sample uses <xref:Microsoft.Xrm.Sdk.Messages.InsertOptionValueRequest> to add a new option to a custom <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> column for the `Contact` table.  
+ This sample code shows how to add a new option to a local option set. The following sample uses <xref:Microsoft.Xrm.Sdk.Messages.InsertOptionValueRequest> to add a new option to a custom <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> attribute for the `Contact` entity.  
 
 ```csharp
 // Create a request.
@@ -486,7 +486,7 @@ InsertOptionValueRequest insertOptionValueRequest =
 {
     AttributeLogicalName = "new_picklist",
     EntityLogicalName = Contact.EntityLogicalName,
-    Label = new Label("New Choice Label", _languageCode)
+    Label = new Label("New Picklist Label", _languageCode)
 };
 
 // Execute the request.
@@ -502,13 +502,13 @@ Console.WriteLine("Created {0} with the value of {1}.",
 
 ## Change the order of options in a local option set
 
- This sample code shows how to change the order of options in a local option set. The following sample retrieves a custom <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> column and changes the order of the original options using the [OrderBy](https://msdn.microsoft.com/library/system.linq.enumerable.orderby.aspx)**LINQ** function to sort items in ascending order by the label text. Then it uses <xref:Microsoft.Xrm.Sdk.Messages.OrderOptionRequest> to set the new order of the options for the column.  
+ This sample code shows how to change the order of options in a local option set. The following sample retrieves a custom <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> attribute and changes the order of the original options using the [OrderBy](https://msdn.microsoft.com/library/system.linq.enumerable.orderby.aspx)**LINQ** function to sort items in ascending order by the label text. Then it uses <xref:Microsoft.Xrm.Sdk.Messages.OrderOptionRequest> to set the new order of the options for the attribute.  
   
  Use the [OrderByDescending](https://msdn.microsoft.com/library/system.linq.enumerable.orderbydescending.aspx) linq function to order the items in descending order.  
 
 ```csharp
 // Use the RetrieveAttributeRequest message to retrieve  
-// a column by it's logical name.
+// a attribute by it's logical name.
 RetrieveAttributeRequest retrieveAttributeRequest =
     new RetrieveAttributeRequest
 {
@@ -522,12 +522,12 @@ RetrieveAttributeResponse retrieveAttributeResponse =
     (RetrieveAttributeResponse)_serviceProxy.Execute(
     retrieveAttributeRequest);
 
-// Access the retrieved column.
+// Access the retrieved attribute.
 PicklistAttributeMetadata retrievedPicklistAttributeMetadata =
     (PicklistAttributeMetadata)
     retrieveAttributeResponse.AttributeMetadata;
 
-// Get the current options list for the retrieved column.
+// Get the current options list for the retrieved attribute.
 OptionMetadata[] optionList =
     retrievedPicklistAttributeMetadata.OptionSet.Options.ToArray();
 
@@ -562,12 +562,12 @@ Console.WriteLine("Option Set option order changed");
 
 <a name="BKMK_DeleteAttribute"></a>
 
-## Delete an column
+## Delete an attribute
 
- This sample shows how to delete columns stored in a `List<`<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>`>` that were created for the `Contact` table in [Create Columns](#BKMK_CreateColumns). For each <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> the <xref:Microsoft.Xrm.Sdk.Messages.DeleteAttributeRequest> prepares the request that is processed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>.  
+ This sample shows how to delete attributes stored in a `List<`<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>`>` that were created for the `Contact` entity in [Create Attributes](#BKMK_CreateAttributes). For each <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> the <xref:Microsoft.Xrm.Sdk.Messages.DeleteAttributeRequest> prepares the request that is processed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>.  
 
 ```csharp
-// Delete all columns created for this sample.
+// Delete all attributes created for this sample.
 foreach (AttributeMetadata anAttribute in addedAttributes)
 {
     // Create the request object

@@ -55,7 +55,7 @@ The column visibility state.
 
 ### isPrimary
 
-Is specific column the primary attribute of the view's table.
+Is specific column the primary attribute of the view's entity.
 
 **Type**: `boolean`<br />
 

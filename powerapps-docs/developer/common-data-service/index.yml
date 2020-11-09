@@ -43,7 +43,7 @@ landingContent:
             url: work-with-data-cds.md
           - text: Types and operations (Web API)
             url: /powerapps/developer/common-data-service/webapi/web-api-types-operations
-          - text: Table operations (Organization service)
+          - text: Entity operations (Organization service)
             url: /powerapps/developer/common-data-service/org-service/entity-operations
           - text: Use FetchXML to query data
             url: /powerapps/developer/common-data-service/use-fetchxml-construct-query
@@ -136,11 +136,11 @@ landingContent:
             url: /powerapps/developer/common-data-service/community-tools
   
   # Card
-  - title: Table and API reference
+  - title: Entity and API reference
     linkLists:
       - linkListType: reference
         links:
-          - text: Table reference
+          - text: Entity reference
             url: reference/about-entity-reference.md
           - text: SDK API class libraries
             url: https://docs.microsoft.com/dotnet/api/?view=dynamics-general-ce-9

@@ -1,6 +1,6 @@
 ---
-title: "Sample: Share rows using GrantAccess, ModifyAccess and RevokeAccess (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to share a row using grant, modify and revoke access message." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to share a record using grant, modify and revoke access message." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Share rows using GrantAccess, ModifyAccess and RevokeAccess messages
+# Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
@@ -24,7 +24,7 @@ search.app:
 Change sample to make sure it works with Common Data Service
 -->
 
-This sample shows how to share a row using the following messages:
+This sample shows how to share a record using the following messages:
 
 [GrantAccessRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.grantaccessrequest?view=dynamics-general-ce-9)
 
@@ -66,7 +66,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 4. Retrieves the root business unit for creating the team for the sample.
 5. The `WhoAMIRequest` gets the current user information.
 6. Creates the team and adds the users to the team. 
-7. Creates an account row and also creates a task, letter to associate to the account.
+7. Creates an account record and also creates a task, letter to associate to the account.
 
 ### Demonstrate
 
@@ -78,4 +78,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

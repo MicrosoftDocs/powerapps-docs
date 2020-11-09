@@ -37,23 +37,23 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>Logical name of the table you want to create. For example: "account".</td>
+<td>Logical name of the entity you want to create. For example: "account".</td>
 </tr>
 <tr>
 <td>data</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>A JSON object defining the columns and values for the new table row.</p>
+<td><p>A JSON object defining the attributes and values for the new entity record.</p>
 <p>See examples later in this topic to see how you can define the <code>data</code> object for various create scenarios.</td>
 </tr>
 <tr>
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when a row is created. An object with the following properties will be passed to identify the new row:</p>
+<td><p>A function to call when a record is created. An object with the following properties will be passed to identify the new record:</p>
 <ul>
-<li><b>entityType</b>: String. The table logical name of the new row.</li>
-<li><b>id</b>: String. GUID of the new row.</li>
+<li><b>entityType</b>: String. The entity logical name of the new record.</li>
+<li><b>id</b>: String. GUID of the new record.</li>
 </ul></td>
 </tr>
 <tr>
@@ -70,15 +70,15 @@ search.app:
 
 ## Return Value
 
-On success, returns a promise object containing the columns specified earlier in the description of the **successCallback** parameter.
+On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
 
 ## Examples
 
-These examples use the same request objects as demonstrated in [Create a table using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) to define the data object for creating a table row.
+These examples use the same request objects as demonstrated in [Create an entity using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) to define the data object for creating an entity record.
 
 ### Basic create 
 
-Creates a sample account row.
+Creates a sample account record.
 
 ```JavaScript
 // define the data to create new account
@@ -92,11 +92,11 @@ var data =
         "accountcategorycode": 1
     }
 
-// create account row
+// create account record
 Xrm.WebApi.createRecord("account", data).then(
     function success(result) {
         console.log("Account created with ID: " + result.id);
-        // perform operations on row creation
+        // perform operations on record creation
     },
     function (error) {
         console.log(error.message);
@@ -105,15 +105,15 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-### Create related table rows along with the primary row
+### Create related entity records along with the primary record
 
- You can create tables related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account row along with the primary contact row and an associated opportunity row.
+ You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account record along with the primary contact record and an associated opportunity record.
 
 > [!NOTE]
-> Creating related table rows in a single create operation is not supported for offline mode.
+> Creating related entity records in a single create operation is not supported for offline mode.
 
 ```JavaScript
-// define data to create primary and related table rows
+// define data to create primary and related entity records
 var data =
     {
         "name": "Sample Account",
@@ -134,11 +134,11 @@ var data =
         ]
     }
 
-// create account row
+// create account record
 Xrm.WebApi.createRecord("account", data).then(
     function success(result) {
         console.log("Account created with ID: " + result.id);
-        // perform operations on row creation
+        // perform operations on record creation
     },
     function (error) {
         console.log(error.message);
@@ -147,14 +147,14 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-### Associate tables on creating new rows
+### Associate entities on creating new records
 
-To associate new table rows to existing table rows, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target row. Here are code examples for both the scenarios: 
+To associate new entity records to existing entity records, set the value of single-valued navigation properties using the `@odata.bind` annotation. However, for mobile clients in the offline mode, you cannot use the `@odata.bind` annotation, and instead have to pass a **lookup** object (**logicalname** and **id**) pointing to the target record. Here are code examples for both the scenarios: 
 
 
 **For online scenario (connected to server)**
 
-The following example creates an account row, and associates it to an existing contact row to set the latter as the primary contact for the new account row:
+The following example creates an account record, and associates it to an existing contact record to set the latter as the primary contact for the new account record:
 
 ```JavaScript
 var data =
@@ -163,11 +163,11 @@ var data =
         "primarycontactid@odata.bind": "/contacts(465b158c-541c-e511-80d3-3863bb347ba8)"
     }
 
-// create account row
+// create account record
 Xrm.WebApi.createRecord("account", data).then(
     function success(result) {
         console.log("Account created with ID: " + result.id);
-        // perform operations on row creation
+        // perform operations on record creation
     },
     function (error) {
         console.log(error.message);
@@ -178,7 +178,7 @@ Xrm.WebApi.createRecord("account", data).then(
 
 **For mobile offine scenario**
 
-Here is the updated sample code to create an account row, and associate it to an existing contact row to set the latter as the primary contact for the new account row from mobile clients when working in the offline mode:
+Here is the updated sample code to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
 
 ```JavaScript
 var data =
@@ -191,11 +191,11 @@ var data =
         } 
     }
 
-// create account row
+// create account record
 Xrm.WebApi.offline.createRecord("account", data).then(
     function success(result) {
         console.log("Account created with ID: " + result.id);
-        // perform operations on row creation
+        // perform operations on record creation
     },
     function (error) {
         console.log(error.message);
@@ -206,6 +206,6 @@ Xrm.WebApi.offline.createRecord("account", data).then(
  
 ### Related topics
 
-[Create a table using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) 
+[Create an entity using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) 
 
 [Xrm.WebApi](../xrm-webapi.md)

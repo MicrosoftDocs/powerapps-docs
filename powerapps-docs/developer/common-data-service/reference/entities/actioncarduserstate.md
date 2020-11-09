@@ -1,22 +1,20 @@
 ---
-title: "ActionCardUserState table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ActionCardUserState table."
-ms.date: 11/07/2020
+title: "ActionCardUserState Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ActionCardUserState entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ActionCardUserState table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# ActionCardUserState Entity Reference
 
 
 
@@ -31,7 +29,7 @@ search.app:
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/actioncarduserstates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/actioncarduserstates(*actioncarduserstateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -49,9 +47,9 @@ search.app:
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActionCardId](#BKMK_ActionCardId)
 - [ActionCardIdName](#BKMK_ActionCardIdName)
@@ -237,9 +235,9 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [OwnerIdName](#BKMK_OwnerIdName)
@@ -361,6 +359,6 @@ See transactioncurrency Entity [TransactionCurrency_ActionCardUserState](transac
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.actioncarduserstate?text=actioncarduserstate EntityType" />

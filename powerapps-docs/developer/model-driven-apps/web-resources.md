@@ -30,9 +30,9 @@ Web resources are *virtual files* that are stored in the Common Data Service dat
   
  Because web resources are stored in Common Data Service and are solution components, they can be easily exported and installed to other Common Data Service orgs. Web resources are also available to users of Common Data Service for Microsoft Office Outlook with Offline Access when offline because they are synchronized with the user's data.  
   
- You can use the form editor to add and configure form-enabled web resources into your table forms.  
+ You can use the form editor to add and configure form-enabled web resources into your entity forms.  
   
- Because web resources are stored as rows in the database, they can be managed programmatically by using the standard techniques to create, retrieve, and update rows. Text-based web resources (JScript, CSS, XML, XSL, RESX, and HTML) can be edited and saved in the application.  
+ Because web resources are stored as records in the database, they can be managed programmatically by using the standard techniques to create, retrieve, and update records. Text-based web resources (JScript, CSS, XML, XSL, RESX, and HTML) can be edited and saved in the application.  
   
 <a name="BKMK_LimitationsOfWebResources"></a>   
 ### Limitations of web resources  
@@ -68,7 +68,7 @@ The maximum size of files that can be uploaded is determined by the Organization
   
 > [!NOTE]
 >  -   When possible, use the `$webresource` directive. Only references that use the `$webresource` directive in the site map or ribbon commands will establish dependencies. Dependencies are not created when web resources reference each other.  
->       - To display a Silverlight web resource outside a table form or chart, create an HTML web resource to be the host page for the Silverlight web resource. Then use the $webresource: directive to open the HTML web resource.
+>       - To display a Silverlight web resource outside an entity form or chart, create an HTML web resource to be the host page for the Silverlight web resource. Then use the $webresource: directive to open the HTML web resource.
   
 <a name="BKMK_WebResourceDirective"></a>   
 ### $webresource directive  
