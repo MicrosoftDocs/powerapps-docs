@@ -136,7 +136,7 @@ Yes, this is possible if you have the **global admin**, **Dynamics 365 admin**, 
 
 The dates associated to your environment is a suggestion that requires approval to go ahead. Approve if the date works for your organization.  
 
-To change the date, select the drop-down icon next to the environment and view the record. Tenant admin roles will then be able to reschedule the transition date to an earlier or later date.
+To change the date, select the drop-down icon next to the environment and view the row. Tenant admin roles will then be able to reschedule the transition date to an earlier or later date.
 
 To reschedule to an earlier date, update the existing date to your preferred option in the list. You can also [switch manually](transition-web-app.md) if our dates are not suitable. 
  

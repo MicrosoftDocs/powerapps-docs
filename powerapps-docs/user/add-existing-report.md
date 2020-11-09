@@ -51,11 +51,11 @@ For information about how to create a custom report, see [Reporting and Analytic
   
    2.  The **Parent Report** text box displays the parent report of the current report, if one exists.  
   
-   3. **Categories**. Choose the **Select or change the values for this field** ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") button, and then specify the categories to include in this report.  
+   3. **Categories**. Choose the **Select or change the values for this column** ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") button, and then specify the categories to include in this report.  
   
-   4. **Related Record Types**. To have the report appear in the Reports list on a page for specific record types, choose the **Select or change the values for this field** ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") button, and then select record types.  
+   4. **Related Row Types**. To have the report appear in the Reports list on a page for specific row types, choose the **Select or change the values for this column** ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") button, and then select row types.  
   
-   5. **Display In**. To specify where reports should be visible, choose the **Select or change the values for this field** ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") button, and then select one or more of the options.  
+   5. **Display In**. To specify where reports should be visible, choose the **Select or change the values for this column** ![Ellipsis button](media/ellipsis-button.png "Ellipsis button") button, and then select one or more of the options.  
   
         If no values are selected, the report won’t be visible to end users.  
   

@@ -20,9 +20,9 @@ search.app:
 
 # Deactivate or activate an account or contact
 
-In a model-driven app, you can deactivate an account or contact rather than deleting it. This ensures the integrity of the audit trail associated with that record.  
+In a model-driven app, you can deactivate an account or contact rather than deleting it. This ensures the integrity of the audit trail associated with that row.  
   
-A deactivated account or contact becomes inactive, which means it cannot be edited or used in establishing new relationships with other records. However, all relationships created with the deactivated item are still available.  
+A deactivated account or contact becomes inactive, which means it cannot be edited or used in establishing new relationships with other rows. However, all relationships created with the deactivated item are still available.  
   
 If later you need to reactivate a deactivated account, it's easy to do so.   
   
