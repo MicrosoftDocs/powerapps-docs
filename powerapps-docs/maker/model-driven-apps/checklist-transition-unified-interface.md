@@ -111,8 +111,8 @@ Flows](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsof
 
 - **Dynamics 365 Customer Service**:
     -   Service scheduling: Consider using [Universal Resource Scheduling](https://docs.microsoft.com/dynamics365/common-scheduler/schedule-anything-with-universal-resource-scheduling) instead of legacy service scheduling.
-    - [Deprecated knowledge management entities](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn265924(v=crm.8)#some-knowledge-management-entities-are-deprecated): See this topic to work with the latest knowledge management entities: [Work with knowledge articles](https://docs.microsoft.com/dynamics365/customer-service/work-knowledge-articles).
-    - [Deprecated contract entities](https://docs.microsoft.com/power-platform/important-changes-coming#contracts-contract-line-items-and-contract-templates-entities-are-deprecated): See this topic to migrate to entitlements: [Contracts to entitlements migration strategy](https://docs.microsoft.com/dynamics365/customer-service/contract-to-entitlement-migration). 
+    - [Deprecated knowledge management tables](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn265924(v=crm.8)#some-knowledge-management-entities-are-deprecated): See this topic to work with the latest knowledge management tables: [Work with knowledge articles](https://docs.microsoft.com/dynamics365/customer-service/work-knowledge-articles).
+    - [Deprecated contract tables](https://docs.microsoft.com/power-platform/important-changes-coming#contracts-contract-line-items-and-contract-templates-entities-are-deprecated): See this topic to migrate to entitlements: [Contracts to entitlements migration strategy](https://docs.microsoft.com/dynamics365/customer-service/contract-to-entitlement-migration). 
 
 ## Test your application in Unified Interface
 
@@ -206,7 +206,7 @@ processes for each group or role.
 
 ### App settings
 
--   Include all required entities in your app, even if they are not in the
+-   Include all required tables in your app, even if they are not in the
     sitemap.  
     
 -   Provide the **Read** privilege for **Model-driven app** in the **Customization** tab in the **Security Role** dialog box.
@@ -227,7 +227,7 @@ processes for each group or role.
 ### Optimize navigation (sitemap)
 
 -   Define one main **area** with the most used **sub-areas** (dashboard,
-    entities, etc.) organized in **groups**
+    tables, etc.) organized in **groups**
 
 -   Create one or more additional areas for less used features
     (configuration, settings, etc.). The idea is to help your users focus only on what’s important to do their work.
@@ -250,8 +250,8 @@ processes for each group or role.
 
 -   Create a **Welcome Page** that users see when they access each of your app. This is a great opportunity to guide users in their first steps.
 
--   Use existing **Custom Controls** to improve the usability of most field
-    types, especially on mobile. For example, replace a 0 to 5 field rating with stars, replace a view of
+-   Use existing **Custom Controls** to improve the usability of most column
+    types, especially on mobile. For example, replace a 0 to 5 column rating with stars, replace a view of
     appointments with a calendar view, replace a sub-grid view with card forms.
 
 -   Leverage **Reference Panels** on forms to bundle multiple views, quick

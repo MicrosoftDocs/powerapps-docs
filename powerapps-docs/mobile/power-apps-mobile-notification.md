@@ -32,7 +32,7 @@ Add a push notification to your app if:
 > [!NOTE]
 > To receive push notification, each user must have opened the app in Power Apps Mobile once or gotten the app from the [Microsoft 365 apps page](https://www.office.com/apps).
 
-Before you can create push notification you need to have access to an app and have the record ID if you're creating a notification for a form.
+Before you can create push notification you need to have access to an app and have the row ID if you're creating a notification for a form.
 
 Create an app
 
@@ -77,7 +77,7 @@ When you trigger a push notification from a flow, you can send the notification 
     | Name | Description |
     | --- | --- |
     | Trigger condition |Select the condition for the notification. |
-    | The entity name |Select which entity the notification is for. |
+    | The table name |Select which table the notification is for. |
     | Scope |Select the scope. |
  
     > [!div class="mx-imgBorder"] 
@@ -101,9 +101,9 @@ When you trigger a push notification from a flow, you can send the notification 
       - **Recipient Items-1**: Select how the flow is triggered.
       - **Message**: Enter the notification message.
       - **Open app**: Select whether to open the app or not when the user selects the notification.
-      - **Entity**: Select which entity the notification is for.
+      - **Table**: Select which table the notification is for.
       - **Form or view**: Select if the notification is for a form or view.
-      - **Record ID**: If the notification is for a form, then enter the record ID.
+      - **Row ID**: If the notification is for a form, then enter the row ID.
 
       ![Enter the notification information for the app](media/modelapp-info.png)
 

@@ -28,6 +28,8 @@ search.app:
 
 # Validate and publish a model-driven app using the app designer
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Validate an app to check for asset dependencies that are required for the app to work, but haven't yet been added to the app. After a successful validation, you publish the app. 
   
 For example, you've added a Customer Service Performance dashboard to the app, which uses charts like Case Mix (By Priority) or Case Resolution Trend (By Day) that you haven't added. When you validate this app, you'll get a list of all missing, required assets.  
@@ -36,7 +38,7 @@ When you validate the app, the app designer canvas shows you details about the a
   
 1.  In the app designer, select **Validate**.  
   
-     A notification bar appears and shows you whether the app has any errors or warnings. The notification bar shows warnings in cases where, for example, an entity has no forms or views, or the app doesn’t contain any components. An error might appear if a site map isn't configured for the app. You can publish an app without addressing warnings, but errors must be fixed before you can publish.  
+     A notification bar appears and shows you whether the app has any errors or warnings. The notification bar shows warnings in cases where, for example, a table has no forms or views, or the app doesn’t contain any components. An error might appear if a site map isn't configured for the app. You can publish an app without addressing warnings, but errors must be fixed before you can publish.  
   
      ![Notification bar showing warnings in the app](media/app-designer-warning-notification.png "Notification bar showing warnings in the app")  
   
@@ -53,7 +55,7 @@ When you validate the app, the app designer canvas shows you details about the a
 3.  Select the assets that you want to add, and then select **Add Dependencies**. When you add a required asset, the count on the tile to which you've added the asset decreases.  
   
     > [!NOTE]
-    >  If a common asset is required across various app components-for example, a form is required for a dashboard and an entity-and you add that asset only once from the dashboard dependency tree, the dependency count will decrease only on the dashboard tile, but not on the entity tile. However, the dependency will be resolved for both.  
+    >  If a common asset is required across various app components-for example, a form is required for a dashboard and a table-and you add that asset only once from the dashboard dependency tree, the dependency count will decrease only on the dashboard tile, but not on the table tile. However, the dependency will be resolved for both.  
     >   
     >  Select **Get Latest Dependencies** ![Get Latest Dependencies button in the app designer](media/app-designer-get-latest-dependencies.png "Get Latest Dependencies button in the app designer") or select **Validate** again to get the latest set of dependencies. You'll only see these buttons after you save your app.  
   

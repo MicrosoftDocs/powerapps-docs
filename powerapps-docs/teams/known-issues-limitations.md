@@ -87,6 +87,8 @@ The following controls aren't supported:
 - [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md)
 - [Video control](../maker/canvas-apps/controls/control-audio-video.md)
 
+The [Image control](../maker/canvas-apps/controls/control-image.md) only supports external media URLs using HTTPS.
+
 ### New connections
 
 Connections in the Power Apps Studio that require an authentication dialog fails in the [Teams desktop client](https://docs.microsoft.com/microsoftteams/get-clients#desktop-client). Open the Studio in the [Teams web client](https://docs.microsoft.com/microsoftteams/get-clients#web-client) to add these connectors.
