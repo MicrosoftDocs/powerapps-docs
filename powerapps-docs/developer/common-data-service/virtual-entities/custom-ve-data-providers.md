@@ -1,7 +1,7 @@
 ---
-title: "Custom virtual entity data providers (Common Data Service) | Microsoft Docs"
-description: "Using the Common Data Service Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider."
-ms.date: 06/24/2020
+title: "Custom virtual table data providers (Common Data Service) | Microsoft Docs"
+description: "Using the Common Data Service Data SDK, .NET Developers have the option of creating custom virtual table data providers to help integrate external data source types that are not supported by an existing data provider."
+ms.date: 11/09/2020
 ms.service: powerapps
 ms.topic: "article"
 applies_to: 
@@ -17,11 +17,11 @@ search.app:
   - D365CE
 ---
 
-# Custom virtual entity data providers
+# Custom virtual table data providers
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Using the Common Data Service Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider. Each data provider is composed of a reusable set of Common Data Service plug-ins that implement the supported CRUD operations. (The initial release is limited to the **Retrieve** and **RetrieveMultiple** read operations.)  This section provides fundamental information about data providers and approaches to developing custom providers, including example code.
+Using the Common Data Service Data SDK, .NET Developers have the option of creating custom virtual table data providers to help integrate external data source types that are not supported by an existing data provider. Each data provider is composed of a reusable set of Common Data Service plug-ins that implement the supported CRUD operations. (The initial release is limited to the **Retrieve** and **RetrieveMultiple** read operations.)  This section provides fundamental information about data providers and approaches to developing custom providers, including example code.
 
 > [!NOTE]
 > As an alternative to creating a custom data source provider, you should consider adapting your data source to an existing data provider. For example, if you create an OData v4 interface to your external data source, then you can directly access it with the supplied standard OData v4 Data Provider. The mechanism of adding this REST interface varies with the underlying data service technology, for example see [WCF Data Services 4.5](https://docs.microsoft.com/dotnet/framework/data/wcf/). OData has broad industry support, with a wide range of dedicated tools and compatible technologies.
@@ -40,23 +40,23 @@ The `Microsoft.Xrm.Sdk.Data.dll` assembly is available as a NuGet package: [Micr
 
 ## Categories of providers
 
-There are two general categories of data provider you can create using the virtual entity data SDK assemblies: generic or targeted. The table below describes these approaches and matches them to the data provider development model best suited for that approach.
+There are two general categories of data provider you can create using the virtual table data SDK assemblies: generic or targeted. The table below describes these approaches and matches them to the data provider development model best suited for that approach.
 
 |**Category**|**Dev Model**|**Description**|
 |------------|-------------|---------------|
-|Generic|"Bare metal" provider|These providers can flexibly translate FetchXML query expressions to the associated request to the external data source, then return the resulting entity instances. Such a provider can be reused for all instances of this data source type. This approach is the most general but is more complicated to develop.  If the schema of the data source changes, the affected virtual entities must only be remapped.|
+|Generic|"Bare metal" provider|These providers can flexibly translate FetchXML query expressions to the associated request to the external data source, then return the resulting table instances. Such a provider can be reused for all instances of this data source type. This approach is the most general but is more complicated to develop.  If the schema of the data source changes, the affected virtual entities must only be remapped.|
 |Targeted|LINQ provider for known schema|Such a provider only narrowly translates queries into the associated LINQ call to a known, existing data source instance. The data source must be a LINQ provider as described in the topic [Enabling a Data Source for LINQ Querying](/dotnet/csharp/programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1). This approach is limited to a specific data source instance, but requires much less coding. If the schema of the data source changes, the data provider must be updated and rebuilt.|
 
 The standard Odata v4 Data Provider and the Cosmos DB Data Provider are examples of generic providers.
 
 ## Steps to use a custom data provider
 
-There are several steps that are required to create a virtual entity data provider solution that can be imported into your Common Data Service applications:
+There are several steps that are required to create a virtual table data provider solution that can be imported into your Common Data Service applications:
 
 1. Develop the custom data provider plug-in DLL (or set of DLLs).
 2. Register the custom data provider with your Common Data Service service using the Plug-in Registration Tool (PRT).
 3. Create a data provider solution.
-4. Customize the data source entity to reflect your data type or specific instance.
+4. Customize the data source table to reflect your data type or specific instance.
 5. Export the custom data provider solution.
 
 
@@ -66,7 +66,7 @@ Because virtual entities in this release are read-only, you will write the data 
 
 |**Event**|**Execution Context**|
 |---------|---------------------|
-|**Retrieve**|Describes which entity to retrieve as well as the attributes and any related entities to include.|
+|**Retrieve**|Describes which table to retrieve as well as the attributes and any related entities to include.|
 |**RetrieveMultiple**|Contains a <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> object defining the query. The framework contains a **QueryExpressionVisitor** class designed to inspect different parts of the query expression tree.|
 
 For both events, you must :
@@ -83,8 +83,8 @@ If for any reason your code cannot achieve the expected result, you must throw t
 
 |**Exception Class**|**Description**|
 |---------------|-----------|
-|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.AuthenticationException>|An error occurred during security authentication to the external data source service; for example HTTP status 401 received from the external data service. Typically occurs because the current user does not have proper privileges or the connection information in the associated **EntityDataSource** is incorrect.|
-|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.EndpointException>|The endpoint configuration in the data source entity is invalid or the endpoint does not exist.|
+|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.AuthenticationException>|An error occurred during security authentication to the external data source service; for example HTTP status 401 received from the external data service. Typically occurs because the current user does not have proper privileges or the connection information is incorrect.|
+|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.EndpointException>|The endpoint configuration in the data source table is invalid or the endpoint does not exist.|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.GenericDataAccessException>|A general data access error, used when the error does not map to a more specific exception.|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.InvalidMetadataException>| |
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.InvalidQueryException>|The specified query is invalid; for example it an invalid clause combination or unsupported comparison operator.|
@@ -94,25 +94,19 @@ If for any reason your code cannot achieve the expected result, you must throw t
 
 ### Plug-in registration
 
-Unlike an ordinary plugin, you will only use the Plugin Registration Tool (PRT) to register the assembly and the plugins for each event. You will not register specific steps. Your plugin will run in stage 30, the main core transaction stage for the operation that is not available for ordinary plugin steps. Instead of registering steps, you will configure your data provider using the following entities. 
+Unlike an ordinary plugin, you will only use the Plugin Registration Tool (PRT) to register the assembly and the plugins for each event. You will not register specific steps. Your plugin will run in stage 30, the main core transaction stage for the operation that is not available for ordinary plugin steps. Instead of registering steps, you will configure your data provider using the [EntityDataProvider](../reference/entities/entitydataprovider.md) table that defines the plug-ins to use for each event and the logical name of the data source.
 
-
-|**Entity**|**Description**|
-|-----|-----|
-|[EntityDataProvider](../reference/entities/entitydataprovider.md)|Defines the plugins to use for each event and the logical name of the data source.|
-|[EntityDataSource](../reference/entities/entitydatasource.md)|Provides the entity context and any connection information required for the external data source, including any secrets required to authenticate.|
-
-When the metadata for your virtual entity is configured, your plugins are registered using the PRT and the correct configuration data is set in the **EntityDataProvider** and **EntityDataSource** entities, your virtual entity will start to respond to requests.
+When the metadata for your virtual table is configured, your plug-ins are registered using the PRT and the correct configuration data is set in the **EntityDataProvider** table, your virtual table will start to respond to requests.
 
 ### Debugging plug-ins
 
-A custom virtual entity provider is a type of plug-in. Use the information in these topics to debug plug-ins for custom virtual entity providers: [Debug Plug-ins](../debug-plug-in.md) and [Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md).
+A custom virtual table provider is a type of plug-in. Use the information in these topics to debug plug-ins for custom virtual table providers: [Debug Plug-ins](../debug-plug-in.md) and [Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md).
 
 
 ### See also
 
-[Get started with virtual entities](get-started-ve.md)<br />
-[API considerations of virtual entities](api-considerations-ve.md)<br />
-[Sample: Generic virtual entity data provider plug-in](sample-generic-ve-plugin.md)
+[Get started with virtual table](get-started-ve.md)<br />
+[API considerations of virtual table](api-considerations-ve.md)<br />
+[Sample: Generic virtual table data provider plug-in](sample-generic-ve-plugin.md)
 
  
