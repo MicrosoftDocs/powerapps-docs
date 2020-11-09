@@ -71,9 +71,9 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 | UserInterventionNeeded_NavigateToAadDenied <br> UserInterventionNeeded_StorageLost | Not applicable | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy) | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy) | Not applicable |
 | AadError | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) |
 
-## Resolution 1: Enable storage of cookies and local data in your browser
+## Resolution 1: Enable storage of third-party cookies and local data in your browser
 
-Power Apps stores some data locally in your browser, including user identity and preferences. Power Apps can’t function if the browser is configured to disallow storage of local data or third-party cookies while using Power Apps.
+Power Apps stores some data locally in your browser, including user identity and preferences. Power Apps can’t function if the browser is configured to disallow storage of local data or third-party cookies set by Power Apps sites.
 
 ### Instructions for Microsoft Edge
 
