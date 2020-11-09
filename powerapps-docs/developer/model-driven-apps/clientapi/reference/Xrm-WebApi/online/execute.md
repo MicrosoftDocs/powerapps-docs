@@ -523,6 +523,126 @@ Xrm.WebApi.online.execute(deleteRequest).then(
 );
 ```
 
+### Associate a record
+The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup fields), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+
+```JavaScript
+var Sdk = window.Sdk || {};
+
+/*
+ * Request to execute an Associate operation.
+ */
+Sdk.AssociateRequest = function(target, relatedEntities, relationship) {
+    this.target = target;
+    this.relatedEntities = relatedEntities;
+    this.relationship = relationship;
+};
+
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+// function object itself.
+Sdk.AssociateRequest.prototype.getMetadata = function() {
+    return {
+        boundParameter: null,
+        parameterTypes: {},
+        operationType: 2, // Associate and Disassociate fall under the CRUD umbrella
+        operationName: "Associate"
+    }
+};
+
+// Construct the target EntityReference object
+var target = {
+    entityType: "account",
+    id: "0b4abc7d-7619-eb11-8dff-000d3ac5c7f9"
+};
+
+// Construct the related EntityReferences that the Target will be associated with.
+var relatedEntities = [
+    {
+        entityType: "contact",
+        id: "180a9aad-7619-eb11-8dff-000d3ac5c7f9"
+    },
+    {
+        entityType: "contact",
+        id: "753c58b4-7619-eb11-8dff-000d3ac5c7f9"
+    }
+];
+
+// The name of the existing relationship to associate on.
+var relationship = "new_account_contact";
+
+var manyToManyAssociateRequest = new Sdk.AssociateRequest(target, relatedEntities, relationship)
+
+Xrm.WebApi.online.execute(manyToManyAssociateRequest).then(
+    function(result) {
+        if (result.ok) {
+            console.log("Status: %s %s", result.status, result.statusText);
+            // perform other operations as required;
+        }
+    }, 
+    function(error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
+### Disassociate a record
+The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (Many-To-One and Many-To-Many relationships). For single-valued navigation properties (One-To-Many relationships a.k.a Lookup fields), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+
+> [!NOTE]
+> Unlike the Associate operation which allows associating the target entity record with multiple related entity records in a single operation, the Disassociate operation is limited to only disassociating one entity record from the target entity record per operation.
+
+```JavaScript
+var Sdk = window.Sdk || {};
+
+/*
+ * Request to execute a Disassociate operation.
+ */
+Sdk.DisassociateRequest = function(target, relatedEntityId, relationship) {
+    this.target = target;
+    this.relatedEntityId = relatedEntityId;
+    this.relationship = relationship;
+};
+
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+// function object itself.
+Sdk.DisassociateRequest.prototype.getMetadata = function() {
+    return {
+        boundParameter: null,
+        parameterTypes: {},
+        operationType: 2, // Associate and Disassociate fall under the CRUD umbrella
+        operationName: "Disassociate"
+    }
+};
+
+// Construct the target EntityReference object
+var target = {
+    entityType: "account",
+    id: "0b4abc7d-7619-eb11-8dff-000d3ac5c7f9"
+};
+
+// The GUID of the related entity record to disassociate.
+var relatedEntityId = "180a9aad-7619-eb11-8dff-000d3ac5c7f9";
+
+// The name of the existing relationship to disassociate from.
+var relationship = "new_account_contact";
+
+var manyToManyDisassociateRequest = new Sdk.DisassociateRequest(target, relatedEntityId, relationship)
+
+Xrm.WebApi.online.execute(manyToManyDisassociateRequest).then(
+    function(result) {
+        if (result.ok) {
+            console.log("Status: %s %s", result.status, result.statusText);
+            // perform other operations as required;
+        }
+    }, 
+    function(error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
 ### Related topics
 
 

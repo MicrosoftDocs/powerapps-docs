@@ -37,7 +37,8 @@ For more information about actions, see [Use actions](/powerapps/maker/common-da
 
 ## Returns
 
-On success, returns Web API result along with any action output.
+On success, returns an object with the Web API result along with any action output.
+On failure, returns an object with error details.
 
 ### Related topics
 [Use actions](/powerapps/maker/common-data-service/actions)
