@@ -96,9 +96,11 @@ Power Apps stores some data locally in your browser, including user identity and
     ***Note: The following steps require your Edge browser version to be 87 or above***
       
     1. Go to the Power Apps website.
-    1. On the top right corner of the URL bar click on the cookie icon.
+    1. Click on the cookie icon in the right corner of the address bar.
     1. Select **Site not working?**.
     1. Select **Allow cookies**.
+
+    ![Allow third-party cookies in Edge for Power Apps](maker/media/troubleshooting-startup-issues/allow-third-party-cookies-edge.gif "Allow third-party cookies in Edge for Power Apps")
 
 ### Instructions for Google Chrome
     
@@ -125,6 +127,8 @@ Power Apps stores some data locally in your browser, including user identity and
     1. Use **Add** for **Sites that can always use cookies** and add:
         - `[*.]powerapps.com`
     1. Ensure that you check the **Including third-party cookies on this site** option when adding the site.
+
+    ![Allow third-party cookies in Chrome for Power Apps](maker/media/troubleshooting-startup-issues/allow-third-party-cookies-chrome.gif "Allow third-party cookies in Chrome for Power Apps")
 
 ### Instructions for Internet Explorer 11
 
