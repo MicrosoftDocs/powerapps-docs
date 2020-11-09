@@ -107,13 +107,13 @@ Legend
 
 ### View quick suggestions
 
-View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary field of an entity row, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
+View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary column of an entity row, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
 
 ![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
 
 ### Search results page
 
-Search results are ranked and grouped by entity, with more fields that are displayed to help distinguish rows and filter to take further action.
+Search results are ranked and grouped by entity, with more columns that are displayed to help distinguish rows and filter to take further action.
 
 The **Top results** tab displays the top 20 results for the search term, with rows grouped by entity type. Tables that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched entity types outside of the top results in desending ordered by number of rows matched.
 
