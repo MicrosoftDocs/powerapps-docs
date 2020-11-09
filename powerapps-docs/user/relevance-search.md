@@ -20,7 +20,7 @@ search.app:
 
 # Using relevance search to search for rows
 
-!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Relevance search delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance. 
   
