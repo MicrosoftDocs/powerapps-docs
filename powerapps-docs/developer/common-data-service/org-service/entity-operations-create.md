@@ -1,8 +1,8 @@
 ---
 title: "Create tables using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Create tables using the Organization Service in Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/09/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -105,7 +105,7 @@ Guid accountid = response.id;
 ### When to use the CreateRequest class
 
 You must use the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class if you want to pass optional parameters. There are two cases where you might need special parameters.
- - When you want duplicate detection rules to be applied. More information: [Check for Duplicate rows](#check-for-duplicate-records)
+ - When you want duplicate detection rules to be applied. More information: [Check for Duplicate rows](#check-for-duplicate-rows)
  - When you are creating a row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the Organization service](use-messages.md)
 
 ## Create related tables in one operation
