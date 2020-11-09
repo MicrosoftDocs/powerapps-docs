@@ -37,7 +37,7 @@ Relevance search brings the following enhancements and benefits:
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results. 
 
 - Relevance Search can comb through the text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.
-- Relevance Search enables you to search for records that are shared with you and records that you own.
+- Relevance Search enables you to search for rows that are shared with you and rows that you own.
     > [!NOTE]
     > - Certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify rows. Because they're ignored during search, these words are also not highlighted in results.
     > - Highlighted terms are often returned as a portion of the full value in a column because only the matched terms are highlighted.
@@ -86,15 +86,15 @@ The search bar in the top is easy to find from any page in your app. It is alway
 > ![Search box on header](media/new-search-exp.png)
 
 
-### No search required to see recent records
+### No search required to see recent rows
 
-Immediately see the records that you accessed recently when you click inside the search box.
+Immediately see the rows that you accessed recently when you click inside the search box.
 
 ![Suggested search results on first click](media/relevance-search-first-click.gif) 
 
-### See recent records and searches
+### See recent rows and searches
 
-Before you even start typing in the search box, you will see any recent searches and recently accessed records in combined view to help with your search. Recently accessed records are also grouped by entity type, allowing you to quickly scan and understand the list of results.
+Before you even start typing in the search box, you will see any recent searches and recently accessed rows in combined view to help with your search. Recently accessed rows are also grouped by entity type, allowing you to quickly scan and understand the list of results.
 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
@@ -102,20 +102,22 @@ Before you even start typing in the search box, you will see any recent searches
 Legend
 
 1. **Recent searches**: Shows your recent searches.
-2. **Recently accessed records**:  Shows recently accessed records that are grouped by entity type.
+2. **Recently accessed rows**:  Shows recently accessed rows that are grouped by entity type.
 
 
 ### View quick suggestions
 
-View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary field of an entity record, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
+View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary field of an entity row, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search#suggestions).
 
 ![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
 
 ### Search results page
 
-Search results are ranked and grouped by entity, with more fields that are displayed to help distinguish records and filter to take further action.
+Search results are ranked and grouped by entity, with more fields that are displayed to help distinguish rows and filter to take further action.
 
-The **Top results** tab displays the top 20 results for the search term, with records grouped by entity type.
+The **Top results** tab displays the top 20 results for the search term, with rows grouped by entity type. Entities that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched entity types outside of the top results in desending ordered by number of rows matched.
+
+
 
 The full result set is grouped by entity, with the entity type displayed as a horizontal list of tabs along the top of the screen.
 
@@ -127,17 +129,18 @@ Each of the tabs lets you drill into a specific entity type, with the filter pan
 
 Legend
 
-1. **Top results**: Show records that best matches the search query.
-2. **Record type**: To narrow your search results to a specific page (entity), select the page (entity) tab.
-3. **Name**: Shows the name of the record.
-4. **Created on**: Shows when the record was created.
+1. **Top results**: Show rows that best matches the search query.
+2. **Row type**: To narrow your search results to a specific page (entity), select the page (entity) tab.
+3. **Name**: Shows the name of the row.
+4. **Created on**: Shows when the row was created.
 5. **Show more**: Select to show more results.
-6. **Filters**: Refine the search results by using filters. Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search you can filter by record type, owner, created on, and modified on.
+6. **Filters**: Refine the search results by using filters. Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search you can filter by row type, owner, created on, and modified on.
 7. **Clear all**: Select to clear all the filters. 
-8. **Owner**: Select your user name to find records that you are the owner of.
+8. **Owner**: Select your user name to find rows that you are the owner of.
 9. **Clear**: Only clears the **Owner** filter. Note, you only see this filter when the **Owner** filter is selected.
-10. **Modified on**: Filter the search results by when the record was last modified.
-11. **Created on**: Select a time range to find records created in the selected time range.
+10. **Modified on**: Filter the search results by when the row was last modified.
+11. **Created on**: Select a time range to find rows created in the selected time range.
+
 
 ### Feedback link
 
