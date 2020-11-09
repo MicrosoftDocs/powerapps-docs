@@ -1,8 +1,8 @@
 ---
-title: "Calendar entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Calendar tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can store data for customer service calendars and holiday schedules using calendar entities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/09/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,11 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Calendar entities
+# Calendar tables
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The calendar entity stores data for customer service calendars and holiday schedules in addition to business. Each calendar is set for a specific time zone.  
+The calendar table stores data for customer service calendars and holiday schedules in addition to business. Each calendar is set for a specific time zone.  
   
  A calendar describes the availability of a service or a resource. Calendars are related to `calendarrule` records, which include details about the duration, start and end times, and recurring patterns of events included in the calendar.  
   
@@ -33,18 +33,8 @@ The calendar entity stores data for customer service calendars and holiday sched
   
  A calendar can be a complex tree of rules and nested calendars that represent a high-level abstraction of the work schedule. The calendar entity supports the <xref:Microsoft.Crm.Sdk.Messages.ExpandCalendarRequest> message to convert to a simple view, which is an array of time blocks that determine availability over specific ranges.  
   
-## In This Section  
+### See also  
  [Types of Calendars](types-calendars.md)  
   
- [Calendar Entity](/reference/entities/calendar.md)  
+ [Calendar table reference](/reference/entities/calendar.md)  
   
-## Related Sections  
- [Appointment Entities](/dynamics365/customer-engagement/developer/appointment-entities)  
-  
- [Recurring Appointment Entities](/dynamics365/customer-engagement/developer/recurring-appointment-entities)  
-  
- [Resource Entities](/dynamics365/customer-engagement/developer/resource-entities)  
-  
- [Service Entity](/dynamics365/customer-engagement/developer/service-entity)  
-  
- [Sample Code for Schedule and Appointment Entities](/dynamics365/customer-engagement/developer/sample-code-schedule-appointment-entities)
