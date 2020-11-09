@@ -1,9 +1,9 @@
-- name: Get started with virtual entities
+- name: Get started with virtual tables
   href: get-started-ve.md
   items:
   - name: API considerations
     href: api-considerations-ve.md
   - name: Custom data providers
     href: custom-ve-data-providers.md
-  - name: 'Sample: Generic virtual entity data provider plug-in'
+  - name: 'Sample: Generic virtual table data provider plug-in'
     href: sample-generic-ve-plugin.md
