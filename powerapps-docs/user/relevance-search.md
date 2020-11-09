@@ -115,11 +115,9 @@ View suggested search results inline as you type, minimizing keystrokes and simp
 
 Search results are ranked and grouped by table, with more columns that are displayed to help distinguish rows and filter to take further action.
 
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Tables that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched table types in desending ordered by number of rows matched.
-
-
-
 The full result set is grouped by table, with the table type displayed as a horizontal list of tabs along the top of the screen.
+
+The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Tables that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched table types in desending ordered by number of matched rows.
 
 Each of the tabs lets you drill into a specific table type, with the filter panel updating to show the set of facets and filters configured for that table.
 
