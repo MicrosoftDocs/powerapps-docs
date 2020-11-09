@@ -38,7 +38,7 @@ For more information on how privileges and access works, see [How access to a ro
    > ![Select assign a row](media/reassign-2.png "[Select assign a row")
 
   
-3. In the assign dialog box, select the **Assign to** field and choose one of the following options:
+3. In the assign dialog box, select the **Assign to** column and choose one of the following options:
     - Select **Me** to assign the row to yourself and them select **Assign**. Remember only a system administrator can assign a row that belongs to someone else to themself.
     
       > [!div class="mx-imgBorder"]
@@ -70,7 +70,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
    > [!div class="mx-imgBorder"]
    > ![Reassign the selected rows](media/reassign-6.png "Reassign the selected rows")
    
- 4. In the assign dialog box, select the **Assign to** field and choose one of the following options:
+ 4. In the assign dialog box, select the **Assign to** column and choose one of the following options:
  
     - Select **Me** to assign the row to yourself and them select **Assign**. Remember only a system administrator can assign a row that belongs to someone else to themself.
     
