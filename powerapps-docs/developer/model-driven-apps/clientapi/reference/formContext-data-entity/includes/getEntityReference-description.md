@@ -1,1 +1,1 @@
-Returns a lookup value that references the row.
+Returns a lookup value that references the record.

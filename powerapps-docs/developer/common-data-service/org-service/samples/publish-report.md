@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to publish a report by creating a **Report** row and the related rows that make it visible. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/PublishReport).
+This sample shows how to publish a report by creating a **Report** record and the related records that make it visible. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/PublishReport).
 
 ## How to run this sample
 
@@ -37,7 +37,7 @@ Checks for the current version of the org.
 
 1. The `Report` method instantiates the report object.
 2. The `ReportCategory` method sets the report category te report should belong to.
-3. The `ReportEntity` method defines which table this report uses.
+3. The `ReportEntity` method defines which entity this report uses.
 4. The `ReportVisibility` method sets the report visibility.
 
 ### Clean up

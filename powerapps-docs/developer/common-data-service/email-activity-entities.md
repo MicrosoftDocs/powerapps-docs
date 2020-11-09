@@ -1,5 +1,5 @@
 ---
-title: "Email activity tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Email activity entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The email activity in Dynamics 365 lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Email activity tables
+# Email activity entities
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -28,7 +28,7 @@ The email activity lets you track and manage email communications with customers
   
 - Create, retrieve, update, and delete the email activity.  
   
-- Send email messages, or send email messages by using email templates (`Template`). For more information about email templates, see [Template table](reference/entities/template.md).  
+- Send email messages, or send email messages by using email templates (`Template`). For more information about email templates, see [Template Entity](/reference/entities/template.md).  
   
 - Attach files as attachments by using the (`ActivityMimeAttachment`) attribute in the email message.  
   
@@ -109,6 +109,7 @@ ObjectId = new EntityReference(Template.EntityLogicalName, _templateId), ObjectT
      Because you are reusing an existing attachment file, you do not have to specify the `ActivityMimeAttachment.Body` and `ActivityMimeAttachment.FileName` attribute values while you are creating and associating email attachment records to emails or email templates.  
   
 ### See also  
- [Activity table](activity-entities.md)<br/>   
- [Email table](reference/entities/email.md)<br/>   
- [ActivityMimeAttachment table](reference/entities/activitymimeattachment.md)
+ [Activity Entities](activity-entities.md)   
+ [Sample code for activity entities](/dynamics365/customer-engagement/developer/sample-code-activity-entities)   
+ [Email Entity](/reference/entities/email.md)   
+ [ActivityMimeAttachment Entity](/reference/entities/activitymimeattachment.md)

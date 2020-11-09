@@ -42,9 +42,9 @@ Checks for the current version of the org.
 ### Demonstrate
 
 1. Defines some anonymous types to define the range of possible connection property values.
-2. Creates a connection role for account and contact table.
-3. Creates a connection role object type code row for account and contact table.
+2. Creates a connection role for account and contact entity.
+3. Creates a connection role object type code record for account and contact entity.
 
 ### Clean up
 
-Display an option to delete the rows in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

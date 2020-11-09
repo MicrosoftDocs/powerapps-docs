@@ -1,22 +1,20 @@
 ---
-title: "SocialProfile table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SocialProfile table."
-ms.date: 11/07/2020
+title: "SocialProfile Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SocialProfile entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SocialProfile table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# SocialProfile Entity Reference
 
 This entity is used to store social profile information of its associated account and contacts on different social channels.
 
@@ -39,7 +37,7 @@ This entity is used to store social profile information of its associated accoun
 |SetState|PATCH [*org URI*]/api/data/v9.0/socialprofiles(*socialprofileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/socialprofiles(*socialprofileid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -57,16 +55,14 @@ This entity is used to store social profile information of its associated accoun
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Blocked](#BKMK_Blocked)
 - [Community](#BKMK_Community)
 - [CustomerId](#BKMK_CustomerId)
-- [CustomerIdName](#BKMK_CustomerIdName)
 - [CustomerIdType](#BKMK_CustomerIdType)
-- [CustomerIdYomiName](#BKMK_CustomerIdYomiName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [InfluenceScore](#BKMK_InfluenceScore)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -145,23 +141,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |Type|Customer|
 
 
-### <a name="BKMK_CustomerIdName"></a> CustomerIdName
-
-|Property|Value|
-|--------|-----|
-|Description|Select the parent account or parent contact for the contact to provide a quick link to additional details, such as financial information, activities, and opportunities.|
-|DisplayName|Parent Customer Type|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForCreate|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|customeridname|
-|MaxLength|160|
-|RequiredLevel|None|
-|Type|String|
-
-
 ### <a name="BKMK_CustomerIdType"></a> CustomerIdType
 
 |Property|Value|
@@ -173,23 +152,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |LogicalName|customeridtype|
 |RequiredLevel|None|
 |Type|EntityName|
-
-
-### <a name="BKMK_CustomerIdYomiName"></a> CustomerIdYomiName
-
-|Property|Value|
-|--------|-----|
-|Description|Select the parent account or parent contact for the contact|
-|DisplayName|Parent Customer Type|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForCreate|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|customeridyominame|
-|MaxLength|450|
-|RequiredLevel|None|
-|Type|String|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -217,6 +179,7 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |DisplayName|Influence Score|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|influencescore|
 |MaxValue|1000000000|
 |MinValue|0|
@@ -295,9 +258,10 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|profilefullname|
 |MaxLength|160|
-|RequiredLevel|None|
+|RequiredLevel|ApplicationRequired|
 |Type|String|
 
 
@@ -307,10 +271,11 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |--------|-----|
 |Description|Shows the customer that this social profile belongs to.|
 |DisplayName|Profile Link|
-|FormatName|Text|
+|FormatName|Url|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|profilelink|
 |MaxLength|100|
 |RequiredLevel|None|
@@ -327,9 +292,10 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|profilename|
 |MaxLength|100|
-|RequiredLevel|None|
+|RequiredLevel|ApplicationRequired|
 |Type|String|
 
 
@@ -453,15 +419,17 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [CustomerIdName](#BKMK_CustomerIdName)
+- [CustomerIdYomiName](#BKMK_CustomerIdYomiName)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedOn](#BKMK_ModifiedOn)
@@ -548,6 +516,38 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_CustomerIdName"></a> CustomerIdName
+
+|Property|Value|
+|--------|-----|
+|Description|Select the parent account or parent contact for the contact to provide a quick link to additional details, such as financial information, activities, and opportunities.|
+|DisplayName|Parent Customer Type|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|customeridname|
+|MaxLength|160|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+
+
+### <a name="BKMK_CustomerIdYomiName"></a> CustomerIdYomiName
+
+|Property|Value|
+|--------|-----|
+|Description|Select the parent account or parent contact for the contact|
+|DisplayName|Parent Customer Type|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|customeridyominame|
+|MaxLength|450|
+|RequiredLevel|ApplicationRequired|
 |Type|String|
 
 
@@ -926,6 +926,6 @@ See account Entity [Socialprofile_customer_accounts](account.md#BKMK_Socialprofi
 
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.socialprofile?text=socialprofile EntityType" />

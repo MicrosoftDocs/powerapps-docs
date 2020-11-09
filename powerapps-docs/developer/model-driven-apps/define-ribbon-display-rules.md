@@ -30,7 +30,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 ## Control when ribbon elements are displayed  
  By defining display rules in rule definitions, you can use the same display rule for many command definitions. When more than one display rule is defined for a command definition, all of the display rules must evaluate as true for the ribbon element to be displayed.  
 
- All display rules provide an optional column to specify whether the default value of the rule is true or false and an optional `InvertResult` column to enable returning a negative result when the item being tested returns true.  
+ All display rules provide an optional attribute to specify whether the default value of the rule is true or false and an optional `InvertResult` attribute to enable returning a negative result when the item being tested returns true.  
 
  The `/RuleDefinitions/DisplayRules/DisplayRule` element supports the following types of rules:  
 
@@ -44,7 +44,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `Modern`  |                                       The command bar is presented using Dynamics 365 for tablets.                                       |
 | `Refresh` |                                                      The command bar is presented using the updated user interface.                                                      |
-| `Legacy`  | The ribbon is presented in forms for tables that were not updated or in a list view in Dynamics 365 for Outlook. |
+| `Legacy`  | The ribbon is presented in forms for entities that were not updated or in a list view in Dynamics 365 for Outlook. |
 
  `<CrmClientTypeRule>`  
  Allows definition of rules depending on the type of client used. `Type` options are as follows:  
@@ -75,10 +75,10 @@ When configuring ribbon elements, you can define specific rules to control when 
 - 2010  
 
   `<EntityPrivilegeRule>`  
-  Use this kind of rule to display ribbon elements when a user has specific privileges for a table. You must specify the privilege depth and the specific privilege you want to check.  
+  Use this kind of rule to display ribbon elements when a user has specific privileges for an entity. You must specify the privilege depth and the specific privilege you want to check.  
 
   `<EntityPropertyRule>`  
-  Allows definition of rules depending on the Boolean values of specific table properties. `PropertyName` options are as follows:  
+  Allows definition of rules depending on the Boolean values of specific entity properties. `PropertyName` options are as follows:  
 
 - DuplicateDetectionEnabled  
 
@@ -99,15 +99,15 @@ When configuring ribbon elements, you can define specific rules to control when 
 - HasNotes  
 
   `<EntityRule>`  
-  Entity rules allow for evaluation of the current table. This is useful when you define custom actions that apply to the table template instead of for specific tables. For example, you may want to add a ribbon element to all tables except for some specific tables. It is easier to define the custom action for the table template that applies to all tables and then use a table rule to filter out those that should be excluded.  
+  Entity rules allow for evaluation of the current entity. This is useful when you define custom actions that apply to the entity template instead of for specific entities. For example, you may want to add a ribbon element to all entities except for some specific entities. It is easier to define the custom action for the entity template that applies to all entities and then use an entity rule to filter out those that should be excluded.  
 
-  The table rule also includes an optional context column to specify whether the table is being displayed in the form or a list (HomePageGrid). The optional `AppliesTo` column can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
+  The entity rule also includes an optional context attribute to specify whether the entity is being displayed in the form or a list (HomePageGrid). The optional `AppliesTo` attribute can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the entity is being displayed in a subgrid.  
 
   `<FormEntityContextRule>`  
   [!INCLUDE[ribbon_element_FormEntityContextRule](../../includes/ribbon-element-formentitycontextrule.md)]
 
   `<FormStateRule`  
-  Use the form state rule to determine the current type of form that is displaying a row. `State` options are as follows:  
+  Use the form state rule to determine the current type of form that is displaying a record. `State` options are as follows:  
 
 - Create  
 
@@ -126,9 +126,9 @@ When configuring ribbon elements, you can define specific rules to control when 
 
 |Value|Presentation|  
 |-----------|------------------|  
-|`Main`|An table form displayed in the application.|  
-|`Preview`|The table preview form displayed as an expanding element in the grid.|  
-|`AppointmentBook`|Used with the appointment, equipment, serviceappointment, and systemuser tables for the Service Scheduling user interface.|  
+|`Main`|An entity form displayed in the application.|  
+|`Preview`|The entity preview form displayed as an expanding element in the grid.|  
+|`AppointmentBook`|Used with the appointment, equipment, serviceappointment, and systemuser entities for the Service Scheduling user interface.|  
 |`Dashboard`|The form defines a dashboard.|  
 |`Quick`|A quick view form.|  
 |`QuickCreate`|A quick create form.|  
@@ -137,7 +137,7 @@ When configuring ribbon elements, you can define specific rules to control when 
  [!INCLUDE[ribbon_element_HideForTabletExperienceRule](../../includes/ribbon-element-hidefortabletexperiencerule.md)]
 
  `<MiscellaneousPrivilegeRule>`  
- Use this kind of rule to check for privileges that do not apply to a specific table, such as ExportToExcel, MailMerge, or GoOffline.  
+ Use this kind of rule to check for privileges that do not apply to a specific entity, such as ExportToExcel, MailMerge, or GoOffline.  
 
  `<OrganizationSettingRule>`  
  Use this to display a ribbon element if specific organization settings are enabled. Setting options are as follows:  
@@ -171,7 +171,7 @@ When configuring ribbon elements, you can define specific rules to control when 
   This type of rule checks the URL of the page being displayed. It returns true if the address matches.  
 
   `<RelationshipTypeRule>` 
-  This type of rule is applied to rows selected in a grid. It lets you determine the type of relationship, as follows:  
+  This type of rule is applied to records selected in a grid. It lets you determine the type of relationship, as follows:  
 
 - OneToMany  
 
@@ -189,7 +189,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 - Spla  
 
   `<ValueRule>`  
-  Use this rule to check the value of a specific column in the row being displayed in the form.  
+  Use this rule to check the value of a specific field in the record being displayed in the form.  
 
 > [!NOTE]
 >  For commands defined for subgrid for forms using the updated user experience, value rules cannot be used within display rules. Use this element within an `<EnableRule>` to hide an element.  

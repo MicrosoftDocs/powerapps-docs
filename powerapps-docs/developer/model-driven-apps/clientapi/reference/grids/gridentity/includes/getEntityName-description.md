@@ -1,1 +1,1 @@
-Returns the logical name for the row in the row.
+Returns the logical name for the record in the row.

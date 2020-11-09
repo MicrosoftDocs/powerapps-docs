@@ -1,8 +1,8 @@
 ---
-title: "Queue tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Queue entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Queues in Power Apps are instrumental in organizing, prioritizing, and monitoring the progress of your work." 
 ms.custom: ""
-ms.date: 11/09/2020
+ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,18 +15,18 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Queue tables
+# Queue entities
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-*Queues* are instrumental in organizing, prioritizing, and monitoring the progress of your work. As a central location for work management, queues assist you in processing cases, responding to service calls, or sending out product information to prospective customers. Programmatically, a queue is a collection of queue items. A queue item serves as a container for a table row, such as a task, an email, or a case that needs processing. See [Queue table reference](reference/entities/queue.md)
+*Queues* are instrumental in organizing, prioritizing, and monitoring the progress of your work. As a central location for work management, queues assist you in processing cases, responding to service calls, or sending out product information to prospective customers. Programmatically, a queue is a collection of queue items. A queue item serves as a container for an entity record, such as a task, an email, or a case that needs processing. See [Queue Entity](reference/entities/queue.md)
 
 > [!NOTE]
-> For information about working with queues using the UI, see [Create and manage queues](/dynamics365/customer-engagement/customer-service/set-up-queues-manage-activities-cases)in Dynamics 365 Customer Service docs.  
+> For information about working with queues using the UI, see [Queues overview](/dynamics365/customer-engagement/customer-service/set-up-queues-manage-activities-cases).  
   
 The following information pertains to queues:  
   
--   All customizable tables can be enabled for queues.  
+-   All customizable entities can be enabled for queues.  
   
 -   Queues may be public or private. Private queue items are only visible to the members of the queue.  
   
@@ -53,8 +53,8 @@ The following information pertains to queues:
 -   All other queues are public. Everyone with read privileges for the queue entity will be able to see these queues.  
   
 <a name="BKMK_QueueAttributes"></a>   
-## Columns used to manage queues  
- Use the following columns to manage queues.  
+## Attributes used to manage queues  
+ Use the following attributes to manage queues.  
   
 |SchemaName|DisplayName|Type|Description|  
 |----------------|-----------------|----------|-----------------|  
@@ -71,10 +71,10 @@ The following information pertains to queues:
 -   When any routing rule uses the queue.  
   
 <a name="BKMK_Enabling"></a>   
-## Enable tables for queues  
+## Enable entities for queues  
  To enable a customizable entity (`EntityMetadata.IsCustomizable = true`) for queues, use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsValidForQueue> attribute to `true`. The queue entity and the queue item entity are customizable entities, but they cannot be enabled for queues.  
   
- The following list contains default queue-enabled tables in Common Data Service:  
+ The following list contains default queue-enabled entities in Common Data Service:  
   
 -   Appointment  
   
@@ -93,6 +93,8 @@ The following information pertains to queues:
 -   PhoneCall  
   
 -   RecurringAppointmentMaster  
+  
+-   ServiceAppointment  
   
 -   SocialActivity  
   
@@ -158,7 +160,9 @@ The following information pertains to queues:
 - Delete a queue item from a queue by using the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> message. When you delete a queue item, a referenced entity record is not deleted. However, when you delete an entity record, all queue items that reference this entity record are deleted.  
   
 ### See also  
-[Queue table reference](reference/entities/queue.md)<br/>   
-[QueueItem table reference](reference/entities/queueitem.md)<br/>   
+ <!--[Configure EMail for Incoming Messages](configure-email-incoming-messages.md)-->  
+ 
+[Queue Entity](reference/entities/queue.md)   
+[QueueItem Entity](reference/entities/queueitem.md)   
 <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>   
  

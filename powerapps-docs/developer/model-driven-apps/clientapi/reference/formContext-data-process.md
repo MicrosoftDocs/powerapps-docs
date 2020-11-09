@@ -18,6 +18,7 @@ search.app:
 # formContext.data.process (Client API reference)
 
 
+
 Provides events, methods, and objects to interact with the business process flow data on a form. See [formContext.ui.process (Client API reference)](formContext-ui-process.md) for methods to interact with the business process flow control on the form.
 
 ## Process events and event handler methods
@@ -54,7 +55,7 @@ A process contains the data for a business process flow. Use the methods to acce
 
 ## ProcessInstance methods
 
-Use these methods to retrieve information about all the process instances for a table row and to set a process instance as the active instance.
+Use these methods to retrieve information about all the process instances for an entity record and to set a process instance as the active instance.
 
 |Name | Description |
 |--|--|

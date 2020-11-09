@@ -32,7 +32,7 @@ Read-only and editable grids
 
 **Type**: String
 
-**Description**: The logical name of the table data displayed in the grid.
+**Description**: The logical name of the entity data displayed in the grid.
 
 ## Remarks
 

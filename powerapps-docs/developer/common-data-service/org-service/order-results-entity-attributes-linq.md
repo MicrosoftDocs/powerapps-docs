@@ -1,6 +1,6 @@
 ---
-title: "Order results using table columns with LINQ (Common Data Service) | Microsoft Docs" 
-description: "Read how you can use lookup or choice columns to order results within a LINQ query"
+title: "Order results using entity attributes with LINQ (Common Data Service) | Microsoft Docs" 
+description: "Read how you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -15,15 +15,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Order results using table columns with LINQ
+# Order results using entity attributes with LINQ
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service(Common Data Service) for Apps, you can use lookup or choice columns to order results within a LINQ query. This topic shows several examples of this type of query.  
+In Common Data Service(Common Data Service) for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
   
 ## Using a Lookup Value to Order By  
 
-The following sample shows use the lookup column `PrimaryContactId` in an `Order By` clause.  
+The following sample shows use the lookup attribute `PrimaryContactId` in an `Order By` clause.  
   
 ```csharp
 using (ServiceContext svcContext = new ServiceContext(_serviceProxy))

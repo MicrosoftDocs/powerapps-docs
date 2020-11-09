@@ -1,6 +1,6 @@
 ---
 title: "Customize commands and the ribbon (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Common Data Service displays commands in different ways depending on the table and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Common Data Service displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 03/27/2020
 ms.service: powerapps
@@ -19,11 +19,11 @@ search.app:
 
 # Customize commands and the ribbon
 
-Common Data Service displays commands in different ways depending on the table and the client. In most places in the web application, you will see a *command bar* instead of a ribbon. 
+Common Data Service displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a *command bar* instead of a ribbon. 
 
 Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
   
-The command bar provides better performance. The ribbon is still displayed in the web application for certain table forms and it is still used for list views in Dynamics 365 for Outlook.  
+The command bar provides better performance. The ribbon is still displayed in the web application for certain entity forms and it is still used for list views in Dynamics 365 for Outlook.  
   
 Both the command bar and the ribbon use the same underlying XML data to define what commands to display, when the commands are enabled, and what the commands do.  
   

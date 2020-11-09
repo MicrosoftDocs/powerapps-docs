@@ -18,7 +18,7 @@ search.app:
 
 
 
-Gets the types of tables allowed in the lookup control. 
+Gets the types of entities allowed in the lookup control. 
 
 ## Control types supported
 
@@ -32,7 +32,7 @@ Lookup control
 
 **Type**: Array of String
 
-**Description**: The logical names of the tables allowed in this control.
+**Description**: The logical names of the entities allowed in this control.
 
 ### Related topics
 

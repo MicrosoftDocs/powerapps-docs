@@ -1,10 +1,10 @@
 ---
 title: clearSelectedRecordIds | Microsoft Docs
-description: Provides information for clearSelectedRecordIds method.
+description: 
 keywords:
 manager: kvivek
 ms.date: 10/01/2019
-ms.author: "nabuthuk"
+ms.service: "powerapps"
 ms.reviewer: "nabuthuk"
 author: Nkrb
 ms.service: "powerapps"

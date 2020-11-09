@@ -15,7 +15,7 @@ ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 
 # Implementing data-set component
 
-This sample component shows how to change the user experience of interacting with the dataset. For example, you only see the home page grid on a table homepage as a table. You can build your code component that can display the data as per your choice. This sample shows the rows as tiles instead of the regular tabular grid. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_DataSetGrid).
+This sample component shows how to change the user experience of interacting with the dataset. For example, you only see the home page grid on an entity homepage as a table. You can build your code component that can display the data as per your choice. This sample shows the records as tiles instead of the regular tabular grid. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_DataSetGrid).
 
 > [!div class="mx-imgBorder"]
 > ![Data Set Grid component](../media/data-set-grid.png "Data Set Grid component")
@@ -111,7 +111,7 @@ export class TSDataSetGrid
     container.appendChild(this.mainContainer);
   }
   /**
-   * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+   * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -424,17 +424,17 @@ export class TSDataSetGrid
 
 In this sample, we have the input parameter defined in component manifest file with the data-set tag. This is the input property that gets bound to the component.  
  
-This component has two important containers that are added onto the main div which is added onto the div that is passed onto the component.  The first container holds the tiles that show the row data from the view and the second container is for the `Load More button` that shows when there are rows that need more area that can fit in one page. 
+This component has two important containers that are added onto the main div which is added onto the div that is passed onto the component.  The first container holds the tiles that show the record data from the view and the second container is for the `Load More button` that shows when there are records that need more area that can fit in one page. 
  
-Both the containers are generated and refreshed whenever the [updateView](../reference/control/updateview.md) method is called. For the first container, we generate the tiles based on the information in the columns and the number of rows. This ensures we display a tile for each row along with its information on it.  
+Both the containers are generated and refreshed whenever the [updateView](../reference/control/updateview.md) method is called. For the first container, we generate the tiles based on the information in the columns and the number of records. This ensures we display a tile for each record along with its information on it.  
  
-If there exists a following page for the rows, the load more button is displayed i.e., the second container is visible and is hidden if there are no more pages in the result set.  
+If there exists a following page for the records, the load more button is displayed i.e., the second container is visible and is hidden if there are no more pages in the result set.  
  
-On the click of load more button, we load the next page of rows and append it to the existing result set and the logic to hide or show the button remains same as earlier as shown in the code. This is taken care by the ***onLoadMoreButtonClick*** method which is bound to the button.
+On the click of load more button, we load the next page of records and append it to the existing result set and the logic to hide or show the button remains same as earlier as shown in the code. This is taken care by the ***onLoadMoreButtonClick*** method which is bound to the button.
  
 The ***toggleLoadMoreButtonWhenNeeded*** function takes the input as the data set and checks, whether the data set, has next page, and if the button is hidden or visible and respectively hides or shows the button.  
  
-The ***onRowClick*** function attaches the context of the row using its GUID value and invokes the [openForm](../reference/navigation/openform.md) method of the `NavigationAPI` to open that respective row. This method is bound to each tile that gets generated as part of the ***createGridBody*** method.
+The ***onRowClick*** function attaches the context of the record using its GUID value and invokes the [openForm](../reference/navigation/openform.md) method of the `NavigationAPI` to open that respective record. This method is bound to each tile that gets generated as part of the ***createGridBody*** method.
  
 The ***getSortedColumnsOnView*** method returns the list of columns based on the defined order on the view.
 

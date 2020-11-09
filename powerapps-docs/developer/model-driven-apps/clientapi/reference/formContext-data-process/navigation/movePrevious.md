@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[./includes/movePrevious-description.md](./includes/movePrevious-description.md)]
 
-You can also move to a previous stage in a different table.
+You can also move to a previous stage in a different entity.
 
 ## Syntax
 
@@ -51,7 +51,7 @@ You can also move to a previous stage in a different table.
 </tr>
 <tr>
 <td>crossEntity</td>
-<td>The previous stage is for a different table.</td>
+<td>The previous stage is for a different entity.</td>
 </tr>
 <tr>
 <td>beginning</td>
@@ -67,7 +67,7 @@ You can also move to a previous stage in a different table.
 </tr>
 <tr>
 <td>stageGate</td>
-<td>One or more required column on the current stage is empty.</td>
+<td>One or more required field on the current stage is empty.</td>
 </tr>
 </table>
 </td>

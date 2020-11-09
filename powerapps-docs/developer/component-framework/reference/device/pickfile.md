@@ -1,6 +1,6 @@
 ---
 title: PickFile | Microsoft Docs
-description: Provides information for pickFile method.
+description: 
 keywords:
 ms.author: nabuthuk
 author: Nkrb

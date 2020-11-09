@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-The <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface provides a set of methods used to perform the most common operations on system and custom tables and on the metadata for your organization.
+The <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface provides a set of methods used to perform the most common operations on system and custom entities and on the metadata for your organization.
 
 ## Client applications
 
@@ -45,14 +45,14 @@ Each of the classes which implement the <xref:Microsoft.Xrm.Sdk.IOrganizationSer
 
 |Method  |Description  |
 |---------|---------|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*>|Link two tables using an table relationship|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|Create an table row.|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|Delete an table row|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*>|Remove the link between two tables using an table relationship|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*>|Link two entities using an entity relationship|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|Create an entity record.|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|Delete an entity record|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*>|Remove the link between two entities using an entity relationship|
 |<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>|Invoke an operation defined as a message by passing an instance of an <xref:Microsoft.Xrm.Sdk.OrganizationRequest> or a class derived from it.|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|Retrieve an instance of an table row.|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|Retrieve a collection of table rows that match the criteria set in a query.|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|Change the column values of an table row.|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|Retrieve an instance of an entity record.|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|Retrieve a collection of entity records that match the criteria set in a query.|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|Change the attribute values of an entity record.|
 
 > [!NOTE]
 > The Organization service exposes only the `Execute` method. The other methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface are simply wrappers around the `Execute` method. These other methods are provided for convenience. You can perform all operations using only the `Execute` method. More information: [Use messages with the Organization service](use-messages.md)
@@ -61,4 +61,4 @@ Each of the classes which implement the <xref:Microsoft.Xrm.Sdk.IOrganizationSer
 
 [Use messages with the Organization service](use-messages.md)<br />
 [Write a plug-in](../write-plug-in.md)<br />
-[Table Operations using the Organization service](entity-operations.md)
+[Entity Operations using the Organization service](entity-operations.md)

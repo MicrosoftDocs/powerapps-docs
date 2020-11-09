@@ -1,5 +1,5 @@
 ---
-title: "Retrieve, update and delete tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Retrieve, update and delete entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,17 +15,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Retrieve, update, and delete tables
+# Retrieve, update, and delete entities
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-This topic shows how to retrieve, update, and delete an table by using the custom `Bank Account` table created in [Create a Custom Table](create-custom-entity.md).  
+This topic shows how to retrieve, update, and delete an entity by using the custom `Bank Account` entity created in [Create a Custom Entity](create-custom-entity.md).  
   
 <a name="BKMK_RetrieveAndUpdateEntity"></a>  
  
-## Retrieve and update an table  
+## Retrieve and update an entity  
 
- The following sample retrieves an table by using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest> message. It then updates the table to disable mail merge by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsMailMergeEnabled> property to `false`, and sets <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasNotes> to `true` in the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> to specify that the table should include a relationship to the `Annotation` table so that the table can display notes.  
+ The following sample retrieves an entity by using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest> message. It then updates the entity to disable mail merge by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsMailMergeEnabled> property to `false`, and sets <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasNotes> to `true` in the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> to specify that the entity should include a relationship to the `Annotation` entity so that the entity can display notes.  
   
 ```csharp
 
@@ -53,9 +53,9 @@ _serviceProxy.Execute(updateBankAccountRequest);
   
 <a name="BKMK_DeleteCustomEntity"></a>   
 
-## Delete a custom table  
+## Delete a custom entity  
 
-The following sample uses the <xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityRequest> message to delete the table with the logical name specified by the `_customEntityName` variable.  
+The following sample uses the <xref:Microsoft.Xrm.Sdk.Messages.DeleteEntityRequest> message to delete the entity with the logical name specified by the `_customEntityName` variable.  
   
 ```csharp
 
@@ -68,6 +68,6 @@ _serviceProxy.Execute(request);
   
 ### See also  
  [Use the IOrganizationService Sample and Helper Code](/dynamics365/customer-engagement/developer/use-sample-helper-code)   
- [Customize table metadata](../customize-entity-metadata.md)   
- [Create and update an table than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
- [Create a Custom Table](create-custom-entity.md)
+ [Customize entity metadata](../customize-entity-metadata.md)   
+ [Create and update an entity than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
+ [Create a Custom Entity](create-custom-entity.md)

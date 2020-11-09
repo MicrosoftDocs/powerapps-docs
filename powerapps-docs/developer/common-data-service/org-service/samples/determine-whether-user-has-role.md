@@ -35,7 +35,7 @@ This sample requires an additional user that isn't available in your system. Cre
 
 ## What this sample does
 
-The [IOrganizationService.RetrieveMultiple](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) message is intended to be used in a scenario where it retrieves a collection of rows.
+The [IOrganizationService.RetrieveMultiple](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) message is intended to be used in a scenario where it retrieves a collection of records.
 
 ## How this sample works
 
@@ -53,4 +53,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-This sample creates no rows. No cleanup is required.
+This sample creates no records. No cleanup is required.

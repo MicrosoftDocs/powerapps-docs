@@ -1,6 +1,6 @@
 ---
 title: CaptureImage | Microsoft Docs
-description: Provides information for captureImage method.
+description: 
 keywords:
 ms.author: nabuthuk
 author: Nkrb

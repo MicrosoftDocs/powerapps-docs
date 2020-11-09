@@ -1,5 +1,5 @@
 ---
-title: "Use late-bound table class with a LINQ query (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use late-bound entity class with a LINQ query (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use late binding with .NET Language-Integrated Query (LINQ) queries" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,11 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use late-bound table class with a LINQ query
+# Use late-bound entity class with a LINQ query
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service, you can use late binding with .NET Language-Integrated Query (LINQ) queries. Late binding uses the column logical name, and is resolved at runtime.  
+In Common Data Service, you can use late binding with .NET Language-Integrated Query (LINQ) queries. Late binding uses the attribute logical name, and is resolved at runtime.  
   
 <a name="usinglatebindingjoin"></a>   
 
@@ -160,5 +160,5 @@ using (OrganizationServiceContext orgSvcContext = new OrganizationServiceContext
   
 ### See also  
  [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
- [Order Results Using table columns with LINQ](order-results-entity-attributes-linq.md)   
+ [Order Results Using Entity Attributes with LINQ](order-results-entity-attributes-linq.md)   
  <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.CreateQuery``1>

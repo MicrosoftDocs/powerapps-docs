@@ -18,7 +18,7 @@ search.app:
 
 
 
-Returns a string indicating when data from the attribute will be submitted when the row is saved. 
+Returns a string indicating when data from the attribute will be submitted when the record is saved. 
 
 ## Attribute types supported
 

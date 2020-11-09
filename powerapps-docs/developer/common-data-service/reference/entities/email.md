@@ -1,22 +1,20 @@
 ---
-title: "Email table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Email table."
-ms.date: 11/07/2020
+title: "Email Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Email entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Email table reference
-
-> [!NOTE]
-> Effective Nov 2020, some terminology in Common Data Service has been updated. For example, *entity* is now *table* and *attribute* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+# Email Entity Reference
 
 Activity that is delivered using email protocols.
 
@@ -49,7 +47,7 @@ Activity that is delivered using email protocols.
 |SetState|PATCH [*org URI*]/api/data/v9.0/emails(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/emails(*activityid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -67,9 +65,9 @@ Activity that is delivered using email protocols.
 
 <a name="writable-attributes"></a>
 
-## Writable Columns
+## Writable attributes
 
-These columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ActivityAdditionalParams](#BKMK_ActivityAdditionalParams)
 - [ActivityId](#BKMK_ActivityId)
@@ -82,7 +80,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [Category](#BKMK_Category)
 - [cc](#BKMK_cc)
 - [ConversationTrackingId](#BKMK_ConversationTrackingId)
-- [CorrelatedActivityId](#BKMK_CorrelatedActivityId)
 - [DelayedEmailSendTime](#BKMK_DelayedEmailSendTime)
 - [DeliveryAttempts](#BKMK_DeliveryAttempts)
 - [DeliveryPriorityCode](#BKMK_DeliveryPriorityCode)
@@ -117,7 +114,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
 - [ReminderActionCardId](#BKMK_ReminderActionCardId)
-- [ReservedForInternalUse](#BKMK_ReservedForInternalUse)
 - [ScheduledEnd](#BKMK_ScheduledEnd)
 - [ScheduledStart](#BKMK_ScheduledStart)
 - [Sender](#BKMK_Sender)
@@ -305,23 +301,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |LogicalName|conversationtrackingid|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
-
-
-### <a name="BKMK_CorrelatedActivityId"></a> CorrelatedActivityId
-
-**Added by**: msft_ActivitiesInfra_Extensions Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Correlated Activity Id|
-|DisplayName|Correlated Activity Id|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|correlatedactivityid|
-|RequiredLevel|None|
-|Targets|email|
-|Type|Lookup|
 
 
 ### <a name="BKMK_DelayedEmailSendTime"></a> DelayedEmailSendTime
@@ -911,24 +890,6 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 |Type|Uniqueidentifier|
 
 
-### <a name="BKMK_ReservedForInternalUse"></a> ReservedForInternalUse
-
-**Added by**: Activities Patch Solution
-
-|Property|Value|
-|--------|-----|
-|Description|For internal use only|
-|DisplayName|Reserved for internal use|
-|Format|TextArea|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|reservedforinternaluse|
-|MaxLength|40000|
-|RequiredLevel|None|
-|Type|Memo|
-
-
 ### <a name="BKMK_ScheduledEnd"></a> ScheduledEnd
 
 |Property|Value|
@@ -1255,15 +1216,14 @@ These columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only Columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ActivityTypeCode](#BKMK_ActivityTypeCode)
 - [AttachmentCount](#BKMK_AttachmentCount)
 - [Compressed](#BKMK_Compressed)
 - [ConversationIndex](#BKMK_ConversationIndex)
-- [CorrelatedActivityIdName](#BKMK_CorrelatedActivityIdName)
 - [CorrelationMethod](#BKMK_CorrelationMethod)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -1380,24 +1340,6 @@ These columns (attributes) return false for both **IsValidForCreate** or **IsVal
 |IsValidForRead|True|
 |LogicalName|conversationindex|
 |MaxLength|2048|
-|RequiredLevel|None|
-|Type|String|
-
-
-### <a name="BKMK_CorrelatedActivityIdName"></a> CorrelatedActivityIdName
-
-**Added by**: msft_ActivitiesInfra_Extensions Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|correlatedactivityidname|
-|MaxLength|400|
 |RequiredLevel|None|
 |Type|String|
 
@@ -2229,7 +2171,6 @@ Listed by **SchemaName**.
 - [email_connections1](#BKMK_email_connections1)
 - [email_connections2](#BKMK_email_connections2)
 - [Email_QueueItem](#BKMK_Email_QueueItem)
-- [email_email_CorrelatedActivityId](#BKMK_email_email_CorrelatedActivityId)
 
 
 ### <a name="BKMK_email_actioncard"></a> email_actioncard
@@ -2471,23 +2412,6 @@ Same as queueitem entity [Email_QueueItem](queueitem.md#BKMK_Email_QueueItem) Ma
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
-
-### <a name="BKMK_email_email_CorrelatedActivityId"></a> email_email_CorrelatedActivityId
-
-**Added by**: msft_ActivitiesInfra_Extensions Solution
-
-Same as email entity [email_email_CorrelatedActivityId](email.md#BKMK_email_email_CorrelatedActivityId) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|email|
-|ReferencingAttribute|correlatedactivityid|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|email_email_CorrelatedActivityId|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -2519,7 +2443,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [processstage_emails](#BKMK_processstage_emails)
 - [sla_email](#BKMK_sla_email)
 - [lk_email_createdby](#BKMK_lk_email_createdby)
-- [email_email_CorrelatedActivityId](#BKMK_email_email_CorrelatedActivityId)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_Emails"></a> KnowledgeBaseRecord_Emails
@@ -2622,12 +2545,8 @@ See sla Entity [sla_email](sla.md#BKMK_sla_email) One-To-Many relationship.
 
 See systemuser Entity [lk_email_createdby](systemuser.md#BKMK_lk_email_createdby) One-To-Many relationship.
 
-### <a name="BKMK_email_email_CorrelatedActivityId"></a> email_email_CorrelatedActivityId
-
-See email Entity [email_email_CorrelatedActivityId](email.md#BKMK_email_email_CorrelatedActivityId) One-To-Many relationship.
-
 ### See also
 
-[About table reference](../about-entity-reference.md)<br />
-[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.email?text=email EntityType" />

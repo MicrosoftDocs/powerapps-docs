@@ -23,13 +23,13 @@ Model-driven apps
 
 ### entities
 
-An array of JSON objects, where each object represents the retrieved table rows containing columns and their values.
+An array of JSON objects, where each object represents the retrieved entity record containing attributes and their values.
 
 **Type**: `Entity[]`
 
 ### nextLink
 
-If the number of rows being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this column returns the URL to return next set of rows.
+If the number of records being retrieved is more than the value specified in the `maxPageSize` parameter in the request, this attribute returns the URL to return next set of records.
 
 **Type**: `string`
 

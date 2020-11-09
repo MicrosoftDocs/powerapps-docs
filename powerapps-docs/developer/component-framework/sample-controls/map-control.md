@@ -12,7 +12,7 @@ author: Nkrb
 
 # Implementing map component
 
-This sample component changes the user experience of interacting with address columns on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_MapControl).
+This sample component changes the user experience of interacting with address fields on the form. Along with the text values of the address, this component provides the ability to visually identify a particular address on a map without navigating to another tab or screen. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_MapControl).
 
 > [!div class="mx-imgBorder"]
 > ![Map component](../media/map-control.png "Map component")
@@ -106,7 +106,7 @@ export class TSMapControl
     return "";
   }
   /**
-   * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+   * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
   public updateView(context: ComponentFramework.Context<IInputs>) {
@@ -142,7 +142,7 @@ export class TSMapControl
 }
 ```
 
-In the manifest file, we defined property of type `Single line of Text`. We use this to bind it to the address column on the form.  
+In the manifest file, we defined property of type `Single line of Text`. We use this to bind it to the address field on the form.  
 
 > [!NOTE]
 > You can use any of the map API’s that are available in the market. In this example, we are going to show how to do it with the Google Map API. 

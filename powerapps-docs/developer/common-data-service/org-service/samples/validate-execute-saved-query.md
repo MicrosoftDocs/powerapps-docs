@@ -42,7 +42,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Account` method creates 3 account rows.
+1. The `Account` method creates 3 account records.
 1. The `SavedQuery` method creates a Saved query.
 1. The `UserQuery` method creates a User query.
 

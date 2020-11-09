@@ -37,7 +37,7 @@ search.app:
 <td>entityLogicalName</td>
 <td>String</td>
 <td>Yes</td>
-<td>Logical name of the table. For example: "account".</td>
+<td>Logical name of the entity. For example: "account".</td>
 </tr>
 
 </table>
@@ -46,7 +46,7 @@ search.app:
 
 **Type**: Boolean.
 
-**Description**: true if the table is present in user’s profile and is currently available for use in offline mode; otherwise false.
+**Description**: true if the entity is present in user’s profile and is currently available for use in offline mode; otherwise false.
 
 [Xrm.WebApi.offline](offline.md)
 

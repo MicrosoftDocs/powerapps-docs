@@ -1,6 +1,6 @@
 ---
-title: getCurrentPosition | Microsoft Docs
-description: Provides information for getCurrentPosition method.
+title: CaptureImageOptions | Microsoft Docs
+description: 
 keywords:
 ms.author: nabuthuk
 author: Nkrb

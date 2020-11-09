@@ -123,15 +123,15 @@ Because of the capability for the HTML in web resources to be changed by using t
 
 |Parameter|Name|Description|
 |---------------|----------|-----------------|
-|typename|Entity Name|The name of the table.|
-|type|Entity Type Code|An integer that uniquely identifies the table in a specific organization.|
-|id|Object GUID|The GUID that represents a row.|
+|typename|Entity Name|The name of the entity.|
+|type|Entity Type Code|An integer that uniquely identifies the entity in a specific organization.|
+|id|Object GUID|The GUID that represents a record.|
 |orgname|Organization Name|The unique name of the organization.|
 |userlcid|User Language Code|The language code identifier being used by the current user.|
 |orglcid|Organization Language Code|The language code identifier that represents the base language for the organization.|
 |data|Optional Data Parameter|An optional value that may be passed.|
 |formid|Form Id|The GUID that represents a form ID.|
-|entrypoint|Entry Point|A string value. This parameter is intended to be passed as an optional value to web resources opened as custom help content for a table. When enabled, the custom help URL will include a value of either “form” or “hierarchychart”.|
+|entrypoint|Entry Point|A string value. This parameter is intended to be passed as an optional value to web resources opened as custom help content for an entity. When enabled, the custom help URL will include a value of either “form” or “hierarchychart”.|
 |pagemode||For internal use only.|
 |security||For internal use only.|
 |tabSet||For internal use only.|

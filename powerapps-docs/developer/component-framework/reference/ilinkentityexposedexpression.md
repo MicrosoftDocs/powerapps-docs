@@ -25,25 +25,25 @@ Model-driven apps
 
 ### name
 
-The `name` of the table to link to.
+The `name` of the entity to link to.
 
 **Type**:  `string`
 
 ### from
 
-The `from` column in the link-entity relationship.
+The `from` attribute in the link-entity relationship.
 
 **Type**:  `string`
 
 ### to
 
-The `to` column in the link-entity relationship.
+The `to` attribute in the link-entity relationship.
 
 **Type**:  `string`
 
 ### linkType
 
-The `type` of the link, referred by the link-entity column. '
+The `type` of the link, referred by the link-entity attribute. '
 
 **Type**:  `string`
 

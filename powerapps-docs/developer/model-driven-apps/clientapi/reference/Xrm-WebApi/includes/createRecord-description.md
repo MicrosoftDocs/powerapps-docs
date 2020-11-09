@@ -1,1 +1,1 @@
-Creates a table row.
+Creates an entity record.

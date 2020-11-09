@@ -1,19 +1,20 @@
 ---
-title: "EntityDataSource table reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the EntityDataSource table."
-ms.date: 11/07/2020
+title: "EntityDataSource Entity Reference (Common Data Service)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the EntityDataSource entity in Common Data Service."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
 
 ---
-# EntityDataSource table reference
+# EntityDataSource Entity Reference
 
 Internal entity that stores data source information for all installed providers.
 
@@ -28,7 +29,7 @@ Internal entity that stores data source information for all installed providers.
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/entitydatasources<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/entitydatasources(*entitydatasourceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Table Properties
+## Entity Properties
 
 |Property|Value|
 |--------|-----|
@@ -46,9 +47,9 @@ Internal entity that stores data source information for all installed providers.
 
 <a name="writable-attributes"></a>
 
-## Writable columns
+## Writable attributes
 
-These Columns (attributes) return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
+These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ConnectionDefinition](#BKMK_ConnectionDefinition)
 - [ConnectionDefinitionSecrets](#BKMK_ConnectionDefinitionSecrets)
@@ -200,9 +201,9 @@ These Columns (attributes) return true for either **IsValidForCreate** or **IsVa
 
 <a name="read-only-attributes"></a>
 
-## Read-only columns
+## Read-only attributes
 
-These columns (attributes) return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
+These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
 - [EntityDataProviderIdName](#BKMK_EntityDataProviderIdName)

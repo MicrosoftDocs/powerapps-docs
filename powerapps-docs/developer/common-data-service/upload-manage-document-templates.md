@@ -1,8 +1,8 @@
 ---
-title: "Template tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "In Common Data Service, the *template* tables help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word)."
+title: "Upload and manage document templates (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "In Common Data Service, the *template* entities help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word)."
 ms.custom: ""
-ms.date: 11/09/2020
+ms.date: 06/19/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,13 +15,22 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Template tables
+# Upload and manage document templates
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service, the *template* tables help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word).
+<!-- 
+Was Mike Carter
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/upload-manage-document-templates
 
-These are the types of template tables:
+Add the short description from  https://docs.microsoft.com/dynamics365/customer-engagement/developer/template-entities which was not migrated.
+-->
+
+In Common Data Service, the *template* entities help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word).
+
+These are the types of template entites:
+
+<!-- Not in Common Data Service, must be in service ContractTemplate  -->
 - [DocumentTemplate](reference/entities/documenttemplate.md)
 - [KbArticleTemplate](reference/entities/kbarticletemplate.md) 
 - [MailMergeTemplate](reference/entities/mailmergetemplate.md) 

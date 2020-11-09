@@ -1,6 +1,6 @@
 ---
 title: setSelectedRecordIds | Microsoft Docs
-description: Provides information for setSelectedRecordIds method.
+description: 
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -29,7 +29,7 @@ Model-driven apps
 
 |Parameter Name|Type|Required|description|
 |----|----|----|----|
-|ids|`string`|Yes|List of row id's|
+|ids|`string`|Yes|List of record id's|
 
 
 ### Related topics

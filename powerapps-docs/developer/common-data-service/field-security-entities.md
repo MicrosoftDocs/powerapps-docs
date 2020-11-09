@@ -1,8 +1,8 @@
 ---
-title: "Field security tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using field security tables to apply field-level security, which restricts field access to specified users and teams." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Field security entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about using field security entities to apply field-level security, which restricts field access to specified users and teams." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/11/2020
+ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,13 +15,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Field security tables
+# Field security entities
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You use field security tables to apply field-level security, which restricts field access to specified users and teams. The scope of field-level security is global, which means that it applies to all rows within the organization, regardless of the business unit hierarchical level to which the row or the user belongs. Field security works in all Common Data Service clients, including Unified Interface, Dynamics 365 for Outlook, and legacy web client. It applies to all components, such as the Common Data Service web services, reports, search, offline, filtered views, auditing, and duplicate detection. Field security can be applied to both custom fields and many out-of-box (OOB) fields.  
+You use field security entities to apply field-level security, which restricts field access to specified users and teams. The scope of field-level security is global, which means that it applies to all records within the organization, regardless of the business unit hierarchical level to which the record or the user belongs. Field security works in all Common Data Service clients, including the Web client, Dynamics 365 for Outlook, and Dynamics. It applies to all components, such as the Common Data Service web services, reports, search, offline, filtered views, auditing, and duplicate detection. For this release, field security can be applied to both custom fields and many out-of-box (OOB) fields.  
   
-For more information about secuity in Common Data Service. see [Security concepts in Common Data Service](/power-platform/admin/wp-security-cds).  
+ For more information about how secured fields change the behavior of methods, see [How Field Security Can Be Used to Control Access to Field Values in Dynamics 365](/dynamics365/customer-engagement/developer/security-dev/use-field-security-control-access-field-values).  
   
 > [!IMPORTANT]
 >  Field-level security profiles prevent unintended users from getting access to Common Data Service data based on the profile definitions. If the SQL Server ACLs are misconfigured, or if there is a SQL injection issue, adversaries can get direct access to data in SQL Server thereby bypassing field level security restrictions. For more information, see [Overview of Web Application Security Threats](https://msdn.microsoft.com/library/f13d73y6.aspx).  
@@ -89,7 +89,8 @@ For more information about secuity in Common Data Service. see [Security concept
 |Use the <xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest> message to remove record access for a user or team.|Use the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> message or the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*> method to remove secured field access for a user or team.|  
   
 ### See also  
- [Security in Common Data Service](/power-platform/admin/wp-security)  
+ [The Security Model of Dynamics 365](security-model.md)   
+ [Administration and security entities](/dynamics365/customer-engagement/developer/administration-security-entities)   
  [FieldSecurityProfile Entity](/reference/entities/fieldsecurityprofile.md)   
  [FieldPermission Entity](/reference/entities/fieldpermission.md)   
  [PrincipalObjectAttributeAccess Entity](/reference/entities/principalobjectattributeaccess.md)    

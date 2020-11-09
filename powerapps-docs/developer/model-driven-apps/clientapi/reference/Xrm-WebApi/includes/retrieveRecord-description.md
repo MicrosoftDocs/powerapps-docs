@@ -1,1 +1,1 @@
-Retrieves a table row.
+Retrieves an entity record.

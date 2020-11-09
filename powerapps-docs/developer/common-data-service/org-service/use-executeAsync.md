@@ -25,7 +25,7 @@ Importing a solution is one operation which can require considerable resources, 
 
 Importing a solution asynchronously improves system performance by postponing message execution until some later time when the server load may be less. Interactive users do not have to wait for the target message to execute before they can continue. This is especially useful when importing solutions which may take a few minutes or more to execute.  
 
-Merging rows with a large number of related activities or other table types can also take a long time to update all the related rows, so executing these in the background can improve the user experience.
+Merging records with a large number of related activities or other entity types can also take a long time to update all the related records, so executing these in the background can improve the user experience.
   
 > [!NOTE]
 >  <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest>, <xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest>, and <xref:Microsoft.Crm.Sdk.Messages.MergeRequest> are the only request classes that can be used with <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest>.
@@ -59,7 +59,7 @@ var asyncResp = (ExecuteAsyncResponse)svc.Execute(asyncReq);
 
 Guid asyncOperationId = asyncResp.AsyncJobId;
 ```
-You can then poll the [AsyncOperation](../reference/entities/asyncoperation.md) table using the `asyncOperationId` value for the system job with the matching [AsyncOperationId](../reference/entities/asyncoperation.md#BKMK_AsyncOperationId) to detect when the [StatusCode](../reference/entities/asyncoperation.md#BKMK_StatusCode) value indicates whether the operation has succeeded (30), failed (31), or was cancelled (32).
+You can then poll the [AsyncOperation](../reference/entities/asyncoperation.md) entity using the `asyncOperationId` value for the system job with the matching [AsyncOperationId](../reference/entities/asyncoperation.md#BKMK_AsyncOperationId) to detect when the [StatusCode](../reference/entities/asyncoperation.md#BKMK_StatusCode) value indicates whether the operation has succeeded (30), failed (31), or was cancelled (32).
 
 ### See Also
 

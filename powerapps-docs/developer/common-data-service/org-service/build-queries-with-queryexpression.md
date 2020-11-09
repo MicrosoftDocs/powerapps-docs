@@ -19,21 +19,21 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to programmatically build a query containing data filters and search conditions that define the scope of a database search. A query expression is used for single-object searches. For example, you can create a search to return all accounts that match certain search criteria. The <xref:Microsoft.Xrm.Sdk.Query.QueryBase> class is the base class for query expressions. There are three derived classes: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> and <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>. The `QueryExpression` class supports complex queries. The `QueryByAttribute` class is a simple means to search for tables where columns match specified values. 
+In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to programmatically build a query containing data filters and search conditions that define the scope of a database search. A query expression is used for single-object searches. For example, you can create a search to return all accounts that match certain search criteria. The <xref:Microsoft.Xrm.Sdk.Query.QueryBase> class is the base class for query expressions. There are three derived classes: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> and <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>. The `QueryExpression` class supports complex queries. The `QueryByAttribute` class is a simple means to search for entities where attributes match specified values. 
 
 > [!NOTE]
 > The third derived class, `FetchExpression` is used with FetchXML, the proprietary Common Data Service query language, can be used to perform some queries by using XML-based queries. More information: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
   
-Query expressions are used in methods that retrieve more than one row, such as the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method, in messages that perform an operation on a result set specified by a query expression, such as <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> and when the ID for a specific row is not known.  
+Query expressions are used in methods that retrieve more than one record, such as the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method, in messages that perform an operation on a result set specified by a query expression, such as <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> and when the ID for a specific record is not known.  
 
 > [!WARNING]
->  Don’t retrieve all columns in a query because of the negative effect on performance. This is particularly true if the query is used as a parameter to an update request. In an update, if all columns are included this sets all column values, even if they are unchanged, and often triggers cascaded updates to child rows.
+>  Don’t retrieve all attributes in a query because of the negative effect on performance. This is particularly true if the query is used as a parameter to an update request. In an update, if all attributes are included this sets all field values, even if they are unchanged, and often triggers cascaded updates to child records.
 
 To save a query so you can re-use it, you can convert it to FetchXML by using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and save it as a saved query. More information: [Saved queries](../saved-queries.md) 
  
 ## Alternatives to QueryExpression
 
-There are two additional ways to create queries to retrieve rows from Common Data Service. 
+There are two additional ways to create queries to retrieve records from Common Data Service. 
 
 - FetchXML, the proprietary Common Data Service query language, can be used to perform some queries by using XML-based queries. More information: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md). 
 - .NET Language-Integrated Query (LINQ). More information: [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md).  
@@ -41,7 +41,7 @@ There are two additional ways to create queries to retrieve rows from Common Dat
 <!-- This doesn't belong here. It should be in model driven app configuration -->
 ## Configuration for Quick find
 
-In Model-driven apps, there is a Quick Find feature. If a user provides search criteria in quick find that is not selective enough, the system detects this and stops the search. This supports a faster form of quick find and can make a big performance difference. This is controlled by the [Organization table QuickFindRecordLimitEnabled](/powerapps/developer/common-data-service/reference/entities/organization#BKMK_QuickFindRecordLimitEnabled) column. When this `Boolean` column value is `true`, a limit is imposed on quick find queries.
+In Model-driven apps, there is a Quick Find feature. If a user provides search criteria in quick find that is not selective enough, the system detects this and stops the search. This supports a faster form of quick find and can make a big performance difference. This is controlled by the [Organization entity QuickFindRecordLimitEnabled](/powerapps/developer/common-data-service/reference/entities/organization#BKMK_QuickFindRecordLimitEnabled) attribute. When this `Boolean` attribute value is `true`, a limit is imposed on quick find queries.
 
 ## In This Section
 

@@ -38,7 +38,7 @@ Within this section you will learn about the issues we have identified, their im
 The documentation targets the following customization types:
 
 - Model-driven app design
-- Table form design
+- Entity form design
 - Client scripting
 - Web resources
 

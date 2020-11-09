@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 8f615966-77a0-49e9-92d4-2160af03b20d
 ---
 
-Returns the table metadata for the specified table.
+Returns the entity metadata for the specified entity.

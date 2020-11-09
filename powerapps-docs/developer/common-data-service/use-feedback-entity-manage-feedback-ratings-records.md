@@ -1,8 +1,8 @@
 ---
-title: "Use the Feedback table to manage feedback and ratings for rows (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the feedback table to obtain feedback and ratings for the records." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use the Feedback entity to manage feedback and ratings for records (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the feedback eneity to obtain feedback and ratings for the records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/09/2020
+ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,26 +15,26 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use the Feedback table to manage feedback and ratings for rows
+# Use the Feedback entity to manage feedback and ratings for records
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Improve your products and services by enabling users to provide feedback and ratings for table rows in Common Data Service. For example, you can enable feedbacks and ratings for the `Product` table to know user's feedback on the products you sell, or on the `Incident` (case) table to understand and improve the quality of your customer support team.  
+Improve your products and services by enabling users to provide feedback and ratings for entity records in Common Data Service. For example, you can enable feedbacks and ratings for the `Product` entity to know user's feedback on the products you sell, or on the `Incident` (case) entity to understand and improve the quality of your customer support team.  
   
- You can enable feedback and rating for both system and custom tables in Common Data Service. By default, the `KnowledgeArticle` table is enabled for feedback and ratings. Use the new `Feedback` table to programmatically create and manage feedback for table row.  
+ You can enable feedback and rating for both system and custom entities in Common Data Service. By default, the `KnowledgeArticle` entity is enabled for feedback and ratings. Use the new `Feedback` entity to programmatically create and manage feedback for entity records.  
   
  To programmatically enable feedback for a:  
   
-- System table, use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to update the entity, and set the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasFeedback> property to true.  
+- System entity, use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to update the entity, and set the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasFeedback> property to true.  
   
-- Custom table, set the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.HasFeedback> property to true  while creating the table, or update existing custom table to set the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasFeedback> property to true.  
+- Custom entity, set the <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest.HasFeedback> property to true  while creating the entity, or update existing custom entity to set the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest>.<xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest.HasFeedback> property to true.  
   
-  Once you have enabled an table for feedback and rating, you can't disable it. After you enable an table for feedback, a regarding relationship is created between the entity and the `Feedback` table.  
+  Once you have enabled an entity for feedback and rating, you can't disable it. After you enable an entity for feedback, a regarding relationship is created between the entity and the `Feedback` entity.  
   
 > [!NOTE]
->  You can also use Power Apps ([make.powerapps.com](https://make.powerapps.com)) to enable feedback and rating for system and custom tables. More information: [Configure a table for feedback/ratings](/powerapps/maker/common-data-service/configure-entity-feedback)  
+>  You can also use the customization tools in Common Data Service to enable feedback and rating for system and custom entities. More information: [Enable an entity for feedback](https://go.microsoft.com/fwlink/p/?LinkId=785436)  
   
- The `Feedback` table stores the following information :  
+ The `Feedback` entity stores the following information :  
   
 - Feedback title  
   
@@ -55,5 +55,5 @@ Improve your products and services by enabling users to provide feedback and rat
   
 - User who created or last modified the feedback record  
   
-- Table row that the feedback is associated with  
+- Entity record that the feedback is associated with  
   

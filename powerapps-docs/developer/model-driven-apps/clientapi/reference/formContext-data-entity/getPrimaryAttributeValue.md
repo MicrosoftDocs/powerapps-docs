@@ -28,11 +28,11 @@ search.app:
 
 **Type**: String.
 
-**Description**: The name of the table.
+**Description**: The name of the entity.
 
 ## Remarks
 
-Each table has one string column that is designated as the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.PrimaryNameAttribute>. The value for this column is used when links to the row are displayed.
+Each entity has one string attribute that is designated as the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.PrimaryNameAttribute>. The value for this attribute is used when links to the record are displayed.
 
 
 

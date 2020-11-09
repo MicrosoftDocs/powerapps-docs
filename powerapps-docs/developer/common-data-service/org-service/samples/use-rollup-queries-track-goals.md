@@ -56,23 +56,23 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Checks for the current version of the org.
 2. Retrieves the sales manager and 2 sales representatives, created manually in **Microsoft 365**.
-3. Creates rows to support `SalesOrder` rows.
+3. Creates records to support `SalesOrder` records.
 4. Creates a new unit group for the sample.
 5. Retrieves the default unit id that is automatically created when we created a new unit group.
 6. The `Product` creates few products that are required for the sample.
 7. The `PriceLevel` creates a new price list.
 8. The `ProductPriceLevel` creates a price list item for the first product and applies volume discount.
-9. Creates an account row for the sales order's potential customer id. 
+9. Creates an account record for the sales order's potential customer id. 
 10. The `SalesOrderDetails` adds the product to the order with the price overridden with a negative value.
 
 ### Demonstrate
 
 1. Creates Metric, and setting the Metric type to `Amount` and setting amount data type to `Money`.
-2. The `RollupField` creates a rollup column which targets the actual totals.
+2. The `RollupField` creates a rollup field which targets the actual totals.
 3. The `GoalRollupQuery` creates the goal rollup queries, locating the sales orders in the first sales representative's area (zip code: 60661) and with a value greater than $1000. 
 4. Creates two goals, one parent goal and one child goals.
 5. The `RecalculateRequest` calculates the rollup for goals. 
 
 ### Clean up
 
-Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample shows how to create a connection between an account and a contact table that have matching connection roles. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ConnectionEarlyBound). 
+This sample shows how to create a connection between an account and a contact entity that have matching connection roles. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ConnectionEarlyBound). 
   
 ## How to run this sample
 
@@ -36,15 +36,15 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. Creates a connection role for account and contact table.
-3. Creates a related connection role object type code for account and contact table.
+2. Creates a connection role for account and contact entity.
+3. Creates a related connection role object type code for account and contact entity.
 4. Associates the connection role with itself.
 
 ### Demonstrate
 
-1. Creates a connection between account and contact table. 
-2. Assigns a connection role to a row.
+1. Creates a connection between account and contact entity. 
+2. Assigns a connection role to a record.
 
 ### Clean up
 
-Display an option to delete the rows created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the records created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

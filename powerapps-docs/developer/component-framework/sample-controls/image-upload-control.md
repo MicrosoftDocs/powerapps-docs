@@ -59,7 +59,7 @@ const NoImageClassName = "NoImage";
 const RemoveButtonClassName = "RemoveButton";
 export class TSImageUploadControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-  // Value of the column is stored and used inside the control
+  // Value of the field is stored and used inside the control
   private _value: string | null;
   // Power Apps component framework framework context, "Input Properties" containing the parameters, control metadata and interface functions.
   private _context: ComponentFramework.Context<IInputs>;
@@ -135,7 +135,7 @@ export class TSImageUploadControl
     container.appendChild(this.controlContainer);
   }
   /**
-   * Called when any value in the property bag has changed. This includes column values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+   * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
    * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -383,7 +383,7 @@ The `successCallback` will be triggered and the resource content injects in the 
 The `device.pickFile` method opens a dialog box to select files from your computer (web client) or mobile device (mobile clients). For desktop, it opens the file explorer, for the mobile client, it opens the library of the photo. When you click on the `upload` button, the device API `pickFile` triggers and the user picks up the file. Once the file is successfully picked, the file's filename, file content will be injected in the `successCallback`. 
 
 > [!NOTE]
-> If the same form or table is used on the legacy web client, then the column will show out-of-box text component on legacy web client, where there might have UX issues.  To make it hidden on the legacy web client, we could uncheck the **Visibility** checkbox and check **Hide Default Control** checkbox together. 
+> If the same form or entity is used on the legacy web client, then the field will show out-of-box text component on legacy web client, where there might have UX issues.  To make it hidden on the legacy web client, we could uncheck the **Visibility** checkbox and check **Hide Default Control** checkbox together. 
 
 ### Related topics
 

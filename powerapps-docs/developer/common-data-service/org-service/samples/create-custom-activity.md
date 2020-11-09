@@ -39,10 +39,10 @@ Checks for the current version of the current org.
 
 ### Demonstrate
 
-1. Creates the custom activity table using the `CreateEntityRequest` message.
-2. Publishes the created custom activity table.
-3. Creates few columns to the custom activity table using `CreateAttributeRequest` message.
+1. Creates the custom activity entity using the `CreateEntityRequest` message.
+2. Publishes the created custom activity entity.
+3. Creates few attributes to the custom activity entity using `CreateAttributeRequest` message.
 
 ### Clean up
 
-Display an option to delete the rows in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the rows to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

@@ -1,12 +1,13 @@
 ---
 title: Common Data Service Developer Guide | Microsoft Docs
 description: Learn how developers can add value using Common Data Service.
-author: phecke
+author: JimDaly
+manager: annbe
 ms.service: powerapps
 ms.topic: article
-ms.date: 11/08/2020
-ms.author: pehecke
-ms.reviewer: pehecke
+ms.date: 03/27/2019
+ms.author: jdaly
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -26,17 +27,17 @@ There are many aspects to how developers can contribute to creating apps that us
 
 Model-driven apps are built on Common Data Service, and can only connect to a Common Data Service environment. All the data that defines a model-driven app is stored within Common Data Service.
 
-Model-driven apps share the method of distributing customizations and extensions used by Common Data Service using [solutions](introduction-solutions.md).
+Model-driven apps share the method of distributing customizations and extensions used by Common Data Service using [Solutions](introduction-solutions.md).
 
-Model driven apps also have a number of points for developers to write code to extend. For information on what developers can do with model-driven apps, see [Model-driven apps developer guide](../model-driven-apps/index.yml).
+Model driven apps also have a number of points for developers to write code to extend. For information on what developers can do with model-driven apps, see [Model-driven apps Developer Guide](../model-driven-apps/overview.md).
 
-Some Dynamics 365 apps, such as [Dynamics 365 Customer Service](https://docs.microsoft.com/dynamics365/customer-service/help-hub), [Dynamics 365 Field Service](https://docs.microsoft.com/dynamics365/field-service/overview), and [Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/help-hub), use the same app design and architecture as model-driven apps.
+Some examples of model-driven apps available from Microsoft are [Dynamics 365 Customer Service](https://docs.microsoft.com/dynamics365/customer-service/help-hub), [Dynamics 365 Field Service](https://docs.microsoft.com/dynamics365/field-service/overview), and [Dynamics 365 Marketing](https://docs.microsoft.com/dynamics365/marketing/help-hub).
 
 ## Understand when to write code
 
 Because Common Data Service includes many capabilities for people to configure custom business logic without writing code, the most common scenarios for developers to contribute involve filling spaces in-between where existing features may not provide functionality you need to meet a requirement. Fortunately, Common Data Service provides many points for developers to extend the common functionality using code.
 
-For a developer who will contribute to projects, it is important that they understand what can be done without writing code. You should familiarize yourself with these capabilities. More information: [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md) 
+For a developer who will contribute to projects it is important that they understand what can be done without writing code. You should familiarize yourself with these capabilities. More information: [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md) 
 
 ## Content for on-premises deployments
 
@@ -47,4 +48,5 @@ Common Data Service is not available for on-premise deployments at this time. Co
 
 ### See also
 
-[Model-driven apps developer guide](../model-driven-apps/index.yml)
+[Power Apps for developers](/powerapps/#pivot=home&panel=developer)<br/>
+[Model-driven apps Developer Guide](../model-driven-apps/overview.md)

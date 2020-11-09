@@ -2,12 +2,13 @@
 title: "Work with data using code in Common Data Service (PowerApps) | Microsoft Docs" 
 description: "Common Data Service provides two web services that you can use to interact with data: Web API and Organization Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/08/2020
+ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID Temp owner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
+manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -18,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Common Data Service has [tables](entities.md) that are used to model and manage business data. You can use standard tables or create your own custom tables to store data. 
+Common Data Service has [entities](entities.md) that are used to model and manage business data. You can use standard entities or create your own custom entities to store data. 
 
 ## Use web services to work with data
 

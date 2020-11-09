@@ -18,7 +18,7 @@ ms.author: nabuthuk
 
 Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps (public preview) to provide enhanced user experience for the users to work with data on forms, views, and dashboards. For example:
 
-- Replace a column that displays a numeric text value with a `dial` or `slider` code component.
+- Replace a field that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
 
@@ -38,7 +38,7 @@ Unlike HTML web resources, code components are rendered as a part of the same co
 
 Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/solutions-overview) package file and move across environments and also shipped via [AppSource](https://appsource.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
 
-Code components can be reused many times across different tables and forms. Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities.
+Code components can be reused many times across different entities and forms. Use Power Apps component framework to create code components that can be used across the full breadth of Power Apps capabilities.
 
 ## Advantages 
 
