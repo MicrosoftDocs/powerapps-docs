@@ -2,7 +2,7 @@
 title: "Update and Delete tables using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to update and delete tables using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/21/2019
+ms.date: 11/09/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Update and Delete tables using the Organization Service
+# Update and delete tables using the Organization Service
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
@@ -117,16 +117,16 @@ svc.Execute(request);
 ### When to use the UpdateRequest class
 
 You must use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you want to pass optional parameters. There are two cases where you might need special parameters.
- - When you want duplicate detection rules to be applied. More information: [Check for Duplicate rows](entity-operations-create.md#check-for-duplicate-records)
+ - When you want duplicate detection rules to be applied. More information: [Check for Duplicate rows](entity-operations-create.md#check-for-duplicate-rows)
  - When you are creating an table row that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the Organization service](use-messages.md)
 
 You must also use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you want to specify an optimistic concurrency behavior. More information: [Optimistic concurrency behavior](#optimistic-concurrency-behavior)
 
 ## Update related tables in one operation
 
-In a similar manner to how you can [Create related tables in one operation](entity-operations-create.md#create-related-entities-in-one-operation), you can also update related tables.
+In a similar manner to how you can [Create related tables in one operation](entity-operations-create.md#create-related-tables-in-one-operation), you can also update related tables.
 
-To do this, you have to retrieve an table with the related rows so that you can access the id values. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-records)
+To do this, you have to retrieve an table with the related rows so that you can access the id values. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-rows)
 
 > [!IMPORTANT]
 > Updates to rows are made in a specific order. First, primary tables are processed, and then related tables are processed. If a change is made by the primary table for a lookup or related table column, and then a related table updates the same column, the related table value is retained. In general, a lookup column value and its equivalent in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.RelatedEntities> for the same relationship should not be used at the same time.
