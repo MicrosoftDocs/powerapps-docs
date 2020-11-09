@@ -1,8 +1,8 @@
 ---
-title: "User and team entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "User and team tables (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about user and team management using which you can create and maintain user accounts and profiles." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/09/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# User and team entities
+# User and team tables
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -63,13 +63,12 @@ User and team management is the area of Common Data Service where you can create
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also  
- [Administration and Security Entities](/dynamics365/customer-engagement/developer/administration-security-entities)   
  [Use Teams to Collaborate and Share Information](use-access-teams-owner-teams-collaborate-share-information.md)   
- [Team Entity](reference/entities/team.md)   
+ [Team table reference](reference/entities/team.md)   
  [Specify time zone settings for a user](specify-time-zone-settings-user.md)   
- [TeamTemplate Entity](reference/entities/teamtemplate.md)   
- [SystemUser Entity](reference/entities/systemuser.md)   
- [UserSettings Entity](reference/entities/usersettings.md)   
+ [TeamTemplate table reference](reference/entities/teamtemplate.md)   
+ [SystemUser table reference](reference/entities/systemuser.md)   
+ [UserSettings table reference](reference/entities/usersettings.md)   
  [Sample: Disable a User](/dynamics365/customer-engagement/developer/sample-disable-user)   
  [Sample: Share Records Using GrantAccess, ModifyAccess and RevokeAccess Messages](org-service/samples/share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md)   
  [Sample: Share a record using an access team](org-service/samples/share-record-using-access-team.md)   
