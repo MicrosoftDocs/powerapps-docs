@@ -42,27 +42,27 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     > [!div class="mx-imgBorder"]
     > ![Report wizard](media/report_wizard_1.png "Report wizard screen")
    
-4. On the **Report Properties** screen, enter a name for the report and then choose the record to include in the report and then select **Next**.
+4. On the **Report Properties** screen, enter a name for the report and then choose the row to include in the report and then select **Next**.
  
     > [!div class="mx-imgBorder"]
     > ![Report properties screen](media/report_wizard_2.png "Report properties screen")
   
-5.  On the **Select Records to Include in the Report** screen choose the filters to determine which records are included in your report. For example, if you only want to see results for records modified in the last 60 days, you can set that filter in this screen. If you don’t want the data filtered, select **Clear**.
+5.  On the **Select Rows to Include in the Report** screen choose the filters to determine which rows are included in your report. For example, if you only want to see results for rows modified in the last 60 days, you can set that filter in this screen. If you don’t want the data filtered, select **Clear**.
 
     > [!div class="mx-imgBorder"]
-    > ![Select Records to Include in the Report*](media/report_wizard_3.png "Select Records to Include in the Report")
+    > ![Select Rows to Include in the Report*](media/report_wizard_3.png "Select Rows to Include in the Report")
   
-6. On the **Lay out Fields** screen, choose the layout of your report. Select **Click here to add a grouping** and choose how you want your data grouped.
+6. On the **Lay out Columns** screen, choose the layout of your report. Select **Click here to add a grouping** and choose how you want your data grouped.
 
     > [!div class="mx-imgBorder"]
-    > ![Lay out Fields](media/report_wizard_4.png "Lay out Fields")
+    > ![Lay out Columns](media/report_wizard_4.png "Lay out Columns")
 
-7. Select the **Record type** and the **Column** for the data you want to have grouped in the report. When you are done with your selections, select **OK**.
+7. Select the **Row type** and the **Column** for the data you want to have grouped in the report. When you are done with your selections, select **OK**.
 
     > [!div class="mx-imgBorder"]
     > ![dd grouping screen](media/report_wizard_5.png "Add grouping screen")
   
-8. Select **Click here to add a column** to columns of data related to the record type you chose in the previous step.  
+8. Select **Click here to add a column** to columns of data related to the row type you chose in the previous step.  
 
     > [!div class="mx-imgBorder"]
     > ![add grouping screen](media/report_wizard_6.png "Add grouping screen")
@@ -72,7 +72,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     > [!div class="mx-imgBorder"]
     > ![add column screen](media/report_wizard_7.png "Add column screen")
   
-10. Repeat the previous step for any additional columns that you want to add. When you are done, on the **Lay Out Fields** screen, slect **Next**.
+10. Repeat the previous step for any additional columns that you want to add. When you are done, on the **Lay Out Columns** screen, slect **Next**.
  
     > [!div class="mx-imgBorder"]
     > ![add more column screen](media/report_wizard_8.png "Add more column screen")

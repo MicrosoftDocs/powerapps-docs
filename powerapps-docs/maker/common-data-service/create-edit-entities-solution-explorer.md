@@ -1,6 +1,6 @@
 ---
-title: "Create and edit entities using solution explorer | MicrosoftDocs"
-description: "Learn how to create an entity using solution explorer"
+title: "Create and edit tables using solution explorer | MicrosoftDocs"
+description: "Learn how to create a table using solution explorer"
 ms.custom: ""
 ms.date: 02/26/2019
 ms.reviewer: ""
@@ -21,78 +21,78 @@ search.app:
   - D365CE
 ---
 
-# Create and edit entities using solution explorer
+# Create and edit tables using solution explorer
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can easily create an entity using the Power Apps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit entities in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing entities using the Solution Explorer.
+You can easily create a table using the Power Apps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing tables using the Solution Explorer.
 
 ## Open solution explorer
 
-Part of the name of any entity you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this entity. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
+Part of the name of any table you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
-## View entities
+## View tables
 
-In the solution explorer **Components** node, select the **Entities** node.
+In the solution explorer **Components** node, select the **Tables** node.
 
-![View entities in solution explorer](media/view-entities-solution-explorer.png)
+![View tables in solution explorer](media/view-entities-solution-explorer.png)
 
-## Create an Entity
+## Create a table
 
-While [viewing entities](#view-entities), select **New** to open the new entity form.
+While [viewing tables](#view-tables), select **New** to open the new table form.
 
-![new entity form in solution explorer](media/new-entity-form-solution-explorer.png)
+![new table form in solution explorer](media/new-entity-form-solution-explorer.png)
 
-The new entity form has two tabs. The **General** tab is for entity options. The **Primary Field** tab is for options about the special single line of text field that each entity has that defines the text shown when there is a link to open the entity in a lookup field.
+The new table form has two tabs. The **General** tab is for table options. The **Primary Field** tab is for options about the special single line of text column that each table has that defines the text shown when there is a link to open the table in a lookup column.
 
 For information about each section see the following:
-- [Configure the primary field](#configure-the-primary-field)
-- [Configure required fields](#configure-required-fields)
+- [Configure the primary column](#configure-the-primary-column)
+- [Configure required columns](#configure-required-columns)
 
 > [!NOTE]
-> You can also make the entity a custom activity. This choice changes some of the default option values. More information: [Create a custom activity entity](#create-custom-activity-entity)
+> You can also make the table a custom activity. This choice changes some of the default option values. More information: [Create a custom activity table](#create-custom-activity-table)
 
-After you have set the required options for the entity, click ![Save command](media/save-entity-icon-solution-explorer.png) to create the custom entity.
+After you have set the required options for the table, click ![Save command](media/save-entity-icon-solution-explorer.png) to create the custom table.
 
-### Configure the primary field
+### Configure the primary column
 
-In the **Primary Field** tab you can usually accept the default values for the primary field, but you have the following options:
+In the **Primary Field** tab you can usually accept the default values for the primary column, but you have the following options:
 
 |Field   |Description  |
 |---------|---------|
-|**Display Name**|Enter the localizable label that will be displayed for this field in forms and lists. The default value is **Name**.|
-|**Name**|Set the name used in the system for this field. The default value is `<customization prefix>_name`|
-|**Maximum Length**|Enter the maximum length for the field values. The default is 100.|
+|**Display Name**|Enter the localizable label that will be displayed for this column in forms and lists. The default value is **Name**.|
+|**Name**|Set the name used in the system for this column. The default value is `<customization prefix>_name`|
+|**Maximum Length**|Enter the maximum length for the column values. The default is 100.|
 
 > [!NOTE]
-> These options do not apply if the entity is an activity entity. More information:  [Create a custom activity entity](#create-custom-activity-entity)
+> These options do not apply if the table is an activity table. More information:  [Create a custom activity table](#create-custom-activity-table)
 
-### Configure required fields
+### Configure required columns
 
-In the **General** tab, some of the options are required before you can save the entity.
+In the **General** tab, some of the options are required before you can save the table.
 
 |Field   |Description  |
 |---------|---------|
-|**Display Name**|This is the singular name for the entity that will be shown in the app.<br />This can be changed later.|
-|**Plural Name**|This is the plural name for the entity that will be shown in the app.<br />This can be changed later.|
-|**Name**|This field is pre-populated based on the display name you enter. It includes the solution publisher customization prefix.|
-|**Ownership**|You can choose either user or team-owned or organization owned. More information: [Standard entity ownership](types-of-entities.md#standard-entities)|
+|**Display Name**|This is the singular name for the table that will be shown in the app.<br />This can be changed later.|
+|**Plural Name**|This is the plural name for the table that will be shown in the app.<br />This can be changed later.|
+|**Name**|This column is pre-populated based on the display name you enter. It includes the solution publisher customization prefix.|
+|**Ownership**|You can choose either user or team-owned or organization owned. More information: [Standard table ownership](types-of-entities.md#standard-tables)|
 
-## Edit an entity
+## Edit a table
 
-While [viewing entities](#view-entities), select the entity you want to edit, or continue editing a new entity you have just saved.
+While [viewing tables](#view-tables), select the table you want to edit, or continue editing a new table you have just saved.
 
 > [!NOTE]
-> Standard entities or custom entities that are part of a managed solution may have limitations on changes you can apply. If the option is not available or is disabled, you are not allowed to make the change.
+> Standard tables or custom tables that are part of a managed solution may have limitations on changes you can apply. If the option is not available or is disabled, you are not allowed to make the change.
 
 #### Set once options
 
 The following options can be set once and cannot be changed after you set them. Take care to only set these options when you need them.
 
 <!-- 
-Same data is presented in edit-entities.md
+Same data is presented in edit-tables.md
 Both should point to this include
  -->
 [!INCLUDE [cc_entity-set-once-options-table](../../includes/cc_entity-set-once-options-table.md)]
@@ -102,48 +102,48 @@ Both should point to this include
 The following properties can be changed at any time.
 
 <!-- 
-Same data is presented in edit-entities.md
+Same data is presented in edit-tables.md
 Both should point to this include
  -->
 [!INCLUDE [cc_entity-changeable-options-table](../../includes/cc_entity-changeable-options-table.md)]
 
 You can also make the following changes:
-- [Create and edit fields for Common Data Service](create-edit-fields.md)
-- [Create and edit relationships between entities](create-edit-entity-relationships.md)
+- [Create and edit columns for Common Data Service](create-edit-fields.md)
+- [Create and edit relationships between tables](create-edit-entity-relationships.md)
 - [Create and design forms](../model-driven-apps/create-design-forms.md)
 - [Create a business process flow to standardize processes](/flow/create-business-process-flow)
 
-## Delete an entity
+## Delete a table
 
-As someone with the system administrator security role, you can delete custom entities that aren’t part of a managed solution.  
+As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
   
 > [!IMPORTANT]
->  When you delete a custom entity, the database tables that store data for that entity are deleted and all data they contain is lost. Any associated records that have a parental relationship to the custom entity are also deleted. For more information about parental relationships, see [Create and edit relationships between entities](create-edit-entity-relationships.md).  
+>  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).  
   
 > [!NOTE]
-> The only way to recover data from an entity that was deleted is to restore the database from a point before the entity was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
+> The only way to recover data from a table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
 
-While [viewing entities](#view-entities), click the ![Delete command](media/delete.gif) command in the toolbar.
+While [viewing tables](#view-tables), click the ![Delete command](media/delete.gif) command in the toolbar.
 
-While viewing an entity use the delete command in the menu bar.
+While viewing a table use the delete command in the menu bar.
 
 ![Delete command](media/delete-custom-entity-solution-explorer.png)
 
 > [!WARNING]
-> Deleting an entity that contains data will remove all the data. This data can only be retrieved by backup of the database.
+> Deleting a table that contains data will remove all the data. This data can only be retrieved by backup of the database.
 
 > [!NOTE]
-> If there are any entity dependencies you will get a **Cannot Delete Component** error with a **Details** link you can use to discover information about why the entity cannot be deleted. In most cases, this will be because of a dependency that has to be removed. 
+> If there are any table dependencies you will get a **Cannot Delete Component** error with a **Details** link you can use to discover information about why the table cannot be deleted. In most cases, this will be because of a dependency that has to be removed. 
 >
-> There may be more than one dependency blocking the deletion of an entity. This error message may only show the first one. For an alternate way to discover dependencies, see [Identify entity dependencies](#identify-entity-dependencies)
+> There may be more than one dependency blocking the deletion of a table. This error message may only show the first one. For an alternate way to discover dependencies, see [Identify table dependencies](#identify-table-dependencies)
 
 
 
-### Identify entity dependencies
+### Identify table dependencies
 
-You can identify dependencies that will prevent an entity from being deleted before you try to delete it. 
+You can identify dependencies that will prevent a table from being deleted before you try to delete it. 
 
-1. In the solution explorer with the entity selected, click **Show Dependencies** in the command bar.
+1. In the solution explorer with the table selected, click **Show Dependencies** in the command bar.
 
 ![Show Dependencies command](media/entity-show-dependencies.png)
 
@@ -151,24 +151,24 @@ You can identify dependencies that will prevent an entity from being deleted bef
 
 ![Published Dependency Type](media/published-entity-dependency.png)
 
-**Published** dependencies will block deleting an entity. **Internal** dependencies should be resolved by the system.  
+**Published** dependencies will block deleting a table. **Internal** dependencies should be resolved by the system.  
 
-3. Remove these published dependencies and you should be able to delete the entity.
+3. Remove these published dependencies and you should be able to delete the table.
 
  > [!NOTE]
- > A very common dependency is that another entity form has a lookup field for the entity you are deleting. Removing the lookup field from the form will resolve the dependency.
+ > A very common dependency is that another table form has a lookup column for the table you are deleting. Removing the lookup column from the form will resolve the dependency.
 
-## Create custom activity entity
+## Create custom activity table
 
-To create the entity as an activity entity, use the same steps described in this topic except select **Define as an activity entity**.
+To create the table as an activity table, use the same steps described in this topic except select **Define as an activity table**.
 
-![Define as activity entity](media/create-activity-entity-solution-explorer.png)
+![Define as activity table](media/create-activity-entity-solution-explorer.png)
 
-An activity entity is a special kind of entity that tracks actions for which an entry can be made on a calendar. More information: [Activity entities](types-of-entities.md#activity-entities).
+An activity table is a special kind of table that tracks actions for which an entry can be made on a calendar. More information: [Activity tables](types-of-entities.md#activity-tables).
 
-When you set this option some entity properties are not compatible. An activity entity has to conform to standard behaviors that all activity entities use.
+When you set this option some table properties are not compatible. An activity table has to conform to standard behaviors that all activity tables use.
 
-The primary field **Name** and **Display Name** will be set to **Subject** and you cannot change this.
+The primary column **Name** and **Display Name** will be set to **Subject** and you cannot change this.
 
 The following options are set by default and cannot be changed:
 
@@ -180,25 +180,25 @@ The following options are set by default and cannot be changed:
 
 The following options cannot be set:
 
-- **Areas that display this entity**
+- **Areas that display this table**
 - **Activities**
 - **Sending email**
 - **Mail Merge**
-- **Single record auditing**
-- **Multiple record auditing**
+- **Single row auditing**
+- **Multiple row auditing**
 
-## Create a Virtual Entity
+## Create a virtual table
 
-Some options are only used when creating a virtual entity.
+Some options are only used when creating a virtual table.
 
 |Option   |Description  |
 |---------|---------|
-|**Virtual Entity**|Whether the entity is a virtual entity.|
-|**Data Source**|The data source for the entity.|
+|**Virtual Entity**|Whether the table is a virtual table.|
+|**Data Source**|The data source for the table.|
 
-More information: [Create and edit virtual entities that contain data from an external data source](create-edit-virtual-entities.md)
+More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create and edit entities in Common Data Service](create-edit-entities.md)<br />
-[Tutorial: Create a custom entity that has components in Power Apps](/powerapps/maker/common-data-service/create-custom-entity)<br />
+[Create and edit tables in Common Data Service](create-edit-entities.md)<br />
+[Tutorial: Create a custom table that has components in Power Apps](/powerapps/maker/common-data-service/create-custom-entity)<br />
 [Create a solution](create-solution.md)
