@@ -19,7 +19,7 @@ search.app:
 ---
 # Set personal options
 
-!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 
 Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone.  
