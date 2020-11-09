@@ -71,9 +71,9 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 | UserInterventionNeeded_NavigateToAadDenied <br> UserInterventionNeeded_StorageLost | Not applicable | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy) | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy) | Not applicable |
 | AadError | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) |
 
-## Resolution 1: Enable storage of local data in your browser
+## Resolution 1: Enable storage of cookies and local data in your browser
 
-Power Apps stores some data locally in your browser, including user identity and preferences. Power Apps can’t function if the browser is configured to disallow storage of local data.
+Power Apps stores some data locally in your browser, including user identity and preferences. Power Apps can’t function if the browser is configured to disallow storage of local data or third-party cookies while using Power Apps.
 
 ### Instructions for Internet Explorer 11
 
@@ -106,13 +106,29 @@ Power Apps stores some data locally in your browser, including user identity and
 
 ### Instructions for Microsoft Edge
 
-1. Open Microsoft Edge.
-2. On the Microsoft Edge toolbar, select **Settings and more**.
-1. Select **Site permissions** from the left pane.
-1. Select **Cookies and site data**.
-1. Turn On **Allow sites to save and read cookie data (recommended)**.
-1. Close all Internet Explorer and Microsoft Edge windows.
+- **Option 1: Enable storage of third-party cookies and local data for all sites**
 
+    1. Select **Settings**.
+    1. Select **Cookies and site permissions**.
+    1. Expand **Cookies and site data**.
+    1. Ensure that **Block third-party cookies** is disabled.
+    1. Ensure these sites aren't added in site-specific cookie configuration that doesn't allow cookies, or deletes cookies when windows are closed:
+        - `https://create.powerapps.com`
+        - `https://*.create.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://make.powerapps.com`
+        - `https://login.microsoftonline.com`
+        - `https://apps.*.powerapps.com`
+        - `https://apps.powerapps.com`
+
+- **Option 2: Create exceptions to allow storage of third-party cookies and local data for Power Apps and associated services.**
+    ***Note: The following steps require your Edge browser version to be 87 or above***
+      
+    1. Go to the Power Apps website.
+    1. On the top right corner of the URL bar click on the cookie icon.
+    1. Select **Site not working?**.
+    1. Select **Allow cookies**.
+    
 ### Instructions for Microsoft Edge Legacy
 
 1. Open Microsoft Edge.
@@ -124,12 +140,12 @@ Power Apps stores some data locally in your browser, including user identity and
 
 ### Instructions for Google Chrome
     
-- **Option 1: Enable local data for all sites**
+- **Option 1: Enable storage of third-party cookies and local data for all sites**
     
     1. Select **Settings**.
     1. Select **Privacy and security**.
     1. Expand **Cookies and other site data**.
-    1. Make sure that **Block third-party cookies** isn't selected.
+    1. Make sure that **Block third-party cookies** or **Block all cookies** isn't selected.
     1. Ensure these sites aren't added in site-specific cookie configuration that doesn't allow cookies, or deletes cookies when windows are closed:
         - `https://create.powerapps.com`
         - `https://*.create.powerapps.com`  (the asterisk is part of the address, don't replace it)
@@ -139,19 +155,14 @@ Power Apps stores some data locally in your browser, including user identity and
         - `https://apps.*.powerapps.com`
         - `https://apps.powerapps.com`
     
-- **Option 2: Create exceptions to allow local data for Power Apps and associated services**
+- **Option 2: Create exceptions to allow storage of third-party cookies and local data for Power Apps and associated services**
       
     1. Select **Settings**.
     1. Select **Privacy and security**.
     1. Expand **Cookies and other site data**.
     1. Use **Add** for **Sites that can always use cookies** and add:
-        - `https://create.powerapps.com`
-        - `https://*.create.powerapps.com`  (the asterisk is part of the address, don't replace it)
-        - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
-        - `https://make.powerapps.com`
-        - `https://login.microsoftonline.com`
-        - `https://apps.*.powerapps.com`
-        - `https://apps.powerapps.com`
+        - `[*.]powerapps.com`
+    1. Ensure that you check the **Including third-party cookies on this site** option when adding the site.
 
 ## Resolution 2: Configure Trust Zones for Internet Explorer and Microsoft Edge Legacy
 
