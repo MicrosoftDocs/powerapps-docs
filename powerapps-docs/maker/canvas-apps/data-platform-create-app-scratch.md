@@ -98,7 +98,7 @@ When you build an app from Common Data Service, you don't need to create a conne
     - **Annual Revenue**
 
     > [!NOTE]
-    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a field](../common-data-service/create-edit-field-portal.md#create-a-field).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a field")
+    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../common-data-service/create-edit-field-portal.md#create-a-column).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
 
 1. Select **Add**.
 
