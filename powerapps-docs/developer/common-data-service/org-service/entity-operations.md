@@ -2,7 +2,7 @@
 title: "Table Operations using the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the table class used for data operations using the Common Data Service organization service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/09/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -177,11 +177,11 @@ More information: [Access formatted values](entity-operations-query-data.md#acce
 
 ## Entity.RelatedEntities 
 
-When you create an table you can also define a set of related table rows to create in the same operation. More information: [Create related tables in one operation](entity-operations-create.md#create-related-entities-in-one-operation)
+When you create an table you can also define a set of related table rows to create in the same operation. More information: [Create related tables in one operation](entity-operations-create.md#create-related-tables-in-one-operation)
 
-When you retrieve an table you can compose use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> to by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> with a query to include related tables in the results. More information: [Retrieve with related records](entity-operations-retrieve.md#retrieve-with-related-records)
+When you retrieve an table you can compose use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> to by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> with a query to include related tables in the results. More information: [Retrieve with related rows](entity-operations-retrieve.md#retrieve-with-related-rows)
 
-If you include related tables in the results, you can also update values on those related tables and include them when you update the table. More information: [Update related tables in one operation](entity-operations-update-delete.md#update-related-entities-in-one-operation)
+If you include related tables in the results, you can also update values on those related tables and include them when you update the table. More information: [Update related tables in one operation](entity-operations-update-delete.md#update-related-tables-in-one-operation)
 
 ## Convert to an EntityReference
 
