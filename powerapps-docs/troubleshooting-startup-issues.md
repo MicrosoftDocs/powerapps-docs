@@ -29,7 +29,7 @@ This troubleshooting article helps fix common configuration problems that preven
     Try again
     ```
 
-    **Resolution**: [Enable third-party cookies and local data](#resolution-1-enable-storage-of-third-party-cookies-and-local-data-in-your-browser).
+    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser).
 
 - When you sign in to Power Apps - especially using the *InPrivate* or *incognito* experience, you receive the following error:
 
@@ -45,7 +45,7 @@ This troubleshooting article helps fix common configuration problems that preven
 
     ```
 
-    **Resolution**: [Enable third-party cookies and local data](#resolution-1-enable-storage-of-third-party-cookies-and-local-data-in-your-browser).
+    **Resolution**: [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser).
 
 - When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
 
@@ -78,12 +78,12 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 | - | - | - | - | - |
 | <ul> <li> Sign in required </li> <li> UserInterventionNeeded_CookiesBlocked </li> <li> UserInterventionNeeded_StorageBlocked </li> </ul> | [Enable third-party cookies and local data](#instructions-for-microsoft-edge) | [Enable third-party cookies and local data](#instructions-for-google-chrome) | [Enable third-party cookies and local data](#instructions-for-internet-explorer-11) |
 | <ul> <li> UserInterventionNeeded_NavigateToAadTimeout </li> </ul> | Possible network problem | Possible network problem | Possible network problem |
-| <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer) |
-| <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) |
+| <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | [Configure Trust Zones](#configure-trust-zones-for-internet-explorer) |
+| <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) |
 
-## Resolution 1: Enable storage of third-party cookies and local data in your browser
+## Enable storage of third-party cookies and local data in your browser
 
-Power Apps stores some data locally in your browser, including user identity and preferences. Power Apps can’t function if the browser is configured to disallow storage of local data, or third-party cookies set by Power Apps.
+Power Apps stores some data such as user identity and preferences locally in your browser. Problems occur if the browser blocks storage of such local data, or third-party cookies set by Power Apps.
 
 Most browsers allow settings to reflect the changes immediately. You may also close all the browser windows and reopen instead.
 
@@ -169,9 +169,9 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     8. Select **OK** to close the Internet Options dialog box.
     9. Close all Internet Explorer and Microsoft Edge windows.
 
-## Resolution 2: Configure Trust Zones for Internet Explorer
+## Configure Trust Zones for Internet Explorer
 
-Internet Explorer use *Trust Zones*. Problems can occur if services on which Power Apps relies are in different Trust Zones in your browser settings.  (You might need assistance from your IT administrator to change some of these settings.)
+Internet Explorer uses *Trust Zones*. Problems can occur if services on which Power Apps relies are in different Trust Zones in your browser settings.  (You might need assistance from your IT administrator to change some of these settings.)
 
 - **Option 1: Add the required Power Apps domains to the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
@@ -210,7 +210,7 @@ Internet Explorer use *Trust Zones*. Problems can occur if services on which Pow
         - Any other address that ends in **powerapps.com** or **create.powerapps.com**.
   7. Select **Close**.
 
-## Resolution 3: Azure Active Directory Errors
+## Azure Active Directory Errors
 
 Azure Active Directory (Azure AD) is the technology on which the Power Apps relies for user authentication and authorization.
 
