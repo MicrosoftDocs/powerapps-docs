@@ -71,7 +71,7 @@ If you want to set a calendar view as the default view, you can do this through 
 You can view a summary of a row by selecting it in the calendar. A pop-up window opens and displays the summary information.
 
 > [!div class="mx-imgBorder"]
-> ![Details of a calendar item (media/details-pop-up-1.png "Details of a calendar item") 
+> ![Details of a calendar item](media/details-pop-up-1.png "Details of a calendar item") 
 
 
 If you want to view complete details about the row, select **More Details** in the pop-up window.
