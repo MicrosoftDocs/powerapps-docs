@@ -17,7 +17,7 @@ search.app:
 
 # Work with rows in the new calendar view
 
-The new calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to a table view by a system customizer or a system administrator. The **Calendar Control V2** control can be added to any table.
+The new calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to a table view by a [system customizer or a system administrator](https://docs.microsoft.com/powerapps/user/find-admin). The **Calendar Control V2** control can be added to any table.
 
 By default, rows are displayed in a read-only grid. When the **Calendar Control V2** control is added to a table and the view is changed to the calendar view, rows associated with the table will be displayed in an interactive calendar.
 
