@@ -58,7 +58,7 @@ You can choose from these calendar views:
 - **Week**: View the week from Sunday through Saturday, by default. You can change the first day of the week in system settings.
 - **Month**: View the entire month.
 
-To change the calendar format, select the drop-down menu and then select **Day**, **Week**, or **Month**.
+To change the calendar format, on the calendar select the drop-down menu and then select **Day**, **Week**, or **Month**.
 
  > [!div class="mx-imgBorder"]
  > ![Select the current calendar view](media/cal-nav-bar-1.png "Select the current calendar view") 
