@@ -22,7 +22,7 @@ search.app:
 Sets a function to be called when the **OnChange** event occurs.
 
 > [!NOTE]
-> If addOnChange is used in a form OnLoad event handler, you should ensure it's called only as much as necessary. You can use [getEventArgs](executioncontext/getEventArgs.md) to conditionally call addOnChange based on the data load state.
+> If the `addOnChange` method is used on the form `OnLoad` event handler, you should ensure that it's called when necessary. You can use the [getEventArgs](executioncontext/getEventArgs.md) to conditionally call the `addOnChange` method based on the data load state.
 
 ## Attribute types supported
 
