@@ -57,7 +57,9 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 |Go to the landmark section of a page| Ctrl+\[ |
 
 
-<!--Is the one above supposed to include just one straight bracket? (I added the backslash to keep the bracket from causing GitHub format issues. It won't show up.)--> 
+## Email 
+
+For accessibility shortcuts available when using email, see [Accessibility shortcuts for email](view-create-email.md#accessibility-shortcuts).
 
 
 ## Editable grids (views)
