@@ -45,18 +45,18 @@ When the calendar view is turned on, it is the default view for the table. Howev
     > [!div class="mx-imgBorder"]
     > ![Switch to calendar view](media/switch-calendar-view-1.png "Switch to calendar view") 
 
-    The activities are displayed in the new calendar view.
+    When you select the **Calendar Control V2** view activities are displayed in a calendar view.
 
     > [!div class="mx-imgBorder"]
     > ![Default calendar view](media/cal-view.png "Default calendar view") 
 
-## Change the calendar view
+## View the calendar by Day, Week, or Month
 
 You can choose from these calendar views:
 
-- **Month**: View the entire month.
-- **Week**: View the week from Sunday through Saturday, by default. You can change the first day of the week in system settings.
 - **Day**: View the current day.
+- **Week**: View the week from Sunday through Saturday, by default. You can change the first day of the week in system settings.
+- **Month**: View the entire month.
 
 **To change the view**
 
