@@ -1,13 +1,13 @@
 ---
-title: 
-description: 
+title: Insert interactive maps into apps
+description: Insert maps, and add customized pins, in PowerApps.
 author: iaanw
 manager: shellha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 7/7/2020
+ms.date: 11/10/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -60,15 +60,16 @@ Column description | Maps to property | Required
 -- | -- | --
 Label for the pin | ItemsLabels | Required
 Longitude of the pin | ItemsLongitudes | Required
-Latitude of the pin | ItemsLattitudes | Required
+Latitude of the pin | ItemsLatitudes | Required
 Color of the pin | ItemsColors | Optional
 Icon for the pin | ItemsIcons | Optional
 
-You can also use a string to denote the address in ItemsAddresses, in which case ItemsLongitudes and ItemsLatitudes won't work.
+
 
 The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](./functions/function-colors).
 
 You can use the icons described in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) topic as your icon.
+
 
 The following is an example of an Excel table with the required columns:
 
@@ -97,11 +98,11 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
 
-    ![](./media/geospatial/convert-table.png)
+    ![Screenshot highlighting the format as table option in Excel](./media/geospatial/convert-table.png)
 
 1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**, for example *TestData*.
 
-    ![](./media/geospatial/table-name.png)
+    ![Screenshot highlighting the table name in Excel](./media/geospatial/table-name.png)
 
 1. Save the workbook.
 
@@ -114,7 +115,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
 
-    ![](./media/geospatial/select-table.png)
+    ![Screenshot of the table selection panel](./media/geospatial/select-table.png)
 
 1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
 
@@ -128,12 +129,8 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the component will use the default icon and color.
 
-    ![](./media/geospatial/map-expanded.png)
+    ![A screenshot of the map component with custom icons and different colors ](./media/geospatial/pins-map.png)
 
-    ![A screenshot of the map component with custom icons and different colors ](./media/geospatial/geospatial-custom-pins-display.png)
-
->[!TIP]
->You can assign the same custom icon to all pins. For the **ItemsIcons** field in the Advanced Properties pane, enter the icon you want to use. For example, set **ItemsIcons** to *MarkerSquare*.
 
 
 
@@ -161,10 +158,12 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Pin color | The color of the pins. | Color picker | Properties |
 | Maximum map pins | Maximum number of pins displayed on the map. | Integer | Properties |
 | ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | TableName.ColumnName | Advanced |
-| ItemsAddresses | A column in Items with the strings that represent the location of the pins. Doesn't work with **ItemsLongitudes** or **ItemsLatitudes**. | TableName.ColumnName | Advanced |
-| ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins. Doesn't work with **ItemsAddresses**. | TableName.ColumnName | Advanced |
-| ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. Doesn't work with **ItemsAddresses**. | TableName.ColumnName | Advanced |
-| Items_Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
+| ItemsAddresses | A column in Items with the strings that represent the location of the pins. | TableName.ColumnName | Advanced |
+| ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins.  | TableName.ColumnName | Advanced |
+| ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. | TableName.ColumnName | Advanced |
+| ItemsColors | Color of the pins | [Any CSS color string](./functions/function-colors) | Advanced |
+| ItemsIcons | Icon of the pins | [Icons defined in Azure image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) | Advanced |
+| Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
 
 ### Additional properties
 
