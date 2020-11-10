@@ -64,8 +64,7 @@ To change the calendar format, select the drop-down menu and then select **Day**
  > ![Select the current calendar view](media/cal-nav-bar-1.png "Select the current calendar view") 
 
 
-
-If you want to set a calendar view as the default view, you do that through personalization settings.
+If you want to set a calendar view as the default view, you can do this through personalization settings. For more information, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#activities-tab-options).
 
 ## View details of a calendar item
 
