@@ -19,7 +19,7 @@ builder called Power Apps Studio. You can use Power Apps Studio to design, build
 
 ![Power Apps Studio](media/studio-power-apps.png "Power Apps Studio")
 
-1. [Build hub](#1---build-hub) – select different tabs in the Power Apps app.
+1. [Build hub](#1---build-hub) – select different pages in the Power Apps app.
 
 1. [Power Apps Studio options](#2--power-apps-studio-options) – options relevant to the settings in a Power Apps Studio session.
 
@@ -387,7 +387,7 @@ are available when creating a new column using visual editor inside Power Apps S
 - Yes/No
 
 > [!IMPORTANT]
-> To add columns of types that aren't supported by visual editor, such as file or image, [create a table](create-table.md) by using the build hub instead.
+> To add columns of types that aren't supported by visual editor, such as file or image, [create a table](create-table.md) by using the solution explorer instead.
 
 ###### Advanced options
 

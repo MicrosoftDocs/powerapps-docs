@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Manage your apps in Teams
 
-To manage an app, select **Apps** from the build hub. Then select the app that you want to manage, or select **Commands** (**…**) next to the app name, and then select commands from the drop-down menu.
+To manage an app, select **Apps** from the solution explorer. Then select the app that you want to manage, or select **Commands** (**…**) next to the app name, and then select commands from the drop-down menu.
 
 ![Select apps](media/manage-apps-1.png "Select apps")
 
