@@ -17,7 +17,7 @@ search.app:
 
 # Work with rows in the new calendar view
 
-The new calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to a table view by a [system customizer or a system administrator](https://docs.microsoft.com/powerapps/user/find-admin). The **Calendar Control V2** control can be added to any table.
+The new calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to a table view by a system customizer or a system administrator. For more information, see [Add the calendar control to tables](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-calendar-control). The **Calendar Control V2** control can be added to any table.
 
 By default, rows are displayed in a read-only grid. When the **Calendar Control V2** control is added to a table and the view is changed to the calendar view, rows associated with the table will be displayed in an interactive calendar.
 
@@ -39,16 +39,8 @@ The calendar view is made available when the calendar control is added to a tabl
     > [!div class="mx-imgBorder"]
     > ![Calendar view of activities](media/cal-view.png "Calendar view of activities") 
 
-## Work with the new calendar view
 
-Using the new calendar view, you can:
-
-- [Change the calendar view](#change-the-calendar-view).
-- [View details of a calendar item](#view-details-of-a-calendar-item).
-- [Create and delete rows from the calendar](#create-and-delete-rows-from-the-calendar).
-- [Search through rows](#search-through-rows).
-
-### Change the calendar view
+## Change the calendar view
 
 You can choose from these calendar views:
 
@@ -70,7 +62,7 @@ You can choose from these calendar views:
 
 If you want to set a calendar view as the default view, you do that through personalization settings.
 
-### View details of a calendar item
+## View details of a calendar item
 
 You can view a summary of a row by selecting it in the calendar. A pop-up window opens and displays the summary information.
 
@@ -89,7 +81,7 @@ If you want to view complete details about the row, select **More Details** in t
 > [!NOTE]
 > This view is not customizable. If you would like to customize this view, add your suggestion [here](https://ideas.powerapps.com).
 
-### Create and delete rows from the calendar
+## Create and delete rows from the calendar
 
 The new calendar view allows you to create and delete rows from the calendar.
 
@@ -121,7 +113,7 @@ The new calendar view allows you to create and delete rows from the calendar.
     > [!div class="mx-imgBorder"]
     > ![Delete a calendar item](media/delete-record-cal.png "Delete a calendar item")
 
-### Search through rows
+## Search through rows
 
 You can use the Search box to filter the rows in the calendar based on a search term. For example, when you enter the keyword **Meeting**, it refreshes the calendar view to show only the rows where the title begins with **Meeting**.
 
