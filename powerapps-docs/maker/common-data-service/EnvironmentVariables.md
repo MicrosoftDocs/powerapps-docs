@@ -26,7 +26,7 @@ Benefits of using environment variables:
 - Configure one or more variables in one place and reference like a parameter across multiple solution components.
 - Enter different values while importing solutions to other environments. 
 - Update values without a code change.
-- Granular level security managed by [Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro).
+- Granular level security managed by [Microsoft Dataverse](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro).
 - Unlimited number of variables (max solution size is 29 MB).
 - Service the definitions and the values independently or together.
 - Supported by [SolutionPackager](/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager) and [DevOps](/powerapps/developer/common-data-service/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
@@ -59,7 +59,7 @@ Environment variables can be created and managed through the modern solution int
 
 The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
 
-You will not be prompted if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in Common Data Service.
+You will not be prompted if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in Dataverse.
    >[!NOTE]
    > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but not get exported in the solution. This approach allows a new value to be set while importing the solution into other environments.  
 
@@ -70,7 +70,7 @@ A notification is displayed when the environment variables do not have any value
 > We recommend partners build their own interfaces requiring the customers to provide the values. Notifications help prevent failures if this step is skipped. 
 
 ## Security
-Both the environmentvariabledefinition and environmentvariablevalue tables are [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-tables). When creating an application that uses environment variables, be sure to assign users the appropriate level of permission. More information: [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security). 
+Both the environmentvariabledefinition and environmentvariablevalue tables are [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-tables). When creating an application that uses environment variables, be sure to assign users the appropriate level of permission. More information: [Security in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security). 
 
 ## Current limitations
 - Caching. Plugins will need to run a query to fetch the values. 
@@ -84,5 +84,5 @@ Both the environmentvariabledefinition and environmentvariablevalue tables are [
 [Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/)
 [Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/common-data-service/plug-ins) </BR>
 [Web API samples](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/web-api-samples) </BR>
-[Create Canvas app from scratch using Common Data Service.](https://docs.microsoft.com/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
-[Create a flow with Common Data Service](https://docs.microsoft.com/flow/connection-cds)
+[Create Canvas app from scratch using Dataverse.](https://docs.microsoft.com/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
+[Create a flow with Dataverse](https://docs.microsoft.com/flow/connection-cds)

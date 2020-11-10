@@ -51,7 +51,7 @@ If it is an appropriate solution, then follow these tips to minimize the impact 
 
 - Avoid including long running tasks, especially those that can be non-deterministic, such as the invocation of external service calls or complex queries to Dynamics 365.
 
-- Limit or avoid querying for additional data from Common Data Service
+- Limit or avoid querying for additional data from Microsoft Dataverse
 
 ### Virtual Entities
 
@@ -59,7 +59,7 @@ Most commonly Retrieve and RetrieveMultiple is called within plug-ins to retriev
 
 ### Retrieve Caution
 
-Common Data Service will trigger at least two Retrieve messages for each entity form load.  One retrieve contains limited attributes, which can vary by entity, and subsequent calls will include more attributes.  If you expect a single action to occur during the loading of a form, then do not rely strictly on the trigger of a Retrieve message.
+Dataverse will trigger at least two Retrieve messages for each entity form load.  One retrieve contains limited attributes, which can vary by entity, and subsequent calls will include more attributes.  If you expect a single action to occur during the loading of a form, then do not rely strictly on the trigger of a Retrieve message.
 
 <a name='additional'></a>
 

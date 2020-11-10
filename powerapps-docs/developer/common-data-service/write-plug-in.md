@@ -1,5 +1,5 @@
 ---
-title: "Write a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the concepts and technical details necessary when writing plug-ins" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 11/03/2020
@@ -198,7 +198,7 @@ Run-time information about plug-ins and custom workflow extensions is captured a
 |TerminateMemoryContributionPercent|The plug-in type percentage contribution to Worker process termination due to excessive memory usage. |
 |TerminateOtherContributionPercent|The plug-in type percentage contribution to Worker process termination due to unknown reasons. |
 
-This data is also available for you to browse using the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Analytics** > **Common Data Service** > **Plug-ins**.
+This data is also available for you to browse using the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Analytics** > **Microsoft Dataverse** > **Plug-ins**.
 
 
 ## Next steps

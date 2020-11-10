@@ -24,9 +24,9 @@ search.app:
 > [!IMPORTANT]
 > This feature has been re-enabled in the majority of regions. Please resume testing, and provide feedback. We thank you for your patience and feedback.
 
-You can use Power BI Desktop to view tables in Common Data Service. The table
+You can use Power BI Desktop to view tables in Microsoft Dataverse. The table
 row data that you can access from your environment is read-only. Data access
-uses the Common Data Service security model that is the same used to access
+uses the Dataverse security model that is the same used to access
 table row data using a Power Apps app.
 
 > [!IMPORTANT]
@@ -34,7 +34,7 @@ table row data using a Power Apps app.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisite
-For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Data Service in an environment you must be an administrator and perform the following steps:
+For this preview, to enable the Tabular Data Stream (TDS) endpoint for Dataverse in an environment you must be an administrator and perform the following steps:
     
 1. Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
       

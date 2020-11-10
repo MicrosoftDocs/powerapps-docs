@@ -24,7 +24,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample demonstrates how to perform basic query requests using the Common Data Service Web API using client-side JavaScript  
+This sample demonstrates how to perform basic query requests using the Microsoft Dataverse Web API using client-side JavaScript  
   
 > [!NOTE]
 >  This sample implements the operations detailed in the [Web API Query Data Sample](../web-api-query-data-sample.md) and uses the common  client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
@@ -35,7 +35,7 @@ This sample demonstrates how to perform basic query requests using the Common Da
 
  To run this sample, the following is required:  
   
-- Access to Common Data Service environment.  
+- Access to Dataverse environment.  
   
 - A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.  
   
@@ -43,7 +43,7 @@ This sample demonstrates how to perform basic query requests using the Common Da
 
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Query Data Sample (Client-side JavaScript)](https://go.microsoft.com/fwlink/p/?LinkId=824050) and download the sample archive file: Microsoft CRM Web API Query Data Sample (Client-side JavaScript).zip. Extract the contents of the sample archieve and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Common Data Service organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Query Data Sample (Client-side JavaScript)](https://go.microsoft.com/fwlink/p/?LinkId=824050) and download the sample archive file: Microsoft CRM Web API Query Data Sample (Client-side JavaScript).zip. Extract the contents of the sample archieve and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Dataverse organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codeSample"></a>
 
@@ -759,7 +759,7 @@ distinct=\"false\" page=\"3\" count=\"4\"> \
   
 ### See also
 
-[Use the Common Data Service Web API](../overview.md)<br />
+[Use the Dataverse Web API](../overview.md)<br />
 [Query Data using the Web API](../query-data-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Query Data Sample](../web-api-query-data-sample.md)<br />

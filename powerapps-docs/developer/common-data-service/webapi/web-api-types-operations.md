@@ -1,5 +1,5 @@
 ---
-title: "Web API types and operations (Common Data Service)| Microsoft Docs"
+title: "Web API types and operations (Microsoft Dataverse)| Microsoft Docs"
 description: "This topic describes what is available for you to use vis-a-vis the Web API and will introduce important topics and how you can find information you need from the documentation generated from the service and metadata documents as well as the documentation of the system entity types, functions, and actions"
 ms.custom: ""
 ms.date: 04/30/2019
@@ -128,7 +128,7 @@ Each `Annotation` element includes a `Term` attribute that describes the type of
 
 ## Entity types
 
-The <xref:Microsoft.Dynamics.CRM.EntityTypeIndex> lists each of the system entity types exposed through the web API which store business data. An entity type is a named structured type with a key. It defines the named properties and relationships of an entity. Entity types may derive by single inheritance from other entity types. <xref:Microsoft.Dynamics.CRM.MetadataEntityTypeIndex> lists each of the entity types used to manage system metadata. Both are entity types but the way you work with them is different. See [Use the Web API with Common Data Service metadata](use-web-api-metadata.md) for information about using model entities. Each entity type is included within an `EntityType` element in the `$metadata`. The following is the definition of the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" /> from the `$metadata` with properties and navigation properties removed.  
+The <xref:Microsoft.Dynamics.CRM.EntityTypeIndex> lists each of the system entity types exposed through the web API which store business data. An entity type is a named structured type with a key. It defines the named properties and relationships of an entity. Entity types may derive by single inheritance from other entity types. <xref:Microsoft.Dynamics.CRM.MetadataEntityTypeIndex> lists each of the entity types used to manage system metadata. Both are entity types but the way you work with them is different. See [Use the Web API with Microsoft Dataverse metadata](use-web-api-metadata.md) for information about using model entities. Each entity type is included within an `EntityType` element in the `$metadata`. The following is the definition of the <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" /> from the `$metadata` with properties and navigation properties removed.  
   
 ```xml  
 <EntityType Name="account" BaseType="mscrm.crmbaseentity">  
@@ -167,7 +167,7 @@ By default, the entity set name matches the <xref href="Microsoft.Dynamics.CRM.E
 
 ### Alternate keys
 
-Although Common Data Service allows for creating alternate keys, only the primary key will be found in the default entities.  
+Although Dataverse allows for creating alternate keys, only the primary key will be found in the default entities.  
   
  None of the system entities have alternate keys defined. If you define alternate keys for an entity, they will be included in the `$metadata` `EntityType` element as an `Annotation` like the following:  
   
@@ -234,7 +234,7 @@ Each property may also have limitations on whether it may be updated. This is de
 
 ### Primitive types
  
-OData supports a wide range of data types but Common Data Service doesn’t use all of them. The following table describes how Common Data Service Organization service types are mapped to OData primitive types.  
+OData supports a wide range of data types but Dataverse doesn’t use all of them. The following table describes how Dataverse Organization service types are mapped to OData primitive types.  
   
 |Organization Service Type|Web API Type|Description|  
 |-------------------------------|------------------|-----------------|  
@@ -374,7 +374,7 @@ An ordinary intersect entity has only the four basic properties required to main
   
 ### See also  
 
-[Use the Common Data Service Web API](overview.md)<br />
-[Authenticate to Common Data Service with the Web API](authenticate-web-api.md)<br />
+[Use the Dataverse Web API](overview.md)<br />
+[Authenticate to Dataverse with the Web API](authenticate-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br/>
 

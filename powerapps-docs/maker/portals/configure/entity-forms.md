@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # About entity forms
 
-A data-driven configuration to allow end users to add a form to collect data in the portal without the need for a developer to surface the form in the portal, entity forms are created in Common Data service and then placed into webpages in the portal or used in conjunction with subgrids and entity lists to build out complete web applications. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [About entity lists](entity-lists.md) 
+A data-driven configuration to allow end users to add a form to collect data in the portal without the need for a developer to surface the form in the portal, entity forms are created in Microsoft Dataverse and then placed into webpages in the portal or used in conjunction with subgrids and entity lists to build out complete web applications. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [About entity lists](entity-lists.md) 
 
 ![Contact us form](../media/contact-us-form.png "Contact us form")  
 
@@ -69,7 +69,7 @@ To secure your forms, you must create entity permissions that determine access a
 |Auto Generate Steps From Tabs|    Indicates that multiple tabs on an entity form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
 |Render Web Resources Inline|    Eliminates the iframe that encompasses a web resource in an entity form.|
 |ToolTips Enabled|    The tooltip is set using the description of the attribute on the target entity.|
-|Show Unsupported Fields|    All fields are currently supported. This is reserved for potential changes Common Data Service may make to field types.|
+|Show Unsupported Fields|    All fields are currently supported. This is reserved for potential changes Dataverse may make to field types.|
 |Set Recommended Fields as Required|     Makes all attributes required that have the field requirement level set to 'Business Recommended'.|
 |Make All Fields Required|     Makes all fields required regardless of the field requirement level.|
 |Validation Summary CSS Class|    CSS Class name assigned to the validation summary. Default is 'validation-summary alert alert-error alert-block'|
@@ -219,4 +219,4 @@ To disable request validation, follow these steps:
 - [Web Forms metadata for portals](configure-web-form-metadata.md)  
 - [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
 - [Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
-- [Microsoft Learn: Interact with Common Data Service data using entity forms](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/3-entity-forms)
+- [Microsoft Learn: Interact with Dataverse data using entity forms](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/3-entity-forms)

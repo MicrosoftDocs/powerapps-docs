@@ -1,5 +1,5 @@
 ---
-title: "Create and edit columns for Common Data Service using Power Apps | MicrosoftDocs"
+title: "Create and edit columns for Microsoft Dataverse using Power Apps | MicrosoftDocs"
 description: Learn how to create and edit columns with Power Apps
 ms.custom: ""
 ms.date: 07/23/2020
@@ -21,15 +21,15 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit columns for Common Data Service
+# Create and edit columns for Microsoft Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit table columns with the Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit table columns with the Dataverse.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Create and edit columns for Common Data Service](create-edit-fields.md)
-- [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)
+- [Create and edit columns for Dataverse](create-edit-fields.md)
+- [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)
 
 ## View columns
 
@@ -54,7 +54,7 @@ Initially, just three column properties are available:
  |Property|Description|
  |--|--|
  |**Display Name**|The text to be displayed for the column in the user interface.|
- |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a column is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Common Data Service Default Publisher** prepended to it.|
+ |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a column is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Dataverse Default Publisher** prepended to it.|
  |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, you cannot change the data type with the exception of converting text columns to autonumber columns.|
  |**Required**| A row can't be saved without data in this column. More information: [Saving rows programmatically for required columns](#saving-rows-programmatically-for-required-columns) |
  |**Searchable**| This column appears in Advanced Find and is available when customizing views. |
@@ -185,7 +185,7 @@ More information: [Define rollup columns that aggregate values](define-rollup-fi
 
 ## Number column options
 
-Each type of number column has absolute minimum and maximum values. You can set appropriate **Minimum value** and **Maximum value** within these absolute values. Do this to have Common Data Service validate the values for the data you want to store in the column.
+Each type of number column has absolute minimum and maximum values. You can set appropriate **Minimum value** and **Maximum value** within these absolute values. Do this to have Dataverse validate the values for the data you want to store in the column.
 
 For **Floating Point Number** and **Decimal Number** data types, you can specify a number of  **Decimal places**.
 
@@ -244,8 +244,8 @@ IME mode does not restrict the characters that users can enter. For example, whe
 -	**Inactive**: Power Apps will deactivate the IME initially. You can activate it later if desired.
 
 ### See also  
-[Create and edit columns for Common Data Service](create-edit-fields.md)<br />
-[Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit columns for Dataverse](create-edit-fields.md)<br />
+[Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Types of columns and column data types](types-of-fields.md)<br />
 [Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
 [Define rollup columns that aggregate values](define-rollup-fields.md)<br />

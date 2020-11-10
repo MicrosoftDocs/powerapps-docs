@@ -20,7 +20,7 @@ These reports are intended to be used by directors, deans, and research administ
 
 ## Prerequisites
 
-The Higher Education Crisis Financial Impact Tracker app pulls data from Common Data Service into this Power BI template, which empowers you to securely store, integrate, and automate the data for use with other business apps, including Power BI, Dynamics 365, and Power Automate.
+The Higher Education Crisis Financial Impact Tracker app pulls data from Microsoft Dataverse into this Power BI template, which empowers you to securely store, integrate, and automate the data for use with other business apps, including Power BI, Dynamics 365, and Power Automate.
 
 To use this Power BI template, you need these prerequisites:
 
@@ -28,7 +28,7 @@ To use this Power BI template, you need these prerequisites:
 
 -  Sign up for the [Power BI service](https://powerbi.microsoft.com/get-started/).
 
--  Create a Common Data Service environment with maker permissions to access the portal and read permissions to access data within the entities.
+-  Create a Dataverse environment with maker permissions to access the portal and read permissions to access data within the entities.
 
 You can configure Power BI dashboards in two ways:
 
@@ -44,7 +44,7 @@ To configure a Power BI report by using a blank report canvas:
    > [!div class="mx-imgBorder"]
    > ![Power BI Desktop](./media/powerbidesktop.png "Power BI Desktop")
 
-2. Select **Get data** > **Power Platform** > **Common Data Service**, and then select **Connect**.
+2. Select **Get data** > **Power Platform** > **Dataverse**, and then select **Connect**.
   
    > [!div class="mx-imgBorder"]
    > ![Get Data](./media/pbigetdata1.png "Get data")
@@ -52,7 +52,7 @@ To configure a Power BI report by using a blank report canvas:
    > [!div class="mx-imgBorder"]
    > ![Get Data](./media/pbigetdata.png "Get data")
 
-3. Enter the **Server Url** that's specific to your Common Data Service environment. To get the Common Data Service environment URL, do the following:
+3. Enter the **Server Url** that's specific to your Dataverse environment. To get the Dataverse environment URL, do the following:
 
    1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the upper-right corner, and then select **Advanced settings**.
 
@@ -60,7 +60,7 @@ To configure a Power BI report by using a blank report canvas:
     <https://yourenvironmentid.crm.dynamics.com/>. Be sure not to copy the rest of the URL.
 
     > [!div class="mx-imgBorder"]
-    > ![Common Data Service environment](./media/cdsenvironment.png "Common Data Service environment")
+    > ![Dataverse environment](./media/cdsenvironment.png "Dataverse environment")
 
     > [!div class="mx-imgBorder"]
     > ![Service URL](./media/ppserviceurl.png "Service URL")
@@ -262,7 +262,7 @@ right side of the page.
     > [!div class="mx-imgBorder"]
     > ![Create relationship](./media/createrelationship.png "Create relationship")
 
-13. To use the suggested fields in Common Data Service that are pertinent to the Power BI template, your relationship mapping between tables should look like the following.
+13. To use the suggested fields in Dataverse that are pertinent to the Power BI template, your relationship mapping between tables should look like the following.
 
      |From: Table | To: Table | 
      |---|---|---|
@@ -306,11 +306,11 @@ When you open the Power BI template, you'll see a series of tabs at the bottom o
 Your organization can add its logos to all pages in the template by inserting
 an image on the page and then copying it to other pages. More information:  [Copy and paste a report visualization](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-copy-paste)
 
-## Connect to Common Data Service
+## Connect to Dataverse
 
 To use your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection in the template. More information: [Create a Power BI report using the Common Data Service connector](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector)
 
-To change the data source, select **Transform data** to open Query Editor. In the **Applied Steps** of Query Editor, change the **Source** for each entity. Use the Common Data Service environment URL. 
+To change the data source, select **Transform data** to open Query Editor. In the **Applied Steps** of Query Editor, change the **Source** for each entity. Use the Dataverse environment URL. 
 
 ## Issues and feedback 
 

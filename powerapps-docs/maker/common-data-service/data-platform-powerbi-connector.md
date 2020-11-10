@@ -17,40 +17,40 @@ search.app:
 # Create a Power BI report using the Common Data Service connector
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Common Data Service allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users, and accessed cross platform on Power BI mobile apps.
+Microsoft Dataverse allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users, and accessed cross platform on Power BI mobile apps.
 
 ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/PBIDesktop.png "Power BI Desktop")
 
 ## Prerequisites
 
-To use Power BI with Common Data Service, you need the following items:
+To use Power BI with Dataverse, you need the following items:
 
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
-* Common Data Service environment with maker permissions to access the portal and read permissions to access data within tables.
+* Dataverse environment with maker permissions to access the portal and read permissions to access data within tables.
 
-## Finding your Common Data Service Environment URL
+## Finding your Dataverse Environment URL
 
 1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the top-right corner, and then select **Advanced settings**.
 
-   <!-- ![Common Data Service Environment](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "Common Data Service Environment") -->
+   <!-- ![Dataverse Environment](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "Dataverse Environment") -->
 
 2. In the new browser tab that opens, copy the root of the URL. This is the unique URL for your environment. The URL will be in the format of **https://yourenvironmentid.crm.dynamics.com/**. Make sure not to copy the rest of the URL. Keep this somewhere handy so you can use it when creating your Power BI reports.
 
     > [!div class="mx-imgBorder"] 
-    > ![Common Data Service Environment](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "Common Data Service environment URL")
+    > ![Dataverse Environment](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "Dataverse environment URL")
 
-## Connecting to Common Data Service from Power BI Desktop
+## Connecting to Dataverse from Power BI Desktop
 
 1. Open **Power BI Desktop**. Select **File** > **Get Data** and then select **Get data to get started** to open the full list of data sources available for Power BI Desktop.
 
     <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport1.png "Power BI Desktop") -->
 
-2. Type *common* in the **Search** box, select **Common Data Service**, and then select **Connect**.
+2. Type *common* in the **Search** box, select **Dataverse**, and then select **Connect**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Power BI Desktop connect to Common Data Service](./media/data-platform-cds-powerbi-connector/CreateReport2.png "Power BI Desktop connect to Common Data Service")
+    > ![Power BI Desktop connect to Dataverse](./media/data-platform-cds-powerbi-connector/CreateReport2.png "Power BI Desktop connect to Dataverse")
 
-3. In the **Common Data Service** dialog box that appears, paste in your Common Data Service environment URL into the **Server Url** box and select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Common Data Service. Select **Connect**.
+3. In the **Dataverse** dialog box that appears, paste in your Dataverse environment URL into the **Server Url** box and select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**.
 
    <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport3.png "Power BI Desktop") -->
 
@@ -90,7 +90,7 @@ As an example, if you had a choice  on your table called ApprovalStatus, you wou
 
 ## Navigating Relationships
 
-Relationships in Common Data Service require you to create a relationship within Power BI desktop between the two tables using a GUID column, this is a system-generated unique identifier that ensures relationships are created for the create rows where ambiguity or duplication may exist with other columns. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
+Relationships in Dataverse require you to create a relationship within Power BI desktop between the two tables using a GUID column, this is a system-generated unique identifier that ensures relationships are created for the create rows where ambiguity or duplication may exist with other columns. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
 
 While some relationships may be automatically created, you can still review and ensure the correct relationships are established when creating your report:
 

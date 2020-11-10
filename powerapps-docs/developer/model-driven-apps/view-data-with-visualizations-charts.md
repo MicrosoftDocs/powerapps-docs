@@ -1,6 +1,6 @@
 ---
 title: "View data with visualizations (charts)  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Visualizations let you see your business data graphically. A visualization is attached to an entity in Common Data Service. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Visualizations let you see your business data graphically. A visualization is attached to an entity in Microsoft Dataverse. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -17,9 +17,9 @@ search.app:
 ---  
 # View data with visualizations (charts)
 
-Visualizations let you see your business data graphically. A visualization is attached to an entity in Common Data Service. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard. More information: [Analyze Data with Dashboards](analyze-data-with-dashboards.md)  
+Visualizations let you see your business data graphically. A visualization is attached to an entity in Microsoft Dataverse. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard. More information: [Analyze Data with Dashboards](analyze-data-with-dashboards.md)  
   
- You can use a chart or a web resource as a visualization in Common Data Service. For charts, you can use the chart designer in model-driven apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into model-driven apps.
+ You can use a chart or a web resource as a visualization in Dataverse. For charts, you can use the chart designer in model-driven apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into model-driven apps.
   
 <a name="VisualizationTypes"></a> 
 
@@ -53,7 +53,7 @@ For more information about how to work with charts, see [Understanding Charts: U
 
 Microsoft Chart Controls is used to build charts in model-driven apps. Microsoft Chart Controls enable you to create various chart types such as column, bar, area, stacked, line, bubble, and pie.  
   
-The following chart types are supported out-of-box in Common Data Service: *Column*, *Area*, *Bar*, *Line*, *Pie*, and *Funnel*. However, you can extend the functionality by creating other supported Microsoft Chart Controls chart types such as multi-series, stacked, and 100% stacked (comparison) charts by specifying appropriate content in the data description and presentation description XML strings for a chart. More information: [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md)  
+The following chart types are supported out-of-box in Dataverse: *Column*, *Area*, *Bar*, *Line*, *Pie*, and *Funnel*. However, you can extend the functionality by creating other supported Microsoft Chart Controls chart types such as multi-series, stacked, and 100% stacked (comparison) charts by specifying appropriate content in the data description and presentation description XML strings for a chart. More information: [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md)  
   
 <a name="WebResources"></a>   
 ## Web resource visualizations  
@@ -65,7 +65,7 @@ The following chart types are supported out-of-box in Common Data Service: *Colu
 
 ## Entities supported for visualizations 
 
-You can create and attach visualizations to only those entities in Common Data Service that support the new ribbon interface. This is because all of the chart controls are only present in the ribbon interface of Common Data Service. Custom entities are also supported for visualizations. You can turn off the visualization support for custom entities if you want to. However, you cannot disable visualization support for the default entities.  
+You can create and attach visualizations to only those entities in Dataverse that support the new ribbon interface. This is because all of the chart controls are only present in the ribbon interface of Dataverse. Custom entities are also supported for visualizations. You can turn off the visualization support for custom entities if you want to. However, you cannot disable visualization support for the default entities.  
   
  The following lists the default entities that are supported for visualizations.  
   

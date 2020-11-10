@@ -20,7 +20,7 @@ Relate and unrelate records of two entities through a one-to-many or many-to-man
 
 ## Description
 
-The **Relate** function links two records through a one-to-many or many-to-many relationship in Common Data Service. The **Unrelate** function reverses the process and removes the link.
+The **Relate** function links two records through a one-to-many or many-to-many relationship in Microsoft Dataverse. The **Unrelate** function reverses the process and removes the link.
 
 For one-to-many relationships, the Many entity has a foreign-key field that points to a record of the One entity. **Relate** sets this field to point to a specific record of the One entity, while **Unrelate** sets this field to *blank*. If the field is already set when **Relate** is called, the existing link is lost in favor of the new link. You can also set this field by using the [**Patch**](function-patch.md) function or an **[Edit form](../controls/control-form-detail.md)** control; you need not use the **Relate** function.
 
@@ -96,7 +96,7 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. On the **View** tab, select **Data sources**.
 
-1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Products** > **Connect**.  
+1. In the **Data** pane, select **Add data source** > **Dataverse** > **Products** > **Connect**.  
 
     The Products entity is part of the sample data loaded above.
 
@@ -166,7 +166,7 @@ At this point, you can move the relationship from one record to another, but you
 
 1. On the **View** tab, select **Data sources**.
 
-1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Reservations** > **Connect**.
+1. In the **Data** pane, select **Add data source** > **Dataverse** > **Reservations** > **Connect**.
 
 1. In **Gallery2**, set the **OnSelect** formula for **NextArrow2** to this formula:
 
@@ -267,7 +267,7 @@ You'll create another app that resembles the one you created earlier in this top
 
 1. On the **View** tab, select **Data sources**.
 
-1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Contacts** > **Connect**.
+1. In the **Data** pane, select **Add data source** > **Dataverse** > **Contacts** > **Connect**.
 
 1. Under **Gallery2**, add a **Combo box** control, ensure that it's named **ComboBox1**, and then set its **Items** property to **Contacts**.
 

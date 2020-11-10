@@ -116,9 +116,9 @@ This article lists some common issues that you might encounter while using Power
 
     If you install Power Apps on a computer that’s running Windows 8 or Windows 8.1, keep the Windows Store app open and active, use the Settings charm to check for updates, and then install them.
 
-1. **Custom connectors and the Common Data Service**
+1. **Custom connectors and the Microsoft Dataverse**
 
-    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](../../administrator/environments-overview.md).
+    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](../../administrator/environments-overview.md).
 
 1. **Running an app on Windows 8.1**
 

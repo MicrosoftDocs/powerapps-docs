@@ -1,6 +1,6 @@
 ---
 title: "Define alternate keys using solution explorer | MicrosoftDocs"
-description: "Learn how to define alternate keys that can be used to reference rows in Common Data Service using solution explorer"
+description: "Learn how to define alternate keys that can be used to reference rows in Microsoft Dataverse using solution explorer"
 ms.custom: ""
 ms.date: 08/01/2020
 ms.reviewer: ""
@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Solution explorer provides one way to view and create alternate keys for Common Data Service.
+Solution explorer provides one way to view and create alternate keys for Microsoft Dataverse.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Define alternate keys to reference rows](define-alternate-keys-reference-records.md)<br />

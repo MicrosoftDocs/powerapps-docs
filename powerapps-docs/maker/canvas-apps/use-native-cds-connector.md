@@ -14,29 +14,29 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Common Data Service and the improved data source experience
+# Microsoft Dataverse and the improved data source experience
 
 ## Overview
 
-If you created a canvas app with either the Common Data Service or the Dynamics 365 connector before November 2019, then you might not have the benefits of using the current native connection experience for the Common Data Service. This article explains both the benefits of using the new experience and how to convert from the legacy Common Data Service or Dynamics 365 connectors to this current and native connection experience enabled by the **Improve data source experience and Common Data Service views** option.
+If you created a canvas app with either the Dataverse or the Dynamics 365 connector before November 2019, then you might not have the benefits of using the current native connection experience for the Dataverse. This article explains both the benefits of using the new experience and how to convert from the legacy Dataverse or Dynamics 365 connectors to this current and native connection experience enabled by the **Improve data source experience and Dataverse views** option.
 
-The **Improve data source experience and Common Data Service views** option has following benefits:
+The **Improve data source experience and Dataverse views** option has following benefits:
 
 1. Significant speed gains.
 2. Increased reliability.
-3. Access to Common Data Service **views** and **File and Image field attributes**.
+3. Access to Dataverse **views** and **File and Image field attributes**.
 
-The **Improve data source experience and Common Data Service views** option appears in the Advanced settings section:
+The **Improve data source experience and Dataverse views** option appears in the Advanced settings section:
 
-![Improve data source experience and Common Data Service views](media/use-native-cds-connector/improved-data-source-setting.png)
+![Improve data source experience and Dataverse views](media/use-native-cds-connector/improved-data-source-setting.png)
 
-The **Relational data, option sets, and other new features for Common Data Service** now appears in the Deprecated features section.
+The **Relational data, option sets, and other new features for Dataverse** now appears in the Deprecated features section.
 
 ## How do I upgrade?
 
 Upgrade your app by inspecting the settings of the features and then by following the directions below:
 
-### *Improve data source experience and Common Data Service views* is On:
+### *Improve data source experience and Dataverse views* is On:
 
 Either you already converted your canvas app to use this feature, or you started an app with default setting of *On* for this feature. No further actions required. 
 
@@ -45,14 +45,14 @@ You may also want to enable the **Explicit Column Selection** feature:
 ![Explicit column selection](media/use-native-cds-connector/explicit-column-selection.png)
 
 > [!NOTE]
-> **Improve data source experience and Common Data Service views** is not supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3). You must turn this feature *Off* when using Power Apps for Windows.
+> **Improve data source experience and Dataverse views** is not supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3). You must turn this feature *Off* when using Power Apps for Windows.
 
-### *Relational data, option sets and other new features for Common Data Service* is Off:
+### *Relational data, option sets and other new features for Dataverse* is Off:
 
 Check *Deprecated features* section under *Advanced settings*.  If set to *Off*, continue with the following instructions as a first step in the conversion. 
 
 > [!IMPORTANT]
-> If you don't see **Relational data, option sets and other new features for Common Data Service** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-common-data-service-views-is-off).
+> If you don't see **Relational data, option sets and other new features for Dataverse** in *Advanced settings*, or if it’s already *On*, skip the following steps and continue to the [next section](#improve-data-source-experience-and-common-data-service-views-is-off).
 
 - **Step 1**: Turn **Use display names** feature **On**:
     
@@ -71,9 +71,9 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     Use the square bracket with an **@** symbol to indicate a global scope so it resolves to the entity; for example, **[@entityName]**.
     
     
-- **Step 2**: Turn **Relational data, option sets and other new features for Common Data Service** and **Use GUID data types instead of strings** features **On**:
+- **Step 2**: Turn **Relational data, option sets and other new features for Dataverse** and **Use GUID data types instead of strings** features **On**:
     
-    1. Turn **Relational data, option sets and other new features for Common Data Service** feature *On*.
+    1. Turn **Relational data, option sets and other new features for Dataverse** feature *On*.
     1. Turn **Use GUID data types instead of strings** feature *On*.
     1. Wait for the health monitor to finish analyzing your app.
     1. Resolve all formula errors.
@@ -88,13 +88,13 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
     - *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
 
-### *Improve data source experience and Common Data Service views* is Off:
+### *Improve data source experience and Dataverse views* is Off:
 
-Use the following instruction to turn **Improve data source experience and Common Data Service views** feature *On*:
+Use the following instruction to turn **Improve data source experience and Dataverse views** feature *On*:
 
-1. Remove your existing Common Data Service data source connections. 
-1. Turn *On* the **Improve data source experience and Common Data Service views** feature.
-1. Add the Common Data Service connection using the new data source selection experience.
+1. Remove your existing Dataverse data source connections. 
+1. Turn *On* the **Improve data source experience and Dataverse views** feature.
+1. Add the Dataverse connection using the new data source selection experience.
 1. Save your application.
 
 > [!NOTE]
@@ -104,9 +104,9 @@ Use the following instruction to turn **Improve data source experience and Commo
 
 To convert your app that uses the Dynamics 365 connector, you'll need to remove and add the connections to your data sources. Use the steps below to convert your connections to your data sources.
 
-1. Ensure the **Improve data source experience and Common Data Service views** feature is turned *On*.
+1. Ensure the **Improve data source experience and Dataverse views** feature is turned *On*.
 2. Remove your existing Dynamics 365 data source connections.
-3. Add the connections to your data sources to the Common Data Service using the new data source selection experience. 
+3. Add the connections to your data sources to the Dataverse using the new data source selection experience. 
 
     > [!NOTE] 
     > - If you have connections to other environments (other than current), select the *Entity* category and then the *More* (...) option to change the environment. You can then select an entity from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
@@ -130,7 +130,7 @@ See the [Detailed Examples](#detailed-examples) section for more information.
 
 ## Detailed Examples
 
-Converting your app to use the new **Option sets** and **Two options** data types with supporting controls can be challenging while upgrading an app to use the new *Improved data source experience and Common Data Service views* feature.
+Converting your app to use the new **Option sets** and **Two options** data types with supporting controls can be challenging while upgrading an app to use the new *Improved data source experience and Dataverse views* feature.
 
 ### Option Sets
 
@@ -142,7 +142,7 @@ It's recommended to remove existing data cards and add them back to work with yo
 
 ![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
 
-With the new *Improved data source experience and Common Data Service views* feature, you no longer see `_accountcategorycode_label`. It's replaced by `accountcategorycode`. Your card is now be marked as **custom** and you'll see errors. Remove the old data card and add the *Option Set* back. The new data card is *Option Set* aware.
+With the new *Improved data source experience and Dataverse views* feature, you no longer see `_accountcategorycode_label`. It's replaced by `accountcategorycode`. Your card is now be marked as **custom** and you'll see errors. Remove the old data card and add the *Option Set* back. The new data card is *Option Set* aware.
 
 ![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
 
@@ -192,7 +192,7 @@ You should remove existing data cards and add them back to work with your Two Op
 
 ![Two Option Set - old style](./media/use-native-cds-connector/TwoOptionSet-Old.png)
 
-With the new *Improved data source experience and Common Data Service views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the Option Set back. You'll see an edit control with two options by default after you add.
+With the new *Improved data source experience and Dataverse views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the Option Set back. You'll see an edit control with two options by default after you add.
 
 ![TwoOptionSet-New](./media/use-native-cds-connector/TwoOptionSet-New.png)
 
@@ -281,7 +281,7 @@ Read [Regarding lookup fields](https://docs.microsoft.com/powerapps/maker/canvas
 
 #### Access the list of all Activities for a record
 
-In Common Data Service, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/common-data-service/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/common-data-service/custom-activities).
+In Dataverse, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/common-data-service/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/common-data-service/custom-activities).
 
 You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with an entity such as account. Add the Activities entity and other individual entities whose data you plan to display in the canvas app.
 
@@ -334,4 +334,4 @@ Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", 
 
 ### See also
 
-[What is Common Data Service?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
+[What is Dataverse?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)

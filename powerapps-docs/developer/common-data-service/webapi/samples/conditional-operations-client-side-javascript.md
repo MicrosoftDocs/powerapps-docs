@@ -1,6 +1,6 @@
 ---
-title: "Web API Conditional Operations Sample (Client-side JavaScript) (Common Data Service)| Microsoft Docs"
-description: "This sample demonstrates how to perform conditional operations using Common Data Service Web API and client-side JavaScript"
+title: "Web API Conditional Operations Sample (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
+description: "This sample demonstrates how to perform conditional operations using Microsoft Dataverse Web API and client-side JavaScript"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.service: powerapps
@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample demonstrates how to perform conditional operations using Common Data Service  Web API using client-side JavaScript.  
+This sample demonstrates how to perform conditional operations using Microsoft Dataverse  Web API using client-side JavaScript.  
   
 > [!NOTE]
 >  This sample implements the operations detailed in the [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
@@ -36,7 +36,7 @@ This sample demonstrates how to perform conditional operations using Common Data
 
  To run this sample, the following is required:  
   
--   Access to Common Data Service online version 8.0 or higher.  
+-   Access to Dataverse online version 8.0 or higher.  
   
 -   A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.  
   
@@ -44,7 +44,7 @@ This sample demonstrates how to perform conditional operations using Common Data
  
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript)](https://go.microsoft.com/fwlink/p/?LinkId=824046) and download the Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the WebAPIConditionalOperations_1_0_0_0_managed.zip managed solution. Import the managed solution into your Common Data Service organization and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript)](https://go.microsoft.com/fwlink/p/?LinkId=824046) and download the Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the WebAPIConditionalOperations_1_0_0_0_managed.zip managed solution. Import the managed solution into your Dataverse organization and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_sampleCode"></a>
 
@@ -443,7 +443,7 @@ Sdk.startSample = function () {
   
 ### See also
 
-[Use the Common Data Service Web API](../overview.md)<br />
+[Use the Dataverse Web API](../overview.md)<br />
 [Perform conditional operations using the Web API](../perform-conditional-operations-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)<br />

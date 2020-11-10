@@ -1,5 +1,5 @@
 ---
-title: "Web API CDSWebApiService  Parallel Operations Sample (C#) (Common Data Service)| Microsoft Docs"
+title: "Web API CDSWebApiService  Parallel Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates using Task Parallel Library (TPL) with synchronous requests."
 ms.custom: ""
 ms.date: 04/20/2020
@@ -38,7 +38,7 @@ This sample is based on the [How to: Write a simple Parallel.ForEach loop](/dotn
 The following is required to build and run the CDSWebApiService C# samples :
 
 - Microsoft Visual Studio 2019. 
-- Access to Common Data Service with privileges to perform CRUD operations.
+- Access to Microsoft Dataverse with privileges to perform CRUD operations.
   
 <a name="bkmk_runSample"></a>
   
@@ -184,7 +184,7 @@ namespace PowerApps.Samples
 
 ### See also
 
-[Use the Common Data Service Web API](../overview.md)<br />
+[Use the Dataverse Web API](../overview.md)<br />
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
 [Web API CDSWebApiService Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)<br />
 [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />

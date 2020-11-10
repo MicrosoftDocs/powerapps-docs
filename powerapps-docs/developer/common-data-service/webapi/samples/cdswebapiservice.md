@@ -1,6 +1,6 @@
 ---
-title: "CDSWebApiService class library (C#) (Common Data Service) | Microsoft Docs"
-description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Common Data Service Web API."
+title: "CDSWebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
+description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Microsoft Dataverse Web API."
 ms.custom: ""
 ms.date: 07/16/2020
 ms.service: powerapps
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-A .NET Framework sample class library that uses JSON objects and common HTTP messaging operations with the Common Data Service Web API. Use of these class methods result in less complicated application code, implementation of performance best practices, and improved error processing.
+A .NET Framework sample class library that uses JSON objects and common HTTP messaging operations with the Microsoft Dataverse Web API. Use of these class methods result in less complicated application code, implementation of performance best practices, and improved error processing.
 
 This class library demonstrates how to:
 

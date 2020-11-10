@@ -1,5 +1,5 @@
 ---
-title: "Sample: Task Parallel Library with CrmServiceClient (Common Data Service)| Microsoft Docs"
+title: "Sample: Task Parallel Library with CrmServiceClient (Microsoft Dataverse)| Microsoft Docs"
 description: "Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications. This sample demonstrates using this with CrmServiceClient"
 ms.custom: ""
 ms.date: 04/20/2020
@@ -166,7 +166,7 @@ namespace PowerApps.Samples
 
                 else
                 {
-                    const string UNABLE_TO_LOGIN_ERROR = "Unable to Login to Common Data Service";
+                    const string UNABLE_TO_LOGIN_ERROR = "Unable to Login to Microsoft Dataverse";
                     if (service.LastCrmError.Equals(UNABLE_TO_LOGIN_ERROR))
                     {
                         Console.WriteLine("Check the connection string values in cds/App.config.");

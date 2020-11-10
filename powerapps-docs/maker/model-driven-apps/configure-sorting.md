@@ -45,7 +45,7 @@ To change the sort order in the view designer, see [Create a public view in Powe
 4.  Select **OK** to close the **Configure Sort Order** dialog box. 
 
     > [!IMPORTANT]
-    > Grids in Unified Interface apps take the list of displayed columns from the underlying FetchXML of the view. If the FetchXML that is returned from Common Data Service does not have a column, then that column is not displayed. This is in contrast to the classic web application, where if a column is not present in FetchXML but is in LayoutXML, such a column is automatically added to the list of displayed columns. Unified Interface apps use OData directly with FetchXML to retrieve data from the server.
+    > Grids in Unified Interface apps take the list of displayed columns from the underlying FetchXML of the view. If the FetchXML that is returned from Microsoft Dataverse does not have a column, then that column is not displayed. This is in contrast to the classic web application, where if a column is not present in FetchXML but is in LayoutXML, such a column is automatically added to the list of displayed columns. Unified Interface apps use OData directly with FetchXML to retrieve data from the server.
 
 ## Next steps
 [Create or edit a view](create-edit-views.md)

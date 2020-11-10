@@ -46,7 +46,7 @@ Selecting the portal notification will link to this page of common issues for fu
 
 ## Solution Checker fails to check Default solution
 
-Solution checker exports the solution from the Common Data Service environment for analysis. Exporting the Default Solution is not supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
+Solution checker exports the solution from the Microsoft Dataverse environment for analysis. Exporting the Default Solution is not supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
 
 
 ## Solution checker fails due to unsupported version of Power Apps Checker
@@ -72,7 +72,7 @@ To uninstall the Power Apps Checker solution:
 
 ### How to install Power Apps Checker
 
-To install Power Apps Checker back into your Common Data Service environment:
+To install Power Apps Checker back into your Dataverse environment:
 
 1. As a System Administrator or as a System Customizer, open up your Power Apps portal by going to https://make.powerapps.com/environments.
 2. Select **Solutions**.
@@ -99,7 +99,7 @@ To disable administration mode for an organization instance:
 
 ## Solution checker fails due to missing security roles
 
-The application user for Solution Checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Common Data Service organization. If either of these roles are not assigned to the user **'Power Apps Checker'**,  attempts to run analysis, download results, and run cancelation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
+The application user for Solution Checker requires two security roles assigned in order to provide the necessary privileges to communicate with the Dataverse organization. If either of these roles are not assigned to the user **'Power Apps Checker'**,  attempts to run analysis, download results, and run cancelation will fail. This occurs most often when customers have automation in place that removes security roles from unexpected users. The following security roles contain minimum required permissions:
 
 - Export Customizations
 - Solution Checker
@@ -108,7 +108,7 @@ The application user for Solution Checker requires two security roles assigned i
 
 To assign missing security roles to the Power Apps Checker user:
 
-1. Open your Common Data Service organization and navigate to **Settings** > **Security** > **Users**.
+1. Open your Dataverse organization and navigate to **Settings** > **Security** > **Users**.
 2. Select the **'Power Apps Checker'** user from the list of users.
 3. Select **MANAGE ROLES** on the command bar.
 4. Select **'Export Customizations'** and **'Solution Checker'** role checkboxes, and then select **OK**.
@@ -119,7 +119,7 @@ To assign missing security roles to the Power Apps Checker user:
 
 ## Solution checker fails due to restricted access mode
 
-The application user for solution checker requires an access mode of **'Non-Interactive'** or **'Read-Write'** in order to communicate with the Common Data Service organization. If the access mode has been changed to another value such as **'Administrative'**, then attempts to run analysis, download results, and run cancelation will fail.
+The application user for solution checker requires an access mode of **'Non-Interactive'** or **'Read-Write'** in order to communicate with the Dataverse organization. If the access mode has been changed to another value such as **'Administrative'**, then attempts to run analysis, download results, and run cancelation will fail.
 
 To resolve this issue, you must update the **'Power Apps Checker'** application user with 'Non-interactive' access mode.
 
@@ -127,7 +127,7 @@ To resolve this issue, you must update the **'Power Apps Checker'** application 
 
 To update the access mode for the Power Apps Checker user:
 
-1. Open your Common Data Service organization and navigate to **Settings** > **Security** > **Users**.
+1. Open your Dataverse organization and navigate to **Settings** > **Security** > **Users**.
 2. Select the **'Power Apps Checker'** user from the list of users and double-click to open the user form.
 3. Scroll to the **'Administration'** > **'Client Access License (CAL) Information'** section of the form.
 4. Select **'Non-interactive'** in the **Access Mode** drop-down control.
@@ -139,7 +139,7 @@ To update the access mode for the Power Apps Checker user:
 
 ## Solution Checker fails due to disabled application user
 
-The Power Apps Checker application user in the Common Data Service organization containing solutions to be analyzed must be enabled. If the application user becomes disabled, requests to analyze solutions in the same organization will fail. If receiving this error message, first verify that the Power Apps Checker application user is indeed disabled. Then follow the mitigation steps provided below.
+The Power Apps Checker application user in the Dataverse organization containing solutions to be analyzed must be enabled. If the application user becomes disabled, requests to analyze solutions in the same organization will fail. If receiving this error message, first verify that the Power Apps Checker application user is indeed disabled. Then follow the mitigation steps provided below.
 
 ![Disabled user status](media/solution-checker-disabled-application-user.png)
 
@@ -158,9 +158,9 @@ The Power Apps Checker application user in the Common Data Service organization 
 
 ## Common plugin conditions that cause solution checker to fail
 
-When solution checker receives and processes analysis requests, it must call the Common Data Service endpoint to retrieve/update relevant job data and export the selected solution(s). Each interaction made by the solution checker service with the Common Data Service could potentially trigger one or more plugin steps that have been registered on message submitted in the request. These plugins may in turn introduce conditions that prevent the message from being handled as expected by the Common Data Service and interrupt the ability of solution checker to process the requested analysis job. Similar situations can occur when downloading solution checker job results or canceling an in-progress analysis job.
+When solution checker receives and processes analysis requests, it must call the Dataverse endpoint to retrieve/update relevant job data and export the selected solution(s). Each interaction made by the solution checker service with the Dataverse could potentially trigger one or more plugin steps that have been registered on message submitted in the request. These plugins may in turn introduce conditions that prevent the message from being handled as expected by the Dataverse and interrupt the ability of solution checker to process the requested analysis job. Similar situations can occur when downloading solution checker job results or canceling an in-progress analysis job.
 
-Typical Common Data Service operations requested by solution checker:
+Typical Dataverse operations requested by solution checker:
 
 - Retrieve solution, systemuser, and organization table data
 - Create, update, and retrieve analysis job, analysis component, and analysis result table data
@@ -175,7 +175,7 @@ When solution checker fails due to an "unlicensed user" exception, it is often c
 
 ### Plugin step performs operations that require privileges not granted to Power Apps Checker application user
 
-When solution checker fails due to Common Data Service denying access based on a missing privilege, it is often caused by a triggered plugin step that performs operations that require privileges not currently granted to the Power Apps Checker application user. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or grant the Power Apps Checker application user the necessary privileges to execute the custom plugin step.
+When solution checker fails due to Dataverse denying access based on a missing privilege, it is often caused by a triggered plugin step that performs operations that require privileges not currently granted to the Power Apps Checker application user. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or grant the Power Apps Checker application user the necessary privileges to execute the custom plugin step.
 
 ### Plugin step unexpectedly interrupts execution by throwing InvalidPluginExecutionException
 
@@ -185,7 +185,7 @@ Common operations invoked by solution checker include Create and Update. These o
 
 ## Solution checker fails due to disabled first-party application in Azure Active Directory
 
-The first-party enterprise application identity used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the identity cannot authenticate when requesting bearer tokens for Common Data Service and other required resource providers on-behalf of the requesting user.
+The first-party enterprise application identity used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the identity cannot authenticate when requesting bearer tokens for Dataverse and other required resource providers on-behalf of the requesting user.
 
 Follow the below steps to verify that the application identity hasn't been disabled in AAD and if necessary enable the application.
 
@@ -239,7 +239,7 @@ If Solution Checker exports a solution that contains no components to analyze, i
 
 ## Solution Checker fails to export large solutions
 
-The primary scenario for failure to export a large solution from the Common Data Service environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check will not complete successfully. If solution checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
+The primary scenario for failure to export a large solution from the Dataverse environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check will not complete successfully. If solution checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
 
 The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, see guidance to [Optimize custom assembly development](../../developer/common-data-service/best-practices/business-logic/optimize-assembly-development.md).
 
@@ -273,6 +273,6 @@ The solution checker will list the number of the errors found in the app, *inclu
 
 ## See also
 
-[Best practices and guidance for the Common Data Service](../../developer/common-data-service/best-practices/index.md)
+[Best practices and guidance for the Dataverse](../../developer/common-data-service/best-practices/index.md)
 
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)

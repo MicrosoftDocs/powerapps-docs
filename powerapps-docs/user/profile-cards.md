@@ -27,7 +27,7 @@ For more information about profile cards, see [Profile cards in Office 365](http
 
 > [!NOTE]
 >  - Profile cards are available on contacts and users in any Unified Interface app. For information, see [Enable viewing profile cards (for admins)](https://docs.microsoft.com/power-platform/admin/enable-profile-card).
->  - The profile card in Common Data Service is not displayed if multi-factor authentication is turned on for Office Delve service in Azure Active Directory.
+>  - The profile card in Microsoft Dataverse is not displayed if multi-factor authentication is turned on for Office Delve service in Azure Active Directory.
 
 ## View a contact's profile
 
@@ -46,7 +46,7 @@ For more information about profile cards, see [Profile cards in Office 365](http
 Profile cards can be seen on contact and user rows. You can only view them when they are in a lookup.
 
 ### Where is information shown in the profile card coming from?
-The information shown on the contact profile card is fetched from Common Data Service (and not Microsoft Exchange). 
+The information shown on the contact profile card is fetched from Dataverse (and not Microsoft Exchange). 
 
 The information shown on the user profile card is fetched from Office 365 (Azure Active Directory). For more information, see [Profile cards in Office 365 (admin section)](https://support.office.com/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501).
 

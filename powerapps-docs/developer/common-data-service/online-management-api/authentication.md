@@ -1,5 +1,5 @@
 ---
-title: "Authenticate to use the Online Management API for Common Data Service| MicrosoftDocs"
+title: "Authenticate to use the Online Management API for Microsoft Dataverse| MicrosoftDocs"
 description: "Provides information about authenticating to the Online Management API to perform environment-related operations."
 ms.date: 10/23/2020
 ms.service: crm-online
@@ -87,7 +87,7 @@ These are the broad steps to authenticate to the Online Management API service.
     }
     ```
 
-You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all Common Data Service environments in your Microsoft 365 tenant, see [Quick Start Sample: Retrieve environments in your tenant](sample-quick-start.md)
+You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all Microsoft Dataverse environments in your Microsoft 365 tenant, see [Quick Start Sample: Retrieve environments in your tenant](sample-quick-start.md)
 
 
 ### Related Topics  

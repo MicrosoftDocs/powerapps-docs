@@ -1,6 +1,6 @@
 ---
-title: Create a canvas app from Common Data Service | Microsoft Docs
-description: In Power Apps, automatically create a canvas app to manage data in Common Data Service
+title: Create a canvas app from Microsoft Dataverse | Microsoft Docs
+description: In Power Apps, automatically create a canvas app to manage data in Microsoft Dataverse
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -14,15 +14,15 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create a canvas app from Common Data Service in Power Apps
+# Create a canvas app from Microsoft Dataverse in Power Apps
 
-In Power Apps, create a canvas app based on a list of sample accounts in [Common Data Service](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
+In Power Apps, create a canvas app based on a list of sample accounts in [Dataverse](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 ## Prerequisites
 
-To follow this quickstart, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](working-with-environments.md) in which a database in Common Data Service has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](https://docs.microsoft.com/power-platform/admin/environments-administration#create-an-environment) that meets this requirement.
+To follow this quickstart, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](working-with-environments.md) in which a database in Dataverse has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](https://docs.microsoft.com/power-platform/admin/environments-administration#create-an-environment) that meets this requirement.
 
 ## Create an app
 
@@ -32,7 +32,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](https
 
 	![Option to create an app](./media/data-platform-create-app/start-from-data.png)
 
-1. On the **Common Data Service** tile, select **Phone layout**.
+1. On the **Dataverse** tile, select **Phone layout**.
 
 	![Connection tile](./media/data-platform-create-app/connection-tile.png)
 
@@ -58,7 +58,7 @@ You'll probably want to make more changes before you use this app or share it wi
 1. Near the left edge, select **Save** and then, in the lower-left corner, select **Save**.
 
 ## Next steps
-In this quickstart, you created an app to manage sample data about accounts in Common Data Service. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs.
+In this quickstart, you created an app to manage sample data about accounts in Dataverse. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs.
 
 > [!div class="nextstepaction"]
 > [Customize a gallery](customize-layout-sharepoint.md).

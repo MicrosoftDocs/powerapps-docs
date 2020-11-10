@@ -55,7 +55,7 @@ To do add snippet on a portal page:
 
 ## Example
 
-The following example uses a Common Data Service database with [sample data](https://docs.microsoft.com/power-platform/admin/add-remove-sample-data).
+The following example uses a Microsoft Dataverse database with [sample data](https://docs.microsoft.com/power-platform/admin/add-remove-sample-data).
 
 1. Open the [Portal Management app](configure-portal.md).
 
@@ -83,7 +83,7 @@ The following example uses a Common Data Service database with [sample data](htt
     {% endif %}
     ```
 
-    Replace the GUID of the record with an account entity record from your Common Data Service database.
+    Replace the GUID of the record with an account entity record from your Dataverse database.
 
     ![Create content snippet](./media/customize-content-snippets/new-content-snippet-html-liquid.png)
 
@@ -150,7 +150,7 @@ Account Name is: {{ account.name }}
 Account State: {{ account.statecode.label }}
 {% endif %}
 ```
-Replace the GUID of the record with an account entity record from your Common Data Service database.
+Replace the GUID of the record with an account entity record from your Dataverse database.
 
 When you browse the page with this content snippet, the entity information is displayed using liquid object along with text instead of HTML. Likewise, you can also use only HTML to display content without using liquid objects.
 

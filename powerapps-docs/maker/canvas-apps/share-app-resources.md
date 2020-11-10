@@ -18,7 +18,7 @@ search.app:
 
 Before you [share a canvas app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
-* entities in Common Data Service
+* entities in Microsoft Dataverse
 
     For information about giving users access to this data, see [Manage entity permissions](share-app.md#manage-entity-permissions).
     
@@ -34,7 +34,7 @@ You can also share your connections, custom connectors and on-premises data gate
 
 ## Connections
 
-Some connections (such as SQL Server with SQL or Windows authentication) are [implicitly shared](share-app-resources.md#implicit-sharing) with the app when you share the app with other users. Other connections require users to create their own connections and explictly grant security privleges (such as security roles for the Common Data Service, OneDrive for Business, SQL Server with Azure AD authentication).
+Some connections (such as SQL Server with SQL or Windows authentication) are [implicitly shared](share-app-resources.md#implicit-sharing) with the app when you share the app with other users. Other connections require users to create their own connections and explictly grant security privleges (such as security roles for the Dataverse, OneDrive for Business, SQL Server with Azure AD authentication).
 
 You can determine whether a connection is automatically shared as part of the app when you share the app with other users; allowing you to update sharing permissions. To do this, go to make.powerapps.com and select **Data** -> **Connections** from left navigation. Then select the required connection. If the **Share** button appears on top navigation or if the **Share** option displays when you select *More Commands* (...), the selected connection can be shared with other users.
 

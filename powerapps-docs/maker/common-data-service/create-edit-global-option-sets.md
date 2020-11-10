@@ -1,5 +1,5 @@
 ---
-title: "Create and edit global choices (picklists) overview for Common Data Service | MicrosoftDocs"
+title: "Create and edit global choices (picklists) overview for Microsoft Dataverse | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/26/2018
 ms.reviewer: ""
@@ -40,7 +40,7 @@ There are two designers you can use to create or edit global choices:
 |Designer| Description|
 |--|--|
 |[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create a choice ](custom-picklists.md) |
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information: [Create and edit global choices for Common Data Service using solution explorer](create-edit-global-option-sets-solution-explorer.md) |
+|Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information: [Create and edit global choices for Microsoft Dataverse using solution explorer](create-edit-global-option-sets-solution-explorer.md) |
 
 > [!NOTE]
 > You can also create global choices in your environment using the following:
@@ -53,7 +53,7 @@ You should use the [Power Apps portal](https://make.powerapps.com/?utm_source=pa
 
 - Assign colors to options
 - Change the order of options
-- Create a global choice in a solution other than the Common Data Service Default solution
+- Create a global choice in a solution other than the Common Data Service Default Solution
 - Set managed properties
 - Set properties used for virtual tables
 - View dependencies
@@ -61,7 +61,7 @@ You should use the [Power Apps portal](https://make.powerapps.com/?utm_source=pa
 ## See also
 
 [Create a choice ](custom-picklists.md)<br />
-[Create and edit global choices for Common Data Service using solution explorer](create-edit-global-option-sets-solution-explorer.md)<br />
+[Create and edit global choices for Dataverse using solution explorer](create-edit-global-option-sets-solution-explorer.md)<br />
 [Developer documentation: Customize global choices](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
   
 

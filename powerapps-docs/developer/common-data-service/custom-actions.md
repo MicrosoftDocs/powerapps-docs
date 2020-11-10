@@ -1,6 +1,6 @@
 ---
-title: "Create your own messages (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Common Data service provides messages that can be called from the web services. You can create your own messages and call them from your apps." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create your own messages (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Microsoft Dataverse provides messages that can be called from the web services. You can create your own messages and call them from your apps." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/26/2020
 ms.reviewer: "pehecke"
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The Common Data Service exposes APIs using *messages*. There are many messages available for you to use. Custom messages are typically used to add new domain specific functionality to combine multiple message requests into a single request. For example, in a support call center, you may want to combine the `Create`, `Assign`, and `Update` messages into a single new `Escalate` message.
+The Microsoft Dataverse exposes APIs using *messages*. There are many messages available for you to use. Custom messages are typically used to add new domain specific functionality to combine multiple message requests into a single request. For example, in a support call center, you may want to combine the `Create`, `Assign`, and `Update` messages into a single new `Escalate` message.
 
 There are now two ways to define custom messages:
 
@@ -29,7 +29,7 @@ There are now two ways to define custom messages:
 |Workflow Custom Action|Also known as simply *Custom Actions*, these have been part of CDS for many years. Workflow Custom Actions provide a no-code way to define a custom message using the Workflow designer. The logic in these workflows can also be extended with code by using custom workflow activities. More information: [Use Workflow Custom Actions with code](workflow-custom-actions.md)|
 |Custom API| This new capability is a preview feature that extends the concept of custom actions to provide developers with capabilities not limited by the workflow designer. More information: [Create and use Custom APIs](custom-api.md)|
 
-Many developers have been creating workflow custom actions simply to create new messages without implementing any logic in the workflow. Instead, they register plug-ins for the message created by the custom action to implement all of their logic. The Custom API feature makes this pattern a first class capability for developers to extend Common Data Service.
+Many developers have been creating workflow custom actions simply to create new messages without implementing any logic in the workflow. Instead, they register plug-ins for the message created by the custom action to implement all of their logic. The Custom API feature makes this pattern a first class capability for developers to extend Dataverse.
 
 ## Compare Workflow Custom Action and Custom API
 
