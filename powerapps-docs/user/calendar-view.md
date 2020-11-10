@@ -25,25 +25,25 @@ By default, rows are displayed in a read-only grid.
 > ![Default grid view](media/default-grid-view-1.png "Default grid view") 
 
 
-When the **Calendar Control V2** control is added to a table and then the default view is changed to the calendar view, rows associated with the table will be displayed in an interactive calendar.
+When the **Calendar Control V2** control is added to a table and then the default view is changed to the calendar view. Rows associated with the table are displayed in an interactive calendar.
 
 > [!div class="mx-imgBorder"]
 > ![Default calendar view](media/cal-view.png "Default calendar view") 
 
-cal-view.png
 
-## Switch to the new calendar view
+## Switch between calendar view and grid view
 
-The calendar view is made available when the calendar control is added to a table view. If the calendar view isn't visible, contact your system customizer or a system administrator.
+When the calendar view is turned on, it is the default view for the table. However, you can still switch between the grid view or the calendar view.
 
-**To switch to the new calendar view**
+1. To switch between views, on the left navigation pane, select the table that has the calendar view turned on.
 
-1.  In the site map, select an item. For example, **Activities**.
+   > [!div class="mx-imgBorder"]
+   > ![Select a table](media/cal-view-1.png "Select a table") 
 
 2.  On the command bar, select the **More commands** icon, and then select **Show As** > **Calendar Control V2**.
 
     > [!div class="mx-imgBorder"]
-    > ![Switch to calendar view](media/switch-calendar-view.png "Switch to calendar view") 
+    > ![Switch to calendar view](media/switch-calendar-view-1.png "Switch to calendar view") 
 
     The activities are displayed in the new calendar view.
 
