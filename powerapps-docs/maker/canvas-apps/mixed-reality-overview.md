@@ -27,6 +27,10 @@ Components are groups of controls that can answer the need for a specific scenar
 - Measure distance, area, and volume using your device with MR.
 - Identify spaces in the real world through an MR overlay.
 
+mixed-reality-overview.png
+
+:::image type="content" source="./media/augmented-overview/mixed-reality-overview.png" alt-text="A photo showing the Power Apps editor portal with the view in 3D component next to the app on a mobile device.":::
+
 You can read more about components and how to build your own in [Power Apps component framework docs](/powerapps/developer/component-framework/custom-controls-overview).
 
 
