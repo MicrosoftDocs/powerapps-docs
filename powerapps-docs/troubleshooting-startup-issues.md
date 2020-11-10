@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/01/2020
+ms.date: 11/10/2020
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -19,6 +19,17 @@ search.app:
 This troubleshooting article helps fix common configuration problems that prevent Power Apps from starting.
 
 ## Common errors
+
+- When you receive the following error message related to cookie settings:
+
+    ```
+    Hmmm... Something went wrong.
+    thirdPartyCookiesBlocked
+    Please enable third party-cookies and site data in your browser settings. If you are using Chrome's Incognito mode, you can uncheck the 'Block third-party cookies' option on the Incognito langing page.
+    Try again
+    ```
+
+    **Resolution**: [Don't block third-party cookies](#resolution-4-allow-third-party-cookies).
 
 - When you sign in to Power Apps - especially using the *InPrivate* or *incognito* experience, you receive the following error:
 
