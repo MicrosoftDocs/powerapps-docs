@@ -52,7 +52,7 @@ The **New** command or **Quick create** makes it fast and easy to enter almost a
     > [!div class="mx-imgBorder"] 
     > ![Create new button](media/newrecord2.png "Create new button")
   
-3. Fill in the columns and theb on the command bar, select **Save** or **Save & Close**. The **Save** option is still available on the bottom right corner.
+3. Fill in the columns and then on the command bar, select **Save** or **Save & Close**. The **Save** option is still available on the bottom right corner.
 
     > [!div class="mx-imgBorder"] 
     > ![Save option on a row](media/saveoptionalwaysvisible.png "Save option on a row")
