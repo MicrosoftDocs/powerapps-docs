@@ -1861,7 +1861,7 @@
   - name: Embed a canvas app as personal app
     href: ../teams/embed-teams-app.md
   - name: Embed a model-driven app as tab app
-    href: embed-model-driven-teams-tab.md
+    href: ../teams/embed-model-driven-teams-tab.md
   - name: Create apps in Teams
     items:
     - name: Create apps in Teams
