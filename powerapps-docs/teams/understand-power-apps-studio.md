@@ -250,7 +250,7 @@ The Power Apps app in Teams is described in detail in [Overview of the Power App
 
 ## 7 – App authoring menu
 
-On the left pane in Power Apps Studio, you switch between options such as **Insert**, **Data Sources**, **Media**, and **Advanced tools**.
+On the left pane in Power Apps Studio, you switch between options such as **Insert**, **Data Sources**, and **Media**.
 
 ![App authoring menu](media/studio-app-1.png "App authoring menu")
 
@@ -258,7 +258,7 @@ You can also select the expand button to expand the list to include names instea
 
 ## 8 – App authoring options
 
-The options for working with canvas apps change depending on the selection on the left pane, such as **Tree view**, **Insert**, **Data sources**, **Media**, or **Advanced tools**.
+The options for working with canvas apps change depending on the selection on the left pane, such as **Tree view**, **Insert**, **Data sources**, or **Media**.
 
 ![App authoring options](media/studio-app-2.png "App authoring options")
 
@@ -473,15 +473,6 @@ If you want to reference additional media, consider using [audio and video contr
 using media from [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),
 or from [Microsoft Stream](../maker/canvas-apps/controls/control-stream-video.md#example).
 More information: [Using multimedia files in Power Apps](../maker/canvas-apps/add-images-pictures-audio-video.md)
-
-### Advanced tools
-
-Go to **Advanced tools** to work with the canvas app Monitor and the Test Studio. Canvas app Monitor is useful when debugging a canvas app or when diagnosing a problem with the app&mdash;such as investigating performance degradation or a time delay when the app is used. With Test Studio, you can
-develop and reuse tests specific to individual apps based on scenarios. These tests can be useful when automating canvas app testing during application lifecycle management (ALM) scenarios, such as releasing a new version of the app.
-
-![Advanced tools](media/studio-advanced-tools.png "Advanced tools")
-
-More information: [Debugging an app with canvas app Monitor](../maker/canvas-apps/monitor.md) and [Test Studio](../maker/canvas-apps/test-studio.md)
 
 ## 9 – Canvas/screen
 

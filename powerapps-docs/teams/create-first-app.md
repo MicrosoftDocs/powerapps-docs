@@ -144,7 +144,7 @@ To add a new column to track new data:
     > [!TIP]
     > For more information about column types supported by the table
     designer, go to [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns that aren't supported by
-    the visual editor, create a table by using the **Build** tab. More information: [Create tables](create-table.md)
+    the visual editor, create a table by using the solution explorer. More information: [Create tables](create-table.md)
 
 1. If required, change **Advanced options** for the selected column type.
 
