@@ -43,15 +43,16 @@ After enabling your apps to be pinned inside of Teams, you can pin your model-dr
 
    :::image type="content" source="media/teams-add-a-tab.png" alt-text="Add a tab":::
 
-1. In the **Add a tab** dialog box, choose **PowerApps**.
+1. In the **Add a tab** dialog box, select **PowerApps**.
 
    :::image type="content" source="media/teams-powerapps-tab.png" alt-text="Add the PowerApps tab":::
 
-1. Select **Model-driven apps** in the dropdown list.
+1. Select **Model-driven apps** in the dropdown list and then search for and select the model-driven app you would like to pin.
 
-  :::image type="content" source="media/teams-select-model-driven.png" alt-text="Select Model-driven apps":::
-
-1. Search for and select the model-driven app you would like to pin.
+   :::image type="content" source="media/teams-select-model-driven.png" alt-text="Select Model-driven apps":::
 
 1. Select **Save**.
 The app is now available to use in the channel.
+
+### See also
+[Embed a canvas app as personal app in Teams](embed-teams-app.md)
