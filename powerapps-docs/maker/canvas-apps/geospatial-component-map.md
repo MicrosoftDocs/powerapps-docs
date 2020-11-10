@@ -1,11 +1,11 @@
 ---
 title: Insert interactive maps into apps
-description: Insert maps, and add customized pins, in PowerApps.
+description: Insert maps, and add customized pins, in Power Apps.
 author: iaanw
 manager: shellha
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 11/10/2020
 ms.author: iawilt
@@ -13,7 +13,6 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
-ms.custom: ce06122020
 ---
 
 
@@ -44,7 +43,7 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 1. Open the **Insert** tab.
 2. Expand **Media**.
 3. Select the component **Map** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
-4. (Optional) Select **Allow** in the window that asks to know your location. This enables the component to display the user's current location.
+4. (Optional) Select **Allow** in the window that asks to know your location. This setting allows the component to display the user's current location.
 
     ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
@@ -66,12 +65,12 @@ Icon for the pin | ItemsIcons | Optional
 
 
 
-The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](./functions/function-colors).
+The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/functions/function-colors).
 
 You can use the icons described in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) topic as your icon.
 
 
-The following is an example of an Excel table with the required columns:
+The following Excel table shows the required columns:
 
 
 :::image type="content" source="media/geospatial/sample-excel.png" alt-text="Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns":::
@@ -110,7 +109,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
 
-    :::image type="content" source="media/geospatial/select-excel.png" alt-text=" ":::
+    :::image type="content" source="media/geospatial/select-excel.png" alt-text="Screenshot of the Import from Excel option.":::
 
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
@@ -129,7 +128,7 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the component will use the default icon and color.
 
-    ![A screenshot of the map component with custom icons and different colors ](./media/geospatial/pins-map.png)
+    ![A screenshot of the map component with custom icons and different colors.](./media/geospatial/pins-map.png)
 
 
 
@@ -161,7 +160,7 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | ItemsAddresses | A column in Items with the strings that represent the location of the pins. | TableName.ColumnName | Advanced |
 | ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins.  | TableName.ColumnName | Advanced |
 | ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. | TableName.ColumnName | Advanced |
-| ItemsColors | Color of the pins | [Any CSS color string](./functions/function-colors) | Advanced |
+| ItemsColors | Color of the pins | [Any CSS color string](/functions/function-colors) | Advanced |
 | ItemsIcons | Icon of the pins | [Icons defined in Azure image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) | Advanced |
 | Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
 
