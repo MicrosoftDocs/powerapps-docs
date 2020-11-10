@@ -19,7 +19,18 @@ search.app:
 
 The new calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to a table view by a system customizer or a system administrator. For more information, see [Add the calendar control to tables](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-calendar-control). The **Calendar Control V2** control can be added to any table.
 
-By default, rows are displayed in a read-only grid. When the **Calendar Control V2** control is added to a table and the view is changed to the calendar view, rows associated with the table will be displayed in an interactive calendar.
+By default, rows are displayed in a read-only grid. 
+
+> [!div class="mx-imgBorder"]
+> ![Default grid view](media/default-grid-view-1.png "Default grid view") 
+
+
+When the **Calendar Control V2** control is added to a table and then the default view is changed to the calendar view, rows associated with the table will be displayed in an interactive calendar.
+
+> [!div class="mx-imgBorder"]
+> ![Default calendar view](media/cal-view.png "Default calendar view") 
+
+cal-view.png
 
 ## Switch to the new calendar view
 
