@@ -19,7 +19,7 @@ search.app:
 ---
 # Create a new row
 
-The **New** command or **Quick create** makes it fast and easy to enter almost any type of information into the system. The command is on the nav bar, so it’s available whenever you need to enter new information into the system. You can also save a row and create a new one directly from the **Quick create** form.
+The **New** command or **Quick create** makes it fast and easy to enter almost any type of information into the system. The command is on the navigation bar, so it’s available whenever you need to enter new information into the system. You can also save a row and create a new one directly from the **Quick create** form.
 
 > [!NOTE]
 > The **Quick create** option is only available for rows that are enabled by your admin.
