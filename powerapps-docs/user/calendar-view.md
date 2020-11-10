@@ -40,7 +40,7 @@ When the calendar view is turned on, it is the default view for the table. Howev
    > [!div class="mx-imgBorder"]
    > ![Select a table](media/cal-view-1.png "Select a table") 
 
-2.  On the command bar, select the **More commands** icon, and then select **Show As** > **Calendar Control V2**.
+2.  On the command bar, select the **More commands** icon, and then select **Show As** and choose either **Calendar Control V2** or **Read Only Grid**.
 
     > [!div class="mx-imgBorder"]
     > ![Switch to calendar view](media/switch-calendar-view-1.png "Switch to calendar view") 
@@ -48,8 +48,7 @@ When the calendar view is turned on, it is the default view for the table. Howev
     The activities are displayed in the new calendar view.
 
     > [!div class="mx-imgBorder"]
-    > ![Calendar view of activities](media/cal-view.png "Calendar view of activities") 
-
+    > ![Default calendar view](media/cal-view.png "Default calendar view") 
 
 ## Change the calendar view
 
