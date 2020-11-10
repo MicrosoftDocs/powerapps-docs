@@ -108,7 +108,7 @@ It's currently not possible to change your Studio version.
 
 ### Visual editor
 
-Currency, Duration, Language, Ticker, and Timezone fields can't be added using visual editor. To create these fields, use the experience to work with tables as available using [build hub](create-table.md).
+Currency, Duration, Language, Ticker, and Timezone fields can't be added using visual editor. To create these fields, use the experience to work with tables as available using [solution explorer](create-table.md).
 
 ## Theme
 
