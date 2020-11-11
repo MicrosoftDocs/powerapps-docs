@@ -42,14 +42,27 @@ The first two options are directly available from the homescreen. The second two
 
 ### Creating a pass
 
-1. The guest is logged in to the portal and can select **create a pass** from the main screen.
-2. The guest selects the facility
-3. The guest takes the daily health check
-4. A pass is created for the guest for that day
+1. The guest is logged in to the portal and can select **create a pass** from the home screen.
+2. The guest selects the facility.
+3. The guest accepts the to the disclaimer.
+4. The guest attestates not having symptoms.
+5. A pass is created for the guest for that day.
 
 ### View existing passes
 
-If a pass has been created for a guest it will be shown here. If no pass exists, the button will be disabled on the home screen and in the hamburger menu. The pass is displayed with all information, a QR code and a cancel button. If the guest does not have a pass, the link to this page is disabled.
+If a pass has been created for a guest it will be shown here. If no pass exists, the button will be disabled on the home screen and in the hamburger menu. 
+
+The pass will display:
+
+1. Name of the guest
+2. Pass Date
+3. Employee Contact
+4. Facility
+5. Parent Organizacion 
+6. QR code
+7. Cancel button
+
+When a pass is cancel, the portal asks you if you are sure. If you cancel the pass, this wont show up in the view pass anymore and the attestation will deactivate but still will be recorded. 
 
 > [!NOTE]
 > An administrator can disable the use of QR codes in the solution settings. This applies to both employee and guest passes.
@@ -89,6 +102,25 @@ Follow these steps:
 In the background, and invite will be created and an e-mail will be send to the email adress of the contact. The email contains a personal link that allows the contact to redeem the invite and create an login that will be linked to the contact.
 
 In the Workplace care management app, step 1 and 2 must be skipped. The **Employees** section is directly available from the side menu.
+
+## Creating Dependents for Guests
+
+In case there is the need to create a pass for dependents, go to **Home** and select **Register Gest or Dependent**. For each of the dependents first you need to fill the contact details:
+
+Mandatory fields: 
+
+1. First Name 
+2. Last Name
+3. Email 
+
+Not mandatory fields:
+
+4. Phone Number
+5. Organization 
+6. Employee Contact
+
+After creating dependents you would be able to see them and create passes on **Register Gest or Dependent**
+
 
 ## Extend the portal
 
