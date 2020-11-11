@@ -145,12 +145,12 @@ Use advanced find to search for rows and then reassign them to someone else. For
      
  6. Select **Add**. 
  
-     > [!div class="mx-imgBorder"].
+     > [!div class="mx-imgBorder"]
      > ![Select add](media/share-5.png "Select add")
      
  7. On the share dialog box, select the type of permissions the user or team has for the row. When you're done, select **Share**   
  
-     > [!div class="mx-imgBorder"].
+     > [!div class="mx-imgBorder"]
      > ![Select the type of permissions](media/share-6.png "Select the type of permissions")
  
 
