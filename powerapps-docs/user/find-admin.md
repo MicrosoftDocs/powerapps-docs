@@ -30,7 +30,7 @@ You may occasionally run across issues that require consultation with your admin
   
 4. Point to **Select**, and then select **Security Roles** from the list.  
   
-5. Under **Fields**, select **Names**.  
+5. Under **Columns**, select **Names**.  
   
 6. Enter **System Administrator** in the box that says **Enter Text**. At this point, your screen should look like this:  
      

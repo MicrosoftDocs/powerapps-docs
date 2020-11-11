@@ -26,7 +26,7 @@ search.app:
 You can manually import solutions using the steps in this article. You must import only those solutions that you've obtained from a trusted source.
  
 > [!NOTE]
-> - The create privilege is required to import a component. Although, the System Customer security role has create privilege on most components that are commonly imported, by default it doesn't have create privilege on the **Plug-In Assembly** entity. The System Administrator security role has this privilege.
+> - The create privilege is required to import a component. Although, the System Customer security role has create privilege on most components that are commonly imported, by default it doesn't have create privilege on the **Plug-In Assembly** table. The System Administrator security role has this privilege.
 > - When you import a managed solution, all component changes will be brought into the environment in a published state. However, when you import an unmanaged solution, the changes are imported in a draft state so you must publish them to make them active. 
 > - To implement healthy application lifecycle management (ALM) in your organization, consider using a source control system to store and collaborate on your solutions, and automate the solution import process. More information: [ALM basics](/power-platform/alm/basics-alm) in the Power Platform ALM guide.
 
@@ -70,7 +70,7 @@ When you download the log file, you will find an XML file that you can open usin
 
 ### There's an active unmanaged layer created after importing a managed solution
 
-During solution import the system must ensure that there is a fallback form for an entity. This requirement is enforced when you create entities or forms. If during import there isn't a fallback form specified for an entity, then the import creates an unmanaged active layer for one of the main forms and the unmanaged customization indicates the form as the fallback form. This ensures that users can view a form when they don’t have access to any of the other entity forms. More information: [Set the fallback form for an entity](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-an-entity)
+During solution import the system must ensure that there is a fallback form for a table. This requirement is enforced when you create tables or forms. If during import there isn't a fallback form specified for a table, then the import creates an unmanaged active layer for one of the main forms and the unmanaged customization indicates the form as the fallback form. This ensures that users can view a form when they don’t have access to any of the other table forms. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
 
 ### The form doesn't appear in target environment after importing the unmanaged solution
 
@@ -80,9 +80,9 @@ During export of unmanaged solutions, some forms that aren't modified get export
 
 This error can occur when the form you are importing doesn’t exist in the target environment and the form is imported for the first time. The solution you are importing has only form changes (diff) in the form XML when it should have the full form XML. A solution should only import a diff form XML when the form is already present in the environment and you’re importing the changes.  To verify, open your solution’s customizations.xml file and search for the FormXml node using the form ID that appears in the error message. If the form XML contains an attribute named `solutionaction`, then the form XML is a diff. To resolve this scenario the form XML must be a full form XML (should not contain the solutionaction attribute) and can be obtained from the instance this form was originally created in as unmanaged.
 
-### *Microsoft.Crm.CrmException: You cannot delete this form because it is the only fallback form of type main for the 'Entity' entity. Each entity must have at least one fallback form for each form type* message during solution upgrade or uninstall
+### *Microsoft.Crm.CrmException: You cannot delete this form because it is the only fallback form of type main for the 'table' table. Each table must have at least one fallback form for each form type* message during solution upgrade or uninstall
 
-This error occurs when a solution upgrade or uninstall attempts to delete the last remaining form for an entity. This behavior is by design. Each entity must be able to display a form for any valid user. Therefore, at least one form must be designated as a fallback form. A fallback form is available to users whose security roles do not have any forms explicitly assigned to them. To work around this issue, create a temporary form configured as the fallback form for the entity, and then try the upgrade or uninstall again. More information: [Set the fallback form for an entity](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-an-entity)
+This error occurs when a solution upgrade or uninstall attempts to delete the last remaining form for a table. This behavior is by design. Each table must be able to display a form for any valid user. Therefore, at least one form must be designated as a fallback form. A fallback form is available to users whose security roles do not have any forms explicitly assigned to them. To work around this issue, create a temporary form configured as the fallback form for the table, and then try the upgrade or uninstall again. More information: [Set the fallback form for a table](../model-driven-apps/control-access-forms.md#set-the-fallback-form-for-a-table)
 
 ### *Solution cannot be deleted due to dependencies from other components in the system* message when uninstalling a solution
 
