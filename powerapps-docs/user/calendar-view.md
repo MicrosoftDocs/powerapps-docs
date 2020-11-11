@@ -86,13 +86,18 @@ The  calendar view allows you to create and delete rows from the calendar.
 
     - On the **Month** view, double-click a date tile, in which you want to create a new row.
     
-    > [!div class="mx-imgBorder"]
-    > ![Select a date tile in the Month view](media/date-tile-1.png "Select a date tile in the Month view")
+      > [!div class="mx-imgBorder"]
+      > ![Select a date tile in the Month view](media/date-tile-1.png "Select a date tile in the Month view")
 
     - On the **Day** or **Week** view, select a date and time in which you want to create a row.
    
-    > [!div class="mx-imgBorder"]
-    > ![Select a time slot in the Day or Week view](media/time-slot-1.png "Select a time slot in the Day or Week view") 
+      > [!div class="mx-imgBorder"]
+      > ![Select a time slot in the Day or Week view](media/time-slot-1.png "Select a time slot in the Day or Week view") 
+    
+    - You can also create a new row by selecting and dragging across time slots in **Day** or **Week** view.
+    
+       > [!div class="mx-imgBorder"]
+       > ![Drag to select a time slot in the Day or Week view](media/new-calendar-item.png "Drag to select a time slot in the Day or Week view") 
 
 2. A new form will open. In this example a **New Reservation** form is opened. Enter the details, and then select **Save** or **Save & Close**. 
 
@@ -102,7 +107,7 @@ The  calendar view allows you to create and delete rows from the calendar.
     > [!NOTE]
     > - If your form has start and end times columns, they are filled-in automatically as per the selected date tile or time slots. By default, the duration is set to 30 minutes.
     > - When you add the new calendar control on a table other than Activity, the corresponding table row is created when you create a row from the calendar.
-    > - You can also create a new row by selecting and dragging across time slots in **Day** or **Week** view.
+    
 
 
 
