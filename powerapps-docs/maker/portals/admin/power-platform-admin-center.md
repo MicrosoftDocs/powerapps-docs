@@ -116,7 +116,7 @@ To view the portals package details:
 
 1. Select a [portal for your environment](#manage-all-portals-for-an-environment).
 
-1. Select **Update** from the notification on the top of the page, if an update is available. You can also check for the notification from the [package details](#view-portals-package-details) page.
+1. Select **Upgrade now** from the notification on the top of the page, if an update is available. You can also check for the notification from the [package details](#view-portals-package-details) page.
 
 ### Method 2: Update portals packages using the portals list for a tenant
 
