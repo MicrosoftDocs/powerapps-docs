@@ -41,7 +41,7 @@ For more information about the solution publisher, see [Solution publisher](/pow
    - **Display Name**. Enter the display name for the publisher. 
    - **Name**. Enter the unique name for the publisher. 
    - **Prefix**. Enter the publisher prefix you want. 
-   -	**Option Value Prefix**. This field generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
+   -	**Option Value Prefix**. This column generates a number based on the publisher prefix. This number is used when you add options to choices and provides an indicator of which solution was used to add the option. 
    - **Contact Details**. Optionally, you can add contact and address information.
 4. Select **Save and Close**.
 
@@ -49,7 +49,7 @@ For more information about the solution publisher, see [Solution publisher](/pow
 You can change a solution publisher for an unmanaged solution by following these steps:
 1.	In the Power Apps portal, select **Solutions**, select **…** next to the solution you want, and then select **Settings**. 
 2.	In the **Solution settings** pane, select **Edit publisher**. 
-3.	Edit the **Display name** and **Prefix** fields to the values you want. The **Option Value Prefix** field generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
+3.	Edit the **Display name** and **Prefix** columns to the values you want. The **Option Value Prefix** column generates a number based on the publisher prefix. This number is used when you add options to choices and provides an indicator of which solution was used to add the option. 
 4.	In addition to the prefix, you can also change the solution publisher display name, contact information, and address in the **Contact Details** section. 
 5.	Select **Save and Close**.
 

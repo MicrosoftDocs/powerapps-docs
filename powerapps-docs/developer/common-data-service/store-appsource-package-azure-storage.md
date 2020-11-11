@@ -37,7 +37,7 @@ To upload your package to Azure Blob storage:
 2. Sign in to Azure Management portal at [https://portal.azure.com](https://portal.azure.com).
 3. Create a new Storage account by clicking  > **Storage** > **Storage account - blob, file, table, queue**.
     
-   Create a Storage account](media/appsource-storageaccount-pic1.png)
+   ![Create a Storage account](media/appsource-storageaccount-pic1.png)
 
 4. On the **Create storage account** page, specify **Name**, **Resource group**, and **Location** for your storage account. Leave the rest of the fields with the default options. Click **Create**. 
 

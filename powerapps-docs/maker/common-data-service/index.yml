@@ -38,15 +38,15 @@ landingContent:
     linkLists:
        - linkListType: concept
          links:
-          - text: Entities and metadata
+          - text: Tables and metadata
             url: create-edit-metadata.md
-          - text: Types of entities
+          - text: Types of tables
             url: types-of-entities.md
-          - text: Entity relationships
+          - text: Table relationships
             url: relationships-overview.md
-          - text: Fields
+          - text: Columns
             url: fields-overview.md
-          - text: Option sets
+          - text: Choices
             url: create-edit-global-option-sets.md
           
   # Card
@@ -54,15 +54,15 @@ landingContent:
     linkLists:
        - linkListType: how-to-guide
          links:
-          - text: Create a custom entity
+          - text: Create a custom table
             url: data-platform-create-entity.md
           - text: Import or export data
             url: data-platform-import-export.md
-          - text: Create a relationship between entities
+          - text: Create a relationship between tables
             url: data-platform-entity-lookup.md
-          - text: Create and edit fields
+          - text: Create and edit columns
             url: create-edit-fields.md
-          - text: Create an option set
+          - text: Create a choice 
             url: custom-picklists.md
 
     # Card
