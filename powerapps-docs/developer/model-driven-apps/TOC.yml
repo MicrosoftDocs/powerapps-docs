@@ -74,7 +74,7 @@
   - name: Debug your JavaScript code for model-driven apps
     href: clientapi/debug-JavaScript-code.md
   - name: Troubleshoot form issues in Unified Interface
-    href: forms-troubleshooting-guide.md
+    href: troubleshoot-forms.md
   - name: Client API Reference
     href: clientapi/reference.md
     items:
