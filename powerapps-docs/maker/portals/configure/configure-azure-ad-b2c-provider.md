@@ -51,7 +51,7 @@ Follow these steps to configure Azure AD B2C as the OpenID Connect provider.
 
     ![Configure Azure AD B2C](media/authentication/configure-adb2c.png "Configure Azure AD B2C")
 
-1. If necessary, update the name.
+1. If necessary, update the **Provider name**.
 
     ![Azure AD B2C provider name](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
 
@@ -68,7 +68,7 @@ In this step, select an existing Azure AD B2C tenant, or create a new B2C tenant
 Select this option if you already have an existing Azure AD B2C tenant. Other details such as the initial domain name, country/region, and location are automatically updated.
 
 > [!NOTE]
-> Ensure the account you use to sign in to Power Apps has access to the Azure AD tenant that you want to use for configuring the B2C authentication.
+> Ensure the account you use to sign in to Power Apps has access to the Azure AD tenant that you want to use for configuring the B2C authentication. For information about adding different types of user accounts to Azure AD B2C tenant, go to [Overview of user accounts in Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/user-overview).
 
 ![Select an existing Azure AD B2C tenant](media/authentication/b2c-tenant-select.png "Select an existing Azure AD B2C tenant")
 
@@ -97,10 +97,8 @@ To create a new Azure AD B2C tenant:
 
     > [!NOTE]
     > - You can't change the Country/Region after you create your directory.
-    > - Ensure you select the correct Country/Region since your choice determines the Datacenter location for your directory.
+    > - Ensure you select the correct Country/Region since your choice determines the **Datacenter location** for your directory.
     > - Microsoft doesn't control the location from which you or your end users may access or move directory data through the use of apps or services. To see Microsoft's data location commitments for its services, see the [Online Service Terms](https://go.microsoft.com/fwlink?linkid=2009014).
-
-1. Select the available **Datacenter location**.
 
     ![New Azure AD B2C tenant details](media/authentication/create-new-b2c-tenant.png "New Azure AD B2C tenant details")
 
@@ -141,16 +139,16 @@ To use an existing application:
 
 ## Step 4 - Configure user flows
 
-In this step, configure the user flows for sign up, sign in and password reset policy.
+In this step, configure the **Sign up and sign in**, and **Password reset** user flows. Sign up and sign in user flow enables a user to create an account or sign in to their account. Password reset flow enables a user to choose a new password after veifying their email. More information: [User flow and policy in Azure AD B2C](https://docs.microsoft.com/azure/active-directory-b2c/user-flow-overview#user-flow-versions)
 
 ![Configure user flows](media/authentication/b2c-user-flows.png "Configure user flows")
 
-- **New policy** - Select if you want to create a new policy. Also allows you to change the name of the policy.
-    <br> If you select **New policy**, flows are created by default with *local account* identity provider using email address. If you want, you can configure more flows, or other identity providers for your B2C tenant later using the Azure portal.
+- **New policy** - Select if you want to create a new policy. Also allows you to change the name of the policy. This option creates the flow with *local account* identity provider using email address.
 - **Existing policy** - Select an already created policy from the Azure AD B2C tenant.
 
 > [!NOTE]
-> Only email claim is configured in these user flows. You can enable more claims like *first name*, and *last name* in the flow's **User attributes** and **Application claims** configuration using the Azure Portal. If you enable more claims, ensure you [edit the authentication provider](#edit-configuration) and add them to the *Registration claims mapping* and *Login claims mapping* in the **Additional settings**. More information: [Step 6 - additional settings for Azure AD B2C provider configuration](configure-azure-ad-b2c-provider-manual.md)
+> - Only email claim is configured in these user flows. You can enable more claims like *first name*, and *last name* in the flow's **User attributes** and **Application claims** configuration using the Azure Portal. 
+> - If you enable more claims, ensure you [edit the authentication provider](#edit-configuration) and add them to the *Registration claims mapping* and *Login claims mapping* in the **Additional settings** (not required for *first name* and *last name*). More information: [Step 6 - additional settings for Azure AD B2C provider configuration](configure-azure-ad-b2c-provider-manual.md)
 
 Select **Create** to create the identity provider configuration.
 
