@@ -30,7 +30,7 @@ This article helps fix some common issues that you might encounter while working
 
 ## URL parameters to disable various form components
 
-You require URL parameters to disable various form components that help narrow down issues to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
+When you are troublshooting issues with forms you need to use URL parameters to disable various form components that help narrow down a problem to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
 
 - DisableFormCommandbar
 
@@ -62,7 +62,7 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormCommandbar=true
 ```
 
-## View registered form event handlers and libraries
+## View registered form event handlers and libraries in the monitor tool.
 
 To view registered form event handles and libraries you can view the `FormEvents` operation in the [Monitor tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker).
 
@@ -76,7 +76,7 @@ You'll need the `eventIndex` and `libraryIndex` parameter values when using the 
 
 ## Disable form handlers
 
-To disable form handlers, use the following flags: 
+When you are troublshooting issues caused by form handlers, you need to disable the form handlers using the following URL flags:
 
 - **&flags=DisableFormHandlers=\<event name\>**: Disables the form handlers by specifying the event name, for example, `DisableFormHandlers=OnLoad`. If you use the `DisableFormHandlers=true` flag, it disables the following event handlers: [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload), [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave), business rule, [OnChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/attribute-onchange), and [TabStateChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/tabstatechange).
 
@@ -86,7 +86,7 @@ To disable form handlers, use the following flags:
 
 ## Disabling form libraries
 
-To disable form libraries, use the following flags:
+When you are troublshooting issues caused by form libraries, you need to disable the form libraries using the following URL flags:
 
 - **&flags=DisableFormLibraries=true**:  Disables all the form libraries.
 
@@ -107,7 +107,7 @@ The main differences between disabling form libraries and form handlers are:
 
 ### Disable web resource controls
 
-To disable web resource controls on a form, use the following flag: 
+When you are troublshooting issues caused by web resource controls, you need to disable web resource controls sing the following URL flag:
 
 **&flags=DisableWebResourceControls=true**: Disables all the web resource controls.
 
@@ -116,7 +116,7 @@ To disable web resource controls on a form, use the following flag:
 
 ### Disable controls on a form
 
-To disable controls on a form, use the following flag: 
+When you are troublshooting issues caused by controls on a form, you need to disable the controls using the following URL flag:
 
 **&flags=DisableFormControl=true**: Disables all the controls on a form.
 
@@ -125,13 +125,13 @@ To disable controls on a form, use the following flag:
 
 ## Disable business process flow
 
-To disable a business process flow on the form, use the following flag:
+If you are troublshooting an issue cuased by a business process flow (BPF) you need to disable it on the form using the following flag:
 
 **&flags=DisableBusinessProcessFlow=true**: Disables a business process flow on the form.
 
 ## Unexpected behaviors when loading a form
 
-While working on model-driven apps forms, you notice some unexpected behaviors while opening a form. Some of the common issues include:
+While working on model-driven app forms there are some common issue that may cause unexpected behavior when the form opens including:
 
 - Fields or controls do not have an expected value.
 
@@ -139,15 +139,15 @@ While working on model-driven apps forms, you notice some unexpected behaviors w
 
 - Controls are not shown/hidden.
 
-Any of the above behaviors appears after the form is opened, for example, you see a value or control for a second, and then the value changes or the control disappears.
+Any of the above behaviors appear after the form is opened, for example, you see a value or control for a second, and then the value changes or the control disappears.
 
-There are many possible causes for the unexpected behaviors when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) scripts that run synchronously or asynchronously to change the field/control behavior. To determine if your script is causing the issue, you can disable the form handlers using the URL parameters by appending `**&flags=DisableFormHandlers=true**` flag at the end of your app URL.
+There are multiple reasons why the unexpected behaviors occurs when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) scripts that run synchronously or asynchronously to change the field/control behavior. To determine if your script is causing the issue, you can disable the form handlers using the URL parameters by appending `**&flags=DisableFormHandlers=true**` flag at the end of your app URL.
 
 If the form loads normally after you disable the form handler, it indicates that there is an issue with the script that is blocking or causing an error when a form is loading.
 
 ## Intermittent form errors
 
-There are many possible causes for intermittent or random form errors. Using the unsupported [Client API](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference) methods are one of the main reasons why you see the intermittent errors and usually have some of the following characteristics:
+There are many reasons why an intermittent or random form error occurs.  The most common is using unsupported [Client API](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference) methods that have some of the following characteristics:
 
 - Occurs on some records, users, regions, browsers, or only during a certain period when the network or service load is high.
 
