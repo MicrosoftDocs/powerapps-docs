@@ -68,14 +68,14 @@ If you want to set a calendar view as the default view, you can do this through 
 
 ## View details of a calendar item and take action
 
-You can view a summary of a row by selecting it in the calendar.A pop-up window opens and displays the summary information.
+You can view a summary of a row by selecting it in the calendar. A pop-up window opens and displays the summary information.
 
 - To view complete details about the row, select **More Details** in the pop-up window.
 
 - To delete the row, select **Delete** in the pop-up window.
 
-> [!div class="mx-imgBorder"]
-> ![Details of a calendar item](media/details-pop-up-1.png "Details of a calendar item") 
+  > [!div class="mx-imgBorder"]
+  > ![Details of a calendar item](media/details-pop-up-1.png "Details of a calendar item") 
 
 > [!NOTE]
 > This view is not customizable. If you would like to customize this view, add your suggestion [here](https://ideas.powerapps.com).
