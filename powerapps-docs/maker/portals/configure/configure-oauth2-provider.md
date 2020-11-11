@@ -10,11 +10,11 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure OAuth 2.0 providers for portals
+# Configure an OAuth 2.0 provider for portals
 
-The OAuth 2.0 based external identity providers involve registering an "application" with a third-party service to obtain a "client ID" and "client secret" pair. Often this application requires specifying a redirect URL that allows the identity provider to send users back to the portal (relying party). The client ID and client secret are configured as portal site settings in order to establish a secure connection from relying party to identity provider. The settings are based on the properties of the [[!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)]AccountAuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.microsoftaccount.microsoftaccountauthenticationoptions.aspx), [TwitterAuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.twitter.twitterauthenticationoptions.aspx), [FacebookAuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.facebook.facebookauthenticationoptions.aspx), and [GoogleOAuth2AuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.google.googleoauth2authenticationoptions.aspx) classes.  
+To use OAuth 2.0&ndash;based external identity providers, you <!--note from editor: Edit okay? I didn't think "involves" was clear enough. --> register an application with a third-party service to obtain a *client ID* and *client secret* pair. Often this application requires that you specify a redirect URL to allow the identity provider to send users back to the portal (the *relying party*). The client ID and client secret are configured as portal site settings to establish a secure connection from the relying party to the identity provider. The settings are based on the properties of the [[!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)]AccountAuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.microsoftaccount.microsoftaccountauthenticationoptions.aspx), [TwitterAuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.twitter.twitterauthenticationoptions.aspx), [FacebookAuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.facebook.facebookauthenticationoptions.aspx), and [GoogleOAuth2AuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.google.googleoauth2authenticationoptions.aspx) classes.  
 
-To learn about individual OAuth 2.0 providers, select the name of the provider that you want to configure.
+To learn about individual OAuth 2.0 providers, select the name of the provider that you want to configure:
 
 - [Microsoft](configure-oauth2-microsoft.md)
 - [LinkedIn](configure-oauth2-linkedin.md)
@@ -24,6 +24,6 @@ To learn about individual OAuth 2.0 providers, select the name of the provider t
 
 > [!NOTE]
 > - Custom OAuth providers aren't supported. For custom OAuth providers, use [OpenID Connect](configure-openid-provider.md) instead.
-> - Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
+> Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. Restart the portal by using [portal actions](../admin/admin-overview.md) if you want the changes to be reflected immediately.
 
-For general settings applicable to all OAuth 2.0 providers, go to [Additional OAuth 2.0 provider settings](configure-oauth2-settings.md).
+For general settings applicable to all OAuth 2.0 providers, go to [Configure additional settings for OAuth 2.0 providers](configure-oauth2-settings.md).

@@ -10,22 +10,22 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure the Azure Active Directory B2C provider
+# Configure the Azure AD B2C provider for portals
 
-[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Microsoft 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C is an extension to that authentication model that enables external customer signs in through local credentials and federation with various common social identity providers.
+[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Microsoft 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C (Azure AD B2C) is an extension to that authentication model that enables external customer sign-ins through local credentials and federation with various common social identity providers.
 
-A portal owner can configure the portal to accept [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports Open ID Connect for federation.
+A portal owner can configure the portal to accept [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports OpenID Connect for federation.
 
 > [!NOTE]
-> Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
+> Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. Restart the portal by using [portal actions](../admin/admin-overview.md) if you want the changes to be reflected immediately.
+<!--markdownlint-disable MD036-->
+**To configure Azure AD B2C as the OpenID Connect provider**
 
-To configure Azure AD B2C as the OpenID Connect provider:
-
-1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
+1. Select **Configure** for **Azure Active Directory B2C**.<!--note from editor: Where does this take place? I'm unclear about the location in the UI.--> More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
 
     ![Azure AD B2C provider name](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
 
-1. If necessary, update the name.
+1. If necessary, update the name.<!--note from editor: Will the reader know whether/why this is/would be necessary?-->
 
 1. Select **Next**.
 
@@ -49,95 +49,95 @@ To configure Azure AD B2C as the OpenID Connect provider:
 
         1. Enter a name.
 
-        1. If not selected already, select **Web** for **Redirect URI**.
+        1. Under **Redirect URI**, select **Web** (if it isn't selected already).
 
-        1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`
+        1. In the **Redirect URI** text box, enter the **Reply URL** for your portal. <br> Example: `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`
 
             > [!NOTE]
-            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Configure Azure Active Directory B2C application**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Redirect URL** in your portal settings while configuring Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, use it as is for the Azure AD B2C configuration in portals.
-    
+            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Configure Azure Active Directory B2C application** step.<!--note from editor: Should this be "the **Create and configure B2C tenant in Azure** step"? That would match the configure- articles that are similar to this one, which use the name of the step as shown in the screenshot for step 6. Also, please note the other edits, which I propagated to the other articles to be parallel. "However" wasn't quite the right word here.--> If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, you must use it as-is for the Azure AD B2C configuration in portals.
+
             ![Register application](media/authentication/register-application-b2c.png "Register application")
-    
+
         1. Select **Register**.
-    
-        1. In the left menu, under **Manage**, select **Authentication**.
-    
+
+        1. On the left pane, under **Manage**, select **Authentication**.
+
             ![Enable implicit grant flow with ID tokens](media/authentication/id-tokens-b2c.png "Enable implicit grant flow with ID tokens")
-    
-        1. Under **Implicit grant**, select **ID tokens** check box.
-    
+
+        1. Under **Implicit grant**, select the **ID tokens** check box.
+
         1. Select **Save**.
 
-    1. [Create a sign-up and sign-in user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, [create a password reset user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
+    1. [Create a sign-up and sign-in user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, you can [create a password reset user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
 
-    1. [Configure token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/configure-tokens#configure-token-compatibility) with an **Issuer (iss) claim** URL that includes **tfp**. More information: [Token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/tokens-overview#compatibility)
+    1. [Configure token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/configure-tokens#configure-token-compatibility) by using an **Issuer (iss) claim** URL that includes **tfp**. More information: [Token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/tokens-overview#compatibility)
 
         ![Configure token compatibility with tfp](media/authentication/token-compatibility.png "Configure token compatibility with tfp") 
 
-1. In this step, enter the site settings and password reset settings for the portal configuration.
+1. In this step, you enter site settings and password reset settings for the portal configuration.
 
     ![Configure site settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step2.png "Configure site settings")
 
-    1. **Configure site settings**
+    1. In the **Configure site settings** section, enter the following values:
 
-        - **Authority** - The issuer URL defined in the metadata of the sign-up and sign-in policy user flow.​
-        <br> To get the issuer URL:
+        - **Authority**: Enter the issuer URL defined in the metadata of the sign-up and sign-in policy user flow.​
+        <br>**To get the issuer URL**
 
-           1. Open the sign-up and sign-in user flow you created earlier. For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
+           1. Open the sign-up and sign-in user flow you created earlier. For this step, you need to go to the Azure AD B2C tenant on the [Azure portal](https://portal.azure.com).
 
-            ![Select the user flow](media/use-simplified-authentication-configuration/user-flow.png "Select the user flow")
+              ![Select the user flow](media/use-simplified-authentication-configuration/user-flow.png "Select the user flow")
 
-           2. Select **Run user flow**.
+           1. Select **Run user flow**.
 
-            ![Run user flow](media/use-simplified-authentication-configuration/run-user-flow.png "Run user flow")
+              ![Run user flow](media/use-simplified-authentication-configuration/run-user-flow.png "Run user flow")
 
-           3. Select the OpenID configuration URL to open in a new browser window or a tab.
+           1. Select the OpenID configuration URL to open in a new browser window or tab.<!--note from editor: Should we add alt text to describe the URL in more detail here? If it would be essential to a user with low vision, any information in an image needs to be available in alt text or an :::image::: description.-->
 
-                ![Select the OpenID configuration URL](media/use-simplified-authentication-configuration/select-openid-configuration-url.png "Select the OpenID configuration URL")
-        
-                The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
+               ![Select the OpenID configuration URL](media/use-simplified-authentication-configuration/select-openid-configuration-url.png "Select the OpenID configuration URL")
 
-           4. Copy the URL of the **Issuer** from the new browser window or tab.
+               The URL refers to the OpenID Connect identity provider configuration document, also known as the *OpenID well-known configuration endpoint*.<!--note from editor: This should either be the URL you show in the previous image or a link to more information.-->
+
+           1. Copy the URL of the **Issuer** from the new browser window or tab.
 
                 ![Copy the Issuer URL](media/use-simplified-authentication-configuration/issuer-url.png "Copy the Issuer URL")
 
-                Ensure you copy only the URL, without the double quotation marks (*""*). <br> For example, `https://contosoorg.b2clogin.com/tfp/799f7b50-f7b9-49ec-ba78-67eb67210998/b2c_1_contoso/v2.0/`
+                Ensure that you copy only the URL, without the quotation marks (*""*). <br> For example, `https://contosoorg.b2clogin.com/tfp/799f7b50-f7b9-49ec-ba78-67eb67210998/b2c_1_contoso/v2.0/`
 
                 > [!TIP]
-                > Ensure the **Issuer (iss) claim** URL includes **tfp**.
+                > Ensure that the **Issuer (iss) claim** URL includes **tfp**.
 
-        - **Client ID​** - Enter the **Application ID** of the Azure AD B2C application created earlier.
+        - **Client ID​**: Enter the **Application ID** of the Azure AD B2C application you created earlier.
 
-        - **Redirect URI** - Enter the portal URL. <br> You only need to change the redirect URI if you use a custom domain name.
+        - **Redirect URI**: Enter the portal URL. <br> You only need to change the redirect URI if you're using a custom domain name.
 
-    2. **Password reset settings**
+    1. In the **Password reset settings**section, enter the following values:
 
-        - **Default policy ID** - Enter the name of the sign-up and sign-in user flow you created in earlier. The name is prefixed with *B2C_1*.
+        - **Default policy ID**: Enter the name of the sign-up and sign-in user flow you created earlier. The name is prefixed with *B2C_1*.
 
-        - **Password reset policy ID** - Enter the name of the password reset user flow you created earlier. The name is prefixed with *B2C_1*.
+        - **Password reset policy ID**: Enter the name of the password reset user flow you created earlier. The name is prefixed with *B2C_1*.
 
-        - **Valid issuers** - A comma-delimited list of issuer URLs for the sign-up and sign-in user flow and password reset user flow you created earlier. 
-        <br> To get the issuer URLs for the sign-up and sign-in user flow, and password reset user flow, open each flow and then follow the steps under **Authority**, earlier in this section.
+        - **Valid issuers**: Enter a comma-delimited list of issuer URLs for the sign-up and sign-in user flow, and password reset user flow, you created earlier. 
+        <br> To get the issuer URLs for the sign-up and sign-in user flow, and the password reset user flow, open each flow and then follow the steps under **Authority**, in step 5a<!--note from editor: Edit okay?--> earlier in this article.
 
-1. In this step, you'll configure the additional site settings.
-
-    You have the option of configuring additional setting for the Azure AD B2C identity provider.
+1. In this step, you have the option of configuring additional settings for the Azure AD B2C identity provider.<!--note from editor: Made this into a bulleted list to be parallel with the previous step.-->
 
     ![Configure additional settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings")
 
-    1. **Registration claims mapping​** - List of logical name/claim pairs to be used to map claim values returned from Azure AD B2C created during sign up to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
-     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
+    - **Registration claims mapping​**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C (created during sign-up)<!--note from editor: Edit okay? I want to make it clearer what was "created during sign-up" --> to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name`, where `field_logical_name` is the logical name of the field in portals and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
+     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow, and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 
-    1. **Login claims mapping** - List of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign-in to the attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
-     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **Application Claims** in your user flow and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
+    - **Login claims mapping**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign-in to the attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
+     For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **Application Claims** in your user flow, and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 
-    1. **External logout** - Enables or disables federated sign-out. When set to **On**, users are redirected to the federated sign-out user experience when they sign out from the portal. When set to **Off**, users are only signed out from the portal.
+    - **External logout**: Choose whether to enable or disable federated sign-out:
+      - Select **On** to redirect users to the federated sign-out user experience when they sign out from the portal.
+      - Select **Off** to simply sign users out from the portal.
 
-    1. **Contact mapping with email** - Specifies whether contacts are mapped to a corresponding email. When set to **On**, this setting associates a unique contact record with a matching email address, and then automatically assigns the external identity provider to the contact after the user successfully signs in.
+    - **Contact mapping with email**: Specify whether contacts are mapped to a corresponding email. Turn on this toggle to associate a unique contact record with a matching email address and then automatically assign the external identity provider to the contact after the user successfully signs in.
 
-    1. **Registration Enabled**​ - Turn [open registration](configure-portal-authentication.md#open-registration) for your portal on or off. Setting this toggle to **Off** disables and hides external account registration.
+    - **Registration enabled**:- Turn [open registration](configure-portal-authentication.md#open-registration) for your portal on or off. Turning off this toggle disables and hides external account registration.
 
-1. Select **Confirm** to view a summary of your configuration and complete the identity configuration.
+1. Select **Confirm** to view a summary of your settings and complete the identity provider configuration.
 
 ### See also
 

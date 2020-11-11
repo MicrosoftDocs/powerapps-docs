@@ -69,7 +69,7 @@ For site settings related to various portal features, see:
 - [Authentication identity](set-authentication-identity.md)
 - [Azure AD B2C provider](azure-ad-b2c.md)
 - [OAuth 2.0](configure-oauth2-settings.md)
-- [Open ID Connect](configure-openid-settings.md)
+- [OpenID Connect](configure-openid-settings.md)
 - [WS-Federation](configure-ws-federation-settings.md)
 - [SAML 2.0](configure-saml2-settings.md)
 - [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
