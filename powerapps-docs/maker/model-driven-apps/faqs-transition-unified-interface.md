@@ -227,11 +227,4 @@ At present, environments from specific data centers, such as Government Communit
 
 If you are still using the legacy web client after December 4, 2020, we will automatically transition your environment to Unified Interface. This process will be applied by geographic location. The **Final Transition Date** column indicates when we expect this to happen. All the dates are shown in the MM/DD/YYYY format. Consider this the last date when the legacy web client will be available for your environment. We strongly discourage any customers delaying the transition until the last minute. The legacy web client will no longer be available to users after the final transition date. So, there won't be any opportunity to switch back and continue testing should you run into any issues after this date.
 
-### What if I have approved a date within the optional transition service but would prefer to wait until the final transition date that is listed within the Unified Interface scheduling portal. Can I remove approval?
 
-Yes, this is possible. 
-1. In the scheduling portal (<https://runone.powerappsportals.com/>), navigate to My Environments > select a environment to view the environment information view, and select **Remove Approval**. 
-2. On the confirmation page, select a reason and select **Yes** under **Remove Approval**. Select **Submit**.  
-
-> [!NOTE]
-> We strongly recommend all customers transition prior to the final transition date because there'll be no opportunity to switch back after this final date has passed. We will be removing the legacy web client for users, so it is important it is prioritized as we don't have the ability to defer the date beyond this period.
