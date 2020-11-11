@@ -23,13 +23,6 @@ Select **Edit** to edit the app in Power Apps Studio. More information: [Edit a 
 > [!TIP]
 > Use this option if you want to rename an app, or change app icon and description. For detailed steps, go to [rename an app](#rename-an-app) or [change app icon and description](#change-app-icon-and-description).
 
-## Play an app
-
-Select **Play** to run the latest published version of the app. More information: [Publish an app](publish-and-share-apps.md)
-
-> [!NOTE]
-> Selecting **Play** opens the app outside of Teams.
-
 ## Add to Teams
 
 Allows you to download the app, and then upload to Teams. To learn how to add an app to Teams, go to [Embed a canvas app in Teams](embed-teams-app.md).

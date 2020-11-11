@@ -21,15 +21,6 @@ The following components aren't supported:
 - AI Builder
 - Custom connectors
 
-## Build hub
-
-Selecting **Play** for apps in build hub launches the application in an external browser window, and may not work.
-
-Use one of the following options to play an app:
-
-- Edit the app and play using the Studio.
-- Publish the app in Teams and play from the pinned tab.
-
 ## Component library
 
 [Component library](../maker/canvas-apps/component-library.md) isn't supported.
