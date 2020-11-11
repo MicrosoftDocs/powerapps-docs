@@ -62,7 +62,7 @@ Developers are app makers who can write code to extend business app creation and
 
 ## Power Apps and Dynamics 365
 
-Dynamics 365 apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing also use the underlying data platform (Dataverse) used by Power Apps to store and secure data. This enables you to build apps using Power Apps and Dataverse directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and Dataverse](maker/common-data-service/data-platform-intro.md#dynamics-365-and-common-data-service)
+Dynamics 365 apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing also use the underlying data platform (Dataverse) used by Power Apps to store and secure data. This enables you to build apps using Power Apps and Dataverse directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and Dataverse](maker/common-data-service/data-platform-intro.md#dynamics-365-and-dataverse)
 
 ## Try Power Apps for free
 
