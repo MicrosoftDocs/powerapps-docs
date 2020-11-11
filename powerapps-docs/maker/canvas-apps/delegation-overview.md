@@ -31,7 +31,7 @@ Where this becomes complicated, and the reason this article exists, is because n
 ## Delegable data sources
 Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](https://docs.microsoft.com/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
 
-- [Microsoft Dataverse](https://docs.microsoft.com/connectors/commondataservice/) 
+- [Common Data Service](https://docs.microsoft.com/connectors/commondataservice/) 
 - [SharePoint](https://docs.microsoft.com/connectors/sharepointonline/) 
 - [SQL Server](https://docs.microsoft.com/connectors/sql/) 
 

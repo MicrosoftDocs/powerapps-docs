@@ -330,8 +330,8 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | Capsule CRM                                       | No                                                                     |
 | Cloud PKI Management                              | No                                                                     |
 | Cognito Forms                                     | No                                                                     |
-| Dataverse                               | Yes*                                                                     |
-| Dataverse (Legacy)                      | No                                                                     |
+| Commmon Data Service                               | Yes*                                                                     |
+| Common Data Service (Legacy)                      | No                                                                     |
 | D&B Optimizer                                     | No                                                                     |
 | Derdack SIGNL4                                    | No                                                                     |
 | Disqus                                            | No                                                                     |

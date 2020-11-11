@@ -96,7 +96,7 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. On the **View** tab, select **Data sources**.
 
-1. In the **Data** pane, select **Add data source** > **Dataverse** > **Products** > **Connect**.  
+1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Products** > **Connect**.  
 
     The Products entity is part of the sample data loaded above.
 
@@ -166,7 +166,7 @@ At this point, you can move the relationship from one record to another, but you
 
 1. On the **View** tab, select **Data sources**.
 
-1. In the **Data** pane, select **Add data source** > **Dataverse** > **Reservations** > **Connect**.
+1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Reservations** > **Connect**.
 
 1. In **Gallery2**, set the **OnSelect** formula for **NextArrow2** to this formula:
 
@@ -267,7 +267,7 @@ You'll create another app that resembles the one you created earlier in this top
 
 1. On the **View** tab, select **Data sources**.
 
-1. In the **Data** pane, select **Add data source** > **Dataverse** > **Contacts** > **Connect**.
+1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Contacts** > **Connect**.
 
 1. Under **Gallery2**, add a **Combo box** control, ensure that it's named **ComboBox1**, and then set its **Items** property to **Contacts**.
 

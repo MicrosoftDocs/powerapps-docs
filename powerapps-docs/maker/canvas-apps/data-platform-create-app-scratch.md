@@ -42,7 +42,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
 1. In the middle of the screen, select **connect to data**.
 
-1. In the **Data** pane, select **Dataverse**, select the **Accounts** check box, and then select **Connect**.
+1. In the **Data** pane, select **Common Data Service**, select the **Accounts** check box, and then select **Connect**.
 
 1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
