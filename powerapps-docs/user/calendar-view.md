@@ -82,22 +82,26 @@ The  calendar view allows you to create and delete rows from the calendar.
 
 ### To create a row
 
-1.  In the calendar, double-click a date tile (in **Month** view) or select a time slot (in **Day** or **Week** view) in which you want to create a row.
+1.  Depending on your calendar view, do one of the follwoing:
 
+    - On the **Month** view, double-click a date tile, in which you want to create a new row.
+    
     > [!div class="mx-imgBorder"]
-    > ![Select a date tile in Month view](media/date-tile.png "Select a date tile in Month view")
+    > ![Select a date tile in the Month view](media/date-tile-1.png "Select a date tile in the Month view")
 
+   - On the **Day** or **Week** view, select a date and time in which you want to create a row.
+   
     > [!div class="mx-imgBorder"]
-    > ![Select a time slot in Day or Week view](media/time-slot.png "Select a time slot in Day or Week view") 
+    > ![Select a time slot in the Day or Week view](media/time-slot-1.png "Select a time slot in the Day or Week view") 
 
-    Depending on the table on which the calendar control was added, an appropriate **New** form is opened. For example, if you're viewing leads, a form to create a new lead is opened. If you're viewing opportunities, a form to create a new opportunity is opened.
+2. A new form will open. In this example a new reservation form is opened. Enter the details, and then save the row. 
 
     > [!NOTE]
-    > - When you add the new calendar control on the Activity table, an appointment is created when you create a row from the calendar. The start and end times are filled-in automatically as per the selected date tile or time slots. By default, the duration is set to 30 minutes.
+    > - If your form has start and end times columns, they are filled-in automatically as per the selected date tile or time slots. By default, the duration is set to 30 minutes.
     > - When you add the new calendar control on a table other than Activity, the corresponding table row is created when you create a row from the calendar.
     > - You can also create a new row by selecting and dragging across time slots in **Day** or **Week** view.
 
-2.  Enter the detail, and then save the row. 
+
 
 ### To delete a row
 
