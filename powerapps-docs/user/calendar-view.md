@@ -82,9 +82,9 @@ You can view a summary of a row by selecting it in the calendar. A pop-up window
 
 ## Create a new row from the calendar
 
-The calendar view allows you to create easily create new rows.
+The calendar view allows you to easily create a new row.
 
-1.  Depending on your calendar view, do one of the follwoing:
+1.  Depending on your calendar view, do one of the following:
 
     - On the **Month** view, double-click a date tile, in which you want to create a new row.
     
@@ -101,7 +101,7 @@ The calendar view allows you to create easily create new rows.
        > [!div class="mx-imgBorder"]
        > ![Drag to select a time slot in the Day or Week view](media/new-calendar-item.gif "Drag to select a time slot in the Day or Week view") 
 
-2. A new form will open. In this example a **New Reservation** form is opened. Enter the details, and then select **Save** or **Save & Close**. 
+2. A new form will open. In this example, a **New Reservation** form is opened. Enter the details, and then select **Save** or **Save & Close**. 
 
     > [!div class="mx-imgBorder"]
     > ![Save new row](media/save-new-res.png "Save new row") 
