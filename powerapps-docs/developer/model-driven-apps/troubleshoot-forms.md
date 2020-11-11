@@ -30,7 +30,7 @@ This article helps fix some common issues that you might encounter while working
 
 ## URL parameters to disable various form components
 
-You require URL parameters to disable various form components that helps narrow down issues to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
+You require URL parameters to disable various form components that help narrow down issues to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
 
 - DisableFormCommandbar
 
@@ -76,7 +76,7 @@ You'll need the `eventIndex` and `libraryIndex` parameter values when using the 
 
 ## Disable form handlers
 
-To disable form handlers use the following flags: 
+To disable form handlers, use the following flags: 
 
 - **&flags=DisableFormHandlers=\<event name\>**: Disables the form handlers by specifying the event name, for example, `DisableFormHandlers=OnLoad`. If you use the `DisableFormHandlers=true` flag, it disables the following event handlers: [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload), [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave), business rule, [OnChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/attribute-onchange), and [TabStateChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/tabstatechange).
 
@@ -141,7 +141,7 @@ While working on model-driven apps forms, you notice some unexpected behaviors w
 
 Any of the above behaviors appears after the form is opened, for example, you see a value or control for a second, and then the value changes or the control disappears.
 
-There are many possible causes for the unexpected behaviors when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) scripts that runs synchronously or asynchronously to change the field/control behavior. To determine if your script is causing the issue, you can disable the form handlers using the URL parameters by appending `**&flags=DisableFormHandlers=true**` flag at the end of your app URL.
+There are many possible causes for the unexpected behaviors when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) scripts that run synchronously or asynchronously to change the field/control behavior. To determine if your script is causing the issue, you can disable the form handlers using the URL parameters by appending `**&flags=DisableFormHandlers=true**` flag at the end of your app URL.
 
 If the form loads normally after you disable the form handler, it indicates that there is an issue with the script that is blocking or causing an error when a form is loading.
 
@@ -217,7 +217,7 @@ This causes the form script error because the first parameter for the `OnLoad` f
 
 **Resolution**:
 
-In the monitor tool the `FormEvent.onload` operation provides all the details including the web resource, function, and the line that is causing the issue.
+In the monitor tool, the `FormEvent.onload` operation provides all the details including the web resource, function, and the line that is causing the issue.
 
 > [!div class="mx-imgBorder"]
 > ![Launch form checker](media/see-form-checker-for-details.png "Launch form checker")
@@ -240,7 +240,7 @@ There are many possible reasons for a form to freeze, loads slowly, throws **Web
 
 **Resolution**:
 
-- Use the **DisableFormCommandbar** flag and refresh the page. If the issue gets resolved, it indicates that the issue is caused by some command customization.
+- Use the **DisableFormCommandbar** flag and refresh the page. If the issue is resolved, it indicates that the issue is caused by some command customization.
 
 - If the issue still persists, use the **DisableFormHandlers=true** flag. If the issue doesn't gets resolved, you can further identify the exact event handler function that's causing the problem.
 
@@ -248,7 +248,7 @@ There are many possible reasons for a form to freeze, loads slowly, throws **Web
 
     - Open the [Monitor Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) to view the registered form event handlers and libraries to get the list of `OnLoad` event handlers of indices ranging from 0 to 19 and form libraries of indices ranging from 0 to 9.
 
-    - Use the **DisableFormHandlers=onload_0_9** flag. If the issue gets resolved, it indicates that the issue is caused by some handlers between the index range 0 and 9 (both included); otherwise, the issue is caused by handlers between index 10 and 19.
+    - Use the **DisableFormHandlers=onload_0_9** flag. If the issue is resolved, it indicates that the issue is caused by some handlers between the index range 0 and 9 (both included); otherwise, the issue is caused by handlers between index 10 and 19.
 
     - Assuming the issue is caused by handlers of index 0 to 9, use the **DisableFormHandlers=onload_0_4 (or true_0_4)** flag to disable handlers for the index range between 0 and 4. Continue doing the same until the range is small enough to loop through each one individually.
   
@@ -293,7 +293,7 @@ Unified Interface.
 > [!div class="mx-imgBorder"]
 > ![Related menu](media/related-menu-error.png "Related menu")
 
-In the [Monitor Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker), the `RelatedMenu` operation provides all the details that is causing the issue.
+In the [Monitor Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker), the `RelatedMenu` operation provides all the details that are causing the issue.
 
 There are also a few sources where a record can be included as an option for the related menu tab. The following example includes details that indicate the label `Activities` in account form related menu comes from the related entity's plural display name.
 
