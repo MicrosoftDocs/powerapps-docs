@@ -127,7 +127,7 @@ At a high level, the following constitute Microsoft Power Platform requests:
 
 - **Power Automate**: All Power Automate step actions.
 
-- **Dataverse**: All create, update, delete (CRUD) operations, in addition to special operations like "share" or "assign." These can come from any client or app, using any SOAP or REST endpoint. These include&mdash;but aren't limited to&mdash;plug-ins, asynchronous workflows, and custom controls making the abovementioned operations.
+- **Common Data Service**: All create, update, delete (CRUD) operations, in addition to special operations like "share" or "assign." These can come from any client or app, using any SOAP or REST endpoint. These include&mdash;but aren't limited to&mdash;plug-ins, asynchronous workflows, and custom controls making the abovementioned operations.
 
 The specific number of allowed requests that a user can make in a 24-hour period is governed by the user's license.
 

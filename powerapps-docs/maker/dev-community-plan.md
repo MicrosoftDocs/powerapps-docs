@@ -53,7 +53,7 @@ With the individual environment, you get the following functionality:
 | Use premium connectors like Salesforce, DB2 and many more |Yes |
 | Access on‐premises data using an on-premises gateway |Yes |
 | Create custom connectors to connect to your own systems |Yes. You can create unlimited custom connectors |
-| **Dataverse** | |
+| **Common Data Service** | |
 | Create and run applications on the Dataverse |Yes |
 | Model your data in the Dataverse |Yes |
 | Create a database in the Dataverse |Yes |

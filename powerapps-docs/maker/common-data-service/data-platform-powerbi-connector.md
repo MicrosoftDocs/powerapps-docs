@@ -45,12 +45,12 @@ To use Power BI with Dataverse, you need the following items:
 
     <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport1.png "Power BI Desktop") -->
 
-2. Type *common* in the **Search** box, select **Dataverse**, and then select **Connect**.
+2. Type *common* in the **Search** box, select **Common Data Service**, and then select **Connect**.
 
     > [!div class="mx-imgBorder"] 
     > ![Power BI Desktop connect to Dataverse](./media/data-platform-cds-powerbi-connector/CreateReport2.png "Power BI Desktop connect to Dataverse")
 
-3. In the **Dataverse** dialog box that appears, paste in your Dataverse environment URL into the **Server Url** box and select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**.
+3. In the **Common Data Service** dialog box that appears, paste in your Dataverse environment URL into the **Server Url** box and select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**.
 
    <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport3.png "Power BI Desktop") -->
 

@@ -159,11 +159,11 @@ To connect to Dataverse, you must configure permissions for the app to connect.
 
     :::image type="content" source="media/blazor-webassembly-walkthrough-add-permissions.png" alt-text="The registered application API Permissions settings page.":::
 
-1. In the **Request API permissions** area, select **APIs my organization uses** and search for *Dataverse*.
+1. In the **Request API permissions** area, select **APIs my organization uses** and search for *Common Data Service*.
 
     :::image type="content" source="media/blazor-webassembly-walkthrough-search-common-data-service-api.png" alt-text="Searching for the Dataverse permissions.":::
 
-1. Select **Dataverse**. 
+1. Select **Common Data Service**. 
 1. Select the **user_impersonation** permission
 
     :::image type="content" source="media/blazor-webassembly-walkthrough-user-impersonation-permission.png" alt-text="Adding the Dataverse user_impersonation permission.":::

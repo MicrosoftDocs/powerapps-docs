@@ -68,16 +68,16 @@ This step is required for both hospital and regional solutions.
 
 1. From the left navigation pane, expand **Data** and select **Connections**.
 
-1. Select **New Connection**, and then type **Dataverse** in the search box. 
+1. Select **New Connection**, and then type **Common Data Service** in the search box. 
 
-1. From the search results, select **+** next to **Dataverse** connector to add a connection.
+1. From the search results, select **+** next to **Common Data Service** connector to add a connection.
 
     > [!div class="mx-imgBorder"] 
     > ![Common Data Service connector](media/cds-connector.png)
 
 1. On the next screen, select **Create**. Select or specify the credentials to create the connector. On successful authentication, your connection will be created.
 
-1. Select **New Connection**, and then type **Dataverse** in the search box.
+1. Select **New Connection**, and then type **Common Data Service** in the search box.
 
 1. From the search results, select **+** next to **Dataverse (current environment)** connector to add a connection.
 

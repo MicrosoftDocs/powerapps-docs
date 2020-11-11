@@ -135,7 +135,7 @@ There are multiple scenarios and examples where dataflows can enable you to get
 better control—and faster insights—from your business data. Other people in
 your organization can leverage dataflows either via Dataverse, the
 Power Platform Dataflow connector in Power BI, or via direct access to Dataflow’s
-**Dataverse** folder in your organization’s Azure Data Lake Storage Gen2
+**Common Data Service** folder in your organization’s Azure Data Lake Storage Gen2
 account. Using a standard data model (schema) defined by the Common Data Model,
 business applications can depend on a table’s schema, and be abstracted from
 how the data was created or from which data source. When a dataflow completes a

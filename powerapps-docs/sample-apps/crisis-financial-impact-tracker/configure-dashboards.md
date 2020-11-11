@@ -44,7 +44,7 @@ To configure a Power BI report by using a blank report canvas:
    > [!div class="mx-imgBorder"]
    > ![Power BI Desktop](./media/powerbidesktop.png "Power BI Desktop")
 
-2. Select **Get data** > **Power Platform** > **Dataverse**, and then select **Connect**.
+2. Select **Get data** > **Power Platform** > **Common Data Service**, and then select **Connect**.
   
    > [!div class="mx-imgBorder"]
    > ![Get Data](./media/pbigetdata1.png "Get data")

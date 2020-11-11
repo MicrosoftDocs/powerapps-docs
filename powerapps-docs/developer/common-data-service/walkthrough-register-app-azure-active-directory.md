@@ -65,11 +65,11 @@ App registration can also be done by an application developer or individual user
 
     ![Add app permission](media/azure-api-permissions-page.png "Add app permission")
 
-7. Search for and choose **Dataverse** under the **APIs my organization uses** tab.
+7. Search for and choose **Common Data Service** under the **APIs my organization uses** tab.
     
     ![Select API](media/app-registration-select-api-page.png "Select API")    
     > [!TIP]
-    > If you are presented with more than one **Dataverse** item in the search list, choose any one of them. In the next step the service name and URL will be shown. At that point you can go back to the API search and choose a different Dataverse list item if needed.
+    > If you are presented with more than one **Common Data Service** item in the search list, choose any one of them. In the next step the service name and URL will be shown. At that point you can go back to the API search and choose a different Dataverse list item if needed.
     
 8.  Click on **Delegated permissions** and check the options and click on **Add permissions**. 
     
