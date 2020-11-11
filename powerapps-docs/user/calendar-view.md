@@ -66,9 +66,13 @@ To change the calendar format, on the calendar select the drop-down menu and the
 
 If you want to set a calendar view as the default view, you can do this through personalization settings. For more information, see [Set personal options](https://docs.microsoft.com/powerapps/user/set-personal-options#activities-tab-options).
 
-## View details of a calendar item
+## View details of a calendar item and take action
 
-You can view a summary of a row by selecting it in the calendar. A pop-up window opens and displays the summary information. To view complete details about the row, select **More Details** in the pop-up window.
+You can view a summary of a row by selecting it in the calendar.A pop-up window opens and displays the summary information.
+
+- To view complete details about the row, select **More Details** in the pop-up window.
+
+- To delete the row, select **Delete** in the pop-up window.
 
 > [!div class="mx-imgBorder"]
 > ![Details of a calendar item](media/details-pop-up-1.png "Details of a calendar item") 
@@ -97,7 +101,7 @@ The  calendar view allows you to create and delete rows from the calendar.
     - You can also create a new row by selecting and dragging across time slots in **Day** or **Week** view.
     
        > [!div class="mx-imgBorder"]
-       > ![Drag to select a time slot in the Day or Week view](media/new-calendar-item.png "Drag to select a time slot in the Day or Week view") 
+       > ![Drag to select a time slot in the Day or Week view](media/new-calendar-item.gif "Drag to select a time slot in the Day or Week view") 
 
 2. A new form will open. In this example a **New Reservation** form is opened. Enter the details, and then select **Save** or **Save & Close**. 
 
@@ -109,9 +113,7 @@ The  calendar view allows you to create and delete rows from the calendar.
     > - When you add the new calendar control on a table other than Activity, the corresponding table row is created when you create a row from the calendar.
     
 
-
-
-### To delete a row
+### Delete a row
 
 1.  On the calendar, select the row you want to delete.
 
