@@ -30,7 +30,7 @@ This article helps fix some common issues that you might encounter while working
 
 ## URL parameters to disable various form components
 
-When you're troubleshooting issues with forms you need to use the URL parameters to disable various form components that help narrow down a problem to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
+When you're troubleshooting issues with forms, you need to use the URL parameters to disable various form components that help narrow down a problem to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
 
 - DisableFormCommandbar
 
@@ -125,7 +125,7 @@ When you're troubleshooting issues caused by controls on a form, you need to dis
 
 ## Disable business process flow
 
-If you are troubleshooting an issue caused by a business process flow (BPF) you need to disable it on the form using the following flag:
+If you're troubleshooting an issue caused by a business process flow (BPF), you need to disable it on the form using the following flag:
 
 **&flags=DisableBusinessProcessFlow=true**: Disables a business process flow on the form.
 
