@@ -1,8 +1,8 @@
 ---
-title: "Forms troubleshooting guide  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Troubleshoot form issues in model-driven apps  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to resolve the common issues on model-driven apps forms." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/10/2020
+ms.date: 11/12/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -16,9 +16,9 @@ search.app:
   - D365CE
 ---
 
-# Troubleshoot model-driven apps form issues
+# Troubleshoot form issues in model-driven apps
 
-Troubleshooting issues in Unified Interface is important when you're working with forms and trying to fix the issues that happen when loading a form, running a script, working with events, or saving data. 
+Troubleshooting issues in Unified Interface is important when you're working with forms and trying to fix issues that occur when loading a form, running a script, working with events, or saving data.
 
 This article helps fix some common issues that you might encounter while working with model-driven app forms.
 
@@ -28,9 +28,9 @@ This article helps fix some common issues that you might encounter while working
 > - Most of the workarounds are available in production environments. Some of the workarounds mentioned in the guide may not have been deployed to your organization yet as new workarounds are added periodically.
 > - The tools listed in this article can be used independently to troubleshoot a certain category of issues.
 
-## Utilizing URL parameters to disable various form components
+## URL parameters to disable various form components
 
-You require URL parameters to disable various form components that helps narrow down many issues to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
+You require URL parameters to disable various form components that helps narrow down issues to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
 
 - DisableFormCommandbar
 
@@ -319,7 +319,7 @@ There are many possible reasons why a control is disabled or hidden when the for
 A control can be disabled using the below list of rules. If a rule is met, the following rules are ignored. If you want to change whether a control is disabled or not, you must change the input to the rule used for the final result, or a rule earlier in the list.
 
 - If the flags `DisableWebResourceControls=true` or `DisableFormControl=<control name>` are passed and the control is impacted by these flags, control will be disabled.
-- If the owning entity is marked as read-only in Unified Interface in entity metadata, the control is disabled.
+- If the owning entity is read-only in Unified Interface in entity metadata, the control is disabled.
 - If the entity is not available in offline mode, the control is disabled.
 - If the current user doesn't have write permissions on the record, the control is disabled.
 - If the attribute metadata has `IsValidforCreate` set to false, the control is disabled.
