@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot form issues in model-driven apps  (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Troubleshoot form issues in model-driven apps (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to resolve the common issues on model-driven apps forms." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 11/12/2020
@@ -30,7 +30,7 @@ This article helps fix some common issues that you might encounter while working
 
 ## URL parameters to disable various form components
 
-When you are troublshooting issues with forms you need to use URL parameters to disable various form components that help narrow down a problem to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
+When you're troubleshooting issues with forms you need to use the URL parameters to disable various form components that help narrow down a problem to a specific component. It is recommended that you use the flags one at a time to narrow down the cause of the issue. The following are a list of URL parameters that can be used:
 
 - DisableFormCommandbar
 
@@ -46,13 +46,13 @@ When you are troublshooting issues with forms you need to use URL parameters to 
 
 - navbar (this is not a "flag" parameter, instead use "&navbar=off" in the URL)
 
-Below are some examples on how to use the flags listed above.
+Below are some examples of how to use the flags listed above.
 
 ```Http
 https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormHandlers=true
 ```
 
-You can also add multiple URL parameters separated with comma ",":  
+You can also add multiple URL parameters separated with a comma ",":  
 
 ```Http
 https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000000&pagetype=entityrecord&id=00000000-0000-0000-0000-000000000000**&flags=DisableFormHandlers=true,DisableWebResourceControls=true,DisableFormCommandbar=true,DisableBusinessProcessFlow=true&navbar=off
@@ -64,7 +64,7 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 
 ## View registered form event handlers and libraries in the monitor tool.
 
-To view registered form event handles and libraries you can view the `FormEvents` operation in the [Monitor tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker).
+To view registered form event handles and libraries you can view the `FormEvents` operation in the [Monitor Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker).
 
 > [!div class="mx-imgBorder"]
 > ![Form events](media/registered-form-events.png "Form events")
@@ -72,11 +72,11 @@ To view registered form event handles and libraries you can view the `FormEvents
 You'll need the `eventIndex` and `libraryIndex` parameter values when using the **DisableFormHandlers** or **DisableFormLibraries** URL flags. Once an event or library is disabled the **disabledByConfigFlag** will be true, and you'll also see such events in the actual event handling.
 
 > [!div class="mx-imgBorder"]
-> ![Form events OnLoad](media/form-events-onload.png "Form events ONLoad")
+> ![Form events OnLoad](media/form-events-onload.png "Form events OnLoad")
 
 ## Disable form handlers
 
-When you are troublshooting issues caused by form handlers, you need to disable the form handlers using the following URL flags:
+When you're troubleshooting issues caused by form handlers, you need to disable the form handlers using the following URL flags:
 
 - **&flags=DisableFormHandlers=\<event name\>**: Disables the form handlers by specifying the event name, for example, `DisableFormHandlers=OnLoad`. If you use the `DisableFormHandlers=true` flag, it disables the following event handlers: [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload), [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave), business rule, [OnChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/attribute-onchange), and [TabStateChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/tabstatechange).
 
@@ -86,9 +86,9 @@ When you are troublshooting issues caused by form handlers, you need to disable 
 
 ## Disabling form libraries
 
-When you are troublshooting issues caused by form libraries, you need to disable the form libraries using the following URL flags:
+When you're troubleshooting issues caused by form libraries, you need to disable the form libraries using the following URL flags:
 
-- **&flags=DisableFormLibraries=true**:  Disables all the form libraries.
+- **&flags=DisableFormLibraries=true**: Disables all the form libraries.
 
 - **&flags=DisableFormLibraries=\<library index\>**: Disables the form libraries by specifying the library index value. For example, `DisableFormLibraries=0` flag disables form library at index 0.
 
@@ -98,16 +98,16 @@ When you are troublshooting issues caused by form libraries, you need to disable
 
 The main differences between disabling form libraries and form handlers are:
 
-- `DisableFormHandlers` flag disables the form handlers regardless of the containing form libraries, while `DisableFormLibraries` flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries.
+- `DisableFormHandlers` flag disables the form handlers regardless of the containing form libraries, while the `DisableFormLibraries` flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries.
 
-- `DisableFormHandlers` flag does not prevent the containing form library from being loaded, thus does not prevent the JavaScript code that is present in the library but not registered as an event handler from being executed.  For example, if a form library `new_myscript.js` is written in the following way:
+- `DisableFormHandlers` flag does not prevent the containing form library from being loaded, thus does not prevent the JavaScript code that is present in the library but not registered as an event handler from being executed. For example, if a form library `new_myscript.js` is written in the following way:
 
   - Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler.
   - `DisableFormHandlers=true` flag only prevents the second alert dialog, while `DisableFormLibraries=true` flag prevents both the alert dialogs.
 
 ### Disable web resource controls
 
-When you are troublshooting issues caused by web resource controls, you need to disable web resource controls sing the following URL flag:
+When you're troubleshooting issues caused by web resource controls, you need to disable web resource controls using the following URL flag:
 
 **&flags=DisableWebResourceControls=true**: Disables all the web resource controls.
 
@@ -116,22 +116,22 @@ When you are troublshooting issues caused by web resource controls, you need to 
 
 ### Disable controls on a form
 
-When you are troublshooting issues caused by controls on a form, you need to disable the controls using the following URL flag:
+When you're troubleshooting issues caused by controls on a form, you need to disable the controls using the following URL flag:
 
 **&flags=DisableFormControl=true**: Disables all the controls on a form.
 
 > [!NOTE]
-> The **&flags=DisableFormControl=new_mycontrol** flag disables specific control on the form. If the issue gets resolved when the `&flags=DisableWebResourceControls=true` flag is used, there may be more than one web resource control on the form and you can use this flag to further identify the control that is causing the issue.
+> The **&flags=DisableFormControl=new_mycontrol** flag disables specific control on the form. If the issue gets resolved when the `&flags=DisableWebResourceControls=true` flag is used, there may be more than one web resource control on the form, and you can use this flag to further identify the control that is causing the issue.
 
 ## Disable business process flow
 
-If you are troublshooting an issue cuased by a business process flow (BPF) you need to disable it on the form using the following flag:
+If you are troubleshooting an issue caused by a business process flow (BPF) you need to disable it on the form using the following flag:
 
 **&flags=DisableBusinessProcessFlow=true**: Disables a business process flow on the form.
 
 ## Unexpected behaviors when loading a form
 
-While working on model-driven app forms there are some common issue that may cause unexpected behavior when the form opens including:
+While working on model-driven app forms, some common issues that may cause unexpected behavior when the form loads are:
 
 - Fields or controls do not have an expected value.
 
@@ -141,27 +141,27 @@ While working on model-driven app forms there are some common issue that may cau
 
 Any of the above behaviors appear after the form is opened, for example, you see a value or control for a second, and then the value changes or the control disappears.
 
-There are multiple reasons why the unexpected behaviors occurs when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) scripts that run synchronously or asynchronously to change the field/control behavior. To determine if your script is causing the issue, you can disable the form handlers using the URL parameters by appending `**&flags=DisableFormHandlers=true**` flag at the end of your app URL.
+There are multiple reasons why unexpected behaviors occur when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) scripts that run synchronously or asynchronously to change the field/control behavior. To determine if your script is causing the issue, you can disable the form handlers using the URL parameters by appending the `**&flags=DisableFormHandlers=true**` flag at the end of your app URL.
 
 If the form loads normally after you disable the form handler, it indicates that there is an issue with the script that is blocking or causing an error when a form is loading.
 
 ## Intermittent form errors
 
-There are many reasons why an intermittent or random form error occurs.  The most common is using unsupported [Client API](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference) methods that have some of the following characteristics:
+There are many reasons why an intermittent or random form error occurs. The most common is using unsupported [Client API](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference) methods that have some of the following characteristics:
 
 - Occurs on some records, users, regions, browsers, or only during a certain period when the network or service load is high.
 
 - Occurs rarely on support instances.
 
-- The repro may only occur once on a computer, and it may occur again after clearing browser cache.
+- The repro may only occur once on a computer, and it may occur again after clearing the browser cache.
 
-- [formContext.getControl](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/controls/getcontrol)  or [formContext.getControl(arg).getAttribute()](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/controls/getattribute) randomly returns null for a valid control or attribute.
+- [formContext.getControl](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/controls/getcontrol) or [formContext.getControl(arg).getAttribute()](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/controls/getattribute) randomly returns null for a valid control or attribute.
 
 There are many ways to write unsupported client API methods and all share a common pattern that they are not written in a supported way and they cause a race condition in the form load pipeline. Because they introduce a race condition, the issue only occurs when the custom script is executed before the form is fully ready to be accessed via client API depending on many factors:
 
 - In the JavaScript web resource, code is put into a global scope that is executed immediately when the web resource file is loaded without waiting for the form to be accessible. Make sure the code is executed inside a valid form handler, such as an [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) handler.
 
-- In the Power Apps component framework component script file, client API methods are accessed inside the [init](https://docs.microsoft.com/powerapps/developer/component-framework/reference/control/init) or [updateView](https://docs.microsoft.com/powerapps/developer/component-framework/reference/control/updateview) function. The `init()` and `updateView()` is executed immediately when the component is loaded without waiting for the form to be readily accessible. You cannot use the  unsupported `Client API` methods in the Power Apps component framework components.
+- In the Power Apps component framework component script file, client API methods are accessed inside the [init](https://docs.microsoft.com/powerapps/developer/component-framework/reference/control/init) or [updateView](https://docs.microsoft.com/powerapps/developer/component-framework/reference/control/updateview) function. The `init()` and `updateView()` is executed immediately when the component is loaded without waiting for the form to be readily accessible. You cannot use the unsupported `Client API` methods in the Power Apps component framework components.
 
 - In the web resource file, client API is accessed inside a `window.setTimeout()` function. The page state is unpredictable when the `setTimeout()` method executes the wrapped function due to the nature of the timer function, so when the execution happens the page may be in a transitional state (during page load, or save) that's not readily accessible by client API.
 
@@ -171,13 +171,13 @@ Using the [Monitor Tool](https://docs.microsoft.com/powerapps/maker/model-driven
 > ![Unsupported client api method](media/unsupported-client-api-method.png "Unsupported client api method")
 
 > [!NOTE]
-> The `callStack` has been modified for demo purpose. The `callStack` provides you with all the details like what web resource, function, and line that is causing the error.
+> The `callStack` has been modified for demo purposes. The `callStack` provides you with all the details like what web resource, function, and line that is causing the error.
 
 ## **Save in Progress** error dialog
 
-Sometimes when you save the form, you see the **Save in Progress** error dialog. This error occurs when the form [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is triggered before the previous [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is completed. This is not supported and the error dialog is by design because calling the `OnSave` event before the previous `OnSave` event is complete would cause recursive save loops with unintended behaviors.
+Sometimes when you save the form, you see the **Save in Progress** error dialog. This error occurs when the form [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is triggered before the previous [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event is completed. This is not supported, and the error dialog is by design because calling the `OnSave` event before the previous `OnSave` event is complete would cause recursive save loops with unintended behaviors.
 
-A typical cause for this error is the script that calls `save()` method in [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event handler. Another possible cause is the concurrent `save()` calls in the `setTimeout()` method, and which could cause the error dialog to intermittently show up, depending on whether the prior `save()` call is completed when another save() call is made.
+A typical cause for this error is the script that calls the `save()` method in [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event handler. Another possible cause is the concurrent `save()` calls in the `setTimeout()` method, and which could cause the error dialog to intermittently show up, depending on whether the prior `save()` call is completed when another save() call is made.
 
 **Resolution**:
 
@@ -186,7 +186,7 @@ In the monitor tool, the `FormEvent.onsave` operation provides all the details t
 > [!div class="mx-imgBorder"]
 > ![Save in progress error](media/save-in-progress-error.png "Save in progress error")
 
-## The form/record is not saved when you try to save
+## The form/record is not saved when you try to save the form
 
 A common cause is an [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave) event handler that calls the `executionContext.getEventArgs().preventDefault()` method to cancel the save operation.
 
@@ -242,7 +242,7 @@ There are many possible reasons for a form to freeze, loads slowly, throws **Web
 
 - Use the **DisableFormCommandbar** flag and refresh the page. If the issue is resolved, it indicates that the issue is caused by some command customization.
 
-- If the issue still persists, use the **DisableFormHandlers=true** flag. If the issue doesn't gets resolved, you can further identify the exact event handler function that's causing the problem.
+- If the issue persists, use the **DisableFormHandlers=true** flag. If the issue doesn't get resolved, you can further identify the exact event handler function that's causing the problem.
 
 - Assuming the form has 10 libraries, and 20 `OnLoad` event handlers, you can use the binary search approach to narrow down the handler index range.
 
@@ -256,9 +256,9 @@ There are many possible reasons for a form to freeze, loads slowly, throws **Web
 
     - Assuming the issue is caused by the handler of index 3, read the event handler details obtained using the monitor tool.
 
-- If the issue still persists, use the **DisableFormLibraries=true** flag to disable all form libraries, and follow the similar binary search approach if the number of libraries is large, or just disable them one after the other in similar way as you did above.
+- If the issue persists, use the **DisableFormLibraries=true** flag to disable all form libraries, and follow the similar binary search approach if the number of libraries is large, or just disable them one after the other in a similar way as you did above.
 
-- If the issue still persists, use the **DisableWebResourceControls=true** flag to disable all the web resource controls. If the issue gets resolved, use the **DisableFormControl** flag to further identify the exact web resource control.
+- If the issue persists, use the **DisableWebResourceControls=true** flag to disable all the web resource controls. If the issue gets resolved, use the **DisableFormControl** flag to further identify the exact web resource control.
 
 - Continue turning off form components one by one with the appropriate URL parameters. The component that is disabled and makes the issue go away will be the component causing the problem. 
 
@@ -274,7 +274,7 @@ This issue happens if a business rule/custom script used to work in the web clie
 
 **Resolution**:
 
-An example of a common issue where this can happen is when a composite control is included in a script that exists in web client, but in the Unified Interface the composite control is broken down into parts and is stored in a different way. For example, if the field `fullname` is part of the business rule or custom script in web client, the fields `firstname`, `middlename`, or `lastname` should be used in Unified Interface.
+An example of a common issue where this can happen is when a composite control is included in a script that exists in web client, but in the Unified Interface, the composite control is broken down into parts and is stored differently. For example, if the field `fullname` is part of the business rule or custom script in the web client, the fields `firstname`, `middlename`, or `lastname` should be used in Unified Interface.
 
 You can use the [Monitor Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) to see more details including the composite control that is causing the problem, the fields that can be used in the business rule or custom script instead.
 
@@ -311,12 +311,12 @@ There are many possible reasons why a control is disabled or hidden when the for
    > [!div class="mx-imgBorder"]
    > ![Forms controls check](media/form-controls-check.png "Form controls check")
 
-2. Another way is to check the `ControlStateChange` operation that explains why a control is in disabled/visible state. This can occur during a form load or triggered after the form is loaded using an `OnChange` event handler.
+2. Another way is to check the `ControlStateChange` operation that explains why control is in a disabled/visible state. This can occur during a form load or triggered after the form is loaded using an `OnChange` event handler.
 
    > [!div class="mx-imgBorder"]
    > ![Control state changed](media/control-state-changed.png "Control state changed")
 
-A control can be disabled using the below list of rules. If a rule is met, the following rules are ignored. If you want to change whether a control is disabled or not, you must change the input to the rule used for the final result, or a rule earlier in the list.
+A control can be disabled using the below list of rules. If a rule is met, the following rules are ignored. If you want to change whether a control is disabled or not, you must change the input to the rule used for the result, or a rule earlier in the list.
 
 - If the flags `DisableWebResourceControls=true` or `DisableFormControl=<control name>` are passed and the control is impacted by these flags, control will be disabled.
 - If the owning entity is read-only in Unified Interface in entity metadata, the control is disabled.
@@ -324,23 +324,23 @@ A control can be disabled using the below list of rules. If a rule is met, the f
 - If the current user doesn't have write permissions on the record, the control is disabled.
 - If the attribute metadata has `IsValidforCreate` set to false, the control is disabled.
 - If the attribute metadata has `IsValidforUpdate` set to false, the control is disabled.
-- If the current user doesn't have  `Assign to` privilege, the owner attribute is disabled.
+- If the current user doesn't have `Assign to` privilege, the owner attribute is disabled.
 - If the user doesn't have write permissions on the attribute defined by field-level security, the control is disabled.
-- If the control is disabled or enabled by `Client API` script, the control disabled state will honor that setting.
-- If the control is disabled in form designer, the control is disabled.
+- If the control is disabled or enabled by the `Client API` script, the control disabled state will honor that setting.
+- If the control is disabled in the form designer, the control is disabled.
 
-Finally, if the control passes all of the above checks, the record state determines whether control is disabled. The control is enabled by default on active records and disabled on  inactive records.
+Finally, if the control passes all the above checks, the record state determines whether the control is disabled. The control is enabled by default on active records and disabled on inactive records.
 
 > [!NOTE]
-> The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form loads, while the `ControlStateChange`operation reflects the state change at any time on the form. For example, if control is disabled for security reasons, it's very unlikely to be enabled after the form is loaded, so the initial state can be found in `FormControls` and not likely found in `ControlStateChange`. Even if a `Client API` function tries to enable the control, it will not be effective, and you'll see `ControlStateChange` event of the disabled state change intention by the script without success, and you'll be able to find out why the intention is unsuccessful in `FormControls`.
+> The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form loads, while the `ControlStateChange`operation reflects the state change at any time on the form. For example, if control is disabled for security reasons, it's very unlikely to be enabled after the form is loaded, so the initial state can be found in `FormControls` and not likely found in `ControlStateChange`. Even if a `Client API` function tries to enable the control, it will not be effective, and you'll see the `ControlStateChange` event of the disabled state change intention by the script without success, and you'll be able to find out why the intention is unsuccessful in `FormControls`.
 
 ## Why a tab or section is visible or hidden
 
-There are many possible reasons why a tab or section is hidden or visible. 
+There are many possible reasons why a tab or section is hidden or visible.
 
 **Resolution**:
 
-The `TabStateChange` or `SectionStateChange` operations in the monitor tool explains the visible state change as shown below.
+The `TabStateChange` or `SectionStateChange` operations in the monitor tool explain the visible state change as shown below.
 
 > [!div class="mx-imgBorder"]
 > ![Tab section](media/tab-section-visible.png "Tab section")
@@ -354,7 +354,8 @@ There are many possible reasons why an expected dialog or navigation happens. On
 
 **Resolution**:
 
-The `XrmNavigation` operation in the [Monitor Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) helps you identify the script that is causing the unexpected behavior.
+The `XrmNavigation` operation in the [Monitor Tool](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) helps you identify the script that is causing unexpected behavior.
 
 > [!div class="mx-imgBorder"]
 > ![From checker navigation](media/form-checker-navigation.png "Form checker navigation")
+
