@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/10/2020
+ms.date: 11/11/2020
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 
 # Troubleshooting startup issues for Power Apps
 
-This troubleshooting article helps fix common configuration problems that prevent Power Apps from starting.
+This troubleshooting article helps fix common configuration problems that prevent [Power Apps](https://make.powerapps.com) from starting.
 
 ## Common errors
 
@@ -74,12 +74,12 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 
 ## Resolutions for common errors
 
-| Error | Microsoft Edge | Google Chrome | Microsoft Internet Explorer 11 |
+| Error | Microsoft Edge | Google Chrome | Microsoft Internet Explorer 11 |  Safari (iOS) |
 | - | - | - | - | - |
-| <ul> <li> Sign in required </li> <li> UserInterventionNeeded_CookiesBlocked </li> <li> UserInterventionNeeded_StorageBlocked </li> </ul> | [Enable third-party cookies and local data](#instructions-for-microsoft-edge) | [Enable third-party cookies and local data](#instructions-for-google-chrome) | [Enable third-party cookies and local data](#instructions-for-internet-explorer-11) |
-| <ul> <li> UserInterventionNeeded_NavigateToAadTimeout </li> </ul> | Possible network problem | Possible network problem | Possible network problem |
-| <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | [Configure Trust Zones](#configure-trust-zones-for-internet-explorer) |
-| <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) |
+| <ul> <li> Sign in required </li> <li> UserInterventionNeeded_CookiesBlocked </li> <li> UserInterventionNeeded_StorageBlocked </li> </ul> | [Enable third-party cookies and local data](#instructions-for-microsoft-edge) | [Enable third-party cookies and local data](#instructions-for-google-chrome) | [Enable third-party cookies and local data](#instructions-for-internet-explorer-11) | [Enable third-party cookies and local data](#instructions-for-safari-ios) |
+| <ul> <li> UserInterventionNeeded_NavigateToAadTimeout </li> </ul> | Possible network problem | Possible network problem | Possible network problem | Possible network problem |
+| <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | [Configure Trust Zones](#configure-trust-zones-for-internet-explorer) | Not applicable |
+| <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) |
 
 ## Enable storage of third-party cookies and local data in your browser
 
@@ -139,6 +139,14 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     1. Use **Add** for **Sites that can always use cookies** and add:
         - `[*.]powerapps.com`
     1. Ensure that you check the **Including third-party cookies on this site** option when adding the site.
+
+### Instructions for Safari (iOS)
+
+1. In Safari app, select **Safari**.
+1. Select **Preferences**.
+1. Select **Privacy**.
+1. Ensure **Block all cookies** isn't selected.
+1. Ensure **Prevent cross-site tracking** isn't selected.
 
 ### Instructions for Internet Explorer 11
 
