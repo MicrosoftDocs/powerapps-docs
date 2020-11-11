@@ -1,12 +1,12 @@
 ---
-title: "Assign or share rowss| MicrosoftDocs"
-description: How to assign or share rowss
+title: "Assign or share rows| MicrosoftDocs"
+description: How to assign or share rows
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 1/20/2020
+ms.date: 11/10/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -19,7 +19,7 @@ search.app:
 ---
 # Assign or share rows
 
-When you create a row, you are the owner of the row. If you would like another person in your organization to take ownership of the row, then you can assign the row to that person. You can assign a row to a user or team. You can also assign a row to yourself that that another user owns but you need to have system administrator privilege to do this.
+When you create a row, you are the owner of the row. If you would like another person in your organization to take ownership of the row, then you can assign the row to that person. You can assign a row to a user or team. You can also assign a row to yourself that another user owns but you need to have system administrator privilege to do this.
 
 If you want to keep ownership of the row but let someone else work on it with you, then use the **Share** option to share the row. 
 
@@ -38,7 +38,7 @@ For more information on how privileges and access works, see [How access to a ro
    > ![Select assign a row](media/reassign-2.png "[Select assign a row")
 
   
-3. In the assign dialog box, select the **Assign to** field and choose one of the following options:
+3. In the assign dialog box, select the **Assign to** column, and choose one of the following options:
     - Select **Me** to assign the row to yourself and them select **Assign**. Remember only a system administrator can assign a row that belongs to someone else to themself.
     
       > [!div class="mx-imgBorder"]
@@ -70,7 +70,7 @@ Use advanced find to search for rows and then reassign them to someone else. For
    > [!div class="mx-imgBorder"]
    > ![Reassign the selected rows](media/reassign-6.png "Reassign the selected rows")
    
- 4. In the assign dialog box, select the **Assign to** field and choose one of the following options:
+ 4. In the assign dialog box, select the **Assign to** column and choose one of the following options:
  
     - Select **Me** to assign the row to yourself and them select **Assign**. Remember only a system administrator can assign a row that belongs to someone else to themself.
     
@@ -145,12 +145,12 @@ Use advanced find to search for rows and then reassign them to someone else. For
      
  6. Select **Add**. 
  
-     > [!div class="mx-imgBorder"].
+     > [!div class="mx-imgBorder"]
      > ![Select add](media/share-5.png "Select add")
      
  7. On the share dialog box, select the type of permissions the user or team has for the row. When you're done, select **Share**   
  
-     > [!div class="mx-imgBorder"].
+     > [!div class="mx-imgBorder"]
      > ![Select the type of permissions](media/share-6.png "Select the type of permissions")
  
 
