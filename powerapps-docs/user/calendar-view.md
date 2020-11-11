@@ -1,7 +1,7 @@
 ---
 title: "Work with rows in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
-ms.date: 06/23/2020
+ms.date: 11/10/2020
 author: mduelae
 ms.author: mkaur
 ms.service: powerapps
