@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/21/2020
+ms.date: 11/10/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -19,9 +19,7 @@ search.app:
 ---
 # Create a new row
 
-## Create a new row using the + option on the command bar
-
-The **Create a new row** command or **Quick create** makes it fast and easy to enter almost any type of information into the system. The command is on the nav bar, so it’s available whenever you need to enter new information into the system. You can also save a row and create a new one directly from the **Quick create** form.
+The **New** command or **Quick create** makes it fast and easy to enter almost any type of information into the system. The command is on the navigation bar, so it’s available whenever you need to enter new information into the system. You can also save a row and create a new one directly from the **Quick create** form.
 
 > [!NOTE]
 > The **Quick create** option is only available for rows that are enabled by your admin.
@@ -44,13 +42,17 @@ The **Create a new row** command or **Quick create** makes it fast and easy to e
 
 ## Create a new row using the New button 
 
-1. From the left navigation pane, select a row type. For example, select **Contacts** to create a new contact row.
+1. From the left navigation pane, select a table type. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select a table](media/select-table.png "Select a table")
+    
 2. On the command bar, select **+New**.
 
     > [!div class="mx-imgBorder"] 
     > ![Create new button](media/newrecord2.png "Create new button")
   
-3. To save your changes, on the command bar, select **Save** or **Save & Close**. The **Save** option is still available on the bottom right corner.
+3. Fill in the columns and then on the command bar, select **Save** or **Save & Close**. The **Save** option is still available on the bottom right corner.
 
     > [!div class="mx-imgBorder"] 
     > ![Save option on a row](media/saveoptionalwaysvisible.png "Save option on a row")
