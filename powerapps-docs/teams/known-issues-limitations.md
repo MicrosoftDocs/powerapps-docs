@@ -5,13 +5,13 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/14/2020
+ms.date: 11/16/2020
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
 # Known issues and limitations
 
-This article provides details about the known issues and limitations when using [**Dataverse for Teams environments**](/power-platform/admin/about-teams-environment) during the preview release.
+This article provides details about the known issues and limitations when using [**Dataverse for Teams environments**](/power-platform/admin/about-teams-environment).
 
 ## Additional components
 
