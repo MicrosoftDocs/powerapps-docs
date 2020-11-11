@@ -80,11 +80,9 @@ You can view a summary of a row by selecting it in the calendar. A pop-up window
 > [!NOTE]
 > This view is not customizable. If you would like to customize this view, add your suggestion [here](https://ideas.powerapps.com).
 
-## Create and delete rows from the calendar
+## Create a new row from the calendar
 
-The  calendar view allows you to create and delete rows from the calendar.
-
-### To create a row
+The calendar view allows you to create easily create new rows.
 
 1.  Depending on your calendar view, do one of the follwoing:
 
@@ -113,18 +111,9 @@ The  calendar view allows you to create and delete rows from the calendar.
     > - When you add the new calendar control on a table other than Activity, the corresponding table row is created when you create a row from the calendar.
     
 
-### Delete a row
-
-1.  On the calendar, select the row you want to delete.
-
-2.  Select **Delete** in the pop-up window.
-
-    > [!div class="mx-imgBorder"]
-    > ![Delete a calendar item](media/delete-record-cal.png "Delete a calendar item")
-
 ## Search through rows
 
-You can use the Search box to filter the rows in the calendar based on a search term. For example, when you enter the keyword **Meeting**, it refreshes the calendar view to show only the rows where the title begins with **Meeting**.
+You can use the Search box to filter the rows in the calendar based on a search term. For example, when you enter the keyword **laptop**, it refreshes the calendar view to show only the rows where the title begins with **laptop**.
 
 > [!div class="mx-imgBorder"]
 > ![Use a search term to filter calendar rows](media/search-cal.png "Use a search term to filter calendar rows")
