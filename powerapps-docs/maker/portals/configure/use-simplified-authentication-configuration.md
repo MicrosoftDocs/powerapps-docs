@@ -44,6 +44,7 @@ You'll see a list of identity providers that you can configure.
 
 ![Identity providers](media/use-simplified-authentication-configuration/portal-authentication-settings.png "Identity providers")
 
+<a name="authentication-settings-from-the-portal-details-page"></a>
 **To view identity providers from the portal details page**
 
 1. Select your portal from the list of available apps.
@@ -59,6 +60,7 @@ The details page displays the **Identity providers** section.
 > [!NOTE]
 > Selecting **See all** from the portal details page takes you to the complete list of identity providers.
 
+<a name="general-authentication-settings"></a>
 ## Configure general authentication settings
 
 You can configure the following general authentication settings by selecting **Authentication Settings** on the **Identity providers** page.
