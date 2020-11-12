@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Work with rows in the new calendar view
+# Work with rows in the calendar view
 
 The calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to a table view by a system customizer or a system administrator. For more information, see [Add the calendar control to tables](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-calendar-control). The **Calendar Control V2** control can be added to any table.
 
@@ -113,7 +113,7 @@ The calendar view allows you to easily create a new row.
 
 ## Search through rows
 
-You can use the Search box to filter the rows in the calendar based on a search term. For example, when you enter the keyword **laptop**, it refreshes the calendar view to show only the rows where the title begins with **laptop**.
+You can use the search box to search for data in the view you're in. For example, when you enter the keyword **laptop**, it refreshes the calendar view to show only the rows where the title begins with **laptop**. For more information, see [Use search on a grid](https://docs.microsoft.com/powerapps/user/grid-filters#use-search-on-a-grid).
 
 > [!div class="mx-imgBorder"]
 > ![Use a search term to filter calendar rows](media/search-cal.png "Use a search term to filter calendar rows")
