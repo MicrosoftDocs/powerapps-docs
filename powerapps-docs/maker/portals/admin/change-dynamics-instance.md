@@ -17,6 +17,8 @@ After your portal is created and provisioned, you can change the details of your
 > [!IMPORTANT]
 > When changing Dynamics 365 Instance for your portal, ensure the new instance is from the same [region](https://docs.microsoft.com/power-platform/admin/regions-overview) as the current instance. Changing the Dynamics 365 Instance for Power Apps portals across regions isn't supported.
 
+To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
 1. Go to the **Dynamics 365 Administration Center** page, and then select the **Applications** tab.
 
 2. Select the name of the portal you want to edit, and then select **Manage**.

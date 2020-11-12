@@ -1,5 +1,6 @@
 ---
-title: "Sort records in a model-driven app view in Power Apps | MicrosoftDocs"
+title: "Sort rows in a model-driven app view in Power Apps | MicrosoftDocs"
+description: Learn how to sort rows in a model-driven app
 ms.custom: ""
 ms.date: 04/17/2020
 ms.reviewer: ""
@@ -22,8 +23,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sort records in a model-driven app view
+# Sort rows in a model-driven app view
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 When you create or edit a view you can configure the sort order for either ascending or descending.
 
@@ -31,7 +33,7 @@ To change the sort order in the view designer, see [Create a public view in Powe
 
 ## Change the sort order using solution explorer
 
-1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the entity you want, select **Views**, and then open the view you want.
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the table you want, select **Views**, and then open the view you want.
 
 2.  In the view designer, select **Configure Sorting**.  
 

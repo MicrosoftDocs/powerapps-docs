@@ -35,9 +35,7 @@ business data from various sources, clean the data, transform it, and then load
 it to Common Data Service or your organization’s Azure Data Lake Gen2 storage
 account.
 
-A dataflow is a collection of entities (entities are similar to tables)
-that are created and managed in environments in the Power Apps service. You can
-add and edit entities in your dataflow, as well as manage data refresh
+A dataflow is a collection of tables that are created and managed in environments in the Power Apps service. You can add and edit tables in your dataflow, as well as manage data refresh
 schedules, directly from the environment in which your dataflow was created.
 
 Once you create a dataflow in the Power Apps portal, you can get data from it
@@ -85,8 +83,8 @@ it.
 
     ![Create a dataflow](media/create-a-dataflow.png)
 
-4.  On the **Select load target** page, select the destination storage where you want entities to be
-stored. Dataflows can store entities in Common Data Service or in your organization's Azure Data Lake
+4.  On the **Select load target** page, select the destination storage where you want tables to be
+stored. Dataflows can store tables in Common Data Service or in your organization's Azure Data Lake
 storage account. Once you select a destination to load data to, enter a **Name**
 for the dataflow, and then select **Create**.
 
@@ -101,7 +99,7 @@ for the dataflow, and then select **Create**.
      > accessible via the Power Platform Dataflow connector and access to it requires
      > membership within the environment it was created in.
 
-5. On the **Choose data source** page, select the data source where the entities are stored, and then select **Create**. The selection of data sources displayed allows you to create dataflow entities. 
+5. On the **Choose data source** page, select the data source where the tables are stored, and then select **Create**. The selection of data sources displayed allows you to create dataflow tables. 
 
     ![Choose a data source](media/choose-data-source.png)
 
@@ -110,7 +108,7 @@ settings, including the account to use when connecting to the data source.
 
     ![Connect to data source](media/data-source-provide-cred.png)
 
-7. Once connected, you select the data to use for your entity. When you
+7. Once connected, you select the data to use for your table. When you
 choose data and a source, the Power Platform Dataflow service will subsequently
 reconnect to the data source in order to keep the data in your dataflow
 refreshed, at the frequency you select later in the setup process.
@@ -118,11 +116,11 @@ refreshed, at the frequency you select later in the setup process.
 
     ![Choose data](media/choose-data.png)
 
-Now that you've selected the data to use in the entity, you can use the dataflow editor to
+Now that you've selected the data to use in the table, you can use the dataflow editor to
 shape or transform that data into the format necessary for use in your dataflow.
 
 ## Use the dataflow editor to shape or transform data
-You can shape your data selection into a form that works best for your entity using a
+You can shape your data selection into a form that works best for your table using a
 Power Query editing experience, similar to the Power Query Editor in Power BI
 Desktop. To learn more about Power Query, see [Query overview in Power BI Desktop](/power-bi/desktop-query-overview).
 
@@ -132,39 +130,39 @@ if you want to create your own shaping code, you can use the advanced editor.
 ![Advanced editor](media/advanced-editor.png)
 
 ## Dataflows and the Common Data Model 
-Dataflows entities include new tools to easily map your business data to the
+Dataflows tables include new tools to easily map your business data to the
 Common Data Model, enrich it with Microsoft and third-party data, and gain simplified access to machine learning. These new capabilities can be leveraged to provide intelligent and actionable insights
 into your business data. Once you’ve completed any transformations in the edit
 queries step described below, you can map columns from your data source tables to standard
-entity fields as defined by the Common Data Model. Standard entities have a
+table columns as defined by the Common Data Model. Standard tables have a
 known schema defined by the Common Data Model.
 
 For more information about this approach, and about the Common Data Model, see [The Common Data
 Model](/powerapps/common-data-model/overview).
 
-To leverage the Common Data Model with your dataflow, select the **Map to Standard** transformation in the **Edit Queries** dialog. In the **Map Entities** screen that appears, select the standard entity that you want to map.
+To leverage the Common Data Model with your dataflow, select the **Map to Standard** transformation in the **Edit Queries** dialog. In the **Map tables** screen that appears, select the standard table that you want to map.
 
-![Map to standard entity](media/map-to-standard-entity.png)
+![Map to standard table](media/map-to-standard-entity.png)
 
-When you map a source column to a standard field, the following occurs:
+When you map a source column to a standard column, the following occurs:
 
-1.  The source column takes on the standard field name (the column is renamed if
+1.  The source column takes on the standard column name (the column is renamed if
     the names are different). 
 
-2.  The source column gets the standard field data type. 
+2.  The source column gets the standard column data type. 
 
-To keep the Common Data Model standard entity, all standard fields that are not
+To keep the Common Data Model standard table, all standard columns that are not
 mapped get *Null* values.
 
 All source columns that are not mapped remain as is to ensure that the result
-of the mapping is a standard entity with custom fields.
+of the mapping is a standard table with custom columns.
 
-Once you’ve completed your selections and your entity and its data settings are
+Once you’ve completed your selections and your table and its data settings are
 complete, you’re ready for the next step, which is selecting the refresh frequency of your
 dataflow.
 
 ## Set the refresh frequency
-Once your entities have been defined, you’ll want to schedule the refresh
+Once your tables have been defined, you’ll want to schedule the refresh
 frequency for each of your connected data sources.
 
 1. Dataflows use a data refresh process to keep data up to date. In the **Power Platform Dataflow authoring tool**, you can choose to refresh your dataflow manually or automatically on a scheduled
@@ -185,13 +183,13 @@ To connect to the dataflow, in Power BI Desktop select **Get Data** > **Power Pl
 ![Connect to the dataflow](media/get-data.png)
 
 Navigate to the environment where you saved your dataflow, select
-the dataflow, and then select the entities that you created from the list.
+the dataflow, and then select the tables that you created from the list.
 
 You can also use the search bar, near the top of the window, to quickly find the
-name of your dataflow or entities from among many dataflow entities.
+name of your dataflow or tables from among many dataflow tables.
 
-When you select the entity and then select the **Load** button, the entities
-appear in the **Fields** pane in Power BI Desktop, and appear and behave just
+When you select the table and then select the **Load** button, the tables
+appear in the **Columns** pane in Power BI Desktop, and appear and behave just
 like tables from any other dataset. -->
 
 ## Using dataflows stored in Azure Data Lake Storage Gen2
@@ -223,7 +221,7 @@ issues. This section provides troubleshooting tips when issues occur.
 ## Next steps
 The following articles are useful for further information and scenarios when using dataflows:
 
--   [Add data to an entity in Common Data Service](data-platform-cds-newentity-pq.md)
+-   [Add data to a table in Common Data Service](data-platform-cds-newentity-pq.md)
 
 -   [Using dataflows with on-premises data sources](using-dataflows-with-on-premises-data.md)
 
@@ -233,4 +231,4 @@ For more information about the Common Data Model:
 
 -   [Common Data Model - overview](/powerapps/common-data-model/overview)
 
--   [Learn more about the Common Data Model schema and entities on GitHub](https://github.com/Microsoft/CDM)
+-   [Learn more about the Common Data Model schema and tables on GitHub](https://github.com/Microsoft/CDM)

@@ -1,13 +1,13 @@
 ---
 title: "Use OneDrive for Business| MicrosoftDocs"
-ms.custom: ""
+description: How to use OneDrive for Business
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/02/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -31,12 +31,12 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
 ## The first time you view your documents  
 
-1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
+1. Open a row and go to the **Document Associated Grid** view. For example, open a contact row.
 
-2.  On the open record, select the **Related** tab, and then select **Documents**.
+2.  On the open row, select the **Related** tab, and then select **Documents**.
 
      > [!div class="mx-imgBorder"]
-     > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+     > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
 
 3.  Select **Document Location** > **OneDrive**.
 
@@ -53,12 +53,12 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
   
 ## View existing OneDrive documents 
  
-1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
+1. Open a row and go to the **Document Associated Grid** view. For example, open a contact row.
 
-2. On the open record, select the **Related** tab, and then select **Documents**.
+2. On the open row, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
-    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+    > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
  
 3. Select **Document Location** to filter the document list.
 
@@ -71,19 +71,19 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
    |---------------------------|------------------------------------------------|
    |      OneDrive             | Documents stored in OneDrive for Business      |
    | Documents on Default Site | Documents stored in your default SharePoint site  |
-   | Shared with me            | Documents that others shared with you that are associated with this record<!--note from editor: Edit okay? I haven't seen an "app record" defined.-->    |
-   |  All Locations            |     All document locations associated with this record     |
+   | Shared with me            | Documents that others shared with you that are associated with this row<!--note from editor: Edit okay? I haven't seen an "app row" defined.-->    |
+   |  All Locations            |     All document locations associated with this row     |
 
 5. After you select a location, you'll see the documents saved in that location.
 
 ## Create a new document and save it to OneDrive
 
-1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
+1. Open a row and go to the **Document Associated Grid** view. For example, open a contact row.
 
-2. On the open record, select the **Related** tab, and then select **Documents**.
+2. On the open row, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
-    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+    > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
 
 2. Select **Document Location**, and change the location to **OneDrive**.
 

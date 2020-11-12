@@ -111,7 +111,7 @@ The solution check results are also available for download. The solution checker
 
 Here's a summary of each column in the report.
 
-|Report field |Description  |Applies-to component   |
+|Report column |Description  |Applies-to component   |
 |---------|---------|---------|
 |Issue     |   The title of the issue identified in the solution.      | All        |
 |Category     | The categorization of the issue identified, such as **Performance**, **Usage**, or **Supportability**.      |  All     |
@@ -157,7 +157,7 @@ Here's a summary of each column in the report.
 |Web Resources  | [web-use-navigation-api](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-navigation-api&client=PAChecker&source=featuredocs)   | Use navigation API parameters.   |
 |Web Resources  | [web-use-org-setting](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-org-setting&client=PAChecker&source=featuredocs)   | Use organization settings.   |
 |Web Resources  | [web-use-grid-api](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-grid-api&client=PAChecker&source=featuredocs)   | Use the grid APIs.    |
-|Web Resources  | [web-avoid-isActivityType](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-isActivityType&client=PAChecker&source=featuredocs)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.getEntityMetadata and don't use in ribbon rules.    |
+|Web Resources  | [web-avoid-isActivityType](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-isActivityType&client=PAChecker&source=featuredocs)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.gettableMetadata and don't use in ribbon rules.    |
 |Web Resources  | [meta-avoid-silverlight](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-silverlight&client=PAChecker&source=featuredocs)   | Silverlight web resource usage is deprecated.   |
 | Web Resources  | [web-remove-debug-script](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-debug-script&client=PAChecker)  | Avoid including debug script in non-development environments.  | 
 | Web Resources  | [web-use-strict-mode](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Use strict mode when possible.  | 

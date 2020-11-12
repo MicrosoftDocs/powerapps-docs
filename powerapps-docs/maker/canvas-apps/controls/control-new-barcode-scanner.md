@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 06/12/2020
+ms.date: 11/05/2020
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
@@ -24,6 +24,10 @@ The control opens a native scanner on an Android or iOS device. The scanner auto
 
 > [!NOTE]
 > The barcode scanner control is only supported on Android and iOS devices. All other platforms will show a warning that some features of the app won't work.
+
+## Considerations for Teams Mobile
+
+The barcode scanner control is not supported in Teams Mobile.
 
 ## Key properties
 

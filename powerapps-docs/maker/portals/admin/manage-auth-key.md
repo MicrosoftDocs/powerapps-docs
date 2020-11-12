@@ -29,6 +29,9 @@ For a portal to connect to Common Data Service using an Azure Active Directory a
 
 ### Authentication key details
 
+> [!TIP]
+> To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
 The details of an authentication key are displayed on Power Apps Portals admin center and portal.
 
 **Power Apps Portals admin center**

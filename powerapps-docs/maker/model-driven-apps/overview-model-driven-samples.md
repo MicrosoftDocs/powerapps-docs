@@ -52,7 +52,7 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
 ## Remove sample apps and data 
 - Deleting a sample app requires deleting the corresponding  [managed solution](https://docs.microsoft.com/dynamics365/customer-engagement/developer/uninstall-delete-solution). 
-- Deleting the solution also deletes any sample data specific to the custom entities for the app.
+- Deleting the solution also deletes any sample data specific to the custom tables for the app.
 - If customizations were made to the sample app, there may be [dependencies](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
 ### Delete a solution
