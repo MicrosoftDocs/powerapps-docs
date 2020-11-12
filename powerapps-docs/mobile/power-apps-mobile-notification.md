@@ -120,7 +120,14 @@ When you trigger a push notification from a flow, you can send the notification 
 9. Select **Flow checker** to check for error or warnings.
 10. Test the flow by selecting **Test** and follow the prompts. 
 
-## Perform an action when a user taps the notification
+## Perform an action when a user taps the notificatio
+
+### Pass parameters
+
+For canvas apps, you can pass key-value pairs using the **Parameters** field as JSON. For example, if you wanted to pass the CaseID, you would put the following as **Parameters**:
+` { "CaseID": 42 }`. You can also use dynamic values from earlier steps as shown below.
+
+<insert image>
 
 ### Read parameters
 
