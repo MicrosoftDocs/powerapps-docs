@@ -146,6 +146,7 @@ These entities are used primarily by the Portal extention. This list includes th
 | Employee Booking         | Contains associations of employees and specific areas, floors, and facilities for a given time. |
 | Facility                 | Contains geographic information about a physical place and reopen phase planning progress.                      |
 | Guest Attestation        | Contains associations of guests to their attestations                      |
+| Share Guest Attestation  | Contains records of attestations that will be emailed to a guest. |
 | Solution Setting         | Contains metadata used to drive platform behavior for specific facility groups.                      |
 |||
 
@@ -488,6 +489,16 @@ The data definitions section provides information about a list of entities, data
 | Summary               | Text       | Used to provide an additional context for the transition.                      | Model-driven app |
 |||||
 
+### Share Guest Attestation
+
+| Display name          | Data type  | Description                                                                   | Platform use    | Solution |
+|-----------------------|------------|-------------------------------------------------------------------------------|-----------------|----------|
+| Name                  | Text       | The primary identifier of the record.                                         | Portal            | Portal |
+| Facility              | Lookup     | Used to associate the applicable facility.                                    | Portal            | Portal |
+| Language              | Text       | Used to capture the language used in the e-mail.                              | Portal            | Portal |
+| Guest Attestation     | Lookup     | Used to associate the guest attestation  to share.                            | Portal            | Portal |
+|||||
+
 ### Share Guest Registration
 
 | Display name          | Data type  | Description                                                                   | Platform use    |
@@ -534,32 +545,33 @@ The data definitions section provides information about a list of entities, data
 
 This section describes the different flows in the solution and explains their purpose. These flows can be extended, used, or turned off, depending on your business requirements.
 
-| Flow | Entity | Description                        |
-|--------------|-----------|-------------------------------------------------|
-| Access Action - Reset facility access | Access Action | Deactivates records when past the date in 'Access available date'. |
-| Access Action - Update linked case | Access Action | Updates linked Employee Case via source field when record is deactivated |
-| Access Action - Update notification | Access Action | Updates the body of the linked notification when the notes changes. | 
-| Access Action - Validate and create notification | Checks if owner is set to linked employee and creates a notification record. |
-| Area - Update Capacity for future Occupancies         | Area      | Updates the daily occupancy when there are capacity changes on an area.|
-| Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes. |
-| Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase. |
-| Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist. |
-| Employee Attestation - Disable Earlier Pass      | Employee Attestation    | When an employee creates multiple passes on a single day, earlier passes will be disabled. |
-| Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. |
-| Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Reactivate occupancy in daily occupancy when employee bookings are disabled. |
-| Employee Case - Create Access Action | Employee Case | Creates Access Action blocking the employee when 'Facility Access Available' is set to 'No' |
-| Employee Case - Create suggestions | Employee Attestation | Creates case contacts when attestation is linked to the case. |
-| Employee Case - Disable Access Action | Employee Case | Deactivates Access Action linked to the Employee Case when 'Facility Access Available' is set to 'Yes' |
-| Employee Case – Update Access Action | Employee Case | Updates linked Access Action when 'Facility Access Available Date' or 'Employee Instructions' changes. |
-| Employee Case - Update Case Contacts | Case Contact | Deactivates case contact records for an employee if an employee case is created for the employee |
-| Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations. |
-| Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. |
-| Guest Attestation - Disable earlier pass | Guest Attestation | Disables earlier attestations and guest registrations for that person so number of guests stays correct. |
-| Guest Registration - Disable earlier pass | Guest Registration | Disables earlier registrations for that person on the same day so number of guest stays correct. |
-| Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. |
-| Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility. |
-| Share Guest Registration - Email | Share Guest Registration | Shares the guest registration details with the host and the guest. |
-||||
+| Flow | Entity | Description                        | Solution |
+|--------------|-----------|-------------------------------------------------|-----------|
+| Access Action - Reset facility access | Access Action | Deactivates records when past the date in 'Access available date'. | Base |
+| Access Action - Update linked case | Access Action | Updates linked Employee Case via source field when record is deactivated | Base |
+| Access Action - Update notification | Access Action | Updates the body of the linked notification when the notes changes. |  Base |
+| Access Action - Validate and create notification | Checks if owner is set to linked employee and creates a notification record. | Base |
+| Area - Update Capacity for future Occupancies         | Area      | Updates the daily occupancy when there are capacity changes on an area.| Base |
+| Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes. | Base |
+| Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase. | Base |
+| Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist. | Base |
+| Employee Attestation - Disable Earlier Pass      | Employee Attestation    | When an employee creates multiple passes on a single day, earlier passes will be disabled. | Base |
+| Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. | Base |
+| Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Reactivate occupancy in daily occupancy when employee bookings are disabled. | Base |
+| Employee Case - Create Access Action | Employee Case | Creates Access Action blocking the employee when 'Facility Access Available' is set to 'No' | Base |
+| Employee Case - Create suggestions | Employee Attestation | Creates case contacts when attestation is linked to the case. | Base |
+| Employee Case - Disable Access Action | Employee Case | Deactivates Access Action linked to the Employee Case when 'Facility Access Available' is set to 'Yes' | Base |
+| Employee Case – Update Access Action | Employee Case | Updates linked Access Action when 'Facility Access Available Date' or 'Employee Instructions' changes. | Base |
+| Employee Case - Update Case Contacts | Case Contact | Deactivates case contact records for an employee if an employee case is created for the employee | Base |
+| Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations. | Base |
+| Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. | Base |
+| Guest Attestation - Disable earlier pass | Guest Attestation | Disables earlier attestations and guest registrations for that person so number of guests stays correct. | Base |
+| Guest Registration - Disable earlier pass | Guest Registration | Disables earlier registrations for that person on the same day so number of guest stays correct. | Base |
+| Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. | Base |
+| Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility. | Base |
+| Share Guest Attestation - Email | Share Guest Attestation | Shares the guest attestation details with the host and the guest. | Portal |
+| Share Guest Registration - Email | Share Guest Registration | Shares the guest registration details with the host and the guest. | Base |
+|||||
 
 For the solution, we generate sample data, which will be refreshed for 12 hours. You can turn off these flows if you don't need sample data in your environments.
 
