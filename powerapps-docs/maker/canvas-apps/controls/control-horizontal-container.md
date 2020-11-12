@@ -16,11 +16,11 @@ search.app:
 ---
 # Horizontal container control 
 
-Horizontal container control determine the position of the child components so that you never have to set X, Y for a component inside the container.
+Horizontal container control determines the position of the child components so that you never have to set X, Y for a component inside the container.
 
 ## Description
 
-**Horizontal** container control distribute the available space to its child components based on the settings, as well as determines alignment of the child components.
+**Horizontal** container control distributes the available space to its child components based on the settings, as well as determines alignment of the child components.
 
 ## Properties
 
@@ -38,7 +38,7 @@ Horizontal container control determine the position of the child components so t
 
 **Direction** - Defines in what direction the container layouts its child components. **Horizontal** and **Vertical**.
 
-**Justify (vertical)** - Defines how child elements are aligned with the primary axis.**Start**, **End**, **Center**, **Space Between**.
+**Justify (vertical)** - Defines how child elements are aligned with the primary axis. **Start**, **End**, **Center**, **Space Between**.
 
 **Align (Horizontal)** - Defines how child components are positioned in the container, in the off axis (opposite from `LayoutDirection`). **Start**, **Center**, **End**, **Stretch**.
 
@@ -75,6 +75,4 @@ Horizontal container control determine the position of the child components so t
 
 ## Example
 
-### Screen reader support
 
-### Keyboard support

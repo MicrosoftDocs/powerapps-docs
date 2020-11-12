@@ -16,11 +16,11 @@ search.app:
 ---
 # Vertical container control 
 
-Vertical container control determine the position of the child components so that you never have to set X, Y for a component inside the container.
+Vertical container control determines the position of the child components so that you never have to set X, Y for a component inside the container.
 
 ## Description
 
-**Vertical container** control distribute the available space to its child components based on the settings, as well as determines alignment of the child components.
+**Vertical container** control distributes the available space to its child components based on the settings, as well as determines alignment of the child components.
 
 ## Properties
 
@@ -38,7 +38,7 @@ Vertical container control determine the position of the child components so tha
 
 **Direction** - Defines in what direction the container layouts its child components. **Horizontal** and **Vertical**.
 
-**Justify (vertical)** - Defines how child elements are aligned with the primary axis.**Start**, **End**, **Center**, **Space Between**.
+**Justify (vertical)** - Defines how child elements are aligned with the primary axis. **Start**, **End**, **Center**, **Space Between**.
 
 **Align (horizontal)** - Defines how child components are positioned in the container, in the off axis (opposite from `LayoutDirection`). **Start**, **Center**, **End**, **Stretch**.
 
@@ -74,9 +74,5 @@ Vertical container control determine the position of the child components so tha
 
 
 ## Example
-
-### Screen reader support
-
-### Keyboard support
 
 

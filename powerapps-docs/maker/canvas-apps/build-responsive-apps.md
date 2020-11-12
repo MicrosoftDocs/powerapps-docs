@@ -64,10 +64,6 @@ Before you start using the responsive layouts, you need to do the following:
 
    ![Settings disable lock orientation](media/create-responsive-layout/settings-disable-lock-orientation.png "Settings disable lock orientation")
 
-1. Go to **File** > **Settings** > **Advanced Settings** and enable the **Layout containers** feature under **Experimental features** tab.
-
-   ![Enable layout control](media/create-responsive-layout/enable-layout-container.png "Enable layout control")
-
 ## Responsive layouts
 
 The following responsive layouts can be created by adding a new screen and selecting the appropriate option from the **Layout** tab: 
