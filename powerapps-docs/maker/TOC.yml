@@ -1899,8 +1899,9 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
-        - name: Dataverse for Teams environment language
+        - name: Environment language
           href: ../teams/language-data-platform.md
+          displayName: Dataverse for Teams environment language
         - name: Dataverse for Teams FAQs
           href: ../teams/data-platform-faqs.md
     - name: Manage your apps
