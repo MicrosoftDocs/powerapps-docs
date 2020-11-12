@@ -28,7 +28,7 @@ More information:
 - [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)
 - [Service Protection API Limits](../../api-limits.md)
 
-This sample is based on the [How to: Write a simple Parallel.ForEach loop](/dotnet/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop) example, but modified to perform create and delete operations with CDS entities using the synchronous methods provided by the CDSWebApiService class.
+This sample is based on the [How to: Write a simple Parallel.ForEach loop](/dotnet/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop) example, but modified to perform create and delete operations with Dataverse entities using the synchronous methods provided by the CDSWebApiService class.
 
 > [!NOTE]
 > If you want to use Fiddler to observe the expected service protection API limits, you will need to set the number of records to create to be around 10,000. They will start to appear after 5 minutes. Note how the application retries the failures and completes the flow of all the records.
@@ -50,7 +50,7 @@ The following is required to build and run the CDSWebApiService C# samples :
 
 1. Select the **ParallelOperations** project and open the App.config. This is a common [App.config](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/CDSWebApiService/App.config) file used by all the samples in this solution. Once you edit this, you can run any of the samples in this solution.
 
-1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the CDS instance and credentials you want to connect to.
+1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the Dataverse instance and credentials you want to connect to.
 
     ```xml
         <add name="Connect"

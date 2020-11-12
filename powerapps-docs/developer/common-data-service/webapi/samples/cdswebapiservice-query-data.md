@@ -126,7 +126,7 @@ namespace PowerApps.Samples
                     // Filter criteria:
                     // Applying filters to get targeted data.
                     // 1) Using standard query functions (e.g.: contains, endswith, startswith)
-                    // 2) Using CDS query functions (e.g.: LastXhours, Last7Days, Today, Between, In, ...)
+                    // 2) Using Dataverse query functions (e.g.: LastXhours, Last7Days, Today, Between, In, ...)
                     // 3) Using filter operators and logical operators (e.g.: eq, ne, gt, and, or, etc…)
                     // 4) Set precedence using parenthesis (e.g.: ((criteria1) and (criteria2)) or (criteria3)
                     // For more info, see:
@@ -145,8 +145,8 @@ namespace PowerApps.Samples
                         "Contacts filtered by fullname containing '(sample)':",
                         containsSampleinFullNameCollection["value"]);
 
-                    //Filter 2: Using CDS query functions to filter results. In this operation, we will query
-                    //for all contacts that were created in the last hour. For complete list of CDS query
+                    //Filter 2: Using Dataverse query functions to filter results. In this operation, we will query
+                    //for all contacts that were created in the last hour. For complete list of Dataverse query
                     //functions, see: https://docs.microsoft.com/dynamics365/customer-engagement/web-api/queryfunctions
 
                     JToken createdInLastHourCollection = svc.Get("contacts?" +
@@ -253,7 +253,7 @@ namespace PowerApps.Samples
 
                     //Result count - count the number of results matching the filter criteria.
                     //Tip: Use count together with the "odata.maxpagesize" to calculate the number of pages in
-                    //the query.  Note: CDS has a max record limit of 5000 records per response.
+                    //the query.  Note: Dataverse has a max record limit of 5000 records per response.
                     Console.WriteLine("\n-- Result Count --");
                     //1) Get a count of a collection without the data.
                     JToken count = svc.Get($"contacts/$count");

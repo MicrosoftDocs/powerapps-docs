@@ -44,7 +44,7 @@ The following is required to build and run the CDSWebApiService C# samples :
 
 1. Select the **AsyncParallelOperations** project and open the App.config. This is a common [App.config](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/CDSWebApiService/App.config) file used by all the samples in this solution. Once you edit this, you can run any of the samples in this solution.
 
-1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the CDS instance and credentials you want to connect to.
+1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the Dataverse instance and credentials you want to connect to.
 
     ```xml
         <add name="Connect"

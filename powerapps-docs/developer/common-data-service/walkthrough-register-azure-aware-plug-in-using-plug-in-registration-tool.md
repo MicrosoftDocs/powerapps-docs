@@ -28,9 +28,9 @@ This walkthrough demonstrates how to register a service endpoint step using the 
 The following prerequisites must be completed before you start this walkthrough:  
   
 - Access to the Plug-in Registration Tool. [!INCLUDE[proc-download-plugin-registration-tool](../../includes/proc-download-plugin-registration-tool.md)]
-- Your CDS system user account must have the System Customizer or System Administrator role. 
-- Have access to a Azure platform service namespace that is configured for SAS authorization, to which CDS will post a message.  
-- If you plan to use any other Azure messaging entity other than a queue, for example a relay, there must be a listener application actively listening to the specified solution endpoint for CDS to successfully post to the Azure Service Bus. For more information, see [Write a Listener for an Azure Solution](write-listener-application-azure-solution.md).  
+- Your Dataverse system user account must have the System Customizer or System Administrator role. 
+- Have access to a Azure platform service namespace that is configured for SAS authorization, to which Dataverse will post a message.  
+- If you plan to use any other Azure messaging entity other than a queue, for example a relay, there must be a listener application actively listening to the specified solution endpoint for Dataverse to successfully post to the Azure Service Bus. For more information, see [Write a Listener for an Azure Solution](write-listener-application-azure-solution.md).  
 - A configured service endpoint with SAS authorization is available in the target organization. More information: [Walkthrough: Configure Microsoft Azure (SAS) for integration with CDS](walkthrough-configure-azure-sas-integration.md).  
   
 ## Steps
@@ -45,7 +45,7 @@ This walkthrough contains the following steps:
 
 ## Connect to CDS
  
-Follow the steps below to connect to CDS using the Plug-in Registration tool.  
+Follow the steps below to connect to Dataverse using the Plug-in Registration tool.  
   
 1. Run the Plug-in Registration tool.  
 1. Click **Create New Connection**.  
@@ -70,7 +70,7 @@ Follow the steps below to register a step for an event on the service endpoint.
   
 1. Click **Register New Step**.  
   
-CDS will now post the current message containing the execution context to the service bus whenever an account is created. The post is performed asynchronously and is not executed immediately.  
+Dataverse will now post the current message containing the execution context to the service bus whenever an account is created. The post is performed asynchronously and is not executed immediately.  
   
 <a name="BKMK_Test"></a>
 

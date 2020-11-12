@@ -280,7 +280,7 @@ The following are the properties of the ServiceConfig class.
 |Password|<xref:System.Security.SecureString>|The password for the user principal|
 |RedirectUrl|<xref:System.String>|The Redirect Url of the application registered with Azure AD|
 |TimeoutInSeconds|`ushort`|The amount of time to try completing a request before it will be cancelled. Default is 120 (2 minutes)|
-|Url|<xref:System.String>|The Url to the CDS environment, i.e "https://yourorg.api.crm.dynamics.com"|
+|Url|<xref:System.String>|The Url to the Dataverse environment, i.e "https://yourorg.api.crm.dynamics.com"|
 |UserPrincipalName|<xref:System.String>|The user principal name of the user. i.e. you@yourorg.onmicrosoft.com|
 |Version|<xref:System.String>|The version of the Web API to use. Default is '9.1'|
 

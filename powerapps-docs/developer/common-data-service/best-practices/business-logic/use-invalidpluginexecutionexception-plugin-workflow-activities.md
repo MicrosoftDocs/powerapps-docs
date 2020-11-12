@@ -59,7 +59,7 @@ Failure to convert the message into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecu
 
 Do not use HTML within error message text. 
 
-Web applications which access CDS data should HTML encode any error message text before they display it to a user. This will prevent any HTML in your message from rendered as you intend. It will just show the HTML code.
+Web applications which access Dataverse data should HTML encode any error message text before they display it to a user. This will prevent any HTML in your message from rendered as you intend. It will just show the HTML code.
 
 
 <a name='seealso'></a>
