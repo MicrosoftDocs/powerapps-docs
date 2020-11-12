@@ -40,7 +40,7 @@ To download the reports:
 
 1. Select **Submit**.
 
-    ![Confirmation](media/portal-usage-reports/confirmation.png "Confirmation")
+    ![Confirmation for the request](media/portal-usage-reports/confirmation.png "Confirmation for the request")
 
     A confirmation notification shows the download request acknowledgment.
 
