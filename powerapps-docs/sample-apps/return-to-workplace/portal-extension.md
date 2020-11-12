@@ -23,6 +23,10 @@ A seperate offering extends the Return to the Workplace solution with a portal. 
 
 ## Getting started with the portal
 
+**Get Started** screen is displayed and click on Get Started button to continue.
+
+Before starting on the portal and as a first time guest, it will ask you to accept the **Terms and Conditions**. Click on the check box and the **Accept** button will enable. 
+
 The portal provides guests with the ability to attest to the health policies. If a user is not signed in, the portal displays the configured methods for signing in, creating an account or redeeming an invitation.
 
 In case a guest has been invited to make use of the portal, the proces is as follows:
@@ -30,6 +34,9 @@ In case a guest has been invited to make use of the portal, the proces is as fol
 1. A guest is invited to use the portal.
 2. The guest received an e-mail with the invite.
 3. The guest uses the link in the e-mail to redeem the invite and create a login.
+4. Accept on the Daily Health Check
+5. Agree with the Health and Agreements
+7. Looking at the Pass. 
 
 While logged in to the portal, the guest can do the following things:
 
@@ -40,6 +47,19 @@ While logged in to the portal, the guest can do the following things:
 
 The first two options are directly available from the homescreen. The second two are available from the top left hamburger menu. Next to those, the hamburger menu provides a link **home** to the home screen and a link **sign out** to sign out.
 
+### Home
+
+On the home screen you have several options:
+
+- Hamburguer menu thats displays
+    - Home
+    - Resources 
+    - Profiles 
+    - Sign Out option
+- Create Pass 
+- View Pass 
+- Register Guest or Dependent
+
 ### Creating a pass
 
 1. The guest is logged in to the portal and can select **create a pass** from the home screen.
@@ -47,6 +67,9 @@ The first two options are directly available from the homescreen. The second two
 3. The guest accepts the to the disclaimer.
 4. The guest attestates not having symptoms.
 5. A pass is created for the guest for that day.
+
+> [!NOTE]
+> An administrator can disable the store of negative attestations in the solution settings. This will stop a negative attestation of being created and wont save the record.
 
 ### View existing passes
 
