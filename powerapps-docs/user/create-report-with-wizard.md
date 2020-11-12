@@ -8,7 +8,6 @@ ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019
 ms.author: mkaur
-ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -72,7 +71,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     > [!div class="mx-imgBorder"]
     > ![add column screen](media/report_wizard_7.png "Add column screen")
   
-10. Repeat the previous step for any additional columns that you want to add. When you are done, on the **Lay Out Columns** screen, slect **Next**.
+10. Repeat the previous step for any additional columns that you want to add. When you are done, on the **Lay Out Columns** screen, select **Next**.
  
     > [!div class="mx-imgBorder"]
     > ![add more column screen](media/report_wizard_8.png "Add more column screen")
