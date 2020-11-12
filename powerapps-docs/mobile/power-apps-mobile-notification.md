@@ -120,6 +120,30 @@ When you trigger a push notification from a flow, you can send the notification 
 9. Select **Flow checker** to check for error or warnings.
 10. Test the flow by selecting **Test** and follow the prompts. 
 
+## Perform an action when a user taps the notification
+
+### Pass parameters
+
+Your push notification can pass specific parameters to the app. For example, to read the **CaseID** value, use *Param("CaseID")*. To quickly identify this parameter, add a **Label** control to your app. Set the **Text** property of that control to **Param("CaseID")**. If the user opens the app from the **All apps** list, the value is empty. If the user opens the app from another location on the device, the value is populated with the **CaseID** value.
+
+### Set the start page
+
+You can set your app to open, for example, the **Case details** page as soon as the app opens:
+
+1. Add a **Timer** control, and set its **OnTimerEnd** property to this formula:
+
+    `Navigate(EditCase, ScreenTransition.None)`
+
+1. (optional) Hide the **Timer** control by setting its **Visible** property to **false**.
+
+1. Set the **OnVisible** property of the screen to **Timer.Start()**.
+
+> [!TIP]
+> It's a good idea to create a unique first page in the app for the notification:
+> 
+> 1. Create an empty page that your app doesn't already open, add a **Text Input** control, and set its **timer.Duration** value.
+> 2. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.
+
 
 ## Known limitations
 
