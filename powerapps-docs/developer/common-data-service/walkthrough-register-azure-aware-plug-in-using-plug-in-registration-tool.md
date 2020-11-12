@@ -31,19 +31,19 @@ The following prerequisites must be completed before you start this walkthrough:
 - Your Dataverse system user account must have the System Customizer or System Administrator role. 
 - Have access to a Azure platform service namespace that is configured for SAS authorization, to which Dataverse will post a message.  
 - If you plan to use any other Azure messaging entity other than a queue, for example a relay, there must be a listener application actively listening to the specified solution endpoint for Dataverse to successfully post to the Azure Service Bus. For more information, see [Write a Listener for an Azure Solution](write-listener-application-azure-solution.md).  
-- A configured service endpoint with SAS authorization is available in the target organization. More information: [Walkthrough: Configure Microsoft Azure (SAS) for integration with CDS](walkthrough-configure-azure-sas-integration.md).  
+- A configured service endpoint with SAS authorization is available in the target organization. More information: [Walkthrough: Configure Microsoft Azure (SAS) for integration with Dataverse](walkthrough-configure-azure-sas-integration.md).  
   
 ## Steps
 
 This walkthrough contains the following steps:  
   
-1. [Connect to CDS](#BKMK_Connect)  
+1. [Connect to Dataverse](#BKMK_Connect)  
 1. [Register a service endpoint step for an event](#BKMK_Register)  
 1. [Test the endpoint registration](#BKMK_Test)
   
 <a name="BKMK_Connect"></a>
 
-## Connect to CDS
+## Connect to Dataverse
  
 Follow the steps below to connect to Dataverse using the Plug-in Registration tool.  
   
@@ -89,6 +89,6 @@ You can now unregister the endpoint, if so desired, by selecting it in the tool'
   
 ### See also
 
-[Azure integration for CDS](azure-integration.md)<br />
-[Introduction to Microsoft Azure Integration with CDS](azure-integration.md)
+[Azure integration for Dataverse](azure-integration.md)<br />
+[Introduction to Microsoft Azure Integration with Dataverse](azure-integration.md)
  

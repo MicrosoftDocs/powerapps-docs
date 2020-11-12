@@ -21,7 +21,7 @@ search.app:
 
 This sample demonstrates using Task Parallel Library (TPL) dataflow components [Dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library) with asynchronous requests.
 
-TPL provides capabilities to add parallelism and concurrency to applications. These capabilities are an important part of maximizing throughput when performing operations that will add or update data within CDS.
+TPL provides capabilities to add parallelism and concurrency to applications. These capabilities are an important part of maximizing throughput when performing operations that will add or update data within Dataverse.
 
 This sample uses the CDSWebApiService class asynchronous methods within asynchronous operations. Because the CDSWebApiService class can manage Service Protection API limits, this code can be resilient to the transient 429 errors that clients should expect. It will retry a configurable number of times. More information: [Service Protection API Limits](../../api-limits.md)
 
