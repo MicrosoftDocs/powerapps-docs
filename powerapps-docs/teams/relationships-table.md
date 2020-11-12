@@ -50,7 +50,7 @@ More information: [Create a relationship between entities](../maker/common-data-
 
 ## Edit a table relationship
 
-Editing relationships in Project Oakdale works the same as Common Data Service except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/maker/common-data-service/create-edit-entity-relationships.md#actions)
+Editing relationships in Project Oakdale works the same as Common Data Service except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/powerapps/maker/common-data-service/create-edit-entity-relationships#actions)
 
 ## Delete a table relationship
 
