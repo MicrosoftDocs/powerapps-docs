@@ -19,7 +19,11 @@ When a user accesses the Power Apps app within a team in Microsoft Teams, the us
  
 - If the user's language setting matches the default language of the environment, the default language is used to display existing information and for creating new tables and columns.
 
-- If the user's language setting is different from the default language of the environment, the new language pack matching the user's language setting will automatically be installed in the environment; it might take up to 15 minutes for the language pack installation to complete. This is a one-time installation, and will only occur the first time a new language is used. 
+- If the user's language setting is different from the default language of the environment and the environment:
+
+        - Doesn't have the required language pack installed, the new language pack matching the user's language setting will automatically be installed in the environment. It might take up to 15 minutes for the language pack installation to complete. This is a one-time installation, and will only occur the first time a new language is used.
+
+        - Already has the required language pack installed, the environment will use the user’s language.
 
     Also, this does not change the default language of the environment, but provides a localized user experience for the user when viewing the existing information in the team, and allows all new tables and columns created by the user to have localized labels that match her/his language.
 
@@ -31,8 +35,10 @@ When a user accesses the Power Apps app within a team in Microsoft Teams, the us
 
 User A’s language is English (United States) in Teams and they create an app in a team called Team 1. 
 
-User B’s language is set to French in Teams and they access the Power Apps app in Team 1. The French language pack is automatically installed in the Dataverse for Teams environment for Team 1. The user interface for User B immediately changes to French while the language pack is installed. After the language pack is installed, any new tables and columns will be created in the French language. 
-
+User B’s language is set to French in Teams and they access the Power Apps app in Team 1.
+- If the Dataverse for Teams environment doesn't have the French language pack installed, it will be automatically installed in the environment for Team 1. The user interface for User B immediately changes to French while the language pack is installed. After the language pack is installed, any new tables and columns will be created in the French language.
+- If the Dataverse for Teams environment for Team 1 already has the French language pack installed, no additional installation is required.
+ 
 If the User B changes her/his language in Teams again and accesses the Power Apps app in the team next time, the new language pack will be installed if the language isn't already installed in Dataverse for Teams environment.
 
 ## Supported languages and fallbacks
