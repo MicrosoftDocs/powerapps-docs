@@ -23,7 +23,7 @@ When a user accesses the Power Apps app within a team in Microsoft Teams, the us
 
     Also, this does not change the default language of the environment, but provides a localized user experience for the user when viewing the existing information in the team, and allows all new tables and columns created by the user to have localized labels that match her/his language.
 
-    > [!NOTE]
+    > [!IMPORTANT]
     > - Any existing tables or columns at the time of the language change will not be translated to another language. They will continue to use the existing names.
     >- In some cases, a language supported by Teams might not be available in Dataverse for Teams and other Power Platform features. When this happens, the nearest fallback language is used for the interface. More information: [Supported languages and fallbacks](#supported-languages-and-fallbacks) later in this topic. 
 
