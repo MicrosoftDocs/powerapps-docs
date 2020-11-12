@@ -1893,12 +1893,17 @@
           href: ../teams/data-platform-compare.md
         - name: Create a table
           href: ../teams/create-table.md
+          displayName: Create a Dataverse for Teams table
         - name: Edit or delete a table
           href: ../teams/edit-delete-table.md
+          displayName: Edit or delete a Dataverse for Teams table
         - name: Work with table relationships
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
+        - name: View table data in Power BI (Preview)
+          href: ../teams/view-table-data-power-bi.md
+          displayName: View Dataverse for Teams table data in Power BI
         - name: Environment language
           href: ../teams/language-data-platform.md
           displayName: Dataverse for Teams environment language
