@@ -11,7 +11,7 @@ ms.reviewer: matp
 ---
 # Dataverse for Teams environment language
 
-The language of a Dataverse for Teams environment is automatically set to the language settings of the Teams user who helped create the environment by either [creating the first app](create-first-app.md) in a team using the Power Apps app or installing an app created using the Power Apps from the Teams app catalog for the first time in the team.
+The language of a Dataverse for Teams environment is automatically set to the language settings of the Teams user who helped create the environment by *either* [creating the first app](create-first-app.md) in a team using the Power Apps app *or* installing an app created using the Power Apps from the Teams app catalog for the first time in the team.
 
 The language settings for a Dataverse for Teams environment define the language, sorting, and search formats of the tables in the environment. The *default* language set during the automatic creation of the environment can't be changed thereafter. 
 
