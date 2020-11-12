@@ -40,7 +40,7 @@ Note that in this lab we will use a channel named "Readiness".
 
 ## Install and pin Power Apps in Teams
 
-In this section, you’ll install the Power Apps app in Teams and pin it to the left rail so you can easily access it. You can find details on how to do this in the ([online documentation](https://docs.microsoft.com/powerapps/teams/install-personal-app)).
+In this section, you’ll install the Power Apps app in Teams and pin it to the left rail so you can easily access it. To learn how to do this, see [Install the Power Apps personal app in Microsoft Teams](https://docs.microsoft.com/powerapps/teams/install-personal-app).
 
 If you’ve already done this, you can skip to the next step.
 
@@ -52,7 +52,7 @@ In this section, you’ll take the initial steps to create the application.
 
 1. Select the **Build** tab at the top of the screen.
 
-1. Select **Create** shown in the bottom left of the screen.
+1. Select **Create** shown in the lower-left of the screen.
 
     This will display the "Create an app" dialog box.
 
@@ -76,11 +76,11 @@ In this section, you will create a table to store the names and details for the 
 
 ### Edit the Name column
 
-1. In the table designer, select the drop-down for the **Name** column and then **Edit Column**.
+1. In the table designer, select the drop-down menu for the **Name** column and then **Edit Column**.
 
 1. Change the name to *Title*.
 
-1. Select **Advanced options** and then change the value for **Max length** to 255.
+1. Select **Advanced options** and then change the value for **Max length** to *255*.
 
 1. Select **Save**.
 
@@ -175,7 +175,7 @@ The table designer should resemble the image below.
 
 The screen created automatically in the app, named **Screen1**, should automatically bind to the table, displaying the fields in the table and the record you added.
 
-It should resemble the image below.
+The screen should resemble the image below.
 
 > [!div class="mx-imgBorder"]
 > ![Screen created in the app](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-screen1.png)
@@ -235,7 +235,7 @@ In this section, you will create a table to store the details for the videos sto
 
 1. For **Type**, select **Text** from the list.
 
-1. Select **Advanced options** and then change the value for **Max length** to 2000.
+1. Select **Advanced options** and then change the value for **Max length** to *2000*.
 
 1. Select **Create**.
 
@@ -273,15 +273,13 @@ In this section, you will create a table to store the details for the videos sto
 
 1. Select **Create**.
 
-Close the table designer (select **X** in the upper right corner).
+Close the table designer (select **X** in the upper-right corner).
 
-Now that you’ve created the required tables, select **Save** on the top-right corner to save the app and close the Power Apps Studio.
+Now that you’ve created the required tables, select **Save** on the upper-right corner to save the app and close the Power Apps Studio.
 
 ## Create flows to get the video details for configured feeds
 
-In this section, you'll create flows in Power Automate to retrieve videos for each of the configured feeds.
-
-This flow will monitor the RSS feeds for the addition of new videos, retrieve details for the videos, and save those details in the database.
+In this section, you'll create flows in Power Automate to retrieve videos for each of the configured feeds. This flow will monitor the RSS feeds for the addition of new videos, retrieve details for the videos, and save those details in the database.
 
 When you’ve completed this section, your flow should resemble the diagram below.
 
@@ -298,21 +296,19 @@ When you’ve completed this section, your flow should resemble the diagram belo
 > ![Completed flow update record](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-completeflow4.png)
 
 > [!NOTE]
-> Power Automate a trigger that allows you to detect when a new item is added to a feed for an individual feed. When tracking multiple feeds, this would require multiple feeds and would require the same number of flows to match the number of feeds. The approach taken in this lab is more complex but with the benefit of having a single flow that supports any number of configured feeds in a single flow.
+> Power Automate has a trigger that allows you to detect when a new item is added to a feed for an individual feed. When tracking multiple feeds, this would require multiple feeds and would require the same number of flows to match the number of feeds. The approach taken in this lab is more complex but with the benefit of having a single flow that supports any number of configured feeds in a single flow.
 
 ### Create the flow
 
 1. Select the **Build** tab.
 
-1. Select the name of your team in the list on the left column.
+1. Select on the name of your team in the list on the left column.
 
 1. Select **See all** under the *Built by this Team* tab.
 
 1. Select **New**.
 
-1. Select **Flow**.
-
-1. Select **Scheduled**.
+1. Select **Flow** > **Scheduled**.
 
     > [!div class="mx-imgBorder"]
     > ![Create a scheduled flow](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-flowsched.png)
@@ -368,15 +364,15 @@ When you’ve completed this section, your flow should resemble the diagram belo
     > [!div class="mx-imgBorder"]
     > ![Add the Current time action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-current-time.png)
 
-### Add the Apply to Each action
+### Add the Apply to each action
 
 1. Select **New Step**.
 
-1. Enter *Apply to each* in the search box and select the action named **Apply to each**.
+1. Enter *Apply to each* in the search box, and then select the action named **Apply to each**.
 
 1. Select the text box under **Select output from previous steps**.
 
-1. In the **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve** and select **value**.
+1. In the **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve**, and select **value**.
 
 1. Select ellipsis (…) in the header of the action and select **Rename**.
 
@@ -393,7 +389,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Select the box for the property **The RSS feed URL**.
 
-1. In the **Dynamic content**, scroll down to the section **Get list of feeds to retrieve** and select **Link**.
+1. In the **Dynamic content**, scroll down to the section **Get list of feeds to retrieve**, and select **Link**.
 
 1. Select in the box for the property "since" and select **Last Retrieved**.
 
@@ -410,7 +406,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. In the **Dynamic content** list, scroll down to the section called **List all RSS feed items** and select **Value**.
 
-1. Select ellipsis (…) in the header of the action and select **Rename**.
+1. Select ellipsis (…) in the header of the action, and then select **Rename**.
 
 1. Rename the action to *Loop through each of the items in the feed since last retrieved*.
 
@@ -424,7 +420,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. In the **Dynamic content** list, scroll down to the section **List all RSS feed items** and select **Feed links**.
 
-1. Select ellipsis (…) in the head of the action and select **Rename**.
+1. Select ellipsis (…) in the head of the action, and then select **Rename**.
 
 1. Rename the action to *Evaluate links to determine if this is YouTube or a Vlog with a video*.
 
@@ -432,7 +428,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Select **Add an action**.
 
-1. Enter *Condition* in the search box and select the action named **Condition**.
+1. Enter *Condition* in the search box, and select the action named **Condition**.
 
 1. Select the text box containing text **Choose a value**.
 
@@ -442,27 +438,27 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Select the text box text **Choose a value** and enter the value *.mp4*.
 
-1. Select ellipsis (…) in the header of the action and select **Rename**.
+1. Select ellipsis (…) in the header of the action, and then select **Rename**.
 
 1. Rename the action to *Check to see if there is a link with an MP4 file*.
 
 1. In the **If yes**" path on the left, select **Add an action**.
 
-    1. Enter **Set variable** in the search box and select the action named **Set Variable**.
+    1. Enter **Set variable** in the search box, and select the action named **Set Variable**.
 
     1. Select **Video Link** in the drop-down for the *Name* property.
 
     1. Select the textbox for the **Value** property.
 
-    1. In the "Dynamic content" list, scroll down to the section called **Evaluate links to determine if this is YouTube or a Vlog with a video** and select **Current item**.
+    1. In the **Dynamic content** list, scroll down to the section called **Evaluate links to determine if this is YouTube or a Vlog with a video** and select **Current item**.
 
-    1. Select ellipsis (…) in the header of the action, and select **Rename**
+    1. Select ellipsis (…) in the header of the action, and then select **Rename**
 
     1. Rename the action to *Specify the Video Link is this link to an MP4 File*.
 
 1. In the **If No** path on the left, select **Add an action**.
 
-    1. Enter **Set variable** in the search box and select the action named **Set Variable**.
+    1. Enter **Set variable** in the search box, and select the action named **Set Variable**.
 
     1. Select **Video Link** in the drop-down for the **Name** property.
 
@@ -470,14 +466,14 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
     1. In the **Dynamic content** list, scroll down to the section **List all RSS feed items** and select **Primary feed link**.
 
-    1. Select ellipsis (…) in the header of the action and select **Rename**.
+    1. Select ellipsis (…) in the header of the action, and then select **Rename**.
 
     1. Rename the action to *Specify the Video Link is the Primary feed link*.
 
         > [!div class="mx-imgBorder"]
         > ![Add the primary feed link](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-primary-feed.png)
 
-    1. Select the header of the action to show the title of **Evaluate links to determine if this is YouTube or a Vlog with a video**.
+    Select the header of the action to show the title of **Evaluate links to determine if this is YouTube or a Vlog with a video**.
 
 ### Add the Create a New Record action
 
@@ -491,33 +487,33 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Select the textbox next to *Field Item ID*.
 
-1. In the **Dynamic content** list scroll down to the section **List all RSS feed items** and select **Feed Item ID**.
+1. In the **Dynamic content** list scroll down to the section **List all RSS feed items**, and then select **Feed Item ID**.
 
-1. In **Dynamic content** list, scroll down to the section **List all RSS feed items** and select **Feed summary**.
+1. In **Dynamic content** list, scroll down to the section **List all RSS feed items**, and then select **Feed summary**.
 
 1. Select **Description**.
 
-1. In the "Dynamic content" list, scroll down to the section called **List all RSS feed items** and select **Feed summary**.
+1. In the **Dynamic content** list, scroll down to the section called **List all RSS feed items** and select **Feed summary**.
 
 1. Select **Feeds**.
 
-1. In the "Dynamic content" list, scroll down to the section **Get list of feeds to retrieve**, and then select **Feeds**.
+1. In the **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve**, and then select **Feeds**.
 
 1. Select **Primary Feed Link**.
 
-1. In the "Dynamic content" list scroll down to the section **List all RSS feed items**, and then select **Primary feed link**.
+1. In the **Dynamic content** list scroll down to the section **List all RSS feed items**, and then select **Primary feed link**.
 
 1. Select **Published On**.
 
-1. In the **Dynamic content** list, scroll down to the section **List all RSS feed items** and select **Feed published on**.
+1. In the **Dynamic content** list, scroll down to the section **List all RSS feed items**, and then select **Feed published on**.
 
 1. Select **Title**.
 
-1. In the "Dynamic content" list, scroll down to the section called **List all RSS feed items** and select **Feed title**.
+1. In the **Dynamic content** list, scroll down to the section called **List all RSS feed items**, and then select **Feed title**.
 
 1. Select **Primary Feed Link**.
 
-1. In the "Dynamic content" list scroll down to the section **List all RSS feed items** and select **Primary feed link**.
+1. In the **Dynamic content** list scroll down to the section **List all RSS feed items** and select **Primary feed link**.
 
 1. Select **Video Link**.
 
@@ -530,7 +526,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
 1. Select **New step**.
 
-1. Enter **Teams** in the search box and select the **Post a Message (V3) (Preview) action**.
+1. Enter **Teams** in the search box, and select the **Post a Message (V3) (Preview) action**.
 
 1. In the drop-down for the **Team** property, select the team to send the message.
 
@@ -555,19 +551,19 @@ Select the the header of the action to show the title of **Loop through each of 
 
 1. Select **Item ID**.
 
-1. In the "Dynamic content" list, scroll down to the section **Get list of feeds to retrieve**, and then select **Feeds**.
+1. In the **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve**, and then select **Feeds**.
 
 1. Select **Title**.
 
-1. In the "Dynamic content" list, scroll down to the section **Get list of feeds to retrieve**, and then select **Title**.
+1. In the **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve**, and then select **Title**.
 
 1. **Description**
 
-1. In the "Dynamic content" list, scroll down to the section **Get list of feeds to retrieve** and select **Description**.
+1. In the **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve**, and then select **Description**.
 
 1. Select **Image Link**.
 
-1. In the "Dynamic content" list, scroll down to the section **Get list of feeds to retrieve**, and then select **Image Link**.
+1. In the **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve**, and then select **Image Link**.
 
 1. Select **Image Title**.
 
@@ -575,15 +571,15 @@ Select the the header of the action to show the title of **Loop through each of 
 
 1. Select **Last Retrieved**.
 
-1. In the "Dynamic content" list, scroll down and select **Current time**
+1. In the **Dynamic content** list, scroll down and select **Current time**.
 
 1. Select **Link**.
 
-1. In the "Dynamic content" list, scroll down to the section **Get list of feeds to retrieve**, and then select **Link**
+1. In the **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve**, and then select **Link**
 
 1. Select **Published On**.
 
-1. In "Dynamic content" list, scroll down to the section **Get list of feeds to retrieve**, and select **Published On**.
+1. In **Dynamic content** list, scroll down to the section **Get list of feeds to retrieve**, and select **Published On**.
 
     > [!div class="mx-imgBorder"]
     > ![Add the Update Record action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-publishedon.png)
@@ -604,9 +600,9 @@ Your complete flow should look like the following:
 
 ### Save the Flow
 
-1. From the upper right side of the screen, select **Save**.
+1. From the upper-right side of the screen, select **Save**.
 
-1. Select the back arrow in the upper left.
+1. Select the back arrow in the upper-left.
 
 1. Select **Run** in the command bar.
 
@@ -616,7 +612,7 @@ Your complete flow should look like the following:
 
 1. Select the refresh button in the 28-day run history to show a successful run of the created flow.
 
-If the flow doesn't show as succeeded, select **Run** and it will display any associated error message.
+If the flow doesn't show as succeeded, select **Run** and it will display the failed action with any associated error message.
 
 ## Edit the app
 
@@ -734,7 +730,7 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Select the control that starts with **Subtitle**.
 
-1. Select **Advanced** tab in properties pane.
+1. Select the **Advanced** tab in properties pane.
 
 1. In the data section, set the **Text** property to *ThisItem.Feed.Title*
 
@@ -750,15 +746,15 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Select the control that starts with **Title**.
 
-1. Select **Advanced** tab in the properties pane.
+1. Select the **Advanced** tab in the properties pane.
 
-1. In the **Data** section, set the **Text** property to *ThisItem.Feed.Image Link*.
+1. In the **Data** section, set the **Text** property to *ThisItem.Feed.'Image Link'*.
 
 ### Add the background for the feed item
 
 1. Enter **Rectangle** in the search box.
 
-1. Drag the rectangle control onto the screen
+1. Drag the rectangle control onto the screen.
 
 1. Set the following properties with these values:
 
@@ -787,7 +783,7 @@ In the tree view on the left side of the screen, there are three controls undern
     |Height | 78   |
     |Color | White |
 
-1. Select **Advanced** tab.
+1. Select the **Advanced** tab.
 
 1. Set the **Text** property to the following value: 
 
@@ -797,9 +793,9 @@ In the tree view on the left side of the screen, there are three controls undern
 
 1. Enter **Vertical Gallery** in the search box.
 
-1. Drag the label onto the screen
+1. Drag the label onto the screen.
 
-1. Set the following properties with these values
+1. Set the following properties with these values:
 
     | Property  | Value  |
     |-----------|--------|
@@ -809,7 +805,7 @@ In the tree view on the left side of the screen, there are three controls undern
     |Width | 916 |
     |Height | 523 |
 
-1. Select **Advanced** tab.
+1. Select the **Advanced** tab.
 
 1. Set the **Media** property to the following value: 
 
@@ -832,7 +828,7 @@ In the tree view on the left side of the screen, there are three controls undern
     |Height | 82        |
     |Color | White |
 
-1. Select **Advanced** tab.
+1. Select the **Advanced** tab.
 
 1. Set the **Text** property to the following value: 
 
@@ -871,7 +867,7 @@ Currently there are two separate screens, but no way to toggle between them. The
 
 1. Select **Add an icon** from the properties pane.
 
-1. Select **Settings** icon type.
+1. Select the **Settings** icon type.
 
 1. Set the following properties with these values:
 
@@ -882,7 +878,7 @@ Currently there are two separate screens, but no way to toggle between them. The
     |Width  | 48 |
     |Height | 51   |
 
-1. Select **Advanced** tab.
+1. Select the **Advanced** tab.
 
 1. In the **Action** section, set the **OnSelect** property to the following value:
 
@@ -892,7 +888,7 @@ Currently there are two separate screens, but no way to toggle between them. The
 
 1. Select **Screen1**.
 
-1. Select the back button in the upper left of the screen.
+1. Select the back button in the upper-left of the screen.
 
 1. Select **Advanced** tab.
 
@@ -918,11 +914,11 @@ Before publishing the application to teams, it’s important to test core functi
 
 1. Open the app in Power Apps Studio.
 
-1. From upper right side of the screen, select **Preview**.
+1. From upper-right side of the screen, select **Preview**.
 
 1. Select the list of feed items in the gallery on the left.
 
-1. When you select an item, confirm the Title, Description, Publish Date, and Video details are displayed.
+1. When you select an item, confirm that the Title, Description, Publish Date, and Video details are displayed.
 
 1. Select the video and confirm the video plays.
 
@@ -930,13 +926,13 @@ Before publishing the application to teams, it’s important to test core functi
 
 1. Add another feed to the **Feeds** table.
 
-1. Re-run the Power Automate flow
+1. Re-run the Power Automate flow.
 
 1. Repeat the above steps.
 
 ## Publish the app
 
-1. Select the **Publish to Teams** icon in the upper right.
+1. Select the **Publish to Teams** icon in the upper-right.
 
 1. Select **Next**.
 
