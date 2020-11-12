@@ -21,9 +21,9 @@ When a user accesses the Power Apps app within a team in Microsoft Teams, the us
 
 - If the user's language setting is different from the default language of the environment and the environment:
 
-        - Doesn't have the required language pack installed, the new language pack matching the user's language setting will automatically be installed in the environment. It might take up to 15 minutes for the language pack installation to complete. This is a one-time installation, and will only occur the first time a new language is used.
+    - Doesn't have the required language pack installed, the new language pack matching the user's language setting will automatically be installed in the environment. It might take up to 15 minutes for the language pack installation to complete. This is a one-time installation, and will only occur the first time a new language is used.
 
-        - Already has the required language pack installed, the environment will use the user’s language.
+    - Already has the required language pack installed, the environment will use the user’s language.
 
     Also, this does not change the default language of the environment, but provides a localized user experience for the user when viewing the existing information in the team, and allows all new tables and columns created by the user to have localized labels that match her/his language.
 
