@@ -14,11 +14,11 @@ ms.reviewer: tapanm
 
 Administrators can download portal login and page view reports from the [Power Platform admin center](https://admin.powerplatform.com). These reports show the number of **logins** and **page views** for Power Apps portals across all environments for a tenant.
 
+## Download reports
+
 The individual reports are available for a duration of the past 30 days before the date you select while downloading the reports. To download reports for longer duration, select the target dates as 30 days apart.
 
 For example, to download the reports from January to March 2020, download three reports with target dates as January 31, February 29, and March 31.
-
-## Download reports
 
 To download the reports:
 
