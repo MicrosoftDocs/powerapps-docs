@@ -11,7 +11,7 @@ ms.reviewer: kvivek
 ---
 # FAQs for Dataverse for Teams 
 
-Here is a list of frequently asked (FAQs) for Dataverse for Teams; also see [Dataverse for Teams licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#project-oakdale) in the Power Platform admin guide.
+Here is a list of frequently asked (FAQs) for Dataverse for Teams; also see [Dataverse for Teams licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#dataverse-for-teams) in the Power Platform admin guide.
 
 ### What does Dataverse for Teams enable and how does this impact Microsoft Power Platform and Teams users? 
 
