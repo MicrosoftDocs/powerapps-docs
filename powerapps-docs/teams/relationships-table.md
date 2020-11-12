@@ -5,14 +5,12 @@ author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 11/16/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---
 
 # Work with table relationships
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Table relationships define the ways that table records can be associated with records from other tables or the same table. There are three types of table relationships. Dataverse for Teams allows for the creation of the same relationship types as Dataverse does:
 
