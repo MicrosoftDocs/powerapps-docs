@@ -102,4 +102,4 @@ The fallback languages are denoted in *italics*.
 
 [What is Dataverse for Teams?](overview-data-platform.md) <br />
 [Create tables](create-table.md)<br/>
-[About the Dataverse for Teams environment](/power-platform/admin/about-teams/environment)
+[About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
