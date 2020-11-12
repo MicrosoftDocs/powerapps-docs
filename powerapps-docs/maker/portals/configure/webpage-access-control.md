@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Manage page permissions
 
-Page permissions control access to the webpages to portal users. For example, you can allow pages to be available anonymously for public access, or restrict access to users from the specific roles. Depending on business requirements, you can manage the inheritance of page permissions from a parent page to a child page. A page can have child [web files](web-files.md), such as downloadable documents. You can also manage the inheritance of page permissions from a page to such child web files.
+Page permissions control access to the webpages to portal users. For example, you can allow pages to be available anonymously for public access, or restrict access to users from the specific roles. Depending on business requirements, you can manage the inheritance of page permissions from a parent page to a child page. A page can have child [web files](web-files.md), such as downloadable documents or for supporting .css and .js files. You can also manage the inheritance of page permissions from a page to such child web files.
 
 You can manage page permissions in two ways:
 
@@ -25,7 +25,7 @@ Portals Studio simplifies the configuration of webpage access permissions using 
 
 Power Apps portals Studio allows you to customize your portal. Page permission management using portals Studio is quicker and more efficient compared to using the Portal Management app. You may still need to use the Portal Management app for managing page permissions of legacy areas.
 
-Managing page permissions using portals Studio still creates the web page access rules accessible using the Portal Management app. However, using the portals Studio to manage page permissions is recommended.
+Managing page permissions using portals Studio still creates the web page access control rules accessible using the Portal Management app. However, using the portals Studio to manage page permissions is recommended.
 
 > [!NOTE]
 > Managing page permissions using portals Studio applies to only [Restrict Read](#restrict-read) permissions that control access to pages for the end users. To manage [Grant Change](#grant-change) permissions for managing and publishing content pages using the legacy portal content editor, use the [Portal Management app](#manage-page-permissions-using-portal-management-app).
