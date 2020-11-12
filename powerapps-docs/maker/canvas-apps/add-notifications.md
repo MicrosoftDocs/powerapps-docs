@@ -58,7 +58,7 @@ In this article, the sample app used for notifications is built from the default
 
     ![Power Apps formula](./media/add-notifications/powerapps-function.png)
 
-## Perform an action when a user taps the notification
+## Load a specific page and context when a user taps the notification
 
 ### Pass parameters
 
