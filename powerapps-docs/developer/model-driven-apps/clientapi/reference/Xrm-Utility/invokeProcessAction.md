@@ -31,7 +31,7 @@ For more information about actions, see [Use actions](/powerapps/maker/common-da
 |Name |Type |Required |Description |
 |---|---|---|---|
 |name|String|Yes|Name of the process action to invoke.|
-|parameters|object|No|An object containing input parameters for the action. You define an object using `key:value` pairs of items, where `key` is of **String** type.|
+|parameters|object|No|An object containing input parameters for the action. You define an object using `key:value` pairs of items, where `key` is of **String** type. To specify a target, add a pair with `Target` as the key and an object with key values `entityName` and `id` as the value.  |
 |successCallback |Function |Yes |A function to call when the action is invoked.  |
 |errorCallback |Function |Yes |A function to call when the operation fails.  |
 
