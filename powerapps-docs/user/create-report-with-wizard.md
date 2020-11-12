@@ -90,7 +90,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 > [!NOTE]
 > The reports that are displayed are shown in HTML-formatted text instead of plain text, this is because the rich-text editor is enabled by default. To workaround this issue, do > one of the following:
 > - Disable the rich-text editor, see [Enable or disable rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline).
-> - Update the report definition to support formatted text. For more information, see [Importing HTML into a Report](https://docs.microsoft.com/sql/reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs?view=sql-server-ver15)
+> - Update the report definition to support formatted text, see [Importing HTML into a Report](https://docs.microsoft.com/sql/reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs?view=sql-server-ver15)
     
 
 ### See Also
