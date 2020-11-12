@@ -40,7 +40,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 4. In the next screen, leave the default selections and then select **Next**.
  
     > [!div class="mx-imgBorder"]
-    > ![Report wizard](media/report_wizard_1.png "Report wizard screen")
+    > ![Report wizard selections](media/report_wizard_1.png "Report wizard selections")
    
 4. On the **Report Properties** screen, enter a name for the report and then choose the row to include in the report and then select **Next**.
  
