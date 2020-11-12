@@ -1906,6 +1906,8 @@
       href: ../teams/remove-your-apps.md
     - name: Uninstall Power Apps personal app
       href: ../teams/uninstall-personal-apps.md
+    - name: "Tutorial: Build an app to retrieve videos"
+      href: ../teams/tutorial-buildapp-retrieve-videos.md 
     - name: Sample apps
       items:
         - name: Use sample apps from Teams store
