@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: b7ae4dd3-e9ee-45cc-a345-2fb7be5eddc6
 caps.latest.revision: 12
 author: "JimDaly" # GitHub ID
-ms.author: "susikka"
+ms.author: pehecke
 manager: "shujoshi"
 search.audienceType: 
   - developer

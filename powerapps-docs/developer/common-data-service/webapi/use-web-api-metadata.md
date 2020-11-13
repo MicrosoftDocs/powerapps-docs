@@ -8,7 +8,7 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
-ms.author: "susikka"
+ms.author: pehecke
 manager: "shujoshi"
 search.audienceType: 
   - developer

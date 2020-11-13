@@ -12,7 +12,7 @@ applies_to:
 ms.assetid: d80cfb87-d4f1-4c75-bcc8-4f54d1351e26
 caps.latest.revision: 27
 author: "JimDaly" # GitHub ID
-ms.author: "susikka"
+ms.author: pehecke
 manager: "shujoshi"
 search.audienceType: 
   - developer
