@@ -4,6 +4,7 @@ description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
 ms.date: 01/27/2020
+ms.service: powerapps
 ms.author: margoc
 searchScope:
   - "Power Apps"
