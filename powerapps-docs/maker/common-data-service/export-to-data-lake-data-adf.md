@@ -50,7 +50,7 @@ To view the permissions that you have in the subscription, go to the [Azure por
 
 This article assumes that you've already exported Common Data Service data by using the [Export to Data Lake service](export-to-data-lake.md).
 
-In this example, account entity data is exported to the data lake.
+In this example, account table data is exported to the data lake.
 
 ## Generate the manifest.json from the model.json
 
@@ -67,7 +67,7 @@ In this example, account entity data is exported to the data lake.
 
     -   Microsoft.CommonDataModel.ObjectModel.Adapter.Adls
 
-    -   Microsoft.IdentityModel.Clients.ActiveDirectory
+    -   Microsoft.IdtableModel.Clients.ActiveDirectory
 
     -   Newtonsoft.Json
 
@@ -101,10 +101,10 @@ In this example, account entity data is exported to the data lake.
 
 9.  Optionally, you can change the name of the manifest file as indicated in the code comments.
 
-10.  Run the code, and refresh your storage container to find the new manifest, entity, resolved entity, and config files.
+10.  Run the code, and refresh your storage container to find the new manifest, table, resolved table, and config files.
 
 > [!NOTE]
-> If there are changes made to the metadata of the entity, you must delete the generated files from the Data Lake and regenerate an updated manifest file by running the code again. It is recommended that you maintain the same name of the manifest file, so there is no need to update any Azure Data Factory dataflows or pipelines.
+> If there are changes made to the metadata of the table, you must delete the generated files from the Data Lake and regenerate an updated manifest file by running the code again. It is recommended that you maintain the same name of the manifest file, so there is no need to update any Azure Data Factory dataflows or pipelines.
 
 ## Set the Data Lake Storage Gen2 storage account as a source
 
@@ -130,14 +130,14 @@ In this example, account entity data is exported to the data lake.
 
     - **Metadata format**: Select **Manifest**. 
     - **Root location**: In the first box (**Container**), enter the container name. In the second box (**Folder path**), enter **/**. 
-    - **Manifest file**: Leave the first box (**Entity path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json* **/** *test*).
+    - **Manifest file**: Leave the first box (**table path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json* **/** *test*).
 
        ![Source options, part one](media/source-options.png "Source options, part one")
 
     - **Schema linked service**: Select the same storage container as the source settings.
     - **Container**: Enter the container name.
     - **Corpus folder**: Leave blank.
-    - **Entity**: Enter text in the format **/*entity*Res.cdm.json/*entity***, replacing *entity* with the entity name you want, such as account.
+    - **table**: Enter text in the format **/*table*Res.cdm.json/*table***, replacing *table* with the table name you want, such as account.
 
        ![Source options, part two](media/source-options-two.png "Source options, part two")
 
@@ -163,12 +163,12 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Schema linked service**: Select the final destination storage container. 
     - **Container**: Enter the container name. 
     - **Corpus folder**: Enter **/** 
-    - **Entity**: Enter text in the format **/*entity*Res.cdm.json/*entity***, replacing *entity* with the entity name you want, such as account.
+    - **table**: Enter text in the format **/*table*Res.cdm.json/*table***, replacing *table* with the table name you want, such as account.
 
       ![Configure the sink Settings tab, part one](media/configure-settings.png "Configure the sink Settings tab, part one")
 
     - **Root Location**: In the first box (**Container**), enter the container name. In the second box (**Folder path**), enter **/**. 
-    - **Manifest file**: Leave the first box (**Entity path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json / test*.
+    - **Manifest file**: Leave the first box (**table path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json / test*.
     - **Format type**: Select your file format preference.
 
       ![Configure the sink Settings tab, part two](media/configure-settings-two.png "Configure the sink Settings tab, part two")
@@ -188,7 +188,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 5.  Let the dataflow run until the bottom view shows that is has been completed. This might take a few minutes.
 
-6.  Go to the final destination storage container, and find the transformed entity data file.
+6.  Go to the final destination storage container, and find the transformed table data file.
 
 ### See also
 

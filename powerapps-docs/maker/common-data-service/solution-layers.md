@@ -28,7 +28,7 @@ search.app:
 
 Managed and unmanaged solutions exist at different levels within a Common Data Service environment. In Common Data Service, there are two distinct layer levels:  
 - Unmanaged layer. All imported unmanaged solutions and unmanaged customizations exist at this layer. The unmanaged layer is a single layer.  
-- Managed layers. All imported managed solutions and the system solution exist at this level. When multiple managed solutions are installed, the last one installed is above the managed solution installed previously. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the runtime behavior is either “Last one wins” or a merge logic is implemented.  If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solutions, the default behavior defined within the system solution is applied. At the base of the managed layers level is the system layer. The system layer contains the entities and components that are required for the platform to function. 
+- Managed layers. All imported managed solutions and the system solution exist at this level. When multiple managed solutions are installed, the last one installed is above the managed solution installed previously. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the runtime behavior is either “Last one wins” or a merge logic is implemented.  If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solutions, the default behavior defined within the system solution is applied. At the base of the managed layers level is the system layer. The system layer contains the tables and components that are required for the platform to function. 
 
 ![Solution layers](media/solution-layers.png)
 
@@ -47,24 +47,17 @@ The see solution layers feature:
 
 1. Sign in to Power Apps, select **Solutions**, open the solution you want, select **...** next to a component, such as **Account**, and then select **See solution layers**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Solution layers button](media/solution-layers-toolbar.png "Solution layers button")
-
-2. The solution layer page appears. It displays each layer for the component, such as the **Account** entity displayed here, with the most recent layer at the top. To view the details for a solution layer, select it. 
+2. The solution layer page appears. It displays each layer for the component, such as the **Account** table displayed here, with the most recent layer at the top, which is typically indicated as the **Active** layer. The active layer determines the runtime behavior of the component. To view the details for a solution layer, select it. 
 
    > [!div class="mx-imgBorder"] 
    > ![Solution layers list](media/solution-layers-list.png "Solution layers list")
 
-3. In the **Solution Layer** dialog box, the **Changed Properties** tab displays only those properties that were modified as part of the specific solution layer. 
+3. In the **Solution Layer** dialog box, the **Updated** tab displays only those properties that were modified as part of the specific solution layer. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer.
 
    > [!div class="mx-imgBorder"] 
    > ![Solution layer changed properties](media/solution-layers-change-prop.png "Solution layer changed properties")
 
-4. Select the **All Properties** tab to view all properties, including changed and unchanged properties, for the solution layer. 
-
-   > [!div class="mx-imgBorder"] 
-   > ![Solution layer all properties](media/solution-layers-all-prop.png "Solution layer all properties")
-5. Select the **LocalizedLabels** tab to display information for components that have label fields in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. If no labels exist the tab isn't displayed.  
+5. If the component includes translations that have been imported, select the **LocalizedLabels** tab to display information for components that have label columns in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. Note that if no labels exist the tab isn't displayed.  
    > [!div class="mx-imgBorder"] 
    > ![Solution layer localized labels](media/localized-labels.png "Solution layer localized labels")
 
@@ -75,8 +68,8 @@ There are additional tabs available for specific component solution layers.
 |Tab name  |Description  |Possible value  |
 |---------|---------|---------|
 |RolePrivileges     | Displays the privileges for a security role.   | Added, Updated, Removed, Unchanged   |
-|AttributePicklistValues (optionset)  | When selected for a global optionset, displays the possible values for an optionset.   | Added, Updated, Removed, Unchanged        |
-|AttributePicklistValues (optionset attribute)   |  When selected for an optionset attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
+|AttributePicklistValues (optionset)  | When selected for a global choice , displays the possible values for a choice .   | Added, Updated, Removed, Unchanged        |
+|AttributePicklistValues (optionset attribute)   |  When selected for a choice  attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
 
 <!--## Remove an unmanaged layer
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 
@@ -89,7 +82,6 @@ Unmanaged customizations reside at the top layer for a component and subsequentl
     > [!div class="mx-imgBorder"] 
     > ![Remove unmanaged layer](media/remove-unmanaged-layer.png)
 3. Save and publish to fully remove the unmanaged layer.
-
 
 -->
 
