@@ -74,9 +74,11 @@ In this section, you will create a table to store the names and details for the 
 
 1. When prompted for the name of the table, enter **Feeds**.
 
+1. Select **Create**.
+
 ### Edit the Name column
 
-1. In the table designer, select the drop-down menu for the **Name** column and then **Edit Column**.
+1. In the visual editor, select the drop-down menu for the **Name** column and then **Edit Column**.
 
 1. Change the name to *Title*.
 
@@ -94,7 +96,7 @@ In this section, you will create a table to store the names and details for the 
 
 1. Select **Advanced options** and then change the value for **Max length** to *255*.
 
-1. Click **Create**.
+1. Select **Create**.
 
 ### Create the Image Link column
 
@@ -171,7 +173,7 @@ The table designer should resemble the image below.
 > [!div class="mx-imgBorder"]
 > ![Table designer](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-tbldesigner.png)
 
-1. Close the table designer.
+Close the table designer.
 
 The screen created automatically in the app, named **Screen1**, should automatically bind to the table, displaying the fields in the table and the record you added.
 
