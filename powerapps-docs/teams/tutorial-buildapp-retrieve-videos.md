@@ -284,17 +284,7 @@ In this section, you'll create flows in Power Automate to retrieve videos for ea
 
 When you’ve completed this section, your flow should resemble the diagram below.
 
-> [!div class="mx-imgBorder"]
-> ![Completed flow screen 1](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-complete_flow.png "Completed flow screen 1")
-
-> [!div class="mx-imgBorder"]
-> ![Completed flow screen 2](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-completeflow2.png "Completed flow screen 2")
-
-> [!div class="mx-imgBorder"]
-> ![Completed flow new record](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-completeflow3.png "Completed flow - new record")
-
-> [!div class="mx-imgBorder"]
-> ![Completed flow update record - screen 2](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-completeflow4.png "Completed flow update record - screen 2")
+![Entire flow - complete](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-complete_flow.png "Entire flow - complete")
 
 > [!NOTE]
 > Power Automate has a trigger that allows you to detect when a new item is added to a feed for an individual feed. When tracking multiple feeds, this would require multiple feeds and would require the same number of flows to match the number of feeds. The approach taken in this lab is more complex but with the benefit of having a single flow that supports any number of configured feeds in a single flow.
