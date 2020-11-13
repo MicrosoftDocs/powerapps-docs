@@ -58,12 +58,6 @@ You can't share apps or data outside of a team currently.
 
 Enabling classic controls requires a refresh of Power Apps Studio.  
 
-### Combo box
-
-The combo box control currently only supports up to 25 items in the dropdown.
-
-![Combo box](media/combo-box.png "Combo box")
-
 ### Canvas components
 
 You may see red errors while using the modern controls in canvas components. These errors won't functionally impact your app, and you can ignore them.
@@ -74,9 +68,10 @@ You may see red errors while using the modern controls in canvas components. The
 
 The following controls aren't supported:
 
-- [Forms Pro survey (preview)](/forms-pro/embed-survey-powerapps)
-- [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md)
-- [Video control](../maker/canvas-apps/controls/control-audio-video.md)
+- [Address Input](../maker/canvas-apps/geospatial-component-input-address.md)
+- [Camera](../maker/canvas-apps/controls/control-camera.md) (in Teams Mobile)
+- [Map](../maker/canvas-apps/geospatial-component-map.md)
+- [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
 
 The [Image control](../maker/canvas-apps/controls/control-image.md) only supports external media URLs using HTTPS.
 
