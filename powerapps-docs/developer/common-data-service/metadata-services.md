@@ -3,7 +3,6 @@ title: "Work with metadata using code (Microsoft Dataverse) | Microsoft Docs"
 description: "Both the [Web API](webapi/overview.md) and the [Organization service](org-service/overview.md) include capabilities to perform CRUD operations on the entity schema"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh"
