@@ -36,7 +36,7 @@ You can view details about solution operations from the **Solutions** area of Po
     > [!div class="mx-imgBorder"] 
     > ![Solution history](media/solution-history.png "Solution history")
 
-Select a solution operation to display the **Information page**. Each solution history record is read-only and includes the following in the **Details** area:
+Select a solution operation to display the **Information page**. Each solution history row is read-only and includes the following in the **Details** area:
 -	**Name**. The solution unique name. 
 -	**Start time**. The time in which the operation started.
 -	**End time**: The time in which the operation ended.

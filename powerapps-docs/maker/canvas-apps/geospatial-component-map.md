@@ -1,19 +1,18 @@
 ---
-title: 
-description: 
+title: Insert interactive maps into apps
+description: Insert maps, and add customized pins, in Power Apps.
 author: iaanw
 manager: shellha
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 7/7/2020
+ms.date: 11/10/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-ms.custom: ce06122020
 ---
 
 
@@ -44,7 +43,7 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 1. Open the **Insert** tab.
 2. Expand **Media**.
 3. Select the component **Map** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
-4. (Optional) Select **Allow** in the window that asks to know your location. This enables the component to display the user's current location.
+4. (Optional) Select **Allow** in the window that asks to know your location. This setting allows the component to display the user's current location.
 
     ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
@@ -56,33 +55,40 @@ You can load a table that contains existing data from an Excel workbook into the
 
 Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
 
-Column description | Maps to property
--- | -- 
-Label for the pin | ItemsLabels
-Longitude of the pin | ItemsLongitudes
-Latitude of the pin | ItemsLattitudes
+Column description | Maps to property | Required
+-- | -- | --
+Label for the pin | ItemsLabels | Required
+Longitude of the pin | ItemsLongitudes | Required
+Latitude of the pin | ItemsLatitudes | Required
+Color of the pin | ItemsColors | Optional
+Icon for the pin | ItemsIcons | Optional
 
-You can also use a string to denote the address, in which case ItemsLongitudes and ItemsLatitudes won't work.
 
 
-The following is an example of an Excel table with the required columns:
+The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/functions/function-colors).
 
-![Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns](./media/geospatial/sample-excel.png)
+You can use the icons described in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) topic as your icon.
+
+
+The following Excel table shows the required columns:
+
+
+:::image type="content" source="media/geospatial/sample-excel.png" alt-text="Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns":::
 
 You can copy the following sample data to test this functionality:
 
-Name | Longitude | Latitude
--- | -- | --
-Fourth Coffee (sample) | -98.29277 | 26.2774
-Litware, Inc. (sample) | -96.85572 | 32.55253
-Adventure Works (sample) | -96.99952 | 32.72058
-Fabrikam, Inc. (sample) | -118.30746 | 34.86543
-Blue Yonder Airlines (sample) | -118.66184 | 34.17553
-City Power & Light (sample) | -113.46184 | 37.15363
-Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918
-Alpine Ski House (sample) | -102.63908 | 35.20919
-A. Datum Corporation (sample) | -89.39433 | 40.71025
-Coho Winery (sample) | -116.97751 | 32.87466
+Name | Longitude | Latitude | Color | Icon
+-- | -- | -- | -- | --
+Fourth Coffee (sample) | -98.29277 | 26.2774 | Blue | marker-flat
+Litware, Inc. (sample) | -96.85572 | 32.55253 | #ffefcd| hexagon-thick
+Adventure Works (sample) | -96.99952 | 32.72058 | | car
+Fabrikam, Inc. (sample) | -118.30746 | 34.86543 | |
+Blue Yonder Airlines (sample) | -118.66184 | 34.17553 | |
+City Power & Light (sample) | -113.46184 | 37.15363 | |
+Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918 | |
+Alpine Ski House (sample) | -102.63908 | 35.20919 | |
+A Datum Corporation (sample) | -89.39433 | 40.71025 | |
+Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 
 
@@ -91,23 +97,24 @@ Coho Winery (sample) | -116.97751 | 32.87466
 
 1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
 
-    ![](./media/geospatial/convert-table.png)
+    ![Screenshot highlighting the format as table option in Excel](./media/geospatial/convert-table.png)
 
 1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**, for example *TestData*.
 
-    ![](./media/geospatial/table-name.png)
+    ![Screenshot highlighting the table name in Excel](./media/geospatial/table-name.png)
 
 1. Save the workbook.
 
 1. Open or create a new app in Power Apps, and insert the map component.
 
-1. On the **Properties** pane, select the **Data source(Items)** field and then search for *excel* and select **Import from Excel**.
+1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
 
-    ![](./media/geospatial/select-excel.png)
+    :::image type="content" source="media/geospatial/select-excel.png" alt-text="Screenshot of the Import from Excel option.":::
+
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
 
-    ![](./media/geospatial/select-table.png)
+    ![Screenshot of the table selection panel](./media/geospatial/select-table.png)
 
 1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
 
@@ -116,10 +123,15 @@ Coho Winery (sample) | -116.97751 | 32.87466
     - **ItemsLabels** as *TestData.Name*
     - **ItemLatitudes** as *TestData.Latitude*
     - **ItemsLongitudes** as *TestData.Longitude*
+    - (Optional) **ItemsColors** as *TestData.Colors*
+    - (Optional) **ItemsIcons** as *TestData.Icons*
 
-1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table.
+1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the component will use the default icon and color.
 
-    ![](./media/geospatial/map-expanded.png)
+    ![A screenshot of the map component with custom icons and different colors.](./media/geospatial/pins-map.png)
+
+
+
 
 
 ### Add informational cards to pins
@@ -172,10 +184,12 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Pin color | The color of the pins. | Color picker | Properties |
 | Maximum map pins | Maximum number of pins displayed on the map. | Integer | Properties |
 | ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | TableName.ColumnName | Advanced |
-| ItemsAddresses | A column in Items with the strings that represent the location of the pins. Doesn't work with **ItemsLongitudes** or **ItemsLatitudes**. | TableName.ColumnName | Advanced |
-| ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins. Doesn't work with **ItemsAddresses**. | TableName.ColumnName | Advanced |
-| ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. Doesn't work with **ItemsAddresses**. | TableName.ColumnName | Advanced |
-| Items_Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
+| ItemsAddresses | A column in Items with the strings that represent the location of the pins. | TableName.ColumnName | Advanced |
+| ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins.  | TableName.ColumnName | Advanced |
+| ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. | TableName.ColumnName | Advanced |
+| ItemsColors | Color of the pins | [Any CSS color string](/functions/function-colors) | Advanced |
+| ItemsIcons | Icon of the pins | [Icons defined in Azure image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) | Advanced |
+| Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
 
 ### Additional properties
 

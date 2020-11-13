@@ -1,6 +1,6 @@
 ---
 title: "Fields overview in Power Apps | MicrosoftDocs"
-description: "Learn about fields in Power Apps portal"
+description: "Learn about columns in Power Apps portal"
 ms.custom: ""
 ms.date: 07/25/2018
 ms.reviewer: ""
@@ -24,11 +24,11 @@ search.app:
   - D365CE
 ---
 
-# Fields overview
+# Columns overview
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Fields define the individual data items that can be used to store information in an entity. Create new fields to capture data when existing standard entities don’t have fields that meet your requirements. After you create a new field, be sure to include it on the appropriate forms and views for the entity so that they are available in your app.
+Columns define the individual data items that can be used to store information in a table. Create new columns to capture data when existing standard tables don’t have columns that meet your requirements. After you create a new column, be sure to include it on the appropriate forms and views for the table so that they are available in your app.
 
 ## See also
-[Types of fields](types-of-fields.md)
+[Types of columns](types-of-fields.md)
