@@ -25,7 +25,7 @@ You can customize the Teams experience by adding Power Apps model-driven apps to
 
 ## Enable integration of model-driven apps in Teams
 
-Before embedding your model-driven app into Teams, you first need to enable integration of model-driven apps in Teams for your environment. To do so, ask your tenant admin to enable the Microsoft Teams Integration in the Power Platform admin center. More information: [Enable Microsoft Teams Integration for model-driven apps](/power-platform/admin/enable-teams-integration) in the Power Platform admin guide.
+Before embedding your model-driven app into Teams, you first need to enable integration of model-driven apps in Teams for your environment. To do so, ask your tenant admin to enable the Microsoft Teams Integration for your environment in the Power Platform admin center. More information: [Enable Microsoft Teams Integration for model-driven apps](/power-platform/admin/enable-teams-integration) in the Power Platform admin guide.
 
 ## Embed a model-driven app
 
