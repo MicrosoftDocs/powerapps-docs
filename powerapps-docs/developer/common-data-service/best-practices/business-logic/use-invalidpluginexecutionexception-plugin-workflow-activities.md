@@ -14,7 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 3/5/2020
-ms.author: JimDaly
+ms.author: JDaly
 search.audienceType: 
   - developer
 search.app: 
