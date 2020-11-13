@@ -52,7 +52,7 @@ Follow the steps to get the URL of your Dataverse for Teams environment, which i
 
 1. Read the preview disclaimer and select **Continue**.
  
-1. On the next page, specify the environment URL that you copied earlier, select the data connectivity mode, and select **OK**.
+1. On the next page, specify the environment URL that you copied earlier. Make sure you remove `https://` and the trailing `/` from the URL. So, in this case you will add `orga0e34f66.crm.dynamics.com`.<br/>Select the data connectivity mode and select **OK**.
 
     ![Specify the environment URL](media/set-env-url.png)
 
