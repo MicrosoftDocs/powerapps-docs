@@ -1,36 +1,36 @@
 ---
-title: Debugging an app with canvas app Monitor | Microsoft Docs
-description: Describes canvas app Monitor to debug a canvas app.
-author: aengusheaney
-manager: kvivek
+title: Overview of Power Apps with Monitor | Microsoft Docs
+description: Learn about Power Apps Monitor.
+author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/12/2020
-ms.author: aheaney
+ms.date: 11/19/2020
+ms.author: hasharaf
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
 
-# Debugging an app with canvas app Monitor (Preview)
+# Monitor overview
 
-[This article is pre-release documentation and is subject to change.]
+**Monitor** is a tool that offers makers the ability to view a stream of events from a user’s session to diagnose and troubleshoot problems. Makers can either use Monitor to view events while building a new app in Power Apps Studio, or to monitor published apps during runtime.
 
-**Canvas app Monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as the app runs.
+## Benefits
 
-This feature gives you a better understanding of how the formulas contained in your app work so you can improve performance and identify any errors or problems.
-
-> [!IMPORTANT]
-> The canvas app Monitor feature is in preview. For more information, see [Experimental and preview features](canvas-apps/working-with-experimental-preview.md).
+Monitor can help you diagnose and troubleshoot problems faster and build more
+reliable apps. It provides a deep view into how an app runs by providing a log
+of all activities in your app as the app runs. Monitor tool also provides a
+better understanding of how the events and formulas contained in your app work
+so you can improve performance and identify any errors or problems.
 
 ## Debugging an app
 
-The key to debugging an issue is to have a better understanding of what your app does, and how. Sometimes, it's difficult to isolate an issue when just looking at the app formulas, or even reviewing runtime errors. Watching the events as they occur in your app can help you understand the order and performance of events and errors, and diagnose issues faster.
+The key to debugging an problem is to have a better understanding of what your app does, and how. Sometimes, it is difficult to isolate an problem when just looking at the app formulas, or even reviewing runtime errors. Watching the events as they occur in your app can help you understand the order and performance of events and errors to diagnose problems faster.
 
-A few example issues and queries that you can uncover when using Monitor are:
+A few example problems and queries that you can uncover when using Monitor are:
 
 - **High number of network calls**
     - Is the app fetching data too frequently?
@@ -38,201 +38,132 @@ A few example issues and queries that you can uncover when using Monitor are:
     - Are timer controls firing too often?
     - Are too many events occurring when the app starts? And can fetching some of the data be delayed?
 
-- **Retrieve data from the same data source**
+-   **Retrieve data from the same data source**
     - Can you use different patterns such as caching data in collections or variables instead of fetching same data multiple times?
-    
--  **The response data size**
-    – Can you use query filters to reduce the amount of data requested?
 
-- **The duration of the request**
+-   **The response data size**
+    - Can you use query filters to reduce the amount of data requested?
+
+-   **The duration of the request**
     - Are integrations optimized?
     - Can you reduce the size of the response using query filters?
 
-- **Errors**
+-   **Errors**
     - Have you configured the required permissions to run the app correctly?
     - Are your requests throttled by the platform?
 
-To see **Monitor** in action, see the [example scenario](#example).
+## Advanced setting: Debug published app
 
-## Open app Monitor while editing an app in Power Apps Studio
+If you want to view the source expressions in the Monitor for the published app, you need to turn on a new setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you will still be able to see the events happening in your app, but you won’t be able to map these to specific expressions or formulas.
 
-Canvas app Monitor is available by default for all canvas apps. To open Monitor when authoring an app:
+To enable this setting, go to **File** > **Settings** > **Advanced settings** > Turn **Debug published app** to *On*.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/).
+![Debug published app](media/monitor/debug-published-app.png "Debug published app")
 
-1. Create a [new app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive) or [edit an existing app](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app).
+## Monitor dashboard
 
-1. Select **Advanced tools** in the left pane.
+You can review various properties for each event inside Monitor. Depending on
+the event category, some of these properties might not contain data.
 
-1. Select **Open Monitor** to open Monitor for this app. 
+![Monitor](media/monitor/monitor.png "Monitor")
 
-    ![Open Monitor](./media/monitor/open-monitor.png "Open Monitor")
+| Column name       | Description                                                                                                                                                                                                                                       |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Id**            | Sequence number for the events.                                                                                                                                                                                                        |
+| **Time**          | Time of the event.                                                                                                                                                                                                                     |
+| **Category**      | Type of event, such as *Network*.                                                                                                                                                                                                      |
+| **Operation**     | The resulting internal operation name of the request inside the app. For example, *createRow* is the operation name from the **Patch** function.                                                                                       |
+| **Result**        | Status Code description in words. For example, a 429 Status will show as an *“Error”* in the result column. Row colors also help to identify any errors and warnings quickly.                                                          |
+| **Result Info**   | Detailed translation of error codes and Results. For example, a 429 Status code will show as “Too many requests” in results info column.                                                                                               |
+| **Status**        | The [http status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) of a network request. For example, a 2XX code represents a successful request while a 4XX code represents an error.                                    |
+| **Duration**      | Depends on the type of event. For example, for a network request, duration is the time taken for the request to be sent and a response to be received. Duration can be used to understand the performance of network calls in the app. |
+| **Data Source**   | Name of the data source accessed by the raised event operation (e.g. name of a CDS entity)                                                                                                                                             |
+| **Control**       | The Control Name associated with this event                                                                                                                                                                                            |
+| **Property**      | Active Control Property of the raised event.                                                                                                                                                                                           |
+| **Response size** | For a network request event, represents response size in bytes received from the sender to your app.                                                                                                                                   |
 
-This action opens Monitor in a new browser tab and connects it to your existing Studio session:
+When you select an event in the grid, a panel displays containing additional
+details about the event. The panel has four tabs:
 
-![Canvas app Monitor](./media/monitor/canvas-app-monitor.png "Canvas app Monitor")
+- **Details**: Shows a high-level overview of the event that you select. Some
+    of the data might be collapsed in the tree view. You can expand and drill
+    down to view content:
 
-> [!NOTE]
-> Monitor has no impact on your app. You can use Monitor with any app in a test environment or in production.
+    ![Monitor - Details](media/monitor/monitor-details.png "Monitor - Details")
 
-## Open app Monitor for published app
+- **Formula**: Shows related formula from your app for the selected event. The
+    name of the control property triggering the event is displayed on top of the tab, and inside the event table:
 
-You can also use Monitor to debug the published app in the web player. There are two options to open Monitor for the published app.
-
-### Open app Monitor for published app using Power Apps Studio
-
-1. Sign in to [Power Apps](https://make.powerapps.com/).
-
-1. Create a [new app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive) or [edit an existing app](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app).
-
-1. Select **Advanced tools** in the left pane.
-
-1. Select **Open Monitor** to open Monitor for this app.
-
-1. Select **Play published app** from the top menu.
-
-   ![Open published app](./media/monitor/play-published-app.png "Open published app")
-
-   This opens the published app in a new browser tab, and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
-
-   > [!NOTE]
-   > If you open the published app using this method, you'll have your app connected to the same Monitor session twice. The app being edited in Power Apps Studio and the published app in the web player. Events from both the Power Apps Studio and the published app will be shown in the Monitor if you interact with the app using both options at the same time.
-
-### Open app Monitor for published app from Power Apps
- 
-You can also open Monitor for the published without having to open the app in Power Apps Studio.
-   
-1. Sign in to [Power Apps](https://make.powerapps.com/).
-
-1. Select **Apps** in the left pane.
-
-1. Select an app from the list.
-
-1. Select **Monitor** from the menu. You can also select **More Commands** (**...**), and then select **Monitor** instead.
-
-    ![Open Monitor](./media/monitor/open-monitor-portal.png "Open Monitor")
-
-    This action opens the Monitor in a new browser tab.
-
-1. In Monitor, select **Play published app** from the top menu.
-
-    ![Open published app](./media/monitor/play-published-app.png "Open published app")
-
-    This opens the published app in a new browser tab, and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
-
-## View events in canvas app Monitor
-
-To view events from your app, play the app in the Studio. Monitor will then display the table of events occurring along with specific details.
-
-![View events as they occur](./media/monitor/view-events.gif "View events as they occur")
-
-Refresh the page to replay the media.
-
-You can review various properties for each event inside Monitor. Depending on the event category, some of these properties might not contain data.
-
-Description of columns in canvas app Monitor:
-
-| Column name | Description
-| - | -
-| **\#** | Sequence number for the events.
-| **Time** | Time of the event.
-| **Status** | The [http status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) of a network request. For example, a 2XX code represents a successful request while a 4XX code represents an error.
-| **Duration** | Depends on the type of event. For example, for a network request, duration is the time taken for the request to be sent and a response to be received. Duration can be used to understand the performance of network calls in the app.
-| **Category** | Type of event, such as *Network*.
-| **Operation** | The resulting internal operation name of the request inside the app. For example, *createRow* is the operation name from the **Patch** function.
-| **Control property** | Control property that raised the event.
-| **Response size** | For a network request event, represents response size in bytes received from the sender to your app.
-
-When you select an event in the grid, a panel displays containing additional details about the event. The panel has four tabs:
-
-- **Details**: Shows a high-level overview of the event that you select. Some of the data might be collapsed in the tree view. You can expand and drill down to view content:
-
-    ![Details tab](./media/monitor/details-tab.png "Details tab")
-
-- **Formula**: Shows related formula from your app for the selected event. The name of the control property triggering the event is displayed on top of the tab, and inside the event table:
-
-    ![Formula tab](./media/monitor/formula-tab.png "Formula tab")
+    ![Monitor - Formula](media/monitor/monitor-formula.png "Monitor - Formula")
 
 - **Request**: Shows the HTTP request sent:
 
-    ![Request tab](./media/monitor/request-tab.png "Request tab")
+    ![Monitor - Request](media/monitor/monitor-request.png "Monitor - Request")
 
-- **Response**: Shows the HTTP response received. You can view the response in tabular or JSON format. Default format is *Table* if the data can be displayed in tabular format:
+- **Response**: Shows the HTTP response received. You can view the response in
+    JSON format.
 
-    ![Response tab](./media/monitor/response-tab.png "Response tab")
-
-    If you select *Table* format, tables and records are displayed in a grid. Selecting a table allows you to drill down to the records inside the table:
-
-    ![Table format - Response tab](./media/monitor/table-format-response-tab.png "Table format - Response tab")
-
-    Selecting *Json tree* shows content in JSON format:
-
-    ![JSON format - Response tab](./media/monitor/json-format-response-tab.png "JSON format - Response tab")
+    ![Monitor - Response](media/monitor/monitor-response.png "Monitor - Response")
 
 ## Collaborative debugging
 
 Inviting other users to your Monitor session enables you to quickly collaborate and debug an app together, without the need to share your screen. When you invite others to participate in a session, they see the exact same app events in their own browser, without having to open the app or the need to reproduce the specific scenario that you're debugging. This allows you and other participants to browse, view, and inspect the app events independently without stepping on each other or handing control back-and-forth to identify the problem.
 
+![Monitor - Invite](media/monitor/invite.png "Monitor - Invite")
+
 > [!NOTE]
-> You can invite any user in your organization to a Monitor session. Users joining the session will see all the events generated by the app, including any data.
+> You can invite any user in your organization to a Monitor session.
+Users joining the session will see all the events generated by the app,
+including any data.
 
 1. Select **Invite** from the top.
 
-1. Enter Azure Active Directory user name or alias of the users that you want to invite to the Monitor session.
+1. Enter Azure Active Directory user name or alias of the users that you want
+    to invite to the Monitor session.
 
-    ![Invite user](./media/monitor/invite-user.png "Invite user")
+    ![Invite user](media/monitor/invite-user-search.png "Invite user")
 
 1. Select the user to generate a link to the current Monitor session.
 
     > [!NOTE]
     > The link is unique for each user. It can't be shared between users. The link expires after 60 minutes.
 
-1. Select the link icon to copy the session link and send it to the users you've invited to the session.
+1. Select the link icon to copy the session link and send it to the users
+    you've invited to the session.
 
-    ![Session link](./media/monitor/session-link.png "Session link")
+    ![Invite user - copy link](media/monitor/invite-user-link-copy.png "Invite user - copy link")
 
-Recipient users can use the link to open the Monitor and connect to your Monitor session.
+Recipient users can use the link to open the Monitor and connect to your Monitor
+session.
 
-## Download and upload a trace file
+## Download and upload trace files
 
-You can download the events that are shown in the  table for offline analysis. Events can be downloaded in a ```.json``` or a ```.csv``` format, and can be shared with others. The ```.csv``` files can only be downloaded. But if you export the events in ```.json``` format, you can them back into the monitor tool for analysis. You can also attach a trace file to support service requests helping speed up the solution to your problem.
+You can download the events that are shown in the table for offline analysis.
+Events can be downloaded in a .json or a .csv format, and can be shared with
+others. The .csv files can only be downloaded. But if you export the events
+in .json format, you can them back into the monitor tool for analysis. You can
+also attach a trace file to support service requests helping speed up the
+solution to your problem.
 
-![Download](./media/monitor/Download.png "Download")
+![Download trace files](media/monitor/download.png "Download trace files")
 
-Select **Upload** to load a ```.json``` trace file to Monitor. The upload option will remove any events currently displayed in the Monitor table, and replace the details with the events contained in the trace file.
+Select **Upload** to load a .json trace file to Monitor. The upload option will remove any events currently displayed in the Monitor table, and replace the details with the events contained in the trace file.
 
-![Upload](./media/monitor/upload.png "Upload")
+![Upload trace files](media/monitor/upload.png "Upload trace files")
 
-## Example
+## Supported Events
 
-In this example, you'll use the *Northwind Sample Data* app included with the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
+Monitor supports several events for canvas apps and model-driven apps. Here are some examples of the supported event categories and types:
 
-*Northwind sample solution* is a canvas app that loads sample data into Common Data Service. You can also create a new app or use an existing app instead.
+| Canvas apps | Model-driven apps |
+| - | - |
+| <ul> <li> Data connectors </li> <li> Network events (error status codes highlighted) </li> <li> Screen load metrics </li> <li> Cross-screen dependency warning </li> <li> User actions such as *Navigate*, *Select*, *SetProperty* </li> <li> Custom Trace() </li> <li> Delegated versus non-delegated queries </li> <li> Verbose switch (internal telemetry) </li> <li> Delegation </li> <li> Function </li> <li> Network </li> <li> Parsing </li> <li> Performance </li> <li> Scenario </li> <li> ScreenLoad </li> <li> Telemetry </li> <li> UserAction </li> <li> Verbose </li> </ul> | <ul> <li>	Form load sequence, core boot </li> <li> Perf metrics </li> <li> XHR Sync versus Async </li> <li> Form rules (model) </li> </ul> |
 
-### Background
+## Next steps
 
-Consider the scenario where the app is deployed and the initial app version experiences performance degradation. The app also intermittently generates errors with no clear pattern. Loading data in the app succeeds mostly and fails sometimes.
-
-When you check canvas app Monitor, you see data operations as expected. However, you also see several responses with HTTP status code 429 indicating too many requests in a specific timeframe.
-
-When you select such an event, you see the error as *Rate limit exceeded. Try again in XX seconds.*
-
-![HTTP status code 429](./media/monitor/http-statuscode-429.png "HTTP status code 429")
-
-### Analysis
-
-The issue needs further analysis to understand why requests are getting throttled. In Monitor, you see that for each **createRow** call, there are several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These entities aren't the entities the app is creating rows for. The **ProgressCount.Text** formula is seen in Monitor:
-
-![ProgressCount.Text formula](./media/monitor/progresscount-text-formula.png "ProgressCount.Text formula")
-
-For each record added, the formula is evaluated again and **CountRows** is called on several entities. This resulted in **getRows** in the log, since **CountRows** isn't delegated for Common Data Service. For each single request to add a record, you're potentially making 12 additional requests to count the rows in each entity.
-
-These extra requests intermittently cause errors because of the Common Data Service platform throttling the requests to the service. And it also explains the overall performance problem.
-
-### Conclusion
-
-The permanent fix for this app is to do the **CountRows** manually for each entity as records are being created in it. Without using Monitor, it would have been difficult to diagnose and resolve this issue.
+- [Monitor canvas apps using Monitor](monitor-canvasapps.md)
+- Monitor model-driven apps using Monitor
 
 ### See also
 
-[Canvas app Test Studio](canvas-apps/test-studio.md)
+[Monitor - advanced monitoring and scenarios](monitor-advanced.md)
