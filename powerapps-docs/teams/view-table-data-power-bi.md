@@ -62,7 +62,9 @@ Follow the steps to get the URL of your Dataverse for Teams environment, which i
 
    ![Connect to your table](media/select-connect.png)
 
-    The environment appears in the Power BI Desktop **Navigator** window. Expand it to view the table tables available to analyze. Select a table to view its data.
+    The environment appears in the Power BI Desktop **Navigator** window. Expand it to view the tables available to analyze. Select a table to view its data.
+
+   ![Views your tables](media/pbi-navigator.png)
 
 For more information about working with Power BI Desktop, see [Get started with Power BI Desktop](/power-bi/desktop-getting-started).
 
