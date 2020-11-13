@@ -5,7 +5,7 @@ author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 11/16/2020
 ms.author: kvivek
 ms.reviewer:
 searchScope:
@@ -19,9 +19,9 @@ Power Apps can be used in three scenarios with Teams.
 
 Scenario|Description
 --------|-------
-[Embed a canvas app as a tab app](embed-teams-tab.md)| Use the **PowerApps tab** for Teams to embed a canvas app as a tab app in Teams. The canvas app integrates business data from a wide variety of Microsoft and third-party data sources, including Dataverse.|
+[Embed a canvas app as a tab app](embed-teams-tab.md)| Use the **Power Apps tab** for Teams to embed a canvas app as a tab app in Teams. The canvas app integrates business data from a wide variety of Microsoft and third-party data sources, including Dataverse.|
 [Embed a canvas app as a personal app](embed-teams-app.md)| Embed a canvas app as a first-class Teams personal app. The canvas app integrates business data from a wide variety of Microsoft and third-party data sources, including Dataverse.|
-[Embed a model-driven app as a tab app](embed-model-driven-teams-tab.md)| Use the **PowerApps tab** for Teams to embed a model-driven app as a tab app in Teams.|
+[Embed a model-driven app as a tab app](embed-model-driven-teams-tab.md)| Use the **Power Apps tab** for Teams to embed a model-driven app as a tab app in Teams.|
 [Create apps in Teams backed by Dataverse for Teams](create-apps-overview.md)|Use the new Power Apps app in Teams to create canvas apps within Teams backed by Dataverse for Teams, the new built-in, low-code data platform for Teams. Dataverse for Teams empowers users to build custom apps, bots, and workflows&mdash;by using Power Apps, Power Virtual Agents, and Power Automate, respectively&mdash;without ever leaving the Teams interface.
 
 ### Related topics
