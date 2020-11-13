@@ -4,7 +4,7 @@ description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
 ms.date: 02/19/2020
-ms.author: v-lshann
+ms.author: margoc
 ---
 
 # Developer learning catalog
