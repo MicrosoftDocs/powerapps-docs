@@ -897,7 +897,7 @@ Currently there are two separate screens, but no way to toggle between them. The
     Navigate(Screen1)
     ```
 
-### Configure the back button
+#### Configure the back button
 
 1. Select **Screen1**.
 
