@@ -8,7 +8,6 @@ ms.component: pa-user
 ms.topic: conceptual
 ms.date: 06/27/2019
 ms.author: mkaur
-ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -40,7 +39,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 4. In the next screen, leave the default selections and then select **Next**.
  
     > [!div class="mx-imgBorder"]
-    > ![Report wizard](media/report_wizard_1.png "Report wizard screen")
+    > ![Report wizard selections](media/report_wizard_1.png "Report wizard selections")
    
 4. On the **Report Properties** screen, enter a name for the report and then choose the row to include in the report and then select **Next**.
  
@@ -72,7 +71,7 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
     > [!div class="mx-imgBorder"]
     > ![add column screen](media/report_wizard_7.png "Add column screen")
   
-10. Repeat the previous step for any additional columns that you want to add. When you are done, on the **Lay Out Columns** screen, slect **Next**.
+10. Repeat the previous step for any additional columns that you want to add. When you are done, on the **Lay Out Columns** screen, select **Next**.
  
     > [!div class="mx-imgBorder"]
     > ![add more column screen](media/report_wizard_8.png "Add more column screen")
@@ -86,6 +85,12 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 
     > [!div class="mx-imgBorder"]
     > ![View you report](media/report_wizard_10.png "View your report")
+    
+> [!NOTE]
+> The reports that are querying notes, may display in HTML-formatted text instead of plain text. This is because the rich-text editor is enabled by default. To workaround this issue, do one of the following:
+> - Disable the rich-text editor, for more information see, [Enable or disable rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline). When you disable the rich-text editor, new notes that are created will not the have the HTML tags. The existing notes that were created when the rich-text editor was enabled will still show in HTML-formatted text.
+> - Update the report definition to support formatted text. For more information, see [Importing HTML into a Report](https://docs.microsoft.com/sql/reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs).
+    
 
 ### See Also
 [Work with reports](work-with-reports.md) 

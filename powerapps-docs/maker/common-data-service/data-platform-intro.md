@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
-ms.date: 11/09/2020
+ms.date: 11/10/2020
 ms.reviewer: matp
 ms.author: matp
 search.audienceType: 
@@ -48,7 +48,7 @@ Responding to customer feedback and data from user research, effective November 
 |Entity, entities	|Table, tables|
 |Field, fields<br/>Attribute, attributes|Column, columns|
 |Record, records|	Row, rows|
-|Option set, option sets<br/>Picklist, picklists|	Choice, choices |
+|Option set, multi select option sets<br/>Picklist, picklists|	Choice, choices |
 | Two Options|	Yes/No|
 
 > [!NOTE]
