@@ -18,10 +18,11 @@ You can use Power BI Desktop to view data from tables in Dataverse for Teams. Th
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - This feature is enabled only for the Dataverse for Teams environments created with the General Availability release. Dataverse for Teams environments created during the Public Preview release will be enabled later.
 
 ## Prerequisites
 
-You must have appropriate Power BI [license](https://docs.microsoft.com/power-bi/admin/service-admin-licensing-organization) to build and share Power BI reports.
+You must have the appropriate Power BI [license](https://docs.microsoft.com/power-bi/admin/service-admin-licensing-organization) to build and share Power BI reports.
 
 ## Step 1: Get the environment URL
 
