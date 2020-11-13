@@ -65,7 +65,7 @@ To enable this setting, go to **File** > **Settings** > **Advanced settings** > 
 You can review various properties for each event inside Monitor. Depending on
 the event category, some of these properties might not contain data.
 
-![Monitor](media/monitor/monitor.png "Monitor")
+![Monitor dashboard](media/monitor/monitor.png "Monitor dashboard")
 
 | Column name       | Description                                                                                                                                                                                                                                       |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

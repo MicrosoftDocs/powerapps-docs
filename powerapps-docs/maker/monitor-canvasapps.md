@@ -75,7 +75,7 @@ display the table of events occurring along with specific details.
 ## Example: Using Monitor with canvas apps
 
 In this example, you'll use the *Northwind Sample Data* app included with
-the [Northwind samplesolution](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/northwind-install).
+the [Northwind samplesolution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
 
 *Northwind sample solution* is a canvas app that loads sample data into Common
 Data Service. You can also create a new app or use an existing app instead.
