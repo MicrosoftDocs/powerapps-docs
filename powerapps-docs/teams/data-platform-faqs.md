@@ -11,9 +11,7 @@ ms.reviewer: kvivek
 ---
 # FAQs for Dataverse for Teams 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
-Here is a list of frequently asked (FAQs) for Dataverse for Teams; also see [Dataverse for Teams licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#project-oakdale) in the Power Platform admin guide.
+Here is a list of frequently asked (FAQs) for Dataverse for Teams; also see [Dataverse for Teams licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#dataverse-for-teams) in the Power Platform admin guide.
 
 ### What does Dataverse for Teams enable and how does this impact Microsoft Power Platform and Teams users? 
 
@@ -59,7 +57,7 @@ It also includes a User table that represents the Common Data Model's [User enti
 
 ### Does Dataverse for Teams include support for Common Data Model?
  
-During public preview, the User table is included in Dataverse for Teams. A broader set of Common Data Model entity support is available out-of-the-box in Dataverse. 
+The User table is included in Dataverse for Teams. A broader set of Common Data Model entity support is available out-of-the-box in Dataverse. 
 
 ### Can I use tables from other environments?
  
@@ -69,10 +67,6 @@ Applications can include data from environments that the maker has access to wit
 
 In addition to the table designer experience previously found in Dataverse, Dataverse for Teams includes a new, easy-to-use editable grid that helps user be even more productive. You can also use tables from other environments subject to the normal permission model. The new visual editor is currently available only in Dataverse for Teams.
 
-
-### Can I use applications built using Dataverse for Teams Preview later in the generally available (GA) version of Dataverse for Teams?
-
-Products in preview can and do change, but the current plan is that Dataverse for Teams applications built using the preview version can be used later in the generally available version of Dataverse for Teams. 
 
 
 ### See also

@@ -12,8 +12,6 @@ ms.reviewer: matp
 
 # Edit or delete a table
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 With Dataverse for Teams, you can perform the following types of operations on a table:
 
 - Create table columns.
@@ -30,7 +28,6 @@ In Microsoft Teams, you can edit four table properties:
 - **Quick create settings**: This enables quick creation of records for client apps that support this feature.
 
 > [!NOTE]
-> Each Project Oakdale environment is assigned a prefix when it's created, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
 > - You can also edit a table using the visual editor. More information: [Create your first table](create-first-app.md#create-your-first-table)
 > - Each Dataverse for Teams environment is assigned a prefix when it's created, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
 

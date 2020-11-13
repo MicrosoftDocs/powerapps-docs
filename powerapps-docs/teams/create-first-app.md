@@ -90,7 +90,7 @@ to enable security for the team's Microsoft 365 Group.
 
 ## Continue creating your first app
 
-After your Dataverse for Teams environment has been created, you can go to the build hub and continue creating your first app.
+After your Dataverse for Teams environment has been created, you can go to the [build hub](overview-of-the-power-apps-app.md#build-hub) and continue creating your first app.
 
 > [!NOTE]
 > If you wait in Teams for the environment to be created, you're automatically taken to the Power Apps Studio and a new app. In this situation, skip this step and go to [create your first table](#create-your-first-table).
@@ -144,7 +144,7 @@ To add a new column to track new data:
     > [!TIP]
     > For more information about column types supported by the table
     designer, go to [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns that aren't supported by
-    the visual editor, create a table by using the **Build** tab. More information: [Create tables](create-table.md)
+    the visual editor, create a table by using the solution explorer. More information: [Create tables](create-table.md)
 
 1. If required, change **Advanced options** for the selected column type.
 
