@@ -182,6 +182,10 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **A:** No.
 
+**Q:** What happens to my form if the list is deleted or restored from the Recycle Bin?
+
+**A:** If the list that is associated with the form is deleted, the form will also be automatically deleted. If the list is restored from the Recycle Bin, the form will also be automatically restored.
+
 ### Administer your custom form
 
 **Q:** How do I share my form?
