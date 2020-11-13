@@ -142,7 +142,9 @@ Not mandatory fields:
 5. Organization 
 6. Employee Contact
 
-After creating dependents you would be able to see them and create passes on **Register Gest or Dependent**
+After creating dependents you would be able to see them when clicking **Create Pass** option to select who to create a pass for.
+
+To find dependents in the Facility Safety Management App, go to **Soluttion Setup** and click on **Employees**. On **My Active Contacts** view, open a record and find dependents on the Guest section. Also, find all of the dependents on the **Active Guests** view.
 
 
 ## Extend the portal
