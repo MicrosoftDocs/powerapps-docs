@@ -25,27 +25,27 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can easily create a table using the Power Apps portal for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing tables using the Solution Explorer.
+You can easily create a table using Power Apps ([make.powerapps.com](https://make.powerapps.com) for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing tables using the Solution Explorer.
 
 ## Open solution explorer
 
-Part of the name of any table you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
+The customization prefix is part of the name of any table you create. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 ## View tables
 
-In the solution explorer **Components** node, select the **Tables** node.
+In the solution explorer **Components** node, select the **Entities** node.
 
 ![View tables in solution explorer](media/view-entities-solution-explorer.png)
 
 ## Create a table
 
-While [viewing tables](#view-tables), select **New** to open the new table form.
+While [viewing tables](#view-tables), select **New** to open the form to create tables.
 
-![new table form in solution explorer](media/new-entity-form-solution-explorer.png)
+![new entity form in solution explorer](media/new-entity-form-solution-explorer.png)
 
-The new table form has two tabs. The **General** tab is for table options. The **Primary Field** tab is for options about the special single line of text column that each table has that defines the text shown when there is a link to open the table in a lookup column.
+The form has two tabs. The **General** tab is for entity options. The **Primary Field** tab is for options about the special single line of text column that each table has that defines the text shown when there is a link to open the table in a lookup column.
 
 For information about each section see the following:
 - [Configure the primary column](#configure-the-primary-column)
@@ -118,10 +118,8 @@ You can also make the following changes:
 As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
   
 > [!IMPORTANT]
->  When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).  
-  
-> [!NOTE]
-> The only way to recover data from a table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore instances](/dynamics365/customer-engagement/admin/backup-restore-instances)
+> - When you delete a custom table, the database tables that store data for that table are deleted and all data they contain is lost. Any associated rows that have a parental relationship to the custom table are also deleted. For more information about parental relationships, see [Create and edit relationships between tables](create-edit-entity-relationships.md).
+> - The only way to recover data from a table that was deleted is to restore the database from a point before the table was deleted. More information: [Backup and restore environments](/power-platform/admin/backup-restore-environments)
 
 While [viewing tables](#view-tables), click the ![Delete command](media/delete.gif) command in the toolbar.
 
