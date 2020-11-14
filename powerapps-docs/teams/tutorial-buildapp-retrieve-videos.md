@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Tutorial: Build an app to retrieve Power Platform videos for readiness
 
-In this lab, you’ll build a solution that retrieves, lists, and displays content that can be used for readiness.
+In this tutorial, you’ll build a solution that retrieves, lists, and displays content that can be used for readiness.
 
 ![Video Library app](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-intro.png "Video Library app")
 
