@@ -1860,6 +1860,8 @@
     href: ../teams/embed-teams-tab.md
   - name: Embed a canvas app as personal app
     href: ../teams/embed-teams-app.md
+  - name: Embed a model-driven app as tab app
+    href: ../teams/embed-model-driven-teams-tab.md
   - name: Create apps in Teams
     items:
     - name: Create apps in Teams
@@ -1886,16 +1888,25 @@
       items:
         - name: Overview
           href: ../teams/overview-data-platform.md
+          displayName: Overview of Dataverse for Teams
         - name: Dataverse for Teams vs Dataverse
           href: ../teams/data-platform-compare.md
         - name: Create a table
           href: ../teams/create-table.md
+          displayName: Create a Dataverse for Teams table
         - name: Edit or delete a table
           href: ../teams/edit-delete-table.md
+          displayName: Edit or delete a Dataverse for Teams table
         - name: Work with table relationships
           href: ../teams/relationships-table.md
         - name: Work with table columns
-          href: ../teams/table-columns.md
+          href: ../teams/table-columns.md        
+        - name: View table data in Power BI (Preview)
+          href: ../teams/view-table-data-power-bi.md
+          displayName: View Dataverse for Teams table data in Power BI
+        - name: Environment language
+          href: ../teams/language-data-platform.md
+          displayName: Dataverse for Teams environment language
         - name: Dataverse for Teams FAQs
           href: ../teams/data-platform-faqs.md
     - name: Manage your apps
@@ -1906,6 +1917,8 @@
       href: ../teams/remove-your-apps.md
     - name: Uninstall Power Apps personal app
       href: ../teams/uninstall-personal-apps.md
+    - name: "Tutorial: Build an app to retrieve videos"
+      href: ../teams/tutorial-buildapp-retrieve-videos.md 
     - name: Sample apps
       items:
         - name: Use sample apps from Teams store

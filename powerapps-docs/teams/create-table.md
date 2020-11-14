@@ -12,8 +12,6 @@ ms.reviewer: matp
 
 # Create tables in Microsoft Teams
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 In Teams, data is defined by *tables*. To create a table, you must be a member of a team.
 
 ## Types of tables
