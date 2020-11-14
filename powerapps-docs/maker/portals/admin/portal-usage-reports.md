@@ -68,7 +68,7 @@ The following table provides the details about the columns in the downloaded rep
 | **PortalId** | ID of the portal. To check the ID of a portal, open the [services - about page](clear-server-side-cache.md) for that portal. |
 | **EnvironmentId** | ID of the Power Platform environment. To check the ID of an environment: <ul> <li> Go to [Power Apps](https://make.powerapps.com). </li> <li> Select the environment from the environments list on the top-right side. </li> <li> Copy the environment ID from the browser's address bar. <br> For example, `https://make.powerapps.com/environments/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/home` lists the ID of the environment. </li> </ul> |
 | **Consumption** | The total number of logins or views, depending on the report selected for download. You can compare the date-wise consumption number in the report for each environment with the configured maximum allowed numbers for logins or views using [Power Platform admin center - Manage add-ons](https://admin.powerplatform.microsoft.com/resources/capacity#add-ons). More information: [Power Platform add-on capacity management](https://docs.microsoft.com/power-platform/admin/capacity-add-on) |
-| **PortalType** | Type of the portal - *Prod* for production, and *Trial* for trial. <br> **Note**: The report doesn't show usage data for a suspended portal. |
+| **PortalType** | Type of the portal - *Prod* for production, and *Trial* for trial. |
 | **LicenseType** | Type of the license, *Capacity*. More information: [Licensing FAQ for Power Apps](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals), [Download Power Apps Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
 
 ### See also
