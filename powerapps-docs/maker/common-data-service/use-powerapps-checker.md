@@ -19,13 +19,13 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-To deliver on complex business requirements, model-driven app makers often can end up with highly advanced solutions that customize and extend the Common Data Service platform. With advanced implementations comes an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
+To deliver on complex business requirements, model-driven app makers often can end up with highly advanced solutions that customize and extend the Microsoft Dataverse platform. With advanced implementations comes an increased risk where performance, stability, and reliability issues become introduced, which can negatively impact the user experience. Identifying and understanding how to resolve these issues can be complicated and time consuming. With the solution checker feature, you can perform a rich static analysis check on your solutions against a set of best practice rules and quickly identify these problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the components and code affected, and links to documentation that describes how to resolve each issue.
 
 The solution checker analyzes these solution components: 
-- Common Data Service plug-ins
-- Common Data Service custom workflow activities 
-- Common Data Service web resources (HTML and JavaScript)
-- Common Data Service configurations, such as SDK message steps 
+- Dataverse plug-ins
+- Dataverse custom workflow activities 
+- Dataverse web resources (HTML and JavaScript)
+- Dataverse configurations, such as SDK message steps 
 
 Solution checker works with unmanaged solutions that can be exported from an environment. 
 
@@ -35,9 +35,9 @@ Solution checker works with unmanaged solutions that can be exported from an env
 > - Use of solution checker does not guarantee that a solution import will be successful. The static analysis checks performed against the solution do not know the configured state of the destination environment and import success may be dependent on other solutions or configurations in the environment. 
 <!-- 
 ## Enable the solution checker
-The Solution checker is enabled by default in every Common Data Service environment. A **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. If the **Run** option is not available in the **Solution checker** menu,  you can enable it by installing the Power Apps checker solution. To install it, follow these steps:   
+The Solution checker is enabled by default in every Dataverse environment. A **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. If the **Run** option is not available in the **Solution checker** menu,  you can enable it by installing the Power Apps checker solution. To install it, follow these steps:   
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the Common Data Service environment where you want to enable the solution checker. 
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the Dataverse environment where you want to enable the solution checker. 
 2. On the left navigation pane, select **Solutions**.
 3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You need to allow pop-up windows if your browser blocks the page from opening. 
 
@@ -131,17 +131,17 @@ Here's a summary of each column in the report.
 
 |Solution component  |Rule name  |Rule description  |
 |---------|---------|---------|
-|Plug-in or workflow activity   | [il-specify-column](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-specify-column&client=PAChecker&source=featuredocs)  | Avoid selecting all columns via Common Data Service query APIs.     |
-|Plug-in or workflow activity   | [meta-remove-dup-reg](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-dup-reg&client=PAChecker&source=featuredocs)     | Avoid duplicate Common Data Service plug-in registrations.     |
-|Plug-in or workflow activity   | [il-turn-off-keepalive](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-turn-off-keepalive&client=PAChecker&source=featuredocs)   | Set KeepAlive to false when interacting with external hosts in a Common Data Service plug-in.     |
-|Plug-in or workflow activity   | [il-avoid-unpub-metadata](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-unpub-metadata&client=PAChecker&source=featuredocs)   | Avoid retrieving unpublished Common Data Service metadata.     |
-|Plug-in or workflow activity   | [il-avoid-batch-plugin](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-batch-plugin&client=PAChecker&source=featuredocs)   | Avoid using batch request types in Common Data Service plug-ins and workflow activities.    |
-|Plug-in or workflow activity   | [meta-avoid-reg-no-attribute](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-no-attribute&client=PAChecker&source=featuredocs)  | Include filtering attributes with Common Data Service plug-in registrations.    |
-|Plug-in or workflow activity   | [meta-avoid-reg-retrieve](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-retrieve&client=PAChecker&source=featuredocs)  | Use caution with Common Data Service plug-ins registered for Retrieve and RetrieveMultiple messages.    |
-|Plug-in or workflow activity   | [meta-remove-inactive](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-inactive&client=PAChecker&source=featuredocs)    | Remove inactive configurations in Common Data Service.    |
+|Plug-in or workflow activity   | [il-specify-column](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-specify-column&client=PAChecker&source=featuredocs)  | Avoid selecting all columns via Dataverse query APIs.     |
+|Plug-in or workflow activity   | [meta-remove-dup-reg](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-dup-reg&client=PAChecker&source=featuredocs)     | Avoid duplicate Dataverse plug-in registrations.     |
+|Plug-in or workflow activity   | [il-turn-off-keepalive](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-turn-off-keepalive&client=PAChecker&source=featuredocs)   | Set KeepAlive to false when interacting with external hosts in a Dataverse plug-in.     |
+|Plug-in or workflow activity   | [il-avoid-unpub-metadata](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-unpub-metadata&client=PAChecker&source=featuredocs)   | Avoid retrieving unpublished Dataverse metadata.     |
+|Plug-in or workflow activity   | [il-avoid-batch-plugin](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-batch-plugin&client=PAChecker&source=featuredocs)   | Avoid using batch request types in Dataverse plug-ins and workflow activities.    |
+|Plug-in or workflow activity   | [meta-avoid-reg-no-attribute](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-no-attribute&client=PAChecker&source=featuredocs)  | Include filtering attributes with Dataverse plug-in registrations.    |
+|Plug-in or workflow activity   | [meta-avoid-reg-retrieve](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-retrieve&client=PAChecker&source=featuredocs)  | Use caution with Dataverse plug-ins registered for Retrieve and RetrieveMultiple messages.    |
+|Plug-in or workflow activity   | [meta-remove-inactive](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-inactive&client=PAChecker&source=featuredocs)    | Remove inactive configurations in Dataverse.    |
 |Plug-in or workflow activity   | [il-meta-avoid-crm2011-depr-message](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-crm2011-depr-message&client=PAChecker&source=featuredocs)  | Don't use Microsoft Dynamics CRM 2011 deprecated messages.     |
 |Plug-in or workflow activity   | [meta-avoid-crm4-event](https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-crm4-event&client=PAChecker&source=featuredocs) | Don't use Microsoft Dynamics CRM 4.0 plug-in registration stage.    |
-|Plug-in or workflow activity   | [il-avoid-specialized-update-ops](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-specialized-update-ops&client=PAChecker&source=featuredocs)  | Don't use specialized update operation requests in Common Data Service.    | 
+|Plug-in or workflow activity   | [il-avoid-specialized-update-ops](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-specialized-update-ops&client=PAChecker&source=featuredocs)  | Don't use specialized update operation requests in Dataverse.    | 
 | Plug-in or workflow activity |  [il-use-autonumber-feature](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-use-autonumber-feature&client=PAChecker)  |Use the auto number feature instead of a custom auto numbering solution. | 
 | Plug-in or workflow activity  | [il-avoid-parallel-plugin](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-parallel-plugin&client=PAChecker)  | The usage of parallel patterns should be avoided within plug-ins.  |
 | Plug-in or workflow activity  | [il-avoid-lock-plugin](https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-lock-plugin&client=PAChecker)  | Avoid lock of static members in plug-ins.  |
@@ -152,7 +152,7 @@ Here's a summary of each column in the report.
 |Web Resources  | [web-avoid-crm2011-service-soap](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-crm2011-service-soap&client=PAChecker&source=featuredocs)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   |
 |Web Resources  | [web-avoid-browser-specific-api](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-browser-specific-api&client=PAChecker&source=featuredocs) | Don't use Internet Explorer legacy APIs or browser plug-ins.   |
 |Web Resources  | [web-avoid-2011-api](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-2011-api&client=PAChecker&source=featuredocs)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model.  |
-|Web Resources  | [web-use-relative-uri](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-relative-uri&client=PAChecker&source=featuredocs)   | Don't use absolute Common Data Service endpoint URLs.    |
+|Web Resources  | [web-use-relative-uri](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-relative-uri&client=PAChecker&source=featuredocs)   | Don't use absolute Dataverse endpoint URLs.    |
 |Web Resources  | [web-use-client-context](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-client-context&client=PAChecker&source=featuredocs)  | Use client contexts.   |
 |Web Resources  | [web-use-navigation-api](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-navigation-api&client=PAChecker&source=featuredocs)   | Use navigation API parameters.   |
 |Web Resources  | [web-use-org-setting](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-org-setting&client=PAChecker&source=featuredocs)   | Use organization settings.   |
@@ -177,6 +177,6 @@ Here's a summary of each column in the report.
 
 
 ### See also
-[Best practices and guidance for the Common Data Service](../../developer/common-data-service/best-practices/index.md)<br />
+[Best practices and guidance for the Dataverse](../../developer/common-data-service/best-practices/index.md)<br />
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)<br />
 [Common issues and resolutions for Solution Checker](common-issues-resolutions-solution-checker.md)<br />

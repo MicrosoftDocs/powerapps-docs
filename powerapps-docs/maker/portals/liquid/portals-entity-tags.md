@@ -1,6 +1,6 @@
 ---
-title: "Use Power Apps Common Data Service entity tags for a portal | MicrosoftDocs"
-description: "Learn about Power Apps Common Data Service entity tags available in portal."
+title: "Use Power Apps Microsoft Dataverse entity tags for a portal | MicrosoftDocs"
+description: "Learn about Power Apps Microsoft Dataverse entity tags available in portal."
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: gisingh
 ms.reviewer: tapanm
 ---
 
-# Power Apps Common Data Service entity tags
+# Power Apps Microsoft Dataverse entity tags
 
 Power Apps entity tags are used to load and display Power Apps data, or use other Power Apps portals framework services. These tags are Power Apps-specific extensions to the Liquid language.
 

@@ -1,5 +1,5 @@
 ---
-title: "Use Upsert to insert or update a record (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use Upsert to insert or update a record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "UpsertRequest(Update or Insert) message helps you simplify various data integration scenarios where you do not know if a record already exists in Dynamics 365. In such cases you won’t know if you should call an UpdateRequest or a CreateRequest operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. UpsertRequest message helps you solve that issue" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/23/2019
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can reduce the complexity involved with data integration scenarios by using the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> message. When loading data into Common Data Service from an external system, for example in a bulk data integration scenario, you may not know if a record already exists in Common Data Service. In such cases you won’t know if you should call an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. You can now reduce this complexity and load data into Common Data Service more efficiently by using the new <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> (Update or Insert) message.  
+You can reduce the complexity involved with data integration scenarios by using the <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> message. When loading data into Microsoft Dataverse from an external system, for example in a bulk data integration scenario, you may not know if a record already exists in Dataverse. In such cases you won’t know if you should call an <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> operation. This results in your querying for the record first to determine if it exists before performing the appropriate operation. You can now reduce this complexity and load data into Dataverse more efficiently by using the new <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> (Update or Insert) message.  
   
 <a name="BKMK_UsingUpsert"></a>   
 ## Using Upsert  
@@ -37,7 +37,7 @@ You can reduce the complexity involved with data integration scenarios by using 
   
 1. Send <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> with enough data for a create or insert operation.  
   
-2. Common Data Service will look up the record targeted by the target entity.  
+2. Dataverse will look up the record targeted by the target entity.  
   
 3. If the record exists:  
   

@@ -1,5 +1,5 @@
 ---
-title: "Merge entity records using the Web API (Common Data Service)| Microsoft Docs"
+title: "Merge entity records using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to use the Merge unbound action to merge two entity records"
 ms.custom: ""
 ms.date: 06/04/2020

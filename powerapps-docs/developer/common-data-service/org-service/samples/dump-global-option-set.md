@@ -1,5 +1,5 @@
 ---
-title: " Dump global option set information to a file (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: " Dump global option set information to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to dump global option set information to a file." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019

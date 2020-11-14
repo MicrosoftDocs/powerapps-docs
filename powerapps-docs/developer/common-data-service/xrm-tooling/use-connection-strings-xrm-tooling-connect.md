@@ -1,6 +1,6 @@
 ---
-title: "Use connection strings in XRM tooling to connect to Common Data Service (Common Data Service)| Microsoft Docs"
-description: "XRM tooling enables you to connect to your Common Data Service environment by using connection strings"
+title: "Use connection strings in XRM tooling to connect to Microsoft Dataverse (Dataverse)| Microsoft Docs"
+description: "XRM tooling enables you to connect to your Microsoft Dataverse environment by using connection strings"
 ms.custom: ""
 ms.date: 11/13/2019
 ms.reviewer: "pehecke"
@@ -15,11 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use connection strings in XRM tooling to connect to Common Data Service
+# Use connection strings in XRM tooling to connect to Microsoft Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-With Common Data Service, XRM tooling enables you to connect to your Common Data Service environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Common Data Service connections at deployment time, and not hard code in your application to connect to your Common Data Service environment.  
+With Dataverse, XRM tooling enables you to connect to your Dataverse environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Dataverse connections at deployment time, and not hard code in your application to connect to your Dataverse environment.  
 
 
 <a name="Create"></a> 
@@ -48,7 +48,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 > [!NOTE]
 > You’ll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
   
- After creating a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object, you can use the object to perform actions in Common Data Service. More information: [Use XRM Tooling to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)  
+ After creating a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object, you can use the object to perform actions in Dataverse. More information: [Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)  
   
 <a name="Parameters"></a>
 
@@ -58,11 +58,11 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
   
 |Parameter name|Description|  
 |--------------------|-----------------|  
-|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Common Data Service environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|   
+|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Dataverse environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|   
 |`UserName`, `User Name`, `UserId`, or `User Id`|Specifies the user's identification name associated with the credentials.|  
 |`Password`|Specifies the password for the user name associated with the credentials.|  
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
-|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Common Data Service environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`. However,  only `OAuth`, `Certificate`, `ClientSecret` and `Office365` are permitted values for Common Data Service environments.|  
+|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Dataverse environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`. However,  only `OAuth`, `Certificate`, `ClientSecret` and `Office365` are permitted values for Dataverse environments.|  
 |`RequireNewInstance`|Specifies whether to reuse an existing connection if recalled while the connection is still active. Default value is `false` that indicates the existing connection be reused. If set to `true`, will force the system to create a unique connection.|  
 |`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|
 |`ClientSecret` or `Secret` |Required when Auth Type is set to `ClientSecret`. Client Secret string to use for authentication.|
@@ -100,10 +100,10 @@ The following examples show how you can use connection strings for connecting to
   
 ### OAuth using named account in Microsoft 365 with UX to prompt for authentication  
 
-Create a new connection to Common Data Service using a UserID or Password via OAuth.
+Create a new connection to Dataverse using a UserID or Password via OAuth.
 
 > [!NOTE]
-> OAuth is the preferred auth type for connecting to Common Data Service when using an interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
+> OAuth is the preferred auth type for connecting to Dataverse when using an interactive flow.  This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
 
 ```xml
 <add name="MyCDSServer"
@@ -120,10 +120,10 @@ Create a new connection to Common Data Service using a UserID or Password via OA
 
 ### OAuth using current logged in user with fall back UX to prompt for authentication
 
-Create a new connection to Common Data Service using the current logged in user via OAuth.
+Create a new connection to Dataverse using the current logged in user via OAuth.
 
 > [!NOTE]
-> OAuth is the preferred auth type for connecting to Common Data Service when using a interactive flow. This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
+> OAuth is the preferred auth type for connecting to Dataverse when using a interactive flow. This auth type fully supports the features of Azure Active Directory Conditional Access and Multi-Factor authentication.
 
 ```xml
 <add name="MyCDSServer"
@@ -141,7 +141,7 @@ Create a new connection to Common Data Service using the current logged in user 
 
 ### Certificate based authentication
 
-Create a new connection to Common Data Service using a Application or Client Id and a Certificate.
+Create a new connection to Dataverse using a Application or Client Id and a Certificate.
 ```xml
 <add name="MyCDSServer" 
   connectionString="
@@ -154,7 +154,7 @@ Create a new connection to Common Data Service using a Application or Client Id 
 
 ### ClientId or Client Secret based authentication
 
-Create a new connection to Common Data Service using a Application or Client Id and a Client Secret.
+Create a new connection to Dataverse using a Application or Client Id and a Client Secret.
 ```xml
 <add name="MyCDSServer" 
   connectionString="
@@ -174,6 +174,6 @@ Create a new connection to Common Data Service using a Application or Client Id 
 ### See also
 
 [Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)<br />
-[Use CrmServiceClient constructors to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
-[Use XRM Tooling to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)<br />
+[Use CrmServiceClient constructors to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)<br />
 <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>

@@ -67,7 +67,7 @@ To migrate an embedded canvas app on a model-driven form that uses a list of row
 	> [!NOTE]
 	> The embedded canvas app has full access to row from the host model-driven form via ModelDrivenFormIntegration.Item. 
 	> As an example, to get the value of a column with the name **accountnumber** and display name **Account Number**, you can use **ModelDrivenFormIntegration.Item.accountnumber** or **ModelDrivenFormIntegration.Item.'Account Number'**.
-4. With recent updates Common Data Service now also provides support to use table views as a filter. See this blog post for details: [Improved data source selection and Common Data Service views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/). 
+4. With recent updates Microsoft Dataverse now also provides support to use table views as a filter. See this blog post for details: [Improved data source selection and Dataverse views](https://powerapps.microsoft.com/blog/improved-data-source-selection-and-common-data-service-views/). 
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />

@@ -1,5 +1,5 @@
 ---
-title: "Define and query hierarchical data with Common Data Service | MicrosoftDocs"
+title: "Define and query hierarchical data with Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to define and query hierarchically related data"
 ms.custom: ""
 ms.date: 06/02/2018
@@ -37,7 +37,7 @@ Some standard tables already have hierarchies defined. Other tables, including c
 
 ## Define hierarchical data
 
-With Common Data Service, hierarchical data structures are supported by *self-referential* one-to-many (1:N) relationships of the related rows. 
+With Microsoft Dataverse, hierarchical data structures are supported by *self-referential* one-to-many (1:N) relationships of the related rows. 
 
 > [!NOTE]
 > *Self-referential* means that the table is related to itself. For example, the account table has a lookup column to associate it with another account table row.

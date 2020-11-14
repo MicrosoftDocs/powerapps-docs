@@ -100,7 +100,7 @@ The following rules show what kinds of data can be mapped.
 - If the columns are choices, the integer values for each option should be identical.  
   
 > [!NOTE]
->  If you need to map choice  columns, we recommend you configure both columns to use the same global choice . Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global choices for Common Data Service (picklists)](create-edit-global-option-sets.md)  
+>  If you need to map choice  columns, we recommend you configure both columns to use the same global choice . Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global choices for Microsoft Dataverse (picklists)](create-edit-global-option-sets.md)  
   
 ## Automatically generate column mappings  
 

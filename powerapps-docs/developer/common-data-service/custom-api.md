@@ -1,6 +1,6 @@
 ---
-title: "Create and use Custom APIs (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Custom API is a new code-first way to define custom messages for the Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/27/2020
 ms.reviewer: "pehecke"
@@ -19,7 +19,7 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.] 
 
-Custom APIs offer a new code-first way to define messages that you can add to CDS web services. Conceptually, Custom APIs are an extension to Custom Actions that have provided a no-code way to include custom messages. To differentiate between the two different kinds of Custom Action, we will use *Workflow Custom Action* to refer to the no-code capabilities that depend on workflow. *Custom API* will refer to the type of custom action that depends on a developer to write a plug-in.
+Custom APIs offer a new code-first way to define messages that you can add to Dataverse web services. Conceptually, Custom APIs are an extension to Custom Actions that have provided a no-code way to include custom messages. To differentiate between the two different kinds of Custom Action, we will use *Workflow Custom Action* to refer to the no-code capabilities that depend on workflow. *Custom API* will refer to the type of custom action that depends on a developer to write a plug-in.
 
 Custom APIs provide a capabilities specifically for developers to define their logic in code. For a full comparison of Workflow Custom Action and Custom API, see [Compare Workflow Custom Action and Custom API](custom-actions.md#compare-workflow-custom-action-and-custom-api).
 
@@ -337,7 +337,7 @@ A: While Custom API has an Execute Privilege Name (`ExecutePrivilegeName`) prope
 
 ### Q: Can I activate or deactivate Custom API records?
 
-A: You cannot. Although these records have the common **Status** and **Status Reason** fields found on most Common Data Service entities. Setting the values for these fields has no impact on the availability of the Custom API, the request parameters, or the response properties.
+A: You cannot. Although these records have the common **Status** and **Status Reason** fields found on most Microsoft Dataverse entities. Setting the values for these fields has no impact on the availability of the Custom API, the request parameters, or the response properties.
 
 ### Q: How can I use my private messages if they are not included in the Web API $metadata service document?
 

@@ -1,5 +1,5 @@
 ---
-title: "Create and edit columns for Common Data Service using Power Apps solution explorer | MicrosoftDocs"
+title: "Create and edit columns for Microsoft Dataverse using Power Apps solution explorer | MicrosoftDocs"
 ms.custom: ""
 ms.date: 07/23/2020
 ms.reviewer: ""
@@ -20,15 +20,15 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit columns for Common Data Service using Power Apps solution explorer
+# Create and edit columns for Microsoft Dataverse using Power Apps solution explorer
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Solution explorer provides one way to Create and edit columns for Common Data Service.
+Solution explorer provides one way to Create and edit columns for Dataverse.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Create and edit columns for Common Data Service](create-edit-fields.md)
-- [Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)
+- [Create and edit columns for Dataverse](create-edit-fields.md)
+- [Create and edit columns for Dataverse using Power Apps portal](create-edit-field-portal.md)
   
 ## Open solution explorer
 
@@ -147,7 +147,7 @@ If you to choose **Use Existing Choice** the designer will display a list of exi
 
 ![Configure a global choice ](media/global-option-set-solution-explorer.png)
 
-You can also configure global choices separately. More information: [Create and edit global choices for Common Data Service (picklists)](create-edit-global-option-sets.md)
+You can also configure global choices separately. More information: [Create and edit global choices for Dataverse (picklists)](create-edit-global-option-sets.md)
 
 > [!NOTE]
 > If you define every choice  as a global choice  your list of global choices will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local choice.
@@ -272,8 +272,8 @@ IME mode does not restrict the characters that users can enter. For example, whe
 -	**Inactive**: Power Apps will deactivate the IME initially. You can activate it later if desired.
 
 ### See also  
-[Create and edit columns for Common Data Service](create-edit-fields.md)<br />
-[Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)<br />
+[Create and edit columns for Dataverse](create-edit-fields.md)<br />
+[Create and edit columns for Dataverse using Power Apps portal](create-edit-field-portal.md)<br />
 [Types of columns and column data types](types-of-fields.md)<br />
 [Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
 [Define rollup columns that aggregate values](define-rollup-fields.md)<br />

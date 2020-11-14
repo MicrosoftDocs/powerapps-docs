@@ -42,7 +42,7 @@ Custom help panes provide the following key features that are not available with
 - Free-form rich text, including bullets and numbering.
 - Visibly linked coach marks and help balloons.
 - More options for video sources, including private sources.
-- Storage of help content in Common Data Service as part of your solution. 
+- Storage of help content in Microsoft Dataverse as part of your solution. 
 
 Custom help panes don't provide the following key features that are available with learning path: 
 - Sequential help balloons.
@@ -128,7 +128,7 @@ Balloons and coach marks can be used to point to specific UI elements. A balloon
 A user can either select an element in order or go back to a specific one and highlight it.
 
 ## Solutions and custom help pane content
-All help content is stored in a help page component in Common Data Service as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help rows are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
+All help content is stored in a help page component in Dataverse as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help rows are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
 
 ### Moving content via solutions
 By default, all new help pages appear in the default solution. If you want to move your content to another environment, first add your existing help pages into an unmanaged solution before you export them. To add a help page to an unmanaged solution, follow these steps:
@@ -139,7 +139,7 @@ By default, all new help pages appear in the default solution. If you want to mo
 4. Select the help pages that you want to add, and then select **Add**. More information: [Export solutions](export-solutions.md)
 
 ## Help page documentation automation
-You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content. The custom help pane data is stored directly in Common Data Service and can be exported and imported for this purpose.  
+You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content. The custom help pane data is stored directly in Dataverse and can be exported and imported for this purpose.  
 
 Custom help panes support a custom XML format. This format is documented below. More information: [Custom help XML definition](#custom-help-xml-definition)  
 
