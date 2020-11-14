@@ -1,7 +1,7 @@
 ---
 title: Debugging canvas apps with Monitor | Microsoft Docs
 description: Learn about debugging canvas apps using Monitor.
-author: tapanm-msft
+author: hasharaf
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
@@ -58,6 +58,17 @@ To open Monitor for a published app:
     Commands** (**...**), and then select **Monitor** instead.
 
     ![Open Monitor for a published app](media/monitor/open-published-app-monitor.png "Open Monitor for a published app")
+
+1. Select **Play published app**.
+
+1. Select **Play app in web browser** to play the app in another tab. To play the app on a mobile device for monitoring session, select **Get app mobile device link** instead.
+
+    ![Play published app - options](media/monitor/play-published-app.png "Play published app - options")
+
+    If you selected to play app on a mobile device, copy the link shown on a mobile device to run the app.
+
+    ![Play published app on a mobile device](media/monitor/mobile-device-link.png "Play published app on a mobile device")
+
 
 This opens the published app in a new browser tab and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
 
