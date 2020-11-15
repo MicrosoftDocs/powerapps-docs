@@ -16,6 +16,8 @@ search.app:
 ---
 # Create a canvas app from Microsoft Dataverse in Power Apps
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In Power Apps, create a canvas app based on a list of sample accounts in [Dataverse](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
