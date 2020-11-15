@@ -29,7 +29,7 @@ Dataverse for Teams is initially focused on the low-code and no-code developer a
 
 Lists is great for quickly tracking data in Teams. All your lists are instantly usable inside of Teams. Additionally, you can build canvas apps and flows on top of your Lists just like you can today in SharePoint. 
 
-Dataverse for Teams is great for building Microsoft Power Platform solutions in Teams. With support for files, images, and multiple related tables, Oakdale can meet your needs today and be promoted to the full Dataverse if you need additional capacity or capabilities in the future.
+Dataverse for Teams is great for building Microsoft Power Platform solutions in Teams. With support for files, images, and multiple related tables, Dataverse for Teams can meet your needs today and be promoted to the full Dataverse if you need additional capacity or capabilities in the future.
 
 ### How does security and governance differ between Dataverse and Microsoft Dataverse for Teams?
 
@@ -66,7 +66,6 @@ Applications can include data from environments that the maker has access to wit
 ### Where can I use the new visual editor?
 
 In addition to the table designer experience previously found in Dataverse, Dataverse for Teams includes a new, easy-to-use editable grid that helps user be even more productive. You can also use tables from other environments subject to the normal permission model. The new visual editor is currently available only in Dataverse for Teams.
-
 
 
 ### See also
