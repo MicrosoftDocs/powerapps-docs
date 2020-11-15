@@ -27,7 +27,7 @@ Every table has required columns that must exist in your input file. We recommen
 
 1. Prepare the file template.
 
-    a. Export the table data to the CVS file. Follow the steps in **Export data to CSV**.  
+    a. Export the table data to the CSV file. Follow the steps in **Export data to CSV**.  
     b. Define a plan to make sure data is unique. Use either **primary keys** or **Alternate Keys**.  
     c. Refer to the next section for instructions to make sure data is unique before you import it into a table. 
 
