@@ -81,7 +81,7 @@ For more information about integrating data into the Dataverse, go to [Add data 
 ## Interacting with tables
 When you develop an app, you can use standard tables, custom tables, or both. Dataverse provides standard tables by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
-For a full list of tables, go to the [table reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
+For a full list of tables, see the [entity reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
 
 You can extend the functionality of standard tables by creating one or more custom tables to store information that's unique to your organization. More information: [How to create a custom table](create-custom-entity.md)
 
