@@ -15,7 +15,7 @@ searchScope:
 
 Microsoft Teams enables people around the world to create, collaborate, and communicate. With more than 75 million daily active users, Teams is how people are getting work done.
 
-Power Apps can be used in three scenarios with Teams.
+Power Apps can be used in four scenarios with Teams.
 
 Scenario|Description
 --------|-------
