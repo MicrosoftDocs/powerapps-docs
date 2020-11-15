@@ -1,5 +1,5 @@
 ---
-title: "Order results using entity attributes with LINQ (Common Data Service) | Microsoft Docs" 
+title: "Order results using entity attributes with LINQ (Microsoft Dataverse) | Microsoft Docs" 
 description: "Read how you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query"
 ms.custom: ""
 ms.date: 10/31/2018
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service(Common Data Service) for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
+In Microsoft Dataverse(Dataverse) for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
   
 ## Using a Lookup Value to Order By  
 

@@ -4,7 +4,7 @@ description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
 ms.date: 02/19/2020
-ms.author: v-lshann
+ms.author: margoc
 ---
 
 # Administrators Learning Catalog
@@ -16,4 +16,4 @@ The following catalog is organized from core knowledge to specific domains, and 
 ## Administration
 | Content  | Description  | Format   | Length    | 
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------|----------------------------------------------------------|
-| [Manage permissions and administration for Common Data Service](https://docs.microsoft.com/learn/paths/manage-permissions-administration-common-data-service/)|	Do you need to manage user access rights? In this learning path you will learn how to manage permissions associated with environments and entities. You will also learn about different administrative portals and how to access each.|	Free self-paced online learning path	|1 hr 23 min |
+| [Manage permissions and administration for Microsoft Dataverse](https://docs.microsoft.com/learn/paths/manage-permissions-administration-common-data-service/)|	Do you need to manage user access rights? In this learning path you will learn how to manage permissions associated with environments and entities. You will also learn about different administrative portals and how to access each.|	Free self-paced online learning path	|1 hr 23 min |

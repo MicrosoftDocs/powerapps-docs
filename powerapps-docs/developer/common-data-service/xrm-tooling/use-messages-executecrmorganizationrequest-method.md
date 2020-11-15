@@ -1,5 +1,5 @@
 ---
-title: "Use messages with the ExecuteCrmOrganizationRequest method (Common Data Service)| Microsoft Docs"
+title: "Use messages with the ExecuteCrmOrganizationRequest method (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how to use messages with the ExecuteCrmOrganizationRequest method. The samples demonstrate how to execute CreateRequest and RetrieveMultipleRequest message using the CrmServiceClient.String) method."
 ms.custom: ""
 ms.date: 03/27/2019
@@ -99,5 +99,5 @@ else
   
 ### See also  
 
-[Use XRM Tooling to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
-[Use XRM Tooling API to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)
+[Use XRM Tooling to connect to Microsoft Dataverse](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)

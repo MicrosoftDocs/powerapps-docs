@@ -1,5 +1,5 @@
 ---
-title: "Retrieve related entity records with a query (Common Data Service)| Microsoft Docs"
+title: "Retrieve related entity records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how you can retrieve related entity records by expanding the navigation properties."
 ms.custom: ""
 ms.date: 06/27/2020

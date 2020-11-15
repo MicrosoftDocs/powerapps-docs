@@ -25,13 +25,13 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The Export to Data Lake service is a pipeline to continuously export data from Common Data Service to Azure Data Lake Storage Gen2. The Export to Data Lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments. 
+The Export to Data Lake service is a pipeline to continuously export data from Microsoft Dataverse to Azure Data Lake Storage Gen2. The Export to Data Lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments. 
 
 ![Export to data lake overview](media/export-data-lake-overview.png "Export to Data Lake overview")
 
 Export to Data Lake provides these features: 
 
-- Linking or unlinking the Common Data Service environment to Data Lake Storage Gen2 in your Azure subscription. 
+- Linking or unlinking the Dataverse environment to Data Lake Storage Gen2 in your Azure subscription. 
 - Continuous replication of tables to Data Lake Storage Gen2.
 - Initial write, followed by incremental writes for data and metadata. 
 - Replication of both standard and custom tables. 
@@ -41,15 +41,15 @@ Export to Data Lake provides these features:
 
 ## How data and metadata are exported
 
-The Export to Data Lake service supports initial and incremental writes for table data and metadata. Any data or metadata changes in Common Data Service are automatically pushed to the data lake without any additional action. This is a push, rather than pull, operation. Changes are pushed to the destination without you needing to set up refresh intervals. 
+The Export to Data Lake service supports initial and incremental writes for table data and metadata. Any data or metadata changes in Dataverse are automatically pushed to the data lake without any additional action. This is a push, rather than pull, operation. Changes are pushed to the destination without you needing to set up refresh intervals. 
 
-Both standard and custom tables can be exported. Notice that the change tracking table attribute in Common Data Service is used to keep the data synchronized in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized. 
+Both standard and custom tables can be exported. Notice that the change tracking table attribute in Dataverse is used to keep the data synchronized in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized. 
 
-All create, update, and delete operations are exported from Common Data Service to the data lake. For example, when a user deletes an Account table row in Common Data Service, the transaction is replicated to the destination data lake.
+All create, update, and delete operations are exported from Dataverse to the data lake. For example, when a user deletes an Account table row in Dataverse, the transaction is replicated to the destination data lake.
 
 ## Prerequisites
 
-Before you can export Common Data Service data to a data lake, you must create and configure an Azure Storage v2 (general-purpose v2) storage account. 
+Before you can export Dataverse data to a data lake, you must create and configure an Azure Storage v2 (general-purpose v2) storage account. 
 
 Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs/data-lake-storage-quickstart-create-account) article, and note these requirements: 
 
@@ -64,10 +64,10 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 > [!NOTE]
 > - The storage account must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.  
 > - The storage account must be created in the same region as the Power Apps environment you'll use the feature in.  
-> - To link the Common Data Service environment to Azure Data Lake Storage Gen2, you must be a Common Data Service administrator. 
+> - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must be a Dataverse administrator. 
 > - Only tables that have change tracking enabled can be exported. 
 
-## Select and export Common Data Service table data to Azure Data Lake Storage Gen2
+## Select and export Dataverse table data to Azure Data Lake Storage Gen2
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Data**, and then select **Tables**. 
 2. On the command bar, select **Export to data lake**, and then on the **Export to data lake** page, select **New link to data lake**. 
@@ -77,16 +77,16 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
    - **Storage account**. Select the Storage v2 (general-purpose v2) storage account to use for the export. 
 
     > [!NOTE]
-    > As part of linking the Common Data Service environment to a data lake, you grant the Export to Data Lake service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
+    > As part of linking the Dataverse environment to a data lake, you grant the Export to Data Lake service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
 
 4. Select the tables that you want to export to the data lake, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization)
 
    > [!div class="mx-imgBorder"] 
    > ![Select tables for export](media/export-data-lake-select-entity.png "Select tables for export")
 
-Your Common Data Service environment is linked to the Azure Data Lake Storage Gen2 account. The file system in the Azure storage account is created with a folder for each table selected to be replicated to the data lake. 
+Your Dataverse environment is linked to the Azure Data Lake Storage Gen2 account. The file system in the Azure storage account is created with a folder for each table selected to be replicated to the data lake. 
 
-You can follow the steps above to create a link from one Common Data Service environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple Common Data Service envrionments to the same Azure Data Lake, all within the same tenant.
+You can follow the steps above to create a link from one Dataverse environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple Dataverse envrionments to the same Azure Data Lake, all within the same tenant.
 
 > [!NOTE]
 > The data exported by Export to data lake service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest) <br />
@@ -117,7 +117,7 @@ A folder that includes snapshot comma-delimited (CSV format) files is displayed 
 
 ### Continuous snapshot updates
 
-Common Data Service data can continuously change through create, update, and delete transactions. Snapshots provide a read-only copy of data that's updated at regular intervals, in this case every hour. This ensures that at any given point, a data analytics consumer can reliably consume data in the lake.
+Dataverse data can continuously change through create, update, and delete transactions. Snapshots provide a read-only copy of data that's updated at regular intervals, in this case every hour. This ensures that at any given point, a data analytics consumer can reliably consume data in the lake.
 
 ![Continuous snapshot updates](media/snapshot-updates.png "Continuous snapshot updates")
 
@@ -127,7 +127,7 @@ Here's an example of an Account.csv partitioned file and snapshot folder in the 
 
 ![Accounts table snapshot](media/export-data-lake-account-snapshots.png "Accounts table snapshot") 
 
-Changes in Common Data Service are continuously pushed to the corresponding CSV files by using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *table*-T2.csv&mdash;for example, Accounts-T2.csv or Contacts-T2.csv (assuming there are changes for the table) &mdash;and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onward is directed to the newer snapshot files. This way, the original snapshot viewer can continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios that have longer-running downstream processes. 
+Changes in Dataverse are continuously pushed to the corresponding CSV files by using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *table*-T2.csv&mdash;for example, Accounts-T2.csv or Contacts-T2.csv (assuming there are changes for the table) &mdash;and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onward is directed to the newer snapshot files. This way, the original snapshot viewer can continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios that have longer-running downstream processes. 
 
 Here's an example of the model.json file, which always points to the latest time-stamped account snapshot file. 
 

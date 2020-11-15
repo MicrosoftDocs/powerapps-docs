@@ -201,7 +201,7 @@
       href: ./canvas-apps/get-started-test-drive.md
     - name: 2 - Create an app using data
       items:
-      - name: From Common Data Service
+      - name: From Microsoft Dataverse
         href: ./canvas-apps/data-platform-create-app.md
       - name: From SharePoint
         href: ./canvas-apps/app-from-sharepoint.md
@@ -219,7 +219,7 @@
         href: ./canvas-apps/customize-card.md
   - name: Create an app from scratch
     items:
-    - name: From Common Data Service
+    - name: From Dataverse
       href: ./canvas-apps/data-platform-create-app-scratch.md
     - name: From Excel
       href: ./canvas-apps/get-started-create-from-blank.md
@@ -231,7 +231,7 @@
           href: ./canvas-apps/connections-list.md
         - name: Popular connectors
           items:
-            - name: Common Data Service
+            - name: Dataverse
               items:
               - name: Overview
                 href: canvas-apps/connections/connection-common-data-service.md
@@ -1541,7 +1541,7 @@
                   href: ./portals/liquid/variable-tags.md
                 - name: Template tags
                   href: ./portals/liquid/template-tags.md
-                - name: Common Data Service entity tags
+                - name: Dataverse entity tags
                   href: ./portals/liquid/portals-entity-tags.md
             - name: Available Liquid filters
               href: ./portals/liquid/liquid-filters.md
@@ -1604,13 +1604,13 @@
       href: ./portals/faq.md
     - name: Legacy Adxstudio Portals v7 FAQ
       href: ./portals/legacy-portal-faq.md
-- name: Common Data Service
+- name: Dataverse
   items:
-  - name: Common Data Service
+  - name: Dataverse
     href: ./common-data-service/index.yml
-  - name: What is Common Data Service?
+  - name: What is Dataverse?
     href: ./common-data-service/data-platform-intro.md
-  - name: Why choose Common Data Service?
+  - name: Why choose Dataverse?
     items:
     - name: Overview
       href: ./common-data-service/why-cds-overview.md
@@ -1822,7 +1822,7 @@
       href: ./common-data-service/data-platform-complex-entities.md
     - name: Restricted tables requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
-  - name: Use Power BI with Common Data Service
+  - name: Use Power BI with Dataverse
     items:
     - name: Overview
       href: ./common-data-service/use-powerbi-with-cds.md
@@ -1844,7 +1844,7 @@
       href: ./common-data-service/export-to-data-lake-data-adf.md
     - name: Analyze exported data with Power BI
       href: ./common-data-service/export-to-data-lake-data-powerbi.md
-  - name: Security in Common Data Service
+  - name: Security in Dataverse
     href: /power-platform/admin/wp-security
   - name: API limits overview
     href: ./common-data-service/api-limits-overview.md

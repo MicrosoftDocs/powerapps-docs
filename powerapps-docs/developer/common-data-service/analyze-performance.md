@@ -1,5 +1,5 @@
 ---
-title: "Analyze plug-in performance (Common Data Service) | Microsoft Docs"
+title: "Analyze plug-in performance (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to find and analyze data about how your registered plug-ins are performing."
 ms.custom: ""
 ms.date: 1/29/2019
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In addition to using a debugger and profiler to learn how your plug-in is performing at the code level, you can obtain metrics as to the overall performance of your registered plug-ins in an organization through [Common Data Service analytics](/power-platform/admin/analytics-common-data-service).
+In addition to using a debugger and profiler to learn how your plug-in is performing at the code level, you can obtain metrics as to the overall performance of your registered plug-ins in an organization through [Microsoft Dataverse analytics](/power-platform/admin/analytics-common-data-service).
 
 Through the [Plug-in](/power-platform/admin/analytics-common-data-service#plug-ins) dashboard you can view metrics such as average execution time, failures, most active plug-ins, and more.
 

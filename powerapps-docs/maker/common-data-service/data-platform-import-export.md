@@ -1,6 +1,6 @@
 ---
-title: Import or export data from Common Data Service
-description: Bulk import and export data from Excel or CSV files into tables in Common Data Service by using the Get Data from Excel and Export Data functionality
+title: Import or export data from Microsoft Dataverse
+description: Bulk import and export data from Excel or CSV files into tables in Microsoft Dataverse by using the Get Data from Excel and Export Data functionality
 author: sabinn-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,11 +13,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Import or export data from Common Data Service
+# Import or export data from Microsoft Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-To bulk import and export data from Microsoft Excel or CSV files, use the Get Data from Excel file and Export Data features for updated Common Data Service environments.
+To bulk import and export data from Microsoft Excel or CSV files, use the Get Data from Excel file and Export Data features for updated Dataverse environments.
 
 There are two ways that you can import files into tables from Excel or CSV files.
 
@@ -62,7 +62,7 @@ Every table has required columns that must exist in your input file. We recommen
 
 ## Option 2: Import by bringing your own source file
 
-If you're an advanced user and know the required columns for a given table for Common Data Service tables, define your own Excel or CSV source file. Follow the steps in **Import the file**.
+If you're an advanced user and know the required columns for a given table for Dataverse tables, define your own Excel or CSV source file. Follow the steps in **Import the file**.
 
 ## Navigate mapping errors
 
@@ -88,7 +88,7 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 
 ## Ensure uniqueness when you import data into a table from Excel or CSV
 
-Common Data Service tables use a primary key to uniquely identify rows within a Common Data Service table table. The primary key for a Common Data Service table is a globally unique identifier (GUID). It forms the default basis for row identification. Data operations, like importing data into Common Data Service tables, surface the default primary keys.
+Dataverse tables use a primary key to uniquely identify rows within a Dataverse table table. The primary key for a Dataverse table is a globally unique identifier (GUID). It forms the default basis for row identification. Data operations, like importing data into Dataverse tables, surface the default primary keys.
 
 Example:  
 The primary key for an **Account** table is **accountid**.
@@ -96,7 +96,7 @@ The primary key for an **Account** table is **accountid**.
    > [!div class="mx-imgBorder"] 
    > ![Sample export file from an **Account** table showing **accountid** as the primary key](./media/data-platform-import-export/export-pk.png)
 
-Sometimes, a primary key might not work when you integrate data from an external source. Use Common Data Service to define alternate keys that uniquely identify a row in place of the primary key.
+Sometimes, a primary key might not work when you integrate data from an external source. Use Dataverse to define alternate keys that uniquely identify a row in place of the primary key.
 
 Example:  
 For an **Account** table, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.

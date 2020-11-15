@@ -1,6 +1,6 @@
 ---
 title: Improve FetchXML request performance | Microsoft Docs
-description: Learn how developers can improve FetchXML request performance when using Common Data Service.
+description: Learn how developers can improve FetchXML request performance when using Microsoft Dataverse.
 author: NHelgren
 manager: annbe
 ms.service: powerapps

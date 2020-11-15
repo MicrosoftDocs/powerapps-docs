@@ -1,5 +1,5 @@
 ---
-title: "Sample: Workflow operations (Common Data Service) | MicrosoftDocs"
+title: "Sample: Workflow operations (Microsoft Dataverse) | MicrosoftDocs"
 description: "This sample demonstrates how to perform a number of workflow operations such as create, delete, activate, set state , and more."
 ms.custom: ""
 ms.date: 1/14/2020

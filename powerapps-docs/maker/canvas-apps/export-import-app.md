@@ -21,12 +21,12 @@ In this article, you'll learn how to export and import canvas apps.
 You can export and import canvas apps by using packages. This feature allows you to export an app from one environment and import it to another. When exporting and importing canvas app packages, consider the scenario that best fits the available options. For example, you can save a canvas app locally by using the *Save As* option when you select the location as *This computer*. The saved file will have the file name extension *.msapp*. This file doesn't include any additional components such as flows created with Power Automate and used by the saved app. Although you can use this method to create a copy of an existing app, you can use the recommended export and import feature that includes [additional resources](#resources-included-in-the-package) with the package. Export and import packages have the file format *.zip*.
 
 > [!IMPORTANT]
-> - For ALM capabilities in Microsoft Power Platform environments, use Common Data Service and solutions instead of the canvas app package export and import. More information: [ALM overview](https://docs.microsoft.com/power-platform/alm/overview-alm)
-> - Canvas app packages can't be used with [Common Data Service solution packages](../common-data-service/solutions-overview.md) because of the package incompatibility.
+> - For ALM capabilities in Microsoft Power Platform environments, use Microsoft Dataverse and solutions instead of the canvas app package export and import. More information: [ALM overview](https://docs.microsoft.com/power-platform/alm/overview-alm)
+> - Canvas app packages can't be used with [Dataverse solution packages](../common-data-service/solutions-overview.md) because of the package incompatibility.
 
 ## Resources included in the package
 
-An app can consume different resources. For example, most apps use connections. Other apps might use Power Automate, have custom connectors, or connect by using gateways to on-premises resources. Some apps might also use Common Data Service customizations.
+An app can consume different resources. For example, most apps use connections. Other apps might use Power Automate, have custom connectors, or connect by using gateways to on-premises resources. Some apps might also use Dataverse customizations.
 
 The following table explains different resource types, supportability, and import options.
 
@@ -36,7 +36,7 @@ The following table explains different resource types, supportability, and impor
 | Power Automate |Yes |There are two options to import a flow into an environment: <ul><li><b>Create new</b>: The flow will be created as a new flow in the environment where the package is imported.</li> <li><b>Update</b>: The flow already exists in the environment and will be updated when this package is imported.</li></ul><br> <b>Note: </b>All resources that the flow depends on will also be included in the app package that's exported and will need to be configured when the package is imported. <br> <br> You can also export and import flows by using solutions. More information: [Power Automate solutions](https://docs.microsoft.com/power-automate/overview-solution-flows) |
 | Custom connectors |No |Exporting a custom connector isn't supported. You'll need to re-create the custom connector on the target environment. |
 | Connections |No |Exporting a connection isn't supported. You'll need to re-create connections on the target environment. |
-| Common Data Service customizations |No |Exporting Common Data Service customizations as a part of a canvas app package isn't supported. You'll need to use Common Data Service solutions instead. More information: [Common Data Service solutions](https://docs.microsoft.com/powerapps/developer/common-data-service/introduction-solutions) |
+| Dataverse customizations |No |Exporting Dataverse customizations as a part of a canvas app package isn't supported. You'll need to use Dataverse solutions instead. More information: [Dataverse solutions](https://docs.microsoft.com/powerapps/developer/common-data-service/introduction-solutions) |
 | Gateways |No | You can't export or import gateways. You'll need to re-create gateways on the target environment. |
 
 ## Permissions required to export a canvas app package
