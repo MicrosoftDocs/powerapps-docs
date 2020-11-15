@@ -1,20 +1,22 @@
 ---
-title: "msdyn_dataflow Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_dataflow entity."
-ms.date: 04/12/2020
+title: "msdyn_dataflow entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_dataflow table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_dataflow Entity Reference
+# msdyn_dataflow entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 
 
@@ -39,8 +41,7 @@ search.app:
 |SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_dataflows(*msdyn_dataflowid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/msdyn_dataflows(*msdyn_dataflowid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -74,6 +75,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [msdyn_MashupSettings](#BKMK_msdyn_MashupSettings)
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_OriginalDataflowId](#BKMK_msdyn_OriginalDataflowId)
+- [msdyn_RefreshHistory](#BKMK_msdyn_RefreshHistory)
 - [msdyn_RefreshSettings](#BKMK_msdyn_RefreshSettings)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -111,7 +113,6 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |--------|-----|
 |Description|For internal use only.|
 |DisplayName|Is Customizable|
-|IsValidForCreate|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|iscustomizable|
@@ -275,6 +276,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_msdyn_RefreshHistory"></a> msdyn_RefreshHistory
+
+|Property|Value|
+|--------|-----|
+|Description|Refresh History (JSON)|
+|DisplayName|RefreshHistory|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_refreshhistory|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_msdyn_RefreshSettings"></a> msdyn_RefreshSettings
@@ -1108,6 +1125,6 @@ See businessunit Entity [business_unit_msdyn_dataflow](businessunit.md#BKMK_busi
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_dataflow?text=msdyn_dataflow EntityType" />

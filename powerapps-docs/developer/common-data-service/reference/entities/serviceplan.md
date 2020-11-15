@@ -1,20 +1,22 @@
 ---
-title: "ServicePlan Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ServicePlan entity."
-ms.date: 04/12/2020
+title: "ServicePlan entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the ServicePlan table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# ServicePlan Entity Reference
+# ServicePlan entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 Service Plan
 
@@ -27,7 +29,7 @@ Service Plan
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/serviceplans(*serviceplanid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -126,7 +128,6 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |--------|-----|
 |Description|For internal use only.|
 |DisplayName|Is Customizable|
-|IsValidForCreate|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|iscustomizable|
@@ -824,6 +825,6 @@ IntersectEntityName: serviceplanappmodules<br />
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.serviceplan?text=serviceplan EntityType" />
