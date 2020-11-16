@@ -1,20 +1,22 @@
 ---
-title: "PersonalDocumentTemplate Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PersonalDocumentTemplate entity."
-ms.date: 04/12/2020
+title: "PersonalDocumentTemplate entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the PersonalDocumentTemplate table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# PersonalDocumentTemplate Entity Reference
+# PersonalDocumentTemplate entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 Used to store Personal Document Templates in database in binary format.
 
@@ -35,7 +37,7 @@ Used to store Personal Document Templates in database in binary format.
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/personaldocumenttemplates(*personaldocumenttemplateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -564,6 +566,6 @@ See systemuser Entity [lk_personaldocumenttemplatebase_modifiedonbehalfby](syste
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.personaldocumenttemplate?text=personaldocumenttemplate EntityType" />

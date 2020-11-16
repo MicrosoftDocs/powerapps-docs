@@ -21,7 +21,7 @@ search.app:
 ---
 # Model-driven app common column properties
 
-You can view and edit common properties of table columns for a model-driven app using Power Apps solution explorer or   Power Apps portal. The Power Apps portal provides an easy way to create and edit table columns with the Common Data Service.
+You can view and edit common properties of table columns for a model-driven app using Power Apps solution explorer or   Power Apps portal. The Power Apps portal provides an easy way to create and edit table columns with the Microsoft Dataverse.
 The portal enables configuring the most common options, but certain options can only be set using solution explorer.
 
 ## Common column properties in Power Apps portal
@@ -34,12 +34,12 @@ The portal enables configuring the most common options, but certain options can 
     > <img src="media/common-field-prop-powerapps.png" alt="Common column properties in Power Apps portal" height="658" width="300">
 
 
-The following table describes the common properties of columns. Certain types of columns have special properties. These are described in [Create and edit columns for Common Data Service](../common-data-service/create-edit-field-portal.md).
+The following table describes the common properties of columns. Certain types of columns have special properties. These are described in [Create and edit columns for Dataverse](../common-data-service/create-edit-field-portal.md).
 
  |Property|Description|
  |--|--|
  |**Display Name**|The text to be displayed for the column in the user interface.|
- |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a column is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Common Data Service Default Publisher** prepended to it.|
+ |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a column is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Dataverse Default Publisher** prepended to it.|
  |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a column is saved, you cannot change the data type with the exception of converting text columns to autonumber columns.|
  |**Required**| A row can't be saved without data in this column. |
  |**Searchable**| This column appears in Advanced Find and is available when customizing views. |

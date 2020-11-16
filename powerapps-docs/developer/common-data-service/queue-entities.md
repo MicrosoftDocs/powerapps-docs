@@ -1,5 +1,5 @@
 ---
-title: "Queue entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Queue entities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Queues in Power Apps are instrumental in organizing, prioritizing, and monitoring the progress of your work." 
 ms.custom: ""
 ms.date: 10/31/2018
@@ -74,7 +74,7 @@ The following information pertains to queues:
 ## Enable entities for queues  
  To enable a customizable entity (`EntityMetadata.IsCustomizable = true`) for queues, use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsValidForQueue> attribute to `true`. The queue entity and the queue item entity are customizable entities, but they cannot be enabled for queues.  
   
- The following list contains default queue-enabled entities in Common Data Service:  
+ The following list contains default queue-enabled entities in Microsoft Dataverse:  
   
 -   Appointment  
   

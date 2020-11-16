@@ -91,7 +91,7 @@ A test case consists of test steps that contain actions. Test actions are writte
 
 ### Add test steps and test assertions
 
-Every test case should have an expected result. In the Kudos example, one of the expected results of sending a kudo is creating a new record in the Common Data Service (Common Data Service) database. You'll now update the test case and add additional test steps to validate that a record was created successfully.
+Every test case should have an expected result. In the Kudos example, one of the expected results of sending a kudo is creating a new record in the Microsoft Dataverse (Dataverse) database. You'll now update the test case and add additional test steps to validate that a record was created successfully.
 
 Follow these steps to verify a successful record creation:
 
@@ -265,7 +265,7 @@ To determine test results outside of Test Studio, there are two properties calle
 The expression entered for these properties triggers when each case or suite completes. You can customize these properties to process and send the results of your tests to various data sources or services such as:
 
 - SQL Server.
-- Common Data Service.
+- Dataverse.
 - Power Automate.
 - Email using Office 365.
 
@@ -295,7 +295,7 @@ The **TestSuiteResult** record contains the following properties:
 - *TestsPassed* – the number of test cases that completed successfully in the suite.
 - *TestsFailed* - the number of test cases that failed in the suite.
 
-In this quickstart, you'll create two custom entities in the Common Data Service database to store the test results by customizing the **OnTestCaseComplete** and **OnTestSuiteComplete** properties:
+In this quickstart, you'll create two custom entities in the Dataverse database to store the test results by customizing the **OnTestCaseComplete** and **OnTestSuiteComplete** properties:
 
 1. Select **Test** in the left pane or **View** on the suite header.
 
@@ -303,13 +303,13 @@ In this quickstart, you'll create two custom entities in the Common Data Service
 
 2. Select the **OnTestCaseComplete** action.
 
-3. Input an expression to process the results of your test. The following sample saves each test case's results to the custom AppTestResults entity in Common Data Service. The test results can optionally be stored to SQL, SharePoint, or any other data source. You might need to set or increase the Trace field in your data source as required.
+3. Input an expression to process the results of your test. The following sample saves each test case's results to the custom AppTestResults entity in Dataverse. The test results can optionally be stored to SQL, SharePoint, or any other data source. You might need to set or increase the Trace field in your data source as required.
 
     > [!NOTE]
-    > The following samples require a [Common Data Service connection](https://docs.microsoft.com/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Common Data Service. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in the following samples.
+    > The following samples require a [Common Data Service connection](https://docs.microsoft.com/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Dataverse. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in the following samples.
 
     ```powerapps-dot
-    //Save to Common Data Service
+    //Save to Dataverse
     Patch(AppTestResults
     , Defaults(AppTestResults)
     , {
@@ -330,10 +330,10 @@ In this quickstart, you'll create two custom entities in the Common Data Service
 
 4. Select the **OnTestSuiteComplete** action.
 
-5. Input an expression to process the results of your test. In the following sample, you'll save each test suite's results to the custom AppTestSuiteResults entity in Common Data Service. 
+5. Input an expression to process the results of your test. In the following sample, you'll save each test suite's results to the custom AppTestSuiteResults entity in Dataverse. 
 
     ```powerapps-dot
-    //Save to Common Data Service
+    //Save to Dataverse
     Patch(AppTestSuiteResults
         , Defaults(AppTestSuiteResults)
         , {

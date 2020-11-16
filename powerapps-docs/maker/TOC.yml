@@ -201,7 +201,7 @@
       href: ./canvas-apps/get-started-test-drive.md
     - name: 2 - Create an app using data
       items:
-      - name: From Common Data Service
+      - name: From Microsoft Dataverse
         href: ./canvas-apps/data-platform-create-app.md
       - name: From SharePoint
         href: ./canvas-apps/app-from-sharepoint.md
@@ -219,7 +219,7 @@
         href: ./canvas-apps/customize-card.md
   - name: Create an app from scratch
     items:
-    - name: From Common Data Service
+    - name: From Dataverse
       href: ./canvas-apps/data-platform-create-app-scratch.md
     - name: From Excel
       href: ./canvas-apps/get-started-create-from-blank.md
@@ -231,7 +231,7 @@
           href: ./canvas-apps/connections-list.md
         - name: Popular connectors
           items:
-            - name: Common Data Service
+            - name: Dataverse
               items:
               - name: Overview
                 href: canvas-apps/connections/connection-common-data-service.md
@@ -1541,7 +1541,7 @@
                   href: ./portals/liquid/variable-tags.md
                 - name: Template tags
                   href: ./portals/liquid/template-tags.md
-                - name: Common Data Service entity tags
+                - name: Dataverse entity tags
                   href: ./portals/liquid/portals-entity-tags.md
             - name: Available Liquid filters
               href: ./portals/liquid/liquid-filters.md
@@ -1604,13 +1604,13 @@
       href: ./portals/faq.md
     - name: Legacy Adxstudio Portals v7 FAQ
       href: ./portals/legacy-portal-faq.md
-- name: Common Data Service
+- name: Dataverse
   items:
-  - name: Common Data Service
+  - name: Dataverse
     href: ./common-data-service/index.yml
-  - name: What is Common Data Service?
+  - name: What is Dataverse?
     href: ./common-data-service/data-platform-intro.md
-  - name: Why choose Common Data Service?
+  - name: Why choose Dataverse?
     items:
     - name: Overview
       href: ./common-data-service/why-cds-overview.md
@@ -1822,7 +1822,7 @@
       href: ./common-data-service/data-platform-complex-entities.md
     - name: Restricted tables requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
-  - name: Use Power BI with Common Data Service
+  - name: Use Power BI with Dataverse
     items:
     - name: Overview
       href: ./common-data-service/use-powerbi-with-cds.md
@@ -1844,7 +1844,7 @@
       href: ./common-data-service/export-to-data-lake-data-adf.md
     - name: Analyze exported data with Power BI
       href: ./common-data-service/export-to-data-lake-data-powerbi.md
-  - name: Security in Common Data Service
+  - name: Security in Dataverse
     href: /power-platform/admin/wp-security
   - name: API limits overview
     href: ./common-data-service/api-limits-overview.md
@@ -1860,7 +1860,9 @@
     href: ../teams/embed-teams-tab.md
   - name: Embed a canvas app as personal app
     href: ../teams/embed-teams-app.md
-  - name: Create apps in Teams (Preview)
+  - name: Embed a model-driven app as tab app
+    href: ../teams/embed-model-driven-teams-tab.md
+  - name: Create apps in Teams
     items:
     - name: Create apps in Teams
       href: ../teams/create-apps-overview.md
@@ -1882,21 +1884,30 @@
       href: ../teams/create-additional-apps.md
     - name: Use Teams integration object
       href: ../teams/use-teams-integration-object.md
-    - name: Work with Project Oakdale
+    - name: Work with Dataverse for Teams
       items:
         - name: Overview
           href: ../teams/overview-data-platform.md
-        - name: Project Oakdale vs Common Data Service
+          displayName: Overview of Dataverse for Teams
+        - name: Dataverse for Teams vs Dataverse
           href: ../teams/data-platform-compare.md
         - name: Create a table
           href: ../teams/create-table.md
+          displayName: Create a Dataverse for Teams table
         - name: Edit or delete a table
           href: ../teams/edit-delete-table.md
+          displayName: Edit or delete a Dataverse for Teams table
         - name: Work with table relationships
           href: ../teams/relationships-table.md
         - name: Work with table columns
-          href: ../teams/table-columns.md
-        - name: Project Oakdale FAQs
+          href: ../teams/table-columns.md        
+        - name: View table data in Power BI (Preview)
+          href: ../teams/view-table-data-power-bi.md
+          displayName: View Dataverse for Teams table data in Power BI
+        - name: Environment language
+          href: ../teams/language-data-platform.md
+          displayName: Dataverse for Teams environment language
+        - name: Dataverse for Teams FAQs
           href: ../teams/data-platform-faqs.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
@@ -1906,6 +1917,8 @@
       href: ../teams/remove-your-apps.md
     - name: Uninstall Power Apps personal app
       href: ../teams/uninstall-personal-apps.md
+    - name: "Tutorial: Build an app to retrieve videos"
+      href: ../teams/tutorial-buildapp-retrieve-videos.md 
     - name: Sample apps
       items:
         - name: Use sample apps from Teams store

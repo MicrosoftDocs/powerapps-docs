@@ -25,7 +25,7 @@ Power Apps apps can include reports that provide useful business information to 
 > [!div class="mx-imgBorder"] 
 > ![Progress against goals standard report](media/progress-against-goals-report.png "Progress against goals standard report")
 
-System reports are available to all users. Individuals who create or otherwise own reports can share them with specific colleagues or teams, or can make the reports available to the organization, so that all users can run them. These reports use FetchXML queries that are proprietary to Common Data Service and retrieve data to build the report. Reports that you create in a Power Apps app are Fetch-based reports.
+System reports are available to all users. Individuals who create or otherwise own reports can share them with specific colleagues or teams, or can make the reports available to the organization, so that all users can run them. These reports use FetchXML queries that are proprietary to Microsoft Dataverse and retrieve data to build the report. Reports that you create in a Power Apps app are Fetch-based reports.
 
 > [!NOTE]
 > Report features don't work with canvas apps or model-driven apps running on mobile devices, such as tablets and phones. 

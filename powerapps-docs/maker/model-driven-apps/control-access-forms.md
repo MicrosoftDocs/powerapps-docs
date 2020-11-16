@@ -37,7 +37,7 @@ You can access form settings from the **Forms** tab in Power Apps or command bar
   
 > [!NOTE]
 > - Quick Create, Quick View, and Card forms can't be assigned to security roles.  
-> - Another option makers have to control form access is to make a main form inactive. You can set an active or inactive state to main forms. This feature was included primarily to manage new forms included when Common Data Service environments upgrade but you can use it to prevent users from being able to use any main form.   
+> - Another option makers have to control form access is to make a main form inactive. You can set an active or inactive state to main forms. This feature was included primarily to manage new forms included when Microsoft Dataverse environments upgrade but you can use it to prevent users from being able to use any main form.   
   
 ### Assign a security role to a form
 1. Sign into Power Apps, select **Solutions**, open the solution you want, select a table, and then select the **Forms** tab. 

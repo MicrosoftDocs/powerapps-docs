@@ -1,5 +1,5 @@
 ---
-title: "Use the Virtual table OData v4 Data Provider with Common Data Service | MicrosoftDocs"
+title: "Use the Virtual table OData v4 Data Provider with Microsoft Dataverse | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/04/2018
 ms.reviewer: ""
@@ -30,16 +30,16 @@ This topic describes how to configure the OData v4 Data Provider as well as the 
 
 ## OData v4 data provider best practices
 
-- Common Data Service requires that all tables have an ID attribute, this ID is known as a unique identifier and the value must be a guid.  You can only map ID columns to external columns with the `Edm.Guid` data type.  You can’t map an `Edm.Int32` data type to a Unique Identifier data type column in Common Data Service.
--  OData tables with nullable properties must be set to match the mapped column in the virtual table. For example, an OData table property with Nullable=False must have the mapped column in Common Data Service **Field Requirement** attribute set to **Business Required**. 
+- Microsoft Dataverse requires that all tables have an ID attribute, this ID is known as a unique identifier and the value must be a guid.  You can only map ID columns to external columns with the `Edm.Guid` data type.  You can’t map an `Edm.Int32` data type to a Unique Identifier data type column in Dataverse.
+-  OData tables with nullable properties must be set to match the mapped column in the virtual table. For example, an OData table property with Nullable=False must have the mapped column in Dataverse **Field Requirement** attribute set to **Business Required**. 
 - For retrieve multiple queries, such as when you load data in to a grid, control the size of the dataset returned from the external data source by using the select and filter query parameters.
 - If not already enabled, system administrators should enable plug-in tracing. Once enabled, all errors from the OData endpoint are captured in the plug-in trace log. More information:  [Administrator Guide: System Settings dialog box - Customization tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab) 
 
 ## Data type mapping
 
-The following table lists the OData table Data Model (EDM) data type mappings with Common Data Service data types. 
+The following table lists the OData table Data Model (EDM) data type mappings with Dataverse data types. 
 
-|OData Data Type|Common Data Service Data Type  |
+|OData Data Type|Dataverse Data Type  |
 |---------|---------|
 |`Edm.Boolean`|Two Options|
 |`Edm.DateTime`|Date and Time|
@@ -71,7 +71,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
 1. On the actions toolbar, click **New**.  
 1. On the **Select Data Provider** dialog box, select from the following data sources, and then click **OK**.  
   
-    - **OData v4 Data Provider**. Common Data Service includes an Odata v4 data provider that can be used to connect to data sources that support the OData v4 open standard.  
+    - **OData v4 Data Provider**. Dataverse includes an Odata v4 data provider that can be used to connect to data sources that support the OData v4 open standard.  
     - *Custom data provider*. If you've imported a data  provider plug-in, the data provider will appear here. More information:  [Developer Documentation: Get started with virtual tables](/dynamics365/customer-engagement/developer/virtual-tables/get-started-ve)  
     
 1. On the **New Data Source** properties page, complete the following columns, and then save the row.  

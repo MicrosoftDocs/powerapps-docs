@@ -1,6 +1,6 @@
 ---
 title: Manage custom columns in a table | Microsoft Docs
-description: Walkthrough of how to create, read, update, and delete custom columns in a table in Common Data Service.
+description: Walkthrough of how to create, read, update, and delete custom columns in a table in Microsoft Dataverse.
 author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
@@ -48,7 +48,7 @@ You can create and update one or more custom columns in any table. When you crea
     > ![New date and time column](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New date and time column")
 
 
-7. Under **Required**, select the check box if you want to recommended this column as required in your apps. This does not provide hard enforcement through all connections to the Common Data Service. If you need to ensure the column is populated, create a [Business Rule](data-platform-create-business-rule.md)
+7. Under **Required**, select the check box if you want to recommended this column as required in your apps. This does not provide hard enforcement through all connections to the Microsoft Dataverse. If you need to ensure the column is populated, create a [Business Rule](data-platform-create-business-rule.md)
 
 8. Under **Searchable**, select the check box if you need this column to be available in Views, Charts, Dashboards and Advanced Find. In most cases this checkbox should be checked.
 
@@ -57,7 +57,7 @@ You can create and update one or more custom columns in any table. When you crea
     > [!IMPORTANT]
     > Your column is not yet saved and created, until you save the changes to the table.
 
-10. Click or tap **Save Table** to finalize your changes and save them to the Common Data Service.
+10. Click or tap **Save Table** to finalize your changes and save them to the Dataverse.
 
     You're notified when the operation is completed successfully. If the operation is unsuccessful, an error message indicates the issues that occurred and how you can fix them.
 
@@ -100,7 +100,7 @@ As you create and modify columns, keep these points in mind:
 * [Define relationships between tables](data-platform-entity-lookup.md)
 * [Create a business rule](data-platform-create-business-rule.md)
 * [Create an app using tables](../canvas-apps/data-platform-create-app.md)
-* [Create an app from scratch using a Common Data Service database](../canvas-apps/data-platform-create-app-scratch.md)
+* [Create an app from scratch using a Dataverse database](../canvas-apps/data-platform-create-app-scratch.md)
 
 ## Privacy notice
 With the Microsoft Power Apps common data model we collect and store custom table and column names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The table and column names that Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service’s standard table coverage, such as schemas related to organizations. The data in the database tables associated with these tables is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom table and column names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).

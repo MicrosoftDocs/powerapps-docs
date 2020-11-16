@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio and the .NET Framework (Common Data Service) | Microsoft Docs" 
+title: "Visual Studio and the .NET Framework (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about managed code development tools and requirements."
 ms.custom: ""
 ms.date: 07/03/2019
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-The .NET SDK assemblies for Common Data Service are built on .NET Framework 4.6.2. 
+The .NET SDK assemblies for Microsoft Dataverse are built on .NET Framework 4.6.2. 
 
 You can use Visual Studio to build your managed code applications using .NET Framework 4.6.2 or later. 
 
@@ -27,7 +27,7 @@ Plug-ins and custom workflow assemblies should use .NET Framework 4.6.2. While a
 
 > [!IMPORTANT]
 > You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later.
-> Only applications using Transport Level Security (TLS) 1.2 or better security are allowed to connect with Common Data Service. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2. 
+> Only applications using Transport Level Security (TLS) 1.2 or better security are allowed to connect with Dataverse. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2. 
 > 
 > More information: <https://<blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/>
 > 

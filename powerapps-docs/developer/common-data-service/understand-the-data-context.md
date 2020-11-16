@@ -1,5 +1,5 @@
 ---
-title: "Understand the execution context (Common Data Service) | Microsoft Docs" 
+title: "Understand the execution context (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about the data that is passed to your plug-ins when it is executed." 
 ms.custom: ""
 ms.date: 09/08/2020

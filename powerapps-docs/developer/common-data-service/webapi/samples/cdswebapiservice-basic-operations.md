@@ -1,6 +1,6 @@
 ---
-title: "Web API CDSWebApiService Basic Operations Sample (C#) (Common Data Service)| Microsoft Docs"
-description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Common Data Service entity instances, using the Common Data Service Web API with the CDSWebAPIService class"
+title: "Web API CDSWebApiService Basic Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
+description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Microsoft Dataverse entity instances, using the Dataverse Web API with the CDSWebAPIService class"
 ms.custom: ""
 ms.date: 04/20/2020
 ms.service: powerapps
@@ -19,17 +19,17 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Common Data Service entity instances, using the Common Data Service Web API.  
+This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Microsoft Dataverse entity instances, using the Dataverse Web API.  
   
 > [!NOTE]
-> This sample implements the Common Data Service operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md). 
+> This sample implements the Dataverse operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md). 
 
 ## Prerequisites
 
 The following is required to build and run the CDSWebApiService C# samples :
 
 - Microsoft Visual Studio 2019. 
-- Access to Common Data Service with privileges to perform CRUD operations.
+- Access to Dataverse with privileges to perform CRUD operations.
   
 <a name="bkmk_runSample"></a>
   
@@ -41,7 +41,7 @@ The following is required to build and run the CDSWebApiService C# samples :
 
 1. Select the **BasicOperations** project and open the App.config. This is a common [App.config](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/CDSWebApiService/App.config) file used by all the samples in this solution. Once you edit this, you can run any of the samples in this solution.
 
-1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the CDS instance and credentials you want to connect to.
+1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the Dataverse instance and credentials you want to connect to.
 
     ```xml
         <add name="Connect"
@@ -250,7 +250,7 @@ namespace PowerApps.Samples
                     Console.WriteLine($"Contact URI: {account2Uri}");
 
                     //Retrieve account, primary contact info, and assigned tasks for contact.
-                    //CDS only supports querying-by-expansion one level deep, so first query
+                    //Dataverse only supports querying-by-expansion one level deep, so first query
                     // account-primary contact.
                     var retrievedAccount2 = svc.Get($"{account2Uri}?$select=name," +
                         $"&$expand=primarycontactid($select=fullname,jobtitle,annualincome)");
@@ -416,7 +416,7 @@ namespace PowerApps.Samples
 
 ### See also
 
-[Use the Common Data Service Web API](../overview.md)<br />
+[Use the Dataverse Web API](../overview.md)<br />
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
 [Create an entity using the Web API](../create-entity-web-api.md)<br />
 [Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)<br />

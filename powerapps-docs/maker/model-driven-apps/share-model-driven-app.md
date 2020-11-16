@@ -110,7 +110,7 @@ Security roles control a user’s access to data through a set of access levels 
     > [!div class="mx-imgBorder"] 
     > ![Manage roles](media/share-model-driven-app/manage-roles.png "Manage roles")
 
-4. On the **All Roles** page, select **Common data service user** then click **Actions** then **Copy Role.** 
+4. On the **All Roles** page, select **Microsoft Dataverse user** then click **Actions** then **Copy Role.** 
 
 > [!TIP]
 > You may also create a new blank role instead of copying an existing role. 
@@ -143,13 +143,13 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 |Environment Maker     |  None       | Can create new resources associated with an environment including apps, connections, custom APIs, gateways, and flows using Power Automate. However, does not have any privileges to access data within an environment. More information: [Environments overview](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
 |System Administrator     |  Create, Read, Write, Delete, Customizations, Security Roles       | Has full permission to customize or administer the environment, including creating, modifying, and assigning security roles. Can view all data in the environment. More information: [Privileges required for customization](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |System Customizer     | Create (self), Read (self), Write (self), Delete (self), Customizations         | Has full permission to customize the environment. However, can only view rows for environment tables that they create. More information: [Privileges required for customization](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
-|Common Data Service User     |  Read, Create (self), write (self), delete (self)       | Can run an app within the environment and perform common tasks for the rows that they own.        |
+|Dataverse User     |  Read, Create (self), write (self), delete (self)       | Can run an app within the environment and perform common tasks for the rows that they own.        |
 |Delegate     | Act on behalf of another user        | Allows code to run as another user or impersonate.  Typically used with another security role to allow access to rows. More information: [Impersonate another user](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
 *Privilege is global scope unless specified otherwise.
 
 ## Use Azure Active Directory groups to manage access
-Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Common Data Service users. Both types of Azure AD groups—Office and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams) 
+Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Dataverse users. Both types of Azure AD groups—Office and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams) 
 
 
 ### See also

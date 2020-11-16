@@ -57,7 +57,7 @@ Power Apps component framework licensing requirements are inline with existing c
 - Code components that don't connect to external services or data. When these components are used in an app that uses standard features, the app remains standard, and end users are required to be licensed at minimum for **Office 365**.
 
 > [!NOTE]
-> If you are currently using code components in model-driven apps connected to Common Data Service, end users will require **Power Apps** licenses.
+> If you are currently using code components in model-driven apps connected to Microsoft Dataverse, end users will require **Power Apps** licenses.
 
 With the general availability of the framework, code component developers will be able to classify components as part of the component manifest to allow makers to see which components are premium.
 

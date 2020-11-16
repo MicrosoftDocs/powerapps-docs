@@ -1,20 +1,22 @@
 ---
-title: "TransformationMapping Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the TransformationMapping entity."
-ms.date: 04/12/2020
+title: "TransformationMapping entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the TransformationMapping table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# TransformationMapping Entity Reference
+# TransformationMapping entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 In a data map, maps the transformation of source attributes to Microsoft Dynamics 365 attributes.
 
@@ -28,7 +30,7 @@ In a data map, maps the transformation of source attributes to Microsoft Dynamic
 |Retrieve|GET [*org URI*]/api/data/v9.0/transformationmappings(*transformationmappingid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/transformationmappings<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -631,6 +633,6 @@ See importmap Entity [TransformationMapping_ImportMap](importmap.md#BKMK_Transfo
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.transformationmapping?text=transformationmapping EntityType" />
