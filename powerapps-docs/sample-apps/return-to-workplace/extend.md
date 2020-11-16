@@ -575,7 +575,9 @@ This section describes the different flows in the solution and explains their pu
 | Share Guest Registration - Email | Share Guest Registration | Shares the guest registration details with the host and the guest. | Base |
 |||||
 
-For the solution, we generate sample data, which will be refreshed for 12 hours. You can turn off these flows if you don't need sample data in your environments.
+## Sample Data
+
+Initially in the solution, the flows below were provided to generate sample data. Every 12 hours new data would get created. In new versions these flows will no longer be provided, yet in the future they will be placed on Github for use on demo environments.
 
 | Flow  | Description |
 |--------------|----------|
