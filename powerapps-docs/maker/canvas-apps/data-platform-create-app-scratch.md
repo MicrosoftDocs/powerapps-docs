@@ -16,6 +16,8 @@ search.app:
 ---
 # Create a canvas app from scratch using Microsoft Dataverse
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Build a canvas app to manage data that's stored in Dataverse, using standard entities (which are built in), custom entities (which your organization creates), or both.
 
 When you build an app from Dataverse, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the app.
