@@ -8,7 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
 ms.date: 10/30/2020
-ms.author: emcoope-msft
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 

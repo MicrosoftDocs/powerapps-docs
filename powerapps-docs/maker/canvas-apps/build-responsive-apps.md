@@ -80,15 +80,6 @@ The Split-screen layout has two sections, each occupying 50% width of the screen
 
 The Sidebar layout has a fixed width sidebar on the left. The main body consists of a fixed height header, and the main section takes up the rest of the screen width.  By default, the template has the same behavior on mobile, however some customizations are recommended based on the UI pattern desired for the mobile experience. 
 
-### Example
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
-1. On the **Blank app** tile, select **Tablet layout**.
-1. Select **File** > **Settings** > **Screen size + orientation** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**.
-1. Select **New screen** and then select **Header, footer, main content** template screen.
-1. Select **MainSectionContainer1** and set the `Direction` property to `Horizontal`. Set `Align` to `Stretch`. 
-
 ## Working with containers 
 
 Containers are building blocks of all the responsive design. A container can be an [auto-layout container](#auto-layout-containers) in vertical or horizontal direction, or a fixed-layout container, which in the future will support constraints. 
