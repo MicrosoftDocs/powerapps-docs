@@ -33,7 +33,7 @@ Some of the benefits of Dataverse for Teams include:
 
 - Support for up to 500 teams.
 
-- The capability to be promoted to Dataverse.
+- The capability to be upgraded to Dataverse.
 
 See also: [Dataverse for Teams FAQs](data-platform-faqs.md)
 
@@ -48,7 +48,7 @@ A solution often has multiple tables that are used together in an application. F
 You can create and populate these tables with a new visual editor that makes it even easier to work with these tables.
 
 > [!NOTE]
-> All the capabilities found in tables are powered by Dataverse for Teams. Although this will satisfy many situations, in some situations an organization might want to have additional capacity, capabilities, or control over their solution. In these scenarios, Dataverse for Teams environments can be upgraded to Microsoft Dataverse. The upgrade process, referred to as *promotion*, has several considerations discussed in [Promotion process](/power-platform/admin/about-teams-environment?branch=teams-preview#promotion-process) in the Microsoft Power Platform admin guide.
+> All the capabilities found in tables are powered by Dataverse for Teams. Although this will satisfy many situations, in some situations an organization might want to have additional capacity, capabilities, or control over their solution. In these scenarios, Dataverse for Teams environments can be upgraded to Microsoft Dataverse. The upgrade process has several considerations discussed in [Upgrade process](/power-platform/admin/about-teams-environment#upgrade-process) in the Microsoft Power Platform admin guide.
 
 ## Security in Dataverse for Teams
 
