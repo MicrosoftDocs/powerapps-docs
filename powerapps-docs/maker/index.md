@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 11/16/2020
 ms.author: tapanm
 ms.reviewer:
 searchScope:
@@ -23,9 +23,6 @@ Power Apps is a high-productivity development platform for business apps, and ha
 - Microsoft Dataverse
 
 Let's learn more about each of these.
-
-> [!NOTE]
-> In addition to creating apps in Power Apps, you can now create apps directly within Microsoft Teams using Power Apps. More information: [Create apps in Microsoft Teams by using Power Apps](/powerapps/teams/create-apps-overview).
 
 ## Canvas apps
 
@@ -45,6 +42,9 @@ Creating a canvas app is easy; with Power Apps, you can find or create your app 
 - [From a Dataverse source](canvas-apps/data-platform-create-app.md)
 - [From a blank canvas](canvas-apps/data-platform-create-app-scratch.md)
 - [Via AppSource](../user/app-source.md)
+
+> [!NOTE]
+> In addition to creating apps in Power Apps, you can now create apps directly within Microsoft Teams using Power Apps. More information: [Create apps in Microsoft Teams by using Power Apps](/powerapps/teams/create-apps-overview).
 
 ## Model-driven apps
 
@@ -78,13 +78,13 @@ Use these topics to quickly get started with portals:
 
 [Dataverse](common-data-service/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you’re a Dynamics 365 customer, your data is already in Dataverse.
 
-Dataverse allows you to securely store and manage data within a set of standard and custom *entities*, and you can add fields to those entities when you need them.
+Dataverse allows you to securely store and manage data within a set of standard and custom *tables*, and you can add columns to those tables when you need them.
 
 Getting started with Dataverse is easy. For example, you can start with these items:
 
-- [Create a custom entity](common-data-service/data-platform-create-entity.md)
-- [Manage fields](common-data-service/data-platform-manage-fields.md)
-- [Create custom option sets](common-data-service/custom-picklists.md)
+- [Create a custom table](common-data-service/data-platform-create-entity.md)
+- [Manage columns](common-data-service/data-platform-manage-fields.md)
+- [Create custom choices](common-data-service/custom-picklists.md)
 - [Create a business rule](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
 ## Planning a Power Apps app or project
@@ -92,21 +92,3 @@ Getting started with Dataverse is easy. For example, you can start with these it
 It's easy to try building out your first app. We have a [30-day trial plan](signup-for-powerapps.md) and a free [community plan](dev-community-plan.md); find out which one is best for you and get started.
 
 If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
-
-
-<!--## Canvas and model-driven artifacts
-
-While we merge the experiences of canvas and model-driven apps, these artifacts will be relevant for either canvas apps or model-driven apps.
-
-| Artifact            | App Type     |
-|---------------------|--------------|
-| Entity > Views      | Model-driven |
-| Entity > Forms      | Model-driven |
-| Entity > Dashboards | Model-driven |
-| Connections         | Canvas       |
-| Gateways            | Canvas       |
-| Custom connectors   | Canvas       |
-| Apps > Import       | Canvas       |
-
--->
-
