@@ -21,7 +21,8 @@ search.app:
 Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as the app runs.
 
 This feature gives you a better understanding of how the formulas contained in your app work so you can improve performance and identify any errors or problems.
-For more information about when you should monitor an app, see <insert link to overview topic in T-shoot section>. To run Monitor with a canvas app, see  https://docs.microsoft.com/powerapps/maker/canvas-apps/monitor.
+
+For more information about when you should monitor an app, see [Monitor overview](monitor-overview.md). To run Monitor with a canvas app, see [Debugging canvas apps with Monitor](monitor-canvasapps.md).
 
 ## Use Monitor to diagnose a model-driven app
 
