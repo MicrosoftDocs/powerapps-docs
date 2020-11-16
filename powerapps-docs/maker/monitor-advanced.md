@@ -129,7 +129,7 @@ To connect a user to a monitoring session:
 
 1. Once you share the link with the user, the user uses the link to open the app, and gets notified of joining a monitoring session.
 
-    ![Connect user - join](media/monitor/copy-connect-user-link.png "Connect user - join")
+    ![Connect user - join](media/monitor/user-join.png "Connect user - join")
 
 User can now interact with the app, and Monitor shows events for this interaction.
 
