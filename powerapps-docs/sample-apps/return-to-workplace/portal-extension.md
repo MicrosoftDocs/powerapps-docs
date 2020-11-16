@@ -12,8 +12,12 @@ ms.reviewer: kvivek
 
 # Return to the Workplace Guest Portals
 
-A seperate offering extends the Return to the Workplace solution with a portal. Allowing people external to your organization to perform attestations.
+A seperate offering extends the Return to the Workplace solution with a portal. Allowing people external to your organization to get a pas by performing attestations. The portal has been designed to provide a mobile experience for the end user, but it will scale to tablet or desktop screen sizes also. This enabels end users to use the portal from their own device.
 
+> [!div class="mx-imgBorder"]
+> ![Portal welcome page](media/portals-welcome-screen.png "Portal welcome screen")
+> [!div class="mx-imgBorder"]
+> ![Portal home screen](media/portals-home-screen.png "Portal home screen")
 
 ## Prerequisites
 
@@ -67,6 +71,9 @@ On the home screen you have several options:
 3. The guest accepts the to the disclaimer.
 4. The guest attestates not having symptoms.
 5. A pass is created for the guest for that day.
+
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-attestation.png "Portal attestation")
 
 > [!NOTE]
 > An administrator can disable the store of negative attestations in the solution settings. This will stop a negative attestation of being created and wont save the record.
@@ -140,7 +147,10 @@ Not mandatory fields:
 
 4. Phone Number
 5. Organization 
-6. Employee Contact
+
+> [!div class="mx-imgBorder"]
+> ![Portal Register Guest or dependent](media/portals-register-dependent.png "Portal Register Guest or dependent")
+
 
 After creating dependents you would be able to see them when clicking **Create Pass** option to select who to create a pass for.
 
