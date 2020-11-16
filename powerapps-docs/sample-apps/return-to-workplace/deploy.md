@@ -164,7 +164,7 @@ Next, we'll configure the data refresh settings for the dataset.
 
 The facility manager Power BI dashboard is used in the model-driven app. Because these reports are published in a different location, you need to change the location.
 
-1. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
+1. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Table**.
 
 2. From the list of entities, select **Facility (msft_facility)** , under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
