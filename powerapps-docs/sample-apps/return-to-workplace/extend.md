@@ -12,6 +12,8 @@ ms.reviewer: kvivek
 
 # Extend the Return to the Workplace solution
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This article provides a detailed description of the data model, workflows, and Power Automate flows used by the Return to the Workplace solution. The solution extends Common Data Model and uses several of its components. Administrators, developers, and users should be mindful of the solution and possible implications of other solutions that coexist in the same environment.
 
 The definitions provided in this article indicate the intended purpose of the entities, relationships, attributes, flows, and workflows contained in the Return to the Workplace solution. These definitions can be fully or partially adopted depending on your business requirements.
