@@ -403,7 +403,7 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
-            - name: Horizontal container control
+            - name: Horizontal container (experimental)
               href: ../canvas-apps/controls/control-horizontal-container.md
             - name: HTML text
               href: ./canvas-apps/controls/control-html-text.md
@@ -449,7 +449,7 @@
               href: ./canvas-apps/controls/control-timer.md
             - name: Toggle
               href: ./canvas-apps/controls/control-toggle.md
-            - name: Vertical container control
+            - name: Vertical container (experimental)
               href: ../canvas-apps/controls/control-vertical-container.md
             - name: Video
               href: ./canvas-apps/controls/control-audio-video.md
