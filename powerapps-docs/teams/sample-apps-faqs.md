@@ -14,6 +14,15 @@ ms.reviewer: tapanm
 
 In this article, learn about the frequently asked questions and the answers about using the sample apps available in the Teams store.
 
+## When I try to install a sample app, I get an error that the app is already in the team.
+
+You may see the following error when you try to install a sample app in a team that already has the app installed, but you’re not the app owner, or the team owner.
+
+`This app is already in this team` <br>
+`To update it, you must be its owner or a team owner.`
+
+When this happens, use the installed app, or install the app in a different team.
+
 ## How can I move an app to another channel in the same Team?
 
 For the steps to move an app, go to [Move an app to another Teams channel in the same team](publish-and-share-apps.md#move-an-app-to-another-teams-channel-in-the-same-team).

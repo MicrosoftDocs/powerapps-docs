@@ -1,19 +1,17 @@
 ---
-title: Known issues and limitations for Project Oakdale | Microsoft Docs
+title: Known issues and limitations for Dataverse for Teams | Microsoft Docs
 description: Provides an overview of known issues and limitations when using Power Apps with Microsoft Teams.
 author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/14/2020
+ms.date: 11/16/2020
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
 # Known issues and limitations
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
-This article provides details about the known issues and limitations when using [**Project Oakdale environments**](/power-platform/admin/about-teams-environment) during the preview release.
+This article provides details about the known issues and limitations when using [**Dataverse for Teams environments**](/power-platform/admin/about-teams-environment).
 
 ## Additional components
 
@@ -23,31 +21,22 @@ The following components aren't supported:
 - AI Builder
 - Custom connectors
 
-## Build hub
-
-Selecting **Play** for apps in build hub launches the application in an external browser window, and may not work.
-
-Use one of the following options to play an app:
-
-- Edit the app and play using the Studio.
-- Publish the app in Teams and play from the pinned tab.
-
 ## Component library
 
 [Component library](../maker/canvas-apps/component-library.md) isn't supported.
 
 ## Government Community Cloud (GCC)
 
-Project Oakdale currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
+Dataverse for Teams currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
 
 ## Hidden membership groups
 
-Project Oakdale doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options). You'll receive the following error when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
+Dataverse for Teams doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options). You'll receive the following error when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
 
 `Existing limits on this team` <br>
 `You're unable to continue due to an administrative setting on this team. You can try again with another team.`
 
-The group may have hidden membership enabled by your administrator. Try using Project Oakdale on a new Teams team, an existing team that does not have hidden membership enabled, or contact your administrator.
+The group may have hidden membership enabled by your administrator. Try using Dataverse for Teams on a new Teams team, an existing team that does not have hidden membership enabled, or contact your administrator.
 
 ## Localization
 
@@ -69,12 +58,6 @@ You can't share apps or data outside of a team currently.
 
 Enabling classic controls requires a refresh of Power Apps Studio.  
 
-### Combo box
-
-The combo box control currently only supports up to 25 items in the dropdown.
-
-![Combo box](media/combo-box.png "Combo box")
-
 ### Canvas components
 
 You may see red errors while using the modern controls in canvas components. These errors won't functionally impact your app, and you can ignore them.
@@ -85,9 +68,10 @@ You may see red errors while using the modern controls in canvas components. The
 
 The following controls aren't supported:
 
-- [Forms Pro survey (preview)](/forms-pro/embed-survey-powerapps)
-- [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md)
-- [Video control](../maker/canvas-apps/controls/control-audio-video.md)
+- [Address Input](../maker/canvas-apps/geospatial-component-input-address.md)
+- [Camera](../maker/canvas-apps/controls/control-camera.md) (in Teams Mobile)
+- [Map](../maker/canvas-apps/geospatial-component-map.md)
+- [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
 
 The [Image control](../maker/canvas-apps/controls/control-image.md) only supports external media URLs using HTTPS.
 
@@ -95,12 +79,12 @@ The [Image control](../maker/canvas-apps/controls/control-image.md) only support
 
 Connections in the Power Apps Studio that require an authentication dialog fails in the [Teams desktop client](https://docs.microsoft.com/microsoftteams/get-clients#desktop-client). Open the Studio in the [Teams web client](https://docs.microsoft.com/microsoftteams/get-clients#web-client) to add these connectors.
 
-### Studio and Visual Editor synchronization
+### Studio and visual editor synchronization
 
 Power Apps Studio doesn't reflect the changes to tables after:
 
 1. Renaming tables.
-1. Adding relationships within the inline [Visual editor](understand-power-apps-studio.md#visual-editor).
+1. Adding relationships within the inline [visual editor](understand-power-apps-studio.md#visual-editor).
 
 To see the new changes, refresh Power Apps Studio.
 
@@ -108,9 +92,9 @@ To see the new changes, refresh Power Apps Studio.
 
 It's currently not possible to change your Studio version.
 
-### Visual Editor
+### Visual editor
 
-Currency, Duration, Language, Ticker, and Timezone fields can't be added using Visual Editor. To create these fields, use the experience to work with tables as available using [build hub](create-table.md).
+Currency, Duration, Language, Ticker, and Timezone fields can't be added using visual editor. To create these fields, use the experience to work with tables as available using [solution explorer](create-table.md).
 
 ## Theme
 

@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Inspection sample apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 In this tutorial, learn about the Inspection (User) and Manage inspections (Manager) apps, and how to use them effectively.
 
 ## Overview

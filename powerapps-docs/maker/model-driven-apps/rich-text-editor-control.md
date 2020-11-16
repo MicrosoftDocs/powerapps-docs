@@ -227,4 +227,4 @@ HTML markup is displayed for columns configured to use the rich text editor cont
 
 ### See also
 
-[Create and edit columns for Common Data Service using Power Apps portal](../common-data-service/create-edit-field-portal.md)
+[Create and edit columns for Microsoft Dataverse using Power Apps portal](../common-data-service/create-edit-field-portal.md)

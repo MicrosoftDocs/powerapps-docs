@@ -1,20 +1,22 @@
 ---
-title: "msdyn_analysisjob Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_analysisjob entity."
-ms.date: 04/12/2020
+title: "msdyn_analysisjob entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_analysisjob table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_analysisjob Entity Reference
+# msdyn_analysisjob entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 
 
@@ -39,8 +41,7 @@ search.app:
 |SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_analysisjobs(*msdyn_analysisjobid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/msdyn_analysisjobs(*msdyn_analysisjobid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -444,7 +445,6 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |--------|-----|
 |Description|Status of the Analysis Job|
 |DisplayName|Status|
-|IsValidForCreate|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|statecode|
@@ -1124,6 +1124,6 @@ See businessunit Entity [business_unit_msdyn_analysisjob](businessunit.md#BKMK_b
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_analysisjob?text=msdyn_analysisjob EntityType" />

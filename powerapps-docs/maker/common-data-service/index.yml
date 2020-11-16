@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Common Data Service documentation
+title: Microsoft Dataverse documentation
 summary: Securely store and manage data that's used by Power Apps business applications. 
 
 metadata:
-  title: Common Data Service documentation
-  description: Provides access to highlighted areas within the Common Data Service documentation
+  title: Dataverse documentation
+  description: Provides access to highlighted areas within the Dataverse documentation
   services: service
   ms.service: powerapps 
   ms.subservice: subservice
@@ -24,13 +24,13 @@ landingContent:
     linkLists:
        - linkListType: overview
          links:
-          - text: What is Common Data Service?
+          - text: What is Dataverse?
             url: data-platform-intro.md
-          - text: Why choose Common Data Service
+          - text: Why choose Dataverse
             url: why-cds-overview.md
        - linkListType: learn
          links:
-          - text: Introduction to Common Data Service
+          - text: Introduction to Dataverse
             url: https://docs.microsoft.com/learn/modules/introduction-common-data-service/
 
   # Card

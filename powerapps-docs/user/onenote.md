@@ -1,5 +1,5 @@
 ---
-title: "Use OneNote in Common Data Service| MicrosoftDocs"
+title: "Use OneNote in Microsoft Dataverse| MicrosoftDocs"
 description: Learn how to use OneNote to take notes 
 author: mduelae
 manager: kvivek
@@ -19,7 +19,7 @@ search.app:
 ---
 # Take notes by using OneNote 
 
-Use OneNote to take or review notes, ideas, plans, and research from the **Document Associated Grid** view of a row in Common Data Service.
+Use OneNote to take or review notes, ideas, plans, and research from the **Document Associated Grid** view of a row in Microsoft Dataverse.
 
 Before you can use OneNote, it must be enabled by your system administrator. More information:
 

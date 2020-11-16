@@ -1,6 +1,6 @@
 ---
-title: "Retrieve and execute predefined queries (Common Data Service)| Microsoft Docs"
-description: "Common Data Service provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve data"
+title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft Docs"
+description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve data"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.service: powerapps
@@ -26,13 +26,13 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Common Data Service provides a way for administrators to create system views that are available to all users. Individual users can save the advanced find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
+Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the advanced find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
 
 <a name="bkmk_predefinedQueries"></a>
 
 ## Predefined queries
 
-Common Data Service allows you to define, save, and execute two types of queries as listed here.
+Dataverse allows you to define, save, and execute two types of queries as listed here.
 
 |Query type|Description|
 |----------------|-----------------|

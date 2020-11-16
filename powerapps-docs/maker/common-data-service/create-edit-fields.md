@@ -1,5 +1,5 @@
 ---
-title: "How to create and edit columns for Common Data Service| MicrosoftDocs"
+title: "How to create and edit columns for Microsoft Dataverse| MicrosoftDocs"
 description: Learn how to create and edit columns
 ms.custom: ""
 ms.date: 02/08/2019
@@ -27,7 +27,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In Common Data Service columns define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
+In Microsoft Dataverse columns define the individual data items that can be used to store data in a table. Columns are sometimes called *attributes* by developers. 
   
 Before you create a custom column, evaluate whether using an existing column would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -35,23 +35,23 @@ There are two designers you can use to create or edit columns:
 
 |Designer| Description|
 |--|--|
-|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)|
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md) |
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit columns for Dataverse using Power Apps portal](create-edit-field-portal.md)|
+|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md) |
 
 > [!NOTE]
 > You can also create columns in your environment using the following:
 > - In model-driven apps, select **New Column** from the form editor.
 > - Import a solution that contains the definition of the columns.
-> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
+> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
 > - A developer can use [Metadata services](/powerapps/developer/common-data-service/use-web-services#metadata-services) to write a program to create and update columns.
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the Power Apps portal to create and edit columns for Common Data Service unless you need to address any of the following requirements:
+You should use the Power Apps portal to create and edit columns for Dataverse unless you need to address any of the following requirements:
 
 - Create a Customer Lookup column. 
    - More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)
-- Create a column in a solution other than the Common Data Service Default solution. 
+- Create a column in a solution other than the Common Data Service Default Solution. 
    - More information: [Solutions overview](solutions-overview.md)
 - Define status reason transitions. 
    - More information: [Define status reason transitions for the Case or custom tables](define-status-reason-transitions.md)
@@ -74,15 +74,15 @@ You should use the Power Apps portal to create and edit columns for Common Data 
 
 ## Community tools
 
-**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Common Data Service. Please see the [Developer Tools](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
+**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer Tools](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also  
-[Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)<br />
-[Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit columns for Dataverse using Power Apps portal](create-edit-field-portal.md)<br />
+[Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Types of columns and column data types](types-of-fields.md)<br />
 [Developer Documentation: Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)
  

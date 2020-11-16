@@ -42,7 +42,7 @@ Websites are created when you create a new portal. However, advanced website man
 |Name|Description|
 |-|-|
 |Name|The descriptive name of the website. This field is required.|
-| Default Language | Default language for the selected portal. Before you change the default language, you must: <br> - [Add the language in Common Data Service environment](https://docs.microsoft.com/power-platform/admin/enable-languages). <br> - [Add the language in Supported Languages](enable-multiple-language-support.md) section for Websites record.
+| Default Language | Default language for the selected portal. Before you change the default language, you must: <br> - [Add the language in Microsoft Dataverse environment](https://docs.microsoft.com/power-platform/admin/enable-languages). <br> - [Add the language in Supported Languages](enable-multiple-language-support.md) section for Websites record.
 | Owner | The owner contact record for the selected Websites record.
 |Primary Domain Name|The primary domain name of the portal to which this website record will be added.|
 |Parent Website\*|The parent website of the website. This field can generally be ignored, except in certain advanced portal configurations in which a single portal application is bound to one master website at the application root path, with one or more child websites available at specific sub-paths. <br>\* Only for backward compatibility, not to be used for new or existing portals. |

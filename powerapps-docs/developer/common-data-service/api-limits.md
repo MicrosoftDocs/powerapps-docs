@@ -1,5 +1,5 @@
 ---
-title: "Service Protection API Limits (Common Data Service) | Microsoft Docs" 
+title: "Service Protection API Limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
 ms.date: 04/20/2020
@@ -21,9 +21,9 @@ search.app:
 
 To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources.
 
-The limits should not affect normal users of interactive clients. Only client applications that perform extraordinary API requests should be affected. The limits provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service platform.
+The limits should not affect normal users of interactive clients. Only client applications that perform extraordinary API requests should be affected. The limits provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Microsoft Dataverse platform.
 
-When a client application makes extraordinarily demanding requests, the Common Data Service follows the common pattern for online services. We return an error indicating that too many requests have been made.
+When a client application makes extraordinarily demanding requests, the Dataverse follows the common pattern for online services. We return an error indicating that too many requests have been made.
 
 - With the Web API, we return a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error.
 - With the Organization Service, you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one of three specific error codes. More information: [Service Protection API Limit Errors returned](#service-protection-api-limit-errors-returned)
@@ -41,7 +41,7 @@ Client application developers should not simply throw the error to display the m
 
 ### Data integration applications
 
-Applications designed to load data into CDS or perform bulk updates must also be able to manage service protection API limit errors. These applications prioritize throughput so they can complete their work in the minimum amount of time. These applications must have a strategy to retry operations. There are several strategies that they can apply to get the maximum throughput. More information: [How to maximize throughput](#how-to-maximize-throughput).
+Applications designed to load data into Dataverse or perform bulk updates must also be able to manage service protection API limit errors. These applications prioritize throughput so they can complete their work in the minimum amount of time. These applications must have a strategy to retry operations. There are several strategies that they can apply to get the maximum throughput. More information: [How to maximize throughput](#how-to-maximize-throughput).
 
 ### Portal applications
 
@@ -49,7 +49,7 @@ Portal applications typically send requests from anonymous users through a singl
 
 ## Impact on plug-ins and custom workflow activities
 
-Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits are not applied to plug-ins and custom workflow activities. Plug-ins and custom workflow activities are uploaded and run within the isolated sandbox service. Common Data Service operations invoked on the sandbox service do not use the public API endpoints.
+Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits are not applied to plug-ins and custom workflow activities. Plug-ins and custom workflow activities are uploaded and run within the isolated sandbox service. Dataverse operations invoked on the sandbox service do not use the public API endpoints.
 
 If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits. More information: [How Service Protection API Limits are enforced](#how-service-protection-api-limits-are-enforced)
 
@@ -235,7 +235,7 @@ This section describes ways that you can design your clients and systems to avoi
 
 ### Update your client application
 
-Service Protection API limits have been applied to CDS since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns described in the [Using the Organization Service](#using-the-organization-service) or [Using the Web API](#using-the-web-api) sections below.
+Service Protection API limits have been applied to Dataverse since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns described in the [Using the Organization Service](#using-the-organization-service) or [Using the Web API](#using-the-web-api) sections below.
 
 ### Move towards real-time integration
 
@@ -336,7 +336,7 @@ If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Cli
 More information:
 
 - [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md).
-- [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Common Data Service](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
+- [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Dataverse](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
 
 ### Use Task Parallel Library with CrmServiceClient
 
@@ -355,6 +355,6 @@ Work with the ETL application vendor to learn which settings to apply. Make sure
 ### See also
 
 [Administer Power Platform / Licensing and license management / Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)<br />
-[Common Data Service API limits overview](../../maker/common-data-service/api-limits-overview.md)<br />
-[Use Common Data Service Web API](webapi/overview.md)<br />
-[Use Common Data Service Organization Service](org-service/overview.md)
+[Dataverse API limits overview](../../maker/common-data-service/api-limits-overview.md)<br />
+[Use Dataverse Web API](webapi/overview.md)<br />
+[Use Dataverse Organization Service](org-service/overview.md)

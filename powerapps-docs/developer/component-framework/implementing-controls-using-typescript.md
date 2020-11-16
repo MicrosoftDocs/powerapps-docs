@@ -332,7 +332,7 @@ The build generates an updated TypeScript type declaration file under the `TSLin
 The component is compiled into the `out/controls/TSLinearInputComponent` folder. The build artifacts include:
 
    - bundle.js – Bundled component source code. 
-   - ControlManifest.xml – Actual component manifest file that is uploaded to the Common Data Service organization.
+   - ControlManifest.xml – Actual component manifest file that is uploaded to the Microsoft Dataverse organization.
 
 ## Debugging your code component
 
@@ -373,8 +373,8 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
      msbuild
     ```
     > [!TIP]
-    > You will be hit with the error: *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Common Data Service and run the solution checker.
-    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Common Data Service and run the solution checker.
+    > You will be hit with the error: *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Dataverse and run the solution checker.
+    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Dataverse and run the solution checker.
       
     > [!NOTE]
     > Make sure that **NuGet targets & Build Tasks** is checked. To enable it:
@@ -384,7 +384,7 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 
 6. The generated solution zip file is located in the `Solution\bin\debug` folder.
-7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+7. Manually [import the solution into Dataverse](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 ## Adding code components in model-driven apps
 

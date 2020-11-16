@@ -1,5 +1,5 @@
 ---
-title: "Sample: Modify query in PreOperation stage (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Modify query in PreOperation stage (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to write a plug-in that modifies a query defined within the PreOperation stage of a RetrieveMultiple request." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 09/23/2019
@@ -34,7 +34,7 @@ You can download the sample from [here](https://github.com/Microsoft/PowerApps-S
 
 1. Download or clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo so that you have a local copy. This sample is located under PowerApps-Samples-master\cds\orgsvc\C#\RetrieveMultipleAccountPreOperation.
 1. Open the sample solution in Visual Studio, navigate to the project's properties, and verify the assembly will be signed during the build. Press F6 to build the sample's assembly (RetrieveMultipleAccountPreOperation.dll).
-1. Run the Plug-in Registration tool and register the assembly in the Common Data Service server's sandbox and database for the `PreOperation` stage of the `RetrieveMultiple` message for the `Account` entity. 
+1. Run the Plug-in Registration tool and register the assembly in the Microsoft Dataverse server's sandbox and database for the `PreOperation` stage of the `RetrieveMultiple` message for the `Account` entity. 
 1. Using an app or write code to retrieve accounts to trigger the plug-in. See [Code to test this sample](#code-to-test-this-sample) below for an example.
 1. When you are done testing, unregister the assembly and step.
 

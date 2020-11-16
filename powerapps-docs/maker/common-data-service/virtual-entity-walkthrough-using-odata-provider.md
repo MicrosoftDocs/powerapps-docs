@@ -1,5 +1,5 @@
 ---
-title: "Virtual table walkthrough using the OData Data Provider in Common Data Service | MicrosoftDocs"
+title: "Virtual table walkthrough using the OData Data Provider in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to use the OData v4 data provider with a virtual table"
 ms.custom: ""
 ms.date: 06/04/2018

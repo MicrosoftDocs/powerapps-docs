@@ -1,5 +1,5 @@
 ---
-title: "Use the QueryByAttribute class (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use the QueryByAttribute class (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the QueryByAttribute class to build queries that test a set of attributes against a set of values"
 ms.custom: ""
 ms.date: 05/03/2019
