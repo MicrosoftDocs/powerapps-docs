@@ -98,7 +98,7 @@ Readiness factors are used to determine whether the workplaces can move through 
 
 2. Enter appropriate values in the fields:
 
-   | **Field** |  **Description** |
+   | **Column** |  **Description** |
    |-------------|------------------------------|
    | Factor | Enter a name for the factor.  |
    | Description | Enter the description for the readiness factor. |
@@ -124,7 +124,7 @@ In the reopening plan, you define phases that guide a facility to safely reopen 
 
 2. Enter appropriate values in the fields:
 
-    | **Field**   | **Description**       |
+   | **Column**    | **Description**       |
    |---------------|------------------------------|
    | Index | Enter a unique index number to place the phase in the order you want.|
    | Name | Enter a name for the reopen phase.|
@@ -155,12 +155,12 @@ To edit the record, select it, update the values, and then select **Save & Close
 
 3. Enter appropriate values in the fields:
 
-   | **Field**    | **Description**     |
-   |--------------|--------------------|
-   | Reopen Phase | The name of the phase you're adding a goal to will appear here.|
-   | Key Metric   | Select a key metric for the goal.  |
-   | Type         | Select an appropriate goal type from the list. |
-   | Value        | Enter a numerical target value for the goal. |
+   | **Column**    | **Description**     |
+   |---------------|--------------------|
+   | Reopen Phase  | The name of the phase you're adding a goal to will appear here.|
+   | Key Metric    | Select a key metric for the goal.  |
+   | Type          | Select an appropriate goal type from the list. |
+   | Value         | Enter a numerical target value for the goal. |
 
    > [!div class="mx-imgBorder"]
    > ![New goal form](media/solution-admin-new-goal-form.png "New goal form")
@@ -211,7 +211,7 @@ By default, two facility types are provided as an example.
 
 2. Enter appropriate values in the fields:
 
-    | **Field**   | **Description**                     |
+   | **Column**   | **Description**                     |
    |-------------|-------------------------------------|
    | Type        | Enter a name for the type of facility.    |
    | Description | Enter the description for the facility type. |
@@ -227,7 +227,7 @@ To edit the record, select it, update the values, and then select **Save & Close
 
 The facility sample data file is available in the package. When you want to import your own facilities, you can [download a template to use for data import](https://docs.microsoft.com/power-platform/admin/download-template-data-import).
 
-**To import sample facility data to the Facility entity**
+**To import sample facility data to the Facility table**
 
 1. On the left pane, under **Facility Management**, select **Facilities**.
 
@@ -236,7 +236,7 @@ The facility sample data file is available in the package. When you want to impo
    > [!div class="mx-imgBorder"]
    > ![Import data](media/solution-admin-facilities-excel-import.png "Import data")
 
-3. After the sample data is imported, you'll see the imported records in the entity.
+3. After the sample data is imported, you'll see the imported records in the table.
 
    > [!div class="mx-imgBorder"]
    > ![Active facilities](media/solution-admin-facilities-active.png "Active facilities")
@@ -270,7 +270,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
    > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
 
    
-   | **Field**              | **Description**                                |
+   | **Column**              | **Description**                                |
    |------------------------|------------------------------------------------|
    | Name | Name of the solution settings record. |
    | Facility Group | Applicable facility group, leave empty for default. |
@@ -291,7 +291,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
    > [!div class="mx-imgBorder"]
    > ![Solution settings guest tab](media/solution-admin-guest-setting.png "Solution settings guest tab")
 
-   | **Field**              | **Description**                                |
+   | **Column**              | **Description**                                |
    |------------------------|------------------------------------------------|
    | Guest Health Terms & Agreement | Shown in the Employee app during the guest registration process.|
    | Guest Privacy Terms & Agreement | Shown in the Employee app during the guest registration process. |
@@ -317,7 +317,7 @@ For active employee cases, the number of cases can be limited to one active case
 
 5. Select **New** and enter the appropriate values in the fields. 
 
-   | **Field**   | **Description**                     |
+   | **Column**   | **Description**                     |
    |-------------|-------------------------------------|
    | Name        | Enter a name for the rule.     |
    | Base Record Type | Select Employee Case. |
