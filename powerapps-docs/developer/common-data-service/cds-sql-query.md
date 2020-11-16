@@ -75,7 +75,7 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 
 ## Supported operations and data types
 
-For a detailed list of supported SQL operations on the Dataverse endpoint see [How Common Data Service SQL differs from Transact-SQL](how-cds-sql-differs-from-transact-sql.md).
+For a detailed list of supported SQL operations on the Dataverse endpoint see [How Dataverse SQL differs from Transact-SQL](how-cds-sql-differs-from-transact-sql.md).
 
 Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. Dataverse option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
 
