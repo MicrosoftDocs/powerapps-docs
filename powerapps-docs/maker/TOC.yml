@@ -404,7 +404,7 @@
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
             - name: Horizontal container (experimental)
-              href: ../canvas-apps/controls/control-horizontal-container.md
+              href: ./canvas-apps/controls/control-horizontal-container.md
             - name: HTML text
               href: ./canvas-apps/controls/control-html-text.md
             - name: Icon
@@ -450,7 +450,7 @@
             - name: Toggle
               href: ./canvas-apps/controls/control-toggle.md
             - name: Vertical container (experimental)
-              href: ../canvas-apps/controls/control-vertical-container.md
+              href: ./canvas-apps/controls/control-vertical-container.md
             - name: Video
               href: ./canvas-apps/controls/control-audio-video.md
             - name: Web barcode scanner (experimental)
@@ -471,12 +471,12 @@
               href: ./canvas-apps/controls/properties-text.md
       - name: Manage screens
         items:
+        - name: Build responsive apps
+          href: canvas-apps/build-responsive-apps.md
         - name: Change screen size and orientation
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
-        - name: Build responsive apps
-          href: canvas-apps/build-responsive-apps.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas

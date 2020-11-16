@@ -76,10 +76,10 @@ Horizontal container control determines the position of the child components so 
 ## Example
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** from left navigation. Select the **New app** drop down menu and then select **Canvas**.
+1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
 1. On the **Blank app** tile, select **Tablet layout**.
 1. Select **File** > **Settings** > **Screen size + orientation** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
-1. Now from the **Insert** pane in the left sidebar, under **Layout**, select **Horizontal container**. 
+1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 
    > [!div class="mx-imgBorder"]
    > ![Insert containers](../media/create-responsive-layout/insert-containers.png "Insert containers")
@@ -90,4 +90,4 @@ Horizontal container control determines the position of the child components so 
    1. Width = Parent.Width
    1. Height = Parent. Height
  
-1. Add few buttons, text inputs, media, icons and select **F5** to see how the app adjusts to the screen changes.
+1. Add few buttons, text inputs, media, icons, and select **F5** to see how the app adjusts to the screen changes.

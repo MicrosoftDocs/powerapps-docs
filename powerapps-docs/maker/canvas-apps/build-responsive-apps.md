@@ -83,7 +83,7 @@ The Sidebar layout has a fixed width sidebar on the left. The main body consists
 ### Example
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** from left navigation. Select the **New app** drop down menu and then select **Canvas**.
+1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
 1. On the **Blank app** tile, select **Tablet layout**.
 1. Select **File** > **Settings** > **Screen size + orientation** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**.
 1. Select **New screen** and then select **Header, footer, main content** template screen.
@@ -121,15 +121,15 @@ You can use auto-layout containers in the following scenarios:
 To build a responsive screen:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Select **Apps** from left navigation. Select the **New app** drop down menu and then select **Canvas**.
+1. Select **Apps** from left navigation. Select the **New app** drop-down menu and then select **Canvas**.
 1. On the **Blank app** tile, select **Tablet layout**.
 1. Select **File** > **Settings** > **Screen size + orientation** and disable **Scale to fit**, **Lock aspect ratio**, and **Lock orientation** and select **Apply**. 
-1. Now from the **Insert** pane in the left sidebar, under **Layout**, select **Horizontal container**. 
+1. Now from the **Insert** panes in the left sidebar, under **Layout** tab, select **Horizontal container**. 
 
    > [!div class="mx-imgBorder"]
    > ![Insert containers](media/create-responsive-layout/insert-containers.png "Insert containers")
 
-1. The top most container needs to be sized to take the entire space with these properties. It will be the same size as the screen as it resizes.  
+1. The top-most container needs to be sized to take the entire space with these properties. It will be the same size as the screen as it resizes.  
    1. X = 0 
    1. Y= 0 
    1. Width = Parent.Width 
@@ -140,7 +140,7 @@ To build a responsive screen:
    > [!div class="mx-imgBorder"]
    > ![Add vertical containers](media/create-responsive-layout/add-two-vertical-containers.png "Add vertical containers")
 
-1. To make the containers fill the full vertical space, Select **Container1** and set the `Align (vertical)` property to `Stretch`.  
+1. To make the containers, fill the full vertical space, Select **Container1** and set the `Align (vertical)` property to `Stretch`.  
 
    > [!div class="mx-imgBorder"]
    > ![Align stretch](media/create-responsive-layout/align-property-stretch.png "Align stretch")
