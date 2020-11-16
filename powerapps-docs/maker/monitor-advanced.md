@@ -168,4 +168,5 @@ The following scenarios aren't supported when using Monitor:
 ### See also
 
 - [Monitor canvas apps using Monitor](monitor-canvasapps.md)
-- Monitor model-driven apps using Monitor
+- [Monitor model-driven apps using Monitor](monitor-modelapps.md)
+

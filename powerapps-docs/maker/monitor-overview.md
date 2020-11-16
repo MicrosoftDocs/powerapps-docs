@@ -100,7 +100,7 @@ details about the event. The panel has four tabs:
 ## Next steps
 
 - [Monitor canvas apps using Monitor](monitor-canvasapps.md)
-- Monitor model-driven apps using Monitor
+- [Monitor model-driven apps using Monitor](monitor-modelapps.md)
 
 ### See also
 
