@@ -152,7 +152,7 @@ to share apps with groups of users.
    > [!div class="mx-imgBorder"]
    > ![Share app](./media/share-app.png "Share app")
 
-1. Specify the Azure AD group or users who you want to share this app with. Because the app connects to Dataverse data, you also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **Higher Education Crisis Financial Impact Tracker User** and **Dataverse User** security roles to the entities used by this app, and then select **Share**.
+1. Specify the Azure AD group or users who you want to share this app with. Because the app connects to Dataverse data, you also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **Higher Education Crisis Financial Impact Tracker User** and **Common Data Service User** security roles to the entities used by this app, and then select **Share**.
 
    > [!div class="mx-imgBorder"]   
    > ![Assign roles](./media/assign-roles.png "Assign roles")
