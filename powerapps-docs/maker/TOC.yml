@@ -2020,6 +2020,8 @@
       href: monitor-overview.md
     - name: Debug canvas apps with Monitor
       href: monitor-canvasapps.md
+    - name: Debug model-driven apps with Monitor
+      href: monitor-modelapps.md
     - name: Advanced monitoring
       href: monitor-advanced.md
   - name: Performance tips for canvas apps
