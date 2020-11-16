@@ -21,7 +21,7 @@ Microsoft provides you the following solutions for emergency response:
 
 Hospital Emergency Response solution customers can transfer their hospital data to the regional medical organizations that have Regional Government Emergency Response and Monitoring solution.
 
-The out-of-box solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. Customers can use other ways to transfer data to/from these solutions such as [importing and exporting data as CSV files](/powerapps/maker/common-data-service/data-platform-import-export) and [using web services](/powerapps/developer/common-data-service/work-with-data-cds) to programmatically interact with data in Common Data Service, which is the underlying data store for these solutions.
+The out-of-box solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. Customers can use other ways to transfer data to/from these solutions such as [importing and exporting data as CSV files](/powerapps/maker/common-data-service/data-platform-import-export) and [using web services](/powerapps/developer/common-data-service/work-with-data-cds) to programmatically interact with data in Microsoft Dataverse, which is the underlying data store for these solutions.
 
 This article provides information about how to use SFTP to do the data transfer.
 
@@ -55,7 +55,7 @@ IT admins need to perform some steps to configure the data transfer from Hospita
 
 ### Step 1: Create connections
 
-Both the hospital and regional systems use Power Automate flows to transfer data between the hospital/regional solutions and SFTP server. In this step, we will create connections for Common Data Service and SFTP to be used by flows for data transfer.
+Both the hospital and regional systems use Power Automate flows to transfer data between the hospital/regional solutions and SFTP server. In this step, we will create connections for Dataverse and SFTP to be used by flows for data transfer.
 
 This step is required for both hospital and regional solutions.
 
@@ -79,7 +79,7 @@ This step is required for both hospital and regional solutions.
 
 1. Select **New Connection**, and then type **Common Data Service** in the search box.
 
-1. From the search results, select **+** next to **Common Data Service (current environment)** connector to add a connection.
+1. From the search results, select **+** next to **Dataverse (current environment)** connector to add a connection.
 
 1. On the next screen, select **Create**. Select or specify the credentials to create the connector. On successful authentication, your connection will be created.
 
@@ -94,7 +94,7 @@ This step is required for both hospital and regional solutions.
 
 1. Select **Create**. Power Apps validates the connection details, and on successful authentication, creates an SFTP connection.
 
-At the end of this step, you should have three connections: two for Common Data Service and one for SFTP.
+At the end of this step, you should have three connections: two for Dataverse and one for SFTP.
 
 ### Step 2: Enable flows for publishing data to SFTP (Hospital)
 

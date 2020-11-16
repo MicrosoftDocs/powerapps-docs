@@ -49,5 +49,5 @@ If you attempt to save the new phone call activity row, you will get this error,
 > ![Create a phone call row](media/error_phonecallactivity_1.png "Create a phone call row")
 
 
-**Resolution**: Common Data Service does not support the option to create a phone call activity from within another phone call activity row.
+**Resolution**: Microsoft Dataverse does not support the option to create a phone call activity from within another phone call activity row.
 

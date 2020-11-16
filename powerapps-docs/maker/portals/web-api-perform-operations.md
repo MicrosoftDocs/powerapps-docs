@@ -823,7 +823,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
 You've created a **webapi** sample page to test the Web API functionality. Before you get started, ensure that the Power Apps portals cache has been cleared so that the changes from the Portal Management app are reflected on your portal.
 
 > [!IMPORTANT]
-> Clearing the portal server-side cache causes temporary performance degradation of the portal while data gets reloaded from Common Data Service.
+> Clearing the portal server-side cache causes temporary performance degradation of the portal while data gets reloaded from Microsoft Dataverse.
 
 To clear the cache:
 

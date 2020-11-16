@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Configure assembly security for an offline plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Walkthrough: Configure assembly security for an offline plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The topic provides a walkthrough on configuring assembly security for an offline plug-in." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-The Common Data Service platform applies an additional security restriction to registered offline plug-in assemblies. When Dynamics 365 for Microsoft Office Outlook with Offline Access is installed, an AllowList key is added to the system registry on the client computer. For each assembly containing an offline plug-in that you register, you must add a registry sub-key under the AllowList key with the key name derived from the assembly's public key token. Failure to add this key results in the offline plug-in not being executed by the platform even though the plug-in is registered. This walkthrough describes how to add this sub-key for a plug-in assembly.  
+The Microsoft Dataverse platform applies an additional security restriction to registered offline plug-in assemblies. When Dynamics 365 for Microsoft Office Outlook with Offline Access is installed, an AllowList key is added to the system registry on the client computer. For each assembly containing an offline plug-in that you register, you must add a registry sub-key under the AllowList key with the key name derived from the assembly's public key token. Failure to add this key results in the offline plug-in not being executed by the platform even though the plug-in is registered. This walkthrough describes how to add this sub-key for a plug-in assembly.  
   
 ### Get the public key token  
   

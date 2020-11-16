@@ -122,9 +122,9 @@ Power Automate can convert files to base64 using the dataUri(base64(*file conten
 
 When you add .glb files to the **Document Library**, they'll be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** component, using the SharePoint data connector to access the list.
 
-**To use Common Data Service**
+**To use Microsoft Dataverse**
 
-The [Note entity](/powerapps/developer/common-data-service/annotation-note-entity) in Common Data Service converts any attached file to base64 in the **Document** field.
+The [Note entity](/powerapps/developer/common-data-service/annotation-note-entity) in Dataverse converts any attached file to base64 in the **Document** field.
 
 ### Loading models as attachments or media content
 

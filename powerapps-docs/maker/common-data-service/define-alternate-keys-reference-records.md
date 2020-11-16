@@ -1,6 +1,6 @@
 ---
-title: "Define alternate keys to reference rows with Common Data Service | MicrosoftDocs"
-description: "Learn how to define alternate keys that can be used to reference rows in Common Data Service"
+title: "Define alternate keys to reference rows with Microsoft Dataverse | MicrosoftDocs"
+description: "Learn how to define alternate keys that can be used to reference rows in Microsoft Dataverse"
 ms.custom: ""
 ms.date: 06/24/2020
 ms.reviewer: ""
@@ -27,7 +27,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-*Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify rows in Common Data Service. 
+*Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify rows in Microsoft Dataverse. 
 
 A data integration system will use alternate keys to uniquely identify rows using one or more table column values that represent a unique combination. Each alternate key has a unique name. 
 
@@ -64,7 +64,7 @@ Information in this topic will help you choose which designer you can use.
 
 You should use the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to create alternate keys unless you need to address any of the following requirements:
 
-- Create an alternate key within a solution other than the Common Data Service default solution
+- Create an alternate key within a solution other than the Common Data Service Default Solution
 - You want to easily track the system job created that tracks the progress of creating the supporting indexes
 
 

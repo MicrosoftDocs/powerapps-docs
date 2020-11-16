@@ -70,7 +70,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 ## Next steps
 
-In this quickstart, you created a sample that uses fictitious data. For more help learning how to create an app, you can also automatically generate an app based on data in other sources, such as Common Data Service, SharePoint, or Excel.
+In this quickstart, you created a sample that uses fictitious data. For more help learning how to create an app, you can also automatically generate an app based on data in other sources, such as Microsoft Dataverse, SharePoint, or Excel.
 
 > [!div class="nextstepaction"]
 > [Generate an app](data-platform-create-app.md)

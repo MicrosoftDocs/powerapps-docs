@@ -1,6 +1,6 @@
 ---
-title: "Use OAuth with Common Data Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to authenticate using OAuth with Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use OAuth with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to authenticate using OAuth with Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use OAuth with Common Data Service
+# Use OAuth with Microsoft Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
@@ -23,10 +23,10 @@ search.app:
 
 Client applications must support the use of OAuth to access data using the Web API. OAuth enables two-factor authentication (2FA) or certificate-based authentication for server-to-server application scenarios.
 
-OAuth requires an identity provider for authentication. For Common Data Service the identity provider is Azure Active Directory (AAD). To authenticate with AAD using a Microsoft work or school account, use the Azure Active Directory Authentication Libraries (ADAL).
+OAuth requires an identity provider for authentication. For Dataverse the identity provider is Azure Active Directory (AAD). To authenticate with AAD using a Microsoft work or school account, use the Azure Active Directory Authentication Libraries (ADAL).
 
 > [!NOTE]
-> This topic will introduce common concepts related to connecting to Common Data Service using OAuth with the ADAL libraries. This content will focus on how a developer can connect to Common Data Service but not on the inner workings of OAuth or the ADAL libraries. For complete information related to authentication see the Azure Active Directory documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
+> This topic will introduce common concepts related to connecting to Dataverse using OAuth with the ADAL libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the ADAL libraries. For complete information related to authentication see the Azure Active Directory documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
 >
 >Samples we provide are pre-configured with appropriate registration values so that you can run them without generating your own app registration. When you publish your own apps, you must use your own registration values.
 
@@ -34,7 +34,7 @@ OAuth requires an identity provider for authentication. For Common Data Service 
 
 When you connect using OAuth you must first register an application in your Azure AD tenant. How you should register your app depends on the type of app you want to make.
 
-In all cases, start with basic steps to register an app described in the AAD topic: [Quickstart: Register an app with the Azure Active Directory v1.0 endpoint](/azure/active-directory/develop/quickstart-v1-add-azure-ad-app). For Common Data Service specific instructions see [Walkthrough: Register an app with Azure Active Directory > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
+In all cases, start with basic steps to register an app described in the AAD topic: [Quickstart: Register an app with the Azure Active Directory v1.0 endpoint](/azure/active-directory/develop/quickstart-v1-add-azure-ad-app). For Dataverse specific instructions see [Walkthrough: Register an app with Azure Active Directory > Create an application registration](walkthrough-register-app-azure-active-directory.md#create-an-application-registration).
 
 The decisions you will need to make in this step mostly depend on the Application Type choice.
 
@@ -52,7 +52,7 @@ When you select **Web app /API** you must provide a **Sign-On URL** which is the
 
 When you select **Native**, you must provide a Redirect URI. This is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This is typically a value formatted like so: `//app:<guid>`. 
 
-### Giving access to Common Data Service
+### Giving access to Dataverse
 
 If your app will be a client which allows the authenticated user to perform operations, you must configure the application to have the Access Dynamics 365 as organization users delegated permission.
 
@@ -97,7 +97,7 @@ These libraries are available for various platforms as shown in the following ta
 
 ## ADAL .NET Client library versions
 
-The Common Data Service supports application authentication with the Web API endpoint using the OAuth 2.0 protocol. The Azure Active Directory Authentication Library (ADAL) is the recommended API interface to that protocol for your custom .NET applications. ADAL v2.x has long been supported by our SDK APIs and in fact many SDK code samples use that version of the library. When ADAL v3 was published, a breaking change was introduced such that user credentials could no longer be passed in ADAL API calls to improve application security.
+The Dataverse supports application authentication with the Web API endpoint using the OAuth 2.0 protocol. The Azure Active Directory Authentication Library (ADAL) is the recommended API interface to that protocol for your custom .NET applications. ADAL v2.x has long been supported by our SDK APIs and in fact many SDK code samples use that version of the library. When ADAL v3 was published, a breaking change was introduced such that user credentials could no longer be passed in ADAL API calls to improve application security.
 
 For your custom .NET applications, use ADAL v2 or greater for application authentication with the Web API endpoint. When using the XrmTooling APIs found in the [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) NuGet package, the correct version of the ADAL library will be imported automatically into your Visual Studio project. Note that the transition from ADAL v2 to ADAL v3 in the XrmTooling APIs occurred in the [v9.1.0.13](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/9.1.0.13) NuGet package. Consult the package's release notes for detailed information.  
 
@@ -289,7 +289,7 @@ httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("
 
 ## Connect as an app
 
-Some apps you will create are not intended to be run interactively by a user. For example, you may want to make a web client application that can perform operations on Common Data Service data, or a console application that performs a scheduled task of some kind. 
+Some apps you will create are not intended to be run interactively by a user. For example, you may want to make a web client application that can perform operations on Dataverse data, or a console application that performs a scheduled task of some kind. 
 
 While you could achieve these scenarios using credentials for an ordinary user, that user account would need to use a paid license. This isn't the recommended approach.
 
@@ -299,7 +299,7 @@ In these cases you can create a special application user which is bound to an Az
 
 To connect as an app you will need:
  - A registered app
- - A Common Data Service user bound to the registered app
+ - A Dataverse user bound to the registered app
  - Connect using either the application secret or a certificate thumbprint
 
 #### Register your app
@@ -326,16 +326,16 @@ To add a password:
 
   The right-most column will contain the key value, after you save the configuration changes. Be sure to copy the key for use in your client application code, as it is not accessible once you leave this page.
 
-#### Common Data Service user account bound to the registered app
+#### Dataverse user account bound to the registered app
 
 
-The first thing you must do is create a custom security role that will define what access and privileges this account will have within the Common Data Service organization. More information: [Create or configure a custom security role](/power-platform/admin/database-security#create-or-configure-a-custom-security-role)
+The first thing you must do is create a custom security role that will define what access and privileges this account will have within the Dataverse organization. More information: [Create or configure a custom security role](/power-platform/admin/database-security#create-or-configure-a-custom-security-role)
 
 After you have created the custom security role, you must create the user account which will use it.
 
 <!-- Almost exactly the same intructions below can be found in powerapps-docs\developer\common-data-service\use-multi-tenant-server-server-authentication.md -->
 
-#### Manually create a Common Data Service application user  
+#### Manually create a Dataverse application user  
 
  The procedure to create this user is different from creating a licensed user. Use the following steps:  
   
@@ -406,5 +406,5 @@ using (CrmServiceClient svc = new CrmServiceClient(ConnectionStr))
 
 ### See also
 
-[Authentication with Common Data Service web services](authentication.md)<br />
+[Authentication with Dataverse web services](authentication.md)<br />
 [Authentication with .NET Framework applications](authenticate-dot-net-framework.md)

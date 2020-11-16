@@ -1,5 +1,5 @@
 ---
-title: "Autonumber columns in Common Data Service | MicrosoftDocs"
+title: "Autonumber columns in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand how to create, manage, and use autonumber columns"
 keywords: ""
 ms.date: 02/26/2019
@@ -91,4 +91,4 @@ Autonumber columns have a default seed value of 1000, but you may set a custom s
 9. Select **Done**.
 
 ## See also
- [Create and edit columns for Common Data Service using Power Apps portal](create-edit-field-portal.md)
+ [Create and edit columns for Microsoft Dataverse using Power Apps portal](create-edit-field-portal.md)

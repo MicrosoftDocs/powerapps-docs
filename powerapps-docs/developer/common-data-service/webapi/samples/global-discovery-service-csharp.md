@@ -1,5 +1,5 @@
 ---
-title: "Global Discovery Service Sample (C#) (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Global Discovery Service Sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to access the global Discovery Service using the OData V4 RESTful API" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 4/16/2020
@@ -27,7 +27,7 @@ This sample is available on Github at [https://github.com/Microsoft/PowerApps-Sa
 
 ## What this sample does
 
-This sample returns the available Common Data Service instances for a given user credential.
+This sample returns the available Microsoft Dataverse instances for a given user credential.
 
 ## How this sample works
 

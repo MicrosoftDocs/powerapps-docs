@@ -1,5 +1,5 @@
 ---
-title: "Create N:N (many-to-many) table relationships in Common Data Service using solution explorer | MicrosoftDocs"
+title: "Create N:N (many-to-many) table relationships in Microsoft Dataverse using solution explorer | MicrosoftDocs"
 description: "Learn how to create many-to-may relationships using solution explorer"
 ms.custom: ""
 ms.date: 05/29/2018
@@ -22,15 +22,15 @@ search.app:
   - D365CE
 ---
 
-# Create N:N (many-to-many) table relationships in Common Data Service using solution explorer
+# Create N:N (many-to-many) table relationships in Microsoft Dataverse using solution explorer
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Solution explorer provides one way to create and edit N:N (many-to-many) for Common Data Service.
+Solution explorer provides one way to create and edit N:N (many-to-many) for Dataverse.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. More information:
 - [Create Many-to-many (N:N) table relationships](create-edit-nn-relationships.md)
-- [Create Many-to-many table relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)
+- [Create Many-to-many table relationships in Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)
 
   
 ## Open solution explorer
@@ -109,5 +109,5 @@ Deleting the relationship will delete the relationship table created. All data c
 ### See also
 
 [Create Many-to-many (N:N) table relationships](create-edit-nn-relationships.md)<br />
-[Create Many-to-many table relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
+[Create Many-to-many table relationships in Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships](create-edit-1n-relationships.md)
