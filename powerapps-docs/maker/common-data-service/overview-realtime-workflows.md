@@ -1,6 +1,6 @@
 ---
-title: "Common Data Service real-time workflows | MicrosoftDocs"
-description: "Common Data Service real-time workflows"
+title: "Microsoft Dataverse real-time workflows | MicrosoftDocs"
+description: "Microsoft Dataverse real-time workflows"
 ms.custom: ""
 ms.date: 07/27/2020
 ms.reviewer: "matp"
@@ -16,7 +16,7 @@ search.audienceType:
   - flowmaker
   - enduser
 ---
-# Common Data Service real-time workflows 
+# Microsoft Dataverse real-time workflows 
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 

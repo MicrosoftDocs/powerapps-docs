@@ -1,6 +1,6 @@
 ---
 title: License requirements for tables| Microsoft Docs
-description: An explanation of license requirements for tables with complex business logic and restricted tables in Common Data Service.
+description: An explanation of license requirements for tables with complex business logic and restricted tables in Microsoft Dataverse.
 author: MicroSri
 ms.service: powerapps
 ms.topic: conceptual
@@ -18,7 +18,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-App makers can use most of the tables available within Common Data Service (including custom tables and tables that are part of the Common Data Model) to create apps and flows for users who have a Power Apps or Power Automate license. 
+App makers can use most of the tables available within Microsoft Dataverse (including custom tables and tables that are part of the Common Data Model) to create apps and flows for users who have a Power Apps or Power Automate license. 
 
 In some cases, tables contain complex business logic or are tied to customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) that require app users to have a specific license. This topic provides licensing information for tables with complex business logic and tables that are tied to Dynamics 365 apps (termed as restricted tables).
 
@@ -35,11 +35,11 @@ To know whether or not you added complex business logic to your tables, review t
 
 ### Impacting license requirements when adding complex business logic
 
-App makers can add code plug-ins and real-time workflows to tables within Common Data Service, but doing so could change the license requirements for users of apps already deployed. App makers should be cautious when adding complex business logic to a table and should first check which apps use the table and whether users of those apps have the appropriate licenses.
+App makers can add code plug-ins and real-time workflows to tables within Dataverse, but doing so could change the license requirements for users of apps already deployed. App makers should be cautious when adding complex business logic to a table and should first check which apps use the table and whether users of those apps have the appropriate licenses.
 
 ## Restricted tables
 
-Restricted tables are not standard tables within Common Data Service, but are included in one of the customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) or a third-party solution. For example, the knowledge article, goal, and entitlement tables.
+Restricted tables are not standard tables within Dataverse, but are included in one of the customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) or a third-party solution. For example, the knowledge article, goal, and entitlement tables.
 
 > [!NOTE]
 > Apps and flows that use these tables require the app and flow user to be licensed appropriately-not the maker or developer of the app or flow.
@@ -47,7 +47,7 @@ Restricted tables are not standard tables within Common Data Service, but are in
 tables that are tied to the functionality of Dynamics 365 apps (such as Dynamics 365 Sales or Dynamics 365 Customer Service) require app users to have the corresponding license for that application if they want to create, update, or delete rows within the tables. For a full list of restricted tables, see [Restricted tables requiring Dynamics 365 licenses](data-platform-restricted-entities.md).
 
 ## Licensing examples
-Barb and Isaac are creating apps in Power Apps using Common Data Service to store their data.
+Barb and Isaac are creating apps in Power Apps using Dataverse to store their data.
 
 ### Table creation
 

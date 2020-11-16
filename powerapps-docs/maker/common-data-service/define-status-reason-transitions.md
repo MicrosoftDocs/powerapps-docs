@@ -31,7 +31,7 @@ search.app:
 You can specify status reason transitions for the Incident (**Case**) table or a custom table.
 
 > [!NOTE]
-> Although the Incident (Case) table isn't included in a default Common Data Service environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
+> Although the Incident (Case) table isn't included in a default Microsoft Dataverse environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
   
 Status reason transitions are an optional additional level of filtering to define what the status reason value can be changed to for each status reason. Defining a limited list of valid options can make it easier for people to choose the correct next status reason for a row when you have a large number of combinations for valid status reason values.  
   
@@ -62,7 +62,7 @@ The metadata for the column defines what status values are valid for a given sta
 You can modify the status reason column options for the Case table and custom tables to define which other status reason options people can choose. The only restriction is that each status reason option for an active status must allow at least one path to an inactive status. Otherwise you could create a condition where it would not be possible to resolve or cancel the case.  
 
 > [!NOTE]
-> Editing the status reason transitions requires using solution explorer. See [Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit columns.
+> Editing the status reason transitions requires using solution explorer. See [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit columns.
   
  When you edit a status reason column the **Edit Status Reason Transitions** button is in the menu. 
 
@@ -83,7 +83,7 @@ The screenshot below provides an example that meets the following requirements:
   
 ### See Also  
 
-[Create and edit columns for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Table metadata > Table states](/powerapps/developer/common-data-service/table-metadata#table-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 

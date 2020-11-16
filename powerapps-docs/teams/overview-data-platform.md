@@ -1,6 +1,6 @@
 ---
-title: Project Oakdale overview | Microsoft Docs
-description: Provides an overview of Project Oakdale.
+title: Microsoft Dataverse for Teams overview | Microsoft Docs
+description: Provides an overview of Dataverse for Teams.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
@@ -9,15 +9,13 @@ ms.date: 09/22/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---
-# Overview of Project Oakdale
+# Overview of Microsoft Dataverse for Teams
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+Microsoft Dataverse for Teams delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps.
 
-Project Oakdale delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Project Oakdale enables everyone to easily build and deploy apps.
+:::image type="content" source="media/tables-in-teams.png" alt-text="Dataverse for Teams table in Teams":::
 
-:::image type="content" source="media/tables-in-teams.png" alt-text="Project Oakdale table in Teams":::
-
-Some of the benefits of Project Oakdale include:
+Some of the benefits of Dataverse for Teams include:
 
 - Support to build low-code and no-code apps, flows, and chatbots for and within Teams.
 
@@ -35,13 +33,13 @@ Some of the benefits of Project Oakdale include:
 
 - Support for up to 500 teams.
 
-- The capability to be promoted to Common Data Service.
+- The capability to be promoted to Dataverse.
 
-See also: [Project Oakdale FAQs](data-platform-faqs.md)
+See also: [Dataverse for Teams FAQs](data-platform-faqs.md)
 
-## Tables in Project Oakdale
+## Tables in Dataverse for Teams
 
-Project Oakdale tables provide the ability to create, populate, and query data within Project Oakdale. Tables represent different types of entities important to an organization, such as a table to store products or another to store orders.  
+Dataverse for Teams tables provide the ability to create, populate, and query data within Dataverse for Teams. Tables represent different types of entities important to an organization, such as a table to store products or another to store orders.  
 
 Each of these tables includes columns that contain data about the subject of the table. For example, a table named *Product* might have columns that contain a product name, product identifier, manufacturer identifier, and price. Each of these columns can contain different types of data. For example, the type of data for a product name is text, identifiers could be numbers, and so on.
 
@@ -50,19 +48,19 @@ A solution often has multiple tables that are used together in an application. F
 You can create and populate these tables with a new visual editor that makes it even easier to work with these tables.
 
 > [!NOTE]
-> All the capabilities found in tables are powered by Project Oakdale. Although this will satisfy many situations, in some situations an organization might want to have additional capacity, capabilities, or control over their solution. In these scenarios, Project Oakdale environments can be upgraded to Common Data Service. The upgrade process, referred to as *promotion*, has several considerations discussed in [Promotion process](/power-platform/admin/about-teams-environment?branch=teams-preview#promotion-process) in the Microsoft Power Platform admin guide.
+> All the capabilities found in tables are powered by Dataverse for Teams. Although this will satisfy many situations, in some situations an organization might want to have additional capacity, capabilities, or control over their solution. In these scenarios, Dataverse for Teams environments can be upgraded to Microsoft Dataverse. The upgrade process, referred to as *promotion*, has several considerations discussed in [Promotion process](/power-platform/admin/about-teams-environment?branch=teams-preview#promotion-process) in the Microsoft Power Platform admin guide.
 
-## Security in Project Oakdale
+## Security in Dataverse for Teams
 
-These tables and the applications that use them are secured with enterprise-grade security that's easy to understand and use for low-code and no-code developers. Security in Project Oakdale aligns to how security is handled in Teams, with a focus on Owners, Members, and Guests.
+These tables and the applications that use them are secured with enterprise-grade security that's easy to understand and use for low-code and no-code developers. Security in Dataverse for Teams aligns to how security is handled in Teams, with a focus on Owners, Members, and Guests.
 
-## Administer Project Oakdale environment
+## Administer Dataverse for Teams environment
 
-You can administer and manage Project Oakdale environment using the Power Platform admin center. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment) in the Power Platform admin guide.
+You can administer and manage Dataverse for Teams environment using the Power Platform admin center. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment) in the Power Platform admin guide.
 
 ### See also
 
-[How are Project Oakdale and Common Data Service different?](data-platform-compare.md) <br />
+[How are Dataverse for Teams and Dataverse different?](data-platform-compare.md) <br />
 [Create tables](create-table.md)<br/>
 [Work with table relationships](relationships-table.md)<br/>
-[Project Oakdale FAQs](data-platform-faqs.md)
+[Dataverse for Teams FAQs](data-platform-faqs.md)

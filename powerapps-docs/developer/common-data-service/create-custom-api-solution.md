@@ -1,5 +1,5 @@
 ---
-title: "Create a Custom API with solution files (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create a Custom API with solution files (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write create custom APis by editing solution files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/26/2020
@@ -28,7 +28,7 @@ search.app:
 
 While you can create Custom APIs through a designer or with code, you can also define them by working with files within a solution. This may be the preferred option for solution publishers who apply the recommended best practices for Application Lifecycle Management (ALM).
 
-A solution file is a compressed (zip) file that has been exported from a Common Data Service instance. The contents of this file can be extracted and the components checked into a source repository. The contents can be edited and then compressed again. The changes applied to the solution will then be part of the solution and will be created when the solution is imported.
+A solution file is a compressed (zip) file that has been exported from a Microsoft Dataverse instance. The contents of this file can be extracted and the components checked into a source repository. The contents can be edited and then compressed again. The changes applied to the solution will then be part of the solution and will be created when the solution is imported.
 
 > [!NOTE]
 > These processes are typically automated with tools and processes that are beyond the scope of this topic. This topic will focus on the simple scenario of creating a Custom API by manually manipulating the extracted files in a solution to demonstrate how the data in the files can be used to create Custom API.

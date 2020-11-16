@@ -36,7 +36,7 @@ The following optional parameters are supported:
 
 Yes. Custom scope parameter(s) can be specified using scope option in configuration.
 
-## Why does the username value in contact, or external identity record in Common Data Service, show a different value compared to what the user entered on the sign-in page?
+## Why does the username value in contact, or external identity record in Microsoft Dataverse, show a different value compared to what the user entered on the sign-in page?
 
 Username field on contact record, and externally identity record, will show the value sent in either the sub-claim or oid-claim (oid claim for only Azure AD-based providers). This is because the sub claim represents the identifier for end user, and is guaranteed by identity provider (IDP) to be unique. Oid claim (Object ID - a unique identifier for all users in a tenant) is supported when used with single-tenant Azure AD-based providers.
 
@@ -52,13 +52,13 @@ No. Portals doesn't support single logout technique for OpenID Connect-based pro
 
 Apart from all the required claims, portals requires a claim representing email address of the users in the *id_token*. This claim must be named as either “email”, “emails” or “upn”.
 
-These claims are processed at in the following order of priority to set as the *Primary Email Address* of the contact record in Common Data Service:
+These claims are processed at in the following order of priority to set as the *Primary Email Address* of the contact record in Dataverse:
 
 1. email
 1. emails
 1. upn
 
-When in use, "emailclaimsmapping" is also used to search for an existing contact (Primary Email Address field in Common Data Service).
+When in use, "emailclaimsmapping" is also used to search for an existing contact (Primary Email Address field in Dataverse).
 
 ## Can I get access to tokens (ID or Access) using JavaScript?
 

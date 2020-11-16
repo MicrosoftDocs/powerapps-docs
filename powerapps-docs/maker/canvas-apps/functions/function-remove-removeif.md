@@ -90,7 +90,7 @@ In this example, you'll use a [**Gallery** control](../controls/control-gallery.
 
 ### Prepare for sample data
 
-This example uses the **Contacts** entity in Common Data Service available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data source instead.
+This example uses the **Contacts** entity in Microsoft Dataverse available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data source instead.
 
 ### Remove button outside a gallery
 

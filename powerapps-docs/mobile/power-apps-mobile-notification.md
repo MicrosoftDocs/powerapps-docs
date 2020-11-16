@@ -61,10 +61,10 @@ When you trigger a push notification from a flow, you can send the notification 
    > ![Select skip](media/create-notification-step3.png)
    
    
- 4. From the list of connectors and triggers select **Common Data Service (current environment)**.  
+ 4. From the list of connectors and triggers select **Microsoft Dataverse (current environment)**.  
  
     > [!div class="mx-imgBorder"] 
-    > ![Select Common Data Service](media/create-notification-step4.png)
+    > ![Select Dataverse](media/create-notification-step4.png)
     
  5. Select the action that will trigger the notification. 
  
