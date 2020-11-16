@@ -1,6 +1,6 @@
 ---
-title: "How Common Data Service SQL Differs from Transact-SQL | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn what subset of the Transact-SQL language is supported by the Common Data Service SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn what subset of the Transact-SQL language is supported by the Dataverse SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/01/2020
 ms.reviewer: "pehecke"
@@ -16,11 +16,11 @@ search.app:
   - D365CE
 ---
 
-# How Common Data Service SQL differs from Transact-SQL (Preview)
+# How Dataverse SQL differs from Transact-SQL (Preview)
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article describes the differences between Common Data Service SQL and Transact-SQL. Common Data Service SQL is a subset of Transact-SQL.
+This article describes the differences between Dataverse SQL and Transact-SQL. Dataverse SQL is a subset of Transact-SQL.
 
 ## Data types
 
@@ -79,7 +79,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 
 ## Functions
 
-Learn about the categories of built-in functions you can use with Common Data Service environments through the SQL endpoint.
+Learn about the categories of built-in functions you can use with Dataverse environments through the SQL endpoint.
 
 More information: [What are the SQL database functions?](/sql/t-sql/functions/functions)
 
@@ -123,7 +123,7 @@ More information: [What are the SQL database functions?](/sql/t-sql/functions/fu
 
 ### System functions
 
-The following system functions perform operations on and return information about values, objects, and settings in the Common Data Service environment.
+The following system functions perform operations on and return information about values, objects, and settings in the Dataverse environment.
 
 More information: [System Functions (Transact-SQL)](/sql/t-sql/functions/system-functions-transact-sql)
 
@@ -226,7 +226,7 @@ More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metad
 
 ## Language elements
 
-The Common Data Service SQL endpoint supports the following language elements.
+The Dataverse SQL endpoint supports the following language elements.
 
 More information: [Language Elements (Transact-SQL)](/sql/t-sql/language-elements/language-elements-transact-sql)
 
@@ -272,7 +272,7 @@ More information: [Language Elements (Transact-SQL)](/sql/t-sql/language-element
 
 ## Queries
 
-Use these statements to query data from the Common Data Service SQL endpoint.
+Use these statements to query data from the Dataverse SQL endpoint.
 
 More information: [Queries](/sql/t-sql/queries/queries)
 
@@ -299,7 +299,7 @@ More information: [Queries](/sql/t-sql/queries/queries)
 
 ### SELECT
 
-Retrieves rows from a Common Data Service environment and enables the selection of one or many rows or columns from one or many tables.
+Retrieves rows from a Dataverse environment and enables the selection of one or many rows or columns from one or many tables.
 
 #### [Supported](#tab/supported)
 
