@@ -127,7 +127,7 @@ When you trigger a push notification from a flow, you can send the notification 
 For canvas apps, you can pass key-value pairs using the **Parameters** field as JSON. For example, if you wanted to pass the CaseID, you would put the following as **Parameters**:
 ` { "CaseID": 42 }`. You can also use dynamic values from earlier steps as shown below.
 
-<insert image>
+![Sample parameters](media/para-image.png)
 
 ### Read parameters
 
