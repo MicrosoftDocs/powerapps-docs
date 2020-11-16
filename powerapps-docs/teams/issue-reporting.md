@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Issue reporting sample apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 In this tutorial, learn about the Manage Issues and Issue reporting apps, and how to use them effectively.
 
 ## Overview

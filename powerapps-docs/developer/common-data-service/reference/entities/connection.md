@@ -1,20 +1,22 @@
 ---
-title: "Connection Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Connection entity."
-ms.date: 04/12/2020
+title: "Connection entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Connection table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Connection Entity Reference
+# Connection entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 Relationship between two entities.
 
@@ -36,7 +38,7 @@ Relationship between two entities.
 |SetState|PATCH [*org URI*]/api/data/v9.0/connections(*connectionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/connections(*connectionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -1315,6 +1317,6 @@ See territory Entity [territory_connections2](territory.md#BKMK_territory_connec
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.connection?text=connection EntityType" />

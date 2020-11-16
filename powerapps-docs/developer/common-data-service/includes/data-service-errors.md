@@ -448,7 +448,7 @@
 |0x80045030<br />-2147200976|Name: **CannotDeleteAttributeUsedInWorkflow**<br />Message: This attribute cannot be deleted because it is used in one or more workflows. Cancel any system jobs for workflows that use this attribute, then delete or modify any workflows that use the attribute, and then try to delete the attribute again.|
 |0x80048cfe<br />-2147185410|Name: **CannotDeleteBaseMoneyCalculationAttribute**<br />Message: The base money calculation Attribute is not valid for deletion|
 |0x8004022f<br />-2147220945|Name: **CannotDeleteCannedView**<br />Message: System-defined views cannot be deleted.|
-|0x80041d5a<br />-2147213990|Name: **CannotDeleteCDSUser**<br />Message: The Common Data Service User Role cannot be deleted.|
+|0x80041d5a<br />-2147213990|Name: **CannotDeleteCDSUser**<br />Message: The Microsoft Common Data Service User Role cannot be deleted.|
 |0x80061108<br />-2147086072|Name: **CannotDeleteChannelAccessProfileRule**<br />Message: You can't delete an active channel access profile rule. Deactivate the rule and then delete it.|
 |0x800608EB<br />-2147088149|Name: **CannotDeleteChannelProperty**<br />Message: You can’t delete a channel property which is being referred in a convert rule.|
 |0x80047016<br />-2147192810|Name: **CannotDeleteChildAttribute**<br />Message: The Child Attribute is not valid for deletion|
@@ -2355,7 +2355,7 @@
 |0x80040315<br />-2147220715|Name: **NotSupported**<br />Message: This action is not supported.|
 |0x8005F106<br />-2147094266|Name: **NotVerifiedAdmin**<br />Message: You need an enterprise account with Yammer in order to complete this setup. Please sign in with a Yammer administrator account or contact a Yammer administrator for help.|
 |0x80154B50<br />-2146088112|Name: **NoUserPrivilege**<br />Message: You do not have sufficient permissions.|
-|0x80060476<br />-2147089290|Name: **NoValidModernFlowTriggerForExecute**<br />Message: Modern Flow '{0}' is not valid for ExecuteWorkflow.  Please select a Flow that triggers whenever a Common Data Service entity is created, updated, or deleted.|
+|0x80060476<br />-2147089290|Name: **NoValidModernFlowTriggerForExecute**<br />Message: Modern Flow '{0}' is not valid for ExecuteWorkflow.  Please select a Flow that triggers whenever a Dataverse entity is created, updated, or deleted.|
 |0x80071023<br />-2147020765|Name: **NoWritePermission**<br />Message: You do not have Write permissions to copy the documents.|
 |0x8005F108<br />-2147094264|Name: **NoYammerNetworksFound**<br />Message: You are not authorized for any Yammer network. Please reauthorize the Yammer setup with a Yammer administrator account or contact a Yammer administrator for help.|
 |0x800404f8<br />-2147220232|Name: **NullArticleTemplateFormatXml**<br />Message: The article template formatxml cannot be NULL|

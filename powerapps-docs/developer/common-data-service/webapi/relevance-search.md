@@ -1,6 +1,6 @@
 ---
-title: "Search across entity data using relevance search (Common Data Service)| Microsoft Docs"
-description: "Read about the various ways to find entity data, including search, suggestions, and autocomplete, and even search across entity types using Common Data Service."
+title: "Search across entity data using relevance search (Microsoft Dataverse)| Microsoft Docs"
+description: "Read about the various ways to find entity data, including search, suggestions, and autocomplete, and even search across entity types using Microsoft Dataverse."
 ms.custom: ""
 ms.date: 10/13/2020
 ms.service: powerapps
@@ -517,6 +517,6 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 ### See Also
 
 [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)  
-[Compare search options in Common Data Service](/powerapps/user/search)  
+[Compare search options in Microsoft Dataverse](/powerapps/user/search)  
 [Retrieve related entity records with a query](retrieve-related-entities-query.md)  
 [Query Data using the Web API](query-data-web-api.md)

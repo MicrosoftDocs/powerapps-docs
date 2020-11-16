@@ -19,7 +19,7 @@ search.app:
 
 # Define custom actions to modify the ribbon
 
-The default, an application command bar or ribbon is defined by Common Data Service metadata. This default data can’t be changed, but you can include definitions of specific actions that will override the default ribbon.  
+The default, an application command bar or ribbon is defined by Microsoft Dataverse metadata. This default data can’t be changed, but you can include definitions of specific actions that will override the default ribbon.  
   
 ## Types of custom actions
 

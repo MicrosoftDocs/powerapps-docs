@@ -1,6 +1,6 @@
 ---
 title: "Use Dynamics 365 App for Outlook | MicrosoftDocs"
-description: "Use Dynamics 365 App for Outlook with Power Apps and Common Data Service."
+description: "Use Dynamics 365 App for Outlook with Power Apps and Microsoft Dataverse."
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -19,7 +19,7 @@ search.app:
 ---
 # Use Dynamics 365 App for Outlook
 
-Use the Dynamics 365 App for Outlook to manage your Dynamics 365 data using Outlook on the desktop, web, or phone. When Dynamics 365 App for Outlook is installed, depending on which version of the app you have installed, you'll see a Common Data Service pane or window next to a selected Outlook email message, or when you're composing an email message or setting up a meeting or appointment.
+Use the Dynamics 365 App for Outlook to manage your Dynamics 365 data using Outlook on the desktop, web, or phone. When Dynamics 365 App for Outlook is installed, depending on which version of the app you have installed, you'll see a Microsoft Dataverse pane or window next to a selected Outlook email message, or when you're composing an email message or setting up a meeting or appointment.
 
 
    > [!div class="mx-imgBorder"] 
@@ -29,7 +29,7 @@ Use the Dynamics 365 App for Outlook to manage your Dynamics 365 data using Outl
 
 With Dynamics 365 App for Outlook, you can:  
   
-- View information about Common Data Service contacts and accounts while you’re working in Outlook. You can view this info in the context of an email message, meeting, or appointment. For example, view phone numbers, company name, last and next activities, and recent rows. 
+- View information about Dataverse contacts and accounts while you’re working in Outlook. You can view this info in the context of an email message, meeting, or appointment. For example, view phone numbers, company name, last and next activities, and recent rows. 
   
 - Link email messages, meetings, and appointments to a row with a single click. For example, link an email message to a specific account or contact. Dynamics 365 App for Outlook also supports custom tables.  
   
@@ -39,7 +39,7 @@ With Dynamics 365 App for Outlook, you can:
   
 - Create a new row for any table (row type).  
   
-- Track Outlook contacts in Common Data Service.  
+- Track Outlook contacts in Dataverse.  
 
 For information on using Dynamics 365 App for Outlook, see [Dynamics 365 App for Outlook User Guide](https://docs.microsoft.com/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide).
 

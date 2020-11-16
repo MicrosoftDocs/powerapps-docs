@@ -1,5 +1,5 @@
 ---
-title: "Column data types in Common Data Service | MicrosoftDocs"
+title: "Column data types in Microsoft Dataverse | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
 keywords: ""
 ms.date: 05/27/2020
@@ -55,8 +55,8 @@ The names used for types depend on the designer used. [Power Apps portal](https:
 |**Whole Number**|**Whole Number**<br />*None* Format|`IntegerType`|
 
 For more descriptions for each type you can add or edit, see the article for the corresponding designer:
- - [Create and edit columns for Common Data Service using Power Apps portal: Column Data types](create-edit-field-portal.md#column-data-types)
- - [Create and edit columns for Common Data Service using Power Apps solution explorer: Column Data types](create-edit-field-solution-explorer.md#column-data-types)
+ - [Create and edit columns for Microsoft Dataverse using Power Apps portal: Column Data types](create-edit-field-portal.md#column-data-types)
+ - [Create and edit columns for Dataverse using Power Apps solution explorer: Column Data types](create-edit-field-solution-explorer.md#column-data-types)
 
 For more information about how column data types are defined in the API, see [Attribute metadata](/powerapps/developer/common-data-service/entity-attribute-metadata)
 

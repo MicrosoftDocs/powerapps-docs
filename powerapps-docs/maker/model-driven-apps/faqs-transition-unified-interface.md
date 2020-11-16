@@ -41,7 +41,7 @@ From a technology standpoint the retraining should be minimal as your business l
 
 ### Will I need to re-create my solution customizations?
 
-No, you should not have to recreate any customizations, provided you have followed the [Common Data Service Developer Guide](/powerapps/developer/common-data-service/overview) and kept up to date with any changes. However, there may be new opportunities to take on our latest investments that could lead to customization alterations.
+No, you should not have to recreate any customizations, provided you have followed the [Microsoft Dataverse Developer Guide](/powerapps/developer/common-data-service/overview) and kept up to date with any changes. However, there may be new opportunities to take on our latest investments that could lead to customization alterations.
 
 ### How long will it take to transition/what is the work effort?
 
@@ -203,7 +203,7 @@ Messages can be seen using the following channels:
 
 ### I have requested a date to postpone but still receiving e-mails and Message Center posts that my environment is set to transition. Should I be concerned?
 
-Our first recommendation is to check the transition portal (<https://runone.powerappsportals.com/>) as it will be the single source of truth for all of your environments. If the date is updated, then it is highly likely that our communication system sent the message before we updated the communications list. 
+Our first recommendation is to check the portal (<https://runone.powerappsportals.com/>) as it will be the single source of truth for all of your environments. If the date is updated, then it is highly likely that our communication system sent the message before we updated the communications list. 
 
 If the date in the portal isn't updated to your new date, raise a support request following your standard procedure.
 
@@ -230,7 +230,7 @@ If you are still using the legacy web client after December 4, 2020, we will aut
 ### What if I have approved a date within the optional transition service but would prefer to wait until the final transition date that is listed within the Unified Interface scheduling portal. Can I remove approval?
 
 Yes, this is possible. 
-1. In the scheduling portal (<https://runone.powerappsportals.com/>), navigate to My Environments > select a environment to view the environment information view, and select **Remove Approval**. 
+1. In the scheduling portal (<https://runone.powerappsportals.com/>), navigate to **My Environments** > select a environment to view the environment information view, and select **Remove Approval**. 
 2. On the confirmation page, select a reason and select **Yes** under **Remove Approval**. Select **Submit**.  
 
 > [!NOTE]

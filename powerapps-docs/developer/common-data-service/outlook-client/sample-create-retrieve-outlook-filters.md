@@ -1,5 +1,5 @@
 ---
-title: "Sample: Create and retrieve Outlook filters (Common Data Service)| Microsoft Docs"
+title: "Sample: Create and retrieve Outlook filters (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample shows how to retrieve filters for Microsoft Dynamics 365 for Outlook"
 ms.custom: ""
 ms.date: 10/31/2018
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-This sample code is for Common Data Service. To download the sample, refer [Sample: Create and retrieve Outlook filters](/dynamics365/customer-engagement/developer/outlook-client/sample-create-retrieve-outlook-filters).
+This sample code is for Microsoft Dataverse. To download the sample, refer [Sample: Create and retrieve Outlook filters](/dynamics365/customer-engagement/developer/outlook-client/sample-create-retrieve-outlook-filters).
 
 ## Prerequisites
 

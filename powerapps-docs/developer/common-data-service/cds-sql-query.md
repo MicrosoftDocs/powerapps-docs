@@ -1,6 +1,6 @@
 ---
-title: "Use SQL to query data (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to query Common Data Service entity data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to query Microsoft Dataverse entity data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/01/2020
 ms.reviewer: "pehecke"
@@ -25,7 +25,7 @@ search.app:
 > [!IMPORTANT]
 > This feature has been re-enabled in the majority of regions. Please resume testing, and provide feedback. We thank you for your patience and feedback.
 
-A SQL data connection is available through the Tabular Data Stream (TDS) endpoint of the Common Data Service. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute Transact-SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
+A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the entity data of the target Dataverse environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
@@ -36,19 +36,17 @@ A SQL data connection is available through the Tabular Data Stream (TDS) endpoin
 You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the SQL connection feature to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi)
 
 > [!NOTE]
-> As of this article's publication date, the TDS endpoint is enabled by default.
->
-> To verify if your target environment has the Common Data Service SQL connection feature enabled, do the following:
+> To verify if your target environment has the Dataverse SQL connection feature enabled, do the following:
 > 1. Sign into Power Apps, on the left navigation pane expand **Data**, and then select **Entities**.
 > 2. On the command bar, you should see a button **Analyze in Power BI**. If you do not see this button, your environment does not yet have the feature.
 
-You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Common Data Service TDS endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
+You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Dataverse endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
 ![Expanded account table](media/ssms-table-expanded.PNG)
 
 ## Security and authentication
 
-The Common Data Service TDS endpoint SQL connection uses the Common Data Service security model and filtered views for data access. Data can be obtained for all entities to which a user has access to in Common Data Service. In addition, because of adherence to the security model and use of filtered views, the [Service Protection API Limits](https://docs.microsoft.com/powerapps/developer/common-data-service/api-limits) are supported when using the endpoint.
+The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all entities to which a user has access to in Dataverse.
 
 Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication are not supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
 
@@ -77,11 +75,11 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 
 ## Supported operations and data types
 
-For a detailed list of supported SQL operations on the TDS endpoint see [How Common Data Service SQL differs from Transact-SQL](how-cds-sql-differs-from-transact-sql.md).
+For a detailed list of supported SQL operations on the Dataverse endpoint see [How Common Data Service SQL differs from Transact-SQL](how-cds-sql-differs-from-transact-sql.md).
 
-Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. Common Data Service option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
+Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. Dataverse option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
 
-The following Common Data Service datatypes are not supported with the SQL connection: `binary`, `image`,
+The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`,
 `ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`.
 
 > [!TIP]
@@ -96,7 +94,7 @@ The following Common Data Service datatypes are not supported with the SQL conne
 
 ## Limitations
 
-There is an 80MB maximum size limit for query results returned from the TDS endpoint. Consider using data integration tools such as [Data Export Service](https://docs.microsoft.com/powerapps/developer/common-data-service/data-export-service) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data.
+There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Data Export Service](https://docs.microsoft.com/powerapps/developer/common-data-service/data-export-service) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data.
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
@@ -104,4 +102,5 @@ Querying data using SQL does not trigger any plug-ins registered on the <xref:Mi
 
 ### See also
 
-[Use FetchXML to construct a query](cds-sql-query.md)
+[Use FetchXML to construct a query](cds-sql-query.md)  
+[Service Protection API Limits](api-limits.md)

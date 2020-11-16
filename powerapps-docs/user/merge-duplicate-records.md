@@ -19,7 +19,7 @@ search.app:
 ---
 # Merge duplicate rows 
 
-Duplicate rows can creep into your data when you or others enter data manually or import data in bulk. Common Data Service helps you address potential duplicates by providing duplicate detection for active rows such as, accounts and contacts. When you merge a row any related or child rows will also be merged. Your administrator may also set up duplicate detection rules for other situations.  
+Duplicate rows can creep into your data when you or others enter data manually or import data in bulk. Microsoft Dataverse helps you address potential duplicates by providing duplicate detection for active rows such as, accounts and contacts. When you merge a row any related or child rows will also be merged. Your administrator may also set up duplicate detection rules for other situations.  
   
 For example, let's say you enter a contact row, Jim Glynn,  along with a mobile phone number.  The duplicate detection rule discovers that you already have a similar row, and displays this dialog box.  
   
@@ -33,7 +33,7 @@ For example, let's say you enter a contact row, Jim Glynn,  along with a mobile 
  > [!div class="mx-imgBorder"] 
  > ![Duplicate contact row is detected](media/duplicates-detected_1.png "Duplicate contact row is detected")  
  
-Common Data Service includes duplicate detection rules for accounts and contacts. These rules are automatically turned on, so you don’t have to do anything to set up duplicate detection for these row types.  
+Dataverse includes duplicate detection rules for accounts and contacts. These rules are automatically turned on, so you don’t have to do anything to set up duplicate detection for these row types.  
   
 > [!NOTE]
 >  If available on your system, you may also be able to check for duplicates of other row types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  

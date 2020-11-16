@@ -282,7 +282,7 @@ You can set the Power BI report URL for the **Dashboard** mobile app so that fro
 
 1.  Save the record.
 
-## View Common Data Service dashboards
+## View Microsoft Dataverse dashboards
 
 Following dashboards are available by default in the Hospital Emergency Response admin (model-driven) app:
 

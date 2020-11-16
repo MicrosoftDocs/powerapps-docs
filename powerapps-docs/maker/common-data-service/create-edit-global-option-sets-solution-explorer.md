@@ -1,5 +1,5 @@
 ---
-title: "Create and edit global choices for Common Data Service using solution explorer | MicrosoftDocs"
+title: "Create and edit global choices for Microsoft Dataverse using solution explorer | MicrosoftDocs"
 description: Learn how to create and edit choices using solution explorer
 ms.custom: ""
 ms.date: 05/26/2018
@@ -21,14 +21,14 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit global choices for Common Data Service using solution explorer
+# Create and edit global choices for Microsoft Dataverse using solution explorer
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Solution explorer provides one way to Create and edit global choices for Common Data Service.
+Solution explorer provides one way to Create and edit global choices for Dataverse.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Create and edit global choices for Common Data Service](create-edit-global-option-sets.md)
+- [Create and edit global choices for Dataverse](create-edit-global-option-sets.md)
 - [Create a choice ](custom-picklists.md)
 
 ## Open solution explorer
@@ -44,7 +44,7 @@ With solution explorer open, under **Components** select **Option Sets**.
 ![View global choices](media/view-global-option-sets-solution-explorer.png)
 
 > [!NOTE]
-> Some system global choices are not customizable. These options may change with updates or new versions so we recommend you don’t use them unless you are certain that your requirements align with the way that Common Data Service uses these values.
+> Some system global choices are not customizable. These options may change with updates or new versions so we recommend you don’t use them unless you are certain that your requirements align with the way that Dataverse uses these values.
 
 ## Create a global choice 
 
@@ -88,7 +88,7 @@ To delete a global choice , while viewing the list select the ![Delete command](
   
 ### See also
  
-[Create and edit global choices for Common Data Service](create-edit-global-option-sets.md)<br />
+[Create and edit global choices for Dataverse](create-edit-global-option-sets.md)<br />
 [Create a choice ](custom-picklists.md)<br />
 [Create and edit columns](create-edit-fields.md)<br />
 [Developer documentation: Customize global choices](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)

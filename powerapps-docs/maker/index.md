@@ -1,6 +1,6 @@
 ---
 title: Overview of creating apps | Microsoft Docs
-description: Overview of creating apps in either canvas or model-driven mode and incorporating the Common Data Service
+description: Overview of creating apps in either canvas or model-driven mode and incorporating the Microsoft Dataverse
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -20,7 +20,7 @@ Power Apps is a high-productivity development platform for business apps, and ha
 - Canvas apps
 - Model-driven apps
 - Portals
-- Common Data Service
+- Microsoft Dataverse
 
 Let's learn more about each of these.
 
@@ -42,15 +42,15 @@ Creating a canvas app is easy; with Power Apps, you can find or create your app 
 
 - [From data](canvas-apps/app-from-sharepoint.md)
 - [From a sample](canvas-apps/open-and-run-a-sample-app.md)
-- [From a Common Data Service source](canvas-apps/data-platform-create-app.md)
+- [From a Dataverse source](canvas-apps/data-platform-create-app.md)
 - [From a blank canvas](canvas-apps/data-platform-create-app-scratch.md)
 - [Via AppSource](../user/app-source.md)
 
 ## Model-driven apps
 
-[Model-driven apps](model-driven-apps/model-driven-app-overview.md) start with your data model – building up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices. 
+[Model-driven apps](model-driven-apps/model-driven-app-overview.md) start with your data model – building up from the shape of your core business data and processes in the Dataverse to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices. 
 
-When you create a model-driven app, you can use all of the power of the Common Data Service to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the Power Apps site.
+When you create a model-driven app, you can use all of the power of the Dataverse to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the Power Apps site.
 
 Getting started with model-driven apps is simple, and you can begin with these topics:
 
@@ -64,7 +64,7 @@ Getting started with model-driven apps is simple, and you can begin with these t
 
 ## Portals
 
-[Portals](portals/overview.md) help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Common Data Service, or even browse content anonymously.
+[Portals](portals/overview.md) help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously.
 
 Use these topics to quickly get started with portals:
 
@@ -74,13 +74,13 @@ Use these topics to quickly get started with portals:
 - [Power BI integration for portals](/powerapps/maker/portals/admin/set-up-power-bi-integration)
 - [Azure integration for portals](/powerapps/maker/portals/enable-azure-storage)
 
-## Common Data Service
+## Dataverse
 
-[Common Data Service](common-data-service/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you’re a Dynamics 365 customer, your data is already in Common Data Service.
+[Dataverse](common-data-service/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you’re a Dynamics 365 customer, your data is already in Dataverse.
 
-Common Data Service allows you to securely store and manage data within a set of standard and custom *entities*, and you can add fields to those entities when you need them.
+Dataverse allows you to securely store and manage data within a set of standard and custom *entities*, and you can add fields to those entities when you need them.
 
-Getting started with Common Data Service is easy. For example, you can start with these items:
+Getting started with Dataverse is easy. For example, you can start with these items:
 
 - [Create a custom entity](common-data-service/data-platform-create-entity.md)
 - [Manage fields](common-data-service/data-platform-manage-fields.md)

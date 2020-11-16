@@ -75,11 +75,11 @@ More information:
 
 - [Purchase Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin)
 
-After you have purchased Power Apps, create an environment with a Common Data Service database.
+After you have purchased Power Apps, create an environment with a Microsoft Dataverse database.
 
 1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
 
-2.  Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+2.  Create a Dataverse environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
     > [!IMPORTANT] 
     > While creating the database, if you select a security group for the database, the apps can be shared only with users that are members of the security group.
@@ -204,7 +204,7 @@ You can install the app by using one of the following 3 options:
 
 4.  Select **Login** to continue.
 
-5.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
+5.  If you have access to more than one Dataverse environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/deploy-select-environment.png "Select an environment")
@@ -262,17 +262,17 @@ This section provides information on how you can use the **Regional Emergency Re
 
 2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the **Regional Emergency Response App.pbit**.
 
-3.  Open the **Regional Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following value: **CDS_base_solution_URL**. Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
+3.  Open the **Regional Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following value: **CDS_base_solution_URL**. Type the URL of your Dataverse environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
 
     > [!div class="mx-imgBorder"] 
     > ![Configure Power BI dashboard](media/deploy-config-dashboard.png "Configure Power BI dashboard")
 
-4.  You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** \> **Sign in** to specify your Common Data Service credentials.
+4.  You will be prompted to enter credentials to connect to your Dataverse environment. Select **Organizational account** \> **Sign in** to specify your Dataverse credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![Connect to Common Data Service environment](media/deploy-connect-cds.png "Connect to Common Data Service environment")
+    > ![Connect to Dataverse environment](media/deploy-connect-cds.png "Connect to Dataverse environment")
 
-5.  After signing in, select **Connect** to connect to your data in Common Data Service.
+5.  After signing in, select **Connect** to connect to your data in Dataverse.
 
 6.  On successful connection, Power BI report will be displayed. You'll be prompted to apply pending changes to your query; select **Apply changes**.
 
@@ -284,7 +284,7 @@ This section provides information on how you can use the **Regional Emergency Re
      > [!div class="mx-imgBorder"] 
      > ![Save Power BI workspace](media/deploy-save-workspace.png "Save Power BI workspace")
 
-8.  You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
+8.  You'll be prompted to save the file as a .pbix file along with your Dataverse environment information. Provide a name and save it on your computer.
 
 9.  After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
 
@@ -534,7 +534,7 @@ The newly created About page can be accessed by your portal users by using the *
 
 ## Step 9: Set up server-side synchronization of emails
 
-Server-side synchronization enables you to sync emails in Common Data Service with Microsoft Exchange Online, Microsoft Exchange Server (on-premises), and POP3 email server for web-hosted email like Gmail or Outlook.com.
+Server-side synchronization enables you to sync emails in Dataverse with Microsoft Exchange Online, Microsoft Exchange Server (on-premises), and POP3 email server for web-hosted email like Gmail or Outlook.com.
 
 > [!div class="mx-imgBorder"] 
 > ![Set up email synchronization](media/deploy-email-synchronization.png "Set up email synchronization")
@@ -548,7 +548,7 @@ For detailed steps on setting server-side sync; see the following resources:
 -   [Connect to Exchange Server (on-premises)](https://docs.microsoft.com/power-platform/admin/connect-exchange-server-on-premises)
 
     > [!WARNING]
-    > Make sure this user is not configured for server-side sync on any other Common Data Service or Dynamics 365 environment. If you have a server-side sync set in another environment, enabling the server-side sync here will disable it in the previously used environment.
+    > Make sure this user is not configured for server-side sync on any other Dataverse or Dynamics 365 environment. If you have a server-side sync set in another environment, enabling the server-side sync here will disable it in the previously used environment.
 
 ## Step 10: Fix the processes for the app
 
@@ -717,8 +717,8 @@ In this step, we are going to do the following:
 
 |Flow name|Changes|
 |--|--|
-|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service and then specify a user account to send emails.|
-|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
+|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Dataverse and then specify a user account to send emails.|
+|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Dataverse and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
@@ -734,12 +734,12 @@ In this step, we are going to do the following:
 
 4.  Select the **Portal User Request: Send Email on Decline Request** name to open the flow definition. Select **Edit** on the toolbar.
 
-5.  Specify the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
+5.  Specify the connection to connect to Dataverse by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
 
     > [!div class="mx-imgBorder"] 
     > ![Fix credential](media/deploy-specify-cred.png "Fix credentials")
 
-6.  After fixing the connection to connect to Common Data Service, select **IfRequestState ==**, and specify the user account that has a mailbox enabled account to send emails.
+6.  After fixing the connection to connect to Dataverse, select **IfRequestState ==**, and specify the user account that has a mailbox enabled account to send emails.
 
     > [!div class="mx-imgBorder"] 
     > ![Specify Outlook credentials](media/deploy-fix-cred2.png "Specify outlook credentials")
@@ -748,11 +748,11 @@ In this step, we are going to do the following:
 
 8.  Next, go to the flows list, and select the **Portal User Request: Send Email to Admins on Request Creation** name to open the flow definition. Select **Edit** on the command bar.
 
-9.  Fix the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.
+9.  Fix the connection to connect to Dataverse by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.
 
-10. After fixing the connection to connect to Common Data Service:
+10. After fixing the connection to connect to Dataverse:
      1. Select **IfRequestState ==**
-     2. Select **Connections** to specify the connection to connect to Common Data Service 
+     2. Select **Connections** to specify the connection to connect to Dataverse 
      3. Select **Connections** to specify the user account credentials that has a mailbox enabled account to send emails
 
     > [!div class="mx-imgBorder"] 
@@ -777,7 +777,7 @@ In this step, we will authorize the connection information for the flows that he
 
 4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
 
-5.  Specify the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
+5.  Specify the connection to connect to Dataverse by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
 
     > [!div class="mx-imgBorder"] 
     > ![Fix credential for connection](media/authorize-cred.png "Fix credentials")

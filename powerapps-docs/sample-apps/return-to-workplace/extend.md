@@ -18,13 +18,13 @@ The definitions provided in this article indicate the intended purpose of the en
 
 ## Integration and extension
 
-The Return to the Workplace solution is built on Microsoft Power Platform. To learn more about working with model-driven apps and Common Data Service, go to:
+The Return to the Workplace solution is built on Microsoft Power Platform. To learn more about working with model-driven apps and Microsoft Dataverse, go to:
 
 - [Model-driven apps guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
-- [Common Data Service developer guide](https://docs.microsoft.com/powerapps/developer/common-data-service/overview)
-- [Common Data Service entities](https://docs.microsoft.com/powerapps/developer/common-data-service/entities)
-- [Work with data using code in Common Data Service](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds)
-- [Best practices and guidance for Common Data Service](https://docs.microsoft.com/powerapps/developer/common-data-service/best-practices/)
+- [Dataverse developer guide](https://docs.microsoft.com/powerapps/developer/common-data-service/overview)
+- [Dataverse entities](https://docs.microsoft.com/powerapps/developer/common-data-service/entities)
+- [Work with data using code in Dataverse](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds)
+- [Best practices and guidance for Dataverse](https://docs.microsoft.com/powerapps/developer/common-data-service/best-practices/)
 - [Business process flows](https://docs.microsoft.com/power-automate/business-process-flows-overview)
 
 To learn more about solutions and application lifecycle management (ALM) guidance to maintain the solution integrity, go to:
@@ -52,9 +52,9 @@ The canvas app within the solution can be tailored to your needs. We recommend t
 
 The security roles included in the solution are set up for test and demo purposes. They must be reviewed and understood thoroughly before moving to a production environment or when importing sensitive data.
 
-To learn more about Microsoft Power Platform and Common Data Service security, go to:
+To learn more about Microsoft Power Platform and Dataverse security, go to:
 
-- [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security)
+- [Security in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security)
 - [Security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
 New security roles can be created and tailored to your needs. The supplied security roles can serve as a template here that can be copied. If the new roles need to be moved to different environments, they need to be added to a new solution.
@@ -68,7 +68,7 @@ In order to copy the security role:
 
 ## Entity relationship diagram
 
-The entity relationship diagram illustrates the entities and their relationships that are present in the Common Data Service environment. System-generated entities and relationships, such as **Created By** and **Modified By**, aren't displayed in the diagram.
+The entity relationship diagram illustrates the entities and their relationships that are present in the Dataverse environment. System-generated entities and relationships, such as **Created By** and **Modified By**, aren't displayed in the diagram.
 
 > [!div class="mx-imgBorder"]
 > ![Entity relationship diagram](media/data-dictionary-ERD.png "Entity relationship diagram")

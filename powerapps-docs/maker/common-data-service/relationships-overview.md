@@ -34,4 +34,4 @@ Table relationships define the ways that table rows can be associated with rows 
 
 ## See also
 [Create a relationship between tables](data-platform-entity-lookup.md) <br/>
-[Create Many-to-many table relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)
+[Create Many-to-many table relationships in Microsoft Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)

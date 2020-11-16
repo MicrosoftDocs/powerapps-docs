@@ -207,7 +207,7 @@ Select **Upload** to load a ```.json``` trace file to Monitor. The upload option
 
 In this example, you'll use the *Northwind Sample Data* app included with the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
 
-*Northwind sample solution* is a canvas app that loads sample data into Common Data Service. You can also create a new app or use an existing app instead.
+*Northwind sample solution* is a canvas app that loads sample data into Microsoft Dataverse. You can also create a new app or use an existing app instead.
 
 ### Background
 
@@ -225,9 +225,9 @@ The issue needs further analysis to understand why requests are getting throttle
 
 ![ProgressCount.Text formula](./media/monitor/progresscount-text-formula.png "ProgressCount.Text formula")
 
-For each record added, the formula is evaluated again and **CountRows** is called on several entities. This resulted in **getRows** in the log, since **CountRows** isn't delegated for Common Data Service. For each single request to add a record, you're potentially making 12 additional requests to count the rows in each entity.
+For each record added, the formula is evaluated again and **CountRows** is called on several entities. This resulted in **getRows** in the log, since **CountRows** isn't delegated for Dataverse. For each single request to add a record, you're potentially making 12 additional requests to count the rows in each entity.
 
-These extra requests intermittently cause errors because of the Common Data Service platform throttling the requests to the service. And it also explains the overall performance problem.
+These extra requests intermittently cause errors because of the Dataverse platform throttling the requests to the service. And it also explains the overall performance problem.
 
 ### Conclusion
 

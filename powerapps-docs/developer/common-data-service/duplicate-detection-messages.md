@@ -1,5 +1,5 @@
 ---
-title: "Duplicate detection messages (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Duplicate detection messages (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use the BulkDetectDuplicatesRequest or RetrieveDuplicatesRequest messages to detect duplicates." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -19,12 +19,12 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Use the messages listed in the following table to detect duplicates in Common Data Service.  
+Use the messages listed in the following table to detect duplicates in Microsoft Dataverse.  
 
 
 |                                                                                                                                                                                                                   Message                                                                                                                                                                                                                   |                                      Web API Operation                                       |                         SDK Assembly                          |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| Detects duplicates for a specified entity type based on query criteria and store them as instances of a duplicate record entity type in the Common Data Service database.<br /><br /> The query expression that describes the records on which to run the duplicate detection job is specified in the <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest.Query> property of this request. | <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates Action" /> | <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest> |
+| Detects duplicates for a specified entity type based on query criteria and store them as instances of a duplicate record entity type in the Dataverse database.<br /><br /> The query expression that describes the records on which to run the duplicate detection job is specified in the <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest.Query> property of this request. | <xref href="Microsoft.Dynamics.CRM.BulkDetectDuplicates?text=BulkDetectDuplicates Action" /> | <xref:Microsoft.Crm.Sdk.Messages.BulkDetectDuplicatesRequest> |
 |                                                                                                         Detects and retrieves duplicates for a specified record.<br /><br /> The matching entity type is specified in the <xref:Microsoft.Crm.Sdk.Messages.RetrieveDuplicatesRequest.MatchingEntityName> property of this request.                                                                                                          |  <xref href="Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates Function" />  |  <xref:Microsoft.Crm.Sdk.Messages.RetrieveDuplicatesRequest>  |
 
 ### See also  

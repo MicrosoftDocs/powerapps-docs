@@ -1,4 +1,4 @@
-- name: Common Data Service developer guide
+- name: Microsoft Dataverse developer guide
   href: index.yml
 - name: Overview
   href: overview.md
@@ -184,13 +184,13 @@
       href: work-data-azure-solution.md
     - name: Work with event data in your Azure Event Hub solution
       href: work-event-data-azure-event-hub-solution.md
-    - name: Configure Azure integration with Common Data Service
+    - name: Configure Azure integration with Dataverse
       href: configure-azure-integration.md
     - name: Write a custom Azure-aware plug-in
       href: write-custom-azure-aware-plugin.md
     - name: Write a listener application for a Azure solution
       href: write-listener-application-azure-solution.md
-    - name: "Tutorial: Configure Azure (SAS) for integration with Common Data Service"
+    - name: "Tutorial: Configure Azure (SAS) for integration with Dataverse"
       href: walkthrough-configure-azure-sas-integration.md
     - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
       href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
@@ -206,7 +206,7 @@
       href: register-web-hook.md
     - name: Test webhook registration
       href: test-webhook-registration.md
-- name: Work with Common Data Service entities
+- name: Work with Dataverse entities
   href: entities.md
   items:
   - name: Customer entities
