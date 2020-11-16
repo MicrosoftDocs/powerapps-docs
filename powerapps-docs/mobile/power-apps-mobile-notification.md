@@ -120,7 +120,7 @@ When you trigger a push notification from a flow, you can send the notification 
 9. Select **Flow checker** to check for error or warnings.
 10. Test the flow by selecting **Test** and follow the prompts. 
 
-## Perform an action when a user taps the notificatio
+## Perform an action when a user taps the notification
 
 ### Pass parameters
 
