@@ -31,9 +31,6 @@ Responsiveness allows different elements of the app to specify how they:
 
 - Maintain or change positions with the screen size changes. 
 
-> [!NOTE]
-> The new responsive layouts are applicable to the apps that are built for **Tablet** format.
-
 ## Why should you build responsive apps
 
 End users can access your app from different devices such as phones, tablets, laptops, and desktops with large monitors, different screen sizes, and with varied number of pixels.
@@ -71,6 +68,9 @@ The following responsive layouts can be created by adding a new screen and selec
 
 > [!div class="mx-imgBorder"]
 > ![Screen layouts](media/create-responsive-layout/different-screen-layouts.png "Screen layouts")
+
+> [!NOTE]
+> The new responsive layouts are available to the apps formats but the new screen templates are available only for **Tablet** format.
 
 ### Split-screen
 
