@@ -279,7 +279,7 @@ OData-Version: 4.0
   
 ## Retrieve related entities by expanding both single-valued and collection-valued navigation properties
 
-The following example demonstrates how you can expand related entities for entity sets using both single- and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns one level of depth and an `@odata.nextLink` property for the related entities.  
+The following example demonstrates how you can expand related entities for entity sets using both single and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns one level of depth and an `@odata.nextLink` property for the related entities.  
   
 In this example, we are retrieving the contact and tasks assigned to the top 2 accounts.  
   
