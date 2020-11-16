@@ -156,9 +156,9 @@ Any column you add to the table in the data source (for example, the Excel table
 
     :::image type="content" source="media/geospatial/map-choose-fields.png" alt-text="Screenshot showing the field selection options.":::
 
-Each pin will now show the fields associated with that pin in a pop-up card.
+5. Each pin will now show the fields associated with that pin in an informational card.
 
-:::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="Screenshot of the map component with an info card on top of a pin, showing information such as Name, Occupancy, and Phone.":::
+    :::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="Screenshot of the map component with an info card on top of a pin, showing information such as Name, Occupancy, and Phone.":::
 
 ### Properties
 
