@@ -1,6 +1,6 @@
 ---
-title: Configure entity relationship cascading behavior (Common Data Service) | Microsoft Docs
-description: Configure cascading behaviors for a one-to-many entity relationship in Common Data Service to preserve data integrity and automate business processes.
+title: Configure entity relationship cascading behavior (Microsoft Dataverse) | Microsoft Docs
+description: Configure cascading behaviors for a one-to-many entity relationship in Microsoft Dataverse to preserve data integrity and automate business processes.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -24,7 +24,9 @@ search.app:
 
 # Configure entity relationship cascading behavior  
 
- You can configure cascading behaviors for a one-to-many entity relationship to preserve data integrity and automate business processes. Both Web API and organization service support configuring cascading behavior.
+ [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+You can configure cascading behaviors for a one-to-many entity relationship to preserve data integrity and automate business processes. Both Web API and organization service support configuring cascading behavior.
 
 ## Using Web API to configure cascading behavior
 

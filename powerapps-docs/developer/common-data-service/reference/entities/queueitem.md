@@ -1,20 +1,22 @@
 ---
-title: "QueueItem Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the QueueItem entity."
-ms.date: 04/12/2020
+title: "QueueItem entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the QueueItem table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# QueueItem Entity Reference
+# QueueItem entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 A specific item in a queue, such as a case record or an activity record.
 
@@ -35,7 +37,7 @@ A specific item in a queue, such as a case record or an activity record.
 |SetState|PATCH [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/queueitems(*queueitemid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -689,7 +691,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |4216|Social Activity|
 |4251|Recurring Appointment|
 |9953|Knowledge Article|
-|10011|Knowledge Article Template|
+|10047|Knowledge Article Template|
 
 
 
@@ -1086,6 +1088,6 @@ See msdyn_knowledgearticletemplate Entity [msdyn_knowledgearticletemplate_QueueI
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.queueitem?text=queueitem EntityType" />

@@ -23,6 +23,8 @@ search.app:
 
 # Connector certification
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 If you own a service or API&mdash;or you've built a custom connector that you want to connect to Power Apps, Power Automate, Azure Logic Apps, or Power Query&mdash;you need to submit your connector to Microsoft for certification. 
 
 Connector certification is now included in ISV Studio, so you can use it to manage and track your connector certification submission. More information: [Submit your connector for Microsoft certification](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)

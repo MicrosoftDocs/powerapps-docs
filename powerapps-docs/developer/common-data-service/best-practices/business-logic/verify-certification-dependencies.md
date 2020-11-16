@@ -23,6 +23,8 @@ search.app:
 ---
 # Verify certification dependencies for plug-ins making outbound calls
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Maintainability, Supportability
 
 **Impact potential**: High
@@ -49,7 +51,7 @@ You should verify that the site you want to connect with has a valid chain of ce
 
 You may encounter this when connecting to a new endpoint for the first time or when something about the certificate has changed.
 
-When the code in your plug-in running in the sandbox attempts to connect to an external endpoint using https, the CDS Sandbox will start SSL/TLS negotiation. The endpoint presents a certificate to use for encryption. If the certificate has one or more intermediate certificates it must present the entire chain to successfully complete SSL/TLS negotiation. If the complete chain is not presented SSL/TLS communication cannot be established. 
+When the code in your plug-in running in the sandbox attempts to connect to an external endpoint using https, the Dataverse Sandbox will start SSL/TLS negotiation. The endpoint presents a certificate to use for encryption. If the certificate has one or more intermediate certificates it must present the entire chain to successfully complete SSL/TLS negotiation. If the complete chain is not presented SSL/TLS communication cannot be established. 
 
 
 

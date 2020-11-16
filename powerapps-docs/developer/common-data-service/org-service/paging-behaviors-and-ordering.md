@@ -1,5 +1,5 @@
 ---
-title: "Paging behaviors and ordering (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Paging behaviors and ordering (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the different paging behaviors for FetchXML queries and how you can write queries to get the desired paging results." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 7/20/2020
@@ -18,6 +18,8 @@ search.app:
 
 # Paging behaviors and ordering
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 When querying data using FetchXML, paging query results can make viewing large
 volumes of information easier. It is important when using paging to include
 ordering parameters as well. Without proper ordering, paging requests for the
@@ -28,7 +30,7 @@ a page.
 
 ## Legacy paging
 
-Legacy paging within the Common Data Service loads all the results of the query
+Legacy paging within the Microsoft Dataverse loads all the results of the query
 up to the current page into memory on the server, selects the number of records
 that are needed for the page, and then ignores the rest. This has benefits such
 as quick back/forward paging through the data or skipping to a specific page,
@@ -53,7 +55,7 @@ cases, users will have to add at least a single ordering value for a more
 consistent paging experience.
 
 > [!NOTE]
-> Paging using FetchXML for Common Data Service is dynamic. The page a
+> Paging using FetchXML for Dataverse is dynamic. The page a
 > record appears on is determined at the time that each page is rendered. If 1000
 > records are being displayed 50 to a page, the first 50 records are displayed as
 > page one. When page two is requested, the system determines what the next 50

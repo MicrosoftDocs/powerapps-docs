@@ -23,7 +23,7 @@ The following is a list of some community resources created by the Power Apps co
 
 The Power Apps component framework gallery (<https://pcf.gallery/>) is a collection of code components created by the Power Apps community. It has a wide range of code components that may fit in for your business case. 
 
-Make sure that you review the licensing terms and the source code before you download. See, [How to run the samples](use-sample-components.md) article on how to create a solution package and import into Common Data Service.
+Make sure that you review the licensing terms and the source code before you download. See, [How to run the samples](use-sample-components.md) article on how to create a solution package and import into Microsoft Dataverse.
 
 > [!WARNING]
 > Code component run in the context of the end user who is using the component and can perform any action that may include accessing, capturing, and modifying the data. 
@@ -46,7 +46,7 @@ The following is the list of videos created by Power Apps community.
 |[Power Apps component framework: Deep dive manifest file for dataset template](https://www.youtube.com/watch?v=TsTrYaOGaGo&feature=youtu.be)| Learn how to define a manifest file for dataset type code components.|
 |[Power Apps component framework Academy: Deep dive manifest file for field template](https://www.youtube.com/watch?time_continue=522&v=w40zqSsYEy0)| Learn how to define a manifest file for field type code components.|
 |[Power Apps component framework Academy: Dataset components](https://www.youtube.com/watch?v=OEiM97nTD0w)| Learn more detail about dataset components and how different methods of dataset API are used.|
-|[Power Apps component framework Academy: Importing into your organization](https://www.youtube.com/watch?v=2uO2L2xTPkc)| Learn how to package and import code components into Common Data Service.|
+|[Power Apps component framework Academy: Importing into your organization](https://www.youtube.com/watch?v=2uO2L2xTPkc)| Learn how to package and import code components into Dataverse.|
 |[Power Apps component framework revolution](https://youtu.be/_SjEQ-7LK_Q)|Learn how component framework has enhanced the visualization in model-driven and canvas apps|
 |[Power Apps component framework Academy: Using React and Office UI fabric](https://www.youtube.com/watch?v=e7JNgGlI3nE)| Learn how to use React and UI fabric in code components.|
 |[Power Apps component framework Academy: Usage of additional frameworks](https://www.youtube.com/watch?v=cOPyyDdsEjQ)| Learn how to use additional frameworks in building code components.|

@@ -78,7 +78,7 @@ Results attribute in provided variable (such as 'resultVariable' in above sample
 
 ### XML attribute
 
-XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Common Data Service. This attribute is useful for debugging purpose when you want to understand how entity permission is getting applied on this *fetchxml* tag.  
+XML attribute in provided variable (such as 'resultVariable' in above sample) holds the resultant query which can be used to get data from Microsoft Dataverse. This attribute is useful for debugging purpose when you want to understand how entity permission is getting applied on this *fetchxml* tag.  
 
 ## include
 
@@ -138,4 +138,4 @@ When user has enabled the header and footer caching, and he wants to avoid cachi
 [Control flow tags](control-flow-tags.md)<br>
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
-[Power Apps common data service entity tags](portals-entity-tags.md)
+[Power Apps Dataverse entity tags](portals-entity-tags.md)

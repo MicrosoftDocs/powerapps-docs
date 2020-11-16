@@ -1,5 +1,5 @@
 ---
-title: "Work with Quick Find’s search item limit (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Work with Quick Find’s search item limit (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: " " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/18/2020
@@ -18,8 +18,10 @@ search.app:
 
 # Work with Quick Find’s search item limit
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Quick Find provides an easy way to configure the default search experience
-across Dynamics 365 Customer Engagement or Common Data Service entities. Quick Find provides optimized searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a
+across Dynamics 365 Customer Engagement or Microsoft Dataverse entities. Quick Find provides optimized searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a
 query indicating:
 
 *The number of records for this search exceeds the Quick Search record limit.*
@@ -70,7 +72,7 @@ better as a standard query than a Quick Find.
 
 ## Avoiding the search limit exception
 
-When writing and executing Quick Find queries in Dynamics 365 Customer ENgagement or Common Data Service, use the following tips to avoid the 10k search limit:
+When writing and executing Quick Find queries in Dynamics 365 Customer ENgagement or Dataverse, use the following tips to avoid the 10k search limit:
 
 ### Best practices when querying
 

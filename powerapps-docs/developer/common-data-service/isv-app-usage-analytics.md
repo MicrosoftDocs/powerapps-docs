@@ -1,6 +1,6 @@
 ---
-title: Introduction to the Power Platform ISV Studio app usage analytics| Microsoft Docs
-description: Measure app's performance and get insights.
+title: Introduction to Microsoft Power Platform ISV Studio app usage analytics| Microsoft Docs
+description: Measure an app's performance and get insights.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -23,39 +23,36 @@ search.app:
 ---
 
 # App usage analytics
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-ISVs need data like active users, number of times the solution installed or other means of data to measure the success of their application. App usage analytics feature allows ISVs to monitor the usage of their apps by giving them the visibility into monthly, daily, and weekly usage data of their apps. 
+As an ISV, you need data&mdash;like active users or the number of times the solution has been installed&mdash;to measure the success of your application. You can use app usage analytics to get visibility into monthly, daily, and weekly usage data. 
 
 > [!NOTE]
-> A tenant or customer needs to update their apps for an ISV to start seeing the usage data.
+> A tenant or customer needs to update their apps for you to start seeing usage data.
 
-App usage feature allows ISVs to filter the usage data by **Component Type**, **Data Date**, **Package Name**, and **Solution Name**. An app can have multiple packages and an individual package can have multiple solutions. Each solution can have multiple components. App usage is measured based on how many times the components of the application are used in a month, week, or day. 
+With the app usage feature, you can filter usage data by **Component Type**, **Data Date**, **Package Name**, and **Solution Name**. An app can have multiple packages, and an individual package can have multiple solutions. Each solution can have multiple components. App usage is measured based on how many times the components of the application are used in a month, week, or day. 
 
 > [!NOTE]
-> An app must be deployed via [AppSource](https://appsource.microsoft.com) in order to see this data.   
+> An app must be deployed via [AppSource](https://appsource.microsoft.com) in order for you to see this data.
 
 > [!div class="mx-imgBorder"]
 > ![Usage dashboard](media/isv-app-usage-analytics-report.png "Usage dashboard")
 
+Some of the components of a solution can have shared ownership by multiple ISVs. For shared components, only the publisher who created the component gets the usage credit. For example, ISV1 created a form and ISV2 extended the form by adding a widget to it. Every time the form is used, ISV1 gets the usage credit. Whenever the widget is used, ISV2 gets the usage credit. If a user visited the form only to access the widget, ISV1 also gets the usage credit.
 
-Some of the components of a solution can have shared ownership by multiple ISVs. For shared components, only the publisher who created the component gets the usage credit. For example, ISV1 created a form and ISV2 extends the form by adding a widget to it. Every time the form is used, ISV1 gets the usage credit and ISV2 gets the usage credit whenever the widget is used. If a user visited the form only to access the widget, ISV1 also gets the usage credit.
+For a component that isn't shared, only the publisher who created it gets the usage credit.
 
-For components that are not shared, only the publisher who created gets the usage credit. 
-    
 ## View the app usage dashboard
-
-To view the app usage data:
-
 1. Sign in to [ISV studio](https://aka.ms/ISVStudio/).
-1. On the **Home** page, you can see a list of published applications. Select the desired application for which you want to see the usage details. 
-1. Scroll-down to the page to view all the apps. Select the app and select the **Usage** tab.
+1. On the **Home** page, view the list of published apps. If necessary, scroll down to view the app for which you want to view usage details.
+1. Select the app, and then select the **Usage** tab.
 
    > [!div class="mx-imgBorder"]
    > ![List of top apps](media/isv-top-apps.png "List of top apps")
 
-1. You can also see the app usage details by directly selecting the app usage icon from the list of apps as shown in the screenshot:
+   You can also go directly to the app usage details by selecting the app usage icon from an app in the list, as shown in the following image.
 
    > [!div class="mx-imgBorder"]
    > ![Usage icon](media/isv-select-app-to-see-details.png "Usage icon")
@@ -64,18 +61,16 @@ To view the app usage data:
 
 The usage dashboard shows the following metrics:
 
-- **Monthly active users**: Tracks the information about the number of unique users who used the app within the last month.
-- **Daily active users**: Tracks the information about the number of daily unique users who used the app within the last 24 hours.
-- **Weekly active users**: Tracks the information about the number of daily unique users who used the app within the last 7 hours.
-- **Usage over time**: Tracks the information about the number of monthly, weekly, and daily active users over time.
-- **Monthly active users by component type**: Tracks the information about the number of monthly active users filtered by component type.
-- **Monthly active users by component name**: Tracks the information about the number of monthly active users filtered by component name.
-
-If ISV is looking at the metrics at a solution level, all the components are rolled up to the solution level. Similarly, all the solution metrics are rolled up to package and all package metrics are rolled up to an app.
+- **Monthly active users**: Tracks the number of unique users who used the app within the last month.
+- **Daily active users**: Tracks the number of daily unique users who used the app within the last 24 hours.
+- **Weekly active users**: Tracks the number of daily unique users who used the app within the last seven hours.
+- **Usage over time**: Tracks the number of monthly, weekly, and daily active users over time.
+- **Monthly active users by component type**: Tracks the number of monthly active users, filtered by component type.
+- **Monthly active users by component name**: Tracks the number of monthly active users, filtered by component name.
 
 ### Filtering the usage dashboard
 
-ISVs can filter the usage dashboard using the filters available. For example, an ISV can filter to see the metrics at app, package, solution, and component level. If ISVs want to see the metrics at solution level, ISVs can select all the components of the solution in the filter.  
+You can filter the usage dashboard by using the available filters. To see the metrics rolled up to the solution level, select all the components of the solution in the filter. Similarly, you can roll up all solution metrics to the package level, and roll up all package metrics to the app level.
 
 ### See also
 
@@ -83,4 +78,4 @@ ISVs can filter the usage dashboard using the filters available. For example, an
 [App page](isv-app-management-apppage.md)<br/> 
 [Tenant page](isv-app-management-tenantpage.md)<br/>
 [AppSource checker](isv-app-management-appsource-checker.md)<br/>
-[Connector Certification](isv-app-management-certification.md)
+[Connector certification](isv-app-management-certification.md)

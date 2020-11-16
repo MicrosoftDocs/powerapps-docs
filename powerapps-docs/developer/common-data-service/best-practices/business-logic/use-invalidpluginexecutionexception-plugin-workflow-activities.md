@@ -14,7 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 3/5/2020
-ms.author: JimDaly
+ms.author: JDaly
 search.audienceType: 
   - developer
 search.app: 
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Use InvalidPluginExecutionException in plug-ins and workflow activities
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 **Category**: Supportability, Usability
 
@@ -57,7 +59,7 @@ Failure to convert the message into a <xref:Microsoft.Xrm.Sdk.InvalidPluginExecu
 
 Do not use HTML within error message text. 
 
-Web applications which access CDS data should HTML encode any error message text before they display it to a user. This will prevent any HTML in your message from rendered as you intend. It will just show the HTML code.
+Web applications which access Dataverse data should HTML encode any error message text before they display it to a user. This will prevent any HTML in your message from rendered as you intend. It will just show the HTML code.
 
 
 <a name='seealso'></a>

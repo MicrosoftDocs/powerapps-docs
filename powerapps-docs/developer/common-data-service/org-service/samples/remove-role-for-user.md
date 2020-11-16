@@ -1,5 +1,5 @@
 ---
-title: " Remove a role for a user (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: " Remove a role for a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to remove a role for a user " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Remove a role for a user
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This sample shows how to disassociate a role from a user by using the [IOrganizationService.Disassociate](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.disassociate?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RemoveRoleFromUser).
 
@@ -46,7 +48,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `query` method retrieves a role from Common Data Service.
+1. The `query` method retrieves a role from Microsoft Dataverse.
 2. The `Disassociate` message removes the role to a team.
 
 ### Clean up

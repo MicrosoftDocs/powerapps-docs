@@ -1,5 +1,5 @@
 ---
-title: "Use Single-Tenant server-to-server authentication (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use Single-Tenant server-to-server authentication (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to access D365 data from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
@@ -17,9 +17,11 @@ search.app:
 ---
 # Use Single-Tenant server-to-server authentication
 
-The single-tenant server-to-server scenario typically applies for enterprise organizations that have multiple Common Data Service environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.  
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+The single-tenant server-to-server scenario typically applies for enterprise organizations that have multiple Microsoft Dataverse environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.  
   
- An enterprise can create a web application or service to connect to any Common Data Service environments associated with a single Azure Active Directory (Azure AD) tenant.
+ An enterprise can create a web application or service to connect to any Dataverse environments associated with a single Azure Active Directory (Azure AD) tenant.
   
 ## Differences from multi-tenant scenario  
  Creating a web application or service for a single-tenant server-to-server authentication is similar to that used for a multi-tenant organization but there are some important differences.  
@@ -36,14 +38,14 @@ In the [See also](#bkmk_seealso) section at the end of this article, there are l
  To create and test a single-tenant application that uses server-to-server (S2S) authentication you will need:  
   
 - An Azure AD tenant to use when registering the provided sample application.
-- A Common Data Service subscription that is associated with the Azure AD tenant.
-- Administrator privileges in the Azure AD tenant and Common Data Service environment.
+- A Dataverse subscription that is associated with the Azure AD tenant.
+- Administrator privileges in the Azure AD tenant and Dataverse environment.
 
 <a name="bkmk_registration"></a>
 ## Azure application registration
 To create an application registration in Azure AD, follow these steps.
 
-1. Navigate to https://admin.microsoft.com and sign in, or from your Common Data Service environment web page, select the application launcher in the top left corner.
+1. Navigate to https://admin.microsoft.com and sign in, or from your Dataverse environment web page, select the application launcher in the top left corner.
 2. Choose **Admin** > **Admin centers** > **Azure Active Directory**
 3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
 4. Choose **+ New registration**
@@ -78,7 +80,7 @@ To create an application registration in Azure AD, follow these steps.
 ## Application User creation
 To create an unlicensed "application user" in your environment, follow these steps. This application user will be given access to your environment's data on behalf of the end user who is using your application.
 
-1. Navigate to your Common Data Service environment (https://*[org]*.crm.dynamics.com).
+1. Navigate to your Dataverse environment (https://*[org]*.crm.dynamics.com).
 2. Navigate to **Settings** > **Security** > **Users**.
 3. Choose **Application Users** in the view filter.
 4. Select **+ New**.
@@ -109,7 +111,7 @@ When application users are created, they are automatically enabled. The default 
 In an event that an application user’s status is disabled and you need to enable it, you can perform the following steps to customize the Application User form to allow update to the **Status** field. You can also use these steps to disable an application user that is no longer used.
 
 1. Remove the **Status** field from the Application User form footer.
-    1. Navigate to your Common Data Service environment (https://*[org]*.crm.dynamics.com).
+    1. Navigate to your Dataverse environment (https://*[org]*.crm.dynamics.com).
     1. Navigate to **Settings** > **Customizations** > **Customize the System**.
     1. In the left pane, select **Entities** > **User** > **Forms**.
     1. Select **Application User** in the list of forms

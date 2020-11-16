@@ -1,6 +1,6 @@
 ---
-title: "Use XRM tooling to execute actions in Common Data Service (Common Data Service) | Microsoft Docs"
-description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on Common Data Service data"
+title: "Use XRM tooling to execute actions in Microsoft Dataverse (Dataverse) | Microsoft Docs"
+description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on Microsoft Dataverse data"
 ms.custom: ""
 ms.date: 03/27/2019
 ms.reviewer: "pehecke"
@@ -21,9 +21,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use XRM tooling to execute actions in Common Data Service
+# Use XRM tooling to execute actions in Microsoft Dataverse
 
-After you are connected to Common Data Service, you can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object to perform actions on your Common Data Service data such as create, update, retrieve or delete data. This section provides some examples on how you can perform actions in Common Data Service using XRM tooling.  
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+After you are connected to Dataverse, you can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object to perform actions on your Dataverse data such as create, update, retrieve or delete data. This section provides some examples on how you can perform actions in Dataverse using XRM tooling.  
   
 ## In This Section
 
@@ -35,5 +37,5 @@ After you are connected to Common Data Service, you can use the <xref:Microsoft.
   
 ### See also
 
-[Use XRM Tooling API to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling API to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)

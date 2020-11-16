@@ -1,5 +1,5 @@
 ---
-title: "Scalable Customization Design: Auto-numbering example (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Scalable Customization Design: Auto-numbering example (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This example illustrates how transactions and concurrency issues need to be accounted for in a code customization." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/15/2019
@@ -17,10 +17,12 @@ search.app:
 ---
 # Scalable Customization Design: Auto-numbering example
 
-> [!NOTE]
-> This example supports a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service](overview.md).
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-One scenario that illustrates the common misunderstanding of how transactions are handled within Common Data Service is implementing an automatic numbering scheme.
+> [!NOTE]
+> This example supports a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Microsoft Dataverse](overview.md).
+
+One scenario that illustrates the common misunderstanding of how transactions are handled within Dataverse is implementing an automatic numbering scheme.
 
 In this scenario the requirement is typically to:
 
@@ -37,7 +39,7 @@ The typical approach involves variations of the following:
 - Record the new number against the newly generated record.
 - Store the new number back as being the last used number in the auto number index store.
 
-The following sections describe different approaches that can be taken within Common Data Service and highlight the implications, showcasing both the importance and benefit of understanding the way transactions are utilized. 
+The following sections describe different approaches that can be taken within Dataverse and highlight the implications, showcasing both the importance and benefit of understanding the way transactions are utilized. 
 
 ## Approach 1: Out of a transaction
 

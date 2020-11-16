@@ -1,6 +1,6 @@
 ---
-title: "Use Web API actions (Common Data Service)| Microsoft Docs"
-descriptions: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Common Data Service"
+title: "Use Web API actions (Microsoft Dataverse)| Microsoft Docs"
+descriptions: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Microsoft Dataverse"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.service: powerapps
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Use Web API actions
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Actions and functions represent re-usable operations you can perform using the Web API. Use a POST request with actions listed in <xref:Microsoft.Dynamics.CRM.ActionIndex> to perform operations that have side effects. You can also define custom actions and they’ll be available for you to use.
 

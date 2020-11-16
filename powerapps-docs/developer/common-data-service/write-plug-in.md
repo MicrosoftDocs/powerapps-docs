@@ -1,8 +1,8 @@
 ---
-title: "Write a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the concepts and technical details necessary when writing plug-ins" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/03/2019
+ms.date: 11/03/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Write a plug-in
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 The process of writing, registering, and debugging a plug-in is:
 
@@ -58,6 +60,13 @@ All assemblies must be signed before they can be registered. This can be done us
 ### Do not depend on .NET assemblies that interact with low-level Windows APIs
 
 Plug-in assemblies must contain all the necessary logic within the respective dll.  Plugins may reference some core .Net assemblies. However, we do not support dependencies on .Net assemblies that interact with low-level Windows APIs, such as the graphics design interface.
+
+### Do not depend on any other assemblies
+
+Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package will include these assemblies in the build folder for your assembly, but you will not upload these assemblies with the assembly that includes your logic. These assemblies are already present in the sandbox runtime.
+ 
+Do not include any other NuGet packages or assemblies to the build folder of your project. You cannot include these assemblies when you register the assembly with your logic. You cannot assume that the assemblies other than those included in the  `Microsoft.CrmSdk.CoreAssemblies` NuGet package will be present and compatible with your code.
+
 
 ## IPlugin interface
 

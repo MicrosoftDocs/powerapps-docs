@@ -1,5 +1,5 @@
 ---
-title: "Access external web services (Common Data Service) | MicrosoftDocs"
+title: "Access external web services (Microsoft Dataverse) | MicrosoftDocs"
 description: "Learn how to access a web service from a custom plug-in or workflow activity."
 ms.custom: ""
 ms.date: 8/19/2019
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Access external web services
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Plug-ins and custom workflow activities can access the network through the HTTP and HTTPS protocols. This capability provides support for accessing popular web services like social sites, news feeds, web services, and more. The following web access restrictions apply to this sandbox capability.  
   

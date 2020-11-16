@@ -1,5 +1,5 @@
 ---
-title: "Retrieve related entity records with a query (Common Data Service)| Microsoft Docs"
+title: "Retrieve related entity records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how you can retrieve related entity records by expanding the navigation properties."
 ms.custom: ""
 ms.date: 06/27/2020
@@ -21,6 +21,8 @@ search.app:
   - D365CE
 ---
 # Retrieve related entity records with a query
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Use the `$expand` system query option in the navigation properties to control what data from related entities is returned. There are two types of navigation properties:  
   

@@ -1,5 +1,5 @@
 ---
-title: "Create and update an entity to send email activities to records (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create and update an entity to send email activities to records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about creating an entity that contains an email address you can use to send email activities to records for that entity." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/05/2019
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Create and update an entity to send email activities to records
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 You can create an entity that contains an email address you can use to send email activities to records for that entity.  
   

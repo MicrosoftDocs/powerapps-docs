@@ -1,6 +1,6 @@
 ---
 title: Entity metadata | Microsoft Docs
-description: Learn about the entity metadata use in Common Data Service.
+description: Learn about the entity metadata use in Microsoft Dataverse.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -30,7 +30,9 @@ Overlap with content in https://docs.microsoft.com/dynamics365/customer-engageme
 -->
 # Entity metadata
 
-Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in Common Data Service.
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in Microsoft Dataverse.
 
 ## Entity names
 Each entity has a unique name defined when it is created. This name is presented in several ways:
@@ -55,7 +57,7 @@ Each entity also has three properties that can display localized values:
 |`DisplayCollectionName`|A plural form of the Display name. i.e. Accounts|
 |`Description`|A short sentence describing the entity i.e. *Business that represents a customer or potential customer. The company that is billed in business transactions.*|
 
-These are the localizable values that are used to refer to the entities in an app. These values can be changed at any time. To add or edit localized values see  [Common Data Service Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
+These are the localizable values that are used to refer to the entities in an app. These values can be changed at any time. To add or edit localized values see  [Dataverse Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
 
 
 ## Primary key
@@ -89,9 +91,7 @@ Each entity that supports entity images will have three supporting attributes.
 |`EntityImage_URL`|`StringType`|An absolute URL to display the entity image in a client.|
 |`EntityImageId`|`UniqueIdentifierType`|The unique identifier of the image|
 
-More information: 
-- [Common Data Service Developer Guide Image attributes](/dynamics365/customer-engagement/developer/image-attributes)
-- [Common Data Service Developer Guide Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
+More information: [Image attributes](image-attributes.md), [Sample: Set and retrieve entity images](org-service/samples/set-retrieve-entity-images.md)
 
 > [!NOTE]
 > This is different from the icon displayed for an entity in model-driven apps. The `IconVectorName` property contains the name of the SVG web resource that sets this.
@@ -156,8 +156,8 @@ For example, `PostComment`, `PostLike`, and `PostRole` are each children of the 
 Each alternate key definition describes one or more attributes in combination that will uniquely identify an entity instance. Alternate keys are typically only applied for integration with external systems. You can define alternate keys to uniquely identify a record. This is valuable if you are integrating data with a system that doesn’t support GUID unique identifier keys. You can define a single field value or combination of field values to uniquely identify an entity. Adding an alternate key will enforce a uniqueness constraint on these attributes. You will not be able to create or update another entity record to have the same values.
 
 More information: 
- - [Common Data Service Customization Guide: Define alternate keys to reference Common Data Service records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)
- - [Define alternate keys for an entity and Developer Guide: Synchronize Common Data Service data with external systems](/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems)
+ - [Dataverse Customization Guide: Define alternate keys to reference Dataverse records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)
+ - [Define alternate keys for an entity and Developer Guide: Synchronize Dataverse data with external systems](/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems)
 
 ## Entity states
 
@@ -181,7 +181,7 @@ Some entities will have different sets of options.
 |---------|---------|
 |0 : Open|1: Open|
 |1 : Completed|2: Made <br />4: Received|
-|2: Cancelled|3: Cancelled|
+|2: Canceled|3: Canceled|
 
 The set of valid state codes for an entity is not customizable, but the status codes are customizable. You can add additional `StatusCode` options for a corresponding `StateCode`.
 
@@ -192,4 +192,4 @@ More information:
 
 ### See also
 
-[Common Data Service entities](entities.md)
+[Dataverse entities](entities.md)

@@ -23,6 +23,8 @@ search.app:
 ---
 # Do not duplicate plug-in step registration
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Performance
 
 **Impact potential**: High

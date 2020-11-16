@@ -1,5 +1,5 @@
 ---
-title: "Retrieve and delete the history of audited data changes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Retrieve and delete the history of audited data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Programmatically retrieve the audit change history or delete audit records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/14/2020
@@ -17,6 +17,8 @@ search.app:
 ---
 # Retrieve and delete the history of audited data changes
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 After auditing is enabled and data changes are made to those entities and attributes being audited, you can proceed to obtain the data change history. Optionally, you can delete the audit records after you review the change history. Follow the sample code link at the end of this topic for more information.  
   
 ## Retrieve the change history
@@ -28,7 +30,7 @@ Refer to the sample link at the end of this topic for sample code that demonstra
 > [!IMPORTANT]
 > Large attribute values, such as [Email.Description](reference/entities/email.md#BKMK_Description) or [Annotation](reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped attribute value can be recognized by three dots at the end of the text, for example “lorem ipsum, lorem ip…”.
 >
-> Going forward, [Audit](reference/entities/audit.md) entity records will be stored in Common Data Service’s log storage. Linking audit records with other entity records using FetchXML will no longer be possible.
+> Going forward, [Audit](reference/entities/audit.md) entity records will be stored in Microsoft Dataverse’s log storage. Linking audit records with other entity records using FetchXML will no longer be possible.
 
 ## Delete the change history for a record
  
@@ -36,13 +38,13 @@ Refer to the sample link at the end of this topic for sample code that demonstra
 
 ## Delete the change history for a date range
 
- You can delete `audit` records for a date range using the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest> request. Audit data records are deleted sequentially from the oldest to the newest. The functionality of this request is slightly different based on the edition of Microsoft SQL Server being used by your Common Data Service server. Common Data Service uses an enterprise edition of SQL Server.
+ You can delete `audit` records for a date range using the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest> request. Audit data records are deleted sequentially from the oldest to the newest. The functionality of this request is slightly different based on the edition of Microsoft SQL Server being used by your Dataverse server. Dataverse uses an enterprise edition of SQL Server.
 
- If your Common Data Service server uses SQL Server standard edition, which does not support the database partitioning feature, the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest> request deletes all audit records created up to the end date specified in the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest.EndDate> property.
+ If your Dataverse server uses SQL Server standard edition, which does not support the database partitioning feature, the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest> request deletes all audit records created up to the end date specified in the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest.EndDate> property.
 
- If your Common Data Service server uses an Enterprise edition of SQL Server that does support partitioning, the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest> request will delete all audit data in those partitions where the end date is before the date specified in the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest.EndDate> property. Any empty partitions are also deleted. However, neither the current (active) partition nor the `audit` records in that active partition can be deleted by using this request or any other request.
+ If your Dataverse server uses an Enterprise edition of SQL Server that does support partitioning, the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest> request will delete all audit data in those partitions where the end date is before the date specified in the <xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest.EndDate> property. Any empty partitions are also deleted. However, neither the current (active) partition nor the `audit` records in that active partition can be deleted by using this request or any other request.
 
- New partitions are automatically created by the Common Data Service platform on a quarterly basis each year. This functionality is non-configurable and cannot be changed. You can obtain the list of partitions using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditPartitionListRequest> request. If the end date of any partition is later than the current date, you cannot delete that partition or any `audit` records in it.  
+ New partitions are automatically created by the Dataverse platform on a quarterly basis each year. This functionality is non-configurable and cannot be changed. You can obtain the list of partitions using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditPartitionListRequest> request. If the end date of any partition is later than the current date, you cannot delete that partition or any `audit` records in it.  
 
 ### See also
 

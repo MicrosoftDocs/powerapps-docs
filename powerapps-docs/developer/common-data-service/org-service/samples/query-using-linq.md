@@ -1,5 +1,5 @@
 ---
-title: "Query data using LINQ (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Query data using LINQ (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to assign records to a team." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/05/2020
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Sample: Query data using LINQ
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 These samples show how to query business data using [Language-Integrated Query (LINQ)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries). You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueriesUsingLINQ). 
 

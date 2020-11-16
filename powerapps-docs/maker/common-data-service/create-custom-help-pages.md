@@ -26,9 +26,11 @@ search.app:
 
 # Create guided help for your Unified Interface app
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide entity, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
+Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide table, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
 
 > [!IMPORTANT]
 > Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
@@ -40,7 +42,7 @@ Custom help panes provide the following key features that are not available with
 - Free-form rich text, including bullets and numbering.
 - Visibly linked coach marks and help balloons.
 - More options for video sources, including private sources.
-- Storage of help content in Common Data Service as part of your solution. 
+- Storage of help content in Microsoft Dataverse as part of your solution. 
 
 Custom help panes don't provide the following key features that are available with learning path: 
 - Sequential help balloons.
@@ -63,13 +65,13 @@ To author custom help panes, you need the following:
     > ![Enable custom help panes](media/enable-custom-help-panes.png "Enable custom help panes")
 
 > [!IMPORTANT]
-> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are both set to **No**.  
+> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable tables** and **Append parameters to URL** are both set to **No**.  
 > - Some environments may require that you also set **Enable Learning Path** to **Yes**.
  
 ## Context-sensitive custom help
 Each help pane is unique for these contexts: 
 - Application 
-- Entity
+- table
 - Form 
 - Language   
 
@@ -126,7 +128,7 @@ Balloons and coach marks can be used to point to specific UI elements. A balloon
 A user can either select an element in order or go back to a specific one and highlight it.
 
 ## Solutions and custom help pane content
-All help content is stored in a help page component in Common Data Service as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help records are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
+All help content is stored in a help page component in Dataverse as part of your solution. When you move your solution from one environment to another, such as from test to production, you can define that your help rows are exported so that they are included in the solution. This enables you to keep your help content in sync with features in your solution as it moves to different environments. As a part of your solution, custom help panes support all standard solution application lifecycle management (ALM) features.
 
 ### Moving content via solutions
 By default, all new help pages appear in the default solution. If you want to move your content to another environment, first add your existing help pages into an unmanaged solution before you export them. To add a help page to an unmanaged solution, follow these steps:
@@ -137,7 +139,7 @@ By default, all new help pages appear in the default solution. If you want to mo
 4. Select the help pages that you want to add, and then select **Add**. More information: [Export solutions](export-solutions.md)
 
 ## Help page documentation automation
-You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content. The custom help pane data is stored directly in Common Data Service and can be exported and imported for this purpose.  
+You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content. The custom help pane data is stored directly in Dataverse and can be exported and imported for this purpose.  
 
 Custom help panes support a custom XML format. This format is documented below. More information: [Custom help XML definition](#custom-help-xml-definition)  
 
@@ -148,7 +150,7 @@ This section discusses frequently asked questions about custom help pages.
 
 ### Are custom help pages the same as customizable help?
 
-Custom help panes and guided tasks are an option in the **Set custom help URL** section of system settings. Custom help panes and guided tasks enable a customizable help pane that shows up right next to the user’s form.  The other options in this system settings set custom help section comprise the customizable help features. They allow you to override the default apps help and point users in your organization to a different URL for help. Alternatively, you can override the help for a highly customized entity so that you can better describe your workflow.
+Custom help panes and guided tasks are an option in the **Set custom help URL** section of system settings. Custom help panes and guided tasks enable a customizable help pane that shows up right next to the user’s form.  The other options in this system settings set custom help section comprise the customizable help features. They allow you to override the default apps help and point users in your organization to a different URL for help. Alternatively, you can override the help for a highly customized table so that you can better describe your workflow.
 
 For more information about customizable help, see [Enable and use customizable help](../model-driven-apps/use-customizable-help.md).
 
@@ -156,7 +158,7 @@ For more information about customizable help, see [Enable and use customizable h
 ### How do I migrate my data from learning path to custom help pages? 
 Learning path has two types of help: help panes and sequential help balloons. The sequential help balloon locations are deeply integrated with the legacy web client UI and are not transferrable to the new custom help panes.  
 
-Depending on how much text you have in your guided help it might be easiest to simply copy the information directly from the learning path user interface to the new custom help pane user interface. However, you can also export your learning path help content.  The simplest way to do this is to export your content using the **Learning Path** > **Content Library** > **Localize** > **Export** feature. Select the records you want and then export them. This creates an XLIFF file for each help pane and guided task.  Then, use a publicly available XLIFF editor or XLIFF to HTML converter to retrieve your content. 
+Depending on how much text you have in your guided help it might be easiest to simply copy the information directly from the learning path user interface to the new custom help pane user interface. However, you can also export your learning path help content.  The simplest way to do this is to export your content using the **Learning Path** > **Content Library** > **Localize** > **Export** feature. Select the rows you want and then export them. This creates an XLIFF file for each help pane and guided task.  Then, use a publicly available XLIFF editor or XLIFF to HTML converter to retrieve your content. 
 
 ## Custom help XML definition
 This section describes the custom help XML definition. 

@@ -1,5 +1,5 @@
 ---
-title: "Entity relationship eligibility (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Entity relationship eligibility (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The article lists the messages that you can use to determine whether entities can participate in entity relationships" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Entity relationship eligibility
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Before you create an entity relationship you should confirm whether the entity is eligible to participate in the relationship. The following table lists the messages that you can use to determine whether entities can participate in entity relationships.  
   

@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/18/2019
+ms.date: 10/20/2019
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -17,8 +17,8 @@ A site setting is a configurable, named value that is used by website code to mo
 The sample portals that are provided with the installation of Power Apps portals contain several configurable site settings for various styles used to modify many visual elements within the site such as background style, text color, and layout width.
 You can manage the following types of site settings:
 
-- **Global Portal settings**: These settings apply to all portals associated with the Common Data Service environment in which they are being added.
-- **Portal site settings**: These settings apply to specific portals (website records) that are associated with the Common Data Service environment in which they are being added.
+- **Global Portal settings**: These settings apply to all portals associated with the Microsoft Dataverse environment in which they are being added.
+- **Portal site settings**: These settings apply to specific portals (website records) that are associated with the Dataverse environment in which they are being added.
 
 
 ## Manage portal site settings
@@ -61,7 +61,7 @@ You can manage the following types of site settings:
 |search/query|+(@Query) _title:(@Query) _logicalname:adx_webpage~0.9^0.2<br> -_logicalname:adx_webfile~0.9 adx_partialurl:(@Query)<br> _logicalname:adx_blogpost~0.9^0.1 -_logicalname:adx_communityforumthread~0.9|Override query for site search, to apply additional weights and filters. @Query is the query text entered by a user. Lucene query syntax reference: [https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html)| 
 |Search/Stemmer|English|The language used by the portal search's stemming algorithm. Default: English|
 |CustomerSupport/DisplayAllUserActivitiesOnTimeline|FALSE| |
-|Authentication/[Protocol]/[Provider]/AllowContactMappingWithEmail| |Allow auto-association to a contact record based on email. For more information, click [here](azure-ad-b2c.md#allow-auto-association-to-a-contact-record-based-on-email).|
+|Authentication/[Protocol]/[Provider]/AllowContactMappingWithEmail| |Allow auto-association to a contact record based on email. More information: [Allow contact mapping with email and require unique email general options](use-simplified-authentication-configuration.md#general-authentication-settings).|
 |||
 
 For site settings related to various portal features, see:

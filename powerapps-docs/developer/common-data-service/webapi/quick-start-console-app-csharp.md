@@ -1,6 +1,6 @@
 ---
-title: "Quick Start: Web API sample (C#) (Common Data Service)| Microsoft Docs"
-description: "This sample demonstrates how to authenticate with a Common Data Service Server and then call a basic Web API operation, the WhoAmI Function"
+title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
+description: "This sample demonstrates how to authenticate with a Microsoft Dataverse Server and then call a basic Web API operation, the WhoAmI Function"
 ms.custom: ""
 ms.date: 02/02/2019
 ms.service: powerapps
@@ -17,7 +17,9 @@ search.app:
 ---
 # Quick Start: Web API sample (C#)
 
-In this quick start you will create a simple console application to connect to your Common Data Service environment using the Web API. 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+In this quick start you will create a simple console application to connect to your Microsoft Dataverse environment using the Web API. 
 
 You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value.
 
@@ -28,10 +30,10 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
  - Visual Studio (2017 recommended)
  - Internet connection
- - Valid user account for a Common Data Service instance
+ - Valid user account for a Dataverse instance
     - Your username
     - Your password
- - Url to the Common Data Service environment you want to connect with
+ - Url to the Dataverse environment you want to connect with
  - Basic understanding of the Visual C# language
 
 > [!NOTE]

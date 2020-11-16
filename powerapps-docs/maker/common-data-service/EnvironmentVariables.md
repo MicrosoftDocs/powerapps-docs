@@ -17,14 +17,16 @@ search.app:
 ---
 # Environment variables overview 
 
-Apps and flows often require different configuration settings across environments. Environment variables as configurable input parameters allow management of data separately compared to hard-coding values within your customization or using additional tools. Because they're solution components, performance is much better than importing configuration data as record data.
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+Apps and flows often require different configuration settings across environments. Environment variables as configurable input parameters allow management of data separately compared to hard-coding values within your customization or using additional tools. Because they're solution components, performance is much better than importing configuration data as row data.
 
 Benefits of using environment variables:
 - No need to manually edit configurable values in a production environment.
 - Configure one or more variables in one place and reference like a parameter across multiple solution components.
 - Enter different values while importing solutions to other environments. 
 - Update values without a code change.
-- Granular level security managed by [Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro).
+- Granular level security managed by [Microsoft Dataverse](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro).
 - Unlimited number of variables (max solution size is 29 MB).
 - Service the definitions and the values independently or together.
 - Supported by [SolutionPackager](/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager) and [DevOps](/powerapps/developer/common-data-service/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
@@ -38,12 +40,12 @@ Environment variables can be created and managed through the modern solution int
 ### Create an environment variable in Power Apps
 1. Sign in to Power Apps, and then on the left panes select **Solutions**. 
 2. On the command bar, select **New** and then select **Environment variable**. 
-3. On the left pane, complete the following fields, and then select **Save**:  
+3. On the left pane, complete the following columns, and then select **Save**:  
    - **Display name**. Enter a name for the environment variable. 
    - **Name**. The unique name is automatically generated from the **Display name**, but you can change it. 
-   - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, or a **Two option** field. 
-   - **Default Value**. This field is part of the environment variable definition entity and is not required. Set a default value for the production environments or when the values don't need to be changed for different environments. 
-   - **Current Value**. Also known as the override value. This field is optional and is a part of the environment variable value entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into a separate JSON file within the solution.zip file that is exported. 
+   - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, or a **Two option** column. 
+   - **Default Value**. This column is part of the environment variable definition table and is not required. Set a default value for the production environments or when the values don't need to be changed for different environments. 
+   - **Current Value**. Also known as the override value. This column is optional and is a part of the environment variable value table. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into a separate JSON file within the solution.zip file that is exported. 
 
       Separation of default value and current value allows you to service the definition and the default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
 
@@ -55,9 +57,9 @@ Environment variables can be created and managed through the modern solution int
 
 ## Enter new values while importing solutions
 
-The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` entity.
+The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
 
-You will not be prompted if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in Common Data Service.
+You will not be prompted if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in Dataverse.
    >[!NOTE]
    > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but not get exported in the solution. This approach allows a new value to be set while importing the solution into other environments.  
 
@@ -68,11 +70,11 @@ A notification is displayed when the environment variables do not have any value
 > We recommend partners build their own interfaces requiring the customers to provide the values. Notifications help prevent failures if this step is skipped. 
 
 ## Security
-Both the environmentvariabledefinition and environmentvariablevalue entities are [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-entities). When creating an application that uses environment variables, be sure to assign users the appropriate level of permission. More information: [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security). 
+Both the environmentvariabledefinition and environmentvariablevalue tables are [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-tables). When creating an application that uses environment variables, be sure to assign users the appropriate level of permission. More information: [Security in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security). 
 
 ## Current limitations
 - Caching. Plugins will need to run a query to fetch the values. 
-- Canvas apps and flows can consume environment variables just like entity record data. <!-- In the future we plan to build additional actions into canvas app and flow designers. This will simplify authoring and provide better visibility into environment variables being used by a specific app or flow. -->
+- Canvas apps and flows can consume environment variables just like table row data. <!-- In the future we plan to build additional actions into canvas app and flow designers. This will simplify authoring and provide better visibility into environment variables being used by a specific app or flow. -->
 - Azure Key Vault integration for secret management. Currently environment variables should'nt be used to store secure data such as passwords and keys.
 - Data types are validated in the modern solution interface only, but not currently on the server during the preview. 
 - Dependencies are not enforced for certain component types.
@@ -82,5 +84,5 @@ Both the environmentvariabledefinition and environmentvariablevalue entities are
 [Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/)
 [Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/common-data-service/plug-ins) </BR>
 [Web API samples](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/web-api-samples) </BR>
-[Create Canvas app from scratch using Common Data Service.](https://docs.microsoft.com/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
-[Create a flow with Common Data Service](https://docs.microsoft.com/flow/connection-cds)
+[Create Canvas app from scratch using Dataverse.](https://docs.microsoft.com/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
+[Create a flow with Dataverse](https://docs.microsoft.com/flow/connection-cds)

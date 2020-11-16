@@ -23,11 +23,12 @@ Add 3D content to your canvas apps. Use the **View in 3D** component to rotate a
 
 You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](#define-where-the-3d-content-is-stored).
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vyoW]
+:::image type="content" source="./media/augmented-overview/view-in-3d.png" alt-text="Photo showing a 3D object being viewed in a mobile device.":::
+
 
 > [!IMPORTANT]
 > Your 3D content must be in the .glb file format.  
-> You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
+> You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
 
 To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
@@ -56,7 +57,8 @@ Some properties are only available in the **Advanced** tab on the **View in 3D**
 Property | Description | Type | Location
 - | - | - | -
 Source | Data source that identifies the .glb file to display. The **View in 3D** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li> | Not applicable | **Properties** (also in **Advanced** as **Src**)
-Background fill | Set the background color for the component | Color picker | **Properties** (also in **Advanced** as **BackgroundFill**, where it accepts RGBA or HTML hexadecimal color codes)
+Background fill | Set the background color for the component. | Color picker | **Properties** (also in **Advanced** as **BackgroundFill**, where it accepts RGBA or HTML hexadecimal color codes)
+Pins(Items) | [Add pins to specific coordinates on the 3D model](mixed-reality-add-pins-3d-model.md). | Drop-down selection | **Properties**
 
 ### Additional properties
 
@@ -120,9 +122,9 @@ Power Automate can convert files to base64 using the dataUri(base64(*file conten
 
 When you add .glb files to the **Document Library**, they'll be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** component, using the SharePoint data connector to access the list.
 
-**To use Common Data Service**
+**To use Microsoft Dataverse**
 
-The [Note entity](/powerapps/developer/common-data-service/annotation-note-entity) in Common Data Service converts any attached file to base64 in the **Document** field.
+The [Note entity](/powerapps/developer/common-data-service/annotation-note-entity) in Dataverse converts any attached file to base64 in the **Document** field.
 
 ### Loading models as attachments or media content
 
@@ -154,6 +156,12 @@ Loading models as attachments or media content works through the binary storage 
 1. In a canvas-based app, add a **Gallery**.
 1. Set the gallery data source to the Excel Online workbook.
 1. In the **Advanced** properties tab for the **View in 3D** component, set the **Src** property to **Gallery1.Selected.3DModel**.
+
+## Performance considerations
+
+Having multiple instances of the **View in 3D** component on one screen can lead to poor performance, as each version of the component will try to load the 3D models at the same time. 
+
+For situations where you want to have a gallery of 3D models, you should put the **View in 3D** component outside of the gallery, and then set its source to the gallery's selected property as described in the [Loading models as attachments or media content](#loading-models-as-attachments-or-media-content) section.
 
 ## Known constraints
 

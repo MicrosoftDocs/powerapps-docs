@@ -18,28 +18,28 @@ Estimated time to complete these steps: 60&ndash;90 minutes
 
 ## Prerequisites
 
-- You should be a Global administrator or Microsoft Power Platform administrator to perform the installation.
+- You should be a global administrator or Microsoft Power Platform administrator to perform the installation.
 
-- You must be a Global administrator and must have a Power BI Pro license to configure and publish reports.
+- You must be a global administrator and must have a Power BI Pro license to configure and publish reports.
 
-- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces) and [Share the workspace with others](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace)
+- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces) and [Give access to your workspace](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace)
 
 ## Step 1: Sign up for Power Apps and create an environment
 
 Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
 
-After you've purchased Power Apps, create an environment with a Common Data Service database.
+After you've purchased Power Apps, create an environment with a Microsoft Dataverse database.
 
 1. Sign in to the [Power Platform admin center](https://aka.ms/ppac).
 
-2. Create a Common Data Service environment with a database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+2. Create a Dataverse environment with a database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
    > [!IMPORTANT]
    > If you select a security group for the database while you're creating it, the apps can be shared only with users who are members of the security group.
 
 3. Create appropriate users, and assign security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
-After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region, for example, crm for US. Make a note of this environment URL.
+After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region—for example, crm for US. Make a note of this environment URL.
 
 ## Step 2: Install the package
 
@@ -61,18 +61,18 @@ You can install the Return to the Workplace solution from AppSource.
     > ![List of apps](media/rtw-apps1.png "List of apps")
 
 > [!TIP]
-> Note the URL of your Common Data Service environment instance. You'll need it to connect the template app to the data.
+> Note the URL of your Dataverse environment instance. You'll need it to connect the template app to the data.
 
 ## Step 3: Configure and publish Power BI dashboards
 
-The Return to the Workplace solution has three Power BI dashboards, one for executive leadership, one for facility managers, and one for Health and Safety leaders. You can publish the Power BI dashboards by using the template app from AppSource.
+The Return to the Workplace solution has three Power BI dashboards, one for executive leadership, one for facility managers, and one for health and safety leaders. You can publish the Power BI dashboards by using the template app from AppSource.
 
 > [!NOTE]
 > If you are a US Government customer, you'll have to publish Power BI dashboards using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
 ### Install template app for dashboards
 
-1. Go to AppSource to install [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi), [Return to the Workplace - Location Management](https://aka.ms/rtw-facilitypbi) and [Return to the Workplace - Workplace Care Management](https://aka.ms/rtw-workplacepbi) dashboards. 
+1. Go to AppSource to install the [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi), [Return to the Workplace - Facility Management](https://aka.ms/rtw-facilitypbi), and [Return to the Workplace - Workplace Care Management](https://aka.ms/rtw-workplacepbi) dashboards. 
 
 2. Select **GET IT NOW** to install the solution in your environment.
     > [!div class="mx-imgBorder"]
@@ -99,14 +99,14 @@ The Return to the Workplace solution has three Power BI dashboards, one for exec
     > [!div class="mx-imgBorder"]
     > ![Connect](media/deploy-connect-data-source.png "Connect")
 
-3. Enter the URL of the Common Data Service environment (for example, https://[myenv].[region].dynamics.com), and then select **Next**.
+3. Enter the URL of the Dataverse environment (for example, https://[myenv].[region].dynamics.com), and then select **Next**.
     > [!div class="mx-imgBorder"]
-    > ![Common Data Service environment name](media/deploy-connect-CDS.png "Common Data Service environment name")
+    > ![Dataverse environment name](media/deploy-connect-CDS.png "Dataverse environment name")
 
-4. Determine where the displayed URL is pointing to in the Common Data Service environment:
+4. Determine where the displayed URL is pointing to in the Dataverse environment:
 
-    - If it's pointing to Common Data Service, set the **Authentication method** to **OAuth2** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
-    - If it's not pointing to Common Data Service, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**
+    - If it's pointing to Dataverse, set the **Authentication method** to **OAuth2** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
+    - If it's not pointing to Dataverse, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png "Privacy")
 
@@ -126,7 +126,7 @@ Next, we'll configure the data refresh settings for the dataset.
       > [!div class="mx-imgBorder"] 
       > ![Update your credentials](media/deploy-schedule-refresh-edit-credentials.png "Update your credentials")
 
-3. On the next screen for the Common Data Service data source, do the following:
+3. On the next screen for the Dataverse data source, do the following:
 
       - For **Authentication method**, select **Microsoft account**.
 
@@ -135,7 +135,7 @@ Next, we'll configure the data refresh settings for the dataset.
       - Select **Sign in**.
 
         > [!div class="mx-imgBorder"] 
-        > ![Configure Common Data Service data source credentials](media/deploy-schedule-refresh-cds-credentials.png "Configure Common Data Service data source credentials")
+        > ![Configure Dataverse data source credentials](media/deploy-schedule-refresh-cds-credentials.png "Configure Dataverse data source credentials")
 
       You'll be prompted to specify your credentials and sign in. After you've successfully signed in, you'll return to the **Settings** page.
 
@@ -155,7 +155,7 @@ Next, we'll configure the data refresh settings for the dataset.
       > ![Schedule refresh data](media/deploy-schedule-refresh.png "Schedule refresh data")
 
       > [!NOTE]
-      > - There are limits to how many times data can be refreshed. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Power BI Premium capacity node, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
+      > - There are limits to how many times data can be refreshed. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Power BI Premium capacity node, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Data refresh](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
       > - We recommend scheduling data to be refreshed every 30 minutes.
 
 5. Go back to your workspace, select the **Reports** tab, and then select the report to open it in a browser.
@@ -166,18 +166,18 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 
 1. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
 
-2. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
+2. From the list of entities, select **Facility (msft_facility)** , under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-report1.png "Enable Power BI")
 
-3. Within the newly created solution, select **Export**. On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
+3. Within the newly created solution, select **Export**. On the right side of your browser a window pops up. Select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**. With the **Version number** and **Unmanaged** option selected, select **Export**.
 
 4. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
 
-5. Open the customization.xml file, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
+5. Open the customizations.xml file, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
 
-    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID**, and **TileURL** according to your Power BI workspace and report. You can find this information by opening the Facility Manager report in Power BI and examine the URL: https://powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
+    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID**, and **TileURL** according to your Power BI workspace and report. You can find this information by opening the Facility Manager report in Power BI and examining the URL: https://powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
 
     The `TileURL` can be found within the Power BI report. You can find it at the following destination **... (ellipsis)** > **Embed** > **Website or portal**. 
 
@@ -203,7 +203,7 @@ Open a facility record in the Facility Safety Management app and you’ll see th
 
 You can change the look and feel of the app by applying themes to match your company branding.
 
-1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear icon and select **Advanced Settings**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app. In the top right select the gear icon and select **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
    > ![Advanced Settings](media/deploy-advanced-settings.png "Advanced Settings")
@@ -234,7 +234,7 @@ You can change the look and feel of the app by applying themes to match your com
 
 2. On the left pane, select **Apps**.
 
-3. Select the **Employee Return to the Workplace App**.
+3. Select the **Employee Return to the Workplace** app.
  
    > [!div class="mx-imgBorder"]
    > ![Select app](media/deploy-select-app-employee.png "Select app")
@@ -247,26 +247,26 @@ You can change the look and feel of the app by applying themes to match your com
 5. Select users from the list of available users or groups with whom you want to share the app.
 
    > [!IMPORTANT]
-   > Even if the user has access to the canvas app, you should still need to assign users with the **Return to the Workplace - Employee** security role. 
+   > Even if the user has access to the canvas app, you still need to assign the user with the **Return to the Workplace - Employee** security role. 
 
 ## Step 8: Set the security roles
 
 In the Return to the Workplace solution, the following security roles are defined:
 
-- Return to the Workplace - Employee, which is used to check in and look at the details of a location.
+- Return to the Workplace - Employee: Can check in and look at the details of a location.
 
-- Return to the Workplace - Facility Manager, which is used to look at facilities and plan phasing.
+- Return to the Workplace - Facility Manager: Can look at facilities and plan phasing.
 
-- Return to the Workplace - Leadership, which is used to view details over the entire system.
+- Return to the Workplace - Leadership: Can view details over the entire system.
 
-- Return to the Workplace - Health & Safety Leader, which is used to manage employee cases.
+- Return to the Workplace - Health & Safety Leader: Manages employee cases.
 
 > [!IMPORTANT]
 > These security roles are indicative. They provide broad access for test and demonstration purpose. Review these roles carefully before moving to a production environment or when importing sensitive data.
 
 **To assign security roles**
 
-1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear icon and then select **Advanced Settings**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app. In the top right, select the gear icon and then select **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
    > ![Customizations Advance Settings](media/deploy-advanced-settings.png " Customizations Advanced Settings")
@@ -288,19 +288,19 @@ In the Return to the Workplace solution, the following security roles are define
    
 
    > [!NOTE]
-   > When you want to assign security roles in bulk, you can use teams privileges. Teams privileges which are based on Azure Active Directory security groups or Office365 groups, can assign security roles based on the organization. More information: [Manage teams](https://docs.microsoft.com/power-platform/admin/manage-teams). When applying teams privileges based on Azure Active Directory security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. More information: [Security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
+   > When you want to assign security roles in bulk, you can use teams privileges. Teams privileges, which are based on Azure Active Directory security groups or Office 365 groups, can assign security roles based on the organization. More information: [Manage teams](https://docs.microsoft.com/power-platform/admin/manage-teams). When applying teams privileges based on Azure Active Directory security groups or Office 365 groups, you need to change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. More information: [Security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
    
 ## Step 9: Enable flows
 
-1. Sign in to [Power Apps](https://make.powerapps.com). Select the **Environment** from the upper-right corner.
+1. Sign in to [Power Apps](https://make.powerapps.com). Select **Environment** from the upper-right corner.
 
 2. On the left pane, select **Solutions**.
 
-3. Select the **Return to the Workplace** from the list of solutions.
+3. Select **Return to the Workplace** from the list of solutions.
 
-4. Select the **Share Guest Registration - Email** solution and then select **Save as**.  Connect the flow with **Common Data Service (current environment)** and **Office 365 Outlook** connector and then select **continue**. After that enter name for the flow and select **save**.
+4. Select the **Share Guest Registration - Email** solution and then select **Save as**.  Connect the flow with the **Dataverse (current environment)** and **Office 365 Outlook** connector and then select **Continue**. Enter a name for the flow and select **Save**.
 
-5. Select **My Flows** on the left, after selecting **Share Guest Registration - Email**, select **Turn on**. Validate whether the flow is turned on, to ensure that it can be used. Additionally, flow should be shared with others to prevent issues with people who aren't allowed to enter it.
+5. Select **My Flows** on the left. After selecting **Share Guest Registration - Email**, select **Turn on**. Validate whether the flow is turned on to ensure that it can be used. Additionally, the flow should be shared with others to prevent issues with people who aren't allowed to enter it.
 
    > [!NOTE]
    > The connection used for **Office 365 Outlook** is the email address used to send emails to guests. Use a service account for sending generic emails or use a shared mailbox. 
@@ -309,7 +309,7 @@ In the Return to the Workplace solution, the following security roles are define
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 
 > [!NOTE]
-> There are notable differences between the commercially available service and the service for Dynamics 365 U.S. Government. Review these differences thoroughly before deciding in which environment to implement. More details: [Dynamics 365 US Government - Feature availability](https://docs.microsoft.com/power-platform/admin/government-feature-availability)
+> There are notable differences between the commercially available service and the service for Dynamics 365 US Government. Review these differences thoroughly before deciding in which environment to implement. More details: [Dynamics 365 US Government - Feature availability](https://docs.microsoft.com/power-platform/admin/government-feature-availability)
 
 This section provides information for US Government customers about how to install the app and publish the Power BI dashboard using the deployment package.
 
@@ -351,7 +351,7 @@ After extracting the .zip file, you'll see the following in the extracted folder
 
 4. Select **Login** to continue.
 
-5. If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment, and then select **Login**.
+5. If you have access to more than one Dataverse environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment, and then select **Login**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/deploy-select-environment.png "Select an environment")
@@ -362,7 +362,7 @@ After extracting the .zip file, you'll see the following in the extracted folder
 
 8. The next screen validates whether all dependencies are available in your environment. Select **Next**.
 
-9. The next screen displays the installation status of the package. It might take a while for the package installation to be completed.
+9. The next screen displays the installation status of the package. It might take a while for the package installation to complete.
 
 10. After the installation is complete, select **Next**.
 
@@ -374,7 +374,7 @@ After extracting the .zip file, you'll see the following in the extracted folder
     > ![List of apps](media/rtw-apps1.png "List of apps")
 
 > [!TIP]
-> After installing the Return to Workplace solution, note the URL of your Common Data Service environment instance. You'll need it to connect the template app to the data.
+> After installing the Return to the Workplace solution, note the URL of your Dataverse environment instance. You'll need it to connect the template app to the data.
 
 ### Step 3: Publish by using the .pbit file in the deployment package
 
@@ -395,19 +395,19 @@ Follow the steps below for each .pbit file.
 
 2. Go to the location where you extracted the deployment package (.zip file). In the **Power BI Template** folder, you'll find the appropriate .pbit file.
 
-3. Open the .pbit file in Power BI Desktop. You'll be prompted to enter the following value: **Common Data Service Environment**. Enter the URL of the Common Data Service environment (for example, https://*[myenv]*.crm.dynamics.com, where [myenv] is the name of your environment). Select **Load**.
+3. Open the .pbit file in Power BI Desktop. You'll be prompted to enter the following value: **Dataverse Environment**. Enter the URL of the Dataverse environment (for example, https://*[myenv]*.crm.dynamics.com, where [myenv] is the name of your environment). Select **Load**.
 
     > [!div class="mx-imgBorder"] 
     > ![Configure the Power BI dashboard](media/deploy-gcc-cds-env.png "Configure the Power BI dashboard")
 
-4. You'll be prompted to enter the credentials to connect to your Common Data Service environment. Select **Organizational account** > **Sign in** to specify your Common Data Service credentials.
+4. You'll be prompted to enter the credentials to connect to your Dataverse environment. Select **Organizational account** > **Sign in** to specify your Dataverse credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![Connect to your Common Data Service environment](media/deploy-gcc-cds-singin.png "Connect to your Common Data Service environment")
+    > ![Connect to your Dataverse environment](media/deploy-gcc-cds-singin.png "Connect to your Dataverse environment")
 
-5. After signing in, select **Connect** to connect to your data in Common Data Service.
+5. After signing in, select **Connect** to connect to your data in Dataverse.
 
-6. After connecting to your Common Data Service environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings should be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
+6. After connecting to your Dataverse environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings should be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
      
     > [!div class="mx-imgBorder"] 
     > ![Access Web Content level](media/deploy-access-web-content-level.png "Access Web Content level")
@@ -427,7 +427,7 @@ Follow the steps below for each .pbit file.
     > [!div class="mx-imgBorder"] 
     > ![Privacy level blob storage](media/deploy-gcc-web-acesss-privacy-levels-blob-storage-public.png "Privacy level blob storage")
 
-    After you've configured the access and privacy levels for COVID-19 public data, you must set the privacy level for Common Data Service data to **Organizational**. 
+    After you've configured the access and privacy levels for COVID-19 public data, you must set the privacy level for Dataverse data to **Organizational**. 
 
     > [!div class="mx-imgBorder"] 
     > ![Access Web Content level CDS](media/deploy-gcc-web-acesss-privacy-levels-CDS.png "Access Web Content level CDS")
@@ -442,9 +442,9 @@ Follow the steps below for each .pbit file.
      > [!div class="mx-imgBorder"] 
      > ![Save the Power BI workspace](media/deploy-gcc-publish.png "Save the Power BI workspace")
 
-9. You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Enter a name, and save it on your computer. The file name you enter is displayed in your Power BI website.
+9. You'll be prompted to save the file along with your Dataverse environment information. Enter a name, and save it on your computer. The file name you enter is displayed in your Power BI website.
 
-10. After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then select **Select**.
+10. After saving the file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then select **Select**.
 
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-gcc-select-destination.png "Publish to Power BI")

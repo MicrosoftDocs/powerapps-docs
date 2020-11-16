@@ -28,6 +28,8 @@ search.app:
 
 # Specify properties for model-driven unified interface apps
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The Unified Interface framework uses responsive design principles to provide an optimal viewing and interaction experience for any screen size or orientation. With model-driven apps that use the Unified Interface framework, the grid (view) control is responsive. As the size of the container decreases—for example, on phones and smaller viewports—the grid is transformed into a list. 
 
 The Read Only Grid control specifies how a grid should reflow to different screen sizes. As an app maker, if you’re working with a Unified Interface app, you can configure the Read Only Grid control and its properties for custom grids and lists.
@@ -41,7 +43,7 @@ Adding the Read Only Grid control to your controls list allows you to  configure
 - Specify the rendering mode as grid-only or list-only.  
 
 1. Open [solution explorer](advanced-navigation.md#solution-explorer).
-2. In navigation pane expand **Entities**, select the appropriate entity (such as **Account** or **Contact**), and then on the **Controls** tab, select **Add Control**.
+2. In navigation pane expand **Entities**, select the appropriate table (such as **Account** or **Contact**), and then on the **Controls** tab, select **Add Control**.
 
     ![Open add control](media/UnifiedInterface_ReadOnlyGrid_AddControl.png "Open Add Control")
 

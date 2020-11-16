@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 8/27/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -19,13 +19,13 @@ search.app:
 ---
 # Export to an Excel dynamic worksheet
 
-Export your app data to an Office Excel worksheet so users can have the latest information. Imagine the CEO of your company getting the critical information they need without having to navigate in an app, but instead merely opening the Excel link on their desktop. You can export up to 100,000 records at a time.    
+Export your app data to an Office Excel worksheet so users can have the latest information. Imagine the CEO of your company getting the critical information they need without having to navigate in an app, but instead merely opening the Excel link on their desktop. You can export up to 100,000 rows at a time.    
   
 ## Export data to an Excel dynamic worksheet  
 
-You can’t export data to a dynamic worksheet in Excel for all record types. If you don’t see the option, it’s not available for that record.  
+You can’t export data to a dynamic worksheet in Excel for all row types. If you don’t see the option, it’s not available for that row.  
   
-1. Open a list of records in the app and select the arrow to the right of **Export to Excel**. 
+1. Open a list of rows in the app and select the arrow to the right of **Export to Excel**. 
 
    > [!div class="mx-imgBorder"] 
    > ![Export to excel](media/export_to_excel.png "Select export to Excel")
@@ -57,7 +57,7 @@ You can’t export data to a dynamic worksheet in Excel for all record types. If
    > ![Refresh all data](media/refresh_data.png "Refresh all data")
   
    > [!NOTE]
-   > - If you have a phone number that starts with **+** or **–** (for example +1-123-456-7890), when you refresh the dynamic worksheet, the phone number field will not display the number correctly.   
+   > - If you have a phone number that starts with **+** or **–** (for example +1-123-456-7890), when you refresh the dynamic worksheet, the phone number column will not display the number correctly.   
    > To avoid the issue, use a space or parentheses **()**, like this: +1 123-456-7890 or +1 (123)-456-7890.  
    >- If you have any issues with dynamic worksheet, see [Troubleshoot export to Excel](ts-export-to-excel.md).  
   
@@ -71,6 +71,6 @@ You can’t export data to a dynamic worksheet in Excel for all record types. If
 
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   
-- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite fields (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these fields in Excel, but when you import the data back into the app, these fields will not be updated. If you want to update these fields, such as a contact’s name, then it’s recommended that you use that view to export your data, update it in Excel, and import it back to the app for changes.  
+- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite columns (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these columns in Excel, but when you import the data back into the app, these columns will not be updated. If you want to update these columns, such as a contact’s name, then it’s recommended that you use that view to export your data, update it in Excel, and import it back to the app for changes.  
  
 
