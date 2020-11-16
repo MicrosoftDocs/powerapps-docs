@@ -12,11 +12,9 @@ ms.reviewer: kvivek
 
 # Extend the Return to the Workplace solution
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+This article provides a detailed description of the data model, workflows, and Power Automate flows used by the Return to the Workplace solution. The solution extends the Common Data Model and uses several of its components. Administrators, developers, and users should be mindful of the solution and possible implications of other solutions that coexist in the same environment.
 
-This article provides a detailed description of the data model, workflows, and Power Automate flows used by the Return to the Workplace solution. The solution extends Common Data Model and uses several of its components. Administrators, developers, and users should be mindful of the solution and possible implications of other solutions that coexist in the same environment.
-
-The definitions provided in this article indicate the intended purpose of the entities, relationships, attributes, flows, and workflows contained in the Return to the Workplace solution. These definitions can be fully or partially adopted depending on your business requirements.
+The definitions provided in this article indicate the intended purpose of the tables, relationships, columns, flows, and workflows contained in the Return to the Workplace solution. These definitions can be fully or partially adopted depending on your business requirements.
 
 ## Integration and extension
 
@@ -70,18 +68,18 @@ In order to copy the security role:
 
 ## Entity relationship diagram
 
-The entity relationship diagram illustrates the entities and their relationships that are present in the Dataverse environment. System-generated entities and relationships, such as **Created By** and **Modified By**, aren't displayed in the diagram.
+The entity relationship diagram illustrates the tables and their relationships that are present in the Dataverse environment. System-generated tables, relationships and columns, such as **Created By** and **Modified By**, aren't displayed in the diagram.
 
 > [!div class="mx-imgBorder"]
 > ![Entity relationship diagram](media/data-dictionary-ERD.png "Entity relationship diagram")
 
-The lists of entities in the following sections are grouped by the app in the Return to the Workplace solution.
+The lists of tables in the following sections are grouped by the app in the Return to the Workplace solution.
 
-## Core entities
+## Core tables
 
-These entities are used across multiple applications and are considered core to the platform.
+These tables are used across multiple applications and are considered core to the platform.
 
-| **Entity name** | **Information in the entity** |
+| **Table name**  | **Information in the table** |
 |-----------------|------------------------------|
 | Country   | Contains standard country names.  |
 | Employee   | Contains contact information.  |
@@ -92,11 +90,11 @@ These entities are used across multiple applications and are considered core to 
 | State  | Contains standard state names. |
 |||
 
-## Employee Return to the Workplace entities
+## Employee Return to the Workplace tables
 
-These entities are used primarily by the Employee Return to the Workplace canvas app.
+These tables are used primarily by the Employee Return to the Workplace canvas app.
 
-| **Entity name**          | **Information in the entity**           |
+| **Table name**           | **Information in the table**           |
 |--------------------------|-----------------|
 | Area                     | Contains a list of physically or logically segmented spaces.                                                  |
 | Floor                    | Contains a list of physically segmented spaces associated to a single facility and multiple areas.            |
@@ -110,21 +108,21 @@ These entities are used primarily by the Employee Return to the Workplace canvas
 | Guest Registration       | Contains associations of employees (hosts) and guests that are associated with an Employee Booking.|
 |||
 
-## Workplace Care Management entities
+## Workplace Care Management tables
 
-These entities are used primarily by the Workplace Care Management model-driven app.
+These tables are used primarily by the Workplace Care Management model-driven app.
 
-| **Entity name**          | **Information in the entity**                   |
+| **Table name**           | **Information in the table**                   |
 |--------------------------|-------------------------------------------------------|
 | Case Contact             | Contains individuals associated with an employee case. |
 | Case Facility            | Contains facilities associated with employee cases. |
 | Employee Case            | Contains associations of employees and information relevant to their case.  |
 
-## Facility Safety Management entities
+## Facility Safety Management tables
 
-These entities are used primarily by the Facility Safety Management model-driven app.
+These tables are used primarily by the Facility Safety Management model-driven app.
 
-| **Entity name**          | **Information in the entity**                                                                                  |
+| **Table name**           | **Information in the table**                                                                                  |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
 | Goal                     | Contains associations of reopen phases and key metrics with target values.                                    |
 | Key Metric               | Contains a list of measurable indications to evaluate progress.                                               |
@@ -137,12 +135,12 @@ These entities are used primarily by the Facility Safety Management model-driven
 | Reopen Phase Transition  | Contains a list of requests to move from one phase to another with relevant process information.              |
 |||
 
-## Portal entities
+## Portal tables
 
-These entities are used primarily by the Portal extention. This list includes the entities from the other sections that been changed.
+These tables are used primarily by the Portal extention. This list includes the tables from the other sections that been changed.
 
 
-| **Entity name**          | **Information in the entity**                   |
+| **Table name**           | **Information in the table**                   |
 |--------------------------|-------------------------------------------------------|
 | Contact                  | Contains individuals and guests.                      |
 | Employee Booking         | Contains associations of employees and specific areas, floors, and facilities for a given time. |
@@ -154,24 +152,24 @@ These entities are used primarily by the Portal extention. This list includes th
 
 ## Data definitions
 
-The data definitions section provides information about a list of entities, data attributes, and the areas of the solution where they're used. The solution colums indicates if the field is part of the base solution or if its added via the portals extention. System-generated attributes such as **Created On** and **Modified On** aren't displayed.
+The data definitions section provides information about a list of tables, columns, and the areas of the solution where they're used. The solution column indicates if the field is part of the base solution or if its added via the portals extention. System-generated columns such as **Created On** and **Modified On** aren't displayed.
 
 ### Access Action
 
-| Display name          | Data type     | Description                                                                      | Platform use                    |
-|-----------------------|---------------|----------------------------------------------------------------------------------|---------------------------------|
-| Employee              | Lookup        | Used to associate the contact.                                                   | Model-driven app and canvas app |
-| Access Status         | Option set    | Used to set type of access action                                                | Model-driven app and canvas app |
-| Access Available date | Date time     | Set expire date for this record.                                                 | Model-driven app                |
-| Submitted by          | Lookup        | Lookup to systemuser. Used to capture original creator                           | Model-driven app                |
-| Source                | Text          | Used to capture source name, defaults to manual when created in model-driven app | Model-driven app                |
-| Notes                 | Text          | Used to capture reason for the block or instructions to the end user.            | Model-driven app                |
-| Notification          | Lookup        | Used to accociate to a specific notification so notes and body can be synched.   | Model-driven app and canvas app |
+| Display name          | Column type     | Description                                                                      | Platform use                    |
+|-----------------------|-----------------|----------------------------------------------------------------------------------|---------------------------------|
+| Employee              | Lookup          | Used to associate the contact.                                                   | Model-driven app and canvas app |
+| Access Status         | Option set      | Used to set type of access action                                                | Model-driven app and canvas app |
+| Access Available date | Date time       | Set expire date for this record.                                                 | Model-driven app                |
+| Submitted by          | Lookup          | Lookup to systemuser. Used to capture original creator                           | Model-driven app                |
+| Source                | Text            | Used to capture source name, defaults to manual when created in model-driven app | Model-driven app                |
+| Notes                 | Text            | Used to capture reason for the block or instructions to the end user.            | Model-driven app                |
+| Notification          | Lookup          | Used to accociate to a specific notification so notes and body can be synched.   | Model-driven app and canvas app |
 |||||
 
 ### Area
 
-| Display name  | Data type     | Description     | Platform use    |
+| Display name  | Column type     | Description     | Platform use    |
 |---------------|---------------|-----------------|------------------|
 | Area  | Text | Primary identifier of the record. | Model-driven app and canvas app |
 | Capacity | Whole Number| Used to capture total allowable occupancy for the area. | Model-driven app and canvas app |
@@ -183,7 +181,7 @@ The data definitions section provides information about a list of entities, data
 
 ### Case Contact
 
-| Display name | Data type | Description   | Platform use|
+| Display name | Column type | Description   | Platform use|
 |-----------|---------------|----------------|------------------|
 | Name | Text  | Primary identifier of the record. | Model-driven app |
 | Employee | Lookup | Contact associated with the record. | Model-driven app |
@@ -195,78 +193,78 @@ The data definitions section provides information about a list of entities, data
 
 ### Case Facility
 
-| Display name  | Data type | Description | Platform use    |
-|---------------|-----------|-------------|------------------|
-| Name          | Text      | Primary identifier of the record. | Model-driven app |
-| Employee Case | Lookup    | Used to associate the employee case with the case facility. | Model-driven app |
-| Facility      | Lookup    | Used to associate the facility with the case facility.      | Model-driven app |
-| Comment       | Text      | Used to capture details on the visits of this facility. | Model-driven app |
+| Display name  | Column type | Description | Platform use    |
+|---------------|-------------|-------------|------------------|
+| Name          | Text        | Primary identifier of the record. | Model-driven app |
+| Employee Case | Lookup      | Used to associate the employee case with the case facility. | Model-driven app |
+| Facility      | Lookup      | Used to associate the facility with the case facility.      | Model-driven app |
+| Comment       | Text        | Used to capture details on the visits of this facility. | Model-driven app |
 | Date From     | Date and time | Used to indicate the period the employee was in the building. | Model-driven app |
 | Date To       | Date and time | Used to indicate the period the employee was in the building. | Model-driven app |
 |||||
 
 ### Country
 
-| Display name   | Data type | Description    | Platform use    |
-|----------------|-----------|------------------------------------|------------------|
-| Name           | Text      | User-friendly name of the country. | Model-driven app |
-| ISO Short Code | Text      | ISO identifier of the country.     | Model-driven app |
+| Display name   | Column type | Description    | Platform use    |
+|----------------|-------------|------------------------------------|------------------|
+| Name           | Text        | User-friendly name of the country. | Model-driven app |
+| ISO Short Code | Text        | ISO identifier of the country.     | Model-driven app |
 |||||
 
 ### Daily Occupancy
 
-| Display name     | Data type    | Description   | Platform use                |
-|------------------|--------------|------------------|------------------------------|
-| Area ID          | Lookup       | Used to associate an area to the daily occupancy. | Model-driven app and canvas app |
-| Facility ID      | Lookup       | Used to associate a facility to the daily occupancy.| Model-driven app and canvas app |
-| Capacity         | Whole Number | Total capacity for an area.| Model-driven app and canvas app |
-| Occupancy        | Whole Number | Occupied spaces for an area. | Model-driven app and canvas app |
-| Date             | Date         | The date for which the occupancy and capacity are tracked. | Model-driven app and canvas app |
+| Display name     | Column type    | Description   | Platform use                |
+|------------------|----------------|------------------|------------------------------|
+| Area ID          | Lookup         | Used to associate an area to the daily occupancy. | Model-driven app and canvas app |
+| Facility ID      | Lookup         | Used to associate a facility to the daily occupancy.| Model-driven app and canvas app |
+| Capacity         | Whole Number   | Total capacity for an area.| Model-driven app and canvas app |
+| Occupancy        | Whole Number   | Occupied spaces for an area. | Model-driven app and canvas app |
+| Date             | Date           | The date for which the occupancy and capacity are tracked. | Model-driven app and canvas app |
 |||||
 
 ### Employee (Contact)
 
-| Display name     | Data type | Description   | Platform use| Solution |
-|------------------|-----------|------------|----------------|------------|
-| Assigned Area    | Lookup    | Could be used to configure a specific area for an employee. | Model-driven app | Base |
-| Company          | Text       | Used to store the company name of a guest. | Model-driven app and canvas app | Base |
-| Contact Type     | Option set | Used to set type of contact (employee, guest). | Model-driven app and canvas app | Base |
-| Default Area     | Lookup    | Used to store the default area for an employee. | Model-driven app and canvas app | Base |
-| Default Facility | Lookup    | Used to associate a facility to the employee. | Model-driven app and canvas app | Base |
-| Host             | Lookup     | Used to associate an employee to a guest. | Model-driven app and canvas app | Base |
-| User ID          | Text      | Used to provide a unique identifier specific to the organization for the employee. | Model-driven app | Base |
+| Display name     | Column type | Description   | Platform use| Solution |
+|------------------|-------------|------------|----------------|------------|
+| Assigned Area    | Lookup      | Could be used to configure a specific area for an employee. | Model-driven app | Base |
+| Company          | Text        | Used to store the company name of a guest. | Model-driven app and canvas app | Base |
+| Contact Type     | Option set  | Used to set type of contact (employee, guest). | Model-driven app and canvas app | Base |
+| Default Area     | Lookup      | Used to store the default area for an employee. | Model-driven app and canvas app | Base |
+| Default Facility | Lookup      | Used to associate a facility to the employee. | Model-driven app and canvas app | Base |
+| Host             | Lookup      | Used to associate an employee to a guest. | Model-driven app and canvas app | Base |
+| User ID          | Text        | Used to provide a unique identifier specific to the organization for the employee. | Model-driven app | Base |
 | Requires portal access | Two Option | Used to send an invite to the contact | Model-driven app | Portal |
 ||||||
 
 ### Employee Attestation
 
-| Display name     | Data type     | Description  | Platform use |
-|------------------|---------------|-------------------------------------------|------------------------------|
-| Attestation Date | DateTime | Used to capture the date and time the attestation was recorded.     | Model-driven app             |
-| Attested         | Option Set    | Used to capture whether the employee has attested.                 | Model-driven app and canvas app |
-| Employee         | Lookup        | Used to denote the employee completing the attestation.             | Model-driven app             |
-| Facility         | Lookup        | Used to associate the facility for which the employee is attesting. | Model-driven app and canvas app |
-| Name             | Text          | Used to create a name for the employee attestation record.  | Model-driven app             |
-| Employee Booking | Lookup        | Used to associate the attestation to an employee booking. | Model-driven app and canvas app |
-| Employee Case    | Lookup        | Used to associate the attestation to an employee case. | Model-driven app |
+| Display name     | Column type     | Description  | Platform use |
+|------------------|-----------------|-------------------------------------------|------------------------------|
+| Attestation Date | DateTime        | Used to capture the date and time the attestation was recorded.     | Model-driven app             |
+| Attested         | Option Set      | Used to capture whether the employee has attested.                 | Model-driven app and canvas app |
+| Employee         | Lookup          | Used to denote the employee completing the attestation.             | Model-driven app             |
+| Facility         | Lookup          | Used to associate the facility for which the employee is attesting. | Model-driven app and canvas app |
+| Name             | Text            | Used to create a name for the employee attestation record.  | Model-driven app             |
+| Employee Booking | Lookup          | Used to associate the attestation to an employee booking. | Model-driven app and canvas app |
+| Employee Case    | Lookup          | Used to associate the attestation to an employee case. | Model-driven app |
 |||||
 
 ### Employee Booking
 
-| Display name     | Data type     | Description   | Platform use|
-|------------------|---------------|---------------|------------------|
-| Facility         | Lookup | Used to associate the facility booked | Model-driven app and canvas app |
-| Area             | Lookup | Used to associate the location booked. | Model-driven app and canvas app|
-| End Arrival Time | DateTime    | Used to capture the ending point in time for the booking. | Model-driven app and canvas app |
-| Start Arrival Time  | DateTime | Used to capture the beginning point in time for the booking. | Model-driven app and canvas app|
-| Booking Date     | Date          | Used to determine the date of the booking.| Model-driven app and canvas app |
-| Employee         | Lookup        | Used to associate the employee creating the booking. | Model-driven app and canvas app|
-| Name             | Text          | Primary identifier of the record. | Model-driven app |
+| Display name     | Column type     | Description   | Platform use|
+|------------------|-----------------|---------------|------------------|
+| Facility         | Lookup          | Used to associate the facility booked | Model-driven app and canvas app |
+| Area             | Lookup          | Used to associate the location booked. | Model-driven app and canvas app|
+| End Arrival Time | DateTime        | Used to capture the ending point in time for the booking. | Model-driven app and canvas app |
+| Start Arrival Time  | DateTime     | Used to capture the beginning point in time for the booking. | Model-driven app and canvas app|
+| Booking Date     | Date            | Used to determine the date of the booking.| Model-driven app and canvas app |
+| Employee         | Lookup          | Used to associate the employee creating the booking. | Model-driven app and canvas app|
+| Name             | Text            | Primary identifier of the record. | Model-driven app |
 |||||
 
 ### Employee Case
 
-| Display name                    | Data type     | Description                                                                                      | Platform use                |
+| Display name                    | Column type     | Description                                                                                      | Platform use                |
 |---------------------------------|---------------|--------------------------------------------------------------------------------------------------|------------------------------|
 | Case Number                     | Text          | Unique identifier for the employee case.                                                         | Model-driven app             |
 | Duration in Days                | Whole number  | Used to capture the number of days a case was open.                                               | Model driven app             |
@@ -287,25 +285,25 @@ The data definitions section provides information about a list of entities, data
 
 ### Employee Facility Search
 
-| Display name | Data type | Description                                         | Platform use                |
-|--------------|-----------|-----------------------------------------------------|------------------------------|
-| Employee     | Lookup    | Used to capture the employee conducting the search. | Model-driven app and canvas app |
-| Facility     | Lookup    | Used to capture the facility searched.              | Model-driven app and canvas app |
+| Display name | Column Type | Description                                         | Platform use                |
+|--------------|-------------|-----------------------------------------------------|------------------------------|
+| Employee     | Lookup      | Used to capture the employee conducting the search. | Model-driven app and canvas app |
+| Facility     | Lookup      | Used to capture the facility searched.              | Model-driven app and canvas app |
 |||||
 
 ### Employee Sentiment
 
-| Display name                       | Data type     | Description                                                      | Platform use                |
-|------------------------------------|---------------|------------------------------------------------------------------|------------------------------|
-| Employee                           | Lookup        | Used to capture the employee completing the sentiment.           | Model-driven app and canvas app |
-| Name                               | Text          | Used to provide a name for the employee sentiment record.        | Model-driven app             |
-| Do you feel safe returning to work | Option Set    | Used to capture a response to the question: Sad, Neutral, Happy. | Model-driven app and canvas app |
-| Sentiment Date                     | DateTime | Used to capture the date and time the sentiment was recorded.    | Model-driven app             |
+| Display name                       | Column type     | Description                                                      | Platform use                    |
+|------------------------------------|-----------------|------------------------------------------------------------------|---------------------------------|
+| Employee                           | Lookup          | Used to capture the employee completing the sentiment.           | Model-driven app and canvas app |
+| Name                               | Text            | Used to provide a name for the employee sentiment record.        | Model-driven app                |
+| Do you feel safe returning to work | Option Set      | Used to capture a response to the question: Sad, Neutral, Happy. | Model-driven app and canvas app |
+| Sentiment Date                     | DateTime        | Used to capture the date and time the sentiment was recorded.    | Model-driven app                |
 |||||
 
 ### Employee Visit
 
-| Display name     | Data type     | Description  | Platform use  |
+| Display name     | Column type     | Description  | Platform use  |
 |------------------|---------------|--------------|----------------|
 | Employee Attestation | Lookup | Used to associate an attestation.     | Model-driven app             |
 | Employee Booking     | Lookup | Used to associate a booking.     | Model-driven app             |
@@ -318,45 +316,45 @@ The data definitions section provides information about a list of entities, data
 
 ### Facility 
 
-| Display name           | Data type | Description                                                 | Platform use    |
-|------------------------|-----------|-------------------------------------------------------------|------------------|
-| Address Street 1       | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Address Street 2       | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Address City           | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Address Country        | Lookup    | Used to associate the standardized state to the facility.   | Model-driven app |
-| Address Latitude       | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Address Longitude      | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Address Postal Code    | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Address State/Province | Lookup    | Used to associate the standardized state to the facility.   | Model-driven app |
-| Description            | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Entry Window Interval  | Option set | Used to set entry window size for employees.                | Model-driven app and canvas app |
-| Group                  | Lookup    | Used to associate the group this facility belongs to.       | Model-driven app and canvas app |
-| Number                 | Text      | Used to provide a recognizable identifier for the facility. | Model-driven app |
-| Type                   | Lookup    | Denotes the facility type.                                  | Model-driven app |
-| Name                   | Text      | Used to provide a recognizable name for the facility.       | Model-driven app and canvas app |
-| Reopen Phase           | Lookup    | Used to associate the current reopen phase.                 | Model-driven app and canvas app |
+| Display name           | Column type | Description                                                 | Platform use     |
+|------------------------|-------------|-------------------------------------------------------------|------------------|
+| Address Street 1       | Text        | Used to provide address information for the facility.       | Model-driven app |
+| Address Street 2       | Text        | Used to provide address information for the facility.       | Model-driven app |
+| Address City           | Text        | Used to provide address information for the facility.       | Model-driven app |
+| Address Country        | Lookup      | Used to associate the standardized state to the facility.   | Model-driven app |
+| Address Latitude       | Text        | Used to provide address information for the facility.       | Model-driven app |
+| Address Longitude      | Text        | Used to provide address information for the facility.       | Model-driven app |
+| Address Postal Code    | Text        | Used to provide address information for the facility.       | Model-driven app |
+| Address State/Province | Lookup      | Used to associate the standardized state to the facility.   | Model-driven app |
+| Description            | Text        | Used to provide address information for the facility.       | Model-driven app |
+| Entry Window Interval  | Option set  | Used to set entry window size for employees.                | Model-driven app and canvas app |
+| Group                  | Lookup      | Used to associate the group this facility belongs to.       | Model-driven app and canvas app |
+| Number                 | Text        | Used to provide a recognizable identifier for the facility. | Model-driven app |
+| Type                   | Lookup      | Denotes the facility type.                                  | Model-driven app |
+| Name                   | Text        | Used to provide a recognizable name for the facility.       | Model-driven app and canvas app |
+| Reopen Phase           | Lookup      | Used to associate the current reopen phase.                 | Model-driven app and canvas app |
 |||||
 
 ### Facility Group
 
-| Display name          | Data type | Description                                                  | Platform use    |
-|-----------------------|-----------|--------------------------------------------------------------|------------------|
-| Description           | Text      | Used to provide additional details about the facility group. | Model-driven app |
-| Name                  | Text      | Used to provide a name for the facility group.               | Model-driven app |
-| Parent Facility Group | Lookup    | Used to group facilities in a hierarchical manner.           | Model-driven app |
+| Display name          | Column type | Description                                                  | Platform use     |
+|-----------------------|-------------|--------------------------------------------------------------|------------------|
+| Description           | Text        | Used to provide additional details about the facility group. | Model-driven app |
+| Name                  | Text        | Used to provide a name for the facility group.               | Model-driven app |
+| Parent Facility Group | Lookup      | Used to group facilities in a hierarchical manner.           | Model-driven app |
 |||||
 
 ### Facility Type
 
-| Display name | Data type | Description                                                 | Platform use    |
-|--------------|-----------|-------------------------------------------------------------|------------------|
-| Description  | Text      | Used to provide additional details about the facility type. | Model-driven app |
-| Type         | Text      | Used to provide a name for the facility type.               | Model-driven app |
+| Display name | Column type | Description                                                 | Platform use    |
+|--------------|-------------|-------------------------------------------------------------|------------------|
+| Description  | Text        | Used to provide additional details about the facility type. | Model-driven app |
+| Type         | Text        | Used to provide a name for the facility type.               | Model-driven app |
 |||||
 
 ### Floor
 
-| Display name                        | Data type     | Description                                                    | Platform use    |
+| Display name                        | Column type     | Description                                                    | Platform use    |
 |-------------------------------------|---------------|----------------------------------------------------------------|------------------|
 | Description | Text    | Used to capture additional details to describe the floor.                     | Model-driven app and canvas app       |
 | Facility                      | Lookup | Used to associate the parent facility. |Model-driven app and canvas app     |
@@ -366,7 +364,7 @@ The data definitions section provides information about a list of entities, data
 
 ### Goal
 
-| Display name | Data type  | Description                                                                                              | Platform use    |
+| Display name | Column type  | Description                                                                                              | Platform use    |
 |--------------|------------|----------------------------------------------------------------------------------------------------------|------------------|
 | Key Metric   | Lookup     | Used to associate the appropriate key metric.                                                            | Model-driven app |
 | Name         | Text       | Used to provide a name for the goal.                                                                     | Model-driven app |
@@ -377,19 +375,19 @@ The data definitions section provides information about a list of entities, data
 
 ### Guest Attestation
 
-| Display name     | Data type     | Description  | Platform use |
-|------------------|---------------|-------------------------------------------|------------------------------|
-| Attestation Date | DateTime | Used to capture the date and time the attestation was recorded.     | Model-driven app             |
-| Attested         | Option Set    | Used to capture whether the Guest has attested.                 | Model-driven  |
-| Guest            | Lookup        | Used to denote the guest completing the attestation.             | Model-driven app             |
-| Facility         | Lookup        | Used to associate the facility for which the Guest is attesting. | Model-driven  |
-| Name             | Text          | Used to create a name for the Guest attestation record.  | Model-driven app             |
+| Display name     | Column type     | Description  | Platform use |
+|------------------|-----------------|-------------------------------------------|------------------------------|
+| Attestation Date | DateTime        | Used to capture the date and time the attestation was recorded.     | Model-driven app             |
+| Attested         | Option Set      | Used to capture whether the Guest has attested.                 | Model-driven  |
+| Guest            | Lookup          | Used to denote the guest completing the attestation.             | Model-driven app             |
+| Facility         | Lookup          | Used to associate the facility for which the Guest is attesting. | Model-driven  |
+| Name             | Text            | Used to create a name for the Guest attestation record.  | Model-driven app             |
 | Guest Registration | Lookup        | Used to associate the attestation to an Guest booking. | Model-driven  |
 |||||
 
 ### Guest Registration
 
-| Display name | Data type  | Description                                                                                              | Platform use    |
+| Display name | Column type  | Description                                                                                              | Platform use    |
 |--------------|------------|----------------------------------------------------------------------------------------------------------|------------------|
 | Employee Booking   | Lookup     | Used to associate the appropriate employee booking tied to the guest registration.  | Model-driven app |
 | Guest   | Lookup     | Used to associate the non-employee to the registration.                   | Model-driven app |
@@ -399,14 +397,14 @@ The data definitions section provides information about a list of entities, data
 
 ### Key Metric
 
-| Display name | Data type | Description                                | Platform use    |
+| Display name | Column type | Description                                | Platform use    |
 |--------------|-----------|--------------------------------------------|------------------|
 | Name         | Text      | Used to provide a name for the key metric. | Model-driven app |
 |||||
 
 ### Measurement
 
-| Display name     | Data type     | Description                                                                       | Platform use    |
+| Display name     | Column type     | Description                                                                       | Platform use    |
 |------------------|---------------|-----------------------------------------------------------------------------------|------------------|
 | Facility Group   | Lookup        | Used to associate the appropriate facility group.                                 | Model-driven app |
 | Facility         | Lookup        | Used to associate the appropriate facility.                                       | Model-driven app |
@@ -418,7 +416,7 @@ The data definitions section provides information about a list of entities, data
 
 ### Notification
 
-| Display name        | Data type     | Description                                                                       | Platform use                    |
+| Display name        | Column type     | Description                                                                       | Platform use                    |
 |---------------------|---------------|--------------------------------------------------------------------|---------------------------------|
 | Employee            | Lookup        | Used to associate the contact.                                     | Model-driven app and canvas app |
 | Notification Type   | Option set    | Used to set warning level                                          | Model-driven app and canvas app |
@@ -431,91 +429,91 @@ The data definitions section provides information about a list of entities, data
 
 ### Readiness Category
 
-| Display name | Data type | Description                                     | Platform use    |
+| Display name | Column type | Description                                     | Platform use    |
 |--------------|-----------|-------------------------------------------------|------------------|
 | Category     | Text      | Used to provide a name for the category record. | Model-driven app |
 |||||
 
 ### Readiness Check
 
-| Display name        | Data type   | Description                                                                  | Platform use                |
-|---------------------|-------------|------------------------------------------------------------------------------|------------------------------|
-| Comment             | Text        | Used to capture additional notes about the readiness check.                  | Model-driven app and canvas app |
-| Factor              | Lookup      | Denotes the factor being checked.                                            | Model-driven app and canvas app |
-| Check Completed     | Two Options | Denotes completion of the readiness check.                                   | Model-driven app and canvas app |
-| Name                | Text        | Denotes the readiness check name.                                            | Model-driven app and canvas app |
-| Readiness Checklist | Lookup      | Used to associate the readiness check to the applicable readiness checklist. | Model-driven app and canvas app |
+| Display name        | Column type   | Description                                                                  | Platform use                |
+|---------------------|---------------|------------------------------------------------------------------------------|------------------------------|
+| Comment             | Text          | Used to capture additional notes about the readiness check.                  | Model-driven app and canvas app |
+| Factor              | Lookup        | Denotes the factor being checked.                                            | Model-driven app and canvas app |
+| Check Completed     | Two Options   | Denotes completion of the readiness check.                                   | Model-driven app and canvas app |
+| Name                | Text          | Denotes the readiness check name.                                            | Model-driven app and canvas app |
+| Readiness Checklist | Lookup        | Used to associate the readiness check to the applicable readiness checklist. | Model-driven app and canvas app |
 |||||
 
 ### Readiness Checklist
 
-| Display name | Data type | Description                                                       | Platform use    |
-|--------------|-----------|-------------------------------------------------------------------|------------------|
-| Description  | Text      | Used to provide additional details for this checklist.            | Model-driven app |
-| Facility     | Lookup    | Used to designate the applicable facility for this checklist.     | Model-driven app |
-| Name         | Text      | Denotes the readiness checklist name.                             | Model-driven app |
-| Reopen Phase | Lookup    | Used to designate the applicable reopen phase for this checklist. | Model-driven app |
+| Display name | Column type | Description                                                       | Platform use     |
+|--------------|-------------|-------------------------------------------------------------------|------------------|
+| Description  | Text        | Used to provide additional details for this checklist.            | Model-driven app |
+| Facility     | Lookup      | Used to designate the applicable facility for this checklist.     | Model-driven app |
+| Name         | Text        | Denotes the readiness checklist name.                             | Model-driven app |
+| Reopen Phase | Lookup      | Used to designate the applicable reopen phase for this checklist. | Model-driven app |
 |||||
 
 ### Readiness Factor
 
-| Display name | Data type | Description                                                   | Platform use    |
-|--------------|-----------|---------------------------------------------------------------|------------------|
-| Category     | Lookup    | Used to group factors by the standard set of category values. | Model-driven app |
-| Description  | Text      | Used to provide additional details about the readiness factor. | Model-driven app |
-| Factor       | Text      | The primary name of the readiness factor.                     | Model-driven app |
+| Display name | Column type | Description                                                   | Platform use     |
+|--------------|-------------|---------------------------------------------------------------|------------------|
+| Category     | Lookup      | Used to group factors by the standard set of category values. | Model-driven app |
+| Description  | Text        | Used to provide additional details about the readiness factor.| Model-driven app |
+| Factor       | Text        | The primary name of the readiness factor.                     | Model-driven app |
 |||||
 
 ### Reopen Phase
 
-| Display name | Data type    | Description                                          | Platform use                |
-|--------------|--------------|------------------------------------------------------|------------------------------|
+| Display name | Column type    | Description                                          | Platform use                |
+|--------------|----------------|------------------------------------------------------|------------------------------|
 | Capacity Limit Percentage | Decimal Number | Used to scale available capacity in a facility. | Model-driven app |
-| Description  | Text         | Used to document details about the reopen phase.     | Model-driven app and canvas app |
-| Name         | Text         | The name of the reopen phase.                        | Model-driven app             |
-| Index        | Whole Number | Used to provide a logical sequence to reopen phases. | Model-driven app             |
-| Process Stage | Lookup | Used to associate a reopen phase to the correct business process flow stage. | Model-driven app |
+| Description  | Text           | Used to document details about the reopen phase.     | Model-driven app and canvas app |
+| Name         | Text           | The name of the reopen phase.                        | Model-driven app             |
+| Index        | Whole Number   | Used to provide a logical sequence to reopen phases. | Model-driven app             |
+| Process Stage | Lookup        | Used to associate a reopen phase to the correct business process flow stage. | Model-driven app |
 ||||
 
 ### Reopen Phase Transition
 
-| Display name          | Data type  | Description                                                                   | Platform use    |
-|-----------------------|------------|-------------------------------------------------------------------------------|------------------|
-| Name                  | Text       | The primary identifier of the record.                                         | Model-driven app |
-| Facility              | Lookup     | Used to associate the applicable facility.                                    | Model-driven app |
-| Proposed Reopen Phase | Lookup     | Used to capture the reopen phase the facility is attempting to transition to. | Model-driven app |
-| Current Reopen Phase  | Lookup     | Used to capture the current reopen phase of the applicable facility.          | Model-driven app |
-| Review Comments       | Text       | Used to capture notes from the review.                                        | Model-driven app |
-| Reviewer              | Lookup     | Used to associate the appropriate reviewer to the transition record.          | Model-driven app |
-| Review Status         | Option Set | Used to denote the current status of the reopen phase transition.             | Model-driven app |
-| Summary               | Text       | Used to provide an additional context for the transition.                      | Model-driven app |
+| Display name          | Column type  | Description                                                                   | Platform use    |
+|-----------------------|--------------|-------------------------------------------------------------------------------|------------------|
+| Name                  | Text         | The primary identifier of the record.                                         | Model-driven app |
+| Facility              | Lookup       | Used to associate the applicable facility.                                    | Model-driven app |
+| Proposed Reopen Phase | Lookup       | Used to capture the reopen phase the facility is attempting to transition to. | Model-driven app |
+| Current Reopen Phase  | Lookup       | Used to capture the current reopen phase of the applicable facility.          | Model-driven app |
+| Review Comments       | Text         | Used to capture notes from the review.                                        | Model-driven app |
+| Reviewer              | Lookup       | Used to associate the appropriate reviewer to the transition record.          | Model-driven app |
+| Review Status         | Option Set   | Used to denote the current status of the reopen phase transition.             | Model-driven app |
+| Summary               | Text         | Used to provide an additional context for the transition.                      | Model-driven app |
 |||||
 
 ### Share Guest Attestation
 
-| Display name          | Data type  | Description                                                                   | Platform use    | Solution |
-|-----------------------|------------|-------------------------------------------------------------------------------|-----------------|----------|
-| Name                  | Text       | The primary identifier of the record.                                         | Portal            | Portal |
-| Facility              | Lookup     | Used to associate the applicable facility.                                    | Portal            | Portal |
-| Language              | Text       | Used to capture the language used in the e-mail.                              | Portal            | Portal |
-| Guest Attestation     | Lookup     | Used to associate the guest attestation  to share.                            | Portal            | Portal |
+| Display name          | Column type  | Description                                                                   | Platform use    | Solution |
+|-----------------------|--------------|-------------------------------------------------------------------------------|-----------------|----------|
+| Name                  | Text         | The primary identifier of the record.                                         | Portal            | Portal |
+| Facility              | Lookup       | Used to associate the applicable facility.                                    | Portal            | Portal |
+| Language              | Text         | Used to capture the language used in the e-mail.                              | Portal            | Portal |
+| Guest Attestation     | Lookup       | Used to associate the guest attestation  to share.                            | Portal            | Portal |
 |||||
 
 ### Share Guest Registration
 
-| Display name          | Data type  | Description                                                                   | Platform use    |
-|-----------------------|------------|-------------------------------------------------------------------------------|------------------|
-| Name                  | Text       | The primary identifier of the record.                                         | Canvas app |
-| Facility              | Lookup     | Used to associate the applicable facility.                                    | Canvas app |
-| Language              | Text       | Used to capture the language used in the e-mail.                              | Canvas app |
-| Guest Registration    | Lookup     | Used to associate the guest registration to share.                            | Canvas app |
+| Display name          | Column type  | Description                                                                   | Platform use    |
+|-----------------------|--------------|-------------------------------------------------------------------------------|------------------|
+| Name                  | Text         | The primary identifier of the record.                                         | Canvas app |
+| Facility              | Lookup       | Used to associate the applicable facility.                                    | Canvas app |
+| Language              | Text         | Used to capture the language used in the e-mail.                              | Canvas app |
+| Guest Registration    | Lookup       | Used to associate the guest registration to share.                            | Canvas app |
 |||||
 
 ### Solution Setting
 
-| Display name                            | Data type  | Description                                                              | Platform use                    | Solution |
-|-----------------------------------------|------------|--------------------------------------------------------------------------|---------------------------------|----------|
-| Allow Employee Sentiment                | Option Set | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app | Base |
+| Display name                            | Column type  | Description                                                              | Platform use                    | Solution |
+|-----------------------------------------|--------------|--------------------------------------------------------------------------|---------------------------------|----------|
+| Allow Employee Sentiment                | Option Set   | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app | Base |
 | Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app | Base |
 | Allow on behalf of attestations         | option set | Indicates if guest are allowed to register other guest.                  | Model-driven app                | Portal |
 | Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app | Base |
@@ -536,18 +534,18 @@ The data definitions section provides information about a list of entities, data
 
 ### State
 
-| Display name | Data type | Description                        | Platform use   |
-|--------------|-----------|------------------------------------|------------------|
-| Name         | Text      | User-friendly name of the state.   | Model-driven app |
-| State Code   | Text      | ISO identifier of the state.       | Model-driven app |
-| Country      | Lookup    | Association to the parent company. | Model-driven app |
+| Display name | Column type | Description                        | Platform use   |
+|--------------|-------------|------------------------------------|------------------|
+| Name         | Text        | User-friendly name of the state.   | Model-driven app |
+| State Code   | Text        | ISO identifier of the state.       | Model-driven app |
+| Country      | Lookup      | Association to the parent company. | Model-driven app |
 |||||
 
 ## Power Automate flows
 
 This section describes the different flows in the solution and explains their purpose. These flows can be extended, used, or turned off, depending on your business requirements.
 
-| Flow | Entity | Description                        | Solution |
+| Flow | Table | Description                        | Solution |
 |--------------|-----------|-------------------------------------------------|-----------|
 | Access Action - Reset facility access | Access Action | Deactivates records when past the date in 'Access available date'. | Base |
 | Access Action - Update linked case | Access Action | Updates linked Employee Case via source field when record is deactivated | Base |
@@ -575,9 +573,9 @@ This section describes the different flows in the solution and explains their pu
 | Share Guest Registration - Email | Share Guest Registration | Shares the guest registration details with the host and the guest. | Base |
 |||||
 
-## Sample Data
+### Sample Data
 
-Initially in the solution, the flows below were provided to generate sample data. Every 12 hours new data would get created. In new versions these flows will no longer be provided, yet in the future they will be placed on Github for use on demo environments.
+Initially in the solution, the flows below were provided to generate sample data. Every 12 hours new data would get created. Starting from version 1.3 these flows will no longer be provided, yet in the future they will be placed on Github for use on demo environments.
 
 | Flow  | Description |
 |--------------|----------|
