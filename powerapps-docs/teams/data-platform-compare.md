@@ -12,7 +12,9 @@ ms.reviewer: matp
 
 # How are Dataverse for Teams and Dataverse different?
 
-Applications within a team in Microsoft Teams have access to a Dataverse for Teams environment. Dataverse for Teams is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataverse for Teams delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataverse for Teams environment can contain, Dataverse for Teams can be promoted to Dataverse.
+[!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+Applications within a team in Microsoft Teams have access to a Dataverse for Teams environment. Dataverse for Teams is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataverse for Teams delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataverse for Teams environment can contain, Dataverse for Teams can be [upgraded](/power-platform/admin/about-teams-environment#upgrade-process) to Dataverse.
 
 ## Table features
 
@@ -88,7 +90,7 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 
 Integration with Dataverse for Teams is delivered primarily through connectors. Support for both standard connectors and the ability to use the Dataverse connector to connect to a Dataverse for Teams for a Teams environment is included. Users with Premium licenses have access to the full set of over 350 standard and premium connectors available. This provides the ability to bring data into or retrieve data from tables in Dataverse for Teams, execute workflows when data in those tables change, and also use data from tables in workflow logic.
 
-Dataverse can also use connectors. Additionally, Dataverse includes other built-in integration capabilities that can export data to a data lake or publish events to an event hub, service bus, or by using webhooks. Dataverse also supports the TDS protocol, which provides integration with SQL Server.<!--note from editor: Edit okay?-->
+Dataverse can also use connectors. Additionally, Dataverse includes other built-in integration capabilities that can export data to a data lake or publish events to an event hub, service bus, or by using webhooks. Dataverse also supports the TDS protocol, which provides integration with SQL Server.
 
 Dataverse can also be used with server-side sync to synchronize with Exchange or POP3, and with Data Export Service, which synchronizes data to Azure SQL Database.
 
