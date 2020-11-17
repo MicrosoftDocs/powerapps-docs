@@ -1,20 +1,22 @@
 ---
-title: "msdyn_componentlayerdatasource Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_componentlayerdatasource entity."
-ms.date: 04/12/2020
+title: "msdyn_componentlayerdatasource entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_componentlayerdatasource table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_componentlayerdatasource Entity Reference
+# msdyn_componentlayerdatasource entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 
 
@@ -28,11 +30,11 @@ search.app:
 |Create|POST [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/msdyn_componentlayerdatasources(*msdyn_componentlayerdatasourceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -91,6 +93,6 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_componentlayerdatasource?text=msdyn_componentlayerdatasource EntityType" />

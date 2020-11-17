@@ -52,13 +52,17 @@ No. Portals doesn't support the single sign-out technique for OpenID Connect&nda
 
 In addition to<!--note from editor: Edit okay?--> all required claims, the portals feature requires a claim representing the email address of users in the ID token. This claim must be named `email`, `emails`, or `upn`.
 
-These claims are processed in the following order of priority to set the *Primary Email Address* of the contact record in Common Data Service:
+Apart from all the required claims, portals requires a claim representing email address of the users in the *id_token*. This claim must be named as either “email”, “emails” or “upn”.
+
+These claims are processed at in the following order of priority to set as the *Primary Email Address* of the contact record in Dataverse:
 
 1. email
 1. emails
 1. upn
 
-When in use, *emailclaimsmapping* is also used to search for an existing contact (the Primary Email Address field in Common Data Service).
+When in use, "emailclaimsmapping" is also used to search for an existing contact (Primary Email Address field in Dataverse).
+
+## Can I get access to tokens (ID or Access) using JavaScript?
 
 ## Can I get access to tokens (ID or access) by using JavaScript?
 

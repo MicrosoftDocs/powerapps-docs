@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 8/27/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -20,20 +20,20 @@ search.app:
 # Export to an Excel PivotTable
 
 
-You can export app data to an Office Excel PivotTable to see patterns and trends in data. An Excel PivotTable is a great way to summarize, analyze, explore, and present your app data. You can export up to 100,000 records at a time.  
+You can export app data to an Office Excel PivotTable to see patterns and trends in data. An Excel PivotTable is a great way to summarize, analyze, explore, and present your app data. You can export up to 100,000 rows at a time.  
   
 
 ## Export data to an Excel PivotTable  
-The option to export data to an Excel PivotTable isn’t available in all record types. If you don’t see the option, it’s not available for that record.  
+The option to export data to an Excel PivotTable isn’t available in all row types. If you don’t see the option, it’s not available for that row.  
   
-1. Open a list of records in your app, select the arrow to the right of **Export to Excel**, and then select **Dynamic PivotTable**.  
+1. Open a list of rows in your app, select the arrow to the right of **Export to Excel**, and then select **Dynamic PivotTable**.  
 
    > [!div class="mx-imgBorder"] 
    > ![Export to excel](media/export_to_excel.png "Select export to Excel")
   
 2. In the **Select Columns for Pivot Excel** dialog box, select the column settings and then select **Export**.  
   
-   By default, the **PivotTable Field List** includes only fields that are displayed in the **Select Columns for Pivot Excel** list.  
+   By default, the **PivotTable Column List** includes only columns that are displayed in the **Select Columns for Pivot Excel** list.  
   
 3. Select **Save** and then save the .xlsx file. Make note of the location where you saved the file.  
   
@@ -58,7 +58,7 @@ The option to export data to an Excel PivotTable isn’t available in all record
    > [!div class="mx-imgBorder"] 
    > ![Refresh all data](media/refresh_data.png "Refresh all data")
   
-7. Drag the fields from the PivotTable Field List to the PivotTable. For more information, see [Excel Help](https://support.microsoft.com/excel).  
+7. Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Excel Help](https://support.microsoft.com/excel).  
   
 ## Tips  
   
@@ -66,6 +66,6 @@ The option to export data to an Excel PivotTable isn’t available in all record
   
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   
-- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite fields (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these fields in Excel, but when you import the data back into the app, these fields won’t be updated. If you want to update these fields, such as a contact’s name, it’s recommended that you use that view to export your data, update it in Excel, and import it back to the app for changes.  
+- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite columns (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these columns in Excel, but when you import the data back into the app, these columns won’t be updated. If you want to update these columns, such as a contact’s name, it’s recommended that you use that view to export your data, update it in Excel, and import it back to the app for changes.  
   
  

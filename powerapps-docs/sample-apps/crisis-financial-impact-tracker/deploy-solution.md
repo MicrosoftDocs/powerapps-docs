@@ -42,17 +42,17 @@ When you extract the .zip file, you see the following components in the extracte
 | Data|Import Templates  | Individual entity template for data load files in .xlsx (Excel) format. The files are arranged in the order in which they should be imported.|
 | Data|Sample Data  | Individual entity sample data in .xlsx (Excel) format. The files are arranged in the order in which they should be imported.|
 | Package |Higher Education Crisis Financial Impact Tracker app package-related files.|Complete list of files required to deploy the app.|
-| Power BI Template | PBITemplate.pbix | A sample Power BI template to connect to the app's Common Data Service instance.|
+| Power BI Template | PBITemplate.pbix | A sample Power BI template to connect to the app's Microsoft Dataverse instance.|
 
 ## Step 2: Sign up for Power Apps, and create an environment
 
 Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
 
-After you purchase Power Apps, create an environment with a Common Data Service database.
+After you purchase Power Apps, create an environment with a Dataverse database.
 
 1. Sign in to the [Power Platform admin center](https://aka.ms/ppac).
 
-1. Create a Common Data Service environment with a database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+1. Create a Dataverse environment with a database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
     > [!IMPORTANT]
     > If you select a security group for the database while creating it, remember that any apps can be shared only with users who are members of that security group.
@@ -76,7 +76,7 @@ Follow the steps below to install and configure the Higher Education Crisis Fina
 
 1. Select **Login** to continue.
 
-1. If you have access to more than one Common Data Service environment, the next screen prompts you to select from the list of available environments where you want to install the package. Select the environment you want, and then select **Login**.
+1. If you have access to more than one Dataverse environment, the next screen prompts you to select from the list of available environments where you want to install the package. Select the environment you want, and then select **Login**.
 
     > [!div class="mx-imgBorder"]
     > ![List of organizations](./media/list-of-organizations-available.png "List of organizations")
@@ -152,7 +152,7 @@ to share apps with groups of users.
    > [!div class="mx-imgBorder"]
    > ![Share app](./media/share-app.png "Share app")
 
-1. Specify the Azure AD group or users who you want to share this app with. Because the app connects to Common Data Service data, you also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **Higher Education Crisis Financial Impact Tracker User** and **Common Data Service User** security roles to the entities used by this app, and then select **Share**.
+1. Specify the Azure AD group or users who you want to share this app with. Because the app connects to Dataverse data, you also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **Higher Education Crisis Financial Impact Tracker User** and **Common Data Service User** security roles to the entities used by this app, and then select **Share**.
 
    > [!div class="mx-imgBorder"]   
    > ![Assign roles](./media/assign-roles.png "Assign roles")

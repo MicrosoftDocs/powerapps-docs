@@ -1,5 +1,5 @@
 ---
-title: "Authenticate Microsoft 365 users with Common Data Service web services (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Authenticate Microsoft 365 users with Microsoft Dataverse web services (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Authenticate Microsoft 365 users with Common Data Service web services
+# Authenticate Microsoft 365 users with Microsoft Dataverse web services
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 

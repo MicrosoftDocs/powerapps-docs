@@ -45,7 +45,7 @@ Alternatively, you can build the component quickly using the `npm run build` com
 > [!TIP]
 > To debug the component during or after the build operation, see [Debug a code component](debugging-custom-controls.md).
 
-Finally when you're done implementing the component logic in TypeScript, you need to bundle all the code component elements into a solution file so that you can import the solution into Common Data Service. More information: [Package a code component](import-custom-controls.md)
+Finally when you're done implementing the component logic in TypeScript, you need to bundle all the code component elements into a solution file so that you can import the solution into Microsoft Dataverse. More information: [Package a code component](import-custom-controls.md)
 
 ### See also
 

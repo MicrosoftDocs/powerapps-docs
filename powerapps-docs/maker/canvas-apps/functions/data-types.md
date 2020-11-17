@@ -100,7 +100,7 @@ That URI displays a scaled-up version of two purple diamonds:
 
 You can show the most recent image captured in a [**Camera**](../controls/control-camera.md) control if you set the **Image** property of an image control to the **Photo** property of the camera control. The app holds the image in memory, and the **Photo** property of the camera control returns a URI reference to the image. For example, you might take a picture, and the camera's **Photo** property could return **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"**.
 
-You use a URI to reference an image or another media file stored in a database. That way, the app doesn't retrieve the actual data until it's actually needed. For example, an attachment in a Common Data Service entity might return **"appres://datasources/Contacts/table/..."** As in the camera example, you can display this image by setting the **Image** property of an image control to this reference, which retrieves the binary data.
+You use a URI to reference an image or another media file stored in a database. That way, the app doesn't retrieve the actual data until it's actually needed. For example, an attachment in a Microsoft Dataverse entity might return **"appres://datasources/Contacts/table/..."** As in the camera example, you can display this image by setting the **Image** property of an image control to this reference, which retrieves the binary data.
 
 When you save a media data type, such as an image, to a database, the app sends the actual image or media data, not the URI reference.
 
@@ -140,7 +140,7 @@ This table shows some examples:
 | **User local** | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Saturday,&nbsp;May&nbsp;18,&nbsp;2019<br>9:00 PM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>8:00 AM |
 | **Time zone independent** | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | Sunday,&nbsp;May&nbsp;19,&nbsp;2019<br>4:00 AM | 
 
-For **User local** date/times, canvas apps use the time zone of the browser or device, but model-driven apps use the user's setting in Common Data Service. These settings typically match, but results will differ if these settings differ.
+For **User local** date/times, canvas apps use the time zone of the browser or device, but model-driven apps use the user's setting in Dataverse. These settings typically match, but results will differ if these settings differ.
 
 Use the [**DateAdd**](function-dateadd-datediff.md) and [**TimeZoneInformation**](function-dateadd-datediff.md) functions to convert local time to UTC and back again.  See the examples at the end of the documentation for these functions.
 
@@ -196,7 +196,7 @@ With(
 
 **Date**, **Time**, and **DateTime** have different names, but they all hold the same information about dates and times. 
 
-A **Date** value can include time information with it, which is usually midnight. A **Time** value can carry date information, which is usually January 1, 1970. Common Data Service also stores time information with a **Date Only** field but shows only the date information by default. Similarly, canvas apps sometimes distinguish between these data types to determine default formats and controls.
+A **Date** value can include time information with it, which is usually midnight. A **Time** value can carry date information, which is usually January 1, 1970. Dataverse also stores time information with a **Date Only** field but shows only the date information by default. Similarly, canvas apps sometimes distinguish between these data types to determine default formats and controls.
 
 Adding and subtracting date and time values directly isn't recommended because time-zone and other conversions could cause confusing results. Either use the **Value** function to convert date/time values to milliseconds first and take into account the app user's time zone, or use the [**DateAdd**](function-dateadd-datediff.md) and [**DateDiff**](function-dateadd-datediff.md) functions to add or subtract from one of these values.
 

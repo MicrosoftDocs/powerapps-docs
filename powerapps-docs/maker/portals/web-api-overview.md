@@ -1,6 +1,6 @@
 ---
 title: Use the Web API for portals | Microsoft Docs
-description: Learn how to use the portals Web API to create, read, update, and delete Common Data Service entities.
+description: Learn how to use the portals Web API to create, read, update, and delete Microsoft Dataverse entities.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.reviewer: tapanm
 
 ## Overview
 
-The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, update, and delete operations across all Common Data Service entities from your portal pages. For example, you can create a new account, update a contact, or change the [entity permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
+The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, update, and delete operations across all Microsoft Dataverse entities from your portal pages. For example, you can create a new account, update a contact, or change the [entity permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.2.6.41 or later for this feature to work**.
@@ -27,7 +27,7 @@ The portals Web API enables building a richer user experience inside Power Apps 
 
 ## Web API operations
 
-The portals Web API offers a subset of capabilities for Common Data Service operations that you can do by using the Common Data Service API. We've kept the API format as similar as possible, to reduce the learning curve.
+The portals Web API offers a subset of capabilities for Dataverse operations that you can do by using the Dataverse API. We've kept the API format as similar as possible, to reduce the learning curve.
 
 ### Web API operations available in portals
 

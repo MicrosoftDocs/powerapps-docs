@@ -28,7 +28,7 @@ ms.reviewer: tapanm
     | Enity List | View (adx_views) |
     | Enity Form Metadata | Subgrid Setting (adx_subgrid_settings) |
 
-- Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want, you can [disable the rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) for the Common Data Service model-driven app.
+- Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want, you can [disable the rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) for the Microsoft Dataverse model-driven app.
 
 - Because of the ongoing compatibility issues between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with Yahoo identity provider.
 
@@ -74,13 +74,13 @@ ms.reviewer: tapanm
     - If the Home page is deleted or disabled for a portal.
     - If a page template related to the Home page or any page is disabled or deleted.
 
-- Power Apps portals Studio will be unable to load source code of those content snippets that don't have a language assigned in Common Data Service.
+- Power Apps portals Studio will be unable to load source code of those content snippets that don't have a language assigned in Dataverse.
 
 - In some instances, the changes for header and footer, either through WYSIWYG experience of Power Apps portals Studio or through the code editor, won't be reflected immediately.
 
 - If a webpage is assigned the Search template in Power Apps portals Studio, it will show a page with the loader. For this scenario to work, you'll have to create an appropriate site marker for that page.
 
-- The Default studio template also shows up as an option in page template while creating a new page once it's used in Power Apps portals Studio. Also, this template is only inserted in English language and it doesn't support localization based on default Common Data Service or portal language.
+- The Default studio template also shows up as an option in page template while creating a new page once it's used in Power Apps portals Studio. Also, this template is only inserted in English language and it doesn't support localization based on default Dataverse or portal language.
 
 - A list rendered as a calendar control or map isn't configurable through Power Apps portals Studio.
 

@@ -1,5 +1,5 @@
 ---
-title: "Modify your code to use global Discovery Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Modify your code to use global Discovery Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Update your application code to make Discovery Service calls using a modern RESTful API."
 ms.custom: ""
 ms.date: 1/16/2020
@@ -31,7 +31,7 @@ The rest of this document describes the changes that may be needed to call the D
 
 ## Authentication
 Accessing the Discovery Service using the RESTful API requires authentication with an OAuth 2.0 access token.
-If your application code uses WS-Trust SAML tokens for authentication, you need to change your application code to acquire an OAuth 2.0 token from Azure Active Directory (AD), and then add that token in the Authorization header of the Discovery Service API calls. More information: [Use OAuth with Common Data Service](../authenticate-oauth.md).
+If your application code uses WS-Trust SAML tokens for authentication, you need to change your application code to acquire an OAuth 2.0 token from Azure Active Directory (AD), and then add that token in the Authorization header of the Discovery Service API calls. More information: [Use OAuth with Microsoft Dataverse](../authenticate-oauth.md).
 
 ## OData API calls
 The example HTTP requests shown below are supported by the Discovery Service RESTful API. These examples use the Instances API to return the same organization data as the <xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationsRequest> and <xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationRequest> message requests of the Organization Service API.
@@ -106,4 +106,4 @@ The Organization Service API message GetUserIdByExternalId is not supported in t
 ## See Also
 [Discovery Services](/powerapps/developer/common-data-service/discovery-service)
 
-[Use the Common Data Service Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api)
+[Use the Dataverse Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api)

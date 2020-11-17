@@ -25,14 +25,14 @@ You can perform actions such as create, retrieve, update, or delete, on organiza
   
 ## Actions on an Organization-Owned Dashboard  
 
- To perform the following actions on an organization-owned dashboard (`SystemForm`), you must have the System Administrator or the System Customizer role assigned to your account in Common Data Service:  
+ To perform the following actions on an organization-owned dashboard (`SystemForm`), you must have the System Administrator or the System Customizer role assigned to your account in Microsoft Dataverse:  
   
-- Create, retrieve, update, and delete. You can create or update an organization-owned dashboard by using the Common Data Service web services or by customizing the entity form. For detailed information about creating a dashboard, see [Create a Dashboard](create-dashboard.md).  
+- Create, retrieve, update, and delete. You can create or update an organization-owned dashboard by using the Dataverse web services or by customizing the entity form. For detailed information about creating a dashboard, see [Create a Dashboard](create-dashboard.md).  
   
 - Set an organization-owned dashboard as the default dashboard for an organization by setting the `SystemForm.IsDefault` attribute value to `true` while creating or updating the dashboard.  
   
   > [!IMPORTANT]
-  >  Using the methods available in the Common Data Service Web Services, it is possible to set two dashboards as the default. Make sure that no other dashboard is the default dashboard for the organization before updating this setting programmatically.  
+  >  Using the methods available in the Dataverse Web Services, it is possible to set two dashboards as the default. Make sure that no other dashboard is the default dashboard for the organization before updating this setting programmatically.  
   
   After you update an organization-owned dashboard, you must publish the metadata changes to make it visible across the organization. You can use the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message or <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> message to publish the changes made for an organization-owned dashboard. For a sample code that demonstrates this, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard).  
   

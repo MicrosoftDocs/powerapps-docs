@@ -1,6 +1,6 @@
 ---
-title: "Community tools for Common Data Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read about the community built tools that help you perform various tasks with Power Apps Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Community tools for Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Read about the community built tools that help you perform various tasks with Power Apps Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/09/2020
 ms.reviewer: "pehecke"
@@ -15,18 +15,18 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Community tools for Common Data Service
+# Community tools for Microsoft Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 The Power Apps community creates tools! 
 
-Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming. 
+Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Dataverse, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming. 
 
 > [!IMPORTANT]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
-The following is a selected list of community tools distributed via the XrmToolBox that you can use with Common Data Service.
+The following is a selected list of community tools distributed via the XrmToolBox that you can use with Dataverse.
 
 |Tool  |Description  |
 |---------|---------|
@@ -34,10 +34,10 @@ The following is a selected list of community tools distributed via the XrmToolB
 |[Early Bound Generator](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGenerator/)|Generates Early Bound Entities/Option Sets/Actions. Uses CrmSvcUtil from the SDK, and shows command line used to create the classes.|
 |[Export to Excel](https://www.xrmtoolbox.com/plugins/Ryr.XrmToolBox.ExportToExcel/)|Easily export records from the selected view/fetchxml to Excel.|
 |[FetchXML Builder](https://www.xrmtoolbox.com/plugins/Cinteros.Xrm.FetchXmlBuilder/)|Create and test FetchXml Queries|
-|[Metadata Browser](https://www.xrmtoolbox.com/plugins/MsCrmTools.MetadataBrowser/)|Browse metadata from your Common Data Service environment|
+|[Metadata Browser](https://www.xrmtoolbox.com/plugins/MsCrmTools.MetadataBrowser/)|Browse metadata from your Dataverse environment|
 |[Plugin Trace Viewer](https://www.xrmtoolbox.com/plugins/Cinteros.XrmToolBox.PluginTraceViewer/)|Investigate the Plug-in Trace Log with easy filtering and display possibilities|
 |[User Settings Utility](https://www.xrmtoolbox.com/plugins/MsCrmTools.UserSettingsUtility/)|Manage users personal settings in bulk|
 
-Here is another tool, [Chromium Metadata Browser](https://community.dynamicslabs.io/feed/metadata-browser), that lets you browse metadata such as entities, attributes, relationships, option sets of Common Data Service environements. It works with Microsoft Edge and Google Chrome browsers. 
+Here is another tool, [Chromium Metadata Browser](https://community.dynamicslabs.io/feed/metadata-browser), that lets you browse metadata such as entities, attributes, relationships, option sets of Dataverse environements. It works with Microsoft Edge and Google Chrome browsers. 
 
 

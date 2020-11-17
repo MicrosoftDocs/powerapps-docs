@@ -1,24 +1,32 @@
 ---
 title: "Send email to multiple recipients | MicrosoftDocs"
-description: "Learn how to send email to multiple recipients."
-ms.date: 05/28/2020
-ms.service:
-  - "dynamics-365-sales"
-ms.topic: article
+description: Learn how to send email to multiple recipients.
 author: sbmjais
-ms.author: shjais
 manager: shujoshi
+ms.service: powerapps
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 05/28/2020
+ms.author: shjais
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Send email to multiple recipients
 
-You can send an email to multiple recipients by using email templates. This is known as *direct* or *bulk* emailing. By default, the direct email feature is disabled. An administrator must enable the direct email feature by selecting **Yes** for **Enable Send Direct Email Action in Unified Interface for Send Email enabled entities** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
+You can send an email to multiple recipients by using email templates. This is known as *direct* or *bulk* emailing. By default, the direct email feature is disabled. An administrator must enable the direct email feature by selecting **Yes** for **Enable Send Direct Email Action in Unified Interface for Send Email enabled tables** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
 
 **To send email to multiple recipients**
   
-1. In the site map for the model-driven app, select an entity to which you want to send email. For example, **Contacts**.  
+1. In the site map for the model-driven app, select a table to which you want to send email. For example, **Contacts**.  
   
-2. In the list of records, select the contacts you want to send an email to.  
+2. In the list of rows, select the contacts you want to send an email to.  
   
 3. On the command bar, select **Send Direct Email**.  
 
@@ -28,10 +36,10 @@ You can send an email to multiple recipients by using email templates. This is k
 4. In the **Send Email** pane, select an email template from the **Template** list.
 
     > [!NOTE]
-    > - If you have multiple records that span multiple pages, you can select one of following options from the **To** list:
-    >   - **All records on current page**: Sends the email to all records displayed on the current page.
-    >   - **All records on all pages**: Sends the email to all the stored records.
-    > - If a few records don't have an email address or they have an invalid email address, those records will be skipped from sending the email.
+    > - If you have multiple rows that span multiple pages, you can select one of following options from the **To** list:
+    >   - **All rows on current page**: Sends the email to all rows displayed on the current page.
+    >   - **All rows on all pages**: Sends the email to all the stored rows.
+    > - If a few rows don't have an email address or they have an invalid email address, those rows will be skipped from sending the email.
 
 5. Select **Send**.
 

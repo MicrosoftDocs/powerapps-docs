@@ -12,12 +12,12 @@ ms.reviewer: tapanm
 
 # Clear the server-side cache for a portal
 
-As a portal administrator, you can clear the server-side cache for the entire portal so that updated data from Common Data Service is immediately reflected on the portal. Updates from Common Data Service  are communicated to the portal in asynchronous mode, so there might be a lag between the time data is updated in Common Data Service and the time that updated data appears on the portal. To eliminate this delay&mdash;for example, when it interferes with portal configuration&mdash;you can force the portal to refresh its cache immediately.
+As a portal administrator, you can clear the server-side cache for the entire portal so that updated data from Microsoft Dataverse is immediately reflected on the portal. Updates from Dataverse  are communicated to the portal in asynchronous mode, so there might be a lag between the time data is updated in Dataverse and the time that updated data appears on the portal. To eliminate this delay&mdash;for example, when it interferes with portal configuration&mdash;you can force the portal to refresh its cache immediately.
 
 > [!IMPORTANT]
-> - Clearing the [portal server-side cache](#steps-to-clear-portal-server-side-cache) or the [configuration entities cache](#configuration-entity-caching-portals-with-capacity-based-licenses) causes temporary performance degradation of the portal while data gets reloaded from Common Data Service.
+> - Clearing the [portal server-side cache](#steps-to-clear-portal-server-side-cache) or the [configuration entities cache](#configuration-entity-caching-portals-with-capacity-based-licenses) causes temporary performance degradation of the portal while data gets reloaded from Dataverse.
 > - Changes to the [configuration entities](#list-of-configuration-entities-refreshed-when-you-clear-config), or [publish changes](../../common-data-service/create-solution.md#publish-changes) actions should be performed during non-peak hours. Frequent or too many entity changes may adversely affect portal performance.
-> - The SLA for cache refresh (data transfer between Common Data Service and portal) is 15 minutes.
+> - The SLA for cache refresh (data transfer between Dataverse and portal) is 15 minutes.
 > - Power Apps portals with version 9.2.6.x or later have improved caching. For more information, go to [Caching changes for portals with version 9.2.6.x or later](#caching-changes-for-portals-with-version-926x-or-later).
 
 ## Steps to clear portal server-side cache
@@ -30,7 +30,7 @@ To clear the server-side cache:
 
 1. Select **Clear Cache**.
 
-The server-side cache is deleted, and data is reloaded from Common Data Service. 
+The server-side cache is deleted, and data is reloaded from Dataverse. 
 
 ![Clear the portal cache](media/clear-server-side-cache/clear-portal-cache.png)
 
@@ -76,20 +76,20 @@ Power Apps portals with version 9.2.6.x or later benefit from improved caching f
 - Add-on portals with high load will have improved performance and a reliable data cache refresh.
 
 > [!IMPORTANT]
-> - No change to SLA for cache refresh (data transfer between Common Data Service and portal) mentioned earlier in this article.
-> - Data changes done using portals will reflect immediately in Common Data Service and portals.
+> - No change to SLA for cache refresh (data transfer between Dataverse and portal) mentioned earlier in this article.
+> - Data changes done using portals will reflect immediately in Dataverse and portals.
 > - No change to [clear server-side cache functionality](#steps-to-clear-portal-server-side-cache). You can continue to use this functionality to clear server cache immediately.
  
 ### FAQs
  
 **1. Can I change the cache refresh duration from 15 minutes to a lesser duration?** <br>
-No. SLA for cache refresh remains 15 minutes. Any changes from Common Data Service will reflect on portals within 15 minutes.
+No. SLA for cache refresh remains 15 minutes. Any changes from Dataverse will reflect on portals within 15 minutes.
 
 **2. I'm using plugins or workflows to update data in other entities and need these data changes to reflect immediately on my portal.** <br>
-This design approach isn't recommended. Except the primary record where the create or update action is triggered, data reflection from Common data Service to portals is never guaranteed to be immediate.
+This design approach isn't recommended. Except the primary record where the create or update action is triggered, data reflection from Dataverse to portals is never guaranteed to be immediate.
 
 **3. Is there any difference in caching between capacity-based portals and add-on portals?** <br>
 No.
 
-**4. How long does it take for changes to reflect from portals to Common Data Service?** <br>
+**4. How long does it take for changes to reflect from portals to Dataverse?** <br>
 Immediately, as long as the update changes a primary record and isn't based on indirect changes to data using plugins or workflows.

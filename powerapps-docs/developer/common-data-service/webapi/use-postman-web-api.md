@@ -1,6 +1,6 @@
 ---
-title: "Use Postman with Common Data Service Web API (Developer Guide for Common Data Service)| MicrosoftDocs"
-description: "Learn how to use Postman to work with Common Data Service Web API"
+title: "Use Postman with Microsoft Dataverse Web API (Developer Guide for Dataverse)| MicrosoftDocs"
+description: "Learn how to use Postman to work with Microsoft Dataverse Web API"
 ms.custom: 
 ms.date: 04/22/2019
 ms.reviewer: "pehecke"
@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5829C16D-417D-4A82-9093-C576ADB683D1
 caps.latest.revision: 7
-author: susikka
-ms.author: "Sushant.Sikka"
+author: phecke
+ms.author: pehecke
 manager: shujoshi
 search.audienceType: 
   - developer
@@ -23,9 +23,9 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-There are a number of third-party tools that allow you to authenticate to Common Data Service instances and to compose and send Web API requests and view responses. Postman is one of the most popular.
+There are a number of third-party tools that allow you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses. Postman is one of the most popular.
 
-Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your Common Data Service instance and use Postman to perform operations with the Web API.
+Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API.
 
 Postman offers many other capabilities beyond those covered in this content. More information: [First 5 things to try if you're new to Postman](https://blog.getpostman.com/2018/04/11/first-5-things-to-try-if-youre-new-to-postman/)
 

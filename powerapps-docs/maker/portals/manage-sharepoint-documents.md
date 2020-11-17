@@ -12,13 +12,13 @@ ms.reviewer: tapanm
 
 # Manage SharePoint documents
 
-Common Data Service supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Common Data Service. Power Apps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an entity form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
+Microsoft Dataverse supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dataverse. Power Apps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an entity form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
 
 > [!NOTE]
 > - Document management works only with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)].
 > - Document management is supported with server-based integration.
 
-To work with the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Common Data Service, you must:
+To work with the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dataverse, you must:
 
 1.	[Enable document management functionality for your environment](#step-1-enable-document-management-functionality-in-model-driven-apps)
 
@@ -125,7 +125,7 @@ By default, the file size is set to 10 MB. However, you can configure the file s
 
 ## Sample configuration to enable document management on the Case entity form
 
-The below example demonstrates configuration using the Case entity which needs the Dynamics 365 Customer Service application as a pre-requisite. Although this sample uses the Case entity, it is just an illustration of the steps mentioned above and can be followed with any other custom entity or any Common Data Service entity that supports managing documents in SharePoint. 
+The below example demonstrates configuration using the Case entity which needs the Dynamics 365 Customer Service application as a pre-requisite. Although this sample uses the Case entity, it is just an illustration of the steps mentioned above and can be followed with any other custom entity or any Dataverse entity that supports managing documents in SharePoint. 
 
 1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-model-driven-apps) to ensure that server-based configuration is complete for your envoronment and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
 
