@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 
 # Return to the Workplace Guest Portals
 
-A seperate offering extends the Return to the Workplace solution with a portal. Allowing people external to your organization to get a pass by performing attestations. The portal has been designed to provide a mobile experience for the end user, but it will scale to tablet or desktop screen sizes also. This enabels end users to use the portal from their own device.
+A seperate offering extends the Return to the Workplace solution with a portal. Allowing people external to your organization to get a pass by performing attestations. The portal has been designed to provide a mobile experience for the end user, but it will scale to tablet or desktop screen sizes also. This enables end users to use the portal from their own device.
 
 > [!div class="mx-imgBorder"]
 > ![Portal welcome page](media/portals-welcome-screen.png "Portal welcome screen")
@@ -41,7 +41,7 @@ In case a guest has been invited to make use of the portal, the proces is as fol
 3. The guest uses the link in the e-mail to redeem the invite and create a login.
 4. Accept on the Daily Health Check
 5. Agree with the Health and Agreements
-7. Looking at the Pass. 
+6. View the Pass. 
 
 While logged in to the portal, the guest can do the following things:
 
@@ -56,7 +56,7 @@ The first two options are directly available from the homescreen. The second two
 
 On the home screen you have several options:
 
-- Hamburguer menu thats displays
+- Hamburger menu thats displays
     - Home
     - Resources 
     - Profiles 
@@ -65,9 +65,9 @@ On the home screen you have several options:
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-hamburguer-menu.png "Portal Hamburguer Menu")
 
-    - Create Pass 
-    - View Pass 
-    - Register Guest or Dependent
+- Create Pass 
+- View Pass 
+- Register Guest or Dependent
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-home-welcome.png "Portal Home")
@@ -75,18 +75,18 @@ On the home screen you have several options:
 
 ### Creating a pass
 
-1. The guest is logged in to the portal and can select **create a pass** from the home screen.
+1. The guest is logged in to the portal and selects **create a pass** from the home screen.
 2. The guest selects the facility.
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-facility.png "Portal facility")
 
-3. The guest accepts the to the disclaimer.
+3. The guest accepts the disclaimer.
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-disclaimer.png "Portal disclaimer")
 
-4. The guest attestates not having symptoms.
+4. The guest attests not having symptoms.
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-attestation.png "Portal attestation")
