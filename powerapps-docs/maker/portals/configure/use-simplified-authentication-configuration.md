@@ -76,7 +76,7 @@ You can configure the following general authentication settings by selecting **A
   - When set to **Off**, new user account registration is disabled and hidden.
 
 - **Require unique email**: Specifies whether a unique email address is needed for validating a new user during sign-up.
-  -  When set to **On**, a sign-up attempt might<!--note from editor: Do we need "might" (not "may" via Writing Style Guide) here, or is it definitely going to fail?--> fail if a user provides an email address that's already present in a contact record.
+  -  When set to **On**, a sign-up attempt might fail if a user provides an email address that's already present in a contact record.
   -  When set to **Off**, a contact that uses a duplicate email address can be created.
 
 You can also go to general authentication settings from the portal details page by selecting **Settings** in the upper-right corner of the **Identity providers** section.
@@ -105,7 +105,7 @@ Several identity providers that you can configure are added by default. You can 
 > - You can't change the configuration of the **Local sign in** and **Azure Active Directory** providers when using this interface.
 > - You can have only one instance of each identity provider type for OAuth 2.0, such as **Facebook**, **LinkedIn**, **Google**, **Twitter**, and **Microsoft**.
 > - Updates to identity provider configuration might take a few minutes to be reflected on the portal. To apply your changes immediately, you can [restart the portal](../admin/admin-overview.md#open-power-apps-portals-admin-center).
-> - If you [add a custom domain name](../admin/add-custom-domain.md) or [change the base URL of your portal](../admin/change-base-url.md), you must re-create<!--note from editor: Via Writing Style Guide.--> the provider configuration by using the correct URL.
+> - If you [add a custom domain name](../admin/add-custom-domain.md) or [change the base URL of your portal](../admin/change-base-url.md), you must re-create the provider configuration by using the correct URL.
 
 ### Add or configure a provider
 

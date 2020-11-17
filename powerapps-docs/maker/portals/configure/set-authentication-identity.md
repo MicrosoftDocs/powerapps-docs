@@ -49,16 +49,22 @@ Returning portal visitors can authenticate by using local user credentials or ex
 - `Authentication/Registration/InvitationEnabled`
 - `Authentication/Registration/RememberMeEnabled`
 - `Authentication/Registration/ResetPasswordEnabled`
-<!--note from editor: What are the following three headings meant to represent? There needs to be some kind of text to tell a reader who has low vision (or has turned off images) what it is they're missing. If these are just "decorative" images that are simply meant to show the UI, I suggest deleting them.-->
+
 ### Sign in by using a local identity or external identity
+
+The following image shows a sign in option with using a local account, or by selecting an external identity provider.
 
 ![Sign in by using a local account](../media/sign-in-local-account.png "Sign in by using a local account")  
 
 ### Sign up by using a local identity or external identity
 
+The following image shows a sign-up screen to register with using a local account, or by selecting an external identity provider.
+
 ![Register for a new local account](../media/register-new-local-account.png "Register for a new local account")  
 
 ### Redeem an invitation code manually
+
+The following image shows the option to redeem an invitation using the invitation code.
 
 ![Sign up by using an invitation code](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
 
@@ -100,10 +106,10 @@ The email sent by this workflow must be customized by using the URL to the redee
 
     ![Customize a new invitation](../media/customize-new-invitation.png "Customize a new invitation")  
 
-3. Process: Send invitation<!--note from editor: I don't understand what this "Process:" label means in the middle of a procedure. Is it meant to be a cross-reference to another section?-->
-4. Customize the invitation email.
-5. The invitation email opens the redemption page.
-6. The user signs up by using the submitted invitation code.
+3. Customize the invitation email.
+4. Process the [Send invitation](invite-contacts.md) workflow.
+1. The invitation email opens the redemption page.
+1. The user signs up by using the submitted invitation code.
 
     ![Sign up by using an invitation code](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
 
@@ -146,8 +152,8 @@ Changing an email address (or setting it for the first time) puts it into an unc
 1. Customize the email in the workflow as necessary. 
 2. The user submits a new email, which is in an unconfirmed state.
 3. The user checks email for confirmation.
-4. Process: Send email confirmation to contact<!--note from editor: As above, this pattern confuses me.-->
-5. Customize the confirmation email.
+4. Customize the confirmation email.
+5. Process the **Send email confirmation to contact** workflow.
 6. The user selects the confirmation link to complete the confirmation process.
 
 > [!NOTE]
@@ -170,7 +176,7 @@ The two-factor authentication feature increases user account security by requiri
 1. Enable two-factor authentication.
 2. Choose to receive the security code by email.
 3. Wait for the email that contains the security code.
-4. Process: Send email two-factor code to contact.<!--note from editor: Here also. -->
+4. Process the **Send email two-factor code to contact.** workflow.
 5. Two-factor authentication can be disabled.
 
 ## Manage external accounts
@@ -180,7 +186,7 @@ An authenticated user can connect (register) multiple external identities to the
 **Related site setting:**
 
 - `Authentication/Registration/ExternalLoginEnabled`
-<!--note from editor: The following procedure suddenly seems aimed at the a different type of reader (end user?). Should it really be here? -->
+
 **External identity provider site settings**
 
 1.  Select a provider to connect to your user account.
@@ -208,7 +214,7 @@ The following table describes the settings for enabling and disabling various au
 | Authentication/Registration/ResetPasswordRequiresConfirmedEmail |   Enables or disables password reset for confirmed email addresses only. If enabled, unconfirmed email addresses can't be used to send password reset instructions. Default: false   |
 |   Authentication/Registration/TriggerLockoutOnFailedPassword    |    Enables or disables recording of failed password attempts. If disabled, user accounts won't be locked out. Default: true    |
 |   Authentication/Registration/IsDemoMode              |     Enables or disables a demo mode flag to be used in development or demonstration environments only. Don't enable this setting on production environments. Demo mode also requires the web browser to be running locally to the web application server. When demo mode is enabled, the password reset code and second-factor code are displayed to the user for quick access. Default: false   |
-|    Authentication/Registration/LoginButtonAuthenticationType    | If a portal only requires a single external identity provider (to handle all authentication), this allows the **Sign-In** button of the header nav bar to link directly to the sign-in page of that external identity provider (instead linking to the intermediate local sign-in form and identity provider selection page). Only a single identity provider can be selected for this action. Specify the *AuthenticationType* value of the provider.<br>For a single sign-on configuration that uses OpenID Connect, such as Azure AD B2C, the user needs to provide the Authority.<br>For OAuth 2.0&ndash;based providers, the accepted values are: `Facebook, Google, Yahoo, [!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)], LinkedIn, Yammer,`<!--note from editor: Should Yammer be included here? --> or `Twitter`<br>For WS-Federation&ndash;based providers, use the value specified for the `Authentication/WsFederation/ADFS/AuthenticationType` and `Authentication/WsFederation/[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]/\[provider\]/AuthenticationType` site settings. Examples: https://adfs.contoso.com/adfs/services/trust, Facebook-0123456789, Google, Yahoo!, uri:[!INCLUDE[pn-ms-windows-short](../../../includes/pn-ms-windows-short.md)]LiveID. |
+|    Authentication/Registration/LoginButtonAuthenticationType    | If a portal only requires a single external identity provider (to handle all authentication), this allows the **Sign-In** button of the header nav bar to link directly to the sign-in page of that external identity provider (instead linking to the intermediate local sign-in form and identity provider selection page). Only a single identity provider can be selected for this action. Specify the *AuthenticationType* value of the provider.<br>For a single sign-on configuration that uses OpenID Connect, such as Azure AD B2C, the user needs to provide the Authority.<br>For OAuth 2.0&ndash;based providers, the accepted values are: `Facebook, Google, Yahoo, [!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)], LinkedIn, or `Twitter`<br>For WS-Federation&ndash;based providers, use the value specified for the `Authentication/WsFederation/ADFS/AuthenticationType` and `Authentication/WsFederation/[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]/\[provider\]/AuthenticationType` site settings. Examples: https://adfs.contoso.com/adfs/services/trust, Facebook-0123456789, Google, Yahoo!, uri:[!INCLUDE[pn-ms-windows-short](../../../includes/pn-ms-windows-short.md)]LiveID. |
 
 ## Enable or disable user registration
 
@@ -252,7 +258,7 @@ The following describes the settings that define how and when an account becomes
 
 ## Cookie authentication site settings
 
-The following describes settings for modifying default authentication cookie behavior, defined by the CookieAuthenticationOptions class.<!--note from editor: Edit okay? I wasn't sure what to do with that sentence fragment.-->
+The following describes settings for modifying default authentication cookie behavior, defined by the CookieAuthenticationOptions class.
 
 | Site setting name   | Description       |
 |----------------------|------------------------------------------------|

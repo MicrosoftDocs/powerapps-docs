@@ -91,11 +91,11 @@ A portal owner can configure the portal to accept [!include[Azure](../../../incl
 
               ![Run user flow](media/use-simplified-authentication-configuration/run-user-flow.png "Run user flow")
 
-           1. Select the OpenID configuration URL to open in a new browser window or tab.<!--note from editor: Should we add alt text to describe the URL in more detail here? If it would be essential to a user with low vision, any information in an image needs to be available in alt text or an :::image::: description.-->
+           1. Select the OpenID configuration URL to open in a new browser window or tab.
 
-               ![Select the OpenID configuration URL](media/use-simplified-authentication-configuration/select-openid-configuration-url.png "Select the OpenID configuration URL")
+               ![Select the OpenID configuration URL](media/use-simplified-authentication-configuration/select-openid-configuration-url.png "Select the OpenID configuration URL. Format: https://<B2C-tenant-name>.b2clogin.com/tfp/<B2C-tenant-name>.onmicrosoft.com/<user-flow-name>/v2.0/.well-known/openid-configuration")
 
-               The URL refers to the OpenID Connect identity provider configuration document, also known as the *OpenID well-known configuration endpoint*.<!--note from editor: This should either be the URL you show in the previous image or a link to more information.-->
+               The URL refers to the OpenID Connect identity provider configuration document, also known as the *OpenID well-known configuration endpoint*.
 
            1. Copy the URL of the **Issuer** from the new browser window or tab.
 
@@ -117,13 +117,13 @@ A portal owner can configure the portal to accept [!include[Azure](../../../incl
         - **Password reset policy ID**: Enter the name of the password reset user flow you created earlier. The name is prefixed with *B2C_1*.
 
         - **Valid issuers**: Enter a comma-delimited list of issuer URLs for the sign-up and sign-in user flow, and password reset user flow, you created earlier. 
-        <br> To get the issuer URLs for the sign-up and sign-in user flow, and the password reset user flow, open each flow and then follow the steps under **Authority**, in step 5a<!--note from editor: Edit okay?--> earlier in this article.
+        <br> To get the issuer URLs for the sign-up and sign-in user flow, and the password reset user flow, open each flow and then follow the steps under **Authority**, in step 5a earlier in this article.
 
-1. In this step, you have the option of configuring additional settings for the Azure AD B2C identity provider.<!--note from editor: Made this into a bulleted list to be parallel with the previous step.-->
+1. In this step, you have the option of configuring additional settings for the Azure AD B2C identity provider.
 
     ![Configure additional settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings")
 
-    - **Registration claims mapping​**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C (created during sign-up)<!--note from editor: Edit okay? I want to make it clearer what was "created during sign-up" --> to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name`, where `field_logical_name` is the logical name of the field in portals and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
+    - **Registration claims mapping​**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C (created during sign-up) to attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name`, where `field_logical_name` is the logical name of the field in portals and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 
      For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow, and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 
     - **Login claims mapping**: Enter a list of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign-in to the attributes in the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> 

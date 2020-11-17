@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Configure a WS-Federation provider for portals
 
-You can add a WS-Federation&ndash;compliant security token service provider&mdash;for example, Azure Active Directory (Azure AD) or a single Active Directory Federation Services (AD FS) server&mdash;as an identity provider.<!--note from editor: The following link defaults to the top level of Azure documentation, and it looks like ACS has been deprecated. Please see https://azure.microsoft.com/en-us/blog/4-month-retirement-notice-access-control-service/ -->
+You can add a WS-Federation&ndash;compliant security token service provider&mdash;for example, Azure Active Directory (Azure AD) or a single Active Directory Federation Services (AD FS) server&mdash;as an identity provider.
 
 > [!NOTE]
 > Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. Restart the portal by using [portal actions](../admin/admin-overview.md) if you want the changes to be reflected immediately.

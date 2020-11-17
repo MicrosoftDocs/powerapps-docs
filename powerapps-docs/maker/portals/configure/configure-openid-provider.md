@@ -14,7 +14,7 @@ ms.reviewer: tapanm
 
 [OpenID Connect](https://openid.net/connect/) external identity providers are services that conform to the [Open ID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html). OpenID Connect introduces the concept of an *ID token*, which is a security token that allows the client to verify the identity of the user. The ID token also gets basic profile information about users&mdash;also known as *claims*.
 
-This article explains how an identity provider that supports OpenID Connect can be integrated with Power Apps portals.
+This article explains how an identity provider that supports OpenID Connect can be integrated with Power Apps portals. Some of the examples of OpenID Connect providers for portals: [Azure Active Directory (Azure AD) B2C](configure-azure-ad-b2c-provider.md), [Azure AD](configure-openid-settings.md), [Azure AD with multiple tenants](configure-openid-settings.md#enable-authentication-using-a-multi-tenant-azure-active-directory-application).
 
 ## Supported and unsupported authentication flows in portals
 
@@ -52,10 +52,7 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
     ![Create application](media/authentication/step-1-openid.png "Create application")
 
     > [!NOTE]
-    > The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.<br><br>Examples of OpenID Connect providers for portals include:<!--note from editor: This list isn't "tip"-type content. I think the list probably should be taken out of the steps entirely and moved to the introduction. -->
-       > - [Azure Active Directory (Azure AD) B2C](configure-azure-ad-b2c-provider.md)
-       > - [Azure AD](configure-openid-settings.md)
-       > - [Azure AD with multiple tenants](configure-openid-settings.md#enable-authentication-using-a-multi-tenant-azure-active-directory-application)
+    > The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
 
 1. Enter the following site settings for portal configuration.
 
@@ -82,7 +79,7 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
     | Name | Description |
     | - | - |
     | External logout | Enables or disables external account sign-out. When enabled, users are redirected to the external sign-out user experience when they sign out from the portal. When disabled, users are only signed out from the portal. |
-    | Post logout redirect<!--note from editor: Edit okay? To match the UI.--> URL | The location where the identity provider will redirect a user after external sign-out. This location should be set appropriately in the identity provider configuration. |
+    | Post logout redirect URL | The location where the identity provider will redirect a user after external sign-out. This location should be set appropriately in the identity provider configuration. |
     | RP initiated logout | Enables or disables a sign-out initiated by the relying party. To use this setting, enable **External logout** first. |
 
 1. (Optional) Configure additional settings.
@@ -96,9 +93,9 @@ Similar to all other providers, you have to sign in to [Power Apps](https://make
     | Valid audiences | Comma-separated list of audience URLs.  |
     | Validate issuers | If enabled, the issuer is validated during token validation. |
     | Valid issuers | Comma-separated list of issuer URLs. |
-    | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during sign-up for<!--note from editor: I get a bit confused by the use of "for" here.Shouldn't it be "to", so it would be "map claim values...to the attributes of the contact record"?--> the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
-    | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during sign-up for<!--note from editor: See note above; same question here.--> the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
-    | Nonce lifetime | Lifetime of the nonce value<!--note from editor: Suggested-->, in minutes. Default: 10 minutes. |
+    | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during sign-up to the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
+    | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during sign-up to the attributes of the contact record. <br> Format: `field_logical_name=jwt_attribute_name` where `field_logical_name` is the logical name of the field in portals, and `jwt_attribute_name` is the attribute with the value returned from the identity provider. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD. In this example, `firstname` and `lastname` are the logical names for the profile fields in portals, whereas `given_name` and `family_name` are the attributes with the values returned by the identity provider for the respective fields. |
+    | Nonce lifetime | Lifetime of the nonce value, in minutes. Default: 10 minutes. |
     | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this value will override the **Application Cookie Expire Timespan** value in the **Authentication/ApplicationCookie/ExpireTimeSpan** site setting. |
     | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to **On**, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 

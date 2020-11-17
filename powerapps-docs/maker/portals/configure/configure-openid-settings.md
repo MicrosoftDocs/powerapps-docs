@@ -109,7 +109,7 @@ In this article, you'll learn about configuring an OpenID Connect provider for p
 
             ![OpenID Connect metadata document](media/authentication/openid-connect-metadata-document.png "OpenID Connect metadata document")
 
-        1. Paste the copied document URL as the **Metadata address** for portals.<!--note from editor: Will the reader know where/how to do this?-->
+        1. Paste the copied document URL as the **Metadata address** for portals.
 
     1. **Scope**: Set the **Scope** site setting value as:
 

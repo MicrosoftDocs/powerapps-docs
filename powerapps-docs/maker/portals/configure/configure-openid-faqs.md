@@ -34,14 +34,14 @@ The following optional parameters are supported:
 
 ## Does portals support custom scope parameters in authentication requests?
 
-Yes. Custom scope parameters can be specified by using the scope option during<!--note from editor: Edit okay? Or should it be "...by configuring the **Scope** option"?--> configuration.
+Yes. Custom scope parameters can be specified by using the scope option during configuration.
 
 ## Why does the username value in a contact, or an external identity record in Common Data Service, show a different value compared to what the user entered on the sign-in page?
 
 The username field on a contact record and an external identity record will show the value sent in either the sub-claim or object ID (OID) claim (for Azure AD&ndash;based providers). This is because the sub-claim represents the identifier for the end user and is guaranteed by the identity provider to be unique. An OID claim (where the object ID is a unique identifier for all users in a tenant) is supported when used with single-tenant Azure AD&ndash;based providers.
 
 ## Does portals support sign-out from OpenID Connect&ndash;based providers?
-<!--note from editor: Following edits to "logout" okay? This follows Writing Style Guide and I don't find any other sources that indicate that "sign out" is inaccurate.-->
+
 Yes. The portals feature supports the front-channel sign-out technique to sign out from both the application and the OpenID Connect&ndash;based providers.
 
 ## Does portals support single sign-out?
@@ -50,7 +50,7 @@ No. Portals doesn't support the single sign-out technique for OpenID Connect&nda
 
 ## Does portals require any specific claim in an ID token*?
 
-In addition to<!--note from editor: Edit okay?--> all required claims, the portals feature requires a claim representing the email address of users in the ID token. This claim must be named `email`, `emails`, or `upn`.
+In addition to all required claims, the portals feature requires a claim representing the email address of users in the ID token. This claim must be named `email`, `emails`, or `upn`.
 
 Apart from all the required claims, portals requires a claim representing email address of the users in the *id_token*. This claim must be named as either “email”, “emails” or “upn”.
 

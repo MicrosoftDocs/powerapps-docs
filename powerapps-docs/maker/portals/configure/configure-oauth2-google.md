@@ -35,7 +35,7 @@ To use **Google** as an identity provider, you need to [create an app in Google]
 1. In **Google APIs**, select **Credentials** on the left pane.
 
     > [!NOTE]
-    > If you've already configured a consent screen with the portal's<!--note from editor: Edit okay? I assume this should be singular "portal's" rather than "portals' top-level domain."--> top-level domain, you can skip steps 6 through 14 and go directly to step 15. However, if your consent screen is configured but the portals' top-level domain hasn't been added, go through step 11 before you skip to step 15.
+    > If you've already configured a consent screen with the portal's top-level domain, you can skip steps 6 through 14 and go directly to step 15. However, if your consent screen is configured but the portals' top-level domain hasn't been added, go through step 11 before you skip to step 15.
 
 1. Select **Configure consent screen**.
 1. Select the **External** user type.
