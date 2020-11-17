@@ -16,8 +16,9 @@ A seperate offering extends the Return to the Workplace solution with a portal. 
 
 > [!div class="mx-imgBorder"]
 > ![Portal welcome page](media/portals-welcome-screen.png "Portal welcome screen")
+
 > [!div class="mx-imgBorder"]
-> ![Portal home screen](media/portals-home-screen.png "Portal home screen")
+> ![Portal Attestation](media/portals-home-welcome.png "Portal Home")
 
 ## Prerequisites
 
@@ -60,20 +61,38 @@ On the home screen you have several options:
     - Resources 
     - Profiles 
     - Sign Out option
-- Create Pass 
-- View Pass 
-- Register Guest or Dependent
+
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-hamburguer-menu.png "Portal Hamburguer Menu")
+
+    - Create Pass 
+    - View Pass 
+    - Register Guest or Dependent
+
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-home-welcome.png "Portal Home")
+
 
 ### Creating a pass
 
 1. The guest is logged in to the portal and can select **create a pass** from the home screen.
 2. The guest selects the facility.
+
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-facility.png "Portal facility")
+
 3. The guest accepts the to the disclaimer.
+
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-disclaimer.png "Portal disclaimer")
+
 4. The guest attestates not having symptoms.
-5. A pass is created for the guest for that day.
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-attestation.png "Portal attestation")
+
+5. A pass is created for the guest for that day.
+
 
 > [!NOTE]
 > An administrator can disable the store of negative attestations in the solution settings. This will stop a negative attestation of being created and wont save the record.
@@ -81,6 +100,9 @@ On the home screen you have several options:
 ### View existing passes
 
 If a pass has been created for a guest it will be shown here. If no pass exists, the button will be disabled on the home screen and in the hamburger menu. 
+
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-view-pass.png "Portal View Pass")
 
 The pass will display:
 
@@ -92,7 +114,13 @@ The pass will display:
 6. QR code
 7. Cancel button
 
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-pass.png "Portal Pass")
+
 When a pass is cancel, the portal asks you if you are sure. If you cancel the pass, this wont show up in the view pass anymore and the attestation will deactivate but still will be recorded. 
+
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-cancel-pass.png "Portal Pass")
 
 > [!NOTE]
 > An administrator can disable the use of QR codes in the solution settings. This applies to both employee and guest passes.
@@ -107,6 +135,9 @@ The resources page displays general information of your organisation to the user
 ### Update profile
 
 On the profile page, guests can perform basic operations. They can update their personal information, change their password or change their login method.
+
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-profile.png "Portal Profile")
 
 > [!NOTE]
 > The options presented to **Manage external authorization** depend on the authentication methods configured by the system administrator.
@@ -153,6 +184,9 @@ Not mandatory fields:
 
 
 After creating dependents you would be able to see them when clicking **Create Pass** option to select who to create a pass for.
+
+> [!div class="mx-imgBorder"]
+> ![Portal Register Guest or dependent](media/portals-select-dependent.png "Portal Register Guest or dependent")
 
 To find dependents in the Facility Safety Management App, go to **Soluttion Setup** and click on **Employees**. On **My Active Contacts** view, open a record and find dependents on the Guest section. Also, find all of the dependents on the **Active Guests** view.
 
