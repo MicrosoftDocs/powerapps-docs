@@ -107,7 +107,7 @@ When using **Connect user** feature for a canvas app:
 1. User A choose the desired app to monitor and open monitor.
 1. User A selects **Connect user** and share the generated connect link with User B
 1. User B plays the published canvas app by clicking the link shared by user A.
-1. User A watches the monitored session as user B interacts with the ap.
+1. User A watches the monitored session as user B interacts with the app.
 
 To connect a user to a monitoring session:
 
