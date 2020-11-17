@@ -1,6 +1,6 @@
 ---
-title: "Frequently Asked Questions (FAQs) about using OpenID Connect providers for authentication in Power Apps portals.  | MicrosoftDocs"
-description: "Learn about Frequently Asked Questions (FAQs) when using OpenID Connect providers for authentication in Power Apps portals."
+title: "FAQ about using OpenID Connect providers for authentication in Power Apps portals.  | MicrosoftDocs"
+description: "Learn about frequently asked questions when using OpenID Connect providers for authentication in Power Apps portals."
 author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,45 +10,47 @@ ms.author: dileeps
 ms.reviewer: tapanm
 ---
 
-# Frequently Asked Questions (FAQs) when using OpenID Connect in portals
+# FAQ for using OpenID Connect in portals
 
-In this article, learn about the common scenarios, or the FAQs when using an authentication provider with Power Apps portals that uses [OpenID Connect specifications](https://openid.net/specs/openid-connect-core-1_0.html).
+This article includes information about common Power Apps portals scenarios and frequently asked questions for using an authentication provider that conforms to the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html).
 
-## Do I require OpenId Connect Auto-Discovery Document to integrate with portals?
+## Do I require an OpenID Connect Auto-Discovery Document to integrate with portals?
 
-Yes. Auto-Discovery Document (commonly known as `/.well-known/openid-configuration`) is required to integrate with portals. Information present in this document is used by portals to create authorization requests, and validate the authentication tokens.
+Yes. The Auto-Discovery Document (also known as `/.well-known/openid-configuration`) is required to integrate with portals. Information present in this document is used by portals to create authorization requests and validate the authentication tokens.
 
-If your identity provider (IDP) doesn’t provide this document, you can create it manually, and host it at any public location (including your portal).
+If your identity provider doesn't provide this document, you can create it manually and host it at any public location (including your portal).
 
 > [!NOTE]
-> Similar to the discovery document, portals also requires the IDP to provide a public *JWKS URI* endpoint where the public keys are available to verify the signature of the id token. This endpoint needs to be specified within the discovery document as “jwks_uri” key.
+> Similar to the discovery document, portals also requires the identity provider to provide a public *JWKS URI* endpoint where the public keys are available to verify the signature of the ID token. This endpoint needs to be specified in the discovery document as the *jwks_uri* key.
 
 ## Does portals support *acr_values*, or *ui_locales* request parameters in the authentication requests?
 
-No. Portals doesn’t support *acr_values*, or *ui_locales* request parameters in authorization requests. However, portals supports all the required, and recommended request parameters defined in the [OpenId Connect specifications](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest).
+No. Portals doesn't support *acr_values* or *ui_locales* request parameters in authorization requests. However, the portals feature does support all the required&mdash;and recommended&mdash;request parameters defined in the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest).
 
 The following optional parameters are supported:
 
 - Response_mode
 - Nonce
 
-## Does portals support custom scope parameter(s) in authentication requests?
+## Does portals support custom scope parameters in authentication requests?
 
-Yes. Custom scope parameter(s) can be specified using scope option in configuration.
+Yes. Custom scope parameters can be specified by using the scope option during configuration.
 
-## Why does the username value in contact, or external identity record in Microsoft Dataverse, show a different value compared to what the user entered on the sign-in page?
+## Why does the username value in a contact, or an external identity record in Common Data Service, show a different value compared to what the user entered on the sign-in page?
 
-Username field on contact record, and externally identity record, will show the value sent in either the sub-claim or oid-claim (oid claim for only Azure AD-based providers). This is because the sub claim represents the identifier for end user, and is guaranteed by identity provider (IDP) to be unique. Oid claim (Object ID - a unique identifier for all users in a tenant) is supported when used with single-tenant Azure AD-based providers.
+The username field on a contact record and an external identity record will show the value sent in either the sub-claim or object ID (OID) claim (for Azure AD&ndash;based providers). This is because the sub-claim represents the identifier for the end user and is guaranteed by the identity provider to be unique. An OID claim (where the object ID is a unique identifier for all users in a tenant) is supported when used with single-tenant Azure AD&ndash;based providers.
 
-## Does portals support logout from OpenId Connect-based provider?
+## Does portals support sign-out from OpenID Connect&ndash;based providers?
 
-Yes. Portal supports front channel logout technique to log out from both the application, and the OpenId Connect-based providers.
+Yes. The portals feature supports the front-channel sign-out technique to sign out from both the application and the OpenID Connect&ndash;based providers.
 
-## Does portals support Single Logout (SLO)?
+## Does portals support single sign-out?
 
-No. Portals doesn't support single logout technique for OpenID Connect-based providers.
+No. Portals doesn't support the single sign-out technique for OpenID Connect&ndash;based providers.
 
-## Does portals require any specific claim in *id_token*?
+## Does portals require any specific claim in an ID token*?
+
+In addition to all required claims, the portals feature requires a claim representing the email address of users in the ID token. This claim must be named `email`, `emails`, or `upn`.
 
 Apart from all the required claims, portals requires a claim representing email address of the users in the *id_token*. This claim must be named as either “email”, “emails” or “upn”.
 
@@ -62,16 +64,16 @@ When in use, "emailclaimsmapping" is also used to search for an existing contact
 
 ## Can I get access to tokens (ID or Access) using JavaScript?
 
-No. Id_token provided by the identity provider isn't made available through any standard technique on the client side; and is only used for authentication purpose.
+## Can I get access to tokens (ID or access) by using JavaScript?
 
-However, if you're using Implicit Grant Flow, you can use the methods provided by your identity provider to get access to ID or Access tokens.
+No. The ID token provided by the identity provider isn't made available through any standard technique on the client side, and is only used for the purpose of authentication. However, if you're using the Implicit Grant flow, you can use the methods provided by your identity provider to get access to ID or access tokens.
 
-For example, Azure AD provides [MSAL library](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) to achieve this scenario in clients.
+For example, Azure AD provides [Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) to achieve this scenario in clients.
 
-## Can I use a custom OpenId Connect provider, instead of Azure AD?
+## Can I use a custom OpenID Connect provider instead of Azure AD?
 
-Yes. Portals supports any OpenID Connect provider that supports the standard [OpenID Connect specifications](https://openid.net/specs/openid-connect-core-1_0.html).
+Yes. Portals supports any OpenID Connect provider that supports the standard [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html).
 
 ### See also
 
-[Configure the Open ID Connect provider for portals](configure-openid-provider.md)
+[Configure an OpenID Connect provider for portals](configure-openid-provider.md)
