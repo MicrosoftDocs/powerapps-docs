@@ -2,7 +2,7 @@
 title: "Retrieve related entity records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how you can retrieve related entity records by expanding the navigation properties."
 ms.custom: ""
-ms.date: 01/16/2020
+ms.date: 11/16/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
