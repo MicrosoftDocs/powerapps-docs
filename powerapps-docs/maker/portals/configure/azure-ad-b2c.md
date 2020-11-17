@@ -1,5 +1,5 @@
 ---
-title: "Customize the Azure AD B2C user sign-in and sign-up experience for portals. | MicrosoftDocs"
+title: "Customize the Azure Active Directory B2C user user interface for portals. | MicrosoftDocs"
 description: "Instructions to customize the Azure AD B2C user interface for portals."
 author: sandhangitmsft
 ms.service: powerapps
@@ -9,7 +9,7 @@ ms.date: 10/20/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
-<!--note from editor: Please check edit to the title; it can't be the same as the H1.-->
+
 # Customize the Azure AD B2C user interface for portals
 
 [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C (Azure AD B2C) supports user interface customization. You can customize the user experience for sign-up and sign-in scenarios.
@@ -366,5 +366,5 @@ For a complete list of other CORS settings, see [CORS protocol support](../add-w
 5. Select **Edit**.
 6. Select **Edit policy** > **Page UI customization** > **Unified sign-up or sign-in page**.
 7. Set **Use custom page** to **Yes**.
-8. Set **Custom page URI** to the URL of the [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Custom Page webpage created in **Step 3: Create a webpage** earlier in this article. For example, `https://mydomain.com/azure-ad-b2c-sign-in`.
+8. Set **Custom page URI** to the URL of the [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Custom Page webpage created in **Step 3. Create a webpage** earlier in this article. For example, `https://mydomain.com/azure-ad-b2c-sign-in`.
 9. Select **OK**.

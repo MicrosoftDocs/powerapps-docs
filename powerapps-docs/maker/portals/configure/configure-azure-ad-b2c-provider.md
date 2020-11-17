@@ -21,11 +21,11 @@ A portal owner can configure the portal to accept [!include[Azure](../../../incl
 <!--markdownlint-disable MD036-->
 **To configure Azure AD B2C as the OpenID Connect provider**
 
-1. Select **Configure** for **Azure Active Directory B2C**.<!--note from editor: Where does this take place? I'm unclear about the location in the UI.--> More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
+1. Select **Configure** for **Azure Active Directory B2C**.More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
 
     ![Azure AD B2C provider name](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
 
-1. If necessary, update the name.<!--note from editor: Will the reader know whether/why this is/would be necessary?-->
+1. If necessary, update the name.
 
 1. Select **Next**.
 
@@ -54,7 +54,7 @@ A portal owner can configure the portal to accept [!include[Azure](../../../incl
         1. In the **Redirect URI** text box, enter the **Reply URL** for your portal. <br> Example: `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`
 
             > [!NOTE]
-            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Configure Azure Active Directory B2C application** step.<!--note from editor: Should this be "the **Create and configure B2C tenant in Azure** step"? That would match the configure- articles that are similar to this one, which use the name of the step as shown in the screenshot for step 6. Also, please note the other edits, which I propagated to the other articles to be parallel. "However" wasn't quite the right word here.--> If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, you must use it as-is for the Azure AD B2C configuration in portals.
+            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure B2C tenant in Azure** step. If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, you must use it as-is for the Azure AD B2C configuration in portals.
 
             ![Register application](media/authentication/register-application-b2c.png "Register application")
 
