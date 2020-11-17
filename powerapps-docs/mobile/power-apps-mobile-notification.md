@@ -32,7 +32,7 @@ Add a push notification to your app if:
 > [!NOTE]
 > To receive push notification, each user must have opened the app in Power Apps Mobile once or gotten the app from the [Microsoft 365 apps page](https://www.office.com/apps).
 
-Before you can create push notification you need to have access to an app and have the record ID if you're creating a notification for a form.
+Before you can create push notification you need to have access to an app and have the row ID if you're creating a notification for a form.
 
 Create an app
 
@@ -61,10 +61,10 @@ When you trigger a push notification from a flow, you can send the notification 
    > ![Select skip](media/create-notification-step3.png)
    
    
- 4. From the list of connectors and triggers select **Common Data Service (current environment)**.  
+ 4. From the list of connectors and triggers select **Microsoft Dataverse (current environment)**.  
  
     > [!div class="mx-imgBorder"] 
-    > ![Select Common Data Service](media/create-notification-step4.png)
+    > ![Select Dataverse](media/create-notification-step4.png)
     
  5. Select the action that will trigger the notification. 
  
@@ -77,7 +77,7 @@ When you trigger a push notification from a flow, you can send the notification 
     | Name | Description |
     | --- | --- |
     | Trigger condition |Select the condition for the notification. |
-    | The entity name |Select which entity the notification is for. |
+    | The table name |Select which table the notification is for. |
     | Scope |Select the scope. |
  
     > [!div class="mx-imgBorder"] 
@@ -101,9 +101,9 @@ When you trigger a push notification from a flow, you can send the notification 
       - **Recipient Items-1**: Select how the flow is triggered.
       - **Message**: Enter the notification message.
       - **Open app**: Select whether to open the app or not when the user selects the notification.
-      - **Entity**: Select which entity the notification is for.
+      - **Table**: Select which table the notification is for.
       - **Form or view**: Select if the notification is for a form or view.
-      - **Record ID**: If the notification is for a form, then enter the record ID.
+      - **Row ID**: If the notification is for a form, then enter the row ID.
 
       ![Enter the notification information for the app](media/modelapp-info.png)
 
@@ -112,13 +112,44 @@ When you trigger a push notification from a flow, you can send the notification 
      - **Recipient Items-1**: Select how the flow is triggered.
      - **Message**: Enter the notification message.
      - **Open app**: Select whether to open the app or not when the user selects the notification.
-     - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Load a specific page and context when a user taps the notification](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-notifications#load-a-specific-page-and-context-when-a-user-taps-the-notification).
+     - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Perform an action when a user taps the notification](power-apps-mobile-notification.md#perform-an-action-when-a-user-taps-the-notification).
 	 
      ![Enter the notification information](media/canvasapp-info.png)
 	
 8. When you're done, select **Save**. 
 9. Select **Flow checker** to check for error or warnings.
 10. Test the flow by selecting **Test** and follow the prompts. 
+
+## Perform an action when a user taps the notification
+
+### Pass parameters
+
+For canvas apps, you can pass key-value pairs using the **Parameters** field as JSON. For example, if you wanted to pass the CaseID, you would put the following as **Parameters**:
+` { "CaseID": 42 }`. You can also use dynamic values from earlier steps as shown below.
+
+![Sample parameters](media/para-image.png)
+
+### Read parameters
+
+To read the passed parameters, use Param("ParameterName"). For example, to read the **CaseID** value, use *Param("CaseID")*. To quickly identify this parameter, add a **Label** control to your app. Set the **Text** property of that control to **Param("CaseID")**. If the user opens the app from the **All apps** list, the value is empty. If the user opens the app from another location on the device, the value is populated with the **CaseID** value.
+
+### Set the start page
+
+You can set your app to open, for example, the **Case details** page as soon as the app opens:
+
+1. Add a **Timer** control, and set its **OnTimerEnd** property to this formula:
+
+    `Navigate(EditCase, ScreenTransition.None)`
+
+1. (optional) Hide the **Timer** control by setting its **Visible** property to **false**.
+
+1. Set the **OnVisible** property of the screen to **Timer.Start()**.
+
+> [!TIP]
+> It's a good idea to create a unique first page in the app for the notification:
+> 
+> 1. Create an empty page that your app doesn't already open, add a **Text Input** control, and set its **timer.Duration** value.
+> 2. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.
 
 
 ## Known limitations

@@ -1,8 +1,8 @@
 ---
-title: "Retrieve related entity records with a query (Common Data Service)| Microsoft Docs"
+title: "Retrieve related entity records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how you can retrieve related entity records by expanding the navigation properties."
 ms.custom: ""
-ms.date: 06/27/2020
+ms.date: 11/16/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -207,9 +207,11 @@ OData-Version: 4.0
 
 ## Retrieve related entities by expanding collection-valued navigation properties
 
-If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, an `@odata.nextLink` property will be returned for the related entities. You should use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
+If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, only one level of depth is returned if there is data. Otherwise the collection will return an empty array.
 
-The following example retrieves the tasks assigned to the top 2 account records.  
+In either case an `@odata.nextLink` property will be returned for the related entities. If you want to retrieve the collection separately, you can use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
+
+The following example retrieves the tasks assigned to the top 2 account records.  One has related tasks, the other does not.
   
 **Request**
 
@@ -229,24 +231,46 @@ HTTP/1.1 200 OK
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
   
-{  
-   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))",
-   "value":[  
-      {  
-         "@odata.etag":"W/\"513475\"",
-         "name":"Fourth Coffee (sample)",
-         "accountid":"36dbf27c-8efb-e511-80d2-00155db07c77",
-         "Account_Tasks":[],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(36dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
-      },
-      {  
-         "@odata.etag":"W/\"513477\"",
-         "name":"Litware, Inc. (sample)",
-         "accountid":"38dbf27c-8efb-e511-80d2-00155db07c77",
-         "Account_Tasks":[],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(38dbf27c-8efb-e511-80d2-00155db07c77)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
-      }
-   ]
+{
+    "@odata.context": "[Organization URI]/api/data/v9.1/$metadata#accounts(name,Account_Tasks(subject,scheduledstart))",
+    "value": [
+        {
+            "@odata.etag": "W/\"37867294\"",
+            "name": "Contoso, Ltd. (sample)",
+            "accountid": "7a4814f9-b0b8-ea11-a812-000d3a122b89",
+            "Account_Tasks": [
+                {
+                    "@odata.etag": "W/\"28876919\"",
+                    "subject": "Task 1 for Contoso, Ltd.",
+                    "scheduledstart": null,
+                    "_regardingobjectid_value": "7a4814f9-b0b8-ea11-a812-000d3a122b89",
+                    "activityid": "7b4814f9-b0b8-ea11-a812-000d3a122b89"
+                },
+                {
+                    "@odata.etag": "W/\"28876923\"",
+                    "subject": "Task 2 for Contoso, Ltd.",
+                    "scheduledstart": null,
+                    "_regardingobjectid_value": "7a4814f9-b0b8-ea11-a812-000d3a122b89",
+                    "activityid": "7c4814f9-b0b8-ea11-a812-000d3a122b89"
+                },
+                {
+                    "@odata.etag": "W/\"28876927\"",
+                    "subject": "Task 3 for Contoso, Ltd.",
+                    "scheduledstart": null,
+                    "_regardingobjectid_value": "7a4814f9-b0b8-ea11-a812-000d3a122b89",
+                    "activityid": "7d4814f9-b0b8-ea11-a812-000d3a122b89"
+                }
+            ],
+            "Account_Tasks@odata.nextLink": "[Organization URI]/api/data/v9.1/accounts(7a4814f9-b0b8-ea11-a812-000d3a122b89)/Account_Tasks?$select=subject,scheduledstart"
+        },
+        {
+            "@odata.etag": "W/\"37526208\"",
+            "name": "Fourth Coffee",
+            "accountid": "ccd685f9-cddd-ea11-a813-000d3a122b89",
+            "Account_Tasks": [],
+            "Account_Tasks@odata.nextLink": "[Organization URI]/api/data/v9.1/accounts(ccd685f9-cddd-ea11-a813-000d3a122b89)/Account_Tasks?$select=subject,scheduledstart"
+        }
+    ]
 }
  
 ```  
@@ -255,7 +279,7 @@ OData-Version: 4.0
   
 ## Retrieve related entities by expanding both single-valued and collection-valued navigation properties
 
-The following example demonstrates how you can expand related entities for entity sets using both single- and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns an `@odata.nextLink` property for the related entities. You should use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
+The following example demonstrates how you can expand related entities for entity sets using both single and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns one level of depth and an `@odata.nextLink` property for the related entities.  
   
 In this example, we are retrieving the contact and tasks assigned to the top 2 accounts.  
   
@@ -278,33 +302,54 @@ HTTP/1.1 200 OK
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
   
-{  
-   "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#accounts(name,primarycontactid,Account_Tasks,primarycontactid(contactid,fullname),Account_Tasks(subject,scheduledstart))",
-   "value":
-   [  
-      {  
-         "@odata.etag":"W/\"550614\"",
-         "name":"Fourth Coffee (sample)",
-         "accountid":"5b9648c3-68f7-e511-80d3-00155db53318",
-         "primarycontactid":{  
-            "contactid":"c19648c3-68f7-e511-80d3-00155db53318",
-            "fullname":"Yvonne McKay (sample)"
-         },
-         "Account_Tasks":[],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5b9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
-      },
-      {  
-         "@odata.etag":"W/\"550615\"",
-         "name":"Litware, Inc. (sample)",
-         "accountid":"5d9648c3-68f7-e511-80d3-00155db53318",
-         "primarycontactid":{  
-            "contactid":"c39648c3-68f7-e511-80d3-00155db53318",
-            "fullname":"Susanna Stubberod (sample)"
-         },
-         "Account_Tasks":[],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5d9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
-      }
-   ]
+{
+    "@odata.context": "[Organization URI]/api/data/v9.1/$metadata#accounts(name,primarycontactid(contactid,fullname),Account_Tasks(subject,scheduledstart))",
+    "value": [
+        {
+            "@odata.etag": "W/\"37867294\"",
+            "name": "Contoso, Ltd. (sample)",
+            "accountid": "7a4814f9-b0b8-ea11-a812-000d3a122b89",
+            "primarycontactid": {
+                "contactid": "7e4814f9-b0b8-ea11-a812-000d3a122b89",
+                "fullname": "Yvonne McKay (sample)"
+            },
+            "Account_Tasks": [
+                {
+                    "@odata.etag": "W/\"28876919\"",
+                    "subject": "Task 1 for Contoso, Ltd.",
+                    "scheduledstart": null,
+                    "_regardingobjectid_value": "7a4814f9-b0b8-ea11-a812-000d3a122b89",
+                    "activityid": "7b4814f9-b0b8-ea11-a812-000d3a122b89"
+                },
+                {
+                    "@odata.etag": "W/\"28876923\"",
+                    "subject": "Task 2 for Contoso, Ltd.",
+                    "scheduledstart": null,
+                    "_regardingobjectid_value": "7a4814f9-b0b8-ea11-a812-000d3a122b89",
+                    "activityid": "7c4814f9-b0b8-ea11-a812-000d3a122b89"
+                },
+                {
+                    "@odata.etag": "W/\"28876927\"",
+                    "subject": "Task 3 for Contoso, Ltd.",
+                    "scheduledstart": null,
+                    "_regardingobjectid_value": "7a4814f9-b0b8-ea11-a812-000d3a122b89",
+                    "activityid": "7d4814f9-b0b8-ea11-a812-000d3a122b89"
+                }
+            ],
+            "Account_Tasks@odata.nextLink": "[Organization URI]/api/data/v9.1/accounts(7a4814f9-b0b8-ea11-a812-000d3a122b89)/Account_Tasks?$select=subject,scheduledstart"
+        },
+        {
+            "@odata.etag": "W/\"37526208\"",
+            "name": "Fourth Coffee",
+            "accountid": "ccd685f9-cddd-ea11-a813-000d3a122b89",
+            "primarycontactid": {
+                "contactid": "384d0f84-7de6-ea11-a817-000d3a122b89",
+                "fullname": "Charlie Brown"
+            },
+            "Account_Tasks": [],
+            "Account_Tasks@odata.nextLink": "[Organization URI]/api/data/v9.1/accounts(ccd685f9-cddd-ea11-a813-000d3a122b89)/Account_Tasks?$select=subject,scheduledstart"
+        }
+    ]
 }
 ```
 

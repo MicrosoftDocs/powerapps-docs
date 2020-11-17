@@ -1,6 +1,6 @@
 ---
-title: "Create custom entity (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Shows how to programmatically create a custom entity in Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create custom entity (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Shows how to programmatically create a custom entity in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"

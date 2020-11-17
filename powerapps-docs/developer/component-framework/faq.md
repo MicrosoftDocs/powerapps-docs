@@ -18,7 +18,7 @@ ms.reviewer: nkrb
 ### Component changes are not reflected after the updated solution import?
 
 Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). 
-Every update in the component needs a component version bump to be reflected on the Common Data Service server.
+Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
 
 > [!NOTE]
 > - A new solution must be created everytime if you wish to have a major version bump. Incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade.

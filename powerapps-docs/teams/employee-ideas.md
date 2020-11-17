@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Employee ideas app
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 In this tutorial, learn about the Employee ideas app, and how to use them effectively.
 
 ## Overview
@@ -34,6 +32,9 @@ Employee ideas app is used by the Teams users to perform the following activitie
 > [!NOTE]
 > - Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
 > - This app is available in three different Teams themes: Default, Dark and High contrast. When you [change the theme in Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7), the app automatically updates to match the selected theme. More information: [Get the Teams theme using the Teams integration object](use-teams-integration-object.md#get-the-teams-theme)
+
+> [!TIP]
+> For a demonstration of how to use this app, watch this [video](https://aka.ms/TeamsEmployeeIdeasVideo).
 
 ## Prerequisites
 
