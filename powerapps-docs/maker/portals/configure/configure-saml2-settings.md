@@ -10,19 +10,17 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure SAML 2.0 provider for portals with AD FS
-
-Settings for an identity provider such as [!include[](../../../includes/pn-active-dir-fed-svcs-ad-fs.md)].
-
+# Configure a SAML 2.0 provider for portals with AD FS
+<!--note from editor: Some edits made to be parallel with configure-ws-federation-settings.md. Like that article, this one has some unusual language and formatting, but without screenshots I hesitate to change anything.-->
 > [!IMPORTANT]
-> The steps for the configuration of AD FS may vary depending on the version of your AD FS server.
+> The steps for the configuration of Active Directory Federation Services (AD FS) might vary depending on the version of your AD FS server.
 
 ### Create an AD FS relying party trust
 
-> [!Note]
-> See [Configure AD FS by using PowerShell](#configure-ad-fs-by-using-powershell), for information about how to perform these steps in a [!INCLUDE[pn-powershell-short](../../../includes/pn-powershell-short.md)] script.
+> [!NOTE]
+> See [Configure AD FS by using PowerShell](#configure-ad-fs-by-using-powershell), for information about how to perform these steps in a PowerShell script.
 
-Using the [!include[](../../../includes/pn-adfs-short.md)] Management tool, go to **Service** > **Claim Descriptions**.
+Using the [AD FS Management tool, go to **Service** > **Claim Descriptions**.
 
 1.  Select **Add Claim Description**.
 2.  Specify the claim:
@@ -37,7 +35,7 @@ Using the [!include[](../../../includes/pn-adfs-short.md)] Management tool, go t
 
 3.  Select **OK**.
 
-Using the [!include[](../../../includes/pn-adfs-short.md)] Management tool, select **Trust Relationships** >**Relying Party Trusts**.
+Using the AD FS Management tool, select **Trust Relationships** >**Relying Party Trusts**.
 
 1. Select **Add Relying Party Trust**.
 2. Welcome: Select **Start**.
@@ -47,22 +45,21 @@ Using the [!include[](../../../includes/pn-adfs-short.md)] Management tool, sele
 5. Choose Profile: Select **AD FS 2.0 profile**, and then select **Next**.
 6. Configure Certificate: Select **Next**.
 7. Configure URL: Select the **Enable support for the SAML 2.0 WebSSO protocol** check box.
-   Relying party SAML 2.0 SSO service URL: Enter https://portal.contoso.com/signin-saml2
-   - Note: [!include[](../../../includes/pn-adfs-short.md)] requires that the portal run on HTTPS.
+   Relying party SAML 2.0 SSO service URL: Enter https://portal.contoso.com/signin-saml2<br>Note that AD FS requires that the portal run on HTTPS.
 
-   > [!Note] 
+   > [!NOTE] 
    > The resulting endpoint has the following settings: 
-   > - Endpoint type: **SAML Assertion Consume Endpoints**             
-   > - Binding: **POST**                                            
-   > - Index: n/a (0)                                              
+   > - Endpoint type: **SAML Assertion Consume Endpoints**
+   > - Binding: **POST**
+   > - Index: n/a (0)
    > - URL: **https://portal.contoso.com/signin-saml2**
 
-8. Configure Identities: Specify https://portal.contoso.com/, select **Add**, and then select **Next**.
-   If applicable, you can add more identities for each additional relying party portal. Users can authenticate across any or all of the available identities.
+8. Configure Identities: Enter<!--note from editor: Edit okay? If you choose rather than enter this URL, should be "select"--> https://portal.contoso.com/, select **Add**, and then select **Next**.
+   If applicable, you can add more identities for each additional relying party portal. Users can authenticate across any or all available identities.
 9. Choose Issuance Authorization Rules: Select **Permit all users to access this relying party**, and then select **Next**.
 10. Ready to Add Trust: Select **Next**.
 11. Select **Close**.
-
+<!--note from editor: How do the following steps fit with the previous steps? Should this have its own procedure heading? (And if so, the previous procedure needs a heading too.)-->
 Add the **Name ID** claim to the relying party trust:
 
 **Transform[!INCLUDE[pn-ms-windows-short](../../../includes/pn-ms-windows-short.md)] account name** to **Name ID** claim (Transform an Incoming Claim):
@@ -77,15 +74,15 @@ Add the **Name ID** claim to the relying party trust:
 
 ### Configure the SAML 2.0 provider
 
-After setting up the AD FS relying party trust, you can follow the steps to [configure the SAML 2.0 provider](configure-saml2-provider.md).
+After setting up the AD FS relying party trust, you can follow the steps in [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md).
 
-### IdP-initiated sign-in
+### Identity provider&ndash;initiated sign-in
 
-[!include[](../../../includes/pn-adfs-short.md)] supports the [IdP-initiated single sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/manage-apps/configure-saml-single-sign-on) profile of the SAML 2.0 [specification](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). In order for the portal (service provider) to respond properly to the SAML request started by the IdP, the [RelayState](https://blogs.technet.com/b/askds/archive/2012/09/27/ad-fs-2-0-relaystate.aspx) parameter must be encoded properly.  
+AD FS supports the [identity provider&ndash;initiated single sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/manage-apps/configure-saml-single-sign-on) profile of the SAML 2.0 [specification](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). In order for the portal (service provider) to respond properly to the SAML request started by the identity provider, the [RelayState](https://blogs.technet.com/b/askds/archive/2012/09/27/ad-fs-2-0-relaystate.aspx) parameter must be encoded properly.  
 
 The basic string value to be encoded into the SAML RelayState parameter must be in the format `ReturnUrl=/content/sub-content/`, where `/content/sub-content/` is the path to the webpage you want to go to on the portal (service provider). The path can be replaced by any valid webpage on the portal. The string value is encoded and placed into a container string of the format `RPID=&lt;URL encoded RPID&gt;&RelayState=&lt;URL encoded RelayState&gt;`. This entire string is once again encoded and added to another container of the format `<https://adfs.contoso.com/adfs/ls/idpinitiatedsignon.aspx?RelayState=&lt;URL> encoded RPID/RelayState&gt;`.
 
-For example, given the service provider path `/content/sub-content/` and the relying party ID `https://portal.contoso.com/`, construct the URL with the steps:
+For example, given the service provider path `/content/sub-content/` and the relying party ID `https://portal.contoso.com/`, construct the URL with the following steps:
 
 - Encode the value `ReturnUrl=/content/sub-content/` to get `ReturnUrl%3D%2Fcontent%2Fsub-content%2F`
 
@@ -93,9 +90,9 @@ For example, given the service provider path `/content/sub-content/` and the rel
 
 - Encode the value `RPID=https%3A%2F%2Fportal.contoso.com%2F&RelayState=ReturnUrl%3D%2Fcontent%2Fsub-content%2F` to get `RPID%3Dhttps%253A%252F%252Fportal.contoso.com%252F%26RelayState%3DReturnUrl%253D%252Fcontent%252Fsub-content%252F`
 
-- Prepend the AD FS IdP-initiated SSO path to get the final URL `https://adfs.contoso.com/adfs/ls/idpinitiatedsignon.aspx?RelayState=RPID%3Dhttps%253A%252F%252Fportal.contoso.com%252F%26RelayState%3DReturnUrl%253D%252Fcontent%252Fsub-content%252F`
+- Prepend the AD FS identity provider&ndash;initiated SSO path to get the final URL `https://adfs.contoso.com/adfs/ls/idpinitiatedsignon.aspx?RelayState=RPID%3Dhttps%253A%252F%252Fportal.contoso.com%252F%26RelayState%3DReturnUrl%253D%252Fcontent%252Fsub-content%252F`
 
-The following [!INCLUDE[pn-powershell-short](../../../includes/pn-powershell-short.md)] script can be used to construct the URL (save to a file named Get-IdPInitiatedUrl.ps1).
+You can use the following PowerShell script to construct the URL. Save the script<!--note from editor: Edit okay?--> to a file named Get-IdPInitiatedUrl.ps1.
 
 ```
 <#
@@ -155,7 +152,7 @@ Write-Output $idpInitiatedUrl
 
 ## Configure AD FS by using PowerShell
 
-The process of adding a relying party trust in [!include[](../../../includes/pn-adfs-short.md)] can also be performed by running the following [!INCLUDE[pn-powershell-short](../../../includes/pn-powershell-short.md)] script on the [!include[](../../../includes/pn-adfs-short.md)] server (save contents to a file named Add-AdxPortalRelyingPartyTrustForSaml.ps1). After running the script, continue with configuring the portal site settings.
+The process of adding a relying party trust in AD FS can also be performed by running the following PowerShell script on the AD FS server. Save the script<!--note from editor: Edit okay?--> to a file named Add-AdxPortalRelyingPartyTrustForSaml.ps1. After running the script, continue with configuring the portal site settings.
 
 ```
 <# 
@@ -257,12 +254,12 @@ Add-ADFSClaimDescription -name "Persistent Identifier" -ClaimType "urn:oasis:nam
 Add-CrmRelyingPartyTrust $domain
 ```
 
-### Configure the SAML 2.0 provider
+### Configure a SAML 2.0 provider
 
-After setting up the AD FS relying party trust, you can follow the steps to [configure the SAML 2.0 provider](configure-saml2-provider.md).
+After setting up the AD FS relying party trust, you can follow the steps in [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md).
 
 ### See also
 
-- [Example: Configure SAML 2.0 for portals with Azure Active Directory](configure-saml2-settings-azure-ad.md)
-- [Frequently Asked Questions (FAQs) when using SAML 2.0 in portals](configure-saml2-faqs.md)
-- [Configure SAML 2.0 provider for portals](configure-saml2-provider.md)
+[Configure a SAML 2.0 provider for portals with Azure AD](configure-saml2-settings-azure-ad.md)  
+[FAQ for using SAML 2.0 in portals](configure-saml2-faqs.md)  
+[Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)
