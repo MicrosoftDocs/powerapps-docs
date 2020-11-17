@@ -21,7 +21,9 @@ A portal owner can configure the portal [!include[Azure](../../../includes/pn-az
 In this article, learn about how to configure Azure Active Directory B2C as the identity provider automatically using a feature in preview. Using these steps, you can create new Azure AD B2C tenant, register application and configure user flows from within Power Apps portals. If you want to configure the Azure AD B2C provider manually, go to [Configure Azure AD B2C provider manually](configure-azure-ad-b2c-provider-manual.md).
 
 > [!NOTE]
-> Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
+> Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. Restart the portal by using [portal actions](../admin/admin-overview.md) if you want the changes to be reflected immediately.
+<!--markdownlint-disable MD036-->
+**To configure Azure AD B2C as the OpenID Connect provider**
 
 Follow these steps to configure Azure AD B2C as the OpenID Connect provider.
 
