@@ -1,5 +1,5 @@
 ---
-title: "Use the Web API with metadata (Common Data Service) | Microsoft Docs"
+title: "Use the Web API with metadata (Microsoft Dataverse) | Microsoft Docs"
 description: "The section provides guidance about how to use the Web API with the entity types included in Web API Metadata EntityType Reference."
 ms.custom: ""
 ms.date: 04/22/2019
@@ -8,7 +8,7 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
-ms.author: "susikka"
+ms.author: pehecke
 manager: "shujoshi"
 search.audienceType: 
   - developer
@@ -59,4 +59,4 @@ You can check whether entities are eligible to participate in a relationship wit
 ### See also
 
 [Browse the metadata for your environment](../browse-your-metadata.md)<br />
-[Use the Common Data Service Web API](overview.md)
+[Use the Microsoft Dataverse Web API](overview.md)

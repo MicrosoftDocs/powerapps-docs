@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships for  Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships for  Microsoft Dataverse.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)

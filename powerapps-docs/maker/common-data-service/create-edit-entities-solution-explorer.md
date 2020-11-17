@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can easily create a table using Power Apps ([make.powerapps.com](https://make.powerapps.com) for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Common Data Service](create-edit-entities.md), you can achieve them by creating or editing tables using the Solution Explorer.
+You can easily create a table using Power Apps ([make.powerapps.com](https://make.powerapps.com) for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Microsoft Dataverse](create-edit-entities.md), you can achieve them by creating or editing tables using the Solution Explorer.
 
 ## Open solution explorer
 
@@ -108,7 +108,7 @@ Both should point to this include
 [!INCLUDE [cc_entity-changeable-options-table](../../includes/cc_entity-changeable-options-table.md)]
 
 You can also make the following changes:
-- [Create and edit columns for Common Data Service](create-edit-fields.md)
+- [Create and edit columns for Dataverse](create-edit-fields.md)
 - [Create and edit relationships between tables](create-edit-entity-relationships.md)
 - [Create and design forms](../model-driven-apps/create-design-forms.md)
 - [Create a business process flow to standardize processes](/flow/create-business-process-flow)
@@ -197,6 +197,6 @@ Some options are only used when creating a virtual table.
 More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create and edit tables in Common Data Service](create-edit-entities.md)<br />
+[Create and edit tables in Dataverse](create-edit-entities.md)<br />
 [Tutorial: Create a custom table that has components in Power Apps](/powerapps/maker/common-data-service/create-custom-entity)<br />
 [Create a solution](create-solution.md)

@@ -1,5 +1,5 @@
 ---
-title: "Access external web services (Common Data Service) | MicrosoftDocs"
+title: "Access external web services (Microsoft Dataverse) | MicrosoftDocs"
 description: "Learn how to access a web service from a custom plug-in or workflow activity."
 ms.custom: ""
 ms.date: 8/19/2019

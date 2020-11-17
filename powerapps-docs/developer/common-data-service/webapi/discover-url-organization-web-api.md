@@ -1,5 +1,5 @@
 ---
-title: "Discover the URL for your organization (Common Data Service)| Microsoft Docs"
+title: "Discover the URL for your organization (Microsoft Dataverse)| Microsoft Docs"
 description: "Use the Discovery Service to find the organizations (instances) that the logged-on user belongs to"
 ms.custom: ""
 ms.date: 1/16/2020
@@ -56,9 +56,9 @@ For the global Discovery Service, the `Instances` entity set, returns the set of
 
 ## How to access the Discovery Service
 
-In general, the Web address of the Discovery Service has the following format: `<service base address>/api/discovery/`.  You can easily find the Web address and version number for your deployment in the Common Data Service Web application by navigating to **Settings > Customization > Developer Resources**  
+In general, the Web address of the Discovery Service has the following format: `<service base address>/api/discovery/`.  You can easily find the Web address and version number for your deployment in the Microsoft Dataverse Web application by navigating to **Settings > Customization > Developer Resources**  
   
-### Common Data Service Discovery services  
+### Dataverse Discovery services  
 
 The service base address of the global Discovery Service is : `https://globaldisco.crm.dynamics.com/`. This results in the service address of `https://globaldisco.crm.dynamics.com/api/discovery/`.  
   

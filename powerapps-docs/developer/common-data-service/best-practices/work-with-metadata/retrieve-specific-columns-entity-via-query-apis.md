@@ -42,7 +42,7 @@ Retrieving all columns can cause:
 
 ## Guidance
 
-For optimal performance, you should only select the minimum amount of data needed by your application when querying Common Data Service data. 
+For optimal performance, you should only select the minimum amount of data needed by your application when querying Microsoft Dataverse data. 
 
 ### ColumnSet Parameter
 

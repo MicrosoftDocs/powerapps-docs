@@ -42,13 +42,13 @@ resolve each issue.
 
 The solution checker analyzes these solution components:
 
--   Common Data Service plug-ins
+-   Microsoft Dataverse plug-ins
 
--   Common Data Service custom workflow activities
+-   Dataverse custom workflow activities
 
--   Common Data Service web resources (HTML and JavaScript)
+-   Dataverse web resources (HTML and JavaScript)
 
--   Common Data Service configurations, such as SDK message steps
+-   Dataverse configurations, such as SDK message steps
 
 **Things to consider** 
 
@@ -164,7 +164,7 @@ Interface are the following:
 
 ### What are model-driven apps?
 
-**Model-driven apps** are a type of app you can create using Power Apps that helps you provide tailored experience to your users depending on their role in the organization. For example, a salesperson can have a completely different experience than a customer service representative through different model-driven apps even though they are using data from the same environment. Multiple model-driven apps can be created in a Common Data Service environment. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
+**Model-driven apps** are a type of app you can create using Power Apps that helps you provide tailored experience to your users depending on their role in the organization. For example, a salesperson can have a completely different experience than a customer service representative through different model-driven apps even though they are using data from the same environment. Multiple model-driven apps can be created in a Dataverse environment. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
 
 The Dynamics 365 apps listed earlier are examples of model-driven apps.
 

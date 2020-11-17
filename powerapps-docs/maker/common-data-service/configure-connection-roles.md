@@ -24,7 +24,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-With Common Data Service you can define **connections** between table rows without creating a table relationship. In model-driven apps people can establish a named link between rows to establish less a formal relationship which doesn't justify creating an actual table relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocal, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
+With Microsoft Dataverse you can define **connections** between table rows without creating a table relationship. In model-driven apps people can establish a named link between rows to establish less a formal relationship which doesn't justify creating an actual table relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocal, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
 
 When people set a connection between two rows, they can also add a description and additional information such as start and end dates for the relationship. More information: [Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-fields)
 
@@ -45,7 +45,7 @@ Anyone with write access to the **Connection Role** table can establish which co
 
 ## View connection roles
 
-There are a number of standard connection roles already configured in Common Data Service.  
+There are a number of standard connection roles already configured in Dataverse.  
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left pane select  **Solutions**. 
 2. Open the unmanaged solution you want. 
@@ -116,7 +116,7 @@ The default **Connection Role Category** values are:
 - Sales Team
 - Service
 
-You can add new categories or modify existing ones by editing the **Category** global choice. More information: [Create and edit global choices for Common Data Service (picklists)](create-edit-global-option-sets.md)
+You can add new categories or modify existing ones by editing the **Category** global choice. More information: [Create and edit global choices for Dataverse (picklists)](create-edit-global-option-sets.md)
 
 #### Select row types
 
@@ -150,7 +150,7 @@ If more than one matching connection role is configured, those connection roles 
 ### See also
 <!-- This is in the basics guide. It needs to be migrated -->
 [Create connections to define and view relationships between rows](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
-[Create and edit global choices for Common Data Service (picklists)](create-edit-global-option-sets.md)<br />
+[Create and edit global choices for Dataverse (picklists)](create-edit-global-option-sets.md)<br />
 [Create and edit relationships between tables](create-edit-entity-relationships.md)
 
 

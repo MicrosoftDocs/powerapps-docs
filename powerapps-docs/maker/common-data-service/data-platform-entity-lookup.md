@@ -133,9 +133,9 @@ For more information on defaults and custom behaviors: [Configure table relation
 If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from a table that contains a lookup column, it appears as a **Drop down** control that contains data from the **Primary name** column of the table.
 
 ## Add 1:N and N:N relationships for canvas apps
-Use the **Relate** function to link two rows through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in Power Apps](../canvas-apps/functions/function-relate-unrelate.md)
+Use the **Relate** function to link two rows through a one-to-many or many-to-many relationship in Microsoft Dataverse. More information: [Relate and Unrelate functions in Power Apps](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## Next steps
-* [Generate an app by using a Common Data Service database](../canvas-apps/data-platform-create-app.md)
-* [Create an app from scratch using a Common Data Service database](../canvas-apps/data-platform-create-app-scratch.md)
+* [Generate an app by using a Dataverse database](../canvas-apps/data-platform-create-app.md)
+* [Create an app from scratch using a Dataverse database](../canvas-apps/data-platform-create-app-scratch.md)
 
