@@ -16,11 +16,13 @@ In this tutorial, you’ll build a solution that retrieves, lists, and displays 
 
 ![Video Library app](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-intro.png "Video Library app")
 
-The focus of this lab will be on finding, retrieving, browsing, and playing video content available on YouTube or RSS Feeds with MP4 video files.  It will continually monitor these channels and feeds for new content, and send a message to a specified Microsoft Team when new content is available.
+## Objective
 
-The channels and feeds in the lab will focus on Power Platform content but can easily be used for other topics.
+The focus of this tutorial will be on finding, retrieving, browsing, and playing video content available on YouTube or RSS Feeds with MP4 video files.  It will continually monitor these channels and feeds for new content, and send a message to a specified Microsoft Team when new content is available.
 
-In this lab, you’ll use:
+The channels and feeds in the tutorial will focus on Power Platform content but can easily be used for other topics.
+
+In this tutorial, you’ll use:
 
 - Power Apps to build the application to specify the YouTube channels and RSS feeds.
 - Power Automate to retrieve information about new and existing videos.
@@ -35,15 +37,15 @@ In this lab, you’ll use:
 
 If you’re unfamiliar with how to create a Team or a channel in a Team, see [Create a channel in Teams](https://support.microsoft.com/office/create-a-channel-in-teams-fda0b75e-5b90-4fb8-8857-7e102b014525).
 
-In this lab, we'll use a channel named "Readiness".
+In this tutorial, we'll use a channel named "Readiness".
 
-## Install and pin Power Apps in Teams
+## Step 1: Install and pin Power Apps in Teams
 
 In this section, you’ll install the Power Apps app in Teams and pin it to the left rail so you can easily access it. To learn how to do install and pin the Power Apps app, see [Install the Power Apps personal app in Microsoft Teams](https://docs.microsoft.com/powerapps/teams/install-personal-app).
 
 If you’ve already done installed and pinned the Power Apps app, you can skip to the next step.
 
-## Create the app and the tables
+## Step 2: Create the app and the tables
 
 In this section, you’ll take the initial steps to create the application.
 
@@ -64,7 +66,7 @@ In this section, you’ll take the initial steps to create the application.
 
 1. When prompted for the name of the app, enter **Video Library** and select **Save**.
 
-### Create the table for the feeds
+### Step 2.1: Create the table for the feeds
 
 In this section, you'll create a table to store the names and details for the feeds that will be used by the application.
 
@@ -74,7 +76,7 @@ In this section, you'll create a table to store the names and details for the fe
 
 1. Select **Create**.
 
-#### Edit the Name column
+#### Step 2.1.1: Edit the Name column
 
 1. In the visual editor, select the drop-down menu for the **Name** column and then **Edit column**.
 
@@ -84,7 +86,7 @@ In this section, you'll create a table to store the names and details for the fe
 
 1. Select **Save**.
 
-#### Create the Description column
+#### Step 2.1.2: Create the Description column
 
 1. Select **+** to create a new column.
 
@@ -96,7 +98,7 @@ In this section, you'll create a table to store the names and details for the fe
 
 1. Select **Create**.
 
-#### Create the Image Link column
+#### Step 2.1.3: Create the Image Link column
 
 1. Select **+** to create a new column.
 
@@ -108,7 +110,7 @@ In this section, you'll create a table to store the names and details for the fe
 
 1. Select **Create**.
 
-#### Create the Image Title column
+#### Step 2.1.4: Create the Image Title column
 
 1. Select **+** to create a new column.
 
@@ -120,7 +122,7 @@ In this section, you'll create a table to store the names and details for the fe
 
 1. Select **Create**.
 
-#### Create the Last Retrieved column
+#### Step 2.1.5: Create the Last Retrieved column
 
 1. Select **+** to create a new column.
 
@@ -130,7 +132,7 @@ In this section, you'll create a table to store the names and details for the fe
 
 1. Select **Create**.
 
-#### Create the Link column
+#### Step 2.1.6: Create the Link column
 
 1. Select **+** to create a new column.
 
@@ -142,7 +144,7 @@ In this section, you'll create a table to store the names and details for the fe
 
 1. Select **Create**.
 
-#### Create the Published On column
+#### Step 2.1.7: Create the Published On column
 
 1. Select **+** to create a new column.
 
@@ -152,7 +154,7 @@ In this section, you'll create a table to store the names and details for the fe
 
 1. Select **Create**
 
-#### Add a row
+#### Step 2.1.8: Add a row
 
 In the visual editor, add a row for the Microsoft show "\#LessCodeMorePower" that will be used in testing.
 
@@ -178,7 +180,7 @@ The screen should resemble the image below.
 
 ![Screen created in the app](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-screen1.png "Screen created in the app")
 
-### Create the table for the feed items
+### Step 2.2: Create the table for the feed items
 
 In this section, you'll create a table to store the details for the videos stored in the Feed Items for the YouTube channel or RSS feed.
 
@@ -190,7 +192,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. When prompted for the name of the table, enter *Feed Items*.
 
-#### Edit the Name column
+#### Step 2.2.1: Edit the Name column
 
 1. In the visual editor, select the drop-down for the **Name** column, and then select **Edit column**.
 
@@ -200,7 +202,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. Select **Save**.
 
-#### Create the Feed column
+#### Step 2.2.2: Create the Feed column
 
 1. Select **+** to create a new column.
 
@@ -212,7 +214,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. Select **Create**.
 
-#### Create the Title column
+#### Step 2.2.3: Create the Title column
 
 1. Select **+** to create a new column.
 
@@ -224,7 +226,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. Select **Create**.
 
-#### Create the Description column
+#### Step 2.2.4: Create the Description column
 
 1. Select **+** to create a new column.
 
@@ -236,7 +238,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. Select **Create**.
 
-#### Create the Primary Feed Link column
+#### Step 2.2.5: Create the Primary Feed Link column
 
 1. Select **+** to create a new column.
 
@@ -248,7 +250,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. Select **Create**.
 
-#### Create the Video Link column
+#### Step 2.2.6: Create the Video Link column
 
 1. Select **+** to create a new column.
 
@@ -260,7 +262,7 @@ In this section, you'll create a table to store the details for the videos store
 
 1. Select **Create**.
 
-#### Create the Published On column
+#### Step 2.2.7: Create the Published On column
 
 1. Select **+** to create a new column.
 
@@ -278,7 +280,7 @@ Select **Close** to close the visual editor.
 
 Now that you’ve created the required tables, select **Save** on the upper-right corner to save the app and close the Power Apps Studio.
 
-## Create flows to get the video details for configured feeds
+## Step 3: Create flows to get the video details for configured feeds
 
 In this section, you'll create flows in Power Automate to retrieve videos for each of the configured feeds. This flow will monitor the RSS feeds for the addition of new videos, retrieve details for the videos, and save those details in the database.
 
@@ -289,7 +291,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 > [!NOTE]
 > Power Automate has a trigger that allows you to detect when a new item is added to a feed for an individual feed. When tracking multiple feeds, this would require multiple feeds and would require the same number of flows to match the number of feeds. The approach taken in this lab is more complex but with the benefit of having a single flow that supports any number of configured feeds in a single flow.
 
-### Create the flow
+### Step 3.1: Create the flow
 
 1. Select the **Build** tab.
 
@@ -315,7 +317,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
     > [!div class="mx-imgBorder"]
     > ![Build a scheduled flow](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-schedflow.png "Build a scheduled flow")
 
-### Add the initialize variable action
+### Step 3.2: Add the initialize variable action
 
 1. Select **New step**.
 
@@ -332,7 +334,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
     > [!NOTE]
     > Don’t enter any value in the **Value** field.
 
-### Add the List Records action
+### Step 3.3: Add the List Records action
 
 1. Select **New Step**.
 
@@ -346,7 +348,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
     ![Add the List Records action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-feedslist.png "Add the List Records action")
 
-### Add the Current time action
+### Step 3.4: Add the Current time action
 
 1. Select **New Step**.
 
@@ -355,7 +357,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
     > [!div class="mx-imgBorder"]
     > ![Add the Current time action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-current-time.png "Add the Current time action")
 
-### Add the Apply to each action
+### Step 3.5: Add the Apply to each action
 
 1. Select **New Step**.
 
@@ -371,7 +373,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
     ![Add the Apply to Each action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-loopfeeds.png "Add the Apply to Each action")
 
-### Add the List all RSS Feed Items action
+### Step 3.6: Add the List all RSS Feed Items action
 
 1. Select **Add an action**.
 
@@ -385,7 +387,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
     ![Add the List all RSS Feed Items action](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-rssfeeds.png "Add the List all RSS Feed Items action")
 
-### Add the Apply to Each Action
+### Step 3.7: Add the Apply to Each Action
 
 1. Select **Add an action**.
 
@@ -401,7 +403,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
     ![Loop through each of the items in the feed since last retrieved](media/tutorial-buildapp-retrieve-videos/feeds-body-loop-through.png "Loop through each of the items in the feed since last retrieved")
 
-### Add the Apply to Each action
+### Step 3.8: Add the Apply to Each action
 
 1. Select **Add an action** inside *Loop through each of the items in the feed since last retrieved*.
 
@@ -417,7 +419,7 @@ When you’ve completed this section, your flow should resemble the diagram belo
 
     ![Evaluate links to determine if this is YouTube or a Vlog with a video](media/tutorial-buildapp-retrieve-videos/feeds-feed-links-loop-through.png "Evaluate links to determine if this is YouTube or a Vlog with a video")
 
-### Add the Condition action
+### Step 3.9: Add the Condition action
 
 1. Select **Add an action**.
 
@@ -473,7 +475,7 @@ Select the header of the action to show the title of **Evaluate links to determi
 
 ![Add the primary feed link](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-primary-feed.png "Add the primary feed link")
 
-### Add the Create a New Record action
+### Step 3.10: Add the Create a New Record action
 
 1. Inside *Loop through each of the items in the feed since last retrieved* action, select **Add an action**.
 
@@ -513,7 +515,7 @@ Select the header of the action to show the title of **Evaluate links to determi
 
     ![Set primary feed link](media/tutorial-buildapp-retrieve-videos/tutorial-create-new-record.png "Set primary feed link")
 
-### Add the Set Variable action
+### Step 3.11: Add the Set Variable action
 
 1. Select **Add action** after *Create new record*.
 
@@ -531,7 +533,7 @@ Select the header of the action to show the title of **Evaluate links to determi
 
 Select the header of the action to show the title of **Loop through each of the items since last retrieved**.
 
-### Add the Update Record action
+### Step 3.12: Add the Update Record action
 
 1. Inside *Loop through each of the feeds in the database* action, select **Add an action**.
 
@@ -579,7 +581,7 @@ Your complete flow should look like the following image:
 
 ![Completed flow](media/tutorial-buildapp-retrieve-videos/tutorial-buildapp-complete_flow.png "Completed flow")
 
-### Save the Flow
+### Step 3.13: Save the Flow
 
 1. From the upper-right side of the screen, select **Save**.
 
@@ -599,7 +601,7 @@ Your complete flow should look like the following image:
 
 If the flow doesn't show as succeeded, select **Run** and it will display the failed action with any associated error message.
 
-## Edit the app to add the video library interface
+## Step 4: Edit the app to add the video library interface
 
 In this section, you'll create a new screen in the app that enables you and other members of the team to browse through videos, see the video details, and play them directly within Teams.
 
@@ -615,7 +617,7 @@ To start editing the app:
 
 Now create a new screen and configure the screen controls using the following steps.
 
-### Create new screen
+### Step 4.1: Create new screen
 
 1. Select **Tree view**.
 
@@ -625,7 +627,7 @@ Now create a new screen and configure the screen controls using the following st
 
 1. Select **+** to begin adding controls to screen.
 
-### Add the header
+### Step 4.2: Add the header
 
 1. Enter **Rectangle** in the search box.
 
@@ -641,7 +643,7 @@ Now create a new screen and configure the screen controls using the following st
     | Height  | 60  |
     | Color  | Purple  |
 
-### Add the header label
+### Step 4.3: Add the header label
 
 1. Enter **Label** in the search box.
 
@@ -660,7 +662,7 @@ Now create a new screen and configure the screen controls using the following st
     |Height | 61 |
     |Color | White |
 
-### Add a rectangle for the Video List Header
+### Step 4.4: Add a rectangle for the Video List Header
 
 1. Enter **Rectangle** in the search box.
 
@@ -676,7 +678,7 @@ Now create a new screen and configure the screen controls using the following st
     | Height  | 58  |
     | Color  | Purple  |
 
-### Add a label for the Video List Header
+### Step 4.5: Add a label for the Video List Header
 
 1. Enter **Label** in the search box.
 
@@ -695,7 +697,7 @@ Now create a new screen and configure the screen controls using the following st
     |Height | 32   |
     |Color | White |
 
-### Add a Vertical Gallery
+### Step 4.6: Add a Vertical Gallery
 
 1. Enter **Vertical Gallery** in the search box.
 
@@ -717,7 +719,7 @@ In the tree view on the left side of the screen, there are three controls undern
 
 ![Video library gallery](media/tutorial-buildapp-retrieve-videos/video-library-gallery.png "Video library gallery")
 
-#### Set the Subtitle
+#### Step 4.6.1: Set the Subtitle
 
 1. Select the control that starts with **Subtitle**.
 
@@ -729,7 +731,7 @@ In the tree view on the left side of the screen, there are three controls undern
     ThisItem.Feed.Description
     ```
 
-#### Set the Title
+#### Step 4.6.2: Set the Title
 
 1. Select the control that starts with **Title**.
 
@@ -741,7 +743,7 @@ In the tree view on the left side of the screen, there are three controls undern
     ThisItem.Feed.Title
     ```
 
-#### Set the Image
+#### Step 4.6.3: Set the Image
 
 1. Select the control that starts with **Image**.
 
@@ -753,7 +755,7 @@ In the tree view on the left side of the screen, there are three controls undern
     ThisItem.Feed.'Image Link'
     ```
 
-### Add the background for the feed item
+### Step 4.7: Add the background for the feed item
 
 1. Enter **Rectangle** in the search box.
 
@@ -769,7 +771,7 @@ In the tree view on the left side of the screen, there are three controls undern
     | Height  | 707  |
     | Color  | Purple  |
 
-### Add the feed item title header label
+### Step 4.8: Add the feed item title header label
 
 1. Enter **Label** in the search box.
 
@@ -794,7 +796,7 @@ In the tree view on the left side of the screen, there are three controls undern
     'Video Library'.Selected.Title
     ```
 
-### Add a Video Control
+### Step 4.9: Add a Video Control
 
 1. Enter **Video** in the search box.
 
@@ -817,7 +819,7 @@ In the tree view on the left side of the screen, there are three controls undern
     'Video Library'.Selected.'Video Link'
     ```
 
-### Add the feed description HTML Text control
+### Step 4.10: Add the feed description HTML Text control
 
 1. Enter **HTML text** in the search box.
 
@@ -842,7 +844,7 @@ In the tree view on the left side of the screen, there are three controls undern
     'Video Library'.Selected.Description
     ```
 
-### Add the Published On label
+### Step 4.11: Add the Published On label
 
 1. Enter **Label** in the search box.
 
@@ -867,11 +869,11 @@ In the tree view on the left side of the screen, there are three controls undern
     Concatenate("Published On ",Text('Video Library'.Selected.'Published On'))
     ```
 
-### Enable toggle between screens
+### Step 4.12: Enable toggle between screens
 
 Currently there are two separate screens, but no way to toggle between them. The ability to toggle between the screens will be important to enable the addition of more feeds.
 
-#### Add the gear icon
+#### Step 4.12.1: Add the gear icon
 
 1. Select **Screen2**.
 
@@ -897,7 +899,7 @@ Currently there are two separate screens, but no way to toggle between them. The
     Navigate(Screen1)
     ```
 
-#### Configure the back button
+#### Step 4.12.2: Configure the back button
 
 1. Select **Screen1**.
 
@@ -924,11 +926,11 @@ Currently there are two separate screens, but no way to toggle between them. The
 
 When you select the gear icon, the app will now show the form to edit the list of feeds. Selecting the back button will return to the list of videos.
 
-## Test the app
+## Step 5: Test the app
 
 Before publishing the application to teams, it’s important to test core functionality.
 
-### Test the Power Automate Flow
+### Step 5.1: Test the Power Automate Flow
 
 1. Run the Power Automate flow.
 
@@ -936,7 +938,7 @@ Before publishing the application to teams, it’s important to test core functi
 
 1. Confirm that the flow has posted new messages to the Channel you specified when configuring the application.
 
-### Test the app functionality
+### Step 5.2: Test the app functionality
 
 1. Open the app in Power Apps Studio.
 
@@ -948,7 +950,7 @@ Before publishing the application to teams, it’s important to test core functi
 
 1. Select the video and confirm the video plays.
 
-### Test additions to the Feeds table
+### Step 5.3: Test additions to the Feeds table
 
 1. Add another feed to the **Feeds** table.
 
@@ -956,7 +958,7 @@ Before publishing the application to teams, it’s important to test core functi
 
 1. Repeat the above steps.
 
-## Publish the app
+## Step 6: Publish the app
 
 1. Select the **Publish to Teams** icon in the upper right.
 
