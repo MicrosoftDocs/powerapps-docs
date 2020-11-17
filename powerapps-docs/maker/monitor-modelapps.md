@@ -18,7 +18,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as the app runs.
+Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs.
 
 This feature gives you a better understanding of how the formulas contained in your app work so you can improve performance and identify any errors or problems.
 
