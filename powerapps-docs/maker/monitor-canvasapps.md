@@ -61,8 +61,6 @@ To open Monitor for a published app:
 
 1. Select **Play published app**.
 
-1. Select **Play app in web browser** to play the app in another tab. To play the app on a mobile device for monitoring session, select **Get app mobile device link** instead.
-
     ![Play published app - options](media/monitor/play-published-app.png "Play published app - options")
 
     If you selected to play app on a mobile device, copy the link shown on a mobile device to run the app.
