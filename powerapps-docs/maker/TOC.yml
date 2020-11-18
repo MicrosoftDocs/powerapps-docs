@@ -1291,8 +1291,9 @@
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
- 
-
+  - name: Troubleshoot issues for the Power Apps mobile app
+    href: ../user/powerapps_mobile_troubleshoot.md
+    
 - name: Portals
   items:
     - name: Portals
@@ -2030,8 +2031,6 @@
     href: ./canvas-apps/get-sessionid.md
   - name: Troubleshoot startup issues for Power Apps
     href: ../troubleshooting-startup-issues.md
-  - name: Troubleshoot issues for the Power Apps mobile app
-    href: ../user/powerapps_mobile_troubleshoot.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support
