@@ -99,7 +99,7 @@ details about the event. The panel has four tabs:
 
 ## Unsupported scenarios for Monitor
 
-To learn about unsupported scenarios for Monitor, go to [unsupported scenarios](/monitor-advanced.md#unsupported-scenarios-for-monitor).
+To learn about unsupported scenarios for Monitor, go to [Advanced monitoring - unsupported scenarios](monitor-advanced.md#unsupported-scenarios-for-monitor).
 
 ## Next steps
 
