@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/16/2020
+ms.date: 11/17/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -23,7 +23,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 ## Sign in issues
 
-### Unable to sign in due to Microsoft Authenticator app
+### Unable to sign in due to Microsoft Authenticator app issues
 
 If you don’t have Microsoft Authenticator app, download the app from the App Store or Play store and then sign in to Power Apps mobile again.
 
