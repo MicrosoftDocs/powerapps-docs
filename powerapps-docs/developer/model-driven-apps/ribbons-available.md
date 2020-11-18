@@ -148,7 +148,7 @@ All entities use a common ribbon definition called the *Entity Ribbon Template*.
 
 ## Customizing global commandbar
 
-You can customize the global commandbar (`Mscrm.GlobalTab`) by adding the buttons to `Mscrm.GlobalTab`. The OOB buttons in the global commandbar currently cannot be modified, but new buttons can be added.
+You can customize the global commandbar (`Mscrm.GlobalTab`) by adding the buttons to `Mscrm.GlobalTab`. The out of the box buttons in the global commandbar currently cannot be modified, but new buttons can be added.
 
 When the location of the `CustomAction` is set to `Location="Mscrm.GlobalTab.New.Controls._children`, custom button is displayed in the global commandbar at the top of the page.
 
