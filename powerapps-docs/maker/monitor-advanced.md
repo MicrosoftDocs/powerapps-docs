@@ -16,6 +16,8 @@ search.app:
 
 # Advanced monitoring concepts
 
+In this article, you'll learn about how to download, and upload trace files in Monitor, events supported by Monitor, and unsupported scenarios.
+
 ## Download and upload trace files
 
 You can download the events that are shown in the table for offline analysis.
