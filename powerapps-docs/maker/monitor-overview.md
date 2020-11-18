@@ -55,7 +55,7 @@ A few example problems and queries that you can uncover when using Monitor are:
 ## Monitor dashboard
 
 You can review various properties for each event inside Monitor. Depending on
-the event category, some of these properties might not contain data.
+the event category, some of these properties might not contain data. For example, the following image shows the Monitor dashboard for canvas apps.
 
 ![Monitor dashboard](media/monitor/monitor.png "Monitor dashboard")
 
