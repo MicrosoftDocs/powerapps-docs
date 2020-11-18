@@ -16,7 +16,7 @@ search.app:
 
 # Monitor overview
 
-**Monitor** is a tool that offers makers the ability to view a stream of events from a user’s session to diagnose and troubleshoot problems. MCanvas app makers can either use Monitor to view events while building a new app in Power Apps Studio, or to monitor published apps during runtime. Makers of model-driven apps can monitor page navigations, command executions, [form-related issues](https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/troubleshoot-forms), and other major actions to understand the app behavior and make improvements.
+**Monitor** is a tool that offers makers the ability to view a stream of events from a user’s session to diagnose and troubleshoot problems. MCanvas app makers can either use Monitor to view events while building a new app in Power Apps Studio, or to monitor published apps during runtime. Makers of model-driven apps can monitor page navigations, command executions, [form-related issues](https://docs.microsoft.com/powerapps/developer/model-driven-apps/troubleshoot-forms), and other major actions to understand the app behavior and make improvements.
 
 ## Benefits
 
