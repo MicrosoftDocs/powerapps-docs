@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/04/2020
+ms.date: 11/17/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -71,8 +71,6 @@ The new Relevance Search experience combines the strength of Relevance Search as
  > [!div class="mx-imgBorder"]
  > ![Turn on new search experience](media/admin-enable-search.jpg) 
 
-> [!NOTE]
-> The **Use new search experience** feature setting is only available for environments where Relevance Search is already turned on. For environments where Relevance Search has never been not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default.
 
 ## Use the new Relevance Search experience 
 
