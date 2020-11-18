@@ -25,7 +25,7 @@ This article helps you fix some common issues that you might encounter while wor
 > [!IMPORTANT]
 > - The workarounds described in this article are only designed for troubleshooting purposes; they aren't meant to be used in production scenarios. 
 > - These workarounds affect the current user session unless otherwise noted (for example, when a browser tab accesses the model-driven app). They don't change system customizations or affect any other users or sessions. After the current session is closed, the effect is no longer applied.
-> - Most of the workarounds are available in most<!--note from editor: Suggested.--> production environments. Some of the workarounds mentioned in the guide might not have been deployed to your organization yet; new workarounds are added periodically.
+> - Most of the workarounds are available in most production environments. Some of the workarounds mentioned in the guide might not have been deployed to your organization yet; new workarounds are added periodically.
 > - The tools listed in this article can be used independently to troubleshoot different categories of issues.
 
 ## Use URL parameters to disable various form components
@@ -63,13 +63,13 @@ https://myorg.crm.dynamics.crm/main.aspx?appid=00000000-0000-0000-0000-000000000
 ```
 
 ## View registered form event handlers and libraries in Monitor
-<!--note from editor: The companion article to this one calls it simply "Monitor," so I'll do so in this article to be parallel. -->
+
 To view registered form event handles and libraries, you can view the `FormEvents` operation in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker).
 
 > [!div class="mx-imgBorder"]
 > ![Form events](media/registered-form-events.png "Form events")
 
-You'll need the `eventIndex` and `libraryIndex` parameter values when using the `DisableFormHandlers` or `DisableFormLibraries`<!--note from editor: In this article, these URL flags are sometimes bold, most often in code format. I can't see a reason for the difference, I think they should be consistent.--> URL flags. After an event or library is disabled, **disabledByConfigFlag** will be true and you'll also see such events in the actual event handling.
+You'll need the `eventIndex` and `libraryIndex` parameter values when using the **DisableFormHandlers** or **DisableFormLibraries** URL flags. After an event or library is disabled, **disabledByConfigFlag** will be true and you'll also see such events in the actual event handling.
 
 > [!div class="mx-imgBorder"]
 > ![Form events OnLoad](media/form-events-onload.png "Form events OnLoad")
@@ -78,11 +78,11 @@ You'll need the `eventIndex` and `libraryIndex` parameter values when using the 
 
 When you're troubleshooting issues caused by form handlers, disable the form handlers by using the following URL flags:
 
-- **&flags=DisableFormHandlers=\<event name\>**: Disables the form handlers by specifying the event name, for example, `DisableFormHandlers=OnLoad`. If you use the `DisableFormHandlers=true` flag, it disables the following event handlers: [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload), [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave), business rule, [OnChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/attribute-onchange), and [TabStateChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/tabstatechange).
+- **&flags=DisableFormHandlers=\<event name\>**: Disables the form handlers by specifying the event name, for example, **DisableFormHandlers=OnLoad**. If you use the **DisableFormHandlers=true** flag, it disables the following event handlers: [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload), [OnSave](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onsave), business rule, [OnChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/attribute-onchange), and [TabStateChange](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/tabstatechange).
 
-- **&flags=DisableFormHandlers=\<event name\>_\<event index\>**: Disables the form handlers by specifying the event name and the event index value. For example, `DisableFormHandlers=true_0` disables the form handler at index 0. `DisableFormHandlers=onload_2` flag disables the form handler at index 2 of the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) event.
+- **&flags=DisableFormHandlers=\<event name\>_\<event index\>**: Disables the form handlers by specifying the event name and the event index value. For example, **DisableFormHandlers=true_0** disables the form handler at index 0. **DisableFormHandlers=onload_2** flag disables the form handler at index 2 of the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) event.
 
-- **&flags=DisableFormHandlers=\<event name\>\<starting index\>\<end index\>**: Disables all the form handlers by specifying the event name and the given index range. For example, `DisableFormHandlers=true_0_2` disables the form handlers at indexes from 0 through 2.<!--note from editor: I deleted "0 and 2 are included" because you don't need it if we go with this "from... through..." wording, which is how the Writing Style Guide recommends we write ranges of numbers. --> `DisableFormHandlers=onload_2_5` flag disables the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) handlers at indexes from 2 through 5.
+- **&flags=DisableFormHandlers=\<event name\>\<starting index\>\<end index\>**: Disables all the form handlers by specifying the event name and the given index range. For example, **DisableFormHandlers=true_0_2** disables the form handlers at indexes from 0 through 2. **DisableFormHandlers=onload_2_5** flag disables the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) handlers at indexes from 2 through 5.
 
 ## Disabling form libraries
 
@@ -90,17 +90,17 @@ When you're troubleshooting issues caused by form libraries, disable the form li
 
 - **&flags=DisableFormLibraries=true**: Disables all form libraries.
 
-- **&flags=DisableFormLibraries=\<library index\>**: Disables form libraries by specifying the library index value. For example, the `DisableFormLibraries=0` flag disables the form library at index 0.
+- **&flags=DisableFormLibraries=\<library index\>**: Disables form libraries by specifying the library index value. For example, the **DisableFormLibraries=0** flag disables the form library at index 0.
 
-- **&flags=DisableFormLibraries=\<starting index\>_\<ending index\>**: Disables the form libraries by specifying the library index range. For example, `DisableFormLibraries=0_2` flag disables the form libraries at indexes from 0 through 2.
+- **&flags=DisableFormLibraries=\<starting index\>_\<ending index\>**: Disables the form libraries by specifying the library index range. For example, **DisableFormLibraries=0_2** flag disables the form libraries at indexes from 0 through 2.
 
 ### Difference between DisableFormHandlers and DisableFormLibraries
 
 The main difference between disabling form libraries and form handlers are:
 
-- The `DisableFormHandlers` flag disables form handlers regardless of the containing form libraries, whereas the `DisableFormLibraries` flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries.
+- The **DisableFormHandlers** flag disables form handlers regardless of the containing form libraries, whereas the **DisableFormLibraries** flag disables the form libraries (web resources) regardless of the functions (event handlers) included in the libraries.
 
-- The `DisableFormHandlers` flag doesn't prevent the containing form library from being loaded, thus it doesn't prevent the JavaScript code that's present in the library&mdash;but not registered as an event handler&mdash;from being executed. For example, if a form library `new_myscript.js` is written in the following way:<!--note from editor: Something is missing here.-->
+- The **DisableFormHandlers** flag doesn't prevent the containing form library from being loaded, thus it doesn't prevent the JavaScript code that's present in the library&mdash;but not registered as an event handler&mdash;from being executed. For example, if a form library `new_myscript.js` is written in the following way:
 
   - Assuming the `myOnloadHandler` is registered as an `OnLoad` event handler.
   - The `DisableFormHandlers=true` flag only prevents the second alert, whereas the `DisableFormLibraries=true` flag prevents both alerts.
@@ -121,7 +121,7 @@ When you're troubleshooting issues caused by controls on a form, disable the con
 **&flags=DisableFormControl=true**: Disables all the controls on a form.
 
 > [!NOTE]
-> `&flags=DisableFormControl=new_mycontrol` disables a specific control on the form. If the issue is resolved when the `&flags=DisableWebResourceControls=true` flag is used, there might be more than one web resource control on the form. You can use this flag to further identify the control that's causing the issue.
+> **&flags=DisableFormControl=new_mycontrol** disables a specific control on the form. If the issue is resolved when the **&flags=DisableWebResourceControls=true** flag is used, there might be more than one web resource control on the form. You can use this flag to further identify the control that's causing the issue.
 
 ## Disable business process flows
 
@@ -139,7 +139,7 @@ Some common issues that can cause unexpected behavior when a model-driven app fo
 
 These behaviors occur after the form is opened&mdash;for example, you see a value or control for a second, and then the value changes or the control disappears.
 
-There are multiple reasons why unexpected behaviors occur when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) scripts that run synchronously or asynchronously to change the field or control behavior. To determine whether your script is causing the issue, you can disable the form handlers by appending `&flags=DisableFormHandlers=true`<!--note from editor: Edit okay? I assume you didn't want those asterisks in this string.--> at the end of your app URL.
+There are multiple reasons why unexpected behaviors occur when a form opens. One of the most common is the [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) scripts that run synchronously or asynchronously to change the field or control behavior. To determine whether your script is causing the issue, you can disable the form handlers by appending **&flags=DisableFormHandlers=true** at the end of your app URL.
 
 If the form loads normally after you disable the form handler, there's an issue with the script that's blocking or causing an error when the form is loading.
 
@@ -155,7 +155,7 @@ The most common cause of intermittent or random form errors is using unsupported
 
 - [formContext.getControl](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/controls/getcontrol) or [formContext.getControl(arg).getAttribute()](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/controls/getattribute) randomly returns null for a valid control or attribute.
 
-There are many ways to write unsupported Client API methods, and they all share a common pattern: they cause a race condition in the form load pipeline. Because they introduce a race condition, the issue only occurs when the custom script is executed before the form is fully ready to be accessed via the Client API. This can depend on many factors:<!--note from editor: Edit okay? I didn't know what "depending on many factors" was modifying.-->
+There are many ways to write unsupported Client API methods, and they all share a common pattern: they cause a race condition in the form load pipeline. Because they introduce a race condition, the issue only occurs when the custom script is executed before the form is fully ready to be accessed via the Client API. This can depend on many factors:
 
 - In the JavaScript web resource, code is put into a global scope that's executed immediately when the web resource file is loaded, without waiting for the form to be accessible. Make sure the code is executed inside a valid form handler, such as an [OnLoad](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/events/form-onload) handler.
 
@@ -179,7 +179,7 @@ A typical cause for this error is the script that calls the `save()` method in t
 
 **Resolution**:
 
-In Monitor, the `FormEvents.onsave`<!--note from editor: Please note the change to plural "FormEvents" - edit okay? I'm going by the screenshot and the companion article about Monitor (for FormEvents.onsave and also FormEvents.onload).--> operation provides all the details that are causing the error. The form checker won't be able to detect the error if the issue can't be reproduced.
+In Monitor, the `FormEvents.onsave` operation provides all the details that are causing the error. The form checker won't be able to detect the error if the issue can't be reproduced.
 
 > [!div class="mx-imgBorder"]
 > ![Save in progress error](media/save-in-progress-error.png "Save in progress error")
@@ -190,7 +190,7 @@ A common cause is an [OnSave](https://docs.microsoft.com/powerapps/developer/mod
 
 **Resolution**:
 
-In Monitor, the `FormEvents.onsave` operation provides all the details why the save event was canceled, more details than are available from the form UI itself.<!--note from editor: Edit okay? I wasn't sure what this was saying.-->
+In Monitor, the `FormEvents.onsave` operation provides all the details why the save event was canceled, more details than that are available from the form UI itself.
 
 > [!div class="mx-imgBorder"]
 > ![Record isn't saved error](media/record-not-saved-error.png "Record isn't saved error")
@@ -238,11 +238,11 @@ There are many possible reasons for a form to freeze, load slowly, or throw a "W
 
 **Resolution**:
 
-- Use the `DisableFormCommandbar`<!--note from editor: As noted above, these flag have mostly been formatted in code font, so I'm changing them in this section to be consistent. If there's a reason behind the switch in format, please excuse!--> flag and refresh the page. If the issue is resolved, it was caused by some command customization.
+- Use the **DisableFormCommandbar** flag and refresh the page. If the issue is resolved, it was caused by some command customization.
 
-- If the issue persists, use the `DisableFormHandlers=true` flag. If the issue still isn't resolved, you can further identify the exact event handler function that's causing the problem.
+- If the issue persists, use the **DisableFormHandlers=true** flag. If the issue still isn't resolved, you can further identify the exact event handler function that's causing the problem.
 
-- Assuming the form has 10 libraries, and 20 `OnLoad` event handlers, you can use the binary search approach to narrow down the handler index range as described in the following example:<!--note from editor: Edit okay? I assume you're setting up an example here. Also, is it okay to make the following an ordered list?-->
+- Assuming the form has 10 libraries, and 20 `OnLoad` event handlers, you can use the binary search approach to narrow down the handler index range as described in the following example:
 
   1. Open [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) to view the registered form event handlers and libraries to get the list of `OnLoad` event handlers of indexes ranging from 0 through 19 and form libraries of indexes ranging from 0 through 9.
 
@@ -286,7 +286,7 @@ There are many reasons why a related menu item doesn't appear on the **Related**
 **Resolution**:
 
 In the following example, a related entity `role` (security role) doesn't appear in the `team` form because the `role` entity isn't available in Unified Interface.
-<!--note from editor: Will the preceding text be enough to explain this concept if the reader can't see the image (due to low vision or having turned images off)? If not, please augment the alt text so that it fully explains this idea. We have to be sure that the image doesn't carry all the meaning. This is a question for all the following images.-->
+
 > [!div class="mx-imgBorder"]
 > ![Related menu](media/related-menu-error.png "Related menu")
 
