@@ -16,19 +16,17 @@ search.app:
 
 # Monitor overview
 
-**Monitor** is a tool that offers makers the ability to view a stream of events from a user’s session to diagnose and troubleshoot problems. Makers of canvas apps can either use Monitor to view events while building a new app in Power Apps Studio, or to monitor published apps during runtime. Makers of model-driven apps can monitor page navigations, command executions, [form-related issues](https://docs.microsoft.com/powerapps/developer/model-driven-apps/troubleshoot-forms), and other major actions to understand the app behavior and make improvements.
+**Monitor** is a tool that offers makers the ability to view a stream of events from a user’s session to diagnose and troubleshoot problems. Makers of canvas apps can either use Monitor to view events while building a new app in Power Apps Studio, or to monitor published apps during runtime. Makers of model-driven apps can monitor page navigation, command executions, [form-related issues](https://docs.microsoft.com/powerapps/developer/model-driven-apps/troubleshoot-forms), and other major actions to understand the app behavior and make improvements.
 
 ## Benefits
 
 Monitor can help you diagnose and troubleshoot problems faster and build more
 reliable apps. It provides a deep view into how an app runs by providing a log
-of all key activities in your app as the app runs. Monitor tool also provides a
-better understanding of how the events and formulas contained in your app work
-so you can improve performance and identify any errors or problems.
+of all key activities in your app as the app runs. Monitor tool also provides a better understanding of how the events and formulas contained in your app work so you can improve performance and identify any errors or problems.
 
 ## Debugging an app
 
-The key to debugging a problem is to have a better understanding of what your app does, and how it does it. Sometimes, it is difficult to isolate a problem when just looking at the app formulas, or even reviewing runtime errors. Watching the events as they occur in your app can help you understand the order of events and performance of your app to spot errors and diagnose problems faster.
+The key to debugging a problem is to have a better understanding of what your app does, and how it does it. Sometimes, it's difficult to isolate a problem when just looking at the app formulas, or even reviewing runtime errors. Watching the events as they occur in your app can help you understand the order of events and performance of your app to spot errors and diagnose problems faster.
 
 A few example problems and queries that you can uncover when using Monitor are:
 
@@ -36,13 +34,13 @@ A few example problems and queries that you can uncover when using Monitor are:
     - Is the app fetching data too frequently?
     - Can you optimize the app to only fetch data when required?
     - Are timer controls firing too often?
-    - Are too many events occurring when the app starts? And can fetching some of the data be delayed?
+    - Are too many events occurring when the app starts? Can fetching some of the data be delayed?
 
 -   **Retrieve data from the same data source**
     - Can you use different patterns such as caching data in collections or variables instead of fetching same data multiple times?
 
 -   **The response data size**
-    - Can you use query filters to reduce the amount of requested data ?
+    - Can you use query filters to reduce the amount of requested data?
 
 -   **The duration of the request**
     - Are connectors/plugins optimized?
@@ -69,7 +67,7 @@ the event category, some of these properties might not contain data. For example
 | **Result Info**   | Detailed translation of error codes and Results. For example, a 429 Status code will show as “Too many requests” in results info column.                                                                                               |
 | **Status**        | The [http status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) of a network request. For example, a 2XX code represents a successful request while a 4XX code represents an error.                                    |
 | **Duration**      | Duration can mostly be used to understand the performance of network calls in the app, but it also depends on the type of event. For example, for a network request, duration is the time taken for the request to be sent and a response to be received.  |
-| **Data Source**   | Name of the data source accessed by the raised event operation (e.g. name of a CDS entity)                                                                                                                                             |
+| **Data Source**   | Name of the data source accessed by the raised event operation (For example, name of a Dataverse table)                                                                                                                                             |
 | **Control**       | The Control Name associated with this event                                                                                                                                                                                            |
 | **Property**      | Active Control Property of the raised event.                                                                                                                                                                                           |
 | **Response size** | For a network request event, represents response size in bytes received from the sender to your app.                                                                                                                                   |

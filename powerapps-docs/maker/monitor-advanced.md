@@ -24,7 +24,7 @@ You can download the events that are shown in the table for offline analysis.
 Events can be downloaded in a .json or a .csv format, and can be shared with
 others. The .csv files can only be downloaded. But if you export the events
 in .json format, you can them back into the monitor tool for analysis. You can
-also attach a trace file to support service requests helping speed up the
+also attach a trace file to support service requests helping speed-up the
 solution to your problem.
 
 ![Download trace files](media/monitor/download.png "Download trace files")

@@ -63,7 +63,7 @@ To open Monitor for a published app:
 
     ![Play published app](media/monitor/play-published-app.png "Play published app")
 
-This opens the published app in a new browser tab and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
+This action opens the published app in a new browser tab and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
 
 Monitor also shows a notification to display that the monitoring session currently open is for the published version of the app.
 
@@ -71,7 +71,7 @@ Monitor also shows a notification to display that the monitoring session current
 
 ### Advanced setting: Debug published app
 
-If you want to view the source expressions in the Monitor for the published app, you need to turn on a new setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you will still be able to see the events happening in your app, but you won’t be able to map these to specific expressions or formulas.
+If you want to view the source expressions in the Monitor for the published app, you need to turn on a new setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you can still see the events happening in your app, but you can't map these events to specific expressions or formulas.
 
 To enable this setting, go to **File** > **Settings** > **Advanced settings** > Turn **Debug published app** to *On*.
 
@@ -87,7 +87,7 @@ display the table of events occurring along with specific details.
 ## Example: Using Monitor with canvas apps
 
 In this example, you'll use the *Northwind Sample Data* app included with
-the [Northwind samplesolution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
+the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
 
 *Northwind sample solution* is a canvas app that loads sample data into Common
 Data Service. You can also create a new app or use an existing app instead.
@@ -114,7 +114,7 @@ several **getRows** requests from the **ProgressCount.Text** property, each 
 ![Error 429 - Formula](media/monitor/error-429-formula.png "Error 429 - Formula")
 
 For each record added, the formula is evaluated again and **CountRows** is
-called on several entities. This resulted in **getRows** in the log,
+called on several entities. This behavior resulted in **getRows** in the log,
 since **CountRows** isn't delegated for Common Data Service. For each single
 request to add a record, you're potentially making 12 additional requests to
 count the rows in each entity.
