@@ -403,7 +403,7 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
-            - name: Horizontal container (experimental)
+            - name: Horizontal container 
               href: ./canvas-apps/controls/control-horizontal-container.md
             - name: HTML text
               href: ./canvas-apps/controls/control-html-text.md
@@ -449,7 +449,7 @@
               href: ./canvas-apps/controls/control-timer.md
             - name: Toggle
               href: ./canvas-apps/controls/control-toggle.md
-            - name: Vertical container (experimental)
+            - name: Vertical container 
               href: ./canvas-apps/controls/control-vertical-container.md
             - name: Video
               href: ./canvas-apps/controls/control-audio-video.md
@@ -1291,8 +1291,9 @@
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
- 
-
+  - name: Troubleshoot issues for the Power Apps mobile app
+    href: ../user/powerapps_mobile_troubleshoot.md
+    
 - name: Portals
   items:
     - name: Portals
@@ -1503,7 +1504,7 @@
                     href: ./portals/configure/configure-saml2-provider.md
                   - name: Configure Azure AD with SAML 2.0
                     href: ./portals/configure/configure-saml2-settings-azure-ad.md
-                  - name: Configure ADFS with SAML 2.0
+                  - name: Configure AD FS with SAML 2.0
                     href: ./portals/configure/configure-saml2-settings.md
                   - name: FAQs when using SAML 2.0
                     href: ./portals/configure/configure-saml2-faqs.md
@@ -1513,7 +1514,7 @@
                     href: ./portals/configure/configure-ws-federation-provider.md
                   - name: Configure WS-Federation with Azure AD
                     href: ./portals/configure/configure-ws-federation-settings-azure-ad.md
-                  - name: Configure WS-Federation with ADFS
+                  - name: Configure WS-Federation with AD FS
                     href: ./portals/configure/configure-ws-federation-settings.md
           - name: Local authentication, registration and other settings
             href: ./portals/configure/set-authentication-identity.md
@@ -2030,8 +2031,6 @@
     href: ./canvas-apps/get-sessionid.md
   - name: Troubleshoot startup issues for Power Apps
     href: ../troubleshooting-startup-issues.md
-  - name: Troubleshoot issues for the Power Apps mobile app
-    href: ../user/powerapps_mobile_troubleshoot.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support

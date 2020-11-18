@@ -15,6 +15,9 @@ search.app:
 ---
 # Quick Start Sample: Retrieve Microsoft Dataverse environments using Online Management API 
 
+> [!NOTE]
+> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated).
+
 The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Dataverse environments from your Microsoft 365 tenant.
 
 The sample uses the authentication [helper code](sample-authentication-helper.md) to easily authenticate to Online Management API using the OAuth 2.0 protocol and pass in the access token in header of your request.
