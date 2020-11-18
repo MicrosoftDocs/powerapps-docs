@@ -61,12 +61,7 @@ To open Monitor for a published app:
 
 1. Select **Play published app**.
 
-    ![Play published app - options](media/monitor/play-published-app.png "Play published app - options")
-
-    If you selected to play app on a mobile device, copy the link shown on a mobile device to run the app.
-
-    ![Play published app on a mobile device](media/monitor/mobile-device-link.png "Play published app on a mobile device")
-
+    ![Play published app](media/monitor/play-published-app.png "Play published app")
 
 This opens the published app in a new browser tab and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
 
@@ -130,8 +125,9 @@ the overall performance problem.
 
 ## Next steps
 
-[Advanced monitoring concepts and scenarios using Monitor](monitor-advanced.md)
+[Collaborative debugging with Monitor](monitor-collaborative-debugging.md)
 
 ### See also
 
-[Monitor model-driven apps using Monitor](monitor-modelapps.md)
+- [Advanced monitoring](monitor-advanced.md)
+- [Monitor model-driven apps using Monitor](monitor-modelapps.md)

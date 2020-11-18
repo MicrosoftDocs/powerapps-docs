@@ -45,7 +45,7 @@ A few example problems and queries that you can uncover when using Monitor are:
     - Can you use query filters to reduce the amount of requested data ?
 
 -   **The duration of the request**
-    - Are integrations optimized?
+    - Are connectors/plugins optimized?
     - Can you reduce the size of the response using query filters?
 
 -   **Errors**
@@ -97,6 +97,10 @@ details about the event. The panel has four tabs:
 
     ![Monitor - Response](media/monitor/monitor-response.png "Monitor - Response")
 
+## Unsupported scenarios for Monitor
+
+To learn about unsupported scenarios for Monitor, go to [unsupported scenarios](/monitor-advanced.md#unsupported-scenarios-for-monitor).
+
 ## Next steps
 
 - [Monitor canvas apps using Monitor](monitor-canvasapps.md)
@@ -104,4 +108,6 @@ details about the event. The panel has four tabs:
 
 ### See also
 
-[Monitor - advanced monitoring and scenarios](monitor-advanced.md)
+- [Troubleshoot form issues in model-driven apps](https://docs.microsoft.com/powerapps/developer/model-driven-apps/troubleshoot-forms)
+- [Collaborative debugging with Monitor](monitor-collaborative-debugging.md)
+- [Advanced monitoring](monitor-advanced.md)

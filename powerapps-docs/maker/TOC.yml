@@ -2022,6 +2022,8 @@
       href: monitor-canvasapps.md
     - name: Debug model-driven apps with Monitor
       href: monitor-modelapps.md
+    - name: Collaborative debugging with Monitor
+      href: monitor-collaborative-debugging.md
     - name: Advanced monitoring
       href: monitor-advanced.md
   - name: Performance tips for canvas apps
