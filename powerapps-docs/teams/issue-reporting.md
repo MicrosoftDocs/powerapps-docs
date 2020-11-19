@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Issue reporting sample apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 In this tutorial, learn about the Manage Issues and Issue reporting apps, and how to use them effectively.
 
 ## Overview
@@ -38,6 +36,9 @@ Issue reporting consists of two different apps, one for reporting issues and ano
 
 > [!NOTE]
 > Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+
+> [!TIP]
+> For a demonstration of how to use this app, watch this [video](https://aka.ms/TeamsIssueReportingVideo).
 
 ## Prerequisites
 
@@ -348,6 +349,6 @@ To review and edit existing issues in Planner:
 ### See also
 
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Inspection sample apps](inspection.md)  
-- [Employee Ideas sample app](employee-ideas.md)
-- [Customize sample apps](customize-sample-apps.md)
+- [Inspection sample app](inspection.md)  
+- [Employee ideas sample app](employee-ideas.md)
+- [Customize sample app](customize-sample-apps.md)

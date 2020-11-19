@@ -1,5 +1,5 @@
 ---
-title: "Associate and disassociate entities using the Web API (Common Data Service)| Microsoft Docs"
+title: "Associate and disassociate entities using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to add  reference to a collection-valued navigation property, remove a reference and change an existing reference using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Associate and disassociate entities using the Web API
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 There are several methods you can use to associate and disassociate entities. Which method you apply depends on whether you’re creating or updating the entities and whether you’re operating in the context of the referenced entity or the referencing entity.  
 

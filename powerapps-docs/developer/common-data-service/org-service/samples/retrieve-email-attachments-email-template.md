@@ -1,5 +1,5 @@
 ---
-title: "Sample: Retrieve email attachements for an email template(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Retrieve email attachements for an email template(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to retrieve email attachements associated with an email template" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Sample: Retrieve email attachments for an email template
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-retrieve-email-attachments-email-template -->
 

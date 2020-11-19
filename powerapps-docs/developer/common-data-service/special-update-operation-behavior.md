@@ -1,5 +1,5 @@
 ---
-title: "Behavior of specialized update operations (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Behavior of specialized update operations (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes special behavior in plug-ins and workflows for update events due to deprecated messages." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Behavior of specialized update operations
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 There are several deprecated specialized messages that perform update operations. In earlier versions it was required to use these messages, but now the same operations should be performed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
 

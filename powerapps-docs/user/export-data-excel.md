@@ -1,13 +1,13 @@
 ---
 title: "Export data to Excel in Power Apps | MicrosoftDocs"
-ms.custom: ""
+description: How to export data to Excel
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 07/09/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -17,6 +17,12 @@ search.app:
   - PowerApps
   - D365CE
   - D365CE
+searchScope:
+  - D365-App-msdynce_saleshub
+  - D365-Entity-lead
+  - D365-UI-View
+  - Power Platform
+  - Power Apps
 ---
 # Export data to Excel
 
@@ -35,14 +41,14 @@ You can export data to a standard Excel file that you can use on any device such
 |                                   Number                                   |                                                             Shows as Number without group separator                                                             |
 |                                  Currency                                  |                                                         Shows as Number and does not include dollar sign ($)                                                         |
 |                          Date only, Date and Time                          |                                                                       Shows as Date only                                                                        |
-|                       Calculated and Roll-up fields                        | Editable in Excel but can’t be imported back to Power Apps |
-|                               Secured fields                               | Editable in Excel but can’t be imported back to Power Apps |
+|                       Calculated and Roll-up columns                        | Editable in Excel but can’t be imported back to Power Apps |
+|                               Secured columns                               | Editable in Excel but can’t be imported back to Power Apps |
   
 ## See which type of export works best for you  
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-|   Do an *ad-hoc* or *what if* analysis without modifying app data. Or, quick bulk edit to multiple records.   | [Export to Excel Online](export-to-excel-online.md) |
+|   Do an *ad-hoc* or *what if* analysis without modifying app data. Or, quick bulk edit to multiple rows.   | [Export to Excel Online](export-to-excel-online.md) |
 |                                                                   Get a snapshot of the data at the current data and time or you want to share it with others.                                                                    |           [Export to an Excel static worksheet](export-excel-static-worksheet.md)           |
 | Get the most up-to-date information and be able to refresh it in Excel and match what you see in the app at any time. |          [Export to an Excel dynamic worksheet](export-excel-dynamic-worksheet.md)          |
 |                                                                      View app data in a pivot table.                                                                      |                 [Export to an Excel PivotTable](export-excel-pivottable.md)                 |
@@ -67,13 +73,13 @@ The error message occurs due to a setting in Excel. To fix the issue, do this:
   
 5. Select **OK** and then close the **Options** dialog box.  
 
-## Limit the number of records that can be exported to Excel using Web API
+## Limit the number of rows that can be exported to Excel using Web API
 
-Update the `maxrecordsforexporttoexcel` attribute of the Organization entity using the Web API.
+Update the `maxrecordsforexporttoexcel` column of the Organization table using the Web API.
 
 ## Example
 
-The Web API request given below will set the value of `maxrecordsforexporttoexcel` attribute to 100.
+The Web API request given below will set the value of `maxrecordsforexporttoexcel` column to 100.
 
 ```html
 PUT [Organization URI]/api/data/v9.1/organizations(df617a54-bc85-48bf-a4f2-3c4208a405e1)
@@ -87,7 +93,7 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
-> The default value of `maxrecordsforexporttoexcel` attribute is 100000. If the value of `maxrecordsforexporttoexcel` attribute is increased to more than 100000, then timeouts may occur and export may fail. It is recommended to split the records into multiple views and then upload.
+> The default value of `maxrecordsforexporttoexcel` column is 100000. If the value of `maxrecordsforexporttoexcel` column is increased to more than 100000, then timeouts may occur and export may fail. It is recommended to split the rows into multiple views and then upload.
 
 ### See also
 

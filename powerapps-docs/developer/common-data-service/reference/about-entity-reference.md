@@ -1,12 +1,11 @@
 ---
-title: "About Entity Reference (Common Data Service)| Microsoft Docs"
-description: "Use this reference to understand the available operations that can be performed for specific entities, the default attributes attributes of each entity and the relationships between entities."
+title: "About entity reference (Microsoft Dataverse)| Microsoft Docs"
+description: "Use this reference to understand the available operations that can be performed for specific entities, the default attributes attributes of each entity and the relationships between entities in Microsoft Dataverse"
 author: JimDaly
-manager: kvivek
 ms.service: powerapps
 ms.devlang: na
 ms.topic: reference
-ms.date: 03/31/2019
+ms.date: 11/16/2020
 ms.author: jdaly
 ms.reviewer: "pehecke"
 search.audienceType: 
@@ -15,7 +14,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# About the Entity Reference
+# About entity reference for Microsoft Dataverse
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Use this reference to understand the available operations that can be performed for specific entities, the default attributes of each entity and the relationships between entities.
 
@@ -29,7 +30,7 @@ Use this reference to understand the available operations that can be performed 
 > - The entity supports some kind of direct data modification operation.
 >    - This excludes entities which you can't work with directly. 
 >
-> To see all entity metadata information for your environment, see [Common Data Service Developers Guide : Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata).
+> To see all entity metadata information for your environment, see [Browse the metadata for your organization](/powerapps/developer/common-data-service/browse-your-metadata).
 
 
 ## Entity Properties

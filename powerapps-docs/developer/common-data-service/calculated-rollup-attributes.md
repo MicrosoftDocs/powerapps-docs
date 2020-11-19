@@ -1,5 +1,5 @@
 ---
-title: "Calculated and rollup attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Calculated and rollup attributes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about common elements and characterstics, calculated attributes, rollup attributes, retrieve a calculated rollup field value immediately, and SourceTypeMasks enumeration." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Calculated and rollup attributes
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 *Calculated* and *rollup* attributes free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
   

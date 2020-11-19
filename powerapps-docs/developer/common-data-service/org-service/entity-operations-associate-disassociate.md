@@ -1,5 +1,5 @@
 ---
-title: "Associate and disassociate entities using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Associate and disassociate entities using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to associate and disassociate entities using the Organization Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Associate and disassociate entities using the Organization Service
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Entity records are associated to each other using lookup attributes on the related entity. The simplest way to associate two entity records in a one-to-many relationship is to use an <xref:Microsoft.Xrm.Sdk.EntityReference> to set the value of a lookup attribute on the related entity.
 

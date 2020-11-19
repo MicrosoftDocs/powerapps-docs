@@ -1,6 +1,6 @@
 ---
 title: Entity relationship metadata | Microsoft Docs
-description: Learn about the entity relationship metadata used in Common Data Service.
+description: Learn about the entity relationship metadata used in Microsoft Dataverse.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -23,6 +23,8 @@ search.app:
 ---
 
 # Entity relationship metadata
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 When you look at the solution explorer or the three relationship collections in the `EntityMetadata`, you might think that there are three types of entity relationships. Actually, there are only two, as shown in the following table.
 
@@ -50,8 +52,8 @@ With model-driven apps, this enables an experience that enables you to view and 
 
 For developers, this enables new types of queries based on the hierarchy using the `Under` and `Not Under` operators.
 
-More information: [Common Data Service Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data).
+More information: [Microsoft Dataverse Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data).
 
 ### See also
 
-[Common Data Service entities](entities.md)
+[Dataverse entities](entities.md)

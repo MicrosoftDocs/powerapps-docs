@@ -1,5 +1,5 @@
 ---
-title: " Event Framework (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: " Event Framework (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the event framework and information developers should know when working with it." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/18/2019
@@ -17,7 +17,9 @@ search.app:
 ---
 # Event Framework
 
-The capability to extend the default behavior of Common Data Service depends on detecting when events occur on the server. The *Event Framework* provides the capability to register custom code to be run in response to specific events. 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+The capability to extend the default behavior of Microsoft Dataverse depends on detecting when events occur on the server. The *Event Framework* provides the capability to register custom code to be run in response to specific events. 
 
 All capabilities to extend the default behavior of the platform depend on the event framework. When you configure a workflow to respond to an event using the workflow designer without writing code, that event is provided by the event framework. 
 
@@ -33,7 +35,7 @@ To leverage the event framework for your custom extensions you must understand:
 
 ## Available events
 
-As described in [Use messages with the Organization service](org-service/use-messages.md), data operations in the Common Data Service platform are based on messages and every message has a name. There are `Create`, `Retrieve`, `RetrieveMultiple`, `Update`, `Delete`, `Associate` and `Disassociate` messages that cover the basic data operations that happen with entities. There are also specialized messages for more complex operations. Custom actions add new messages.
+As described in [Use messages with the Organization service](org-service/use-messages.md), data operations in the Dataverse platform are based on messages and every message has a name. There are `Create`, `Retrieve`, `RetrieveMultiple`, `Update`, `Delete`, `Associate` and `Disassociate` messages that cover the basic data operations that happen with entities. There are also specialized messages for more complex operations. Custom actions add new messages.
 
 When you use the Plug-in registration tool to associate an extension with a particular message, you will register it as a *step*. The screenshot below is the **Register New Step** dialog used when registering a plug-in.
 
@@ -62,7 +64,7 @@ $filter=iscustomprocessingstepallowed eq true and isvisible eq true)
 ```
 
 > [!TIP]
-> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and entities eligible for plug-ins using the Common Data Service](https://powerapps.microsoft.com/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-common-data-service/)
+> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and entities eligible for plug-ins using the Dataverse](https://powerapps.microsoft.com/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-common-data-service/)
 
 
 You can also use the following FetchXML to retrieve this information. The [FetchXML Builder](https://fxb.xrmtoolbox.com) is a useful tool to execute this kind of query.

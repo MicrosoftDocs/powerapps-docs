@@ -35,7 +35,7 @@ You can cancel the save action by using the preventDefault method within the eve
 > 
 > For example, there may be code in an OnSave event handler to make a network request, stop the form save (using the preventDefault method), and then close the form if the request is successful. Before the response from the request is receieved, the user may have navigated to a different page. In this case, the user may see an unexpected unsaved changes dialog from the page they are on when the response is received.
 >
-> You should also **not** make synchronous network requests in an OnSave event handler. This can cause a slow save experience and an unresponsive app. Instead, if additional data is needed to determine whether a save should proceed or not, the requests should be made via the Common Data Service, for example with plug-ins or flows.
+> You should also **not** make synchronous network requests in an OnSave event handler. This can cause a slow save experience and an unresponsive app. Instead, if additional data is needed to determine whether a save should proceed or not, the requests should be made via the Microsoft Dataverse, for example with plug-ins or flows.
 
 ### Related topic
 [Grid OnSave Event](grid-onsave.md)  

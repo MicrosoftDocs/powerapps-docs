@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 8/27/2020
-ms.author: mduelae
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -31,12 +31,12 @@ When you make changes to your data in Excel Online, you can save the updated inf
   
 ## Open app data in Excel Online  
 
-The option to open data in Excel Online isn’t available in all record types. If you don’t see the option, it’s not available for that record.  
+The option to open data in Excel Online isn’t available in all row types. If you don’t see the option, it’s not available for that row.  
   
 > [!NOTE]
 > Updated data in an app won’t immediately be reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that time frame, any updated data should show in Excel Online.
   
-To open a list of records in an app, on the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
+To open a list of rows in an app, on the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
 
    > [!div class="mx-imgBorder"] 
    > ![Export to excel](media/export_to_excel.png "Select export to Excel")

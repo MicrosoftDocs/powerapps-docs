@@ -1,5 +1,5 @@
 ---
-title: "Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to share a record using grant, modify and revoke access message." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,9 +17,11 @@ search.app:
 ---
 # Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-share-records-using-grantaccess-modifyaccess-revokeaccess-messages 
 
-Change sample to make sure it works with Common Data Service
+Change sample to make sure it works with Microsoft Dataverse
 -->
 
 This sample shows how to share a record using the following messages:

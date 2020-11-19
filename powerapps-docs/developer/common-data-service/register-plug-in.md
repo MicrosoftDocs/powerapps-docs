@@ -1,6 +1,6 @@
 ---
-title: "Register a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to register a plug-in to apply custom business logic to Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to register a plug-in to apply custom business logic to Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/19/2019
 ms.reviewer: "pehecke"
@@ -18,6 +18,8 @@ search.app:
 
 # Register a plug-in
 
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 The process of writing, registering, and debugging a plug-in is:
 
@@ -49,14 +51,14 @@ You will use the Plugin Registration Tool (PRT) to register your plug-in assembl
 
 PRT is one of the tools available for download from NuGet. Follow the instructions in [Download tools from NuGet](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
 
-After you download the PRT, use the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) steps in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to connect to your Common Data Service environment.
+After you download the PRT, use the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) steps in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to connect to your Microsoft Dataverse environment.
 
 ## Register an assembly
 
-Registering an assembly is the process of uploading the assembly to the Common Data Service database. See the instructions found at [Register your assembly](tutorial-write-plug-in.md#register-your-assembly) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
+Registering an assembly is the process of uploading the assembly to the Dataverse database. See the instructions found at [Register your assembly](tutorial-write-plug-in.md#register-your-assembly) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 
 > [!NOTE]
-> You will find options related to the *isolation mode* and *location* for the assembly. These refer to options that apply to on-premise deployments. Common Data Service is not available for on-premises deployments, so you will always accept the default options of **SandBox** and **Database** for these options.
+> You will find options related to the *isolation mode* and *location* for the assembly. These refer to options that apply to on-premise deployments. Dataverse is not available for on-premises deployments, so you will always accept the default options of **SandBox** and **Database** for these options.
 
 When an assembly is uploaded it is stored in the `PluginAssembly` entity. Most of the properties are set using reflection of the imported entity. The base64 encoded bytes of the assembly is stored in the `Content` attribute. While viewing the **Properties** of the assembly in the PRT, you can only edit the **Description** attribute value.
 
@@ -198,7 +200,7 @@ There are certain scenarios where step registration for a message and entity com
 
 |Option|Description|
 |--|--|
-|**Server**|The plug-in will run on the Common Data Service server.|
+|**Server**|The plug-in will run on the Dataverse server.|
 |**Offline**|The plug-in will run within the Dynamics 365 for Outlook client when the user is in offline mode.|
 
 <!-- TODO Add link to where more information about offline-plugins will be documented -->
@@ -217,7 +219,7 @@ If your plug-in step is registered in the **PreValidation** or **PreOperation** 
 
 #### Messages that support entity images
 
-In Common Data Service, only the following messages support entity images:
+In Dataverse, only the following messages support entity images:
 
 |Message|Request Class Property| Description|
 |--|--|--|

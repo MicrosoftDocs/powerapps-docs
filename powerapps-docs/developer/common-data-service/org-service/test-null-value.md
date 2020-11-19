@@ -1,5 +1,5 @@
 ---
-title: "Test for a null value (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Test for a null value (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to test for a null value by using the FilterExpression and QueryByAttribute classes"
 ms.custom: ""
 ms.date: 05/03/2019
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Test for a null value
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 The following code example shows how to test for a null value by using the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> classes.  
   

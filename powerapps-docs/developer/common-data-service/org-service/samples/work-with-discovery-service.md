@@ -1,5 +1,5 @@
 ---
-title: "Sample: Work with discovery service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Work with discovery service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to work with discovery service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Work with Discovery Service
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This sample code shows how to use the discovery service with SDK assemblies. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/Nava_samplecode/cds/orgsvc/C%23/DiscoveryService).
 

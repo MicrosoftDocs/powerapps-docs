@@ -1,5 +1,5 @@
 ---
-title: "Understand the execution context (Common Data Service) | Microsoft Docs" 
+title: "Understand the execution context (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about the data that is passed to your plug-ins when it is executed." 
 ms.custom: ""
 ms.date: 09/08/2020
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Understand the execution context
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 The **Event Execution Pipeline** passes registered plug-ins a wealth of data about the current operation being processed and the plug-in's execution environment.
 

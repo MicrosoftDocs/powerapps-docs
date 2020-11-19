@@ -1,5 +1,5 @@
 ---
-title: "Late-bound and Early-bound programming using the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Late-bound and Early-bound programming using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the different programming styles available when using the .NET SDK assemblies with the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Late-bound and Early-bound programming using the Organization service
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 When you work with the Organization service assemblies you have two styles you can use: *late-bound* and *early-bound*.
 

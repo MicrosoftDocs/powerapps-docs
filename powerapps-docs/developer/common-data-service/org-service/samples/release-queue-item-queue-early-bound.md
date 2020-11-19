@@ -1,5 +1,5 @@
 ---
-title: "Sample: Release a queue item to the queue (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Release a queue item to the queue (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to use ReleaseToQueueRequest message" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Sample: Release a queue item to the queue
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-release-queue-item-queue-early-bound
 Couldn't each of the operations in this series of samples be added to just one sample?

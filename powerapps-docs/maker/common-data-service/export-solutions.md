@@ -24,6 +24,8 @@ search.app:
 ---
 
 # Export solutions  
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can manually export solutions using the steps in this article. We recommend that you create an unmanaged solution to use for exporting your customizations, and then export your customizations periodically so that you have a backup in case anything happens. You can't export [managed](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) solutions or the [Default Solution](solutions-overview.md#default-solutions). 
  
 > [!NOTE]
@@ -85,7 +87,7 @@ The export can take several minutes to complete. Once finished, the export .zip 
 |Order Prefix|Prefix to use for all orders throughout the app.|  
 |Unique String Length|Number of characters appended to invoice, quote, and order numbers.|  
 |Calendar|Calendar Type|Calendar type for the system. Set to Gregorian US by default|  
-|Date Format Code|Information about how the date is displayed throughout Common Data Service|  
+|Date Format Code|Information about how the date is displayed throughout Microsoft Dataverse|  
 |Date Separator|Character used to separate the month, the day, and the year in dates throughout the app.|  
 |Max Appointment Duration|Maximum number of days an appointment can last.|  
 |Show Week Number|Information that specifies whether to display the week number in calendar displays throughout the app.|  

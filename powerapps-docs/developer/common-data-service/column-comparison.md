@@ -1,5 +1,5 @@
 ---
-title: "Use column comparison in queries (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use column comparison in queries (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to compare columns when querying business data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/08/2020
@@ -18,7 +18,9 @@ search.app:
 
 # Use column comparison in queries
 
-In the Common Data Service, users can perform a column comparison for the
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+In the Microsoft Dataverse, users can perform a column comparison for the
 following condition operators using FetchXML, Web API, or the SDK API:
 
 - Equal
@@ -34,7 +36,7 @@ all records with a matching value.
 
 ## Limitations
 
-Listed below are the limitations for the current Common Data Service column comparison support.
+Listed below are the limitations for the current Dataverse column comparison support.
 
 - You can only compare columns within a single entity
 - Only two columns may be compared at a time.

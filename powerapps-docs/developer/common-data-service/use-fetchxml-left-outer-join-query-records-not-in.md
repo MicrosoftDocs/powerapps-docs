@@ -1,5 +1,5 @@
 ---
-title: "Use a left outer join in FetchXML to query for records 	&bdquo;not in&bdquo; (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use a left outer join in FetchXML to query for records 	&bdquo;not in&bdquo; (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how to use a left outer join in FetchXML to perform a query that filters on the join table and build a query to find records “not in” a set" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Use a left outer join in FetchXML to query for records "not in"
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 You can use a left outer join in FetchXML to perform a query that filters on the join table, such as to find all contacts who did not have any campaign activities in the past two months. Another common use for this type of a query is to find records “not in” a set, such as in these cases:  
   

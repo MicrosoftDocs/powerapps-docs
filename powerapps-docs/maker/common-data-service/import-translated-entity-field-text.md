@@ -1,6 +1,6 @@
 ---
-title: "Import translated entity and field text with Power Apps | MicrosoftDocs"
-description: "Learn how to import translated entity and field text"
+title: "Import translated table and column text with Power Apps | MicrosoftDocs"
+description: "Learn how to import translated table and column text"
 ms.custom: ""
 ms.date: 06/19/2018
 ms.reviewer: ""
@@ -23,9 +23,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Import translated entity, form, and field text back into an app
+# Import translated table, form, and column text back into an app
 
-If you have customized entity or field text, such as field labels or drop-down list values, you can provide the users in your organization who are not working with the base language version of your environment with this customized text in their own languages. To do so, you export the text strings for all your customizations so that they can be translated into the languages you use in your organization.  
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+If you have customized table or column text, such as column labels or drop-down list values, you can provide the users in your organization who are not working with the base language version of your environment with this customized text in their own languages. To do so, you export the text strings for all your customizations so that they can be translated into the languages you use in your organization.  
   
  After the translation, you need to import the translated text strings into your environment before users can take advantage of the changes.  
   
@@ -55,4 +57,4 @@ If you have customized entity or field text, such as field labels or drop-down l
 > If you have questions about the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ## Next steps  
- [Export customized entity and field text for translation](export-customized-entity-field-text-translation.md)
+ [Export customized table and column text for translation](export-customized-entity-field-text-translation.md)

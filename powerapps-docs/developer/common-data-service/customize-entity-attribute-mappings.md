@@ -1,5 +1,5 @@
 ---
-title: "Customize entity and attribute mappings in Power Apps (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Customize entity and attribute mappings in Power Apps (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about mapping attributes between entities that have an entity relationship in Power Apps. This lets you set default values for a record that is created in the context of another record." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,13 +17,15 @@ search.app:
 ---
 # Customize entity and attribute mappings
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can map attributes between entities that have an entity relationship. This lets you set default values for a record that is created in the context of another record. Use the customization tools in the application to map attributes; see [Map entity fields](../../maker/common-data-service/map-entity-fields.md).
 
 <a name="bkmk_BehaviorintheApplication"></a>
 
 ## Behavior in the application
 
- Mapping in Common Data Service streamlines data entry when you create new records that are associated with another record. When an entity has an entity relationship with another entity, you can create new related entity records by using the **Create Related** tab in the ribbon. When you create a new record in this manner, mapped data from the primary entity record is copied to the form for the new related entity record. By mapping entity attributes, you control what data is copied by adding new mappings in the relationship between the two entities. If you create a record in any way other than from the associated view of the primary entity, data is not mapped.  
+ Mapping in Microsoft Dataverse streamlines data entry when you create new records that are associated with another record. When an entity has an entity relationship with another entity, you can create new related entity records by using the **Create Related** tab in the ribbon. When you create a new record in this manner, mapped data from the primary entity record is copied to the form for the new related entity record. By mapping entity attributes, you control what data is copied by adding new mappings in the relationship between the two entities. If you create a record in any way other than from the associated view of the primary entity, data is not mapped.  
 
  For example, you might want to set up a mapping between the address fields in accounts and the address fields in contacts. With this mapping, when a user adds a contact associated with a specific account, the address fields for the contact are populated automatically.  
 
@@ -71,7 +73,7 @@ For more information see [Create a new entity record from another entity](webapi
  You can edit attribute mappings between entities for entity relationships that support mapping. 
 
  In addition to creating each attribute map manually, you can use the 
- `AutoMapEntity` message(<xref href="Microsoft.Dynamics.CRM.AutoMapEntity?text=AutoMapEntity Action" /> or <xref:Microsoft.Crm.Sdk.Messages.AutoMapEntityRequest> class) to generate a new set of attribute mappings. This message performs the action found under the **Generate Mappings** menu option in the **More Actions** menu on the toolbar (see [Automatically generate field mappings](../../maker/common-data-service/map-entity-fields.md#automatically-generate-field-mappings)). This message maps all the attributes between the two related entities where the attribute names and types are identical. This message is provided as a productivity enhancement so that you do not have to manually add all attribute mappings. Instead, you can generate a set of likely mappings and minimize the amount of manual work to add or remove individual mappings to meet your requirements. 
+ `AutoMapEntity` message(<xref href="Microsoft.Dynamics.CRM.AutoMapEntity?text=AutoMapEntity Action" /> or <xref:Microsoft.Crm.Sdk.Messages.AutoMapEntityRequest> class) to generate a new set of attribute mappings. This message performs the action found under the **Generate Mappings** menu option in the **More Actions** menu on the toolbar (see [Automatically generate column mappings](../../maker/common-data-service/map-entity-fields.md#automatically-generate-column-mappings)). This message maps all the attributes between the two related entities where the attribute names and types are identical. This message is provided as a productivity enhancement so that you do not have to manually add all attribute mappings. Instead, you can generate a set of likely mappings and minimize the amount of manual work to add or remove individual mappings to meet your requirements. 
 
 > [!NOTE]
 > Automatically generating mappings in this manner will remove any previously defined attribute mappings and may include mappings that you do not want.  

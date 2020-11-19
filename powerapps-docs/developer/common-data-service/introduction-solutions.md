@@ -24,11 +24,13 @@ search.app:
 
 # Introduction to solutions
 
-*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service to install and uninstall the business functionality defined by the solution.
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Every customization that you make to Common Data Service, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service environment.
+*Solutions* are how customizers and developers author, package, and maintain units of software that extend Microsoft Dataverse. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Dataverse to install and uninstall the business functionality defined by the solution.
 
-If you intend to transport customizations or extensions between different Common Data Service environments or distribute solutions using AppSource, you must understand the solution framework.
+Every customization that you make to Dataverse, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Dataverse environment.
+
+If you intend to transport customizations or extensions between different Dataverse environments or distribute solutions using AppSource, you must understand the solution framework.
 
 > [!NOTE]
 > For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm).

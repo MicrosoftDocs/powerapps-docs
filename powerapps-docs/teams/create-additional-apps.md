@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Create additional apps from Microsoft Teams
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 Using the Power Apps app to create the [first app](create-first-app.md) in a team creates an environment. After an environment is available, you can create additional apps in the team by using several methods. Let's take a look at them.
 
 ## Create an app from the Power Apps home
@@ -40,20 +38,20 @@ You can also select **Create** at the bottom of the environment list.
 
 To create an app while you're inside a team, go to the team and select the channel. Select **Add a tab** ![Add a tab](media/additional-apps-5.png "Add a tab").
 
-![Create an app while inside a team](media/additional-apps-6.png "Create an app while inside a team")
+![Create an app from inside a team by adding a tab](media/additional-apps-7.png "Create an app from inside a team by adding a tab")
 
 In the dialog box, select **Power Apps**, and then select **Create an app in Power Apps**.
 
-![Create an app from inside a team by adding a tab](media/additional-apps-7.png "Create an app from inside a team by adding a tab")
+![Create an app while inside a team](media/additional-apps-6.png "Create an app while inside a team")
 
-## Create an app from the build hub
+## Create an app from the solution explorer
 
 You can also select **New** \> **Canvas app**, and then select an app layout to
 create an app. A canvas app is an app that you can create from scratch
 or using any available template through Power Apps Studio. More
 information: [Canvas apps terminology reference and definitions](overview-of-the-power-apps-app.md#canvas-apps-terminology-reference-and-definitions)
 
-![Create an app from the build hub](media/additional-apps-8.png "Create an app from the build hub")
+![Create an app from the solution explorer](media/additional-apps-8.png "Create an app from the solution explorer")
 
 > [!TIP]
 > Creating a canvas app using different methods doesn't affect which app features are available. If you want to change the app orientation and size after you selected a layout, go to [Change screen size and orientation of a canvas app](../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md).

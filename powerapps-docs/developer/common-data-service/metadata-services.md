@@ -1,9 +1,8 @@
 ---
-title: "Work with metadata using code (Common Data Service) | Microsoft Docs"
+title: "Work with metadata using code (Microsoft Dataverse) | Microsoft Docs"
 description: "Both the [Web API](webapi/overview.md) and the [Organization service](org-service/overview.md) include capabilities to perform CRUD operations on the entity schema"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh"
@@ -19,6 +18,8 @@ search.app:
 
 # Work with metadata using code
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Both the [Web API](webapi/overview.md) and the [Organization service](org-service/overview.md) include capabilities to perform CRUD operations on the entity schema. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read metadata.
 
 ## Why work with metadata?
@@ -31,10 +32,10 @@ Some examples:
 
 ## Browse the metadata for your organization
 
-Developing a good working understanding of the metadata in the system can help you understand how Common Data Service platform works. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the *Metadata Browser* which will allow you to view all the hidden entities and metadata properties that are found in the system. More information about the *Metadata Browser*: [Browse the metadata for your organization](browse-your-metadata.md)
+Developing a good working understanding of the metadata in the system can help you understand how Microsoft Dataverse platform works. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the *Metadata Browser* which will allow you to view all the hidden entities and metadata properties that are found in the system. More information about the *Metadata Browser*: [Browse the metadata for your organization](browse-your-metadata.md)
 
 ## Programmatically work with metadata
 
 For more information about programmatically working with metadata using:
-- **Web API**: [Use Web API with Common Data Service metadata](webapi/use-web-api-metadata.md)
-- **Organization service**: [Use Organization service with Common Data Service metadata](org-service/work-with-metadata.md)
+- **Web API**: [Use Web API with Dataverse metadata](webapi/use-web-api-metadata.md)
+- **Organization service**: [Use Organization service with Dataverse metadata](org-service/work-with-metadata.md)

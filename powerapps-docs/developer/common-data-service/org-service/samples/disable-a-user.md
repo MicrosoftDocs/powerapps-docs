@@ -1,5 +1,5 @@
 ---
-title: " Disable or enable a user (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: " Disable or enable a user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to disable and enable a system user." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/27/2020
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Sample: Disable or enable a user
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This sample shows how to disable and enable a system user account in an online or on-premise/IFD environment.
 

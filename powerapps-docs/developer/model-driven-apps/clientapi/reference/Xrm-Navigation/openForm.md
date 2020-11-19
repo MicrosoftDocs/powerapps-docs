@@ -44,7 +44,7 @@ search.app:
 <li><b>height</b>: (Optional) Number. Height of the form window to be displayed in pixels.</li>
 <li><b>navbar</b>: (Optional) String. Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid values are: "on", "off", or "entity".<ul><li><code>on</code>: The navigation bar is displayed. This is the default behavior if the <b>navbar</b> parameter is not used.</li>
 <li><code>off</code>: The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.</li><li><code>entity</code>: On an entity form, only the navigation options for related entities are available. After navigating to a related entity, a back button is displayed in the navigation bar to allow returning to the original record.</li></ul></li>
-<li><b>openInNewWindow</b>: (Optional) Boolean. Indicates whether to display form in a new window.</li>
+<li><b>openInNewWindow</b>: (Optional) Boolean. Indicates whether to display form in a new window or a new tab. If you specify <code>true</code> and do not specify values for height or width, the form will display in a new tab.</li>
 <li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>
 This does not apply to opening a new browser window.  
 <li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related records on the form. The object has the following attributes.
@@ -167,6 +167,12 @@ formParameters["jobtitle"] = "Sr. Marketing Manager";
 formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this record were set programmatically.";
 
+// Set lookup field
+formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
+formParameters["preferredsystemuseridname"] = "Admin user"; // Name of the user.
+formParameters["preferredsystemuseridtype"] = "systemuser"; // Entity name. 
+// End of set lookup field
+
 // Open the form.
 Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
     function (success) {
@@ -196,6 +202,12 @@ formParameters["jobtitle"] = "Sr. Marketing Manager";
 formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this record were set programmatically.";
 
+// Set lookup field
+formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
+formParameters["preferredsystemuseridname"] = " Admin user"; // Name of the user.
+formParameters["preferredsystemuseridtype"] = "systemuser"; // Entity name.
+// End of set lookup field
+
 // Open the form.
 Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
     function (success) {
@@ -209,7 +221,3 @@ Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
 ### Related topics
 
 [Xrm.Navigation](../xrm-navigation.md)
-
-
-
-

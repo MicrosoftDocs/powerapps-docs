@@ -1,6 +1,6 @@
 ---
-title: "Configure an entity for feedback with Power Apps | MicrosoftDocs"
-description: "Learn how to enable feedback for an entity"
+title: "Configure a table for feedback with Power Apps | MicrosoftDocs"
+description: "Learn how to enable feedback for a table"
 ms.custom: ""
 ms.date: 05/18/2018
 ms.reviewer: ""
@@ -23,11 +23,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Configure an entity for feedback/ratings
+# Configure a table for feedback/ratings
 
-Let customers or employees write feedback for any entity record, or rate entity records within a defined rating range by enabling entities for feedback.  
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-This capability is commonly used with a system that captures data from customers via a portal, or survey. Data about service or product satisfaction can be applied with entities that represent that kind of data.
+Let customers or employees write feedback for any table row, or rate table rows within a defined rating range by enabling tables for feedback.  
+
+This capability is commonly used with a system that captures data from customers via a portal, or survey. Data about service or product satisfaction can be applied with tables that represent that kind of data.
 
 Feedback can also be used by employees to provide feedback on a collaborative effort.
 
@@ -36,18 +38,18 @@ Feedback can also be used by employees to provide feedback on a collaborative ef
   
 ## Enable feedback  
   
-Edit the entity to enable **Feedback**. More information: [Edit an entity](edit-entities.md)
+Edit the table to enable **Feedback**. More information: [Edit a table](edit-entities.md)
   
-## Add a subgrid for feedback on the entity form  
+## Add a subgrid for feedback on the table form  
 
-By default, users must go to the list of associated records of the record you want to add feedback to. To make it easier for users to add feedback, you may want to add a feedback subgrid to the form of the entity you are enabling feedback for.  
+By default, users must go to the list of associated rows of the row you want to add feedback to. To make it easier for users to add feedback, you may want to add a feedback subgrid to the form of the table you are enabling feedback for.  
 
 <!-- This is the closest I could find to a topic about adding an subgrid to a form. -->
 More information:  [Sub-Grid properties overview](../model-driven-apps/sub-grid-properties-legacy.md)
 
-## Add a rollup field  to the entity form to show the ratings  
+## Add a rollup column  to the table form to show the ratings  
 
-Depending on how you want to calculate the rating for the entity, you can create a rollup field that calculates the rating, and then add it to the form of the entity you're enabling for feedback. More information: [Define rollup fields that aggregate values](define-rollup-fields.md)
+Depending on how you want to calculate the rating for the table, you can create a rollup column that calculates the rating, and then add it to the form of the table you're enabling for feedback. More information: [Define rollup columns that aggregate values](define-rollup-fields.md)
   
 ### See also  
- [Submit feedback or ratings for Dynamics 365 records](/dynamics365/customer-engagement/basics/submit-feedback-ratings)
+ [Submit feedback or ratings for Dynamics 365 rows](/dynamics365/customer-engagement/basics/submit-feedback-ratings)

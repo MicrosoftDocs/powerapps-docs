@@ -1,5 +1,5 @@
 ---
-title: " Use Outlook methods (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: " Use Outlook methods (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to use the Outlook methods." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Sample: Use Dynamics 365 for Outlook methods
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This sample shows how to use the methods available in the [Microsoft.Crm.Outlook.Sdk.dll](https://docs.microsoft.com/dotnet/api/microsoft.crm.outlook.sdk?view=dynamics-outlookclient-ce-9) assembly. You can download the sample from [here]().
 

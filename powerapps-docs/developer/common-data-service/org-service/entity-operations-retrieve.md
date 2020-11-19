@@ -1,5 +1,5 @@
 ---
-title: "Retrieve an entity using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Retrieve an entity using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes options available when retrieving a record programmatically" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Retrieve an entity using the Organization Service
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 You will typically retrieve a record based on the results of a query and the query results should include a unique identifier for the entity record.
 

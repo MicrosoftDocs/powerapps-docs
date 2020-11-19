@@ -1,6 +1,6 @@
 ---
 title: Attribute metadata | Microsoft Docs
-description: Learn about the attribute metadata use in Common Data Service.
+description: Learn about the attribute metadata use in Microsoft Dataverse.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -29,6 +29,8 @@ Overlap with https://docs.microsoft.com/dynamics365/customer-engagement/develope
 -->
 # Attribute metadata
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Entities include a collection of attributes that represent the data that can be included within each record. Developers need to understand the different types of attributes and how to work with them. 
 
 More information: [Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-entity-attributes)
@@ -55,7 +57,7 @@ Each attribute also has two properties that can display localized values. These 
 |`Description`|A short sentence describing the attribute or providing guidance to the user. i.e. *Type an ID number or code for the account to quickly search and identify the account in system views.*<br />In model-driven apps, this information will appear when users hover over the field for this attribute in a form.|
 
 
-These are the localizable values that are used to refer to the attributes in an app. These values can be changed at any time. To add or edit localized values see  [Common Data Service Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
+These are the localizable values that are used to refer to the attributes in an app. These values can be changed at any time. To add or edit localized values see  [Microsoft Dataverse Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
 
 ## Attribute types
 
@@ -128,7 +130,7 @@ This property can have the following values set:
 |`ApplicationRequired`|2|**Business Required**|The application requires the attribute to have a value.|
 |`Recommended`|3|**Business Recommended**|It is recommended that the attribute has a value.|
 
-Common Data Service only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. The data service does not return an error when an attribute with `ApplicationRequired` applied does not have a value.
+Dataverse only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. The data service does not return an error when an attribute with `ApplicationRequired` applied does not have a value.
 
 Model-driven apps will enforce the `ApplicationRequired` option and use a different presentation for the `Recommended` option. Creators of custom clients may use this information to require similar validation or presentation options.
 
@@ -142,8 +144,8 @@ More information: [Managed Properties](/power-platform/alm/managed-properties-al
 Calculated and rollup attributes free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.
 
 More information: 
-- [Common Data Service Customization Guide: Define rollup fields that aggregate values](/dynamics365/customer-engagement/customize/define-rollup-fields)
-- [Common Data Service Customization Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/customize/define-calculated-fields)
+- [Dataverse Customization Guide: Define rollup fields that aggregate values](/dynamics365/customer-engagement/customize/define-rollup-fields)
+- [Dataverse Customization Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/customize/define-calculated-fields)
 - [Calculated and rollup attributes](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
 
 ## Attribute format
@@ -223,7 +225,7 @@ With the organization service you can use the following messages to retrieve inf
 
 More information: 
 - [Sample: Dump attribute picklist metadata to a file](/dynamics365/customer-engagement/developer/org-service/sample-dump-attribute-picklist-metadata-file)
-- [Common Data Service Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+- [Dataverse Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
 
 #### Use the Web API to retrieve options
 
@@ -244,9 +246,9 @@ When you create a new entity record in the context of an existing entity record,
 For developers creating custom clients, the same behavior can be achieved by using the `InitializeFrom` message (Organization service  [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest) or Web API [InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom)) to get the entity data with the configured default values set.
 
 More information 
-- [Common Data Service Customization Guide: Map entity fields](/dynamics365/customer-engagement/customize/map-entity-fields#BKMK_mappingEntityFields)
-- [Common Data Service Developer Guide Customize entity and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)
+- [Dataverse Customization Guide: Map entity fields](/dynamics365/customer-engagement/customize/map-entity-fields#BKMK_mappingEntityFields)
+- [Dataverse Developer Guide Customize entity and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)
 
 ### See also
 
-[Common Data Service entities](entities.md)
+[Dataverse entities](entities.md)
