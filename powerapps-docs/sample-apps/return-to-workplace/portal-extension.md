@@ -26,11 +26,38 @@ A seperate offering extends the Return to the Workplace solution with a portal. 
 ## Installation
 
 
+## Configuration
+
+There are solution settings that alter the portals behavior. Please see ##### for more details.
+
+- Allow self registration
+- Allow unauthenticated users to self-screen
+- Allow authenticated users to add guest or create passes for guests/dependents.
+
 ## Getting started with the portal
 
-**Get Started** screen is displayed and click on Get Started button to continue.
+The portal provides two ways for end users to self-screen.
 
-Before starting on the portal and as a first time guest, it will ask you to accept the **Terms and Conditions**. Click on the check box and the **Accept** button will enable. 
+1) Unauthenticated. This allows users to complete a specific guest attestation send to them, or they can create new guest attestations and attest in order to get a pass for a facility. This mode is very relevant for infrequent visitors.
+
+2) Authenticated. Guests can be invited to the portal and there they can create passes for themselves or create a pass for their own guests or dependents. This mode is relevant to frequenst visitors, suppliers/vendors or schools where a guardian creates a pass for a dependent.
+
+These two modes are explained in detail below.
+
+### Unauthenticated access to the portal
+
+When you open the portal the **Get Started** screen is displayed. Click on **Get Started** button to continue.
+
+In the unauthenticated mode the users are referred to the **terms and conditions** page. Click on the check box and the **Accept** button will enable. 
+
+On the next screen, the user has to provide contact details. After which a facility can be selected.
+
+At this point the visitor can self-screen and attest to the company policies.
+
+At the end the pass is showed and can be e-mailed if needed.
+
+
+### Authenticated access to the portal
 
 The portal provides guests with the ability to attest to the health policies. If a user is not signed in, the portal displays the configured methods for signing in, creating an account or redeeming an invitation.
 
