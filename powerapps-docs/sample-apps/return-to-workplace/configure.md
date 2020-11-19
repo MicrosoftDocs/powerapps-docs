@@ -378,7 +378,7 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 
 4.	Go through the **Bulk Deletion Wizard**.
 
-5.	Select the appropriate **entity** and **criteria**.
+5.	Select the appropriate **table** and **criteria**.
 
    > [!div class="mx-imgBorder"]
    > ![Criteria](media/solution-admin-criteria.png "Criteria")
