@@ -277,7 +277,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
    | Company Name |Name of the company for solution settings. |
    | Allow Employee Sentiment | Capture employee sentiment information in the Employee app. |
    | Allow storing of Negative Attestations | When disabled, negative attestations registered in the Employee app are not stored. |
-   | Allow QR codes | Enables QR code on the pass in the Employee app.  |
+   | Allow QR codes | Enables QR code on the pass in the Employee app and Portal.  |
    | Allow Guest Registrations | Enables employees to register guests on their bookings in the Employee app.  |
    | Allow Share Guest Registrations | Enables employees to share passes with guests. |
    | Health & Safety email | Email address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
@@ -295,6 +295,9 @@ Some of these settings have an impact on the Employee app. The solution setting 
    |------------------------|------------------------------------------------|
    | Guest Health Terms & Agreement | Shown in the Employee app during the guest registration process.|
    | Guest Privacy Terms & Agreement | Shown in the Employee app during the guest registration process. |
+   | Allow Unauthenticated Guests to Create a Pass | Enable unauthenticated guests to create a pass. |
+   | Allow on behalf of attestations | Allow attestating on behalf a guest. |
+   | Resource Text | Information around the resource. |
    |||
 
 ## Set duplicate detection rules for employee cases 
