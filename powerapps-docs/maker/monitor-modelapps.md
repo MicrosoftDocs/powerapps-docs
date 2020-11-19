@@ -16,8 +16,6 @@ search.app:
 
 # Debug a model-driven app with Monitor
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
 Monitor can help you debug and diagnose problems and help you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all key activities in your app as the app runs.
 
 For more information about when you should monitor an app, see [Monitor overview](monitor-overview.md). To run Monitor with a canvas app, see [Debugging canvas apps with Monitor](monitor-canvasapps.md).
@@ -42,7 +40,7 @@ For more information about when you should monitor an app, see [Monitor overview
 
 ## Events monitored
 
-Page navigations, command executions, form saves, and other major actions will send key performance indicators and network events to Monitor.
+Page navigation, command executions, form saves, and other major actions will send key performance indicators and network events to Monitor.
 
 ### FullLoad
 
