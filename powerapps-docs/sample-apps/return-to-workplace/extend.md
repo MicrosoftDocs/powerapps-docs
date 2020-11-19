@@ -494,7 +494,7 @@ The data definitions section provides information about a list of tables, column
 | Display name          | Column type  | Description                                                                   | Platform use    | Solution |
 |-----------------------|--------------|-------------------------------------------------------------------------------|-----------------|----------|
 | Name                  | Text         | The primary identifier of the record.                                         | Portal            | Portal |
-| Facility              | Lookup       | Used to associate the applicable facility.                                    | Portal            | Portal |
+| Recipient             | Text         | Used to capture email address of the recipient                                | Portal            | Portal |
 | Language              | Text         | Used to capture the language used in the e-mail.                              | Portal            | Portal |
 | Guest Attestation     | Lookup       | Used to associate the guest attestation  to share.                            | Portal            | Portal |
 |||||
@@ -567,6 +567,8 @@ This section describes the different flows in the solution and explains their pu
 | Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. | Base |
 | Guest Attestation - Disable earlier pass | Guest Attestation | Disables earlier attestations and guest registrations for that person so number of guests stays correct. | Base |
 | Guest Registration - Disable earlier pass | Guest Registration | Disables earlier registrations for that person on the same day so number of guest stays correct. | Base |
+| Notification - Send as email | Notification | Sends an e-mail to the employee when the notification is set to 'Yes' on 'Send as email' | Base |
+| Notification - Validate and set correct owner | Notification | Sets owner to correct user record of the employee contact | Base |
 | Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. | Base |
 | Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility. | Base |
 | Share Guest Attestation - Email | Share Guest Attestation | Shares the guest attestation details with the host and the guest. | Portal |
