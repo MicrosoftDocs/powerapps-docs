@@ -66,7 +66,7 @@ Select a Network event to display the **Details** tab.
 
 Earlier you learned about Monitor and how to use it to model-driven apps. Let’s look at a few scenarios where Monitor can assist you in solving script errors, unexpected behavior, and slowdowns.
 
-## Custom script errors (model-driven apps)
+## Custom script errors
 
 Sometimes, a bug in the custom JS causes a script error or functionality
 problem when loading a page. While this usually produces a call stack in the
@@ -79,7 +79,7 @@ and **type** (such as *onload*, *onchange*, *RuleEvaluation*, and *CustomContr
 
 ![Custom script error example](media/monitor/custom-script-error.png "Custom script error example")
 
-## Slow performance (model-driven apps)
+## Slow performance
 
 Browser developer tools can help profile slow page loads, but there is many data to filter though and it’s not clear what is important to look at. Monitor solves this problem by showing relevant events that contribute to page load performance.
 
