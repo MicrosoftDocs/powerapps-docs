@@ -38,7 +38,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 1. (Optional) If the app doesn't have any description, select **Edit details** to open the app in Power Apps Studio to add.
 
-1. (Optional) Add additional details such as *Name*, Website*, *Terms of Use*, *Privacy Policy*, *MPN ID* (Microsoft Partner Network ID).
+1. (Optional) Add additional details such as *Name*, *Website*, *Terms of Use*, *Privacy Policy*, *MPN ID* (Microsoft Partner Network ID).
 
     ![Add additional details](../maker/canvas-apps/media/embed-teams-app/additional-settings-embed.png "Add additional details")
 
