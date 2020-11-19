@@ -135,7 +135,7 @@ With version 1.3 we are introducing the Return to the Workplace portal, which al
 
 ### Step 2: Access Control
 
-In version 1.2 we allowed case manager to block employees from access to the facility. We made this feature more generic which allows you block employees via multiple ways either being from within the platform or outside of the platform. If you blocked employees earlier, please create access controls now. More information: [Configure Access Control](testetste.md).
+In version 1.2 we allowed case manager to block employees from access to the facility. We made this feature more generic which allows you to block employees via multiple ways either being from within the platform via f.e. Power Automate or via the API. If you blocked employees earlier, please create access controls now. More information: [Configure Access Control](testetste.md).
 
 ### Step 3: Notifications
 
@@ -143,7 +143,7 @@ With the introduction of version 1.3, we implemented notifications to notify emp
 
 ### Step 4: Power BI Dashboards
 
-The Power BI Dashboards now contain information about the activities in the Return to the Workplace portal. In addition to that, we implemented 
+The Power BI Dashboards now contain information about the activities in the Return to the Workplace portal. We also implemented county / state level details for United States to get a more detailed view of the virus spread. More information: [Location Readiness dashboard](dashboard-for-executive-leadership.md)
 
 
 ## Give feedback about the solution
