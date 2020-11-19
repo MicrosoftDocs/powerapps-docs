@@ -135,11 +135,11 @@ With version 1.3 we are introducing the Return to the Workplace portal, which al
 
 ### Step 2: Access Control
 
-In version 1.2 we allowed case manager to block employees from access to the facility. We made this feature more generic which allows you to block employees via multiple ways either being from within the platform via f.e. Power Automate or via the API. If you blocked employees earlier, please create access controls now. More information: [Configure Access Control](testetste.md).
+In version 1.2 we allowed case manager to block employees from access to the facility. We made this feature more generic which allows you to block employees via multiple ways either being from for example Power Automate or via the API. If you blocked employees earlier, please create access controls now. More information: [Configure Access Control](testetste.md).
 
 ### Step 3: Notifications
 
-With the introduction of version 1.3, we implemented notifications to notify employees about important events. Out of the box, we supply email notifications. More information: [Configure Email Flows](configure.md)
+With the introduction of version 1.3, we implemented notifications to notify employees about important events. They will receive these notifications either in the employee app or via different ways of communication. Out of the box, we supply email notifications. More information: [Configure Email Flows](configure.md)
 
 ### Step 4: Power BI Dashboards
 
