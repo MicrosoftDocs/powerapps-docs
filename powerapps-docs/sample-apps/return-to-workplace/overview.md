@@ -26,11 +26,15 @@ The main modules of the Return to the Workplace solution include:
 
 - **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace app to check in remotely and self-screen before entering a building.
 
+- **Return to the Workplace Guest Portal** allows third parties the ability to follow a similar self service process as the employee. Allowing them to check-in on invitation and self-screen before getting a pass. Users of the portal can even add new guests or dependents allowing for a more decentralized and scalable solution.
+
 ## Licensing requirements
 
-- Power Apps license
+- Power Apps per user plan or Power Apps per App plan
 
 - Power BI Premium or Power BI Pro license, if you'll be using the Power BI dashboard that's available as part of the solution 
+
+- Power Apps Portals, if installed, can be provisioned without requiring a specific license. User access licensing is based on persona type and charged as per use bases.
 
 Contact your local Microsoft account representative for questions related to licensing as per your requirements.
 
@@ -39,11 +43,13 @@ See also:
 - [Licensing overview for Microsoft Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
+- [Power Apps Portals details](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals)
 
 ## Start here
 
 |Task | Description|Target audience|See|
-|--|--|-----|--|
+|-----|------------|---------------|---|
+|What's new?|Provides an overview of the features added in the latest and previous releases. |Business leaders|[What's new?](whats-new.md)|
 |Download and deploy the solution| Used by IT administrators to deploy the Return to the Workplace solution and set up users and security.|IT administrators|[Deploy the solution](deploy.md)|
 |Upgrade the solution| Used by IT administrators to upgrade to the latest version of the Return to the Workplace solution|IT administrators|[Upgrade the solution](upgrade.md)|
 |Configure the Return to the Workplace solution| Used by IT administrators to set up and configure data related to workplaces and users who will use this solution.|IT administrators|[Configure the solution](configure.md)|
@@ -52,6 +58,7 @@ See also:
 |Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Facility Safety Management app](app-for-facility-manager.md)
 |Use the employee app|Used by employees who are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to having no symptoms before returning to a reopened workplace.|Employees|[Employee Return to the Workplace app](app-for-employee.md)
 |Use the care management app|Used to manage employee cases.|Case managers|[Workplace Care Management app](app-for-health-and-safety-lead.md)
+|Use the portal |Learn about the portals' capability and configuration options.|IT administrators|[Return to the Workplace portal](portal-extention.md)|
 
 ## Feedback about the solution
 
