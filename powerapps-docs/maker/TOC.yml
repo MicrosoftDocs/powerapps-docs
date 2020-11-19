@@ -2026,7 +2026,7 @@
       - name: Use Monitor with model-driven app forms
         href: ./model-driven-apps/monitor-form-checker.md
       - name: Troubleshoot form issues in model-driven apps
-        href: ./developer/model-driven-apps/troubleshoot-forms.md
+        href: ../developer/model-driven-apps/troubleshoot-forms.md 
     - name: Collaborative debugging with Monitor
       href: monitor-collaborative-debugging.md
     - name: Advanced monitoring
