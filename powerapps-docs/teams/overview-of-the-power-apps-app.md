@@ -83,13 +83,9 @@ Shows all available Power Apps objects such as apps, flows, and chatbots in the 
 
 ![Solution explorer - All](media/power-apps-overview-16.png "Solution explorer - All")
 
-- **Back** takes you back to the **Build** hub, with its list of environments.
+Select **New** to create new apps, flows, or tables.
 
-- **New** is what you select to create new apps, flows, or tables.
-
-    ![Solution explorer - All - New option](media/power-apps-overview-15.png "Solution explorer - All - New option")
-
-- **Publish all customizations** publishes customization changes. More information: [Work with solutions in Power Apps](../maker/common-data-service/solutions-overview.md#work-with-solutions-in-power-apps)
+![Solution explorer - All - New option](media/power-apps-overview-15.png "Solution explorer - All - New option")
 
 ### Apps
 
