@@ -25,7 +25,8 @@ Don't have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-
 Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** inside your apps. Specify the tile that you want to show by setting its **Workspace**, **Dashboard**, and **Tile** properties in the **Data** tab of the options panel.
 
   > [!NOTE]
-  > Power BI tile control only supports tile visualizations pinned to a dashboard.  To embed a report page, first pin the page to the dashboard then you can embed that tile visualization.  **Querystring parameter filtering is only supported within pinned visualization tiles.**
+  > - Power BI tile control only supports tile visualizations pinned to a dashboard. To embed a report page, pin the page to the dashboard first. Then, you can embed that tile visualization.
+  > - *Querystring parameter filtering* is only supported within pinned visualization tiles.
 
 ## Sharing and security
 
@@ -33,7 +34,7 @@ When you share an app that contains Power BI content, you must share not only th
 
 ## Performance
 
-It's not recommended to have more than three (3) Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
+It's not recommended to have more than 3 Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
 
 ## Pass a parameter
 
