@@ -39,17 +39,19 @@ Monitor supports several events for canvas apps and model-driven apps. Here are 
 
 | Canvas apps | Model-driven apps |
 | - | - |
-| <ul> <li> Data connectors </li> <li> Network events (error status codes highlighted) </li> <li> Screen load metrics </li> <li> Cross-screen dependency warning </li> <li> User actions such as *Navigate*, *Select*, *SetProperty* </li> <li> Custom Trace() </li> <li> Delegated versus non-delegated queries </li> <li> Verbose switch (internal telemetry) </li> <li> Delegation </li> <li> Function </li> <li> Network </li> <li> Parsing </li> <li> Performance </li> <li> Scenario </li> <li> ScreenLoad </li> <li> Telemetry </li> <li> UserAction </li> <li> Verbose </li> </ul> | <ul> <li>	Form load sequence, core boot </li> <li> Perf metrics </li> <li> XHR Sync versus Async </li> <li> Form rules (model) </li> </ul> |
+| <ul> <li> Data connectors </li> <li> Network events (error status codes highlighted) </li> <li> Screen load metrics </li> <li> Cross-screen dependency warning </li> <li> User actions such as *Navigate*, *Select*, *SetProperty* </li> <li> Custom Trace() </li> <li> Delegated versus non-delegated queries </li> <li> Verbose switch (internal telemetry) </li> <li> Delegation </li> <li> Function </li> <li> Network </li> <li> Parsing </li> <li> Performance </li> <li> Scenario </li> <li> ScreenLoad </li> <li> Telemetry </li> <li> UserAction </li> <li> Verbose </li> </ul> | <ul> <li>	Form events, such as load and save  </li> <li> Network </li> <li> Page navigations</li> <li> command executions </li> </ul> |
 
 ## Unsupported scenarios for Monitor
 
 The following scenarios aren't supported when using Monitor:
 
-- Monitor connected to apps running on a mobile device (native players).
-- Monitor connected to canvas app embedded in a model-driven app or custom page.
-- Monitor connected to SharePoint custom form app.
-- Monitor connected to Teams embedded app. As an alternative, play the app in a web player for diagnostics purposes.
-- Monitor isn't supported on Internet Explorer version 11.
+|Description  |App type  |
+|---------|---------|
+|Monitor connected to apps running on a mobile device (native players).     |  Canvas    |
+|Monitor connected to canvas app embedded in a model-driven app or custom page.     |  Canvas       |
+|Monitor connected to SharePoint custom form app.     | Canvas        |
+|Monitor connected to Teams embedded app. As an alternative, play the app in a web player for diagnostics purposes.     | Canvas        |
+|Monitor isn't supported on Internet Explorer version 11.     |  Canvas and model-driven       |
 
 ### See also
 
