@@ -40,7 +40,7 @@ To start with customizing the sample apps, the first step is to open the app ins
 
     ![Select Power Apps app](media/power-apps.png "Select Power Apps app")
 
-1. Select [Build](overview-of-the-power-apps-app.md#build-tab) tab.
+1. Select [Build](overview-of-the-power-apps-app.md#build-hub) tab.
 
 1. Select the team environment where you installed the sample app.
 
