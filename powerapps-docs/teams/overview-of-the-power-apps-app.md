@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Overview of the Power Apps app
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 You can use the Power Apps app to create and manage apps across the available environments for the applicable teams. Select the Power Apps app from the left pane in Microsoft Teams to open the Power Apps interface.
 
 > [!NOTE]
@@ -27,11 +25,11 @@ Three tabs are available: **Home**, **Build**, and **About**. You can start crea
 
 Let's understand each tab in detail.
 
-## Home tab
+## Home
 
 Your **Power Apps** experience in Teams starts with the **Home** tab. Use the **Home** tab to get started creating new apps with Power Apps. 
 
-![Home tab](media/home-tab.png "Home tab")
+![Home](media/home-tab.png "Home")
 
 1. **Introduction Video**: Watch a one-minute video to find out what Power Apps in Teams is all about.
 
@@ -43,11 +41,11 @@ Your **Power Apps** experience in Teams starts with the **Home** tab. Use the **
 
 1. **Learn**: You'll find helpful articles in this section to get you started with Power Apps in Teams.
 
-## Build tab
+## Build hub
 
-Select the **Build** tab to see the list of environments for each team that you're a member of, and the list of apps or objects that have been created or installed.
+Select the **Build** hub to see the list of environments for each team that you're a member of, and the list of apps or objects that have been created or installed.
 
-![Build tab](media/power-apps-overview-4.png "Build tab")
+![Build](media/power-apps-overview-4.png "Build")
 
 1. **Environments**: Each Microsoft Teams team with an environment that you have access to is listed here.
 
@@ -59,31 +57,37 @@ Select the **Build** tab to see the list of environments for each team that you'
 
     ![Expand and collapse the list](media/power-apps-overview-8.png "Expand and collapse the list")
 
-1. **Built by this team**: This list shows all Power Apps objects such as apps, flows, and tables created in the selected environment (the Teams team). Select **New app** to create a new app. Select **See all** to open the build hub for the environment. More information: [Build hub](#    build-hub)
+    When you select an environment from the list, you'll see the recent resources built by the selected environment's tea, or the apps installed in the selected environment on the right side of the screen
+
+1. **Built by this team**: This list shows all Power Apps objects such as apps, flows, and tables created in the selected environment (the Teams team). Select **New app** to create a new app. Select **See all** to open the solution explorer for the environment. More information: [Solution explorer](#solution-explorer)
 
     Select **See all** to view the all the components in the selected environment, and to create new apps or components.
 
     ![Built by this team](media/power-apps-overview-5.png "Built by this team")
 
+    In the *Items created for* list, select an app, or a table to directly open the selection in the respective editor.
+
 1. **Installed apps**: Shows a list of installed apps in the environment (Teams team) from the Teams app store.
 
     ![Installed apps](media/power-apps-overview-9.png "Installed apps")
 
-## Build hub
+    Select an app, or a table to directly open the selection in the respective editor.
 
-When you select **See all** from the environment list on the **Build** tab, you'll see the Power Apps build hub with the available components for the selected environment. To get started, select a component group from the left pane.
+## Solution explorer
+
+When you select **See all** from the environment list on the **Build** hub, you'll see the Power Apps solution explorer with a tree view of the pages for the environment. To get started, select a page from the solution explorer on the left.
 
 ### All
 
 Shows all available Power Apps objects such as apps, flows, and chatbots in the selected environment.
 
-![Build hub - All](media/power-apps-overview-16.png "Build hub - All")
+![Solution explorer - All](media/power-apps-overview-16.png "Solution explorer - All")
 
-- **Back** takes you back to the **Build** tab, with its list of environments.
+- **Back** takes you back to the **Build** hub, with its list of environments.
 
 - **New** is what you select to create new apps, flows, or tables.
 
-    ![Build hub - All - New option](media/power-apps-overview-15.png "Build hub - All - New option")
+    ![Solution explorer - All - New option](media/power-apps-overview-15.png "Solution explorer - All - New option")
 
 - **Publish all customizations** publishes customization changes. More information: [Work with solutions in Power Apps](../maker/common-data-service/solutions-overview.md#work-with-solutions-in-power-apps)
 
@@ -91,25 +95,25 @@ Shows all available Power Apps objects such as apps, flows, and chatbots in the 
 
 Shows the apps created with Power Apps. More information: [Manage your apps](manage-your-apps.md)
 
-![Build hub - Apps](media/power-apps-overview-10.png "Build hub - Apps")
+![Solution explorer - Apps](media/power-apps-overview-10.png "Solution explorer - Apps")
 
 ### Flows
 
 Shows all the Power Automate flows in the selected team's environment. Power Automate is a service that helps you create automated workflows between your
 favorite apps and services to synchronize files, get notifications, collect data, and more. Different types of flows are available. More information: [Get started with Power Automate](/power-automate/teams/overview.md)
 
-![Build hub - Flows](media/power-apps-overview-11.png "Build hub - Flows")
+![Solution explorer - Flows](media/power-apps-overview-11.png "Solution explorer - Flows")
 
 ### Tables
 
 In Power Apps, a *table* defines information that you want to track in the form of records, which typically include properties such as company name, location,
 products, email, and phone. You can then surface that data by creating an app that refers to the table. For more information about tables, go to [Tables overview](../maker/common-data-service/entity-overview.md).
 
-![Build hub - Tables](media/power-apps-overview-12.png "Build hub - Tables")
+![Solution explorer - Tables](media/power-apps-overview-12.png "Solution explorer - Tables")
 
 ### Other - Connection references
 
-Lists connections available to the environment. Data is stored in a data source, and you bring that data into your app by creating a connection. A Power Apps connection connects your app to such a data source. You can use several other types of connections to connect to the Project Oakdale environment within the team. More information: [Overview of canvas-app connectors](../maker/canvas-apps/connections-list.md)
+Lists connections available to the environment. Data is stored in a data source, and you bring that data into your app by creating a connection. A Power Apps connection connects your app to such a data source. You can use several other types of connections to connect to the Dataverse for Teams environment within the team. More information: [Overview of canvas-app connectors](../maker/canvas-apps/connections-list.md)
 
 ![Connection references](media/power-apps-overview-13.png "Connection references")
 
@@ -118,9 +122,9 @@ Lists connections available to the environment. Data is stored in a data source,
 Lists the environment variables for your selected team's environment. Apps and flows often require different configuration settings across environments.
 You can use environment variables as configurable input parameters separately to manage data, rather than hard-coding values in your customization or using additional tools. More information: [Environment variables overview](../maker/common-data-service/environmentvariables.md).
 
-![Build hub - Environment variables](media/power-apps-overview-14.png "Build hub - Environment variables")
+![Solution explorer - Environment variables](media/power-apps-overview-14.png "Solution explorer - Environment variables")
 
-## About tab
+## About
 
 Select the **About** tab to view the version of the installed Power Apps app.
 
@@ -137,8 +141,8 @@ useful information that you can then share with others when investigating an iss
 - **Object ID**: Object ID of the user account in Azure Active Directory.
 - **Build name**: Build and version details of the Power Apps app.
 - **Resource ID**: ID of the resource.
-- **Unique name**: Unique name of the Common Data Service organization.
-- **Instance url**: URL of the Common Data Service instance.
+- **Unique name**: Unique name of the Dataverse organization.
+- **Instance url**: URL of the Dataverse instance.
 
 > [!NOTE]
 > Session details are only used when you reach out to Microsoft Support to investigate an issue.
@@ -151,7 +155,7 @@ While creating canvas aps using Power Apps from the Teams interface, you need to
 |----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Power Apps Studio](https://docs.microsoft.com/powerapps/powerapps-overview#power-apps-for-app-makerscreators) | An application used to make or author a canvas app.                                                                                                             |
 | [Canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started)                           | An app that you can create from scratch or by using any available template through Power Apps Studio.                                                                                             |
-| [Model-driven app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)     | An application based on Common Data Service forms, views, tables, columns, and other components.                                                                                                                     |
+| [Model-driven app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)     | An application based on Dataverse forms, views, tables, columns, and other components.                                                                                                                     |
 | [Connector](https://docs.microsoft.com/connectors/connectors)                                                  | A connection object that connects an app with a data source. For example, a connector for SharePoint or a connector for OneDrive.                                                                                |
 | [Control](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties#controls)                | An object that can be added on the canvas to provide certain app functionality.                                                                                                                              |
 | [Property](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties#all-properties)         | Behaviors representing the controls available in an app.                                                                                                                                                     |

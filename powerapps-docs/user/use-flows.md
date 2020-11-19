@@ -1,6 +1,6 @@
 ---
 title: "Use Power Automate to automate processes in model-driven apps| MicrosoftDocs"
-ms.custom: ""
+description: How to sse Power Automate to automate processes
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -19,7 +19,7 @@ search.app:
 ---
 # Use Power Automate to automate processes
 
-Power Automate lets you create automated processes between your favorite apps and services. From within your app, you can run a flow on one or more records. 
+Power Automate lets you create automated processes between your favorite apps and services. From within your app, you can run a flow on one or more rows. 
 
 Also, you can open Power Automate from your app to view, edit, or create new flows.  More information: [Get started with Power Automate](https://docs.microsoft.com/flow/getting-started)
 

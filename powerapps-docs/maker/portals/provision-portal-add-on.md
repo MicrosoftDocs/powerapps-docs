@@ -15,8 +15,9 @@ ms.reviewer: tapanm
 If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page and provision the portal.
 
 > [!NOTE]
-> - To provision a portal, you must be assigned either System Administrator or System Customizer role of the Common Data Service environment selected for the portal. You must also have the [required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to create and register an application in Azure AD. If you don't have the required permissions, contact the Global Administrator to update your permissions or ask the Global Administrator to provision the portal.
+> - To provision a portal, you must be assigned either System Administrator or System Customizer role of the Microsoft Dataverse environment selected for the portal. You must also have the [required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to create and register an application in Azure AD. If you don't have the required permissions, contact the Global Administrator to update your permissions or ask the Global Administrator to provision the portal.
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-portal.md#create-additional-portals-in-an-environment).
+> - To learn about the roles required to create add-on portals, read [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md).
 
 ## Provision add-on portal
 
@@ -180,7 +181,7 @@ If the package installation has failed, the portal administrator page will open 
 
 1. Go to the Solution Management page of the **Dynamics 365 Administration Center** page and check that the package status is **Install Failed**. 
 
-2. If the package status is **Install Failed**, try retrying the installation from the solution page. Also, be sure to check that a system administrator is installing the solution with the default language in Common Data Service set to the language the portal should be installed in.
+2. If the package status is **Install Failed**, try retrying the installation from the solution page. Also, be sure to check that a system administrator is installing the solution with the default language in Dataverse set to the language the portal should be installed in.
 
 > [!NOTE]
 > Some solutions have prerequisites for their installation, so an installation will fail if the prerequisites are not met. For example, to install the Partner Field Service for a partner portal, the Partner Portal and Field Service solutions must have already been installed. If you attempt to install the Partner Field Service first, the installation will fail and give you an error message.

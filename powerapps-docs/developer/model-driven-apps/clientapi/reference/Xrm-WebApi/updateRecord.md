@@ -208,6 +208,9 @@ Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).th
 );
 ```
 
+### Update associations for collection-valued navigation properties
+The [Xrm.WebApi.online.execute](online/execute.md) API can be used to associate and disassociate collection-valued navigation properties. This is **NOT** supported for mobile offline scenarios.
+
 ### Related topics
 
 [Xrm.WebApi](../xrm-webapi.md)

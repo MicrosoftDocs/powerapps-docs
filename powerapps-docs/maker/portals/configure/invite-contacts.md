@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Invite contacts to your portals
 
-Use the invitation feature of portals to invite contacts to your portal through automated email(s) created in your Common Data Service. The people you invite receive an email, fully customizable by you, with a link to your portal and an invitation code. This code can be used to gain special access configured by you. With this feature you have the ability to:
+Use the invitation feature of portals to invite contacts to your portal through automated email(s) created in your Microsoft Dataverse. The people you invite receive an email, fully customizable by you, with a link to your portal and an invitation code. This code can be used to gain special access configured by you. With this feature you have the ability to:
 
 - Send Single or Group Invitations
 -   Specify an expiry date if desired

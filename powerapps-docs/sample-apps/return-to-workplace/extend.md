@@ -1,5 +1,5 @@
 ---
-title: Extend the Return to the Workplace Solution
+title: Extend the Return to the Workplace solution
 description: Provides an overview of how to extend the Return to the Workplace solution.
 author: v-jogha
 ms.service: powerapps
@@ -12,19 +12,21 @@ ms.reviewer: kvivek
 
 # Extend the Return to the Workplace solution
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This article provides a detailed description of the data model, workflows, and Power Automate flows used by the Return to the Workplace solution. The solution extends Common Data Model and uses several of its components. Administrators, developers, and users should be mindful of the solution and possible implications of other solutions that coexist in the same environment.
 
 The definitions provided in this article indicate the intended purpose of the entities, relationships, attributes, flows, and workflows contained in the Return to the Workplace solution. These definitions can be fully or partially adopted depending on your business requirements.
 
 ## Integration and extension
 
-Return to the Workplace solution is built on Microsoft Power Platform. To learn more about working with model-driven apps and Common Data Service, go to:
+The Return to the Workplace solution is built on Microsoft Power Platform. To learn more about working with model-driven apps and Microsoft Dataverse, go to:
 
 - [Model-driven apps guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
-- [Common Data Service developer guide](https://docs.microsoft.com/powerapps/developer/common-data-service/overview)
-- [Common Data Service entities](https://docs.microsoft.com/powerapps/developer/common-data-service/entities)
-- [Work with data using code in Common Data Service](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds)
-- [Best practices and guidance for Common Data Service](https://docs.microsoft.com/powerapps/developer/common-data-service/best-practices/)
+- [Dataverse developer guide](https://docs.microsoft.com/powerapps/developer/common-data-service/overview)
+- [Dataverse entities](https://docs.microsoft.com/powerapps/developer/common-data-service/entities)
+- [Work with data using code in Dataverse](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds)
+- [Best practices and guidance for Dataverse](https://docs.microsoft.com/powerapps/developer/common-data-service/best-practices/)
 - [Business process flows](https://docs.microsoft.com/power-automate/business-process-flows-overview)
 
 To learn more about solutions and application lifecycle management (ALM) guidance to maintain the solution integrity, go to:
@@ -38,26 +40,26 @@ To learn more about supported extension methods, go to:
 
 ## Guidance
 
-With the solution, there are numerous parts that can be extended. Below are a couple of components where we give some additional guidance to customize or tailor them.
+Numerous parts of this solution can be extended. The following are a couple of components where we give additional guidance to customize or tailor them.
 
 ### Copying a canvas app
 
-The canvas app within the solution can be tailored to your own needs. It is recommended to copy the canvas app before you make any changes. This way your changes aren't impacted by new versions. To copy a canvas app:
+The canvas app within the solution can be tailored to your needs. We recommend that you copy the canvas app before you make any changes. That way your changes won't be impacted by new versions. To copy a canvas app:
 
-1. Go to the [Power Apps](https://make.powerapps.com).
+1. Go to [Power Apps](https://make.powerapps.com).
 2. Select the **Employee Return to the Workplace** app and then select **Edit**.
-3. Select **File** and the select **Save As**. Select a new location and name and then select **Save**.
+3. Select **File** and then select **Save As**. Select a new location and name and then select **Save**.
 
 ### Security roles
 
 The security roles included in the solution are set up for test and demo purposes. They must be reviewed and understood thoroughly before moving to a production environment or when importing sensitive data.
 
-To learn more about the Power Platform and Common Data Service Security, see:
+To learn more about Microsoft Power Platform and Dataverse security, go to:
 
-- [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security)
-- [Security Roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
+- [Security in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security)
+- [Security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
-New security roles can be created and tailored to your needs. The supplied security roles can serve as template here that can be copied. If the new roles need to be moved to different environments, they need to be added to a new solution.
+New security roles can be created and tailored to your needs. The supplied security roles can serve as a template here that can be copied. If the new roles need to be moved to different environments, they need to be added to a new solution.
 
 In order to copy the security role:
 
@@ -68,7 +70,7 @@ In order to copy the security role:
 
 ## Entity relationship diagram
 
-The entity relationship diagram illustrates the entities and their relationships that are present in the Common Data Service environment. System-generated entities and relationships, such as **Created By** and **Modified By**, aren't displayed in the diagram.
+The entity relationship diagram illustrates the entities and their relationships that are present in the Dataverse environment. System-generated entities and relationships, such as **Created By** and **Modified By**, aren't displayed in the diagram.
 
 > [!div class="mx-imgBorder"]
 > ![Entity relationship diagram](media/data-dictionary-ERD.png "Entity relationship diagram")
@@ -156,10 +158,10 @@ The data definitions section provides information about a list of entities, data
 |-----------|---------------|----------------|------------------|
 | Name | Text  | Primary identifier of the record. | Model-driven app |
 | Employee | Lookup | Contact associated with the record. | Model-driven app |
-| Comment | Text | Used to capture details of th possible contact. | Model-driven app |
+| Comment | Text | Used to capture details of the possible contact. | Model-driven app |
 | Risk Assessment | Option set | Used to denote the current risk of the case contact. | Model-driven app |
 | Exposure Score | Whole number | Score calculated by case contact suggestion flow. | Model-driven app |
-| Open Case | Lookup | Used associate an open case for the case contact. | Model-driven app|
+| Open Case | Lookup | Used to associate an open case for the case contact. | Model-driven app|
 |||||
 
 ### Case Facility
@@ -225,7 +227,7 @@ The data definitions section provides information about a list of entities, data
 |------------------|---------------|---------------|------------------|
 | Facility         | Lookup | Used to associate the facility booked | Model-driven app and canvas app |
 | Area             | Lookup | Used to associate the location booked. | Model-driven app and canvas app|
-| End Arrival Time | DateTime    | Used to capture the ending point in time for the booking. | Model-driven app; Canvas app |
+| End Arrival Time | DateTime    | Used to capture the ending point in time for the booking. | Model-driven app and canvas app |
 | Start Arrival Time  | DateTime | Used to capture the beginning point in time for the booking. | Model-driven app and canvas app|
 | Booking Date     | Date          | Used to determine the date of the booking.| Model-driven app and canvas app |
 | Employee         | Lookup        | Used to associate the employee creating the booking. | Model-driven app and canvas app|
@@ -237,7 +239,7 @@ The data definitions section provides information about a list of entities, data
 | Display name                    | Data type     | Description                                                                                      | Platform use                |
 |---------------------------------|---------------|--------------------------------------------------------------------------------------------------|------------------------------|
 | Case Number                     | Text          | Unique identifier for the employee case.                                                         | Model-driven app             |
-| Duration in Days                | Whole number  | Used to capture the number of days a case was open                                               | Model driven app             |
+| Duration in Days                | Whole number  | Used to capture the number of days a case was open.                                               | Model driven app             |
 | Facility Access Available       | Option Set    | Used to denote whether the employee can get a pass for a facility.                               | Model-driven app and canvas app |
 | Facility Access Available Date  | Date and Time | Used to specify when the employee will be able to get a pass for a facility.                     | Model-driven app             |
 | Employee Instructions           | Text Area     | Used to give the employee a note on why they are blocked from booking a pass.                    | Model-driven app and canvas app            |
@@ -247,8 +249,8 @@ The data definitions section provides information about a list of entities, data
 | Public Health Official Notified | Option Set    | Used to denote whether the appropriate public health officials have been notified, if applicable. | Model-driven app             |
 | Risk Assessment                 | Option Set    | Used to denote the current risk of the employee case.                                            | Model-driven app             |
 | Screened                        | Option Set    | Used to denote whether the screening process has occurred.                                       | Model-driven app             |
-| First Time Employee Contacted   | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
-| First Time to Investigation     | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
+| First Time Employee Contacted   | Date and Time | Marked by a workflow and used in the Power BI dashboards to track performance.                | Model-driven app             |
+| First Time to Investigation     | Date and Time | Marked by a workflow and used in the Power BI dashboards to track performance.                | Model-driven app             |
 | Originating Case                | Lookup        | Used to associate a case to the case where it was created from (via case contacts).               | Model-driven app  |
 | Process Stage                   | Text          | Indicates the actual process stage of the business process flow.                                                | Model-driven app             |
 |||||
@@ -413,11 +415,11 @@ The data definitions section provides information about a list of entities, data
 
 | Display name | Data type    | Description                                          | Platform use                |
 |--------------|--------------|------------------------------------------------------|------------------------------|
-| Capacity Limit Percentage | Decimal Number | used to scale available capacity in a facility | Model-driven app |
+| Capacity Limit Percentage | Decimal Number | Used to scale available capacity in a facility. | Model-driven app |
 | Description  | Text         | Used to document details about the reopen phase.     | Model-driven app and canvas app |
 | Name         | Text         | The name of the reopen phase.                        | Model-driven app             |
 | Index        | Whole Number | Used to provide a logical sequence to reopen phases. | Model-driven app             |
-| Process Stage | Lookup | Used to associate a Reopen Phase to the correct business process flow stage | Model-driven app |
+| Process Stage | Lookup | Used to associate a reopen phase to the correct business process flow stage. | Model-driven app |
 ||||
 
 ### Reopen Phase Transition
@@ -452,15 +454,15 @@ The data definitions section provides information about a list of entities, data
 | Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app |
 | Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app |
 | Allow QR codes                          | Option Set | Indicates if QR codes are displayed on the pass.                         | Model-driven app and canvas app |
-| Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registrations is available               | Model-driven app and canvas app |
+| Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registration is available.               | Model-driven app and canvas app |
 | Company Name                            | Text       | Used to describe the solution settings record.                            | Model-driven app |
 | Facility Group                          | Lookup     | Links solution settings record to specific facility group.               | Model-driven app and canvas app |
 | Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
 | Health Contact Instructions             | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app |
 | Health & Safety Instructions            | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app |
 | General Terms & Agreement               | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app |
-| Guest Health Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest.          | Model-driven app and canvas app |
-| Guest Privacy Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest.           | Model-driven app and canvas app |
+| Guest Health Terms & Agreement          | Text       | Instructions provided to an employee when registering a guest.          | Model-driven app and canvas app |
+| Guest Privacy Terms & Agreement          | Text       | Instructions provided to an employee when registering a guest.           | Model-driven app and canvas app |
 | Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                |
 |||||
 
@@ -490,9 +492,9 @@ This section describes the different flows in the solution and explains their pu
 |Employee Case – Disable Earlier Passes  | Employee Case | Disable passes that are active when an employee no longer has access to a facility.|
 | Employee Case - Reset Facility Access Available      | Employee Case    | Reset the employee case facility access available when the time is reached. |
 | Employee Case - Share with Employee | Employee Case | Shares the employee case record with an employee when facility access is disabled. |
-| Employee Case - Update Case Contacts | Case Contact | Deactivates case contact records for an employee if an employee case is created for the employee |
+| Employee Case - Update Case Contacts | Case Contact | Deactivates case contact records for an employee if an employee case is created for the employee. |
 | Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations. |
-| Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. |
+| Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow, and updates the capacities. |
 | Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. |
 | Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility. |
 | Share Guest Registration - Email | Share Guest Registration | Shares the guest registration details with the host and the guest. |

@@ -1,5 +1,5 @@
 ---
-title: "Web API CDSWebApiService  Parallel Operations Sample (C#) (Common Data Service)| Microsoft Docs"
+title: "Web API CDSWebApiService  Parallel Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates using Task Parallel Library (TPL) with synchronous requests."
 ms.custom: ""
 ms.date: 04/20/2020
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This example shows how to use a [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach) loop to enable data parallelism over a set of records to create in CDS.
+This example shows how to use a [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach) loop to enable data parallelism over a set of records to create in Dataverse.
 
 This sample uses the CDSWebApiService class synchronous methods within operations. Because the CDSWebApiService class can manage Service Protection API limits, this code can be resilient to the transient 429 errors that clients should expect. It will retry a configurable number of times. 
 
@@ -28,7 +28,7 @@ More information:
 - [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)
 - [Service Protection API Limits](../../api-limits.md)
 
-This sample is based on the [How to: Write a simple Parallel.ForEach loop](/dotnet/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop) example, but modified to perform create and delete operations with CDS entities using the synchronous methods provided by the CDSWebApiService class.
+This sample is based on the [How to: Write a simple Parallel.ForEach loop](/dotnet/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop) example, but modified to perform create and delete operations with Dataverse entities using the synchronous methods provided by the CDSWebApiService class.
 
 > [!NOTE]
 > If you want to use Fiddler to observe the expected service protection API limits, you will need to set the number of records to create to be around 10,000. They will start to appear after 5 minutes. Note how the application retries the failures and completes the flow of all the records.
@@ -38,7 +38,7 @@ This sample is based on the [How to: Write a simple Parallel.ForEach loop](/dotn
 The following is required to build and run the CDSWebApiService C# samples :
 
 - Microsoft Visual Studio 2019. 
-- Access to Common Data Service with privileges to perform CRUD operations.
+- Access to Microsoft Dataverse with privileges to perform CRUD operations.
   
 <a name="bkmk_runSample"></a>
   
@@ -50,7 +50,7 @@ The following is required to build and run the CDSWebApiService C# samples :
 
 1. Select the **ParallelOperations** project and open the App.config. This is a common [App.config](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/CDSWebApiService/App.config) file used by all the samples in this solution. Once you edit this, you can run any of the samples in this solution.
 
-1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the CDS instance and credentials you want to connect to.
+1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the Dataverse instance and credentials you want to connect to.
 
     ```xml
         <add name="Connect"
@@ -184,7 +184,7 @@ namespace PowerApps.Samples
 
 ### See also
 
-[Use the Common Data Service Web API](../overview.md)<br />
+[Use the Dataverse Web API](../overview.md)<br />
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
 [Web API CDSWebApiService Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)<br />
 [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />

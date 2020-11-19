@@ -118,7 +118,7 @@ landingContent:
         links:
           - text: Model-driven apps documentation
             url: /powerapps/maker/model-driven-apps
-          - text: Common Data Service developer documentation
+          - text: Microsoft Dataverse developer documentation
             url: /powerapps/developer/common-data-service      
           - text: Canvas apps developer documentation
             url: /powerapps/maker/canvas-apps/dev-enterprise-intro

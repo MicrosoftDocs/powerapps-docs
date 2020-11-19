@@ -48,7 +48,7 @@ Additional differences between Power Apps portals with capacity-based licenses a
 
 You can create Power Apps portal with capacity-based license using steps described in following articles:
 
-- [Create a Common Data Service starter portal](create-portal.md)
+- [Create a Microsoft Dataverse starter portal](create-portal.md)
 - [Create a portal with Dynamics 365 environment](create-dynamics-portal.md)
 
 To create Power Apps portal with add-on based license, see [provisioning a portal using portal add-on](provision-portal-add-on.md).
@@ -104,7 +104,7 @@ If you don't have sufficient privileges to create a portal in an environment, yo
 > [!div class=mx-imgBorder]
 > ![Create portal error](media/portal-create-error.png "Create portal error")
 
-For information on creating a portal and the required privileges, see [Create a portal](create-portal.md).
+More information: [Create a portal](create-portal.md), [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md)
 
 ### I'm getting the message: "Your data isn't quite ready".
 
@@ -167,9 +167,9 @@ A Power Apps portal consists of the following components:
 
 - **Portal website host**: Portal website host is the Portal code that forms the actual website.
 
-- **Portal configuration**: The portal configuration in the Common Data Service environment that defines portal components such as *Websites*, *Pages*, *Content Snippets* and *Web Roles* records.
+- **Portal configuration**: The portal configuration in the Dataverse environment that defines portal components such as *Websites*, *Pages*, *Content Snippets* and *Web Roles* records.
 
-- **Portal solutions**: Solutions that are installed in the Common Data Service environment and contain the metadata entities for any portal.
+- **Portal solutions**: Solutions that are installed in the Dataverse environment and contain the metadata entities for any portal.
 
 **To delete a portal**, you must delete the **portal website host** and the  **portal configuration**.
 
@@ -198,11 +198,11 @@ For details about licensing of internal users, go to [Portal Licensing FAQ](http
 
 For details about use rights to portals for internal users, go to FAQ [use rights to portals for internal users](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users) and [Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) section **Power Apps Portals – Use rights for Internal users**.
 
-## Common Data Service environment lifecycle
+## Dataverse environment lifecycle
 
-### We recently moved our Common Data Service environment from one geolocation or tenant to another. How do we handle portals connected to our organization?
+### We recently moved our Dataverse environment from one geolocation or tenant to another. How do we handle portals connected to our organization?
 
-When you move your Common Data Service environment from one geolocation or tenant to another, associated portals to that organization won't move automatically. Also, since your organization has moved, any portal associated with that organization won't work and will throw an error on startup.
+When you move your Dataverse environment from one geolocation or tenant to another, associated portals to that organization won't move automatically. Also, since your organization has moved, any portal associated with that organization won't work and will throw an error on startup.
 
 To associate your portal again to relevant organizations:
 
@@ -210,9 +210,9 @@ To associate your portal again to relevant organizations:
 
 2. Once your existing portal is reset, go to the new tenant (or to the new geolocation of the existing tenant) and provision a portal available there.
 
-### After restoring a Common Data Service environment from an old backup, the portal connected to the organization isn't working. How do we fix it?
+### After restoring a Dataverse environment from an old backup, the portal connected to the organization isn't working. How do we fix it?
 
-When a Common Data Service environment is restored from a backup, various changes are done in your organization that can break your portal's connection with the organization. To fix this issue:
+When a Dataverse environment is restored from a backup, various changes are done in your organization that can break your portal's connection with the organization. To fix this issue:
 
 - If the organization ID is the same after the restore operation, and portal solutions are also available:
 
@@ -228,9 +228,9 @@ When a Common Data Service environment is restored from a backup, various change
 
   - In this case, it's better to reset the portal by following the steps in [Reset a portal](admin/reset-portal.md) and then reprovision it.
 
-### We recently changed the URL of our Common Data Service environment and our portal stopped working. How do we fix it?
+### We recently changed the URL of our Dataverse environment and our portal stopped working. How do we fix it?
 
-When you change the URL of your Common Data Service environment, your portal will stop working because it can't identify the Common Data Service environment URL anymore. To fix this issue:
+When you change the URL of your Dataverse environment, your portal will stop working because it can't identify the Dataverse environment URL anymore. To fix this issue:
 
 1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Update Dynamics 365 URL**.
@@ -242,7 +242,7 @@ Your portal will be restarted and start working again.
 
 ### Performance of entity forms: Actions such as create/update/delete on entity forms take a lot of time to complete or timeout.
 
-This can happen because of multiple reasons - such as depending on your data and customizations done on that entity in Common Data Service. When troubleshooting such performance related issue on record actions from portals, ensure that there are no synchronous plugins registered on those events that may possibly cause these delays. Wherever possible, try to implement them asynchronously so that they don't hold or delay the transaction.
+This can happen because of multiple reasons - such as depending on your data and customizations done on that entity in Dataverse. When troubleshooting such performance related issue on record actions from portals, ensure that there are no synchronous plugins registered on those events that may possibly cause these delays. Wherever possible, try to implement them asynchronously so that they don't hold or delay the transaction.
 
 ### When accessing my portal, I see a generic error page. How can I see the actual error?
 
@@ -283,28 +283,28 @@ You can enable your portal to use a custom domain name in place of the standard 
 
 ### Portal doesn't load and displays a generic error page (Server Error in "/" application) 
 
-This issue can be caused by different kinds of reasons like when a portal isn't able to connect to the underlying Common Data Service environment, Common Data Service environment doesn't exist, or its URL has changed, when request to Common Data Service environment is timed out, and so on. When you run the portal checker tool, it will try to determine the exact reason and will point you to the correct mitigation. 
+This issue can be caused by different kinds of reasons like when a portal isn't able to connect to the underlying Dataverse environment, Dataverse environment doesn't exist, or its URL has changed, when request to Dataverse environment is timed out, and so on. When you run the portal checker tool, it will try to determine the exact reason and will point you to the correct mitigation. 
 
 Below is a list of most common causes and their corresponding mitigation steps:
 
-#### URL of the connected Common Data Service environment has changed 
+#### URL of the connected Dataverse environment has changed 
 
-This happens when the URL of Common Data Service environment is changed by a user after portal is provisioned against the organization. To fix this issue, update the Dynamics 365 URL:
+This happens when the URL of Dataverse environment is changed by a user after portal is provisioned against the organization. To fix this issue, update the Dynamics 365 URL:
 
 1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Update Dynamics 365 URL**. 
 
-Once this action is successfully executed, your Common Data Service environment URL will be updated and portal will start working.
+Once this action is successfully executed, your Dataverse environment URL will be updated and portal will start working.
 
-#### Common Data Service environment connected to your portal is in administration mode
+#### Dataverse environment connected to your portal is in administration mode
 
-This issue occurs when the Common Data Service environment is put in administration mode either when changing organization from production to sandbox mode or manually by an organization administrator.
+This issue occurs when the Dataverse environment is put in administration mode either when changing organization from production to sandbox mode or manually by an organization administrator.
 
 If this is the cause, you can disable administration mode by doing actions listed [here](https://docs.microsoft.com/dynamics365/admin/manage-sandbox-instances#administration-mode). Once administration mode is disabled, portal will work fine.
 
-#### Authentication connection between Common Data Service environment and portal is broken
+#### Authentication connection between Dataverse environment and portal is broken
 
-This issue occurs when the authentication connection between Dynamic 365 organization and portal is broken because either Common Data Service environment was restored from a backup or was deleted and recreated from a backup. To fix this issue:
+This issue occurs when the authentication connection between Dynamic 365 organization and portal is broken because either Dataverse environment was restored from a backup or was deleted and recreated from a backup. To fix this issue:
 
 1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. In the **Portal Details** tab, select **Off** from the **Portal State** list.
@@ -314,9 +314,9 @@ This issue occurs when the authentication connection between Dynamic 365 organiz
 
 In certain situations, especially if the organization ID has changed after the restore operation (or if you reprovisioned the organization), these mitigation steps won't work. In those situations, you can reset and reprovision the portal against the same instance. For information on how to reset a portal, see [Reset a portal](admin/reset-portal.md).
 
-#### Request to Common Data Service environment has timed out
+#### Request to Dataverse environment has timed out
 
-This issue is typically a transient issue that can occur if the API requests to your Common Data Service environment has timed out. This issue will automatically mitigate itself once the API requests starts working. To mitigate this issue, you can also try restarting the portal:
+This issue is typically a transient issue that can occur if the API requests to your Dataverse environment has timed out. This issue will automatically mitigate itself once the API requests starts working. To mitigate this issue, you can also try restarting the portal:
 
 1. Open [Power Apps Portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Restart**.
@@ -325,7 +325,7 @@ If restarting the portal doesn't work and this issue is occurring for a long per
 
 #### Website binding not found
 
-This issue occurs when the website binding records for portal are deleted from the underlying Common Data Service environment and portal isn't able to create binding automatically. To fix this issue:
+This issue occurs when the website binding records for portal are deleted from the underlying Dataverse environment and portal isn't able to create binding automatically. To fix this issue:
 
 1. Open the [Portal Management app](configure/configure-portal.md).
 2. Go to **Portals** > **Website Bindings**.
@@ -347,15 +347,15 @@ There are situations in which portal won't be able to recreate website binding r
 
 3. Once website binding record is recreated, restart your portal from Power Apps Portals admin center.
 
-#### An unexpected error has occurred while trying to connect to your Common Data Service environment
+#### An unexpected error has occurred while trying to connect to your Dataverse environment
 
 This situation can arise because of some unexpected issue. To mitigate in this situation, you can either try resetting or reprovisioning the portal. For information on how to reset a portal, see [Reset a portal](admin/reset-portal.md).
 
 If portal reset and reprovision doesn't solve this issue, contact Microsoft support for help.
 
-### Portal isn't displaying updated data from Common Data Service environment
+### Portal isn't displaying updated data from Dataverse environment
 
-Any data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Common Data Service environment is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata entity of portal, for example, web pages, web files, content snippet, site setting, and so on, it's advised to clear cache manually or restart the portal from Power Apps Portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](admin/clear-server-side-cache.md). 
+Any data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Dataverse environment is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata entity of portal, for example, web pages, web files, content snippet, site setting, and so on, it's advised to clear cache manually or restart the portal from Power Apps Portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](admin/clear-server-side-cache.md). 
 
 However, if you're seeing stale data for a long time in non-portal metadata entities, it can be because of variety of issues listed below:
 
@@ -612,7 +612,7 @@ This issue occurs when the **Access Denied** site marker is available, but is po
 
 ### Profile web form isn't available for contact entity
 
-Profile page is one of the common pages used in your portal for all profile related issues. This page shows a form that can be used by users to update their profile. Form used on this page comes from the **Profile Web Page** main form available in the Contact entity. This form is created in your Common Data Service environment when portal is provisioned. This error is displayed when the **Profile** web form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website displaying runtime error on portal. This is an irreparable state and requires portal to be reinstalled in the environment.
+Profile page is one of the common pages used in your portal for all profile related issues. This page shows a form that can be used by users to update their profile. Form used on this page comes from the **Profile Web Page** main form available in the Contact entity. This form is created in your Dataverse environment when portal is provisioned. This error is displayed when the **Profile** web form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website displaying runtime error on portal. This is an irreparable state and requires portal to be reinstalled in the environment.
 
 ### Published state isn't available for this website
 

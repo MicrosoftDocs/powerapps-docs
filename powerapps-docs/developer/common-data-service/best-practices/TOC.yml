@@ -1,4 +1,4 @@
-- name: Best practices and guidance for the Common Data Service
+- name: Best practices and guidance for the Microsoft Dataverse
   href: index.md
   items: 
   - name: Apply business logic using code

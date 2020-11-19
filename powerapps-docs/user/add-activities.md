@@ -22,9 +22,9 @@ search.app:
 
 Add **Activities** in the **Timeline** wall to keep track of all your communications with a customer or contact. For example, you can take notes, add posts, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer. 
 
-- Activities that you add from within a record appear in the **Timeline** wall of the record. 
-- If the **Regarding** field of an activity is set, the activity appears in the record it is associated with. 
-- You can also choose the filter pane to filter the activities by record type and date. 
+- Activities that you add from within a row appear in the **Timeline** wall of the row. 
+- If the **Regarding** column of an activity is set, the activity appears in the row it is associated with. 
+- You can also choose the filter pane to filter the activities by row type and date. 
 - When a new activity is created, you will get a **What you missed** notification in the **Timeline** wall.
 - An email with an attached image will be shown inline with the body of the email.
 
@@ -34,7 +34,7 @@ Add **Activities** in the **Timeline** wall to keep track of all your communicat
 
 Legend:
 
-  1. Search Records
+  1. Search Rows
   2. Take notes
   3. Add info and activities
   4. Filter
@@ -44,9 +44,9 @@ Legend:
   8. Date and time
 
 
-## Add an activity from within a record
+## Add an activity from within a row
 
-1. Open the record that you want to add an activity to.
+1. Open the row that you want to add an activity to.
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button").
 3. Select the type of activity that you want to add.
 
@@ -56,7 +56,7 @@ Legend:
 
 ### Add a phone call  
   
-1. Open the record that you want to add the activity to. 
+1. Open the row that you want to add the activity to. 
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Phone Call**. 
 
@@ -68,7 +68,7 @@ Legend:
 
      In the **Description** area, provide a summary of the conversation with the customer. 
   
-     The **Call To** field is automatically populated with the record you added the phone call activity to. You can select a different record if needed.  
+     The **Call To** column is automatically populated with the row you added the phone call activity to. You can select a different row if needed.  
   
 4. By default, the direction is set to **Outgoing**. You can change it to **Incoming** by selecting **Outgoing**.
   
@@ -76,23 +76,23 @@ Legend:
 
 
 > [!NOTE]
-> When you open an existing phone call activity, and on the **Phone Number** field select the phone icon, the system will open a new **Quick Create: Phone Call** activity. If you attempt to save the new phone call activity record, you will get this error, **Unable to find many-to-one relationship,entity: phonecall, referenced Entity: undefined, field: regardingobjectid**. This happens because Common Data Service does not support the option to create a phone call activity from within another phone call activity record. For more information, see [Known issues for activities](activities-known-issues.md).
+> When you open an existing phone call activity, and on the **Phone Number** column select the phone icon, the system will open a new **Quick Create: Phone Call** activity. If you attempt to save the new phone call activity row, you will get this error, **Unable to find many-to-one relationship,table: phonecall, referenced Table: undefined, column: regardingobjectid**. This happens because Microsoft Dataverse does not support the option to create a phone call activity from within another phone call activity row. For more information, see [Known issues for activities](activities-known-issues.md).
   
 ### Add a task  
   
-1. Open the record that you want to add the activity to. 
+1. Open the row that you want to add the activity to. 
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Task**.
   
-3. The **Owner** field is set to the current user by default. If you want to reassign the task, select the lookup icon, and then select another user or team.  
+3. The **Owner** column is set to the current user by default. If you want to reassign the task, select the lookup icon, and then select another user or team.  
   
 4. When you're done filling in the task information, select **Save and Close** to save . 
   
 ### Add an email  
 
-To add an email activity to a record, you must first save the record you are adding the activity to.  
+To add an email activity to a row, you must first save the row you are adding the activity to.  
   
-1. Open the record that you want to add the activity to. 
+1. Open the row that you want to add the activity to. 
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Email**. 
 
@@ -124,12 +124,12 @@ To add an email activity to a record, you must first save the record you are add
   
 ### Add an appointment  
 
-To add an appointment activity to a record, you must first save the record you are adding the appointment activity to.  
+To add an appointment activity to a row, you must first save the row you are adding the appointment activity to.  
 
 > [!NOTE]
 > Recurring appointments are not supported on the Dynamics 365 App for Outlook, Dynamics 365 for phones app, and when you run the model-driven apps web client on your mobile phone web browser.
   
-1. Open the record that you want to add the activity to. 
+1. Open the row that you want to add the activity to. 
   
 2.  In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Appointment**.  
   
@@ -141,7 +141,7 @@ To add an appointment activity to a record, you must first save the record you a
 
 You can also easily add notes in the activities area.
   
-1. Open the record that you want to add the activity to. 
+1. Open the row that you want to add the activity to. 
   
 2. In the **Timeline** section, select the **Enter a note** area.
 
@@ -166,11 +166,11 @@ You can also easily add notes in the activities area.
 
 ### Add a post 
 
-1. Open the record that you want to add a post to. 
+1. Open the row that you want to add a post to. 
 
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Post**. 
 
-3. Enter details of the post in the text field.
+3. Enter details of the post in the text column.
 
 4. When you're done, select **Add** to save the post.
 
@@ -191,20 +191,20 @@ In the **Timeline** section, select ![More button ](media/MoreButton.png "More b
 
 ## Use the filter pane
 
-Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane. You can select multiple filters and filter options at the same time. You can filter and see activity due date, modified date, or by the status of the activity.
+Quickly filter activities, notes or posts in the timeline wall by row type or activity type and date using the filter pane. You can select multiple filters and filter options at the same time. You can filter and see activity due date, modified date, or by the status of the activity.
 
 - In the **Timeline** section, select **Open Filter Pane** and select how you want to filter the activities.
 
  > [!Note]
- > When you zoom out in the browser, the filter pane and the timeline records are displayed in two columns. 
- > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md#why-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
+ > When you zoom out in the browser, the filter pane and the timeline rows are displayed in two columns. 
+ > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline rows. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md#why-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
 
   > [!div class="mx-imgBorder"]
   > ![Filter pane in the timeline ](media/timeline-filter2.png "Filter pane in the timeline") ![Filter pane on the timeline ](media/timeline-filter5.png "The filter pane on the timeline")
 
 
 ## Manage Activities
-Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated record or editing notes and posts.
+Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated row or editing notes and posts.
 
   ![Timeline command bar options](media/timeline-options1.png "Timeline command bar options")
   ![Timeline command bar option](media/timeline-options2.png "Timeline command bar option")
@@ -225,7 +225,7 @@ You can see the activities in the following views:
   > [!div class="mx-imgBorder"]
   > ![Old calendar view](media/old-cal-view.png "Old calendar view") 
 
-- **New Calendar**: Shows an interactive calendar with a list of the day's scheduled activities and the associated deals. More information: [Work with records in the new calendar view](calendar-view.md)
+- **New Calendar**: Shows an interactive calendar with a list of the day's scheduled activities and the associated deals. More information: [Work with rows in the new calendar view](calendar-view.md)
 
     > [!div class="mx-imgBorder"]
     > ![New calendar view](media/cal-view.png "New calendar view") 

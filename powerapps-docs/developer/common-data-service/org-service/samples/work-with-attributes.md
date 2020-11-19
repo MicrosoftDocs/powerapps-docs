@@ -1,5 +1,5 @@
 ---
-title: "Sample: Work with attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Work with attributes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to work with attributes" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -28,7 +28,7 @@ This sample shows how to perform various actions on attributes. You can download
 
 ## What this sample does
 
-This sample shows how to create different types of attributes in Common Data Service.
+This sample shows how to create different types of attributes in Microsoft Dataverse.
 
 ## How this sample works
 
