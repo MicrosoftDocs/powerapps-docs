@@ -18,18 +18,23 @@ This article provides resources where you can learn about the new features that 
 
 ### Guest Return to the Workplace Portal
 Facility managers can provide access to third parties. A third party can choose a facility, attest to being symptom-free and receive a personalized day pass for facilities entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
+
 ![Portal](media/whats-new-guest-portal.png "Portal")
+
 ![Portal](media/whats-new-guest-portal2.png "Portal")
 
 ### Facility Access 
 Facility or case managers can now manage facility access for employees and provide them guidance through the app, push notification, email, or text.
 
+![Facility Access](media/whats-new-manage-facility-access.png "Facility Access")
+
 ### Notifications
 Employees can now have in app notifications when booking or when facility access has been enabled or disabled.
 
+
 ### Upgraded Dashboards with County Level Virus Data
 COVID-19 data and insights at a county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.  
-
+![Dashaboards](media/whats-new-dashboard.png "Dashboards")
 
 ## New and updated features in October 2020 (v1.2)
 
