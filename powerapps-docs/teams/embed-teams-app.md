@@ -32,11 +32,17 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
     ![Show list of apps](../maker/canvas-apps/media/embed-teams-app/file-apps2.png "Show list of apps")
 
-2. Select **More actions** (...) for the app you want to share in Teams, and then select **Add to Teams**.
+1. Select **More actions** (...) for the app you want to share in Teams, and then select **Add to Teams**.
 
     ![Add to Teams](../maker/canvas-apps/media/embed-teams-app/add-to-teams.png "Add to Teams")
 
-3. In the Add to Teams panel, select **Download**. Power Apps will then generate your Teams manifest file using the app description and logo you've already set in your app.
+1. (Optional) If the app doesn't have any description, select **Edit details** to open the app in Power Apps Studio to add.
+
+1. (Optional) Add additional details such as *Name*, Website*, *Terms of Use*, *Privacy Policy*, *MPN ID* (Microsoft Partner Network ID).
+
+    ![Add additional details](../maker/canvas-apps/media/embed-teams-app/additional-settings-embed.png "Add additional details")
+
+1. In the Add to Teams panel, select **Download**. Power Apps will then generate your Teams manifest file using the app description and logo you've already set in your app.
 
     ![Download app](../maker/canvas-apps/media/embed-teams-app/download-app.png "Download app")
 
