@@ -29,14 +29,14 @@ requests into smaller, more usable segments, which can improve the performance o
 > performance issues with your existing fetch request.
 
 Executing a traditional fetch for a given number of the top entity records will pull all
-the columns in the selected list that meet the filter criteria. Let's say you're
+the columns in the select list that meet the filter criteria. Let's say you're
 pulling the top 500 records on an entity that has 100 columns and 100,000 rows
 that meet the filter criteria. This request can cause issues in two ways:
 
 - The 99,500 rows will pull all columns, even though you only need to populate
-  the selected list for 500 rows when returning to the client.
+  the select list for 500 rows when returning to the client.
 
-- The query optimizer<!--note from editor: I assume this is an internal feature? I don't find it elsewhere in the doc set or in any style guide, hence the change to lowercase.--> can generate an arbitrary order when retrieving the child
+- The query optimizer can generate an arbitrary order when retrieving the child
   columns, resulting in a data order you don't want.
 
 When you use `LateMaterialize`, you create a fetch that will:
