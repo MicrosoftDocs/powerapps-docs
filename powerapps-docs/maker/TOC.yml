@@ -2021,8 +2021,9 @@
     - name: Debug canvas apps with Monitor
       href: monitor-canvasapps.md
     - name: Debug model-driven apps with Monitor
-      href: monitor-modelapps.md
       items: 
+      - name: Debug a model-driven app
+        href: monitor-modelapps.md  
       - name: Use Monitor to debug model-driven app forms
         href: ./model-driven-apps/monitor-form-checker.md
       - name: Troubleshoot form issues in model-driven apps
