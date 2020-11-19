@@ -24,13 +24,17 @@ Don't have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-
 
 Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** inside your apps. Specify the tile that you want to show by setting its **Workspace**, **Dashboard**, and **Tile** properties in the **Data** tab of the options panel.
 
+  > [!NOTE]
+  > - Power BI tile control only supports tile visualizations pinned to a dashboard. To embed a report page, pin the page to the dashboard first. Then, you can embed that tile visualization.
+  > - *Querystring parameter filtering* is only supported within pinned visualization tiles.
+
 ## Sharing and security
 
 When you share an app that contains Power BI content, you must share not only the app itself but also the [dashboard](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports) where the tile comes from. Otherwise, the Power BI content won't appear even for users who open the app. Apps that contain Power BI content respect the permissions for that content.
 
 ## Performance
 
-It's not recommended to have more than three Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
+It's not recommended to have more than 3 Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
 
 ## Pass a parameter
 
@@ -53,7 +57,7 @@ The parameter will filter a value in the dataset of the report where the tile or
 - Only one filter can be applied.
 - Only the `eq` operator is supported.
 - Field type must be string.
-- Filtering is only available on pinned visualizations.
+- Filtering is only available on pinned visualization tiles.
 
 You can use computed fields in the Power BI report to convert other value types to string or combines multiple fields into one.
 
@@ -81,7 +85,9 @@ You can use computed fields in the Power BI report to convert other value types 
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control. By default, the Power BI report that's associated with the tile opens.
 
-**TileUrl** – The URL by which the tile is requested from the Power BI service. You can pass a single parameter into the Power BI tile by appending the parameter to the URL (for example: … & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). You can use only the equals operator in the parameter.  Filtering is only available on pinned visualizations.
+**TileUrl** – The URL by which the tile is requested from the Power BI service. You can pass a single parameter into the Power BI tile by appending the parameter to the URL (for example: … & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). You can use only the equals operator in the parameter. 
+  > [!NOTE]
+  > Filtering is only available on pinned visualization tiles.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
