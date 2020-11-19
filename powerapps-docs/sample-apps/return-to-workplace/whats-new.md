@@ -14,6 +14,20 @@ ms.reviewer: kvivek
 
 This article provides resources where you can learn about the new features that have recently released.
 
+## New and updated features in Decmeber 2020 (v1.3)
+
+### Guest Return to the Workplace Portal
+Facility managers can provide access to third parties. A third party can choose a facility, attest to being symptom-free and receive a personalized day pass for facilities entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
+
+### Upgraded Dashboards wih County Level Virus Data
+COVID-19 data and insights at a county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.  
+
+### Access Actions
+Facility or case managers can now manage facility access
+
+### Employee App Notifications
+Facility or case managers can now manage facility access for employees and provide them guidance through the app, push notification, email, or text. 
+
 ## New and updated features in October 2020 (v1.2)
 
 ### Guest bookings 
