@@ -10,7 +10,7 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Return to the Workplace Guest Portals
+# Return to the Workplace Guest Portal
 
 A seperate offering extends the Return to the Workplace solution with a portal. Allowing people external to your organization to get a pass by performing attestations. The portal has been designed to provide a mobile experience for the end user, but it will scale to tablet or desktop screen sizes also. This enables end users to use the portal from their own device.
 
