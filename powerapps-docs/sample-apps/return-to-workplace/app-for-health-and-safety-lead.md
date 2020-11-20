@@ -161,7 +161,7 @@ Case managers are the resources who manage employee cases.
 
 ### Employee Block Access
 
-On **Employee Instructions** an employee can be blocked access to the facility. Adding an expiration date for this block and instructions.
+On **Employee Instructions** an employee can be blocked access to the facility. Adding an expiration date for the block and instructions.
 
    > [!div class="mx-imgBorder"]
    > ![Enter name](media/health-safety-employee-block-access.png "Enter name")
