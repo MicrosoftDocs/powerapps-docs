@@ -131,7 +131,7 @@ landingContent:
           - text: Test using Test Studio
             url: test-studio.md
           - text: Debug using Monitor
-            url: monitor.md
+            url: ../monitor-canvasapps.md
           - text: Analyze app telemetry using Application Insights
             url: application-insights.md
           - text: Performance tips
