@@ -33,11 +33,11 @@ With the introduction of portals we added a new way for people approaching the s
 |Booking level||Facilities, floors, areas, arrival times|Facilities|
 |Attestation|Yes|Yes|
 |Access controls|Yes|No|
-|Notifications (e.g., in-app, email, text)|Yes|Future|
+|Notifications (e.g., in-app, email, text)|Yes|No|
 |Included in occupancy metrics|Yes|Yes|
 |Included in occupancy capacity limits|Yes|No|
 |Included in case management|Yes|By company policy|
-|Manual contract tracing|Yes|Limited|
+|Manual contract tracing|Yes|Limited (manual data entry)|
 
 ### Access Control 
 Facility or case managers can now manage facility access for employees via access controls. They are a new way of blocking facility access for an employee which allows people create them either via other ways which can also be automated via Power Automate or an API. Access controls tie in to notifications, so people find guidance in the employee app.
@@ -50,8 +50,8 @@ Employees can now have in app notifications when booking or when facility access
 ### Upgraded Dashboards with County Level Virus Data
 COVID-19 data and insights at a county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
 
-![Dashboards](media/whats-new-county.png "Dashboards County Level")
 ![Dashboards](media/whats-new-state.png "Dashboards State Level")
+![Dashboards](media/whats-new-county.png "Dashboards County Level")
 
 ## New and updated features in October 2020 (v1.2)
 
