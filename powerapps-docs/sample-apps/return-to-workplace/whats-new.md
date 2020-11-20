@@ -26,6 +26,7 @@ Facility managers can provide access to third parties. A third party can choose 
 With the introduction of portals we added a new way for people approaching the solution. Below you will find a comparison how the portal related to the mobile app.
 
 ||Employee App (Power App Canvas)|Web App (Power App Portal)|
+|-----|------------|---------------|
 |Persona|Employee|3rd Party|
 |Target Users|Employees, students|Vendors, parents or guardians of students, “of-age” student|
 |Security||Authentication Azure AD|Multiple types supported (including Azure AD B2C, Gmail, Facebook)|
