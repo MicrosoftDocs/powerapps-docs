@@ -48,7 +48,7 @@ Additional differences between Power Apps portals with capacity-based licenses a
 
 You can create Power Apps portal with capacity-based license using steps described in following articles:
 
-- [Create a Microsoft Dataverse starter portal](create-portal.md)
+- [Create a Dataverse starter portal](create-portal.md)
 - [Create a portal with Dynamics 365 environment](create-dynamics-portal.md)
 
 To create Power Apps portal with add-on based license, see [provisioning a portal using portal add-on](provision-portal-add-on.md).
