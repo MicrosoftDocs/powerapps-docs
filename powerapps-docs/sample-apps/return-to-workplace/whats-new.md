@@ -19,9 +19,9 @@ This article provides resources where you can learn about the new features that 
 ### Return to the Workplace Portal
 Facility managers can provide access to third parties. A third party can choose a facility, attest to being symptom-free and receive a personalized day pass for facilities entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
 
-![Portal](media/whats-new-guest-portal.png "Portal")
+![Portal](media/whats-new-guest-portal8.png "Portal")
 
-![Portal](media/whats-new-guest-portal2.png "Portal")
+![Portal](media/whats-new-guest-portal1.png "Portal")
 
 With the introduction of portals we added a new way for people approaching the solution. Below you will find a comparison how the portal related to the mobile app.
 
