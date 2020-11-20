@@ -47,8 +47,8 @@ Employees can now have in app notifications when booking or when facility access
 
 ![Notifications](media/whats-new-notifications.png "Notifications")
 
-### Upgraded Dashboards with County Level Virus Data
-COVID-19 data and insights at a county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
+### Dashboards with State and County Level Virus Data
+COVID-19 data and insights is now available at a state and county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
 
 ![Dashboards](media/whats-new-state.png "Dashboards State Level")
 ![Dashboards](media/whats-new-county.png "Dashboards County Level")
