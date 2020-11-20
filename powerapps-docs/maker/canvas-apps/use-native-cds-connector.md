@@ -1,6 +1,6 @@
 ---
 title: Upgrade to use native Common Data Service connector | Microsoft Docs
-description: 
+description: Learn about upgrading native Common Data Service connector for improved data source experience.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -146,7 +146,7 @@ It's recommended to remove existing data cards and add them back to work with yo
 
 With the new *Improved data source experience and Common Data Service views* feature, you no longer see `_accountcategorycode_label`. It's replaced by `accountcategorycode`. Your card is now be marked as **custom** and you'll see errors. Remove the old data card and add the *Option Set* back. The new data card is *Option Set* aware.
 
-![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
+![OptionSet with new style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
 
 #### Editing the Option Set Filter expressions to use new syntax
 
@@ -196,7 +196,7 @@ You should remove existing data cards and add them back to work with your Two Op
 
 With the new *Improved data source experience and Common Data Service views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the Option Set back. You'll see an edit control with two options by default after you add.
 
-![TwoOptionSet-New](./media/use-native-cds-connector/TwoOptionSet-New.png)
+![Two Option Set - new style](./media/use-native-cds-connector/TwoOptionSet-New.png)
 
 If you prefer the toggle switch for your boolean field, you can unlock the data card and replace the control in the data card with a toggle instead.  You'll also need to set these properties on the Toggle.
 
@@ -305,13 +305,13 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
     "Unknown")
 ```
 
- ![Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
+ ![New Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
 
 #### Access the list of Notes for a record
 
 When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
 
-![Notes-Field](./media/use-native-cds-connector/Notes-Field.png)
+![Notes field](./media/use-native-cds-connector/Notes-Field.png)
 
 ##### Filtering
 

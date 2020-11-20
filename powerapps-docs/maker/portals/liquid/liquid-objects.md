@@ -227,9 +227,14 @@ The following table explains various attributes associated with blog Object.
 
 The blogposts object allows you to access a collection of blog post objects. You can order the blog posts and achieve pagination in addition to using liquid filters:
 
+```
 {% assign blogposts = blogs.posts | order\_by “adx\_name”, “desc” | paginate: 0,4 | all %}
-Note that blogs.posts.all is also a valid way to get all blog posts
-blogs.posts | from\_index: 0 | take: 2 is also possible
+```
+
+Other possible options:
+
+- `blogs.posts.all` (to get all blog posts)
+- `blogs.posts | from\_index: 0 | take: 2`
 
 The following table explains various attributes associated with blogposts Object.
 
