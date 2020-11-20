@@ -52,7 +52,7 @@ capabilities from application code.
 ## Search
 
 The minimum syntax of a relevance search HTTP request is as shown below.
-<!--note from editor: Is it okay that this code uses smart quotation marks? I won't change it, but will use straight quotation marks outside of code markup.-->
+
 ```http
 POST [Organization URI]/api/search/v1.0/query
 {  
@@ -90,7 +90,7 @@ search is enabled.
 
 #### `facets=[list<string>] (optional)`
 
-Facets support the ability to drill down<!--note from editor: Via Cloud Style Guide.--> into data results after they've been
+Facets support the ability to drill down into data results after they've been
 retrieved.
 
 ```http
