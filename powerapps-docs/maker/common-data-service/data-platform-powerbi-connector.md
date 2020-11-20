@@ -78,10 +78,10 @@ Choices are used in tables to provide a drop-down list of values to a user in ap
 
 As an example, if you had a choice  on your table called ApprovalStatus, you would see two columns in Power BI:
 
-* ApprovalStatus - This will show a unique integer value for each item in your choice , this is help when applying filters so they will not be impacted if you make future changes to the display name.
-* ApprovalStatus_display - This will show the friendly display name of the item and is most commonly used when presenting the option in a table or chart.
+* approvalstatus - This will show a unique integer value for each item in your choice , this is help when applying filters so they will not be impacted if you make future changes to the display name.
+* approvaltatusname - This will show the friendly display name of the item and is most commonly used when presenting the option in a table or chart.
 
-    |ApprovalStatus|ApprovalStatus_Display|
+    |approvalstatus|approvalstatusname|
     |---------|---------|
     1|Submitted
     2|In Review
