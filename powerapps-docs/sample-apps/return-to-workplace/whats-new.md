@@ -42,10 +42,10 @@ With the introduction of portals we added a new way for people approaching the s
 ### Access Control 
 Facility or case managers can now manage facility access for employees via access controls. They are a new way of blocking facility access for an employee which allows people create them either via other ways which can also be automated via Power Automate or an API. Access controls tie in to notifications, so people find guidance in the employee app.
 
-![Facility Access](media/whats-new-manage-facility-access.png "Facility Access")
-
 ### Notifications
 Employees can now have in app notifications when booking or when facility access has been enabled or disabled. Out of the box there email notification is also provided, but these can be extended via Power Automate or other solutions.
+
+![Notifications](media/whats-new-notifications.png "Notifications")
 
 ### Upgraded Dashboards with County Level Virus Data
 COVID-19 data and insights at a county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
