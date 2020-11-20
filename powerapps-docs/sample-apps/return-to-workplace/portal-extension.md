@@ -20,19 +20,44 @@ A seperate offering extends the Return to the Workplace solution with a portal. 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-home-welcome.png "Portal Home")
 
-## Prerequisites
 
+## Configuration
 
-## Installation
+There are solution settings that alter the portals behavior. Please see ##### for more details.
 
+- Allow self registration
+- Allow unauthenticated users to self-screen
+- Allow authenticated users to add guest or create passes for guests/dependents.
 
 ## Getting started with the portal
 
-**Get Started** screen is displayed and click on Get Started button to continue.
+The portal provides two ways for end users to self-screen.
 
-Before starting on the portal and as a first time guest, it will ask you to accept the **Terms and Conditions**. Click on the check box and the **Accept** button will enable. 
+1) Unauthenticated. This allows users to complete a specific guest attestation send to them, or they can create new guest attestations and attest in order to get a pass for a facility. This mode is very relevant for infrequent visitors.
+
+2) Authenticated. Guests can be invited to the portal and there they can create passes for themselves or create a pass for their own guests or dependents. This mode is relevant to frequenst visitors, suppliers/vendors or schools where a guardian creates a pass for a dependent.
+
+These two modes are explained in detail below.
+
+### Unauthenticated access to the portal
+
+When you open the portal the **Get Started** screen is displayed. Click on **Get Started** button to continue.
+
+In the unauthenticated mode the users are referred to the **terms and conditions** page. Click on the check box and the **Accept** button will enable. 
+
+On the next screen, the user has to provide contact details. After which a facility can be selected.
+
+At this point the visitor can self-screen and attest to the company policies.
+
+At the end the pass is showed and can be e-mailed if needed.
+
+
+### Authenticated access to the portal
 
 The portal provides guests with the ability to attest to the health policies. If a user is not signed in, the portal displays the configured methods for signing in, creating an account or redeeming an invitation.
+
+ > [!NOTE]
+ > Please see [Overview of authentication in Power Apps portals](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal-authentication) for more information
 
 In case a guest has been invited to make use of the portal, the proces is as follows:
 
@@ -52,7 +77,7 @@ While logged in to the portal, the guest can do the following things:
 
 The first two options are directly available from the homescreen. The second two are available from the top left hamburger menu. Next to those, the hamburger menu provides a link **home** to the home screen and a link **sign out** to sign out.
 
-### Home
+#### Home
 
 On the home screen you have several options:
 
@@ -73,33 +98,34 @@ On the home screen you have several options:
 > ![Portal Attestation](media/portals-home-welcome.png "Portal Home")
 
 
-### Creating a pass
+#### Creating a pass
 
 1. The guest is logged in to the portal and selects **create a pass** from the home screen.
-2. The guest selects the facility.
+2. Select the person where to create the pass for. This can be either the guest or a dependent..
+3. The guest selects the facility.
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-facility.png "Portal facility")
 
-3. The guest accepts the disclaimer.
+4. The guest accepts the disclaimer.
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-disclaimer.png "Portal disclaimer")
 
-4. The guest attests not having symptoms.
+5. The guest attests not having symptoms.
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-attestation.png "Portal attestation")
 
-5. A pass is created for the guest for that day.
+6. A pass is created for the guest/dependent for that day.
 
 
 > [!NOTE]
 > An administrator can disable the store of negative attestations in the solution settings. This will stop a negative attestation of being created and wont save the record.
 
-### View existing passes
+#### View existing passes
 
-If a pass has been created for a guest it will be shown here. If no pass exists, the button will be disabled on the home screen and in the hamburger menu. 
+If a pass has been created for a guest or one of its dependents, they will be shown here. If no pass exists, the button will be disabled on the home screen and in the hamburger menu. 
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-view-pass.png "Portal View Pass")
@@ -117,7 +143,7 @@ The pass will display:
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-pass.png "Portal Pass")
 
-When a pass is cancel, the portal asks you if you are sure. If you cancel the pass, this wont show up in the view pass anymore and the attestation will deactivate but still will be recorded. 
+When a pass is cancelled, the portal asks to confirm. If you cancel the pass, it wont show up in the view pass anymore and the attestation will be deactivate. The record will still exists in the system.
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-cancel-pass.png "Portal Pass")
@@ -125,14 +151,14 @@ When a pass is cancel, the portal asks you if you are sure. If you cancel the pa
 > [!NOTE]
 > An administrator can disable the use of QR codes in the solution settings. This applies to both employee and guest passes.
 
-### View resources
+#### View resources
 
 The resources page displays general information of your organisation to the user of the portal.
 
 > [!NOTE]
 > An administrator can configure this information in the solution settings, therefor the actual information displayed depends on the default facility and the facility group associated to that facility.
 
-### Update profile
+#### Update profile
 
 On the profile page, guests can perform basic operations. They can update their personal information, change their password or change their login method.
 

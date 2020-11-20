@@ -127,6 +127,25 @@ In previous versions, it was possible to indicate on an employee case whether th
 With the introduction of guest passes, you can share passes with guests. From within the employee app, these **Share** buttons send an email via Outlook to the guest who is invited. To set this up, go to [Deploy the solution - Turn on Flows](deploy.md).
 
 
+## Upgrade from version 1.2 to 1.3
+
+### Step 1: Return to the Workplace Portal
+
+With version 1.3 we are introducing the Return to the Workplace portal, which allows third-parties to indicate they are coming the facility. The portal is installed separate, which allows you to choice if you want to install it. What the portal can do, you can find in [Return to the Workplace portal](ex.md). On how to install the portal, you will find that in the [Deploy the solution](deploy.md).  
+
+### Step 2: Access Control
+
+In version 1.2 we allowed case manager to block employees from access to the facility. We made this feature more generic which allows you to block employees via multiple ways either being from for example Power Automate or via the API. If you blocked employees earlier, please create access controls now. More information: [Configure Access Control](testetste.md).
+
+### Step 3: Notifications
+
+With the introduction of version 1.3, we implemented notifications to notify employees about important events. They will receive these notifications either in the employee app or via different ways of communication. Out of the box, we supply email notifications. More information: [Configure Email Flows](configure.md)
+
+### Step 4: Power BI Dashboards
+
+The Power BI Dashboards now contain information about the activities in the Return to the Workplace portal. We also implemented county / state level details for United States to get a more detailed view of the virus spread. More information: [Location Readiness dashboard](dashboard-for-executive-leadership.md)
+
+
 ## Give feedback about the solution
 
 To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
