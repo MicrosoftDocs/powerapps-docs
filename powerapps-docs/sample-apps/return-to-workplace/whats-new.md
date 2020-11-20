@@ -16,21 +16,35 @@ This article provides resources where you can learn about the new features that 
 
 ## New and updated features in December 2020 (v1.3)
 
-### Guest Return to the Workplace Portal
+### Return to the Workplace Portal
 Facility managers can provide access to third parties. A third party can choose a facility, attest to being symptom-free and receive a personalized day pass for facilities entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
 
 ![Portal](media/whats-new-guest-portal.png "Portal")
 
 ![Portal](media/whats-new-guest-portal2.png "Portal")
 
-### Facility Access 
-Facility or case managers can now manage facility access for employees and provide them guidance through the app, push notification, email, or text.
+With the introduction of portals we added a new way for people approaching the solution. Below you will find a comparison how the portal related to the mobile app.
+
+||Employee App (Power App Canvas)|Web App (Power App Portal)|
+|Persona|Employee|3rd Party|
+|Target Users|Employees, students|Vendors, parents or guardians of students, “of-age” student|
+|Security||Authentication Azure AD|Multiple types supported (including Azure AD B2C, Gmail, Facebook)|
+|Booking level||Facilities, floors, areas, arrival times|Facilities|
+|Attestation|Yes|Yes|
+|Access controls|Yes|No|
+|Notifications (e.g., in-app, email, text)|Yes|Future|
+|Included in occupancy metrics|Yes|Yes|
+|Included in occupancy capacity limits|Yes|No|
+|Included in case management|Yes|By company policy|
+|Manual contract tracing|Yes|Limited|
+
+### Access Control 
+Facility or case managers can now manage facility access for employees via access controls. They are a new way of blocking facility access for an employee which allows people create them either via other ways which can also be automated via Power Automate or an API. Access controls tie in to notifications, so people find guidance in the employee app.
 
 ![Facility Access](media/whats-new-manage-facility-access.png "Facility Access")
 
 ### Notifications
-Employees can now have in app notifications when booking or when facility access has been enabled or disabled.
-
+Employees can now have in app notifications when booking or when facility access has been enabled or disabled. Out of the box there email notification is also provided, but these can be extended via Power Automate or other solutions.
 
 ### Upgraded Dashboards with County Level Virus Data
 COVID-19 data and insights at a county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.  
