@@ -317,7 +317,13 @@ This section provides information around how to install the Return to the Workpl
 
 3. Select **Portal from Blank**.
 
+   > [!div class="mx-imgBorder"]
+   > ![Create portal](media/create-portal.png "Create portal")
+
 4. Fill in the name and the address. Leave the language on English and press **Create**. You will see a popup appearing on the right top saying that the portal provisioning has started.
+
+   > [!div class="mx-imgBorder"]
+   > ![Portal details](media/enter-portal-name.png "Portal details")
 
 5. Select Apps on the left side, you see the name portal app appearing.
 
@@ -353,6 +359,9 @@ In the deployment package we also included the portal data. You
 4. Select **Website Bindings** on the left side. Validate if there is a binding for the url indicated for the **Return to the Workplace** website.
 
 5. Go to [Power Apps](https://make.powerapps.com). Select the three dots next to the portal and press **Settings**. Select **Administration** to open the portal administration side. Select **Portal Actions** and select **Restart**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Portal restart](media/portal-restart.png "Portal restart")
 
 6. Go to [Power Apps](https://make.powerapps.com). Select the portal and press **Browse**.
    
