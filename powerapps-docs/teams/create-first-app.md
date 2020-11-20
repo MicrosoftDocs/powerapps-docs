@@ -99,7 +99,7 @@ After your Dataverse for Teams environment has been created, you can go to the [
 
     ![Build tab](media/build-tab-env.png "Build tab")
 
-1. Select **Create** to get started building your first app. This action opens
+1. Select **New** > **App** to get started building your first app. This action opens
 Power Apps Studio, where you're prompted to name your app. 
 
 1. Enter an app name, and then select **Save**.

@@ -15,6 +15,9 @@ search.app:
 ---
 # Operations supported by Online Management API 
 
+> [!NOTE]
+> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated).
+
 You can perform most of the environment-related operations using the API that you can do using the admin center. The API also lets you perform some additional operations such as using tenant application identities to create/manage environments and retrieving service versions (releases) for environments.
 
 For a list of operations supported by the API, see [Online Management API reference](/rest/api/admin.services.crm.dynamics.com/).

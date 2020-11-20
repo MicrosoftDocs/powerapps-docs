@@ -10,21 +10,21 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure OpenID Connect for portals with Azure Active Directory
+# Configure an OpenID Connect provider for portals with Azure AD
 
-In this article, you'll learn about configuring OpenID Connect provider for portals with Azure Active Directory, and multi-tenant Azure AD.
+In this article, you'll learn about configuring an OpenID Connect provider for portals with Azure Active Directory (Azure AD) and multitenant Azure AD.
 
 > [!NOTE]
-> - Portals isn't limited to only Azure AD, multi-tenant Azure AD, or Azure AD B2C as the OpenID Connect providers. You can use any other provider that confirms to the OpenID Connect specifications with portals.
-> - Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
+> - Portals isn't limited to only Azure AD, multitenant Azure AD, or Azure AD B2C as the OpenID Connect providers. You can use any other provider that conforms to the OpenID Connect specification.
+> Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. Restart the portal by using [portal actions](../admin/admin-overview.md) if you want the changes to be reflected immediately.
 
-To configure Azure AD as the OpenID Connect provider using Implicit Grant flow:
+**To configure Azure AD as the OpenID Connect provider by using the Implicit Grant flow**
 
 1. Select [Add provider](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) for your portal.
 
-1. Select **Login provider** as **Other**.
+1. For **Login provider**, select **Other**.
 
-1. Select **Protocol** as **OpenID Connect**.
+1. For **Protocol**, select **OpenID Connect**.
 
 1. Enter a provider name.
 
@@ -32,13 +32,13 @@ To configure Azure AD as the OpenID Connect provider using Implicit Grant flow:
 
 1. Select **Next**.
 
-1. In this step, create the application and configure the settings with your identity provider.
+1. In this step, you create the application and configure the settings with your identity provider.
 
     ![Create application](media/authentication/step-1-openid.png "Create application")
 
     > [!NOTE]
     > - The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
-    > - More details about creating the app registration on the Azure portal are available in the [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+    > - More details about creating the app registration on the Azure portal are available in [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
 
     1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -54,76 +54,73 @@ To configure Azure AD as the OpenID Connect provider using Implicit Grant flow:
 
     1. If necessary, select a different **Supported account type**. More information: [Supported account types](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
 
-    1. If not selected already, select **Web** for **Redirect URI**.
+    1. Under **Redirect URI**, select **Web** (if it isn't already selected).
 
     1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-openid_1`
 
         > [!NOTE]
-        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Create and configure OpenID Connect provider settings**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Redirect URL** in your portal settings while configuring OpenID Connect provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-openid_1`, use it as is for the OpenID Connect configuration in portals.
+        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in the **Create and configure OpenID Connect provider settings** step. If you're using a custom domain name for the portal, enter the custom URL. Be sure to use this value when you configure the **Redirect URL** in your portal settings while configuring the OpenID Connect provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-openid_1`, you must use it as-is for the OpenID Connect configuration in portals.
 
         ![Register application](media/authentication/register-application.png "Register application")
 
     1. Select **Register**.
 
-    1. In the left menu, under **Manage**, select **Authentication**.
+    1. On the left pane, under **Manage**, select **Authentication**.
 
-        ![Enable implicit grant flow with ID tokens](media/authentication/id-tokens-openid.png "Enable implicit grant flow with ID tokens")
+        ![Enable the Implicit Grant flow with ID tokens](media/authentication/id-tokens-openid.png "Enable the Implicit Grant flow with ID tokens")
 
-    1. Under **Implicit grant**, select **ID tokens** check box.
+    1. Under **Implicit grant**, select the **ID tokens** check box.
 
     1. Select **Save**.
 
-1. In this step, enter the site settings for the portal configuration.
+1. In this step, you enter the site settings for the portal configuration.
 
     ![Configure OpenID Connect site settings](media/authentication/openid-site-settings-1.png "Configure OpenID Connect site settings")
 
     > [!TIP]
-    > If you closed the browser window after configuring the app registration in the earlier step, sign in to the Azure portal again and go to the app that you registered for the next steps.
+    > If you closed the browser window after configuring the app registration in the earlier step, sign in to the Azure portal again and go to the app that you registered.
 
-    1. **Authority** - To configure the authority URL, use the following format:
+    1. **Authority**: To configure the authority URL, use the following format:
 
         `https://login.microsoftonline.com/<Directory (tenant) ID>/`
 
         For example, if the *Directory (tenant) ID* in the Azure portal is `7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb`, the authority URL is `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/`
 
-    1. **Client ID** - Copy the **Application (client) ID** from the Azure portal as the client ID.
+    1. **Client ID**: Copy the **Application (client) ID** from the Azure portal as the client ID.
 
         ![Authority and Client ID](media/authentication/authority-client-id.png "Authority and Client ID")
 
-    1. **Redirect URL** - Confirm that the **Redirect URL** site setting value is the same as the **Redirect URI** that you set in the Azure portal earlier.
+    1. **Redirect URL**: Confirm that the **Redirect URL** site setting value is the same as the **Redirect URI** that you set in the Azure portal earlier.
 
-        ![Confirm Redirect URL](media/authentication/redirect-uri-azure-power-apps.png "Confirm Redirect URL")
+        ![Confirm redirect URL](media/authentication/redirect-uri-azure-power-apps.png "Confirm redirect URL")
 
         > [!NOTE]
-        > If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in **Create and configure OpenID Connect provider settings**. If you're using a custom domain name, enter the URL manually. However, ensure that the value entered here is exactly the same as the value you entered as the **Redirect URI** in the Azure portal earlier.
+        > If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in the **Create and configure OpenID Connect provider settings** step. If you're using a custom domain name, enter the URL manually. Be sure that the value you enter here is exactly the same as the value you entered as the **Redirect URI** in the Azure portal earlier.
 
-    1. **Metadata address** - To configure the metadata address:
+    1. **Metadata address**: To configure the metadata address, do the following:
 
         1. Select **Overview** in the Azure portal.
-        
-        1. Select **Endpoints**.
-        
-            ![Endpoints in Azure portal](media/authentication/endpoints.png "Endpoints in Azure portal")
 
-        1. Copy the **OpenID Connect metadata document**.
+        1. Select **Endpoints**.
+
+           ![Endpoints in the Azure portal](media/authentication/endpoints.png "Endpoints in the Azure portal")
+
+        1. Copy the URL in **OpenID Connect metadata document**.
 
             ![OpenID Connect metadata document](media/authentication/openid-connect-metadata-document.png "OpenID Connect metadata document")
 
         1. Paste the copied document URL as the **Metadata address** for portals.
 
-    1. **Scope** - Set the **Scope** site setting value as:
+    1. **Scope**: Set the **Scope** site setting value as:
 
         `openid email`
 
         > [!NOTE]
-        > `openid` value in **Scope** is mandatory. `email` value is optional, and specifying it in the scope ensures that the email address of the portal user (contact record) is pre-filled, and shown on the *Profile* page after the user logs in.
+        > The `openid` value in **Scope** is mandatory. The `email` value is optional; specifying the `email` value in the scope ensures that the email address of the portal user (contact record) is automatically filled in and shown on the **Profile** page after the user signs in. For information about additional claims, see [Configure additional claims](#configure-additional-claims) later in this article.
 
-        > [!TIP]
-        > For additional claims, see [Configure additional claims](#configure-additional-claims).
+    1. For **Response type**, select **code id_token**.
 
-    1. **Response type** - Select **code id_token**.
-
-    1. **Response mode** - Select **form_post**.
+    1. For **Response mode**, select **form_post**.
 
 1. Select **Confirm**.
 
@@ -132,8 +129,6 @@ To configure Azure AD as the OpenID Connect provider using Implicit Grant flow:
 1. Select **Close**.
 
 ## Configure additional claims
-
-To configure additional claims, such as using first name, or last name:
 
 1. Enable [optional claims in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
 
@@ -146,20 +141,21 @@ To configure additional claims, such as using first name, or last name:
 1. Set the **Login claims mapping** additional site setting.
     <br> Example: `firstname=given_name,lastname=family_name`
 
-For example, the first name, last name and email addresses supplied with the additional claims will become the default values in the portal's profile page.
+For example, the first name, last name, and email addresses supplied with the additional claims become the default values in the profile page in the portal.
 
 ![Profile page example](media/authentication/profile-page.png "Profile page example")
 
-## Enable authentication using a multi-tenant Azure Active Directory application
+<a name="enable-authentication-using-a-multi-tenant-azure-active-directory-application"></a>
+## Enable authentication by using a multitenant Azure AD application
 
-You can configure your portal to accept [!include[](../../../includes/pn-azure-active-directory.md)] users from any tenant in [!include[](../../../includes/pn-azure-shortest.md)] and not just a specific tenant by using the multi-tenant application registered in [!include[](../../../includes/pn-azure-active-directory.md)]. To enable multi-tenancy, [update the application registration](https://docs.microsoft.com/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multi-tenant) in the [!include[](../../../includes/pn-azure-active-directory.md)] application.
+You can configure your portal to accept Azure AD users from any tenant in Azure, and not just from a specific tenant, by using the multitenant application registered in Azure AD. To enable multitenancy, [update the application registration](https://docs.microsoft.com/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multi-tenant) in the Azure AD application.
 
-To support authentication against [!include[](../../../includes/pn-azure-active-directory.md)] using a multi-tenanted application, you have to create or configure the additional **Issuer Filter** site setting.
+To support authentication against Azure AD by using a multitenant application, you have to create or configure the additional **Issuer Filter** site setting.
 
-![Issuer filter for multi-tenancy](media/authentication/issuer-filter-multi-tenant.png "Issuer filter for multi-tenancy")
+![Issuer filter for multitenancy](media/authentication/issuer-filter-multi-tenant.png "Issuer filter for multitenancy")
 
 This site setting is a wildcard-based filter that matches on all issuers across all tenants. Example: `https://sts.windows.net/*/`
 
 ### See also
 
-- [Frequently Asked Questions (FAQs) when using OpenID Connect in portals](configure-openid-faqs.md)
+[FAQ for using OpenID Connect in portals](configure-openid-faqs.md)
