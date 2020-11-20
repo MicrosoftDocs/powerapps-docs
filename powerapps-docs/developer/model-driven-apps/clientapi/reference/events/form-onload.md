@@ -18,7 +18,9 @@ search.app:
 
 
 
-The form `OnLoad` event occurs after the form has loaded. It also occurs after a record is created by selecting the **Save** button on the main form.  It cannot prevent the window from loading. Use the `OnLoad` event to apply logic about how the form should be displayed, to set properties on fields, and interact with other page elements.
+The form `OnLoad` event occurs after the form has loaded. It also occurs after a record is created, for example by selecting the **Save** button on the main form.  It cannot prevent the window from loading. Use the `OnLoad` event to apply logic about how the form should be displayed, to set properties on fields, and interact with other page elements.
+
+You can determine in what context the `OnLoad` event occurs by using [getEventArgs](../executioncontext/getEventArgs.md). By doing so, you can apply logic conditional on the context.
 
 The form `OnLoad` events are synchronous. However, you should **not** make synchronous network requests in an `OnLoad` event handler. This can cause a slow save experience and an unresponsive app. Instead, you can make asynchronous network requests. 
 
