@@ -48,8 +48,10 @@ Facility or case managers can now manage facility access for employees via acces
 Employees can now have in app notifications when booking or when facility access has been enabled or disabled. Out of the box there email notification is also provided, but these can be extended via Power Automate or other solutions.
 
 ### Upgraded Dashboards with County Level Virus Data
-COVID-19 data and insights at a county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.  
-![Dashaboards](media/whats-new-dashboard.png "Dashboards")
+COVID-19 data and insights at a county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
+
+![Dashboards](media/whats-new-county.png "Dashboards County Level")
+![Dashboards](media/whats-new-state.png "Dashboards State Level")
 
 ## New and updated features in October 2020 (v1.2)
 
