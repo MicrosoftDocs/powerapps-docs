@@ -29,8 +29,8 @@ With the introduction of portals we added a new way for people approaching the s
 |-----|------------|---------------|
 |Persona|Employee|3rd Party|
 |Target Users|Employees, students|Vendors, parents or guardians of students, “of-age” student|
-|Security||Authentication Azure AD|Multiple types supported (including Azure AD B2C, Gmail, Facebook)|
-|Booking level||Facilities, floors, areas, arrival times|Facilities|
+|Security|Authentication Azure AD|Multiple types supported (including Azure AD B2C, Gmail, Facebook)|
+|Booking level|Facilities, floors, areas, arrival times|Facilities|
 |Attestation|Yes|Yes|
 |Access controls|Yes|No|
 |Notifications (e.g., in-app, email, text)|Yes|No|
