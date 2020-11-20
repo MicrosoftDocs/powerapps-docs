@@ -44,7 +44,7 @@ landingContent:
             url: open-and-run-a-sample-app.md 
           - text: Create your first app
             url: get-started-test-drive.md  
-          - text: Create a canvas app from Microsoft Dataverse
+          - text: Create a canvas app from Dataverse
             url: data-platform-create-app.md
        - linkListType: learn
          links:
