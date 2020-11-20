@@ -62,6 +62,7 @@ The Workplace Care Management app has the following components:
       > [!div class="mx-imgBorder"]
       > ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
 
+
 **Master data**
 
 - **Employee**: List of all employees. Employees are contacts.
@@ -157,6 +158,13 @@ Case managers are the resources who manage employee cases.
    > ![Enter name](media/health-safety-employee-case-form.png "Enter name")
 
 3. Save the record.
+
+### Employee Block Access
+
+On **Employee Instructions** an employee can be blocked access to the facility. Adding an expiration date for this block and instructions.
+
+   > [!div class="mx-imgBorder"]
+   > ![Enter name](media/health-safety-employee-block-access.png "Enter name")
 
 ### Managing a case – moving a case through the process stages
 
