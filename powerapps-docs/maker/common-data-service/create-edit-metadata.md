@@ -28,7 +28,7 @@ Dataverse is designed so that you can quickly and easily create a data model for
   
 Different clients people use to interact with the data in your environment depend on the table metadata and adapt as you customize the metadata. But these clients also depend on other data to control what visual elements to display, any custom logic to apply, and how to apply security. This system data is also stored within tables but the tables themselves are not available for customization.
 
-You can learn about standard tables, attributes, and table relationships included by default in Dataverse by reviewing the [table Reference](/powerapps/developer/common-data-service/reference/about-table-reference).
+You can learn about standard tables, attributes, and table relationships included by default in Dataverse by reviewing the [entity reference](/powerapps/developer/common-data-service/reference/about-table-reference).
 
 > [!TIP]
 > The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the tables and metadata properties that are found in the system. More information: [Browse the metadata for your environment](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
