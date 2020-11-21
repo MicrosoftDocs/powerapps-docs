@@ -12,11 +12,11 @@ ms.reviewer: tapanm
 
 # Portal templates
 
-Based on the selected environment in Power Apps, you can create a Microsoft Dataverse starter portal or a portal in an environment containing customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation).
+Based on the selected environment in Power Apps, you can create a Dataverse starter portal or a portal in an environment containing customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation).
 
 ## Environment with Dataverse
 
-If you select an environment that contains Dataverse, you can create a Dataverse starter portal. The Dataverse starter portal comes with the sample data for you to quickly get started. It also has the following built-in sample pages:
+If you select an environment that contains Microsoft Dataverse, you can create a Dataverse starter portal. The Dataverse starter portal comes with the sample data for you to quickly get started. It also has the following built-in sample pages:
 
 - Default studio template
 - Page with title
