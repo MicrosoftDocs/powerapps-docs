@@ -382,9 +382,9 @@ This area of the Facility Safety Management app keeps track of general employee 
 > [!div class="mx-imgBorder"]
 ![Employee sentiment](media/facility-manager-employee-sentiment.png "Employee sentiment")
 
-## Employee Access
+## Facility Access
 
-Each employee can be blocked for making bookings and thus entering a building by disabling Access. This can be done by a Case Manager in the Workplace Care Management app or by a Facility Manager. To do so as facility manager, follow these steps:
+Each employee can be blocked for making bookings and thus entering a building by disabling Facility Access. This can be done by a Case Manager in the Workplace Care Management app or by a Facility Manager. To do so as facility manager, follow these steps:
 
 1. Open an employee record. 
 2. Go to the **Access** tab.
@@ -402,7 +402,9 @@ Each employee can be blocked for making bookings and thus entering a building by
 The Employee is now blocked and can no longer make bookings via the Employee App.
 All existing bookings are disabled.
 
-Create notifications for employees
+## Notifications
+
+Every time an access control is created a notification is send to the employee. These notifications can be used in more situations. If you want to send a notification to an employee follow these steps:
 
 1. Open an employee record.
 2. Go to the **Notifications** tab.
