@@ -41,9 +41,9 @@ Contact your local Microsoft account representative for questions related to lic
 See also: 
 
 - [Licensing overview for Microsoft Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+- [Licensing oveview for Power Apps Portals](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals)
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
-- [Licensing oveview for Power Apps Portals](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals)
 
 ## Start here
 
