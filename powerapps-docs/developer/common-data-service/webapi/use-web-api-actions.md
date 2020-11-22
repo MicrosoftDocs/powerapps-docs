@@ -144,7 +144,7 @@ It is less common to find actions bound to an entity collection. The following a
 
 |||| 
 |-|-|-|  
-|<xref:Microsoft.Dynamics.CRM.CreateException?text="CreateException Action" />|<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?text=DeliverIncomingEmail Action />|<xref:Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action />|  
+|<xref:Microsoft.Dynamics.CRM.CreateException />|<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?text=DeliverIncomingEmail Action />|<xref:Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action />|  
 |<xref:Microsoft.Dynamics.CRM.FulfillSalesOrder?text=FulfillSalesOrder Action />|<xref:Microsoft.Dynamics.CRM.ValidateSavedQuery?text=ValidateSavedQuery Action />||
 
 As an example of an action bound to an entity collection, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action" /> represented in the CSDL:
