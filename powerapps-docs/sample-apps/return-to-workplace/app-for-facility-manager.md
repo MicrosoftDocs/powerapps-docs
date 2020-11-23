@@ -194,6 +194,9 @@ To access the facility manager dashboard:
     - Employee bookings (or employee bookings and guest registrations) versus capacity by date. Shows the employee bookings (and guest registrations) on a certain date on the total capacity on that date.
     
     - Average daily occupancy by floor (or floor and area). The dot represents the capacity and the contents show the average employee bookings and average guest registrations.
+
+    > [!div class="mx-imgBorder"]
+    > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-occupancy.png "Facility manager dashboard - Readiness")
     
 - **Daily Arrivals** shows booking information to assist in controlling the facility traffic, such as:
 
@@ -206,9 +209,9 @@ To access the facility manager dashboard:
 
 **Virus Spread**
 
-This tab shows data from public health sources by country (and by state in the United States):
+This tab shows data from public health sources by country (by state and county for the USA. Note that county level data for the USA is only for the last 6 months):
 
-- **New COVID Cases** shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
+- **Confirmed COVID Cases** tab shows the associated risk level, number of cases for the last reporting day, 14-day average in absolute numbers and per population, daily trend, and the total number of cases and per population.
    
 - **New Fatal COVID Cases** shows information for COVID-19 cases with fatalities.
    
@@ -225,7 +228,7 @@ This tab summarizes the employee engagement and Employee Return to the Workplace
 
 - **Average sentiment** shows average employee sentiment.
 
-- **Passes generated** shows number of passes generated.
+- **Passes generated** shows number of passes generated both for employees and guests.
 
   There are two charts. One displays the sentiment by date and the other displays the pass and guest registrations generated versus the number of visits by date, along with the trend over time.
 
