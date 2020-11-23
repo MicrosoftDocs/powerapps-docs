@@ -131,7 +131,7 @@ With the introduction of guest passes, you can share passes with guests. From wi
 
 ### Step 1: Return to the Workplace Portal
 
-With version 1.3 we are introducing the Return to the Workplace portal, which allows third-parties to indicate they are coming the facility. The portal is installed separate, which allows you to choice if you want to install it. What the portal can do, you can find in [Return to the Workplace portal](ex.md). On how to install the portal, you will find that in the [Deploy the solution](deploy.md).  
+With version 1.3 we are introducing the Return to the Workplace portal, which allows third-parties to indicate they are coming the facility. The portal is installed separate, which allows you to choice if you want to install it. What the portal can do, you can find in [Return to the Workplace portal](portal-extension.md). On how to install the portal, you will find that in the [Deploy the solution](deploy.md).  
 
 ### Step 2: Access Control
 
@@ -139,7 +139,7 @@ In version 1.2 we allowed case manager to block employees from access to the fac
 
 ### Step 3: Notifications
 
-With the introduction of version 1.3, we implemented notifications to notify employees about important events. They will receive these notifications either in the employee app or via different ways of communication. Out of the box, we supply email notifications. More information: [Configure Email Flows](configure.md)
+With the introduction of version 1.3, we implemented notifications to notify employees about important events. They will receive these notifications either in the employee app or via different ways of communication. Out of the box, we supply email notifications. More information: [Enable Flows](deploy.md#step-9-enable-flows)
 
 ### Step 4: Power BI Dashboards
 
