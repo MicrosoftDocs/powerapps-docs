@@ -295,9 +295,9 @@ Some of these settings have an impact on the Employee app. The solution setting 
    |------------------------|------------------------------------------------|
    | Guest Health Terms & Agreement | Shown in the Employee app during the guest registration process.|
    | Guest Privacy Terms & Agreement | Shown in the Employee app during the guest registration process. |
-   | Allow Unauthenticated Guests to Create a Pass | Enable unauthenticated guests to create a pass. |
-   | Allow on behalf of attestations | Allow attestating on behalf a guest. |
-   | Resource Text | Information around the resource. |
+   | Allow Unauthenticated Guests to Create a Pass (portal only) | Enable unauthenticated guests to create a pass. |
+   | Allow on behalf of attestations (portal only) | Allow attestating on behalf a guest. |
+   | Resource Text (poral only) | Information around the resource. |
    |||
 
 ## Set duplicate detection rules for employee cases 

@@ -17,13 +17,13 @@ This article provides resources where you can learn about the new features that 
 ## New and updated features in December 2020 (v1.3)
 
 ### Return to the Workplace Portal
-Facility managers can provide access to third parties. A third party can choose a facility, attest to being symptom-free and receive a personalized day pass for facilities entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
+Facility managers can provide facility access to third parties. A third party can choose a facility, attest to being symptom-free and receive a day pass for facility entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
 
 ![Portal](media/whats-new-guest-portal8.png "Portal")
 
 ![Portal](media/whats-new-guest-portal1.png "Portal")
 
-With the introduction of portals we added a new way for people approaching the solution. Below you will find a comparison how the portal related to the mobile app.
+With the introduction of portals we added a new way for people approaching the solution. Below you will find a comparison how the portal relates to the mobile app.
 
 ||Employee App (Mobile App)|Portal (Web App)|
 |-----|------------|---------------|
@@ -40,15 +40,15 @@ With the introduction of portals we added a new way for people approaching the s
 |Manual contract tracing|Yes|Limited (manual data entry)|
 
 ### Access Control 
-Facility or case managers can now manage facility access for employees via access controls. They are a new way of blocking facility access for an employee which allows people create them either via other ways which can also be automated via Power Automate or an API. Access controls tie in to notifications, so people find guidance in the employee app.
+Facility or case managers can now manage facility access for employees via access controls. They are a new way of blocking facility access for an employee which allows people to create them either via Power Automate or an API. Access controls tie in to notifications, so people find guidance in the employee app.
 
 ### Notifications
-Employees can now have in app notifications when booking or when facility access has been enabled or disabled. Out of the box there email notification is also provided, but these can be extended via Power Automate or other solutions.
+Employees can now have in app notifications when facility access has been enabled or disabled. Out of the box email notifications is also provided, but these can be extended via Power Automate or other solutions.
 
 ![Notifications](media/whats-new-notifications.png "Notifications")
 
 ### Dashboards with State and County Level Virus Data
-COVID-19 data and insights is now available at a state and county level for US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
+COVID-19 data and insights is now available at a state and county level for the US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
 
 ![Dashboards](media/whats-new-state.png "Dashboards State Level")
 ![Dashboards](media/whats-new-county.png "Dashboards County Level")

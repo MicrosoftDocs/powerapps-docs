@@ -305,6 +305,13 @@ In the Return to the Workplace solution, the following security roles are define
    > [!NOTE]
    > The connection used for **Office 365 Outlook** is the email address used to send emails to guests. Use a service account for sending generic emails or use a shared mailbox. 
 
+6. Repeat step 4 and 5 for the following flows:
+
+ - Notification - Send as email
+ - Share Guest attestation - email
+ - Share Guest attestation - email with portal link (portal only)
+ - Contact - Create portal invitation (portal only)
+
 ## Appendix: Deploy the Return to the Workplace portal
 
 This section provides information around how to install the Return to the Workplace portal.  
@@ -315,17 +322,20 @@ This section provides information around how to install the Return to the Workpl
 
 2. Select **Create** on the left side.
 
-3. Select **Portal from Blank**.
+3. Select **Portal from blank**.
 
    > [!div class="mx-imgBorder"]
    > ![Create portal](media/create-portal.png "Create portal")
 
-4. Fill in the name and the address. Leave the language on English and press **Create**. You will see a popup appearing on the right top saying that the portal provisioning has started.
+4. Fill in the name and the address. Leave the language on English and press **Create**.
 
    > [!div class="mx-imgBorder"]
    > ![Portal details](media/enter-portal-name.png "Portal details")
 
-5. Select Apps on the left side, you see the name portal app appearing.
+5. You will see a popup appearing on the top right saying that the portal provisioning has started. Select Apps on the left side, you see the name of your portal app appear in the list. As soon as provisioning completes, the link will be active.
+
+   > [!div class="mx-imgBorder"]
+   > ![Portal provisioning notice](media/portal-provisioning.png "Portal provisioning notice")
 
 ### Step 2: Install the package
 
@@ -341,14 +351,14 @@ You can install the Return to the Workplace Portal solution from AppSource.
 
 2. Select **GET IT NOW** to install the solution in your environment. You'll be redirected to the actual installation page, where you can select the environment where you want to install it. Installation starts after you select the environment and accept the terms and agreement.
 
-3. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left pane, select **Solutions** to see the new solution which was installed.
+3. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left pane, select **Solutions** to see the new solution which is installed.
 
     > [!div class="mx-imgBorder"]
-    > ![List of apps](media/rtw-apps1.png "List of apps")
+    > ![List of solutions](media/rtw-apps1-solutions.png "List of solutions")
 
 ### Step 3: Restart the Portal
 
-In the deployment package we also included the portal data. You 
+In the deployment package we also included the portal data. To link the data to the right portal, follow the steps below: 
 
 1. Go to [Power Apps](https://make.powerapps.com). Select **Apps** on the left side and open the **Portal Management** app.
 
