@@ -387,7 +387,7 @@ This area of the Facility Safety Management app keeps track of general employee 
 
 ## Facility Access
 
-Each employee can be blocked for making bookings and thus entering a building by disabling Facility Access. This can be done by a Case Manager in the Workplace Care Management app or by a Facility Manager. To do so as facility manager, follow these steps:
+Each employee can be blocked for making bookings (and thus entering a building) by disabling Facility Access. This can be done by a Case Manager in the Workplace Care Management app or by a Facility Manager. To do so as a facility manager, follow these steps:
 
 1. Open an employee record. 
 2. Go to the **Access** tab.
@@ -396,18 +396,18 @@ Each employee can be blocked for making bookings and thus entering a building by
 > [!div class="mx-imgBorder"]
 ![Access Action list on Employee form](media/facility-manager-employee-block2.jpg "Access Action list on Employee form")
 
-4. Select **Access Status** as **Blocked**, set **Access Available Date** to a date in the future when you would like the block to expire and enter some notes to display to the Employee.
-5. Employee, Source, Submitted By and Owner are filled in automatically. Select **Save & Close**
+4. Select **Access Status** as **Blocked** and set **Access Available Date** to a date in the future when you would like the block to expire. You can enter some notes to display to the Employee.
+5. Select **Save & Close**
 
 > [!div class="mx-imgBorder"]
 ![Creating an Access Action](media/facility-manager-employee-block3.jpg "Creating an Access Action")
 
 The Employee is now blocked and can no longer make bookings via the Employee App.
-All existing bookings are disabled. An Notification is automatically created of the type **warning**, set as **Send as push notification** and in the body it has the note of the Access Action.
+All existing bookings are disabled. A notification is automatically created of the type **warning**, set as **Send as push notification** and in the body it has the notes of the Access Action.
 
 ## Notifications
 
-Every time an access control is created a notification is created for the employee. These notifications can be used for different situations. By default the Employee App loads active notifications for the employee. Also a flow is implemented that will send the notification as an e-mail if the setting **Send as email** is set to **Yes**. If you want to create a notification for an employee follow these steps:
+Every time an access control is created a notification is created for the employee. These notifications can be used for different situations. Also a flow is implemented that will send the notification as an e-mail if the setting **Send as email** is set to **Yes**. If you want to create a notification for an employee follow these steps:
 
 1. Open an employee record.
 2. Go to the **Notifications** tab.
@@ -424,7 +424,7 @@ Every time an access control is created a notification is created for the employ
 5. Select **Save & Close**
 
 > [!Note]
-> A flow for push notifications has not been implemented, since this requires the app ID. A flow can be implemented easily. Some guidance can be found here: [Send Push Notification connector](https://docs.microsoft.com/en-us/connectors/powerappsnotification/#send-push-notification)
+> A flow for push notifications has not been implemented, since this requires the app ID. To implement a flow for push notifications, please see: [Send Push Notification connector](https://docs.microsoft.com/en-us/connectors/powerappsnotification/#send-push-notification)
 
 ## Give feedback about the solution
 
