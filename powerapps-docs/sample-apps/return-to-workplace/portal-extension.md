@@ -119,6 +119,8 @@ On the home screen you have several options:
 
 6. A pass is created for the guest/dependent for that day.
 
+> [!div class="mx-imgBorder"]
+> ![Portal Attestation](media/portals-own-pass.png "Portal Pass")
 
 > [!NOTE]
 > An administrator can disable the store of negative attestations in the solution settings. This will stop a negative attestation of being created and wont save the record.
