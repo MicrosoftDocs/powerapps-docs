@@ -34,16 +34,16 @@ The main modules of the Return to the Workplace solution include:
 
 - Power BI Premium or Power BI Pro license, if you'll be using the Power BI dashboard that's available as part of the solution 
 
-- Power Apps Portals, if installed, can be provisioned without requiring a specific license. User access licensing is based on persona type and charged as per use bases.
+- Power Apps Portals, if installed, can be provisioned without requiring a specific user license. Licensing is based on Page Views or Logins per 24 hours. See Licensing overview for Power Apps Portals below.
 
 Contact your local Microsoft account representative for questions related to licensing as per your requirements.
 
 See also: 
 
 - [Licensing overview for Microsoft Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+- [Licensing oveview for Power Apps Portals](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals)
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
-- [Power Apps Portals details](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals)
 
 ## Start here
 
