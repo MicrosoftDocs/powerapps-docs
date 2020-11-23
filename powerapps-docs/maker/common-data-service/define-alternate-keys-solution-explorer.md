@@ -67,7 +67,7 @@ Part of the name of any alternate key you create is the customization prefix. Th
 
 ## Delete an alternate key
 
-While [viewing alternate keys](#view-alternate-keys), select ![Delete](media/delete.gif).
+While [viewing alternate keys](#view-alternate-keys), select ![Delete command](media/delete.gif).
 
 ### See also
 

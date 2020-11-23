@@ -44,7 +44,7 @@ To add a lookup relation to a table, create a relation under the **Relationships
 1. On the right pane, select a **Related** table for the **Current** table, and then select **Done**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to One Relationship")
+    > ![Many to one relationship example](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to one relationship example")
 
 1. Select **Save table**.
 
