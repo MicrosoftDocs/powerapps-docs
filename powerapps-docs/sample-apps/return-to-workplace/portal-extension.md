@@ -23,7 +23,7 @@ A seperate offering extends the Return to the Workplace solution with a portal. 
 
 ## Configuration
 
-There are solution settings that alter the portals behavior. Please see ##### for more details.
+There are solution settings that alter the portals behavior. Please see [Configure the solution](configure.md#set-solution-settings) for more details.
 
 - Allow self registration
 - Allow unauthenticated users to self-screen
