@@ -167,12 +167,12 @@ You can say how you're feeling about returning to the workplace. On the home pag
 
 ## Notifications
 
-Each employee can receive notifications via the Employee App. In the top right a bell icon is displayed. If there are unread notifications, a badge will be displayed indicating the number of unread notifications. Clicking on the bell icon will take the employee to a new screen, where all the notifications are listed. The newest notifications are shown on top of the list.
+Each employee can receive notifications via the Employee App. In the top right a bell icon is displayed. If there are unread notifications, a badge will be displayed indicating, the number of unread notifications. Clicking on the bell icon will take the employee to a new screen where all the notifications are listed. The newest notifications are shown on top of the list.
 
 > [!div class="mx-imgBorder"]
 > ![Notification bell](media/employee-notification-bell.png "Notification bell")
 
-A notification shows a created date, a type, a header text and a body. There are three types of notications: information, warning and error. Each indicated with their own icon. 
+A notification shows a created date, type, header text and a body. There are three types of notications: information, warning and error. Each indicated with their own icon. 
 
 > [!div class="mx-imgBorder"]
 > ![Notifications list](media/employee-notification-list.png "Notifications list")
