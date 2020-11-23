@@ -424,7 +424,7 @@ Every time an access control is created a notification is created for the employ
 5. Select **Save & Close**
 
 > [!Note]
-> A flow for push notifications has not been implemented, since this requires the app ID. To implement a flow for push notifications, please see: [Send Push Notification connector](https://docs.microsoft.com/en-us/connectors/powerappsnotification/#send-push-notification)
+> A flow for push notifications has not been implemented, since this requires the app ID. To implement a flow for push notifications, please see: [Send Push Notification connector](https://docs.microsoft.com/connectors/powerappsnotification/#send-push-notification)
 
 ## Give feedback about the solution
 

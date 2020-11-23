@@ -135,7 +135,7 @@ With version 1.3 we are introducing the Return to the Workplace portal, which al
 
 ### Step 2: Access Control
 
-In version 1.2 we allowed case manager to block employees from access to the facility. We made this feature more generic which allows you to block employees via multiple ways either being from for example Power Automate or via the API. If you blocked employees earlier, please create access controls now. More information: [Configure Access Control](testetste.md).
+In version 1.2 we allowed case manager to block employees from access to the facility. We made this feature more generic which allows you to block employees via multiple ways either being from for example Power Automate or via the API. If you blocked employees earlier, please create access controls now. More information: [Facility Access](app-for-facility-manager.md#facility-access).
 
 ### Step 3: Notifications
 
