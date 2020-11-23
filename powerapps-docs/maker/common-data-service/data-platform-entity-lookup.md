@@ -33,25 +33,21 @@ Additionally, you can set advanced cascading behaviors on many-to-one and one-to
 
 To add a lookup relation to a table, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section select **Tables** on the left navigation pane.
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
+1. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
-3. Click **Relationships**
+1. Select **Add relationship**, and then select a relationship type, such as **Many-to-one**.
 
-4. Click **Add relationship**, this will open a new panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop down.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-1.png "Many to One Relationship")
-
-5. After selecting a table the Look up columns will be shown on the Primary table, they will default with the table's name (in this example Classroom) but you can change them if needed.
-
-    ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to One Relationship")
-
-6. Click **Done** to add the relationship to your table, and then click **Save table**.
+1. On the right pane, select a related table for the **Current** table.
 
     > [!div class="mx-imgBorder"] 
-    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-3.png "Many to One Relationship")
+    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to One Relationship")
+
+1. Select **Done**, and then select **Save table**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-3.png "Many to One Relationship") 
 
 ## Add a One-to-many relationship
 

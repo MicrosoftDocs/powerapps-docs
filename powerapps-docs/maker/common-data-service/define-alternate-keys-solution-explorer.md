@@ -42,7 +42,7 @@ Part of the name of any alternate key you create is the customization prefix. Th
 
 ## View alternate keys
 
-1. With solution explorer open, under **Components** expand **Tables** and select the table where you want to view alternate keys.
+1. With solution explorer open, under **Components** expand **Entities** and select the table where you want to view alternate keys.
 2. Expand the table and select **Keys**.
 
     ![View alternate keys](media/view-alternate-keys-solution-explorer.png)
