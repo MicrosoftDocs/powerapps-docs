@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 
 # Return to the Workplace Guest Portal
 
-A seperate offering extends the Return to the Workplace solution with a portal. Allowing people external to your organization to get a pass by performing attestations. The portal has been designed to provide a mobile experience for the end user, but it will scale to tablet or desktop screen sizes also. This enables end users to use the portal from their own device.
+A separate offering extends the Return to the Workplace solution with a portal. Allowing people external to your organization to get a day pass by performing attestations. The portal has been designed to provide a mobile experience for the end user, but it will scale to tablet or desktop screen sizes also. This enables end users to use the portal from their own device.
 
 > [!div class="mx-imgBorder"]
 > ![Portal welcome page](media/portals-welcome-screen.png "Portal welcome screen")
@@ -59,19 +59,19 @@ The portal provides guests with the ability to attest to the health policies. If
  > [!NOTE]
  > Please see [Overview of authentication in Power Apps portals](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal-authentication) for more information
 
-In case a guest has been invited to make use of the portal, the proces is as follows:
+In case a guest has been invited to make use of the portal, the process is as follows:
 
 1. A guest is invited to use the portal.
 2. The guest received an e-mail with the invite.
 3. The guest uses the link in the e-mail to redeem the invite and create a login.
-4. Accept on the Daily Health Check
-5. Agree with the Health and Agreements
+4. Accept on the Daily Health Check.
+5. Agree with the Health and Agreements.
 6. View the Pass. 
 
 While logged in to the portal, the guest can do the following things:
 
-- Create a pass.
-- View existing passes.
+- Create a pass
+- View existing passes
 - View resources
 - Update their profile
 
@@ -143,7 +143,7 @@ The pass will display:
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-pass.png "Portal Pass")
 
-When a pass is cancelled, the portal asks to confirm. If you cancel the pass, it wont show up in the view pass anymore and the attestation will be deactivate. The record will still exists in the system.
+When a pass is cancelled, the portal asks to confirm. If you cancel the pass, it will not show up in the view pass screen and the attestation will be deactivate. The record will still exists in the system.
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-cancel-pass.png "Portal Pass")
@@ -192,7 +192,7 @@ In the Workplace care management app, step 1 and 2 must be skipped. The **Employ
 
 ## Creating Dependents for Guests
 
-In case there is the need to create a pass for dependents, go to **Home** and select **Register Gest or Dependent**. For each of the dependents first you need to fill the contact details:
+In case there is the need to create a pass for dependents, go to **Home** and select **Register Guest or Dependent**. For each of the dependents first you need to fill the contact details:
 
 Mandatory fields: 
 
