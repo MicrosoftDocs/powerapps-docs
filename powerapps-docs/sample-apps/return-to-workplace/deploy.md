@@ -305,6 +305,13 @@ In the Return to the Workplace solution, the following security roles are define
    > [!NOTE]
    > The connection used for **Office 365 Outlook** is the email address used to send emails to guests. Use a service account for sending generic emails or use a shared mailbox. 
 
+6. Repeat step 4 and 5 for the following flows:
+
+ - Notification - Send as email
+ - Share Guest attestation - email
+ - Share Guest attestation - email with portal link (portal only)
+ - Contact - Create portal invitation (portal only)
+
 ## Appendix: Deploy the Return to the Workplace portal
 
 This section provides information around how to install the Return to the Workplace portal.  
