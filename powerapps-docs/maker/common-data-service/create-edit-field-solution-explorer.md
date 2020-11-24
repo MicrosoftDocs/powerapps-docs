@@ -1,5 +1,6 @@
 ---
 title: "Create and edit columns for Microsoft Dataverse using Power Apps solution explorer | MicrosoftDocs"
+description: "Discover how to create and edit columns in Power Apps"
 ms.custom: ""
 ms.date: 07/23/2020
 ms.reviewer: ""
