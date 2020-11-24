@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/16/2020
+ms.date: 11/24/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -168,7 +168,7 @@ To manage web page access control rules using the Portal Management app:
     |   Website   |                                                                                                           The website that this rule applies to; must match the website of the page to which this rule is applied. Filters Web Page.                                                                                                           |
     |  Web Page   |                            The webpage that this rule applies to. The rule will affect not only the page but all child pages of the page, making this attribute select the branch of the website to which the rule will apply. If a rule is applied to the home page, it will apply to the entire portal.                            |
     |    Right    |                                                                                                                                    [Grant change](#grant-change) or [Restrict read](#restrict-read)                                                                                                                                      |
-    |    Scope    | <ul><li><strong>All content</strong>: All descendant content is included in security validation.</li><li><strong>Exclude direct child web files</strong>: All child web files directly related to this webpage are excluded from security validation. This option does not exclude child's descendants.</li></ul>By default, **All content** is selected. |
+    |    Scope    | <ul><li><strong>All content</strong>: All descendant content is included in security validation.</li><li><strong>Exclude direct child web files</strong>: All child web files directly related to this webpage are excluded from security validation. This option doesn't exclude child's descendants.</li></ul>By default, **All content** is selected. |
     | Description |                                                                                                                                                     (Optional) A description of the rule.                                                                                                                                                      |
 
 1. Select **Save & Close** to save your changes.
@@ -199,11 +199,11 @@ Grant Change allows a user in a web role associated with the rule to publish con
 
 Next, you would set the right to grant change and the webpage to the parent page of the entire news branch of your site. You would then assign this web role to any contacts you want to designate as news editors. One user can have many web roles.
 
-A Grant Change rule should always be present in any portal that you wish to enable front-side editing for. This rule will apply to the home page of the site, thus making it the default rule for the entire site. This rule will be associated with a web role that is to represent the administrative role for the site. Users who are to be given front-side content publishing rights will be assigned to this role.
+A Grant Change rule should always be present in any portal that you wish to enable front-side editing for. This rule will apply to the home page of the site, making it the default rule for the entire site. This rule will be associated with a web role that is to represent the administrative role for the site. Users who are to be given front-side content publishing rights will be assigned to this role.
 
 ### Restrict Read
 
-The Restrict Read rule is used to limit viewing of a page (and its child pages) and its content to specific users. Whereas grant change is a permissive rule (it grants the ability to do something to its users), restrict read is a restrictive rule in that it restricts an action to a limited set of users. For example, you might have a section of the site meant to be used by employees only. You might restrict read of this branch to only people in the employee web role. You would create a new rule called restrict read to employees only.
+The Restrict Read rule is used to limit viewing of a page (and its child pages) and its content to specific users. In comparison, Grant Change is a permissive rule (it grants the ability to do something to its users), restrict read is a restrictive rule in that it restricts an action to a limited set of users. For example, you might have a section of the site meant to be used by employees only. You might restrict read of this branch to only people in the employee web role. You would create a new rule called restrict read to employees only.
 
 You would then set the right to restrict read and the page to the page at the top of the branch that is to be read only by employees. You would then associate this rule with the employee web role and then assign users to this role.
 
