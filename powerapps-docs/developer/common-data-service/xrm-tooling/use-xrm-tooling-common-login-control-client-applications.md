@@ -1,6 +1,6 @@
 ---
-title: "Use the XRM tooling common login control in your client applications (Common Data Service)| Microsoft Docs"
-description: "The Common Data Service SDK provides you with a template for Visual Studio that enables you to use the common login control in your client applications. The code for Common Data Service authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Common Data Service"
+title: "Use the XRM tooling common login control in your client applications (Microsoft Dataverse)| Microsoft Docs"
+description: "The Microsoft Dataverse SDK provides you with a template for Visual Studio that enables you to use the common login control in your client applications. The code for Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Dataverse"
 ms.custom: ""
 ms.date: 03/27/2019
 ms.reviewer: "pehecke"
@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-There is a template for Visual Studio that enables you to use the common login control in your client applications. The code for Common Data Service authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Common Data Service. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
+There is a template for Visual Studio that enables you to use the common login control in your client applications. The code for Microsoft Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Dataverse. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
   
 ![XRM Tooling common login control](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")
   
@@ -45,13 +45,13 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
   
 1.  Start Visual Studio, and create a new project.  
 2.  In the **New Project** dialog box:  
-    1.  From the list of installed templates, expand **Visual C#**, and select **Common Data Service SDK Templates**.  
+    1.  From the list of installed templates, expand **Visual C#**, and select **Dataverse SDK Templates**.  
     2.  Ensure that **.NET Framework 4.6.2** is selected.  
     3.  Select **WPF Application for Dynamics 365**.  
     4.  Specify the name and location of the project, and click **OK**.  
   
      > [!div class="mx-imgBorder"]
-     > ![WPF Application for Common Data Service template](../media/crm-sdk-v6-xrm-tooling-newproject.png "WPF Application for Common Data Service template")   
+     > ![WPF Application for Dataverse template](../media/crm-sdk-v6-xrm-tooling-newproject.png "WPF Application for Dataverse template")   
 
 > [!NOTE]
 > **Known Issue with Visual Studio 2015**
@@ -66,16 +66,16 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
   
     1. Save the project and press **F5** or click **Debug** > **Start Debugging** to verify if the project compiles successfully. On successful compilation, you’ll see a MainWindow with **Login to Dynamics 365** button. Click the button to display the common login control.  
 
-    2.  Test the authentication by providing your credentials to connect to Common Data Service, and then click **Login**. A message displays your Common Data Service connection status.  
+    2.  Test the authentication by providing your credentials to connect to Dataverse, and then click **Login**. A message displays your Dataverse connection status.  
 
   
- For a sample that uses the common login control template to connect to Common Data Service and perform various operations, see [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md).  
+ For a sample that uses the common login control template to connect to Dataverse and perform various operations, see [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md).  
   
 <a name="Add"></a>
 
 ## Add the common login control template to your existing WPF application
 
- If you already have a WPF client application, you can easily add the common login control template to it to leverage the uniform sign-in experience and the underlying code for Common Data Service authentication, credential storage and reuse, and default tracing or logging. In this case, you must create a control in the user interface of your existing client application to call the common login control, instantiate an instance of the Common Data Service connection object, and then use the connection object to perform various operations in Common Data Service.  
+ If you already have a WPF client application, you can easily add the common login control template to it to leverage the uniform sign-in experience and the underlying code for Dataverse authentication, credential storage and reuse, and default tracing or logging. In this case, you must create a control in the user interface of your existing client application to call the common login control, instantiate an instance of the Dataverse connection object, and then use the connection object to perform various operations in Dataverse.  
   
 1. Open an existing WPF application project in Visual Studio. For this example, let’s assume that the name of your WPF application project is `SampleWPFApp`.  
   
@@ -84,7 +84,7 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
     1. In the **Solution Explorer** pane, right-click the project name, and click **Add** > **New Item**.  
   
 
-    2.  In the **Add New Item** dialog box, from the list of installed templates, expand **Visual C#**, and select **Common Data Service SDK Templates**. Click **Common Data Service Login Form for WPF Applications**, and click **OK**.  
+    2.  In the **Add New Item** dialog box, from the list of installed templates, expand **Visual C#**, and select **Dataverse SDK Templates**. Click **Dataverse Login Form for WPF Applications**, and click **OK**.  
 
           > [!div class="mx-imgBorder"]
           > ![Add the common login control template](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
@@ -95,14 +95,14 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
     > ![Verify that the login control renders properly](../media/crm-sdk-v6-xrmtooling-addtemplate03.png "Verify that the login control renders properly")
   
 
-4.  You must now call the newly added login control from your application. To do this, add a **Button** control on your `MainWindow.xaml` file, and set the name and content to **btnSignIn** and **Sign in to Common Data Service** respectively.  
+4.  You must now call the newly added login control from your application. To do this, add a **Button** control on your `MainWindow.xaml` file, and set the name and content to **btnSignIn** and **Sign in to Dataverse** respectively.  
  
      > [!div class="mx-imgBorder"]
      > ![Add a control to call the login form](../media/crm-sdk-v6-xrmtooling-addtemplate02.png "Add a control to call the login form")
   
 5. Double-click the button to add code for the click event of the **btnSignIn** button in the `MainWindow.xaml.cs` file.  
   
-6.  Add the following sample code in the click event of the **btnSignIn** button to call the `CrmLoginForm1` control, and create an instance of the Common Data Service connection object.  
+6.  Add the following sample code in the click event of the **btnSignIn** button to call the `CrmLoginForm1` control, and create an instance of the Dataverse connection object.  
  
 ```csharp
     // Establish the Login control.  
@@ -151,9 +151,9 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
   
 9. To test the project:  
   
-    1.  Save the project and press F5 or click **Debug** > **Start Debugging** to verify if the project compiles successfully. On successful compilation, you will see a MainWindow with the new **Sign In to Common Data Service** button. Click it to display the common login control.  
+    1.  Save the project and press F5 or click **Debug** > **Start Debugging** to verify if the project compiles successfully. On successful compilation, you will see a MainWindow with the new **Sign In to Dataverse** button. Click it to display the common login control.  
   
-    2.  Test the authentication by providing your credentials to connect to Common Data Service, and then click **Login**. If successful, a message appears stating the version and the organization name that you are connected to. Click **OK** to close the message.  
+    2.  Test the authentication by providing your credentials to connect to Dataverse, and then click **Login**. If successful, a message appears stating the version and the organization name that you are connected to. Click **OK** to close the message.  
   
  
     > [!div class="mx-imgBorder"]

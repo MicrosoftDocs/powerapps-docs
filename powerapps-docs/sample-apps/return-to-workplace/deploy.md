@@ -28,11 +28,11 @@ Estimated time to complete these steps: 60&ndash;90 minutes
 
 Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
 
-After you've purchased Power Apps, create an environment with a Common Data Service database.
+After you've purchased Power Apps, create an environment with a Microsoft Dataverse database.
 
 1. Sign in to the [Power Platform admin center](https://aka.ms/ppac).
 
-2. Create a Common Data Service environment with a database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+2. Create a Dataverse environment with a database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
    > [!IMPORTANT]
    > If you select a security group for the database while you're creating it, the apps can be shared only with users who are members of the security group.
@@ -61,7 +61,7 @@ You can install the Return to the Workplace solution from AppSource.
     > ![List of apps](media/rtw-apps1.png "List of apps")
 
 > [!TIP]
-> Note the URL of your Common Data Service environment instance. You'll need it to connect the template app to the data.
+> Note the URL of your Dataverse environment instance. You'll need it to connect the template app to the data.
 
 ## Step 3: Configure and publish Power BI dashboards
 
@@ -99,14 +99,14 @@ The Return to the Workplace solution has three Power BI dashboards, one for exec
     > [!div class="mx-imgBorder"]
     > ![Connect](media/deploy-connect-data-source.png "Connect")
 
-3. Enter the URL of the Common Data Service environment (for example, https://[myenv].[region].dynamics.com), and then select **Next**.
+3. Enter the URL of the Dataverse environment (for example, https://[myenv].[region].dynamics.com), and then select **Next**.
     > [!div class="mx-imgBorder"]
-    > ![Common Data Service environment name](media/deploy-connect-CDS.png "Common Data Service environment name")
+    > ![Dataverse environment name](media/deploy-connect-CDS.png "Dataverse environment name")
 
-4. Determine where the displayed URL is pointing to in the Common Data Service environment:
+4. Determine where the displayed URL is pointing to in the Dataverse environment:
 
-    - If it's pointing to Common Data Service, set the **Authentication method** to **OAuth2** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
-    - If it's not pointing to Common Data Service, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**
+    - If it's pointing to Dataverse, set the **Authentication method** to **OAuth2** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
+    - If it's not pointing to Dataverse, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png "Privacy")
 
@@ -126,7 +126,7 @@ Next, we'll configure the data refresh settings for the dataset.
       > [!div class="mx-imgBorder"] 
       > ![Update your credentials](media/deploy-schedule-refresh-edit-credentials.png "Update your credentials")
 
-3. On the next screen for the Common Data Service data source, do the following:
+3. On the next screen for the Dataverse data source, do the following:
 
       - For **Authentication method**, select **Microsoft account**.
 
@@ -135,7 +135,7 @@ Next, we'll configure the data refresh settings for the dataset.
       - Select **Sign in**.
 
         > [!div class="mx-imgBorder"] 
-        > ![Configure Common Data Service data source credentials](media/deploy-schedule-refresh-cds-credentials.png "Configure Common Data Service data source credentials")
+        > ![Configure Dataverse data source credentials](media/deploy-schedule-refresh-cds-credentials.png "Configure Dataverse data source credentials")
 
       You'll be prompted to specify your credentials and sign in. After you've successfully signed in, you'll return to the **Settings** page.
 
@@ -298,7 +298,7 @@ In the Return to the Workplace solution, the following security roles are define
 
 3. Select **Return to the Workplace** from the list of solutions.
 
-4. Select the **Share Guest Registration - Email** solution and then select **Save as**.  Connect the flow with the **Common Data Service (current environment)** and **Office 365 Outlook** connector and then select **Continue**. Enter a name for the flow and select **Save**.
+4. Select the **Share Guest Registration - Email** solution and then select **Save as**.  Connect the flow with the **Dataverse (current environment)** and **Office 365 Outlook** connector and then select **Continue**. Enter a name for the flow and select **Save**.
 
 5. Select **My Flows** on the left. After selecting **Share Guest Registration - Email**, select **Turn on**. Validate whether the flow is turned on to ensure that it can be used. Additionally, the flow should be shared with others to prevent issues with people who aren't allowed to enter it.
 
@@ -351,7 +351,7 @@ After extracting the .zip file, you'll see the following in the extracted folder
 
 4. Select **Login** to continue.
 
-5. If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment, and then select **Login**.
+5. If you have access to more than one Dataverse environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment, and then select **Login**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/deploy-select-environment.png "Select an environment")
@@ -374,7 +374,7 @@ After extracting the .zip file, you'll see the following in the extracted folder
     > ![List of apps](media/rtw-apps1.png "List of apps")
 
 > [!TIP]
-> After installing the Return to the Workplace solution, note the URL of your Common Data Service environment instance. You'll need it to connect the template app to the data.
+> After installing the Return to the Workplace solution, note the URL of your Dataverse environment instance. You'll need it to connect the template app to the data.
 
 ### Step 3: Publish by using the .pbit file in the deployment package
 
@@ -395,19 +395,19 @@ Follow the steps below for each .pbit file.
 
 2. Go to the location where you extracted the deployment package (.zip file). In the **Power BI Template** folder, you'll find the appropriate .pbit file.
 
-3. Open the .pbit file in Power BI Desktop. You'll be prompted to enter the following value: **Common Data Service Environment**. Enter the URL of the Common Data Service environment (for example, https://*[myenv]*.crm.dynamics.com, where [myenv] is the name of your environment). Select **Load**.
+3. Open the .pbit file in Power BI Desktop. You'll be prompted to enter the following value: **Dataverse Environment**. Enter the URL of the Dataverse environment (for example, https://*[myenv]*.crm.dynamics.com, where [myenv] is the name of your environment). Select **Load**.
 
     > [!div class="mx-imgBorder"] 
     > ![Configure the Power BI dashboard](media/deploy-gcc-cds-env.png "Configure the Power BI dashboard")
 
-4. You'll be prompted to enter the credentials to connect to your Common Data Service environment. Select **Organizational account** > **Sign in** to specify your Common Data Service credentials.
+4. You'll be prompted to enter the credentials to connect to your Dataverse environment. Select **Organizational account** > **Sign in** to specify your Dataverse credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![Connect to your Common Data Service environment](media/deploy-gcc-cds-singin.png "Connect to your Common Data Service environment")
+    > ![Connect to your Dataverse environment](media/deploy-gcc-cds-singin.png "Connect to your Dataverse environment")
 
-5. After signing in, select **Connect** to connect to your data in Common Data Service.
+5. After signing in, select **Connect** to connect to your data in Dataverse.
 
-6. After connecting to your Common Data Service environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings should be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
+6. After connecting to your Dataverse environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings should be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
      
     > [!div class="mx-imgBorder"] 
     > ![Access Web Content level](media/deploy-access-web-content-level.png "Access Web Content level")
@@ -427,7 +427,7 @@ Follow the steps below for each .pbit file.
     > [!div class="mx-imgBorder"] 
     > ![Privacy level blob storage](media/deploy-gcc-web-acesss-privacy-levels-blob-storage-public.png "Privacy level blob storage")
 
-    After you've configured the access and privacy levels for COVID-19 public data, you must set the privacy level for Common Data Service data to **Organizational**. 
+    After you've configured the access and privacy levels for COVID-19 public data, you must set the privacy level for Dataverse data to **Organizational**. 
 
     > [!div class="mx-imgBorder"] 
     > ![Access Web Content level CDS](media/deploy-gcc-web-acesss-privacy-levels-CDS.png "Access Web Content level CDS")
@@ -442,7 +442,7 @@ Follow the steps below for each .pbit file.
      > [!div class="mx-imgBorder"] 
      > ![Save the Power BI workspace](media/deploy-gcc-publish.png "Save the Power BI workspace")
 
-9. You'll be prompted to save the file along with your Common Data Service environment information. Enter a name, and save it on your computer. The file name you enter is displayed in your Power BI website.
+9. You'll be prompted to save the file along with your Dataverse environment information. Enter a name, and save it on your computer. The file name you enter is displayed in your Power BI website.
 
 10. After saving the file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then select **Select**.
 

@@ -19,7 +19,7 @@ search.app:
 ---
 # Use OneDrive for Business 
 
-Create and manage private documents from within Common Data Service apps by using OneDrive for Business. More information:  [What is OneDrive for Business?](https://support.office.com/article/What-is-OneDrive-for-Business-187f90af-056f-47c0-9656-cc0ddca7fdc2)
+Create and manage private documents from within Microsoft Dataverse apps by using OneDrive for Business. More information:  [What is OneDrive for Business?](https://support.office.com/article/What-is-OneDrive-for-Business-187f90af-056f-47c0-9656-cc0ddca7fdc2)
 
 
 Before you can use OneDrive for Business, it must be enabled by your system administrator. More information:
@@ -31,19 +31,19 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
 ## The first time you view your documents  
 
-1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
+1. Open a row and go to the **Document Associated Grid** view. For example, open a contact row.
 
-2.  On the open record, select the **Related** tab, and then select **Documents**.
+2.  On the open row, select the **Related** tab, and then select **Documents**.
 
      > [!div class="mx-imgBorder"]
-     > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+     > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
 
 3.  Select **Document Location** > **OneDrive**.
 
      > [!div class="mx-imgBorder"]
      > ![Open the Documents tab and select OneDrive](media/onedrive_menu.png "Open the Documents tab and select OneDrive")
 
-4. After OneDrive for Business is enabled, you'll see the following dialog box when you go to the **Documents** tab to view documents in Common Data Service and upload a file to OneDrive, or when you attempt to create a new document or folder.  
+4. After OneDrive for Business is enabled, you'll see the following dialog box when you go to the **Documents** tab to view documents in Dataverse and upload a file to OneDrive, or when you attempt to create a new document or folder.  
 
     > [!div class="mx-imgBorder"]
     > ![Change your OneDrive folder](media/setup_onedrive.png "Change your OneDrive folder")  
@@ -53,12 +53,12 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
   
 ## View existing OneDrive documents 
  
-1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
+1. Open a row and go to the **Document Associated Grid** view. For example, open a contact row.
 
-2. On the open record, select the **Related** tab, and then select **Documents**.
+2. On the open row, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
-    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+    > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
  
 3. Select **Document Location** to filter the document list.
 
@@ -71,19 +71,19 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
    |---------------------------|------------------------------------------------|
    |      OneDrive             | Documents stored in OneDrive for Business      |
    | Documents on Default Site | Documents stored in your default SharePoint site  |
-   | Shared with me            | Documents that others shared with you that are associated with this record<!--note from editor: Edit okay? I haven't seen an "app record" defined.-->    |
-   |  All Locations            |     All document locations associated with this record     |
+   | Shared with me            | Documents that others shared with you that are associated with this row<!--note from editor: Edit okay? I haven't seen an "app row" defined.-->    |
+   |  All Locations            |     All document locations associated with this row     |
 
 5. After you select a location, you'll see the documents saved in that location.
 
 ## Create a new document and save it to OneDrive
 
-1. Open a record and go to the **Document Associated Grid** view. For example, open a contact record.
+1. Open a row and go to the **Document Associated Grid** view. For example, open a contact row.
 
-2. On the open record, select the **Related** tab, and then select **Documents**.
+2. On the open row, select the **Related** tab, and then select **Documents**.
  
     > [!div class="mx-imgBorder"]
-    > ![Open the Documents tab in a record ](media/onedrive_nav.png "Open the Documents tab in a record")
+    > ![Open the Documents tab in a row ](media/onedrive_nav.png "Open the Documents tab in a row")
 
 2. Select **Document Location**, and change the location to **OneDrive**.
 
@@ -97,8 +97,8 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
 ## Things to consider 
 
-Be aware of the following regarding OneDrive for Business in Common Data Service:
+Be aware of the following regarding OneDrive for Business in Dataverse:
 
-- OneDrive storage folders are created in the user's current Common Data Service language. If the language changes, new folders will be created in the new language. Old folders will remain in the previous language.  
+- OneDrive storage folders are created in the user's current Dataverse language. If the language changes, new folders will be created in the new language. Old folders will remain in the previous language.  
 
 - There might be a delay between when the documents are shared in OneDrive and when they're available to other users. 

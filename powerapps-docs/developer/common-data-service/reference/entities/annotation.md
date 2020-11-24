@@ -1,20 +1,22 @@
 ---
-title: "Annotation Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Annotation entity."
-ms.date: 04/12/2020
+title: "Annotation entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the Annotation table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Annotation Entity Reference
+# Annotation entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 Note that is attached to one or more objects, including other notes.
 
@@ -36,7 +38,7 @@ Note that is attached to one or more objects, including other notes.
 |Rollup|<xref href="Microsoft.Dynamics.CRM.Rollup?text=Rollup Function" />|<xref:Microsoft.Crm.Sdk.Messages.RollupRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/annotations(*annotationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -60,6 +62,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 - [AnnotationId](#BKMK_AnnotationId)
 - [DocumentBody](#BKMK_DocumentBody)
+- [DummyFileName](#BKMK_DummyFileName)
 - [FileName](#BKMK_FileName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsDocument](#BKMK_IsDocument)
@@ -102,6 +105,24 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForRead|True|
 |LogicalName|documentbody|
 |MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_DummyFileName"></a> DummyFileName
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Dummy attribute associated with the note attachment|
+|DisplayName|File Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|dummyfilename|
+|MaxLength|500|
 |RequiredLevel|None|
 |Type|String|
 
@@ -200,12 +221,12 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |--------|-----|
 |Description|Text of the note.|
 |DisplayName|Description|
-|Format|Text|
+|Format|Email|
 |IsLocalizable|False|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|notetext|
-|MaxLength|100000|
+|MaxLength|1073741823|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -220,7 +241,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForRead|True|
 |LogicalName|objectid|
 |RequiredLevel|None|
-|Targets|account,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_solutioncomponentdatasource,msdyn_solutionhistorydatasource,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
+|Targets|account,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
 |Type|Lookup|
 
 
@@ -337,6 +358,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [DummyRegarding](#BKMK_DummyRegarding)
 - [FilePointer](#BKMK_FilePointer)
 - [FileSize](#BKMK_FileSize)
 - [IsPrivate](#BKMK_IsPrivate)
@@ -460,6 +482,24 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |IsValidForRead|True|
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_DummyRegarding"></a> DummyRegarding
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Dummy attribute associated with the note regarding|
+|DisplayName|Regarding|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|dummyregarding|
+|MaxLength|500|
 |RequiredLevel|None|
 |Type|String|
 
@@ -850,8 +890,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [Goal_Annotation](#BKMK_Goal_Annotation)
 - [KbArticle_Annotation](#BKMK_KbArticle_Annotation)
 - [DuplicateRule_Annotation](#BKMK_DuplicateRule_Annotation)
-- [msdyn_solutionhistorydatasource_Annotations](#BKMK_msdyn_solutionhistorydatasource_Annotations)
-- [msdyn_solutioncomponentdatasource_Annotations](#BKMK_msdyn_solutioncomponentdatasource_Annotations)
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aifptrainingdocument_Annotations](#BKMK_msdyn_aifptrainingdocument_Annotations)
 - [msdyn_aiodimage_Annotations](#BKMK_msdyn_aiodimage_Annotations)
@@ -965,18 +1003,6 @@ See kbarticle Entity [KbArticle_Annotation](kbarticle.md#BKMK_KbArticle_Annotati
 
 See duplicaterule Entity [DuplicateRule_Annotation](duplicaterule.md#BKMK_DuplicateRule_Annotation) One-To-Many relationship.
 
-### <a name="BKMK_msdyn_solutionhistorydatasource_Annotations"></a> msdyn_solutionhistorydatasource_Annotations
-
-**Added by**: Microsoft Dynamics 365 Solution History APIs Solution
-
-See msdyn_solutionhistorydatasource Entity [msdyn_solutionhistorydatasource_Annotations](msdyn_solutionhistorydatasource.md#BKMK_msdyn_solutionhistorydatasource_Annotations) One-To-Many relationship.
-
-### <a name="BKMK_msdyn_solutioncomponentdatasource_Annotations"></a> msdyn_solutioncomponentdatasource_Annotations
-
-**Added by**: Microsoft Dynamics 365 Settings APIs Solution
-
-See msdyn_solutioncomponentdatasource Entity [msdyn_solutioncomponentdatasource_Annotations](msdyn_solutioncomponentdatasource.md#BKMK_msdyn_solutioncomponentdatasource_Annotations) One-To-Many relationship.
-
 ### <a name="BKMK_msdyn_aimodel_Annotations"></a> msdyn_aimodel_Annotations
 
 **Added by**: AISolution Solution
@@ -997,6 +1023,6 @@ See msdyn_aiodimage Entity [msdyn_aiodimage_Annotations](msdyn_aiodimage.md#BKMK
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.annotation?text=annotation EntityType" />

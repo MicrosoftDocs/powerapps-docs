@@ -24,29 +24,29 @@ search.app:
   - D365CE
 ---
 
-# Define status reason transitions for the Case or custom entities
+# Define status reason transitions for the Case or custom tables
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can specify status reason transitions for the Incident (**Case**) entity or a custom entity.
+You can specify status reason transitions for the Incident (**Case**) table or a custom table.
 
 > [!NOTE]
-> Although the Incident (Case) entity isn't included in a default Common Data Service environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
+> Although the Incident (Case) table isn't included in a default Microsoft Dataverse environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
   
-Status reason transitions are an optional additional level of filtering to define what the status reason value can be changed to for each status reason. Defining a limited list of valid options can make it easier for people to choose the correct next status reason for a record when you have a large number of combinations for valid status reason values.  
+Status reason transitions are an optional additional level of filtering to define what the status reason value can be changed to for each status reason. Defining a limited list of valid options can make it easier for people to choose the correct next status reason for a row when you have a large number of combinations for valid status reason values.  
   
 <a name="BKMK_StatusAndStatusReasons"></a>
 
-## What is the connection between Status and Status Reason fields?  
+## What is the connection between Status and Status Reason columns?  
 
-Entities that can have different status values have two fields that capture this data:  
+Tables that can have different status values have two columns that capture this data:  
   
 |Display Name|Description|  
 |------------------|-----------------|  
-|**Status**|Represents the state of the record. Typically **Active** or **Inactive**. You cannot add new status options.|  
+|**Status**|Represents the state of the row. Typically **Active** or **Inactive**. You cannot add new status options.|  
 |**Status Reason**|Represents a reason that is linked to a specific status. Each status must have at least one possible status reason. You can add additional status reason options.|  
   
-The metadata for the field defines what status values are valid for a given state. For example, for the Incident (**Case**) entity, the default status and status reason options are:  
+The metadata for the column defines what status values are valid for a given state. For example, for the Incident (**Case**) table, the default status and status reason options are:  
   
 |Status|Status Reason|  
 |------------|-------------------|  
@@ -59,12 +59,12 @@ The metadata for the field defines what status values are valid for a given stat
 
 ## Edit status reason transitions
  
-You can modify the status reason field options for the Case entity and custom entities to define which other status reason options people can choose. The only restriction is that each status reason option for an active status must allow at least one path to an inactive status. Otherwise you could create a condition where it would not be possible to resolve or cancel the case.  
+You can modify the status reason column options for the Case table and custom tables to define which other status reason options people can choose. The only restriction is that each status reason option for an active status must allow at least one path to an inactive status. Otherwise you could create a condition where it would not be possible to resolve or cancel the case.  
 
 > [!NOTE]
-> Editing the status reason transitions requires using solution explorer. See [Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
+> Editing the status reason transitions requires using solution explorer. See [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit columns.
   
- When you edit a status reason field the **Edit Status Reason Transitions** button is in the menu. 
+ When you edit a status reason column the **Edit Status Reason Transitions** button is in the menu. 
 
 ![Edit Status Reason Transitions command](media/status-reason-transitions-command.png)
 
@@ -83,7 +83,7 @@ The screenshot below provides an example that meets the following requirements:
   
 ### See Also  
 
-[Create and edit fields for Common Data Service using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
-[Entity metadata > Entity states](/powerapps/developer/common-data-service/entity-metadata#entity-states)<br />
+[Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Table metadata > Table states](/powerapps/developer/common-data-service/table-metadata#table-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 

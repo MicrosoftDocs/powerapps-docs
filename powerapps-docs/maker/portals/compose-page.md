@@ -209,7 +209,7 @@ You can add the following components on a webpage:
 
 Form is a data-driven configuration that collects data in the portal without the need for a developer to surface the form in the portal. 
 
-Forms are [created in Common Data Service](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview). You can use them in webpages in the portal or in conjunction with lists to build out complete web applications.  
+Forms are [created in Microsoft Dataverse](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview). You can use them in webpages in the portal or in conjunction with lists to build out complete web applications.  
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
@@ -232,7 +232,7 @@ Forms are [created in Common Data Service](https://docs.microsoft.com/powerapps/
 
     - **Entity**: The name of the entity from which the form is loaded.
 
-    - **Form layout**: The name of the form on the target entity in Common Data Service that is to be rendered.
+    - **Form layout**: The name of the form on the target entity in Dataverse that is to be rendered.
 
     - **Mode**: Select one of the following options:
 
@@ -266,7 +266,7 @@ Forms are [created in Common Data Service](https://docs.microsoft.com/powerapps/
 
 List is a data-driven configuration to render a list of records without the need for a developer to surface the grid in the portal.
 
-Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
+Lists use [Dataverse views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 

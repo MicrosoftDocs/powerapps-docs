@@ -1,6 +1,6 @@
 ---
-title: "Web API Functions and Actions Sample (Common Data Service)| Microsoft Docs"
-description: "This group of samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service Web API. These are implemented using Client-side JavaScript and C#"
+title: "Web API Functions and Actions Sample (Microsoft Dataverse)| Microsoft Docs"
+description: "This group of samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. These are implemented using Client-side JavaScript and C#"
 ms.custom: ""
 ms.date: 04/06/2020
 ms.service: powerapps
@@ -24,7 +24,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-This group of samples demonstrate how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service Web API. This sample is implemented as a separate project for the following languages:  
+This group of samples demonstrate how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:  
   
 -   [Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)  
   
@@ -48,13 +48,13 @@ This sample is divided into the following principal sections, containing Web API
 |[Using unbound custom action with parameters](#bkmk_unboundCustomActionWithParams)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" />|  
 |[Handling custom action exceptions](#bkmk_boundCustomActionErrorHandling)|[Use a custom action](use-web-api-actions.md#bkmk_customActions)<br /><br /> [Unbound actions](use-web-api-actions.md#bkmk_unboundActions)<br /><br /> <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />|  
   
-The following sections contain a brief discussion of the Common Data Service Web API operations performed, along with the corresponding HTTP messages and associated console output.  
+The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output.  
   
 <a name="bkmk_sampleData"></a>
    
 ## Sample data  
 
-To ensure the operations in this sample work properly, we first create sample data on the Common Data Service server. These sample data will be deleted from the server unless the user chooses to not delete them. The data in this sample are created individually as follows.  
+To ensure the operations in this sample work properly, we first create sample data on the Dataverse server. These sample data will be deleted from the server unless the user chooses to not delete them. The data in this sample are created individually as follows.  
   
 - Create an account (e.g.: `Fourth Coffee`) and associate it with an incident that has three 30 minute tasks (90 minutes total). After the tasks are created, they are then marked as completed. The operation will calculate the total time it took to complete these three tasks.  
   
@@ -320,7 +320,7 @@ Bound Action: AddToQueue
   
 ## Working with custom actions  
 
-If you define custom actions for your solution, you can call them using the Common Data Service Web API. Regardless of whether the operations included in your custom action have side effects, they can potentially modify data and therefore are considered actions rather than functions. There is no way to create a custom function. More information:[Use a custom action](use-web-api-actions.md#bkmk_customActions).  
+If you define custom actions for your solution, you can call them using the Dataverse Web API. Regardless of whether the operations included in your custom action have side effects, they can potentially modify data and therefore are considered actions rather than functions. There is no way to create a custom function. More information:[Use a custom action](use-web-api-actions.md#bkmk_customActions).  
   
 This sample comes with two custom actions. They both require parameters but one is bound and the other is unbound.  
   
@@ -484,7 +484,7 @@ Expected custom error: ContactFirstName and ContactLastName are required when Cu
   
 ### See also  
 
-[Use the Common Data Service Web API](overview.md)<br />
+[Use the Dataverse Web API](overview.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)<br />

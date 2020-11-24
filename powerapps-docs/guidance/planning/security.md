@@ -63,7 +63,7 @@ update, and delete) that you can set up for record-level security:
 
 - **Delete** Allows the user to delete data (like removing a row in Excel).
 
-For Common Data Service, there are four more types of access: append,
+For Microsoft Dataverse, there are four more types of access: append,
 append-to, assign, and share. More information: [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
 ### Field-level security
@@ -98,7 +98,7 @@ information.
 
 **Step 3**: Identify the requirements for who can see the records.
 
-**Step 4**: If you're using data sources other than Common Data Service&mdash;or
+**Step 4**: If you're using data sources other than Dataverse&mdash;or
 services that don't have Office 365 or Azure Active Directory authentication&mdash;you should
 consider how you'll allow access to those systems. If you aren't in charge
 of those systems, seek advice from those service administrators.
@@ -131,7 +131,7 @@ reports (but not change them).
 
 ![Diagram of expense report security groups](media/expense-report-security.png "Diagram of expense report security groups")
 
-More information: [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security)
+More information: [Security in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security)
 
 > [!div class="nextstepaction"]
 > [Next step: Make the app](making-phase.md)

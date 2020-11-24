@@ -1,6 +1,6 @@
 ---
 title: Upgrade to use native Common Data Service connector | Microsoft Docs
-description: 
+description: Learn about upgrading native Common Data Service connector for improved data source experience.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -14,17 +14,19 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Common Data Service and the improved data source experience
+# Microsoft Dataverse and the improved data source experience
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 ## Overview
 
-If you created a canvas app with either the Common Data Service or the Dynamics 365 connector before November 2019, then you might not have the benefits of using the current native connection experience for the Common Data Service. This article explains both the benefits of using the new experience and how to convert from the legacy Common Data Service or Dynamics 365 connectors to this current and native connection experience enabled by the **Improve data source experience and Common Data Service views** option.
+If you created a canvas app with either the Dataverse or the Dynamics 365 connector before November 2019, then you might not have the benefits of using the current native connection experience for the Dataverse. This article explains both the benefits of using the new experience and how to convert from the legacy Dataverse or Dynamics 365 connectors to this current and native connection experience enabled by the **Improve data source experience and Common Data Service views** option.
 
 The **Improve data source experience and Common Data Service views** option has following benefits:
 
 1. Significant speed gains.
 2. Increased reliability.
-3. Access to Common Data Service **views** and **File and Image field attributes**.
+3. Access to Dataverse **views** and **File and Image field attributes**.
 
 The **Improve data source experience and Common Data Service views** option appears in the Advanced settings section:
 
@@ -92,9 +94,9 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
 
 Use the following instruction to turn **Improve data source experience and Common Data Service views** feature *On*:
 
-1. Remove your existing Common Data Service data source connections. 
+1. Remove your existing Dataverse data source connections. 
 1. Turn *On* the **Improve data source experience and Common Data Service views** feature.
-1. Add the Common Data Service connection using the new data source selection experience.
+1. Add the Dataverse connection using the new data source selection experience.
 1. Save your application.
 
 > [!NOTE]
@@ -106,7 +108,7 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 
 1. Ensure the **Improve data source experience and Common Data Service views** feature is turned *On*.
 2. Remove your existing Dynamics 365 data source connections.
-3. Add the connections to your data sources to the Common Data Service using the new data source selection experience. 
+3. Add the connections to your data sources to the Dataverse using the new data source selection experience. 
 
     > [!NOTE] 
     > - If you have connections to other environments (other than current), select the *Entity* category and then the *More* (...) option to change the environment. You can then select an entity from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
@@ -144,7 +146,7 @@ It's recommended to remove existing data cards and add them back to work with yo
 
 With the new *Improved data source experience and Common Data Service views* feature, you no longer see `_accountcategorycode_label`. It's replaced by `accountcategorycode`. Your card is now be marked as **custom** and you'll see errors. Remove the old data card and add the *Option Set* back. The new data card is *Option Set* aware.
 
-![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
+![OptionSet with new style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
 
 #### Editing the Option Set Filter expressions to use new syntax
 
@@ -194,7 +196,7 @@ You should remove existing data cards and add them back to work with your Two Op
 
 With the new *Improved data source experience and Common Data Service views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the Option Set back. You'll see an edit control with two options by default after you add.
 
-![TwoOptionSet-New](./media/use-native-cds-connector/TwoOptionSet-New.png)
+![Two Option Set - new style](./media/use-native-cds-connector/TwoOptionSet-New.png)
 
 If you prefer the toggle switch for your boolean field, you can unlock the data card and replace the control in the data card with a toggle instead.  You'll also need to set these properties on the Toggle.
 
@@ -281,7 +283,7 @@ Read [Regarding lookup fields](https://docs.microsoft.com/powerapps/maker/canvas
 
 #### Access the list of all Activities for a record
 
-In Common Data Service, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/common-data-service/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/common-data-service/custom-activities).
+In Dataverse, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/common-data-service/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/common-data-service/custom-activities).
 
 You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with an entity such as account. Add the Activities entity and other individual entities whose data you plan to display in the canvas app.
 
@@ -303,13 +305,13 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
     "Unknown")
 ```
 
- ![Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
+ ![New Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
 
 #### Access the list of Notes for a record
 
 When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
 
-![Notes-Field](./media/use-native-cds-connector/Notes-Field.png)
+![Notes field](./media/use-native-cds-connector/Notes-Field.png)
 
 ##### Filtering
 
@@ -334,4 +336,4 @@ Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", 
 
 ### See also
 
-[What is Common Data Service?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
+[What is Dataverse?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)

@@ -25,7 +25,8 @@ Before using this app:
 For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
 > [!NOTE]
-> Sections of this article uses one of the available sample apps from the Teams store as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
+> - Sections of this article uses one of the available sample apps from the Teams store as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
+> - Read [Sample app updates](use-sample-apps-from-teams-store.md#sample-app-updates) before you customize sample apps to understand the impact of new releases to the sample app versions.
 
 ## Open the sample app in Power Apps Studio
 
@@ -39,7 +40,7 @@ To start with customizing the sample apps, the first step is to open the app ins
 
     ![Select Power Apps app](media/power-apps.png "Select Power Apps app")
 
-1. Select [Build](overview-of-the-power-apps-app.md#build-tab) tab.
+1. Select [Build](overview-of-the-power-apps-app.md#build-hub) tab.
 
 1. Select the team environment where you installed the sample app.
 
@@ -57,8 +58,8 @@ When you install sample apps, the tables are pre-populated with sample data. The
 
 | Sample app | Tables |
 | - | - |
-| Employee Ideas |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
-| Inspection | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
+| Inspection |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
+| Employee ideas | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
 | Issue Reporting | Issue Reports <br> Issue Report Questions <br> Issue Report Templates <br> Issue Report Categories |
 
 To remove data from the sample apps:
@@ -75,7 +76,7 @@ To remove data from the sample apps:
 
     ![Delete rows](media/customize-sample-apps/delete-rows.png "Delete rows")
 
-1. Close the Visual Editor.
+1. Close the visual editor.
 
 1. Repeat the previous steps for the remaining tables.
 
@@ -200,7 +201,7 @@ If you want to quickly edit the data in the app, you can open the table and modi
 
 1. Replace the text with the value you want.
 
-1. Close the Visual Editor.
+1. Close the visual editor.
 
     Data in the app should reflect the updated value, such as the location name in this example.
 
@@ -227,7 +228,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Select **Create**.
 
-1. Close the Visual Editor.
+1. Close the visual editor.
 
     ![Add Store Name column](media/customize-sample-apps/add-store-name.png "Add Store Name column")
 
