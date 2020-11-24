@@ -56,7 +56,7 @@ To get started with managing page permissions using portals Studio:
 
 The options under **Permissions** vary depending on the selected page. For example, the options for a parent page are different from the options for the child page inheriting permissions from the parent page.
 
-Let's take a look at different options to manage permissions for a page.
+Let's look at different options to manage permissions for a page.
 
 ### Allow anonymous access to a page
 
