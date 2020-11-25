@@ -147,7 +147,10 @@ Xrm.WebApi.online.execute(winOpportunityRequest).then(
     function(result) {
         if (result.ok) {
             console.log("Status: %s %s", result.status, result.statusText);
-            // perform other operations as required;
+            // The WinOpportunityRequest does not return any response body text. So we
+            // need not access the result.json() or result.text() properties.
+
+            // Perform other operations as required.
         }
     },
     function(error) {
@@ -188,9 +191,12 @@ Xrm.WebApi.online.execute(whoAmIRequest).then(
     function (result) {
         if (result.ok) {
             console.log("Status: %s %s", result.status, result.statusText);
+
+            // The WhoAmI request does return a response body as JSON. Access it
+            // using response.json() which returns a Promise with the responseBody.
             result.json().then(
-                function (response) {
-                    console.log("User Id: %s", response.UserId);
+                function (responseBody) {
+                    console.log("User Id: %s", responseBody.UserId);
                     // perform other operations as required;
                 });
         }
@@ -248,9 +254,12 @@ var calculateRollupFieldRequest = new Sdk.CalculateRollupFieldRequest(quoteId, f
 Xrm.WebApi.online.execute(calculateRollupFieldRequest).then(
     function(result) {
         if (result.ok) { // If the result was retrieved
+
+            // The CalculateRollupField request does return a response body as JSON. Access it
+            // using response.json() which returns a Promise with the responseBody.
             result.json().then( // Convert the result to Json
-                function(response) { //Do something with the response
-                    console.log("The response is: %s", response);
+                function(responseBody) { //Do something with the response
+                    console.log("The response is: %s", responseBody);
                 });
         }
     },
@@ -314,9 +323,11 @@ var retrieveDuplicatesRequest = new Sdk.RetrieveDuplicatesRequest(contactRecord,
 Xrm.WebApi.online.execute(retrieveDuplicatesRequest).then(
     function(result) {
         if (result.ok) {
+            // The RetrieveDuplicates request does return a response body as JSON. Access it
+            // using response.json() which returns a Promise with the responseBody.
             result.json().then(
-                function(response) {
-                    console.log("The response is: %s", response);
+                function(responseBody) {
+                    console.log("The response is: %s", responseBody);
                 });
         }
     },
@@ -364,7 +375,9 @@ Xrm.WebApi.online.execute(createRequest).then(
     function(result) {
         if (result.ok) {
             console.log("Status: %s %s", result.status, result.statusText);
-            // perform other operations as required;
+            // The Create request does not return any content as part of the response body.
+            // We do not need to use result.json(). 
+            // Perform other operations as required.
         }
     },
     function(error) {
@@ -411,9 +424,12 @@ Xrm.WebApi.online.execute(retrieveRequest).then(
     function(result) {
         if (result.ok) {
             console.log("Status: %s %s", result.status, result.statusText);
+
+            // The Retrieve request does return a response body as JSON. Access it
+            // using response.json() which returns a Promise with the responseBody.
             result.json().then(
-                function(response) {
-                    console.log("Name: %s", response.name);
+                function(responseBody) {
+                    console.log("Name: %s", responseBody.name);
                     // perform other operations as required;
                 });
         }
@@ -463,6 +479,9 @@ var updateRequest = new Sdk.UpdateRequest("account", "d2b6c3f8-b0fa-e911-a812-00
 Xrm.WebApi.online.execute(updateRequest).then(
     function(result) {
         if (result.ok) {
+            // The Update request does not return any content as part of the response body.
+            // We do not need to use result.json(). 
+
             console.log("Status: %s %s", result.status, result.statusText);
             // perform other operations as required;
         }
@@ -512,6 +531,9 @@ var deleteRequest = new Sdk.DeleteRequest(entityReference);
 Xrm.WebApi.online.execute(deleteRequest).then(
     function(result) {
         if (result.ok) {
+            // The Delete request does not return any content as part of the response body.
+            // We do not need to use result.json(). 
+
             console.log("Status: %s %s", result.status, result.statusText);
             // perform other operations as required;
         }
@@ -575,6 +597,9 @@ var manyToManyAssociateRequest = new Sdk.AssociateRequest(target, relatedEntitie
 Xrm.WebApi.online.execute(manyToManyAssociateRequest).then(
     function(result) {
         if (result.ok) {
+            // The Associate request does not return any content as part of the response body.
+            // We do not need to use result.json(). 
+
             console.log("Status: %s %s", result.status, result.statusText);
             // perform other operations as required;
         }
@@ -632,6 +657,9 @@ var manyToManyDisassociateRequest = new Sdk.DisassociateRequest(target, relatedE
 Xrm.WebApi.online.execute(manyToManyDisassociateRequest).then(
     function(result) {
         if (result.ok) {
+            // The Disassociate request does not return any content as part of the response body.
+            // We do not need to use result.json(). 
+
             console.log("Status: %s %s", result.status, result.statusText);
             // perform other operations as required;
         }
