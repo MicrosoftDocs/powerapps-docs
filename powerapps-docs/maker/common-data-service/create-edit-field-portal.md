@@ -47,7 +47,7 @@ The portal enables configuring the most common options, but certain options can 
 
 While viewing columns, in the command bar, select **Add column** which will show the **Column properties** panel.
 
-![Column Properties](media/field-properties.png)
+<img src="media/field-properties.png" alt="Column Properties pane" height="850" width="400">
 
 Initially, just three column properties are available:
 
