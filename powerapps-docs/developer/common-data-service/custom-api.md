@@ -134,7 +134,12 @@ A Custom API creates a new message which can be invoked via the SDK or Web API.
 
 You can choose to use either early- or late-bound code to invoke your custom API. Use the `CrmSvcUtil` tool to generate helper request and response classes to mirror the request and response properties of your custom API.
 
-For late-bound code, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties. Bound custom actions have an implicit request property named `Target` that should be set to an `EntityReference` of the record to invoke the API on. You can access response properties from the parameters of the returned response.
+For late-bound code, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
+
+* Entity-bound custom APIs have an implicit request property named `Target` that should be set to an `EntityReference` of the record to invoke the API on.
+* Collection-bound custom APIs have an implicit `InputCollection` request property that should be set to a `QueryBase` instance (`FetchExpression`, `QueryExpression` or `QueryByAttribute`)
+
+You can access response properties from the parameters of the returned response.
 
 ```csharp
 var req = new OrganizationRequest("myapi_EscalateCase")
