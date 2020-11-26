@@ -109,7 +109,9 @@ The object returned for your Custom API message will include any response proper
 
 > [!IMPORTANT]
 > A Custom API that represents a function with no response properties is not valid and will not appear in the Web API $metadata service document. If you try to use it, you will get a `404 Not Found` error similar to this: 
+>
 > `{"error":{"code":"0x8006088a","message":"Resource not found for the segment 'your_function_name'."}}`.
+>
 > You must also set the data to be returned in the plug-in for the function. If no data is set to be returned by the plug-in, the operation will return `204 No Content`.
 
 If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
