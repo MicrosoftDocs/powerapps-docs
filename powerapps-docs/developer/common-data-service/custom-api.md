@@ -126,6 +126,50 @@ This table includes attributes of the Custom API Response Property entity that y
 > [!NOTE]
 > Some values are not valid for update. They cannot be changed after the Custom API Response Property is saved. If you need to change one of these values, you must delete the Custom API Response Property and re-create it with the changes you want to make.
 
+## Invoking Custom APIs
+
+A Custom API creates a new message which can be invoked via the SDK or Web API.
+
+### Invoking Custom APIs from SDK applications or plugins
+
+You can choose to use either early- or late-bound code to invoke your custom API. Use the `CrmSvcUtil` tool to generate helper request and response classes to mirror the request and response properties of your custom API.
+
+For late-bound code, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties. Bound custom actions have an implicit request property named `Target` that should be set to an `EntityReference` of the record to invoke the API on. You can access response properties from the parameters of the returned response.
+
+```csharp
+var req = new OrganizationRequest("myapi_EscalateCase")
+{
+  ["Target"] = new EntityReference("incident", guid),
+  ["Priority"] = new OptionSetValue(1)
+};
+
+var resp = svc.Execute(req);
+
+var newOwner = (EntityReference) resp["AssignedTo"];
+```
+
+### Invoking Custom APIs with Web API
+
+Custom APIs can be called in the same way as any [standard Web API function or action](webapi/web-api-functions-actions-sample.md). If your custom API has the `IsFunction` field set to `true` then it needs to be invoked as a function using a `GET` request, otherwise it needs to be used as an action using a `POST` request:
+
+```http
+POST [Organization URI]/api/data/v9.1/myapi_CustomUnboundAPI
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Content-Type: application/json; charset=utf-8
+
+{
+  "InputParameter": "Value"
+}
+```
+
+```http
+GET [Organization URI]/api/v9.1/accounts(ed5d4e42-850c-45b7-8b38-2677545107cc)/Microsoft.Dynamics.CRM.myapi_CustomBoundAPI()
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Content-Type: application/json; charset=utf-8
+```
+
 ## Retrieve data about Custom APIs
 
 You can use the following queries to retrieve data about Custom APIs.
