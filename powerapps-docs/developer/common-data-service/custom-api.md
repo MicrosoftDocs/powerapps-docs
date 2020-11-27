@@ -437,6 +437,19 @@ It is not possible to create the Custom API, Custom API Request Parameter, and C
 
 If you define your Custom API as a function by setting the **Is Function** property to true, you cannot bind the function to an entity or entity collection. You also cannot use any **Entity** or **EntityCollection** request parameters.
 
+If you attempt this you with a function bound to the account entity, you can expect a `400 Bad Request` error like this:
+
+`GET [Organization URL]/api/data/v9.1/accounts/Microsoft.Dynamics.CRM.new_CollectionBoundFunction()`
+
+```json
+{
+    "error": {
+        "code": "0x8006088a",
+        "message": "The request URI is not valid. Since the segment 'accounts' refers to a collection, this must be the last segment in the request URI or it must be followed by an function or action that can be bound to it otherwise all intermediate segments must refer to a single resource."
+    }
+}
+```
+
 ### Private messages cannot be used in plug-ins
 
 If you define your custom API to be private, you cannot use that message in a plug-in. More information: [Private Messages](org-service/use-messages.md#private-messages)
