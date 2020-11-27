@@ -437,7 +437,7 @@ It is not possible to create the Custom API, Custom API Request Parameter, and C
 
 If you define your Custom API as a function by setting the **Is Function** property to true, you cannot bind the function to an entity or entity collection. You also cannot use any **Entity** or **EntityCollection** request parameters.
 
-If you attempt this you with a function bound to the account entity, you can expect a `400 Bad Request` error like this:
+If you attempt this with a function bound to the account entity, you can expect a `400 Bad Request` error like this:
 
 `GET [Organization URL]/api/data/v9.1/accounts/Microsoft.Dynamics.CRM.new_CollectionBoundFunction()`
 
