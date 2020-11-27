@@ -2,7 +2,7 @@
 title: "Use messages with the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/26/2020
+ms.date: 11/26/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -135,6 +135,7 @@ Microsoft Dataverse contains some messages which are not intended for 3rd party 
 
 > [!CAUTION]
 > You should not use private messages unless you created them as a Custom API. By marking a message as private, the solution publisher is explicitly calling out that they do not support other apps to use the message. They may remove the message or introduce breaking changes at any time. Use of these messages by anyone other than the solution publisher are not supported.
+> Calling private messages from plug-ins is not supported.
 
 More information: [Create and use Custom APIs](../custom-api.md)
 
