@@ -279,6 +279,53 @@ The following example shows editing the Excel worksheet to add Japanese translat
 > [!TIP]
 > If you are editing the solution files to create your Custom APIs, you can provide the localized labels directly. More information: [Providing Localized Labels with the solution](create-custom-api-solution.md#providing-localized-labels-with-the-solution)
 
+### Setting localized values
+
+If you prefer to set localized labels in code rather than using the manual process described above, you can use the `SetLocLabels` message using either the Web API [SetLocLabels Action](/dynamics365/customer-engagement/web-api/setloclabels) or the Organization Service <xref:Microsoft.Crm.Sdk.Messages.SetLocLabelsRequest>.
+
+The following example shows how to use the Web API to set the localized labels for the `displayname` property of a custom API.
+
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.1/SetLocLabels HTTP/1.1
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Content-Type: application/json
+
+{
+    "EntityMoniker": {
+        "@odata.type": "Microsoft.Dynamics.CRM.customapi",
+        "customapiid": "86bcd12e-2f30-eb11-a813-000d3a122b89"
+    },
+    "AttributeName": "displayname",
+    "Labels": [
+        {
+            "Label": "例え",
+            "LanguageCode": 1041
+        },
+        {
+            "Label": "Beispiel",
+            "LanguageCode": 1031
+        },
+        {
+            "Label": "ejemplo",
+            "LanguageCode": 1034
+        }
+    ]
+}
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+```
+
+
 ### Retrieving localized values
 
 To retrieve the localized labels use the `RetrieveLocLabels` message using either the Web API [RetrieveLocLabels Function](/dynamics365/customer-engagement/web-api/retrieveloclabels) or the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.
