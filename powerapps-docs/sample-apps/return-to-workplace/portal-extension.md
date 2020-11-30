@@ -84,7 +84,7 @@ On the home screen you have several options:
 - REGISTER GUEST OR DEPENDENT
 
 > [!div class="mx-imgBorder"]
-> ![Portal Attestation](media/portals-home-welcome.png "Portal Attestation")
+> ![Welcome screen](media/portals-home-welcome.png "Welcome screen")
 
 
 #### Creating a pass
@@ -97,22 +97,22 @@ To create a guest pass using the portal:
 1. From the list of available facilities, select the facility and then select **NEXT**.
 
    > [!div class="mx-imgBorder"]
-   > ![Portal Attestation](media/portals-facility.png "Portal facility")
+   > ![Create pass](media/portals-facility.png "Create pass")
 
 1. **Accept** the disclaimers on the **Take the daily health check** screen.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal Attestation](media/portals-disclaimer.png "Portal disclaimer")
+    > ![Accept disclaimers](media/portals-disclaimer.png "Accept disclaimer")
 
 1. Select **I AGREE** if you don't have any symptoms.
 
    > [!div class="mx-imgBorder"]
-   > ![Portal Attestation](media/portals-attestation.png "Portal attestation")
+   > ![Agree terms](media/portals-attestation.png "Agree terms")
 
 1. A pass is generated for the guest/dependent for that day.
 
    > [!div class="mx-imgBorder"]
-   > ![Portal Attestation](media/portals-own-pass.png "Portal Pass")
+   > ![Pass generation](media/portals-own-pass.png "Pass generation")
 
 > [!NOTE]
 > System administrator can disable the storing of negative attestations in the solution settings. This will stop a negative attestation from being created and wont save the record.
@@ -122,7 +122,7 @@ To create a guest pass using the portal:
 To view existing guest or dependent passes select **VIEW PASS** on the home screen. If no pass exists, the **VIEW PASS** option will be disabled on the home screen and in the hamburger menu. 
 
 > [!div class="mx-imgBorder"]
-> ![Portal Attestation](media/portals-view-pass.png "Portal View Pass")
+> ![View existing pass](media/portals-view-pass.png "View existing pass")
 
 The pass displays:
 
@@ -136,12 +136,12 @@ The pass displays:
 8. SHARE PASS
 
 > [!div class="mx-imgBorder"]
-> ![Portal Attestation](media/portals-pass.png "Portal Pass")
+> ![View pass](media/portals-pass.png "View pass")
 
 When **CANCEL PASS** is selected, the portal asks for confirmation. When a pass is cancelled it will no longer show up in the **VIEW PASS** screen and the attestation will be deactivated. The record will still exist in the system.
 
 > [!div class="mx-imgBorder"]
-> ![Portal Attestation](media/portals-cancel-pass.png "Portal Pass")
+> ![Cancel pass](media/portals-cancel-pass.png "Cancel pass")
 
 > [!NOTE]
 > System administrator can disable the use of QR codes in the solution settings. This applies to both employee and guest passes.
@@ -158,7 +158,7 @@ The resources screen displays general information from your organization to the 
 On the profile screen, guests can perform basic operations. They can update their personal information, change their password or change their login method.
 
 > [!div class="mx-imgBorder"]
-> ![Portal Attestation](media/portals-profile.png "Portal Profile")
+> ![Portal profile](media/portals-profile.png "Portal profile")
 
 > [!NOTE]
 > The options presented to **Manage external authorization** depend on the authentication methods configured by the system administrator.
@@ -207,7 +207,7 @@ Non-mandatory fields:
 After creating dependents, user will see them listed by selecting the **CREATE PASS** option.
 
 > [!div class="mx-imgBorder"]
-> ![Portal Register Guest or dependent](media/portals-select-dependent.png "Portal Register Guest or dependent")
+> ![Create pass for guests](media/portals-select-dependent.png "Create pass for guests")
 
 To find dependents in the Facility  Management app, go to **Solution Setup** and select **Employees**. On **My Active Contacts** view, open a record and find dependents on the **Guest** tab. All dependents can be found on the **Active Guests** view.
 

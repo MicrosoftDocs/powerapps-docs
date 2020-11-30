@@ -201,7 +201,7 @@ The key piece of data to be captured and recorded before moving to the next stag
 In the **Employee Instructions** section an employee can be blocked from accessing facilities.
 
    > [!div class="mx-imgBorder"]
-   > ![Enter name](media/health-safety-employee-block-access.png "Enter name")
+   > ![Employee instructions](media/health-safety-employee-block-access.png "Employee instructions")
 
 Case manager can inform an employee that the facility is not available to enter for a while. When **Facility Access Available** is set to **No**, the employee won't be able to get a day pass. To inform an employee that facility access is not available, you'll be able to give **Employee Instructions** that are visible in the app. With the **Facility Access Available Date**, you can inform the employee of when they will be able to get a day pass again. A flow will automatically reset **Facility Access Available** when the date is reached.
 

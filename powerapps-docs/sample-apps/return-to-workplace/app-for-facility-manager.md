@@ -201,7 +201,7 @@ To access the facility manager dashboard:
   - Two charts that can be filtered by date range and that display number of bookings by arrival window and by weekday.
 
     > [!div class="mx-imgBorder"]
-    > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - Readiness")
+    > ![Facility manager dashboard - daily arrivals](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - daily arrivals")
 
 **Virus Spread**
 

@@ -39,7 +39,7 @@ A map highlights the locations of facilities, along with the number of facilitie
 Important statistics are provided at the top, including the number of facilities, new cases, new fatal cases, and the reproductive number.
 
 > [!div class="mx-imgBorder"]
-> ![System at a Glance](media/pbi-dash-system-at-a-glance2.png "System at a Glance")
+> ![System at a Glance 2](media/pbi-dash-system-at-a-glance2.png "System at a Glance 2")
 
 ### Key metrics
 

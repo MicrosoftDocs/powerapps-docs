@@ -20,9 +20,9 @@ This article provides resources where you can learn about the new features that 
 
 Facility managers can provide facility access to third parties. A third party can choose a facility, attest to being symptom-free and receive a day pass for facility entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
 
-![Portal](media/whats-new-guest-portal8.png "Portal")
+![Guest portal](media/whats-new-guest-portal8.png "Guest portal")
 
-![Portal](media/whats-new-guest-portal1.png "Portal")
+![New guest](media/whats-new-guest-portal1.png "New guest")
 
 With the introduction of portals, we added a new way for users approaching the solution. Below you will find a comparison how the portal relates to the mobile app.
 
@@ -54,8 +54,8 @@ Employees can now have in app notifications when facility access has been enable
 
 COVID-19 data and insights is now available at the state and county level for USA, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
 
-![Dashboards](media/whats-new-state.png "Dashboards State Level")
-![Dashboards](media/whats-new-county.png "Dashboards County Level")
+![Dashboards state level](media/whats-new-state.png "Dashboards state level")
+![Dashboards county level](media/whats-new-county.png "Dashboards county level")
 
 ## New and updated features in October 2020 (v1.2)
 
