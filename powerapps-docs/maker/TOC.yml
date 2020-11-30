@@ -403,6 +403,8 @@
               href: ./canvas-apps/controls/control-export-import.md
             - name: Gallery
               href: ./canvas-apps/controls/control-gallery.md
+            - name: Horizontal container 
+              href: ./canvas-apps/controls/control-horizontal-container.md
             - name: HTML text
               href: ./canvas-apps/controls/control-html-text.md
             - name: Icon
@@ -447,6 +449,8 @@
               href: ./canvas-apps/controls/control-timer.md
             - name: Toggle
               href: ./canvas-apps/controls/control-toggle.md
+            - name: Vertical container 
+              href: ./canvas-apps/controls/control-vertical-container.md
             - name: Video
               href: ./canvas-apps/controls/control-audio-video.md
             - name: Web barcode scanner (experimental)
@@ -465,6 +469,14 @@
               href: ./canvas-apps/controls/properties-size-location.md
             - name: Text
               href: ./canvas-apps/controls/properties-text.md
+      - name: Manage screens
+        items:
+        - name: Build responsive apps
+          href: canvas-apps/build-responsive-apps.md
+        - name: Change screen size and orientation
+          href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+        - name: Create responsive layout
+          href: ./canvas-apps/create-responsive-layout.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas
@@ -905,12 +917,6 @@
       href: ./canvas-apps/restore-an-app.md
     - name: Change app name and tile
       href: ./canvas-apps/set-name-tile.md
-    - name: Manage screens
-      items:
-        - name: Change screen size and orientation
-          href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
-        - name: Create responsive layout
-          href: ./canvas-apps/create-responsive-layout.md
   - name: Test an app with Test Studio
     items:
     - name: Test Studio Overview
@@ -923,8 +929,6 @@
         href: ./canvas-apps/test-studio-classic-pipeline-editor.md
       - name: Configure pipeline using YAML
         href: ./canvas-apps/test-studio-yaml-pipeline.md
-  - name: Debug an app with canvas app Monitor
-    href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes
@@ -1285,8 +1289,9 @@
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
- 
-
+  - name: Troubleshoot issues for the Power Apps mobile app
+    href: ../user/powerapps_mobile_troubleshoot.md
+    
 - name: Portals
   items:
     - name: Portals
@@ -1497,7 +1502,7 @@
                     href: ./portals/configure/configure-saml2-provider.md
                   - name: Configure Azure AD with SAML 2.0
                     href: ./portals/configure/configure-saml2-settings-azure-ad.md
-                  - name: Configure ADFS with SAML 2.0
+                  - name: Configure AD FS with SAML 2.0
                     href: ./portals/configure/configure-saml2-settings.md
                   - name: FAQs when using SAML 2.0
                     href: ./portals/configure/configure-saml2-faqs.md
@@ -1507,7 +1512,7 @@
                     href: ./portals/configure/configure-ws-federation-provider.md
                   - name: Configure WS-Federation with Azure AD
                     href: ./portals/configure/configure-ws-federation-settings-azure-ad.md
-                  - name: Configure WS-Federation with ADFS
+                  - name: Configure WS-Federation with AD FS
                     href: ./portals/configure/configure-ws-federation-settings.md
           - name: Local authentication, registration and other settings
             href: ./portals/configure/set-authentication-identity.md
@@ -1582,7 +1587,7 @@
           href: ./portals/configure/create-web-roles.md
         - name: Assign entity permissions
           href: ./portals/configure/assign-entity-permissions.md
-        - name: Control webpage access
+        - name: Manage page permissions
           href: ./portals/configure/webpage-access-control.md
         - name: Create website access permissions
           href: ./portals/configure/website-access-permission.md
@@ -2018,6 +2023,24 @@
     href: ../webinars.md
 - name: Troubleshoot
   items:
+  - name: Debug Power Apps with Monitor
+    items:
+    - name: Monitor overview
+      href: monitor-overview.md
+    - name: Debug canvas apps with Monitor
+      href: monitor-canvasapps.md
+    - name: Debug model-driven apps with Monitor
+      items: 
+      - name: Debug a model-driven app
+        href: monitor-modelapps.md  
+      - name: Use Monitor to debug model-driven app forms
+        href: ./model-driven-apps/monitor-form-checker.md
+      - name: Troubleshoot form issues in model-driven apps
+        href: ../developer/model-driven-apps/troubleshoot-forms.md 
+    - name: Collaborative debugging with Monitor
+      href: monitor-collaborative-debugging.md
+    - name: Advanced monitoring
+      href: monitor-advanced.md
   - name: Performance tips for canvas apps
     href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions
@@ -2026,8 +2049,6 @@
     href: ./canvas-apps/get-sessionid.md
   - name: Troubleshoot startup issues for Power Apps
     href: ../troubleshooting-startup-issues.md
-  - name: Troubleshoot issues for the Power Apps mobile app
-    href: ../user/powerapps_mobile_troubleshoot.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support

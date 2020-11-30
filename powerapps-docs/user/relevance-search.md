@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/04/2020
+ms.date: 11/17/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -66,13 +66,11 @@ Relevance Search needs to be enabled on by the administrator for your organizati
 
 ### Turn on the new Relevance Search experience 
 
-The new search experience is available as a feature setting in the Power Platform admin Center. It combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. When the **Use new search experience** setting is turned on, it will enable the new experience to all the apps in the environment.
+The new Relevance Search experience combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. The new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)
 
  > [!div class="mx-imgBorder"]
  > ![Turn on new search experience](media/admin-enable-search.jpg) 
 
-> [!NOTE]
-> The **Use new search experience** feature setting is only available for environments where Relevance Search is already turned on. For environments where Relevance Search has never been not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default.
 
 ## Use the new Relevance Search experience 
 

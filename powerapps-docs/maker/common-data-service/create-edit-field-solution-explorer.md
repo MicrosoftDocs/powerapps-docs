@@ -1,5 +1,6 @@
 ---
 title: "Create and edit columns for Microsoft Dataverse using Power Apps solution explorer | MicrosoftDocs"
+description: "Discover how to create and edit columns in Power Apps"
 ms.custom: ""
 ms.date: 07/23/2020
 ms.reviewer: ""
@@ -143,7 +144,7 @@ When you choose **Multi Select Choice** or **Choice** data type the solution exp
 
 #### Use Existing Choice
 
-If you to choose **Use Existing Choice** the designer will display a list of existing *global choices* and include an **Edit** and **New** buttons to configure the global choices that this column should use.
+If you to choose **Use Existing Option Set** the designer will display a list of existing *global choices* and include an **Edit** and **New** buttons to configure the global choices that this column should use.
 
 ![Configure a global choice ](media/global-option-set-solution-explorer.png)
 
@@ -183,9 +184,9 @@ You can also set specific **Behavior** for Date Time columns in the **Advanced o
 
 More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
 
-## Column Type
+## Column type
 
-You can set a custom column **Column Type** to be a **Simple**, **Calculated**, or a **Rollup** column. 
+You can set a custom column **Field Type** to be a **Simple**, **Calculated**, or a **Rollup** column. 
 
 ### Simple
 

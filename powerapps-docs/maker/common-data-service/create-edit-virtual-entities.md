@@ -53,7 +53,8 @@ Alternatively, developers can build their own data providers. Data providers are
  
  Developers create a custom plug-in to use as the data provider for a virtual table. Alternatively, you can use the provided OData v4 Data Provider. More information: [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)  
   
-1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual table Data Sources**.  
+1. Sign in to Power Apps, and then select **Settings** > **Advanced settings**. 
+1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual Entity Data Sources**.  
 1. On the actions toolbar, select **New**.  
 1. On the **Select  Data Provider** dialog box, select from the following data sources, and then select **OK**.
  
@@ -90,8 +91,8 @@ Part of the name of any virtual table you create is the customization prefix. Th
 
 ### Create a virtual table
   
-1. In solution explorer, create a new table. To do this, select **Tables** in the left navigation pane, and then select **New**.  
-2. On the **General** tab of the **Entity Definition**, select **Virtual table**, and then in the **Data Source** drop down list, select the data source that you want.  
+1. In solution explorer, create a new table. To do this, select **Entities** in the left navigation pane, and then select **New**.  
+2. On the **General** tab of the **Entity Definition**, select **Virtual Entity**, and then in the **Data Source** drop down list, select the data source that you want.  
 
     > [!div class="mx-imgBorder"] 
     > ![Virtual table option on table definition](media/virtual-entity-click-option.png)  

@@ -40,7 +40,7 @@ Dynamics 365 Portals version 9.1.4 for the customer engagement apps (Dynamics 36
 
 - **OAuth 2.0 implicit grant flow**: As a portal developer, you can now make client-side API calls to external APIs and get them secured by using OAuth 2.0 implicit grant flow. More information: [OAuth 2.0 implicit grant flow](oauth-implicit-grant-flow.md)
 
-- **Microsoft Dataverse starter portal (preview)**: As a portal administrator, you can now configure your portal to connect to the Dataverse environment and allow your users to interact with it. This feature brings in the ability to connect a portal to a Dataverse environment that does not have any customer engagement apps (Dynamics 365 Sales,Dynamics 365 Service, or Dynamics 365 Marketing) preinstalled.
+- **Dataverse starter portal (preview)**: As a portal administrator, you can now configure your portal to connect to the Dataverse environment and allow your users to interact with it. This feature brings in the ability to connect a portal to a Dataverse environment that does not have any customer engagement apps (Dynamics 365 Sales,Dynamics 365 Service, or Dynamics 365 Marketing) preinstalled.
 
 ### Dynamics 365 Portals version 9.1.1 for the customer engagement apps
 

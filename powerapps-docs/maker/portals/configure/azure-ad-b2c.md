@@ -1,5 +1,5 @@
 ---
-title: "Customize the Azure AD B2C user interface for portals. | MicrosoftDocs"
+title: "Customize the Azure Active Directory B2C user user interface for portals. | MicrosoftDocs"
 description: "Instructions to customize the Azure AD B2C user interface for portals."
 author: sandhangitmsft
 ms.service: powerapps
@@ -12,9 +12,10 @@ ms.reviewer: tapanm
 
 # Customize the Azure AD B2C user interface for portals
 
-[!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports user interface customization. You can customize the user experience for sign-up and sign-in scenarios.
+[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C (Azure AD B2C) supports user interface customization. You can customize the user experience for sign-up and sign-in scenarios.
 
-### Step 1: Create a web template
+### Step 1. Create a web template
+
 Create a web template by using the following values:
 
 **Name**: [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Custom Page
@@ -324,24 +325,27 @@ Create a web template by using the following values:
   </body>
 </html>
 ```
-### Step 2: Create a page template
+
+### Step 2. Create a page template
 
 Create the following page template:
+
 - **Name**: [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Custom Page
 - **Type**: Web Template
 - **Web Template**: [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Custom Page
 - **Use Website Header and Footer**: Clear this check box
 
-### Step 3: Create a webpage
+### Step 3. Create a webpage
 
 Create the following webpage:
+
 - **Name**: Sign-in
 - **Parent** Page: Home
 - **Partial Url**: azure-ad-b2c-sign-in
 - **Page Template**: [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Custom Page
 - **Publishing State**: Published
 
-### Step 4: Create site settings
+### Step 4. Create site settings
 
 Site settings are required to configure cross-origin resource sharing (CORS) to allow [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C to request the custom page and inject the sign-in or sign-up user interface. Create the following site settings.
 
@@ -353,14 +357,14 @@ Site settings are required to configure cross-origin resource sharing (CORS) to 
 
 For a complete list of other CORS settings, see [CORS protocol support](../add-web-resource.md#cors-protocol-support).
 
-### Step 5: [!include[Azure](../../../includes/pn-azure-shortest.md)] configuration
+### Step 5. [!include[Azure](../../../includes/pn-azure-shortest.md)] configuration
 
 1. Sign in to your [!include[Azure portal](../../../includes/pn-azure-portal.md)].
-2. Navigate to the **[!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Tenant Management** blade.
-3. Navigate to **Settings** > **Sign-up or sign-in policies**. A list of available policies is displayed.
+2. Go to the **[!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Tenant Management** blade.
+3. Go to **Settings** > **Sign-up or sign-in policies**. A list of available policies is displayed.
 4. Select the policy you want to edit.
 5. Select **Edit**.
-6. Select **Edit policy** > **Page UI customization** > **Unified sign-up or sign-in page**
+6. Select **Edit policy** > **Page UI customization** > **Unified sign-up or sign-in page**.
 7. Set **Use custom page** to **Yes**.
-8. Set **Custom page URI** to the URL of the [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Custom Page webpage created in step 3 of this procedure. For example, `https://mydomain.com/azure-ad-b2c-sign-in`.
+8. Set **Custom page URI** to the URL of the [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Custom Page webpage created in **Step 3. Create a webpage** earlier in this article. For example, `https://mydomain.com/azure-ad-b2c-sign-in`.
 9. Select **OK**.
