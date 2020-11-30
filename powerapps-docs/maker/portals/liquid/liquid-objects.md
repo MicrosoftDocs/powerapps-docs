@@ -132,7 +132,7 @@ The blogs object allows you to select a specific blog or blog posts.
 
 <div class=panel-heading>
 
-{% assign sitemarker = sitemarkers[Blog Home] %}
+{% assign sitemarker = sitemarkers["Blog Home"] %}
 
 {% assign snippet = snippets[Home Blog Activity Heading] %}
 
@@ -227,9 +227,14 @@ The following table explains various attributes associated with blog Object.
 
 The blogposts object allows you to access a collection of blog post objects. You can order the blog posts and achieve pagination in addition to using liquid filters:
 
+```
 {% assign blogposts = blogs.posts | order\_by “adx\_name”, “desc” | paginate: 0,4 | all %}
-Note that blogs.posts.all is also a valid way to get all blog posts
-blogs.posts | from\_index: 0 | take: 2 is also possible
+```
+
+Other possible options:
+
+- `blogs.posts.all` (to get all blog posts)
+- `blogs.posts | from\_index: 0 | take: 2`
 
 The following table explains various attributes associated with blogposts Object.
 
@@ -289,7 +294,7 @@ An entity object provides access to the attributes of a Power Apps entity record
 |               Notes                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Loads any notes (annotation) associated with the entity, ordered from oldest to newest (createdon). Notes are returned as note objects.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |            permissions             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Loads Entity Permission assertion results for the entity. Results are returned as a permissions object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |                url                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Returns the Power Apps portals content management system URL path for the entity. If the entity has no valid URL in the current website, returns null. Generally, this will only return a value for certain entity types that have been integrated into the portal CMS , unless you have customized the URL Provider in your application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| \[attribute or relationship name\] | You can access any attribute of the Power Apps entity by logical name. `{{ entity.createdon }}{% assign attribute_name = 'name' %}{{ entity[attribute_name] }}` <br>The values of most entity attributes map directly to [Liquid types](liquid-types.md): Two Option fields map to Booleans, text fields to strings, numeric/currency fields to numbers, date/time fields to date objects. But some attribute types are returned as objects:<ul><li>Lookup (Entity Reference) fields are returned as entity reference objects.</li><li>Option Set/Picklist fields are returned as option set value objects.</li><li>You can also load any related entities by relationship schema name.</li>`{{ page.adx_webpage_entitylist.adx_name }}`In the case that a relationship is reflexive (that is, self-referential), a reflexive relationship object will be returned. (Otherwise, the result would be ambiguous.)`{{ page.adx_webpage_webpage.referencing.adx_name }}` <br>**Note**: Loading large numbers of related entities, or accessing large numbers of relationships in a single template, can have a negative impact on template rendering performance. Avoid loading related entities for each item in an array, within a loop. Where possible, use [Power Apps Microsoft Dataverse entity tags](portals-entity-tags.md) to load collections of entities. |
+| \[attribute or relationship name\] | You can access any attribute of the Power Apps entity by logical name. `{{ entity.createdon }}{% assign attribute_name = 'name' %}{{ entity[attribute_name] }}` <br>The values of most entity attributes map directly to [Liquid types](liquid-types.md): Two Option fields map to Booleans, text fields to strings, numeric/currency fields to numbers, date/time fields to date objects. But some attribute types are returned as objects:<ul><li>Lookup (Entity Reference) fields are returned as entity reference objects.</li><li>Option Set/Picklist fields are returned as option set value objects.</li><li>You can also load any related entities by relationship schema name.</li>`{{ page.adx_webpage_entitylist.adx_name }}`In the case that a relationship is reflexive (that is, self-referential), a reflexive relationship object will be returned. (Otherwise, the result would be ambiguous.)`{{ page.adx_webpage_webpage.referencing.adx_name }}` <br>**Note**: Loading large numbers of related entities, or accessing large numbers of relationships in a single template, can have a negative impact on template rendering performance. Avoid loading related entities for each item in an array, within a loop. Where possible, use [Dataverse entity tags](portals-entity-tags.md) to load collections of entities. |
 
 ### Entity Reference
 
@@ -1153,7 +1158,7 @@ Allows you to load any site marker by name. If the sitemarker exists, a sitemark
 ```
 {{ sitemarkers[Login].url }}
 
-{% assign my_sitemarker = sitemarkers[My Site Marker] %}
+{% assign my_sitemarker = sitemarkers["My Site Marker"] %}
 
 {% if my_sitemarker %}
 

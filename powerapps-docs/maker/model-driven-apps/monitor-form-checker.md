@@ -17,9 +17,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Use Monitor to troubleshoot model-driven app form behavior (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Use Monitor to troubleshoot model-driven app form behavior
 
 Monitor can help you debug and diagnose problems, which helps you build faster, more reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as it runs.
 

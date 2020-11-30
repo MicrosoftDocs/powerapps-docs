@@ -929,8 +929,6 @@
         href: ./canvas-apps/test-studio-classic-pipeline-editor.md
       - name: Configure pipeline using YAML
         href: ./canvas-apps/test-studio-yaml-pipeline.md
-  - name: Debug an app with canvas app Monitor
-    href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes
@@ -1291,8 +1289,9 @@
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
- 
-
+  - name: Troubleshoot issues for the Power Apps mobile app
+    href: ../user/powerapps_mobile_troubleshoot.md
+    
 - name: Portals
   items:
     - name: Portals
@@ -1590,7 +1589,7 @@
           href: ./portals/configure/create-web-roles.md
         - name: Assign entity permissions
           href: ./portals/configure/assign-entity-permissions.md
-        - name: Control webpage access
+        - name: Manage page permissions
           href: ./portals/configure/webpage-access-control.md
         - name: Create website access permissions
           href: ./portals/configure/website-access-permission.md
@@ -2024,6 +2023,24 @@
     href: ../webinars.md
 - name: Troubleshoot
   items:
+  - name: Debug Power Apps with Monitor
+    items:
+    - name: Monitor overview
+      href: monitor-overview.md
+    - name: Debug canvas apps with Monitor
+      href: monitor-canvasapps.md
+    - name: Debug model-driven apps with Monitor
+      items: 
+      - name: Debug a model-driven app
+        href: monitor-modelapps.md  
+      - name: Use Monitor to debug model-driven app forms
+        href: ./model-driven-apps/monitor-form-checker.md
+      - name: Troubleshoot form issues in model-driven apps
+        href: ../developer/model-driven-apps/troubleshoot-forms.md 
+    - name: Collaborative debugging with Monitor
+      href: monitor-collaborative-debugging.md
+    - name: Advanced monitoring
+      href: monitor-advanced.md
   - name: Performance tips for canvas apps
     href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions
@@ -2032,8 +2049,6 @@
     href: ./canvas-apps/get-sessionid.md
   - name: Troubleshoot startup issues for Power Apps
     href: ../troubleshooting-startup-issues.md
-  - name: Troubleshoot issues for the Power Apps mobile app
-    href: ../user/powerapps_mobile_troubleshoot.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support

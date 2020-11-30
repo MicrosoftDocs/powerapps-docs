@@ -40,7 +40,7 @@ To start with customizing the sample apps, the first step is to open the app ins
 
     ![Select Power Apps app](media/power-apps.png "Select Power Apps app")
 
-1. Select [Build](overview-of-the-power-apps-app.md#build-tab) tab.
+1. Select [Build](overview-of-the-power-apps-app.md#build-hub) tab.
 
 1. Select the team environment where you installed the sample app.
 
@@ -58,8 +58,8 @@ When you install sample apps, the tables are pre-populated with sample data. The
 
 | Sample app | Tables |
 | - | - |
-| Employee Ideas |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
-| Inspection | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
+| Inspection |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
+| Employee ideas | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
 | Issue Reporting | Issue Reports <br> Issue Report Questions <br> Issue Report Templates <br> Issue Report Categories |
 
 To remove data from the sample apps:
