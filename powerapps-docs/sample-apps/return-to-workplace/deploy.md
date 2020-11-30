@@ -5,9 +5,9 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Deploy the Return to the Workplace solution
@@ -312,27 +312,25 @@ In the Return to the Workplace solution, the following security roles are define
  - Share Guest attestation - email with portal link (portal only)
  - Contact - Create portal invitation (portal only)
 
-## Appendix: Deploy the Return to the Workplace portal
+## Appendix: Deploy the Return to the Workplace Portal
 
-This section provides information around how to install the Return to the Workplace portal.  
+This section provides information on how to install the Return to the Workplace portal.  
 
-### Step 1: Create a new Portal
+### Step 1: Create a new portal
 
-1. Go to [Power Apps](https://make.powerapps.com). Select the environment you want to install the portal on.
+1. Go to [Power Apps](https://make.powerapps.com). Select the environment you want to install the portal.
 
-2. Select **Create** on the left side.
-
-3. Select **Portal from blank**.
+1. Select **Apps** from the left navigation pane, select **New app** and then select **POrtal**.
 
    > [!div class="mx-imgBorder"]
    > ![Create portal](media/create-portal.png "Create portal")
 
-4. Fill in the name and the address. Leave the language on English and press **Create**.
+1. Enter appropriate values and then select **Create** .
 
    > [!div class="mx-imgBorder"]
    > ![Portal details](media/enter-portal-name.png "Portal details")
 
-5. You will see a popup appearing on the top right saying that the portal provisioning has started. Select Apps on the left side, you see the name of your portal app appear in the list. As soon as provisioning completes, the link will be active.
+1. You'll see a popup appearing on the top right displaying that the portal provisioning has started. Select **Apps** from the left navigation pane, you'll see the name of your portal from the list of available apps. As soon as provisioning completes, the link will be active.
 
    > [!div class="mx-imgBorder"]
    > ![Portal provisioning notice](media/portal-provisioning.png "Portal provisioning notice")
@@ -358,22 +356,22 @@ You can install the Return to the Workplace Portal solution from AppSource.
 
 ### Step 3: Restart the Portal
 
-In the deployment package we also included the portal data. To link the data to the right portal, follow the steps below: 
+The deployment package also contains the sample portal data. To import data into the right portal: 
 
-1. Go to [Power Apps](https://make.powerapps.com). Select **Apps** on the left side and open the **Portal Management** app.
+1. Go to [Power Apps](https://make.powerapps.com). Select **Apps** from the left navigation pane and then select **Portal Management** app.
 
-2. Select **Website** on the left side. Select the **Return to the Workplace** website, change the url to the url earlier indicated.
+2. Select **Website** and then select **Return to the Workplace** website, change the url to the url that you have created earlier.
 
 3. Select **Save and Close** and then deactivate the **Basic** website.
 
-4. Select **Website Bindings** on the left side. Validate if there is a binding for the url indicated for the **Return to the Workplace** website.
+4. Select **Website Bindings** . Validate if there is a binding for the url indicated for the **Return to the Workplace** website.
 
-5. Go to [Power Apps](https://make.powerapps.com). Select the three dots next to the portal and press **Settings**. Select **Administration** to open the portal administration side. Select **Portal Actions** and select **Restart**.
+5. Go to [Power Apps](https://make.powerapps.com). Select **...** and then select **Settings**. Select **Administration** to open the portal administration. Select **Portal Actions** and then select **Restart**.
 
    > [!div class="mx-imgBorder"]
    > ![Portal restart](media/portal-restart.png "Portal restart")
 
-6. Go to [Power Apps](https://make.powerapps.com). Select the portal and press **Browse**.
+6. Go to [Power Apps](https://make.powerapps.com). Select the portal and select **Browse**.
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 

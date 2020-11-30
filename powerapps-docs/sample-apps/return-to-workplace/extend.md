@@ -7,10 +7,12 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Extend the Return to the Workplace solution
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)] 
 
 This article provides a detailed description of the data model, workflows, and Power Automate flows used by the Return to the Workplace solution. The solution extends the Common Data Model and uses several of its components. Administrators, developers, and users should be mindful of the solution and possible implications of other solutions that coexist in the same environment.
 
@@ -137,7 +139,7 @@ These tables are used primarily by the Facility Safety Management model-driven a
 
 ## Portal tables
 
-These tables are used primarily by the Portal extention. This list includes the tables from the other sections that been changed.
+These tables are used primarily by the Portal extension. This list includes the tables from the other sections that been changed.
 
 
 | **Table name**           | **Information in the table**                   |
@@ -152,7 +154,7 @@ These tables are used primarily by the Portal extention. This list includes the 
 
 ## Data definitions
 
-The data definitions section provides information about a list of tables, columns, and the areas of the solution where they're used. The solution column indicates if the field is part of the base solution or if its added via the portals extention. System-generated columns such as **Created On** and **Modified On** aren't displayed.
+The data definitions section provides information about a list of tables, columns, and the areas of the solution where they're used. The solution column indicates if the field is part of the base solution or if its added via the portals extension. System-generated columns such as **Created On** and **Modified On** aren't displayed.
 
 ### Access Action
 
@@ -161,10 +163,10 @@ The data definitions section provides information about a list of tables, column
 | Employee              | Lookup          | Used to associate the contact.                                                   | Model-driven app and canvas app |
 | Access Status         | Option set      | Used to set type of access action                                                | Model-driven app and canvas app |
 | Access Available date | Date time       | Set expire date for this record.                                                 | Model-driven app                |
-| Submitted by          | Lookup          | Lookup to systemuser. Used to capture original creator                           | Model-driven app                |
+| Submitted by          | Lookup          | Lookup to system user. Used to capture original creator                           | Model-driven app                |
 | Source                | Text            | Used to capture source name, defaults to manual when created in model-driven app | Model-driven app                |
 | Notes                 | Text            | Used to capture reason for the block or instructions to the end user.            | Model-driven app                |
-| Notification          | Lookup          | Used to accociate to a specific notification so notes and body can be synched.   | Model-driven app and canvas app |
+| Notification          | Lookup          | Used to associate to a specific notification so notes and body can be synched.   | Model-driven app and canvas app |
 |||||
 
 ### Area
@@ -578,7 +580,7 @@ This section describes the different flows in the solution and explains their pu
 
 ### Sample Data
 
-Initially in the solution, the flows below were provided to generate sample data. Every 12 hours new data would get created. Starting from version 1.3 these flows will no longer be provided, yet in the future they will be placed on Github for use on demo environments.
+Initially in the solution, the flows below were provided to generate sample data which will be refreshed for 12 hours. Starting from version 1.3 these flows will no longer be provided, yet in the future they will be placed on Github for use on demo environments.
 
 | Flow  | Description |
 |--------------|----------|

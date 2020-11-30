@@ -1,25 +1,24 @@
 ---
-title: Portal extention to the Return to the Workplace solution for Microsoft Power Platform | Microsoft Docs
-description: Provides an overview of the portal extention for Return to the Workplace solution.
+title: Portal extension to the Return to the Workplace solution for Microsoft Power Platform | Microsoft Docs
+description: Provides an overview of the portal extension for Return to the Workplace solution.
 author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/03/2020
+ms.date: 11/30/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
 
 # Return to the Workplace Guest Portal
 
-A separate offering extends the Return to the Workplace solution with a portal. This portal allows people outside your organization to get a pass by completing a health attestation. The portal has been designed to provide a mobile experience for users but will scale to tablet and desktop screens as well. This enables users to access the portal from a device of their choosing.
+The Return to the Workplace solution now contains a guest portal. This portal allows people outside your organization to get a pass by completing a health attestation. The portal has been designed to provide a mobile experience for users but will scale to tablet and desktop screens as well. This enables users to access  portal from any device.
 
 > [!div class="mx-imgBorder"]
 > ![Portal welcome page](media/portals-welcome-screen.png "Portal welcome screen")
 
 > [!div class="mx-imgBorder"]
 > ![Portal Attestation](media/portals-home-welcome.png "Portal Home")
-
 
 ## Configuration
 
@@ -37,7 +36,7 @@ The portal provides two ways for end users to self-screen.
 
 1) Unauthenticated. This mode allows users to complete a guest attestation that has been sent to them through email. Users can also create new guest attestations in order to get a pass for a facility. This mode is most relevant for infrequent visitors as it allows users to get a pass without creating an account.
 
-2) Authenticated. Guests can be invited to the portal and are prompted to create an account. There they can create passes for themselves as well as their guests or dependents. This mode is most relevant to frequenst visitors, suppliers/vendors or schools, where a guardian creates a pass for a dependent.
+2) Authenticated. Guests can be invited to the portal and are prompted to create an account. There they can create passes for themselves as well as their guests or dependents. This mode is most relevant to frequent visitors, suppliers/vendors or schools, where a guardian creates a pass for a dependent.
 
 These two modes are explained in greater detail below.
 

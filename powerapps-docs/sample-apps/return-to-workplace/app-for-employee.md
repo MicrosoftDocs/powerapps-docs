@@ -5,9 +5,9 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Use the Employee Return to the Workplace app
@@ -167,23 +167,23 @@ You can say how you're feeling about returning to the workplace. On the home pag
 
 ## Notifications
 
-Each employee can receive notifications via the Employee App. In the top right a bell icon is displayed. If there are unread notifications, a badge will be displayed indicating, the number of unread notifications. Clicking on the bell icon will take the employee to a new screen where all the notifications are listed. The newest notifications are shown on top of the list.
+Employees will receive notifications via the Employee app. You can find the notification icon displayed on the top-right corner. If there are any unread notifications, a badge will be displayed showing the number of unread notifications. Selecting the notification icon navigates the employee to a new screen where all the notifications are displayed. The newest notifications are shown on top of the list.
 
 > [!div class="mx-imgBorder"]
 > ![Notification bell](media/employee-notification-bell.png "Notification bell")
 
-A notification shows a created date, type, header text and a body. There are three types of notications: information, warning and error. Each indicated with their own icon. 
+A notification contains a created date, type, header text and a body. There are three types of notifications: **Information**, **Warning**, and **Error**. Each notification type can be identified by the icon next to the header text. 
 
 > [!div class="mx-imgBorder"]
 > ![Notifications list](media/employee-notification-list.png "Notifications list")
 
-A notification is marked as read when it has been viewed by the employee in the app. The notification will still be visible on this screen. The user can return to the main screen by clicking on the cross in the top right of the screen.
+A notification is marked as read when the notification is seen by the employee in the app. All the notifications that are read will be still shown in the notification screen. Employee can return to the main screen by selecting the **X** icon on the top-right of the screen.
 
 ## Facility access not available
 
-A case manager or facility manager can block you from making bookings which results in that access is no longer available for you. You'll see a banner appearing on the home screen, which indicates the **Access is not available**. A notification of type error is received with further instructions.
+Case manager or facility manager can block the employees from making bookings to a specific facility, which makes the employees unable to reserve the facility. You'll see a banner appearing on the home screen, indicating **Access is not available**. An error notification will be received with further instructions.
 
-When a user is blocked, the health and safety instructions are shown on the bottom of the notifications screen.
+When an employee is blocked, the health and safety instructions are shown on the bottom of the notifications screen.
 
 > [!NOTE]
 > The health and safety instructions can be configured in the solution settings.

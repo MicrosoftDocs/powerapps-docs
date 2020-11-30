@@ -5,9 +5,9 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Use the Location Readiness dashboard
@@ -34,7 +34,7 @@ Users can switch between two different views in terms of virus metrics: Worldwid
 > [!div class="mx-imgBorder"]
 > ![System at a Glance](media/pbi-dash-report-usa-county-virus.png "System at a Glance")
 
-A map highlights locations of facilities, along with the number of facilities that are in a certain phase. Hovering over a facility gives you insights into the virus spread at that ocation.
+A map highlights the locations of facilities, along with the number of facilities that are in a certain phase. Hovering over a facility gives you insights into the virus spread at that location.
 
 Important statistics are provided at the top, including the number of facilities, new cases, new fatal cases, and the reproductive number.
 
@@ -50,14 +50,14 @@ Review the phases that facilities are in, the number of facilities, new cases, n
 > [!div class="mx-imgBorder"]
 > ![System at Glance phases](media/pbi-dash-system-at-a-glance-phases.png "System at a Glance phases")
 
-#### Confirmed Covid cases 
+#### Confirmed COVID cases 
 
-Information is shown about the number of cases for the last reporting day, 14-day moving average in absolute numbers and per population with the associated risk level, daily trend, and the total number of cases and per population.
+Information is shown about the number of cases for the last reporting day, 14 day moving average in absolute numbers and per population with the associated risk level, daily trend, and the total number of cases and per population.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance cases](media/pbi-dash-report-covidcases.png "System at a Glance cases")
 
-#### Fatal Covid cases
+#### Fatal COVID cases
 
 The data on this tab shows information for COVID-19 cases with fatalities, giving you easy access to information about new fatal cases and total fatal cases in absolute terms and per population, and daily trend.
 
