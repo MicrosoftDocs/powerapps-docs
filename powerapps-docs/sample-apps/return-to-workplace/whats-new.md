@@ -1,13 +1,13 @@
 ---
-title: Whats new in Return to the Workplace Solution
-description: Provides an overview of whats new in the Return to the Workplace solution.
+title: What's new in Return to the Workplace Solution
+description: Provides an overview of what's new in the Return to the Workplace solution.
 author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/14/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # What's new in the Return to the Workplace solution?
@@ -16,39 +16,43 @@ This article provides resources where you can learn about the new features that 
 
 ## New and updated features in December 2020 (v1.3)
 
-### Return to the Workplace Portal
+### Return to the Workplace Guest Portal
+
 Facility managers can provide facility access to third parties. A third party can choose a facility, attest to being symptom-free and receive a day pass for facility entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
 
 ![Portal](media/whats-new-guest-portal8.png "Portal")
 
 ![Portal](media/whats-new-guest-portal1.png "Portal")
 
-With the introduction of portals we added a new way for people approaching the solution. Below you will find a comparison how the portal relates to the mobile app.
+With the introduction of portals, we added a new way for users approaching the solution. Below you will find a comparison how the portal relates to the mobile app.
 
-||Employee App (Mobile App)|Portal (Web App)|
+||Employee app (Mobile app)|Portal (Web app)|
 |-----|------------|---------------|
-|Persona|Employee|3rd Party|
-|Target Users|Employees, students|Vendors, parents or guardians of students, “of-age” student|
+|Persona|Employee|Third Party|
+|Target Users|Employees, students|Vendors, parents, or guardians of students, “of-age” student|
 |Security|Authentication Azure AD|Multiple types supported (including Azure AD B2C, Gmail, Facebook)|
 |Booking level|Facilities, floors, areas, arrival times|Facilities|
 |Attestation|Yes|Yes|
 |Access controls|Yes|No|
-|Notifications (e.g., in-app, email, text)|Yes|No|
+|Notifications (for example, in-app, email, text)|Yes|No|
 |Included in occupancy metrics|Yes|Yes|
 |Included in occupancy capacity limits|Yes|No|
 |Included in case management|Yes|By company policy|
 |Manual contract tracing|Yes|Limited (manual data entry)|
 
-### Access Control 
-Facility or case managers can now manage facility access for employees via access controls. They are a new way of blocking facility access for an employee which allows people to create them either via Power Automate or an API. Access controls tie in to notifications, so people find guidance in the employee app.
+### Access control 
+
+Facility or case managers can now manage facility access for employees via access controls. They are the new way of blocking facility access for an employee that allows case managers to create them either via Power Automate or an API. Access controls tie in to notifications, so employee can find guidance in the Employee app.
 
 ### Notifications
-Employees can now have in app notifications when facility access has been enabled or disabled. Out of the box email notifications is also provided, but these can be extended via Power Automate or other solutions.
+
+Employees can now have in app notifications when facility access has been enabled or disabled. Out of the box email notifications are also provided, but these can be extended via Power Automate or other solutions.
 
 ![Notifications](media/whats-new-notifications.png "Notifications")
 
-### Dashboards with State and County Level Virus Data
-COVID-19 data and insights is now available at a state and county level for the US, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
+### Dashboards with state and county level virus data
+
+COVID-19 data and insights is now available at the state and county level for USA, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
 
 ![Dashboards](media/whats-new-state.png "Dashboards State Level")
 ![Dashboards](media/whats-new-county.png "Dashboards County Level")
