@@ -5,7 +5,7 @@ author: v-jogha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 11/30/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -571,8 +571,9 @@ This section describes the different flows in the solution and explains their pu
 | Notification - Validate and set correct owner | Notification | Sets owner to correct user record of the employee contact | Base |
 | Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. | Base |
 | Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility. | Base |
-| Share Guest Attestation - Email | Share Guest Attestation | Shares the guest attestation details with the host and the guest. | Portal |
+| Share Guest Attestation - Email | Share Guest Attestation | Shares the guest attestation details with the host and the guest. | Base |
 | Share Guest Registration - Email | Share Guest Registration | Shares the guest registration details with the host and the guest. | Base |
+| Share Guest Registration – Email with portal link | Share Guest Registration | Shares the registration details with the host and the guest, but includes link to the portal to make a guest attestation. | Portal |
 |||||
 
 ### Sample Data
