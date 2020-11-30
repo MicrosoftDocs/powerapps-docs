@@ -64,7 +64,7 @@ With the individual environment, you get the following functionality:
 | Supports data policies established by the Office 365 administrator |Yes |
 | Establish data policies for the individual environment |Yes |
 
-*You can't share apps, flows, connections, etc. with any other users of your tenant. You also can't add any other user as an environment admin or maker, or to the database roles from the admin center.
+*You can't share apps, flows, connections, etc. with any other users of your tenant. You also can't add any other user as an environment admin or maker, or to the database roles from the admin center. Using premium connectors outside of Power Apps context in this individual environment will require standalone plans. 
 
 ## What are the capacity limits for the individual environment?
 
