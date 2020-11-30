@@ -69,4 +69,4 @@ Hello, DAVE BOWMAN.
 [Control flow tags](control-flow-tags.md)<br>
 [Iteration tags](iteration-tags.md)<br>
 [Template tags](template-tags.md)<br>
-[Power Apps Microsoft Dataverse entity tags](portals-entity-tags.md)
+[Dataverse entity tags](portals-entity-tags.md)

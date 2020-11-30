@@ -16,6 +16,9 @@ search.app:
 ---
 # Sample: Authentication helper for the Online Management API 
 
+> [!NOTE]
+> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated).
+
 The helper code sample provides the following methods to easily authenticate to Online Management API using the OAuth 2.0 protocol and pass in the access token in the header of your messages.
 
 ## DiscoverAuthority method

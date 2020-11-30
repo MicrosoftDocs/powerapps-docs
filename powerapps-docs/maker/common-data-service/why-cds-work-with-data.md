@@ -103,7 +103,7 @@ Dataverse provides three ways to query rows:
 > [!NOTE]
 > Multi-table quick find is also called *categorized search*.
 
-For more information, see [Compare searches](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#compare-model-driven-apps-in-dynamics-365-searches).
+For more information, see [Compare searches](/powerapps/user/search).
 
 ### Relevance search
 
