@@ -47,16 +47,16 @@ You export the ribbon by including it in a solution and then exporting the solut
   
 6. Click the **Save** icon.  
   
-7. If you want to edit the ribbon for specific entities:  
+7. If you want to edit the ribbon for specific tables:  
   
-   1.  Click **Add Existing** and then click **Entity**.  
+   1.  Click **Add Existing** and then click **Table**.  
   
-   2.  Select the entities you want to include in the Solution and then click **OK**.  
+   2.  Select the tables you want to include in the Solution and then click **OK**.  
   
        > [!NOTE]
-       >  For the purpose of editing entity ribbons, you do not have to include required components. If you intend to export this solution and apply it to another system, you should include required components.  
+       >  For the purpose of editing table ribbons, you do not have to include required components. If you intend to export this solution and apply it to another system, you should include required components.  
   
-8. If you want to edit global ribbons or add a custom group to all entities, click **Add Existing** and then click **Application Ribbons**.  
+8. If you want to edit global ribbons or add a custom group to all tables, click **Add Existing** and then click **Application Ribbons**.  
   
 9. Click **Save and Close**.  
   
@@ -66,16 +66,16 @@ You export the ribbon by including it in a solution and then exporting the solut
 1. Go to **Settings > Solutions**. 
 1. Double-click a solution to open it.  
   
-5. If you want to edit the ribbon for specific entities:  
+5. If you want to edit the ribbon for specific tables:  
   
-   1.  Click **Add Existing** and then click **Entity**.  
+   1.  Click **Add Existing** and then click **Table**.  
   
-   2.  Select the entities you want to include in the Solution and then click **OK**.  
+   2.  Select the tables you want to include in the Solution and then click **OK**.  
   
        > [!NOTE]
-       >  For the purpose of editing entity ribbons, you do not have to include required components. If you intend to export this solution and apply it to another system, you should include required components.  
+       >  For the purpose of editing table ribbons, you do not have to include required components. If you intend to export this solution and apply it to another system, you should include required components.  
   
-6. If you want to edit global ribbons, such as to add custom button to all entities: click **Add Existing** and then click **Application Ribbons**.  
+6. If you want to edit global ribbons, such as to add custom button to all tables: click **Add Existing** and then click **Application Ribbons**.  
   
 7. Click **Save and Close**.  
   
