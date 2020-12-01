@@ -32,7 +32,7 @@ The first step to move your customizations is to create a solution in Dataverse.
 > [!NOTE]
 > Only include items that you or your team have created. Solutions that contain any of the standard Dataverse or Dynamics 365 tables, such as account or contact, won’t import.
 
-For information about the differences between Dataverse for Teams and Dataverse see [How are Dataverse for Teams and Dataverse different?](data-platform-compare.md)
+For information about the differences between Dataverse for Teams and Dataverse, see [How are Dataverse for Teams and Dataverse different?](data-platform-compare.md)
 
 For information about how to create a solution with Dataverse, see [Create a solution](../maker/common-data-service/create-solution.md). 
 
@@ -71,7 +71,7 @@ When you download the log file, you will find an XML file in your browser's defa
 
 When you are working with a new Dataverse for Teams environment, the **Import** command is missing because the **See all** link **Build** tab is not displayed for that environment.  
 
-To work around this issue, create and save an app in the environment. When an item exists in the environment the **See all** link is available and you will be able to browse to the **Build** tab.
+To work around this issue, create and save an app in the environment. When an item exists in the environment, the **See all** link is available and you will be able to browse to the **Build** tab.
 
 ### See also
 
