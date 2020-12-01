@@ -49,9 +49,15 @@ Customizers can use the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liqu
 
 Enabling the Power BI Embedded service allows you to embed dashboards and reports created in the new workspace of Power BI. The dashboards and reports are embedded on webpages in a portal by using the powerbi Liquid tag.
 
-**Prerequisites**: Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the Power Apps Portals admin center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces).
+### Prerequisites
 
-**Power BI Embedded service limitations**: For information on limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
+Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the Power Apps Portals admin center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces).
+
+### Power BI Embedded service limitations
+
+Power Apps portals doesn't support [Azure Analysis Services live connections](https://docs.microsoft.com/power-bi/developer/embedded/embedded-row-level-security#working-with-analysis-services-live-connections). You an use Analysis Services in import mode with row-level security (RLS) applied in the report instead of Analysis Services.
+
+For more information about Power BI Embedded service limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
 > [!NOTE]
 > Ensure that Power BI visualization is enabled for the powerbi Liquid tag to work.
