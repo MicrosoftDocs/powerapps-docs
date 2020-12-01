@@ -132,7 +132,7 @@ The blogs object allows you to select a specific blog or blog posts.
 
 <div class=panel-heading>
 
-{% assign sitemarker = sitemarkers[Blog Home] %}
+{% assign sitemarker = sitemarkers["Blog Home"] %}
 
 {% assign snippet = snippets[Home Blog Activity Heading] %}
 
@@ -1158,7 +1158,7 @@ Allows you to load any site marker by name. If the sitemarker exists, a sitemark
 ```
 {{ sitemarkers[Login].url }}
 
-{% assign my_sitemarker = sitemarkers[My Site Marker] %}
+{% assign my_sitemarker = sitemarkers["My Site Marker"] %}
 
 {% if my_sitemarker %}
 
