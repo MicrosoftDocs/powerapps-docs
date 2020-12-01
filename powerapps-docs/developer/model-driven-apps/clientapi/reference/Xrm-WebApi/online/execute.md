@@ -71,8 +71,7 @@ search.app:
 <td>No</td>
 <td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following attributes:</p>
 <ul>
-<li><b>json</b>: (Optional). Promise. Response body in JSON format.</li>
-<li><b>text</b>: (Optional). Promise. Response body in plaintext format. </li>
+<li><b>body (Deprecated)</b>: Object. Response body.</li>
 <li><b>headers</b>: Object. Response headers.</li>
 <li><b>ok</b>: Boolean. Indicates whether the request was successful.</li>
 <li><b>status</b>: Number. Numeric value in the response status code. For example: <b>200</b></li>
