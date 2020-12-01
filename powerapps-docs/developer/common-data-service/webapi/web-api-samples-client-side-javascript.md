@@ -1,5 +1,5 @@
 ---
-title: "Web API  Data operations Samples (Client-side JavaScript) (Common Data Service)| Microsoft Docs"
+title: "Web API  Data operations Samples (Client-side JavaScript) (Microsoft Dataverse)| Microsoft Docs"
 description: "This topic provides a description of various Web API samples that are implemented using Client-side JavaScript"
 ms.custom: ""
 ms.date: 10/31/2018
@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-This topic provides common understanding about Web API samples using client-side JavaScript. While each sample focuses on a different aspect of Common Data Service Web API, they all follow similar process and structure described in this topic.  
+This topic provides common understanding about Web API samples using client-side JavaScript. While each sample focuses on a different aspect of Microsoft Dataverse Web API, they all follow similar process and structure described in this topic.  
 
 <a name="bkmk_listOfSamples"></a>   
 ## Web API Samples using client-side JavaScript  
@@ -34,8 +34,8 @@ This topic provides common understanding about Web API samples using client-side
   
 |Sample|Sample Group|Description|  
 |------------|------------------|-----------------|  
-|[Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate Common Data Service entity records.|  
-|[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Common Data Service query functions. Includes demonstration of working with pre-defined queries and using FetchXML to perform  queries.|  
+|[Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate Dataverse entity records.|  
+|[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Dataverse query functions. Includes demonstration of working with pre-defined queries and using FetchXML to perform  queries.|  
 |[Web API Conditional Operations Sample (Client-side JavaScript)](samples/conditional-operations-client-side-javascript.md)|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|Demonstrates how to perform conditional operations. The behavior of these operations depends on criteria you specify.|  
 |[Web API Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|Demonstrates how to use bound and unbound functions and actions, including custom actions.|  
   
@@ -43,30 +43,30 @@ This topic provides common understanding about Web API samples using client-side
 ## How to download the source code for the sample.  
  The source code for each sample is available on [MSDN Code Gallery](https://code.msdn.microsoft.com/site/search?f%5b0%5d.type=user&f%5b0%5d.value=microsoft%20dynamics%20crm%20sdk%20documentation%20team). The link to download each sample is included in the individual page for that sample.  
   
- After you download the sample, extract the compressed file. Find the Microsoft Visual Studio 2015 solution for each sample within the C# folder because the project is an empty ASP.NET web application project. A Common Data Service solution is also provided in the download that you can import and run.  
+ After you download the sample, extract the compressed file. Find the Microsoft Visual Studio 2015 solution for each sample within the C# folder because the project is an empty ASP.NET web application project. A Dataverse solution is also provided in the download that you can import and run.  
   
 > [!NOTE]
->  Neither Visual Studio or ASP.NET is required to develop client-side JavaScript for Common Data Service, however the MSDN Code Gallery site requires files be included in a Visual Studio as a container.  However, Visual Studio does provide a good experience for writing JavaScript.  
+>  Neither Visual Studio or ASP.NET is required to develop client-side JavaScript for Dataverse, however the MSDN Code Gallery site requires files be included in a Visual Studio as a container.  However, Visual Studio does provide a good experience for writing JavaScript.  
   
 <a name="bkmk_HowToImport"></a>   
-## How to import the Common Data Service solution that contains the sample.  
- Within each project you will find a Common Data Service managed solution file. The name of this file will depend on the sample's project name, but the file name will end with `_managed.zip`.  
+## How to import the Dataverse solution that contains the sample.  
+ Within each project you will find a Dataverse managed solution file. The name of this file will depend on the sample's project name, but the file name will end with `_managed.zip`.  
   
- To import the Common Data Service solution to your Common Data Service server, do the following:  
+ To import the Dataverse solution to your Dataverse server, do the following:  
   
-1.  Extract the contents of the downloaded zip file and locate the Common Data Service solution file, which will also be a zip file. For example, if you downloaded the `Basic Operations` sample, look for the Common Data Service solution zip file with the name `WebAPIBasicOperations\WebAPIBasicOperations_1_0_0_0_managed.zip`.  
+1.  Extract the contents of the downloaded zip file and locate the Dataverse solution file, which will also be a zip file. For example, if you downloaded the `Basic Operations` sample, look for the Dataverse solution zip file with the name `WebAPIBasicOperations\WebAPIBasicOperations_1_0_0_0_managed.zip`.  
   
-2.  In the Common Data Service UI, go to **Settings > Solutions**. This page lists all solutions on your Common Data Service server. After you finished importing this solution, the solution name for that sample will appear in this list (e.g.: **Web API Basics Operations**).  
+2.  In the Dataverse UI, go to **Settings > Solutions**. This page lists all solutions on your Dataverse server. After you finished importing this solution, the solution name for that sample will appear in this list (e.g.: **Web API Basics Operations**).  
   
 3.  Click **Import** and follow the instructions on the import dialog to complete this action.  
   
 <a name="bkmk_howToRunSample"></a>   
 ## How to run the sample to see the script in action  
- The sample program runs as a web resource within Common Data Service. The imported solution provides a configuration page that gives you an option to keep or delete sample data and a button to start the sample program.
+ The sample program runs as a web resource within Dataverse. The imported solution provides a configuration page that gives you an option to keep or delete sample data and a button to start the sample program.
   
  To run the sample, do the following:  
   
-1.  From the **All Solutions** page in Common Data Service, click the solution name (e.g.: **Web API Basics Operations** link). This will open the solution's properties in a new window.  
+1.  From the **All Solutions** page in Dataverse, click the solution name (e.g.: **Web API Basics Operations** link). This will open the solution's properties in a new window.  
   
 2.  From the left navigation menu, click **Configuration**.  
   
@@ -80,7 +80,7 @@ This topic provides common understanding about Web API samples using client-side
   
 -   Program output and error messages are sent to the browser’s debugger console. To see these output, open the console window first before running the sample.  Press F12 to access the developer tools, including the console window, in the Internet Explorer and Microsoft Edge browsers.  
   
--   These samples use the browser native [ES6-Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx) implementation for modern browsers that support it. For Internet Explorer, this sample uses the [ES6-Promise polyfill](https://github.com/stefanpenner/es6-promise) because Internet Explorer is the only browser supported by Common Data Service which does not have native support for this feature.  
+-   These samples use the browser native [ES6-Promise](https://msdn.microsoft.com/library/dn802826\(v=vs.94\).aspx) implementation for modern browsers that support it. For Internet Explorer, this sample uses the [ES6-Promise polyfill](https://github.com/stefanpenner/es6-promise) because Internet Explorer is the only browser supported by Dataverse which does not have native support for this feature.  
   
      Promises are not required. Similar interactions can be performed using callback functions.  
   
@@ -149,7 +149,7 @@ This topic provides common understanding about Web API samples using client-side
   
 ### See also
 
-[Use the Common Data Service Web API](overview.md)<br />
+[Use the Dataverse Web API](overview.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Samples (C#)](web-api-samples-csharp.md)   
  

@@ -1,5 +1,5 @@
 ---
-title: "Create Many-to-many table relationships in Common Data Service using Power Apps portal | MicrosoftDocs"
+title: "Create Many-to-many table relationships in Microsoft Dataverse using Power Apps portal | MicrosoftDocs"
 description: "Learn how to create many-to-may relationships"
 ms.custom: ""
 ms.date: 08/27/2019
@@ -22,15 +22,15 @@ search.app:
   - D365CE
 ---
 
-# Create Many-to-many table relationships in Common Data Service using Power Apps portal
+# Create Many-to-many table relationships in Microsoft Dataverse using Power Apps portal
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit Many-to-many table relationships for Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit Many-to-many table relationships for Dataverse.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create N:N (many-to-many) table relationships](create-edit-nn-relationships.md)
-- [Create N:N (many-to-many) table relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md)
+- [Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md)
 
 ## View Many-to-many table relationships
 
@@ -89,4 +89,4 @@ Deleting the Many-to-Many relationship will delete the relationship table create
 ### See also
 
 [Create N:N (many-to-many) table relationships](create-edit-nn-relationships.md)<br />
-[Create N:N (many-to-many) table relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md)
+[Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md)

@@ -107,5 +107,5 @@ When a solution with a Power BI embedded component will be moved to other enviro
 [Create or edit model-driven app dashboards](create-edit-dashboards.md) <br />
 [View table data in Power BI Desktop](../common-data-service/view-entity-data-power-bi.md) <br />
 [Use Power BI](use-power-bi.md) <br />
-[Use Power BI with Common Data Service](../common-data-service/use-powerbi-with-cds.md) <br />
+[Use Power BI with Microsoft Dataverse](../common-data-service/use-powerbi-with-cds.md) <br />
 [Create a Power BI report using the Common Data Service connector](../common-data-service/data-platform-powerbi-connector.md)

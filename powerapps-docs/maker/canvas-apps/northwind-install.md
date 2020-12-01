@@ -17,14 +17,14 @@ search.app:
 
 # Install Northwind Traders database and apps
 
-By following the steps in [this series of topics](northwind-orders-canvas-part1.md), you can discover concepts about relational data as implemented in a sample database in Common Data Service. You can also explore sample business apps, both canvas and model-driven, for managing that data and earn practical experience by creating such an app. This first topic explains how to install the Northwind Traders database in your own environment and gain access to the sample apps, which you can open for editing to reveal how they were built.
+By following the steps in [this series of topics](northwind-orders-canvas-part1.md), you can discover concepts about relational data as implemented in a sample database in Microsoft Dataverse. You can also explore sample business apps, both canvas and model-driven, for managing that data and earn practical experience by creating such an app. This first topic explains how to install the Northwind Traders database in your own environment and gain access to the sample apps, which you can open for editing to reveal how they were built.
 
 Northwind Traders is a fictitious organization that manages orders, products, customers, suppliers, and many other aspects of a small business. This sample appeared with the first versions of Microsoft Access and is still available as an Access template.
 
 ## Prerequisites
 
-- A Power Apps license that supports Common Data Service. You can [use a free trial license](../signup-for-powerapps.md) for 30 days.
-- An environment with a Common Data Service database. You can [create such an environment](https://docs.microsoft.com/power-platform/admin/create-environment) if you have appropriate permissions.
+- A Power Apps license that supports Dataverse. You can [use a free trial license](../signup-for-powerapps.md) for 30 days.
+- An environment with a Dataverse database. You can [create such an environment](https://docs.microsoft.com/power-platform/admin/create-environment) if you have appropriate permissions.
 
 ## Download the solution
 
@@ -35,7 +35,7 @@ This [solution](../../developer/common-data-service/introduction-solutions.md) f
 
 ## Install the solution
 
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Common Data Service database.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Dataverse database.
 
 1. In the left navigation pane, select **Solutions**, and then select **Import** in the toolbar near the top of the screen:
 
@@ -87,10 +87,10 @@ This [solution](../../developer/common-data-service/introduction-solutions.md) f
     > [!div class="mx-imgBorder"]
     > ![Northwind database in list of apps](media/northwind-install/sample-data-app.png)
 
-1. When the app asks for permission to interact with Common Data Service, select **Allow**:
+1. When the app asks for permission to interact with Dataverse, select **Allow**:
 
     > [!div class="mx-imgBorder"]
-    > ![Consent dialog box for Common Data Service](media/northwind-install/sample-data-permission.png)
+    > ![Consent dialog box for Dataverse](media/northwind-install/sample-data-permission.png)
 
 1. After the app loads and shows that the sample entities contain no records, select **Load Data** to populate the entities:
 

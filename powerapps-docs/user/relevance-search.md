@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/04/2020
+ms.date: 11/17/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -36,19 +36,19 @@ Relevance search brings the following enhancements and benefits:
   
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results. 
 
-- Relevance Search can comb through the text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.
+- Relevance Search can comb through the text in a document that's stored in Microsoft Dataverse, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.
 - Relevance Search enables you to search for rows that are shared with you and rows that you own.
     > [!NOTE]
     > - Certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify rows. Because they're ignored during search, these words are also not highlighted in results.
     > - Highlighted terms are often returned as a portion of the full value in a column because only the matched terms are highlighted.
     > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a column has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results where part of the matched column is truncated.
 
-- Includes search results for text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
+- Includes search results for text in a document that's stored in Dataverse, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
   
 - Enables you to search for rows that are shared with you and rows that you own.  
   
   > [!NOTE]
-  >  Hierarchical security models aren't supported. Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in relevance search.  
+  >  Hierarchical security models aren't supported. Even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see the result in relevance search.  
   
 - Lets you also search for choices and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry column, which is a searchable option set.
 
@@ -66,13 +66,11 @@ Relevance Search needs to be enabled on by the administrator for your organizati
 
 ### Turn on the new Relevance Search experience 
 
-The new search experience is available as a feature setting in the Power Platform admin Center. It combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. When the **Use new search experience** setting is turned on, it will enable the new experience to all the apps in the environment.
+The new Relevance Search experience combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. The new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)
 
  > [!div class="mx-imgBorder"]
  > ![Turn on new search experience](media/admin-enable-search.jpg) 
 
-> [!NOTE]
-> The **Use new search experience** feature setting is only available for environments where Relevance Search is already turned on. For environments where Relevance Search has never been not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default.
 
 ## Use the new Relevance Search experience 
 
@@ -200,7 +198,7 @@ If your organization has turned on both search options (relevance search and cat
 
 ## Filter rows with facets
 
-With Common Data Service, you can now refine your search results by using facets and filters. Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms.
+With Dataverse, you can now refine your search results by using facets and filters. Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms.
 
 Facets are available in the leftmost pane. Immediately after you perform a search, the following global facets are available for four common columns:  
   

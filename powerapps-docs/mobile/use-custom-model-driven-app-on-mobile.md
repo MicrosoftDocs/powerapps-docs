@@ -33,7 +33,7 @@ It's easy to get around in the Power Apps mobile app. The following illustration
 Legend:
 
 1. **Site map**: Open the menu and move between apps, get to your favorite and recently used rows, access settings, and more.
-2. **Search**: Search for app rows in Common Data Service.
+2. **Search**: Search for app rows in Microsoft Dataverse.
 3. **New**: Create a new row and quickly enter almost any type of information into the system.
 4. **Relationship Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
 

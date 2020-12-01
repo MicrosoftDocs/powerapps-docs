@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Solution explorer provides one way to create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships for Common Data Service.
+Solution explorer provides one way to create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships for Microsoft Dataverse.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)

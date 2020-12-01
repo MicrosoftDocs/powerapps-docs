@@ -36,7 +36,7 @@ Track expense reports from submission to approval. Tally line items as individua
 This list stores the expense reports.
 
 1. Open a web browser.
-1. Go to the SharePoint site where you want to create the HelpDesk list.
+1. Go to the SharePoint site where you want to create the Expenses list.
 1. Sign in with an account that has permission to create lists.
 1. Select the **gear icon** in the top-right portion of the web page.
 1. Select **Add an app**.

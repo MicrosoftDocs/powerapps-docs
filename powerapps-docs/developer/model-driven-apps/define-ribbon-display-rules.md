@@ -180,7 +180,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 - NoRelationship  
 
   `<SkuRule>`  
-  Use this kind of rule to display a ribbon element for a specific SKU version of Common Data Service, as follows:  
+  Use this kind of rule to display a ribbon element for a specific SKU version of Microsoft Dataverse, as follows:  
 
 - OnPremise  
 

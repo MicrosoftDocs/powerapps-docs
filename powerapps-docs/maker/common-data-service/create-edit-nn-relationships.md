@@ -1,5 +1,5 @@
 ---
-title: "Create many-to-many table relationships in Common Data Service overview | MicrosoftDocs"
+title: "Create many-to-many table relationships in Microsoft Dataverse overview | MicrosoftDocs"
 description: "Learn how to create many-to-many table relationships"
 ms.custom: ""
 ms.date: 04/07/2020
@@ -41,8 +41,8 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 |Designer| Description|
 |--|--|
-|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create Many-to-many table relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)|
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create N:N (many-to-many) table relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md) |
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create Many-to-many table relationships in Microsoft Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)|
+|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md) |
 
 > [!NOTE]
 > You can also create new Many-to-many (N:N) table relationship in your environment using the following:
@@ -59,7 +59,7 @@ You should use the Power Apps portal to create and edit Many-to-many (N:N) table
 ## See also
 
 [Create and edit relationships between tables](create-edit-entity-relationships.md)<br />
-[Create Many-to-many table relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
-[Create N:N (many-to-many) table relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md)<br />
+[Create Many-to-many table relationships in Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
+[Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md)<br />
 [Developer documentation: Customize table relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
 [Developer documentation: table relationship eligibility](https://docs.microsoft.com/dynamics365/customer-engagement/developer/table-relationship-eligibility)

@@ -1,5 +1,5 @@
 ---
-title: "Use Postman to perform operations with the Web API (Common Data Service for Apps)| MicrosoftDocs"
+title: "Use Postman to perform operations with the Web API (Microsoft Dataverse for Apps)| MicrosoftDocs"
 description: "Learn how to compose and send Web API requests using Postman."
 ms.custom: 
 ms.date: 03/22/2019
@@ -10,9 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: AB50128B-D8E3-47A3-A0F8-9594EF6B7022
 caps.latest.revision: 7
-author: susikka
-ms.author: susikka
-manager: shujoshi
+author: phecke
+ms.author: pehecke
 search.audienceType: 
   - developer
 search.app: 

@@ -1,5 +1,5 @@
 ---
-title: "Data import entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Data import entities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Lists the data import entities used to create data maps, configure and run data imports, and log failure information." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The Common Data Service data import entities are used to create data maps, configure and run data imports, and log failure information.  
+The Microsoft Dataverse data import entities are used to create data maps, configure and run data imports, and log failure information.  
 
  The following table lists the entities that are used to configure, run, and log failures for import operations.  
 
@@ -35,10 +35,10 @@ The Common Data Service data import entities are used to create data maps, confi
 |                    Entity name (display name)                     |                                                                                                                      Description                                                                                                                       |
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                       importmap (data map)                        |                                                                                                           Data map that is used for import.                                                                                                            |
-|                  columnmapping (column mapping)                   |                                                           Mapping between a column in the source file and a target attribute in Common Data Service.                                                           |
+|                  columnmapping (column mapping)                   |                                                           Mapping between a column in the source file and a target attribute in Dataverse.                                                           |
 |                  lookupmapping (lookup mapping)                   |       Mapping between a column in the source file, or an output of a complex transformation and a target attribute of type <xref:Microsoft.Xrm.Sdk.EntityReference>. Used in conjunction with column mapping or complex transformation mapping.        |
-|                   ownermapping (owner mapping)                    |                                                             Mapping between a user specified in the source file and a user in Common Data Service.                                                             |
-|                picklistmapping (picklist mapping)                 | Mapping between a column in the source file and a target attribute of <xref:Microsoft.Xrm.Sdk.OptionSetValue>, Boolean, state, or status type in Common Data Service. Used in conjunction with column mapping. |
+|                   ownermapping (owner mapping)                    |                                                             Mapping between a user specified in the source file and a user in Dataverse.                                                             |
+|                picklistmapping (picklist mapping)                 | Mapping between a column in the source file and a target attribute of <xref:Microsoft.Xrm.Sdk.OptionSetValue>, Boolean, state, or status type in Dataverse. Used in conjunction with column mapping. |
 |          transformationmapping (transformation mapping)           |                                                                                                            Complex transformation mapping.                                                                                                             |
 | transformationparametermapping (transformation parameter mapping) |                                                                                           Parameter mapping that is used in complex transformation mapping.                                                                                            |
 

@@ -33,7 +33,7 @@ You can perform the following edits to a table:
 
 - Table properties. More information: [Edit table properties using Power Apps](#edit-table-properties-using-power-apps)
 
-- **Columns**. More information:  [Create and edit columns for Common Data Service](create-edit-fields.md)
+- **Columns**. More information:  [Create and edit columns for Microsoft Dataverse](create-edit-fields.md)
   
 - **Relationships**. More information:  [Create and edit relationships between tables](create-edit-entity-relationships.md)
 

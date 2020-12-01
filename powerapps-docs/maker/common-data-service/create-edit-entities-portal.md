@@ -27,10 +27,10 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit tables for  Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit tables for  Microsoft Dataverse.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
-- [Create and edit tables in Common Data Service](create-edit-entities.md)
+- [Create and edit tables in Dataverse](create-edit-entities.md)
 - [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
 
 ## View tables
@@ -67,10 +67,10 @@ Enter data for the following columns
 |--|--|
 |**Display name**|This is the singular name for the table that will be shown in the app. This can be changed later.|
 |**Plural display name**|This is the plural name for the table that will be shown in the app. This can be changed later.|
-|**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
+|**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Dataverse solution publisher. You cannot change this after the table is saved.|
 |**Primary Name**|This is the only column visible at this point.| Edit it if you want to change the **Display Name**or **Name** of the column.
 |**Display name**|This is the main user-friendly text identifier for your row (typically a name or a number). The value of this column is shown to users when they need to select from a list of rows.
-|**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the table is saved.|
+|**Name**|This column is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Dataverse solution publisher. You cannot change this after the table is saved.|
 
 Select **Enable Attachments** to append notes and files to rows for this table.
 
@@ -163,5 +163,5 @@ If the table has dependencies that prevent it from being deleted you will see an
 
 ### See also
 
-[Create and edit tables in Common Data Service](create-edit-entities.md)<br />
+[Create and edit tables in Dataverse](create-edit-entities.md)<br />
 [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)

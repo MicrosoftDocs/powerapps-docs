@@ -1,6 +1,6 @@
 ---
 title: "Define alternate keys using solution explorer | MicrosoftDocs"
-description: "Learn how to define alternate keys that can be used to reference rows in Common Data Service using solution explorer"
+description: "Learn how to define alternate keys that can be used to reference rows in Microsoft Dataverse using solution explorer"
 ms.custom: ""
 ms.date: 08/01/2020
 ms.reviewer: ""
@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Solution explorer provides one way to view and create alternate keys for Common Data Service.
+Solution explorer provides one way to view and create alternate keys for Microsoft Dataverse.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Define alternate keys to reference rows](define-alternate-keys-reference-records.md)<br />
@@ -42,7 +42,7 @@ Part of the name of any alternate key you create is the customization prefix. Th
 
 ## View alternate keys
 
-1. With solution explorer open, under **Components** expand **Tables** and select the table where you want to view alternate keys.
+1. With solution explorer open, under **Components** expand **Entities** and select the table where you want to view alternate keys.
 2. Expand the table and select **Keys**.
 
     ![View alternate keys](media/view-alternate-keys-solution-explorer.png)
@@ -67,7 +67,7 @@ Part of the name of any alternate key you create is the customization prefix. Th
 
 ## Delete an alternate key
 
-While [viewing alternate keys](#view-alternate-keys), select ![Delete](media/delete.gif).
+While [viewing alternate keys](#view-alternate-keys), select ![Delete command](media/delete.gif).
 
 ### See also
 

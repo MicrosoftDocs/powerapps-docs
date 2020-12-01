@@ -50,7 +50,7 @@ Share your portal with internal or external users. Follow the steps mentioned in
 To share the portal with internal users you must first create a security role and then assign users to the security role so they can use the portal.
 
 > [!NOTE]
-> As a user in Common Data Service, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. It is recommended that you are in a System Administrator security role in the corresponding Common Data Service database.
+> As a user in Microsoft Dataverse, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. It is recommended that you are in a System Administrator security role in the corresponding Dataverse database.
 
 #### Step 1: Create a security role
 
