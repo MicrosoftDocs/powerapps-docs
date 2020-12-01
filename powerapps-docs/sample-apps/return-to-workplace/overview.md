@@ -58,7 +58,7 @@ See also:
 |Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Facility Safety Management app](app-for-facility-manager.md)
 |Use the employee app|Used by employees who are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to having no symptoms before returning to a reopened workplace.|Employees|[Employee Return to the Workplace app](app-for-employee.md)
 |Use the care management app|Used to manage employee cases.|Case managers|[Workplace Care Management app](app-for-health-and-safety-lead.md)
-|Use the portal |Used by facility managers to give third parties access to the facility.|Facility managers|[Return to the Workplace portal](portal-extension.md)|
+|Use the portal |Used by facility managers to give third parties access to the facility.|Facility managers|[Return to the Workplace Guest Portal](portal-extension.md)|
 
 ## Feedback about the solution
 
@@ -66,6 +66,6 @@ To provide feedback about the Return to the Workplace solution, visit <https://a
 
 ### Disclaimer
 
-This app is a sample and is provided "as is" without warranty of any kind.  Customer bears the sole risk and responsibility for any use of this app.  Customer is expected to update and customize this app as appropriate for its own needs, and is responsible for ensuring that its implementation complies with all laws and regulations applicable to Customer's use.  Microsoft is not responsible for the performance, accuracy, or results from the use of the app or any modifications to the app.  
+This app is a sample and is provided "as is" without warranty of any kind. Customer bears the sole risk and responsibility for any use of this app.  Customer is expected to update and customize this app as appropriate for its own needs, and is responsible for ensuring that its implementation complies with all laws and regulations applicable to Customer's use.  Microsoft is not responsible for the performance, accuracy, or results from the use of the app or any modifications to the app.  
 
 This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such. Sample data included in this app are for illustration only and are fictitious. No real association is intended or inferred. 

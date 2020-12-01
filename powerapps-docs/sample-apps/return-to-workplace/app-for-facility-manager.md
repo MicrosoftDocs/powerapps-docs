@@ -207,7 +207,7 @@ To access the facility manager dashboard:
 
 This tab shows data from public health sources by country (by state and by county in the United States of America). 
 
-> ![NOTE]
+> [!NOTE]
 > The county level data is available only from the last 6 months.
 
 - **Confirmed COVID Cases**  shows the associated risk level, number of cases for the last reporting day, 14 day average in absolute numbers and per population, daily trend, and the total number of cases and per population.
@@ -393,13 +393,13 @@ Case managers or facility managers can block the employees from making bookings 
 3. Select **New Access Action**
 
    > [!div class="mx-imgBorder"]
-   ![Access Action list on Employee form](media/facility-manager-employee-block2.jpg "Access Action list on Employee form")
+   > ![Access Action list on Employee form](media/facility-manager-employee-block2.png "Access Action list on Employee form")
 
 4. Select **Access Status** as **Blocked** and set **Access Available Date** to a date in the future when you would like the block to expire. You can enter information in the **Notes** so that employee can see the information.
 5. Select **Save & Close**
 
    > [!div class="mx-imgBorder"]
-   ![Creating an Access Action](media/facility-manager-employee-block3.jpg "Creating an Access Action")
+   > ![Creating an Access Action](media/facility-manager-employee-block3.png "Creating an Access Action")
 
 An employee is now blocked and can no longer make bookings via the Employee app. All the existing bookings are disabled. A  warning notification is automatically created and set as **Send as push notification** and the body has the notes of the access action.
 
@@ -412,12 +412,12 @@ Every time an access action is created, a notification is created for the employ
 3. Select **New Notification**.
 
    > [!div class="mx-imgBorder"]
-   ![New notification](media/facility-manager-employee-block4.jpg "New Notification")
+   > ![New notification](media/facility-manager-employee-block4.png "New Notification")
 
 4. Select **Notification Type** as information, warning or error. Add a **Header** and **Body** for the notification. Set **Send as email** to **Yes**, if you want to send an email to the employee.
 
     > [!div class="mx-imgBorder"]
-    ![Notification type](media/facility-manager-employee-block5.jpg "Notification type")
+    > ![Notification type](media/facility-manager-employee-block5.png "Notification type")
 
 5. Select **Save & Close**
 

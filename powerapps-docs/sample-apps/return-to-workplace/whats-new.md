@@ -20,9 +20,11 @@ This article provides resources where you can learn about the new features that 
 
 Facility managers can provide facility access to third parties. A third party can choose a facility, attest to being symptom-free and receive a day pass for facility entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
 
-![Guest portal](media/whats-new-guest-portal8.png "Guest portal")
+> [!div class="mx-imgBorder"]
+> ![Guest portal](media/whats-new-guest-portal8.png "Guest portal")
 
-![New guest](media/whats-new-guest-portal1.png "New guest")
+> [!div class="mx-imgBorder"]
+> ![New guest](media/whats-new-guest-portal1.png "New guest")
 
 With the introduction of portals, we added a new way for users approaching the solution. Below you will find a comparison how the portal relates to the mobile app.
 
@@ -48,14 +50,18 @@ Facility or case managers can now manage facility access for employees via acces
 
 Employees can now have in app notifications when facility access has been enabled or disabled. Out of the box email notifications are also provided, but these can be extended via Power Automate or other solutions.
 
-![Notifications](media/whats-new-notifications.png "Notifications")
+> [!div class="mx-imgBorder"]
+> ![Notifications](media/whats-new-notifications.png "Notifications")
 
 ### Dashboards with state and county level virus data
 
 COVID-19 data and insights is now available at the state and county level for USA, including new metrics such as confirmed cases per 100K and Fatal cases per 1M population.
 
-![Dashboards state level](media/whats-new-state.png "Dashboards state level")
-![Dashboards county level](media/whats-new-county.png "Dashboards county level")
+> [!div class="mx-imgBorder"]
+>![Dashboards state level](media/whats-new-state.png "Dashboards state level")
+
+> [!div class="mx-imgBorder"]
+> ![Dashboards county level](media/whats-new-county.png "Dashboards county level")
 
 ## New and updated features in October 2020 (v1.2)
 
@@ -78,7 +84,7 @@ Manual contact tracing can quickly identify case contacts through a suggested li
 
 Case managers can now manage facility access like blocking employees entering into the facility. When blocking the employee, you can provide a notification to the employee when the employee is trying to book a facility. Case managers can also set the date when facility access will be available again for the  employee. More information: [Workplace Care Management app](app-for-health-and-safety-lead.md)
 
-![Access management 1](media/whats-new-employee-app-access-management1.jpg "Access management 1")    ![Access management 2](media/whats-new-employee-app-access-management2.jpg "Access management 2")
+![Access management 1](media/whats-new-employee-app-access-management1.png "Access management 1")    ![Access management 2](media/whats-new-employee-app-access-management2.png "Access management 2")
 
 ### Prioritized case dashboard 
 

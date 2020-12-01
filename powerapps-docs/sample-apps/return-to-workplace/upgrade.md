@@ -13,10 +13,6 @@ ms.reviewer: kvivek
 
 This article provides step-by-step instructions for how to upgrade the existing Return to the Workplace solution to the latest version. If you're deploying the solution for the first time, see [Deploy the Return to the Workplace solution](deploy.md). Follow the steps to upgrade the solution and then follow the upgrade path that is applicable for you.
 
-
-<!-- from editor: Is the last sentence, above, referring to the upgrade steps in this article? -->
-
-
 ## Prerequisites
 
 - You must be a global administrator or Microsoft Power Platform administrator to do the installation.

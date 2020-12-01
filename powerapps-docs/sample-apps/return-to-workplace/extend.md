@@ -12,8 +12,6 @@ ms.reviewer: nabuthuk
 
 # Extend the Return to the Workplace solution
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)] 
-
 This article provides a detailed description of the data model, workflows, and Power Automate flows used by the Return to the Workplace solution. The solution extends the Common Data Model and uses several of its components. Administrators, developers, and users should be mindful of the solution and possible implications of other solutions that coexist in the same environment.
 
 The definitions provided in this article indicate the intended purpose of the tables, relationships, columns, flows, and workflows contained in the Return to the Workplace solution. These definitions can be fully or partially adopted depending on your business requirements.
@@ -147,7 +145,7 @@ These tables are used primarily by the Portal extension. This list includes the 
 | Contact                  | Contains individuals and guests.                      |
 | Employee Booking         | Contains associations of employees and specific areas, floors, and facilities for a given time. |
 | Facility                 | Contains geographic information about a physical place and reopen phase planning progress.                      |
-| Guest Attestation        | Contains associations of guests to their attestations                      |
+| Guest Attestation        | Contains associations of guests to their attestations.                      |
 | Share Guest Attestation  | Contains records of attestations that will be emailed to a guest. |
 | Solution Setting         | Contains metadata used to drive platform behavior for specific facility groups.                      |
 |||
@@ -161,10 +159,10 @@ The data definitions section provides information about a list of tables, column
 | Display name          | Column type     | Description                                                                      | Platform use                    |
 |-----------------------|-----------------|----------------------------------------------------------------------------------|---------------------------------|
 | Employee              | Lookup          | Used to associate the contact.                                                   | Model-driven app and canvas app |
-| Access Status         | Option set      | Used to set type of access action                                                | Model-driven app and canvas app |
+| Access Status         | Option set      | Used to set type of access action.                                                | Model-driven app and canvas app |
 | Access Available date | Date time       | Set expire date for this record.                                                 | Model-driven app                |
-| Submitted by          | Lookup          | Lookup to system user. Used to capture original creator                           | Model-driven app                |
-| Source                | Text            | Used to capture source name, defaults to manual when created in model-driven app | Model-driven app                |
+| Submitted by          | Lookup          | Lookup to system user. Used to capture original creator.                           | Model-driven app                |
+| Source                | Text            | Used to capture source name, defaults to manual when created in model-driven app. | Model-driven app                |
 | Notes                 | Text            | Used to capture reason for the block or instructions to the end user.            | Model-driven app                |
 | Notification          | Lookup          | Used to associate to a specific notification so notes and body can be synched.   | Model-driven app and canvas app |
 |||||
@@ -496,9 +494,9 @@ The data definitions section provides information about a list of tables, column
 | Display name          | Column type  | Description                                                                   | Platform use    | Solution |
 |-----------------------|--------------|-------------------------------------------------------------------------------|-----------------|----------|
 | Name                  | Text         | The primary identifier of the record.                                         | Portal            | Portal |
-| Recipient             | Text         | Used to capture email address of the recipient                                | Portal            | Portal |
+| Recipient             | Text         | Used to capture email address of the recipient.                                | Portal            | Portal |
 | Language              | Text         | Used to capture the language used in the e-mail.                              | Portal            | Portal |
-| Guest Attestation     | Lookup       | Used to associate the guest attestation  to share.                            | Portal            | Portal |
+| Guest Attestation     | Lookup       | Used to associate the guest attestation to share.                            | Portal            | Portal |
 |||||
 
 ### Share Guest Registration
@@ -520,8 +518,8 @@ The data definitions section provides information about a list of tables, column
 | Allow on behalf of attestations         | option set | Indicates if guest are allowed to register other guest.                  | Model-driven app                | Portal |
 | Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app | Base |
 | Allow QR codes                          | Option Set | Indicates if QR codes are displayed on the pass.                         | Model-driven app and canvas app | Base |
-| Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registrations is available               | Model-driven app and canvas app | Base |
-| Allow Unauthenticated Guests to Create a Pass | Option Set | Indicates if unauthenticated persons can book a pass on the portal | Model-driven app                | Portal |
+| Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registrations is available.              | Model-driven app and canvas app | Base |
+| Allow Unauthenticated Guests to Create a Pass | Option Set | Indicates if unauthenticated persons can book a pass on the portal. | Model-driven app                | Portal |
 | Company Name                            | Text       | Used to describe the solution settings record.                            | Model-driven app | Base |
 | Facility Group                          | Lookup     | Links solution settings record to specific facility group.               | Model-driven app and canvas app | Base |
 | Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app | Base |
@@ -531,7 +529,7 @@ The data definitions section provides information about a list of tables, column
 | Guest Health Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest.          | Model-driven app and canvas app | Base |
 | Guest Privacy Terms & Agreement         | Text       | Instructions provided to an employee when registration a guest.           | Model-driven app and canvas app | Base |
 | Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                | Base |
-| Resources Text                          | Text       | instruction provided to resources when registering to the portal         | Model-driven app and Poral      | Portal |
+| Resources Text                          | Text       | instruction provided to resources when registering to the portal.         | Model-driven app and Portal      | Portal |
 ||||||
 
 ### State

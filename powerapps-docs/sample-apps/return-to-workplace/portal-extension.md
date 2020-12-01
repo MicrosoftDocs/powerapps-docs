@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Return to the Workplace Guest Portal
 
-The Return to the Workplace solution now contains a guest portal. This portal allows people outside your organization to get a pass by completing a health attestation. The portal has been designed to provide a mobile experience for users but will scale to tablet and desktop screens as well. This enables users to access  portal from any device.
+Return to the Workplace solution now includes a guest portal. Return to the Workplace Guest Portal allows users outside your organization to get a pass by completing a health attestation. The portal has been designed to provide a mobile experience for users but will scale to tablet and desktop screens as well. This enables users to access the portal from any device.
 
 > [!div class="mx-imgBorder"]
 > ![Portal welcome page](media/portals-welcome-screen.png "Portal welcome page")
@@ -22,9 +22,9 @@ The Return to the Workplace solution now contains a guest portal. This portal al
 
 ## Configuration
 
-To alter the portals behavior you can change the solution settings. You can alter the following portal behavior: 
+To alter the behavior of the portal you can make changes in the solution settings area. You can alter the following portal behavior: 
 
-- Allow self registration
+- Allow self-registration
 - Allow unauthenticated users to self-screen
 - Allow authenticated users to add guests or create passes for guests/dependents.
 
@@ -32,25 +32,25 @@ More information: [Configure the solution](configure.md#set-solution-settings)
 
 ## Getting started with the portal
 
-The Return to Workplace Guest Portal provides two ways of authentication for end users to self-screen.
+Return to the Workplace Guest Portal provides two ways of authentication for end-users.
 
-1. **Unauthenticated**: Allows users to complete guest attestation sent to them through email. Users can also create new guest attestations in order to get a pass to access a facility. The unauthenticated way approach is more relevant for infrequent visitors as it allows users to get a pass without creating an account.
+### Unauthenticated access to the portal
 
-2. **Authenticated**. Guests can be invited to the portal and are prompted to create an account. They can create passes for themselves and for their guests or dependents. The unauthenticated way approach is more relevant for frequent visitors, suppliers/vendors or schools, where a guardian creates a pass for a dependent.
+Allows users to complete guest attestation sent to them through email. Users can also create new guest attestations to get a pass to access a facility. The unauthenticated way approach is more relevant for infrequent visitors as it allows users to get a pass without creating an account.
 
-### Unauthenticated access to portal
+When the user opens the portal in the browser,  **GET STARTED** screen is displayed. Select **GET STARTED** to continue.
 
-When the user open the portal in the browser,  **GET STARTED** screen is displayed. Select **GET STARTED** to continue.
+In the unauthenticated mode, the users are directed to the **Terms and Conditions** page. Users must accept the terms and conditions by checking the box and selecting the **Accept** button. 
 
-In the unauthenticated mode the users are directed to the **terms and conditions** page. User must accept the terms and conditions by checking the box and selecting the **Accept** button. 
-
-On the next screen, the user provides contact details. After this a facility can be selected. At this point the visitor can self-screen and attest to the company policies.At the end of the process, a pass is shown and can be e-mailed if needed.
+On the next screen, the user provides contact details. After this, a facility can be selected. At this point, the visitor can self-screen and attest to the company policies. At the end of the process, a pass is shown and can be e-mailed if needed.
 
 ### Authenticated access to the portal
 
-The portal provides guests with the ability to attest to company health policies. If a user is not signed in, they are given the options to **SIGN IN**, **REGISTER**, or **REDEEM INVITATION**. More information: [Overview of authentication in Power Apps portals](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal-authentication) 
+Guests can be invited to the portal and are prompted to create an account. They can create passes for themselves and their guests or dependents. The unauthenticated way approach is more relevant for frequent visitors, suppliers/vendors, or schools, where a guardian creates a pass for a dependent.
 
-If the user wants to use the **REDEEM INVITATION** option to access the portal, the user need to do the following:
+Portal provides guests with the ability to attest to company health policies. If a user is not signed in, they are given the options to **SIGN IN**, **REGISTER**, or **REDEEM INVITATION**. More information: [Overview of authentication in Power Apps portals](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal-authentication) 
+
+If the user wants to use the **REDEEM INVITATION** option to access the portal, the user needs to do the following:
 
 1. Open the link in the e-mail to redeem the invitation and create an account.
 2. Select **Accept** on the daily health check.
@@ -70,22 +70,21 @@ The first two options are directly available from the home screen. The second tw
 
 On the home screen you have several options:
 
-- Hamburger menu thats displays
-    - HOME
-    - RESOURCES
-    - PROFILE 
-    - SIGN OUT
+- Hamburger menu that displays
+  - HOME
+  - RESOURCES
+  - PROFILE 
+  - SIGN OUT
 
-> [!div class="mx-imgBorder"]
-> ![Portal Hamburger Menu](media/portals-hamburguer-menu.png "Portal Hamburger Menu")
+  > [!div class="mx-imgBorder"]
+  > ![Portal Hamburger Menu](media/portals-hamburguer-menu.png "Portal Hamburger Menu")
 
 - CREATE PASS 
 - VIEW PASS 
 - REGISTER GUEST OR DEPENDENT
 
-> [!div class="mx-imgBorder"]
-> ![Welcome screen](media/portals-home-welcome.png "Welcome screen")
-
+  > [!div class="mx-imgBorder"]
+  > ![Welcome screen](media/portals-home-welcome.png "Welcome screen")
 
 #### Creating a pass
 
@@ -115,7 +114,7 @@ To create a guest pass using the portal:
    > ![Pass generation](media/portals-own-pass.png "Pass generation")
 
 > [!NOTE]
-> System administrator can disable the storing of negative attestations in the solution settings. This will stop a negative attestation from being created and wont save the record.
+> System administrator can disable the storing of negative attestations in the solution settings. This will stop a negative attestation from being created and won't save the record.
 
 #### View existing passes
 
@@ -138,7 +137,7 @@ The pass displays:
 > [!div class="mx-imgBorder"]
 > ![View pass](media/portals-pass.png "View pass")
 
-When **CANCEL PASS** is selected, the portal asks for confirmation. When a pass is cancelled it will no longer show up in the **VIEW PASS** screen and the attestation will be deactivated. The record will still exist in the system.
+When **CANCEL PASS** is selected, the portal asks for confirmation. When a pass is canceled it will no longer show up in the **VIEW PASS** screen and the attestation will be deactivated. The record will still exist in the system.
 
 > [!div class="mx-imgBorder"]
 > ![Cancel pass](media/portals-cancel-pass.png "Cancel pass")
@@ -155,7 +154,7 @@ The resources screen displays general information from your organization to the 
 
 #### Update profile
 
-On the profile screen, guests can perform basic operations. They can update their personal information, change their password or change their login method.
+On the profile screen, guests can perform basic operations. They can update their personal information, change their password, or change their login method.
 
 > [!div class="mx-imgBorder"]
 > ![Portal profile](media/portals-profile.png "Portal profile")
@@ -169,9 +168,9 @@ This section describes the way guests can start interacting with the portal.
 
 ### Sending invites to contacts
 
-In the Facility Management app and the Workplace Care Management app, the facility manager or the health and safety leader can invite contacts to the portal.
+In the Facility Management app and the Workplace Care Management app, the facility manager, or the health and safety leader can invite contacts to the portal.
 
-To invite contact to the portal:
+To invite a contact to the portal:
 
 1. Open the **Facility Management app**.
 2. Select **Solution Setup** area.
@@ -181,13 +180,13 @@ To invite contact to the portal:
 6. Set the field **Requires portal access** to **YES**
 7. Select **Save**.
 
-In the background, invite will be created and an e-mail is sent to the contact. The email contains a personal link that allows the contact to redeem the invitation and create an account that will be linked to the contact.
+In the background, an invite will be created and an e-mail is sent to the contact. The email contains a personal link that allows the contact to redeem the invitation and create an account that will be linked to the contact.
 
-In the Workplace Care Management app, skip step 1 and 2 described above. The **Employees** section is directly available from the side menu.
+In the Workplace Care Management app, skip steps 1 and 2 described above. The **Employees** section is directly available from the side menu.
 
 ## Creating dependents for guests
 
-To create a pass for the dependents, go to **Home** and select **REGISTER GUEST OR DEPENDENT**. Contact details must first be filled in for all the dependents:
+To create a pass for the dependents, go to **Home** and select **REGISTER GUEST OR DEPENDENT**. Contact details must first be entered for all the dependents:
 
 Mandatory fields: 
 
@@ -204,18 +203,18 @@ Non-mandatory fields:
 > ![Portal Register Guest or dependent](media/portals-register-dependent.png "Portal Register Guest or dependent")
 
 
-After creating dependents, user will see them listed by selecting the **CREATE PASS** option.
+After creating dependents, the user will see them listed when creating a pass for the dependents.
 
 > [!div class="mx-imgBorder"]
 > ![Create pass for guests](media/portals-select-dependent.png "Create pass for guests")
 
-To find dependents in the Facility  Management app, go to **Solution Setup** and select **Employees**. On **My Active Contacts** view, open a record and find dependents on the **Guest** tab. All dependents can be found on the **Active Guests** view.
+To find dependents in the Facility Management app, go to **Solution Setup** and select **Employees**. On **My Active Contacts** view, open a record and find dependents on the **Guest** tab. All dependents can be found on the **Active Guests** view.
 
 ## Extend portal
 
-To extend portal to fit for your business requirements, see:
+To learn more about how to extend portals to fit into your business needs, see:
 
-[Extend the Return to the Workplace solution](extend.md) page.
+[Extend the Return to the Workplace solution](extend.md)<br/>
 [Power Apps portals documentation](https://docs.microsoft.com/powerapps/maker/portals/)
 
 
