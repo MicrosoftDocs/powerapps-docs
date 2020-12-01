@@ -396,10 +396,10 @@ Case managers or facility managers can block the employees from making bookings 
    > ![Access Action list on Employee form](media/facility-manager-employee-block2.png "Access Action list on Employee form")
 
 4. Select **Access Status** as **Blocked** and set **Access Available Date** to a date in the future when you would like the block to expire. You can enter information in the **Notes** so that employee can see the information.
-5. Select **Save & Close**
 
-   > [!div class="mx-imgBorder"]
-   > ![Creating an Access Action](media/facility-manager-employee-block3.png "Creating an Access Action")
+    > [!div class="mx-imgBorder"]
+    > ![Creating an Access Action](media/facility-manager-employee-block3.png "Creating an Access Action")
+5. Select **Save & Close**
 
 An employee is now blocked and can no longer make bookings via the Employee app. All the existing bookings are disabled. A  warning notification is automatically created and set as **Send as push notification** and the body has the notes of the access action.
 
