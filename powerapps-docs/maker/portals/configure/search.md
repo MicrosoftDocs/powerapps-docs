@@ -207,7 +207,8 @@ You can also rebuild a full search index from a portal.
 3.    Select **Rebuild search index**.
 
 > [!IMPORTANT]
-> A full index rebuild is a very expensive operation and should not be done during peak hours of usage, as this can bring your portal down.
+> - A full index rebuild is a very expensive operation and should not be done during peak hours of usage, as this can bring your portal down.
+> - Time taken to rebuild index is proportional to the size of the data eligble for indexing as per your search query configuration. For example, few minutes for a couple of entities whereas an hour for a large number of entites.
 
 ## Remove an entity from global search
 
