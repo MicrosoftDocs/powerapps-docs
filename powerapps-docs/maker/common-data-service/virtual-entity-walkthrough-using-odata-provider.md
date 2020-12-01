@@ -64,7 +64,7 @@ The OData metadata of the external data source Ticket table:
 
 Create the data source for the OData v4 data provider that uses the OASIS Open Data Protocol (OData) sample web service.
 
-1. Go to **Settings** > **Administration** > **Virtual table Data Sources**.
+1. Go to **Settings** > **Administration** > **Virtual Entity Data Sources**.
 1. Select **NEW**, select **OData v4 Data Provider**, and then select **OK**.
 1. Enter or select the following information.
 
@@ -89,7 +89,7 @@ Part of the name of any custom table you create is the customization prefix. Thi
 
 ## Create the virtual table
 
-1. In the left navigation pane of solution explorer, select **Tables**, and then select **New** from the main pane.
+1. In the left navigation pane of solution explorer, select **Entities**, and then select **New** from the main pane.
 2. On the **table: New** form, select the **Virtual table** option, and then enter the following information: 
 
     |Field|Value|
@@ -103,12 +103,12 @@ Part of the name of any custom table you create is the customization prefix. Thi
     |**Notes (includes attachments)**|selected|
     |**Activities**|selected|
 
-1. Next to **Areas that display this table**, select **Service**, and then select **Save** (but don’t close the table form).
+1. Next to **Areas that display this entity**, select **Service**, and then select **Save** (but don’t close the table form).
     ![Ticket table definition](media/ticket-entity.png)
 
 ## Create the columns for the virtual table
 
-On the left navigation pane of the **table: Ticket** page, select **Columns**. As part of this walkthrough you will edit two existing columns and add a third column.
+On the left navigation pane of the **Entity: Ticket** page, select **Columns**. As part of this walkthrough you will edit two existing columns and add a third column.
 
 > [!IMPORTANT]
 > External names are case sensitive. Refer to your web service metadata to make sure you use the correct name.
@@ -147,7 +147,7 @@ On the left navigation pane of the **table: Ticket** page, select **Columns**. A
 
 ## Configure the default view
 
-1. On the left pane of the solution explorer, under the **Ticket table**, select **Views**.
+1. On the left pane of the solution explorer, under the **Ticket entity**, select **Views**.
 1. Open the **All Tickets** view.
 1. In the **Common Tasks** pane select **Add Columns**.
     ![Add columns for view](media/addcolumns.png)

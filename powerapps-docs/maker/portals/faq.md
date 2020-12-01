@@ -14,6 +14,13 @@ ms.reviewer: tapanm
 
 We've compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
+> [!NOTE]
+> Effective November 2020:
+> - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
+> - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+>
+> Power Apps portals articles will be updated soon to reflect the latest terminology.
+
 ## General
 
 ### When I edit a page using the content editor, I don't see the expected content.
@@ -52,7 +59,7 @@ Additional differences between Power Apps portals with capacity-based licenses a
 
 You can create Power Apps portal with capacity-based license using steps described in following articles:
 
-- [Create a Microsoft Dataverse starter portal](create-portal.md)
+- [Create a Dataverse starter portal](create-portal.md)
 - [Create a portal with Dynamics 365 environment](create-dynamics-portal.md)
 
 To create Power Apps portal with add-on based license, see [provisioning a portal using portal add-on](provision-portal-add-on.md).
