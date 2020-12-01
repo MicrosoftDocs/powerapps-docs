@@ -53,14 +53,10 @@ Enabling the Power BI Embedded service allows you to embed dashboards and report
 
 Before enabling the Power BI Embedded service, ensure that you have created your dashboards and reports in the new workspace in Power BI. After creating the workspace, provide admin access to the global administrator so the workspaces are displayed in the Power Apps Portals admin center. For more information on creating new workspaces and adding access to them, see [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces).
 
-### Power BI Embedded service limitations
-
-Power Apps portals doesn't support [Azure Analysis Services live connections](https://docs.microsoft.com/power-bi/developer/embedded/embedded-row-level-security#working-with-analysis-services-live-connections). You an use Analysis Services in import mode with row-level security (RLS) applied in the report instead of Analysis Services.
-
-For more information about Power BI Embedded service limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
-
 > [!NOTE]
 > Ensure that Power BI visualization is enabled for the powerbi Liquid tag to work.
+
+**To enable Power BI Embedded service:**
 
 1. Open [Power Apps Portals admin center](admin-overview.md).
 
@@ -167,7 +163,7 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 3. In the **Manage Power BI Embedded service integration** window, remove, or move the Power BI workspaces from which dashboards and reports need to be displayed in your portal to the **Selected Workspaces** list.
 
     > [!div class=mx-imgBorder]
-    > ![Select Power BI workspaces](../media/manage-powerbi-embedded-window.png "Select Power BI workspaces")
+    > ![Select Power BI workspaces - Manage Power BI Embedded service integration](../media/manage-powerbi-embedded-window.png "Select Power BI workspaces - Manage Power BI Embedded service integration")
     
     > [!NOTE]
     > After removing the workspaces from the **Selected Workspaces** list, it can take up to 1 hour to reflect the changes. Until then, the databases and reports are rendered on the portal without any issues.
@@ -191,6 +187,12 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 4. Select **Save**.
 
 5. Select **OK** in the confirmation message. While Power BI Embedded service is being disabled, the portal restarts and is unavailable for a few minutes. A message appears when Power BI Embedded service is disabled.
+
+### Power BI Embedded service limitations
+
+Power Apps portals doesn't support [Azure Analysis Services live connections](https://docs.microsoft.com/power-bi/developer/embedded/embedded-row-level-security#working-with-analysis-services-live-connections). You an use Analysis Services in import mode with row-level security (RLS) applied in the report instead of Analysis Services.
+
+For more information about Power BI Embedded service limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
 ## Privacy notice  
 
