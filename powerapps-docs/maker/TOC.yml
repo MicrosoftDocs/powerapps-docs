@@ -1380,8 +1380,8 @@
           href: ./portals/admin/upgrade-portal.md
         - name: Cookies used by portal
           href: ./portals/admin/portal-cookies.md
-        - name: Portal usage reports
-          href: ./portals/admin/portal-usage-reports.md
+        - name: Portal consumption reports
+          href: ./portals/admin/portal-consumption-reports.md
     - name: Advanced portal configuration
       items:
         - name: Overview

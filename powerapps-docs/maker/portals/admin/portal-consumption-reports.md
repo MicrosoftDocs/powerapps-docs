@@ -1,24 +1,24 @@
 ---
-title: "View, download, and review portal usage report for Power Apps portals | MicrosoftDocs"
-description: "Learn how to view, download, and review the Power Apps portals usage report from the Power Platform admin center."
-author: neerajnandwana-msft
+title: "View, download, and review portal consumption report for Power Apps portals | MicrosoftDocs"
+description: "Learn how to view, download, and review the Power Apps portals consumption report from the Power Platform admin center."
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/16/2020
-ms.author: nenandw
+ms.date: 12/01/2020
+ms.author: sandhan
 ms.reviewer: tapanm
 ---
  
-# Portals usage report
+# Portals consumption report
+
+Power Apps portals is licensed using **per login**, and **per page view** capacity add-ons for external users. This capacity must be allocated to a Power Platform environment by an administrator. For more information about Power Apps portals licensing, go to [licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals).
 
 Administrators can download portal login and page view reports from the [Power Platform admin center](https://admin.powerplatform.com). These reports show the number of **logins** and **page views** for Power Apps portals across all environments for a tenant.
 
 ## Download reports
 
-The individual reports are available for a duration of the past 30 days before the date you select while downloading the reports. To download reports for longer duration, select the target dates as 30 days apart.
-
-For example, to download the reports from January to March 2020, download three reports with target dates as January 31, February 29, and March 31.
+The individual reports are available for a duration of 30 days preceding the date you select while downloading the reports. 
 
 To download the reports:
 
@@ -28,11 +28,11 @@ To download the reports:
 
 1. Select **Capacity**.
 
-    ![Capacity](media/portal-usage-reports/select-capacity.png "Capacity")
+    ![Capacity](media/portal-consumption-reports/select-capacity.png "Capacity")
 
 1. Scroll down to the **Add-ons** section, and select **Download reports**.
 
-    ![Add-ons](media/portal-usage-reports/summary-add-ons.png "Add-ons")
+    ![Add-ons](media/portal-consumption-reports/summary-add-ons.png "Add-ons")
 
 1. Select **Portal Logins**, or **Portal Views** report.
 
@@ -40,16 +40,16 @@ To download the reports:
 
 1. Select **Submit**.
 
-    ![Confirmation for the request](media/portal-usage-reports/confirmation.png "Confirmation for the request")
+    ![Confirmation for the request](media/portal-consumption-reports/confirmation.png "Confirmation for the request")
 
     A confirmation notification shows the download request acknowledgment.
 
 1. After the generated report becomes available, select **Download**.
 
-    ![Download report](media/portal-usage-reports/download-notification.png "Download report")
+    ![Download report](media/portal-consumption-reports/download-notification.png "Download report")
 
     > [!TIP]
-    > To quickly regenerate the report for the selected report type and target date, select **Regenerate report** from the usage report notification.
+    > To quickly regenerate the report for the selected report type and target date, select **Regenerate report** from the consumption report notification.
 
 1. **Save**, and **Open** the downloaded Excel report file.
 
