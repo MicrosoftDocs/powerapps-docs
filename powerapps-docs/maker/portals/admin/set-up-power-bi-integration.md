@@ -188,7 +188,7 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 
 ### Power BI Embedded service limitations
 
-Power Apps portals doesn't support [Azure Analysis Services live connections](https://docs.microsoft.com/power-bi/developer/embedded/embedded-row-level-security#working-with-analysis-services-live-connections). You an use Analysis Services in import mode with row-level security (RLS) applied in the report instead of Analysis Services.
+Power Apps portals doesn't support [Azure Analysis Services live connections](https://docs.microsoft.com/power-bi/developer/embedded/embedded-row-level-security#working-with-analysis-services-live-connections). You can use Analysis Services in import mode with row-level security (RLS) applied in the report instead of Analysis Services.
 
 For more information about Power BI Embedded service limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
