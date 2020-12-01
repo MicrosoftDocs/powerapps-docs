@@ -16,7 +16,7 @@ searchScope:
 
 Register and watch our recorded sessions on-demand.
 
-**Introduction to New Governance Capabilities in Microsoft Power Platform**
+**Introduction to New Governance Capabilities in Microsoft Power Platform**  
 by Anupma Sharma  
 [Register and watch now](https://info.microsoft.com/ww-Landing-GovernanceCapabilitiesinPowerPlatform.html?LCID=EN-US)
 
