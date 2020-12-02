@@ -1906,7 +1906,9 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
-        - name: View table data in Power BI (Preview)
+        - name: Import a Dataverse solution
+          href: ../teams/import-solution-in-teams.md 
+        - name: View table data in Power BI
           href: ../teams/view-table-data-power-bi.md
           displayName: View Dataverse for Teams table data in Power BI
         - name: Environment language
