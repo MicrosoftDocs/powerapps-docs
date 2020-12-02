@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/30/2020
+ms.date: 12/01/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -208,7 +208,7 @@ You can also rebuild a full search index from a portal.
 
 > [!IMPORTANT]
 > - A full index rebuild is a very expensive operation and should not be done during peak hours of usage, as this can bring your portal down.
-> - Time taken to rebuild index is proportional to the size of the data eligble for indexing as per your search query configuration. For example, few minutes for a couple of entities whereas an hour for a large number of entites.
+> - Time taken to rebuild index is proportional to the size of the data eligible for indexing as per your search query configuration, and can range from a few minutes to an hour.
 
 ## Remove an entity from global search
 
