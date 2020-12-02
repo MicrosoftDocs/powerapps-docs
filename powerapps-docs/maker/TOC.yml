@@ -1297,29 +1297,52 @@
     - name: Portals
       href: ./portals/index.yml
     - name: What is Power Apps portals?
-      href: ./portals/overview.md
-    - name: Release updates
-      href: ./portals/release-updates.md
-    - name: Design and build a portal
+    - name: Portal lifecycle
+      href: ./portals/admin/portal-lifecycle.md
+    - name: "Microsoft Learn: Get started with Power Apps portals"
+      href: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals
+    - name: Available portal templates
+      href: ./portals/portal-templates.md
+    - name: Create portal
       items:
-        - name: Portal templates
-          href: ./portals/portal-templates.md
-        - name: Create a portal
-          items:
-           - name: Create a starter portal
-             href: ./portals/create-portal.md
-           - name: Create a portal with Dynamics 365 environment
-             href: ./portals/create-dynamics-portal.md
-           - name: Create a portal using the older portal add-on
-             href: ./portals/provision-portal-add-on.md
-        - name: Power Apps portals Studio anatomy
+        - name: Create a starter portal
+          href: ./portals/create-portal.md
+        - name: Create a portal with Dynamics 365 environment
+          href: ./portals/create-dynamics-portal.md
+        - name: Create a portal using the older portal add-on
+          href: ./portals/provision-portal-add-on.md
+    - name: Build using portals Studio
+      items:
+        - name: Portals Studio overview
           href: ./portals/portal-designer-anatomy.md
-        - name: Supported web browsers for portal designer
-          href: ./portals/supported-browser.md
         - name: Create and manage webpages
           href: ./portals/create-manage-webpages.md
-        - name: Compose a page
-          href: ./portals/compose-page.md
+        - name: Customize web pages
+          items:
+            - name: WYSIWYG editor overview
+              href: ./portals/compose-page.md#use-the-wysiwyg-editor
+            - name: Add sections
+              href: ./portals/compose-page.md#add-sections
+            - name: Add components
+              items:
+                - name: Add text box
+                  href: ./portals/compose-page.md#add-text-box
+                - name: Add image
+                  href: ./portals/compose-page.md#add-image
+                - name: Add IFrame
+                  href: ./portals/compose-page.md#add-iframe
+                - name: Add form
+                  href: ./portals/compose-page.md#add-form
+                - name: Add list
+                  href: ./portals/compose-page.md#add-list
+                - name: Add breadcrumb
+                  href: ./portals/compose-page.md#add-breadcrumb
+                - name: Add custom menu
+                  href: ./portals/compose-page.md#add-a-custom-menu
+                - name: Use code editor
+                  href: ./portals/compose-page.md#use-code-editor
+                - name: Add Power BI
+                  href: ./portals/compose-page.md#add-power-bi
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
@@ -1328,130 +1351,72 @@
               href: ./portals/theme-overview.md
             - name: Edit CSS
               href: ./portals/edit-css.md
-    - name: Manage existing portals
-      href: ./portals/manage-existing-portals.md
-    - name: Advanced portal administration
+        - name: Supported web browsers for portals Studio
+          href: ./portals/supported-browser.md
+    - name: Build using Portal Management app
       items:
-        - name: Overview
-          href: ./portals/admin/admin-overview.md
-        - name: Portal details
-          href: ./portals/admin/portal-details.md
-        - name: Portal administration from Power Platform admin center
-          href: ./portals/admin/power-platform-admin-center.md
-        - name: Roles required for portal administration
-          href: ./portals/admin/portal-admin-roles.md
-        - name: Download public key of portal
-          href: ./portals/admin/get-public-key.md
-        - name: View portal error logs
-          href: ./portals/admin/view-portal-error-log.md
-        - name: Reset a portal
-          href: ./portals/admin/reset-portal.md
-        - name: Change base URL of a portal
-          href: ./portals/admin/change-base-url.md
-        - name: Enable maintenance mode
-          href: ./portals/admin/enable-maintenance-mode.md
-        - name: Add a custom domain name
-          href: ./portals/admin/add-custom-domain.md
-        - name: Import metadata translation
-          href: ./portals/admin/import-metadata-translation.md
-        - name: Power BI integration
-          items:
-            - name: Set up Power BI integration
-              href: ./portals/admin/set-up-power-bi-integration.md
-            - name: Add a Power BI report or dashboard to a web page in portal
-              href: ./portals/admin/add-powerbi-report.md
-        - name: Run Portal Checker
-          href: ./portals/admin/portal-checker.md
-        - name: Renew portal authentication key
-          href: ./portals/admin/manage-auth-key.md
-        - name: Set up IP address restriction
-          href: ./portals/admin/ip-address-restrict.md
-        - name: Update to Power Apps portals domain
-          href: ./portals/admin/update-portal-domain.md
-        - name: Clear the server-side cache
-          href: ./portals/admin/clear-server-side-cache.md
-        - name: Migrate portal configuration
-          href: ./portals/admin/migrate-portal-configuration.md
-        - name: About portal lifecycle
-          href: ./portals/admin/portal-lifecycle.md
-        - name: Update portal solution
-          href: ./portals/admin/power-platform-admin-center.md#update-the-power-apps-portal-solution
-        - name: Upgrade a portal
-          href: ./portals/admin/upgrade-portal.md
-        - name: Cookies used by portal
-          href: ./portals/admin/portal-cookies.md
-    - name: Advanced portal configuration
-      items:
-        - name: Overview
+        - name: Portal Management app overview
           href: ./portals/configure/configure-portal.md
         - name: Configure site settings
           href: ./portals/configure/configure-site-settings.md
-        - name: Search
-          items:
-            - name: About search
-              href: ./portals/configure/search.md
-            - name: Configure search for additional entities
-              href: ./portals/configure/search-additional-entities.md
-            - name: Improve search by using faceted search
-              href: ./portals/configure/improve-portal-search-faceted-search.md
-            - name: Search within file attachments
-              href: ./portals/configure/search-file-attachment.md
-        - name: Enable multiple-language support
-          href: ./portals/configure/enable-multiple-language-support.md
         - name: Create and manage web files
           href: ./portals/configure/web-files.md
         - name: Manage web links
           href: ./portals/configure/manage-web-links.md
+        - name: Work with forms and lists in portals
+          items:
+            - name: Work with entity forms
+              href: ./portals/configure/entity-forms.md
+            - name: Work with entity lists
+              href: ./portals/configure/entity-lists.md
+            - name: Work with web forms
+              items:
+                - name: Define web form properties
+                  href: ./portals/configure/web-form-properties.md
+                - name: Web form steps
+                  items:
+                    - name: Define web form steps
+                      href: ./portals/configure/web-form-steps.md
+                    - name: Define a load form and load tab step type
+                      href: ./portals/configure/load-form-step.md
+                    - name: Add a redirect step type
+                      href: ./portals/configure/add-redirect-step.md
+                    - name: Add a conditional step type
+                      href: ./portals/configure/add-conditional-step.md
+                    - name: Add custom JavaScript
+                      href: ./portals/configure/add-custom-javascript.md
+                - name: Configure web form metadata
+                  href: ./portals/configure/configure-web-form-metadata.md
+                - name: Configure a web form subgrid
+                  href: ./portals/configure/configure-web-form-subgrid.md
+                - name: Add geolocation
+                  href: ./portals/configure/add-geolocation.md
+        - name: Manage webpages
+          href: ./portals/configure/web-page.md
         - name: Create and manage page templates
           href: ./portals/configure/page-templates.md
         - name: Manage content snippets
           href: ./portals/configure/customize-content-snippets.md
-        - name: Create a redirect URL
+        - name: Configure website redirects
           href: ./portals/configure/add-redirect-url.md
-        - name: Use shortcuts to place child nodes
+        - name: Configure shortcuts
           href: ./portals/configure/place-child-nodes.md
-        - name: Behavior and format of the date and time field
-          href: ./portals/configure/behavior-format-date-time-field.md
-        - name: View activities in a portal timeline
-          href: ./portals/configure/view-all-activities-in-portal-timeline.md
-        - name: Rate a webpage
+        - name: Configure webpage ratings
           href: ./portals/configure/rate-webpage.md
-        - name: Enable header and footer output caching on a portal
+        - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
         - name: Add chart on a web page in portal
           href: ./portals/configure/add-chart.md
-        - name: Work with entity forms
-          href: ./portals/configure/entity-forms.md
-        - name: Work with entity lists
-          href: ./portals/configure/entity-lists.md
         - name: Manage websites
           href: ./portals/configure/websites.md
         - name:  Create and manage website bindings
           href: ./portals/configure/website-bindings.md
-        - name: Work with web forms
+        - name: Configure multiple languages
           items:
-            - name: Define web form properties
-              href: ./portals/configure/web-form-properties.md
-            - name: Web form steps
-              items:
-                - name: Define web form steps
-                  href: ./portals/configure/web-form-steps.md
-                - name: Define a load form and load tab step type
-                  href: ./portals/configure/load-form-step.md
-                - name: Add a redirect step type
-                  href: ./portals/configure/add-redirect-step.md
-                - name: Add a conditional step type
-                  href: ./portals/configure/add-conditional-step.md
-                - name: Add custom JavaScript
-                  href: ./portals/configure/add-custom-javascript.md
-            - name: Configure web form metadata
-              href: ./portals/configure/configure-web-form-metadata.md
-            - name: Configure a web form subgrid
-              href: ./portals/configure/configure-web-form-subgrid.md
-            - name: Add geolocation
-              href: ./portals/configure/add-geolocation.md
-        - name: Implement GDPR in portals
-          href: ./portals/configure/implement-gdpr.md
+            - name: Enable multiple-language support
+              href: ./portals/configure/enable-multiple-language-support.md
+            - name: Behavior and format of the date and time field
+              href: ./portals/configure/behavior-format-date-time-field.md
         - name: Create and run advertisements
           href: ./portals/configure/create-run-advertisement.md
         - name: Gather feedback by using polls
@@ -1460,69 +1425,139 @@
           href: ./portals/configure/publishing-states.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
-    - name: Portal authentication
+    - name: Manage existing portals
+      href: ./portals/manage-existing-portals.md
+    - name: Administer portal from Power Platform admin center
       items:
-          - name: Overview
-            href: ./portals/configure/configure-portal-authentication.md
-          - name: Get started
-            href: ./portals/configure/use-simplified-authentication-configuration.md
-          - name: Azure AD B2C
-            items:
-                - name: Configure
-                  href: ./portals/configure/configure-azure-ad-b2c-provider.md
-                - name: Customize the Azure AD B2C user interface
-                  href: ./portals/configure/azure-ad-b2c.md
-          - name: OAuth 2.0
-            items:
-                 - name: Overview
-                   href: ./portals/configure/configure-oauth2-provider.md
-                 - name: Microsoft
-                   href: ./portals/configure/configure-oauth2-microsoft.md
-                 - name: LinkedIn
-                   href: ./portals/configure/configure-oauth2-linkedin.md
-                 - name: Facebook
-                   href: ./portals/configure/configure-oauth2-facebook.md
-                 - name: Google
-                   href: ./portals/configure/configure-oauth2-google.md
-                 - name: Twitter
-                   href: ./portals/configure/configure-oauth2-twitter.md
-                 - name: Additional settings
-                   href: ./portals/configure/configure-oauth2-settings.md
-          - name: OpenID Connect
-            items:
-                 - name: Configure
-                   href: ./portals/configure/configure-openid-provider.md
-                 - name: Configure OpenID Connect for Azure AD
-                   href: ./portals/configure/configure-openid-settings.md
-                 - name: FAQs when using OpenID Connect
-                   href: ./portals/configure/configure-openid-faqs.md                                        
-          - name: SAML 2.0
-            items:
-                  - name: Configure
-                    href: ./portals/configure/configure-saml2-provider.md
-                  - name: Configure Azure AD with SAML 2.0
-                    href: ./portals/configure/configure-saml2-settings-azure-ad.md
-                  - name: Configure AD FS with SAML 2.0
-                    href: ./portals/configure/configure-saml2-settings.md
-                  - name: FAQs when using SAML 2.0
-                    href: ./portals/configure/configure-saml2-faqs.md
-          - name: WS-Federation
-            items:
-                  - name: Configure
-                    href: ./portals/configure/configure-ws-federation-provider.md
-                  - name: Configure WS-Federation with Azure AD
-                    href: ./portals/configure/configure-ws-federation-settings-azure-ad.md
-                  - name: Configure WS-Federation with AD FS
-                    href: ./portals/configure/configure-ws-federation-settings.md
-          - name: Local authentication, registration and other settings
-            href: ./portals/configure/set-authentication-identity.md
-          - name: Migrate to Azure AD B2C
-            href: ./portals/configure/migrate-identity-providers.md
-    - name:  Advanced portal customization
+        - name: Portals admin center overview
+          href: ./portals/admin/admin-overview.md
+        - name: Manage portals from admin center
+          href: ./portals/admin/power-platform-admin-center.md
+        - name: Configure portal details
+          href: ./portals/admin/portal-details.md
+        - name: Configure portal actions
+          items:
+            - name: Download public key of portal
+              href: ./portals/admin/get-public-key.md
+            - name: View portal error logs
+              href: ./portals/admin/view-portal-error-log.md
+            - name: Reset a portal
+              href: ./portals/admin/reset-portal.md
+            - name: Change base URL of a portal
+              href: ./portals/admin/change-base-url.md
+            - name: Enable maintenance mode
+              href: ./portals/admin/enable-maintenance-mode.md
+            - name: Add a custom domain name
+              href: ./portals/admin/add-custom-domain.md
+            - name: Import metadata translation
+              href: ./portals/admin/import-metadata-translation.md
+            - name: Set up Power BI integration
+              href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Run Portal Checker
+          href: ./portals/admin/portal-checker.md
+        - name: Renew portal authentication key
+          href: ./portals/admin/manage-auth-key.md
+        - name: Set up IP address restriction
+          href: ./portals/admin/ip-address-restrict.md
+        - name: View activities in a portal timeline
+          href: ./portals/configure/view-all-activities-in-portal-timeline.md
+        - name: Roles required for portal administration
+          href: ./portals/admin/portal-admin-roles.md
+        - name: Update to Power Apps portals domain
+          href: ./portals/admin/update-portal-domain.md
+    - name: Configure security
+      items:
+        - name: Portal authentication
+          items:
+              - name: Overview
+                href: ./portals/configure/configure-portal-authentication.md
+              - name: Get started
+                href: ./portals/configure/use-simplified-authentication-configuration.md
+              - name: Azure AD B2C
+                items:
+                    - name: Configure
+                      href: ./portals/configure/configure-azure-ad-b2c-provider.md
+                    - name: Customize the Azure AD B2C user interface
+                      href: ./portals/configure/azure-ad-b2c.md
+              - name: OAuth 2.0
+                items:
+                    - name: Overview
+                      href: ./portals/configure/configure-oauth2-provider.md
+                    - name: Microsoft
+                      href: ./portals/configure/configure-oauth2-microsoft.md
+                    - name: LinkedIn
+                      href: ./portals/configure/configure-oauth2-linkedin.md
+                    - name: Facebook
+                      href: ./portals/configure/configure-oauth2-facebook.md
+                    - name: Google
+                      href: ./portals/configure/configure-oauth2-google.md
+                    - name: Twitter
+                      href: ./portals/configure/configure-oauth2-twitter.md
+                    - name: Additional settings
+                      href: ./portals/configure/configure-oauth2-settings.md
+              - name: OpenID Connect
+                items:
+                    - name: Configure
+                      href: ./portals/configure/configure-openid-provider.md
+                    - name: Configure OpenID Connect for Azure AD
+                      href: ./portals/configure/configure-openid-settings.md
+                    - name: FAQs when using OpenID Connect
+                      href: ./portals/configure/configure-openid-faqs.md                                        
+              - name: SAML 2.0
+                items:
+                      - name: Configure
+                        href: ./portals/configure/configure-saml2-provider.md
+                      - name: Configure Azure AD with SAML 2.0
+                        href: ./portals/configure/configure-saml2-settings-azure-ad.md
+                      - name: Configure AD FS with SAML 2.0
+                        href: ./portals/configure/configure-saml2-settings.md
+                      - name: FAQs when using SAML 2.0
+                        href: ./portals/configure/configure-saml2-faqs.md
+              - name: WS-Federation
+                items:
+                      - name: Configure
+                        href: ./portals/configure/configure-ws-federation-provider.md
+                      - name: Configure WS-Federation with Azure AD
+                        href: ./portals/configure/configure-ws-federation-settings-azure-ad.md
+                      - name: Configure WS-Federation with AD FS
+                        href: ./portals/configure/configure-ws-federation-settings.md
+              - name: Local authentication, registration and other settings
+                href: ./portals/configure/set-authentication-identity.md
+              - name: Migrate to Azure AD B2C
+                href: ./portals/configure/migrate-identity-providers.md
+              - name: OAuth 2.0 implicit grant flow
+                href: ./portals/oauth-implicit-grant-flow.md
+        - name: User management
+          items:
+            - name: Configure contacts
+              href: ./portals/configure/configure-contacts.md
+            - name: Invite contacts
+              href: ./portals/configure/invite-contacts.md
+        - name: Roles and permissions
+          items:
+            - name: Create web roles
+              href: ./portals/configure/create-web-roles.md
+            - name: Assign entity permissions
+              href: ./portals/configure/assign-entity-permissions.md
+            - name: Manage page permissions
+              href: ./portals/configure/webpage-access-control.md
+            - name: Create website access permissions
+              href: ./portals/configure/website-access-permission.md
+    - name: Configure search
+      items:
+        - name: Portal search overview
+          href: ./portals/configure/search.md
+        - name: Configure search for additional entities
+          href: ./portals/configure/search-additional-entities.md
+        - name: Use faceted search
+          href: ./portals/configure/improve-portal-search-faceted-search.md
+        - name: Search within file attachments
+          href: ./portals/configure/search-file-attachment.md
+    - name: For developers
       items:
         - name: Work with Liquid templates
           items:
-            - name: Overview
+            - name: Liquid templates overview
               href: ./portals/liquid/liquid-overview.md
             - name: Store content by using web templates
               href: ./portals/liquid/store-content-web-templates.md
@@ -1562,14 +1597,9 @@
                   href: ./portals/liquid/render-rss-custom-page-template.md
                 - name: Render a site header and primary navigation bar
                   href: ./portals/liquid/render-site-header-primary-navigation.md
-        - name: OAuth 2.0 implicit grant flow
-          href: ./portals/oauth-implicit-grant-flow.md
-        - name: Manage webpages
-          href: ./portals/configure/web-page.md
-        - name: Portals Web API
+        - name: Use portals Web API
           items:
-          - name: Overview
-            displayName: Portals Web API overview
+          - name: Portals Web API overview
             href: ./portals/web-api-overview.md
           - name: Perform operations
             displayName: Portals Web API perform operations
@@ -1577,21 +1607,7 @@
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
-    - name: User management and security in portal
-      items:
-        - name: Configure contacts
-          href: ./portals/configure/configure-contacts.md
-        - name: Invite contacts
-          href: ./portals/configure/invite-contacts.md
-        - name: Create web roles
-          href: ./portals/configure/create-web-roles.md
-        - name: Assign entity permissions
-          href: ./portals/configure/assign-entity-permissions.md
-        - name: Manage page permissions
-          href: ./portals/configure/webpage-access-control.md
-        - name: Create website access permissions
-          href: ./portals/configure/website-access-permission.md
-    - name: Document storage in portals
+    - name: Configure document storage in portals
       items:
         - name: Configure notes
           href: ./portals/configure-notes.md
@@ -1603,12 +1619,42 @@
               href: ./portals/add-web-resource.md
         - name: Manage SharePoint documents
           href: ./portals/manage-sharepoint-documents.md
+    - name: Integrate Power BI with portals
+      items:
+        - name: Set up Power BI integration
+          href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Add a Power BI report or dashboard to a web page in portal using Power BI component in Studio
+          href: ./portals/compose-page.md#add-power-bi
+        - name: Add a Power BI report or dashboard to a web page in portal using powerbi liquid tag
+          href: ./portals/admin/add-powerbi-report.md
+    - name: Update, upgrade, migrate and convert portals
+      items:
+        - name: Convert portal from trial to production
+          href: ./portals/admin/portal-lifecycle.md#convert-a-portal-from-trial-to-production
+        - name: Convert portal to capacity-based model
+          href: ./portals/admin/portal-lifecycle.md#convert-an-existing-portal-to-a-capacity-based-model
+        - name: Update portal solution
+          href: ./portals/admin/power-platform-admin-center.md#update-the-power-apps-portal-solution
+        - name: Upgrade a portal
+          href: ./portals/admin/upgrade-portal.md
+        - name: Migrate portal configuration
+          href: ./portals/admin/migrate-portal-configuration.md
+    - name: Compliance and accessibility
+      items:
+        - name: Implement GDPR in portals
+          href: ./portals/configure/implement-gdpr.md
+        - name: Cookies used by portal
+          href: ./portals/admin/portal-cookies.md
+    - name: Clear the server-side cache
+      href: ./portals/admin/clear-server-side-cache.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQ
       href: ./portals/faq.md
     - name: Legacy Adxstudio Portals v7 FAQ
       href: ./portals/legacy-portal-faq.md
+    - name: Release updates
+      href: ./portals/release-updates.md
 - name: Dataverse
   items:
   - name: Dataverse
