@@ -1,6 +1,6 @@
 ---
-title: "View, download, and review portal consumption report for Power Apps portals | MicrosoftDocs"
-description: "Learn how to view, download, and review the Power Apps portals consumption report from the Power Platform admin center."
+title: "View, download, and review portal capacity consumption reports for Power Apps portals | MicrosoftDocs"
+description: "Learn how to view, download, and review the Power Apps portals capacity consumption reports from the Power Platform admin center."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
  
-# Portals consumption report
+# Portals capacity consumption reports
 
 Power Apps portals is licensed using **per login**, and **per page view** capacity add-ons for external users. This capacity must be allocated to a Power Platform environment by an administrator. For more information about Power Apps portals licensing, go to [licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals).
 
