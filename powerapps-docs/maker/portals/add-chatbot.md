@@ -12,11 +12,11 @@ ms.reviewer: tapanm
 
 # Add chatbot to a page
 
-Power Apps portals allows you to add a [Power Virtual Agents chatbot](https://docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) to answer questions posted by visitor to your portal page. A bot can be configured with different topics and trigger phrases to automatically respond during a conversation with a visitor.
+Power Apps portals allows you to add a [Power Virtual Agents chatbot](https://docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) to answer questions posted by a visitor on your portal page. A chatbot (bot) configured with different topics, and trigger phrases, can automatically respond to questions posted by a visitor in a chat conversation.
 
 ## Prerequisites
 
-Before you add a Power Virtual Agents chatbot to a Power Apps portals page, you must create a chatbot first. To learn about how to create a chatbot, go to [Create and delete Power Virtual Agents bots](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot).
+Before you add a Power Virtual Agents bot to a Power Apps portals page, you must create a bot first. To learn about how to create a bot, go to [Create and delete Power Virtual Agents bots](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot).
 
 ## Add chatbot component
 
@@ -51,7 +51,7 @@ Chatbot component is now added to your portal page. Browse your portal to intera
 
 ## Get the Power Virtual Agents bot ID
 
-To get the ID of a chatbot created using Power Virtual Agents:
+To get the ID of a bot created using Power Virtual Agents:
 
 1. Go to [Power Virtual Agents](https://powerva.microsoft.com).
 
