@@ -5,9 +5,9 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Use the Employee Return to the Workplace app
@@ -165,9 +165,28 @@ You can say how you're feeling about returning to the workplace. On the home pag
 > [!NOTE]
 > In the solution settings, you can turn this feature off if you don't want to use this.
 
+## Notifications
+
+Employees will receive notifications via the Employee app. You can find the notification icon displayed on the top-right corner. If there are any unread notifications, a badge will be displayed showing the number of unread notifications. Selecting the notification icon navigates the employee to a new screen where all the notifications are displayed. The newest notifications are shown on top of the list.
+
+> [!div class="mx-imgBorder"]
+> ![Notification bell](media/employee-notification-bell.png "Notification bell")
+
+A notification contains a created date, type, header text and a body. There are three types of notifications: **Information**, **Warning**, and **Error**. Each notification type can be identified by the icon next to the header text. 
+
+> [!div class="mx-imgBorder"]
+> ![Notifications list](media/employee-notification-list.png "Notifications list")
+
+A notification is marked as read when the notification is seen by the employee in the app. All the notifications that are read will be still shown in the notification screen. Employee can return to the main screen by selecting the **X** icon on the top-right of the screen.
+
 ## Facility access not available
 
-It's possible for the case manager to inform you that access to the facility is no longer available. In that case, you'll see a banner on the home screen that indicates the **Facility access is not available**. You'll see a message with further instructions when you select the banner. 
+Case manager or facility manager can block the employees from making bookings to a specific facility, which makes the employees unable to reserve the facility. You'll see a banner appearing on the home screen, indicating **Access is not available**. An error notification will be received with further instructions.
+
+When an employee is blocked, the health and safety instructions are shown on the bottom of the notifications screen.
+
+> [!NOTE]
+> The health and safety instructions can be configured in the solution settings.
 
 > [!div class="mx-imgBorder"]
 > ![Facility access is not available](media/facility-access-not-available.png "Facility access is not available")
