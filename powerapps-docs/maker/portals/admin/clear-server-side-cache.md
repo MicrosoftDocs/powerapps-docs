@@ -10,7 +10,7 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Clear the server-side cache for a portal
+# Server-side cache in portals
 
 As a portal administrator, you can clear the server-side cache for the entire portal so that updated data from Microsoft Dataverse is immediately reflected on the portal. Updates from Dataverse  are communicated to the portal in asynchronous mode, so there might be a lag between the time data is updated in Dataverse and the time that updated data appears on the portal. To eliminate this delay&mdash;for example, when it interferes with portal configuration&mdash;you can force the portal to refresh its cache immediately.
 
