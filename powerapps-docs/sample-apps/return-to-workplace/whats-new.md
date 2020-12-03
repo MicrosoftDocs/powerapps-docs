@@ -28,7 +28,7 @@ Facility managers can provide facility access to third parties. A third party ca
 
 With the introduction of portals, we added a new way for users approaching the solution. Below you will find a comparison how the portal relates to the mobile app.
 
-||Employee app (Mobile app)|Portal (Web app)|
+|Name|Employee app (Mobile app)|Portal (Web app)|
 |-----|------------|---------------|
 |Persona|Employee|Third Party|
 |Target Users|Employees, students|Vendors, parents, or guardians of students, “of-age” student|

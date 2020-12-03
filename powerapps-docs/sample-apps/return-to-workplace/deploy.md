@@ -345,7 +345,7 @@ You can install the Return to the Workplace Portal from AppSource.
 1. Go to [AppSource](https://aka.ms/rtw-portal) to install the **Return to the Workplace Portal**.
 
     > [!div class="mx-imgBorder"]
-    > ![Installation page](media/deploy-portal-appsource.png "Installation page")
+    > ![Portal page](media/deploy-portal-appsource.png "Portal page")
 
 2. Select **GET IT NOW** to install the solution in your environment. You'll be redirected to the actual installation page, where you can select the environment where you want to install it. Installation starts after you select the environment and accept the terms and agreement.
 
