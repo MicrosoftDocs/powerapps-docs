@@ -26,7 +26,7 @@ The main modules of the Return to the Workplace solution include:
 
 - **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace app to check in remotely and self-screen before entering a building.
 
-- **Return to the Workplace portal** allows third parties the ability to follow a similar self service process as the employee. Allowing them to check-in on invitation and self-screen before getting a pass. Users of the portal can even add new guests or dependents allowing for a more decentralized and scalable solution.
+- **Return to the Workplace portal** allows third parties the ability to follow a similar self-service process as the employee. Allowing them to check in on invitation and self-screen before getting a pass. Users of the portal can even add new guests or dependents allowing for a more decentralized and scalable solution.
 
 ## Licensing requirements
 
@@ -68,4 +68,4 @@ To provide feedback about the Return to the Workplace solution, visit <https://a
 
 This app is a sample and is provided "as is" without warranty of any kind. Customer bears the sole risk and responsibility for any use of this app.  Customer is expected to update and customize this app as appropriate for its own needs, and is responsible for ensuring that its implementation complies with all laws and regulations applicable to Customer's use.  Microsoft is not responsible for the performance, accuracy, or results from the use of the app or any modifications to the app.  
 
-This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such. Sample data included in this app are for illustration only and are fictitious. No real association is intended or inferred. 
+This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used as such. Sample data included in this app are for illustration only and are fictitious. No real association is intended or inferred. 
