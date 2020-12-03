@@ -1320,6 +1320,8 @@
           href: ./portals/create-manage-webpages.md
         - name: Compose a page
           href: ./portals/compose-page.md
+        - name: Add a chatbot
+          href: ./portals/add-chatbot.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
