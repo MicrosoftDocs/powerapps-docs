@@ -39,7 +39,7 @@ To add a chatbot component to portal page:
     ![Enter bot ID](media/add-chatbot/enter-bot-id.png "Enter bot ID")
 
     > [!NOTE]
-    > To learn about how to get the bot ID, go to [Get a Power Virtual Agents bot ID](#get-a-power-virtual-agents-bot-id).
+    > To learn about how to get the bot ID, go to [Get a Power Virtual Agents bot ID](#get-the-power-virtual-agents-bot-id).
 
 1. Enter a display name.
 
@@ -47,7 +47,7 @@ To add a chatbot component to portal page:
 
 Chatbot component is now added to your portal page. Browse your portal to interact with the chatbot.
 
-## Get a Power Virtual Agents bot ID
+## Get the Power Virtual Agents bot ID
 
 To get the ID of a chatbot created using Power Virtual Agents:
 
