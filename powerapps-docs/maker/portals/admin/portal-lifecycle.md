@@ -1,5 +1,5 @@
 ---
-title: "About the Power Apps portals lifecycle | MicrosoftDocs"
+title: "Power Apps portals lifecycle - different stages of a portal. | MicrosoftDocs"
 description: "Information about the Power Apps portals lifecycle and converting it from trial to production."
 author: neerajnandwana-msft
 ms.service: powerapps
@@ -10,7 +10,7 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# About the portal lifecycle
+# Power Apps portals lifecycle
 
 A portal is always created as a trial. A trial portal, which expires after 30 days, is useful for trying out its capabilities at no cost. After it expires, the portal is suspended and shut down. Seven days after it's suspended, the trial portal is deleted. You'll be notified at every stage of the portal lifecycle&mdash;nearing suspension, suspended, deleted, and converted from trial to production&mdash;through toast notifications and email.
 

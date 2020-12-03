@@ -1297,6 +1297,7 @@
     - name: Portals
       href: ./portals/index.yml
     - name: What is Power Apps portals?
+      href: ./portals/overview.md
     - name: Portal lifecycle
       href: ./portals/admin/portal-lifecycle.md
     - name: "Microsoft Learn: Get started with Power Apps portals"
@@ -1351,7 +1352,7 @@
               href: ./portals/theme-overview.md
             - name: Edit CSS
               href: ./portals/edit-css.md
-        - name: Supported web browsers for portals Studio
+        - name: Supported browsers for portals Studio
           href: ./portals/supported-browser.md
     - name: Build using Portal Management app
       items:
@@ -1359,10 +1360,42 @@
           href: ./portals/configure/configure-portal.md
         - name: Configure site settings
           href: ./portals/configure/configure-site-settings.md
-        - name: Create and manage web files
+        - name: Add chart on a web page in portal
+          href: ./portals/configure/add-chart.md
+        - name: Configure advertisements
+          href: ./portals/configure/create-run-advertisement.md
+        - name: Configure content snippets
+          href: ./portals/configure/customize-content-snippets.md
+        - name: Configure header and footer output caching
+          href: ./portals/configure/enable-header-footer-output-caching.md
+        - name: Configure multiple languages
+          items:
+            - name: Enable multiple-language support
+              href: ./portals/configure/enable-multiple-language-support.md
+            - name: Behavior and format of the date and time field
+              href: ./portals/configure/behavior-format-date-time-field.md
+        - name: Configure page templates
+          href: ./portals/configure/page-templates.md
+        - name: Configure polls
+          href: ./portals/configure/gather-feedback-poll.md
+        - name: Configure publishing states
+          href: ./portals/configure/publishing-states.md
+        - name: Configure shortcuts
+          href: ./portals/configure/place-child-nodes.md
+        - name: Configure website redirects
+          href: ./portals/configure/add-redirect-url.md
+        - name: Configure webpage ratings
+          href: ./portals/configure/rate-webpage.md
+        - name: Configure web files
           href: ./portals/configure/web-files.md
-        - name: Manage web links
+        - name: Configure web links
           href: ./portals/configure/manage-web-links.md
+        - name: Configure webpages
+          href: ./portals/configure/web-page.md
+        - name: Configure websites
+          href: ./portals/configure/websites.md
+        - name: Configure website bindings
+          href: ./portals/configure/website-bindings.md
         - name: Work with forms and lists in portals
           items:
             - name: Work with entity forms
@@ -1391,38 +1424,6 @@
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
-        - name: Manage webpages
-          href: ./portals/configure/web-page.md
-        - name: Create and manage page templates
-          href: ./portals/configure/page-templates.md
-        - name: Manage content snippets
-          href: ./portals/configure/customize-content-snippets.md
-        - name: Configure website redirects
-          href: ./portals/configure/add-redirect-url.md
-        - name: Configure shortcuts
-          href: ./portals/configure/place-child-nodes.md
-        - name: Configure webpage ratings
-          href: ./portals/configure/rate-webpage.md
-        - name: Configure header and footer output caching
-          href: ./portals/configure/enable-header-footer-output-caching.md
-        - name: Add chart on a web page in portal
-          href: ./portals/configure/add-chart.md
-        - name: Manage websites
-          href: ./portals/configure/websites.md
-        - name:  Create and manage website bindings
-          href: ./portals/configure/website-bindings.md
-        - name: Configure multiple languages
-          items:
-            - name: Enable multiple-language support
-              href: ./portals/configure/enable-multiple-language-support.md
-            - name: Behavior and format of the date and time field
-              href: ./portals/configure/behavior-format-date-time-field.md
-        - name: Create and run advertisements
-          href: ./portals/configure/create-run-advertisement.md
-        - name: Gather feedback by using polls
-          href: ./portals/configure/gather-feedback-poll.md
-        - name: Create and manage publishing states
-          href: ./portals/configure/publishing-states.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
     - name: Manage existing portals
@@ -1437,29 +1438,29 @@
           href: ./portals/admin/portal-details.md
         - name: Configure portal actions
           items:
-            - name: Download public key of portal
+            - name: Download public key
               href: ./portals/admin/get-public-key.md
-            - name: View portal error logs
+            - name: Diagnostics and error handling
               href: ./portals/admin/view-portal-error-log.md
-            - name: Reset a portal
+            - name: Reset portal
               href: ./portals/admin/reset-portal.md
-            - name: Change base URL of a portal
+            - name: Change base URL
               href: ./portals/admin/change-base-url.md
             - name: Enable maintenance mode
               href: ./portals/admin/enable-maintenance-mode.md
-            - name: Add a custom domain name
+            - name: Add custom domain name
               href: ./portals/admin/add-custom-domain.md
             - name: Import metadata translation
               href: ./portals/admin/import-metadata-translation.md
             - name: Set up Power BI integration
               href: ./portals/admin/set-up-power-bi-integration.md
-        - name: Run Portal Checker
+        - name: Use Portal Checker
           href: ./portals/admin/portal-checker.md
-        - name: Renew portal authentication key
+        - name: Manage portal authentication key
           href: ./portals/admin/manage-auth-key.md
-        - name: Set up IP address restriction
+        - name: Restrict IP addresses
           href: ./portals/admin/ip-address-restrict.md
-        - name: View activities in a portal timeline
+        - name: View activities in portal timeline
           href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Roles required for portal administration
           href: ./portals/admin/portal-admin-roles.md
@@ -1559,35 +1560,35 @@
           items:
             - name: Liquid templates overview
               href: ./portals/liquid/liquid-overview.md
-            - name: Store content by using web templates
+            - name: Store source content by using web templates
               href: ./portals/liquid/store-content-web-templates.md
             - name: Understand Liquid operators
               href: ./portals/liquid/liquid-operators.md
-            - name: Available Liquid types
+            - name: Understand Liquid types
               href: ./portals/liquid/liquid-types.md
-            - name: Available Liquid conditional operators
+            - name: Understand Liquid conditional operators
               href: ./portals/liquid/liquid-conditional-operators.md
-            - name: Available Liquid objects
+            - name: Understand Liquid objects
               href: ./portals/liquid/liquid-objects.md
-            - name: Available Liquid tags
+            - name: Understand available Liquid tags
               items:
-                - name: Available Liquid tags
+                - name: Liquid tags overview
                   href: ./portals/liquid/liquid-tags.md
-                - name: Control flow tags
+                - name: Understand control flow tags
                   href: ./portals/liquid/control-flow-tags.md
-                - name: Iteration tags
+                - name: Understand iteration tags
                   href: ./portals/liquid/iteration-tags.md
-                - name: Variable tags
+                - name: Understand variable tags
                   href: ./portals/liquid/variable-tags.md
-                - name: Template tags
+                - name: Understand template tags
                   href: ./portals/liquid/template-tags.md
-                - name: Dataverse entity tags
+                - name: Understand Dataverse entity tags
                   href: ./portals/liquid/portals-entity-tags.md
-            - name: Available Liquid filters
+            - name: Understand Liquid filters
               href: ./portals/liquid/liquid-filters.md
-            - name: Create advanced templates
+            - name: Create custom templates
               items:
-                - name: Create a custom page template
+                - name: Create custom page template
                   href: ./portals/liquid/create-custom-template.md
                 - name: Use hybrid navigation to render page hierarchy
                   href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
