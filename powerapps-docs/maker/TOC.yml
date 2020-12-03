@@ -1352,7 +1352,7 @@
           href: ./portals/work-with-templates.md
         - name: Work with themes
           items:
-            - name: Themes overview and enable basic themes
+            - name: Basic themes
               href: ./portals/theme-overview.md
             - name: Edit CSS
               href: ./portals/edit-css.md
@@ -1558,6 +1558,26 @@
           href: ./portals/configure/improve-portal-search-faceted-search.md
         - name: Search within file attachments
           href: ./portals/configure/search-file-attachment.md
+    - name: Configure document storage in portals
+      items:
+        - name: Configure notes
+          href: ./portals/configure-notes.md
+        - name: Azure storage
+          items:
+            - name: Enable Azure storage
+              href: ./portals/enable-azure-storage.md
+            - name: Add the Azure Storage web resource to a form
+              href: ./portals/add-web-resource.md
+        - name: Manage SharePoint documents
+          href: ./portals/manage-sharepoint-documents.md
+    - name: Integrate Power BI with portals
+      items:
+        - name: Set up Power BI integration
+          href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Add a Power BI report or dashboard to a web page in portal using Power BI component in Studio
+          href: ./portals/compose-page.md#add-power-bi
+        - name: Add a Power BI report or dashboard to a web page in portal using powerbi liquid tag
+          href: ./portals/admin/add-powerbi-report.md
     - name: For developers
       items:
         - name: Work with Liquid templates
@@ -1611,27 +1631,7 @@
             href: ./portals/web-api-perform-operations.md
           - name: Compose HTTP requests and handle errors
             displayName: Portals Web API handle HTTP requests and errors
-            href: ./portals/web-api-http-requests-handle-errors.md
-    - name: Configure document storage in portals
-      items:
-        - name: Configure notes
-          href: ./portals/configure-notes.md
-        - name: Azure storage
-          items:
-            - name: Enable Azure storage
-              href: ./portals/enable-azure-storage.md
-            - name: Add the Azure Storage web resource to a form
-              href: ./portals/add-web-resource.md
-        - name: Manage SharePoint documents
-          href: ./portals/manage-sharepoint-documents.md
-    - name: Integrate Power BI with portals
-      items:
-        - name: Set up Power BI integration
-          href: ./portals/admin/set-up-power-bi-integration.md
-        - name: Add a Power BI report or dashboard to a web page in portal using Power BI component in Studio
-          href: ./portals/compose-page.md#add-power-bi
-        - name: Add a Power BI report or dashboard to a web page in portal using powerbi liquid tag
-          href: ./portals/admin/add-powerbi-report.md
+            href: ./portals/web-api-http-requests-handle-errors.md          
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert portal from trial to production
