@@ -1298,6 +1298,12 @@
       href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
+    - name: Power Apps portals architecture
+      items:
+        - name: Connectivity to Microsoft Dataverse
+          href: ./portals/admin/connectivity.md
+        - name: Server-side cache in portals
+          href: ./portals/admin/clear-server-side-cache.md
     - name: Portal lifecycle
       href: ./portals/admin/portal-lifecycle.md
     - name: "Microsoft Learn: Get started with Power Apps portals"
@@ -1348,7 +1354,7 @@
           href: ./portals/work-with-templates.md
         - name: Work with themes
           items:
-            - name: Create theme
+            - name: Themes overview and enable basic themes
               href: ./portals/theme-overview.md
             - name: Edit CSS
               href: ./portals/edit-css.md
@@ -1456,7 +1462,7 @@
               href: ./portals/admin/set-up-power-bi-integration.md
         - name: Use Portal Checker
           href: ./portals/admin/portal-checker.md
-        - name: Manage portal authentication key
+        - name: Renew portal authentication key
           href: ./portals/admin/manage-auth-key.md
         - name: Restrict IP addresses
           href: ./portals/admin/ip-address-restrict.md
@@ -1646,8 +1652,6 @@
           href: ./portals/configure/implement-gdpr.md
         - name: Cookies used by portal
           href: ./portals/admin/portal-cookies.md
-    - name: Clear the server-side cache
-      href: ./portals/admin/clear-server-side-cache.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQ

@@ -10,11 +10,11 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Portal checker
+# Portal Checker
 
-Portal checker is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal checker helps to identify issues with a portal by looking at various configuration parameters and it provides suggestions on how to fix them.
+Portal Checker is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal Checker helps to identify issues with a portal by looking at various configuration parameters and it provides suggestions on how to fix them.
 
-When you run portal checker, the results are displayed in the **Diagnostic results** section in a grid format. The results grid has the following columns:
+When you run portal Checker, the results are displayed in the **Diagnostic results** section in a grid format. The results grid has the following columns:
 
 - **Issue**: Displays the top-level issue faced by a customer; for example, performance issue.
 - **Category**: Displays the top-level area where issues can be categorized; for example, provisioning or solution upgrade.
@@ -35,16 +35,16 @@ If required, you can rerun the diagnostic checks, which will refresh the results
 > [!NOTE]
 > If portal is turned off or IP address filtering is enabled, certain diagnostic checks will not be run on your portal.
 
-For a list of common issues diagnosed by the portal checker tool, see [Common portal issues diagnosed by portal checker and their best practices](https://docs.microsoft.com/dynamics365/customer-engagement/portals/portal-faq).
+For a list of common issues diagnosed by Portal Checker, see [Common portal issues diagnosed by Portal Checker and their best practices](https://docs.microsoft.com/dynamics365/customer-engagement/portals/portal-faq).
 
-To run portal checker:
+To run Portal Checker:
 
 1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Run Portal Checker**.
 
     > [!div class=mx-imgBorder]
-    > ![Run portal checker](../media/run-diagnostics.png "Run portal checker")
+    > ![Run Portal Checker](../media/run-diagnostics.png "Run Portal Checker")
 
 3.	Select **Run Portal Checker**. The diagnostic session will start and gather data about the customer issues. The results are displayed in the **Diagnostic results** section.
 
