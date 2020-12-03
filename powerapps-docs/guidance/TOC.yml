@@ -12,6 +12,12 @@
       href: patterns/communication-pattern.md
     - name: Inspection or Audit pattern
       href: patterns/inspection-pattern.md
+    - name: Project management pattern
+      href: patterns/project-management-pattern.md
+    - name: Asset management / resource booking pattern
+      href: patterns/asset-management-pattern.md    
+    - name: Approval pattern
+      href: patterns/approval-pattern.md
     - name: More patterns
       href: patterns/more-patterns.md
   - name: Planning a Power Apps project
