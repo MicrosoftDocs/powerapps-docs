@@ -1306,8 +1306,6 @@
           href: ./portals/admin/connectivity.md
         - name: Server-side cache in portals
           href: ./portals/admin/clear-server-side-cache.md
-    - name: "Microsoft Learn: Get started with Power Apps portals"
-      href: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals
     - name: Available portal templates
       href: ./portals/portal-templates.md
     - name: Create portal
