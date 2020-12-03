@@ -5,7 +5,7 @@ author: kathyos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 07/20/2020
+ms.date: 12/10/2020
 ms.author: kathyos
 ms.reviewer: kathyos
 
@@ -114,7 +114,7 @@ We'll continue to add patterns over time.
     :::column:::
        **Approvals**
 
-       [Find real-world approvals use cases](more-patterns.md#approvals)
+       [Read more about the approvals pattern, including real-world use cases](approval-pattern.md)
     :::column-end:::
     :::column:::
         Collect approval from one or more sources
@@ -131,7 +131,7 @@ We'll continue to add patterns over time.
     :::column:::
        **Asset management**
 
-       [Find real-world asset management use cases](more-patterns.md#asset-management)
+       [Read more about the asset management pattern, including real-world use cases](asset-management-pattern.md)
     :::column-end:::
     :::column:::
         Manage inventory or other assets
@@ -142,6 +142,20 @@ We'll continue to add patterns over time.
       - Asset rollout
       - Inventory management
       - Supply order management
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+       **Project management**
+
+       [Read more about the project management pattern, including real-world use cases](project-management-pattern.md)
+    :::column-end:::
+    :::column:::
+        Track a project from inception to completion
+    :::column-end:::
+    :::column:::
+        Example use cases: 
+      - Project management
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -177,10 +191,8 @@ We'll continue to add patterns over time.
       - Employee onboarding
       - Employee promotion evaluation
       - Expense reporting process
-      - Project management
       - Request management
       - Service desk tickets
-
     :::column-end:::
 :::row-end:::
 :::row:::
