@@ -152,7 +152,7 @@ These tables are used primarily by the Portal extension. This list includes the 
 
 ## Data definitions
 
-The data definitions section provides information about a list of tables, columns, and the areas of the solution where they're used. The solution column indicates if the field is part of the base solution or if its added via the portals extension. System-generated columns such as **Created On** and **Modified On** aren't displayed.
+The data definitions section provides information about a list of tables, columns, and the areas of the solution where they're used. The solution column indicates if the field is part of the base solution or if it is added via the portals extension. System-generated columns such as **Created On** and **Modified On** aren't displayed.
 
 ### Access Action
 
@@ -382,7 +382,7 @@ The data definitions section provides information about a list of tables, column
 | Guest            | Lookup          | Used to denote the guest completing the attestation.             | Model-driven app             |
 | Facility         | Lookup          | Used to associate the facility for which the Guest is attesting. | Model-driven  |
 | Name             | Text            | Used to create a name for the Guest attestation record.  | Model-driven app             |
-| Guest Registration | Lookup        | Used to associate the attestation to an Guest booking. | Model-driven  |
+| Guest Registration | Lookup        | Used to associate the attestation to a Guest booking. | Model-driven  |
 |||||
 
 ### Guest Registration
@@ -515,10 +515,10 @@ The data definitions section provides information about a list of tables, column
 |-----------------------------------------|--------------|--------------------------------------------------------------------------|---------------------------------|----------|
 | Allow Employee Sentiment                | Option Set   | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app | Base |
 | Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app | Base |
-| Allow on behalf of attestations         | option set | Indicates if guest are allowed to register other guest.                  | Model-driven app                | Portal |
+| Allow on behalf of attestations         | option set | Indicates if guest is allowed to register other guest.                  | Model-driven app                | Portal |
 | Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app | Base |
 | Allow QR codes                          | Option Set | Indicates if QR codes are displayed on the pass.                         | Model-driven app and canvas app | Base |
-| Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registrations is available.              | Model-driven app and canvas app | Base |
+| Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registration is available.              | Model-driven app and canvas app | Base |
 | Allow Unauthenticated Guests to Create a Pass | Option Set | Indicates if unauthenticated persons can book a pass on the portal. | Model-driven app                | Portal |
 | Company Name                            | Text       | Used to describe the solution settings record.                            | Model-driven app | Base |
 | Facility Group                          | Lookup     | Links solution settings record to specific facility group.               | Model-driven app and canvas app | Base |
@@ -578,7 +578,7 @@ This section describes the different flows in the solution and explains their pu
 
 ### Sample Data
 
-Initially in the solution, the flows below were provided to generate sample data which will be refreshed for 12 hours. Starting from version 1.3 these flows will no longer be provided, yet in the future they will be placed on Github for use on demo environments.
+Initially in the solution, the flows below were provided to generate sample data that will be refreshed for 12 hours. Starting from version 1.3 these flows will no longer be provided, yet in the future they will be placed on GitHub for use on demo environments.
 
 | Flow  | Description |
 |--------------|----------|

@@ -203,7 +203,7 @@ Open a facility record in the Facility Safety Management app and you’ll see th
 
 You can change the look and feel of the app by applying themes to match your company branding.
 
-1. Open the **Facility Safety Management** app or the **Workplace Care Management** app. In the top right select the gear icon and select **Advanced Settings**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app. In the top right, select the gear icon and select **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
    > ![Advanced Settings](media/deploy-advanced-settings.png "Advanced Settings")
@@ -320,12 +320,12 @@ This section provides information on how to install the Return to the Workplace 
 
 1. Go to [Power Apps](https://make.powerapps.com). Select the environment you want to install the portal.
 
-1. Select **Apps** from the left navigation pane, select **New app** and then select **POrtal**.
+1. Select **Apps** from the left navigation pane, select **New app** and then select **Portal**.
 
    > [!div class="mx-imgBorder"]
    > ![Create portal](media/create-portal.png "Create portal")
 
-1. Enter appropriate values and then select **Create** .
+1. Enter appropriate values and then select **Create**.
 
    > [!div class="mx-imgBorder"]
    > ![Portal details](media/enter-portal-name.png "Portal details")
@@ -337,15 +337,15 @@ This section provides information on how to install the Return to the Workplace 
 
 ### Step 2: Install the package
 
-You can install the Return to the Workplace Portal solution from AppSource. 
+You can install the Return to the Workplace Portal from AppSource. 
 
 > [!NOTE]
 > If you are a US Government customer, you'll have to install using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
-1. Go to [AppSource](https://aka.ms/rtw-app) to install the **Return to the Workplace Portal solution**.
+1. Go to [AppSource](https://aka.ms/rtw-portal) to install the **Return to the Workplace Portal**.
 
     > [!div class="mx-imgBorder"]
-    > ![Installation page](media/return-to-workplace-installationpage.png "Installation page")
+    > ![Installation page](media/deploy-portal-appsource.png "Installation page")
 
 2. Select **GET IT NOW** to install the solution in your environment. You'll be redirected to the actual installation page, where you can select the environment where you want to install it. Installation starts after you select the environment and accept the terms and agreement.
 
@@ -364,7 +364,7 @@ The deployment package also contains the sample portal data. To import data into
 
 3. Select **Save and Close** and then deactivate the **Basic** website.
 
-4. Select **Website Bindings** . Validate if there is a binding for the url indicated for the **Return to the Workplace** website.
+4. Select **Website Bindings**. Validate if there is a binding for the url indicated for the **Return to the Workplace** website.
 
 5. Go to [Power Apps](https://make.powerapps.com). Select **...** and then select **Settings**. Select **Administration** to open the portal administration. Select **Portal Actions** and then select **Restart**.
 

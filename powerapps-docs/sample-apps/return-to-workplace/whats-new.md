@@ -16,7 +16,7 @@ This article provides resources where you can learn about the new features that 
 
 ## New and updated features in December 2020 (v1.3)
 
-### Return to the Workplace Guest Portal
+### Return to the Workplace Portal
 
 Facility managers can provide facility access to third parties. A third party can choose a facility, attest to being symptom-free and receive a day pass for facility entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
 

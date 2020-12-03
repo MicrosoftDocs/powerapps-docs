@@ -58,7 +58,7 @@ See also:
 |Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Facility Safety Management app](app-for-facility-manager.md)
 |Use the employee app|Used by employees who are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to having no symptoms before returning to a reopened workplace.|Employees|[Employee Return to the Workplace app](app-for-employee.md)
 |Use the care management app|Used to manage employee cases.|Case managers|[Workplace Care Management app](app-for-health-and-safety-lead.md)
-|Use the portal |Used by facility managers to give third parties access to the facility.|Facility managers|[Return to the Workplace Guest Portal](portal-extension.md)|
+|Use the portal |Used by facility managers to give third parties access to the facility.|Facility managers|[Return to the Workplace Portal](portal-extension.md)|
 
 ## Feedback about the solution
 

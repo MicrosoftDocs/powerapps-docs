@@ -10,9 +10,9 @@ ms.author: garybird
 ms.reviewer: nabuthuk
 ---
 
-# Return to the Workplace Guest Portal
+# Return to the Workplace Portal
 
-Return to the Workplace solution now includes a guest portal. Return to the Workplace Guest Portal allows users outside your organization to get a pass by completing a health attestation. The portal has been designed to provide a mobile experience for users but will scale to tablet and desktop screens as well. This enables users to access the portal from any device.
+Return to the Workplace solution now includes a guest portal. Return to the Workplace Portal allows users outside your organization to get a pass by completing a health attestation. The portal has been designed to provide a mobile experience for users but will scale to tablet and desktop screens as well. This enables users to access the portal from any device.
 
 > [!div class="mx-imgBorder"]
 > ![Portal welcome page](media/portals-welcome-screen.png "Portal welcome page")
