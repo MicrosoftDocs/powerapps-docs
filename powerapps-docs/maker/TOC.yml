@@ -1300,12 +1300,12 @@
       href: ./portals/overview.md
     - name: Power Apps portals architecture
       items:
+        - name: Portal lifecycle
+          href: ./portals/admin/portal-lifecycle.md
         - name: Connectivity to Microsoft Dataverse
           href: ./portals/admin/connectivity.md
         - name: Server-side cache in portals
           href: ./portals/admin/clear-server-side-cache.md
-        - name: Portal lifecycle
-          href: ./portals/admin/portal-lifecycle.md
     - name: "Microsoft Learn: Get started with Power Apps portals"
       href: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals
     - name: Available portal templates
