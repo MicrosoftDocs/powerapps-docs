@@ -32,6 +32,8 @@ To add a chatbot component to portal page:
 
 1. Select **Components** from the left pane.
 
+1. Select **Chatbot** component.
+
     ![Add chatbot component to a page](media/add-chatbot/add-chatbot.png "Add chatbot component to a page")
 
 1. Enter **Bot ID** in the chatbot component configuration pane that appears on the left.
@@ -41,7 +43,7 @@ To add a chatbot component to portal page:
     > [!NOTE]
     > To learn about how to get the bot ID, go to [Get a Power Virtual Agents bot ID](#get-the-power-virtual-agents-bot-id).
 
-1. Enter a display name.
+1. If necessary, update the display name.
 
 1. If necessary, update the chat window height, width, header background color, and header text color.
 
