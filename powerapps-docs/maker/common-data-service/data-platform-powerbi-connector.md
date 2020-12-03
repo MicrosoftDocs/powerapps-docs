@@ -37,7 +37,7 @@ To use Power BI with Dataverse, you need the following items:
 
    :::image type="content" source="media/session-details.png" alt-text="Session details":::
 1. In the **Power Apps session details** dialog box, select **Copy Details**.
-1. Paste the session details somewhere such as Notepad so that you can copy only the **Instance url**. The instance URL is the unique URL for your environment. The URL will be in the format: https://yourenvironmentid.crm.dynamics.com/. Make sure you remove *https://* and the trailing */* from the URL before pasting it to connect to your environment. Keep this somewhere handy so you can use it when creating your Power BI reports.
+1. Paste the session details somewhere such as Notepad so that you can copy only the **Instance url**. The instance URL is the unique URL for your environment. The URL will be in the format: `https://yourenvironmentid.crm.dynamics.com/`. **Make sure you remove *https://* and the trailing */* from the URL before pasting it to connect to your environment.** Keep this somewhere handy so you can use it when creating your Power BI reports.
 
 ## Connect to Dataverse using the connector
 
