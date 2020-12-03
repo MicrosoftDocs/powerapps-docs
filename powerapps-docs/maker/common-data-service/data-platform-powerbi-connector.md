@@ -29,7 +29,7 @@ To use Power BI with Dataverse, you need the following items:
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
 * Dataverse environment with maker permissions to access the portal and read permissions to access data within tables.
 * You must have the appropriate Power BI [license](/power-bi/admin/service-admin-licensing-organization) to build and share Power BI reports.
-* To use the **Common Data Service (beta)** connector, the **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings]/power-platform/admin/settings-features)
+* To use the **Common Data Service (beta)** connector, the **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Find your Dataverse environment URL
 
