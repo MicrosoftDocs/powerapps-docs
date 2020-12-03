@@ -16,7 +16,7 @@ Power Apps portals allows you to add a [Power Virtual Agents chatbot](https://do
 
 ## Prerequisites
 
-Before you add a Power Virtual Agents chatbot to a Power Apps portals page, you must create a chatbot first. To learn how to create a chatbot, go to [Create and delete Power Virtual Agents bots](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot).
+Before you add a Power Virtual Agents chatbot to a Power Apps portals page, you must create a chatbot first. To learn about how to create a chatbot, go to [Create and delete Power Virtual Agents bots](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot).
 
 ## Add chatbot component
 
