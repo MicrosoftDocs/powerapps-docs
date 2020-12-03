@@ -52,7 +52,7 @@ To use Power BI with Dataverse, you need the following items:
    
    If you selected the **Common Data Service (beta)** connector, select from the following **Data Connectivity** mode options: 
    * **Import**: You should import data to Power BI wherever possible. With this mode, data is cached in the Power BI service and imported on a scheduled interval.
-   * **DirectQuery**: Connects directly to the data in Dataverse.  Use this mode for real-time data retrieval. This mode can also more strictly enforces the Dataverse security model. More information: [DirectQuery model guidance in Power BI Desktop](/power-bi/guidance/directquery-model-guidance).
+   * **DirectQuery**: Connects directly to the data in Dataverse.  Use this mode for real-time data retrieval. This mode can also more strictly enforce the Dataverse security model. More information: [DirectQuery model guidance in Power BI Desktop](/power-bi/guidance/directquery-model-guidance).
 
    Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**.
 
@@ -72,10 +72,10 @@ To use Power BI with Dataverse, you need the following items:
 ### Choices
 Choices are used in tables to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector choice  columns will be presented as two columns to show both the unique value, and the display value.
 
-For example, if you had a choice column on your table called approvalstatus, you would see two columns in Power BI:
+For example, if you had a choice column on your table called `approvalstatus`, you would see two columns in Power BI:
 
-* approvalstatus  - This will show a unique integer value for each item in your choice , this is help when applying filters so they will not be impacted if you make future changes to the display name.
-* approvalstatusname  - This will show the friendly display name of the item and is most commonly used when presenting the option in a table or chart.
+* `approvalstatus`  - This will show a unique integer value for each item in your choice , this is help when applying filters so they will not be impacted if you make future changes to the display name.
+* `approvalstatusname`  - This will show the friendly display name of the item and is most commonly used when presenting the option in a table or chart.
 
     |approvalstatus |approvalstatusname |
     |---------|---------|
@@ -85,7 +85,7 @@ For example, if you had a choice column on your table called approvalstatus, you
     4|Rejected
 
 ### Lookups
-Lookup columns use a many-to-one (N:1) table relationship between the table you’re working with and the target row type defined for the lookup. Lookups are presented in Power BI Desktop as two columns, *lookup*id and *lookup*idname.
+Lookup columns use a many-to-one (N:1) table relationship between the table you’re working with and the target row type defined for the lookup. Lookups are presented in Power BI Desktop as two columns, *lookup*id and *lookup*id-name.
 
 ## Navigating relationships
 
