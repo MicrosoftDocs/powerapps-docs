@@ -158,6 +158,7 @@ Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [document
 - [Pinnacle Group – Helpdesk employee leads transition from paper to digital](https://powerapps.microsoft.com/blog/pinnacle-group/)
 
 - [Kelly Roofing uses Power Apps to capture photos at work sites](https://powerapps.microsoft.com/blog/kellyroofing/)
+- [G & J Pepsi – Transforming in-store merchandising and auditing to achieve targeted business goals](https://customers.microsoft.com/story/gj-pepsi-consumer-goods-powerapps)
 
 ### Microsoft Power Apps Community
 
