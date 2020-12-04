@@ -22,8 +22,6 @@ In this article, learn about how to configure Azure Active Directory B2C as the 
 
 > [!NOTE]
 > Changes to the authentication settings [might take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to be reflected on the portal. Restart the portal by using [portal actions](../admin/admin-overview.md) if you want the changes to be reflected immediately.
-<!--markdownlint-disable MD036-->
-**To configure Azure AD B2C as the OpenID Connect provider**
 
 Follow these steps to configure Azure AD B2C as the OpenID Connect provider.
 
