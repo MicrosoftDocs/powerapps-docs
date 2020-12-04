@@ -5,9 +5,9 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Use the Workplace Care Management app
@@ -61,6 +61,7 @@ The Workplace Care Management app has the following components:
 
       > [!div class="mx-imgBorder"]
       > ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
+
 
 **Master data**
 
@@ -197,7 +198,14 @@ The key piece of data to be captured and recorded before moving to the next stag
   > [!div class="mx-imgBorder"]
   > ![Monitoring](media/health-safety-bpf-monitoring.png "Monitoring")
 
-A case manager can inform an employee that the facility is not available to enter for a while. When **Facility Access Available** is set to **No**, the employee won't be able to get a day pass. When you inform an employee that facility access is not available, you'll be able to give **Employee Instructions** that are visible in the app. With the **Facility Access Available Date**, you can inform the employee of when they will be able to get a day pass again. A flow will automatically reset **Facility Access Available** when the date is reached.
+In the **Employee Instructions** section an employee can be blocked from accessing facilities.
+
+   > [!div class="mx-imgBorder"]
+   > ![Employee instructions](media/health-safety-employee-block-access.png "Employee instructions")
+
+Case manager can inform an employee that the facility is not available to enter for a while. When **Facility Access Available** is set to **No**, the employee won't be able to get a day pass. To inform an employee that facility access is not available, you'll be able to give **Employee Instructions** that are visible in the app. With the **Facility Access Available Date**, you can inform the employee of when they will be able to get a day pass again. A flow will automatically reset **Facility Access Available** when the date is reached.
+
+This functionality seamlessly ties in with the access controls. More information: [Facility Access](app-for-facility-manager.md#facility-access).
 
 #### Resolve
 

@@ -57,7 +57,7 @@ For each row, you can open and view detailed information about the form event. F
 > [!div class="mx-imgBorder"] 
 > ![Monitoring a related menu](media/monitor-formchecker-related-menu.png)
 
-To see the full details, select **+** next to the line that displays the word **data** in the title, which is line **5** in the previous screenshot. The expanded details displays all items in the related menu with information that can help you understand why a table is, or isn't, included in the related menu options. There are many types of events that are monitored, including the standard form events like onload, onsave, and onclose.
+To see the full details, select **+** next to the line that displays the word **data** in the title, which is line **5** in the previous screenshot. The expanded details displays all items in the related menu with information that can help you understand why a table is, or isn't, included in the related menu options. There are many types of events that are monitored, including the standard form events like `onload`, `onsave`, and `onclose`.
 
 As you continue to use the app that's being monitored, Monitor updates the information in the list of events. For forms, there are many different scenarios that you can troubleshoot and find additional information on the form, control, or table you're working with. 
 
@@ -70,8 +70,8 @@ Supported areas for form monitoring include the following.
 |Control state   | Details about the state of the visible, enabled, and label source of a control when the form is loaded.     |
 |Related menu   | Details about the state of related menu items. Examples:  <br /> Why is a menu item not being displayed? <br /> Where does the menu item come from?     |
 |Tab / section / control state change   | Details on who (via the callstack) has caused a form component&mdash;such as a tab, section, or control&mdash;to change the component's visibility and enabled state.        |
-|Navigation     | Details about what's causing navigation or unexpected dialogs by tracing the callstack of these Xrm.Navigation client API methods: openAlertDialog(), openConfirmDialog(), openDialog(), openErrorDialog(), navigateTo(), openForm(), openTaskFlow(), openUrl(), openWebResource()         |
-|Unsupported customizations    |  Details about unsupported client API access before the form is ready. Examples: <br /> Accessing parent.Xrm.Page in iFrame before the form is fully loaded. <br /> Accessing Xrm.Page in a form web resource outside of form handler contexts using window.setTimeout() to periodically call the form client API. <br /> Accessing Xrm.Page in updateView() method of the Power Apps control framework control code.  |
+|Navigation     | Details about what's causing navigation or unexpected dialogs by tracing the callstack of these `Xrm.Navigation` client API methods: `openAlertDialog()`, `openConfirmDialog()`, `openDialog()`, `openErrorDialog()`, `navigateTo()`, `openForm()`, `openTaskFlow()`, `openUrl()`, `openWebResource()`         |
+|Unsupported customizations    |  Details about unsupported client API access before the form is ready. Examples: <br /> Accessing parent.`Xrm.Page` in iFrame before the form is fully loaded. <br /> Accessing `Xrm.Page` in a form web resource outside of form handler contexts using window.`setTimeout()` to periodically call the form client API. <br /> Accessing `Xrm.Page` in `updateView()` method of the Power Apps control framework control code.  |
 
 Examples of the supported form-related events in Monitor include:
 
@@ -85,3 +85,5 @@ Examples of the supported form-related events in Monitor include:
 - ControlStateChange.visible
 - SectionStateChange.visible
 - UnsupportedClientApi
+
+For more information about how to troubleshoot issues with forms in a model-driven app, see [Troubleshoot form issues in model-driven apps](../../developer/model-driven-apps/troubleshoot-forms.md).

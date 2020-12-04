@@ -179,7 +179,7 @@ A typical cause for this error is the script that calls the `save()` method in t
 
 **Resolution**:
 
-In Monitor, the `FormEvents.onsave` operation provides all the details that are causing the error. The form checker won't be able to detect the error if the issue can't be reproduced.
+In [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) the `FormEvents.onsave` operation provides all the details that are causing the error. The form checker won't be able to detect the error if the issue can't be reproduced.
 
 > [!div class="mx-imgBorder"]
 > ![Save in progress error](media/save-in-progress-error.png "Save in progress error")
@@ -190,7 +190,7 @@ A common cause is an [OnSave](https://docs.microsoft.com/powerapps/developer/mod
 
 **Resolution**:
 
-In Monitor, the `FormEvents.onsave` operation provides all the details why the save event was canceled, more details than that are available from the form UI itself.
+In [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker), the `FormEvents.onsave` operation provides all the details why the save event was canceled, more details than that are available from the form UI itself.
 
 > [!div class="mx-imgBorder"]
 > ![Record isn't saved error](media/record-not-saved-error.png "Record isn't saved error")
@@ -215,7 +215,7 @@ This causes the form script error because the first parameter for the `OnLoad` f
 
 **Resolution**:
 
-In Monitor, the `FormEvent.onload` operation provides all the details including the web resource, function, and the line that's causing the issue.
+In [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker), the `FormEvent.onload` operation provides all the details including the web resource, function, and the line that's causing the issue.
 
 > [!div class="mx-imgBorder"]
 > ![FormEvent.onload operation](media/see-form-checker-for-details.png "FormEvent.onload operation")
@@ -337,7 +337,7 @@ There are many possible reasons why a tab or section might be hidden or visible.
 
 **Resolution**:
 
-The `TabStateChange` or `SectionStateChange` operations in Monitor explain the visible state change, as shown in the following image.
+The `TabStateChange` or `SectionStateChange` operations in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) explain the visible state change, as shown in the following image.
 
 > [!div class="mx-imgBorder"]
 > ![Tab section](media/tab-section-visible.png "Tab section")
@@ -354,4 +354,4 @@ There are many possible reasons why an alert appears or navigation happens unexp
 The `XrmNavigation` operation in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) helps you identify the script that's causing unexpected behavior.
 
 > [!div class="mx-imgBorder"]
-> ![XrmNavigation operation in Monitor](media/form-checker-navigation.png "XrmNavigation operation in Monitor")
+> ![XrmNavigation operation in Monitor](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker)")
