@@ -32,7 +32,8 @@ The following prebuilt components can be used for geospatial and mapping scenari
 ## Prerequisites
 
 1. An admin must [enable the geospatial features in the Power Platform admin center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
-2. [Enable the geospatial features for each app](#enable-the-geospatial-features-for-each-app).
+2. An admin must [ensure the geospatial components will not be blocked by the environment's data loss prevention policies](#review-the-environments-data-loss-prevention-policies).
+3. [Enable the geospatial features for each app](#enable-the-geospatial-features-for-each-app).
 
     >[!IMPORTANT]
     >The components require the default **Organizations** data source to be present. This data source is included whenever you insert the components into an app, but if you manually delete it you'll need to add it before the components will work:
@@ -84,6 +85,12 @@ The geospatial features require additional terms of use that must be reviewed an
 1. Select **Save** at the bottom of the settings page.
 
     ![Screenshot of the Save button](./media/geospatial/ppac-save.png "Screenshot of the Save button")
+
+### Review the environment's data loss prevention policies
+
+The geospatial components require the Common Data Service and Spatial Services connectors. 
+
+For the components to function properly, these connectors must not have conflicting data loss prevention policies. An admin must review the environment's data loss prevention policies and ensure that these connectors are classified under the same data group, typically the **Business** data group. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss). 
 
 ### Enable the geospatial features for each app
 

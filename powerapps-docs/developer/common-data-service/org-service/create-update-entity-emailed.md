@@ -1,5 +1,5 @@
 ---
-title: "Create and update an entity to send email activities to records (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create and update an entity to send email activities to records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about creating an entity that contains an email address you can use to send email activities to records for that entity." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/05/2019

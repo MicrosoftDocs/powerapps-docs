@@ -1,6 +1,6 @@
 ---
-title: "Use Workflow Custom Actions with code (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Actions are custom messages that extend the functionality of Common Data Service. Learn more about how to create your own actions" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use Workflow Custom Actions with code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Actions are custom messages that extend the functionality of Microsoft Dataverse. Learn more about how to create your own actions" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/26/2020
 ms.reviewer: "pehecke"
@@ -18,7 +18,7 @@ search.app:
 
 # Use Workflow Custom Actions with code
 
-Workflow Custom Actions, also known as simply *Custom Actions*, are one of two ways to create custom messages for the Common Data service. The other is a preview feature called *Custom APIs*. More information: [Create and use Custom APIs](custom-api.md).
+Workflow Custom Actions, also known as simply *Custom Actions*, are one of two ways to create custom messages for the Microsoft Dataverse. The other is a preview feature called *Custom APIs*. More information: [Create and use Custom APIs](custom-api.md).
 
 Both of these capabilities allow for creating new messages that can be called from web services. Workflow Custom Actions will continue to provide a no-code way to declaratively define synchronous business logic. Custom actions have always been synchronous 'real-time' workflows and therefore not suitable to be converted to use Power Automate.
 
@@ -69,10 +69,10 @@ If one of the steps in the action’s real-time workflow is a custom workflow ac
 The existing <xref:Microsoft.Xrm.Sdk.IExecutionContext.Depth> platform checks ensure an infinite loop does not occur. For more information on depth limits see <xref:Microsoft.Xrm.Sdk.Deployment.WorkflowSettings.MaxDepth>. 
 
 > [!TIP]
->  A best practice recommendation is that long running operations should be executed outside of Common Data Service using Power Automate, Logic Apps, or other capabilities offered by Azure.
+>  A best practice recommendation is that long running operations should be executed outside of Dataverse using Power Automate, Logic Apps, or other capabilities offered by Azure.
   
 ### See also  
  [Create a custom action](../../maker/common-data-service/create-actions.md)<br />
  [Use actions](../../maker/common-data-service/actions.md)<br />
- [Classic Common Data Service workflows](/flow/workflow-processes)<br />
+ [Classic Dataverse workflows](/flow/workflow-processes)<br />
 

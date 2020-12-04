@@ -1,5 +1,5 @@
 ---
-title: "Create a Custom API with code (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create a Custom API with code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write code create custom APis." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/26/2020
@@ -24,7 +24,7 @@ search.app:
 > - [Create and use Custom APIs](custom-api.md)
 > - [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)
 >
-> You should also understand how to create Common Data Service records, using either the Web API or Organization Service. For more information see:
+> You should also understand how to create Microsoft Dataverse records, using either the Web API or Organization Service. For more information see:
 > - [Create an entity record using the Web API](webapi/create-entity-web-api.md)
 > - [Create entities using the Organization Service](org-service/entity-operations-create.md)
 
@@ -127,7 +127,7 @@ using (CDSWebApiService svc = new CDSWebApiService(config))
 
 This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with a late-bound programming style: More information: 
 
-- [Use CrmServiceClient constructors to connect to Common Data Service](xrm-tooling/use-crmserviceclient-constructors-connect.md)
+- [Use CrmServiceClient constructors to connect to Dataverse](xrm-tooling/use-crmserviceclient-constructors-connect.md)
 - [Late-bound and Early-bound programming using the Organization service](org-service/early-bound-programming.md)
 - [Create entities using the Organization Service](org-service/entity-operations-create.md)
 

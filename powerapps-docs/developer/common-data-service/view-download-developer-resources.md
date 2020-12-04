@@ -1,6 +1,6 @@
 ---
-title: "View or download developer resources for Power Apps and Common Data Service | MicrosoftDocs"
-description: "Find developer resources and service endpoint URLs for Power Apps and Common Data Service"
+title: "View or download developer resources for Power Apps and Microsoft Dataverse | MicrosoftDocs"
+description: "Find developer resources and service endpoint URLs for Power Apps and Microsoft Dataverse"
 keywords: ""
 ms.date: 04/09/2020
 ms.service: powerapps
@@ -59,13 +59,13 @@ This section provides links for developers to find resources. The following reso
 |[Developer Overview](https://go.microsoft.com/fwlink/?LinkId=550995)|Link to a topic providing an overview for developers.|
 
 
-## Connect your apps to this instance of Common Data Service
+## Connect your apps to this instance of Microsoft Dataverse
 
-This section provides information you need to connect to your Common Data Service instance.
+This section provides information you need to connect to your Dataverse instance.
 
 ### Instance Web API
 
-This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. You can also download the service document that describes the metadata and operations available in your instance. More information: [Developer Documentation: Use the Common Data Service Web API](/powerapps/developer/common-data-service/webapi/overview)
+This is the URL for the Web API for your instance. The Web API is an OData v4 RESTful API. You can also download the service document that describes the metadata and operations available in your instance. More information: [Developer Documentation: Use the Dataverse Web API](/powerapps/developer/common-data-service/webapi/overview)
 
 ### Organization Service
 
@@ -80,9 +80,9 @@ This information uniquely describes your instance. There is a GUID **ID** and a 
 This information is needed when you use Azure extensions with your instance.
 More information: [Azure integration](/powerapps/developer/common-data-service/azure-integration)
 
-## Connect your apps to the Common Data Service Discovery Service
+## Connect your apps to the Dataverse Discovery Service
 
-Because people may have access to multiple Common Data Service environments, the discovery services allow for retrieving the available environments that a person can access based on their user credentials.
+Because people may have access to multiple Dataverse environments, the discovery services allow for retrieving the available environments that a person can access based on their user credentials.
 
 ### Discovery Web API
 

@@ -1,6 +1,6 @@
 ---
-title: "Quickstart: Blazor Server Web API sample (C#) (Common Data Service)| Microsoft Docs"
-description: "This sample demonstrates how to authenticate with a Common Data Service from a Blazor Server application and then call a basic WhoAmI Web API function."
+title: "Quickstart: Blazor Server Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
+description: "This sample demonstrates how to authenticate with a Microsoft Dataverse from a Blazor Server application and then call a basic WhoAmI Web API function."
 ms.custom: ""
 ms.date: 07/07/2020
 ms.service: powerapps
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-In this quickstart, you'll create a Blazor Server application to connect to your Common Data Service environment using the Web API.
+In this quickstart, you'll create a Blazor Server application to connect to your Microsoft Dataverse environment using the Web API.
 
 You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI](/dynamics365/customer-engagement/web-api/whoami) function. The response will be a [WhoAmIResponse](/dynamics365/customer-engagement/web-api/whoamiresponse) complex type. After call completion, the `UserId` property value is displayed.
 
@@ -31,9 +31,9 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 - Visual Studio 2019 (version 16.6.2 or later recommended)
 - Familiarity with the Microsoft Azure portal
 - Internet connection
-- Valid user account for a Common Data Service instance
+- Valid user account for a Dataverse instance
 - Administrator access to grant application registrations
-- URL to the Common Data Service environment you want to connect with
+- URL to the Dataverse environment you want to connect with
 - Basic understanding of the Visual C# language
 
 > [!NOTE]
@@ -55,7 +55,7 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 
 ## Configure the application in Active Directory
 
-By default, the template will create a registered application. Connecting to Common Data Service will require additional permissions. Open the Azure portal and log in with your credentials. Navigate to **Active Directory** and **App Registrations**, and then choose the entry with the same name as your application.
+By default, the template will create a registered application. Connecting to Dataverse will require additional permissions. Open the Azure portal and log in with your credentials. Navigate to **Active Directory** and **App Registrations**, and then choose the entry with the same name as your application.
 
 1. Choose **Authentication**, select (check) **Access tokens** under **Implicit grant**, and then click **Save**.
 
@@ -150,7 +150,7 @@ The application requires some extra steps to capture the authentication token an
     </app>
     ```
 
-1. Obtain the environment name for the Common Data Services management API. If you're not sure what the name is, open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), navigate to **Environments** then choose **Open environment**. You will see a URL like this: `https://{org}.crm.dynamics.com` where {org} is the environment name.
+1. Obtain the environment name for the Dataverse management API. If you're not sure what the name is, open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), navigate to **Environments** then choose **Open environment**. You will see a URL like this: `https://{org}.crm.dynamics.com` where {org} is the environment name.
 
 1. Add an entry named `CDSAPI` to the appsettings.json file with the environment URL as the value. Append `/api/data/v.9.0/` to the end of the URL so it looks like this:
 
@@ -279,4 +279,4 @@ Learn how to structure your code for a better design.
 
 ### See Also
 
-[Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service](../walkthrough-blazor-webassembly-single-tenant.md)
+[Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Dataverse](../walkthrough-blazor-webassembly-single-tenant.md)

@@ -14,7 +14,7 @@ searchScope:
 ---
 # What is Power Apps?
 
-Power Apps is a suite of apps, services, connectors and data platform that provides a rapid application development environment to build custom apps for your business needs. Using Power Apps, you can quickly build custom business apps that connect to your business data stored *either* in the underlying data platform ([Common Data Service](/powerapps/maker/common-data-service/data-platform-intro)) *or* in various online and on-premises data sources (SharePoint, Microsoft 365, Dynamics 365, SQL Server, and so on). 
+Power Apps is a suite of apps, services, connectors and data platform that provides a rapid application development environment to build custom apps for your business needs. Using Power Apps, you can quickly build custom business apps that connect to your business data stored *either* in the underlying data platform ([Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro)) *or* in various online and on-premises data sources (SharePoint, Microsoft 365, Dynamics 365, SQL Server, and so on). 
 
 ![Power Apps](media/PowerApps-intro.png "Power Apps")
 
@@ -51,18 +51,18 @@ You can run apps that you created, or that someone else created and shared with 
 
 ## Power Apps for admins
 
-Power Apps admins can use **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to create and manage environments, get real-time, self-help recommendations and support for Power Apps and Power Automate, and view Common Data Service analytics. More information: [Administer Power Platform](/power-platform/admin/admin-guide)
+Power Apps admins can use **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to create and manage environments, get real-time, self-help recommendations and support for Power Apps and Power Automate, and view Dataverse analytics. More information: [Administer Power Platform](/power-platform/admin/admin-guide)
 
 ## Power Apps for developers
 
 Developers are app makers who can write code to extend business app creation and customization. Developers can use code to create data and metadata, apply server-side logic using Azure functions, plug-ins, and workflow extensions, apply client-side logic using JavaScript, integrate with external data using virtual entities and webhooks, build custom connectors, and embed apps into your website experiences to create integrated solutions. More information: 
-- [Common Data Service developer](/powerapps/developer/common-data-service/)
+- [Dataverse developer](/powerapps/developer/common-data-service/)
 - [Model-driven apps developer](/powerapps/developer/model-driven-apps/)
 - [Canvas apps developer](/powerapps/maker/canvas-apps/dev-enterprise-intro)
 
 ## Power Apps and Dynamics 365
 
-Dynamics 365 apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing also use the underlying data platform (Common Data Service) used by Power Apps to store and secure data. This enables you to build apps using Power Apps and Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and Common Data Service](maker/common-data-service/data-platform-intro.md#dynamics-365-and-common-data-service)
+Dynamics 365 apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing also use the underlying data platform (Dataverse) used by Power Apps to store and secure data. This enables you to build apps using Power Apps and Dataverse directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and Dataverse](maker/common-data-service/data-platform-intro.md#dynamics-365-and-dataverse)
 
 ## Try Power Apps for free
 

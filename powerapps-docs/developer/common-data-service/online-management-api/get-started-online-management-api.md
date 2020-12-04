@@ -1,6 +1,6 @@
 ---
-title: "Get started with Online Management API for Common Data Service| MicrosoftDocs"
-description: "Provides basic information to help you get started with the Online Admin API for Common Data Service."
+title: "Get started with Online Management API for Microsoft Dataverse| MicrosoftDocs"
+description: "Provides basic information to help you get started with the Online Admin API for Microsoft Dataverse."
 ms.date: 10/23/2020
 ms.service: powerapps
 ms.topic: conceptual
@@ -18,7 +18,7 @@ search.app:
 > [!NOTE]
 > Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated). 
 
-This topic provides basic information to help you get started with the Online Admin API for Common Data Service.
+This topic provides basic information to help you get started with the Online Admin API for Microsoft Dataverse.
 
 ## Microsoft 365 Admin roles
 

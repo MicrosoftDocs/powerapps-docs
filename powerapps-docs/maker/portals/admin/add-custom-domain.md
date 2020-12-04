@@ -17,6 +17,8 @@ A custom domain can help your customers find your support resources more easily 
 > [!IMPORTANT]
 > You can add a custom domain name to a portal only when the portal is in production state. For more information about portal stages, go to [portal lifecycle](portal-lifecycle.md).
 
+To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
 1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Add a Custom Domain Name**. A wizard opens to choose the SSL certificate.
@@ -28,7 +30,7 @@ A custom domain can help your customers find your support resources more easily 
      > [!NOTE]
      > The SSL certificate must meet all the following requirements:
      > - Signed by a trusted certificate authority.
-     > - [Exported](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps) as a password-protected PFX file.
+     > - [Exported](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps&preserve-view=true) as a password-protected PFX file.
      > - Contains private key at least 2048 bits long.
      > - Contains all intermediate certificates in the certificate chain.
      > - Must be SHA2 enabled; SHA1 support is being removed from popular browsers.

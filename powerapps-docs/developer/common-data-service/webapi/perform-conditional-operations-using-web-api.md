@@ -1,5 +1,5 @@
 ---
-title: "Perform conditional operations using the Web API (Common Data Service)| Microsoft Docs"
+title: "Perform conditional operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.custom: ""
 ms.date: 06/19/2020
@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Common Data Service provides support for a set of conditional operations that rely upon the standard HTTP resource versioning mechanism known as *ETags*.  
+Microsoft Dataverse provides support for a set of conditional operations that rely upon the standard HTTP resource versioning mechanism known as *ETags*.  
   
 <a name="bkmk_ETags"></a>
   
@@ -33,13 +33,13 @@ Common Data Service provides support for a set of conditional operations that re
 
 The HTTP protocol defines an *entity tag*, or [ETag](https://msdn.microsoft.com/library/dd541486.aspx) for short, for identifying specific versions of a resource. ETags are opaque identifiers whose exact values are implementation dependent. ETag values occur in two varieties: strong and weak validation. Strong validation indicates that a unique resource, identified by a specific URI, will be identical on the binary level if its corresponding ETag value is unchanged. Weak validation only guarantees that the resource representation is semantically equivalent for the same ETag value.  
   
-Common Data Service generates a weakly validating `@odata.etag` property for every entity instance, and this property is automatically returned with each retrieved entity record. For more information, see [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md).  
+Dataverse generates a weakly validating `@odata.etag` property for every entity instance, and this property is automatically returned with each retrieved entity record. For more information, see [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md).  
   
 <a name="bkmk_ifMatchHeaders"></a>
  
 ## If-Match and If-None-Match headers
 
-Use [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers with ETag values to check whether the current version of a resource matches the one last retrieved, matches any previous version or matches no version.  These comparisons form the basis of conditional operation support. Common Data Service provides ETags to support conditional retrievals, optimistic concurrency, and limited upsert operations.
+Use [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers with ETag values to check whether the current version of a resource matches the one last retrieved, matches any previous version or matches no version.  These comparisons form the basis of conditional operation support. Dataverse provides ETags to support conditional retrievals, optimistic concurrency, and limited upsert operations.
   
 > [!WARNING]
 > Client code should not give any meaning to the specific value of an ETag, nor to any apparent relationship between ETags beyond equality or inequality. For example, an ETag value for a more recent version of a resource is not guaranteed to be greater than the ETag value for an earlier version. Also, the algorithm used to generate new ETag values may change without notice between releases of a service.  

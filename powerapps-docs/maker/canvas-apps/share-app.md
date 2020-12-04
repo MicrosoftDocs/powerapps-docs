@@ -18,7 +18,7 @@ search.app:
 After you build a canvas app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name, or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
 
 > [!IMPORTANT]
-> For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Common Data Service](#common-data-service) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
+> For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. If your app connects to data for which users need access permissions, specify them.
 
-    For example, your app might connect to an entity in a Common Data Service database. When you share such an app, the sharing panel prompts you to manage security for that entity.
+    For example, your app might connect to an entity in a Dataverse database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
     ![Assign a security role](media/share-app/data-permissions-common-data-servicel.png)
 
@@ -140,29 +140,29 @@ After a while, you can discover this group in the Power Apps sharing panel and s
 
 ## Manage entity permissions
 
-### Common Data Service
+### Dataverse
 
-If you create an app based on Common Data Service, you must also ensure that the users that you share the app with have the appropriate permissions for the entity or entities used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
+If you create an app based on Dataverse, you must also ensure that the users that you share the app with have the appropriate permissions for the entity or entities used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
 
 > [!NOTE]
 > - You can assign security roles to individual users and security groups in Azure AD but not to Office groups.
-> - The user must also be in the Common Data Service root business unit. If the user is not in the root business unit, you can share the app without providing a security role, and then set the security role directly.
+> - The user must also be in the Dataverse root business unit. If the user is not in the root business unit, you can share the app without providing a security role, and then set the security role directly.
 
 #### Prerequisite
 
-To assign a role, you must have **System administrator** permissions for a Common Data Service database.
+To assign a role, you must have **System administrator** permissions for a Dataverse database.
 
 #### Assign a security group in Azure AD to a role
 
 1. In the sharing panel, select **Assign a security role** under **Data permissions**.
 
-1. Select the Common Data Service role(s) that you want to apply to the selected Azure AD user(s) or group(s):
+1. Select the Dataverse role(s) that you want to apply to the selected Azure AD user(s) or group(s):
 
      ![Security role list](media/share-app/cds-assign-security-role-list.png "Security role list")
 
-### Common Data Service (previous version)
+### Dataverse (previous version)
 
-When you share an app that's based on an older version of Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
+When you share an app that's based on an older version of Dataverse, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
 
 ## Share with guests
  
@@ -227,13 +227,13 @@ After you share an app for guest access, guests can discover and access apps sha
 
 Canvas apps enable building an app, tailored to digitizing business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that may be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for Power Apps](/powerapps/maker/canvas-apps/connections-list).
 
-[Power Apps portals](/powerapps/maker/portals/overview) provide the ability to build low-code, responsive websites that allow external users to interact with the data stored in Common Data Service. It allows organizations to create websites that can be shared with users external to their organization either anonymously or through the login provider of their choice, such as LinkedIn, Microsoft Account, or other commercial login providers. 
+[Power Apps portals](/powerapps/maker/portals/overview) provide the ability to build low-code, responsive websites that allow external users to interact with the data stored in Dataverse. It allows organizations to create websites that can be shared with users external to their organization either anonymously or through the login provider of their choice, such as LinkedIn, Microsoft Account, or other commercial login providers. 
 
 The following table outlines a few core capability differences between Power Apps portals and canvas apps.  
 
 | Portals or canvas apps| Interface | Authentication | Accessible data sources |
 |------|--------|----------|-------------------|
-| Power Apps portals | Browser only experience | Allows anonymous and authenticated access | Common Data Service |
+| Power Apps portals | Browser only experience | Allows anonymous and authenticated access | Dataverse |
 | Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any ~150 out-of-box connectors and any custom connector  |
 |
 
@@ -330,7 +330,7 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | Capsule CRM                                       | No                                                                     |
 | Cloud PKI Management                              | No                                                                     |
 | Cognito Forms                                     | No                                                                     |
-| Common Data Service                               | Yes*                                                                     |
+| Commmon Data Service                               | Yes*                                                                     |
 | Common Data Service (Legacy)                      | No                                                                     |
 | D&B Optimizer                                     | No                                                                     |
 | Derdack SIGNL4                                    | No                                                                     |
@@ -404,7 +404,7 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | Windows Defender Advanced Threat Protection (ATP) | No                                                                     |
 | Word Online (Business)                            | No                                                                     |
 
-\* When using the Common Data Service connector, ensure the guest user is licensed from the same tenant where you have Common Data Service located.
+\* When using the Common Data Service connector, ensure the guest user is licensed from the same tenant where you have Dataverse located.
 
 ### See also
 
