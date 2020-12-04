@@ -1325,29 +1325,29 @@
         - name: Customize web pages
           items:
             - name: WYSIWYG editor overview
-              href: ./portals/compose-page.md#use-the-wysiwyg-editor
+              href: ./portals/compose-page.md
             - name: Add sections
-              href: ./portals/compose-page.md#add-sections
+              href: ./portals/add-sections.md
             - name: Add components
               items:
-                - name: Add text box
-                  href: ./portals/compose-page.md#add-text-box
+                - name: Add text
+                  href: ./portals/add-text.md
                 - name: Add image
-                  href: ./portals/compose-page.md#add-image
+                  href: ./portals/add-image.md
                 - name: Add IFrame
-                  href: ./portals/compose-page.md#add-iframe
+                  href: ./portals/add-iframe.md
                 - name: Add form
-                  href: ./portals/compose-page.md#add-form
+                  href: ./portals/add-form.md
                 - name: Add list
-                  href: ./portals/compose-page.md#add-list
+                  href: ./portals/add-list.md
                 - name: Add breadcrumb
-                  href: ./portals/compose-page.md#add-breadcrumb
+                  href: ./portals/add-breadcrumb.md
                 - name: Add custom menu
-                  href: ./portals/compose-page.md#add-a-custom-menu
+                  href: ./portals/add-custom-menu.md
                 - name: Use code editor
-                  href: ./portals/compose-page.md#use-code-editor
+                  href: ./portals/use-code-editor.md
                 - name: Add Power BI
-                  href: ./portals/compose-page.md#add-power-bi
+                  href: ./portals/add-powerbi.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
         - name: Work with themes
