@@ -318,7 +318,7 @@ This section provides information on how to install the Return to the Workplace 
 
 
    > [!IMPORTANT]
-   > Portals is introduced at version 1.3, which is required to use portals.
+   > Return to the Workplace Portal is introduced in version 1.3. You need to update the existing Return to the Workplace solution in order to use the portal.
 
 ### Step 1: Create a new portal
 
