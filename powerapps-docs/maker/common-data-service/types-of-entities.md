@@ -1,6 +1,6 @@
 ---
 title: "Types of tables | MicrosoftDocs"
-description: "Learn about the different types of Common Data Service tables."
+description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
@@ -27,7 +27,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Before creating or editing tables in Common Data Service, you should understand that there are different types of tables. Once a custom table is created, these types can't be changed. The two main table types are standard tables and activity tables.  
+Before creating or editing tables in Microsoft Dataverse, you should understand that there are different types of tables. Once a custom table is created, these types can't be changed. The two main table types are standard tables and activity tables.  
   
 <a name="BKMK_tableOwnership"></a>
 
@@ -54,7 +54,7 @@ An activity can be thought of as any action for which an entry can be made on a 
   
 Activity tables can only be owned by a user or team, they can’t be owned by an organization.  
   
-The following table lists activity tables that are available in a default Common Data Service environment.
+The following table lists activity tables that are available in a default Dataverse environment.
   
 |Name|Description|Display in activity menus|Reference|
 |----------|-----------------|----------------|---------------|  
@@ -72,7 +72,7 @@ To create a custom activity table, open the **More settings** section in the **N
 
 ## Virtual tables
 
-A virtual table is a custom table in Common Data Service that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Common Data Service web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
+A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
 [Create or edit tables](create-edit-entities.md)

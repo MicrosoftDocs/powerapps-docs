@@ -32,7 +32,7 @@ search.app:
 With advanced data preparation available in Power Apps, you can create a
 collection of data called a dataflow, which you can then use to connect with
 business data from various sources, clean the data, transform it, and then load
-it to Common Data Service or your organization’s Azure Data Lake Gen2 storage
+it to Microsoft Dataverse or your organization’s Azure Data Lake Gen2 storage
 account.
 
 A dataflow is a collection of tables that are created and managed in environments in the Power Apps service. You can add and edit tables in your dataflow, as well as manage data refresh
@@ -84,7 +84,7 @@ it.
     ![Create a dataflow](media/create-a-dataflow.png)
 
 4.  On the **Select load target** page, select the destination storage where you want tables to be
-stored. Dataflows can store tables in Common Data Service or in your organization's Azure Data Lake
+stored. Dataflows can store tables in Dataverse or in your organization's Azure Data Lake
 storage account. Once you select a destination to load data to, enter a **Name**
 for the dataflow, and then select **Create**.
 
@@ -93,8 +93,8 @@ for the dataflow, and then select **Create**.
      > [!IMPORTANT]
      > There is only one owner of any dataflow—the person who created it. Only the owner can edit the dataflow. Authorization
      > and access to data created by the dataflow depend on the destination you loaded
-     > data to. Data loaded into Common Data Service will be available via the Common Data Service
-     > Connector and requires the person accessing the data to be authorized to Common Data Service.
+     > data to. Data loaded into Dataverse will be available via the Dataverse
+     > Connector and requires the person accessing the data to be authorized to Dataverse.
      > Data loaded into your organization’s Azure Data Lake Gen2 storage account is
      > accessible via the Power Platform Dataflow connector and access to it requires
      > membership within the environment it was created in.
@@ -221,7 +221,7 @@ issues. This section provides troubleshooting tips when issues occur.
 ## Next steps
 The following articles are useful for further information and scenarios when using dataflows:
 
--   [Add data to a table in Common Data Service](data-platform-cds-newentity-pq.md)
+-   [Add data to a table in Dataverse](data-platform-cds-newentity-pq.md)
 
 -   [Using dataflows with on-premises data sources](using-dataflows-with-on-premises-data.md)
 

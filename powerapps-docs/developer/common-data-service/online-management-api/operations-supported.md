@@ -1,6 +1,6 @@
 ---
-title: "Operations supported by Online Management API for Common Data Service| MicrosoftDocs"
-description: "Provides information about the operations you can perform using the Online Management API to manage your Common Data Service environments."
+title: "Operations supported by Online Management API for Microsoft Dataverse| MicrosoftDocs"
+description: "Provides information about the operations you can perform using the Online Management API to manage your Microsoft Dataverse environments."
 ms.date: 09/30/2019
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,6 +14,9 @@ search.app:
   - PowerApps
 ---
 # Operations supported by Online Management API 
+
+> [!NOTE]
+> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated).
 
 You can perform most of the environment-related operations using the API that you can do using the admin center. The API also lets you perform some additional operations such as using tenant application identities to create/manage environments and retrieving service versions (releases) for environments.
 

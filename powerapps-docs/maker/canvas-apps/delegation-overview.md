@@ -133,7 +133,7 @@ To make it easier to know what is and isn't being delegated, Power Apps provides
 Delegation warnings appear only on formulas that operate on delegable data sources. If you don't see a warning and you believe your formula isn't being properly delegated, check the type of data source against the list of [delegable data sources](delegation-overview.md#delegable-data-sources) earlier in this topic.
 
 ## Examples
-For this example, you'll automatically generate a three-screen app based on a SQL Server table named **[dbo].[Fruit]**. For information about how to generate the app, you can apply similar principles in the [topic about Common Data Service](data-platform-create-app.md) to SQL Server.
+For this example, you'll automatically generate a three-screen app based on a SQL Server table named **[dbo].[Fruit]**. For information about how to generate the app, you can apply similar principles in the [topic about Dataverse](data-platform-create-app.md) to SQL Server.
 
 ![Three-screen app](./media/delegation-overview/products-afd.png)
 

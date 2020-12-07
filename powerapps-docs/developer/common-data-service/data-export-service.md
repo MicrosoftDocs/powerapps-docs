@@ -1,5 +1,5 @@
 ---
-title: "Data export service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Data export service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Capabilities, prerequisites, API, and programming of the Data Export Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -19,14 +19,14 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Data Export is an add-on service made available as a Common Data Service solution that adds the ability to replicate Common Data Service data to a Microsoft Azure SQL Database store in a customer-owned Microsoft Azure subscription. The supported target destinations are Microsoft Azure SQL Database and Microsoft Azure SQL Server on Microsoft Azure virtual machines. Data Export intelligently synchronizes the entire Common Data Service schema and data initially and thereafter synchronizes on a continuous basis as changes occur (delta changes) in Common Data Service.  
+Data Export is an add-on service made available as a Microsoft Dataverse solution that adds the ability to replicate Dataverse data to a Microsoft Azure SQL Database store in a customer-owned Microsoft Azure subscription. The supported target destinations are Microsoft Azure SQL Database and Microsoft Azure SQL Server on Microsoft Azure virtual machines. Data Export intelligently synchronizes the entire Dataverse schema and data initially and thereafter synchronizes on a continuous basis as changes occur (delta changes) in Dataverse.  
   
-The Data Export service provides an interface for managing configuration and ongoing administration of this service from within Common Data Service.  For more information, see [Replicate data to Azure SQL Database](https://docs.microsoft.com/power-platform/admin/replicate-data-microsoft-azure-sql-database). This topic explains the corresponding programmatic interface and issues for this service.  
+The Data Export service provides an interface for managing configuration and ongoing administration of this service from within Dataverse.  For more information, see [Replicate data to Azure SQL Database](https://docs.microsoft.com/power-platform/admin/replicate-data-microsoft-azure-sql-database). This topic explains the corresponding programmatic interface and issues for this service.  
   
 ## Prerequisites for using the Data Export Service  
- Because this service requires access to an external Microsoft Azure SQL Database from Common Data Service, a number of prerequisites must be satisfied before you can successfully access this service. The following perquisites are more fully explained from an administrator's perspective in the section [Prerequisites for using Data Export Service](/power-platform/admin/replicate-data-microsoft-azure-sql-database#prerequisites-for-using-).  
+ Because this service requires access to an external Microsoft Azure SQL Database from Dataverse, a number of prerequisites must be satisfied before you can successfully access this service. The following perquisites are more fully explained from an administrator's perspective in the section [Prerequisites for using Data Export Service](/power-platform/admin/replicate-data-microsoft-azure-sql-database#prerequisites-for-using-).  
   
- Your Common Data Service environment must be configured so that:  
+ Your Dataverse environment must be configured so that:  
   
 - The entities that will be exported are enabled with change tracking. For more information, see [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md).  
   
@@ -37,7 +37,7 @@ The Data Export service provides an interface for managing configuration and ong
   
  The target Azure SQL Database must be configured so that:  
   
-- The subscription must support the volume of data being replicated from your Common Data Service instance.  
+- The subscription must support the volume of data being replicated from your Dataverse instance.  
   
 - Firewall settings must allow access from the IP address of your  Data Export service. For more information, see [Configure an Azure SQL Database server-level firewall rule using the Azure Portal](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/).  
   
@@ -64,7 +64,7 @@ For online solutions and services, Azure provides a [Key Vault](https://azure.mi
 It is also advised that you add the domain https://discovery.crmreplication.azure.net/ to the trusted sites list in your browser and to enable pop-ups for this site.  
   
 ## Programming for the Data Export Service  
- The Data Export Service exposes a REST-based API that is divided into two groups: a set of `Metadata` operations for exploring Common Data Service organizational structure, relationships, and connection information; and a set of `Profiles` operations    for configuring and managing each data replication.  This API is fully defined and documented at the following [Swagger](https://swagger.io/) URLs:  
+ The Data Export Service exposes a REST-based API that is divided into two groups: a set of `Metadata` operations for exploring Dataverse organizational structure, relationships, and connection information; and a set of `Profiles` operations    for configuring and managing each data replication.  This API is fully defined and documented at the following [Swagger](https://swagger.io/) URLs:  
   
 |Swagger endpoint|Description|  
 |----------------------|-----------------|  
@@ -102,7 +102,7 @@ It is also advised that you add the domain https://discovery.crmreplication.azur
 |profiles/{id}/failures|[GET](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_GetProfileFailuresInfoById)|Get the connection string to a blob that contains failure details for a given profile|  
   
 ### Gain Access  
-Because only Common Data Service System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Azure Active Directory ([AAD](https://azure.microsoft.com/services/active-directory/)) [security tokens](https://azure.microsoft.com/documentation/articles/active-directory-token-and-claims/). The following code snippet demonstrates generating such a token for a web application by using the administrator's name and password.   You must replace the `AppId`, `crmAdminUser` and `crmAdminPassword` with values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.  
+Because only Dataverse System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Azure Active Directory ([AAD](https://azure.microsoft.com/services/active-directory/)) [security tokens](https://azure.microsoft.com/documentation/articles/active-directory-token-and-claims/). The following code snippet demonstrates generating such a token for a web application by using the administrator's name and password.   You must replace the `AppId`, `crmAdminUser` and `crmAdminPassword` with values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.  
   
 ```csharp  
   

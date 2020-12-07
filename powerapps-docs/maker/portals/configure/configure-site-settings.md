@@ -17,8 +17,8 @@ A site setting is a configurable, named value that is used by website code to mo
 The sample portals that are provided with the installation of Power Apps portals contain several configurable site settings for various styles used to modify many visual elements within the site such as background style, text color, and layout width.
 You can manage the following types of site settings:
 
-- **Global Portal settings**: These settings apply to all portals associated with the Common Data Service environment in which they are being added.
-- **Portal site settings**: These settings apply to specific portals (website records) that are associated with the Common Data Service environment in which they are being added.
+- **Global Portal settings**: These settings apply to all portals associated with the Microsoft Dataverse environment in which they are being added.
+- **Portal site settings**: These settings apply to specific portals (website records) that are associated with the Dataverse environment in which they are being added.
 
 
 ## Manage portal site settings
@@ -69,7 +69,7 @@ For site settings related to various portal features, see:
 - [Authentication identity](set-authentication-identity.md)
 - [Azure AD B2C provider](azure-ad-b2c.md)
 - [OAuth 2.0](configure-oauth2-settings.md)
-- [Open ID Connect](configure-openid-settings.md)
+- [OpenID Connect](configure-openid-settings.md)
 - [WS-Federation](configure-ws-federation-settings.md)
 - [SAML 2.0](configure-saml2-settings.md)
 - [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)

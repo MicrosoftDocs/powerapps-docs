@@ -66,7 +66,7 @@ SavedQueryVisualization newWebResourceVisualization = new SavedQueryVisualizatio
 _orgOwnedVisualizationId = service.Create(newWebResourceVisualization);  
 ```  
   
-If you want to create a web resource visualization by using the Common Data Service, you must create an XML file in the following format, and then use **Import Chart** in the ribbon to import the visualization.  
+If you want to create a web resource visualization by using the Microsoft Dataverse, you must create an XML file in the following format, and then use **Import Chart** in the ribbon to import the visualization.  
   
 ```xml  
 <visualization>  

@@ -1,6 +1,6 @@
 ---
-title: "FAQs | MicrosoftDocs"
-description: "Frequently asked questions about component framework"
+title: "Power Apps component framework FAQs | MicrosoftDocs"
+description: "Frequently asked questions about Power Apps component framework"
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"
@@ -11,14 +11,14 @@ author: ghurlman
 ms.reviewer: nkrb
 ---
 
-# FAQs
+# Power Apps component framework FAQs
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ### Component changes are not reflected after the updated solution import?
 
 Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). 
-Every update in the component needs a component version bump to be reflected on the Common Data Service server.
+Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
 
 > [!NOTE]
 > - A new solution must be created everytime if you wish to have a major version bump. Incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade.
