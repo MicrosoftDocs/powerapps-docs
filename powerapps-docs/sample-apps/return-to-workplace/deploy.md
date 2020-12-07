@@ -316,6 +316,10 @@ In the Return to the Workplace solution, the following security roles are define
 
 This section provides information on how to install the Return to the Workplace portal.  
 
+
+   > [!IMPORTANT]
+   > Return to the Workplace Portal is introduced in version 1.3. You need to update the existing Return to the Workplace solution in order to use the portal.
+
 ### Step 1: Create a new portal
 
 1. Go to [Power Apps](https://make.powerapps.com). Select the environment you want to install the portal.
