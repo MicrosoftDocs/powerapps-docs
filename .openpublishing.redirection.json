@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/monitor.md",
+      "redirect_url": "../monitor-canvasapps",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/user/use-custom-model-driven-app-on-mobile.md",
       "redirect_url": "../mobile/use-custom-model-driven-app-on-mobile",
       "redirect_document_id": "false"

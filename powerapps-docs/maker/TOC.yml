@@ -929,8 +929,6 @@
         href: ./canvas-apps/test-studio-classic-pipeline-editor.md
       - name: Configure pipeline using YAML
         href: ./canvas-apps/test-studio-yaml-pipeline.md
-  - name: Debug an app with canvas app Monitor
-    href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes
@@ -1589,7 +1587,7 @@
           href: ./portals/configure/create-web-roles.md
         - name: Assign entity permissions
           href: ./portals/configure/assign-entity-permissions.md
-        - name: Control webpage access
+        - name: Manage page permissions
           href: ./portals/configure/webpage-access-control.md
         - name: Create website access permissions
           href: ./portals/configure/website-access-permission.md
@@ -1908,7 +1906,9 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
-        - name: View table data in Power BI (Preview)
+        - name: Import a Dataverse solution
+          href: ../teams/import-solution-in-teams.md 
+        - name: View table data in Power BI
           href: ../teams/view-table-data-power-bi.md
           displayName: View Dataverse for Teams table data in Power BI
         - name: Environment language
@@ -2011,6 +2011,8 @@
       href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
     - name: Employee Return to the Workplace app
       href: ../sample-apps/return-to-workplace/app-for-employee.md
+    - name: Return to the Workplace Portal
+      href: ../sample-apps/return-to-workplace/portal-extension.md
     - name: Extend the solutions
       href: ../sample-apps/return-to-workplace/extend.md
 - name: Resources
@@ -2023,6 +2025,24 @@
     href: ../webinars.md
 - name: Troubleshoot
   items:
+  - name: Debug Power Apps with Monitor
+    items:
+    - name: Monitor overview
+      href: monitor-overview.md
+    - name: Debug canvas apps with Monitor
+      href: monitor-canvasapps.md
+    - name: Debug model-driven apps with Monitor
+      items: 
+      - name: Debug a model-driven app
+        href: monitor-modelapps.md  
+      - name: Use Monitor to debug model-driven app forms
+        href: ./model-driven-apps/monitor-form-checker.md
+      - name: Troubleshoot form issues in model-driven apps
+        href: ../developer/model-driven-apps/troubleshoot-forms.md 
+    - name: Collaborative debugging with Monitor
+      href: monitor-collaborative-debugging.md
+    - name: Advanced monitoring
+      href: monitor-advanced.md
   - name: Performance tips for canvas apps
     href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions

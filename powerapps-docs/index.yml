@@ -74,7 +74,7 @@ conceptualContent:
         - text: What is Microsoft Dataverse?
           url: /powerapps/maker/common-data-service/data-platform-intro
           itemType: overview
-        - text: Entities and metadata
+        - text: Tables and metadata
           url: /powerapps/maker/common-data-service/create-edit-metadata
           itemType: concept
       footerLink:
