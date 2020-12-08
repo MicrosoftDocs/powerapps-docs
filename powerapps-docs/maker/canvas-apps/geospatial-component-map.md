@@ -47,7 +47,7 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 
     ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
-You can modify the component by using a number of [properties](#properties).
+You can modify the component by using a number of [properties](#input-properties).
 
 ### Use the map component with data from Excel
 
