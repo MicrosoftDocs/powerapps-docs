@@ -15,7 +15,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create or edit a Power BI embedded system dashboard (Preview)
+# Create or edit a Power BI embedded system dashboard
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
