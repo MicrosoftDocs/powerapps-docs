@@ -5,7 +5,7 @@ author: iaanw
 manager: shellha
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
 ms.date: 7/7/2020
 ms.author: iawilt
@@ -13,7 +13,6 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
-ms.custom: ce06122020
 ---
 
 # Address input component (Preview)
@@ -46,7 +45,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
     ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
-You can modify the component by using a number of [properties](#properties).
+You can modify the component by using a number of [properties](#input-properties).
 
 ### Set a default search radius
 
@@ -72,7 +71,7 @@ You can save addresses that a user inputs into the address component as a data c
 
     This causes the button to save the current latitude and longitude to a collection named *locations*, as long as the search results are not blank
 
-    ![](./media/geospatial/input-code.png)
+    ![Screenshot of the button on the app](./media/geospatial/input-code.png)
 
 4. Select the map component, and go to the **Advanced** tab on the **Properties** pane.
 
