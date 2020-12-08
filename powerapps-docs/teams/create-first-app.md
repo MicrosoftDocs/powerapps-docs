@@ -162,8 +162,8 @@ select **Add row**.
 
 You can paste up to 50 rows of data into a table. To create new rows from the copied data, add rows in the table first. Adding new rows ensures pasting data from clipboard doesn't overwrite your existing data.
 
-> [!IMPORTANT]
-> Paste operations are automatically saved, and there's no undo option.  Pasting multiple rows of data over existing data will overwrite the values in existing cells.
+> [!CAUTION]
+> Paste operations are automatically saved, and there's no undo option. Use caution when pasting data over existing rows since this action will overwrite your existing data in the table.
 
 To paste data in multiple rows:
 
