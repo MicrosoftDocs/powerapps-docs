@@ -200,6 +200,11 @@ To paste the data from clipboard into the table:
 
     ![Delete extra row](media/delete-extra-row.png "Delete extra row")
 
+    > [!TIP]
+    > To delete multiple rows that are together, select the top row, and press the **Shift** key on the keyboard. Keeping the key pressed, select the last row in the chunk of the rows that you want to delete. And then, select **Delete X record(s)**.
+
+    ![Delete multiple rows](media/delete-multiple-records.png "Delete multiple rows")
+
 Changes to the table are automatically saved. However, check for errors, and fix them before you close the visual editor.
 
 ### Update the app template
