@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/24/2020
+ms.date: 12/07/2020
 ms.author: jshum
 ms.reviewer: 
 ---
@@ -142,8 +142,7 @@ To add a new column to track new data:
 1. Select the type for your column.
 
     > [!TIP]
-    > For more information about column types supported by the table
-    designer, go to [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns that aren't supported by
+    > For more information about column types supported by the visual editor, go to [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns that aren't supported by
     the visual editor, create a table by using the solution explorer. More information: [Create tables](create-table.md)
 
 1. If required, change **Advanced options** for the selected column type.
@@ -158,6 +157,50 @@ To add rows, select the empty row and start typing additional data, or
 select **Add row**.
 
 ![Add rows](media/add-rows.png "Add rows")
+
+#### Paste data in multiple rows
+
+You can paste up to 50 rows of data into a table. To create new rows from the copied data, add rows in the table first. Adding new rows ensures pasting data from clipboard doesn't overwrite your existing data.
+
+> [!IMPORTANT]
+> Paste operations are automatically saved, and there's no undo option.  Pasting multiple rows of data over existing data will overwrite the values in existing cells.
+
+To paste data in multiple rows:
+
+1. Select the record that you want to add new records above or below.
+
+1. Select **Insert row above**, or **Insert row below** to insert rows before or after existing rows.
+    <br> For example, inserting row above the selected row:
+
+    ![Insert row above](media/insert-row.png "Insert row above")
+
+    To add rows at the top instead, select **Add row**.
+
+    ![Add row](media/add-row.png "Add row")
+
+1. Repeat the above step to add more empty rows, as needed.
+
+    > [!TIP]
+    > If you're unsure of how many rows do you need, create additional empty rows before pasting data. Extra empty rows can be deleted later.
+
+1. Select the top-left cell from the newly created rows.
+
+    ![Select top-left cell](media/select-top-left-cell.png "Select top-left cell")
+
+1. Paste the copied data.
+
+    ![Paste rows](media/paste-rows.png "Paste rows")
+
+    > [!NOTE]
+    > If you selected to edit the top-left cell from the new rows, the data is pasted inside the cell. To avoid this problem, ensure you select the top-left cell. Before you paste data from clipboard, don't *double-click* inside the cell that lets you enter or edit the individual cell data.
+
+    ![Incorrect pasting of rows](media/paste-inside-edit-cell.png "Incorrect pasting of rows")
+
+1. Remove any extra empty rows.
+
+    ![Delete extra row](media/delete-extra-row.png "Delete extra row")
+
+Changes to the table are automatically saved. However, check for errors, and fix them before you close the visual editor.
 
 ### Update the app template
 
