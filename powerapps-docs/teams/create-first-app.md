@@ -160,7 +160,7 @@ select **Add row**.
 
 #### Paste the copied data into the table
 
-You can paste up to **50 rows** of data into a table. To create new rows from the copied data, add empty rows in the table first. Adding new rows ensures pasting data from clipboard doesn't overwrite your existing data accidentally.
+You can paste up to **50 rows** of data into a table. To create new rows from the copied data, add empty rows in the table first. Adding new empty rows ensures pasting data from clipboard doesn't accidentally overwrite your existing data.
 
 > [!CAUTION]
 > Paste operations are automatically saved, and there's no undo option. Use caution when pasting data over existing rows since this action will overwrite your existing data in the table.
