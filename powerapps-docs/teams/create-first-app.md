@@ -160,7 +160,7 @@ select **Add row**.
 
 #### Paste the copied data into the table
 
-You can paste up to 50 rows of data into a table. To create new rows from the copied data, add rows in the table first. Adding new rows ensures pasting data from clipboard doesn't overwrite your existing data.
+You can paste up to **50 rows** of data into a table. To create new rows from the copied data, add empty rows in the table first. Adding new rows ensures pasting data from clipboard doesn't overwrite your existing data accidentally.
 
 > [!CAUTION]
 > Paste operations are automatically saved, and there's no undo option. Use caution when pasting data over existing rows since this action will overwrite your existing data in the table.
@@ -192,7 +192,7 @@ To paste the data from clipboard into the table:
     ![Paste rows](media/paste-rows.png "Paste rows")
 
     > [!NOTE]
-    > If you selected to edit the top-left cell from the new rows, the data is pasted inside the cell. To avoid this problem, ensure you select the top-left cell. Before you paste data from clipboard, don't *double-click* inside the cell that lets you enter or edit the individual cell data.
+    > If you paste data when the cell is in edit mode (if you *double-clicked* top-left cell), the data is pasted inside the cell. If this problem happens, delete the incorrectly pasted data, select any other cell, select the top-left cell, and try to paste again.
 
     ![Incorrect pasting of rows](media/paste-inside-edit-cell.png "Incorrect pasting of rows")
 
