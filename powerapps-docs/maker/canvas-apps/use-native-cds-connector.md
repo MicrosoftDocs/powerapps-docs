@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/29/2020
+ms.date: 12/08/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -33,6 +33,9 @@ The **Improve data source experience and Common Data Service views** option appe
 ![Improve data source experience and Common Data Service views](media/use-native-cds-connector/improved-data-source-setting.png)
 
 The **Relational data, option sets, and other new features for Common Data Service** now appears in the Deprecated features section.
+
+> [!NOTE]
+> Power Apps Mobile for Windows Phone supports legacy Microsoft Dataverse connector without the need to upgrade the connector.
 
 ## How do I upgrade?
 
