@@ -153,7 +153,7 @@ To edit project details:
 
     ![Edit project](media/milestones/edit-project.png "Edit project")
 
-## Create Category, priority, and status
+## Create category, priority, and status
 
 You can change the options and color coding for options used for priority,
 status, and category.
