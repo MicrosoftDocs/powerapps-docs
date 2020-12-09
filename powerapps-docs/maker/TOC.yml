@@ -1930,12 +1930,16 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
+        - name: Bulletins
+          href: ../teams/bulletins.md
         - name: Employee ideas
           href: ../teams/employee-ideas.md
         - name: Inspection
           href: ../teams/inspection.md
         - name: Issue reporting
           href: ../teams/issue-reporting.md
+        - name: Milestones
+          href: ../teams/milestones.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps
