@@ -246,8 +246,7 @@ Like other facets, you can use date and time facets to filter and see search res
 
 ## Configure facets and filters
   
-> [!NOTE]
->  A system customizer can set the default experience for all tables, but you can configure your own facets and filters.  
+Configure your own facets and filters.  
   
 1. In the upper-right corner, select **Settings**, and then select **Personalization Settings**.  
   
@@ -259,7 +258,7 @@ Like other facets, you can use date and time facets to filter and see search res
    > [!div class="mx-imgBorder"]
    > ![Configure Facets and Filters](media/configure-facets-filters.png "Configure Facets and Filters")  
   
-3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for a table. Your system administrator or customizer can set a default experience for all tables, but you can set your own here.  
+3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for a table. 
   
    - In the **Select Table** drop-down list, select a table you want to configure facets for. This drop-down list contains only the tables that are enabled for relevance search.  
   
