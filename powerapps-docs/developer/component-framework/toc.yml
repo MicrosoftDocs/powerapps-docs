@@ -41,7 +41,7 @@
     - name: Limitations
       href: limitations.md
   - name: FAQs
-    href: faq.yml
+    href: faq.md
   - name: Sample components
     items: 
     - name: How to use the sample components?
