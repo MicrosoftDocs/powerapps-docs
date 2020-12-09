@@ -1,3 +1,15 @@
+---
+title: Use Bulletins apps from teams store | Microsoft Docs
+description: Learn how to use the Bulletins apps from Teams store.
+author: navjotm
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 12/17/2020
+ms.author: namarwah
+ms.reviewer: tapanm
+---
+
 # Bulletins sample app
 
 In this tutorial, you'll learn about installing, configuring, and using the **Bulletins** sample app.
@@ -79,6 +91,26 @@ To open the Manage bulletins app:
 
 1. **Published posts** -  View posts that are available to users of the Bulletins app.
 
+### Categories for bulletins, FAQs, and links
+
+Each bulletin post, FAQ, link, or contact has an associated category. To add, edit, or delete these categories:
+
+1. Open the **Manage bulletins** app.
+
+1. Select **Settings** (![Settings icon](media/bulletins/settings-icon.png "Settings icon")) from the top-right side of the app.
+
+    ![Settings](media/bulletins/settings.png "Settings")
+
+    - To add a category, select **Add category**.
+
+        ![Add category](media/bulletins/manage-category.png "Add category")
+
+    - To delete a category, select **Delete**.
+
+    - To edit a category, select the category, and update the name.
+
+1. Select **Save**.
+
 ### Create a new bulletin post
 
 A bulletin post is visible to users of the Bulletin app with the details that you enter while creating a bulletin.
@@ -86,6 +118,8 @@ A bulletin post is visible to users of the Bulletin app with the details that yo
 ![New bulletin post](media/bulletins/new-bulletin.png "New bulletin post")
 
 To create a new bulletin post:
+
+1. Open the **Manage bulletins** app.
 
 1. Select **Bulletins** tab.
 
@@ -134,7 +168,7 @@ post in **Manage bulletins** app. You'll see statistics regarding the number of 
 
 To modify or delete a bulletin post, or if you want to change a published post to a draft:
 
-1. Open **Manage bulletins** app.
+1. Open the **Manage bulletins** app.
 
 1. Select the desired post from the list of published posts.
 
@@ -151,7 +185,7 @@ To modify or delete a bulletin post, or if you want to change a published post t
 If your post is in question, and answer format, use FAQs as the post type. 
 To create an FAQs post, perform the following steps:
 
-1. Open **Manage Bulletins** app.
+1. Open the **Manage Bulletins** app.
 
 1. Select **FAQs** tab.
 
@@ -179,7 +213,7 @@ To create an FAQs post, perform the following steps:
 
 To edit or delete a FAQ bulletin post:
 
-1. Open **Manage bulletins** app.
+1. Open the **Manage bulletins** app.
 
 1. Select **FAQs** tab.
 
@@ -191,234 +225,196 @@ To edit or delete a FAQ bulletin post:
 
     ![Edit or delete FAQ](media/bulletins/edit-delete-faq.png "Edit or delete FAQ")
 
-Manage links and contacts
--------------------------
+### Manage links and contacts
 
 Links and contacts provide users of the Bulletins app with helpful information
-about related website links and organization contacts whom they can contact with
-questions about bulletin categories. For example, if you have a category for
-safety in the Bulletins app, you might want to add a link to the safety
+about related website links and organization contacts whom they can contact with questions about bulletin categories. For example, if you have a category for safety in the Bulletins app, you might want to add a link to the safety
 department SharePoint site and add the safety manager as a contact in the app
 for the Safety category.
 
-Add a link
-----------
+#### Add a link
 
-To add a link to the Bulletins app, follow these steps:
+To add a link to the Bulletins app:
 
-1.  Open the **Manage Bulletins** app in Microsoft Teams
+1. Open the **Manage Bulletins** app.
 
-2.  Click **Links and contacts**
+1. Select **Links and contacts** tab.
 
-3.  Click **Add link**
+1. Select **Add link**.
 
-4.  Add link details
+1. Add link details&mdash;*Title*, *Description*, *Category*, and *URL*.
+    <br> **Preview** section shows the link details as you enter.
 
-    1.  Title
+1. Select **Save** to save the link.
 
-    2.  Description
+    ![Add link](media/bulletins/add-link.png "Add link")
 
-    3.  Category
+#### Edit, or delete a link
 
-    4.  URL
+To edit, or delete a link:
 
-5.  The **Preview** section will show the way the link will appear in the
-    Bulletins app
+1. Open the **Manage Bulletins** app.
 
-6.  To close the new link form without saving the link, click **Cancel**
+1. Select **Links and contacts** tab.
 
-7.  To save the link, click **Save**
+1. Select the link that you want to edit, or delete.
 
-![](media/bulletins/02e4001fecb87aba36828563aab8ef63.png)
+    - To edit link, update information, and select **Save.**
 
-Edit or delete a link
----------------------
+    - To delete a link, select **Delete**.
 
-To modify or delete a link, perform the following steps:
+    ![Edit link](media/bulletins/edit-link.png "Edit link")
 
-1.  Open the **Manage bulletins** app in Microsoft Teams
+#### Add a contact
 
-2.  Click the **Links and contacts** tab
-
-3.  Select the link that you wish to modify or delete
-
-    1.  To delete a link, click **Delete**
-
-    2.  To modify a link, change the text of the link, then click **Save.**
-
-![](media/bulletins/a006e3d9c2da8036df1db7d4d82851e5.png)
-
-Add a contact
--------------
-
-You can add internal and external contacts to Bulletins to provide helpful
+You can add internal, and external contacts to Bulletins to provide helpful
 contacts related to bulletin categories.
 
-Add an internal contact
------------------------
+##### Add an internal contact
 
-To add a contact that is a member of your organization, follow these steps:
+To add a contact that is a member of your organization:
 
-1.  Open the **Manage bulletins** app in Microsoft Teams
+1. Open the **Manage Bulletins** app.
 
-2.  Click the **Links and contacts** tab
+1. Select **Links and contacts** tab.
 
-3.  Click **Add contact**
+1. Select **Add contact**.
 
-4.  To add an internal contact:
+1. Toggle **Internal user** to *Yes*.
 
-    1.  Toggle **Internal user** to **Yes**
+1. Search for the contact from the **Select a contact** dropdown.
 
-    2.  Search for the contact from the **Select a contact** dropdown
+1. Select **Category**.
 
-    3.  Select **Category**
+1. Enter **Description**.
+    <br> **Preview** section shows the link details as you enter.
 
-    4.  Enter description for contact you want users of Bulletins app to see for
-        specified contact
+    ![New internal contact](media/bulletins/new-contact.png "New internal contact")
 
-![](media/bulletins/462fd380e4f2011e3495f995ace36ff8.png)
+1. Select **Save**.
 
-1.  To add an external contact who is not a member of your organization to the
-    Bulletins app:
+##### Add an external contact
 
-    1.  Toggle **Internal user** to **No**
+To add a contact from outside of your organization:
 
-    2.  Enter **Name**
+1. Open the **Manage Bulletins** app.
 
-    3.  Select **Category**
+1. Select **Links and contacts** tab.
 
-    4.  Add a **Description** that you want users or the Bulletins app to see
-        for the contact
+1. Select **Add contact**.
 
-    5.  Enter **Email Address** of contact
+1. Toggle **Internal user** to *No*.
 
-![](media/bulletins/f8da0469c267e7c917f0b658cc9ba27f.png)
+1. Enter **Name**.
 
-1.  The **Preview** area will display the way that the contact will appear to
-    users of the Bulletin app
+1. Select **Category**.
 
-2.  To leave the contact form without saving, click **Cancel**
+1. Enter **Description**.
 
-3.  To save the contact record, click **Save**
+1. Enter **Email Address** of contact.
+    <br> **Preview** section shows the link details as you enter.
 
-Edit or delete a contact
-------------------------
+    ![New external contact](media/bulletins/new-external-contact.png "New external contact")
 
-To edit or delete a contact, open the contact from the **Links and contacts**
-tab of the **Manage bulletins** app
+1. Select **Save**.
 
--   To edit the contact, update the contact information and click **Save**
+#### Edit or delete a contact
 
--   To delete the contact, click **Delete**
+To edit, or delete a contact:
 
-![](media/bulletins/5b745cbab0aa285d55fc426ee5f4f59b.png)
+1. Open the **Manage Bulletins** app.
 
-Update categories for bulletins, FAQs, and links
-------------------------------------------------
+1. Select **Links and contacts** tab.
 
-To add or change the categories for bulletins, FAQ’s, or links, click Settings
+1. Select the contact that you want to edit, or delete.
 
--   To add a category, click **Add category**
+    - To edit contact, update information, and select **Save.**
 
--   To delete a category, click **Delete**
+    - To delete contact, select **Delete**.
 
--   To rename a category, click the category title that you wish to modify and
-    enter a new title
-
->   When finished, click **Save**
-
-![](media/bulletins/c9ce97e698ff5d47430639d39449fb54.png)
+    ![Edit contact](media/bulletins/edit-contact.png "Edit contact")
 
 ## Bulletins app
 
-The Bulletins app in Microsoft Teams is a central location for all company
+The **Bulletins** app in Microsoft Teams is a central location for all company
 communication, such as memos, broadcasts, and news. The Bulletins app displays
 bulletins, FAQs, links, and contacts created in the **Manage bulletins** app.
 
-Opening the Bulletins app
--------------------------
+### Open the Bulletins app
 
-1.  In Microsoft Teams, click the **Bulletins** tab
+1. Sign in to Teams.
 
-2.  The first time you run the Bulletins app, you will be prompted to allow the
-    connections in the app—you must his allow to run the Bulletins app.
+1. Select the Team.
 
-Understanding the Bulletins user interface
-------------------------------------------
+1. Select the channel where you installed the **Bulletins** app.
 
-In this section, we describe the options available from the main screen of the
-Bulletins app:
+1. Select the **Manage Bulletins** tab.
 
-1.  App areas: navigate between the following areas of the Bulletins app
+    ![Bulletins tab](media/bulletins/bulletins-tab.png "Bulletins tab")
 
-    1.  Home: view bulletin posts
+1. Select **Allow** if the app asks for your permissions to use the connectors.
 
-    2.  FAQs: view frequently asked questions
+### Understand the Bulletins app user interface
 
-    3.  Links and contacts: view helpful links and contacts
+The Bulletins app consists of the following capabilities.
 
-2.  Sort and filter: Change the order of the categories displayed in the app,
-    and which categories are visible
+1. **App areas** - switch between the different areas of the Bulletins app:
 
-3.  Search for bulletins
+    1. **Home** - view the bulletin posts.
 
-4.  Category: Indicates the category for which the post tiles in this section
-    apply
+    1. **FAQs** - view frequently asked questions.
 
-5.  Posts: tiles displaying the image or video, title, and description of the
-    post. Users may click the tile to view the post. Posts indicate the age of
-    the post’s publication.
+    1. **Links and contacts** - view links and contacts.
 
-![](media/bulletins/09e465b7125ea355eb0f280703bb3917.png)
+1. **Sort and filter** - change the order of the categories displayed in the app, and hide/unhide categories.
 
-View a post
------------
+1. Search for bulletins.
 
-To view a post, click the desired bulletin post tile. The post will be
-displayed. If a link button has been defined for the post, it will be displayed
-at the bottom of the post. Click the button to view the link.
+1. **Category** - indicates the category for which the post tiles in this section apply. Featured bulletin posts are shown above other categories.
 
-To close the post, click the **Close** button.
+1. **Posts** - tiles displaying the image or video, title, and description of the post. Select the tile to view the post. Posts also indicate the age of the post’s publication.
 
-![](media/bulletins/c68c59409fa7176a2a793f42f2d18910.png)
+    ![Bulletins app interface](media/bulletins/bulletins-app-interface.png "Bulletins app interface")
 
-View frequently asked questions (FAQs)
---------------------------------------
+### View a post
 
-To view FAQ’s in the Bulletins app in Microsoft Teams, perform the following
-steps:
+To view a post, select the desired bulletin post tile. If a link button has been defined for the post, it'll be displayed at the bottom of the post. Select the button to view the link.
 
-1.  Open the **Bulletins** tab in Microsoft Teams
+To close the post, select the **Close** button.
 
-2.  Click the **FAQs** tab of the Bulletins app
+![View post](media/bulletins/view-post.png "View post")
 
-3.  Search for the question
+### View frequently asked questions (FAQs)
 
-4.  Click the question you wish to select
+To view FAQs:
 
-5.  FAQ form will display
+1. Open the **Bulletins** app.
 
-6.  Click **Close** to close the FAQ form
+1. Select **FAQs** tab.
 
-![](media/bulletins/b2bda5ae1eabf637842c450a4cdb95ff.png)
+1. Select the question. You can also search for the question.
 
-![](media/bulletins/2fb6f5a2be0d2f910d03f0337e5875aa.png)
+    ![View FAQs](media/bulletins/view-faqs.png "View FAQs")
 
-View links and contacts
------------------------
+1. After reading the FAQs details, select **Close**.
 
-The Bulletins app will provide users with helpful links and contacts grouped by
-category. Follow these steps to find and view a link or contact:
+### View links and contacts
 
-1.  Open **Bulletins** tab in Microsoft Teams
+The Bulletins app shows helpful links and contacts grouped by category.
 
-2.  Clcik the **Links and contacts** tab
+To view links, and contacts:
 
-3.  Search for the desired contact or link in the search box and hit enter
+1. Open the **Bulletins** app.
 
-4.  Search results will be displayed
+1. Select the **Links and contacts** tab.
 
-5.  Click the link or contact to open the link or contact (links will open in a
-    browser window).
+1. Select the link or contact. You can also search use search option.
 
-    ![](media/bulletins/b6aae11f99ef63d16498f471b2a5b6c3.png)
+    ![View links and contacts](media/bulletins/view-links-contacts.png "View links and contacts")
+
+### See also
+
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Issue Reporting sample app](issue-reporting.md)
+- [Customize sample apps](customize-sample-apps.md)
