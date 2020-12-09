@@ -12,11 +12,11 @@ ms.reviewer: tapanm
 
 # Bulletins sample app
 
-In this tutorial, you'll learn about installing, configuring, and using the **Bulletins** sample app.
+In this tutorial, you'll learn about configuring, and using the **Bulletins** sample app.
 
 ## Overview
 
-The Bulletins Power Apps app for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to:
+The Bulletins sample app for Microsoft Teams provides a central location for all company communication such as broadcasts, memos, announcements, and company news. The app allows you to:
 
 - Create bulletin posts.
 - Categorize bulletin posts.
@@ -48,6 +48,18 @@ For details about the above steps, go to [Use sample apps from the Teams store](
 ## Manage bulletins app
 
 Manage bulletins app is the manager experience for Bulletins. This app is where you'll create, edit posts, and categorize posts that the users will read through the Bulletins app.
+
+In this section, you'll learn about the following capabilities in the Manage bulletins app:
+
+- [Open the Manage bulletins app](#open-the-manage-bulletins-app)
+- [Understand the Manage bulletins app interface](#understand-the-manage-bulletins-app-interface)
+- [Categories for bulletins, FAQs, and links](#categories-for-bulletins-faqs-and-links)
+- [Create a new bulletin post](#create-a-new-bulletin-post)
+- [View post statistics](#view-post-statistics)
+- [Edit, delete, or unpublish a post](#edit-delete-or-unpublish-a-post)
+- [Create FAQs post](#create-faqs-post)
+- [Edit or delete a FAQ bulletin](#edit-or-delete-a-faq-bulletin)
+- [Manage links and contacts](#manage-links-and-contacts)
 
 ### Open the Manage bulletins app
 
@@ -339,6 +351,14 @@ To edit, or delete a contact:
 The **Bulletins** app in Microsoft Teams is a central location for all company
 communication, such as memos, broadcasts, and news. The Bulletins app displays
 bulletins, FAQs, links, and contacts created in the **Manage bulletins** app.
+
+In this section, you'll learn about the following capabilities in the Bulletins app:
+
+- [Open the Bulletins app](#open-the-bulletins-app)
+- [Understand the Bulletins app user interface](#understand-the-bulletins-app-user-interface)
+- [View a post](#view-a-post)
+- [View frequently asked questions (FAQs)](#view-frequently-asked-questions-faqs)
+- [View links and contacts](#view-links-and-contacts)
 
 ### Open the Bulletins app
 
