@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 12/17/2020
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -25,13 +25,15 @@ In this tutorial, you'll learn how to search for a sample app in the Teams store
 
 Several sample apps are available from the Teams store that you can add to your Teams channels and use for different purposes.
 
-| Name | Description |
+| Sample app | Description |
 | - | - |
-| [Employee ideas](employee-ideas.md) | Manager and employee apps for campaigns and ideas. |
-| [Inspection](inspection.md) | Manager and user apps for area inspections. |
-| [Issue reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
+| ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins](bulletins.md) | Manager and user apps for company communications.
+| ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](employee-ideas.md) | App for campaigns and ideas. |
+| ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) | Manager and user apps for area inspections. |
+| ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
+| ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones](milestones.md) | App to keep track of projects, and initiatives. |
 
-The following tutorial shows how to install the Employee ideas app.
+The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
 
 ## Install the sample app
 
@@ -125,7 +127,10 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 
 ### See also
 
-- [Employee ideas app](employee-ideas.md)  
-- [Inspection sample app](inspection.md)  
-- [Issue Reporting sample apps](issue-reporting.md)
+- [Bulletins sample app](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones sample app](milestones.md)
 - [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)

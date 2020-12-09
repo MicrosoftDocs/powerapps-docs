@@ -399,7 +399,10 @@ To submit inspection of grouped locations:
 
 ### See also
 
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Issue Reporting sample app](issue-reporting.md)
 - [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Bulletins sample apps](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones sample app](milestones.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

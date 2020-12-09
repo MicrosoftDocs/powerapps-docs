@@ -10,7 +10,7 @@ ms.author: namarwah
 ms.reviewer: tapanm
 ---
 
-# Employee ideas app
+# Employee ideas sample app
 
 In this tutorial, learn about the Employee ideas app, and how to use them effectively.
 
@@ -264,7 +264,10 @@ To delete an idea:
 
 ### See also
 
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Inspection sample app](inspection.md)  
-- [Issue Reporting sample app](issue-reporting.md)
 - [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Bulletins sample apps](bulletins.md)
+- [Inspection sample apps](inspection.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones sample app](milestones.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
