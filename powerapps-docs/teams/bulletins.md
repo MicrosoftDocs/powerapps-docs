@@ -376,6 +376,8 @@ In this section, you'll learn about the following capabilities in the Bulletins 
 
 The Bulletins app consists of the following capabilities.
 
+![Bulletins app interface](media/bulletins/bulletins-app-interface.png "Bulletins app interface")
+
 1. **App areas** - switch between the different areas of the Bulletins app:
 
     1. **Home** - view the bulletin posts.
@@ -391,8 +393,6 @@ The Bulletins app consists of the following capabilities.
 1. **Category** - indicates the category for which the post tiles in this section apply. Featured bulletin posts are shown above other categories.
 
 1. **Posts** - tiles displaying the image or video, title, and description of the post. Select the tile to view the post. Posts also indicate the age of the post’s publication.
-
-    ![Bulletins app interface](media/bulletins/bulletins-app-interface.png "Bulletins app interface")
 
 ### View a post
 
