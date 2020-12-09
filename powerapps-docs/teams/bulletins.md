@@ -99,7 +99,7 @@ Each bulletin post, FAQ, link, or contact has an associated category. To add, ed
 
 1. Select **Settings** (![Settings icon](media/bulletins/settings-icon.png "Settings icon")) from the top-right side of the app.
 
-    ![Settings](media/bulletins/settings.png "Settings")
+    ![Settings option](media/bulletins/settings.png "Settings option")
 
     - To add a category, select **Add category**.
 
