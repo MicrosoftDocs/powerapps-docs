@@ -57,7 +57,7 @@ In this section, you'll learn about the following capabilities in the Manage bul
 - [Create a new bulletin post](#create-a-new-bulletin-post)
 - [View post statistics](#view-post-statistics)
 - [Edit, delete, or unpublish a post](#edit-delete-or-unpublish-a-post)
-- [Create FAQs post](#create-faqs-post)
+- [Create FAQ post](#create-faq-post)
 - [Edit or delete a FAQ bulletin](#edit-or-delete-a-faq-bulletin)
 - [Manage links and contacts](#manage-links-and-contacts)
 
