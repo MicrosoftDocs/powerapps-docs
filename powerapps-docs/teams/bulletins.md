@@ -77,7 +77,7 @@ To open the Manage bulletins app:
 
 1. Select **Allow** if the app asks for your permissions to use the connectors.
 
-1. You can learn more about extending this app capabilities on the splash screen. Select **Got it** to close the screen, and go to the app. To hide this message while opening this app again, select **Don't show this again** before you select **Got it**.
+1. You can learn more about extending app capability on the splash screen. Select **Got it** to close the screen, and go to the app. To hide this message while opening this app again, select **Don't show this again** before you select **Got it**.
 
     ![Splash screen](media/bulletins/splash-screen.png "Splash screen")
 
@@ -139,9 +139,9 @@ To create a new bulletin post:
 
 1. Select a category.
 
-1. To make the bulletin appear at the top of the list as a featured post, select the **Make it featured** drop-down, and select the desired time frame for which the post should be featured.
+1. To make the bulletin appear at the top of the list as a featured post, select the **Make it featured** drop-down, and select the time frame during which the post should be featured.
 
-1. (Optional) If you want to schedule the post to appear at a later date, toggle **Schedule** to *On*, and specify a date/time when the post should appear to users in the Bulletins app.
+1. (Optional) If you want to schedule the post to appear at a future date, toggle **Schedule** to *On*, and specify a date/time when the post should appear to users in the Bulletins app.
 
 1. In **Bulletin details** section, enter the details of the post.
 
@@ -153,11 +153,10 @@ To create a new bulletin post:
 
     1. Enter the text of your bulletin. Formatted text is supported using rich controls.
 
-1. Bulletins allows authors to add a button that links to a website. For
+1. Bulletins app allows authors to add a button that links to a website. For
     example, you may want to link to a SharePoint site that has more details
     about an announcement. To add a link button, enter a title for your button
-    in the **Addd a button** section, then enter the URL for the website to
-    which the button should hyperlink to.
+    in the **Add a button** section, then enter the URL for the website for the button to open when selected.
 
 1. Specify the author for the bulletin in the **Author** section.
 
@@ -172,7 +171,7 @@ To create a new bulletin post:
 ### View post statistics
 
 To view the number of people who have viewed and bookmarked a post, open the
-post in **Manage bulletins** app. You'll see statistics regarding the number of views and bookmarks for the bulletin. You can also change the filter to show the statistics of the last 7 days, 30 days, or 6 months.
+post in **Manage bulletins** app. You'll see statistics about the number of views and bookmarks for the bulletin. You can also change the filter to show the statistics of the last 7 days, 30 days, or 6 months.
 
 ![View post statistics](media/bulletins/bulletin-statistics.png "View post statistics")
 
@@ -182,7 +181,7 @@ To modify or delete a bulletin post, or if you want to change a published post t
 
 1. Open the **Manage bulletins** app.
 
-1. Select the desired post from the list of published posts.
+1. Select the post from the list of published posts.
 
     - To delete a post, select **Delete**.
 
@@ -192,10 +191,11 @@ To modify or delete a bulletin post, or if you want to change a published post t
 
     ![Edit, delete, or unpublish a bulletin post](media/bulletins/edit-delete-unpublish-bulletin.png "Edit, delete, or unpublish a bulletin post")
 
-### Create FAQs post
+### Create FAQ post
 
 If your post is in question, and answer format, use FAQs as the post type. 
-To create an FAQs post, perform the following steps:
+
+To create an FAQ post:
 
 1. Open the **Manage Bulletins** app.
 
@@ -203,7 +203,7 @@ To create an FAQs post, perform the following steps:
 
 1. Select **New FAQ**.
 
-    ![FAQs bulletin](media/bulletins/faqs-bulletin.png "FAQs bulletin")
+    ![FAQ bulletin](media/bulletins/faqs-bulletin.png "FAQ bulletin")
 
 1. Enter FAQ details.
 
@@ -213,7 +213,7 @@ To create an FAQs post, perform the following steps:
 
     1. Enter the answer in the **Answer** rich-text box. This text box supports formatted text, such as bold, underline, and hyperlinks.
 
-1. To make this FAQ a featured question in the FAQs section of the Bulletins app, toggle **Make it featured** to *Yes*.
+1. To make this FAQ a featured question in the FAQ section of the Bulletins app, toggle **Make it featured** to *Yes*.
 
 1. If the FAQ is ready for an approver to review it, toggle **Ready for review** to *On*.
 
@@ -240,9 +240,7 @@ To edit or delete a FAQ bulletin post:
 ### Manage links and contacts
 
 Links and contacts provide users of the Bulletins app with helpful information
-about related website links and organization contacts whom they can contact with questions about bulletin categories. For example, if you have a category for safety in the Bulletins app, you might want to add a link to the safety
-department SharePoint site and add the safety manager as a contact in the app
-for the Safety category.
+about the related website links, and the organization contacts. For example, if you have a category for safety in the Bulletins app, you might want to add a link to the safety department SharePoint site and add the safety manager as a contact in the app for the Safety category.
 
 #### Add a link
 
@@ -398,7 +396,7 @@ The Bulletins app consists of the following capabilities.
 
 ### View a post
 
-To view a post, select the desired bulletin post tile. If a link button has been defined for the post, it'll be displayed at the bottom of the post. Select the button to view the link.
+To view a post, select the bulletin post tile. If a link button has been defined for the post, it will be displayed at the bottom of the post. Select the button to view the link.
 
 To close the post, select the **Close** button.
 

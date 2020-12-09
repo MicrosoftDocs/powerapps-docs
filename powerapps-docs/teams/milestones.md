@@ -49,14 +49,14 @@ To open the Milestones app:
 
 1. Select **Allow** if the app asks for your permissions to use the connectors.
 
-1. You can learn more about extending this app capabilities on the splash screen. Select **Got it** to close the screen, and go to the app. To hide this message while opening this app again, select **Don't show this again** before you select **Got it**.
+1. You can learn more about extending this app's capabilities on the splash screen. Select **Got it** to close the screen, and go to the app. To hide this message while opening this app again, select **Don't show this again** before you select **Got it**.
 
     ![Milestones app splash screen](media/milestones/splash-screen.png "Milestones app splash screen")
 
 ## Understand the Milestones interface
 
 The Milestones app gives you easy access to your projects, work items,
-activities, and project milestones The following are the available options from the main Milestones screen.
+activities, and project milestones
 
 ![Understand the Milestone app interface](media/milestones/understand-interface.png "Understand the Milestone app interface")
 
@@ -78,7 +78,7 @@ activities, and project milestones The following are the available options from 
 
 1. **New activity** - add an update to the activity log.
 
-1. **Expand/collapse the activity log** - expands, or collapses the activity log on screen.
+1. **Expand/collapse the activity log** - expands, or collapses the activity log section.
 
 1. **Projects list** - shows all projects, or the results of the search term entered in the find projects search box. Overdue work item count is displayed if the project has any overdue work items.
 
@@ -86,7 +86,7 @@ activities, and project milestones The following are the available options from 
 
 1. **Project work items** - create, read, update, and delete work items associated with the project.
 
-1. **Activity log** - view activity log, including manually added items, and system generated notifications.
+1. **Activity log** - view activity log, including manually added items, and system-generated notifications.
 
 ## Create a new project
 
@@ -131,7 +131,7 @@ To add work items to a project:
 
     ![New work item button](media/milestones/new-work-item-button.png "New work item button")
 
-1. Add the work item details, such as *Name*, *Description*, and select values for *Assigned to*, *Milestone*, *Status*, *Category*, *Priority*, and *Target date*.
+1. Add the work item details: *Name*, *Description*, values for *Assigned to*, *Milestone*, *Status*, *Category*, *Priority*, and *Target date*.
 
 1. Select **Create**.
 
@@ -168,7 +168,7 @@ status, and category.
 
 1. To rename a category, select the name of the category that you wish to change, and enter a new name.
 
-1. To add an additional option, select **Add**. And then, select the desired color, and enter the name.
+1. To add an additional option, select **Add**. And then, select the color, and enter the name.
 
 1. To delete an option, select the field, then select the **Delete**.
 
