@@ -32,19 +32,19 @@ This section lists limitations of controls used inside the canvas apps created u
    - When using Internet Explorer, the camera control isn't supported. Microsoft Edge is recommended.
    - When using desktop browsers, the barcode scanner isn't supported. Use the Power Apps for mobile app.
 
-- [Container control (experimental)](controls/control-container.md) - see [Container control (experimental) limitations](controls/control-container.md#known-limitations)
+- [Container control (experimental)](controls/control-container.md) - see [Container control (experimental) limitations](controls/control-container.md#known-limitations).
 
-- [Export and import controls](controls/control-export-import.md) - see [Export and import control limitations](controls/control-export-import.md#limitations)
+- [Export and import controls](controls/control-export-import.md) - see [Export and import control limitations](controls/control-export-import.md#limitations).
 
-- [Gallery control](controls/control-gallery.md) - see [Gallery control limitations](controls/control-gallery.md#limitations)
+- [Gallery control](controls/control-gallery.md) - see [Gallery control limitations](controls/control-gallery.md#limitations).
 
 - [Image control](controls/control-image.md) - only supports external media URLs using HTTPS.
 
-- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#pass-a-parameter)
+- [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#pass-a-parameter).
 
-- [PDF viewer control (experimental)](controls/control-pdf-viewer.md) - see [PDF viewer control (experimental) limitations](controls/control-pdf-viewer.md#limitations)
+- [PDF viewer control (experimental)](controls/control-pdf-viewer.md) - see [PDF viewer control (experimental) limitations](controls/control-pdf-viewer.md#limitations).
 
-- [Stream Video control](controls/control-stream-video.md) - see [Stream Video control limitations](controls/control-stream-video.md#limitations)
+- [Stream Video control](controls/control-stream-video.md) - see [Stream Video control limitations](controls/control-stream-video.md#limitations).
 
 ## Limitations of controls in Dataverse for Teams environments
 
