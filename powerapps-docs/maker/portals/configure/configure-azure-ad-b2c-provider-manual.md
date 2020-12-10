@@ -26,7 +26,12 @@ In this article, learn how to configure Azure Active Directory B2C as the identi
 
 1. If necessary, update the name.
 
-1. Select **Next**.
+1. Select **Skip to manual configuration**.
+
+    ![Skip to manual configuration](media/authentication/skip-to-manual.png "Skip to manual configuration")
+
+    > [!NOTE]
+    > Selecting **Next** instead of **Skip to manual configuration** takes you to configure the [Azure AD B2C authentication using the Power Apps portals interface](configure-azure-ad-b2c-provider.md).
 
 1. In this step, create the application and configure the settings with your identity provider.
 
