@@ -57,19 +57,6 @@ opportunity is always attached to an account or contact. To create an
 opportunity, you must have the access right **appendto** on accounts and the
 access right **append** on opportunities.
 
-## Dependencies between access rights
-
-There are some dependencies between data operations and access rights as shown
-in the following table.
-
-| Operation | Access rights required |
-|---|---|
-| Create a record and be the record owner | CREATE, READ |
-| Share a record | SHARE: Required by the person doing the share operation.<p/>READ: Required by the person doing the share and also by the person the record is shared with. |
-| Assign a record| ASSIGN, WRITE, READ |
-| Append to a record | APPENDTO, WRITE, READ |
-| Append a record | APPEND, READ, WRITE |
-
 ### See Also
 
 [How access to a record is determined](/power-platform/admin/how-record-access-determined)
