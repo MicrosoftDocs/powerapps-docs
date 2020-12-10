@@ -1,6 +1,6 @@
 ---
-title: "IOrganizationService Interface (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the common methods exposed to perform data operations with Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "IOrganizationService Interface (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the common methods exposed to perform data operations with Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # IOrganizationService Interface
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 The <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface provides a set of methods used to perform the most common operations on system and custom entities and on the metadata for your organization.
 

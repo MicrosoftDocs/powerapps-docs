@@ -1,6 +1,6 @@
 ---
-title: "Create custom entity (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Shows how to programmatically create a custom entity in Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create custom entity (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Shows how to programmatically create a custom entity in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Create custom entity
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 This topic shows how to programmatically create a custom user-owned entity called **Bank Account** and add four different types of attributes to it.  
   

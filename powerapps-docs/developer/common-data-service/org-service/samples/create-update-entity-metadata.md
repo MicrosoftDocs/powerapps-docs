@@ -1,5 +1,5 @@
 ---
-title: "Sample: Create and update entity metadata  (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Create and update entity metadata  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create and update entity metadata." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Create and update entity metadata
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This topic shows how to programmatically create a custom user-owned entity called **Bank Account** and add four different types of attributes to it.
 

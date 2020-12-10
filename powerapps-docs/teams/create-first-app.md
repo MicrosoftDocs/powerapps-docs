@@ -5,18 +5,16 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/24/2020
+ms.date: 12/07/2020
 ms.author: jshum
 ms.reviewer: 
 ---
 
 # Create your first app in Microsoft Teams
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 You can create, edit, and delete [canvas apps](/powerapps/maker/canvas-apps/getting-started) in Teams.
 
-If you're creating an app by using Power Apps in a Teams team for the first time, a new Project Oakdale environment will be created for you. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment)
+If you're creating an app by using Power Apps in a Teams team for the first time, a new Dataverse for Teams environment will be created for you. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
 ## Get started with creating your first app
 
@@ -37,26 +35,16 @@ After installing the Power Apps app from the Teams store:
 
     ![Select a team to create the app](media/create-app-2.png "Select a team to create the app")
 
-    If this is the first app being created in the selected team, a new Project Oakdale environment will be created for the selected team. You'll see a message about this when you select the team. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment)
+    If this is the first app being created in the selected team, a new Dataverse for Teams environment will be created for the selected team. You'll see a message about this when you select the team. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
     ![Creating the first app in a team](media/create-app-3.png "Creating the first app in a team")
 
-1. Select **Create**. You'll see a confirmation about the Project Oakdale environment being created, which might take some time. You'll be notified when the environment is available for you to create your first app.
+1. Select **Create**. You'll see a confirmation about the Dataverse for Teams environment being created, which might take some time. You'll be notified when the environment is available for you to create your first app.
 
     ![First app in a team](media/create-app-4.png "First app in a team")
 
 > [!NOTE]
 > Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
-
-### Notification
-
-Once the environment gets created, you'll see a notification on the bottom-right side of Teams.
-
-![Bottom notification](media/notification-bottom.png "Bottom notification")
-
-The notification also appears in Teams Activity.
-
-![Activity notification](media/notification-activity.png "Activity notification")
 
 ## Creating an app in a team with a Microsoft 365 Group
 
@@ -102,7 +90,7 @@ to enable security for the team's Microsoft 365 Group.
 
 ## Continue creating your first app
 
-After your Project Oakdale environment has been created, you can go to the build hub and continue creating your first app.
+After your Dataverse for Teams environment has been created, you can go to the [build hub](overview-of-the-power-apps-app.md#build-hub) and continue creating your first app.
 
 > [!NOTE]
 > If you wait in Teams for the environment to be created, you're automatically taken to the Power Apps Studio and a new app. In this situation, skip this step and go to [create your first table](#create-your-first-table).
@@ -111,7 +99,7 @@ After your Project Oakdale environment has been created, you can go to the build
 
     ![Build tab](media/build-tab-env.png "Build tab")
 
-1. Select **Create** to get started building your first app. This action opens
+1. Select **New** > **App** to get started building your first app. This action opens
 Power Apps Studio, where you're prompted to name your app. 
 
 1. Enter an app name, and then select **Save**.
@@ -123,10 +111,10 @@ Power Apps Studio, where you're prompted to name your app.
 
 ### Create your first table
 
-Data for apps built in Teams lives in Project Oakdale environments as tables. Like other data experiences, you can add additional columns to track different attributes of each record before filling up the table with multiple rows of data.
+Data for apps built in Teams lives in Dataverse for Teams environments as tables. Like other data experiences, you can add additional columns to track different attributes of each record before filling up the table with multiple rows of data.
 
 > [!TIP]
-> To learn about Project Oakdale tables in detail, go to [Overview of Project Oakdale](overview-data-platform.md).
+> To learn about Dataverse for Teams tables in detail, go to [Overview of Dataverse for Teams](overview-data-platform.md).
 
 To get started creating your first table:
 
@@ -139,9 +127,9 @@ new table that describes this dataset, and then select
 **Create**.
 
 1. After the table is created, you can add columns of different types, add rows, and
-work with data in the Visual Editor.
+work with data in the visual editor.
 
-   ![Visual Editor](media/table-designer-1.png "Visual Editor")
+   ![Visual editor](media/table-designer-1.png "Visual editor")
 
 ### Add columns to the table
 
@@ -154,9 +142,8 @@ To add a new column to track new data:
 1. Select the type for your column.
 
     > [!TIP]
-    > For more information about column types supported by the table
-    designer, go to [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns that aren't supported by
-    the Visual Editor, create a table by using the **Build** tab. More information: [Create tables](create-table.md)
+    > For more information about column types supported by the visual editor, go to [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns that aren't supported by
+    the visual editor, create a table by using the solution explorer. More information: [Create tables](create-table.md)
 
 1. If required, change **Advanced options** for the selected column type.
 
@@ -171,13 +158,101 @@ select **Add row**.
 
 ![Add rows](media/add-rows.png "Add rows")
 
+#### Paste the copied data into the table
+
+You can paste up to **50 rows** of data into a table. To create new rows from the copied data, add empty rows in the table first. Adding new empty rows ensures pasting data from clipboard doesn't accidentally overwrite your existing data.
+
+> [!CAUTION]
+> Paste operations are automatically saved, and there's no undo option. Use caution when pasting data over existing rows since this action will overwrite your existing data in the table.
+
+To paste the data from clipboard into the table:
+
+1. Select the record that you want to add new records above or below.
+
+1. Select **Insert row above**, or **Insert row below** to insert rows before or after existing rows.
+    <br> For example, inserting row above the selected row:
+
+    ![Insert row above](media/insert-row.png "Insert row above")
+
+    To add rows at the top instead, select **Add row**.
+
+    ![Add row](media/add-row.png "Add row")
+
+1. Repeat the above step to add more empty rows, as needed.
+
+    > [!TIP]
+    > If you're unsure of how many rows do you need, create additional empty rows before pasting data. Extra empty rows can be deleted later.
+
+1. Select the top-left cell from the newly created rows.
+
+    ![Select top-left cell](media/select-top-left-cell.png "Select top-left cell")
+
+1. Paste the copied data.
+
+    ![Paste rows](media/paste-rows.png "Paste rows")
+
+    > [!NOTE]
+    > If you paste data when the cell is in edit mode (if you *double-clicked* top-left cell), the data is pasted inside the cell. If this problem happens, delete the incorrectly pasted data, select any other cell, select the top-left cell, and try to paste again.
+
+    ![Incorrect pasting of rows](media/paste-inside-edit-cell.png "Incorrect pasting of rows")
+
+1. Remove any extra empty rows.
+
+    ![Delete extra row](media/delete-extra-row.png "Delete extra row")
+
+    > [!TIP]
+    > To delete multiple rows that are together, select the top row, and press the **Shift** key on the keyboard. Keeping the key pressed, select the last row in the chunk of the rows that you want to delete. And then, select **Delete X record(s)**.
+
+    ![Delete multiple rows](media/delete-multiple-records.png "Delete multiple rows")
+
+Changes to the table are automatically saved. However, check for errors, and fix them before you close the visual editor.
+
 ### Update the app template
 
 After you close the table, the app template that was added to the app screen by default is automatically refreshed to use the new table.
 
+> [!NOTE]
+> If you add additional data sources, such as a new table, or if you reopened the app, refer to [Manually connect data to the app](#manually-connect-data-to-the-app) to manually refresh the app with the new data.
+
 ![Updated app template](media/updated-gallery.png "Updated app template")
 
 Depending on the number of fields you added to your table, the app template might need updates to the form and the gallery.
+
+#### Manually connect data to the app
+
+The gallery and the edit form components on the screen automatically refresh with the data only for the first data source. If you add additional data sources, such as a new table, or if you reopened the app, you'll have to manually connect the data to the template gallery and form.
+
+> [!TIP]
+> Skip these steps if the app screen is already connected to the table that you created.
+
+To manually connect to the new data:
+
+1. Select the gallery, and then select the correct data source.
+
+    ![Change the gallery data source](media/select-gallery-source.png "Change the gallery data source")
+
+1. Select the form, and then select the correct data source.
+
+    ![Change the form data source](media/select-form-source.png "Change the form data source")
+
+1. If you see any formula error, select **Edit in the formula bar**, and update the formula with the data source name.
+
+    ![Edit the formula](media/edit-formula.png "Edit the formula")
+
+    For example, to change from using *Instructions* as the data source name for the edit form to *Recipes*, replace the name of the data source.
+
+    Change from:
+
+    ```powerapps-dot
+    Remove(Instructions, selectedRecord); If(IsEmpty(Errors(Instructions, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(Instructions)););
+    ```
+    Change to:
+
+    ```powerapps-dot
+    Remove(Recipes, selectedRecord); If(IsEmpty(Errors(Recipes, selectedRecord)),UpdateContext( {itemSelected:false, editMode:false, newMode:false, deleteMode:false}); Set(CurrentItem,First(Recipes)););
+    ```
+
+1. Repeat the earlier step to fix any additional formula errors.
 
 #### Update background color for the selected gallery record
 

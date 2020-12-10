@@ -1,5 +1,5 @@
 ---
-title: "Task, fax, phone call, and letter activity entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Task, fax, phone call, and letter activity entities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about entities that enable you to manage core activities that are performed in a relationship management solution" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Task, fax, phone call, and letter activity entities
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 This section contains information about the entities that enable you to manage core activities that are performed in a relationship management solution.  
 ## In This Section  

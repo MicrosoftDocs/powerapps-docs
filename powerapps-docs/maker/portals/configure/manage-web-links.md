@@ -16,7 +16,7 @@ A web link can link to any URL or it can link to another webpage within the same
 
 ## Manage web links in Power Apps portals
 
-Once the portal customizations have been imported into the Common Data Service environment, web links can be managed from a web link set.
+Once the portal customizations have been imported into the Microsoft Dataverse environment, web links can be managed from a web link set.
 
 1. Open the [Portal Management app](configure-portal.md).
 

@@ -1,5 +1,5 @@
 ---
-title: "Sample: CRUD email attachments <Topic Title> (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: CRUD email attachments <Topic Title> (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to perform CRUD operations on email atachments" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Sample: Create, retrieve, update, and delete an email attachment
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This sample shows how to create, retrieve, update, and delete email attachments using the following methods:
 

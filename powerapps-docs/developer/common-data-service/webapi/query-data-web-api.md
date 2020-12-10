@@ -1,6 +1,6 @@
 ---
-title: "Query Data using the Web API (Common Data Service)| Microsoft Docs"
-description: "Read about the various ways to query Common Data Service data using the Common Data Service Web API and various system query options that can be applied in these queries"
+title: "Query Data using the Web API (Microsoft Dataverse)| Microsoft Docs"
+description: "Read about the various ways to query Microsoft Dataverse data using the Dataverse Web API and various system query options that can be applied in these queries"
 ms.custom: ""
 ms.date: 12/04/2019
 ms.service: powerapps
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Query Data using the Web API
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 If you want to retrieve data for an entity set, use a `GET` request. When retrieving data, you can apply query options to set criteria for the data you want and the entity properties that should be returned.  
     
@@ -232,9 +234,9 @@ The Web API supports these standard OData string query functions:
 > [!NOTE]
 >  This is a sub-set of the [11.2.5.1.2 Built-in Query Functions](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). `Date`, `Math`, `Type`, `Geo` and other string functions aren’t supported in the web API.  
   
-### Common Data Service Web API query functions
+### Microsoft Dataverse Web API query functions
  
-Common Data Service provides a number of special functions that accept parameters, return Boolean values, and can be used as filter criteria in a query. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> for a list of these functions. The following is an example of the <xref href="Microsoft.Dynamics.CRM.Between?text=Between Function" /> searching for accounts with a number of employees between 5 and 2000.  
+Dataverse provides a number of special functions that accept parameters, return Boolean values, and can be used as filter criteria in a query. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> for a list of these functions. The following is an example of the <xref href="Microsoft.Dynamics.CRM.Between?text=Between Function" /> searching for accounts with a number of employees between 5 and 2000.  
   
 ```http 
 GET [Organization URI]/api/data/v9.1/accounts?$select=name,numberofemployees
@@ -476,9 +478,9 @@ By using `$apply` you can aggregate and group your data dynamically.  Possible u
 |Last created record date and time|`accounts?$apply=aggregate(createdon with max as lastCreate)`|
 |First created record date and time|`accounts?$apply=aggregate(createdon with min as firstCreate)`|
 
-The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Common Data Service can be found here: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md).
+The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Dataverse can be found here: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md).
 
-Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Common Data Service supports only a sub-set of these aggregate methods.
+Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Dataverse supports only a sub-set of these aggregate methods.
 
 
 <a name="bkmk_useParameterAliases"></a>
@@ -873,6 +875,7 @@ More information: [Use column comparison in queries](../column-comparison.md)
 
 ### See also
 
+[Search across entity data using relevance search](relevance-search.md)  
 [Work with Quick Find’s search item limit](../quick-find-limit.md)  
 [Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />

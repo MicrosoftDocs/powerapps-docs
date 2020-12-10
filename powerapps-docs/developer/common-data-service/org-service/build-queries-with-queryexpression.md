@@ -1,5 +1,5 @@
 ---
-title: "Build queries with QueryExpression (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Build queries with QueryExpression (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use the QueryExpression class to programmatically build a query containing data filters and search conditions that define the scope of a database search" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/25/2019
@@ -17,10 +17,12 @@ search.app:
 ---
 # Build queries with QueryExpression
 
-In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to programmatically build a query containing data filters and search conditions that define the scope of a database search. A query expression is used for single-object searches. For example, you can create a search to return all accounts that match certain search criteria. The <xref:Microsoft.Xrm.Sdk.Query.QueryBase> class is the base class for query expressions. There are three derived classes: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> and <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>. The `QueryExpression` class supports complex queries. The `QueryByAttribute` class is a simple means to search for entities where attributes match specified values. 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+In Microsoft Dataverse, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to programmatically build a query containing data filters and search conditions that define the scope of a database search. A query expression is used for single-object searches. For example, you can create a search to return all accounts that match certain search criteria. The <xref:Microsoft.Xrm.Sdk.Query.QueryBase> class is the base class for query expressions. There are three derived classes: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> and <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>. The `QueryExpression` class supports complex queries. The `QueryByAttribute` class is a simple means to search for entities where attributes match specified values. 
 
 > [!NOTE]
-> The third derived class, `FetchExpression` is used with FetchXML, the proprietary Common Data Service query language, can be used to perform some queries by using XML-based queries. More information: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
+> The third derived class, `FetchExpression` is used with FetchXML, the proprietary Dataverse query language, can be used to perform some queries by using XML-based queries. More information: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
   
 Query expressions are used in methods that retrieve more than one record, such as the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method, in messages that perform an operation on a result set specified by a query expression, such as <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> and when the ID for a specific record is not known.  
 
@@ -31,9 +33,9 @@ To save a query so you can re-use it, you can convert it to FetchXML by using th
  
 ## Alternatives to QueryExpression
 
-There are two additional ways to create queries to retrieve records from Common Data Service. 
+There are two additional ways to create queries to retrieve records from Dataverse. 
 
-- FetchXML, the proprietary Common Data Service query language, can be used to perform some queries by using XML-based queries. More information: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md). 
+- FetchXML, the proprietary Dataverse query language, can be used to perform some queries by using XML-based queries. More information: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md). 
 - .NET Language-Integrated Query (LINQ). More information: [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md).  
 
 <!-- This doesn't belong here. It should be in model driven app configuration -->

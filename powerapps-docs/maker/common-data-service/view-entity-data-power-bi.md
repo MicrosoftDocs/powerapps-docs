@@ -1,8 +1,9 @@
 ---
-title: "View entity data in Power BI Desktop (Preview) | MicrosoftDocs"
-description: "Learn how access and view entity data in Power BI Desktop"
+title: "View table data in Power BI Desktop (Preview) | MicrosoftDocs"
+description: "Learn how to access and view table data in Power BI Desktop"
 ms.custom: ""
-ms.date: 09/25/2020
+ms.date: 12/03/2020
+ms.topic: how-to
 ms.reviewer: "matp"
 ms.service: powerapps
 author: "Mattp123"
@@ -13,72 +14,61 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
-  - D365CE
 ---
-# View entity data in Power BI Desktop (Preview)
+# View table data in Power BI Desktop
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!WARNING]
-> A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is globally disabled, and we are working urgently to address the issue. This topic will be updated when the issue is resolved or when we have more information to share.
-> 
-> While this feature is disabled, the existing Commmon Data Service connector still works using the import connection mode.
+> [!IMPORTANT]
+> This feature has been re-enabled in the majority of regions. Please resume testing, and provide feedback. We thank you for your patience and feedback.
 
-You can use Power BI Desktop to view entities in Common Data Service. The entity
-record data that you can access from your environment is read-only. Data access
-uses the Common Data Service security model that is the same used to access
-entity record data using a Power Apps app.
+You can use Power BI Desktop to view tables in Microsoft Dataverse. The table
+row data that you can access from your environment is read-only. Data access
+uses the Dataverse security model that is the same used to access
+table row data using a Power Apps app.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisite
-For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Data Service in an environment you must be an administrator and perform the following steps:
-    
-1. Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
-      
-2. Verify that your environment has at least version 9.1.0.17437. To do this, select the **Settings** gear on the toolbar, and then select **Advanced Settings**. Then, on the new browser tab that opens select the **Settings** gear on the toolbar, and then select **About**.
-      
-3. Enable the TDS endpoint. For more information, see the **TDS endpoint (Preview)** setting in this topic [Manage feature settings](/power-platform/admin/settings-features).
+* Enable the Tabular Data Stream (TDS) endpoint. More information: [Manage feature settings](/power-platform/admin/settings-features).
+* Power BI Desktop. [Get it now](https://powerbi.microsoft.com/downloads/)
           
-## View entity data
+## View table data
 
 1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the
     appropriate environment from the top-right corner.
 
-2.  On the left navigation pane expand **Data**, select **Entities**, and then
+2.  On the left navigation pane expand **Data**, select **Tables**, and then
     select **Analyze in Power BI** on the command bar.
 
     The pbids file for your environment is downloaded to your browser’s default download folder.
-    
-    > [!NOTE]
-    > If you don't have the **Analyze in Power BI** option in your Power Apps environment, you don't yet have access to the SQL connection feature.
 
-3.  Open the .pbids file to access it in Power BI Desktop. Don’t have Power BI
-    Desktop? [Get it now](https://powerbi.microsoft.com/downloads/).
+3.  Open the .pbids file to access it in Power BI Desktop.
 
-4.  The pbids file is loaded in Power BI Desktop. In the **SQL Server database**
-    dialog box, select **Microsoft account**, select **Sign in**, and then in
-    the browser window that appears enter your credentials.
+4.  The pbids file is loaded in Power BI Desktop. In the dialog box, select **Organizational account**, select **Sign in**, and then in the browser window that appears select or enter your credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/power-bi-environment-signin.png)
+    > ![Sign in to connect to your environment](media/power-bi-environment-signin.png "Sign in to connect to your environment")
 
-5.  In the **SQL Server database** dialog box in Power BI Desktop, select
-    **Connect**.
+5.  In the dialog box in Power BI Desktop, select **Connect**.
 
     The environment appears in the Power BI Desktop **Navigator** window. Expand
-    it to view the entity tables available to analyze. Select an entity to view
+    it to view the tables available to analyze. Select a table to preview
     its data.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/entity-record-data-displayed.png)
+    > ![table rows displayed example](media/entity-record-data-displayed.png "table rows displayed example" )
+
+6. After you're finished selecting the tables you want to analyze, select **Load** to build a report.
+
+For more information about Power BI Desktop, see [Get started with Power BI Desktop](/power-bi/desktop-getting-started).
 
 > [!NOTE]
 > SQL options, such as a T-SQL queries aren’t supported.
-
-For more information about Power BI Desktop, see [Get started with Power BI Desktop](/power-bi/desktop-getting-started).
 
 ### See also
 [Use SQL to query data](../../developer/common-data-service/cds-sql-query.md)

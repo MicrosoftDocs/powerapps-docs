@@ -1,5 +1,5 @@
 ---
-title: "On-premises deployment options (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "On-premises deployment options (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,9 +17,11 @@ search.app:
 ---
 # On-premises deployment options
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <!-- 
 
-TODO: This page and any links to it will not be published until an on-premises version of Common Data Service is released.
+TODO: This page and any links to it will not be published until an on-premises version of Microsoft Dataverse is released.
 
 
  -->

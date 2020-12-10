@@ -1,6 +1,6 @@
 ---
-title: "Customization solutions file schema (Common Data Service) | Microsoft Docs"
-description: "The following is the schema definition for an solution customization file from Common Data Service."
+title: "Customization solutions file schema (Microsoft Dataverse) | Microsoft Docs"
+description: "The following is the schema definition for an solution customization file from Microsoft Dataverse."
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -25,7 +25,9 @@ search.app:
 # Customization solutions file schema
 
 
-The following is the schema definition for an import/export customization file from Common Data Service. 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+The following is the schema definition for an import/export customization file from Microsoft Dataverse. 
 
 You can find schema  in the `Schemas\9.0.0.2090\CustomizationsSolution.xsd` folder when you download the Schemas zip file.
 

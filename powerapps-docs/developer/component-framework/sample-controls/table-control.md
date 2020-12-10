@@ -35,6 +35,9 @@ Model-driven apps
 			<code path="index.ts" order="1" />
 			<css path="css/TS_TableControl.css" order="2" />
 		</resources>
+  <feature-usage>  
+    <uses-feature name="Utility" required="true" />  
+  </feature-usage>
 	</control>
 </manifest>
 ```

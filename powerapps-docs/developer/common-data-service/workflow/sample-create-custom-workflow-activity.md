@@ -1,5 +1,5 @@
 ---
-title: "Sample: Create a custom workflow activity (Common Data Service) | Microsoft Docs"
+title: "Sample: Create a custom workflow activity (Microsoft Dataverse) | Microsoft Docs"
 description: "The sample demonstrates how to write a custom workflow activity that can create an account and a task for the account. This sample uses early binding."
 ms.custom: ""
 ms.date: 1/28/2020
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Sample: Create a custom workflow activity
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Download the complete sample here: [WorkflowActivities](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkflowActivities).
 

@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Use sample apps from the Microsoft Teams store
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 Sample apps that were created by using Power Apps are available in the Teams store. You can select the sample app that best fits your business requirement and quickly install it to get started. In this article, you'll learn about one such sample app that helps manage campaigns and ideas. Sample apps created with Power Apps and published to the Teams store can consist of multiple components such as apps, flows, and tables.
 
 In this tutorial, you'll learn how to search for a sample app in the Teams store and add it to your team channel. After you install the sample app, you can go to the team that you added the app to and use the tabs for the app just as you use other features such as **Post**, **Files**, or **Wiki**.
@@ -71,7 +69,7 @@ The following tutorial shows how to install the Employee ideas app.
     ![App installation](media/sample-app-5.png "App installation")
 
     > [!NOTE]
-    > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](/power-platform/admin/about-teams-environment.md)
+    > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](https://docs.microsoft.com/power-platform/admin/about-teams-environment)
     > - Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
 
 1. After the app is installed, you'll see a tab named **Employee ideas** added to the team channel that you selected earlier.
@@ -117,13 +115,17 @@ You can further customize and edit the components of an installed Power Apps app
 
 If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively by selecting **Ctrl**+**Alt**+**A** on the keyboard to get the session details. For more information about session details, go to [About tab](overview-of-the-power-apps-app.md#about-tab).
 
+## Sample app updates
+
+Updates to the sample apps are published immediately. If you already have a sample app in use when this happens, a new version of the app is created with these updates and published as the live version. If you [customized a sample app](customize-sample-apps.md), you can [restore the app to a previous version](manage-your-apps?#restore-an-app) with your customizations, or recreate the customizations on top of the updated live version. When restoring the app to preserve your customizations, ensure to check the app functionality for compatibility with the updates.
+
 ## Sample apps FAQs
 
 For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sample-apps-faqs.md).
 
 ### See also
 
-- [Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
+- [Employee ideas app](employee-ideas.md)  
+- [Inspection sample app](inspection.md)  
 - [Issue Reporting sample apps](issue-reporting.md)
 - [Customize sample apps](customize-sample-apps.md)

@@ -1,5 +1,5 @@
 ---
-title: "Use XRM tooling to execute actions in Common Data Service| MicrosoftDocs"
+title: "Use XRM tooling to execute actions in Microsoft Dataverse| MicrosoftDocs"
 description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on Dynamics 365 data"
 ms.custom: ""
 ms.date: 03/20/2019
@@ -21,6 +21,8 @@ search.app:
   - D365CE
 ---
 # Use XRM tooling to execute a web request against web API
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 The <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object is used to perform actions on your Dynamics 365 data such as create, update, retrieve or delete data.
 

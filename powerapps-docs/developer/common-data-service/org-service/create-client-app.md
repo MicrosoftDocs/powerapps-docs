@@ -1,5 +1,5 @@
 ---
-title: "Create Client applications(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create Client applications(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 05/20/2019
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Create a client application
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Content coming soon...
 <!-- 

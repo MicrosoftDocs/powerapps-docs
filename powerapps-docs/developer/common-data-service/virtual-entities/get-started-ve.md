@@ -1,6 +1,6 @@
 ---
-title: "Get started with virtual entities (Common Data Service) | Microsoft Docs"
-description: "Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service, without replication of data and often without custom coding."
+title: "Get started with virtual entities (Microsoft Dataverse) | Microsoft Docs"
+description: "Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Microsoft Dataverse, without replication of data and often without custom coding."
 ms.date: 06/24/2020
 ms.service: powerapps
 ms.topic: "get-started-article"
@@ -19,7 +19,9 @@ search.app:
 
 # Get started with virtual entities
 
-Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service, without replication of data and often without custom coding. Virtual entities support create, updates and delete of data in the external system. 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Microsoft Dataverse, without replication of data and often without custom coding. Virtual entities support create, updates and delete of data in the external system. 
 
 Virtual entities replace previous client-side and server-side approaches to integrating external data, which required customized code and suffered from numerous limitations, including imperfect integration, data duplication, or extensive commitment of development resources.  In addition, for administrators and system customizers, the use of virtual entities greatly simplifies administration and configuration.
 
@@ -28,12 +30,12 @@ Virtual entities replace previous client-side and server-side approaches to inte
 
 ## Virtual entities, data providers and data sources
 
-A virtual entity is a definition of an entity in the Common Data Service platform metadata without the associated physical tables for entity instances created in the Common Data Service database. Instead during runtime, when an entity instance is required, its state is dynamically retrieved from the associated external system. Each virtual entity type is associated with a *virtual entity data provider* and (optionally) some configuration information from an associated *virtual entity data source*. 
+A virtual entity is a definition of an entity in the Dataverse platform metadata without the associated physical tables for entity instances created in the Dataverse database. Instead during runtime, when an entity instance is required, its state is dynamically retrieved from the associated external system. Each virtual entity type is associated with a *virtual entity data provider* and (optionally) some configuration information from an associated *virtual entity data source*. 
 
 <!-- TODO:
-A data provider is a particular type of Common Data Service plug-in, which is registered against CRUD events that occur in the platform. More information: [Write a plug-in](../write-plugin.md) -->
+A data provider is a particular type of Dataverse plug-in, which is registered against CRUD events that occur in the platform. More information: [Write a plug-in](../write-plugin.md) -->
 
-The following data providers ship with Common Data Service:
+The following data providers ship with Dataverse:
 - An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default.
 - An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
@@ -50,10 +52,10 @@ In this example, a corresponding virtual entity data source would also be provid
 Following are the limitations in virtual entities that must be considered.
 
 - Only organization-owned entities are supported. The security filtering applied to user-owned entities is not supported. Access to the virtual entity data can be turned on or off for individual users based on their security role. Field-level security is not supported.
-- It must be possible to model the external data as a Common Data Service entity. This means:
+- It must be possible to model the external data as a Dataverse entity. This means:
     - All entities in the external data source must have an associated GUID primary key.  
-    - All entity properties must be represented as Common Data Service attributes. You can use simple types representing text, numbers, optionsets, dates, images, and lookups. 
-    - You must be able to model any entity relationships in Common Data Service.
+    - All entity properties must be represented as Dataverse attributes. You can use simple types representing text, numbers, optionsets, dates, images, and lookups. 
+    - You must be able to model any entity relationships in Dataverse.
     - An attribute on a virtual entity cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
     - Although you can add virtual entity columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual entity lookup column.
 - Auditing and change tracking is not supported.
@@ -62,7 +64,7 @@ Following are the limitations in virtual entities that must be considered.
 - A virtual entity cannot represent an activity and do not support business process flows.
 - Once created, a virtual entity cannot be changed to be a standard (non-virtual) entity.  The reverse is also true: a standard entity cannot be converted into a virtual entity.
 
-For more information about how these limitations are reflected in the Common Data Service API, see [API considerations of virtual entities](api-considerations-ve.md). 
+For more information about how these limitations are reflected in the Dataverse API, see [API considerations of virtual entities](api-considerations-ve.md). 
 
 ### See also
 

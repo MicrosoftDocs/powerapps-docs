@@ -16,6 +16,9 @@ When you provision a portal, the portal-related solutions are installed on the o
 
 ## To import metadata translation
 
+> [!TIP]
+> To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
+
 1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Portal Actions** > **Get latest metadata translations**. A confirmation window is displayed asking whether to update the portal solutions.
@@ -24,5 +27,5 @@ When you provision a portal, the portal-related solutions are installed on the o
 
 > [!Note]
 > - If the latest version of a portal package is available, it isn't updated. The portal solutions are updated in the same version. To upgrade your portal solutions based on the latest available packages, you need to access the Solution Admin center.
-> - If a user has modified any data in Common Data Service, the existing data will not be overwritten during the update.
+> - If a user has modified any data in Microsoft Dataverse, the existing data will not be overwritten during the update.
 > - If the portal solutions are being installed, the solution update cannot be triggered.

@@ -1,6 +1,6 @@
 ---
-title: "Web API Functions and Actions Sample (C#) (Common Data Service)| Microsoft Docs"
-description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service Web API and C#"
+title: "Web API Functions and Actions Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
+description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API and C#"
 ms.custom: ""
 ms.date: 8/17/2020
 ms.service: powerapps
@@ -22,14 +22,16 @@ search.app:
 ---
 # Web API Functions and Actions Sample (C#)
 
-This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service Web API.  
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
+This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API.  
   
 > [!NOTE]
 > This sample implements the operations detailed in the [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md). This sample also uses the [CDSWebApiService](cdswebapiservice.md) class methods for messaging, performance enhancements, and error processing.
 
 ## Prerequisites
 
-Prerequisites for all Common Data Service Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
+Prerequisites for all Dataverse Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
   
 ## How to run this sample
 
@@ -38,7 +40,7 @@ Go to [Web API Functions and Actions Sample (C#)](https://github.com/Microsoft/P
 |File|Purpose/Description|  
 |----------|--------------------------|  
 |Program.cs|Contains the primary source code for this sample.|  
-|App.config|The application configuration file, which contains placeholder Common Data Service server connection information. This file is shared with several of the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|
+|App.config|The application configuration file, which contains placeholder Dataverse server connection information. This file is shared with several of the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|
 |FunctionsAndActions.sln <br />FunctionsAndActions.csproj <br />Packages.config <br />AssemblyInfo.cs|The standard Visual Studio 2019 solution, project, NuGet package configuration, and assembly information files for this sample.|  
 |WebAPIFunctionsandActions_1_0_0_0_managed.zip|A custom managed solution containing two custom actions called by this sample.|  
   
@@ -48,7 +50,7 @@ Next, use the following procedure to run this sample.
   
 1. Locate and double-click on the solution file, FunctionsAndActions.sln, to load the solution into Visual Studio. Build the **FunctionsAndActions** solution.  This should automatically download and install all the required NuGet packages that are either missing or need to be updated.  
   
-1. Edit the application configuration file, App.config, to specify connection information for your Common Data Service server.  
+1. Edit the application configuration file, App.config, to specify connection information for your Dataverse server.  
   
 1. Build and run the **FunctionsAndActions** project from within Visual Studio.  All sample solutions are configured to run in debug mode by default.  
   
@@ -295,7 +297,7 @@ namespace PowerApps.Samples
 
 ### See also
 
-[Use the Common Data Service Web API](../overview.md)<br />
+[Use the Dataverse Web API](../overview.md)<br />
 [Use Web API functions](../use-web-api-functions.md)<br />
 [Use Web API actions](../use-web-api-actions.md)<br />
 [Web API Samples](../web-api-samples.md)<br />

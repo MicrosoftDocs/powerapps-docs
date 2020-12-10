@@ -1,6 +1,6 @@
 ---
 title: Improve FetchXML request performance | Microsoft Docs
-description: Learn how developers can improve FetchXML request performance when using Common Data Service.
+description: Learn how developers can improve FetchXML request performance when using Microsoft Dataverse.
 author: NHelgren
 manager: annbe
 ms.service: powerapps
@@ -17,42 +17,44 @@ search.app:
 
 # Improve FetchXML request performance
 
-An option available in FetchXML requests called *LateMaterialize* allows you to break up such
-requests into smaller more usable segments which can improve the performance of long running FetchXML requests.
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+You can use the `LateMaterialize` option in FetchXML requests to break up such
+requests into smaller, more usable segments, which can improve the performance of long-running FetchXML requests.
 
 > [!NOTE]
 > Performance improvements depend on the data distribution for each
-> participating entity and linked entity. Late materialization may not always
-> provide a performance benefit. It is best used if you are experiencing
+> participating entity and linked entity. Late materialization might not always
+> provide a performance benefit. It's best used if you're experiencing
 > performance issues with your existing fetch request.
 
 Executing a traditional fetch for a given number of the top entity records will pull all
-the columns in the select list that meet the filter criteria. Let’s say you are
-pulling the top 500 records on an entity that has 100 columns and 100K rows
-that meet the filter criteria, this request can cause issues in two ways:
+the columns in the select list that meet the filter criteria. Let's say you're
+pulling the top 500 records on an entity that has 100 columns and 100,000 rows
+that meet the filter criteria. This request can cause issues in two ways:
 
-- The 99.5K rows will pull all columns, even though you only need to populate
+- The 99,500 rows will pull all columns, even though you only need to populate
   the select list for 500 rows when returning to the client.
 
-- Query Optimizer can generate an arbitrary order when retrieving the child
-  columns, resulting in an undesired data order.
+- The query optimizer can generate an arbitrary order when retrieving the child
+  columns, resulting in a data order you don't want.
 
-Using `LateMaterialize` allows you to create a fetch that will:
+When you use `LateMaterialize`, you create a fetch that will:
 
 - First pull only the primary ID of the top number of records specified.
 
 - Select only the columns of data needed based on the primary IDs that were
-  retrieved. For example, where only 5 columns are needed for display in the form.
+  retrieved&mdash;for example, where only five columns are needed for display in the form.
 
 By pulling only the needed data after the primary IDs are collected, the
-retrieval is much faster as data that is not needed for the current operation is
+retrieval is much faster because data that's not needed for the current operation is
 excluded.
 
 This is most beneficial when:
 
-- The entity you are querying has one or more links to other entities for column data.
+- The entity you're querying has one or more links to other entities for column data.
 
-- There are many columns in the entity.
+- The entity contains many columns.
 
 - The entity contains logical attributes.
 
@@ -112,6 +114,6 @@ This is most beneficial when:
 </fetch>
 ```
 
-### See Also
+### See also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)

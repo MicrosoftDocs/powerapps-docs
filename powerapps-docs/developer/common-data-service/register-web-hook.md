@@ -1,5 +1,5 @@
 ---
-title: "Register a webhook (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Register a webhook (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic will describe how to register a webhook using the plug-in registration tool" 
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Register a webhook
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Use the Plug-in Registration tool to register a webhook. To get the Plug-in registration tool, see [Download tools from NuGet](download-tools-nuget.md). 
 
@@ -34,7 +36,7 @@ When you register a webhook you must provide three items of information:
 
 ## Authentication options
 
-The correct webhook registration authentication option and values to use depend on what the endpoint expects.  The owner of the endpoint must tell you what to use. To use webhooks with Common Data Service, the endpoint must allow one of the three authentication options described below:
+The correct webhook registration authentication option and values to use depend on what the endpoint expects.  The owner of the endpoint must tell you what to use. To use webhooks with Microsoft Dataverse, the endpoint must allow one of the three authentication options described below:
 
 
 |Type  |Description  |

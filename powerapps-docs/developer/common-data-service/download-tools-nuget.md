@@ -1,5 +1,5 @@
 ---
-title: "Download tools from NuGet (Common Data Service) | Microsoft Docs"
+title: "Download tools from NuGet (Microsoft Dataverse) | Microsoft Docs"
 description: "Download the Plugin Registration, Package Deployment, and other core tools from Nuget."
 ms.custom: ""
 ms.date: 10/31/2018
@@ -22,6 +22,8 @@ search.app:
 ---
 
 # Download tools from NuGet 
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 You can download tools used in development from NuGet using the  powershell script found below. These tools include:
 

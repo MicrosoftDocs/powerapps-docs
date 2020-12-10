@@ -44,7 +44,7 @@ landingContent:
             url: open-and-run-a-sample-app.md 
           - text: Create your first app
             url: get-started-test-drive.md  
-          - text: Create a canvas app from Common Data Service
+          - text: Create a canvas app from Dataverse
             url: data-platform-create-app.md
        - linkListType: learn
          links:
@@ -114,7 +114,7 @@ landingContent:
     linkLists:
        - linkListType: concept
          links:
-          - text: Create a canvas app within a Common Data Service solution
+          - text: Create a canvas app within a Dataverse solution
             url: add-app-solution.md
           - text: Reuse canvas app components
             url: create-component.md
@@ -131,7 +131,7 @@ landingContent:
           - text: Test using Test Studio
             url: test-studio.md
           - text: Debug using Monitor
-            url: monitor.md
+            url: ../monitor-canvasapps.md
           - text: Analyze app telemetry using Application Insights
             url: application-insights.md
           - text: Performance tips

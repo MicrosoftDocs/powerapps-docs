@@ -1,5 +1,5 @@
 ---
-title: "Queue entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Queue entities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Queues in Power Apps are instrumental in organizing, prioritizing, and monitoring the progress of your work." 
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Queue entities
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 *Queues* are instrumental in organizing, prioritizing, and monitoring the progress of your work. As a central location for work management, queues assist you in processing cases, responding to service calls, or sending out product information to prospective customers. Programmatically, a queue is a collection of queue items. A queue item serves as a container for an entity record, such as a task, an email, or a case that needs processing. See [Queue Entity](reference/entities/queue.md)
 
@@ -72,7 +74,7 @@ The following information pertains to queues:
 ## Enable entities for queues  
  To enable a customizable entity (`EntityMetadata.IsCustomizable = true`) for queues, use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsValidForQueue> attribute to `true`. The queue entity and the queue item entity are customizable entities, but they cannot be enabled for queues.  
   
- The following list contains default queue-enabled entities in Common Data Service:  
+ The following list contains default queue-enabled entities in Microsoft Dataverse:  
   
 -   Appointment  
   

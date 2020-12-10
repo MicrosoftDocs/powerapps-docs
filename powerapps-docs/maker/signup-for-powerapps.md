@@ -14,10 +14,10 @@ ms.reviewer: kvivek
 You can explore all Power Apps capabilities for free by signing up for a Power Apps trial plan that expires after 30 days. If you don't have any license for Power Apps, the trial plan provides temporary access to these and other features:
 
 - Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more).
-- Create and run canvas apps that connect to Common Data Service and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
+- Create and run canvas apps that connect to Microsoft Dataverse and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
 - Create and run model-driven apps.
 - Create automated workflows with Power Automate.
-- Create and manage environments and Common Data Service databases.
+- Create and manage environments and Dataverse databases.
 
 If you have a Power Apps license or a license through Office 365, you already have access to some of these features; the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
@@ -89,7 +89,7 @@ Power Apps trial licenses are only available in the Azure commercial cloud. Powe
 
 You'll be prompted to request an extension of the trial or purchase a plan 30 days after the trial starts. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
 
-If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of Power Apps that your other license provides. Any data in Common Data Service will remain as it is, and any app or flow that uses Common Data Service will continue to run as it did if your license supports them. If you try to use premium Power Apps features but your existing license doesn't (for example, modify a schema or entities in Common Data Service), you'll be prompted to purchase a plan.
+If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of Power Apps that your other license provides. Any data in Dataverse will remain as it is, and any app or flow that uses Dataverse will continue to run as it did if your license supports them. If you try to use premium Power Apps features but your existing license doesn't (for example, modify a schema or entities in Dataverse), you'll be prompted to purchase a plan.
 
 ### More questions?
 

@@ -18,6 +18,8 @@ search.app:
 ---
 # Use a connection reference in a solution
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 A connection  is a proxy or a wrapper around an API that allows the underlying service to talk to Microsoft Power Automate, Microsoft Power Apps, and Azure Logic Apps. It provides a way for users to connect their accounts and use a set of pre-built actions and triggers to build their apps and workflows.
@@ -37,7 +39,7 @@ You can add a connection reference to a solution in a few different ways:
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and on the left pane select **Solutions**. 
 2. Create a new or open an existing solution.
 3. On the command bar select **New**, and then in the list of components select Connection Reference. 
-4. On the **New Connection Reference** pane, enter the following information. Required fields a denoted with an asterisk (*).
+4. On the **New Connection Reference** pane, enter the following information. Required columns are denoted with an asterisk (*).
    - **Display name**: Enter a friendly name to help differentiate this connection reference from others.
    - **Description**: Enter text that describes the connection.
    - **Connector**: Choose from the following options:
@@ -47,7 +49,7 @@ You can add a connection reference to a solution in a few different ways:
 
 ## Limits
 
-During the preview, the same connection reference can be used a maximum of 16 times in flows.
+While connection references are in preview, one connection reference can only be used within a maximum of 16 flows. If the same connection needs to be used in more than 16 flows, then create another connection reference with a connection to the same connector. There is no limit to the number of actions in each flow that can be associated with the connection reference.
 
 ### See also
 
