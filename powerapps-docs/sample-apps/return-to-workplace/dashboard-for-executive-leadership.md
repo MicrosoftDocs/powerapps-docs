@@ -5,9 +5,9 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Use the Location Readiness dashboard
@@ -25,16 +25,21 @@ This article is for executive leaders who use the Power BI dashboard to analyze 
 
 ## System at a glance
 
-The **System at a Glance** tab provides key metrics for returning to work, including current value, goal values, and whether locations have met the goals. 
+The **System at a Glance** tab provides visibility into key metrics to monitor virus spread and facility status. 
 
-The key metrics are the number of COVID-19 new cases per day, fatality cases per day, new cases per day per million population, fatality cases per day per million population, reproductive number, and facilities' Readiness Checklist completion percentage.
+The key metrics are the number of COVID-19 new cases per day, fatal cases per day, 14 day moving average per one hundred thousand population and associated risk level, 14 day moving average fatal cases per million population, reproductive number.
 
-A map highlights locations of facilities, along with the number of facilities that are in a certain phase. Hovering over a facility gives you insights into the virus spread at that location.
+Users can switch between two different views in terms of virus metrics: Worldwide & United States. Virus metrics for worldwide view are shown on a country level and on a state/county level for the United States.
+
+> [!div class="mx-imgBorder"]
+> ![System at a Glance](media/pbi-dash-report-usa-county-virus.png "System at a Glance")
+
+A map highlights the locations of facilities, along with the number of facilities that are in a certain phase. Hovering over a facility gives you insights into the virus spread at that location.
 
 Important statistics are provided at the top, including the number of facilities, new cases, new fatal cases, and the reproductive number.
 
 > [!div class="mx-imgBorder"]
-> ![System at a Glance](media/pbi-dash-system-at-a-glance2.png "System at a Glance")
+> ![System at a Glance 2](media/pbi-dash-system-at-a-glance2.png "System at a Glance 2")
 
 ### Key metrics
 
@@ -45,16 +50,17 @@ Review the phases that facilities are in, the number of facilities, new cases, n
 > [!div class="mx-imgBorder"]
 > ![System at Glance phases](media/pbi-dash-system-at-a-glance-phases.png "System at a Glance phases")
 
-#### New cases per day
+#### Confirmed COVID cases 
 
-Information is shown about new confirmed cases and average cases, in addition to states with the most active spread.
+Information is shown about the number of cases for the last reporting day, 14 day moving average in absolute numbers and per population with the associated risk level, daily trend, and the total number of cases and per population.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance cases](media/pbi-dash-report-covidcases.png "System at a Glance cases")
 
-#### Fatal cases per day
+#### Fatal COVID cases
 
-The data on confirmed deaths is shown in these visualizations, giving you easy access to information about the most active spread by states, new fatal cases, and total fatal cases.
+The data on this tab shows information for COVID-19 cases with fatalities, giving you easy access to information about new fatal cases and total fatal cases in absolute terms and per population, and daily trend.
+
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance fatal COVID cases](media/pbi-dash-report-fatalcovidcases.png "System at a Glance fatal COVID cases")
@@ -111,7 +117,7 @@ The Occupancy section provides metrics regarding facility capacity and usage, su
 
 ## Employee Activity 
 
-The **Employee Activity** tab provides an overall time-series daily view for employee sentiment and attestation. You can check every day to see where numbers increased or were lower compared to previous days.
+The **Employee Activity** tab provides an overall time-series daily view for employee sentiment and daily passes generated for employees and guests. You can check every day to see where numbers increased or were lower compared to previous days. 
 
 > [!div class="mx-imgBorder"]
 > ![Employee Activity](media/pbi-dash-report-leadership-employee-activity.png "Employee Activity")
@@ -148,7 +154,7 @@ WHO supports open access to the published output of its activities as a fundamen
 
    For further information, visit [WHO Copyright, Licensing, and Permissions](https://www.who.int/about/who-we-are/publishing-policies/copyright).
 
-2. USAFACTS (cases/deaths US only): <https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/>  
+2. USAFACTS (cases/deaths, population US only): <https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/>  
 
    © 2020 USAFacts. All rights reserved.  USAFacts data is available under a Creative Commons license. Learn more at <https://usafacts.org/faq/> 
 
@@ -159,6 +165,9 @@ WHO supports open access to the published output of its activities as a fundamen
 4. Reproductive factor estimates: <https://epiforecasts.io/covid/posts/global/> 
 
     This dataset is from EpiForecasts and the CMMID COVID-10 working group at <https://epiforecasts.io/covid/posts/global> and is licensed under Creative Commons Attribution CC BY 4.0.
+
+5. Global Population data:  https://population.un.org/wpp/Download/Standard/Population/ is puled from UN department of economic and social affairs.
+
 
 ## Feedback about the solution
 

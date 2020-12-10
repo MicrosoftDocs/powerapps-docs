@@ -33,70 +33,63 @@ Additionally, you can set advanced cascading behaviors on many-to-one and one-to
 
 To add a lookup relation to a table, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section, and then select **Tables** on the left navigation pane.
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
+1. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
-3. Click **Relationships**
+1. Select the **Relationships** tab.
 
-4. Click **Add relationship**, this will open a new panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop down.
+1. Select **Add relationship**, and then select a relationship type, such as **Many-to-one**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-1.png "Many to One Relationship")
-
-5. After selecting a table the Look up columns will be shown on the Primary table, they will default with the table's name (in this example Classroom) but you can change them if needed.
-
-    ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to One Relationship")
-
-6. Click **Done** to add the relationship to your table, and then click **Save table**.
+1. On the right pane, select a **Related** table for the **Current** table, and then select **Done**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-3.png "Many to One Relationship")
+    > ![Many to one relationship example](./media/data-platform-cds-newrelationship/manytoone-2.png "Many to one relationship example")
+
+1. Select **Save table**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-3.png "Many to One Relationship") 
 
 ## Add a One-to-many relationship
 
 To add a One-to-many relationship, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and select **Tables** in the left navigation pane.
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
+2. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
-3. Click **Relationships**
+3. Select the **Relationships** tab.
 
-4. Click  the down arrow to the right of **Add relationship**, this will give you the choice of both types of relationships. Click **One-to-many** this will open a new panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop down.
+4. Select the down arrow to the right of **Add relationship**, and then select **One-to-many**.
     > [!div class="mx-imgBorder"] 
     > ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-1.png "One to Many Relationship")
 
-5. After selecting a table the Look up columns will be shown on the Primary table, they will default with the tables name (in this example Class) but you can change them if needed.
+5. Select a table. Notice the **Look up** columns will be shown on the **Current** table, they will default with the tables name (in this example Teacher) but you can change them if needed. Select **Done** to add the relationship to your table.
 
     > [!NOTE]
-    > In the case of a One-to-many relationships, the Look up column will be created on the related table, not the table you currently have selected. If you need the lookup on the current table, please create a Many-to-one relationship.
+    > In the case of a One-to-many relationships, the Look up column will be created on the related table, not the table you currently have selected. If you need the lookup on the current table, create a Many-to-one relationship.
 
-    > [!div class="mx-imgBorder"] 
-    > ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-2.png "One to Many Relationship")
-
-6. Click **Done** to add the relationship to your table, and then click **Save table**.
-
-    > [!div class="mx-imgBorder"] 
-    > ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-3.png "One to Many Relationship")
+    :::image type="content" source="media/data-platform-cds-newrelationship/one-to-many-example.png" alt-text="One to many example":::
+6. Select **Save table**.
 
 ## Add a Many-to-many relationship
 To add a Many-to-many relationship, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
 
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Tables** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and select **Tables** in the left navigation pane.
 
-2. Click or tap an existing table, or [Create a new table](data-platform-create-entity.md)
+2. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
-3. Click **Relationships**
+3. Select the **Relationships** tab.
 
-4. Click  the down arrow to the right of **Add relationship**, this will give you the choice of both types of relationships. Click **Many-to-many** this will open a new panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop down.
+4. Select  **Add relationship** and then select **Many-to-many**. This opens a panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop down.
 
 5. After selecting a table, the names for the relationship and relationship table will appear. They will default with the names of the tables combined, but you can change them if needed.
 
     > [!div class="mx-imgBorder"] 
     > ![Many to Many Relationship](./media/data-platform-cds-newrelationship/manytomany-1.png "Many to Many Relationship")
 
-6. Click **Done** to add the relationship to your table, and then click **Save table**.
+6. Select **Done** to add the relationship to your table, and then click **Save table**.
 
 
 ## Add advanced relationship behavior
