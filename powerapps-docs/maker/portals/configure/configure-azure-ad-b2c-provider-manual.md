@@ -20,7 +20,7 @@ In this article, learn how to configure Azure Active Directory B2C as the identi
 <!--markdownlint-disable MD036-->
 **To configure Azure AD B2C as the OpenID Connect provider manually**
 
-1. Select **Configure** for **Azure Active Directory B2C**.More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
+1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
 
     ![Azure AD B2C provider name](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
 
