@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
   title: Power App component framework FAQs
-  description: Get answers on frequently asked questions about Power Apps component framework.
+  description: Get answers to frequently asked questions about Power Apps component framework.
   author: ghurlman
   ms.service: powerapps
   ms.search.keywords: 
@@ -18,14 +18,14 @@ sections:
           Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). 
           Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
           > [!NOTE]
-          > - A new solution must be created everytime if you wish to have a major version bump. Incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade.
-          > - Only three version sections are supported (i.e. MAJOR.MINOR.PATCH). These version number sections should be between 0 and 65536.
+          > - A new solution must be created every time if you wish to have a major version bump. Incrementing the major version number (e.g., 1.0 to 2.0) is not supported as an upgrade.
+          > - Only three version sections are supported (i.e., MAJOR.MINOR.PATCH). These version number sections should be between 0 and 65536.
 
       - question: What are the things to be considered from a performance perspective?
         answer: |
-          1. If you wish to access large chunk of data items, implement [filtering](reference/filtering.md) and [paging](reference/paging.md) methods to limit how much data should be loaded.
+          1. If you wish to access a large chunk of data items, implement [filtering](reference/filtering.md) and [paging](reference/paging.md) methods to limit how much data should be loaded.
           2. Batch your network calls, and make any network calls asynchronous. Design the component in such a way that all the required information is provided with a single call. 
-          3. Design the component such that the user has to perform an action (such as clicking on a button) to initiate the loading of specific item's data rather than making the call for each data item.
+          3. Design the component such that the user has to perform an action (such as clicking on a button) to initiate the loading of a specific item's data rather than making the call for each data item.
           4. Ensure that you clean up the resources using the [destroy](reference/control/destroy.md) function. Open network calls, connections, and event handlers need to be cleaned up to increase the performance.
 
       - question: Where can I find some good examples of code components?
@@ -58,7 +58,7 @@ sections:
 
       - question: TabIndex support for components in canvas apps
         answer: |
-          Currently code components do not support `tabindex` property in canvas apps. For model-driven apps the tab assignment is assigned automatically using `tabIndex = 0`, so elements are navigated in the order they appear. 
+          Currently, code components do not support `tabindex` property in canvas apps. For model-driven apps the tab assignment is assigned automatically using `tabIndex = 0`, so elements are navigated in the order they appear. 
 
      
 additionalContent: |
