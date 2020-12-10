@@ -27,7 +27,7 @@ The Bulletins app solution consists of two apps.
 
 - [Manage bulletins app](#manage-bulletins-app)
 
-    - Manager experience for managing Bulletins app.
+    - Manager experience for managing **Bulletins** app.
     - Allows managers to create, edit, and categorize posts read through the Bulletins app.
 
 - [Bulletins app](#bulletins-app)
