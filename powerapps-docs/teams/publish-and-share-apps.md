@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/30/2020
+ms.date: 12/10/2020
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
@@ -46,7 +46,7 @@ Moving an app to another Teams channel in the same team requires publishing the 
 - To publish an app to the new channel: Follow the steps to [publish and add an app to Teams](#publish-and-add-an-app-to-teams). But before you select **Save + close**, select **Add a tab** ![Add a tab](media/publish-app-9.png "Add a tab") for the new channel you want. And then, select **Save + close** to publish the app to the new channel.
 - To remove the app from a channel: Follow the steps to [remove an app](remove-your-apps.md).
 
-## Share an app with colleagues
+## Share broad distribution apps with colleagues
 
 After collaboration with your team to build an app, as an owner of the team, you can share the app and its underlying data with other colleagues within your company that don't belong to your development team.
 
@@ -93,6 +93,8 @@ To set the permissions of a table:
 
 1. Select **See all** under the list of resources in the team.
 
+1. Select **Tables** from the left pane.
+
 1. Select the table you want to share.  
 
     ![Manage permissions](media/manage-permissions.png "Manage permissions")
@@ -118,7 +120,7 @@ ready to share the app with an existing security group.
 
 > [!NOTE]
 > - You can share an app to a single security group.
-> - Only a Teams administrator can share an app to a security group with over 1000 users.
+> - You can only share apps to security groups with less than 1000 members.
 
 To share an app:
 
