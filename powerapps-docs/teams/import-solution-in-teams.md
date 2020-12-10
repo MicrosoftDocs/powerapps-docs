@@ -15,11 +15,12 @@ ms.reviewer: matp
 
 Microsoft Dataverse for Teams provides a way to transport the customizations you make in Microsoft Dataverse into Dataverse for Teams. The process involves three main steps:
 
-1. First, create a solution in a Dataverse environment. 
-1. Next, export the solution from the Dataverse environment.
-1. Finally, import the solution in Dataverse for Teams.
+1. Create a solution in a Dataverse environment. 
+1. Export the solution from the Dataverse environment.
+1. Import the solution in Dataverse for Teams.
 
-## Create a solution in Dataverse 
+## Create a solution in Dataverse
+
 The first step to move your customizations is to create a solution in Dataverse. Include only components that are fully supported for Dataverse for Teams. Solutions that included components that are not supported by Dataverse for Teams won’t import. Only the following custom components can be imported into Dataverse for Teams:
 
 * Canvas apps 
@@ -41,7 +42,8 @@ For information about how to create a solution with Dataverse, see [Create a sol
 Typically, you want to export your solution as managed. However, if your goal is to transport your customizations to Dataverse for Teams and continue your development from there, export your solution as an unmanaged solution. More information: [Export solutions](../maker/common-data-service/export-solutions.md) 
 
 ## Import the solution into Dataverse for Teams
-1. Select the **Build** tab of the team where you want to import the solution.
+
+1. From the Power Apps personal app in Teams, select the **Build** tab of the team where you want to import the solution. More information: [Install the Power Apps personal app in Microsoft Teams](install-personal-app.md)
 1. Select **See all**, and then on the command bar, select **Import**.
 1. On the **Import a solution** pane, select **Browse**.
 

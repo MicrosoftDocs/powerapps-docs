@@ -1,6 +1,6 @@
 ---
-title: "FAQs | MicrosoftDocs"
-description: "Frequently asked questions about component framework"
+title: "Power Apps component framework FAQs | MicrosoftDocs"
+description: "Frequently asked questions about Power Apps component framework"
 manager: kvivek
 ms.date: 10/01/2019
 ms.service: "powerapps"
@@ -11,7 +11,7 @@ author: ghurlman
 ms.reviewer: nkrb
 ---
 
-# FAQs
+# Power Apps component framework FAQs
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
