@@ -1,5 +1,5 @@
 ---
-title: "Ingest Common Data Service data with Azure Data Factory | MicrosoftDocs"
+title: "Ingest Microsoft Dataverse data with Azure Data Factory | MicrosoftDocs"
 ms.custom: ""
 ms.date: 07/29/2020
 ms.reviewer: "matp"
@@ -20,25 +20,25 @@ search.app:
   - D365CE
 ---
 
-# Ingest exported Common Data Service data with Azure Data Factory
+# Ingest exported Microsoft Dataverse data with Azure Data Factory
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-After exporting data from Common Data Service to Azure Data Lake Storage Gen2 with the Export to Data Lake service, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
+After exporting data from Dataverse to Azure Data Lake Storage Gen2 with the Export to Data Lake service, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
 
 This article shows you how to perform the following tasks: 
 
 1.  Generate a manifest.json from the existing model.json in the Data Lake Storage Gen2 storage account that holds the exported data.
 
-2.  Set the Data Lake Storage Gen2 storage account with the Common Data Service data as a *source* in a Data Factory dataflow.
+2.  Set the Data Lake Storage Gen2 storage account with the Dataverse data as a *source* in a Data Factory dataflow.
 
-3.  Set the Data Lake Storage Gen2 storage account with the Common Data Service data as a *sink* in a Data Factory dataflow.
+3.  Set the Data Lake Storage Gen2 storage account with the Dataverse data as a *sink* in a Data Factory dataflow.
 
 4.  Run your dataflow by creating a pipeline.
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to ingest exported Common Data Service data with Data Factory.
+This section describes the prerequisites necessary to ingest exported Dataverse data with Data Factory.
  
 ### Azure roles
 
@@ -48,7 +48,7 @@ To view the permissions that you have in the subscription, go to the [Azure por
 
 ### Export to data lake
 
-This article assumes that you've already exported Common Data Service data by using the [Export to Data Lake service](export-to-data-lake.md).
+This article assumes that you've already exported Dataverse data by using the [Export to Data Lake service](export-to-data-lake.md).
 
 In this example, account table data is exported to the data lake.
 
@@ -143,7 +143,7 @@ In this example, account table data is exported to the data lake.
 
 ## Set the Data Lake Storage Gen2 storage account 
 
-After setting the exported Common Data Service data in the Data Lake Storage Gen2 storage account as a source in the Data Factory dataflow, there are many possibilities for transforming your data. More information: [Azure Data Factory](/azure/data-factory/introduction)
+After setting the exported Dataverse data in the Data Lake Storage Gen2 storage account as a source in the Data Factory dataflow, there are many possibilities for transforming your data. More information: [Azure Data Factory](/azure/data-factory/introduction)
 
 Ultimately, you must set a sink for your dataflow. Follow these instructions to set the Data Lake Storage Gen2 storage account with the data exported by the Export to Data Lake service as your sink.
 
@@ -192,4 +192,4 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 ### See also
 
-[Analyze Common Data Service data in Azure Data Lake Storage Gen2 with Power BI](export-to-data-lake-data-powerbi.md)
+[Analyze Dataverse data in Azure Data Lake Storage Gen2 with Power BI](export-to-data-lake-data-powerbi.md)

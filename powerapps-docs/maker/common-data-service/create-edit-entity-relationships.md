@@ -1,5 +1,5 @@
 ---
-title: "About table relationships for Common Data Service | MicrosoftDocs"
+title: "About table relationships for Microsoft Dataverse | MicrosoftDocs"
 ms.custom: ""
 ms.date: 08/17/2020
 ms.reviewer: ""

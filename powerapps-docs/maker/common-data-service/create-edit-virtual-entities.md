@@ -1,5 +1,5 @@
 ---
-title: "Create and edit virtual tables with Common Data Service | MicrosoftDocs"
+title: "Create and edit virtual tables with Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to create virtual tables"
 ms.custom: ""
 ms.date: 03/03/2020
@@ -27,13 +27,13 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-A virtual table is a custom table in Common Data Service that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Common Data Service web services.  
+A virtual table is a custom table in Microsoft Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  
   
 In the past, to integrate the disparate data sources you would need to create a connector to move data or develop a custom plug-in, either client or server-side. However, with virtual tables you can connect directly with an external data source  at runtime so that specific data from the external data source is available in an environment, without the need for data replication.  
 
-Virtual tables are made up of three main components, a *data provider*, a *data source* row, and a *virtual table*. The data provider consists of plug-ins and a data source table. The data source is a table row in Common Data Service, which includes metadata that represents the schema of the connection parameters. Each virtual table references a data source in the table definition.  
+Virtual tables are made up of three main components, a *data provider*, a *data source* row, and a *virtual table*. The data provider consists of plug-ins and a data source table. The data source is a table row in Dataverse, which includes metadata that represents the schema of the connection parameters. Each virtual table references a data source in the table definition.  
   
-Common Data Service includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
+Dataverse includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
   
 Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual tables](../../developer/common-data-service/virtual-entities/get-started-ve.md)
   
@@ -43,7 +43,7 @@ Alternatively, developers can build their own data providers. Data providers are
   
 ## Virtual table benefits  
   
-- Developers can implement plugins to read external data using the Common Data Service web services and Plug-in Registration tool.  
+- Developers can implement plugins to read external data using the Dataverse web services and Plug-in Registration tool.  
 - System customizers use Power Apps solution explorer to configure the data source row and create virtual tables that are used to access external data without writing any code.  
 - End users work with the rows created by the virtual table to view the data in columns, grids, search results, and Fetch XML-based reports and dashboards.  
   
@@ -53,14 +53,15 @@ Alternatively, developers can build their own data providers. Data providers are
  
  Developers create a custom plug-in to use as the data provider for a virtual table. Alternatively, you can use the provided OData v4 Data Provider. More information: [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)  
   
-1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual table Data Sources**.  
+1. Sign in to Power Apps, and then select **Settings** > **Advanced settings**. 
+1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual Entity Data Sources**.  
 1. On the actions toolbar, select **New**.  
 1. On the **Select  Data Provider** dialog box, select from the following data sources, and then select **OK**.
  
     |Data Provider|Description|
     |--|--|
     |*Custom data provider*|If you've imported a data  provider plug-in, the data provider will appear here. More Information [Developer Documentation: Get started with virtual tables](/dynamics365/customer-engagement/developer/virtual-tables/get-started-ve)|
-    |**OData v4 Data Provider**|Common Data Service includes an OData Data Provider that can be used with OData v4 web services. More Information [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)|
+    |**OData v4 Data Provider**|Dataverse includes an OData Data Provider that can be used with OData v4 web services. More Information [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)|
 
   
 ### Add a secured column to a Data Source
@@ -77,7 +78,7 @@ You create columns for a Data Source in the same way as any other table. For dat
   
 ## Create a virtual table
   
-You create a virtual table just like any other table in Common Data Service with the addition of a few extra attributes described here. Virtual tables must be created using solution explorer.
+You create a virtual table just like any other table in Dataverse with the addition of a few extra attributes described here. Virtual tables must be created using solution explorer.
 
 > [!NOTE]
 >  Although you can create a virtual table by selecting **None** as the data source, to acquire data a virtual table requires a data source. More Information [Add a data source to use for virtual tables](#AddDataSource)
@@ -90,8 +91,8 @@ Part of the name of any virtual table you create is the customization prefix. Th
 
 ### Create a virtual table
   
-1. In solution explorer, create a new table. To do this, select **Tables** in the left navigation pane, and then select **New**.  
-2. On the **General** tab of the **Entity Definition**, select **Virtual table**, and then in the **Data Source** drop down list, select the data source that you want.  
+1. In solution explorer, create a new table. To do this, select **Entities** in the left navigation pane, and then select **New**.  
+2. On the **General** tab of the **Entity Definition**, select **Virtual Entity**, and then in the **Data Source** drop down list, select the data source that you want.  
 
     > [!div class="mx-imgBorder"] 
     > ![Virtual table option on table definition](media/virtual-entity-click-option.png)  
@@ -142,10 +143,10 @@ Virtual tables have these restrictions.
 - Virtual table columns can't be used in rollups or calculated columns.
 - A virtual table can't be an activity type of table.  
 - Many features that affect table table rows cannot be enabled with virtual tables.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, column security, Relevance Search, Portals for Dynamics 365 web portal solutions, and N:N relationships between virtual tables.  
-- Virtual tables are organization owned and don't support the row-level Common Data Service security concepts. We recommend that you implement your own security model for the external data source.  
-- We recommend that you target a single data source when you use virtual tables in Advanced Finds. For example, creating an  Advanced Find that ultimately creates a join between the Common Data Service native data and the virtual table external data isn't supported.  
+- Virtual tables are organization owned and don't support the row-level Dataverse security concepts. We recommend that you implement your own security model for the external data source.  
+- We recommend that you target a single data source when you use virtual tables in Advanced Finds. For example, creating an  Advanced Find that ultimately creates a join between the Dataverse native data and the virtual table external data isn't supported.  
 - Column metadata properties that validate on update don’t apply to virtual tables. For example, a Whole Number column on a virtual table column may be set to have a minimum value of zero. However, since the value is coming from an external data source, a query will return values less than zero when retrieved from a virtual table.  The minimum value property is not implied in the query.  You would still need to filter the values to be greater than 0 if that’s what is desired.
-- Virtual tables don't support change tracking and cannot be synchronized by using a Common Data Service feature, such as the Data Export Service.
+- Virtual tables don't support change tracking and cannot be synchronized by using a Dataverse feature, such as the Data Export Service.
 - Virtual tables that use the included OData v4 data provider are enabled on outbound port 443.
   
 ### See also  

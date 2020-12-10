@@ -1,6 +1,6 @@
 ---
-title: "Use XRM tooling to retrieve data (Common Data Service)| Microsoft Docs"
-description: "Use CrmServiceClient class to retrieve data from Common Data Service"
+title: "Use XRM tooling to retrieve data (Microsoft Dataverse)| Microsoft Docs"
+description: "Use CrmServiceClient class to retrieve data from Microsoft Dataverse"
 ms.custom: ""
 ms.date: 03/27/2019
 ms.reviewer: "pehecke"
@@ -25,7 +25,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for retrieving data in Common Data Service. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.  
+There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for retrieving data in Microsoft Dataverse. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.  
   
 ## GetEntityDataById  
 
@@ -100,5 +100,5 @@ else
 ### See also  
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Use XRM Tooling to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
-[Use XRM Tooling API to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)
+[Use XRM Tooling to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)

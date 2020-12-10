@@ -27,5 +27,5 @@ When you provision a portal, the portal-related solutions are installed on the o
 
 > [!Note]
 > - If the latest version of a portal package is available, it isn't updated. The portal solutions are updated in the same version. To upgrade your portal solutions based on the latest available packages, you need to access the Solution Admin center.
-> - If a user has modified any data in Common Data Service, the existing data will not be overwritten during the update.
+> - If a user has modified any data in Microsoft Dataverse, the existing data will not be overwritten during the update.
 > - If the portal solutions are being installed, the solution update cannot be triggered.

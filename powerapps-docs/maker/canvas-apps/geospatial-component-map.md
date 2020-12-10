@@ -47,7 +47,7 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 
     ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
-You can modify the component by using a number of [properties](#properties).
+You can modify the component by using a number of [properties](#input-properties).
 
 ### Use the map component with data from Excel
 
@@ -133,7 +133,35 @@ Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 
 
-### Properties
+
+### Add informational cards to pins
+
+You can add informational cards to each pin on the map. 
+
+When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the component, as described in the section [Use the map component with data from Excel](#use-the-map-component-with-data-from-excel).
+
+Any column you add to the table in the data source (for example, the Excel table) will be available as a field to show on the card.
+
+**To add informational cards to pins:**
+
+1. First, insert the map component and bind a dataset to it as described in [Use the map component with data from Excel](#use-the-map-component-with-data-from-excel).
+
+2. In the **Properties** pane, select **Show info cards** and choose whether they should appear when a user hovers over the pin, or if the user has to select the pin.
+
+    :::image type="content" source="media/geospatial/map-info-card-type.png" alt-text="Screenshot of the properties pane showing the drop-down selection menu to show the cards on hover or on click.":::
+
+3. In the **Properties** pane, next to **Fields**, select **Edit**.
+
+4. Select **Add field**, and then select each of the fields you want to show in the card. Select **Add**.
+
+    :::image type="content" source="media/geospatial/map-choose-fields.png" alt-text="Screenshot showing the field selection options.":::
+
+5. Each pin will now show the fields associated with that pin in an informational card.
+
+    :::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="Screenshot of the map component with an info card on top of a pin, showing information such as Name, Occupancy, and Phone.":::
+
+### Input properties
+
 
 The following properties can be defined and configured in the component's **Properties** pane.
 
@@ -155,7 +183,6 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Compass control | Whether the compass component appears on the map. | Boolean | Properties |
 | Pitch control | Whether the pitch component appears on the map. | Boolean | Properties |
 | Pin color | The color of the pins. | Color picker | Properties |
-| Maximum map pins | Maximum number of pins displayed on the map. | Integer | Properties |
 | ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | TableName.ColumnName | Advanced |
 | ItemsAddresses | A column in Items with the strings that represent the location of the pins. | TableName.ColumnName | Advanced |
 | ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins.  | TableName.ColumnName | Advanced |
@@ -164,7 +191,18 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | ItemsIcons | Icon of the pins | [Icons defined in Azure image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) | Advanced |
 | Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
 
-### Additional properties
+### Output properties
+
+The component outputs various properties when a user interacts with it inside an app. You can use these outputs in other components or to customize the experience. 
+
+The following table lists the output properties available.
+
+
+| Property | Description |
+| -- | -- |
+| CenterLocation | Center location of the map. |
+
+### Additional (common) properties
 
 **[BorderColor](./controls/properties-color-border.md)** - The color of a control's border.
 

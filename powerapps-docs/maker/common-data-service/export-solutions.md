@@ -87,7 +87,7 @@ The export can take several minutes to complete. Once finished, the export .zip 
 |Order Prefix|Prefix to use for all orders throughout the app.|  
 |Unique String Length|Number of characters appended to invoice, quote, and order numbers.|  
 |Calendar|Calendar Type|Calendar type for the system. Set to Gregorian US by default|  
-|Date Format Code|Information about how the date is displayed throughout Common Data Service|  
+|Date Format Code|Information about how the date is displayed throughout Microsoft Dataverse|  
 |Date Separator|Character used to separate the month, the day, and the year in dates throughout the app.|  
 |Max Appointment Duration|Maximum number of days an appointment can last.|  
 |Show Week Number|Information that specifies whether to display the week number in calendar displays throughout the app.|  

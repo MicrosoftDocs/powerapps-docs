@@ -1,20 +1,18 @@
 ---
-title: Table relationships in Project Oakdale | Microsoft Docs
-description: Explains how to create and use table relationships in in Project Oakdale.
+title: Table relationships in Dataverse for Teams | Microsoft Docs
+description: Explains how to create and use table relationships in in Dataverse for Teams.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 11/16/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---
 
 # Work with table relationships
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
-Table relationships define the ways that table records can be associated with records from other tables or the same table. There are three types of table relationships. Project Oakdale allows for the creation of the same relationship types as Common Data Service does:
+Table relationships define the ways that table records can be associated with records from other tables or the same table. There are three types of table relationships. Dataverse for Teams allows for the creation of the same relationship types as Dataverse does:
 
 - **One-to-many relationships**. In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class of students have a single classroom.
 
@@ -50,7 +48,7 @@ More information: [Create a relationship between entities](../maker/common-data-
 
 ## Edit a table relationship
 
-Editing relationships in Project Oakdale works the same as Common Data Service except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/powerapps/maker/common-data-service/create-edit-entity-relationships#actions)
+Editing relationships in Dataverse for Teams works the same as Dataverse except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/powerapps/maker/common-data-service/create-edit-entity-relationships#actions)
 
 ## Delete a table relationship
 

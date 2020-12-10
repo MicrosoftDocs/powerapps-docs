@@ -1,5 +1,5 @@
 ---
-title: "Access external web services (Common Data Service) | MicrosoftDocs"
+title: "Access external web services (Microsoft Dataverse) | MicrosoftDocs"
 description: "Learn how to access a web service from a custom plug-in or workflow activity."
 ms.custom: ""
 ms.date: 8/19/2019
@@ -21,6 +21,7 @@ search.app:
 
 Plug-ins and custom workflow activities can access the network through the HTTP and HTTPS protocols. This capability provides support for accessing popular web services like social sites, news feeds, web services, and more. The following web access restrictions apply to this sandbox capability.  
   
+- Your server must have the current [TLS and cipher suites](https://docs.microsoft.com/power-platform/admin/onpremises-server-cipher-tls-requirements).
 - Only the HTTP and HTTPS protocols are allowed.
 - Access to localhost (loopback) is not permitted.
 - IP addresses cannot be used. You must use a named web address that requires DNS name resolution.

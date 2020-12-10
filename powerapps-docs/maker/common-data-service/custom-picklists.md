@@ -57,7 +57,7 @@ Choices can be created in two ways, either from the **Choices** list within the 
     > [!div class="mx-imgBorder"] 
     > ![Save choice](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "Save choirce")
 
-9. Click **Done** to close the column panel, and then **Save Table** to save your table to Common Data Service.
+9. Click **Done** to close the column panel, and then **Save Table** to save your table to Microsoft Dataverse.
 
     > [!NOTE]
     > You can select one of your items as the **Default** for this column, and it will be selected by default when users are creating new rows in your table.

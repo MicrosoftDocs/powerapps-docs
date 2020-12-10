@@ -1,8 +1,8 @@
 ---
-title: "Use Web API actions (Common Data Service)| Microsoft Docs"
-descriptions: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Common Data Service"
+title: "Use Web API actions (Microsoft Dataverse)| Microsoft Docs"
+descriptions: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Microsoft Dataverse"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/21/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -78,7 +78,15 @@ OData-Version: 4.0
 
 ## Bound actions
 
-In the [CSDL metadata document](web-api-types-operations.md#bkmk_csdl), when an `Action` element represents a bound action, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined within the action represents the entity that the operation is bound to. When the `Type` attribute of the parameter is a collection, the operation is bound to a collection of entities. As an example, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" /> represented in the CSDL:
+There are two ways that an action can be bound. The most common way is for the action to be bound by an entity. Less frequently, it can also be bound to an entity collection.
+
+In the [CSDL metadata document](web-api-types-operations.md#bkmk_csdl), when an `Action` element represents a bound action, it has an `IsBound` attribute with the value `true`. The first `Parameter` element defined within the action represents the entity that the operation is bound to. When the `Type` attribute of the parameter is a collection, the operation is bound to a collection of entities.
+
+When invoking a bound function, you must include the full name of the function including the `Microsoft.Dynamics.CRM` namespace. If you do not include the full name, you will get the following error: `Status Code:400 Request message has unresolved parameters`.
+
+### Actions bound to an entity
+
+As an example of an action bound to an entity, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" /> represented in the CSDL:
 
 ```xml
  <ComplexType Name="AddToQueueResponse">
@@ -93,13 +101,11 @@ In the [CSDL metadata document](web-api-types-operations.md#bkmk_csdl), when an 
 </Action>
 ```
 
-This bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest> used by the organization service. In the Web API this action is bound to the <xref href="Microsoft.Dynamics.CRM.queue?text=queue EntityType" />) that represents the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>.<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest.DestinationQueueId> property. This action accepts several additional parameters and returns a <xref href="Microsoft.Dynamics.CRM.AddToQueueResponse?text=AddToQueueResponse ComplexType" /> corresponding to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueResponse> returned by the organization service. When an action returns a complex type, the definition of the complex type will appear directly above the action in the CSDL.
+This entity bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest> used by the organization service. In the Web API this action is bound to the <xref href="Microsoft.Dynamics.CRM.queue?text=queue EntityType" /> that represents the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>.<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest.DestinationQueueId> property. This action accepts several additional parameters and returns a <xref href="Microsoft.Dynamics.CRM.AddToQueueResponse?text=AddToQueueResponse ComplexType" /> corresponding to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueResponse> returned by the organization service. When an action returns a complex type, the definition of the complex type will appear directly above the action in the CSDL.
 
-A bound action must be invoked using a URI to set the first parameter value. You cannot set it as a named parameter value.
+An action bound to an entity must be invoked using a URI to set the first parameter value. You cannot set it as a named parameter value.
 
-When invoking a bound function, you must include the full name of the function including the `Microsoft.Dynamics.CRM` namespace. If you do not include the full name, you will get the following error: Status Code:400 Request message has unresolved parameters.
-
-The following example shows using the <xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" /> to add a letter to a queue. Because the type of the `Target` parameter type is not specific (`mscrm.crmbaseentity`), you must explicitly declare type of the object using the `@odata.type` property value of the full name of the entity, including the `Microsoft.Dynamics.CRM` namespace. In this case, `Microsoft.Dynamics.CRM.letter`. More information:[Specify entity parameter type](#bkmk_specifyentityparametertype)
+The following example shows using the <xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" /> to add a letter to a queue. Because the type of the `Target` parameter type is not specific (`mscrm.crmbaseentity`), you must explicitly declare type of the object using the `@odata.type` property value of the full name of the entity, including the `Microsoft.Dynamics.CRM` namespace. In this case, `Microsoft.Dynamics.CRM.letter`. More information: [Specify entity parameter type](#bkmk_specifyentityparametertype)
 
  **Request**
 
@@ -129,6 +135,59 @@ OData-Version: 4.0
 {
  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.AddToQueueResponse",
  "QueueItemId": "5aae8258-4878-e511-80d4-00155d2a68d1"
+}
+```
+
+### Actions bound to an entity collection
+
+It is less common to find actions bound to an entity collection. The following are some you may find:
+
+|&nbsp; |&nbsp;|&nbsp;|
+|-|-|-|  
+|<xref:Microsoft.Dynamics.CRM.CreateException?text=CreateException Action/>|<xref:Microsoft.Dynamics.CRM.DeliverIncomingEmail?text=DeliverIncomingEmail Action/>|<xref:Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action/>|  
+|<xref:Microsoft.Dynamics.CRM.FulfillSalesOrder?text=FulfillSalesOrder Action/>|<xref:Microsoft.Dynamics.CRM.ValidateSavedQuery?text=ValidateSavedQuery Action >||
+
+As an example of an action bound to an entity collection, the following is the definition of the <xref href="Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action" /> represented in the CSDL:
+
+```xml
+<ComplexType Name="ExportTranslationResponse">
+	<Property Name="ExportTranslationFile" Type="Edm.Binary" />
+</ComplexType>
+<Action Name="ExportTranslation" IsBound="true">
+	<Parameter Name="entityset" Type="Collection(mscrm.solution)" Nullable="false" />
+	<Parameter Name="SolutionName" Type="Edm.String" Nullable="false" Unicode="false" />
+	<ReturnType Type="mscrm.ExportTranslationResponse" Nullable="false" />
+</Action>
+```
+
+This entity collection bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.ExportTranslationRequest> used by the organization service. In the Web API this action is bound to the <xref href="Microsoft.Dynamics.CRM.solution?text=solution EntityType" />. But rather than passing a value to the request, the entity collection binding simply applies the constraint that the URI of the request must include the path to the specified entity set.
+
+The following example shows using the <xref href="Microsoft.Dynamics.CRM.ExportTranslation?text=ExportTranslation Action" /> which exports a binary file containing data about localizable string values which can be updated to modify or add localizable values. Note how the entity collection bound action is preceded by the entity set name for the solution entity: `solutions`.
+
+ **Request**
+
+```http
+POST [Organization URI]/api/data/v9.1/solutions/Microsoft.Dynamics.CRM.ExportTranslation HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+
+{
+    "SolutionName":"MySolution"
+}
+```
+
+ **Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.ExportTranslationResponse",
+    "ExportTranslationFile": "[Binary data Removed for brevity]"
 }
 ```
 

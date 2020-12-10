@@ -110,7 +110,7 @@ Security roles control a user’s access to data through a set of access levels 
     > [!div class="mx-imgBorder"] 
     > ![Manage roles](media/share-model-driven-app/manage-roles.png "Manage roles")
 
-4. On the **All Roles** page, select **Common data service user** then click **Actions** then **Copy Role.** 
+4. On the **All Roles** page, select **Microsoft Dataverse user** then click **Actions** then **Copy Role.** 
 
 > [!TIP]
 > You may also create a new blank role instead of copying an existing role. 
@@ -149,7 +149,7 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 *Privilege is global scope unless specified otherwise.
 
 ## Use Azure Active Directory groups to manage access
-Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Common Data Service users. Both types of Azure AD groups—Office and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams) 
+Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Dataverse users. Both types of Azure AD groups—Office and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams) 
 
 
 ### See also

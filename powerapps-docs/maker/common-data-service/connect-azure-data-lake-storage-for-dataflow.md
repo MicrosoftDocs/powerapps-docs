@@ -128,7 +128,7 @@ For more information about dataflows, the Common Data Model, and Azure Data Lake
 - [Self-service data prep with dataflows](https://go.microsoft.com/fwlink/?linkid=2099972)
 - [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
-- [Add data to a table in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
+- [Add data to a table in Microsoft Dataverse](https://go.microsoft.com/fwlink/?linkid=2100075)
 
 For more information about Azure storage, see this article:
 - [Azure Storage security guide](https://docs.microsoft.com/azure/storage/common/storage-security-guide)

@@ -13,13 +13,13 @@ author: Nkrb
 
 # Package a code component
 
-This article describes how to import code components into Common Data Service. After implementing the code components using the Power Apps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Common Data Service so that you can see the code components in runtime.
+This article describes how to import code components into Microsoft Dataverse. After implementing the code components using the Power Apps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Dataverse so that you can see the code components in runtime.
 
 To create and import a solution file:
 
 1. Create a new folder inside the sample component folder and name it as **Solutions** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
 
-2. Create a new solutions project using the following command. The solution project is used for bundling the code component into a solution zip file that is used for importing into Common Data Service.
+2. Create a new solutions project using the following command. The solution project is used for bundling the code component into a solution zip file that is used for importing into Dataverse.
    
    ```CLI
    pac solution init --publisher-name developer --publisher-prefix dev
@@ -47,13 +47,13 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+5. Manually [import the solution into Dataverse](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 ## Connecting to your environment
 
-You can deploy the code components directly from the Power Apps CLI by connecting to the Common Data Service environment and then pushing the updated components.
+You can deploy the code components directly from the Power Apps CLI by connecting to the Dataverse environment and then pushing the updated components.
 
-Follow the steps below to create the authentication profile, connect to Common Data Service, and push the updated components. 
+Follow the steps below to create the authentication profile, connect to Dataverse, and push the updated components. 
  
 1. Create your authentication profile using the command: 
  
@@ -84,7 +84,7 @@ Follow the steps below to create the authentication profile, connect to Common D
 
 ## Deploying code components 
 
-After you have successfully created an authentication profile, you can start pushing the code components to the Common Data Service instance with all the latest changes. 
+After you have successfully created an authentication profile, you can start pushing the code components to the Dataverse instance with all the latest changes. 
 
 The `push` capability speeds up the inner-developer cycle development because it bypasses the code component versioning requirements and does not require that you build your solution (cdsproj) to import the code component. 
 
@@ -101,9 +101,9 @@ To use the `push` capability, do the following:
    > [!NOTE]
    > The publisher prefix that you use with the `push` command should match the publisher prefix of your solution in which the components will be included.
 
-## Create a solution project based on an existing solution in Common Data Service
+## Create a solution project based on an existing solution in Dataverse
 
-To create a solution project based on an existing solution in Common Data Service, run the command `pac solution clone`. To do so:
+To create a solution project based on an existing solution in Dataverse, run the command `pac solution clone`. To do so:
 
 1. Ensure that you have a valid authentication profile created.
 2. Run the command 
