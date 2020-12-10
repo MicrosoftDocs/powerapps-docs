@@ -365,6 +365,8 @@
             items:
             - name: List of controls and properties
               href: ./canvas-apps/reference-properties.md
+            - name: Limitations of controls
+              href: ./canvas-apps/control-limitations.md
             - name: Add picture
               href: ./canvas-apps/controls/control-add-picture.md
             - name: Attachments
