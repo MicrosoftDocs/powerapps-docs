@@ -25,10 +25,6 @@ The control opens a native scanner on an Android or iOS device. The scanner auto
 > [!NOTE]
 > The barcode scanner control is only supported on Android and iOS devices. All other platforms will show a warning that some features of the app won't work.
 
-## Considerations for Teams Mobile
-
-The barcode scanner control is not supported in Teams Mobile.
-
 ## Key properties
 
 **Value** – Output property that contains the text value of the code that was scanned most recently.
@@ -101,3 +97,7 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 |AZTEC|✔|✔|
 
 **NOTE:** PDF_417 and AZTEC aren't supported in Auto mode
+
+### See also
+
+[Limitations of controls in Power Apps](../control-limitations.md)
