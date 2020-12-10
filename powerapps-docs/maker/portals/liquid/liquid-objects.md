@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/14/2020
+ms.date: 12/10/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -14,12 +14,12 @@ ms.reviewer: tapanm
 
 Liquid objects contain attributes to output dynamic content to the page. For example, the page object has an attribute called title that can be used to output the title of the current page.
 
-To access an object attribute by name, use a dot . To render an object's attribute in a template, wrap it in {{ and }}.
+To access an object attribute by name, use a period (.). To render an object's attribute in a template, wrap it in {{ and }}.
 
 ```
 {{ page.title }}
 ```
-Attributes of an object can also be accessed by using a string name and \[\]. This is useful in cases where the desired attribute is determined dynamically, or the attribute name contains characters , spaces, special characters, and so on that would be invalid when using the . syntax.
+Attributes of an object can also be accessed by using a string name and \[\]. This format is useful in cases where the required attribute is determined dynamically, or the attribute name contains characters, spaces, special characters, and so on, that would be invalid when using a period (.) inside the syntax.
 
 ```
 {{ page[title] }}
@@ -35,7 +35,7 @@ The following objects can be used and accessed anywhere, in any template.
 |   Object    |                                                                                                                                                                                          Description                                                                                                                                                                                           |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  entities   |                                                                                                 Allows you to load any Power Apps entity by ID. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [entities](#entities)                                                                                                 |
-|     now     |                                          A date/time object that refers to the current UTC time at the time the template is rendered.<br>**Note**: This value is cached by the portal web app and is not refreshed every time. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Date filters](liquid-filters.md#date-filters)                                          |
+|     now     |                                          A date/time object that refers to the current UTC time at the time the template is rendered.<br>**Note**: This value is cached by the portal web app and isn't refreshed every time. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Date filters](liquid-filters.md#date-filters)                                          |
 |    page     | Refers to the current portal request page. The page object provides access to things like the breadcrumbs for the current page, the title or URL of the current page, and any other attributes or related entities of the underlying Power Apps record. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [page](#page) |
 |   params    |                                                                                                                             A convenient shortcut for request.params. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [request](#request)                                                                                                                              |
 |   request   |                                                                                                                        Contains information about the current HTTP request. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [request](#request)                                                                                                                        |
@@ -86,7 +86,7 @@ The ads object allows you to select a specific ad or ad placement:
 
 ### Ad Placement attributes
 
-An ad placement is an entity object, with all of the same attributes, in addition to those listed below.
+An ad placement is an entity object with the same general attributes, and the attributes listed below.
 
 |Attribute   |Description   |
 |---|---|
@@ -195,7 +195,7 @@ The blogs object allows you to select a specific blog or blog posts.
 
 ### blogs Object
 
-The blogs object allows you to access any specific blog in the portal, or to access all blog posts in the portal (regardless of the blog).
+The blogs object allows you to access any specific blog in the portal, or to access all blog posts in the portal.
 
 The following table explains the attributes associated with the blogs object.
 
@@ -253,14 +253,14 @@ The following table explains various attributes associated with blogpost Object.
 | url            | The URL of the post.                                                                |
 | content        | Returns the content field for the post.                                             |
 | content        | Returns the Content field for the post.                                             |
-| author         | Returns the authorf for the post (which is simply a contact entity object.          |
+| author         | Returns the authors for the post (which is simply a contact entity object.          |
 | title          | The Title of the post.                                                              |
 | comment\_count | Returns the integer value of the count of how many comments there for a given post. |
 | publish\_date  | The date at which the post was published.                                           |
 
 ## entities
 
-Allows you to load any Power Apps entity by ID. If the entity exists, an entity object will be returned. If an entity with the given ID is not found, [null](liquid-types.md#null) will be returned.  
+Allows you to load any Power Apps entity by ID. If the entity exists, an entity object will be returned. If an entity with the given ID isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
 {% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] %}
@@ -293,7 +293,7 @@ An entity object provides access to the attributes of a Power Apps entity record
 |           logical\_name            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   The Power Apps logical name of the entity.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |               Notes                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Loads any notes (annotation) associated with the entity, ordered from oldest to newest (createdon). Notes are returned as note objects.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |            permissions             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Loads Entity Permission assertion results for the entity. Results are returned as a permissions object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|                url                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Returns the Power Apps portals content management system URL path for the entity. If the entity has no valid URL in the current website, returns null. Generally, this will only return a value for certain entity types that have been integrated into the portal CMS , unless you have customized the URL Provider in your application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|                url                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Returns the Power Apps portals content management system URL path for the entity. If the entity has no valid URL in the current website, returns null. Generally, this will only return a value for certain entity types that have been integrated into the portal CMS, unless you've customized the URL Provider in your application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | \[attribute or relationship name\] | You can access any attribute of the Power Apps entity by logical name. `{{ entity.createdon }}{% assign attribute_name = 'name' %}{{ entity[attribute_name] }}` <br>The values of most entity attributes map directly to [Liquid types](liquid-types.md): Two Option fields map to Booleans, text fields to strings, numeric/currency fields to numbers, date/time fields to date objects. But some attribute types are returned as objects:<ul><li>Lookup (Entity Reference) fields are returned as entity reference objects.</li><li>Option Set/Picklist fields are returned as option set value objects.</li><li>You can also load any related entities by relationship schema name.</li>`{{ page.adx_webpage_entitylist.adx_name }}`In the case that a relationship is reflexive (that is, self-referential), a reflexive relationship object will be returned. (Otherwise, the result would be ambiguous.)`{{ page.adx_webpage_webpage.referencing.adx_name }}` <br>**Note**: Loading large numbers of related entities, or accessing large numbers of relationships in a single template, can have a negative impact on template rendering performance. Avoid loading related entities for each item in an array, within a loop. Where possible, use [Dataverse entity tags](portals-entity-tags.md) to load collections of entities. |
 
 ### Entity Reference
@@ -314,7 +314,7 @@ A note is an entity object that provides access to the attributes and relationsh
 
 |  Attribute   |                                                                                                                                                                                                                                  Description                                                                                                                                                                                                                                  |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| documentbody | Loads the documentbody attribute of the note annotation record, as a Base64-encoded string. Because the content of this attribute may be large, it is not loaded with the rest of the note attributes, it is only loaded on demand. <br> **Note**: Use of the documentbody attribute could have a negative impact on template rendering performance, and should be done with caution.<br>Use the url attribute to provide a link to the note attachment instead, if possible. |
+| documentbody | Loads the documentbody attribute of the note annotation record, as a Base64-encoded string. Because the content of this attribute may be large, it isn't loaded with the rest of the note attributes, it is only loaded on demand. <br> **Note**: Use of the documentbody attribute could have a negative impact on template rendering performance, and should be done with caution.<br>Use the url attribute to provide a link to the note attachment instead, if possible. |
 |     url      |                                                                                                                                   Returns the URL path for the built-in portal annotation attachment handler. If the user has permission, and the note has an attached file, a request to this URL will download the note file attachment.                                                                                                                                    |
 
 >[!Note]
@@ -455,7 +455,7 @@ The events object has following attributes:
 
 |Attribute   |Description   |
 |---|---|
-|occurences |Returns a eventoccurancessobject containing all event occurrences in the portal |
+|occurences |Returns an eventoccurancessobject containing all event occurrences in the portal |
 |[event name or id] |You can access any event by its Name or Id properties.<br>{% assign event = events[&quot;Event Name&quot;] %}<br>{% assign event = events[&quot;da8b8a92-2ee6-476f-8a21-782b047ff460&quot;] %} |
 
 ### event Object
@@ -466,7 +466,7 @@ The event object has following attributes:
 
 |Attribute   |Description   |
 |---|---|
-| occurrences | Returns a eventoccurrencesobject containing all occurrences for the event. |
+| occurrences | Returns an eventoccurrencesobject containing all occurrences for the event. |
 | name       | The name of the event.                                                     |
 | url        | The URL of the event.                                                      |
 
@@ -554,9 +554,9 @@ This is child page number 3.
 
 ## forums
 
-Provides the ability to access and render Forums and Forum Threads. Note that the ability to use liquid to render forum data extends to posts, but to create a new post or thread, you must use an ASP.NET web forms Page Template with said functionality built in (such as the default Forum Thread and Forum Post Page Templates).
+Provides the ability to access and render Forums and Forum Threads. The ability to use liquid to render forum data extends to posts, but to create a new post or thread, you must use an ASP.NET web forms Page Template with said functionality built in (such as the default Forum Thread and Forum Post Page Templates).
 
-The forums object allows you to select a Forum or Forum Threads :
+The forums object allows you to select a Forum or Forum Threads:
 
 ```
 <div class=content-panel panel panel-default>
@@ -773,7 +773,7 @@ The categories object allows you to access a collection of category objects. You
 |Attribute|Description|
 |---|---|
 |recent |Returns a collection of category objects containing the latest modified date. |
-|top_level |Returns a collection of category objects that do not have a parent category. |
+|top_level |Returns a collection of category objects that don't have a parent category. |
 |||
 
 ### Filters
@@ -788,7 +788,7 @@ The following filters can accept an optional parameter indicating the page size.
 |Attribute|Description|
 |---|---|
 |recent |Returns a collection of category objects containing the latest modified date. You can provide parameters `{% assign recent_categories = knowledge.categories \| recent: 10 %}` |
-|top_level |Returns a collection of category objects that do not have a parent category. `{% assign root_categories = knowledge.categories \| top_level %}` |
+|top_level |Returns a collection of category objects that don't have a parent category. `{% assign root_categories = knowledge.categories \| top_level %}` |
 |||
 
 ### article Object
@@ -1055,9 +1055,9 @@ The searchindex object is used within the [Power Apps Dataverse entity tags](por
 
 |Attribute   |Description   |
 |---|---|
-| approximate\_total\_hits | Returns an approximate count of total hits matching the index query. Note that due to the way the search index works in regard to security filtering and other design factors, this number is only an approximation, and may not exactly match the total number of results available to the current user in some situations.  |
+| approximate\_total\_hits | Returns an approximate count of total hits matching the index query. Due to the way the search index works in regard to security filtering and other design factors, this number is only an approximation, and may not exactly match the total number of results available to the current user in some situations.  |
 | Page                     | Returns the page number of the current query.                                                                                                                                                                                                           |
-| page\_size               | Returns the maximum page size of the current query. Note that if you want the actual number of results returned for the current page (because this may be less than the specified maximum page size), use results.size.                                                                                           |
+| page\_size               | Returns the maximum page size of the current query. If you want the actual number of results returned for the current page (because this may be less than the specified maximum page size), use results.size.                                                                                           |
 | results                  | Returns the query result page, as search index result objects.                                                                                                                                                                                          |
 
 ### Search Index Results
@@ -1065,7 +1065,7 @@ The searchindex object is used within the [Power Apps Dataverse entity tags](por
 |   Attribute   |                                                                                                                                                Description                                                                                                                                                 |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    entity     |                                                                                                                            The underlying [entities](#entities) for the result.                                                                                                                            |
-|   fragment    | A relevant short text fragment for the result, with terms matching the specified query highlighted using the &lt;em&gt; HTML tag. Note that certain types of queries do not support highlighted fragments, such as fuzzy queries (~) and wildcard queries (\*). This property will be null in those cases. |
+|   fragment    | A relevant short text fragment for the result, with terms matching the specified query highlighted using the &lt;em&gt; HTML tag. Certain types of queries do not support highlighted fragments, such as fuzzy queries (~) and wildcard queries (\*). This property will be null in those cases. |
 |      Id       |                                                             The Power Apps entity ID of the underlying record for the result, as a string. For example, 936DA01F-9ABD-4d9d-80C7-02AF85C822A8                                                              |
 | logical\_name |                                                                           The Power Apps entity logical name of the underlying record for the result. For example, adx\_webpage                                                                           |
 |    number     |                                                            The number of the result, across all result pages, starting from 1. For example, for the first result of the second page of results, with a page size of 10, this value will be 11.                                                             |
@@ -1075,7 +1075,7 @@ The searchindex object is used within the [Power Apps Dataverse entity tags](por
 
 ## settings
 
-Allows you to load any [site setting](../configure/configure-site-settings.md) by name. If a setting with the given name is not found, [null](liquid-types.md#null) will be returned.  
+Allows you to load any [site setting](../configure/configure-site-settings.md) by name. If a setting with the given name isn't found, [null](liquid-types.md#null) will be returned.  
 
 > [!Note]
 > Settings are returned as [strings](liquid-types.md#string), but you can use [Type filters](liquid-filters.md#type-filters) to convert them to other types.
@@ -1168,7 +1168,7 @@ It's also possible to load a site map node by URL path:
 
 ## sitemarkers
 
-Allows you to load any site marker by name. If the sitemarker exists, a sitemarker object will be returned. If a sitemarker with the given name is not found, [null](liquid-types.md#null) will be returned.  
+Allows you to load any site marker by name. If the sitemarker exists, a sitemarker object will be returned. If a sitemarker with the given name isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
 {{ sitemarkers[Login].url }}
@@ -1198,7 +1198,7 @@ Site marker My Site Marker does not exist.
 
 ## snippets
 
-Allows you to load any content snippets by name. If a snippet with the given name is not found, [null](liquid-types.md#null) will be returned.  
+Allows you to load any content snippets by name. If a snippet with the given name isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
 {{ snippets[Header] }}
@@ -1230,8 +1230,8 @@ Contains properties useful within a [Iteration tags](iteration-tags.md) loop blo
 |---|---|
 | Col        | Returns the index of the current row, starting at 1.                                                       |
 | col0       | Returns the index of the current row, starting at 0.                                                       |
-| col\_first | Returns true if the current column is the first column in a row, returns false if it is not.               |
-| col\_last  | Returns true if the current column is the last column in a row, returns false if it is not.                |
+| col\_first | Returns true if the current column is the first column in a row, returns false if it isn't.               |
+| col\_last  | Returns true if the current column is the last column in a row, returns false if it isn't.                |
 | First      | Returns true if it's the first iteration of the loop. Returns false if it's not the first iteration.       |
 | Index      | The current item's position in the collection, where the first item has a position of 1.                   |
 | index0     | The current item's position in the collection, where the first item has a position of 0.                   |
@@ -1275,7 +1275,7 @@ In addition to having all of the attributes of an [entity](#entity) object, user
 
 Allows you to load any weblinks by name or ID.  
 
-If the web link set exists, a [web link set object](#web-link-set-attributes) will be returned. If a web link set with the given name or ID is not found, [null](liquid-types.md#null) will be returned.
+If the web link set exists, a [web link set object](#web-link-set-attributes) will be returned. If a web link set with the given name or ID isn't found, [null](liquid-types.md#null) will be returned.
 
 
 ```
