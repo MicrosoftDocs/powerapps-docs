@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/25/2020
+ms.date: 11/30/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -22,6 +22,10 @@ We've compiled a list of frequently asked questions and provided brief answers t
 > Power Apps portals articles will be updated soon to reflect the latest terminology.
 
 ## General
+
+### When I edit a page using the content editor, I don't see the expected content.
+
+This can happen when you have the portal URL that exceeds **500 characters**. <br> For example, if you have a webpage with more than 500 characters in length, and you edit the page using the [content editor](https://docs.microsoft.com/dynamics365/portals/get-started-portal-content-editor), the *Language content* tab in the editor may appear blank. If you review the browser for script errors, you may notice an HTTP response with `400 Bad Request` error. When this happens, ensure you truncate the URL so that you don't exceed 500 characters maximum length.
 
 ### Rendering Power BI report on my portal page fails with the following error:
 

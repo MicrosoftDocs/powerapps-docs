@@ -23,6 +23,7 @@ The following is a selected list of community tools distributed via the XrmToolB
 
 |Tool  |Description  |
 |---------|---------|
+|[FetchXML Builder](https://fetchxmlbuilder.com/)|Build queries for Microsoft Dataverse, Dynamics 365 and the Power Platform. Investigate data. Get code.|
 |[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/)|Exports and Imports translations with contextual information|
 |[Export to Excel](https://www.xrmtoolbox.com/plugins/Ryr.XrmToolBox.ExportToExcel/)|Easily export records from the selected view/fetchxml to Excel.|
 |[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)|Manage custom entities icons in a single screen|
