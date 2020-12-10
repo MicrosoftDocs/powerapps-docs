@@ -17,8 +17,6 @@ search.app:
 
 # Building responsive apps  
 
-[This article is pre-release documentation and is subject to change.]
-
 Responsiveness refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly, providing great UI and UX in every device, form factor, and screen size. 
 
 > [!IMPORTANT]

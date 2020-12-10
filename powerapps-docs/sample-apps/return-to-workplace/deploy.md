@@ -5,9 +5,9 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Deploy the Return to the Workplace solution
@@ -164,7 +164,7 @@ Next, we'll configure the data refresh settings for the dataset.
 
 The facility manager Power BI dashboard is used in the model-driven app. Because these reports are published in a different location, you need to change the location.
 
-1. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
+1. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Table**.
 
 2. From the list of entities, select **Facility (msft_facility)** , under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
@@ -203,7 +203,7 @@ Open a facility record in the Facility Safety Management app and you’ll see th
 
 You can change the look and feel of the app by applying themes to match your company branding.
 
-1. Open the **Facility Safety Management** app or the **Workplace Care Management** app. In the top right select the gear icon and select **Advanced Settings**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app. In the top right, select the gear icon and select **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
    > ![Advanced Settings](media/deploy-advanced-settings.png "Advanced Settings")
@@ -305,6 +305,77 @@ In the Return to the Workplace solution, the following security roles are define
    > [!NOTE]
    > The connection used for **Office 365 Outlook** is the email address used to send emails to guests. Use a service account for sending generic emails or use a shared mailbox. 
 
+6. Repeat step 4 and 5 for the following flows:
+
+ - Notification - Send as email
+ - Share Guest attestation - email
+ - Share Guest attestation - email with portal link (portal only)
+ - Contact - Create portal invitation (portal only)
+
+## Appendix: Deploy the Return to the Workplace Portal
+
+This section provides information on how to install the Return to the Workplace portal.  
+
+
+   > [!IMPORTANT]
+   > Return to the Workplace Portal is introduced in version 1.3. You need to update the existing Return to the Workplace solution in order to use the portal.
+
+### Step 1: Create a new portal
+
+1. Go to [Power Apps](https://make.powerapps.com). Select the environment you want to install the portal.
+
+1. Select **Apps** from the left navigation pane, select **New app** and then select **Portal**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Create portal](media/create-portal.png "Create portal")
+
+1. Enter appropriate values and then select **Create**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Portal details](media/enter-portal-name.png "Portal details")
+
+1. You'll see a popup appearing on the top right displaying that the portal provisioning has started. Select **Apps** from the left navigation pane, you'll see the name of your portal from the list of available apps. As soon as provisioning completes, the link will be active.
+
+   > [!div class="mx-imgBorder"]
+   > ![Portal provisioning notice](media/portal-provisioning.png "Portal provisioning notice")
+
+### Step 2: Install the package
+
+You can install the Return to the Workplace Portal from AppSource. 
+
+> [!NOTE]
+> If you are a US Government customer, you'll have to install using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
+
+1. Go to [AppSource](https://aka.ms/rtw-portal) to install the **Return to the Workplace Portal**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Portal page](media/deploy-portal-appsource.png "Portal page")
+
+2. Select **GET IT NOW** to install the solution in your environment. You'll be redirected to the actual installation page, where you can select the environment where you want to install it. Installation starts after you select the environment and accept the terms and agreement.
+
+3. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left pane, select **Solutions** to see the new solution which is installed.
+
+    > [!div class="mx-imgBorder"]
+    > ![List of solutions](media/rtw-apps1-solutions.png "List of solutions")
+
+### Step 3: Restart the Portal
+
+The deployment package also contains the sample portal data. To import data into the right portal: 
+
+1. Go to [Power Apps](https://make.powerapps.com). Select **Apps** from the left navigation pane and then select **Portal Management** app.
+
+2. Select **Website** and then select **Return to the Workplace** website, change the url to the url that you have created earlier.
+
+3. Select **Save and Close** and then deactivate the **Basic** website.
+
+4. Select **Website Bindings**. Validate if there is a binding for the url indicated for the **Return to the Workplace** website.
+
+5. Go to [Power Apps](https://make.powerapps.com). Select **...** and then select **Settings**. Select **Administration** to open the portal administration. Select **Portal Actions** and then select **Restart**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Portal restart](media/portal-restart.png "Portal restart")
+
+6. Go to [Power Apps](https://make.powerapps.com). Select the portal and select **Browse**.
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 

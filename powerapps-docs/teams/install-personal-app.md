@@ -39,6 +39,10 @@ To easily access Power Apps app, **right click** the Power Apps app from  ![More
 
 This action adds Power Apps to the Teams left rail for quick access.
 
+When you pin Power Apps app, the text of the app icon in the Teams rail changes from italicized to normal to reflect the pinned app.
+
+![Italic text change for app icon](media/pin-italic-text.png "Italic text change for app icon")
+
 You can unpin Power Apps app anytime with a **right click** on the Power Apps app from the left rail, and then by selecting **Unpin**.
 
 ![Unpin Power Apps app](media/unpin-power-apps.png "Unpin Power Apps app")

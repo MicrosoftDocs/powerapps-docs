@@ -28,10 +28,8 @@ search.app:
 
 Relevance search delivers fast and comprehensive search results across multiple
 entities, in a single list, sorted by relevance. Relevance search must be
-enabled in your target environment by an administrator prior to using the
-feature.
-
-For more information about relevance search see [Using relevance search to search for records](https://docs.microsoft.com/powerapps/user/relevance-search).
+enabled in your target environment by an administrator before you can use the
+feature. More information: [Using relevance search to search for records](https://docs.microsoft.com/powerapps/user/relevance-search)
 
 To begin using relevance search, your application simply issues an HTTP POST
 request (presently Web API only) to start a relevance search. When searching
@@ -41,14 +39,14 @@ data is to be searched.
 There are three relevance search methods that can be used in the Power Apps web
 application UI:
 
-- Search – Provides a search results page.
+- **Search**: Provides a search results page.
 
-- Suggestions – Provides suggestions as the user types into a form field.
+- **Suggestions**: Provides suggestions as the user enters text into a form field.
 
-- Autocomplete – Provides autocompletion of input as the user types into a
+- **Autocomplete**: Provides autocompletion of input as the user enters text into a
     form field.
 
-The following sections describe how to access the above mentioned search
+The following sections describe how to access the abovementioned search
 capabilities from application code.
 
 ## Search
@@ -71,28 +69,28 @@ A successful search response returns an HTTP status of 200 and consists of:
     includes search highlights, which indicate matches to the search parameter
     value contained within the `crmhit` tag of the response.
 
-- totalrecordcount: The total count of results (of type long). A value of -1
-    is returned if `returntotalrecordcount` set to **false** (default).
+- totalrecordcount: The total count of results (of type long). A value of &minus;1
+    is returned if `returntotalrecordcount` is set to **false** (default).
 
 - facets: The facet results.
 
 In addition, you can add one or more query parameters to customize how the
-search is to be done and what results are returned. The supported query
-parameters are indicated in the next section.
+search is to be done and which results are returned. The supported query
+parameters are indicated in the following section.
 
 ### Query parameters
 
-A list of supported query parameters for relevance search is listed below.
+The following query parameters are supported for relevance search.
 
 #### `entities=[list<string>] (optional)`
 
-The default entity list searches across all relevance search-configured entities
+The default entity list searches across all relevance search&ndash;configured entities
 and fields. The default list is configured by your administrator when relevance
 search is enabled.
 
 #### `facets=[list<string>] (optional)`
 
-Facets support the ability to drill into data results after they have been
+Facets support the ability to drill down into data results after they've been
 retrieved.
 
 ```http
@@ -139,9 +137,9 @@ Specifies the number of search results to retrieve. The default is 50, and the m
 
 #### `orderby=[list<string>] (optional)`
 
-A list of comma-separated clauses where each clause consists of an attribute name followed by ‘asc’ (default is ascending) or ‘desc’ (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+A list of comma-separated clauses where each clause consists of an attribute name followed by 'asc' (ascending, which is the default) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
-For a set of results that contains multiple entity types, the list of clauses for `orderby` must be globally applicable (for example: modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+For a set of results that contain multiple entity types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
 `“orderby”: [“@search.score desc", "modifiedon desc”]`
 
@@ -153,22 +151,22 @@ Specifies whether any or all the search terms must be matched to count the
 document as a match. The default is 'any'.
 
 > [!NOTE]
-> The `searchMode` parameter on a query request controls whether a term with the NOT operator is AND'ed or OR'ed with other terms in the query (assuming there is no + or | operator on the other terms).<p/> Using `searchMode=any` increases the recall of queries by including more results, and by default, will be interpreted as "OR NOT". For example, "wifi -luxury" will match documents that either contain the term "wifi" or those that do not contain the term "luxury".<p/>Using `searchMode=all` increases the precision of queries by including fewer results, and by default, will be interpreted as "AND NOT". For example, "wifi -luxury" will match documents that contain the term "wifi" and do not contain the term "luxury".
+> The `searchMode` parameter on a query request controls whether a term with the NOT operator is AND'ed or OR'ed with other terms in the query (assuming there is no + or | operator on the other terms).<p/> Using `searchMode=any` increases the recall of queries by including more results, and by default will be interpreted as "OR NOT". For example, "wifi -luxury" will match documents that either contain the term "wifi" or those that don't contain the term "luxury".<p/>Using `searchMode=all` increases the precision of queries by including fewer results, and by default will be interpreted as "AND NOT". For example, "wifi -luxury" will match documents that contain the term "wifi" and don't contain the term "luxury".
 
 #### `searchtype= simple | full (optional)`
 
 The search type specifies the syntax of a search query. Using 'simple' selects
 simple query syntax and 'full' selects Lucene query syntax. The default is
-‘simple’.
+'simple'.
 
 The simple query syntax supports the following functionality:
 
 | **Functionality** | **Description** |
 |---|---|
 | Boolean operators | AND operator; denoted by +<br/>OR operator; denoted by \|<br/>NOT operator; denoted by \- |
-| Precedence operators | A search term "hotel+(wifi \| luxury)" will search for results containing the term “hotel” and either “wifi” or “luxury” (or both). |
+| Precedence operators | A search term "hotel+(wifi \| luxury)" will search for results containing the term "hotel" and either "wifi" or "luxury" (or both). |
 | Wildcards            | Trailing wildcard are supported. For example, "Alp\*" searches for "alpine". |
-| Exact matches        | A query enclosed in quotation marks “ “.|
+| Exact matches        | A query enclosed in quotation marks " ".|
 
 The Lucene query syntax supports the following functionality:
 
@@ -177,10 +175,10 @@ The Lucene query syntax supports the following functionality:
 | Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, &&, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
 | Precedence operators              | The same functionality as simple query syntax. |
 | Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – "alp\*"<br/>Leading wildcard - "\*ine" |
-| Fuzzy search                      | Supports queries misspelled by up to 2 characters.<br/>“Uniersty\~” will return “University”<br/>“Blue\~1” will return “glue”, “blues” |
-| Term boosting                     | Weighs specific terms in a query differently.<br/>“Rock\^2 electronic” will return results where the matches of “rock” are more important than matches to “electronic”. |
-| Proximity search                  | Returns results where terms are within X words of each other - for more contextual results.<br/>For example, “airport hotel”\~5 returns results where “airport” and “hotel” are within 5 words of each other, thus boosting the chances of finding a hotel located close to an airport. |
-| Regular expression (regex) search | For example, /\[mh\]otel/ matches “motel” or “hotel”. |
+| Fuzzy search                      | Supports queries misspelled by up to two characters.<br/>"Uniersty\~" will return "University"<br/>"Blue\~1" will return "glue", "blues" |
+| Term boosting                     | Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" will return results where the matches to "rock" are more important than matches to "electronic". |
+| Proximity search                  | Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
+| Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
 
 ### Example: basic search
 
@@ -340,9 +338,9 @@ POST [Organization URI]/api/search/v1.0/query
 ## Suggestions
 
 Suggestions provide a list of matches to the specified search parameter value,
-based on an entity record’s primary field. This is different from a regular search
-request because a suggestion search only searches through an entity record’s primary field,
-while search requests search through all relevance search-enabled entity fields.
+based on an entity record's primary field. This is different from a regular search
+request because a suggestion search only searches through an entity record's primary field,
+while search requests search through all relevance search&ndash;enabled entity fields.
 
 The minimum syntax of a suggestion search HTTP request is as shown below.
 
@@ -354,16 +352,16 @@ POST [Organization URI]/api/search/v1.0/suggest
 ```
 
 The search parameter value provides a text string for the search to match and
-has a 3-character minimum length.
+has a three-character minimum length.
 
-A successful search response returns an HTTP status of 200 and contains “value”,
+A successful search response returns an HTTP status of 200 and contains "value",
 which is a list consisting of text or a document where the text is the
 suggestion with highlights, and the document is a dictionary \<string,object\>
 of the suggestion result. By default, five results are returned. Suggestion highlights indicate matches to the search parameter value and are contained within the `crmhit` tag in the response.
 
 In addition, you can add one or more query parameters to customize how the
-suggestion search is to be done and what results are returned. The supported
-query parameters are indicated in the next section.
+suggestion search is to be done and which results are returned. The supported
+query parameters are indicated in the following section.
 
 ### Query parameters
 
@@ -377,9 +375,9 @@ Number of suggestions to retrieve. The default is 5.
 
 #### `orderby=[List<string>] (optional)`
 
-A list of comma-separated clauses where each clause consists of an attribute name followed by ‘asc’ (shorthand for ascending) or ‘desc’ (shorthand for descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+A list of comma-separated clauses where each clause consists of an attribute name followed by 'asc' (ascending) or 'desc' (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
-For a set of results that contains multiple entity types, the list of clauses for `orderby` must be globally applicable (for example: modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+For a set of results that contain multiple entity types, the list of clauses for `orderby` must be globally applicable (for example, modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
 `“orderby”: [“@search.score desc", "modifiedon desc”]`
 
@@ -387,7 +385,7 @@ If the query request includes a filter for a specific entity type, `orderby` can
 
 #### `entities=[list<string>] (optional)`
 
-Default is searching across all relevance search configured entities.
+The default is searching across all relevance search&ndash;configured entities.
 
 #### `filter=[string] (optional)`
 
@@ -408,7 +406,7 @@ POST [Organization URI]/api/search/v1.0/suggest
 
 ### Example: suggestion search
 
-Below is an example of a basic suggestion search request.
+The following is an example of a basic suggestion search request.
 
 **Request**
 
@@ -447,9 +445,9 @@ POST [Organization URI]/api/search/v1.0/suggest
 ## Autocomplete
 
 Provides autocompletion of user input. Autocomplete is based on an entity
-record’s primary field.
+record's primary field.
 
-The minimum syntax of a relevance search HTTP request is as shown below.
+The minimum syntax of a relevance search HTTP request is as follows.
 
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
@@ -459,11 +457,11 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 ```
 
 A successful search response returns an HTTP status of 200 and consists of
-“value”, which is a string.
+"value", which is a string.
 
 In addition, you can add one or more query parameters to customize how the
-search is to be done and what results are returned. The supported query
-parameters are indicated in the next section.
+search is to be done and which results are returned. The supported query
+parameters are indicated in the following section.
 
 ### Query parameters
 
@@ -473,7 +471,7 @@ Fuzzy search to aid with misspellings. The default is **false**.
 
 #### `entities=[list<string>] (optional)`
 
-The default scope is searching across all relevance search configured entities
+The default scope is searching across all relevance search&ndash;configured entities
 and fields.
 
 #### `filter=[string] (optional)`
@@ -495,7 +493,7 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### Example: autocomplete search
 
-Below is an example of a basic autocomplete request.
+The following is an example of a basic autocomplete request.
 
 **Request**
 
@@ -514,7 +512,7 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 }
 ```
 
-### See Also
+### See also
 
 [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)  
 [Compare search options in Microsoft Dataverse](/powerapps/user/search)  

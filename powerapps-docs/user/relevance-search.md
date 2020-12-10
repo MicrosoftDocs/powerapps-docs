@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/04/2020
+ms.date: 11/17/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -36,14 +36,12 @@ Relevance search brings the following enhancements and benefits:
   
 - Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results. 
 
-- Relevance Search can comb through the text in a document that's stored in Microsoft Dataverse, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.
-- Relevance Search enables you to search for rows that are shared with you and rows that you own.
     > [!NOTE]
     > - Certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify rows. Because they're ignored during search, these words are also not highlighted in results.
     > - Highlighted terms are often returned as a portion of the full value in a column because only the matched terms are highlighted.
     > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a column has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results where part of the matched column is truncated.
-
-- Includes search results for text in a document that's stored in Dataverse, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
+    
+- Includes search results for text in a document that's stored in Microsoft Dataverse, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON. Note, that File data type is not supported
   
 - Enables you to search for rows that are shared with you and rows that you own.  
   
@@ -53,7 +51,7 @@ Relevance search brings the following enhancements and benefits:
 - Lets you also search for choices and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry column, which is a searchable option set.
 
   > [!NOTE]
-  > - Relevance search is text-based, and can search only on columns of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in columns of Numeric or Date data type.
+  > - Relevance search is text-based, and can search only on columns of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in columns of Numeric, Date, or File data type.
   
 - Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across table data using relevance search](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/relevance-search).
   
@@ -66,13 +64,11 @@ Relevance Search needs to be enabled on by the administrator for your organizati
 
 ### Turn on the new Relevance Search experience 
 
-The new search experience is available as a feature setting in the Power Platform admin Center. It combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. When the **Use new search experience** setting is turned on, it will enable the new experience to all the apps in the environment.
+The new Relevance Search experience combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. The new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)
 
  > [!div class="mx-imgBorder"]
  > ![Turn on new search experience](media/admin-enable-search.jpg) 
 
-> [!NOTE]
-> The **Use new search experience** feature setting is only available for environments where Relevance Search is already turned on. For environments where Relevance Search has never been not turned on, the setting **Use new search experience** will not be shown and the new experience is turned on by default.
 
 ## Use the new Relevance Search experience 
 
@@ -250,8 +246,10 @@ Like other facets, you can use date and time facets to filter and see search res
 
 ## Configure facets and filters
   
+Configure your own facets and filters.  
+
 > [!NOTE]
->  A system customizer can set the default experience for all tables, but you can configure your own facets and filters.  
+> Your admin can use the Quick Find view to define which fields appear as default facets when you use Relevance Search. The first four view columns with data types other than single line of text and multiple lines of text are displayed as default facets in the result. You can override this setting in your [Personalization Settings](https://docs.microsoft.com/powerapps/user/set-personal-options#to-set-personal-options). At any time up to four fields can be selected as facets.
   
 1. In the upper-right corner, select **Settings**, and then select **Personalization Settings**.  
   
@@ -263,7 +261,7 @@ Like other facets, you can use date and time facets to filter and see search res
    > [!div class="mx-imgBorder"]
    > ![Configure Facets and Filters](media/configure-facets-filters.png "Configure Facets and Filters")  
   
-3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for a table. Your system administrator or customizer can set a default experience for all tables, but you can set your own here.  
+3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for a table. 
   
    - In the **Select Table** drop-down list, select a table you want to configure facets for. This drop-down list contains only the tables that are enabled for relevance search.  
   

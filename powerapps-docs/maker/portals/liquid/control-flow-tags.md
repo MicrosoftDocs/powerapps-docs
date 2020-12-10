@@ -85,4 +85,4 @@ Hello, stranger.
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
 [Template tags](template-tags.md)<br>
-[Power Apps Microsoft Dataverse entity tags](portals-entity-tags.md)
+[Dataverse entity tags](portals-entity-tags.md)
