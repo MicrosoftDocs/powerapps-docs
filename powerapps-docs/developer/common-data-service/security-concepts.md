@@ -17,6 +17,8 @@ search.app:
 ---
 # Security concepts
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 A brief summary of key security concepts that developers should understand is listed below. For more details about Microsoft Dataverse security see [Security concepts in Microsoft Dataverse](/power-platform/admin/wp-security-cds).
 
 - Dataverse uses security roles to control what data operations users can perform.
