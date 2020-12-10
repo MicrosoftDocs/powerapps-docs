@@ -9,6 +9,15 @@
     href: supported-customizations.md
 - name: Security and data access
   href: security-model.md
+  items:
+  - name: Security concepts
+    href: security-concepts.md
+  - name: Data operations and access rights
+    href: security-access-rights.md
+  - name: Sharing and assigning
+    href: security-sharing-assigning.md
+  - name: Verifying access in code
+    href: security-access-coding.md
 - name: Work with data using code
   href: work-with-data-cds.md
   items:
