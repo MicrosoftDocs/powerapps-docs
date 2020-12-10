@@ -1,8 +1,8 @@
 ---
-title: Migrate data between Common Data Service environments using the dataflows OData connector
+title: Migrate data between Microsoft Dataverse environments using the dataflows OData connector
 author: denisem-msft
 ms.reviewer: "nabuthuk"
-description: Migrate data between Common Data Service environments using dataflows OData connector.
+description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
 ms.date: 05/05/2020
 ms.service: powerapps
 ms.topic: "article"
@@ -13,19 +13,21 @@ search.app:
 
 
 
-# Migrate data between Common Data Service environments using the dataflows OData connector
+# Migrate data between Microsoft Dataverse environments using the dataflows OData connector
 
-Common Data Service [Web API](/powerapps/developer/common-data-service/webapi/overview) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Common Data Service. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Common Data Service. 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-In this article, we walk you through how to migrate data between Common Data Service environments using the dataflows OData connector. 
+Dataverse [Web API](/powerapps/developer/common-data-service/webapi/overview) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Dataverse. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Dataverse. 
+
+In this article, we walk you through how to migrate data between Dataverse environments using the dataflows OData connector. 
 
 ## Prerequisites
 
 - System Administrator or System Customizer security role permission on both the source and target environments.
 
-- Power Apps, Power Automate, or Common Data Service license (per app or per user).
+- Power Apps, Power Automate, or Dataverse license (per app or per user).
 
-- Two Common Data Service [environments with database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
+- Two Dataverse [environments with database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
 
 ## Scenarios
 
@@ -49,7 +51,7 @@ In this article, we walk you through how to migrate data between Common Data Ser
 
 ## Step 2: Get the OData endpoint 
 
-Common Data Service provides an OData endpoint that does not require additional configuration to authenticate with the dataflows' connector. It is relatively easy to connect to the source environment. 
+Dataverse provides an OData endpoint that does not require additional configuration to authenticate with the dataflows' connector. It is relatively easy to connect to the source environment. 
 
 This article will walk through how to set up a new dataflow with the OData connector. For information on connecting to all data sources supported by dataflows, see [Create and use dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows). 
 
@@ -105,7 +107,7 @@ In the **target** environment, create a new dataflow with the OData connector.
     | Authentication kind | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |     
 
     > [!IMPORTANT] 
-    > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Common Data Service OData endpoint or any other OAuth-based authentication data source. 
+    > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Dataverse OData endpoint or any other OAuth-based authentication data source. 
     
 1. Select **Next** in the lower right.
 

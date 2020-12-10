@@ -1,6 +1,6 @@
 ---
-title: "Enhanced quick Start(Common Data Service)| Microsoft Docs"
-description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
+title: "Enhanced quick Start(Microsoft Dataverse)| Microsoft Docs"
+description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
 ms.custom: ""
 ms.date: 02/02/2019
 ms.service: powerapps
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Enhanced quick start
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you begin this topic.
 
@@ -66,15 +68,15 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.2" />
     </startup>
   <connectionStrings>
-    <!--Online using Office 365-->
+    <!--Online using Microsoft 365-->
     <add name="Connect"
-         connectionString="Url=https://yourorg.api.crm.dynamics.com;Username=yourname@yourorg.onmicrosoft.com;Password=y0urp455w0rd; />
+         connectionString="Url=https://yourorg.api.crm.dynamics.com;Username=yourname@yourorg.onmicrosoft.com;Password=mypassword;" />
   </connectionStrings>
 </configuration>
 ```
 This creates a connection string that can be referenced by name, in this case `Connect`, so that you can define more than one connection if you wish.
 
-Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your Common Data Service environment.
+Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your Microsoft Dataverse environment.
 
 ### Add using directive to Program.cs
 

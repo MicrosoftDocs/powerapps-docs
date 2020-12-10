@@ -1,5 +1,5 @@
 ---
-title: "Work with attribute metadata (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Work with attribute metadata (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes common operations on attribute metadata." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/05/2019
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Work with attribute metadata
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 This topic describes a number of common operations that can be applied to attribute metadata.
 

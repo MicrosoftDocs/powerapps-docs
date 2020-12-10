@@ -1,5 +1,5 @@
 ---
-title: "Web API CDSWebApiService Async Parallel Operations Sample (C#) (Common Data Service)| Microsoft Docs"
+title: "Web API CDSWebApiService Async Parallel Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates using Task Parallel Library (TPL) dataflow components with asynchronous requests."
 ms.custom: ""
 ms.date: 04/20/2020
@@ -17,9 +17,11 @@ search.app:
 ---
 # Web API CDSWebApiService Async Parallel Operations Sample (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample demonstrates using Task Parallel Library (TPL) dataflow components [Dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library) with asynchronous requests.
 
-TPL provides capabilities to add parallelism and concurrency to applications. These capabilities are an important part of maximizing throughput when performing operations that will add or update data within CDS.
+TPL provides capabilities to add parallelism and concurrency to applications. These capabilities are an important part of maximizing throughput when performing operations that will add or update data within Dataverse.
 
 This sample uses the CDSWebApiService class asynchronous methods within asynchronous operations. Because the CDSWebApiService class can manage Service Protection API limits, this code can be resilient to the transient 429 errors that clients should expect. It will retry a configurable number of times. More information: [Service Protection API Limits](../../api-limits.md)
 
@@ -30,7 +32,7 @@ This sample simply creates a configurable number of account records to create, w
 The following is required to build and run the CDSWebApiService C# samples :
 
 - Microsoft Visual Studio 2019. 
-- Access to Common Data Service with privileges to perform CRUD operations.
+- Access to Microsoft Dataverse with privileges to perform CRUD operations.
   
 <a name="bkmk_runSample"></a>
   
@@ -42,7 +44,7 @@ The following is required to build and run the CDSWebApiService C# samples :
 
 1. Select the **AsyncParallelOperations** project and open the App.config. This is a common [App.config](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/CDSWebApiService/App.config) file used by all the samples in this solution. Once you edit this, you can run any of the samples in this solution.
 
-1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the CDS instance and credentials you want to connect to.
+1. You must edit the `Url`, `UserPrincipalName`, and `Password` values to set the Dataverse instance and credentials you want to connect to.
 
     ```xml
         <add name="Connect"
@@ -178,7 +180,7 @@ namespace PowerApps.Samples
 
 ### See also
 
-[Use the Common Data Service Web API](../overview.md)<br />
+[Use the Dataverse Web API](../overview.md)<br />
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
 [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />
 [Web API CDSWebApiService Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)<br />

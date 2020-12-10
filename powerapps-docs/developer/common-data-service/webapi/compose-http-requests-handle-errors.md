@@ -1,8 +1,8 @@
 ---
-title: "Compose HTTP requests and handle errors (Common Data Service)| Microsoft Docs"
+title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 08/09/2020
+ms.date: 09/08/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,9 +12,9 @@ applies_to:
 ms.assetid: 64a39182-25de-4d31-951c-852025a75811
 caps.latest.revision: 13
 author: "JimDaly" # GitHub ID
-ms.author: "jdaly"
+ms.author: "pehecke"
 ms.reviewer: "pehecke"
-manager: "annbe"
+manager: "sunilg"
 search.audienceType: 
   - developer
 search.app: 
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Compose HTTP requests and handle errors
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 You interact with the Web API by composing and sending HTTP requests. You need to know how to set the appropriate HTTP headers and handle any errors included in the response.  
 
@@ -117,7 +119,7 @@ You can use additional headers to enable specific capabilities.
 
 ## Identify status codes
 
- Whether an http request succeeds or fails, the response will include a status code. Status codes returned by the Common Data Service Web API include the following.  
+ Whether an http request succeeds or fails, the response will include a status code. Status codes returned by the Microsoft Dataverse Web API include the following.  
   
 |Code|Description|Type|  
 |----------|-----------------|----------|  
@@ -260,6 +262,24 @@ This response includes the following annotations:
 
 If you do not want to receive all annotations in the response, you can specify which specific annotations you want to have returned. Rather than using `Prefer: odata.include-annotations="*"`, you can use the following to receive only formatted values for operations that retrieve data and the helplink if an error occurs:
 `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.HelpLink"`.
+
+## Add a Shared Variable from the Web API
+
+You can set a string value that will be available to plug-ins within the ExecutionContext in the `SharedVariables` collection. More information: [Shared variables](../understand-the-data-context.md#shared-variables)
+
+To pass this value using the Web API, simply use the `tag` query option.
+
+For example: `?tag=This is a value passed.`
+
+Will result in the following value within the `SharedVariables` collection when sent using a webhook.
+
+```json
+{
+"key": "tag",
+"value": "This is a value passed."
+}
+```
+This can also be done using the Organization Service: [Add a Shared Variable from the Organization Service](../org-service/use-messages.md#add-a-shared-variable-from-the-organization-service)
 
 ### See also  
 

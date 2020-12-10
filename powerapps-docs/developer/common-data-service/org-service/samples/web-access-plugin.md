@@ -1,5 +1,5 @@
 ---
-title: "Sample: Web access from a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Web access from a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to write a plug-in that can access resources on the web (network)." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 8/19/2019
@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Web access from a plug-in
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to write a plug-in that can access web (network) resources like a web service or feed. It also demonstrates how to limit the time duration allowed for this call. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WebAccessPlugin).
 
 ## How to run this sample
@@ -26,7 +28,7 @@ This sample shows how to write a plug-in that can access web (network) resources
     - WebClientPlugin uses [WebClient Class](/dotnet/api/system.net.webclient)
     - HttpClientPlugin uses [HttpClient Class](/dotnet/api/system.net.http.httpclient)
 1. Open the sample solution in Visual Studio, navigate to the project's properties, and verify the assembly will be signed during the build. Press F6 to build the sample's assembly (WebAccessPlugin.dll).
-1. Run the Plug-in Registration tool and register the assembly in the Common Data Service server's sandbox and database. 
+1. Run the Plug-in Registration tool and register the assembly in the Microsoft Dataverse server's sandbox and database. 
 1. For either plug-in type, when registering a step, specify a web URI string (i.e., `https://www.microsoft.com`) in the unsecure configuration field.
     - The default value `https://www.bing.com` will be used if none is provided.
 1. Using an app or write code to perform the appropriate operation to invoke the message and entity request that you registered the plug-in on.

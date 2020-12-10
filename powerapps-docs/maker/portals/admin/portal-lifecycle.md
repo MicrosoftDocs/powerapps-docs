@@ -46,6 +46,7 @@ You can convert a trial portal to a production portal from the notifications dis
 > You must be assigned one of the following roles to convert a portal from trial to production:
 > - Global administrator
 > - System administrator
+> <br> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
 
 When you open the [Power Apps Portals admin center](admin-overview.md) and go to the **[Portal Details](portal-details.md)** tab, you'll see the notification about the trial expiration displayed below the **Type** field.
 
@@ -69,6 +70,9 @@ To convert your portal from trial to production:
 ## Convert an existing portal to a capacity-based model
 
 You can convert your existing portal license to [capacity-based licensing model](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). To change your portal license to capacity-based model:
+
+> [!TIP]
+> To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
 1. Go to [Portal details](portal-details.md).
 1. Select **Change License**.

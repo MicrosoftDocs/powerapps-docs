@@ -1,6 +1,6 @@
 ---
-title: "Developers: Get started with Common Data Service | Microsoft Docs"
-description: Learn how developers can add value using Common Data Service in Power Apps.
+title: "Developers: Get started with Microsoft Dataverse | Microsoft Docs"
+description: Learn how developers can add value using Microsoft Dataverse in Power Apps.
 suite: powerapps
 author: JimDaly
 manager: ryjones
@@ -15,7 +15,9 @@ search.app:
   - D365CE
 ---
 
-# Developers: Get started with Common Data Service
+# Developers: Get started with Microsoft Dataverse
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Where to start depends on what problem you are trying to solve. This guide includes information about a wide range of capabilities and it is unlikely you will ever use all of them. The following sections include several of the key areas to begin.
 
@@ -31,7 +33,7 @@ The most common extensions created using code involve automating the processes u
 
 ## Integrate with external data
 
-Data management capabilities in Common Data Service not only lets you work with data within Common Data Service, but also effectively interact with external data critical to your business. More information: 
+Data management capabilities in Dataverse not only lets you work with data within Dataverse, but also effectively interact with external data critical to your business. More information: 
 
 - [Import data](/powerapps/developer/common-data-service/import-data)
 - [Synchronize data](/powerapps/developer/common-data-service/data-synchronization)
@@ -40,17 +42,17 @@ Data management capabilities in Common Data Service not only lets you work with 
 - [Webhooks](/powerapps/developer/common-data-service/use-webhooks
 )
 
-## Common Data Service entities
+## Dataverse entities
 
 Entities store the business data you will work with. An understanding what they are and how to work with them is essential.
 More information:
 
-- [Common Data Service entities](entities.md)
+- [Dataverse entities](entities.md)
 - [About the Entity Reference](reference/about-entity-reference.md)
 
 ## Work with metadata
 
-Developing a good working understanding of the metadata in the system can help you understand how Common Data Service platform works. Generally you will use designers to add, update, or delete entity schema that defines metadata, but both the Web API and the Organization service web services provide capabilities to perform CRUD operations on the entity schema. More information: [Work with metadata using code](metadata-services.md) 
+Developing a good working understanding of the metadata in the system can help you understand how Dataverse platform works. Generally you will use designers to add, update, or delete entity schema that defines metadata, but both the Web API and the Organization service web services provide capabilities to perform CRUD operations on the entity schema. More information: [Work with metadata using code](metadata-services.md) 
 
 ## Use solutions to package and distribute extensions
 
@@ -63,7 +65,7 @@ If you are going to distribute the extensions you create or any customizations t
 
 ## Create client applications and authentication
 
-When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are [creating a client application](/powerapps/developer/common-data-service/connect-cds). A simple console client application is a good way to familiarize yourself with the Common Data Service APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
+When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are [creating a client application](/powerapps/developer/common-data-service/connect-cds). A simple console client application is a good way to familiarize yourself with the Dataverse APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
 
 - [Authentication](authentication.md)
 - [Build web applications using Server-to-Server (S2S) authentication](/powerapps/developer/common-data-service/build-web-applications-server-server-s2s-authentication)

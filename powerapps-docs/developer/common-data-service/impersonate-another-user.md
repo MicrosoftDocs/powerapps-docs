@@ -1,6 +1,6 @@
 ---
-title: "Impersonate another user (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use impersonation to execute business logic on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Impersonate another user (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Use impersonation to execute business logic on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/07/2020
 ms.reviewer: "pehecke"
@@ -17,9 +17,11 @@ search.app:
 ---
 # Impersonate another user
 
-Use impersonation to execute business logic on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-This is necessary because the Common Data Service web services can be called by various clients and services on behalf of a Common Data Service user.
+Use impersonation to execute business logic on behalf of another Microsoft Dataverse user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. 
+
+This is necessary because the Dataverse web services can be called by various clients and services on behalf of a Dataverse user.
 
 Impersonation involves two different user accounts: 
 
@@ -40,7 +42,7 @@ In other words, the *impersonator* is allowed to do something *if and only if* t
 
 ## Impersonation with Server-to-Server authentication
 
-If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user* account so that you do not need to use a paid Common Data Service user license.
+If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user* account so that you do not need to use a paid Dataverse user license.
 
 More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md).
 

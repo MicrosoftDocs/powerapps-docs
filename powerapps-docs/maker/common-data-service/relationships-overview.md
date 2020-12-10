@@ -1,6 +1,6 @@
 ---
-title: "Entity overview in Power Apps | MicrosoftDocs"
-description: "Learn how to create and edit entities using Power Apps portal"
+title: "table relationships in Power Apps | MicrosoftDocs"
+description: "Learn about table relationships in Power Apps"
 ms.custom: ""
 ms.date: 07/25/2018
 ms.reviewer: ""
@@ -24,12 +24,14 @@ search.app:
   - D365CE
 ---
 
-# Entity relationships overview
+# Table relationships overview
 
-Entity relationships define the ways that entity records can be associated with records from other entities or the same entity. There are two types of entity relationships.
-- **One-to-many relationships**. In a one-to-many entity relationship, many referencing (related) entity records can be associated with a single referenced (primary) entity record. The referenced entity record is sometimes referred to as the ”parent” and records of the referencing entity are referred to as ”children.”  A many-to-one relationship is just the child perspective of a one-to-many relationship.
-- **Many-to-many relationships**. In a many-to-many entity relationship many entity records can be associated with many other entity records. Records related using a many-to-many relationship can be considered peers and the relationship is reciprocal. 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+Table relationships define the ways that table rows can be associated with rows from other tables or the same table. There are two types of table relationships.
+- **One-to-many relationships**. In a one-to-many table relationship, many referencing (related) table rows can be associated with a single referenced (primary) table row. The referenced table row is sometimes referred to as the ”parent” and rows of the referencing table are referred to as ”children.”  A many-to-one relationship is just the child perspective of a one-to-many relationship.
+- **Many-to-many relationships**. In a many-to-many table relationship many table rows can be associated with many other table rows. Rows related using a many-to-many relationship can be considered peers and the relationship is reciprocal. 
 
 ## See also
-[Create a relationship between entities](data-platform-entity-lookup.md) <br/>
-[Create Many-to-many entity relationships in Common Data Service using Power Apps portal](create-edit-nn-relationships-portal.md)
+[Create a relationship between tables](data-platform-entity-lookup.md) <br/>
+[Create Many-to-many table relationships in Microsoft Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)

@@ -1,13 +1,13 @@
 ---
 title: Configuration guide for the Return to the Workplace solution administrator
-description: Provides an overview of Return to the Workplace Solution.
+description: Provides an overview on how to configure the Return to the Workplace solution.
 author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Configure the Return to the Workplace solution
@@ -22,7 +22,7 @@ This article provides step-by-step instructions to IT administrators for configu
 
 ## Prerequisites
 
-- The environment needs to have all the Return to the Workplace components in place with the model-driven apps, canvas apps, and Power BI dashboards.
+The environment needs to have all Return to the Workplace components in place with the model-driven apps, canvas apps, and Power BI dashboards.
 
 ## Plan reopening phases
 
@@ -98,7 +98,7 @@ Readiness factors are used to determine whether the workplaces can move through 
 
 2. Enter appropriate values in the fields:
 
-   | **Field** |  **Description** |
+   | **Column** |  **Description** |
    |-------------|------------------------------|
    | Factor | Enter a name for the factor.  |
    | Description | Enter the description for the readiness factor. |
@@ -124,7 +124,7 @@ In the reopening plan, you define phases that guide a facility to safely reopen 
 
 2. Enter appropriate values in the fields:
 
-    | **Field**   | **Description**       |
+   | **Column**    | **Description**       |
    |---------------|------------------------------|
    | Index | Enter a unique index number to place the phase in the order you want.|
    | Name | Enter a name for the reopen phase.|
@@ -148,19 +148,19 @@ To edit the record, select it, update the values, and then select **Save & Close
    > [!div class="mx-imgBorder"]
    > ![Select a phase to add a goal to](media/solution-reopen-phases-active.png "Select a phase to add a goal to")
 
-2. Under **Key Metrics**, select **+ New Goal**.
+2. Under **Key Metrics**, select **New Goal**.
 
    > [!div class="mx-imgBorder"]
    > ![Select a new goal](media/solution-admin-new-goal.png "Select a new goal")
 
 3. Enter appropriate values in the fields:
 
-   | **Field**    | **Description**     |
-   |--------------|--------------------|
-   | Reopen Phase | The name of the phase you're adding a goal to will appear here.|
-   | Key Metric   | Select a key metric for the goal.  |
-   | Type         | Select an appropriate goal type from the list. |
-   | Value        | Enter a numerical target value for the goal. |
+   | **Column**    | **Description**     |
+   |---------------|--------------------|
+   | Reopen Phase  | The name of the phase you're adding a goal to will appear here.|
+   | Key Metric    | Select a key metric for the goal.  |
+   | Type          | Select an appropriate goal type from the list. |
+   | Value         | Enter a numerical target value for the goal. |
 
    > [!div class="mx-imgBorder"]
    > ![New goal form](media/solution-admin-new-goal-form.png "New goal form")
@@ -190,7 +190,7 @@ To edit the record, select it, update the values, and then select **Save & Close
 
 ## Manage facilities
 
-Facilities are an important part of the Return to the Workplace solution. By default, the solution includes two facility types&mdash;buildings and conference centers&mdash. The IT administrator is responsible for creating, updating the existing facility types, and importing records. 
+Facilities are an important part of the Return to the Workplace solution. By default, the solution includes two facility types&mdash;buildings and conference centers. The IT administrator is responsible for creating, updating the existing facility types, and importing records. 
 
 **To manage facilities**
 
@@ -211,7 +211,7 @@ By default, two facility types are provided as an example.
 
 2. Enter appropriate values in the fields:
 
-    | **Field**   | **Description**                     |
+   | **Column**   | **Description**                     |
    |-------------|-------------------------------------|
    | Type        | Enter a name for the type of facility.    |
    | Description | Enter the description for the facility type. |
@@ -227,7 +227,7 @@ To edit the record, select it, update the values, and then select **Save & Close
 
 The facility sample data file is available in the package. When you want to import your own facilities, you can [download a template to use for data import](https://docs.microsoft.com/power-platform/admin/download-template-data-import).
 
-**To import sample facility data to the Facility entity**
+**To import sample facility data to the Facility table**
 
 1. On the left pane, under **Facility Management**, select **Facilities**.
 
@@ -236,14 +236,14 @@ The facility sample data file is available in the package. When you want to impo
    > [!div class="mx-imgBorder"]
    > ![Import data](media/solution-admin-facilities-excel-import.png "Import data")
 
-3. After the sample data is imported, you'll see the imported records in the entity.
+3. After the sample data is imported, you'll see the imported records in the table.
 
    > [!div class="mx-imgBorder"]
    > ![Active facilities](media/solution-admin-facilities-active.png "Active facilities")
 
 ## Specify solution settings
 
-The overall solution requires certain configurations to be made to make sure that the user has the correct information. You can use solution settings to configure your own terms of agreement, health terms of agreement, and contact email. You can also use themes to tailor the experience to your company branding.
+The overall solution requires certain configurations to ensure that the user has the correct information. You can use solution settings to configure your own terms of agreement, health terms of agreement, and contact email. You can also use themes to tailor the experience to your company branding.
 
 When setting up the solution, do the following:
 
@@ -253,17 +253,89 @@ When setting up the solution, do the following:
 
 ## Set solution settings
 
-With solution settings, you define the terms of agreement that are applicable to your company. Solution settings are linked to groups or to the entire organization, which makes it possible to differentiate them for individual facilities. One solution setting will act as the default and will be applicable for every facility, which will be the solution setting that has an empty group. To set solution settings:
+With solution settings, you define system settings unique to your company. Solution settings are linked to a facility group or to the entire organization, which makes it possible to differentiate them for facilities in that group. One solution setting will act as the default and will be applicable for every facility, which will be the solution setting record that has an empty facility group.
+
+Some of these settings have an impact on the Employee app. The solution setting record that applies is found by matching the facility group of that user's default facility to settings. If no record is found or the user has no default facility set, the default solution settings record is used.
+
+**To set solution settings**
 
 1. Select **Solution Settings** in the left pane, and then select **New**.
 
    > [!div class="mx-imgBorder"]
    > ![Solution Settings](media/solution-admin-view-solution-settings.png)
 
-2. Enter the appropriate values in the fields:
+2. Enter the appropriate values in the fields.
 
    > [!div class="mx-imgBorder"]
    > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
+
+   
+   | **Column**              | **Description**                                |
+   |------------------------|------------------------------------------------|
+   | Name | Name of the solution settings record. |
+   | Facility Group | Applicable facility group, leave empty for default. |
+   | Company Name |Name of the company for solution settings. |
+   | Allow Employee Sentiment | Capture employee sentiment information in the Employee app. |
+   | Allow storing of Negative Attestations | When disabled, negative attestations registered in the Employee app are not stored. |
+   | Allow QR codes | Enables QR code on the pass in the Employee app and Employee portal.  |
+   | Allow Guest Registrations | Enables employees to register guests on their bookings in the Employee app.  |
+   | Allow Share Guest Registrations | Enables employees to share passes with guests. |
+   | Health & Safety email | Email address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
+   | Health & Safety Instructions | General instructions provided to employee in the Employee app when access is blocked by the case manager. |
+   | General Terms & Agreement | Shown in the Employee app during the booking process. |
+   | Health Terms & Agreement | Shown in the Employee app during the booking process. |
+   |||
+
+3. On the **Guest** tab, add values for the guest-related settings.
+
+   > [!div class="mx-imgBorder"]
+   > ![Solution settings guest tab](media/solution-admin-guest-setting.png "Solution settings guest tab")
+
+   | **Column**              | **Description**                                |
+   |------------------------|------------------------------------------------|
+   | Guest Health Terms & Agreement | Shown in the Employee app during the guest registration process.|
+   | Guest Privacy Terms & Agreement | Shown in the Employee app during the guest registration process. |
+   | Allow Unauthenticated Guests to Create a Pass (Portal only) | Enable unauthenticated guests to create a pass. |
+   | Allow on behalf of attestations (Portal only) | Allow attestation on behalf a guest. |
+   | Resource Text (Portal only) | Information around the resource. |
+   |||
+
+## Set duplicate detection rules for employee cases 
+
+For active employee cases, the number of cases can be limited to one active case per employee. When you want to enable this, you need to create a **Duplicate rule**. 
+
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+
+2. Select the environment in which the app is located.
+
+3. On the command box, select **Settings**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Environment Settings](media/solution-environmnet-setting.png "Environment Settings")
+
+4. Expand **Data management** and then select **Duplicate detection rules**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Data Management](media/solution-data-management.png "Data Management")
+
+5. Select **New** and enter the appropriate values in the fields. 
+
+   | **Column**   | **Description**                     |
+   |-------------|-------------------------------------|
+   | Name        | Enter a name for the rule.     |
+   | Base Record Type | Select Employee Case. |
+   | Matching Record Type | Select Employee Case. |
+   | Field | Select Employee. |
+   | Criteria | Select Exact Match. |
+
+   Select the **Exclude inactive matching records** check box.
+
+   > [!div class="mx-imgBorder"]
+   > ![Pop up](media/solution-pop-up-rule.png "Pop up")
+
+6. Select **Save and Close**.
+
+7. Select the newly created rule from the list of rules and then select **Publish**.
 
 ## Define a theme
 
@@ -289,52 +361,24 @@ You can use a theme to enhance the user experience.
    > [!div class="mx-imgBorder"]
    > ![Theme color](media/deploy-theme-colors.png "Theme color")
    
-## Contoso Sample Data
-
-To try out the solution, when installing the Return to the Workplace solution, Contoso sample data is installed with it. This sample data includes data around the entities listed below. Advised is to import or create your own data for these entities.
-
-- Facilities
-- Facility Groups
-- Facility Types
-- Employees
-- Solution Settings
-
-Usage sample data is generated by four flows, these need to be disabled when you are not using the Contoso sample data or when accessing the solution in a production environment.
-
-- Sample Data - Generate Facility transitions
-
-This flow will loop over all the facilities and randomly move a facility one phase backward or forward. By generating and approving a Reopen Phase Transition record. Prerequisites: Facility should be in active state and has a Reopen phase set.
-
-- Sample Data - Generate Employee Records
-
-This flow mimics employees using the app. It will create a booking, attestation, and sentiment record for the current day for each active employee. Prerequisites: Employees record should be active, have a default facility assigned and an assigned area that is part of that default facility.
-
-- Sample Data - Create and update employee cases
-
-This flow runs twice a day and randomly moves cases one step forward through the process. For each employee, a case is created if none exists. If a case exists, it is moved forward one step in the process. If the case reaches the **Resolved** stage, it will be closed. When moving from opening to investigation, it creates a linked case facility record based on the employees' default facility. Prerequisites: Employees records should be in active state and have a default facility selected.
-
-- Sample Data - Visits
-
-This flow runs twice a day and creates a visit record for each employee for their default facility. When an employee record is in active state, has a default facility assigned and an assigned area that is part of that default facility, then the visit will also be linked to a booking or attestation record.
-
 ## Bulk record deletion
 
-Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period.
+Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period. Also, to reduce storage, you can delete deactivated share guest registrations or employee attestations after a certain period of time.
 
 **To create bulk record-delete jobs**
 
 1.	Select **Settings**, and then select **Data Management**
 
-2.	Under **Data Management**, select **Bulk record deletion**.
+2.	Under **Data Management**, select **Bulk Record Deletion**.
 
    > [!div class="mx-imgBorder"]
-   > ![Data Management](media/solution-admin-dm.png "Data Management")
+   > ![Data Management admin](media/solution-admin-dm.png "Data Management admin")
 
 3.	Select **New**.
 
 4.	Go through the **Bulk Deletion Wizard**.
 
-5.	Select the appropriate **entity** and **criteria**.
+5.	Select the appropriate **table** and **criteria**.
 
    > [!div class="mx-imgBorder"]
    > ![Criteria](media/solution-admin-criteria.png "Criteria")

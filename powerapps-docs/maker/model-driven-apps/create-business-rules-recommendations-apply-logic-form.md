@@ -1,5 +1,6 @@
 ---
 title: "Create model-driven app business rules and recommendations | MicrosoftDocs"
+description: Learn how to create a business rule for a specific form in Power Apps
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
@@ -26,32 +27,36 @@ search.app:
 ---
 # Create business rules and recommendations to apply logic in a model-driven app form
 
-This topic shows you how to create business rules and recommendations to apply form logic in a model-driven app without writing JavaScript code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to Main and Quick Create forms, and they work in model-driven apps, legacy web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-> [!NOTE]
-> To define a business rule for an entity so that it applies to all forms and server, see [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule).
-  
+This topic shows you how to create business rules and recommendations to apply form logic in a model-driven app without writing JavaScript code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to Main and Quick Create forms, and they work in model-driven apps, legacy web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).
+ 
  By combining conditions and actions, you can do any of the following with business rules:  
   
--   Set field values  
+-   Set column values  
   
--   Clear field values  
+-   Clear column values  
   
--   Set field requirement levels  
+-   Set column requirement levels  
   
--   Show or hide fields  
+-   Show or hide columns  
   
--   Enable or disable fields  
+-   Enable or disable columns  
   
 -   Validate data and show error messages  
   
 -   Create business recommendations based on business intelligence.  
+
+> [!NOTE]
+> To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](/powerapps/maker/common-data-service/data-platform-create-business-rule).
+>
+> Business rules don’t work with multi-select choices.
   
 ## Create a business rule or business recommendation
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, select the entity you want, and then select the **Business rules** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Business rules** tab.
 
 3.  On the command bar, select **Add business rule**.
 
@@ -69,7 +74,7 @@ This topic shows you how to create business rules and recommendations to apply f
     |||  
     |-|-|  
     |**If you select this item...**|**The scope is set to...**|  
-    |**Entity**|All forms and server|  
+    |**Table**|All forms and server|  
     |**All Forms**|All forms|  
     |Specific form (**Account** form, for example)|Just that form|  
   
@@ -81,7 +86,7 @@ This topic shows you how to create business rules and recommendations to apply f
   
     2.  To set properties for the condition, select the **Condition** component in the designer window, and then set the properties in the **Properties** tab on the right side of the screen. As you set properties, an expression is created at the bottom of the **Properties** tab.  
   
-    3.  To add an additional clause (an AND or OR)  to the  condition, select **New** in the **Properties** tab to create a new rule, and then set the properties for that rule. In the **Rule Logic** field, you can specify whether to add the new rule as an AND or an OR.  
+    3.  To add an additional clause (an AND or OR)  to the  condition, select **New** in the **Properties** tab to create a new rule, and then set the properties for that rule. In the **Rule Logic** column, you can specify whether to add the new rule as an AND or an OR.  
   
         ![Add a new rule to a condition](media/add-new-rule-condition.png "Add a new rule to a condition")  
   
@@ -130,30 +135,31 @@ This topic shows you how to create business rules and recommendations to apply f
 ## Common issues
 This section describes common issues that may occur when you use business rules. 
 
-### Full Name field not supported with unified interface apps
-Actions or conditions that use a **Full Name** (fullname) field aren't supported in apps based on the unified interface.  Alternatively, you can use actions or conditions with **First Name** (firstname) and **Last Name** (lastname) fields. 
+### Full Name column and Address column not supported with Unified Interface apps
+Actions or conditions that use a composite column like the **Full Name** (fullname) column or an **Address** column aren't supported in apps based on the Unified Interface.  Alternatively, you can use actions or conditions with the constituent columns. For example, for the **Full Name** column, you can use actions or conditions on the  **First Name** (firstname) and **Last Name** (lastname) columns. 
 
 ### Business rules don't fire on editable grid on a dashboard
 Entity scoped business rules will not fire on an editable grid when the editable grid is configured on a dashboard page.
 
 ### Is your business rule not firing for a form?
-A business rule may not execute because the field referenced in the business rule isn't included with the form. 
-1.    Open solution explorer. Expand the entity that you want and then select **Forms**. 
+A business rule may not execute because the column referenced in the business rule isn't included with the form. 
+1.    Open solution explorer. Expand the table that you want and then select **Forms**. 
 2.    Open the form that you want and then on the form designer ribbon select **Business Rules**. 
 3.    In the form designer, open the business rule. 
-4.    In the business rule designer select each condition and action to verify all the fields referenced in each condition and action. 
+4.    In the business rule designer select each condition and action to verify all the columns referenced in each condition and action. 
 
         > [!div class="mx-imgBorder"] 
-        > ![](media/business-rule-field.png "Field referenced in business rule exists in entity")
+        > ![Field referenced in business rule exists in table](media/business-rule-field.png "Field referenced in business rule exists in table")
 
- 5.    Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
+ 5.    Verify that each column referenced in the business rule is also included on the form. If not, add the missing column to the form.
 
         > [!div class="mx-imgBorder"] 
-        > ![](media/account-name-on-form.png "Account name field on form")
+        > ![Account name column on form](media/account-name-on-form.png "Account name column on form")
 
+A business rule may also not execute because a column referenced in the business rule is a composite column. You can use the constituent columns of the composite column instead.
 ## Frequently asked questions (FAQ)
-*Can business rules unlock fields on a read-only form?*
-- Yes, a business rule can unlock fields and edit actions on a read-only form.
+*Can business rules unlock columns on a read-only form?*
+- Yes, a business rule can unlock columns and edit actions on a read-only form.
 
 *How do I troubleshoot a business rule that isn't working?* 
 - See [Is your business rule not firing for a form?](#is-your-business-rule-not-firing-for-a-form) in this topic.

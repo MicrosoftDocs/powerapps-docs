@@ -1,5 +1,5 @@
 ---
-title: "Sample: Add a record to queue (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Add a record to queue (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to add a record to a queue." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,9 +17,11 @@ search.app:
 ---
 # Sample: Add a record to a queue
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to add a record to a queue. It creates source and destination queues. It adds a letter activity to the source queue and then moves it to the destination queue. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RecordToQueue).
 
-This sample requires additional users that are not in your system. Create the users manually in **Office 365** in order to run the sample without any errors. For this sample, create a user profile **as is** shown below. 
+This sample requires additional users that are not in your system. Create the users manually in **Microsoft 365** in order to run the sample without any errors. For this sample, create a user profile **as is** shown below. 
 
 **First Name**: Kevin<br/>
 **Last Name**: Cook<br/>
@@ -44,7 +46,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 2. The `Queue` method creates source and destination queues and store their returned GUIDs in variable.
 3. Creates a Letter entity.
 4. The `AddToQueueRequest` method adds an entity record into a queue, in this sample it associates the letter with first queue.
-5. Retrieves the user created manually in **Office 365** for assigning the queue items to the user's queue.
+5. Retrieves the user created manually in **Microsoft 365** for assigning the queue items to the user's queue.
 
 ### Demonstrate
 

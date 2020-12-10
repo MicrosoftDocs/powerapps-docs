@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Power Query | Microsoft Docs
-description: Resolve issues by using Power Query to create a custom entity in Common Data Service.
+description: Resolve issues by using Power Query to create a custom table in Microsoft Dataverse.
 author: mllopis
 manager: kfile
 ms.service: powerapps
@@ -16,11 +16,13 @@ search.app:
 ---
 
 # Troubleshoot Power Query
-When you use Power Query for Excel to create a custom entity that contains data from external sources, this error might appear:
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+When you use Power Query for Excel to create a custom table that contains data from external sources, this error might appear:
 
 >"Your Azure Active Directory administrator has set a policy that prevents you from using this feature. Please contact your administrator, who can grant permissions for this feature on your behalf."
 
-The error appears if Power Query can't access the organization's data in Power Apps or Common Data Service. This situation arises under two sets of circumstances:
+The error appears if Power Query can't access the organization's data in Power Apps or Microsoft Dataverse. This situation arises under two sets of circumstances:
 
 * An Azure Active Directory (Azure AD) tenant administrator has disallowed users' ability to consent to apps that access company data on their behalf.
 * Using an unmanaged Active Directory tenant. An unmanaged tenant is a directory without a global administrator that was created to complete a self-service signup offer. To fix this scenario, users must first convert to a managed tenant and then follow one of the two solutions to this issue. The solutions are described in the next section.
@@ -48,7 +50,7 @@ The advantage of this approach (versus the tenant-wide solution) is that this so
 Users can update mashups and other information (such as query names and mashup metadata) through the Query Editor and through the **Options** dialog box that's accessible from the Query Editor.
 
 In Power Apps, you access the Query Editor by doing the following:
-1. Go to the **Data** pane, expand it, and then select **Entities**. 
+1. Go to the **Data** pane, expand it, and then select **Tables**. 
 2. Select the ellipsis (...), and then select **Edit Queries**.
 3. In the ribbon, select the **Options** button, and then select the **Export Diagnostics** button.
 
@@ -61,7 +63,7 @@ To remove mashups from Power Apps:
 1. Remove the Data Integrator projects, which can be removed from the namesake tab.
 2. Select the ellipsis (...), and then select the **Delete** option.
 
-If you created a mashup through the "New entities from data (Technical Preview)" feature, you can remove it by doing the following:
+If you created a mashup through the "New tables from data (Technical Preview)" feature, you can remove it by doing the following:
 1. Select the ellipsis (...), and then select **Edit queries**.
 2. In the ribbon, select the **Options** button.
 3. Select the **Remove all queries** button.  
@@ -75,7 +77,7 @@ To export personal data, users can do the following:
 3. Select the **Export Diagnostics** button.
 
 In Power Apps, you can access the Query Editor by doing the following:
-1. Go to the **Data** pane, expand it, and then select **Entities**.
+1. Go to the **Data** pane, expand it, and then select **Tables**.
 2. Select the ellipsis (...), and then select **Edit Queries**. 
 3. In the ribbon, select the **Options** button, and then select the **Export Diagnostics** button.
 

@@ -1,6 +1,6 @@
 ---
-title: "Perform operations using the Web API (Common Data Service)| Microsoft Docs"
-description: "Common Data Service Web API provides a modern, RESTful web service that you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices. Read about the operations that can be performed using the Web API"
+title: "Perform operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
+description: "Microsoft Dataverse Web API provides a modern, RESTful web service that you can use to interact with data in Dataverse using a wide variety of platforms, programming languages and devices. Read about the operations that can be performed using the Web API"
 ms.custom: ""
 ms.date: 04/22/2019
 ms.service: powerapps
@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: b7ae4dd3-e9ee-45cc-a345-2fb7be5eddc6
 caps.latest.revision: 12
 author: "JimDaly" # GitHub ID
-ms.author: "susikka"
+ms.author: pehecke
 manager: "shujoshi"
 search.audienceType: 
   - developer
@@ -20,7 +20,9 @@ search.app:
 ---
 # Perform operations using the Web API
 
-The Web API provides a modern, RESTful web service you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices.
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+The Web API provides a modern, RESTful web service you can use to interact with data in Microsoft Dataverse using a wide variety of platforms, programming languages and devices.
 
 > [!NOTE]
 > Information under this section is also applicable to the Dynamics 365 Customer Engagement (on-premises) users. 
@@ -44,6 +46,6 @@ The Web API provides a modern, RESTful web service you can use to interact with 
 
 ### See also
 
-[Use the Common Data Service Web API](overview.md)<br />
-[Authenticate to Common Data Service with the Web API](authenticate-web-api.md)<br />
+[Use the Dataverse Web API](overview.md)<br />
+[Authenticate to Dataverse with the Web API](authenticate-web-api.md)<br />
 [Web API types, functions and actions](web-api-types-operations.md)

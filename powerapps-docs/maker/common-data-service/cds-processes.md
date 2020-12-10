@@ -1,5 +1,5 @@
 ---
-title: "Apply business logic in Common Data Service | MicrosoftDocs"
+title: "Apply business logic in Microsoft Dataverse | MicrosoftDocs"
 description: "Learn about the different types of business logic you can use in your app"
 ms.custom: ""
 ms.date: 12/20/2019
@@ -23,19 +23,28 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Apply business logic in Common Data Service
-There are several choices available for applying business logic in Common Data Service. 
+# Apply business logic in Microsoft Dataverse
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+There are several choices available for applying business logic in Dataverse. 
 
 ## Business rules
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules.
 
-Define *business rules* for an entity that apply to all the entity forms and at the server level. Business rules defined for an entity apply to both *canvas apps* and *model-driven apps* if the entity is used in the app. More information: [Create a business rule for an entity](data-platform-create-business-rule.md)
+Define *business rules* for a table that apply to all the table forms and at the server level. Business rules defined for a table apply to both *canvas apps* and *model-driven apps* if the table is used in the app. More information: [Create a business rule for a table](data-platform-create-business-rule.md)
 
 > [!NOTE]
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules for a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
+## Dataverse processes
+You can also use the following Dataverse processes:
+
+- [Real-time workflows](overview-realtime-workflows.md)
+
+- [Actions](actions.md).
+
 ## Power Automate
-Power Automate has several different flows you can use to create automated workflows within Common Data Service or between Common Data Service and another app or service than can be used to synchronize files, get notifications, collect data, and more. 
+Power Automate has several different flows you can use to create automated workflows within Dataverse or between Dataverse and another app or service that can be used to synchronize files, get notifications, collect data, and more. 
 
 
 |Flow type  |Description  |More information  |
@@ -44,11 +53,8 @@ Power Automate has several different flows you can use to create automated workf
 |Automated flows     |  Create a flow that performs one or more tasks automatically after it's triggered by an event.    | [Learn more](/power-automate/get-started-logic-flow)        |
 |Button flows   | Run repetitive tasks from anyplace, at any time, via a flow app on your mobile device.        | [Learn more](/power-automate/introduction-to-button-flows)        |
 |Scheduled flows   | Create a flow that performs one or more tasks on a schedule.    | [Learn more](/power-automate/run-scheduled-tasks)        |
-|UI flows   | Record and automate the playback of manual steps on legacy software.    | [Learn more](/power-automate/ui-flows/overview)     |
+|UI flows   | Row and automate the playback of manual steps on legacy software.    | [Learn more](/power-automate/ui-flows/overview)     |
 
-
-## Classic Common Data Service processes
-You can also use the classic Common Data Service processes, which are workflows and actions. More information: [Power Automate: Use Workflow processes](/flow/workflow-processes) and [Power Automate: Actions overview](/flow/actions).
 
 ### See also
 

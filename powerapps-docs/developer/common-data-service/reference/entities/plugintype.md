@@ -1,20 +1,22 @@
 ---
-title: "PluginType Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PluginType entity."
-ms.date: 04/12/2020
+title: "PluginType entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the PluginType table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# PluginType Entity Reference
+# PluginType entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 Type that inherits from the IPlugin interface and is contained within a plug-in assembly.
 
@@ -29,7 +31,7 @@ Type that inherits from the IPlugin interface and is contained within a plug-in 
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/plugintypes<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/plugintypes(*plugintypeid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -691,6 +693,7 @@ Listed by **SchemaName**.
 - [plugintype_sdkmessageprocessingstep](#BKMK_plugintype_sdkmessageprocessingstep)
 - [plugintype_plugintypestatistic](#BKMK_plugintype_plugintypestatistic)
 - [plugintypeid_sdkmessageprocessingstep](#BKMK_plugintypeid_sdkmessageprocessingstep)
+- [plugintype_customapi](#BKMK_plugintype_customapi)
 
 
 ### <a name="BKMK_plugintype_sdkmessageprocessingstep"></a> plugintype_sdkmessageprocessingstep
@@ -737,6 +740,23 @@ Same as sdkmessageprocessingstep entity [plugintypeid_sdkmessageprocessingstep](
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_plugintype_customapi"></a> plugintype_customapi
+
+**Added by**: Custom API Framework Solution
+
+Same as customapi entity [plugintype_customapi](customapi.md#BKMK_plugintype_customapi) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|customapi|
+|ReferencingAttribute|plugintypeid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|CustomAPIId|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -777,6 +797,6 @@ See systemuser Entity [lk_plugintype_modifiedonbehalfby](systemuser.md#BKMK_lk_p
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.plugintype?text=plugintype EntityType" />

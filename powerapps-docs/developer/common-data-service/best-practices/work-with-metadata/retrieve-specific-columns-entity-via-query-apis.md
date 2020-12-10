@@ -23,6 +23,8 @@ search.app:
 --- 
 # Do not retrieve Entity all columns via query APIs
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Performance
 
 **Impact potential**: High
@@ -40,7 +42,7 @@ Retrieving all columns can cause:
 
 ## Guidance
 
-For optimal performance, you should only select the minimum amount of data needed by your application when querying Common Data Service data. 
+For optimal performance, you should only select the minimum amount of data needed by your application when querying Microsoft Dataverse data. 
 
 ### ColumnSet Parameter
 
