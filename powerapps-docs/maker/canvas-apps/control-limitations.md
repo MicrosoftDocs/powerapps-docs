@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/11/2021
+ms.date: 12/31/2020
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -38,7 +38,7 @@ This section lists limitations of controls used inside the canvas apps created u
 
 - [Gallery control](controls/control-gallery.md) - see [Gallery control limitations](controls/control-gallery.md#limitations)
 
-- [Image control](../maker/canvas-apps/controls/control-image.md) - only supports external media URLs using HTTPS.
+- [Image control](controls/control-image.md) - only supports external media URLs using HTTPS.
 
 - [Power BI tile control](controls/control-power-bi-tile.md) - see [Power BI tile control limitations for passing a parameter](controls/control-power-bi-tile.md#pass-a-parameter)
 
