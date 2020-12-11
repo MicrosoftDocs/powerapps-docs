@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/03/2020
+ms.date: 12/11/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -24,7 +24,7 @@ The following table lists different administrative tasks for portals, and the ro
 
 | Task | Required roles |
 | - | - |
-| [Create portal](..\create-portal.md) | Required roles and permissions in **Azure Active Directory**: <ul> <li> Is [portal creation disabled](../create-portal.md#disable-portal-creation-in-a-tenant) in tenant? </li> <ul> <li> If **No** - [Permissions to register an app](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#permissions-required-for-registering-an-app) in the Azure Active Directory required. </li> <li> If **Yes** - Only [Global administrator](#global-administrator) can create portal. </ul> </ul> <br> Required roles and permissions in **Power Platform** (both required): <ul> <li> **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** for the [user record](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles#create-a-read-write-user-account) in Power Platform environment. </li> <li> And, [System administrator](#system-administrator) role. </li> </ul> <ul>   |
+| [Create portal](..\create-portal.md) | Required roles and permissions in **Azure Active Directory**: <ul> <li> Is [portal creation disabled](../create-portal.md#disable-portal-creation-in-a-tenant) in tenant? </li> <ul> <li> If **No** - [Permissions to register an app](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#permissions-required-for-registering-an-app) in the Azure Active Directory required. </li> <li> If **Yes** - Only [Global administrator](#global-administrator) can create portal. </ul> </ul> <br> Required roles and permissions in **Power Platform** (both required): <ul> <li> [Read-Write Access Mode](#read-write-access-mode) </li> <li> And [System administrator](#system-administrator) role. </li> </ul> <ul>   |
 | [Download public key of a portal](get-public-key.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Import metadata translation](import-metadata-translation.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [View portal error logs](view-portal-error-log.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
@@ -34,29 +34,16 @@ The following table lists different administrative tasks for portals, and the ro
 | [Add a custom domain name](add-custom-domain.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul>   |
 | [Connect to a Microsoft Dataverse environment using a portal](manage-auth-key.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Change the Dynamics 365 instance of an add-on portal](change-dynamics-instance.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
-| [Update Dynamics 365 instance of a portal](power-platform-admin-center.md#update-the-power-apps-portal-solution) | **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** for the [user record](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles#create-a-read-write-user-account) in Power Platform environment, and any one of the following: <ul> <li> [System administrator](#system-administrator), and [Portal app owner](#portal-app-owner) </li> <li> Or, [Global administrator](#global-administrator) </li> </ul>
-
-| Portal action | Read-Write user account in Dataverse | Portal app owner | Portal owner | System customizer | System administrator | Dynamics 365 administrator | Power Platform administrator | Global administrator |
-| - | - | - | - | - | - | - | - | - |
-| [Create portal](..\create-portal.md) | Required |  |  |  | Required |  |  | &Delta; (See below) |
-| [Download public key of a portal](get-public-key.md) |  | | &check; | &check; | &check; | &check; | &check; | &check; |
-| [Import metadata translation](import-metadata-translation.md) |  | | &check; | &check; | &check; | &check; | &check; | &check; |
-| [View portal error logs](view-portal-error-log.md) |  | | &check; | | &check; | &check; | &check; | &check; |
-| [Reset a portal](reset-portal.md) |  | Required | &check; | &check; | &check; | &check; | &check; | &check; |
-| [Convert a portal from trial to production](portal-lifecycle.md#convert-a-portal-from-trial-to-production) |  | Required | &check; | &check; | &check; | &check; | &check; | &check; |
-| [Convert an existing portal to a capacity-based model](portal-lifecycle.md#convert-an-existing-portal-to-a-capacity-based-model) |  | Required | &check; | &check; | &check; | &check; | &check; | &check; |
-| [Add a custom domain name](add-custom-domain.md) |  | | &check; | &check; | &check; | &check; | &check; | &check; |
-| [Connect to a Microsoft Dataverse environment using a portal](manage-auth-key.md) |  | | &check; | &check; | &check; | &check; | &check; | &check; |
-| [Change the Dynamics 365 instance of an add-on portal](change-dynamics-instance.md) |  | | &check; | &check; | &check; | &check; | &check; | &check; |
-| [Update Dynamics 365 instance of a portal](power-platform-admin-center.md#update-the-power-apps-portal-solution) | Required  | &varphi; (See below) |  |  | &varphi; (See below) |  |  | &varphi; (See below) |
-
-&Delta; - Only required if [portal creation is disabled](../create-portal.md#disable-portal-creation-in-a-tenant) in the tenant. When portal creation not disabled, any non-global administrator with the [permissions to register an app](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#permissions-required-for-registering-an-app) in the Azure Active Directory required.
-<br> **Required** - A must role, or permission for the related action.
-<br> &varphi; - Option 1: - both *Portal app owner*, and *System administrator* required. Option 2: *Global administrator*.
+| [Update Dynamics 365 instance of a portal](power-platform-admin-center.md#update-the-power-apps-portal-solution) | [Read-Write Access Mode](#read-write-access-mode), and any one of the following: <ul> <li> [System administrator](#system-administrator), and [Portal app owner](#portal-app-owner) </li> <li> Or, [Global administrator](#global-administrator) </li> </ul> |
+| [Update portal packages](power-platform-admin-center.md#update-the-power-apps-portal-solution) | [Read-Write Access Mode](#read-write-access-mode), and [System administrator](#system-administrator) |
 
 ## Manage membership of the required roles
 
 This section explains about managing the membership of the required roles listed above for different kinds of administrative tasks in Power Apps portals.
+
+### Read-Write Access Mode
+
+A user account in Power Platform with **Access Mode** set to *Read-Write*. See [Create a Read-Write user account](https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles#create-a-read-write-user-account). 
 
 ### Portal app owner
 
