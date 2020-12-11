@@ -85,7 +85,7 @@ Portal owner is the user that created the Power Apps portal. This role can't be 
 
 ### Read-Write Access Mode
 
-A user account in Power Platform with **Access Mode** set to *Read-Write*. See [Create a Read-Write user account](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles#create-a-read-write-user-account). 
+A user account in Power Platform with **Access Mode** set to *Read-Write*. For detailed steps to configure Access Mode of a user account in Power Platform, see [Create a Read-Write user account](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles#create-a-read-write-user-account). 
 
 ### System administrator
 
