@@ -171,9 +171,8 @@ following query to retrieve these.
 
 Use these messages to retrieve privileges by privilege ID or name. They include privileges that the user might have from teams.
 
-[RetrieveUserPrivilegeByPrivilegeIdRequest](/dynamics365/customer-engagement/web-api/retrieveuserprivilegebyprivilegeid)
-
-[RetrieveUserPrivilegeByPrivilegeNameRequest](/dynamics365/customer-engagement/web-api/retrieveuserprivilegebyprivilegename)
+<xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest>  
+<xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest>
 
 ### See Also
 
