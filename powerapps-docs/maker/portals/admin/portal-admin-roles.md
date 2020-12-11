@@ -45,13 +45,13 @@ This section explains about managing the membership of the required roles listed
 
 Dynamics 365 administrator is a Power Platform service admin role. This role can do admin functions on Power Platform because they have the system admin role.
 
-To assign a user the Dynamics 365 administrator role, read [Assign a service admin role to a user](https://docs.microsoft.com/power-platform/admin/use-service-admin-role-manage-tenant#assign-a-service-admin-role-to-a-user).
+To assign a user the Dynamics 365 administrator role, go to [Assign a service admin role to a user](https://docs.microsoft.com/power-platform/admin/use-service-admin-role-manage-tenant#assign-a-service-admin-role-to-a-user).
 
 ### Global administrator
 
 Global administrator is a Microsoft 365 admin role. A person who purchases the Microsoft business subscription is a global administrator. A global administrator has unlimited control over products in the subscription and access to most data.
 
-To assign a user the global administrator role, read [Assign admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide&preserve-view=true).
+To assign a user the global administrator role, go to [Assign admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide&preserve-view=true).
 
 More information: [About admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true)
 
@@ -85,25 +85,25 @@ Portal owner is the user that created the Power Apps portal. This role can't be 
 
 ### Read-Write Access Mode
 
-A user account in Power Platform with **Access Mode** set to *Read-Write*. For detailed steps to configure Access Mode of a user account in Power Platform, see [Create a Read-Write user account](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles#create-a-read-write-user-account). 
+A user account in Power Platform with **Access Mode** set to *Read-Write*. For detailed steps to configure Access Mode of a user account in Power Platform, go to [Create a Read-Write user account](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles#create-a-read-write-user-account). 
 
 ### System administrator
 
 System administrator is a Power Platform security role. This role has full permissions to customize and administrator Power Platform environment.
 
-To assign a user the System administrator Power Platform role, read [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
+To assign a user the System administrator Power Platform role, go to [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
 
 ### System customizer
 
 System customizer is a Power Platform security role. This role has full permissions to customize Power Platform environment.
 
-To assign a user the System administrator Power Platform role, read [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
+To assign a user the System administrator Power Platform role, go to [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
 
 ### Power Platform administrator
 
 Power Platform administrator is a Power Platform service admin role. This role can do admin functions on Power Platform because they have the system admin role.
 
-To assign a user the Power Platform administrator role, read [Assign a service admin role to a user](https://docs.microsoft.com/power-platform/admin/use-service-admin-role-manage-tenant#assign-a-service-admin-role-to-a-user).
+To assign a user the Power Platform administrator role, go to [Assign a service admin role to a user](https://docs.microsoft.com/power-platform/admin/use-service-admin-role-manage-tenant#assign-a-service-admin-role-to-a-user).
 
 ### See also
 
