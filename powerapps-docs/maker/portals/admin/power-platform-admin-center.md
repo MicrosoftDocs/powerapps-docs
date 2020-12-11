@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/16/2020
+ms.date: 12/11/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -92,11 +92,19 @@ A portal can have the following status: *Configured*, *Suspended*, or *Not-confi
 
 ## Update the Power Apps portal solution
 
-A Power Apps portal consists of solutions from different packages in an environment. You can use the Power Platform admin center to view the details of packages (such as the version details), and update them if available for the selected portal.
+A Power Apps portal consists of solutions from different packages in an environment. You can use the Power Platform admin center to view the details of packages (such as the version details), and update them if a package with a higher version is available for the selected portal.
 
 > [!IMPORTANT]
 > - Package upgrade may take some time. While the upgrade is in progress, you can see some instability in your portal. Hence, upgrade the packages during off-peak hours.
 > - Solutions in a package are upgraded for an environment. Hence, the selected package will be upgraded for all portals in this environment using this package.
+
+### Permissions required
+
+You may see the following error message if you don't have the required permissions to view and upgrade portal package:
+
+`You don't have the permissions to access this portal's environment.`
+
+To learn about the permissions required to view and upgrade portal packages, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
 ### View portals package details
 
@@ -112,13 +120,20 @@ To view the portals package details:
 
     ![Details of portal's packages such as name, version and installed status ](media/power-platform-admin-center/portal-package-details-info.png "Details of portal's packages such as name, version and installed status")
 
-### Method 1: Update portals packages using the selected environment
+### Update portals package
+
+You can use Power Platform admin center to upgrade portal packages. Two methods are available depending on whether you want to review the updates for an environment, or for a tenant.
+
+> [!NOTE]
+> In addition to the methods mentioned above, you'll also see a notification when you edit the portal using the portals Studio if an upgrade package is available.
+
+#### Method 1: Update portals packages using the selected environment
 
 1. Select a [portal for your environment](#manage-all-portals-for-an-environment).
 
 1. Select **Upgrade now** from the notification on the top of the page, if an update is available. You can also check for the notification from the [package details](#view-portals-package-details) page.
 
-### Method 2: Update portals packages using the portals list for a tenant
+#### Method 2: Update portals packages using the portals list for a tenant
 
 1. Select a portal from the [list of all portals in a tenant](#manage-all-portals-for-a-tenant).
 
