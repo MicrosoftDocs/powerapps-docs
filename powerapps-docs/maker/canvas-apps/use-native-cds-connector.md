@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/08/2020
+ms.date: 12/14/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -16,7 +16,13 @@ search.app:
 ---
 # Microsoft Dataverse and the improved data source experience
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+> [!NOTE]
+> - Effective November 2020:
+>     - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
+>     - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+>
+>     This article will be updated soon to reflect the latest terminology.
+> - Power Apps mobile app on Windows platform supports legacy Microsoft Dataverse connector without the need to upgrade the connector.
 
 ## Overview
 
@@ -34,9 +40,6 @@ The **Improve data source experience and Common Data Service views** option appe
 
 The **Relational data, option sets, and other new features for Common Data Service** now appears in the Deprecated features section.
 
-> [!NOTE]
-> Power Apps Mobile for Windows Phone supports legacy Microsoft Dataverse connector without the need to upgrade the connector.
-
 ## How do I upgrade?
 
 Upgrade your app by inspecting the settings of the features and then by following the directions below:
@@ -50,7 +53,9 @@ You may also want to enable the **Explicit Column Selection** feature:
 ![Explicit column selection](media/use-native-cds-connector/explicit-column-selection.png)
 
 > [!NOTE]
-> **Improve data source experience and Common Data Service views** is not supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3). You must turn this feature *Off* when using Power Apps for Windows.
+> - **Improve data source experience and Common Data Service views** is not supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3). You must turn this feature *Off* when using Power Apps for Windows.
+> - When this feature is *Off*, you'll see the following message. You can ignore this message when using Power Apps mobile app for Windows platform, .
+> <br> `This app is using a connector for the Common Data Service or Dynamics 365 that will not be supported past Oct 1, 2020.`
 
 ### *Relational data, option sets and other new features for Common Data Service* is Off:
 
