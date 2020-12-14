@@ -30,7 +30,7 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
 -   [Manage your documents using SharePoint](https://docs.microsoft.com/power-platform/admin/manage-documents-using-sharepoint)  
 
 > [!IMPORTANT]
-> SharePoint managed documents that are deleted from a Power Apps or Dynamics 365 customer engagement app are permanently deleted from both the app and the SharePoint site. 
+> SharePoint managed documents that are deleted using a Power Apps or Dynamics 365 customer engagement app are permanently deleted from both the app and the SharePoint site. 
 
 ## Where do you access the documents from?
 
