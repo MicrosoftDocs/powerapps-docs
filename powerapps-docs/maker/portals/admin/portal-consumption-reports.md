@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/01/2020
+ms.date: 12/14/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -18,7 +18,7 @@ Administrators can download portal login and page view reports from the [Power P
 
 ## Download reports
 
-The individual reports are available for a duration of 30 days preceding the date you select while downloading the reports. 
+The individual reports contain data for a duration of 30 days preceding the date you select while downloading the reports.
 
 To download the reports:
 
@@ -36,7 +36,7 @@ To download the reports:
 
 1. Select **Portal Logins**, or **Portal Views** report.
 
-1. Select a **Target Date**. The report includes the data for the duration of past 30 days before the selected date.
+1. Select a **Target Date**. The report includes the data for the duration of past 30 days from the **Target Date** you select.
 
 1. Select **Submit**.
 
@@ -55,7 +55,7 @@ To download the reports:
 
 ## Analyze reports
 
-The report contains date-wise consumption of all available portals across all environments for the tenant. You can filter the Excel file with different columns, such as portal ID, environment ID, or date range, for additional analysis.
+The report contains date-wise capacity consumption of all available portals across all environments for the tenant. You can filter the Excel file with different columns, such as portal ID, environment ID, or date range, for additional analysis.
 
 The following table provides the details about the columns in the downloaded report.
 
