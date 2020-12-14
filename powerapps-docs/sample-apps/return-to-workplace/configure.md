@@ -262,7 +262,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
 1. Select **Solution Settings** in the left pane, and then select **New**.
 
    > [!div class="mx-imgBorder"]
-   > ![Solution Settings](media/solution-admin-view-solution-settings.png)
+   > ![Solution Settings](media/solution-admin-view-solution-settings.png "Solution Settings")
 
 2. Enter the appropriate values in the fields.
 
@@ -304,7 +304,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
 
 For active employee cases, the number of cases can be limited to one active case per employee. When you want to enable this, you need to create a **Duplicate rule**. 
 
-1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com "Power Platform admin center").
 
 2. Select the environment in which the app is located.
 
