@@ -132,18 +132,17 @@ With solutions that are unmanaged or the default one, you can use the **New** or
 
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
-- Canvas app button triggered flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
+- Canvas app instant flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
   - The app and flow will not currently be connected in the target environment after deployment. First associate valid connections with the flow and activate the flow. Then edit the app and re-associate the flow to the button.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
 - Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
-- Button triggered flows are not available in solutions.
+- Instant flows are not available in solutions.
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
 - Flows that connect to SharePoint are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
 
-
- For details about customizing the individual components in a solution, see the following topics:  
+For details about customizing the individual components in a solution, see the following topics:  
   
 -   For table, table relationships, column and message customizations, see [Metadata](create-edit-metadata.md).  
   
@@ -155,6 +154,4 @@ The following limitations apply to the use of canvas apps, flows, and custom con
  
  
 ### Next steps  
-[Create a solution](create-solution.md) <br/>
-
- 
+[Create a solution](create-solution.md)
