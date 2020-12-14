@@ -10,8 +10,8 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/02/2020
-ms.author: matp
+ms.date: 12/14/2020
+ms.author: mkaur
 search.audienceType: 
   - maker
 search.app: 
@@ -28,6 +28,9 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
 -   [Find your administrator or support person](find-admin.md)  
 
 -   [Manage your documents using SharePoint](https://docs.microsoft.com/power-platform/admin/manage-documents-using-sharepoint)  
+
+> [!IMPORTANT]
+> SharePoint managed documents that are deleted from a Power Apps or Dynamics 365 customer engagement app are permanently deleted from both the app and the SharePoint site. 
 
 ## Where do you access the documents from?
 
