@@ -1470,8 +1470,10 @@
             href: ./portals/configure/use-simplified-authentication-configuration.md
           - name: Azure AD B2C
             items:
-                - name: Configure
+                - name: Configure (Preview)
                   href: ./portals/configure/configure-azure-ad-b2c-provider.md
+                - name: Configure manually
+                  href: ./portals/configure/configure-azure-ad-b2c-provider-manual.md
                 - name: Customize the Azure AD B2C user interface
                   href: ./portals/configure/azure-ad-b2c.md
           - name: OAuth 2.0
@@ -2013,6 +2015,8 @@
       href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
     - name: Employee Return to the Workplace app
       href: ../sample-apps/return-to-workplace/app-for-employee.md
+    - name: Return to the Workplace Portal
+      href: ../sample-apps/return-to-workplace/portal-extension.md
     - name: Extend the solutions
       href: ../sample-apps/return-to-workplace/extend.md
 - name: Resources

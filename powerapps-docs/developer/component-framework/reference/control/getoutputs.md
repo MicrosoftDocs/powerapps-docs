@@ -23,8 +23,8 @@ Model-driven apps and canvas apps (public preview)
 
 ## Remarks
 
-The output will contain a value for each property marked as `input-output` or `bound` in the manifest.
-For example, if the manifest has a property `value` that is an `input-output`, and you want to set that to the local variable `myvalue` you should return:
+The output will contain a value for each property with a usage as `bound` in the manifest.
+For example, if the manifest has a property named `value` that has usage as `bound`, and you want to set that to the local variable `myvalue` then you should return:
 
 ```TypeScript
 {
