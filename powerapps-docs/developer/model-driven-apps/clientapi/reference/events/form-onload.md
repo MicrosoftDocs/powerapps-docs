@@ -24,7 +24,7 @@ You can determine in what context the `OnLoad` event occurs by using [getEventAr
 
 Data for related entities on a form, such as data for subgrids and quick view forms, are not guaranteed to be available when an `OnLoad` event handler is executed. Logic that depends on related data should use the subgrid onload event, the quick view form isLoaded function, or the appropriate manner for determining when related data is loaded for the particular related data.
 
-Controls on the form are not guaranteed to be rendered when the `OnLoad` event occurs.
+Controls and other UI of the form are not guaranteed to be rendered and in the DOM when the `OnLoad` event occurs.
 
 Logic in an `OnLoad` event handler cannot prevent the form from loading.
 
