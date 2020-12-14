@@ -49,11 +49,11 @@ Power Automate has several different flows you can use to create automated workf
 
 |Flow type  |Description  |More information  |
 |---------|---------|---------|
-|Business process flows     | Define a set of steps that runs in a Power Apps model-driven app for people to follow to take them to a desired outcome.        | [Learn more](/power-automate/create-business-process-flow)     |
-|Automated flows     |  Create a flow that performs one or more tasks automatically after it's triggered by an event.    | [Learn more](/power-automate/get-started-logic-flow)        |
-|Button flows   | Run repetitive tasks from anyplace, at any time, via a flow app on your mobile device.        | [Learn more](/power-automate/introduction-to-button-flows)        |
+|Business process flows     | Define a set of steps that run in a Power Apps model-driven app for people to follow to take them to a desired outcome.        | [Learn more](/power-automate/create-business-process-flow)     |
+|Cloud flows     |  Create a flow that performs one or more tasks automatically after it's triggered by an event.    | [Learn more](/power-automate/get-started-logic-flow)        |
+|Instant flows   | Run repetitive tasks from anyplace, at any time, via a flow app on your mobile device.        | [Learn more](/power-automate/introduction-to-button-flows)        |
 |Scheduled flows   | Create a flow that performs one or more tasks on a schedule.    | [Learn more](/power-automate/run-scheduled-tasks)        |
-|UI flows   | Row and automate the playback of manual steps on legacy software.    | [Learn more](/power-automate/ui-flows/overview)     |
+|Desktop flows   | Row and automate the playback of manual steps on legacy software.    | [Learn more](/power-automate/desktop-flows/overview)     |
 
 
 ### See also
