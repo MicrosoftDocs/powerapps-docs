@@ -28,9 +28,9 @@ Controls and other UI of the form are not guaranteed to be rendered and in the D
 
 Logic in an `OnLoad` event handler cannot prevent the form from loading.
 
-The form `OnLoad` events are synchronous. However, you should **not** make synchronous network requests in an `OnLoad` event handler. This can cause a slow save experience and an unresponsive app. Instead, you can make asynchronous network requests. 
+The form `OnLoad` events are synchronous. However, you should **not** make synchronous network requests in an `OnLoad` event handler. This can cause a slow save experience and an unresponsive app. Instead, you should asynchronous network requests. 
 
-You should be careful when using asynchronous code in an `OnLoad` event handler that needs an action to be taken or handled on the resolution of the async code. Asynchronous code can cause issues if the resolution handler expects the app context to remain the same as it was when the asynchronous code has started. For example, there may be code in an `OnLoad` event handler to make a network request and change a control to be disabled based on the response data. Before the response from the request is receieved, the user may have interacted with the control or navigated to a different page, so there may be undesired behavior. 
+You should be careful when using asynchronous code in an `OnLoad` event handler that needs an action to be taken or handled on the resolution of the async code. Asynchronous code can cause issues if the resolution handler expects the app context to remain the same as it was when the asynchronous code has started. For example, there may be code in an `OnLoad` event handler to make a network request and change a control to be disabled based on the response data. Before the response from the request is receieved, the user may have interacted with the control or navigated to a different page, so there may be undesired behavior. If you need to not show data or UI before the asynchronous requests complete, your code can hide or disable the relevant UI until the requests are complete. Your code should also check that the user is in the same context after each asynchronous continuation point.
 
 
 
