@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/11/2020
+ms.date: 12/15/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -33,7 +33,7 @@ The following table lists different administrative tasks for portals, and the ro
 | [Download public key of a portal](get-public-key.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Import metadata translation](import-metadata-translation.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Reset a portal](reset-portal.md) | [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
-| [Update Dynamics 365 instance of a portal](power-platform-admin-center.md#update-the-power-apps-portal-solution) | [Read-Write Access Mode](#read-write-access-mode), and any one of the following: <ul> <li> [System administrator](#system-administrator), and [Portal app owner](#portal-app-owner) </li> <li> Or, [Global administrator](#global-administrator) </li> </ul> |
+| [Update Dynamics 365 instance of a portal](power-platform-admin-center.md#update-dynamics-365-instance-for-your-portal) | [Read-Write Access Mode](#read-write-access-mode), and any one of the following: <ul> <li> [System administrator](#system-administrator), and [Portal app owner](#portal-app-owner) </li> <li> Or, [Global administrator](#global-administrator) </li> </ul> |
 | [Update portal packages](power-platform-admin-center.md#update-the-power-apps-portal-solution) | [Read-Write Access Mode](#read-write-access-mode), and [System administrator](#system-administrator) |
 | [View portal error logs](view-portal-error-log.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 
