@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 07/12/2016
+ms.date: 12/15/2020
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
@@ -80,9 +80,14 @@ If you're sharing a folder in Dropbox, the shared folder must be attached to the
 There are [certain limitations](#sharing-excel-tables) with connectors involving Excel files.
 
 ## Known limitations
-If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
+- If **Data type unsupported** or **Not formatted as a table** appears when you try to use an Excel connection in your app, [format the data as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+
+- If your Excel data includes a calculated column, you can't use it to build an app, and you can’t add that data to an existing app.
+
+- Power Apps mobile app for Windows platform doesn't support **Dropbox** connector. A pop-up dialog will show the following message in this situation: <br>
+  `Upgrade browser to use Dropbox`
+<br> When this happens, use [Power Apps mobile app on iOS, or Android devices](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#install-power-apps-mobile-app).
 
 ### Sharing Excel tables
 To share data in an Excel file:
