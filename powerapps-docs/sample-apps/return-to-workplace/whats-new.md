@@ -18,7 +18,7 @@ This article provides resources where you can learn about the new features that 
 
 ### Facility management app
 
-- Solution Settings now included a switch to toggle between 12 and 24 hour time format in the Employee App.
+- Solution Settings now includes a switch to toggle between 12-Hour and 24-Hour time format in the Employee App.
 
 ### Workplace care management app
 
