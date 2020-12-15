@@ -42,7 +42,7 @@ A notification appears at the top to show the current monitoring session as a *S
 > Monitor has no impact on your app. You can use Monitor with any app in
 a test environment or in production.
 
-<a name="open-monitor-for-published-app></a>
+<a name="open-monitor-for-published-app"></a>
 ## Open Monitor for a published app
 
 You can also use Monitor to debug the published app in the web player.
