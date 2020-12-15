@@ -19,7 +19,7 @@ Power Apps offers several cloud-storage connections. Using any of these connecti
 
 | [Azure Blob](https://docs.microsoft.com/connectors/azureblob/) | [Box](https://docs.microsoft.com/connectors/box/) | [Dropbox](https://docs.microsoft.com/connectors/dropbox/) | [Google Drive](https://docs.microsoft.com/connectors/googledrive/) | [OneDrive](https://docs.microsoft.com/connectors/onedrive/) | [OneDrive for Business](https://docs.microsoft.com/connectors/onedriveforbusiness/) |
 | --- | --- | --- | --- | --- | --- |
-| ![Icon](./media/cloud-storage-blob-connections/blobicon.png) |![API Icon][boxicon] |![API Icon][dropboxicon] |![API Icon][googledriveicon] |![OneDrive](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive")  |![OneDrive for Business](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive for Business") |
+| ![Azure Blob](./media/cloud-storage-blob-connections/blobicon.png "Azure Blob") |![Box][boxicon "Box"] |![Dropbox][dropboxicon "Dropbox"] |![Google Drive][googledriveicon "Google Drive"] |![OneDrive](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive")  |![OneDrive for Business](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive for Business") |
 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
