@@ -266,8 +266,8 @@ To delete an idea:
 
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Bulletins sample apps](bulletins.md)
+- [Bulletins (Preview) sample apps](bulletins.md)
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
+- [Milestones (Preview) sample app](milestones.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
