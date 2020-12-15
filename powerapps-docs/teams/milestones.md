@@ -27,7 +27,7 @@ Benefits of using the Milestones app:
 - Classify work items by milestones.
 - Configure work item categories, priorities, and status options.
 
-> [!IMPORTANT]
+> [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 

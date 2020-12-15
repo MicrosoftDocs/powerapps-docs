@@ -37,7 +37,7 @@ The Bulletins app solution consists of two apps.
     - Central location for all company communication such as memos, broadcasts, and news.
     - Shows bulletins, FAQs, links, and contacts created using the **Manage bulletins** app.
 
-> [!IMPORTANT]
+> [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
