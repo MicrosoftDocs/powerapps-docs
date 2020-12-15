@@ -23,11 +23,11 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Common Data Service provides an abstraction that makes it possible to work with any type of data, including relational, non-relational, image, file, relative search, or data lake. There is no need to understand the type of data as Common Data Service exposes a set of data types that allow you to build up your model. The type of storage is optimized for the data type chosen.
+Microsoft Dataverse provides an abstraction that makes it possible to work with any type of data, including relational, non-relational, image, file, relative search, or data lake. There is no need to understand the type of data as Dataverse exposes a set of data types that allow you to build up your model. The type of storage is optimized for the data type chosen.
 
 Data can be easily imported and exported with dataflows, Power Query, and Azure Data Factory. Dynamics customers can also use the Data Export Service.
 
-Common Data Service also has a connector for Power Automate and Azure Logic Apps that can be used with the hundreds of other connectors in those services for on-premises, infrastructure as a service (IaaS), platform as a service (PaaS), or software as a service (SaaS) services. This includes sources in Azure, Microsoft 365, Dynamics 365, SAP ERP, Salesforce, Amazon Redshift, Access, Excel, text/CSV, SharePoint lists, SQL Server databases, Oracle, MySQL, PostgreSQL, Blockchain, and Azure SQL Data Warehouse.
+Dataverse also has a connector for Power Automate and Azure Logic Apps that can be used with the hundreds of other connectors in those services for on-premises, infrastructure as a service (IaaS), platform as a service (PaaS), or software as a service (SaaS) services. This includes sources in Azure, Microsoft 365, Dynamics 365, SAP ERP, Salesforce, Amazon Redshift, Access, Excel, text/CSV, SharePoint lists, SQL Server databases, Oracle, MySQL, PostgreSQL, Blockchain, and Azure SQL Data Warehouse.
 
 ## Common Data Model
 
@@ -37,7 +37,7 @@ Common Data Model provides reference architecture that's intended to streamline 
 
 Common Data Model includes a set of standardized, extensible data schemas that Microsoft and its partners have published. This collection of predefined schemas includes tables, attributes, semantic metadata, and relationships. The schemas represent commonly used concepts and activities, such as **Account** and **Campaign**, to simplify the creation, aggregation, and analysis of data.
 
-The Common Data Model schemas can be used to inform the creation of tables in Common Data Service. The resulting tables will<!--Edit okay?--> then be compatible with apps and analytics that target this Common Data Model definition.
+The Common Data Model schemas can be used to inform the creation of tables in Dataverse. The resulting tables will<!--Edit okay?--> then be compatible with apps and analytics that target this Common Data Model definition.
 
 The following image shows some elements of the standard Common Data Model tables. 
 
@@ -45,9 +45,9 @@ The following image shows some elements of the standard Common Data Model tables
 
 ## Tables
 
-In Common Data Service, tables are used to model and manage business data. To increase productivity, Common Data Service includes a set of tables known as standard tables. These tables are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization. The standard tables adhere to Common Data Model.
+In Dataverse, tables are used to model and manage business data. To increase productivity, Dataverse includes a set of tables known as standard tables. These tables are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization. The standard tables adhere to Common Data Model.
 
-A set of tables that are commonly used across industries, such as **User** and **Team**, are included in Common Data Service and referred to as *standard tables*. These out-of-the-box tables can also be customized, such as including additional columns. In addition, you can easily create your own custom tables in Common Data Service.
+A set of tables that are commonly used across industries, such as **User** and **Team**, are included in Dataverse and referred to as *standard tables*. These out-of-the-box tables can also be customized, such as including additional columns. In addition, you can easily create your own custom tables in Dataverse.
 
 ![View tables](media/standard-entities.png "View tables")
 
@@ -55,9 +55,9 @@ A set of tables that are commonly used across industries, such as **User** and *
 
 Columns define the individual data items that can be used to store data in a table. Fields are sometimes called attributes by developers. An table representing a course at a university might contain columns such as "Name," "Location," "Department," "Registered Students," and so on.
 
-Columns might have different types of data such as strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Common Data Service stores the data in the best storage type for the model created.
+Columns might have different types of data such as strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Dataverse stores the data in the best storage type for the model created.
 
-Each of these columns can be associated with one of many data types supported by Common Data Service.
+Each of these columns can be associated with one of many data types supported by Dataverse.
 
 ![Create a column](media/entity-field.png "Create a column")
 
@@ -65,9 +65,9 @@ More information: [Types of columns](/powerapps/maker/common-data-service/types-
 
 ## Relationships
 
-Data in one table often relates to data in another table. table relationships define how rows can be related to each other in the Common Data Service model.
+Data in one table often relates to data in another table. table relationships define how rows can be related to each other in the Dataverse model.
 
-Common Data Service provides easy-to-use visual designers to define the different types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table.
+Dataverse provides easy-to-use visual designers to define the different types of relationships from one table to another (or between a table and itself). Each table can have a relationship with more than one table, and each table can have more than one relationship to another table.
 
 ![Account table relationships](media/entity-relationships.png "Account table relationships")
 
@@ -79,20 +79,20 @@ The relationship types are:
 
 - **Many-to-many**: In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
-Because many-to-one relationships are the most common, Common Data Service provides a specific data type named *lookup*, which not only makes it easy to define this relationship but adds productivity to building forms and apps.
+Because many-to-one relationships are the most common, Dataverse provides a specific data type named *lookup*, which not only makes it easy to define this relationship but adds productivity to building forms and apps.
 
 For more information about creating table relationships, see [Create a relationship between tables](/powerapps/maker/common-data-service/data-platform-table-lookup).
 
-Organizations often need to be in compliance with various regulations to ensure the availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations might want to track changes in Common Data Service data for security and analytical purposes.
+Organizations often need to be in compliance with various regulations to ensure the availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations might want to track changes in Dataverse data for security and analytical purposes.
 
-Common Data Service provides an auditing capability where changes to tables and attribute data in an organization can be rowed over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;tables and attributes. Auditing isn't supported on metadata
+Dataverse provides an auditing capability where changes to tables and attribute data in an organization can be rowed over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;tables and attributes. Auditing isn't supported on metadata
 changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](/powerapps/developer/common-data-service/configure-entities-attributes-auditing).
 
-Common Data Service supports analytics by providing the capability to choose tables for machine learning models to run. It has a prebuilt AI capability through AI Builder.
+Dataverse supports analytics by providing the capability to choose tables for machine learning models to run. It has a prebuilt AI capability through AI Builder.
 
 ## Search
 
-Common Data Service provides three ways to query rows:
+Dataverse provides three ways to query rows:
 
 - Relevance search
 
@@ -103,11 +103,11 @@ Common Data Service provides three ways to query rows:
 > [!NOTE]
 > Multi-table quick find is also called *categorized search*.
 
-For more information, see [Compare searches](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#compare-model-driven-apps-in-dynamics-365-searches).
+For more information, see [Compare searches](/powerapps/user/search).
 
 ### Relevance search
 
-Relevance search delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by Azure) to boost search performance.
+Relevance search delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. It uses a dedicated search service external to Dataverse (powered by Azure) to boost search performance.
 
 Relevance search brings the following enhancements and benefits:
 
@@ -125,7 +125,7 @@ For more information about relevance search, see [Using relevance search to sear
 
 ### Quick find
 
-Common Data Service includes the ability to find rows quickly and has approaches that will search just one type of table, such as customer, or be used to search across multiple types of tables at the same time, such as contacts, users, customers, and so on.
+Dataverse includes the ability to find rows quickly and has approaches that will search just one type of table, such as customer, or be used to search across multiple types of tables at the same time, such as contacts, users, customers, and so on.
 
 *Single-table quick find* is used to find rows of only one type. This search option is available from within a view.
 
@@ -136,9 +136,9 @@ rows, but will find them across different types of tables, such as accounts or c
 
 ## Data Lake
 
-Common Data Service supports continuous replication of table data to Azure Data Lake Storage, which can then be used to run analytics such as Power BI reporting, machine learning, data warehousing, and other downstream integration processes.
+Dataverse supports continuous replication of table data to Azure Data Lake Storage, which can then be used to run analytics such as Power BI reporting, machine learning, data warehousing, and other downstream integration processes.
 
-![Common Data Service data replication to Azure Data Lake Storage](media/cds-with-data-lake.png "Common Data Service data replication to Azure Data Lake Storage")
+![Dataverse data replication to Azure Data Lake Storage](media/cds-with-data-lake.png "Dataverse data replication to Azure Data Lake Storage")
 
 This feature is designed for enterprise big-data analytics. It's cost-effective, scalable, has high availability and disaster recovery capabilities, and enables best-in-class analytics performance.
 

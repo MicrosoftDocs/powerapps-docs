@@ -1,17 +1,11 @@
 ---
-title: "tables and metadata in Common Data Service | MicrosoftDocs"
-description: "Learn about tables and metadata in Common Data Service"
+title: "Tables and metadata in Microsoft Dataverse | MicrosoftDocs"
+description: "Learn about tables and metadata in Microsoft Dataverse"
 ms.custom: ""
-ms.date: 05/30/2018
+ms.date: 11/16/2020
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "Mattp123"
 ms.assetid: 88b18946-474c-4c94-8e4c-27532f930757
 caps.latest.revision: 28
@@ -24,17 +18,17 @@ search.app:
   - D365CE
 ---
 
-# Tables and metadata in Common Data Service
+# Tables and metadata in Microsoft Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Common Data Service is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Common Data Service work or you are evaluating what is possible, understanding the metadata used by Common Data Service may provide you insight.
+Dataverse is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Dataverse work or you are evaluating what is possible, understanding the metadata used by Dataverse may provide you insight.
 
-*Metadata* means data about data. Common Data Service provides a flexible platform for you because it is relatively easy to edit the definitions of the data that the environment will use. In Common Data Service, the metadata is a collection of tables. tables describe the kinds of data which is stored in the database.  Each table corresponds to a database table and each column (also known as attribute) within a table represents a column in that table. table metadata is what controls the kinds of rows you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit tables, columns, and table relationships, you are editing this metadata. 
+*Metadata* means data about data. Dataverse provides a flexible platform for you because it is relatively easy to edit the definitions of the data that the environment will use. In Dataverse, the metadata is a collection of tables. tables describe the kinds of data which is stored in the database.  Each table corresponds to a database table and each column (also known as attribute) within a table represents a column in that table. table metadata is what controls the kinds of rows you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit tables, columns, and table relationships, you are editing this metadata. 
   
 Different clients people use to interact with the data in your environment depend on the table metadata and adapt as you customize the metadata. But these clients also depend on other data to control what visual elements to display, any custom logic to apply, and how to apply security. This system data is also stored within tables but the tables themselves are not available for customization.
 
-You can learn about standard tables, attributes, and table relationships included by default in Common Data Service by reviewing the [table Reference](/powerapps/developer/common-data-service/reference/about-table-reference).
+You can learn about standard tables, attributes, and table relationships included by default in Dataverse by reviewing the [entity reference](/powerapps/developer/common-data-service/reference/about-table-reference).
 
 > [!TIP]
 > The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the tables and metadata properties that are found in the system. More information: [Browse the metadata for your environment](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
@@ -43,7 +37,7 @@ You can learn about standard tables, attributes, and table relationships include
 
 ## Create new metadata or use existing metadata?
 
-Common Data Service comes with a number of standard tables that support core business application capabilities. For example, data about your customers or potential customers is intended to be stored using the account or contact tables.  
+Dataverse comes with a number of standard tables that support core business application capabilities. For example, data about your customers or potential customers is intended to be stored using the account or contact tables.  
   
 Each of these tables also contain a number of columns that represent common data that the system may need to store for the respective table.  
   

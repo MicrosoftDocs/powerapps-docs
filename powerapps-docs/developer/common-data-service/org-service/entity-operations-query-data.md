@@ -1,8 +1,8 @@
 ---
-title: "Query data using the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Introduces the different ways to query data using Common Data Service SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Query data using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Introduces the different ways to query data using Microsoft Dataverse SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 12/10/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -41,6 +41,8 @@ Both of these methods will return an <xref:Microsoft.Xrm.Sdk.EntityCollection> t
 
 > [!NOTE]
 > To ensure best performance, each query request can return a maximum of 5000 entity records. To return larger result sets you must request additional pages.
+>
+> All filter conditions for string values are case insensitive.  
 
 ### Null attribute values are not returned
 

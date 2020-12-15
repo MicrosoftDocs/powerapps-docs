@@ -29,7 +29,7 @@ search.app:
   
  Any table relationships that are configured to be displayed can be overridden within the form editor. You can also include navigation links to display web resources or other web sites via form navigation.  
   
- For step-by-step instructions, see [Create and edit table relationships for Common Data Service](../common-data-service/create-edit-entity-relationships.md)  
+ For step-by-step instructions, see [Create and edit table relationships for Microsoft Dataverse](../common-data-service/create-edit-entity-relationships.md)  
   
  To enable editing navigation you must first select **Navigation** from the **Select** group on the **Home** tab of the form designer.  
  

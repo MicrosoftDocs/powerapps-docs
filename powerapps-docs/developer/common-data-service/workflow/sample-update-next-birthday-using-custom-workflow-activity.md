@@ -1,5 +1,5 @@
 ---
-title: "Sample: Update next birthday using a custom workflow activity (Common Data Service) | Microsoft Docs"
+title: "Sample: Update next birthday using a custom workflow activity (Microsoft Dataverse) | Microsoft Docs"
 description: "The sample demonstrates workflow activity returns the next birthday. Use this in a workflow that sends a birthday greeting to a customer. "
 ms.custom: ""
 ms.date: 1/28/2020

@@ -1,5 +1,5 @@
 ---
-title: "Search options in Common Data Service| MicrosoftDocs"
+title: "Search options in Microsoft Dataverse| MicrosoftDocs"
 description: Learn how to to use the different search option
 author: mduelae
 manager: kvivek
@@ -18,9 +18,9 @@ search.app:
   - D365CE
 ---
 
-# Compare search options in Common Data Service
+# Compare search options in Microsoft Dataverse
 
-There are three ways to search rows in Common Data Service:
+There are three ways to search rows in Dataverse:
 
 -   Relevance Search   
   

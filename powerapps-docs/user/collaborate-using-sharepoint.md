@@ -10,8 +10,8 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/02/2020
-ms.author: matp
+ms.date: 12/14/2020
+ms.author: mkaur
 search.audienceType: 
   - maker
 search.app: 
@@ -21,13 +21,16 @@ search.app:
 
 # Collaborate using SharePoint 
 
-With Common Data Service, you can store your documents on SharePoint and manage them from within your app. The documents that you create in your app are stored on SharePoint, and are automatically synced to your desktop and mobile devices.
+With Microsoft Dataverse, you can store your documents on SharePoint and manage them from within your app. The documents that you create in your app are stored on SharePoint, and are automatically synced to your desktop and mobile devices.
 
 Before you can use SharePoint to store documents, it must be enabled by your system administrator. More information:
 
 -   [Find your administrator or support person](find-admin.md)  
 
 -   [Manage your documents using SharePoint](https://docs.microsoft.com/power-platform/admin/manage-documents-using-sharepoint)  
+
+> [!IMPORTANT]
+> SharePoint managed documents that are deleted using a Power Apps or Dynamics 365 customer engagement app are permanently deleted from both the app and the SharePoint site. 
 
 ## Where do you access the documents from?
 
@@ -101,7 +104,7 @@ Before you can use SharePoint to store documents, it must be enabled by your sys
 
 ## Manage SharePoint locations
 
-You can create new or edit existing SharePoint locations from your app in Common Data Service.
+You can create new or edit existing SharePoint locations from your app in Dataverse.
 
 ### Edit a location
 

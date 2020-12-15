@@ -38,7 +38,7 @@ As the volume of data continues to grow, so does the challenge of shaping that
 data into well-structured, actionable information. You want data that’s ready for
 apps, AI workloads, or analytics so that you can quickly turn volumes of
 data into actionable insights. With self-service data prep in the Power Apps
-portal, you can transform and load data to Common Data Service or your organization’s
+portal, you can transform and load data to Microsoft Dataverse or your organization’s
 Azure Data Lake Storage Gen2 account with just a few clicks.
 
 Dataflows were introduced to help organizations unify data from disparate
@@ -64,7 +64,7 @@ of data and its meaning across applications and business processes such as
 Power Apps, Power BI, some Dynamics 365 apps (model-driven apps), and Azure, which store data in conformance with the Common Data Model. A dataflow’s resulting tables can then be stored
 in either of the following:
 
--   **Common Data Service.** Lets you securely store and manage data that's used
+-   **Dataverse.** Lets you securely store and manage data that's used
     by business applications built using Power Apps and Power Automate.
 
 -   **Azure Data Lake Storage Gen2.** Lets you collaborate with people in your
@@ -90,8 +90,8 @@ Once you’ve created and saved a dataflow, you will need to run it in the cloud
 You can choose to trigger a dataflow to run manually or schedule the frequency
 for the Power Platform Dataflow service to run it for you. When a dataflow
 completes a run, its data is available to use. To get dataflow data loaded into
-Common Data Service, the Common Data Service connector can be used in Power Apps,
-Power Automate, Excel, and all other applications that support the Common Data Service
+Dataverse, the Common Data Service connector can be used in Power Apps,
+Power Automate, Excel, and all other applications that support the Dataverse
 connector. To get from dataflows stored in your organization’s Azure Data Lake
 Storage Gen2 account, you can used the Power Platform Dataflow connector in
 Power BI Desktop or access the files directly in the lake.
@@ -103,7 +103,7 @@ section, you get a tour of how dataflows can be used in an organization.
 > [!NOTE]
 > You must have a paid Power Apps plan to use dataflows, but you are not charged separately for using dataflows. 
 
-### Load data to Common Data Service
+### Load data to Dataverse
 Dataflows can be used to populate tables in the [Common Data
 Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
 that are then used in Power Apps applications. With a few clicks, you can
@@ -133,7 +133,7 @@ organization's Azure Data Lake, see [Connect Azure Data Lake Storage Gen2 for da
 ## Summary of self-service data prep for big data in Power Apps
 There are multiple scenarios and examples where dataflows can enable you to get
 better control—and faster insights—from your business data. Other people in
-your organization can leverage dataflows either via Common Data Service, the
+your organization can leverage dataflows either via Dataverse, the
 Power Platform Dataflow connector in Power BI, or via direct access to Dataflow’s
 **Common Data Service** folder in your organization’s Azure Data Lake Storage Gen2
 account. Using a standard data model (schema) defined by the Common Data Model,
@@ -166,7 +166,7 @@ common usage scenarios for dataflows:
 
 -   [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
 
--   [Add data to a table in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
+-   [Add data to a table in Dataverse](https://go.microsoft.com/fwlink/?linkid=2100075)
 
 -   [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
 

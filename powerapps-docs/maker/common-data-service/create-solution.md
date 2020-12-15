@@ -106,7 +106,7 @@ Every app you create or customization you make is part of a solution. Every solu
 The solution publisher indicates who developed the app. For this reason, you should create a solution publisher that is meaningful. You can view the solution publisher for a solution by selecting **Settings** from the **Solutions** area in Power Apps. For more information about the solution publisher, see [Solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher) in the Power Platform ALM guide.
 
 > [!NOTE]
-> The **Common Data Services Default Solution** is associated with the **Common Data Service Default Publisher**. The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items.
+> The **Common Data Services Default Solution** is associated with the **Microsoft Dataverse Default Publisher**. The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items.
 
 ### Create a solution publisher
 1.	In the Power Apps portal, select **Solutions**. 
@@ -142,13 +142,13 @@ For example, imagine that you've created a new custom table that doesn't exist i
   
 2.  Select **New solution** and create a solution. Enter information in the required columns. Select **Create**.  
   
-3.  Open the solution you created. On the command bar, select **Add Existing**, and then select **table**.  
+3.  Open the solution you created. On the command bar, select **Add Existing**, and then select **Entity**.  
   
-4.  In the **Add existing tables** pane, select one or more tables you want to add to the solution. For example, select **Account** and **Custom table**. Select **Next**.  
+4.  In the **Add existing entities** pane, select one or more tables you want to add to the solution. For example, select **Account** and **Custom table**. Select **Next**.  
 
-5.  In the **Select tables** pane, you can choose from the assets to include: 
+5.  In the **Select Entities** pane, you can choose from the assets to include: 
     - **Include all components**. This option includes all components *and* metadata associated with the table. It can include other tables or table components such as business process flows, reports, connections, and queues. 
-    - **Include table metadata**. This option includes *only* the metadata associated with the table. Metadata includes the table attributes, such as auditing, duplicate detection, or change tracking. 
+    - **Include entity metadata**. This option includes *only* the metadata associated with the table. Metadata includes the table attributes, such as auditing, duplicate detection, or change tracking. 
     - **Select components**. This option lets you individually select each component that’s associated with the table, such as columns, relationships, business rules, views, forms, and charts. 
     - Don't include any components. 
 
@@ -181,7 +181,7 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
   
  ![Start the wizard.](media/solution-segmentation-wizard-starts-admin.png "Start the wizard.")  
   
- Open the **Columns** tab and select the **Account Number** column.  
+ Open the **Fields** tab and select the **Account Number** column.  
   
  ![Select the Account table assets.](media/solution-segmentation-select-account-assets-admin.png "Select the Account table assets.")  
   

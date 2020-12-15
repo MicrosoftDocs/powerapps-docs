@@ -22,7 +22,7 @@ search.app:
 
 You can customize the Teams experience by adding Power Apps canvas apps to your channels in Teams using the **PowerApps** tab. In this topic, you learn how to add the Product Showcase sample app to a Teams channel, and then open the app from that channel. 
 
-![App embedded in Microsoft Teams](../user/media/open-app-embedded-in-teams/embedded-app.png)
+![App embedded in Microsoft Teams](media/open-app-embedded-in-teams/embedded-app.png "App embedded in Microsoft Teams")
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin.
 
@@ -38,23 +38,23 @@ Sign into Power Apps at [https://make.powerapps.com](https://make.powerapps.com?
 
 1. In Microsoft Teams, select a team, and a channel under that team. In this example, it's the **General** channel under the **Business Development** team.
 
-    ![](../user/media/open-app-embedded-in-teams/teams-select-channel.png)
+    ![Select General channel](media/open-app-embedded-in-teams/teams-select-channel.png "Select General channel")
 
 2. Choose **+** to add a tab.
 
-    ![](../user/media/open-app-embedded-in-teams/teams-add-tab.png)
+    ![Select +](media/open-app-embedded-in-teams/teams-add-tab.png "Select +")
 
-3. In the **Add a tab** dialog box, choose **PowerApps**.
+3. In the **Add a tab** dialog box, choose **Power Apps**.
 
-    ![](../user/media/open-app-embedded-in-teams/add-a-tab.png)
+    ![Select Add a tab](media/open-app-embedded-in-teams/add-a-tab.png "Select Add a tab")
 
 4. Choose **Sample apps** > **Product Showcase** > **Save**.
 
-    ![](../user/media/open-app-embedded-in-teams/select-an-app.png)
+    ![Select Product Showcase and Save](media/open-app-embedded-in-teams/select-an-app.png "Select Product Showcase and Save")
 
     The app is now available to use in the channel.
 
-    ![](../user/media/open-app-embedded-in-teams/app-in-channel.png)
+    ![App shows up in channel](media/open-app-embedded-in-teams/app-in-channel.png "App shows up in channel")
 
 > [!NOTE]
 > You must [share](../maker/canvas-apps/share-app.md) your own apps before you add them to Teams (sample apps are shared by default).
@@ -63,15 +63,15 @@ Sign into Power Apps at [https://make.powerapps.com](https://make.powerapps.com?
 
 1. In Microsoft Teams, choose the team and the channel that contains the app.
 
-    ![](../user/media/open-app-embedded-in-teams/teams-select-channel.png)
+    ![Select General in Teams under your team](media/open-app-embedded-in-teams/teams-select-channel.png "Select General in Teams under your team")
 
 2. Choose the **Product Showcase** tab.
 
-    ![](../user/media/open-app-embedded-in-teams/open-tab.png)
+    ![Select Product Showcase tab](media/open-app-embedded-in-teams/open-tab.png "Select Product Showcase tab")
 
     The app opens in the channel.
 
-    ![](../user/media/open-app-embedded-in-teams/app-in-channel.png)
+    ![App opens](media/open-app-embedded-in-teams/app-in-channel.png "App opens")
 
 ## Known issues
 
@@ -84,5 +84,3 @@ In the desktop app for Microsoft Teams:
 ## Clean up resources
 
 To remove the app from the channel, choose the **Product Showcase** tab > **Remove**.
-
-

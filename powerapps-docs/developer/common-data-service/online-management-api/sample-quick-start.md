@@ -1,6 +1,6 @@
 ---
-title: "Quick Start Sample: Retrieve Common Data Service environements using Online Management API| MicrosoftDocs"
-description: "The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environments from your Microsoft 365 tenant."
+title: "Quick Start Sample: Retrieve Microsoft Dataverse environements using Online Management API| MicrosoftDocs"
+description: "The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Microsoft Dataverse environments from your Microsoft 365 tenant."
 ms.date: 10/01/2019
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,9 +13,12 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Quick Start Sample: Retrieve Common Data Service environments using Online Management API 
+# Quick Start Sample: Retrieve Microsoft Dataverse environments using Online Management API 
 
-The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environments from your Microsoft 365 tenant.
+> [!NOTE]
+> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated).
+
+The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Dataverse environments from your Microsoft 365 tenant.
 
 The sample uses the authentication [helper code](sample-authentication-helper.md) to easily authenticate to Online Management API using the OAuth 2.0 protocol and pass in the access token in header of your request.
 

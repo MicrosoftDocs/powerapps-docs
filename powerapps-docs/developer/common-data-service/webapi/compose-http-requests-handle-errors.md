@@ -1,5 +1,5 @@
 ---
-title: "Compose HTTP requests and handle errors (Common Data Service)| Microsoft Docs"
+title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
 ms.custom: ""
 ms.date: 09/08/2020
@@ -119,7 +119,7 @@ You can use additional headers to enable specific capabilities.
 
 ## Identify status codes
 
- Whether an http request succeeds or fails, the response will include a status code. Status codes returned by the Common Data Service Web API include the following.  
+ Whether an http request succeeds or fails, the response will include a status code. Status codes returned by the Microsoft Dataverse Web API include the following.  
   
 |Code|Description|Type|  
 |----------|-----------------|----------|  

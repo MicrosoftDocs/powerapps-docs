@@ -31,7 +31,7 @@ Model-driven apps have a number of capabilities that allow customers to surface 
   
  In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instances.  Additionally, users can run as many reports as they need whenever they want to run them to meet business goals.  We do not place time restrictions on reports.  
   
- The reporting capabilities built in to Common Data Service are designed to let users run reports on datasets that span shorter periods of time. Considering this, note the following fixed settings:  
+ The reporting capabilities built in to Microsoft Dataverse are designed to let users run reports on datasets that span shorter periods of time. Considering this, note the following fixed settings:  
   
 - Reports and queries can execute for up to five minutes. When the maximum period is reached, the report will time out and a message is returned to the user. Within the five-minute duration, reports and queries are allowed to span large datasets that are beyond 50,000 rows, which provides significant flexibility to satisfy most operational reporting needs.  
   
@@ -54,11 +54,11 @@ Model-driven apps have a number of capabilities that allow customers to surface 
   
 - When appropriate for your business, users should run the default (out-of-the-box) reports and dashboards. These reports and dashboards are typically designed to query per user datasets, so in most cases will not exceed the dataset limit.  
   
-  If users must run reports that exceed these settings, we recommend that you review the following options for assistance with complex reporting needs. Both options effectively offload reporting workloads from Common Data Service to another datastore by using a data integration solution.  
+  If users must run reports that exceed these settings, we recommend that you review the following options for assistance with complex reporting needs. Both options effectively offload reporting workloads from Dataverse to another datastore by using a data integration solution.  
   
 - [Adapters](reporting-considerations.md#BKMK_ThirdPartyAdapt) are used in conjunction with SQL Server Integration Services (SSIS) to extend the capabilities for integration with your apps data.  
   
-- Extract transform load [(ETL) tools](reporting-considerations.md#BKMK_ETL) provide a new tool set for creating analysis of data by combining multiple data sources or extracting data to the data warehouse solution if SSIS is not in use. ETL tools provide comprehensive solutions for connecting with common data service to move data.  
+- Extract transform load [(ETL) tools](reporting-considerations.md#BKMK_ETL) provide a new tool set for creating analysis of data by combining multiple data sources or extracting data to the data warehouse solution if SSIS is not in use. ETL tools provide comprehensive solutions for connecting with Dataverse to move data.  
   
 > [!IMPORTANT]
 >  When you use these tools, we recommend you move or synchronize data during nonbusiness hours.  
