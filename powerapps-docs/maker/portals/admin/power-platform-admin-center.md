@@ -79,20 +79,25 @@ The following table describes the different types of portals that are listed in 
 
 ### Portal status
 
-A portal can have the following status: *Configured*, *Suspended*, or *Not-configured*. The following table describes each state.
+A portal can have the following status: *Configured*, *Suspended*, or *Not configured*. The following table describes each state.
 
 | Status         |  Description    |
 |----------------|-----------------|
 | Configured     | This portal has been configured to an environment.     |
 | Suspended      | This portal has been suspended because its trial period is over. It will be deleted in seven days, unless it's converted to a production portal. |
-| Not-configured | This portal is ready to be configured to an environment.   |
+| Not configured | This portal is ready to be configured to an environment.   |
 
 > [!NOTE]
-> You can [create a new portal](../provision-portal-add-on.md) if the portal add-on status is *Not-configured*. The status will change to *Configured* after the portal is provisioned.
+> You can [create a new portal](../provision-portal-add-on.md) if the portal add-on status is *Not configured*. The status will change to *Configured* after the portal is provisioned.
 
 ## Update the Power Apps portal solution
 
-A Power Apps portal consists of solutions from different packages in an environment. You can use the Power Platform admin center to view the details of packages (such as the version details), and update them if a package with a higher version is available for the selected portal.
+A Power Apps portal consists of solutions from different packages in an environment.
+
+Use Power Platform admin center to:
+
+- View the details of installed packages (such as the version details).
+- If a package with a higher version is available, update them for the selected portal.
 
 > [!IMPORTANT]
 > - Package upgrade may take some time. While the upgrade is in progress, you can see some instability in your portal. Hence, upgrade the packages during off-peak hours.
@@ -122,7 +127,7 @@ To view the portals package details:
 
 ### Update portals package
 
-You can use Power Platform admin center to upgrade portal packages. Two methods are available depending on whether you want to review the updates for an environment, or for a tenant.
+You can use Power Platform admin center to upgrade portal packages. Choose to upgrade based on selected environment, or from the list of portals for a tenant.
 
 > [!NOTE]
 > In addition to the methods listed below, you'll also see a notification when you edit the portal using the portals Studio if an upgrade package is available.
@@ -131,7 +136,7 @@ You can use Power Platform admin center to upgrade portal packages. Two methods 
 
 1. Select a [portal for your environment](#manage-all-portals-for-an-environment).
 
-1. Select **Upgrade now** from the notification on the top of the page, if an update is available. You can also check for the notification from the [package details](#view-portals-package-details) page.
+1. Select **Upgrade now** from the notification on the top of the page if an update is available. You can also check for the notification from the [package details](#view-portals-package-details) page.
 
 #### Method 2: Update portals packages using the portals list for a tenant
 
