@@ -27,10 +27,10 @@ Power Apps portals Studio simplifies the configuration of webpage access permiss
 <a name="manage-page-permissions-using-portals-studio"></a>
 ## Manage page permissions with Power Apps portals Studio
 
-Not only can you use Power Apps portals Studio to customize your portal, you can manage page permissions quickly and efficiently.
+Not only can you use portals Studio to customize your portal, you can manage page permissions quickly and efficiently.
 
 <!--markdownlint-disable MD036-->
-**To get started with managing page permissions using Power Apps portals Studio**
+**To get started with managing page permissions using portals Studio**
 
 1. Go to [Power Apps](https://make.powerapps.com).
 
@@ -40,7 +40,7 @@ Not only can you use Power Apps portals Studio to customize your portal, you can
 
 1. Select your portal.
 
-1. Select **Edit** to open the portal in Power Apps portals Studio.
+1. Select **Edit** to open the portal in portals Studio.
 
     ![Edit portal](media/webpage-access-control/edit-portal.png "Edit portal")
 
@@ -48,7 +48,7 @@ Not only can you use Power Apps portals Studio to customize your portal, you can
 
 1. Select the page that you want to manage permissions for.
 
-    ![Select a page in Power Apps portals Studio](media/webpage-access-control/select-page.png "Select a page in Power Apps portals Studio")
+    ![Select a page in portals Studio](media/webpage-access-control/select-page.png "Select a page in portals Studio")
 
 1. On the **Component** pane, expand **Permissions**.
 
