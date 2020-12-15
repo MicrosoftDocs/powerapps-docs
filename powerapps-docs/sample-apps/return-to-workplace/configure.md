@@ -267,7 +267,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
 2. Enter the appropriate values in the fields.
 
    > [!div class="mx-imgBorder"]
-   > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
+   > ![Solution settings form](media/solution-admin-new-setting-24hr.png "Solution settings form")
 
    
    | **Column**              | **Description**                                |
@@ -280,6 +280,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
    | Allow QR codes | Enables QR code on the pass in the Employee app and Employee portal.  |
    | Allow Guest Registrations | Enables employees to register guests on their bookings in the Employee app.  |
    | Allow Share Guest Registrations | Enables employees to share passes with guests. |
+   | Use 24-Hour Format | Switches between 24 or 12 hour time format on the passes. | 
    | Health & Safety email | Email address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
    | Health & Safety Instructions | General instructions provided to employee in the Employee app when access is blocked by the case manager. |
    | General Terms & Agreement | Shown in the Employee app during the booking process. |
