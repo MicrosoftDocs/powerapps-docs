@@ -91,24 +91,24 @@ On the home screen you have several options:
 To create a guest pass using the portal: 
 
 1. Sign in to the portal.
-1. On the home screen, select **CREATE PASS**.
-1. Select the guest name.
-1. From the list of available facilities, select the facility and then select **NEXT**.
+2. On the home screen, select **CREATE PASS**.
+3. Select the guest name.
+4. From the list of available facilities, select the facility and then select **NEXT**. Notice that you are not able to click on closed facilities.
 
    > [!div class="mx-imgBorder"]
    > ![Create pass](media/portals-facility.png "Create pass")
 
-1. **Accept** the disclaimers on the **Take the daily health check** screen.
+5. **Accept** the disclaimers on the **Take the daily health check** screen.
 
     > [!div class="mx-imgBorder"]
     > ![Accept disclaimers](media/portals-disclaimer.png "Accept disclaimer")
 
-1. Select **I AGREE** if you don't have any symptoms.
+6. Select **I AGREE** if you don't have any symptoms.
 
    > [!div class="mx-imgBorder"]
    > ![Agree terms](media/portals-attestation.png "Agree terms")
 
-1. A pass is generated for the guest/dependent for that day.
+7. A pass is generated for the guest/dependent for that day.
 
    > [!div class="mx-imgBorder"]
    > ![Pass generation](media/portals-own-pass.png "Pass generation")
