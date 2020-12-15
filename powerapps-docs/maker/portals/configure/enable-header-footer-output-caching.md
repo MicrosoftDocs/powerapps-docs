@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/02/2020
+ms.date: 12/10/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -30,7 +30,7 @@ For a user who upgraded to a newer version of portals, output caching is disable
 1. Open the [Portal Management app](configure-portal.md).
 2. Go to **Portals** > **Web Templates**.
 3. Open the Header web template.
-4. In the **Source** field, do the following:
+4. Update the code in the **Source** field:
     - Find the following code and update it:
     
         **Existing code**
@@ -147,16 +147,8 @@ For a user who upgraded to a newer version of portals, output caching is disable
 1. Open the [Portal Management app](configure-portal.md).
 2. Go to **Portals** > **Web Templates**.
 3. Open the Languages Dropdown web template.
-4. In the **Source** field, find the following code and update it:
+4. In the **Source** field, find the following code, and ensure that the `language` object uses `url.substitution` attribute instead of `url`:
     
-    **Existing code**
-
-    ```
-    <a href=/{{ language.url }} title={{ language.name }} data-code={{ language.code }}>{{ language.name }}</a>
-    ```
-
-    **Updated code**
-
     ```
     <a href=/{{ language.url_substitution }} title={{ language.name }} data-code={{ language.code }}>{{ language.name }}</a>
     ```

@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the various ways to query Microsoft Dataverse data using the Dataverse Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 12/04/2019
+ms.date: 12/10/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -217,7 +217,9 @@ GET [Organization URI]/api/data/v9.1/accounts?$select=name,revenue
 |`( )`|Precedence grouping|`(contains(name,'sample') or contains(name,'test')) and revenue gt 5000`|  
   
 > [!NOTE]
->  This is a sub-set of the [11.2.5.1.1 Built-in Filter Operations](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). Arithmetic operators and the comparison has operator are not supported in the Web API.  
+>  This is a sub-set of the [11.2.5.1.1 Built-in Filter Operations](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). Arithmetic operators and the comparison has operator are not supported in the Web API.
+>
+> All filter conditions for string values are case insensitive.  
   
 <a name="bkmk_buildInQueryFunctions"></a>
 
