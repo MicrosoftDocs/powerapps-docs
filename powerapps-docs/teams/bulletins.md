@@ -38,8 +38,8 @@ The Bulletins app solution consists of two apps.
     - Shows bulletins, FAQs, links, and contacts created using the **Manage bulletins** app.
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 

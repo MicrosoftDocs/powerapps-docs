@@ -28,8 +28,8 @@ Benefits of using the Milestones app:
 - Configure work item categories, priorities, and status options.
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
