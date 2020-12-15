@@ -141,6 +141,11 @@ With the introduction of version 1.3, we implemented notifications to notify emp
 
 The Power BI Dashboards now contain information about the activities in the Return to the Workplace portal. We also implemented county / state level details for United States to get a more detailed view of the virus spread. More information: [Location Readiness dashboard](dashboard-for-executive-leadership.md)
 
+## Upgrade from version 1.3 to 1.4
+
+### Step 1: Configure the solution settings
+
+A new option to switch between a 12-Hour or 24-Hour time format for Employee Passes is introduced in the solution settings. For more information: [Configure the solution](configure.md#set-solution-settings)
 
 ## Give feedback about the solution
 
