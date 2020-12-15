@@ -20,6 +20,8 @@
       href: use-xrm-tooling-delete-data.md
     - name: Use messages with the ExecuteCrmOrganizationRequest method
       href: use-messages-executecrmorganizationrequest-method.md
+    - name: Use XRM tooling to execute a web request against web API
+      href: use-xrm-tooling-to-execute-web-request.md
   - name: Use the XRM tooling common login control in your client applications
     href: use-xrm-tooling-common-login-control-client-applications.md
   - name: Configure tracing for XRM tooling
