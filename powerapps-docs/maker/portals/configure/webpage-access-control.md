@@ -5,24 +5,24 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/24/2020
+ms.date: 12/14/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
 # Manage page permissions
 
-You use page permissions to control user access to portal webpages. For example, you can allow pages to be available anonymously for public access, or restrict access to users who have specific roles. Depending on business requirements, you can manage the inheritance of page permissions from a parent page to a child page. A page can have child [web files](web-files.md)&mdash;such as downloadable documents, CSS files, or JS files&mdash;and you can also manage the inheritance of page permissions from the page to such child web files.<!--note from editor: Edits suggested. -->
+You use page permissions to control user access to portal webpages. For example, you can allow pages to be available anonymously for public access, or restrict access to users who have specific roles. Depending on business requirements, you can manage the inheritance of page permissions from a parent page to a child page. A page can have child [web files](web-files.md)&mdash;such as downloadable documents, CSS files, or JS files&mdash;and you can also manage the inheritance of page permissions from the page to such child web files.
 
 You can manage page permissions in two ways:
 
 - [Power Apps portals Studio](#manage-page-permissions-using-portals-studio)
 - [Portal Management app](#manage-page-permissions-using-portal-management-app)
 
-Power Apps portals Studio simplifies the configuration of webpage access permissions compared to using the Portal Management app, and is the recommended method. Managing page permissions with the Portal Management app is accomplished by setting *webpage access control rules*. You can also set these webpage access control rules by using Power Apps portals Studio, but you must use the Portal Management app to manage page permissions for legacy areas.<!--note from editor: Will the reader know what "legacy areas" means? -->  
+Power Apps portals Studio simplifies the configuration of webpage access permissions compared to using the Portal Management app, and is the recommended method. Managing page permissions with the Portal Management app is accomplished by setting *webpage access control rules*. You can also set these webpage access control rules by using portals Studio, but you must use the Portal Management app to manage page permissions for other areas that can't be managed using portals Studio.
 
 > [!NOTE]
-> Managing page permissions with Power Apps portals Studio applies only to [Restrict Read](#restrict-read) permissions, which control access to pages by users. To manage [Grant Change](#grant-change) permissions for managing and publishing content pages with the legacy portal content editor, use the [Portal Management app](#manage-page-permissions-using-portal-management-app).<!--note from editor: I think you want to explain the difference between the two methods in the introduction rather than folding some of it under the discussion of portals Studio. These edits are suggested, to consolidate and streamline the info.-->
+> Managing page permissions with portals Studio applies only to [Restrict Read](#restrict-read) permissions, which control access to pages by users. To manage [Grant Change](#grant-change) permissions for managing and publishing content pages with the legacy portal content editor, use the [Portal Management app](#manage-page-permissions-using-portal-management-app).
 
 <a name="manage-page-permissions-using-portals-studio"></a>
 ## Manage page permissions with Power Apps portals Studio
@@ -78,11 +78,11 @@ Use **Select roles** to choose which roles will be allowed to access the page. O
 
 Any role with the [**Anonymous Users** role](create-web-roles.md#attributes-and-relationships) set to **Yes** is excluded from the list of roles that you can select for restricting access to a page.
 
-If the Portal Management app is used<!--note from editor: I find the present tense a bit confusing here. Should it be "was used...", or are we switching here from Power Apps portals Studio to the Portal Management app? And if so, is the following alert UI from Power Apps portals Studio or from the Portal Management app? (Also, please verify my changes to alt text. Because you talk about the alert later, we should tell people with low vision what it says.)--> to configure this role for the selected page, an alert is shown for the applicable role when you manage the page permissions.
+If the Portal Management app was used to configure this role for the selected page, an alert is shown for the applicable role when you manage the page permissions.
 
 ![Alert: Anonymous Users role should not be assigned directly to web pages](media/webpage-access-control/anonymous-users.png "Alert: Anonymous Users role should not be assigned directly to web pages")
 
-If this alert appears, change the permissions, because roles with **Anonymous Users Role** set to **Yes** can't be assigned directly to users.<!--note from editor: Will the reader know how and where to "change the permissions"?-->
+If this alert appears, change the permissions, because roles with **Anonymous Users Role** set to **Yes** can't be assigned directly to users.
 
 #### Permissions apply to child files
 
@@ -95,7 +95,7 @@ When **Permissions apply to child files** is set to **On**, the child [web files
 
 #### Restriction in page hierarchy
 
-When a page is set to **Off** for **Page available to everyone**, a lock icon ![lock icon](media/webpage-access-control/lock-icon.png )appears next to it in the list of pages to signify that the page has restrictions.<!--note from editor: Icon suggested; what do you think?-->
+When a page is set to **Off** for **Page available to everyone**, a lock icon ![Lock icon](media/webpage-access-control/lock-icon.png "Lock icon")appears next to it in the list of pages to signify that the page has restrictions.
 
 ![Restricted access - lock icon](media/webpage-access-control/restricted-lock.png "Restricted access - lock icon")
 
@@ -105,7 +105,7 @@ A child page can inherit permissions from the parent page, or it can be configur
 
 #### Inherit permissions from a parent page
 
-When the **Permissions** section shows **Inherit parent page permissions** for a selected child page, that page has a parent page with **Page available to everyone** set to **Off**.<!--note from editor: Suggested.-->
+**Permissions** section shows **Inherit parent page permissions** when a child page is selected that has the parent page with **Page available to everyone** set to **Off**.
 
 ![Inherit permissions](media/webpage-access-control/inherit-permissions.png "Inherit permissions")
 
@@ -113,7 +113,7 @@ By default, every child page has **Inherit parent page permissions** set to **On
 
 #### Configure child page with unique permissions
 
-When a child page has **Inherit parent page permissions** set to **Off**, the child page&mdash;and the pages that this child page is a parent of&mdash;aren't available to the users who have the roles that have been given access to the parent page.<!--note from editor: Edit okay? This was a bit twisty to me.-->
+When a child page has **Inherit parent page permissions** set to **Off**, the child page&mdash;and the pages that this child page is a parent of&mdash;aren't available to the users from the selected roles for the parent page access.
 
 ![Unique permissions for a child page](media/webpage-access-control/unique-child-permissions.png "Unique permissions for a child page")
 
@@ -127,7 +127,7 @@ When **Permissions apply to child files** is set to **On**, the child [web files
 
 ### The effect of subpage changes on permissions
 
-A page can be promoted to a higher level in the page hierarchy, or made a subpage to a lower level in page hierarchy. The effects these actions have on permissions are as follows:<!--note from editor: Suggest using bullets to show that the next two statements are closely related.-->
+A page can be promoted to a higher level in the page hierarchy, or made a subpage to a lower level in page hierarchy. The effects these actions have on permissions are as follows:
 
 - If a page is made a subpage, the page inherits permissions from its new parent.
 
@@ -138,7 +138,7 @@ A page can be promoted to a higher level in the page hierarchy, or made a subpag
 <a name="manage-page-permissions-using-portal-management-app"></a>
 ## Manage page permissions with the Portal Management app
 
-Using the Portal Management app, you can manage page permissions through webpage access control rules. These rules allow you to control the publishing actions that a web role can perform across the pages of your website. Also, you can control which pages are visible to which web roles.<!--note from editor: Is there a reason to use "web role" here, but "role" in the previous section? If there's no difference, please use one or the other throughout.-->
+Using the Portal Management app, you can manage page permissions through webpage access control rules. These rules allow you to control the publishing actions that a web role can perform across the pages of your website. Also, you can control which pages are visible to which web roles.
 
 ### Webpage access control rules
 
@@ -166,10 +166,10 @@ Using the Portal Management app, you can manage page permissions through webpage
     |    Name     |                                                                                                                                                                  Description                                                                                                                                                                   |
     |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |    Name     |                                                                                                                                                        A descriptive name for the rule.                                                                                                                                                        |
-    |   Website   |                                                                                                           The website that this rule applies to; this must match the website of the page to which this rule is applied. This field filters the Web Page field.<!--note from editor: Edit okay? I'm not sure what this meant.-->                                                                                                           |
+    |   Website   |                                                                                                           The website that this rule applies to; this must match the website of the page to which this rule is applied.                                                                                                        |
     |  Web Page   |                            The webpage that this rule applies to. The rule will affect not only this page but all of its child pages, making this attribute select the branch of the website to which the rule will apply. If the rule is applied to the home page, it will apply to the entire portal.                            |
     |    Right    |                                                                                                                                    [Grant change](#grant-change) or [Restrict read](#restrict-read)                                                                                                                                      |
-    |    Scope    | <ul><li><strong>All content</strong>: All descendant content is included in security validation.</li><li><strong>Exclude direct child web files</strong>: All child web files directly related to this webpage are excluded from security validation. This option doesn't exclude the descendants of the child web file.<!--note from editor: Edit okay?--></li></ul>By default, **All content** is selected. |
+    |    Scope    | <ul><li><strong>All content</strong>: All descendant content is included in security validation.</li><li><strong>Exclude direct child web files</strong>: All child web files directly related to this webpage are excluded from security validation. This option doesn't exclude the descendants of the child web file.</li></ul>By default, **All content** is selected. |
     | Description |                                                                                                                                                     (Optional) A description of the rule.                                                                                                                                                      |
 
 1. Select **Save & Close**.
@@ -196,11 +196,11 @@ There are two types of access control rules: **Grant Change** and **Restrict Rea
 
 #### Grant Change
 
-Use a **Grant Change** rule to allow a user who has the web role associated with the rule to publish content changes for this page, and all child pages of this page. **Grant Change** rules take precedence over **Restrict Read** rules.<!--note from editor: Edit assumes that you can have more than one Grant Change and more than one Restrict Read rule. If that's not the case, then the first sentence of this paragraph should be "Use the **Grant Change** rule..."-->
+Use a **Grant Change** rule to allow a user who has the web role associated with the rule to publish content changes for this page, and all child pages of this page. **Grant Change** rules take precedence over **Restrict Read** rules.
 
 For example, you have a news branch in your site, which you want to be editable by users who have the news editor web role. These users might not have access to the entire site, and certainly can't edit the entire site, but within this branch you want them to have full content publishing authority. You'd create a webpage access control rule called "grant news publishing to news editors."
 
-Next, you set **Right** to **Grant Change** and **Web Page** to the parent page of the entire news branch of your site.<!--note from editor: Edit okay? I'm going off the image of the UI here.--> You then assign this web role to any users you want to designate as news editors. (One user can have many web roles.)
+Next, you set **Right** to **Grant Change** and **Web Page** to the parent page of the entire news branch of your site. You then assign this web role to any users you want to designate as news editors. (One user can have many web roles.)
 
 A **Grant Change** rule should always be present in any portal that you want to enable front-side editing for. This rule will apply to the home page of the site, making it the default rule for the entire site. This rule will be associated with a web role that is to represent the administrative role for the site. Users who are to be given front-side content publishing rights will be assigned to this role.
 
