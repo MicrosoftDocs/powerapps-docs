@@ -22,7 +22,7 @@ This article provides resources where you can learn about the new features that 
 
 ### Workplace care management app
 
-- On the exposures tab of an Employee Case, the Employee Attestation lookup now only shows postive 'Yes' attestations to link to the case.
+- On the exposures tab of an Employee Case, the Employee Attestation lookup now only shows positive 'Yes' attestations to link to the case.
 
 ### Return to the Workplace Portal
 
