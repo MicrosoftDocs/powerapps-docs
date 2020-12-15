@@ -10,7 +10,9 @@ ms.author: namarwah
 ms.reviewer: tapanm
 ---
 
-# Milestones sample app
+# Milestones sample app (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 In this tutorial, you'll learn about configuring, and using the **Milestones** sample app.
 
@@ -24,6 +26,10 @@ Benefits of using the Milestones app:
 - Assign work items to employees.
 - Classify work items by milestones.
 - Configure work item categories, priorities, and status options.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 

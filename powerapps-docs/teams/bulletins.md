@@ -10,7 +10,9 @@ ms.author: namarwah
 ms.reviewer: tapanm
 ---
 
-# Bulletins sample app
+# Bulletins sample app (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 In this tutorial, you'll learn about configuring, and using the **Bulletins** sample app.
 
@@ -34,6 +36,10 @@ The Bulletins app solution consists of two apps.
 
     - Central location for all company communication such as memos, broadcasts, and news.
     - Shows bulletins, FAQs, links, and contacts created using the **Manage bulletins** app.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
