@@ -369,9 +369,9 @@ More information: [Publish and add an app to Teams](publish-and-share-apps.md)
 ### See also
 
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Bulletins sample apps](bulletins.md)
+- [Bulletins (Preview) sample apps](bulletins.md)
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
+- [Milestones (Preview) sample app](milestones.md)
 - [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

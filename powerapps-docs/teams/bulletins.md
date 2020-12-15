@@ -444,4 +444,4 @@ To view links, and contacts:
 - [Employee ideas sample app](employee-ideas.md)  
 - [Inspection sample apps](inspection.md)  
 - [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
+- [Milestones (Preview) sample app](milestones.md)
