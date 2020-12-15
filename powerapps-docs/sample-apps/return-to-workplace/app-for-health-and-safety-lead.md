@@ -261,6 +261,9 @@ To link an employee attestation record to a case:
 3. Use the lookup to search for the attestation records for the employee under investigation.
 4. Select the applicable employee attestation records and then select **Add**.
 
+  > [!div class="mx-imgBorder"]
+  > ![Deactivate employee case](media/health-safety-linkedrecord.png "Linked Record")
+
 The employee attestation record is now linked to the case record. This triggers the background suggestion process that creates case contact suggestions that can assist in the manual contact tracing procedure.
 
 Each employee attestation record can only be linked to a single case record. If the duplicate detection rules have been set up, there can also be only one active case per employee. This prevents duplicate work.
