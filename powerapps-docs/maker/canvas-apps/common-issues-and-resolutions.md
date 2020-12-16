@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 09/22/2020
+ms.date: 12/15/2020
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -17,6 +17,11 @@ search.app:
 # Common issues and resolutions for Power Apps
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
+
+1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
+<br> A pop-up dialog will show the following message in this situation: <br>
+  `Upgrade browser to use Dropbox`
+<br> When this happens, consider using web player on Windows platform.
 
 1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
    When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, please use your browser.

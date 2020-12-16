@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/03/2020
+ms.date: 12/15/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -24,24 +24,40 @@ The following table lists different administrative tasks for portals, and the ro
 
 | Task | Required roles |
 | - | - |
-| [Create portal](..\create-portal.md) | Any one of the following roles and permissions: <ul> <li> [Permissions to register an app](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#permissions-required-for-registering-an-app) in the Azure Active Directory, and any one of the following roles with **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** for the [user record](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles#create-a-read-write-user-account) in Power Platform environment: <ul> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> </ul> **Note**: Creating a portal is allowed with these roles only if Global administrator hasn't [disabled portal creation](../create-portal.md#disable-portal-creation-in-a-tenant) in a tenant.</li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Add a custom domain name](add-custom-domain.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul>   |
+| [Change the Dynamics 365 instance of an add-on portal](change-dynamics-instance.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Connect to a Microsoft Dataverse environment using a portal](manage-auth-key.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Convert an existing portal to a capacity-based model](portal-lifecycle.md#convert-an-existing-portal-to-a-capacity-based-model) |  [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Convert a portal from trial to production](portal-lifecycle.md#convert-a-portal-from-trial-to-production) | [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Create portal](..\create-portal.md) | Required roles and permissions in **Azure Active Directory**: <ul> <li> Is [portal creation disabled](../create-portal.md#disable-portal-creation-in-a-tenant) in tenant? </li> <ul> <li> If **No** - [Permissions to register an app](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#permissions-required-for-registering-an-app) in the Azure Active Directory required. </li> <li> If **Yes** - Only [Global administrator](#global-administrator) can create a portal. </ul> </ul> <br> Required roles and permissions in **Power Platform** (both required): <ul> <li> User account with [Read-Write Access Mode](#read-write-access-mode). </li> <li> And [System administrator](#system-administrator) role. </li> </ul> <ul>   |
 | [Download public key of a portal](get-public-key.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Import metadata translation](import-metadata-translation.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
-| [View portal error logs](view-portal-error-log.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Reset a portal](reset-portal.md) | [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
-| [Convert a portal from trial to production](portal-lifecycle.md#convert-a-portal-from-trial-to-production) | [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
-| [Convert an existing portal to a capacity-based model](portal-lifecycle.md#convert-an-existing-portal-to-a-capacity-based-model) |  [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
-| [Add a custom domain name](add-custom-domain.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul>   |
-| [Connect to a Microsoft Dataverse environment using a portal](manage-auth-key.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
-| [Change the Dynamics 365 instance of a portal](change-dynamics-instance.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Update Dynamics 365 instance of a portal](power-platform-admin-center.md#update-dynamics-365-instance-for-your-portal) | User account with [Read-Write Access Mode](#read-write-access-mode), and any one of the following: <ul> <li> [System administrator](#system-administrator), and [Portal app owner](#portal-app-owner) </li> <li> Or, [Global administrator](#global-administrator) </li> </ul> |
+| [Update portal packages](power-platform-admin-center.md#update-the-power-apps-portal-solution) | User account with [Read-Write Access Mode](#read-write-access-mode), and [System administrator](#system-administrator) |
+| [View portal error logs](view-portal-error-log.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 
 ## Manage membership of the required roles
 
 This section explains about managing the membership of the required roles listed above for different kinds of administrative tasks in Power Apps portals.
 
+### Dynamics 365 administrator
+
+Dynamics 365 administrator is a Power Platform service admin role. This role can do admin functions on Power Platform because they have the system admin role.
+
+To assign a user the Dynamics 365 administrator role, go to [Assign a service admin role to a user](https://docs.microsoft.com/power-platform/admin/use-service-admin-role-manage-tenant#assign-a-service-admin-role-to-a-user).
+
+### Global administrator
+
+Global administrator is a Microsoft 365 admin role. A person who purchases the Microsoft business subscription is a global administrator. A global administrator has unlimited control over products in the subscription and access to most data.
+
+To assign a user the global administrator role, go to [Assign admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide&preserve-view=true).
+
+More information: [About admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true)
+
 ### Portal app owner
 
-Portal app owner is a user who owns [portal application registration](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-ap) in the [Azure portal](https://portal.azure.com)
+Portal app owner is a user who owns [portal application registration](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-ap) in the [Azure portal](https://portal.azure.com).
 
 To add an app owner for the portal app in Azure portal:
 
@@ -67,37 +83,27 @@ The user is added as an owner of the portal app.
 
 Portal owner is the user that created the Power Apps portal. This role can't be managed, and can't be changed.
 
-### System customizer
+### Read-Write Access Mode
 
-System customizer is a Power Platform security role. This role has full permissions to customize Power Platform environment.
-
-To assign a user the System administrator Power Platform role, read [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
+A user account in Power Platform with **Access Mode** set to *Read-Write*. For detailed steps to configure Access Mode of a user account in Power Platform, go to [Create a Read-Write user account](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles#create-a-read-write-user-account). 
 
 ### System administrator
 
 System administrator is a Power Platform security role. This role has full permissions to customize and administrator Power Platform environment.
 
-To assign a user the System administrator Power Platform role, read [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
+To assign a user the System administrator Power Platform role, go to [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
 
-### Dynamics 365 administrator
+### System customizer
 
-Dynamics 365 administrator is a Power Platform service admin role. This role can do admin functions on Power Platform because they have the system admin role.
+System customizer is a Power Platform security role. This role has full permissions to customize Power Platform environment.
 
-To assign a user the Dynamics 365 administrator role, read [Assign a service admin role to a user](https://docs.microsoft.com/power-platform/admin/use-service-admin-role-manage-tenant#assign-a-service-admin-role-to-a-user).
+To assign a user the System administrator Power Platform role, go to [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
 
 ### Power Platform administrator
 
 Power Platform administrator is a Power Platform service admin role. This role can do admin functions on Power Platform because they have the system admin role.
 
-To assign a user the Power Platform administrator role, read [Assign a service admin role to a user](https://docs.microsoft.com/power-platform/admin/use-service-admin-role-manage-tenant#assign-a-service-admin-role-to-a-user).
-
-### Global administrator
-
-Global administrator is a Microsoft 365 admin role. A person who purchases the Microsoft business subscription is a global administrator. A global administrator has unlimited control over products in the subscription and access to most data.
-
-To assign a user the global administrator role, read [Assign admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide&preserve-view=true).
-
-More information: [About admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true)
+To assign a user the Power Platform administrator role, go to [Assign a service admin role to a user](https://docs.microsoft.com/power-platform/admin/use-service-admin-role-manage-tenant#assign-a-service-admin-role-to-a-user).
 
 ### See also
 
