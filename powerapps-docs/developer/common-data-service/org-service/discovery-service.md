@@ -1,5 +1,5 @@
 ---
-title: "Use the Discovery Service with the SDK Assemblies (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use the Discovery Service with the SDK Assemblies (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to use the Discovery Service with the APIs available in the SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/16/2020
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Use the Discovery Service with the SDK Assemblies
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 > [!IMPORTANT]
 > Effective March 2, 2020, the *regional* Discovery Service will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).
@@ -47,7 +49,7 @@ There are three messages that you can use which all inherit from the abstract <x
   
 |Message|Description|  
 |-------------|-----------------|  
-|<xref:Microsoft.Xrm.Sdk.Discovery.RetrieveUserIdByExternalIdRequest>|Retrieves the logged-on user's ID in Common Data Service|  
+|<xref:Microsoft.Xrm.Sdk.Discovery.RetrieveUserIdByExternalIdRequest>|Retrieves the logged-on user's ID in Microsoft Dataverse|  
 |<xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationRequest>|Retrieves information about a single organization.|  
 |<xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationsRequest>|Retrieves information about all organizations to which the user belongs.|  
 

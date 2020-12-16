@@ -1,24 +1,22 @@
 ---
-title: Use Issue Reporting app from teams store | Microsoft Docs
-description: Learn how to use the Issue Reporting app from Teams store.
-author: tapanm-msft
+title: Use Issue reporting app from teams store | Microsoft Docs
+description: Learn how to use the Issue reporting app from Teams store.
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/05/2020
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
 
-# Issue Reporting sample apps
+# Issue reporting sample apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
-In this tutorial, learn about the Manage Issues and Issue Reporting apps, and how to use them effectively.
+In this tutorial, learn about the Manage Issues and Issue reporting apps, and how to use them effectively.
 
 ## Overview
 
-Issue Reporting consists of two different apps, one for reporting issues and another for managing them:
+Issue reporting consists of two different apps, one for reporting issues and another for managing them:
 
 - [Manage Issues app](#manage-issues-app)
 
@@ -28,9 +26,9 @@ Issue Reporting consists of two different apps, one for reporting issues and ano
     - Create, review, edit, or delete issue template forms to collect information when a user reports an issue.
     - Review team issues, report on issue history, and efficiently manage issue resolution.
 
-- [Issue Reporting app](#issue-reporting-app)
+- [Issue reporting app](#issue-reporting-app)
 
-    The Issue Reporting app is used by employees to:
+    The Issue reporting app is used by employees to:
 
     - Log issues with the information required to resolve the issue.
     - Modify existing issues and assist with resolution
@@ -38,6 +36,9 @@ Issue Reporting consists of two different apps, one for reporting issues and ano
 
 > [!NOTE]
 > Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+
+> [!TIP]
+> For a demonstration of how to use this app, watch this [video](https://aka.ms/TeamsIssueReportingVideo).
 
 ## Prerequisites
 
@@ -73,7 +74,7 @@ This app provides the following capabilities:
 
 1. Select the team.
 
-1. Select the channel where you installed the **Issue Reporting** app.
+1. Select the channel where you installed the **Issue reporting** app.
 
 1. Add **Tasks (Planner)** tab.
 
@@ -87,7 +88,7 @@ This app provides the following capabilities:
 1. Select the **Tasks (Planner)** instance to integrate the app with Planner.
 
     > [!NOTE]
-    > Issue Reporting requires a Planner tab to be installed before the app can be used. If you didn't add Planner tab, add the tab first and then, reopen the **Manage Issues** app.
+    > Issue reporting requires a Planner tab to be installed before the app can be used. If you didn't add Planner tab, add the tab first and then, reopen the **Manage Issues** app.
 
 1. Select **Continue**.
 
@@ -288,7 +289,7 @@ To view issue tasks in Planner
 
     ![View issues](media/issue-reporting/view-issues.png "View issues")
 
-## Issue Reporting app
+## Issue reporting app
 
 The Issue reporting app provides the following capabilities:
 
@@ -300,7 +301,7 @@ The Issue reporting app provides the following capabilities:
 
 To submit a new issue:
 
-1. Select the **Issue Reporting** tab in Teams.
+1. Select the **Issue reporting** tab in Teams.
 
 1. Select **Report an issue**.
 
@@ -319,7 +320,7 @@ To submit a new issue:
 
 To view an issue task in Planner:
 
-1. Select the **Issue Reporting** tab in Teams.
+1. Select the **Issue reporting** tab in Teams.
 
 1. Select **View issues**.
 
@@ -347,5 +348,7 @@ To review and edit existing issues in Planner:
 
 ### See also
 
-[Inspection sample apps](inspection.md)  
-[Employee Ideas sample app](employee-ideas.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Inspection sample app](inspection.md)  
+- [Employee ideas sample app](employee-ideas.md)
+- [Customize sample app](customize-sample-apps.md)

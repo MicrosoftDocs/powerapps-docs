@@ -1,6 +1,6 @@
 ---
-title: "Handle exceptions in your code (Common Data Service) | Microsoft Docs"
-description: "This article discusses the exceptions that are returned from a Common Data Service web service method call. The sample in this article highlights the common faults and exceptions that your application design should handle."
+title: "Handle exceptions in your code (Microsoft Dataverse) | Microsoft Docs"
+description: "This article discusses the exceptions that are returned from a Microsoft Dataverse web service method call. The sample in this article highlights the common faults and exceptions that your application design should handle."
 ms.custom: ""
 ms.date: 06/17/2019
 ms.reviewer: "pehecke"
@@ -17,13 +17,15 @@ search.app:
 ---
 # Handle exceptions in your code
 
-There are a number of exceptions that can be returned from a Common Data Service web service method call. Your application design must catch and appropriately handle these exceptions. In the SDK .NET assemblies, all web service method calls use a communication channel to the server based on the Windows communication foundation technology. In WCF terms, exceptions returned from the channel are called *faults*.  
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+There are a number of exceptions that can be returned from a Microsoft Dataverse web service method call. Your application design must catch and appropriately handle these exceptions. In the SDK .NET assemblies, all web service method calls use a communication channel to the server based on the Windows communication foundation technology. In WCF terms, exceptions returned from the channel are called *faults*.  
 
 <a name="BKMK_Common"></a>   
 
 ## Common exceptions and faults  
 
-The following code is used in most Common Data Service Web Services samples. It highlights the common faults and exceptions that your application design should handle.  
+The following code is used in most Dataverse Web Services samples. It highlights the common faults and exceptions that your application design should handle.  
   
 ```csharp
 catch (FaultException<Microsoft.Xrm.Sdk.OrganizationServiceFault> ex)
@@ -79,13 +81,13 @@ In addition to these exceptions and faults, your code must handle the following 
 - [MessageSecurityException](/dotnet/api/system.servicemodel.security.messagesecurityexception)  
 - [SecurityNegotiationException](/dotnet/api/system.servicemodel.security.securitynegotiationexception)  
   
-When connecting to Common Data Service, a `SecurityAccessDeniedException` exception can be thrown if you use a valid Microsoft account and your account is not associated with any Common Data Service organization. A `MessageSecurityException` can be thrown if your Microsoft account isn’t valid or there was an authentication failure.  
+When connecting to Dataverse, a `SecurityAccessDeniedException` exception can be thrown if you use a valid Microsoft account and your account is not associated with any Dataverse organization. A `MessageSecurityException` can be thrown if your Microsoft account isn’t valid or there was an authentication failure.  
   
 <a name="BKMK_BusinessRuleErrors"></a>
 
 ## Custom errors from business rules
  
-With Common Data Service, customizers can create business rules that are evaluated on the server. Customizers can throw error messages based on conditions set in the business rule. Developers should be sure to include robust error handling in their code to catch and handle these exceptions.  
+With Dataverse, customizers can create business rules that are evaluated on the server. Customizers can throw error messages based on conditions set in the business rule. Developers should be sure to include robust error handling in their code to catch and handle these exceptions.  
   
 The following is an example of the trace log produced when one of these errors is returned from a business rule named **Name of Entity Scope Business Rule returning Error** and the error message is **custom error message**.  
   

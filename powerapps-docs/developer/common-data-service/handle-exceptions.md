@@ -1,5 +1,5 @@
 ---
-title: "Handle exceptions in a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Handle exceptions in a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
 ms.custom: ""
 ms.date: 09/20/2019
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Handle exceptions in plug-ins
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 There are two possible outcomes when a plug-in allows an exception to be passed back to the D365 system: information about the exception is logged or displayed to the user, and the current message request being processed is cancelled. The exact behavior as described below is dependent on how the plug-in is executed: in the sandbox or not, synchronous or asynchronous.
 

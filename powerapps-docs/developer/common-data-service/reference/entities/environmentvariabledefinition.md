@@ -1,20 +1,22 @@
 ---
-title: "EnvironmentVariableDefinition Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the EnvironmentVariableDefinition entity."
-ms.date: 04/12/2020
+title: "EnvironmentVariableDefinition entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the EnvironmentVariableDefinition table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# EnvironmentVariableDefinition Entity Reference
+# EnvironmentVariableDefinition entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 Contains information about the settable variable: its type, default value, and etc.
 
@@ -32,6 +34,10 @@ Contains information about the settable variable: its type, default value, and e
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveAllCompositeDataSources|<xref href="Microsoft.Dynamics.CRM.RetrieveAllCompositeDataSources?text=RetrieveAllCompositeDataSources Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAllCompositeDataSourcesRequest>|
+|RetrieveCompositeDataSource|<xref href="Microsoft.Dynamics.CRM.RetrieveCompositeDataSource?text=RetrieveCompositeDataSource Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveCompositeDataSourceRequest>|
+|RetrieveEnvironmentVariables|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariables?text=RetrieveEnvironmentVariables Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveEnvironmentVariablesRequest>|
+|RetrieveEnvironmentVariableValue|<xref href="Microsoft.Dynamics.CRM.RetrieveEnvironmentVariableValue?text=RetrieveEnvironmentVariableValue Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveEnvironmentVariableValueRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/environmentvariabledefinitions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
@@ -39,8 +45,7 @@ Contains information about the settable variable: its type, default value, and e
 |SetState|PATCH [*org URI*]/api/data/v9.0/environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -62,6 +67,8 @@ Contains information about the settable variable: its type, default value, and e
 
 These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [ApiId](#BKMK_ApiId)
+- [ConnectionReferenceId](#BKMK_ConnectionReferenceId)
 - [DefaultValue](#BKMK_DefaultValue)
 - [Description](#BKMK_Description)
 - [DisplayName](#BKMK_DisplayName)
@@ -74,6 +81,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [ParameterKey](#BKMK_ParameterKey)
+- [ParentDefinitionId](#BKMK_ParentDefinitionId)
 - [SchemaName](#BKMK_SchemaName)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -81,6 +90,36 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [Type](#BKMK_Type)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [ValueSchema](#BKMK_ValueSchema)
+
+
+### <a name="BKMK_ApiId"></a> ApiId
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|API Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|apiid|
+|MaxLength|150|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ConnectionReferenceId"></a> ConnectionReferenceId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for Connection Reference associated with Environment Variable Definition.|
+|DisplayName|Connection Reference|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|connectionreferenceid|
+|RequiredLevel|None|
+|Targets||
+|Type|Lookup|
 
 
 ### <a name="BKMK_DefaultValue"></a> DefaultValue
@@ -280,6 +319,36 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|EntityName|
 
 
+### <a name="BKMK_ParameterKey"></a> ParameterKey
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Parameter Key|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parameterkey|
+|MaxLength|150|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ParentDefinitionId"></a> ParentDefinitionId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for Environment Variable Definition associated with Environment Variable Definition.|
+|DisplayName|Parent Definition|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parentdefinitionid|
+|RequiredLevel|None|
+|Targets||
+|Type|Lookup|
+
+
 ### <a name="BKMK_SchemaName"></a> SchemaName
 
 |Property|Value|
@@ -290,9 +359,10 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
+|IsValidForUpdate|False|
 |LogicalName|schemaname|
 |MaxLength|100|
-|RequiredLevel|ApplicationRequired|
+|RequiredLevel|SystemRequired|
 |Type|String|
 
 
@@ -375,7 +445,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |100000001|Number|
 |100000002|Boolean|
 |100000003|JSON|
-|100000004|Connection reference|
+|100000004|Data Source|
 
 
 
@@ -1108,6 +1178,6 @@ See businessunit Entity [business_unit_environmentvariabledefinition](businessun
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.environmentvariabledefinition?text=environmentvariabledefinition EntityType" />

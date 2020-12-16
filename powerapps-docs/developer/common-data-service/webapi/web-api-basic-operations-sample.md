@@ -1,5 +1,5 @@
 ---
-title: "Web API Basic Operations Sample (Common Data Service)| Microsoft Docs"
+title: "Web API Basic Operations Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This group of sample demonstrates how to perform CRUD (Create, Retrieve, Update and Delete) operations using the Web API. These are implemented using Client-side JavaScript and C#"
 ms.custom: ""
 ms.date: 03/22/2019
@@ -23,7 +23,9 @@ search.app:
 ---
 # Web API Basic Operations Sample
 
-This group of samples demonstrate how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations using the Common Data Service Web API.  
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+This group of samples demonstrate how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations using the Microsoft Dataverse Web API.  
   
 -   [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)  
   
@@ -33,7 +35,7 @@ This group of samples demonstrate how to perform basic CRUD (Create, Retrieve, U
  
 ## Demonstrates  
 
-This sample is divided into the following sections, containing Common Data Service Web API operations which are discussed in greater detail in the specified associated conceptual topics.  
+This sample is divided into the following sections, containing Dataverse Web API operations which are discussed in greater detail in the specified associated conceptual topics.  
   
 |Code section|Associated conceptual topics|  
 |------------------|----------------------------------|  
@@ -44,7 +46,7 @@ This sample is divided into the following sections, containing Common Data Servi
 |[Section 5: Delete entities (sample cleanup)](#bkmk_section5)|[Basic delete](update-delete-entities-using-web-api.md#bkmk_delete)|  
   
 > [!NOTE]
->  For brevity, less pertinent HTTP headers have been omitted. The URLs of the records will vary with the base organization address and the ID of the record assigned by your Common Data Service server.  
+>  For brevity, less pertinent HTTP headers have been omitted. The URLs of the records will vary with the base organization address and the ID of the record assigned by your Dataverse server.  
   
 <a name="bkmk_section1"></a>
    
@@ -855,7 +857,7 @@ DELETE https://[Organization URI]/api/data/v9.0/opportunities(7cf77a42-5f0e-e611
   
 ### See also  
 
-[Use the Common Data Service Web API](overview.md)<br />
+[Use the Dataverse Web API](overview.md)<br />
 [Create an entity using the Web API](create-entity-web-api.md)<br />
 [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
 [Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />

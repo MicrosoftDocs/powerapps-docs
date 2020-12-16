@@ -1,6 +1,6 @@
 ---
-title: "Start a Common Data Service Web API project in Visual Studio (C#) (Common Data Service)| MicrosoftDocs"
-description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
+title: "Start a Microsoft Dataverse Web API project in Visual Studio (C#) (Dataverse)| MicrosoftDocs"
+description: "Create a new project in Visual Studio to build a console application that uses Microsoft Dataverse Web API"
 ms.custom: 
 ms.date: 04/22/2019
 ms.reviewer: "pehecke"
@@ -18,15 +18,17 @@ search.audienceType:
 search.app: 
   - D365CE
 ---
-# Start a Common Data Service Web API project in Visual Studio (C#)
+# Start a Microsoft Dataverse Web API project in Visual Studio (C#)
 
-This topic demonstrates how to create a new project in Visual Studio 2017 that builds a console application that uses the Common Data Service Web API. It illustrates the common references and project resources that most applications, including the SDK C# samples, use to implement Web API-based solutions.  
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+This topic demonstrates how to create a new project in Visual Studio 2017 that builds a console application that uses the Dataverse Web API. It illustrates the common references and project resources that most applications, including the SDK C# samples, use to implement Web API-based solutions.  
   
 <a name="bkmk_prerequisites"></a>   
 ## Prerequisites  
  The following prerequisites are required to build the console application described in this section.  
   
-- Visual Studio 2017 installed on your development computer. Any edition, including [Visual Studio Express](https://www.visualstudio.com/products/visual-studio-express-vs.aspx), should be sufficient to work with the Common Data Service Web API.
+- Visual Studio 2017 installed on your development computer. Any edition, including [Visual Studio Express](https://www.visualstudio.com/products/visual-studio-express-vs.aspx), should be sufficient to work with the Dataverse Web API.
   
 - A NuGet client must be installed: either the command-line utility or the Visual Studio extension. For more information, see [Installing NuGet](https://docs.nuget.org/consume/installing-nuget).  
   
@@ -47,7 +49,7 @@ The following procedure demonstrates how to create a console application project
   
 4. From the list of templates, select **Console App(.NET Framework)**. (Alternately choose the project type suited to your solution.)  All of the Web API C# samples are console applications.  
   
-   ![A new console app project dialog in Common Data Service](media/new-project.PNG "A new console app project dialog in Common Data Service")  
+   ![A new console app project dialog in Dataverse](media/new-project.PNG "A new console app project dialog in Dataverse")  
   
 5. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name "StartWebAPI-CS" was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
   
@@ -67,13 +69,13 @@ install-package System.Net.Http
   
 4. If you have additional functionality that you routinely use in your applications, you can add the associated references to the required assemblies now. For more information, see [How to: Add or Remove References by Using the Add Reference Dialog Box](https://msdn.microsoft.com/library/wkze6zky.aspx).  
   
-   Because the Common Data Service Web API is based on REST principles, it does not require client-side assemblies to access.  However, other APIs supported by Common Data Service apps do require these.
+   Because the Dataverse Web API is based on REST principles, it does not require client-side assemblies to access.  However, other APIs supported by Dataverse apps do require these.
   
 #### Add typical using statements  
   
 1.  In the **Solution Explorer**, open **Program.cs** for editing.  
   
-2.  At the top of the file, add the following `using` statements, which reference namespaces commonly used in Common Data Service Web API-based solutions.  
+2.  At the top of the file, add the following `using` statements, which reference namespaces commonly used in Dataverse Web API-based solutions.  
   
     ```csharp
     using Newtonsoft.Json;  
@@ -126,7 +128,7 @@ This section explains how to add a basic set of settings and instructions to per
   
 ### Next steps
 
- At this point the solution can be built without errors. If you edit the application configuration file to supply values for your Dynamics 365 Server, the program should also successfully connect to that server. The solution represents a skeletal frame that is ready to accept custom code, including calls to the Common Data Service Web API.  
+ At this point the solution can be built without errors. If you edit the application configuration file to supply values for your Dynamics 365 Server, the program should also successfully connect to that server. The solution represents a skeletal frame that is ready to accept custom code, including calls to the Dataverse Web API.  
   
 > [!TIP]
 >  Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](https://msdn.microsoft.com/library/xkh1wxd8.aspx) instructions to create the template.  

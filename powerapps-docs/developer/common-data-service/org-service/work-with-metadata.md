@@ -1,5 +1,5 @@
 ---
-title: "Work with metadata using the Organization service (Common Data Service) | Microsoft Docs"
+title: "Work with metadata using the Organization service (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to programmatically access and modify the metadata model using the Organization service"
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,9 @@ search.app:
 ---
 # Work with metadata using the Organization service
 
-Metadata refers to the structure of entities used to manage data in Common Data Service. <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase> is the base class for classes that contain metadata information. This section describes how to programmatically access and modify the metadata model using the Organization service.
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+Metadata refers to the structure of entities used to manage data in Microsoft Dataverse. <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase> is the base class for classes that contain metadata information. This section describes how to programmatically access and modify the metadata model using the Organization service.
 
 > [!IMPORTANT]
 > Adding, removing or changing entities, alternate keys, attributes, or relationships can interfere with normal system operation. If you’re applying changes to a production system we recommend that you schedule these operations when it’s least disruptive to users.

@@ -1,6 +1,6 @@
 ---
-title: "Create and update option sets using the Web API (Common Data Service) | Microsoft Docs"
-description: "Learn about creating and updating entity Common Data Service uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
+title: "Create and update option sets using the Web API (Microsoft Dataverse) | Microsoft Docs"
+description: "Learn about creating and updating entity Microsoft Dataverse uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
 ms.custom: ""
 ms.date: 09/17/2020
 ms.service: powerapps
@@ -22,6 +22,8 @@ search.app:
 ---
 
 # Create and update option sets using the Web API
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Typically, you use *global* option sets to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike *local* options sets which are defined only for a specific attribute, you can reuse global option sets. You will also see them used in request parameters in a manner similar to an enumeration.  
   

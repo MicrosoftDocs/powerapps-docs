@@ -1,5 +1,5 @@
 ---
-title: "Update and delete entities using the Web API (Common Data Service)| Microsoft Docs"
+title: "Update and delete entities using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on entities using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Update and delete entities using the Web API
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Operations to modify data are a core part of the Web API. In addition to a simple update and delete, you can perform operations on single attributes and compose *upsert* requests that will either update or insert an entity depending on whether it exists.  
   

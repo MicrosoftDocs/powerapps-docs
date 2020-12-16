@@ -1,27 +1,27 @@
 ---
 title: Power Apps Community Plan -- a free development environment for individual use | Microsoft Docs
-description: Sign up to build skills and learn more about Power Apps, Power Automate, and the Common Data Service.
+description: Sign up to build skills and learn more about Power Apps, Power Automate, and the Microsoft Dataverse.
 author: dileepsinghmicrosoft 
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
-ms.date: 07/07/2020
+ms.date: 10/11/2020
 ms.author: dileeps
 ms.reviewer:
 ---
 # Power Apps Community Plan: a free development environment for individual use
-If you want to build skills and learn more about Power Apps, Power Automate, and the Common Data Service, the Power Apps Community Plan is the right plan for you. The Power Apps Community Plan gives you a free development environment for individual use, where you can:
+If you want to build skills and learn more about Power Apps, Power Automate, and the Microsoft Dataverse, the Power Apps Community Plan is the right plan for you. The Power Apps Community Plan gives you a free development environment for individual use, where you can:
 
 * Learn to build business apps and workflows with the full functionality of Power Apps and Power Automate.
 * Connect to any data source by using our 100+ [out of the box connectors](./canvas-apps/connections-list.md) or by creating your own [custom connectors](./canvas-apps/register-custom-api.md).
-* Explore how you can use [the Common Data Service](https://docs.microsoft.com/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
+* Explore how you can use [the Dataverse](https://docs.microsoft.com/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
 * Export the solutions you create in your individual environment, and [publish them on Microsoft AppSource](../developer/common-data-service/publish-app-appsource.md) so your customers can test-drive them.
 
 ## Who can sign up for the Power Apps Community Plan?
 Anyone with a [work or school account](signup-for-powerapps.md#faq) can sign up for the Power Apps Community Plan. But we especially recommend this plan if you:
 
-* Want to build skills and learn more about Power Apps, Power Automate, and the Common Data Service.
+* Want to build skills and learn more about Power Apps, Power Automate, and the Dataverse.
 * Are interested in building business apps and workflows to distribute on Microsoft AppSource.
 
 ## Where can I sign up for the Power Apps Community Plan?
@@ -44,8 +44,8 @@ With the individual environment, you get the following functionality:
 | **Key features** | |
 | Create and run apps |Yes. You can create unlimited apps |
 | Share apps\* |No |
-| Use the Common Data Service |Yes |
-| Model your data using the Common Data Service |Yes|
+| Use the Dataverse |Yes |
+| Model your data using the Dataverse |Yes|
 | Enterprise-grade administration of the environment and user policies |Yes |
 | **Connectivity** | |
 | Connect to Office 365, Dynamics 365, and other connectors |Yes |
@@ -54,9 +54,9 @@ With the individual environment, you get the following functionality:
 | Access on‐premises data using an on-premises gateway |Yes |
 | Create custom connectors to connect to your own systems |Yes. You can create unlimited custom connectors |
 | **Common Data Service** | |
-| Create and run applications on the Common Data Service |Yes |
-| Model your data in the Common Data Service |Yes |
-| Create a database in the Common Data Service |Yes |
+| Create and run applications on the Dataverse |Yes |
+| Model your data in the Dataverse |Yes |
+| Create a database in the Dataverse |Yes |
 | Create and use dataflows |No |
 | **Management** | |
 | Add co-workers as environment makers and admins |No |
@@ -102,7 +102,7 @@ Yes, you should be able to export the resources from this environment to other e
 
 ### Will my Power Apps Community Plan subscription ever expire?
 
-You can use your Power Apps Community Plan subscription perpetually for free. If you are actively using an individual environment, then you won't lose access to any of the resources or functionality in that environment. You may, however, notice a delay when accessing your Common Data Service Database for the first time after a long period of inactivity.  This delay does not impact the data or entities stored in the Common Data Service.
+You can use your Power Apps Community Plan subscription perpetually for free. If you are actively using an individual environment, then you won't lose access to any of the resources or functionality in that environment. You may, however, notice a delay when accessing your Dataverse Database for the first time after a long period of inactivity.  This delay does not impact the data or entities stored in the Dataverse.
 
 ### Can I get or create multiple individual environments?
 
@@ -112,9 +112,9 @@ No, you can only have one individual environment, which is created for you by Po
 
 Both Power Apps Plan Trial and Power Apps Community Plan are free, but are created for different purposes:
 
-**Power Apps Plan Trial** gives you Power Apps Plan 2 for 30 days. This is meant for trying out Power Apps, Common Data Service, and Power Automate. Once your trial expires, you can purchase a plan. If you are already using Power Apps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of Power Apps, which are available with Power Apps Per User Plan.
+**Power Apps Plan Trial** gives you Power per user plan for 30 days. This is meant for trying out Power Apps, Dataverse, and Power Automate. Once your trial expires, you can purchase a plan. If you are already using Power Apps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of Power Apps, which are available with Power Apps Per User Plan.
 
-**Power Apps Community Plan** gives you access to Power Apps premium functionalities, Common Data Service, and Power Automate for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [Microsoft AppSource](https://appsource.microsoft.com). This plan is perpetually available, but only for learning and building your skills on Power Apps, Common Data Services, and Power Automate.
+**Power Apps Community Plan** gives you access to Power Apps premium functionalities, Dataverse, and Power Automate for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [Microsoft AppSource](https://appsource.microsoft.com). This plan is perpetually available, but only for learning and building your skills on Power Apps, Dataverse, and Power Automate.
 
 ### Can I sign up with my personal account?
 

@@ -1,5 +1,5 @@
 ---
-title: "Run duplicate detection (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Run duplicate detection (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Execute duplicate detection for a specific record, entity type, or during create or update operations." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Run duplicate detection
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 There are several ways to perform duplicate detection after you enable it and publish the duplicate detection rules.  
 

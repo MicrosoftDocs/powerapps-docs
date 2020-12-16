@@ -1,5 +1,5 @@
 ---
-title: "Sample: Create and retrieve entity relationships  (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Create and retrieve entity relationships  (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create and retrieve entity relationships." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Create and retrieve entity relationships
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This sample shows how to create and retrieve entity relationships. The following methods are used to create and retrieve the relationships:
 

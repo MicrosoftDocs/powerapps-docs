@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Common Data Service developer documentation
-summary: Learn how to write applications and web pages that can access Common Data Service business data, extend the functionality of the platform through plug-ins and workflow, or interface your business data to external systems.
+title: Microsoft Dataverse developer documentation
+summary: Learn how to write applications and web pages that can access Dataverse business data, extend the functionality of the platform through plug-ins and workflow, or interface your business data to external systems.
 
 metadata:
-  title: Common Data Service developer documentation
-  description: Provides access to highlighted areas within the Common Data Service developer documentation
+  title: Dataverse developer documentation
+  description: Provides access to highlighted areas within the Dataverse developer documentation
   services: service
   ms.service: powerapps 
   ms.subservice: subservice
@@ -30,7 +30,7 @@ landingContent:
             url: get-started-CDS-developers.md
        - linkListType: learn
          links:
-          - text: Introduction to Common Data Service for developers
+          - text: Introduction to Dataverse for developers
             url: https://docs.microsoft.com/learn/modules/intro-cds-developers-power-platform/
          
           

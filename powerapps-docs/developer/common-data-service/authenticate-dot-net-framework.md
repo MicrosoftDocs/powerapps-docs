@@ -1,6 +1,6 @@
 ---
-title: "Authentication with .NET Framework applications (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "How .NET Framework applications can authenticate with Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Authentication with .NET Framework applications (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "How .NET Framework applications can authenticate with Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 05/11/2020
 ms.reviewer: "pehecke"
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Authentication with .NET Framework applications
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 If you are using the .NET Framework you can use classes within the [Xrm.Tooling](/dotnet/api/?view=dynamics-xrmtooling-ce-9) namespace to authenticate and connect to the Organization service and the Web API.
 
@@ -59,10 +61,10 @@ Use .NET Framework version 4.6.2 or higher when you create client applications. 
 
 ## .NET Framework applications without SDK assemblies
 
-If you prefer to not have a dependency on any SDK assemblies, you can also use the patterns described in [Use OAuth with Common Data Service](authenticate-oauth.md) without taking a dependency on any SDK assemblies. Without the SDK assemblies, you can only use the OData Restful web services (Web API and OData Global Discovery Service). The [Web API Data operations Samples (C#)](webapi/web-api-samples-csharp.md) demonstrate this approach.
+If you prefer to not have a dependency on any SDK assemblies, you can also use the patterns described in [Use OAuth with Microsoft Dataverse](authenticate-oauth.md) without taking a dependency on any SDK assemblies. Without the SDK assemblies, you can only use the OData Restful web services (Web API and OData Global Discovery Service). The [Web API Data operations Samples (C#)](webapi/web-api-samples-csharp.md) demonstrate this approach.
 
 ### See also
 
-[Authentication with Common Data Service web services](authentication.md)<br />
-[Use OAuth with Common Data Service](authenticate-oauth.md)
+[Authentication with Dataverse web services](authentication.md)<br />
+[Use OAuth with Dataverse](authenticate-oauth.md)
 

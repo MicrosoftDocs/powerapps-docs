@@ -26,6 +26,8 @@ search.app:
 ---
 # Using an on-premises data gateway in Power Platform Dataflows
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Install an on-premises data gateway to transfer data quickly and securely
 between a Power Platform dataflow and a data source that isn't in the cloud,
 such as an on-premises SQL Server database or an on-premises SharePoint site.
@@ -116,7 +118,7 @@ There are a few known limitations when using enterprise gateways and dataflows.
 -   Changing the gateway impacts the entire dataflow.
 
 -   If several gateways are needed, the best practice is to build several
-    dataflows (one for each gateway) and use the compute or entity reference
+    dataflows (one for each gateway) and use the compute or table reference
     capabilities to unify the data.
 
 -   Dataflows are only supported using enterprise gateways. Personal gateways
@@ -132,7 +134,7 @@ gateway service for your network, see [Understand on-premises data gateways](../
 
 - [Create and use dataflows in Power Apps](create-and-use-dataflows.md)
 
-- [Add data to an entity in Common Data Service by using Power Query](data-platform-cds-newentity-pq.md)
+- [Add data to a table in Microsoft Dataverse by using Power Query](data-platform-cds-newentity-pq.md)
 
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
 

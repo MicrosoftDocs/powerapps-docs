@@ -118,7 +118,7 @@ landingContent:
         links:
           - text: Create web resources
             url: create-edit-web-resources.md
-          - text: Change custom entity icons
+          - text: Change custom table icons
             url: change-custom-entity-icons.md
           - text: Create customizable help
             url: use-customizable-help.md
@@ -128,7 +128,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Customize entity forms using code
+          - text: Customize table forms using code
             url: ../../developer/model-driven-apps/customize-entity-forms.md
           - text: Apply data visualizations using code
             url: ../../developer/model-driven-apps/customize-visualizations-dashboards.md      

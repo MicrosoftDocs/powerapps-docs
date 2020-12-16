@@ -1,18 +1,16 @@
 ---
 title: Remove your apps | Microsoft Docs
 description: Learn how to remove your apps using Power Apps app from Teams.
-author: tapanm-msft
+author: si-matthews
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: simatthe
+ms.reviewer: tapanm
 ---
 
 # Remove an app from your team
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Removing an app that was added as a tab from a Microsoft Teams channel makes it inaccessible from the Teams tab for all members of the Teams channel.
 

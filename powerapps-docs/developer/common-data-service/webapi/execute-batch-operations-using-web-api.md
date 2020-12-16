@@ -1,5 +1,5 @@
 ---
-title: "Execute batch operations using the Web API (Common Data Service)| Microsoft Docs"
+title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
 ms.date: 03/30/2020
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Execute batch operations using the Web API
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 You can group multiple operations into a single HTTP request using a batch operation.  
   

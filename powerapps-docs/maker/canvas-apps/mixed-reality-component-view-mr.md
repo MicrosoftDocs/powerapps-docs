@@ -23,13 +23,13 @@ You can use the **View in MR** component in your app to let users see how a part
 
 The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vvwR]
+:::image type="content" source="./media/augmented-overview/view-in-mixed-reality.png" alt-text="Photo showing a 3D model of a forklift being overlaid onto the real world through a mobile device.":::
 
 You can also take photos and [upload them to OneDrive](mixed-reality-take-upload-photos.md).
 
 > [!IMPORTANT]
 > Your 3D content must be in the .glb file format.  
-> You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
+> You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/guides/3d-content-guidelines/) from a variety of 3D formats.
 
 To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
@@ -62,14 +62,14 @@ Some properties are only available under **More options** in the **Advanced** ta
 
 Property | Description | Type | Location
 - | - | - | -
-Text | Label for the button | String | Properties (also in **Advanced**)
+Text | Label for the button. | String | Properties (also in **Advanced**)
 Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
 Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. | Not applicable | **Properties** (also in **Advanced**)
 Object width | Width of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
 Object height | Height of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
 Object depth | The three-dimensional depth of the 3D content. | Integer | **Properties** (also in **Advanced**)
 Units | The unit used for the object width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
-Photos | The photos captured during the mixed reality session. | | Not applicable (output property only)
+Photos | The photos captured during the mixed reality session.<br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | | Not applicable (output property only)
 
 ### Additional properties
 

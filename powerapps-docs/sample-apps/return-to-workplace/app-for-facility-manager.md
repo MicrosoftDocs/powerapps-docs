@@ -5,16 +5,16 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Use the Facility Safety Management app
 
 The Facility Safety Management app provides step-by-step instructions to facility managers in the organization to manage the reopening and readiness of their facilities. 
 
-This helps the organizations ensure that they can provide a safe working environment for employees by using the Return to the Workplace solution.
+This helps organizations ensure that they can provide a safe working environment for employees by using the Return to the Workplace solution.
 
 ## App at a glance
 
@@ -32,7 +32,7 @@ The left pane lists all the components available in the **Facility Management** 
 ## App components
 
 The Facility Safety Management app has the following components:
-<!--markdownlint-disable MD036-->
+
 **Facility Management**
 
 - **Facilities**: List of the facilities (for example, buildings and plants) that require monitoring to reopen.
@@ -43,17 +43,25 @@ The Facility Safety Management app has the following components:
 
 **Reopen Readiness**
 
-- **Phase Transitions** - A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase and its associated checklist based upon the phase's configured readiness factors.
+- **Phase Transitions**: A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase and its associated checklist based upon the phase's configured readiness factors.
 
 **Employee**
 
-- **Employee Sentiment** -  Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees with the Employee Return to the Workplace app.
+- **Employee Attestation**: Keeps track of employee health assessments or attestations based on the questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
 
-- **Employee Attestation** - Keeps track of employee health assessments or attestations based on a series of questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
+- **Employee Sentiment**: Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees with the Employee Return to the Workplace app.
 
-- **Employee Bookings** - Keeps track of the employee's area, start (arrival) time, and end (departure) time. Employee bookings are linked to the employees' attestation record and are updated with actual employee visits.
+- **Employee Bookings**: Keeps track of bookings made by employees. Together with an attestation this would be a valid and safe way to enter a building and is referred to as a pass.
 
-- **Employee Visits** - Keeps track of visits to the facility. Employee visits are linked to an employee and a booking record. 
+- **Employee Visits**: Keeps track of the visits. Employee visits are linked to an employee and a booking record.
+
+**Guests**
+
+- **Guest Attestations**: Keep track of attestations made by guests. Guest attestations should be linked to a guest registration. 
+
+- **Guest Registrations**: Keep track of registered guests. Guest registrations are always linked to a booking for an employee. The employee serves as a host. Guests are stored as a contact record of type `Guest`. Guests can be added via the Employee app.
+
+- **Employee Visits**: Keeps track of visits to the facility. Employee visits are linked to an employee and a booking record. 
 
 ## Manage facilities 
 
@@ -158,55 +166,73 @@ You can monitor and assess the current status of a facility by reviewing its ass
 
 ### Accessing the facility manager dashboard for your facility
 
+To access the facility manager dashboard:
+
 1. On the left pane, select **Facility**. The default view, **My Facilities**, shows only your facilities. When switching the views, you can see all the active or inactive facilities. 
 
-2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information about facility usage, guides the reopening process, and analyzes occupancy at a facility. The report has three main tabs: **Facility**, **Virus Spread**, and **Employee Activity**.
+2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information on facility usage, guides reopening, and analyzes the occupancy at a facility. The report has three main tabs: 
+   - Facility 
+   - Virus Spread
+   - Employee Activity
 
-   - **Facility** tab
+**Facility**
 
-     **Readiness** shows the status of the readiness checks needed for a facility's safe reopening. Checks are separated into categories (for example, **Employee Experience** and **Communications**), which can be expanded to show the progress of individual actions. The reproductive number is the average number of people to whom COVID-19 might be transmitted by an infected individual.
+- **Readiness** shows the status of the readiness checks needed for a facility’s safe reopening. At the top, the phase is shown together with the reproductive number, which is the average number of people to whom COVID-19 might be transmitted by an infected individual, and the average sentiment. In the middle, you find the checks separated into categories (for example, Employee Experience or Communications) that can be expanded to show the progress of individual actions. 
 
-     **Occupancy** provides metrics regarding the facility capacity and usage, such as:
-      - The facility's total capacity, and its current capacity based on the reopen phase.
-      - The number of bookings and visits for the most recent day, and daily average for the last seven days.
-      - Two charts&mdash;which can be filtered by date range, floor, or area&mdash;that show:
-          - Number of bookings and the current capacity.
-          - Average daily occupancy, shown as a black bar. Capacity is represented by the green zone. Floors and areas with black bars in the red zone are over capacity. Occupancy can be viewed at the floor or area level. Hover over the information symbol (🛈) next to the chart to see detailed instructions.
-
-     **Daily Arrivals** shows booking information to assist in controlling facility traffic, such as:
-        - Capacity and visit metrics, busiest weekday, and the arrival time window for the last seven days.
-        - Two charts, which can be filtered by date range, that display the number of bookings by arrival window and by weekday.
-
-     > [!div class="mx-imgBorder"]
-     > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - Readiness")
-
-   - **Virus Spread** tab
-
-      This tab shows data from public health sources by country (by state in the United States):
-
-      - **New COVID-19 Cases** shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
-
-      - **Fatal COVID Cases** shows information for COVID-19 cases with fatalities.
-
-      - **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the United States is at the state level.
+- **Occupancy** provides metrics regarding the facility capacity and usage, such as:
+  
+  - Facility’s total capacity, and current capacity based on reopening phase.
+  
+  - Number of bookings, guest registrations, and visits for the most recent day and daily average for the last seven days.
+  
+  - Two charts that can be filtered by date range and to a floor or an area:
+  
+    - Employee bookings (or employee bookings and guest registrations) versus capacity by date. Shows the employee bookings (and guest registrations) on a certain date on the total capacity on that date.
+    
+    - Average daily occupancy by floor (or floor and area). The dot represents the capacity and the contents show the average employee bookings and average guest registrations.
 
       > [!div class="mx-imgBorder"]
-      > ![Facility manager dashboard - Virus spread](media/pbi-dash-facility-manager-virus-spread.png "Facility manager dashboard - Virus spread")
+      > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-occupancy.png "Facility manager dashboard - Readiness")
+    
+- **Daily Arrivals** shows booking information to assist in controlling the facility traffic, such as:
 
-   - **Employee Activity** tab
+  - Capacity and visit metrics, busiest weekday, and arrival time window for the last seven days.
+  
+  - Two charts that can be filtered by date range and that display number of bookings by arrival window and by weekday.
 
-     This tab summarizes the employee engagement and Employee Return to the Workplace app usage over a period. The following metrics are shown:
+    > [!div class="mx-imgBorder"]
+    > ![Facility manager dashboard - daily arrivals](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - daily arrivals")
 
-      - Employee App Usage, which shows the number of times the Employee Return to Workplace app has been used to obtain a pass
+**Virus Spread**
 
-      - Average employee sentiment
+This tab shows data from public health sources by country (by state and by county in the United States of America). 
 
-      - Number of passes generated
+> [!NOTE]
+> The county level data is available only from the last 6 months.
 
-      - Two charts, one of which displays employee sentiment by date and the other, passes generated versus the number of visits by date, along with the trend over time.
+- **Confirmed COVID Cases**  shows the associated risk level, number of cases for the last reporting day, 14 day average in absolute numbers and per population, daily trend, and the total number of cases and per population.
+   
+- **New Fatal COVID Cases** shows information for COVID-19 cases with fatalities.
+   
+- **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual. Data for the United States is at the state level.
+  
+  > [!div class="mx-imgBorder"]
+  > ![Facility manager dashboard - Virus spread](media/pbi-dash-facility-manager-virus-spread.png "Facility manager dashboard - Virus spread")
 
-      > [!div class="mx-imgBorder"]
-      > ![Facility manager dashboard - Employee activity](media/pbi-dash-facility-manager-employee-activity.png "Facility manager dashboard - Employee activity")
+**Employee Activity**
+
+This tab summarizes the employee engagement and Employee Return to the Workplace app usage over a period. The following metrics are shown:
+
+- **Employee App Usage** shows the number of times the Employee Return to the Workplace app has been used to obtain a pass.
+
+- **Average sentiment** shows average employee sentiment.
+
+- **Passes generated** shows the number of passes generated for both the employees and guests.
+
+  There are two charts. One displays the sentiment by date and the other displays the pass and guest registrations generated versus the number of visits by date, along with the trend over time.
+
+  > [!div class="mx-imgBorder"]
+  > ![Facility manager dashboard - Employee activity](media/pbi-dash-facility-manager-employee-activity.png "Facility manager dashboard - Employee activity")
 
 ### Exploring the facility
 
@@ -216,23 +242,23 @@ You can see all the details of a facility by opening the facility record. To exp
    > [!div class="mx-imgBorder"]
    > ![Select details ](media/facility-manager-facility-form-populated.png "Select details")
 
- - Select the **Checklist** tab to see the checklist items and their completion status.
+- Select the **Checklist** tab to see the checklist items and their completion status.
 
    > [!div class="mx-imgBorder"]
    > ![Checklist items](media/facility-manager-checklist-2-1.png "Checklist items") 
 
-    > [!NOTE]
-    > Checklist items are configured as part of the global process for managing reopen phases and their associated readiness factors. Therefore, new checks are added as readiness factors on a reopen phase and not on the facility.
+   > [!NOTE]
+   > Checklist items are configured as part of the global process for managing reopen phases and their associated readiness factors. Therefore, new checks are added as readiness factors on a reopen phase and not on the facility.
 
-  - Select the **Transitions** tab to see any related transition requests and their status.
+- Select the **Transitions** tab to see any related transition requests and their status.
 
-     > [!div class="mx-imgBorder"]
-     > ![Facility transition](media/facility-manager-facility-transitions.png "Facility transition")
+    > [!div class="mx-imgBorder"]
+    > ![Facility transition](media/facility-manager-facility-transitions.png "Facility transition")
 
 - Select the **Occupancy** tab to see any floors and areas, or add them to the facility.
 
-     > [!div class="mx-imgBorder"]
-     > ![Facility transition occupancy](media/facility-manager-facility-ocupancy.png "Facility transition occupancy")
+    > [!div class="mx-imgBorder"]
+    > ![Facility transition occupancy](media/facility-manager-facility-ocupancy.png "Facility transition occupancy")
 
 - Select the **Related** tab to see any related actions.
 
@@ -338,7 +364,7 @@ For ease of use, you can also use the business process flow to create new transi
 
 - Moving forward
 
-   Given that the facility isn't in the final phase, you can select the circle of the current stage and then select **Next Stage**. The business process flow won't move instantly, but in the background, a new transition record is created and you'll go to that record. The record is prepopulated with the next phase and is ready for approval.
+   Given that the facility isn't in the final phase, you can select the circle of the current stage and then select **Next Stage**. The business process flow won't move instantly, but in the background, a new transition record is created and you'll go to that record. The record is auto-populated with the next phase and is ready for approval.
 
 - Moving backward
 
@@ -346,17 +372,57 @@ For ease of use, you can also use the business process flow to create new transi
 
 ## Monitor employee attestations
 
-You can monitor whether your organization's employees are feeling healthy enough to be eligible to return to your facility. You can track employee self-attestations of their health based on a series of questions that the employees answer. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Attestations** area of the Facility Safety Management app.
+You can monitor whether your organization's employees are feeling healthy enough to be eligible to return to your facility. You can track employee self-attestations of their health based on the questions employees answer. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Attestations** area of the Facility Safety Management app.
 
 > [!div class="mx-imgBorder"]
 > ![Employee attestations](media/facility-manager-employee-attestations.png "Employee attestations")
 
 ## Monitor employee sentiments
 
-This area of the Facility Safety Management app keeps track of general employee sentiment about the prospect of returning to their workplace. This information is self-reported, but it's a valuable parameter when tracked consistently over time and with larger groups. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Attestations** area of the Facility Safety Management app.
+This area of the Facility Safety Management app keeps track of general employee sentiment about the prospect of returning to their workplace. This information is self-reported, but it's a valuable parameter when tracked consistently over time and with larger groups. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Sentiment** area of the Facility Safety Management app.
 
 > [!div class="mx-imgBorder"]
 ![Employee sentiment](media/facility-manager-employee-sentiment.png "Employee sentiment")
+
+## Facility Access
+
+Case managers or facility managers can block the employees from making bookings by disabling access to the facility. To block an employee from making a booking:
+
+1. Open an employee record. 
+2. Go to the **Access** tab.
+3. Select **New Access Action**
+
+   > [!div class="mx-imgBorder"]
+   > ![Access Action list on Employee form](media/facility-manager-employee-block2.png "Access Action list on Employee form")
+
+4. Select **Access Status** as **Blocked** and set **Access Available Date** to a date in the future when you would like the block to expire. You can enter information in the **Notes** so that employee can see the information.
+
+    > [!div class="mx-imgBorder"]
+    > ![Creating an Access Action](media/facility-manager-employee-block3.png "Creating an Access Action")
+5. Select **Save & Close**
+
+An employee is now blocked and can no longer make bookings via the Employee app. All the existing bookings are disabled. A  warning notification is automatically created and set as **Send as push notification** and the body has the notes of the access action.
+
+## Notifications
+
+Every time an access action is created, a notification is created for the employee. These notifications can be used in different situations. Also a flow is implemented that will send the notification as an e-mail if **Send as email** is set to **Yes**. To create a notification for an employee:
+
+1. Open an employee record.
+2. Go to **Notifications** tab.
+3. Select **New Notification**.
+
+   > [!div class="mx-imgBorder"]
+   > ![New notification](media/facility-manager-employee-block4.png "New Notification")
+
+4. Select **Notification Type** as information, warning or error. Add a **Header** and **Body** for the notification. Set **Send as email** to **Yes**, if you want to send an email to the employee.
+
+    > [!div class="mx-imgBorder"]
+    > ![Notification type](media/facility-manager-employee-block5.png "Notification type")
+
+5. Select **Save & Close**
+
+> [!NOTE]
+> A flow for push notifications has not been implemented, since this requires the app ID. To implement a flow for push notifications, see article [Send push notification connector](https://docs.microsoft.com/connectors/powerappsnotification/#send-push-notification)
 
 ## Give feedback about the solution
 

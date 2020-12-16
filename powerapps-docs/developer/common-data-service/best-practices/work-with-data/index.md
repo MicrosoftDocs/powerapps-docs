@@ -1,6 +1,6 @@
 ---
-title: "Developers: Best practices and guidance around working with data for the Common Data Service | Microsoft Docs"
-description: Best practices and guidance around working with data for developers of the Common Data Service in Power Apps.
+title: "Developers: Best practices and guidance around working with data for the Microsoft Dataverse | Microsoft Docs"
+description: Best practices and guidance around working with data for developers of the Microsoft Dataverse in Power Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -22,13 +22,15 @@ search.app:
   - D365CE
 ---
 
-# Best practices and guidance around working with data for the Common Data Service
+# Best practices and guidance around working with data for the Microsoft Dataverse
 
-This list below contains all of the best practices and guidance around integrating data using code with the Common Data Service.
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
+This list below contains all of the best practices and guidance around integrating data using code with the Dataverse.
 
 |Best Practice  |Description  |
 |---------|---------|
-|[Service Protection API Limits (Common Data Service)](../../api-limits.md)     |Understand the limits for API requests.         |
+|[Service Protection API Limits (Dataverse)](../../api-limits.md)     |Understand the limits for API requests.         |
 
 ### See Also
-[Work with data using code in Common Data Service (Power Apps)](../../work-with-data-cds.md)<br />
+[Work with data using code in Dataverse (Power Apps)](../../work-with-data-cds.md)<br />

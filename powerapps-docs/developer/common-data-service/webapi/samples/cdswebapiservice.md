@@ -1,6 +1,6 @@
 ---
-title: "CDSWebApiService class library (C#) (Common Data Service) | Microsoft Docs"
-description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Common Data Service Web API."
+title: "CDSWebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
+description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Microsoft Dataverse Web API."
 ms.custom: ""
 ms.date: 07/16/2020
 ms.service: powerapps
@@ -17,7 +17,9 @@ search.app:
 ---
 # CDSWebApiService class library (C#)
 
-A .NET Framework sample class library that uses JSON objects and common HTTP messaging operations with the Common Data Service Web API. Use of these class methods result in less complicated application code, implementation of performance best practices, and improved error processing.
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
+A .NET Framework sample class library that uses JSON objects and common HTTP messaging operations with the Microsoft Dataverse Web API. Use of these class methods result in less complicated application code, implementation of performance best practices, and improved error processing.
 
 This class library demonstrates how to:
 
@@ -278,7 +280,7 @@ The following are the properties of the ServiceConfig class.
 |Password|<xref:System.Security.SecureString>|The password for the user principal|
 |RedirectUrl|<xref:System.String>|The Redirect Url of the application registered with Azure AD|
 |TimeoutInSeconds|`ushort`|The amount of time to try completing a request before it will be cancelled. Default is 120 (2 minutes)|
-|Url|<xref:System.String>|The Url to the CDS environment, i.e "https://yourorg.api.crm.dynamics.com"|
+|Url|<xref:System.String>|The Url to the Dataverse environment, i.e "https://yourorg.api.crm.dynamics.com"|
 |UserPrincipalName|<xref:System.String>|The user principal name of the user. i.e. you@yourorg.onmicrosoft.com|
 |Version|<xref:System.String>|The version of the Web API to use. Default is '9.1'|
 

@@ -1,6 +1,6 @@
 ---
-title: "Query Data sample (C#) (Common Data Service)| Microsoft Docs"
-description: "This sample demonstrates how to query data of Common Data Service entity instances, using the Common Data Service Web API along with the CDSWebApiService class."
+title: "Query Data sample (C#) (Microsoft Dataverse)| Microsoft Docs"
+description: "This sample demonstrates how to query data of Microsoft Dataverse entity instances, using the Dataverse Web API along with the CDSWebApiService class."
 ms.custom: ""
 ms.date: 07/15/2020
 ms.service: powerapps
@@ -17,7 +17,9 @@ search.app:
 ---
 # Query Data sample (C#)
 
-This sample demonstrates how to perform data queries of Common Data Service entity instances, using the Common Data Service Web API. Those query operations include:
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
+This sample demonstrates how to perform data queries of Microsoft Dataverse entity instances, using the Dataverse Web API. Those query operations include:
 
 - Selecting specific properties
 - Using Query Functions
@@ -29,14 +31,14 @@ This sample demonstrates how to perform data queries of Common Data Service enti
 - Using predefined queries
   
 > [!NOTE]
-> This sample implements the Common Data Service operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the methods available in the [CDSWebApiService](cdswebapiservice.md) class for message processing, performance enhancements, and error management.
+> This sample implements the Dataverse operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the methods available in the [CDSWebApiService](cdswebapiservice.md) class for message processing, performance enhancements, and error management.
 
 ## Prerequisites
 
 The following is required to build and run the sample:
 
 - Microsoft Visual Studio 2019.
-- Access to Common Data Service with privileges to perform the operations described above.
+- Access to Dataverse with privileges to perform the operations described above.
   
 ## How to run this sample
 
@@ -44,7 +46,7 @@ The following is required to build and run the sample:
 
 1. Navigate to the cds/webapi/C#/[QueryData](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QueryData) folder and load the solution file into Visual Studio.
 
-1. Edit the App.config file that is shared by several of the samples and set appropriate values for the Common Data Service environment you intend to use: connectionString `Url`, `UserPrincipalName`, and `Password`. You only need to perform this step once for all samples that share this file.
+1. Edit the App.config file that is shared by several of the samples and set appropriate values for the Dataverse environment you intend to use: connectionString `Url`, `UserPrincipalName`, and `Password`. You only need to perform this step once for all samples that share this file.
 
 1. Press F5 to build and run the program in debug mode.
 
@@ -124,7 +126,7 @@ namespace PowerApps.Samples
                     // Filter criteria:
                     // Applying filters to get targeted data.
                     // 1) Using standard query functions (e.g.: contains, endswith, startswith)
-                    // 2) Using CDS query functions (e.g.: LastXhours, Last7Days, Today, Between, In, ...)
+                    // 2) Using Dataverse query functions (e.g.: LastXhours, Last7Days, Today, Between, In, ...)
                     // 3) Using filter operators and logical operators (e.g.: eq, ne, gt, and, or, etc…)
                     // 4) Set precedence using parenthesis (e.g.: ((criteria1) and (criteria2)) or (criteria3)
                     // For more info, see:
@@ -143,8 +145,8 @@ namespace PowerApps.Samples
                         "Contacts filtered by fullname containing '(sample)':",
                         containsSampleinFullNameCollection["value"]);
 
-                    //Filter 2: Using CDS query functions to filter results. In this operation, we will query
-                    //for all contacts that were created in the last hour. For complete list of CDS query
+                    //Filter 2: Using Dataverse query functions to filter results. In this operation, we will query
+                    //for all contacts that were created in the last hour. For complete list of Dataverse query
                     //functions, see: https://docs.microsoft.com/dynamics365/customer-engagement/web-api/queryfunctions
 
                     JToken createdInLastHourCollection = svc.Get("contacts?" +
@@ -251,7 +253,7 @@ namespace PowerApps.Samples
 
                     //Result count - count the number of results matching the filter criteria.
                     //Tip: Use count together with the "odata.maxpagesize" to calculate the number of pages in
-                    //the query.  Note: CDS has a max record limit of 5000 records per response.
+                    //the query.  Note: Dataverse has a max record limit of 5000 records per response.
                     Console.WriteLine("\n-- Result Count --");
                     //1) Get a count of a collection without the data.
                     JToken count = svc.Get($"contacts/$count");
@@ -834,4 +836,4 @@ namespace PowerApps.Samples
 
 [Query Data using the Web API](../query-data-web-api.md)  
 [Web API Query Data Sample](../web-api-query-data-sample.md)  
-[Use the Common Data Service Web API](../overview.md)
+[Use the Dataverse Web API](../overview.md)

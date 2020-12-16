@@ -1,20 +1,22 @@
 ---
-title: "SemiAnnualFiscalCalendar Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SemiAnnualFiscalCalendar entity."
-ms.date: 04/12/2020
+title: "SemiAnnualFiscalCalendar entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the SemiAnnualFiscalCalendar table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# SemiAnnualFiscalCalendar Entity Reference
+# SemiAnnualFiscalCalendar entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 Calendar representing the semi-annual span of time during which the financial activities of an organization are calculated.
 
@@ -29,7 +31,7 @@ Calendar representing the semi-annual span of time during which the financial ac
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/semiannualfiscalcalendars<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/semiannualfiscalcalendars(*userfiscalcalendarid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -671,6 +673,6 @@ See transactioncurrency Entity [transactioncurrency_semiannualfiscalcalendar](tr
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.semiannualfiscalcalendar?text=semiannualfiscalcalendar EntityType" />

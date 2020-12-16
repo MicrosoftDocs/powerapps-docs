@@ -1,5 +1,5 @@
 ---
-title: "Execute messages in a single database transaction (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Execute messages in a single database transaction (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can execute two or more organization service requests in a single database transaction using the ExecuteTransactionRequest message request." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,9 @@ search.app:
 ---
 # Execute messages in a single database transaction
 
- It is a common requirement in business applications to coordinate changes of multiple records in the system so that either all the data changes succeed, or none of them do. In database terms, this is known as executing multiple operations in a single transaction with the ability to roll back all data changes should any one operation fail.  
+ [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+It is a common requirement in business applications to coordinate changes of multiple records in the system so that either all the data changes succeed, or none of them do. In database terms, this is known as executing multiple operations in a single transaction with the ability to roll back all data changes should any one operation fail.  
   
  You can execute two or more organization service requests in a single database transaction using the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> message request. To use this message, populate the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest.Requests> collection with two or more organization requests that are to be executed in the transaction. Set <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest.ReturnResponses> to `true` if you want to get back a collection of responses, one for each message request executed, in the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionResponse.Responses> collection. Message requests in the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest.Requests> collection are executed in order as they appear in the collection, where the element at index 0 is executed first. This same order is preserved in the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleResponse.Responses> collection.  
   

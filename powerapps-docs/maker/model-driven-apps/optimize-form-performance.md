@@ -21,14 +21,16 @@ search.app:
 ---
 # Optimize model-driven app form performance
 
+[!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Forms that load slowly can reduce productivity and user adoption. Follow these recommendations to maximize how quickly your forms will load. Many of these recommendations are about how a developer may implement form scripts for your organization. Be sure to discuss these recommendations with developers who create form scripts for your forms.  
   
 <a name="BKMK_FormDesign"></a>   
 ## Form design  
  Think about the interaction the user will have with the form and the amount of data that must be displayed within it.  
   
- **Keep the number of fields to a minimum**  
- The more fields you have in a form, the more data that needs to be transferred over the Internet or intranet to view each record.
+ **Keep the number of columns to a minimum**  
+ The more columns you have in a form, the more data that needs to be transferred over the Internet or intranet to view each row.
  
  **Design for performance**  
  When designing forms and pages, put what is most important at the top to make it most easily accessible for your users. Move infrequently used components to other tabs on a form, use role-based forms instead of showing and hiding components, and make sure that different workflows have dedicated dashboards and views. Feel free to use sections to organize your controls – this won’t make your forms slower.
@@ -44,7 +46,7 @@ Synchronous requests can cause slow page loads and unresponsive forms. [Use asyn
 The more scripts you add to the form, the more time it will take to download them. Usually scripts are cached in your browser after they are loaded the first time, but the performance the first time a form is viewed often creates a significant impression.  
   
 **Avoid loading all scripts in the Onload event**  
-If you have code that only supports `OnChange` events for fields or the `OnSave` event, make sure to set the script library with the event handler for those events instead of the `OnLoad` event. This way loading those libraries can be deferred and increase performance when the form loads.  
+If you have code that only supports `OnChange` events for columns or the `OnSave` event, make sure to set the script library with the event handler for those events instead of the `OnLoad` event. This way loading those libraries can be deferred and increase performance when the form loads.  
   
  **Use collapsed tabs to defer loading web resources**  
  When web resources or IFRAMES are included in sections inside a collapsed tab they will not be loaded if the tab is collapsed. They will be loaded when the tab is expanded. When the tab state changes the `TabStateChange` event occurs. Any code that is required to support web resources or IFRAMEs within collapsed tabs can use event handlers for the **TabStateChange** event and reduce code that might otherwise have to occur in the `OnLoad` event.  

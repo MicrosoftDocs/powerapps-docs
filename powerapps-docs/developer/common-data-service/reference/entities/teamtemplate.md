@@ -1,20 +1,22 @@
 ---
-title: "TeamTemplate Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the TeamTemplate entity."
-ms.date: 04/12/2020
+title: "TeamTemplate entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the TeamTemplate table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# TeamTemplate Entity Reference
+# TeamTemplate entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 Team template for an entity enabled for automatically created access teams.
 
@@ -31,7 +33,7 @@ Team template for an entity enabled for automatically created access teams.
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/teamtemplates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/teamtemplates(*teamtemplateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -84,7 +86,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |DisplayName|Description|
 |Format|TextArea|
 |IsLocalizable|False|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|description|
 |MaxLength|2000|
@@ -156,6 +158,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [versionnumber](#BKMK_versionnumber)
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -362,6 +365,23 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |RequiredLevel|None|
 |Type|String|
 
+
+### <a name="BKMK_versionnumber"></a> versionnumber
+
+**Added by**: Access Team Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Version number for team template.|
+|DisplayName|Version Number|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|versionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
 <a name="onetomany"></a>
 
 ## One-To-Many Relationships
@@ -431,6 +451,6 @@ See systemuser Entity [lk_teamtemplate_modifiedonbehalfby](systemuser.md#BKMK_lk
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.teamtemplate?text=teamtemplate EntityType" />

@@ -1,20 +1,18 @@
 ---
 title: Use Inspection apps from teams store | Microsoft Docs
 description: Learn how to use the Inspection apps from Teams store.
-author: tapanm-msft
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/05/2020
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
 
 # Inspection sample apps
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
-In this tutorial, learn about the Inspection (User) and Manage Inspections (Manager) apps, and how to use them effectively.
+In this tutorial, learn about the Inspection (User) and Manage inspections (Manager) apps, and how to use them effectively.
 
 ## Overview
 
@@ -22,7 +20,7 @@ The Inspection solution for Microsoft Teams is a general inspection app that can
 to inspect anything from a location&mdash;such as a retail store or manufacturing
 plant&mdash;to assets and equipment, such as vehicles and machines. There are two apps in this solution, each intended for different kinds of users.
 
-- [Manage Inspections app](#manage-inspections-app) is used by a manager to perform the following actions:
+- [Manage inspections app](#manage-inspections-app) is used by a manager to perform the following actions:
 
     - View and close inspections.
     - Create and edit inspection forms.
@@ -37,6 +35,9 @@ plant&mdash;to assets and equipment, such as vehicles and machines. There are tw
 > [!NOTE]
 > Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
 
+> [!TIP]
+> For a demonstration of how to use this app, watch this [video](https://aka.ms/TeamsInspectionVideo).
+
 ## Prerequisites
 
 Before using this app:
@@ -50,7 +51,7 @@ For details about the above steps, go to [Use sample apps from the Teams store](
 ## Label setup
 
 The labels describing the items being inspected and their associated types can
-be modified in the **Manage Inspections** app.
+be modified in the **Manage inspections** app.
 
 To change labels used in the app:
 
@@ -58,7 +59,7 @@ To change labels used in the app:
 
 1. Select the team.
 
-1. Select the **Manage Inspections** tab in Teams.
+1. Select the **Manage inspections** tab in Teams.
 
 1. Select ![App settings to customize experience](media/inspection/teams-settings.png "App settings to customize experience") from the upper-right corner.
 
@@ -72,9 +73,9 @@ To change labels used in the app:
 
     ![Customize experience](media/inspection/customize-experience.png "Customize experience")
 
-## Manage Inspections app
+## Manage inspections app
 
-The Manage Inspections app gives a manager the following capabilities:
+The Manage inspections app gives a manager the following capabilities:
 
 - [Configure the app](#configure-the-app)
 - [Edit the app configuration](#edit-the-app-configuration)
@@ -95,7 +96,7 @@ To configure the app:
 
 1. Select the team.
 
-1. Select the **Manage Inspections** tab in Teams.
+1. Select the **Manage inspections** tab in Teams.
 
 1. Configure or skip Planner integration:
 
@@ -105,10 +106,10 @@ To configure the app:
         > [!IMPORTANT]
         > Without Planer integration, the app will still work, but the tasks will not be created during the inspections.    
  
-    - To set up the Planner tab first, go back to the Teams channel, set up the Planner tab, and reopen the **Manage Inspections** tab.
+    - To set up the Planner tab first, go back to the Teams channel, set up the Planner tab, and reopen the **Manage inspections** tab.
 
         > [!TIP]
-        > Give your Planner a distinct name, such as “Inspection tasks”. When you select the Planner instance later to configure the **Manage Inspections** app, you'll be able to identify the right Planner based on this name. The list of Planner instances inside the app as options shows Planner names, and not the name on the Teams tab for the Planner.
+        > Give your Planner a distinct name, such as “Inspection tasks”. When you select the Planner instance later to configure the **Manage inspections** app, you'll be able to identify the right Planner based on this name. The list of Planner instances inside the app as options shows Planner names, and not the name on the Teams tab for the Planner.
 
     ![Planner integration](media/inspection/planner-tab.png "Planner integration")
 
@@ -131,7 +132,7 @@ To configure the app:
 
 To edit the app configuration:
 
-1. Go to the **Manage Inspections** tab in Teams.
+1. Go to the **Manage inspections** tab in Teams.
 
 1. Select ![Teams settings for managing inspections](media/inspection/teams-settings.png "Teams settings for managing inspections") from the upper-right corner.
 
@@ -149,7 +150,7 @@ The location types define the classes of different areas that can be added to th
 
 To add the area types:
 
-1. Select the **Manage Inspections** tab in Teams.
+1. Select the **Manage inspections** tab in Teams.
 
 1. Select the **Locations** tab in the app.
 
@@ -169,7 +170,7 @@ Locations are the areas that need to be inspected.
 
 To add locations:
 
-1. Select the **Manage Inspections** tab in Teams.
+1. Select the **Manage inspections** tab in Teams.
 
 1. Select **Add location** on the left pane in the app.
 
@@ -187,7 +188,7 @@ Grouped locations allow users to aggregate locations that are commonly inspected
 
 To group locations:
 
-1. Select the **Manage Inspections** tab in Teams.
+1. Select the **Manage inspections** tab in Teams.
 
 1. Select ![Teams settings for grouped locations](media/inspection/teams-settings.png "Teams settings for grouped locations") from the upper-right corner.
 
@@ -215,7 +216,7 @@ Inspection forms are tied to location types. You can define more than one inspec
 
 To add inspection forms:
 
-1. Select the **Manage Inspections** tab in Teams.
+1. Select the **Manage inspections** tab in Teams.
 
 1. Select the **Inspection forms** tab.
 
@@ -235,7 +236,7 @@ To add inspection forms:
 
 To review submitted inspection:
 
-1. Select the **Manage Inspections** tab in Teams.
+1. Select the **Manage inspections** tab in Teams.
 
 1. Select the **Locations** tab.
 
@@ -255,7 +256,7 @@ Inspection insights provide managers with a dashboard of insights about inspecti
 
 To view the inspection insights:
 
-1. Select the **Manage Inspections** tab in Teams.
+1. Select the **Manage inspections** tab in Teams.
 
 1. Select **Inspection insights** tab inside the app.
 
@@ -398,5 +399,7 @@ To submit inspection of grouped locations:
 
 ### See also
 
-[Employee Ideas sample apps](employee-ideas.md)  
-[Issue Reporting sample apps](issue-reporting.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Issue Reporting sample app](issue-reporting.md)
+- [Customize sample apps](customize-sample-apps.md)
