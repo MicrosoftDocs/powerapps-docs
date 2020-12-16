@@ -15,7 +15,7 @@ search.app:
 ---
 
 # Debugging canvas apps with Monitor
-<!--note from editor: Please check my edit to the title in metadata; it shouldn't be the same as the H1. Also, please note that the sister topic to this one, monitor-modelapps.md, should have an H1 of "Debugging model apps with Monitor," to be parallel. (The Writing Style Guide prefers the way you have it here, with the H1 as a noun and the H2s as verbs. I realize that you don't own that topic, though.)-->
+
 Monitor is available by default for all canvas apps. Using Monitor, you can trace events as they occur in a canvas app during the authoring experience in Power Apps Studio, or you can use Monitor to debug the published version of a canvas app. More information: [Monitor overview](monitor-overview.md)
 
 ## Get started with Monitor in canvas apps
@@ -72,7 +72,7 @@ Monitor also displays a notification that the monitoring session that's currentl
 
 ### Advanced setting: Debug published app
 
-If you want to view the source expressions in Monitor for the published app, you need to turn on the<!--note from editor: Unless you plan to come back and remove "new" at some point, I suggest not saying this is new because it won't always be.--> setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you'll be able to see the events happening in your app, but you won't be able to map these events to specific expressions or formulas.
+If you want to view the source expressions in Monitor for the published app, you need to turn on the setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you'll be able to see the events happening in your app, but you won't be able to map these events to specific expressions or formulas.
 
 To enable this setting, go to **File** > **Settings** > **Advanced settings**, and then turn on **Debug published app**.
 
@@ -90,11 +90,11 @@ display the table of events as they're occurring, along with specific details.
 In this example, you'll use the Northwind Sample Data app included with
 the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
 
-The *Northwind sample solution* is a canvas app that loads sample data into Microsoft Dataverse<!--note from editor: Edit okay?-->. You can also create a new app or use an existing app instead.<!--note from editor: Generally, you want to reserve italics for defining a term (as you are here) and for a few other specific cases (parameters, variables, book titles), but not error messages or file names.-->
+The *Northwind sample solution* is a canvas app that loads sample data into Microsoft Dataverse. You can also create a new app or use an existing app instead.
 
 ### Background
 
-Consider the scenario where an app has been deployed, and the initial version of the app experiences performance degradation. The app also intermittently generates errors with no clear pattern. Loading data in the app succeeds most of the time, but fails sometimes.<!--note from editor: Edits in this paragraph suggested, but if you don't like, note that "succeeds mostly" implies that it doesn't quite succeed all the way.-->
+Consider the scenario where an app has been deployed, and the initial version of the app experiences performance degradation. The app also intermittently generates errors with no clear pattern. Loading data in the app succeeds most of the time, but fails sometimes.
 
 When you check Monitor, you see data operations as expected. However, you also see several responses that have HTTP status code 429, indicating that there have been too many requests in a specific timeframe.
 
@@ -106,17 +106,17 @@ When you select such an event, you see the error as "Rate limit exceeded. Try a
 
 The problem needs further analysis to understand why requests are getting
 throttled. In Monitor, you see that for each **createRow** call, there are
-several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These entities aren't the entities the app is creating rows for. The **ProgressCount.Text** formula is seen in Monitor, as shown in the following image.<!--note from editor: If the reader can't see the image, will they understand what's going on here? It seems to me that you've explained the behavior fully, but you'd be the better judge of that. If the formula needs to be fully duplicated, you can use the :::image type="complex"::: extension.-->
+several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These entities aren't the entities the app is creating rows for. The **ProgressCount.Text** formula is seen in Monitor, as shown in the following image.
 
 ![Error 429 - Formula](media/monitor/error-429-formula.png "Error 429 - Formula")
 
 For each record added, the formula is evaluated again and **CountRows** is
 called on several entities. This behavior results in **getRows** in the log,
-because **CountRows** isn't delegated for Dataverse<!--note from editor: Edit okay?-->. For each single
+because **CountRows** isn't delegated for Dataverse. For each single
 request to add a record, you're potentially making 12 additional requests to
 count the rows in each entity.
 
-These extra requests intermittently cause errors because the Dataverse<!--note from editor: Edit okay?--> platform is throttling the requests to the service. This also explains the overall performance problem.
+These extra requests intermittently cause errors because the Dataverse platform is throttling the requests to the service. This also explains the overall performance problem.
 
 ## Next steps
 

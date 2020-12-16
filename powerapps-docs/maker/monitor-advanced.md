@@ -16,13 +16,13 @@ search.app:
 
 # Advanced monitoring concepts
 
-In this article, you'll learn about downloading and uploading trace files in Monitor, events supported by Monitor, and scenarios that Monitor doesn't support.<!--note from editor: Suggested.-->
+In this article, you'll learn about downloading and uploading trace files in Monitor, events supported by Monitor, and scenarios that Monitor doesn't support.
 
 ## Download and upload trace files
 
-You can download the events listed in [Supported events](#supported-events) for offline analysis.<!--note from editor: Is this what you meant by "events that are shown in the table"?-->
+You can download the events listed in [Supported events](#supported-events) for offline analysis.
 Events can be downloaded in .json or .csv format, and you can share them with
-others. The .csv files can only be downloaded, not uploaded, but if you download<!--note from editor: Edit okay? Or is "export" different somehow?--> the events
+others. The .csv files can only be downloaded, not uploaded, but if you download the events
 in .json format, you can upload them later into Monitor for analysis. You can
 also attach a trace file to support service requests, which can help speed up getting the solution to your problem.
 
@@ -49,7 +49,7 @@ Monitor doesn't support the scenarios in the following table.
 |Monitor connected to apps running on a mobile device (native players).     |  Canvas    |
 |Monitor connected to a canvas app embedded in a model-driven app or custom page.     |  Canvas       |
 |Monitor connected to a SharePoint custom form app.     | Canvas        |
-|Monitor connected to a Microsoft Teams embedded app.<!--note from editor: Should this be "a Power Apps app in Microsoft Teams."? --> As an alternative, you can play the app in a web player for diagnostics purposes.     | Canvas        |
+|Monitor connected to a Microsoft Teams embedded app. As an alternative, you can play the app in a web player for diagnostics purposes.     | Canvas        |
 |Monitor isn't supported on Internet Explorer version 11.     |  Canvas and model-driven       |
 
 ### See also

@@ -20,11 +20,11 @@ Monitor is a tool that offers makers the ability to view a stream of events from
 
 ## Benefits
 
-Monitor can help you diagnose and troubleshoot problems faster, and build more reliable apps. It provides a deep view of your app by logging all the key activities that occur in the app as it runs<!--note from editor: Suggested, to cut down on the repeated words.-->. Monitor also provides a better understanding of how the events and formulas contained in your app work, so you can improve performance and identify any errors or problems.
+Monitor can help you diagnose and troubleshoot problems faster, and build more reliable apps. It provides a deep view of your app by logging all the key activities that occur in the app as it runs. Monitor also provides a better understanding of how the events and formulas contained in your app work, so you can improve performance and identify any errors or problems.
 
 ## Debugging an app
 
-The key to debugging a problem is to have a better understanding of what your app does, and how it does it. Sometimes it's difficult to isolate a problem by just looking at the app formulas, or even by reviewing runtime errors. Watching the events as they occur in your app can help you understand the order of events and how your app is performing<!--note from editor: Suggested.-->, to spot errors and diagnose problems faster.
+The key to debugging a problem is to have a better understanding of what your app does, and how it does it. Sometimes it's difficult to isolate a problem by just looking at the app formulas, or even by reviewing runtime errors. Watching the events as they occur in your app can help you understand the order of events and how your app is performing, to spot errors and diagnose problems faster.
 
 Some examples of problems and queries that you can uncover when using Monitor are:
 
@@ -57,7 +57,7 @@ You can review various properties for each event inside Monitor. Depending on th
 | Column name       | Description                                                                                                                                                                                                                                       |
 |-------------------|-----------------------------------------------------|
 | **Id**            | The sequence number for the events.        |
-| **Time**          | The time the event occurred.                         |<!--note from editor: Suggested.-->
+| **Time**          | The time the event occurred.                         |
 | **Category**      | The type of event, such as *Network*.          |
 | **Operation**     | The resulting internal operation name of the request inside the app. For example, *createRow* is the operation name from the **Patch** function.          |
 | **Result**        | The text description of the status code. For example, a 429 status will appear as an *"Error"* in the result column. Row colors also help to identify any errors and warnings quickly.          |
