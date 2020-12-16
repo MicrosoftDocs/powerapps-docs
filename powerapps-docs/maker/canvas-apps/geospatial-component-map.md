@@ -47,7 +47,7 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 
     ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
-You can modify the component by using a number of [properties](#properties).
+You can modify the component by using a number of [properties](#input-properties).
 
 ### Use the map component with data from Excel
 
@@ -160,7 +160,8 @@ Any column you add to the table in the data source (for example, the Excel table
 
     :::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="Screenshot of the map component with an info card on top of a pin, showing information such as Name, Occupancy, and Phone.":::
 
-### Properties
+### Input properties
+
 
 The following properties can be defined and configured in the component's **Properties** pane.
 
@@ -182,7 +183,6 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Compass control | Whether the compass component appears on the map. | Boolean | Properties |
 | Pitch control | Whether the pitch component appears on the map. | Boolean | Properties |
 | Pin color | The color of the pins. | Color picker | Properties |
-| Maximum map pins | Maximum number of pins displayed on the map. | Integer | Properties |
 | ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | TableName.ColumnName | Advanced |
 | ItemsAddresses | A column in Items with the strings that represent the location of the pins. | TableName.ColumnName | Advanced |
 | ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins.  | TableName.ColumnName | Advanced |
@@ -191,7 +191,18 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | ItemsIcons | Icon of the pins | [Icons defined in Azure image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) | Advanced |
 | Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
 
-### Additional properties
+### Output properties
+
+The component outputs various properties when a user interacts with it inside an app. You can use these outputs in other components or to customize the experience. 
+
+The following table lists the output properties available.
+
+
+| Property | Description |
+| -- | -- |
+| CenterLocation | Center location of the map. |
+
+### Additional (common) properties
 
 **[BorderColor](./controls/properties-color-border.md)** - The color of a control's border.
 
