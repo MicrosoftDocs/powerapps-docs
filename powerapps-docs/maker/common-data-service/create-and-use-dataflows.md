@@ -218,6 +218,12 @@ issues. This section provides troubleshooting tips when issues occur.
     Active Directory authentication for Azure SQL Data Warehouse. Use
     basic authentication for this scenario.
 
+## Limitations and Considerations
+There are a few dataflow limitations as described below that users should keep in mind.
+- Dataflows can only be modified by their owners
+- Dataflows do not support mapping [Owner](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/types-of-fields) type fields
+- Currently Dataflows only supports insert/create and delete operations (if enabled). This means that every time a Dataflow is ran, it will insert duplicate records. If an alternate key is defined then those records will fail during the run because of duplicate key. If delete records is enabled, then all records will be deleted and created per run. 
+
 ## Next steps
 The following articles are useful for further information and scenarios when using dataflows:
 
