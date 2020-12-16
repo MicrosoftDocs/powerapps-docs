@@ -508,9 +508,11 @@ You can use Entity Permissions if you want to secure records, but if you want to
 - The control will find all condition elements where uitype="account" and set the value to the actual value of the current portal user's parent account ID.
 - The control will find all condition elements where uitype="adx_website" and set the value to the actual value of the current website ID.
 
-Example View Filter Criteria
+### Example View Filter Criteria
 
 The following image shows an arbitrary contact assigned to a filter condition, this contact happens to be a stub 'dummy' contact but this could be any contact record. The ID of this record will be replaced by the actual value of the ID of the user viewing the page. If the user is not logged in then no records will be returned. This provides greater flexibility in filtering the data based on the user and website contextually.
+
+![Example view filter criteria](media/entity-list-view-filter-criteria.png "Example view filter criteria")
 
 > [!NOTE]
 > If you are filtering by current portal user's contact or parent account then it is recommended that you associate a [Web Page Access Control Rule](webpage-access-control.md) to the Web Page to force the user to sign in. You would create a [Web Role](create-web-roles.md) with "Authenticated Users Role" checked. Create a Web Page Access Control Rule with "Restrict Read" right and associate the Web Role. This will force users to be signed in to view the page and therefore allow the data to be filled accordingly.
