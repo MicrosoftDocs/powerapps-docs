@@ -85,3 +85,5 @@ Examples of the supported form-related events in Monitor include:
 - ControlStateChange.visible
 - SectionStateChange.visible
 - UnsupportedClientApi
+
+For more information about how to troubleshoot issues with forms in a model-driven app, see [Troubleshoot form issues in model-driven apps](../../developer/model-driven-apps/troubleshoot-forms.md).

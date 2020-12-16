@@ -29,7 +29,7 @@ To create a portal in an environment containing customer engagement apps:
 
 3.	Select the required portal template.
 
-4.	In the create portal window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**. The creation process is same as described in the [Create a Microsoft Dataverse starter portal](create-portal.md) section.
+4.	In the create portal window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**. The creation process is same as described in the [Create a Dataverse starter portal](create-portal.md) section.
 
 > [!NOTE]
 > - If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page. More information: [Provision a portal using the older portal add-on](provision-portal-add-on.md)

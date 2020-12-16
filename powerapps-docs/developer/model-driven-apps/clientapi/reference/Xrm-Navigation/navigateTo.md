@@ -131,6 +131,7 @@ search.app:
 <ul><li><b>value</b>: Number. The numerical value.</li>
 <li><b>unit</b>: String. The unit of measurement. Specify "%" or "px". Default value is "px".</li></ul></li>
 <li><strong>position</strong>: (Optional) Number. Specify <strong>1</strong> to open the dialog in center; <strong>2</strong> to open the dialog on the side. Default is 1 (center).</li>
+<li><strong>title</strong>: (Optional) String. The dialog title on top of the center or side dialog.</li>
 </ul></td>
 </tr>
 <tr>

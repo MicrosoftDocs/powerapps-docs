@@ -1,13 +1,13 @@
 ---
 title: Upgrade to use native Common Data Service connector | Microsoft Docs
-description: 
+description: Learn about upgrading native Common Data Service connector for improved data source experience.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/29/2020
+ms.date: 12/14/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -15,6 +15,14 @@ search.app:
   - PowerApps
 ---
 # Microsoft Dataverse and the improved data source experience
+
+> [!NOTE]
+> - Effective November 2020:
+>     - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
+>     - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+>
+>     This article will be updated soon to reflect the latest terminology.
+> - Power Apps mobile app on Windows platform supports legacy Microsoft Dataverse connector without the need to upgrade the connector.
 
 ## Overview
 
@@ -45,7 +53,9 @@ You may also want to enable the **Explicit Column Selection** feature:
 ![Explicit column selection](media/use-native-cds-connector/explicit-column-selection.png)
 
 > [!NOTE]
-> **Improve data source experience and Common Data Service views** is not supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3). You must turn this feature *Off* when using Power Apps for Windows.
+> - **Improve data source experience and Common Data Service views** is not supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3). You must turn this feature *Off* when using Power Apps for Windows.
+> - When this feature is *Off*, you'll see the following message. You can ignore this message when using Power Apps mobile app for Windows platform.
+> <br> `This app is using a connector for the Common Data Service or Dynamics 365 that will not be supported past Oct 1, 2020.`
 
 ### *Relational data, option sets and other new features for Common Data Service* is Off:
 
@@ -84,7 +94,7 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     It’s possible to have errors at this stage if you're using an option set field or hard-coded GUID text values.  <br><br> 
     
     - *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
-    See the [Detailed Examples](#detailed-examples) section for more information.
+    More information: [Detailed Examples](#detailed-examples).
     - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
     - *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
 
@@ -118,14 +128,14 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 
 *Possible errors and suggestions*:
 
-It’s possible to have errors as you convert if: you aren't using Display Names, if you are using GUID strings, or if you are using an option set field.
+It’s possible to have errors as you convert if: you aren't using Display Names, if you're using GUID strings, or if you're using an option set field.
 
 - If control name conflicts, change the name of the control to be different and unique. 
 - For field and entity display name conflicts, you may see a formula that is expecting an entity but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the entity; for example, **[@entityName]**.
-- *Option Set values*: If you are using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
-See the [Detailed Examples](#detailed-examples) section for more information.
-- *GUIDs*: If you are using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
-- *Lookups*: If you are using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
+- *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
+More information: [Detailed Examples](#detailed-examples).
+- *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
+- *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
 - For any Polymorphic references, refer to the Detailed Examples section below. 
 
 ## Detailed Examples
@@ -134,17 +144,17 @@ Converting your app to use the new **Option sets** and **Two options** data type
 
 ### Option Sets
 
-Separate `_myfield` and `_myfield_label` fields were used for an Option set earlier. Now, there is a single `myfield` that can be used both for locale-independent comparisons and to obtain the locale-specific label.
+Separate `_myfield` and `_myfield_label` fields were used for an Option set earlier. Now, there's a single `myfield` that can be used both for locale-independent comparisons and to obtain the locale-specific label.
 
 #### Removing and adding Option set Data cards
 
-It's recommended to remove existing data cards and add them back to work with your Option set. For example, if you are working with the Account entity and the Category Option set, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
+It's recommended to remove existing data cards and add them back to work with your Option set. For example, if you're working with the Account entity and the Category Option set, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
 
 ![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
 
 With the new *Improved data source experience and Common Data Service views* feature, you no longer see `_accountcategorycode_label`. It's replaced by `accountcategorycode`. Your card is now be marked as **custom** and you'll see errors. Remove the old data card and add the *Option Set* back. The new data card is *Option Set* aware.
 
-![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
+![OptionSet with new style name](./media/use-native-cds-connector/OptionSet-with-new-style-name.png)
 
 #### Editing the Option Set Filter expressions to use new syntax
 
@@ -154,7 +164,7 @@ Previously, if you wanted to use an Option Set value in a Filter expression you 
 Filter(Account,'Category Value' = "1")
 ```
 
-You'll need to edit this formula. Option set text identifer is no longer used for the value. This expression should be updated to look the following:
+You'll need to edit this formula. Option set text identifer is no longer used for the value. This expression should be updated to:
 
 ```powerapps-dot
 Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
@@ -188,13 +198,13 @@ Filter(Accounts, 'Category Code' = [@’Category Code’].'Preferred Customer')
 
 #### Removing and adding Two Option set Data cards
 
-You should remove existing data cards and add them back to work with your Two Option set. The data types were earlier recognized as simple boolean - such as true/on and false/off with no labels:
+Remove existing data cards and add them back to work with your Two Option set. The data types were earlier recognized as simple boolean - such as true/on and false/off with no labels:
 
 ![Two Option Set - old style](./media/use-native-cds-connector/TwoOptionSet-Old.png)
 
 With the new *Improved data source experience and Common Data Service views* feature, your card will now be marked as **custom** and you'll see errors.  Remove the old data card and add the Option Set back. You'll see an edit control with two options by default after you add.
 
-![TwoOptionSet-New](./media/use-native-cds-connector/TwoOptionSet-New.png)
+![Two Option Set - new style](./media/use-native-cds-connector/TwoOptionSet-New.png)
 
 If you prefer the toggle switch for your boolean field, you can unlock the data card and replace the control in the data card with a toggle instead.  You'll also need to set these properties on the Toggle.
 
@@ -215,7 +225,7 @@ Using the [Patch](./functions/function-patch.md) function with Two option should
 
 ### Polymorphic lookups
 
-Following guidelines help to upgrade your application if it referenced [polymorphic](working-with-references.md) fields. Polymorphic lookups, from the same field, support references to a restricted set of multiple entities.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific entity. A record reference carries with it the entity information allowing it to point to a record in several different other entities, which differs from a normal lookup that can only point to records in one entity.  
+Following guidelines help to upgrade your application if it referenced [polymorphic](working-with-references.md) fields. Polymorphic lookups, from the same field, support references to a restricted set of multiple entities.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific entity. A record reference carries the entity information allowing it to point to a record in several different other entities, which differs from a normal lookup that can only point to records in one entity.  
 
 #### Access, Set, and Filter on the Owner field of a record
 
@@ -303,13 +313,13 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
     "Unknown")
 ```
 
- ![Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
+ ![New Polymorphic-IsType](./media/use-native-cds-connector/Polymorphic-IsType.png)
 
 #### Access the list of Notes for a record
 
 When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
 
-![Notes-Field](./media/use-native-cds-connector/Notes-Field.png)
+![Notes field](./media/use-native-cds-connector/Notes-Field.png)
 
 ##### Filtering
 

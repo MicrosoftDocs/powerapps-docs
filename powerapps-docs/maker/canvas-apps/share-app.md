@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/02/2020
+ms.date: 12/03/2020
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -261,7 +261,7 @@ As with non-guests, the underlying data source(s) accessed by the app must also 
 
 #### What license must be assigned to my guest so they can run an app shared with them?
 
-The same license that’s required for non-guests to run an app. For instance, if the app uses premium connecters then a Power Apps Per App Plan or a Power Apps Per User Plan must be assigned to the guest.  
+The same license that’s required for non-guests to run an app. For instance, if the app uses premium connectors, then a Power Apps Per App Plan or a Power Apps Per User Plan must be assigned to the guest.  
 
 |    Plan                             | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
@@ -298,7 +298,7 @@ Intune only applies policies of a user’s home tenant. For instance, if Lesa@Co
 
 #### What connectors support guest access?
 
-All connectors that don't use Azure AD authentication of any type supports guest access. The following table enumerates all connectors that use Azure AD authentication and which connectors currently support guest access.
+All connectors that don't use Azure AD authentication of any type supports guest access. The following table enumerates all connectors that use Azure AD authentication and which connectors currently support guest access. More information: [List of all Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors)
 
 | **Connector**                                     | **Supports guest access**                                              |
 |---------------------------------------------------|------------------------------------------------------------------------|
@@ -382,7 +382,11 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | Paylocity                                         | No                                                                     |
 | Planner                                           | No                                                                     |
 | Plumsail Forms                                    | No                                                                     |
+| Power Apps for Admins | No |
+| Power Apps for Makers | No |
+| Power Automate Management | No |
 | Power BI                                          | Yes                                                                    |
+| Power Platform for Admins                                          | No                                                                    |
 | Project Online                                    | No                                                                     |
 | ProjectWise Design Integration                    | No                                                                     |
 | Projectwise Share                                 | No                                                                     |

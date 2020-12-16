@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/28/2020
+ms.date: 12/01/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -15,6 +15,10 @@ searchScope:
 # Power Apps webinars
 
 Register and watch our recorded sessions on-demand.
+
+**Introduction to New Governance Capabilities in Microsoft Power Platform**  
+by Anupma Sharma  
+[Register and watch now](https://info.microsoft.com/ww-Landing-GovernanceCapabilitiesinPowerPlatform.html?LCID=EN-US)
 
 **How Low-Code Platforms Drive Business Innovation**  
 by John R. Rymer and Charles Lamanna  
@@ -44,10 +48,15 @@ by Ronald Chang, Alan Chai, Kenric Auguillard, and Ladd Laird
 by Pierce Boggan and Hailey Huber  
 [Register and watch now](https://info.microsoft.com/ww-landing-rapid-application-development-with-power-apps-and-azure.html?lcid=en-us)
 
+**Build Bots with Power Virtual Agents and Extend Them with Custom Code**  
+by Omar Aftab and Marina Kolomiets  
+[Register and watch now](https://info.microsoft.com/ww-Landing-BuildBotswithPowerVirtualAgents.html?LCID=EN-US)
+
 **Deliver Java Apps Quickly Using Custom Connectors in Microsoft Power Apps**  
 by Sandra Ahlgrimm and Dawid van Heerden  
 [Register and watch now](https://info.microsoft.com/ww-Landing-DeliverJavaAppsQuicklyUsingCustomConnectors.html?LCID=EN-US)
 
 ### See also
 
+[Webinars and videos by Power Apps community](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery)<br/>
 [Power Automate webinars](/power-automate/webinars)

@@ -1380,6 +1380,8 @@
           href: ./portals/admin/upgrade-portal.md
         - name: Cookies used by portal
           href: ./portals/admin/portal-cookies.md
+        - name: Portal consumption reports
+          href: ./portals/admin/portal-consumption-reports.md
     - name: Advanced portal configuration
       items:
         - name: Overview
@@ -1468,8 +1470,10 @@
             href: ./portals/configure/use-simplified-authentication-configuration.md
           - name: Azure AD B2C
             items:
-                - name: Configure
+                - name: Configure (Preview)
                   href: ./portals/configure/configure-azure-ad-b2c-provider.md
+                - name: Configure manually
+                  href: ./portals/configure/configure-azure-ad-b2c-provider-manual.md
                 - name: Customize the Azure AD B2C user interface
                   href: ./portals/configure/azure-ad-b2c.md
           - name: OAuth 2.0
@@ -1587,7 +1591,7 @@
           href: ./portals/configure/create-web-roles.md
         - name: Assign entity permissions
           href: ./portals/configure/assign-entity-permissions.md
-        - name: Control webpage access
+        - name: Manage page permissions
           href: ./portals/configure/webpage-access-control.md
         - name: Create website access permissions
           href: ./portals/configure/website-access-permission.md
@@ -1906,7 +1910,9 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
-        - name: View table data in Power BI (Preview)
+        - name: Import a Dataverse solution
+          href: ../teams/import-solution-in-teams.md 
+        - name: View table data in Power BI
           href: ../teams/view-table-data-power-bi.md
           displayName: View Dataverse for Teams table data in Power BI
         - name: Environment language
@@ -2009,6 +2015,8 @@
       href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
     - name: Employee Return to the Workplace app
       href: ../sample-apps/return-to-workplace/app-for-employee.md
+    - name: Return to the Workplace Portal
+      href: ../sample-apps/return-to-workplace/portal-extension.md
     - name: Extend the solutions
       href: ../sample-apps/return-to-workplace/extend.md
 - name: Resources
