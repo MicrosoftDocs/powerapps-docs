@@ -87,7 +87,7 @@ There are [certain limitations](#sharing-excel-tables) with connectors involving
 
 - Power Apps mobile app for Windows platform doesn't support **Dropbox** connector. A pop-up dialog will show the following message in this situation: <br>
   `Upgrade browser to use Dropbox`
-<br> When this happens, use [Power Apps mobile app on iOS, or Android devices](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#install-power-apps-mobile-app).
+<br> When this happens, consider using web player on Windows platform.
 
 ### Sharing Excel tables
 To share data in an Excel file:
