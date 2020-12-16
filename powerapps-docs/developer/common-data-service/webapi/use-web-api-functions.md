@@ -1,6 +1,6 @@
 ---
-title: "Use Web API functions (Common Data Service)| Microsoft Docs"
-description: "Functions are reusable operations that are used with a GET request to retrieve data from Common Data Service"
+title: "Use Web API functions (Microsoft Dataverse)| Microsoft Docs"
+description: "Functions are reusable operations that are used with a GET request to retrieve data from Microsoft Dataverse"
 ms.custom: ""
 ms.date: 09/05/2019
 ms.service: powerapps
@@ -22,6 +22,8 @@ search.app:
   - D365CE
 ---
 # Use Web API functions
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 Functions and actions represent re-usable operations you can perform using the Web API. There are two types of functions in the Web API:  
   

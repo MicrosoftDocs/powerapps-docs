@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 10/25/2016
 ms.author: gregli
 search.audienceType: 
@@ -67,7 +67,7 @@ For the following example, the current time is **3:59:37 PM** on **Thursday, Apr
 | **Day(&nbsp;Now()&nbsp;)** |Returns the day component of the current time and date. |9 |
 | **Hour(&nbsp;Now()&nbsp;)** |Returns the hour component of the current time and date. |15 |
 | **Minute(&nbsp;Now()&nbsp;)** |Returns the minute component of the current time and date. |59 |
-| **Second(&nbsp;Now()&nbsp;)** |Returns the minute component of the current time and date. |37 |
+| **Second(&nbsp;Now()&nbsp;)** |Returns the second component of the current time and date. |37 |
 | **Weekday(&nbsp;Now()&nbsp;)** |Returns the weekday component of the current time and date, using the default start of the week as Sunday. |5 |
 | **Weekday(&nbsp;Now(),&nbsp;14&nbsp;)** |Returns the weekday component of the current time and date, using an Excel code to specify the start of the week as Thursday. |1 |
 | **Weekday(&nbsp;Now(),&nbsp;StartOfWeek.Wednesday&nbsp;)** |Returns the weekday component of the current time and date, using a **StartOfWeek** enumeration to specify the start of the week as Wednesday. |2 |

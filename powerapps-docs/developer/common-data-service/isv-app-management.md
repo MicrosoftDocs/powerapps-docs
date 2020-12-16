@@ -24,6 +24,8 @@ search.app:
 
 # Introduction to ISV Studio for the Power Platform
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 ISV Studio is designed to become the go-to Power Platform destination for Independent Software Vendors (ISV) to monitor and manage their applications. ISV Studio provides a consolidated cross tenant view of all the applications an ISV is distributing to customers.
@@ -33,9 +35,9 @@ ISV Studio is designed to become the go-to Power Platform destination for Indepe
 > - ISV Studio is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-ISV Studio supports applications built on the Common Data Service that are published to and deployed through [AppSource](https://appsource.microsoft.com/). No telemetry will be provided on side loaded solutions not deployed through AppSource.
+ISV Studio supports applications built on the Microsoft Dataverse that are published to and deployed through [AppSource](https://appsource.microsoft.com/). No telemetry will be provided on side loaded solutions not deployed through AppSource.
 
-The applications currently available on the Common Data Service includes Power Apps as well as Dynamics 365 for Sales, Marketing, Service, and Talent.
+The applications currently available on the Dataverse includes Power Apps as well as Dynamics 365 for Sales, Marketing, Service, and Talent.
 
 As an end user installs an application from AppSource, a consent dialog will be displayed requesting the user to acknowledge that contact, usage, and transactional information may be shared with the application provider. This information is used by the provider to support billing and other transactional activities and to enable telemetry in ISV Studio for the ISV to learn from and act on.
 
@@ -45,7 +47,7 @@ To access the public preview of ISV Studio, navigate your browser to [https://ak
 
 ## Pre-requisites
 
-1. The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include Power Apps and model-driven apps in Dynamics 365 such as Dynamics 365 Sales and Dynamics 365 Customer Service.
+1. The ISV must be associated with a Microsoft registered Partner organization [ISV] that has one or more supported apps published in [AppSource](https://appsource.microsoft.com/). Supported apps include model-driven apps created using Power Apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service.
 
 2. The ISV must have an [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) (AAD) account and the account must be configured as an app contributor or owner in Partner Center for the particular ISV.
 

@@ -1,5 +1,5 @@
 ---
-title: "Link custom attributes of the recurring appointment master and appointment entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Link custom attributes of the recurring appointment master and appointment entities (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Link the custom attributes of the RecurringAppointmentMaster entity with custom attributes of the Appointment entity to automatically copy data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Link custom attributes of the recurring appointment master and appointment entities
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 You can link the custom attributes created for the `RecurringAppointmentMaster` entity with the custom attributes created for the `Appointment` entity to automatically copy the data from the recurring appointment master custom attribute to the linked recurring appointment instances custom attribute, every time it is expanded.  
   

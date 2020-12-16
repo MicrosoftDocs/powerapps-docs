@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 21368fac-d4bc-4f75-8a9c-cce098fa0b45
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +15,6 @@ search.app:
   - D365CE
 ---
 # setVisible (Client API reference)
-
-
 
 Sets a value that indicates whether the control is visible. 
 
@@ -33,6 +31,9 @@ All
 |Name|Type|Required|Description|
 |--|--|--|--|
 |bool|Boolean|Yes|Specify **true** to show the control; **false** to hide the control.|
+
+>[!NOTE]
+> If a control is set to false and is in a section that is hidden and if you set the control to true, the section will be visible.
 
 ### Related topics
 

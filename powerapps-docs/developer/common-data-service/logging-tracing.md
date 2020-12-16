@@ -1,5 +1,5 @@
 ---
-title: "Logging and tracing (Common Data Service) | Microsoft Docs"
+title: "Logging and tracing (Microsoft Dataverse) | Microsoft Docs"
 description: "Use the trace log to store plug-in execution information to aid in plug-in debugging."
 ms.custom: ""
 ms.date: 09/19/2019
@@ -17,9 +17,11 @@ search.app:
 ---
 # Tracing and logging
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Use tracing to troubleshoot a plug-in or custom workflow activity (custom code). Tracing assists developers by recording run-time information as an aid in diagnosing the cause of code failures. Tracing is supported for synchronous or asynchronous execution.
   
-Recording of run-time tracing information for Common Data Service is provided by a service named <xref:Microsoft.Xrm.Sdk.ITracingService>. Information provided to this service by custom code can be recorded in three different places as identified here.  
+Recording of run-time tracing information for Microsoft Dataverse is provided by a service named <xref:Microsoft.Xrm.Sdk.ITracingService>. Information provided to this service by custom code can be recorded in three different places as identified here.  
 
 - **Trace log**  
   
@@ -91,7 +93,7 @@ Each Trace call is logged as a new line in the [PluginTraceLog](reference/entiti
 
  ### Plug-in trace viewer
 
-**Plugin Trace Viewer** is a tool that XrmToolbox community developed. Please see the [Community tools for Common Data Service](community-tools.md) topic for community developed tools.
+**Plugin Trace Viewer** is a tool that XrmToolbox community developed. Please see the [Community tools for Dataverse](community-tools.md) topic for community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 

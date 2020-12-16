@@ -1,5 +1,5 @@
 ---
-title: "Sample: Work with option sets (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Work with option sets (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to work with global option set" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Work with option sets
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This sample shows how to work with option sets. Typically, you use global option sets to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike local options sets which are defined only for a specific attribute, you can reuse global option sets. You will also see them used in request parameters in a manner similar to an enumeration.
 

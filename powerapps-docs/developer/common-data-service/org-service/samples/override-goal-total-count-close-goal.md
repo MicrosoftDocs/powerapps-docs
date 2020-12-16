@@ -1,5 +1,5 @@
 ---
-title: "Sample: Override goal total count and close the goal (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Override goal total count and close the goal (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to override the goal total count and close the goal." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,9 +17,11 @@ search.app:
 ---
 # Sample: Override goal total count and close the goal
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to override the goal total count and close the goal. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/OverrideGoalTotal).
 
-This sample requires additional users that are not in your system. Create the required user **as is** shown below manually in **Office 365**. Replace `yourorg` with the `OrgName` of your organization.
+This sample requires additional users that are not in your system. Create the required user **as is** shown below manually in **Microsoft 365**. Replace `yourorg` with the `OrgName` of your organization.
 
 **First Name**: Samantha<br/>
 **Last Name**: Smith<br/>
@@ -42,7 +44,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the version of the org.
-2. Retrieves the sales manager user created manually in **Office 365**.
+2. Retrieves the sales manager user created manually in **Microsoft 365**.
 3. Creates a `PhoneCall` record and supporting account record for the sample.
 4. Creates ActivityPartys for the phone calls "From" field.
 5. Creates an open phone call.

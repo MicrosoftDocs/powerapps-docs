@@ -1,8 +1,8 @@
 ---
-title: "Query data using the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Introduces the different ways to query data using Common Data Service SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Query data using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Introduces the different ways to query data using Microsoft Dataverse SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 12/10/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Query data using the Organization service
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 The SDK assemblies for the organization service provide several styles to query data. Each provides different advantages.
 
@@ -39,6 +41,8 @@ Both of these methods will return an <xref:Microsoft.Xrm.Sdk.EntityCollection> t
 
 > [!NOTE]
 > To ensure best performance, each query request can return a maximum of 5000 entity records. To return larger result sets you must request additional pages.
+>
+> All filter conditions for string values are case insensitive.  
 
 ### Null attribute values are not returned
 
@@ -97,8 +101,10 @@ results.Entities.ToList().ForEach(x => {
 
 
 More information:
+
 - [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
 - [FetchXML schema](../fetchxml-schema.md)
+- [Work with Quick Find’s search item limit](../quick-find-limit.md)
 - [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
 - [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
 - [Fiscal date and older than datetime query operators in FetchXML](../use-fetchxml-fiscal-date-older-datetime-query-operators.md)

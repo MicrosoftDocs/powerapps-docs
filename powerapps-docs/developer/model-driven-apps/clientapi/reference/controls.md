@@ -4,9 +4,9 @@ ms.date: 08/12/2019
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -14,8 +14,6 @@ search.app:
   - D365CE
 ---
 # Controls (Client API reference)
-
-
 
 A control represents an HTML element present on the form. Some controls are bound to a specific attribute, whereas others may represent unbound controls such as an IFRAME, Web resource, or a sub grid that has been added to the form. 
 
@@ -329,6 +327,13 @@ The Sliverlight web resource has these additional methods:
 </td>
 </tr>
 </table>
+
+> [!TIP]
+> If you want to modify all the controls bound to an attribute on a form, use the controls collection inside the attribute type. For example, to add notification to each control bound to the `name` attribute, you can do the following:
+ >  ```JavaScript
+ >   const notification = { messages: ['Sample Notification on Name Controls'], notificationLevel: 'RECOMMENDATION', uniqueId: 'my_unique_id'};
+ >  formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification));
+ > ```
 
 
 ### Related topics

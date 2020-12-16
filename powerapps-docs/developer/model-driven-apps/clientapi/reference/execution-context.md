@@ -6,9 +6,9 @@ ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 1fcbf0fd-4e47-4352-a555-9315f7e57331
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -26,7 +26,7 @@ The execution context object provides the following methods.
 |Method |Description |
 |---|---|
 |[getDepth](executioncontext/getDepth.md)|Returns a value that indicates the order in which this handler is executed.|
-|[getEventArgs](executioncontext/getEventArgs.md)|Returns an object with methods to manage the **OnSave** event.|
+|[getEventArgs](executioncontext/getEventArgs.md)|Returns an object with methods to manage this handler.|
 |[getEventSource](executioncontext/getEventSource.md)|Returns a reference to the object that the event occurred on.|
 |[getFormContext](executioncontext/getFormContext.md)|Returns a reference to the form or an item on the form depending on where the method was called.|
 |[getSharedVariable](executioncontext/getSharedVariable.md)|Retrieves a variable set using the [setSharedVariable](executioncontext/setSharedVariable.md) method.|

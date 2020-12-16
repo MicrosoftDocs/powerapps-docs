@@ -5,9 +5,9 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Use the Location Readiness dashboard
@@ -16,47 +16,58 @@ This article is for executive leaders who use the Power BI dashboard to analyze 
 
 ## How to view the Location Readiness dashboard
 
-1. Open Power BI Desktop.
+1. Open Power BI in the Service.
 
 2. In the search bar, search for **Return to the Workplace – Leadership**.
 
     > [!div class="mx-imgBorder"]
-    > ![Search for dashboard](media/pbi-dash-command-bar.png "Search for dashboard")
+    > ![Search for dashboard](media/pbi-dash-command-barr.png "Search for dashboard")
 
 ## System at a glance
 
-The **System at a Glance** tab provides key metrics for returning to work, including current value, goal values, and whether locations have met the goals. These key metrics are the number of COVID-19 new cases per day, fatality cases per day, new cases per day per million population, fatality cases per day per million population, reproductive number, and facilities' Readiness Checklist completion percentage.
+The **System at a Glance** tab provides visibility into key metrics to monitor virus spread and facility status. 
 
-A map highlights locations of facilities, along with the number of facilities that are in a certain phase. Hovering over a facility gives you insights into the virus spread at that location.
+The key metrics are the number of COVID-19 new cases per day, fatal cases per day, 14 day moving average per one hundred thousand population and associated risk level, 14 day moving average fatal cases per million population, reproductive number.
 
-Some important statistics are provided at the top, including the number of facilities, new cases, new fatal cases, and the reproductive number.
+Users can switch between two different views in terms of virus metrics: Worldwide & United States. Virus metrics for worldwide view are shown on a country level and on a state/county level for the United States.
 
 > [!div class="mx-imgBorder"]
-> ![System at a Glance](media/pbi-dash-system-at-a-glance2.png "System at a Glance")
+> ![System at a Glance](media/pbi-dash-report-usa-county-virus.png "System at a Glance")
+
+A map highlights the locations of facilities, along with the number of facilities that are in a certain phase. Hovering over a facility gives you insights into the virus spread at that location.
+
+Important statistics are provided at the top, including the number of facilities, new cases, new fatal cases, and the reproductive number.
+
+> [!div class="mx-imgBorder"]
+> ![System at a Glance 2](media/pbi-dash-system-at-a-glance2.png "System at a Glance 2")
 
 ### Key metrics
 
 #### Phases
+
 Review the phases that facilities are in, the number of facilities, new cases, new fatal cases, and the reproductive number.
 
 > [!div class="mx-imgBorder"]
 > ![System at Glance phases](media/pbi-dash-system-at-a-glance-phases.png "System at a Glance phases")
 
-#### New COVID cases per day
-Information is shown about new confirmed cases and average cases, in addition to states with the most active spread.
+#### Confirmed COVID cases 
+
+Information is shown about the number of cases for the last reporting day, 14 day moving average in absolute numbers and per population with the associated risk level, daily trend, and the total number of cases and per population.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance cases](media/pbi-dash-report-covidcases.png "System at a Glance cases")
 
-#### Fatal COVID cases per day
-The data on confirmed deaths is shown in these visualizations, giving you easy access to information about the most active spread by states, new fatal cases, and total fatal cases.
+#### Fatal COVID cases
+
+The data on this tab shows information for COVID-19 cases with fatalities, giving you easy access to information about new fatal cases and total fatal cases in absolute terms and per population, and daily trend.
+
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance fatal COVID cases](media/pbi-dash-report-fatalcovidcases.png "System at a Glance fatal COVID cases")
 
 #### Effective Reproductive Number
 
-This is a key measure of how fast the virus is growing or decreasing, showing the average number of people who are infected.
+Effective Reproductive Number is a key measure of how fast the virus is growing or decreasing, showing the average number of people who are infected.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance reproductive number](media/pbi-dash-report-reproductivenumber.png "System at a Glance reproductive number")
@@ -73,7 +84,7 @@ When you want to drill down on certain facility locations, you can filter on the
 Different from the overall view of **System at a Glance**, the **Facility at a Glance** tab lets you drill down to each facility and track details about facility open readiness, employee sentiment, and employee attestation. It helps executive leaders to monitor all kinds of key metrics and determine the facility's opening phase.
 
 > [!div class="mx-imgBorder"]
-> ![Facility view](media/pbi-dash-selected-facility-details2.png "Facility view")
+> ![Facility view](media/pbi-dash-report-facility-at-a-glance-overview.png "Facility view")
 
 ### Key metrics
 
@@ -82,21 +93,34 @@ Different from the overall view of **System at a Glance**, the **Facility at a G
 In this area, you can find employees average sentiment, reproductive numbers, facilities, and current phases.
 
 > [!div class="mx-imgBorder"]
-> ![Phase readiness](media/pbi-dash-report-facility-at-a-glance-PhaseReadiness.png "Phase readiness")
+> ![Phase readiness](media/pbi-dash-report-facility-at-a-glance-phases-readiness.png "Phase readiness")
 
 #### Readiness Checklist
 
 The checklist shows the steps needed to move facilities through phases.
 
 > [!div class="mx-imgBorder"]
-> ![Readiness Checklist](media/pbi-dash-report-facility-at-a-glance-checklist.png "Readiness Checklist")
+> ![Readiness Checklist](media/pbi-dash-report-facility-at-a-glance-readiness-checklist.png "Readiness Checklist")
+
+#### Occupancy
+
+The Occupancy section provides metrics regarding facility capacity and usage, such as:
+
+- Facility’s total capacity, and current capacity based on reopening phase.
+- Number of bookings and visits for the most recent day and daily average for the last seven days.
+- Two charts, that can be filtered by date range:
+   - Number of bookings and the current capacity.
+   - Average daily occupancy, shown as a black bar. Capacity is represented by the green zone.  Facilities with black bars in the red zone are over-capacity.
+
+> [!div class="mx-imgBorder"]
+> ![Readiness Checklist Occupancy](media/pbi-dash-report-facility-at-a-glance-occupancy.png "Readiness Checklist occupancy")
 
 ## Employee Activity 
 
-The **Employee Activity** tab provides an overall time-series daily view for employee sentiment and attestation. You can check every day to see where numbers increased or were lower compared to previous days.
+The **Employee Activity** tab provides an overall time-series daily view for employee sentiment and daily passes generated for employees and guests. You can check every day to see where numbers increased or were lower compared to previous days. 
 
 > [!div class="mx-imgBorder"]
-> ![Employee Activity](media/pbi-dash-employee-activity2.png "Employee Activity")
+> ![Employee Activity](media/pbi-dash-report-leadership-employee-activity.png "Employee Activity")
 
 ## Tools
 
@@ -130,7 +154,7 @@ WHO supports open access to the published output of its activities as a fundamen
 
    For further information, visit [WHO Copyright, Licensing, and Permissions](https://www.who.int/about/who-we-are/publishing-policies/copyright).
 
-2. USAFACTS (cases/deaths US only): <https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/>  
+2. USAFACTS (cases/deaths, population US only): <https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/>  
 
    © 2020 USAFacts. All rights reserved.  USAFacts data is available under a Creative Commons license. Learn more at <https://usafacts.org/faq/> 
 
@@ -141,6 +165,9 @@ WHO supports open access to the published output of its activities as a fundamen
 4. Reproductive factor estimates: <https://epiforecasts.io/covid/posts/global/> 
 
     This dataset is from EpiForecasts and the CMMID COVID-10 working group at <https://epiforecasts.io/covid/posts/global> and is licensed under Creative Commons Attribution CC BY 4.0.
+
+5. Global Population data:  https://population.un.org/wpp/Download/Standard/Population/ is puled from UN department of economic and social affairs.
+
 
 ## Feedback about the solution
 

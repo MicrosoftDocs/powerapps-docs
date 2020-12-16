@@ -1,6 +1,6 @@
 ---
-title: "Use Multi-Tenant Server-to-server authentication (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes how to configure an application user for server-to-server authentication with Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use Multi-Tenant Server-to-server authentication (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes how to configure an application user for server-to-server authentication with Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 2/28/2019
 ms.reviewer: "pehecke"
@@ -17,11 +17,13 @@ search.app:
 ---
 # Use Multi-Tenant Server-to-server authentication
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This is the most common scenario and the one which is used for apps distributed using Microsoft AppSource, but you can also use multi-tenant without listing your application with Microsoft AppSource.  
   
-Each Common Data Service organization is associated with an Azure Active Directory tenant. Your web application or service is registered with its own Azure AD tenant.  
+Each Microsoft Dataverse organization is associated with an Azure Active Directory tenant. Your web application or service is registered with its own Azure AD tenant.  
   
-In this scenario any Common Data Service tenant can potentially use your multi-tenant application after they grant consent for the application to access data.  
+In this scenario any Dataverse tenant can potentially use your multi-tenant application after they grant consent for the application to access data.  
   
 <a name="bkmk_Requirements"></a>   
 
@@ -31,7 +33,7 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
   
 - An Azure AD tenant you will use to publish your application or service.  
   
-- 2 Common Data Service subscriptions  
+- 2 Dataverse subscriptions  
   
   -   One must be associated with Azure AD tenant you will use to publish your application or service.  
   
@@ -47,13 +49,13 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
   
 1. Create a multi-tenant web application registered with your Azure AD tenant.  
   
-2. Create an application user associated with the registered application  in your Common Data Service tenant  
+2. Create an application user associated with the registered application  in your Dataverse tenant  
   
-3. Create a custom security role and assign it to the application user in your Common Data Service tenant  
+3. Create a custom security role and assign it to the application user in your Dataverse tenant  
   
-4. Test your application using your Common Data Service tenant  
+4. Test your application using your Dataverse tenant  
   
-5. Test your application using a separate Common Data Service tenant  
+5. Test your application using a separate Dataverse tenant  
   
 <a name="bkmk_CreateAMultitenantWebApp"></a>
    
@@ -82,7 +84,7 @@ Azure AD requires the following values to register your application:
   
  ![ASP.NET  MVC Change Authentication Dialog](media/mvc-change-authentication-dialog.png "ASP.NET  MVC Change Authentication Dialog")  
   
- When you configure a project with these options it will be configured to use OWIN middleware and scaffolding for a basic application that supports this scenario. With some basic modifications it can be adapted to work with Common Data Service. 
+ When you configure a project with these options it will be configured to use OWIN middleware and scaffolding for a basic application that supports this scenario. With some basic modifications it can be adapted to work with Dataverse. 
   
  In the process of creating and registering your application for development you will most likely use `https://localhost` as the **Sign-on URL** and **Reply URL** values so you can test and debug your application locally before publishing. You will need to change these values before you publish your app.  
   
@@ -90,15 +92,15 @@ Azure AD requires the following values to register your application:
   
 <a name="bkmk_GrantApplicationRights"></a>
    
-## Grant your application rights to access Common Data Service data
+## Grant your application rights to access Dataverse data
   
- This is the reason why your Common Data Service instance must be associated with your Azure AD tenant. If your Azure AD tenant is not associated with a Common Data Service tenant, you will not be able to perform the following steps.  
+ This is the reason why your Dataverse instance must be associated with your Azure AD tenant. If your Azure AD tenant is not associated with a Dataverse tenant, you will not be able to perform the following steps.  
   
 1. Go to [https://portal.azure.com](https://portal.azure.com) and select **Azure Active Directory**.  
   
 2. Click **App registrations** and look for the application you created using Visual Studio.  
   
-3. You need to give your application privileges to access Common Data Service data. In the **API Access** area click **Required permissions**. You should see that it already has permissions for **Windows Azure Active Directory**.  
+3. You need to give your application privileges to access Dataverse data. In the **API Access** area click **Required permissions**. You should see that it already has permissions for **Windows Azure Active Directory**.  
   
 4. Click **Add**, then **Select an API**. In the list, select **Dynamics 365** and then click the **Select** button.  
   
@@ -110,8 +112,8 @@ Azure AD requires the following values to register your application:
   
 <a name="bkmk_CreateAppUser"></a>
    
-## Create an application user  associated with the registered application  in Common Data Service  
- When your application accesses the Common Data Service data of one of the subscribers of your application, it will require an application user in the subscriber’s Common Data Service organization. Like any Common Data Service user, this application user must be associated with at least one security role which defines the data the user is able to access.  
+## Create an application user  associated with the registered application  in Dataverse  
+ When your application accesses the Dataverse data of one of the subscribers of your application, it will require an application user in the subscriber’s Dataverse organization. Like any Dataverse user, this application user must be associated with at least one security role which defines the data the user is able to access.  
   
  The [SystemUser Entity](reference/entities/systemuser.md) has three new attributes to store this data.  
   
@@ -121,10 +123,10 @@ Azure AD requires the following values to register your application:
 |[ApplicationIdUri](reference/entities/systemuser.md#BKMK_ApplicationIdUri)|**Application ID URI**|StringType|The URI used as a unique logical identifier for the external app. This can be used to validate the application|  
 |[AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId)|**Azure AD Object ID**|UniqueidentifierType|This is the application directory object Id.|  
   
- This `systemuser``AzureActiveDirectoryObjectId` property value must be a reference to the Azure Active Directory Object Id of your registered application. This reference will be set in Common Data Service when the application user is created based on the `ApplicationId` value.  
+ This `systemuser``AzureActiveDirectoryObjectId` property value must be a reference to the Azure Active Directory Object Id of your registered application. This reference will be set in Dataverse when the application user is created based on the `ApplicationId` value.  
   
 > [!NOTE]
->  When you are initially developing your application with your own Common Data Service tenant and the Azure AD tenant associated with it, you can simply create the application user because the registered application is already part of your Azure AD tenant.  
+>  When you are initially developing your application with your own Dataverse tenant and the Azure AD tenant associated with it, you can simply create the application user because the registered application is already part of your Azure AD tenant.  
 > 
 >  However, in order to create the application user in a different organization for testing, or whenever a subscriber will use your application, they must first grant consent for your application, so the steps in the process are different. See [Test your application using a separate Dynamics 365 tenant](#bkmk_TestUsingSeparateTenant) for more information.  
   
@@ -132,14 +134,14 @@ Azure AD requires the following values to register your application:
  
 ### Create a security role for the application user  
 
- In the next step you will create a Common Data Service application user. The privileges and access rights for this user will be defined by a custom security role you set. Before you create the application user, you must create a custom security role so you can associate the user to it. More information: [Create or edit a security role](https://technet.microsoft.com/library/dn531130.aspx)  
+ In the next step you will create a Dataverse application user. The privileges and access rights for this user will be defined by a custom security role you set. Before you create the application user, you must create a custom security role so you can associate the user to it. More information: [Create or edit a security role](https://technet.microsoft.com/library/dn531130.aspx)  
   
 > [!NOTE]
->  The application user cannot be associated with one of the default Common Data Service security roles. You must create a custom security role to associate with the application user.  
+>  The application user cannot be associated with one of the default Dataverse security roles. You must create a custom security role to associate with the application user.  
   
 <a name="bkmk_ManuallyCreateUser"></a>   
 
-### Manually create a Common Data Service application user  
+### Manually create a Dataverse application user  
 
  The procedure to create this user is different from creating a licensed user. Use the following steps:  
   
@@ -169,21 +171,21 @@ Azure AD requires the following values to register your application:
   
 <a name="bkmk_TestUsingYourTenant"></a>  
  
-## Test your application using your Common Data Service tenant 
+## Test your application using your Dataverse tenant 
  
- Because the application has been registered with your Azure AD tenant and the application user in your development organization is already configured, you can continue to develop your application against your own Common Data Service tenant. But this is not a valid test of the multi-tenant capability. You need to test your application on a separate Common Data Service tenant.  
+ Because the application has been registered with your Azure AD tenant and the application user in your development organization is already configured, you can continue to develop your application against your own Dataverse tenant. But this is not a valid test of the multi-tenant capability. You need to test your application on a separate Dataverse tenant.  
   
 <a name="bkmk_TestUsingSeparateTenant"></a>   
 
-## Test your application using a separate Common Data Service tenant  
+## Test your application using a separate Dataverse tenant  
 
- Before you test your application with a separate Common Data Service tenant, an administrator for the Azure AD tenant must grant consent for the application. The administrator grants consent by navigating to the application using a browser. The first time they access the application, they will see a dialog like this:  
+ Before you test your application with a separate Dataverse tenant, an administrator for the Azure AD tenant must grant consent for the application. The administrator grants consent by navigating to the application using a browser. The first time they access the application, they will see a dialog like this:  
   
  ![Grant consent to access Dynamics 365 data](media/grant-consent-to-access-crm-data.PNG "Grant consent to access Dynamics 365 data")  
   
  When they grant consent, your registered application will be added to the  Azure AD Enterprise applications list and it is available to the users of the Azure AD tenant.  
   
- Only after an administrator has granted consent, you must then create the application user in the subscriber’s Common Data Service tenant. You can manually create the application user using the steps described in [Manually create a Dynamics 365 application user](#bkmk_ManuallyCreateUser).  
+ Only after an administrator has granted consent, you must then create the application user in the subscriber’s Dataverse tenant. You can manually create the application user using the steps described in [Manually create a Dynamics 365 application user](#bkmk_ManuallyCreateUser).  
   
  For initial tests you may want to manually perform these steps. When you are ready to make your application or service available to subscribers you will want to have a more efficient procedure. This is covered in the next section.  
   
@@ -191,7 +193,7 @@ Azure AD requires the following values to register your application:
    
 ## Prepare a method to deploy the application user  
 
- After subscribers grant consent to your application or service you will need an easy, reliable way for them to add the application user and any other required components to their Common Data Service organization.  
+ After subscribers grant consent to your application or service you will need an easy, reliable way for them to add the application user and any other required components to their Dataverse organization.  
   
  You must include a custom security role which defines what privileges your application requires and then make sure that the application user is associated to that custom security role. Because a custom security role can be included in a solution, you should prepare a managed solution which contains the definition of the custom security role and any other solution components your application requires.  
   
@@ -201,7 +203,7 @@ Azure AD requires the following values to register your application:
 - [Copy a security role](/dynamics365/customer-engagement/admin/copy-security-role)  
 - [Add solution components](/dynamics365/customer-engagement/customize/create-solution.md#add-solution-components)
   
-  For information about creating a Common Data Service solution, see the following topics:
+  For information about creating a Dataverse solution, see the following topics:
   
 - [Use solutions for your customizations](/power-platform/alm/use-solutions-for-your-customizations)  
 - [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)  
@@ -210,7 +212,7 @@ Azure AD requires the following values to register your application:
   
   There are several ways that you can achieve this, including writing your own program using the web services and having the subscriber run the program.  
   
-  The Dynamics 365 Package Deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different Common Data Service organization. More information: [Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)  
+  The Dynamics 365 Package Deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different Dataverse organization. More information: [Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)  
   
 ### See also  
  [Use Single-Tenant Server-to-server authentication](use-single-tenant-server-server-authentication.md)   

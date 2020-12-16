@@ -1,6 +1,6 @@
 ---
-title: "Detect duplicate data using the Web API (Common Data Service)| Microsoft Docs"
-description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Common Data Service Web API"
+title: "Detect duplicate data using the Web API (Microsoft Dataverse)| Microsoft Docs"
+description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Microsoft Dataverse Web API"
 ms.custom: ""
 ms.date: 04/06/2020
 ms.service: powerapps
@@ -11,9 +11,8 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: AE107774-4545-44B4-94C8-A0271EFA7876
 caps.latest.revision: 11
-author: "susikka"
-ms.author: "susikka"
-manager: "shujoshi"
+author: "phecke"
+ms.author: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -23,7 +22,9 @@ search.app:
 
 # Detect duplicate data using the Web API
 
-Common Data Service Web API allows you to detect duplicate records of an existing record in order to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md) 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
+Microsoft Dataverse Web API allows you to detect duplicate records of an existing record in order to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md) 
 
 ## Detect duplicates during Create operation
 
@@ -39,7 +40,7 @@ Use preference header `MSCRM.SuppressDuplicateDetection` and set its value to `f
 
 
 > [!NOTE]
-> Make sure there are appropriate duplicate detection rules in place. Common Data Service includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you'll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, [see Duplicate rule entities](../duplicaterule-entities.md) 
+> Make sure there are appropriate duplicate detection rules in place. Dataverse includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you'll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, [see Duplicate rule entities](../duplicaterule-entities.md) 
 
 
 

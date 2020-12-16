@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/11/2015
 ms.author: gregli
 search.audienceType: 
@@ -64,7 +64,7 @@ If there are no errors, the table that **Errors** returns will be [empty](functi
 ### Step by Step
 For this example, we'll be working with the **IceCream** data source:
 
-![](media/function-errors/icecream.png)
+![Ice Cream](media/function-errors/icecream.png "Ice Cream")
 
 Through the app, a user loads the Chocolate record into a data-entry form and then changes the value of **Quantity** to 90.  The record to be worked with is placed in the [context variable](../working-with-variables.md#use-a-context-variable) **EditRecord**:
 

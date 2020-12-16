@@ -1,5 +1,5 @@
 ---
-title: "Fiscal date and older than datetime query operators in FetchXML (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Fiscal date and older than datetime query operators in FetchXML (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how to use FetchXML fiscal data conditional operators and &quot;older than&quot; clauses for date and time values" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,9 @@ search.app:
 ---
 # Fiscal date and older than datetime query operators in FetchXML
 
-A FetchXML query in Common Data Service can use special fiscal date values and *older than* clauses for date and time values in queries. For example, a FetchXML query can find all orders fulfilled in the last fiscal month or urgent cases with high severity that are older than 15 minutes.  
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+A FetchXML query in Microsoft Dataverse can use special fiscal date values and *older than* clauses for date and time values in queries. For example, a FetchXML query can find all orders fulfilled in the last fiscal month or urgent cases with high severity that are older than 15 minutes.  
   
 > [!NOTE]
 >  For all fiscal date queries, the FetchXML query uses the organization’s fiscal year settings.  

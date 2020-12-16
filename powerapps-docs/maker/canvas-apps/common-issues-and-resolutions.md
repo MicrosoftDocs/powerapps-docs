@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 07/02/2020
+ms.date: 12/15/2020
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -17,6 +17,11 @@ search.app:
 # Common issues and resolutions for Power Apps
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
+
+1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
+<br> A pop-up dialog will show the following message in this situation: <br>
+  `Upgrade browser to use Dropbox`
+<br> When this happens, consider using web player on Windows platform.
 
 1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
    When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, please use your browser.
@@ -28,7 +33,7 @@ This article lists some common issues that you might encounter while using Power
    When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users many see a black box when scrolling covering part of the app. This issue happens with chromium based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium with version 85.**
    
 1. **Problems downloading attachments in SharePoint custom forms** (May 22, 2020)
-   When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, change to use the default SharePoint form or use another browser. The team is actively working to fix this issue. **Fix has been deployed in the weeek of 6/8/2020**
+   When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, change to use the default SharePoint form or use another browser. The team is actively working to fix this issue. **Fix has been deployed in the week of 6/8/2020**
    
 1. **Problems downloading attachments in embedded Power Apps** (May 22, 2020)
   When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, use another browser. The team is actively working to fix this issue.
@@ -116,9 +121,9 @@ This article lists some common issues that you might encounter while using Power
 
     If you install Power Apps on a computer that’s running Windows 8 or Windows 8.1, keep the Windows Store app open and active, use the Settings charm to check for updates, and then install them.
 
-1. **Custom connectors and the Common Data Service**
+1. **Custom connectors and Microsoft Dataverse**
 
-    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Common Data Service and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](../../administrator/environments-overview.md).
+    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](../../administrator/environments-overview.md).
 
 1. **Running an app on Windows 8.1**
 
@@ -207,3 +212,7 @@ This article lists some common issues that you might encounter while using Power
 1. **Card gallery is deprecated**.
 
      Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.
+     
+ 1.   **Power Apps per app plans does not support Power Apps for Windows app**
+ 
+        Power Apps for Windows app is not supported if you're on the [Power Apps per app plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp). 

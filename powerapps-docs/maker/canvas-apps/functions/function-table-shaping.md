@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 04/04/2019
 ms.author: gregli
 search.audienceType: 
@@ -43,7 +43,7 @@ Use the **RenameColumns** function to rename one or more columns of a table by p
 
 The **ShowColumns** function includes columns of a table and drops all other columns. You can use **ShowColumns** to create a single-column table from a multi-column table.  **ShowColumns** includes columns, and **DropColumns** excludes columns.  
 
-For all these functions, the result is a new table with the transform applied. The original table isn't modified. You can't modify an existing table with a formula. SharePoint, Common Data Service, SQL Server, and other data sources provide tools for modifying the columns of lists, entities, and tables, which are often referred to as the schema. The functions in this topic only transform an input table, without modifying the original, into an output table for further use.
+For all these functions, the result is a new table with the transform applied. The original table isn't modified. You can't modify an existing table with a formula. SharePoint, Microsoft Dataverse, SQL Server, and other data sources provide tools for modifying the columns of lists, entities, and tables, which are often referred to as the schema. The functions in this topic only transform an input table, without modifying the original, into an output table for further use.
 
 The arguments to these functions support delegation. For example, a **Filter** function used as an argument to pull in related records searches through all listings, even if the **'[dbo].[AllListings]'** data source contains a million rows:
 

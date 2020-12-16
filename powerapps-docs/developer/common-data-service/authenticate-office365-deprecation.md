@@ -1,5 +1,5 @@
 ---
-title: "Use of Office365 authentication with the WS-Trust security protocol (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use of Microsoft 365 authentication with the WS-Trust security protocol (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes deprecation of the WS-Trust security protocol and the authentication code changes required in applications."
 ms.custom: ""
 ms.date: 02/05/2020
@@ -16,7 +16,9 @@ search.app:
   - D365CE
 ---
 
-# Use of Office365 authentication with the WS-Trust security protocol
+# Use of Microsoft 365 authentication with the WS-Trust security protocol
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Use of the WS-Trust authentication security protocol when connecting to Common
 Data Service is no longer recommended and has been
@@ -34,10 +36,10 @@ changes to be made to your application’s code.
 ## How do I know if my code or application is using WS-Trust?
 
 First and most importantly, this change **only** impacts client applications that
-connect to the Common Data Service. It does not impact custom plug-ins,
+connect to the Microsoft Dataverse. It does not impact custom plug-ins,
 workflow activities, or on-premises/IFD service connections.
 
-- If your code employs user account and password credentials for authentication with Common Data Service or an application, you are likely using the WS-Trust security protocol. Some examples are shown below, though this list is not fully inclusive.
+- If your code employs user account and password credentials for authentication with Dataverse or an application, you are likely using the WS-Trust security protocol. Some examples are shown below, though this list is not fully inclusive.
 
   - When using the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) class with a connection string:
 
@@ -64,7 +66,7 @@ Service.
 
 - If your code uses an [Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy](/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy) instance:
 
-  If you are passing the `OrganizationServiceProxy` instance around to various methods, or returning the instance from a function, replace all occurrences of the type `OrganizationServiceProxy` with the [IOrganizationService](/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) interface. This interface exposes all the core methods used to communicate with Common Data Service.
+  If you are passing the `OrganizationServiceProxy` instance around to various methods, or returning the instance from a function, replace all occurrences of the type `OrganizationServiceProxy` with the [IOrganizationService](/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) interface. This interface exposes all the core methods used to communicate with Dataverse.
 
   When invoking the constructor, it is recommend you add the NuGet package [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) to your project and replace all use of `OrganizationServiceProxy` class constructors with [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) class constructors. You will need to alter your coding pattern here, however, for simplicity `CrmServiceClient` supports connection strings in addition to complex constructors and the ability to provide external authentication handlers. `CrmServiceClient` implements `IOrganizationService`, therefore your new authentication code will be portable to the rest of your application code. You can find examples on the use of `CrmServiceClient` in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23) repository.
 
@@ -85,7 +87,7 @@ Service.
     Password=passcode;Url=https://contosotest.crm.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
     RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;LoginPrompt=Auto"`
 
-        This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Office 365 behavior worked.
+        This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Microsoft 365 behavior worked.
 
         The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to create your own application registration in Azure Active Directory (AAD) for applications running in your tenant.<p/>
 
@@ -96,8 +98,8 @@ Service.
      Remove all use of that property in your code. `CrmServiceClient` implements `IOrganizationService` and exposes everything that is settable for the organization service proxy.
 
 > [!IMPORTANT]
-> Regarding not being able to login using User ID/Password even if using OAuth: if your tenant and user is configured in Azure Active Directory for conditional access and/or Multi-Factor Authentication is required, you will not be able to use user ID/password flows in a non-interactive form at all. For those situations, you must use a Service Principal user to authenticate with Common Data Service.<p/>
-To do this, you must first register the application user (Service Principal) in Azure Active Directory. You can find out how to do this [here](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal). During application registration you will need to create that user in Common Data Service and grant permissions. Those permissions can either be granted directly or indirectly by adding the application user to a team which has been granted permissions in Common Data Service. You can find more information on how to set up an application user to authenticate with Common Data Service [here](/powerapps/developer/common-data-service/use-single-tenant-server-server-authentication).
+> Regarding not being able to login using User ID/Password even if using OAuth: if your tenant and user is configured in Azure Active Directory for conditional access and/or Multi-Factor Authentication is required, you will not be able to use user ID/password flows in a non-interactive form at all. For those situations, you must use a Service Principal user to authenticate with Dataverse.<p/>
+To do this, you must first register the application user (Service Principal) in Azure Active Directory. You can find out how to do this [here](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal). During application registration you will need to create that user in Dataverse and grant permissions. Those permissions can either be granted directly or indirectly by adding the application user to a team which has been granted permissions in Dataverse. You can find more information on how to set up an application user to authenticate with Dataverse [here](/powerapps/developer/common-data-service/use-single-tenant-server-server-authentication).
 
 ## Need help?
 

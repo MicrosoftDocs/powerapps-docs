@@ -1,20 +1,22 @@
 ---
-title: "msdyn_solutioncomponentsummary Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_solutioncomponentsummary entity."
-ms.date: 04/12/2020
+title: "msdyn_solutioncomponentsummary entity reference (Microsoft Dataverse)| MicrosoftDocs"
+description: "Includes schema information and supported messages for the msdyn_solutioncomponentsummary table."
+ms.date: 11/14/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# msdyn_solutioncomponentsummary Entity Reference
+# msdyn_solutioncomponentsummary entity reference
+
+> [!NOTE]
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
 
 
 
@@ -28,11 +30,11 @@ search.app:
 |Create|POST [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries(*msdyn_solutioncomponentsummaryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries(*msdyn_solutioncomponentsummaryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |Update|PATCH [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries(*msdyn_solutioncomponentsummaryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
-
-## Entity Properties
+## Entity properties
 
 |Property|Value|
 |--------|-----|
@@ -54,6 +56,7 @@ search.app:
 
 These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [msdyn_canvasappuniqueid](#BKMK_msdyn_canvasappuniqueid)
 - [msdyn_componentlogicalname](#BKMK_msdyn_componentlogicalname)
 - [msdyn_componenttype](#BKMK_msdyn_componenttype)
 - [msdyn_componenttypename](#BKMK_msdyn_componenttypename)
@@ -108,6 +111,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [msdyn_workflowcategory](#BKMK_msdyn_workflowcategory)
 - [msdyn_workflowcategoryname](#BKMK_msdyn_workflowcategoryname)
 - [msdyn_workflowidunique](#BKMK_msdyn_workflowidunique)
+
+
+### <a name="BKMK_msdyn_canvasappuniqueid"></a> msdyn_canvasappuniqueid
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Canvas App Unique Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_canvasappuniqueid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_msdyn_componentlogicalname"></a> msdyn_componentlogicalname
@@ -994,6 +1013,6 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### See also
 
-[About the Entity Reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[About entity reference](../about-entity-reference.md)<br />
+[Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_solutioncomponentsummary?text=msdyn_solutioncomponentsummary EntityType" />

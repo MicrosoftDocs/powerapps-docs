@@ -1,16 +1,11 @@
 ---
 title: "Add, configure, move, or delete sections on a form using the form designer | MicrosoftDocs"
+description: "Work with sections on a model-driven app form in Power Apps"
 ms.custom: ""
-ms.date: 08/26/2019
-ms.reviewer: ""
+ms.date: 08/25/2020
+ms.reviewer: "matp"
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "PowerApps"
 author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
@@ -30,7 +25,7 @@ Add, configure, move, or delete sections on a form using the form designer.
 To add sections to a form, use the **Components** pane. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/FormDesignerComponentsLayout.png "Layout components")
+> ![Layout components](media/FormDesignerComponentsLayout.png "Layout components")
 
   > [!NOTE]
   >   Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md).
@@ -72,6 +67,11 @@ These are the properties available to configure a section when you create or edi
 |**Display options** | **Hide on phone** |  The section can be hidden to render a condensed version of this form on phone screens. |
 |**Formatting** |  **Columns** |  Specify up to four columns for the section. |
 
+> [!NOTE]
+> We recommend limiting the length of section label text to about 50 characters. Section label text doesn't wrap and can truncate on devices with small screens.
+>
+> Sections that don't have any columns or controls will be hidden at runtime in Unified Interface.
+    
 ## Move sections on a form
 You can move sections using drag and drop or cut and paste actions. 
 
@@ -107,7 +107,7 @@ You can move sections using drag and drop or cut and paste actions.
     > [!NOTE]
     >   - Sections can only be deleted on main forms and quick view forms. More information: [Form types](types-forms.md)
     >   - If you delete a section by mistake, on the command bar, select **Undo** to revert the form to its previous state. 
-    >   - You can't delete a section that contains a field that is required or locked. 
+    >   - You can't delete a section that contains a column that is required or locked. 
     >   - You can't delete a section that is locked. 
     >   - A tab needs to have at least one section in each tab column. If you delete the last remaining section in a tab column a new section will be automatically added.
     >   - In the Unified Interface, sections won't be rendered if you have selected to hide them including the title and the border.  This is different than the legacy web client, and is by design to ensure proper rendering of the form across differing view ports from extra wide to narrow.
@@ -115,7 +115,7 @@ You can move sections using drag and drop or cut and paste actions.
 ### See also
 [Overview of the model-driven form designer](form-designer-overview.md)  
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
-[Add, configure, move, or delete fields on a form](add-move-or-delete-fields-on-form.md)  
+[Add, configure, move, or delete columns on a form](add-move-or-delete-fields-on-form.md)  
 [Add, configure, move, or delete components on a form](add-move-configure-or-delete-components-on-form.md)  
 [Add, configure, move, or delete tabs on a form](add-move-or-delete-tabs-on-form.md)  
 [Configure header properties in the form designer](form-designer-header-properties.md)  
@@ -123,4 +123,4 @@ You can move sections using drag and drop or cut and paste actions.
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit fields](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../common-data-service/create-edit-field-portal.md)  

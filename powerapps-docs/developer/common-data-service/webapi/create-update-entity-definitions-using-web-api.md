@@ -1,5 +1,5 @@
 ---
-title: "Create and update entity definitions using the Web API (Common Data Service) | Microsoft Docs"
+title: "Create and update entity definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating entity definitions using the Web API."
 ms.custom: ""
 ms.date: 10/31/2018
@@ -24,6 +24,8 @@ search.app:
 # Create and update entity definitions using the Web API
 
 
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 You can perform all the same operations on model entities that you can with the organization service. This topic focuses on working with metadata entities using the Web API. To find details about the entity metadata properties, see [Customize entity metadata](../customize-entity-metadata.md) and <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" />.  
 
@@ -799,7 +801,7 @@ As mentioned in [Update entities](create-update-entity-definitions-using-web-api
   
 ### See also
 
-[Use the Web API with Common Data Service metadata](use-web-api-metadata.md)<br />
+[Use the Web API with Microsoft Dataverse metadata](use-web-api-metadata.md)<br />
 [Query Metadata using the Web API](query-metadata-web-api.md)<br />
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
 [Model entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)<br />

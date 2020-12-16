@@ -1,5 +1,5 @@
 ---
-title: "Download tools from NuGet (Common Data Service) | Microsoft Docs"
+title: "Download tools from NuGet (Microsoft Dataverse) | Microsoft Docs"
 description: "Download the Plugin Registration, Package Deployment, and other core tools from Nuget."
 ms.custom: ""
 ms.date: 10/31/2018
@@ -23,6 +23,8 @@ search.app:
 
 # Download tools from NuGet 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can download tools used in development from NuGet using the  powershell script found below. These tools include:
 
 |Tool|NuGet Package|
@@ -40,6 +42,7 @@ You can download tools used in development from NuGet using the  powershell scri
 1. Copy and paste the following PowerShell script into the PowerShell window and press Enter.
 
     ```powershell
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
     $targetNugetExe = ".\nuget.exe"
     Remove-Item .\Tools -Force -Recurse -ErrorAction Ignore

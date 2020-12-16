@@ -1,8 +1,8 @@
 ---
-title: "Use webhooks to create external handlers for server events (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use webhooks to create external handlers for server events (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/04/2019
+ms.date: 08/29/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -17,13 +17,15 @@ search.app:
 ---
 # Use webhooks to create external handlers for server events
 
-With Common Data Service, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Webhooks enable developers and ISV’s to integrate Common Data Service data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
+With Microsoft Dataverse, you can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
+
+Webhooks enable developers and ISV’s to integrate Dataverse data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the SAS authentication model that you may currently use for Azure Service Bus integration.
 
 When deciding between the webhook model and the Azure Service Bus integration, here are some items to keep in mind:
 
-- Azure Service Bus works for high scale processing, and provides a full queueing mechanism if Common Data Service is pushing many events.
+- Azure Service Bus works for high scale processing, and provides a full queueing mechanism if Dataverse is pushing many events.
 - Webhooks can only scale to the point at which your hosted web service can handle the messages.
 - Webhooks enables synchronous and asynchronous steps. Azure Service Bus only allows for asynchronous steps.
 - Webhooks send POST requests with JSON payload and can be consumed by any programming language or web application hosted anywhere.
@@ -35,12 +37,12 @@ When deciding between the webhook model and the Azure Service Bus integration, h
 There are three parts to using web hooks:
 
 - Creating or configuring a service to consume webhook requests.
-- Registering webhook step on the Common Data Service service, or
+- Registering webhook step on the Dataverse service, or
 - Invoking a webhook from a plug-in or custom workflow activity. 
 
 ### Start by registering a test webhook
 
-In order to understand how to create and configure a service to consume a webhook request from Common Data Service, it is valuable to start by understanding how to register a web hook. More information: [Register a web hook](register-web-hook.md)
+In order to understand how to create and configure a service to consume a webhook request from Dataverse, it is valuable to start by understanding how to register a web hook. More information: [Register a web hook](register-web-hook.md)
 
 When you have registered an example webhook you can use a request logging site to examine the contextual data that will be passed. More information: [Test webhook registration with request logging site](test-webhook-registration.md)
 
@@ -74,8 +76,7 @@ Other data you can expect to find passed to your service is in the table below:
 
 |Key|Value Description|
 |---------|---------|
-|`x-request-id`|A unique identifier for the request|
-|`x-ms-dynamics-organization`|The name of the tenant sending the request|
+|`x-ms-dynamics-organization`|The domain name of the environment sending the request|
 |`x-ms-dynamics-entity-name`|The logical name of the entity passed in the execution context data.|
 |`x-ms-dynamics-request-name`|The name of the Event that the webhook step was registered for.|
 |`x-ms-correlation-request-id`|Unique identifier for tracking any type of extension. This property is used by the platform for infinite loop prevention. In most cases, this property can be ignored. This value may be used when working with technical support because it can be used to query telemetry to understand what occurred during the entire operation.
@@ -87,9 +88,6 @@ Other data you can expect to find passed to your service is in the table below:
 The body will contain string that represents the JSON value of an instance of the <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> class. This is the same data that is passed to Azure service bus integrations. 
 
 The service you create must parse this data to extract the relevant items of information for your service to provide its function. How you choose to parse this data depends on the technology you are using and your preferences.
-
-> [!IMPORTANT]
-> Due to certain Service Bus optimizations, it is not recommended that .NET developers deserialize the JSON formatted message request body to a <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> object. Rather, use [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm) to parse the message body.
 
 The following is an example of the serialized JSON data passed for a step registered with the following properties:
 
@@ -363,7 +361,7 @@ If your web hook is registered to run asynchronously, you can examine the system
 
 [Write a plug-in](write-plug-in.md)<br />
 [Register a plug-in](register-plug-in.md)<br />
-[Asynchronous service in Common Data Service](asynchronous-service.md)<br />
+[Asynchronous service in Dataverse](asynchronous-service.md)<br />
 [Sample: Azure aware custom plug-in](org-service/samples/azure-aware-custom-plugin.md)<br />
 [Sample: Azure aware custom workflow activity](org-service/samples/azure-aware-custom-workflow-activity.md)<br />
 [Azure Functions](https://azure.microsoft.com/services/functions/)<br />

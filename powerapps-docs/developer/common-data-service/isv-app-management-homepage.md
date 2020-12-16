@@ -24,6 +24,8 @@ search.app:
 
 # The Home page
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 After a user logs into the ISV Studio, they are presented with the landing page

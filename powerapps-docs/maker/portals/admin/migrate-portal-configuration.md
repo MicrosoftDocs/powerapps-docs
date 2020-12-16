@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/08/2020
+ms.date: 08/10/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -14,20 +14,21 @@ ms.reviewer: tapanm
 
 Portal development involves several configurations and customizations to achieve a desired experience for portal end users.
 
-After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Common Data Service environment, and then importing it into the target Common Data Service environment.
+After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Microsoft Dataverse environment, and then importing it into the target Dataverse environment.
 
 To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-configuration-data).
 
 > [!NOTE]
 > - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget).
 > - The minimum solution version of portals supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
+> - Source and destination organizations must have same default language for the migration to work successfully.
 
 Schema files are available for the following portal types:
 
-- **Portals created in an environment with Common Data Service**
+- **Portals created in an environment with Dataverse**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2110477)
 
-- **Portals created in an environment containing model-driven apps in Dynamics 365**
+- **Portals created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service)**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2019804)
     - [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
     - [Customer Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019705)
@@ -60,12 +61,12 @@ You can export portal configuration data from a source system by using portal-sp
     > [!div class=mx-imgBorder]
     > ![Export configuration data](../media/export-config-data.png "Export configuration data")
 
-4.	On the **Login** screen, provide authentication details to connect to your Common Data Service environment from where you want to export data. If you have multiple organizations on the Common Data Service environment from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
+4.	On the **Login** screen, provide authentication details to connect to your Dataverse environment from where you want to export data. If you have multiple organizations on the Dataverse environment from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
 
     > [!div class=mx-imgBorder]
-    > ![Provide authentication details to connect to your Common Data Service environment from where you want to export data](../media/export-config-login.png "Provide authentication details to connect to your Common Data Service environment from where you want to export data")
+    > ![Provide authentication details to connect to your Dataverse environment from where you want to export data](../media/export-config-login.png "Provide authentication details to connect to your Dataverse environment from where you want to export data")
 
-5.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Common Data Service environment to connect to. 
+5.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Dataverse environment to connect to. 
 
     > [!NOTE]
     > If you do not have multiple organizations, this screen is not displayed.
@@ -91,9 +92,9 @@ You can export portal configuration data from a source system by using portal-sp
     > [!div class=mx-imgBorder]
     > ![Import configuration data](../media/import-config-data.png "Import configuration data")
 
-2.	On the **Login** screen, provide authentication details to connect to your Common Data Service environment from where you want to export data. If you have multiple organizations on the Common Data Service environment from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
+2.	On the **Login** screen, provide authentication details to connect to your Dataverse environment from where you want to export data. If you have multiple organizations on the Dataverse environment from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
 
-3.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Common Data Service environment to connect to. 
+3.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Dataverse environment to connect to. 
 
     > [!NOTE]
     > - If you do not have multiple organizations, this screen is not displayed.
@@ -114,7 +115,7 @@ Power Apps portals doesn't support tenant to tenant migration. To migrate a port
 
 1. [Reset](reset-portal.md) your portal in the source tenant.
 
-1. Provision a new portal in an environment [with Common Data Service](../create-portal.md) or [containing model-driven apps in Dynamics 365](../create-dynamics-portal.md).
+1. Provision a new portal in an environment [with Dataverse](../create-portal.md) or [containing customer engagement apps](../create-dynamics-portal.md).
 
 1. Migrate portal configurations and customizations using the [export](#export-portal-configuration-data) and [import](#import-portal-configuration-data) steps explained in this article earlier.
 

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 02/05/2017
 ms.author: gregli
 search.audienceType: 
@@ -70,7 +70,7 @@ The following examples use the **IceCream** [data source](../working-with-data-s
 | **Search( IceCream, "choc", "Flavor" )** |Returns records where the string "choc" appears in the **Flavor** name, independent of uppercase or lowercase letters. |![](media/function-filter-lookup/icecream-chocolate.png) |
 | **Search( IceCream, "", "Flavor" )** |Because the search term is empty, all records are returned. |![](media/function-filter-lookup/icecream.png) |
 | **LookUp( IceCream, Flavor = "Chocolate", Quantity )** |Searches for a record with **Flavor** equal to "Chocolate", of which there is one.  For the first record that's found, returns the **Quantity** of that record. |100 |
-| **LookUp( IceCream, Quantity > 150, Quantity + OnOrder )** |Searches for a record with **Quantity** greater than 100, of which there are multiple.  For the first record that's found, which is "Vanilla" **Flavor**, returns the sum of **Quantity** and **OnOrder** columns. |250 |
+| **LookUp( IceCream, Quantity > 150, Quantity + OnOrder )** |Searches for a record with **Quantity** greater than 150, of which there are multiple.  For the first record that's found, which is "Vanilla" **Flavor**, returns the sum of **Quantity** and **OnOrder** columns. |250 |
 | **LookUp( IceCream, Flavor = "Pistachio", OnOrder )** |Searches for a record with **Flavor** equal to "Pistachio", of which there are none.  Because none were found, **Lookup** returns *blank*. |*blank* |
 | **LookUp( IceCream, Flavor = "Vanilla" )** |Searches for a record with **Flavor** equal to "Vanilla", of which there is one.  Since no reduction formula was supplied, the entire record is returned. |{ Flavor: "Vanilla", Quantity: 200, OnOrder: 75 } |
 

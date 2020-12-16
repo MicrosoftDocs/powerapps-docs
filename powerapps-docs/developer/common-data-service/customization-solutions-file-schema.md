@@ -1,6 +1,6 @@
 ---
-title: "Customization solutions file schema (Common Data Service) | Microsoft Docs"
-description: "The following is the schema definition for an solution customization file from Common Data Service."
+title: "Customization solutions file schema (Microsoft Dataverse) | Microsoft Docs"
+description: "The following is the schema definition for an solution customization file from Microsoft Dataverse."
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -8,8 +8,6 @@ ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
 helpviewer_keywords: 
   - "schemas"
 ms.assetid: 71e3e594-0240-4af1-99b4-135042b7a000
@@ -23,12 +21,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/customization-solutions-file-schema -->
 
 # Customization solutions file schema
 
 
-The following is the schema definition for an import/export customization file from Common Data Service. 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+The following is the schema definition for an import/export customization file from Microsoft Dataverse. 
 
 You can find schema  in the `Schemas\9.0.0.2090\CustomizationsSolution.xsd` folder when you download the Schemas zip file.
 

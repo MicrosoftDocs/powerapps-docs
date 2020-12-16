@@ -4,9 +4,9 @@ ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -38,7 +38,7 @@ var kbSearchResult = kbSearchControl.getSelectedResults();
 | **Property**        | **Type** | **Description**  |
 |---------------------|----------|------------------|
 | **answer**          | String   | The HTML markup containing the content of the article. You could pass this content to a custom action that could include it in an email to send to the customer. |
-| **articleId**       | String   | The article ID that is used as an alternate key. You can use it to see if this article already exists in Common Data Service or not.|
+| **articleId**       | String   | The article ID that is used as an alternate key. You can use it to see if this article already exists in Microsoft Dataverse or not.|
 | **articleUid**      | String   | The unique article ID. This value is used as an alternate key. This ID is needed to create a new KB record while associating an article if one doesn't exist already. |
 | **attachmentCount** | Number   | Number of attachments in the article. |
 | **createdOn**       | Date     | The date the article was created. This value will be in the current user’s time zone and format. You may want to use the age of the article in your business logic. |

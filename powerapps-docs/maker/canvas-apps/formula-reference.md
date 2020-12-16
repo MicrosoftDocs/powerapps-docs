@@ -28,7 +28,7 @@ Other elements include:
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 
-## A
+## <a id="-a"></a> A
 **[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
 **[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
@@ -317,7 +317,7 @@ Other elements include:
 
 **[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
 
-**[SetPropertry](functions/function-setproperty.md)** – Simulates interactions with input controls.
+**[SetProperty](functions/function-setproperty.md)** – Simulates interactions with input controls.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 

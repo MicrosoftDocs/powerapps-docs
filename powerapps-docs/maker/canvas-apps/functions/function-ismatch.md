@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 02/07/2020
 ms.author: gregli
 search.audienceType: 
@@ -97,6 +97,7 @@ Predefined patterns provide a simple way to match either one of a set of charact
 | **Period** |Matches a period or dot ("."). |`\.` |
 | **RightParen** |Matches a right parenthesis ")". |`\)` |
 | **Space** |Matches a character that adds whitespace. |`\s` |
+|**Tab**|Matches a tab character.|`\t`|
 
 For example, the pattern **"A" & MultipleDigits** will match the letter "A" followed by one or more digits.  
 

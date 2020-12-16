@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 34715e1f-35c0-4b7f-971e-e0a6518f0722
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -37,6 +37,16 @@ When the `arg` value is not provided, it returns an array of all the controls on
 
 **Description**: Object if you use the method with parameter; object collection if you use the method without any parameters.
 
+> [!TIP]
+> If you want to modify the all the controls bound to an attribute on a form, use the controls collection inside the attribute type.
+For example, to add notification to each control bound to the `name` attribute, you can do the following:
+> ```JavaScript
+>  const notification = {
+>  messages: ['Sample Notification on Name Controls'],
+>  notificationLevel: 'RECOMMENDATION',
+>  uniqueId: 'my_unique_id'};
+> formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification));
+> ```
 
 
 ### Related topics

@@ -1,5 +1,5 @@
 ---
-title: "Subscribe to SDK assembly updates using NuGet (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Subscribe to SDK assembly updates using NuGet (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: ".NET SDK assemblies and some command-line tools are available through a software distribution website called nuget.org. Use of NuGet packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,13 +17,15 @@ search.app:
 ---
 # Subscribe to SDK assembly updates using NuGet
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 .NET SDK assemblies and some command-line tools are available through a software distribution website called [nuget.org](https://www.nuget.org). Use of NuGet  packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools. Visual Studio has supported this capability since version 2010 and there is even a standalone NuGet  client for those developers that don’t develop in Visual Studio. Another advantage of using NuGet  packages in your projects is that assembly references and dependencies are automatically taken care of for you.  
   
 <a name="BKMK_GetNuGetPackages"></a>
 
 ## Where to find the NuGet SDK packages
 
-The NuGet SDK are found under the [crmsdk](https://www.nuget.org/profiles/crmsdk) profile. These are the official Common Data Service packages. Select any package in the list to navigate to the package details page. The following are the current NuGet packages relevant for Common Data Service.  
+The NuGet SDK are found under the [crmsdk](https://www.nuget.org/profiles/crmsdk) profile. These are the official Microsoft Dataverse packages. Select any package in the list to navigate to the package details page. The following are the current NuGet packages relevant for Dataverse.  
 
 
 |Package|Description|

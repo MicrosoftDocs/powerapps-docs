@@ -1,5 +1,5 @@
 ---
-title: "Use the QueryByAttribute class (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use the QueryByAttribute class (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the QueryByAttribute class to build queries that test a set of attributes against a set of values"
 ms.custom: ""
 ms.date: 05/03/2019
@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Use the QueryByAttribute class
+
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 You can use the <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> class to build queries that test a set of attributes against a set of values. Use this class with the <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method or the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> method.
   

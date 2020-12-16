@@ -1,7 +1,7 @@
 ---
-title: "Authenticate to use the Online Management API for Common Data Service| MicrosoftDocs"
+title: "Authenticate to use the Online Management API for Microsoft Dataverse| MicrosoftDocs"
 description: "Provides information about authenticating to the Online Management API to perform environment-related operations."
-ms.date: 11/27/2017
+ms.date: 10/23/2020
 ms.service: crm-online
 ms.topic: conceptual
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
@@ -14,6 +14,9 @@ search.app:
   - D365CE
 ---
 # Authenticate to use the Online Management API
+
+> [!NOTE]
+> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated). 
 
 Online Management API supports OAuth 2.0 protocol for authentication. Use [Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) to authenticate by obtaining a valid OAuth 2.0 access token, and pass it using the **Authorization** header in your requests to the Online Management API.
 
@@ -84,7 +87,7 @@ These are the broad steps to authenticate to the Online Management API service.
     }
     ```
 
-You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all Common Data Service environments in your Office 365 tenant, see [Quick Start Sample: Retrieve environments in your tenant](sample-quick-start.md)
+You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all Microsoft Dataverse environments in your Microsoft 365 tenant, see [Quick Start Sample: Retrieve environments in your tenant](sample-quick-start.md)
 
 
 ### Related Topics  

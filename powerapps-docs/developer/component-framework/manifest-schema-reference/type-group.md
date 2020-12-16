@@ -41,7 +41,7 @@ Model-driven apps and canvas apps (public preview)
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|1 or more|
 
 
-The `type-group` has a limited support for canvas apps in this experimental preview . The following issues occur when you try to import components into Common Data Service:
+The `type-group` has a limited support for canvas apps in this experimental preview . The following issues occur when you try to import components into Microsoft Dataverse:
 
 1. All the types listed in the in the type-group are of compatible in canvas apps. The types that are compatible are:
    - **Strings**: SingleLine.Text, Multiple, SingleLine.TextArea, SingleLine.Email, SingleLine.Phone, SingleLine.URL, SingleLine.Ticker.

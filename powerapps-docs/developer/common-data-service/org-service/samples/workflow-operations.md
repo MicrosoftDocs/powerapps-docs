@@ -1,5 +1,5 @@
 ---
-title: "Sample: Workflow operations (Common Data Service) | MicrosoftDocs"
+title: "Sample: Workflow operations (Microsoft Dataverse) | MicrosoftDocs"
 description: "This sample demonstrates how to perform a number of workflow operations such as create, delete, activate, set state , and more."
 ms.custom: ""
 ms.date: 1/14/2020
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Sample: Workflow operations
+
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
 This sample demonstrates how to perform a number of workflow operations such as create, delete, activate, set state , and more.
 

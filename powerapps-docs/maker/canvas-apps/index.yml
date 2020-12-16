@@ -1,0 +1,155 @@
+### YamlMime:Landing
+
+title: Power Apps canvas apps documentation
+summary: Design and build a business app from a canvas in Microsoft Power Apps with data from a variety of sources without writing any code using traditional programming languages, such as C#.
+
+metadata:
+  title: Power Apps canvas apps documentation
+  description: Provides access to highlighted areas within the Power Apps canvas apps documentation
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: tapanm-msft
+  ms.author: tapanm
+  ms.date: 09/04/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: What are canvas apps?
+            url: getting-started.md
+          - text: System and configuration requirements
+            url: limits-and-config.md
+          - text: Planning a Power Apps project
+            url: /powerapps/guidance/planning/introduction
+       - linkListType: learn
+         links:
+          - text: Get started with canvas apps in Power Apps
+            url: https://docs.microsoft.com/learn/modules/get-started-with-powerapps/
+
+  # Card
+  - title: Explore and create
+    linkLists:
+       - linkListType: quickstart
+         links:
+          - text: Explore sample apps
+            url: open-and-run-a-sample-app.md 
+          - text: Create your first app
+            url: get-started-test-drive.md  
+          - text: Create a canvas app from Dataverse
+            url: data-platform-create-app.md
+       - linkListType: learn
+         links:
+          - text: Create canvas apps in Power Apps
+            url: https://docs.microsoft.com/learn/paths/create-powerapps/
+
+  # Card
+  - title: Design the interface
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Add and configure controls
+            url: add-configure-controls.md
+          - text: Screens and layouts
+            url: set-aspect-ratio-portrait-landscape.md
+          - text: Add forms
+            url: add-form.md
+       - linkListType: learn
+         links:
+          - text: Use the UI and controls in canvas apps
+            url: https://docs.microsoft.com/learn/paths/ui-controls-canvas-app-powerapps/
+
+  # Card
+  - title: Customize
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Galleries
+            url: customize-layout-sharepoint.md
+          - text: Forms
+            url: customize-forms-sharepoint.md
+          - text: Cards
+            url: customize-card.md
+          - text: Accessibility
+            url: accessible-apps.md
+
+  # Card
+  - title: Understand building blocks
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Connectors
+            url: connections-list.md
+          - text: Delegation
+            url: delegation-overview.md
+          - text: Data sources
+            url: working-with-data-sources.md
+          - text: Tables and records
+            url: working-with-tables.md  
+
+  # Card
+  - title: Manage
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Save and publish
+            url: save-publish-app.md
+          - text: Share an app
+            url: share-app.md
+          - text: Edit an app
+            url: edit-app.md
+          - text: Licensing
+            url: license-designation.md
+
+  # Card
+  - title: Application Lifecycle Management (ALM)
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Create a canvas app within a Dataverse solution
+            url: add-app-solution.md
+          - text: Reuse canvas app components
+            url: create-component.md
+          - text: ALM with Microsoft Power Platform
+            url: https://docs.microsoft.com/power-platform/alm/overview-alm
+          - text: Integrate with other websites
+            url: embed-apps-dev.md
+
+    # Card
+  - title: Test, debug and optimize
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Test using Test Studio
+            url: test-studio.md
+          - text: Debug using Monitor
+            url: ../monitor-canvasapps.md
+          - text: Analyze app telemetry using Application Insights
+            url: application-insights.md
+          - text: Performance tips
+            url: performance-tips.md
+
+  # Card
+  - title: Reference and advanced learning
+    linkLists:
+       - linkListType: reference
+         links:
+          - text: Controls and properties reference
+            url: reference-properties.md
+          - text: Formula reference
+            url: formula-reference.md
+       - linkListType: learn
+         links:
+          - text: Use advanced data options and connectors
+            url: https://docs.microsoft.com/learn/paths/advanced-data-options-and-connectors/
+          - text: Master advanced techniques
+            url: https://docs.microsoft.com/learn/paths/understand-advanced-topics/
+

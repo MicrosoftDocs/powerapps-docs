@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 10/21/2015
 ms.author: gregli
 search.audienceType: 
@@ -43,7 +43,7 @@ Both **Update** and **UpdateIf** return the modified data source as a [table](..
 * *DataSource* – Required. The data source that contains the record that you want to replace.
 * *OldRecord* – Required. The record to replace.
 * *NewRecord* – Required. The replacement record. This isn't a change record. The entire record is replaced, and missing properties will contain *blank*.
-* **All** – Optional. In a collection, the same record may appear more than once. Specify the **All** argument to remove all copies of the record.
+* *All* – Optional. In a collection, the same record may appear more than once. Specify the **All** argument to update all copies of the record.
 
 **UpdateIf**( *DataSource*, *Condition1*, *ChangeRecord1* [, *Condition2*, *ChangeRecord2*, ... ] )
 

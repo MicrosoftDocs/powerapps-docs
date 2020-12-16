@@ -3,9 +3,9 @@ title: "navigateTo (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 04/08/2020
 ms.service: powerapps
 ms.topic: "reference"
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -19,7 +19,7 @@ search.app:
 
 
 > [!NOTE]
-> This method is supported only on the Unified Interface.
+> This method is supported only on Unified Interface.
 
 ## Syntax
 
@@ -38,7 +38,7 @@ search.app:
 <td>pageInput</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>Input about the page to navigate to. The object definition changes depending on the type of page to navigate to: <i>entity list</i>, <i>entity record</i>, or <i>HTML web resource</i>.</p>
+<td><p>Input about the page to navigate to. The object definition changes depending on the type of page to navigate to: <i>entity list</i>, <i>entity record</i>, <i> dashboard</i>, or <i>HTML web resource</i>.</p>
 <p>----------------------------------------------------------------</p>
 <p><strong>entity list</strong>
 <p>The object contains the following attributes:</p>
@@ -107,7 +107,15 @@ search.app:
 <li><strong>pageType</strong>: String. Specify "webresource".</li>
 <li><strong>webresourceName</strong>: String. The name of the web resource to load.</li>
 <li><strong>data</strong>: (Optional) String. The data to pass to the web resource.</li>
-</ul></td>
+</ul>
+<p>----------------------------------------------------------------</p>
+<p><strong>dashboard</strong>
+<p>The object contains the following attributes:</p>
+<ul>
+<li><strong>pageType</strong>: String. Specify "dashboard".</li>
+<li><strong>dashboardId</strong>: String. The ID of the dashboard to load. If you don't specify the ID, navigates to the default dashboard.</li>
+</ul>
+</td>
 </tr>
 <tr>
 <td>navigationOptions</td>
@@ -123,6 +131,7 @@ search.app:
 <ul><li><b>value</b>: Number. The numerical value.</li>
 <li><b>unit</b>: String. The unit of measurement. Specify "%" or "px". Default value is "px".</li></ul></li>
 <li><strong>position</strong>: (Optional) Number. Specify <strong>1</strong> to open the dialog in center; <strong>2</strong> to open the dialog on the side. Default is 1 (center).</li>
+<li><strong>title</strong>: (Optional) String. The dialog title on top of the center or side dialog.</li>
 </ul></td>
 </tr>
 <tr>

@@ -5,16 +5,16 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2020
+ms.date: 08/31/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
 
 # Add the Azure Storage web resource to a form
 
-Attachments uploaded to Azure Storage instead of directly to Common Data Service can be managed by using notes in Common Data Service.
+Attachments uploaded to Azure Storage (instead of directly to Microsoft Dataverse) can be managed by using notes in Dataverse.
 
-To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form and you must [configure Azure Storage for your organization](enable-azure-storage.md).
+To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form, and [configure Azure Storage for your organization](enable-azure-storage.md).
 
 > [!NOTE]
 > In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
@@ -23,7 +23,7 @@ When a file (for example, attachments.zip) is uploaded to Azure Storage by using
 
 ![Attachment on a form](media/notes-attachment-lead-form.png "Placeholder for the attachment on a form")
 
-The attachment file is now named attachment.zip.txt. By default, Common Data Service  has no conception of an Azure file, so this placeholder .txt file is stored in Common Data Service  instead. The Azure Storage context for the placeholder file shows details about the file.
+The attachment file is now named attachment.zip.txt. By default, Dataverse  has no conception of an Azure file, so this placeholder .txt file is stored in Dataverse  instead. The Azure Storage context for the placeholder file shows details about the file.
 ```
 {
  Name: attachment.zip,
@@ -32,6 +32,8 @@ The attachment file is now named attachment.zip.txt. By default, Common Data Ser
  "Url": "https://accountname.blob.core.windows.net/storage/81a9a9491c36e51182760026833bcf82/attachment.zip"
 }
 ```
+
+## Steps to add the Azure Storage web resource to a form
 
 To see and interact with the file stored in Azure, you must add the web resource adx.annotations.html to the form. As a pre-requisite, ensure that your users have read access to adx_setting. Otherwise, the web resource won't render properly.
 
@@ -57,7 +59,7 @@ The new control will now be rendered on the page, giving you the ability to mana
 
 ![Azure file attachment on a form](media/azure-file-attachment-lead-form.png "Azure file attachment on a form")
 
-The paper-clip icon has been replaced with a cloud icon to denote that this file is stored in Azure Storage. You can continue to store attachments in Common Data Service; those files will be denoted with the paper-clip icon.
+The paper-clip icon has been replaced with a cloud icon to denote that this file is stored in Azure Storage. You can continue to store attachments in Dataverse; those files will be denoted with the paper-clip icon.
 
 > [!NOTE]
 > You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon.
@@ -69,20 +71,20 @@ The paper-clip icon has been replaced with a cloud icon to denote that this file
 > 
 > [!include[More information](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services).
 
-If the attached file is an image, the control will display the image as a thumbnail whether it's stored in Common Data Service  or Azure Storage.
+If the attached file is an image, the control will display the image as a thumbnail whether it's stored in Dataverse  or Azure Storage.
 
 > [!NOTE]
 > The thumbnail feature is limited to images under 1 MB in size.
 
 ![Notes thumbnail](media/notes-thumbnail.png "Notes thumbnail")
 
-### Processes for Azure Blob Storage
+## Processes for Azure Blob Storage
 
-There are two processes that are required to upload attachments to Azure Storage: **Azure Blob Storage Url** and **AzureBlobStorageEnabled**.
+Several processes are required to upload attachments to Azure Storage that must be activated: **AzureBlobStorageEnabled**, **Azure Blob Storage Url** and **Generate Shared Access Signature**.
 
 ![Blob storage processes](media/blob-storage-processes.png "Blob storage processes")
 
-During migration, the processes may get deactivated. This may cause attachments to upload to Common Data Service instead of Azure Storage after you follow steps to add web resource. Ensure these two processes are activated to upload attachments to Azure Storage.
+During migration, the processes may get deactivated. Migration may cause attachments to upload to Dataverse instead of Azure Storage after you follow steps to add web resource. Ensure these processes are activated to upload attachments to Azure Storage.
 
 ## CORS protocol support
 

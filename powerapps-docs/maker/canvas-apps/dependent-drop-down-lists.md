@@ -60,7 +60,7 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 
 ## Open the form
 
-1. Open the **Incidents** list, and then select **PowerApps** > **Customize forms**.
+1. Open the **Incidents** list, and then select **Power Apps** > **Customize forms**.
 
     > [!div class="mx-imgBorder"]
     > ![Open the Incidents list, and then select Power Apps > Customize forms.](./media/dependent-drop-down-lists/open-form.png "Open the Incidents list, and then select Power Apps > Customize forms.")
@@ -200,6 +200,6 @@ This symptom is likely due to using a **LookUp** column in SharePoint or a **Cho
 
 ## Known limitations
 
-This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Common Data Service.
+This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Microsoft Dataverse.
 
 The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. In addition, Power Apps doesn't support using two choice fields in SharePoint without any matching table of data, and you can't define **Matching field** within this UI.

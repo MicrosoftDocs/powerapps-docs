@@ -26,7 +26,7 @@ search.app:
    
 # Use Excel and Word templates
 
-You can use templates in a variety of ways to speed your work and improve consistency. With Excel templates, you can easily create and share your customized analysis with others in your organization. You can use Word templates to create standardized documents automatically populated with Common Data Service data.
+You can use templates in a variety of ways to speed your work and improve consistency. With Excel templates, you can easily create and share your customized analysis with others in your organization. You can use Word templates to create standardized documents automatically populated with Microsoft Dataverse data.
 
 ## Enable and work with Excel and Word templates
 
@@ -35,12 +35,12 @@ You can use templates in a variety of ways to speed your work and improve consis
 2. Select **Settings** > **Templates**.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/settings-templates.png "Settings Templates") 
+   > ![Settings Templates](media/settings-templates.png "Settings Templates") 
 
 3. On the **Templates** page, select **Document Template** to work with Excel or Word templates.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/document-templates.png "Document Templates") 
+   > ![Document Templates](media/document-templates.png "Document Templates") 
 
 For information on using templates, see the following documentation:
 

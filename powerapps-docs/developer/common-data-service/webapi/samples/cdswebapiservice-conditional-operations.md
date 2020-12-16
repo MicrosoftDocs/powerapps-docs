@@ -1,6 +1,6 @@
 ---
-title: "Conditional Operation sample (C#) (Common Data Service)| Microsoft Docs"
-description: "This sample shows how to perform conditional message operations when accessing records of the Common Data Service."
+title: "Conditional Operation sample (C#) (Microsoft Dataverse)| Microsoft Docs"
+description: "This sample shows how to perform conditional message operations when accessing records of the Microsoft Dataverse."
 ms.custom: ""
 ms.date: 07/16/2020
 ms.service: powerapps
@@ -17,19 +17,21 @@ search.app:
 ---
 # Conditional Operations sample (C#)
 
-This sample shows how to perform conditional message operations when accessing entity instance records of the Common Data Service. The sample uses the Common Data Service Web API and the CDSWebApiService class.
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-Messages using a conditional statement, such as "If-None-Match", in the message header are sent to Common Data Service.
+This sample shows how to perform conditional message operations when accessing entity instance records of the Microsoft Dataverse. The sample uses the Dataverse Web API and the CDSWebApiService class.
+
+Messages using a conditional statement, such as "If-None-Match", in the message header are sent to Dataverse.
 
 > [!NOTE]
-> This sample implements the Common Data Service operations and console output detailed in [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the methods available in the [CDSWebApiService](cdswebapiservice.md) class for message processing, performance enhancements, and error management.
+> This sample implements the Dataverse operations and console output detailed in [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the methods available in the [CDSWebApiService](cdswebapiservice.md) class for message processing, performance enhancements, and error management.
 
 ## Prerequisites
 
 The following is required to build and run the sample:
 
 - Microsoft Visual Studio 2019.
-- Access to Common Data Service with privileges to perform the operations described above.
+- Access to Dataverse with privileges to perform the operations described above.
   
 ## How to run this sample
 
@@ -37,7 +39,7 @@ The following is required to build and run the sample:
 
 1. Navigate to the cds/webapi/C#/[ConditionalOperations](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/ConditionalOperations) folder and load the solution file into Visual Studio.
 
-1. Edit the App.config file that is shared by several of the samples and set appropriate values for the Common Data Service environment you intend to use: connectionString `Url`, `UserPrincipalName`, and `Password`. You only need to perform this step once for all samples that share this file.
+1. Edit the App.config file that is shared by several of the samples and set appropriate values for the Dataverse environment you intend to use: connectionString `Url`, `UserPrincipalName`, and `Password`. You only need to perform this step once for all samples that share this file.
 
 1. Press F5 to build and run the program in debug mode.
 
@@ -60,7 +62,7 @@ namespace PowerApps.Samples
 {
     /// <summary>
     /// This program demonstrates use of conditional operations with the 
-    /// Common Data Service Web API.
+    /// Dataverse Web API.
     /// </summary>
     class Program
     {
@@ -294,4 +296,4 @@ namespace PowerApps.Samples
 
 [Perform conditional operations using the Web API](../perform-conditional-operations-using-web-api.md)  
 [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)  
-[Use the Common Data Service Web API](../overview.md)
+[Use the Dataverse Web API](../overview.md)

@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 1b24e8b2-20af-4e75-8c00-1aa393c07aef
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -29,7 +29,7 @@ search.app:
 
 | Parameter Name        | Type           | Required  |Description  |
 | ------------- |-------------| -----|-----|
-|imageOptions |Object | No|An object with the following attributes:<br/>- **allowEdit**: Indicates whether to edit the image before saving. Boolean.<br/>- **height**: Height of the image to capture. Number.<br/>- **preferFrontCamera**: Indicates whether to capture image using the front camera of the device. Boolean.<br/>- **quality**: Quality of the image file in percentage. Number.<br/>- **width**: Width of the image to capture. Number..|
+|imageOptions |Object | No|An object with the following attributes:<br/>- **allowEdit**: Indicates whether to edit the image before saving. Boolean.<br/>- **height**: Height of the image to capture. Number.<br/>- **quality**: Quality of the image file in percentage. Number.<br/>- **width**: Width of the image to capture. Number..|
 |successCallback |Function | Yes|A function to call when image is returned. A base64 encoded image object with the following attributes is passed to the function:<br/>- **fileContent**: Contents of the image file. String <br/>- **fileName**: Name of the image file. String.<br/>- **fileSize**: Size of the image file in KB. Number.<br/>- **mimeType**: Image file MIME type. String.|
 |errorCallback |Function | Yes|A function to call when the operation fails. |
  

@@ -1,5 +1,5 @@
 ---
-title: "Authentication with Common Data Service web services (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Authentication with Microsoft Dataverse web services (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Introduces authentication options that depend on the software framework you use." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,9 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Authentication with Common Data Service web services
+# Authentication with Microsoft Dataverse web services
 
-When you create client applications that use Common Data Service web services you need to authenticate to gain access to data. 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
+When you create client applications that use Dataverse web services you need to authenticate to gain access to data. 
 How you authenticate depends on the software framework you use and which web service you want to connect with.
 
 ## .NET Framework Applications
@@ -25,7 +27,7 @@ How you authenticate depends on the software framework you use and which web ser
 If your client application uses the .NET Framework, you have two options:
 
 - OAuth
-- Office 365
+- Microsoft 365
 
 ### OAuth
 
@@ -37,19 +39,19 @@ OAuth is also required to support:
  - Use of client secrets to enable server-to-server authentication scenarios.
  - Cross-Origin Resource Sharing (CORS) to connect a Single Page Application (SPA)
 
-More information: [Use OAuth with Common Data Service](authenticate-oauth.md)
+More information: [Use OAuth with Dataverse](authenticate-oauth.md)
 
-### Office 365
+### Microsoft 365
 
-Office 365 authentication requires using the .NET Framework SDK assemblies with the SOAP web services only.
+Microsoft 365 authentication requires using the .NET Framework SDK assemblies with the SOAP web services only.
 
-Using Office 365 authentication does not require that your register your applications as OAuth does. You must simply provide a User Principal Name (UPN) and password for a valid user.
+Using Microsoft 365 authentication does not require that your register your applications as OAuth does. You must simply provide a User Principal Name (UPN) and password for a valid user.
 
-More information: [Authentication with .NET Framework applications](authenticate-dot-net-framework.md), [Use of Office365 authentication with the WS-Trust security protocol](authenticate-office365-deprecation.md)
+More information: [Authentication with .NET Framework applications](authenticate-dot-net-framework.md), [Use of Microsoft 365 authentication with the WS-Trust security protocol](authenticate-office365-deprecation.md)
 
 ## All other software frameworks
 
 If you are using anything other than .NET Framework, you must authenticate using OAuth and you must use the OData RESTful 
 web services (Web API and OData Global Discovery Service).
 
-More information:  [Use OAuth with Common Data Service](authenticate-oauth.md)
+More information:  [Use OAuth with Dataverse](authenticate-oauth.md)

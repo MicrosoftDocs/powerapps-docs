@@ -63,11 +63,11 @@ More information:
 -   [Power Apps Pricing](https://powerapps.microsoft.com/pricing/)
 -   [Purchase Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin)
 
-After you have purchased Power Apps, create an environment with a Common Data Service database.
+After you have purchased Power Apps, create an environment with a Microsoft Dataverse database.
 
 1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
 
-2.  Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+2.  Create a Dataverse environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
     > [!IMPORTANT]
     > While creating the database, if you select a security group for the database, the apps can be shared *only* with users that are members of the security group.
@@ -115,7 +115,7 @@ You can install the app by using one of the following 3 options:
 5.  The installation will start, and you can monitor the progress of your app installation on the Dynamics 365 apps page.
 
     > [!div class="mx-imgBorder"] 
-    > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
+    > ![Monitor the app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
 
     > [!IMPORTANT]
     > It might take a while for the app to install.
@@ -141,12 +141,12 @@ You can install the app by using one of the following 3 options:
 4.  On the next page, select your environment where you want to install the app. Select the legal terms and privacy statements check boxes, and select **Agree**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select an environment](media/appsource-02.png "Select an environment")
+    > ![Select an environment for installing app](media/appsource-02.png "Select an environment")
 
-5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+5.  You'll be taken to Power Platform admin center where you can monitor the progress of your app installation.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/appsource-03.png "Monitor app installation progress")
+    > ![Monitor app installation progress](media/appsource-03.png "Monitor app installation progress")
 
     > [!IMPORTANT]
     > It might take a while for the app to install.
@@ -171,7 +171,7 @@ You can install the app by using one of the following 3 options:
 
 4.  Select **Login** to continue.
 
-5.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
+5.  If you have access to more than one Dataverse environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/deploy-select-environment.png "Select an environment")
@@ -316,7 +316,7 @@ groups to easily share apps with groups of users.
     > [!div class="mx-imgBorder"] 
     > ![Share canvas apps](media/conf-share-canvas-apps.png "Share canvas apps")
 
-4.  Specify the Azure AD group or users that you want to share this app with. As the app connects to Common Data Service data, you will also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **Emergency Response User** and **Common Data Service User** security roles to the entities used by this app and select **Share**.
+4.  Specify the Azure AD group or users that you want to share this app with. As the app connects to Dataverse data, you will also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **Emergency Response User** and **Common Data Service User** security roles to the entities used by this app and select **Share**.
 
     > [!div class="mx-imgBorder"] 
     > ![Share app with Azure AD group or users](media/conf-share-app-groups-users.png "Share app with Azure AD group or users")
@@ -425,40 +425,40 @@ This section provides information on how you can use the **Emergency Response Ap
         > [!TIP]
         > You might want to specify a different value for **Organization_name** to identify Power BI dashboard in your test environment. For example, **Contoso Test System**.
 
-    - **CDS_base_solution_URL**: Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com
+    - **CDS_base_solution_URL**: Type the URL of your Dataverse environment instance. For example: https://*[myenv]*.crm.dynamics.com
 
     > [!div class="mx-imgBorder"]
     > ![specify org name and base URL](media/pbi-pub-rep1.png)
 
     Select **Load**.
 
-3. You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** > **Sign in** to specify your Common Data Service credentials.  
+3. You will be prompted to enter credentials to connect to your Dataverse environment. Select **Organizational account** > **Sign in** to specify your Dataverse credentials.  
 
     > [!div class="mx-imgBorder"]
-    > ![select-organizational-account](media/select-organizational-account.png)
+    > ![Select Organizational account](media/select-organizational-account.png)
 
-4. After signing in, select **Connect** to connect to your data in Common Data Service.
+4. After signing in, select **Connect** to connect to your data in Dataverse.
 
 5. On successful connection, your data will be displayed in the Power BI report. You'll be prompted to apply pending changes to your query; select **Apply changes**.
 
 6. Select **Publish** to publish data to your Power BI workspace. You'll be prompted to save your changes; select **Save**.
 
     > [!div class="mx-imgBorder"]
-    > ![select-refresh-publish](media/select-refresh-publish.png)
+    > ![Select Publish](media/select-refresh-publish.png)
 
-7. You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
+7. You'll be prompted to save the file as a .pbix file along with your Dataverse environment information. Provide a name and save it on your computer.
 
 8. After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
 
 12. The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Select the dataset in your workspace and select the **Schedule refresh** icon.  
     
     > [!div class="mx-imgBorder"]
-    > ![schedule-refresh](media/schedule-refresh.png)
+    > ![Schedule refresh](media/schedule-refresh.png)
 
 13. The first time you try to set the data refresh setting, you'll see the **Settings** page with a message stating that your credentials aren't valid. Under **Data source credentials**, select **Edit credentials** to specify your credentials.  
 
     > [!div class="mx-imgBorder"]
-    > ![select-edit-credentials](media/select-edit-credentials.png)
+    > ![Enter credentials](media/select-edit-credentials.png)
 
 14. In the next screen:
     - Select **Authentication method** as **OAuth2**.
@@ -478,7 +478,7 @@ This section provides information on how you can use the **Emergency Response Ap
 16. Select your workspace name in the left pane, and then select **Create app** in the top-right corner.  
 
     > [!div class="mx-imgBorder"]
-    > ![select-create-app](media/select-create-app.png)
+    > ![Select Create app](media/select-create-app.png)
 
 17. On the app publishing page:
 
@@ -489,7 +489,7 @@ This section provides information on how you can use the **Emergency Response Ap
     3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](https://docs.microsoft.com/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
 
         > [!div class="mx-imgBorder"]
-        > ![select-install-apps-automatically](media/select-install-apps-automatically.png)
+        > ![Select to install apps automatically](media/select-install-apps-automatically.png)
 
 18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
 
@@ -512,7 +512,7 @@ You must enable the following flows that help in collating the data from various
 3.  In the solution, filter on **Flow** to find all the flows.
 
     > [!div class="mx-imgBorder"]
-    > ![all-flows](media/all-flows.png)
+    > ![Flow](media/all-flows.png)
 
 4.  Select the flow name to open the flow definition. For example, **Populate CDC Data - Healthcare Staff**.
 

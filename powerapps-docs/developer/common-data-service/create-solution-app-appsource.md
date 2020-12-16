@@ -1,5 +1,5 @@
 ---
-title: "Step 2: Create a managed solution for your app (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Step 2: Create a managed solution for your app (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to create a managed solution for your app to include all the components. This is required for publishing an app to Appsource." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
@@ -16,6 +16,8 @@ search.app:
   - D365CE
 ---
 # Step 2: Create a managed solution for your app
+
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
 Create a managed solution to include all the components for your app. You might find these topics helpful as you plan and create a managed solution to package your app components:
 - [Introduction to solutions](introduction-solutions.md)
