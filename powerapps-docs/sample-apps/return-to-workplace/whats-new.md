@@ -18,11 +18,11 @@ This article provides resources where you can learn about the new features that 
 
 ### Facility management app
 
-- Solution Settings now included a switch to toggle between 12 and 24 hour time format in the Employee App.
+- Solution Settings now includes a switch to toggle between 12-Hour and 24-Hour time format in the Employee App.
 
 ### Workplace care management app
 
-- On the exposures tab of an Employee Case, the Employee Attestation lookup now only shows postive 'Yes' attestations to link to the case.
+- On the exposures tab of an Employee Case, the Employee Attestation lookup now only shows positive 'Yes' attestations to link to the case.
 
 ### Return to the Workplace Portal
 
