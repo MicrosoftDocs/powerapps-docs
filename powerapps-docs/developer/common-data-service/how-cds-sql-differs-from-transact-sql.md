@@ -176,7 +176,19 @@ More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metad
 
 #### [Supported](#tab/supported)
 
-- DATABASE_PRINCIPAL_ID
+- OBJECT_ID
+- SERVERPROPERTY
+
+#### [Not supported](#tab/not-supported)
+
+- @@PROCID
+- APP_NAME
+- APPLOCK_MODE
+- APPLOCK_TEST
+- ASSEMBLYPROPERTY
+- COL_LENGTH
+- COL_NAME
+- COLUMNPROPERTY
 - DATABASEPROPERTYEX
 - DB_ID
 - DB_NAME
@@ -194,7 +206,6 @@ More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metad
 - INDEXPROPERTY  
 - NEXT VALUE FOR
 - OBJECT_DEFINITION
-- OBJECT_ID
 - OBJECT_NAME
 - OBJECT_SCHEMA_NAME
 - OBJECTPROPERTY
@@ -204,23 +215,11 @@ More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metad
 - SCHEMA_ID
 - SCHEMA_NAME
 - SCOPE_IDENTITY
-- SERVERPROPERTY
 - STATS_DATE
 - TYPE_ID
 - TYPE_NAME
 - TYPEPROPERTY
 - VERSION
-
-#### [Not supported](#tab/not-supported)
-
-- @@PROCID
-- APP_NAME
-- APPLOCK_MODE
-- APPLOCK_TEST
-- ASSEMBLYPROPERTY
-- COL_LENGTH
-- COL_NAME
-- COLUMNPROPERTY
 
 ---
 
