@@ -2,7 +2,7 @@
 title: "Troubleshoot plug-ins (Microsoft Dataverse for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Contains information on errors that can occur due to plug-ins and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/18/2019
+ms.date: 12/06/2020
 ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
@@ -151,3 +151,10 @@ if (context.InputParameters.Contains("Target") &&
 ```
 
 Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method to avoid this error when accessing entity attributes, but be aware that this method will return the default value of the type if the attribute doesn't exist. If the default value is null, this works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned will be `1/1/0001 00:00` rather than null.
+
+## Error: You cannot start a transaction with a different isolation level than is already set on the current transaction
+
+Error Code: `-2147220989`<br />
+Error Message: `You cannot start a transaction with a different isolation level than is already set on the current transaction`
+
+Plug-ins are intended to support business logic. Modifying any part of the data schema within synchronous plug-in is not supported. These operations frequently take longer and may cause cached metadata used by applications to become out of sync. However, these operations can be performed in a plug-in step registered to run asynchronously.

@@ -58,4 +58,5 @@ by Sandra Ahlgrimm and Dawid van Heerden
 
 ### See also
 
+[Webinars and videos by Power Apps community](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery)<br/>
 [Power Automate webinars](/power-automate/webinars)
