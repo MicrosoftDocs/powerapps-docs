@@ -247,6 +247,9 @@ Like other facets, you can use date and time facets to filter and see search res
 ## Configure facets and filters
   
 Configure your own facets and filters.  
+
+> [!NOTE]
+> Your admin can use the Quick Find view to define which fields appear as default facets when you use Relevance Search. The first four view columns with data types other than single line of text and multiple lines of text are displayed as default facets in the result. You can override this setting in your [Personalization Settings](https://docs.microsoft.com/powerapps/user/set-personal-options#to-set-personal-options). At any time up to four fields can be selected as facets.
   
 1. In the upper-right corner, select **Settings**, and then select **Personalization Settings**.  
   
