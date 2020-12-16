@@ -2,7 +2,7 @@
 title: "How Dataverse SQL Differs from Transact-SQL | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn what subset of the Transact-SQL language is supported by the Dataverse SQL endpoint." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/01/2020
+ms.date: 12/16/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -77,6 +77,50 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 
 ---
 
+## Statements
+
+A SQL statement is an atomic unit of work and either completely succeeds or completely fails. A SQL statement is a set of instruction that consists of identifiers, parameters, variables, names, data types, and SQL reserved words that compiles successfully. 
+
+More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
+
+### [Supported](#tab/supported)
+
+- DQL
+  - SELECT column
+  - SELECT expression
+  - SELECT STAR
+  - SELECT distinct
+  - SELECT TOP
+  - SELECT SET Variable
+  - All JOIN types
+  - All WHERE conditions
+  - All nested queries (SELECT, FROM, WHERE)
+  - Union
+  - [GROUP BY](#select-group-by)/Having
+- General
+  - IF THEN ELSE
+  - DECLARE variable
+
+### [Not supported](#tab/not-supported)
+
+- DDL
+- DML
+- TCL
+- SCS
+- DCL
+- Stored Procedure
+- DQL
+  - Pivot
+  - DQL XML function
+  - DQL JSON function
+  - CUBE and ROLLUP
+  - Duplicate columns
+  - Without unique column name and alias
+- General
+  - WHILE LOOP
+
+---
+
 ## Functions
 
 Learn about the categories of built-in functions you can use with Dataverse environments through the SQL endpoint.
@@ -101,7 +145,7 @@ More information: [What are the SQL database functions?](/sql/t-sql/functions/fu
 ### [Not supported](#tab/not-supported)
 
 - ODBC Scalar
-- Analytic (planned)
+- Analytic
 - Cryptographic
 - Cursor
 - Data type
@@ -110,8 +154,8 @@ More information: [What are the SQL database functions?](/sql/t-sql/functions/fu
   - IDENT_SEED
   - IDENTITY(Function)
   - SQL_VARIANT_PROPERTY
-- JSON (planned)
-- Ranking (planned)
+- JSON
+- Ranking
 - Replication
 - Rowset
 - Security
@@ -130,7 +174,6 @@ More information: [System Functions (Transact-SQL)](/sql/t-sql/functions/system-
 #### [Supported](#tab/supported)
 
 - @@ROWCOUNT
-- CHECKSUM
 - FORMATMESSAGE
 - GETANSINULL
 - ISNULL
@@ -147,6 +190,7 @@ More information: [System Functions (Transact-SQL)](/sql/t-sql/functions/system-
 - @@PACK_RECEIVED
 - @@TRANCOUNT
 - BINARY_CHECKSUM
+- CHECKSUM
 - CONNECTIONPROPERTY
 - CONTEXT_INFO
 - CURRENT_REQUEST_ID
@@ -176,8 +220,7 @@ More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metad
 
 #### [Supported](#tab/supported)
 
-- OBJECT_ID
-- SERVERPROPERTY
+No metadata functions are supported at this time.
 
 #### [Not supported](#tab/not-supported)
 
@@ -206,6 +249,7 @@ More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metad
 - INDEXPROPERTY  
 - NEXT VALUE FOR
 - OBJECT_DEFINITION
+- OBJECT_ID
 - OBJECT_NAME
 - OBJECT_SCHEMA_NAME
 - OBJECTPROPERTY
@@ -215,6 +259,7 @@ More information: [Metadata Functions (Transact-SQL)](/sql/t-sql/functions/metad
 - SCHEMA_ID
 - SCHEMA_NAME
 - SCOPE_IDENTITY
+- SERVERPROPERTY
 - STATS_DATE
 - TYPE_ID
 - TYPE_NAME
@@ -246,8 +291,8 @@ More information: [Language Elements (Transact-SQL)](/sql/t-sql/language-element
 
 #### [Supported](#tab/supported)
 
-- Reserved Keywords
-- Syntax Conventions
+- [Reserved Keywords](/sql/t-sql/language-elements/reserved-keywords-transact-sql)
+- [Syntax Conventions](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)
 - -- (Comment)
 - Slash Star (Block Comment)
 - NULL and UNKNOWN
@@ -320,6 +365,9 @@ Retrieves rows from a Dataverse environment and enables the selection of one or 
 ##### [Supported](#tab/supported)
 
 - GROUP BY column-expression [ ,...n ]
+
+##### [Not supported](#tab/not-supported)
+
 - GROUP BY ROLLUP
 - GROUP BY CUBE ( )
 - GROUP BY GROUPING SETS ( )
@@ -327,18 +375,19 @@ Retrieves rows from a Dataverse environment and enables the selection of one or 
 - GROUP BY [ ALL ] column-expression [ ,...n ]
 - WITH (DISTRIBUTED_AGG)
 
-##### [Not supported](#tab/not-supported)
-
 ---
 
 ### FROM plus JOIN, APPLY, PIVOT
 
 #### [Supported](#tab/supported)
 
-- FROM plus JOIN, APPLY, PIVOT
-- FROM - Using PIVOT & UNPIVOT
+- JOIN
+- APPLY
 
 #### [Not supported](#tab/not-supported)
+
+- PIVOT
+- UNPIVOT
 
 ---
 
@@ -366,52 +415,7 @@ Hints are not supported.
 
 #### [Not supported](#tab/not-supported)
 
-- FREETEXT (planned)
-
----
-
-## Statements
-
-A SQL statement is an atomic unit of work and either completely succeeds or completely fails. A SQL statement is a set of instruction that consists of identifiers, parameters, variables, names, data types, and SQL reserved words that compiles successfully. 
-
-More information: [Transact-SQL statements](/sql/t-sql/statements/statements)
-
-### [Supported](#tab/supported)
-
-- DQL
-  - SELECT column
-  - SELECT expression
-  - SELECT STAR
-  - SELECT distinct
-  - SELECT TOP
-  - SELECT SET Variable
-  - All JOIN types
-  - All WHERE conditions
-  - All nested queries (SELECT, FROM, WHERE)
-  - Union
-  - [GROUP BY](#select-group-by)/Having
-- General
-  - IF THEN ELSE
-  - DECLARE variable
-
-
-### [Not supported](#tab/not-supported)
-
-- DDL
-- DML
-- TCL
-- SCS
-- DCL
-- Stored Procedure
-- DQL
-  - Pivot (planned)
-  - DQL XML function
-  - DQL JSON function
-  - CUBE and ROLLUP (planned)
-  - Duplicate columns
-  - Without unique column name and alias (planned)
-- General
-  - WHILE LOOP
+- FREETEXT
 
 ---
 
