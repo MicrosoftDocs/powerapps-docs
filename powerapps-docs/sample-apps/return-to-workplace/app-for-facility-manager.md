@@ -5,9 +5,9 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 11/30/2020
 ms.author: garybird
-ms.reviewer: kvivek
+ms.reviewer: nabuthuk
 ---
 
 # Use the Facility Safety Management app
@@ -45,21 +45,21 @@ The Facility Safety Management app has the following components:
 
 - **Phase Transitions**: A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase and its associated checklist based upon the phase's configured readiness factors.
 
-
-<!-- editor note: The following doesn't include Employee Bookings, although that's shown in the image. -->
-
-
 **Employee**
 
 - **Employee Attestation**: Keeps track of employee health assessments or attestations based on the questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
 
 - **Employee Sentiment**: Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees with the Employee Return to the Workplace app.
 
+- **Employee Bookings**: Keeps track of bookings made by employees. Together with an attestation this would be a valid and safe way to enter a building and is referred to as a pass.
+
 - **Employee Visits**: Keeps track of the visits. Employee visits are linked to an employee and a booking record.
 
 **Guests**
 
-- **Guest Registrations**: Keeps track of registered guests. Guest registrations are always linked to a booking for an employee. The employee serves as a host. Guests are stored as a contact record of type `Guest`. Guests can be added via the Employee app.
+- **Guest Attestations**: Keep track of attestations made by guests. Guest attestations should be linked to a guest registration. 
+
+- **Guest Registrations**: Keep track of registered guests. Guest registrations are always linked to a booking for an employee. The employee serves as a host. Guests are stored as a contact record of type `Guest`. Guests can be added via the Employee app.
 
 - **Employee Visits**: Keeps track of visits to the facility. Employee visits are linked to an employee and a booking record. 
 
@@ -190,6 +190,9 @@ To access the facility manager dashboard:
     - Employee bookings (or employee bookings and guest registrations) versus capacity by date. Shows the employee bookings (and guest registrations) on a certain date on the total capacity on that date.
     
     - Average daily occupancy by floor (or floor and area). The dot represents the capacity and the contents show the average employee bookings and average guest registrations.
+
+      > [!div class="mx-imgBorder"]
+      > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-occupancy.png "Facility manager dashboard - Readiness")
     
 - **Daily Arrivals** shows booking information to assist in controlling the facility traffic, such as:
 
@@ -198,13 +201,16 @@ To access the facility manager dashboard:
   - Two charts that can be filtered by date range and that display number of bookings by arrival window and by weekday.
 
     > [!div class="mx-imgBorder"]
-    > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - Readiness")
+    > ![Facility manager dashboard - daily arrivals](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - daily arrivals")
 
 **Virus Spread**
 
-This tab shows data from public health sources by country (and by state in the United States):
+This tab shows data from public health sources by country (by state and by county in the United States of America). 
 
-- **New COVID Cases** shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
+> [!NOTE]
+> The county level data is available only from the last 6 months.
+
+- **Confirmed COVID Cases**  shows the associated risk level, number of cases for the last reporting day, 14 day average in absolute numbers and per population, daily trend, and the total number of cases and per population.
    
 - **New Fatal COVID Cases** shows information for COVID-19 cases with fatalities.
    
@@ -221,7 +227,7 @@ This tab summarizes the employee engagement and Employee Return to the Workplace
 
 - **Average sentiment** shows average employee sentiment.
 
-- **Passes generated** shows number of passes generated.
+- **Passes generated** shows the number of passes generated for both the employees and guests.
 
   There are two charts. One displays the sentiment by date and the other displays the pass and guest registrations generated versus the number of visits by date, along with the trend over time.
 
@@ -377,6 +383,46 @@ This area of the Facility Safety Management app keeps track of general employee 
 
 > [!div class="mx-imgBorder"]
 ![Employee sentiment](media/facility-manager-employee-sentiment.png "Employee sentiment")
+
+## Facility Access
+
+Case managers or facility managers can block the employees from making bookings by disabling access to the facility. To block an employee from making a booking:
+
+1. Open an employee record. 
+2. Go to the **Access** tab.
+3. Select **New Access Action**
+
+   > [!div class="mx-imgBorder"]
+   > ![Access Action list on Employee form](media/facility-manager-employee-block2.png "Access Action list on Employee form")
+
+4. Select **Access Status** as **Blocked** and set **Access Available Date** to a date in the future when you would like the block to expire. You can enter information in the **Notes** so that employee can see the information.
+
+    > [!div class="mx-imgBorder"]
+    > ![Creating an Access Action](media/facility-manager-employee-block3.png "Creating an Access Action")
+5. Select **Save & Close**
+
+An employee is now blocked and can no longer make bookings via the Employee app. All the existing bookings are disabled. A  warning notification is automatically created and set as **Send as push notification** and the body has the notes of the access action.
+
+## Notifications
+
+Every time an access action is created, a notification is created for the employee. These notifications can be used in different situations. Also a flow is implemented that will send the notification as an e-mail if **Send as email** is set to **Yes**. To create a notification for an employee:
+
+1. Open an employee record.
+2. Go to **Notifications** tab.
+3. Select **New Notification**.
+
+   > [!div class="mx-imgBorder"]
+   > ![New notification](media/facility-manager-employee-block4.png "New Notification")
+
+4. Select **Notification Type** as information, warning or error. Add a **Header** and **Body** for the notification. Set **Send as email** to **Yes**, if you want to send an email to the employee.
+
+    > [!div class="mx-imgBorder"]
+    > ![Notification type](media/facility-manager-employee-block5.png "Notification type")
+
+5. Select **Save & Close**
+
+> [!NOTE]
+> A flow for push notifications has not been implemented, since this requires the app ID. To implement a flow for push notifications, see article [Send push notification connector](https://docs.microsoft.com/connectors/powerappsnotification/#send-push-notification)
 
 ## Give feedback about the solution
 
