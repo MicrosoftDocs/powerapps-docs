@@ -76,7 +76,7 @@ The XSD schema files that are used to validate the customization.xml file in a s
   
 ### See also
 
-[When to edit the customizations file for Common Data Service](when-edit-customization-file.md)<br/> 
+[When to edit the customizations file for Microsoft Dataverse](when-edit-customization-file.md)<br/> 
 [Ribbon core schema](ribbon-core-schema.md)<br/>
 [Ribbon types schema](ribbon-types-schema.md)<br/>
 [Ribbon WSS schema](ribbon-wss-schema.md)<br/>

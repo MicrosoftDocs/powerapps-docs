@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Power Apps portals documentation
-summary: Use Power Apps portals to create external-facing websites that allow users outside their organizations to sign in with a wide variety of identities, create and view data in Common Data Service, or even browse content anonymously. 
+summary: Use Power Apps portals to create external-facing websites that allow users outside their organizations to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously. 
 
 metadata:
   title: Power Apps portals documentation
@@ -76,7 +76,7 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/portals-administration/
 
   # Card
-  - title: Integrate with Common Data Service
+  - title: Integrate with Dataverse
     linkLists:
       - linkListType: concept
         links:

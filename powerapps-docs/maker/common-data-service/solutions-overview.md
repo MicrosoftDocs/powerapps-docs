@@ -22,7 +22,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, flows, and more.
+Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, tables, processes, web resources, choices, flows, and more.
 
 Solutions are the mechanism for implementing application lifecycle management (ALM) in Power Apps and other Power Platform products, such as Power Automate. For detailed information about the solution concepts and how solutions are used for application lifecycle management, see [Overview of ALM with Microsoft Power Platform](/power-platform/alm/overview-alm) in the Power Platform ALM guide.
 
@@ -132,22 +132,21 @@ With solutions that are unmanaged or the default one, you can use the **New** or
 
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
-- Canvas app button triggered flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
+- Canvas app instant flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
   - The app and flow will not currently be connected in the target environment after deployment. First associate valid connections with the flow and activate the flow. Then edit the app and re-associate the flow to the button.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
 - Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
-- Button triggered flows are not available in solutions.
+- Instant flows are not available in solutions.
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
 - Flows that connect to SharePoint are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
 
-
- For details about customizing the individual components in a solution, see the following topics:  
+For details about customizing the individual components in a solution, see the following topics:  
   
--   For entity, entity relationships, field and message customizations, see [Metadata](create-edit-metadata.md).  
+-   For table, table relationships, column and message customizations, see [Metadata](create-edit-metadata.md).  
   
--   For entity forms, see [Forms](../model-driven-apps/create-design-forms.md).  
+-   For table forms, see [Forms](../model-driven-apps/create-design-forms.md).  
   
 -   For processes, see [Processes](../model-driven-apps/guide-staff-through-common-tasks-processes.md).  
   
@@ -155,6 +154,4 @@ The following limitations apply to the use of canvas apps, flows, and custom con
  
  
 ### Next steps  
-[Create a solution](create-solution.md) <br/>
-
- 
+[Create a solution](create-solution.md)

@@ -1,8 +1,8 @@
 ---
-title: "Troubleshoot plug-ins (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Troubleshoot plug-ins (Microsoft Dataverse for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Contains information on errors that can occur due to plug-ins and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/18/2019
+ms.date: 12/06/2020
 ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
@@ -36,7 +36,7 @@ Error Message: `There is no active transaction. This error is usually caused by 
 
 To understand the message, you need to appreciate that any time an error related to a data operation occurs within a synchronous plug-in the transaction for the entire operation will be ended.
 
-More information: [Scalable Customization Design in Common Data Service](scalable-customization-design/overview.md)
+More information: [Scalable Customization Design in Microsoft Dataverse](scalable-customization-design/overview.md)
 
 The most common cause is simply that a developer might believe they can attempt to perform an operation that *might* succeed so they wrap that operation in a try/catch block and attempt to swallow the error if it fails.
 
@@ -55,7 +55,7 @@ Blocking is the most common cause for a SQL Timeout error is that the operation 
 
 Blocking may be due to other concurrent operations. Your code may work fine in isolation in a test environment and still be susceptible to conditions that will only occur when multiple users are initiating the logic in your plug-in.
 
-When writing plug-ins, it is essential to understand how to design customizations that are scalable. More information: [Scalable Customization Design in Common Data Service](scalable-customization-design/overview.md)
+When writing plug-ins, it is essential to understand how to design customizations that are scalable. More information: [Scalable Customization Design in Dataverse](scalable-customization-design/overview.md)
 
 ### Cascade operations
 
@@ -89,7 +89,7 @@ Error Message: `Message size exceeded when sending context to Sandbox. Message s
 
 This error occurs when a message payload is greater than 116.85 MB **AND** a plug-in is registered for the message. The error message will include the size of the payload that caused this error.
  
-The limit will help ensure that users running applications cannot interfere with each other based on resource constraints. The limit will help provide a level of protection from unusually large message payloads that threaten the availability and performance characteristics of the Common Data Service platform.
+The limit will help ensure that users running applications cannot interfere with each other based on resource constraints. The limit will help provide a level of protection from unusually large message payloads that threaten the availability and performance characteristics of the Dataverse platform.
  
 116.85 MB is large enough that it should be rare to encounter this case. The most likely situation where this case might occur is when you retrieve a record with multiple related records which include large binary files.
  
@@ -100,7 +100,7 @@ If you encounter this error you can:
 
 ## Error: The given key was not present in the dictionary
 
-Common Data Service frequently uses classes derived from the abstract <xref:Microsoft.Xrm.Sdk.DataCollection`2> class that represents a collection of keys and values. For example, with plug-ins the  <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> property is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> derived from the <xref:Microsoft.Xrm.Sdk.DataCollection`2> class. These classes are essentially dictionary objects where you access a specific value using the key name.
+Dataverse frequently uses classes derived from the abstract <xref:Microsoft.Xrm.Sdk.DataCollection`2> class that represents a collection of keys and values. For example, with plug-ins the  <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> property is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> derived from the <xref:Microsoft.Xrm.Sdk.DataCollection`2> class. These classes are essentially dictionary objects where you access a specific value using the key name.
 
 ### Error codes
 
@@ -151,3 +151,10 @@ if (context.InputParameters.Contains("Target") &&
 ```
 
 Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method to avoid this error when accessing entity attributes, but be aware that this method will return the default value of the type if the attribute doesn't exist. If the default value is null, this works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned will be `1/1/0001 00:00` rather than null.
+
+## Error: You cannot start a transaction with a different isolation level than is already set on the current transaction
+
+Error Code: `-2147220989`<br />
+Error Message: `You cannot start a transaction with a different isolation level than is already set on the current transaction`
+
+Plug-ins are intended to support business logic. Modifying any part of the data schema within synchronous plug-in is not supported. These operations frequently take longer and may cause cached metadata used by applications to become out of sync. However, these operations can be performed in a plug-in step registered to run asynchronously.

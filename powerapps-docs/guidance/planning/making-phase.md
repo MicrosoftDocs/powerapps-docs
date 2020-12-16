@@ -26,7 +26,7 @@ The following are the basic steps for creating canvas apps.
 1. Set up the data source.
 
    - [Set up entities](../../maker/common-data-service/create-edit-entities.md)
-        (when using Common Data Service).
+        (when using Microsoft Dataverse).
 
    - Set up tables (when using a database).
 

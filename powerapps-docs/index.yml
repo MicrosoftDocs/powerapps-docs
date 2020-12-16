@@ -12,7 +12,7 @@ metadata:
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 09/22/2020 #Required; mm/dd/yyyy format.
+  ms.date: 11/16/2020 #Required; mm/dd/yyyy format.
   hide_bc: false
 
 
@@ -71,10 +71,10 @@ conceptualContent:
     
     - title: Work with data platform
       links:
-        - text: What is Common Data Service?
+        - text: What is Microsoft Dataverse?
           url: /powerapps/maker/common-data-service/data-platform-intro
           itemType: overview
-        - text: Entities and metadata
+        - text: Tables and metadata
           url: /powerapps/maker/common-data-service/create-edit-metadata
           itemType: concept
       footerLink:
@@ -89,7 +89,7 @@ conceptualContent:
         - text: Create apps in Teams
           url: /powerapps/teams/create-apps-overview
           itemType: overview
-        - text: What is Project Oakdale?
+        - text: What is Microsoft Dataverse for Teams?
           url: /powerapps/teams/overview-data-platform
           itemType: overview
 
@@ -119,7 +119,7 @@ conceptualContent:
     
     - title: Power Apps for developers
       links:
-        - text: Common Data Service developer
+        - text: Dataverse developer
           url: /powerapps/developer/common-data-service/
           itemType: reference
         - text: Model-driven apps developer

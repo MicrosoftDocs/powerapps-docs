@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service | Microsoft Docs"
+title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Microsoft Dataverse | Microsoft Docs"
 description: ""
 keywords: ""
 ms.date: 08/17/2020
@@ -16,19 +16,19 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service
+# Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Microsoft Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Use the steps in this tutorial to create a Blazor WebAssembly app that connects to the Common Data Service. The focus of this topic is to understand the necessary steps to authenticate a user with a specific Common Data Service instance and retrieve data.
+Use the steps in this tutorial to create a Blazor WebAssembly app that connects to the Dataverse. The focus of this topic is to understand the necessary steps to authenticate a user with a specific Dataverse instance and retrieve data.
 
 Blazor WebAssembly is one of two hosting models available for ASP.NET Core Blazor, the other is Blazor Server. For a complete description of the differences, see [ASP.NET Core Blazor hosting models](/aspnet/core/blazor/hosting-models).
 
-This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic. Because Common Data Service uses Azure Active Directory (Azure AD) for authentication, this tutorial will describe how to modify the basic app created using the app template provided so that it can connect to Common Data Service.
+This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic. Because Dataverse uses Azure Active Directory (Azure AD) for authentication, this tutorial will describe how to modify the basic app created using the app template provided so that it can connect to Dataverse.
 
 ## Goal
 
-When you complete this tutorial, you will have a Blazor WebAssembly app that displays data from the Common Data Service Account entity that the authenticated user has access to.
+When you complete this tutorial, you will have a Blazor WebAssembly app that displays data from the Dataverse Account entity that the authenticated user has access to.
 
 :::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="Represents the goal of this tutorial.":::
 
@@ -37,8 +37,8 @@ When you complete this tutorial, you will have a Blazor WebAssembly app that dis
 
 To complete this tutorial, you must have:
 
-- Access to a [Common Data Service environment with a database](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database)
-- A Common Data Service user with a security role that provides read access to the Account and Contact entities
+- Access to a [Dataverse environment with a database](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database)
+- A Dataverse user with a security role that provides read access to the Account and Contact entities
 - Understanding of the C# programming language
 - Understanding of ASP.NET Core Blazor is helpful but not required
 - The latest version of Visual Studio 2019 with the **ASP.NET and web development** workload installed.
@@ -48,18 +48,18 @@ To complete this tutorial, you must have:
 
 Let’s make sure that your environment is configured properly, and you understand where to perform the actions in Step 2.
 
-### Verify Common Data Service database
+### Verify Dataverse database
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 1. Select **Solutions** in the navigation pane.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-maker-portal.png" alt-text="The maker portal showing an environment without a Common Data Service database.":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-maker-portal.png" alt-text="The maker portal showing an environment without a Dataverse database.":::
 
 1. If you don’t see a list of installed solutions, use the environment selector at the top to choose a different environment that has a database. Otherwise create a new environment.
 
-### Get the Common Data Service Web API URI
+### Get the Dataverse Web API URI
 
-You will need the Instance Web API Service Root URL. This is found on the Developer Resources page of your Common Data Service environment.
+You will need the Instance Web API Service Root URL. This is found on the Developer Resources page of your Dataverse environment.
 
 Follow the instructions found in [View or download developer resources](view-download-developer-resources.md) to copy the Url. 
 
@@ -153,7 +153,7 @@ At this point, all the capabilities of the app work whether you log-in or not. O
 
 ## Step 3: Grant API permissions
 
-To connect to Common Data Service, you must configure permissions for the app to connect.
+To connect to Dataverse, you must configure permissions for the app to connect.
 
 1. Return to your app registration in Azure AD, In the **API permissions** section, click **Add a permission**.
 
@@ -161,15 +161,15 @@ To connect to Common Data Service, you must configure permissions for the app to
 
 1. In the **Request API permissions** area, select **APIs my organization uses** and search for *Common Data Service*.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-search-common-data-service-api.png" alt-text="Searching for the Common Data Service permissions.":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-search-common-data-service-api.png" alt-text="Searching for the Dataverse permissions.":::
 
 1. Select **Common Data Service**. 
 1. Select the **user_impersonation** permission
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-user-impersonation-permission.png" alt-text="Adding the Common Data Service user_impersonation permission.":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-user-impersonation-permission.png" alt-text="Adding the Dataverse user_impersonation permission.":::
 
     > [!NOTE]
-    > Dynamics CRM and Common Data Service refer to the same service.
+    > Dynamics CRM and Dataverse refer to the same service.
 
 1. Click **Add permissions**.
 1. (Optional) For the **Configured permissions**, click **Grant Admin consent for [Your Azure Active Directory tenant name]**. In the screenshot below the tenant name is ‘Default Directory’. Yours may be different.
@@ -178,7 +178,7 @@ To connect to Common Data Service, you must configure permissions for the app to
 
 ## Step 4: Apply code changes
 
-Apply changes to the following files to enable displaying Common Data Service data in the application.
+Apply changes to the following files to enable displaying Dataverse data in the application.
 
 ### \wwwroot\appsettings.json
 
@@ -194,7 +194,7 @@ You will find that this file already has configuration information generated by 
 }
 ```
 
-Update the file to include a new `CDSWebAPI` section that includes the root of the **Instance Web API Service Root URL** you copied in the [Get the Common Data Service Web API URI](#get-the-common-data-service-web-api-uri) step.
+Update the file to include a new `CDSWebAPI` section that includes the root of the **Instance Web API Service Root URL** you copied in the [Get the Dataverse Web API URI](#get-the-dataverse-web-api-uri) step.
 
 > [!NOTE]
 > You don’t need the full URL, just the root.
@@ -246,7 +246,7 @@ Update the file to include a new `CDSWebAPI` section that includes the root of t
 1. Add the following code below the line that starts with `builder.Configuration.Bind("AzureAd" ...`
 
     ```csharp
-    // Add access to Common Data Service to the scope of the access token when the user signs in
+    // Add access to Dataverse to the scope of the access token when the user signs in
     options.ProviderOptions.DefaultAccessTokenScopes.Add($"{resourceUrl}/user_impersonation");
     ```
 
@@ -463,7 +463,7 @@ This code does the following:
 
 1. Ensures that only authenticated users can view the page with data.
 1. Defines a table to display Account data after it is retrieved.
-1. Requests an accesstoken and then uses that token with an HttpRequestMessage to retrieve data from Common Data Service.
+1. Requests an accesstoken and then uses that token with an HttpRequestMessage to retrieve data from Dataverse.
 1. Defines classes to enable strongly typed data when the JSON returned from the service is deserialized.
 
 ### \Shared\NavMenu.razor
@@ -485,7 +485,7 @@ Add this node where ever you like within the `<ul class="nav flex-column">` elem
 In Visual Studio, press F5 to launch the app with the code changes.
 
 1. Before logging in, navigate to **Fetch Accounts**. You should expect to see the failure notification.
-1. Log-in as a user who has access to the Common Data Service data.
+1. Log-in as a user who has access to the Dataverse data.
 
     > [!NOTE]
     > If you did not grant admin consent in [Step 3: Grant API permissions](#step-3-grant-api-permissions), users can expect to see a dialog like this:
@@ -504,5 +504,5 @@ In Visual Studio, press F5 to launch the app with the code changes.
 [Quickstart: Blazor Server Web API sample (C#)](./webapi/quick-start-blazor-server-app.md)  
 [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
 [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)<br />
-[Use OAuth with Common Data Service](authenticate-oauth.md)<br />
-[Use the Common Data Service Web API](webapi/overview.md)
+[Use OAuth with Dataverse](authenticate-oauth.md)<br />
+[Use the Dataverse Web API](webapi/overview.md)

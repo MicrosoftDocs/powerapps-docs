@@ -1,6 +1,6 @@
 ---
-title: "Developers: Best practices and guidance while working with metadata for the Common Data Service | Microsoft Docs"
-description: Best practices and guidance while working with metadata for developers of the Common Data Service in Power Apps.
+title: "Developers: Best practices and guidance while working with metadata for the Microsoft Dataverse | Microsoft Docs"
+description: Best practices and guidance while working with metadata for developers of the Microsoft Dataverse in Power Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -22,11 +22,11 @@ search.app:
   - D365CE
 ---
 
-# Best practices and guidance while working with metadata for the Common Data Service
+# Best practices and guidance while working with metadata for the Microsoft Dataverse
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
-This list below contains all of the guidance and best practices regarding interacting and working with metadata within the Common Data Service.
+This list below contains all of the guidance and best practices regarding interacting and working with metadata within the Dataverse.
 
 
 |Best Practice  |Description  |

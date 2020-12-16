@@ -23,7 +23,7 @@ You can use the **View shape in MR** component in your app to let users see if a
 
 The component creates a button in your app. When app users click the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the component in Power Apps.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vvwR]
+:::image type="content" source="./media/augmented-overview/view-shape-in-mixed-reality.png" alt-text="Photo showing a 3D shape being overlaid onto the real world through a mobile device.":::
 
 To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
@@ -62,7 +62,7 @@ Shape width | Width of the cube. | Integer | **Properties** (also in **Advanced*
 Shape height | Height of the cube. | Integer | **Properties** (also in **Advanced**)
 Shape depth | The three-dimensional depth of the cube. | Integer | **Properties** (also in **Advanced**)
 Unit of measurement | The measurement unit used for the width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
-Photos | The photos captured during the mixed reality session. | | Not applicable (output property only)
+Photos | The photos captured during the mixed reality session.<br/>You can [upload the mixed-reality photos to OneDrive and show them in a gallery](mixed-reality-take-upload-photos.md). | | Not applicable (output property only)
 
 ### Additional properties
 

@@ -29,7 +29,7 @@ Be sure to check out documentation specific to each sample app for more details.
 
 ## Get sample apps
 
-In order to play or edit model-driven sample apps, the apps must first be provisioned in a Common Data Service database. First create a trial environment and database and be sure to select **Deploy sample apps and data**.
+In order to play or edit model-driven sample apps, the apps must first be provisioned in a Microsoft Dataverse database. First create a trial environment and database and be sure to select **Deploy sample apps and data**.
 
 > [!div class="mx-imgBorder"] 
 > ![Create database](media/overview-model-driven-samples/create-database1.png "Create a database")
@@ -52,7 +52,7 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
 ## Remove sample apps and data 
 - Deleting a sample app requires deleting the corresponding  [managed solution](https://docs.microsoft.com/dynamics365/customer-engagement/developer/uninstall-delete-solution). 
-- Deleting the solution also deletes any sample data specific to the custom entities for the app.
+- Deleting the solution also deletes any sample data specific to the custom tables for the app.
 - If customizations were made to the sample app, there may be [dependencies](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
 ### Delete a solution

@@ -1,5 +1,5 @@
 ---
-title: "Calculated and rollup attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Calculated and rollup attributes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about common elements and characterstics, calculated attributes, rollup attributes, retrieve a calculated rollup field value immediately, and SourceTypeMasks enumeration." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -70,7 +70,7 @@ search.app:
  Calculated attribute values are available in the retrieve plug-in pipeline. Post image of entity record update or create contains the calculated attribute value in stage 40. More information: [Event execution pipeline](event-framework.md#event-execution-pipeline) and [Entity Images](understand-the-data-context.md#entity-images)
   
 ### Limitations  
- You can’t use values in calculated attributes that reference a related entity, another calculated attribute, or a *logical value* in the same entity to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated attribute, the sort direction will be ignored and will not throw an error. If the calculated attribute references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated field using the `SourceTypeMask` property on the attribute metadata. More information: [Logical attributes](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
+ You can’t use values in calculated attributes on a *logical value* in the same entity to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated attribute, the sort direction will be ignored and will not throw an error. If the calculated attribute references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated field using the `SourceTypeMask` property on the attribute metadata. More information: [Logical attributes](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
   
  Only attributes from an immediate parent entity can be used in a calculated attribute.  
   

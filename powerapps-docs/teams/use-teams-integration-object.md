@@ -12,8 +12,6 @@ ms.reviewer: tapanm
 
 # Microsoft Teams integration object
 
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 You can use the Teams integration object to easily find and access the Teams integration features and use the improved usability of expressions while integrating your canvas app with Teams. The availability of a *Teams integration object* can be validated by checking the presence of **Teams** control from the tree view.
 
 ![Teams integration object](media/teams-1.png "Teams integration object")
@@ -86,7 +84,7 @@ Considering the Teams channel name as *General*, you can use the following formu
 
 ![Filtered items](media/teams-filtered-items.png "Filtered items")
 
-For more information about the Teams client SDK, go to [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). For more information about using context from Teams, go to [Use context from teams](../maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
+For more information about the Teams client SDK, go to [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). For more information about using context from Teams, go to [Use context from teams](../maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
 
 ### See also
 
