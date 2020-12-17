@@ -108,7 +108,7 @@ Queries using the TDS endpoint execute under the service protection API limits.
 
 ## Troubleshooting authentication problems
 
-Only Azure Active Directory authentication is supported. If you try to use other forms of authentication, you will see errors like the following.
+Only Azure Active Directory authentication is supported on the Dataverse endpoint SQL connection. If you try to use other forms of authentication, you will see errors like the following.
 
 - Error returned when using **Azure Active Directory – Integrated** authentication.
 
