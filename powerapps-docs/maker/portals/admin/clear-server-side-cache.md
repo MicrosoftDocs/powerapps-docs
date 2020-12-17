@@ -57,7 +57,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_entityform
-:::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -68,7 +67,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_entitypermission
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -79,7 +77,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_pagealert
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -90,7 +87,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_pagetag_webpage
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -101,7 +97,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_publishingstate
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -112,7 +107,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_redirect
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -123,7 +117,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_sitemarker
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -134,7 +127,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_webfile
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -145,7 +137,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_webformmetadata
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -156,7 +147,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_weblink
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -167,7 +157,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_webnotificationurl
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -178,7 +167,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_webpageaccesscontrolrule
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -189,7 +177,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_webpagelog
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -200,7 +187,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_website_list
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -211,7 +197,6 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_websiteaccess_webrole
-::column-end:::
 :::row-end:::
 :::row:::
 :::column:::
@@ -222,31 +207,7 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 :::column-end:::
 :::column:::
 	adx_webtemplate
-::column-end:::
 :::row-end:::
-
-<!---
-
-| Configuration entities:| | |
-|-------------------------------------------|---------------------------|--------------------------------------|
-| adx_contentaccesslevel                    | adx_redirect              | adx_webpage_tag                      |
-| adx_contentsnippet                        | adx_setting               | adx_webpageaccesscontrolrule         |
-| adx_entityform                            | adx_shortcut              | adx_webpageaccesscontrolrule_webrole |
-| adx_entityformmetadata                    | adx_sitemarker            | adx_webpagehistory                   |
-| adx_entitylist                            | adx_sitesetting           | adx_webpagelog                       |
-| adx_entitypermission_webrole              | adx_webfile               | adx_webrole_systemuser               |
-| adx_externalidentity                      | adx_webfilelog            | adx_website                          |
-| adx_pagealert                             | adx_webform               | adx_website_list                     |
-| adx_pagenotification                      | adx_webformmetadata       | adx_website_sponsor                  |
-| adx_pagetag                               | adx_webformsession        | adx_websiteaccess                    |
-| adx_pagetag_webpage                       | adx_webformstep           | adx_websiteaccess_webrole            |
-| adx_pagetemplate                          | adx_weblink               | adx_websitebinding                   |
-| adx_portallanguage                        | adx_weblinkset            | adx_websitelanguage                  |
-| adx_publishingstate                       | adx_webnotificationentity | adx_webtemplate                      |
-| adx_publishingstatetransitionrule         | adx_webnotificationurl    | adx_urlhistory                       |
-| adx_publishingstatetransitionrule_webrole | adx_webpage               | adx_entitypermission                 |
-
--->
 
 ## Caching changes for portals with version 9.2.6.x or later
 
