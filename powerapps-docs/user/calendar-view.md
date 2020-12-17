@@ -54,7 +54,7 @@ When the calendar view is turned on, it is the default view for the table. Howev
 You can choose from these calendar views:
 
 - **Day**: View the current day.
-- **Week**: View the week from Sunday through Saturday, by default. You can change the first day of the week in system settings.<br/>To view the week numbers in the calendar view, ask your admin to enable displaying the week numbers in the calendar view for your environment. Follow the steps in [Customize regional options] and select [Show week numbers on Calendar views].
+- **Week**: View the week from Sunday through Saturday, by default. You can change the first day of the week in system settings.<br/>To view the week numbers, ask your admin to enable displaying the week numbers in the calendar view for your environment. Follow the steps in [Customize regional options] and select [Show week numbers on Calendar views].
 - **Month**: View the entire month.
 
 To change the calendar format, on the calendar select the drop-down menu and then select **Day**, **Week**, or **Month**.
