@@ -48,6 +48,9 @@ You can install the Return to the Workplace solution from AppSource.
 > [!NOTE]
 > If you are a US Government customer, you'll have to install using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
+> [!NOTE]
+> Important you can download the pbix files via Github.
+
 1. Go to [AppSource](https://aka.ms/rtw-app) to install the **Return to the Workplace solution**.
 
     > [!div class="mx-imgBorder"]
