@@ -10,7 +10,7 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Power Apps portals FAQ
+# Power Apps portals FAQs
 
 We've compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
@@ -27,44 +27,9 @@ We've compiled a list of frequently asked questions and provided brief answers t
 
 This can happen when you have the portal URL that exceeds **500 characters**. <br> For example, if you have a webpage with more than 500 characters in length, and you edit the page using the [content editor](https://docs.microsoft.com/dynamics365/portals/get-started-portal-content-editor), the *Language content* tab in the editor may appear blank. If you review the browser for script errors, you may notice an HTTP response with `400 Bad Request` error. When this happens, ensure you truncate the URL so that you don't exceed 500 characters maximum length.
 
-### Rendering Power BI report on my portal page fails with the following error:
-
-*A configuration error occurred while rendering your report.*
-
-This can happen due to multiple reasons such as:
-
-- Your [Power BI Embedded configuration](admin/set-up-power-bi-integration.md) is incorrect.
-- [Row-level security](https://docs.microsoft.com/power-bi/admin/service-admin-rls) in Power BI is enabled but you didn't pass roles in [Power BI component configuration](add-powerbi.md) (Advanced settings), or *roles* parameter in the [powerbi liquid tag](liquid/portals-entity-tags.md#powerbi).
-- **Embed content in apps** in Power BI [Developer Settings](https://docs.microsoft.com/power-bi/admin/service-admin-portal#developer-settings) is not enabled.
-
 ### Does Power Apps portals support TLS 1.2?
 
 Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
-
-### What is the difference between Power Apps portals, Dynamics 365 portals and add-on portals?
-
-With the launch of Power Apps portals on October 1, 2019, Dynamics 365 portals are called as Power Apps portals. In other words, all portals are referred to as **Power Apps portals**.
-
-One of the major changes introduced in portals after October 1, 2019 is the licensing model. Earlier, portals were licensed add-ons to Dynamics 365 apps while certain Dynamics 365 licenses included a default portal add-on. After October 1, 2019, portals are [licensed based on usage](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). All existing portals will be part of a transition period based on current customer contract after which they'll need to be converted to a new licensing model.
-
-You can check the type of a portal from the [Power Apps Portals admin center](./admin/admin-overview.md):
-
-![Power Apps portals type](./media/power-apps-portals-type.png)
-
-Additional differences between Power Apps portals with capacity-based licenses and add-on based licenses:
-
-- For add-on portals, the portal type has 'add-on' suffix added. For example, a production add-on portal type lists as 'Production (add-on)'.
-- Power Apps portals have a [different caching mechanism](admin/clear-server-side-cache.md) in comparison with add-on based licenses portals.
-- Provisioning method is different for portals with capacity-based licenses from add-on based licenses.
-
-You can create Power Apps portal with capacity-based license using steps described in following articles:
-
-- [Create a Dataverse starter portal](create-portal.md)
-- [Create a portal with Dynamics 365 environment](create-dynamics-portal.md)
-
-To create Power Apps portal with add-on based license, see [provisioning a portal using portal add-on](provision-portal-add-on.md).
-
-See [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#what-is-the-difference-between-power-apps-portals-and-dynamics-365-portals-in-terms-of-licensing) for licensing differences between add-on based licenses and capacity-based licenses.
 
 ### When is an add-on portal in suspended state?
 

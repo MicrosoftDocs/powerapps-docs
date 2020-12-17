@@ -192,6 +192,16 @@ Power Apps portals doesn't support [Azure Analysis Services live connections](ht
 
 For more information about Power BI Embedded service limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
+### Rendering Power BI report on my portal page fails with the following error:
+
+*A configuration error occurred while rendering your report.*
+
+This can happen due to multiple reasons such as:
+
+- Your [Power BI Embedded configuration](#enable-power-bi-embedded-service) is incorrect.
+- [Row-level security](https://docs.microsoft.com/power-bi/admin/service-admin-rls) in Power BI is enabled but you didn't pass roles in [Power BI component configuration](add-powerbi.md) (Advanced settings), or *roles* parameter in the [powerbi liquid tag](liquid/portals-entity-tags.md#powerbi).
+- **Embed content in apps** in Power BI [Developer Settings](https://docs.microsoft.com/power-bi/admin/service-admin-portal#developer-settings) is not enabled.
+
 ## Privacy notice  
 
 [!INCLUDE[cc_privacy_powerbi_tiles_dashboards](../../../includes/cc-privacy-powerbi-tiles-dashboards.md)]
