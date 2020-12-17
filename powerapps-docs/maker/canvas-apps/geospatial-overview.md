@@ -2,7 +2,7 @@
 title: Add Geospatial components to apps made with Microsoft Power Apps
 description: Geospatial components let you view and manipulate 3D objects and images in the real world, in augmented reality. 
 author: iaanw
-manager: shellha
+manager: shellyha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
