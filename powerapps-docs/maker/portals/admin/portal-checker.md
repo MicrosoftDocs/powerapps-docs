@@ -1,6 +1,6 @@
 ---
-title: "Identify and fix customer issues with a portal | MicrosoftDocs"
-description: "Learn to identify and fix customer issues with a portal."
+title: "Run Portal checker to identify common problems with your portal. | MicrosoftDocs"
+description: "Learn about how to run Portal Checker on your portal to identify common problems and resolutions."
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
