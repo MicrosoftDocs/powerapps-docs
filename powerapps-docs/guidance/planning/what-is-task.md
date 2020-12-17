@@ -23,14 +23,12 @@ for one task at a time. You might discover new tasks as you go.
 Your Power Apps project doesn't have to tackle each step, but it's good to know
 what they are.
 
-## Discover processes to improve on using Process advisor
-If your task is done fully on the desktop you can discover all the steps 
+> [!NOTE]
+> If your task is done fully on the desktop, you can discover all the steps 
 different people in your organization are performing to complete the task by 
-using our process discovery functionality called [Process advisor](/power-automate/process-advisor-overview.md). 
-Process advisor visualizes your process in a [Process map](/power-automate/process-advisor-visualize.md) 
-and reveals bottleneck and metrics for your process through analytical report.
-
-![Process map](media/process-map.png "Process advisor process map")
+using our process discovery functionality called [process advisor](/power-automate/process-advisor-overview.md). 
+Process advisor visualizes your process in a [process map](/power-automate/process-advisor-visualize.md) 
+and reveals bottlenecks and metrics for your process through an analytical report.
 
 ## Example: Expense reporting tasks
 

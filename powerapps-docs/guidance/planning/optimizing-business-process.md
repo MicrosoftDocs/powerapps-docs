@@ -70,6 +70,13 @@ Some key questions to ask:
   - [Using AI](https://docs.microsoft.com/ai-builder/overview) to replace
         human attention
 
+> [!NOTE]
+> If your task is done fully on the desktop, you can use [process advisor](/power-automate/process-advisor-overview.md)
+to automatically optimize the process. 
+Process advisor has capabilities to [analyze your process](/power-automate/process-advisor-analyze), 
+and visualize it in a [process map](/power-automate/process-advisor-visualize.md).
+Process map reveals bottlenecks and metrics for your process through an analytical report.
+
 ## Example: Optimizing the expense report process
 
 We reviewed the current expense process and found some obvious improvements
@@ -95,13 +102,6 @@ Rebecca is researching how the semiannual audit might be optimized by using AI.
 Our proposed optimized process looks like the following illustration.
 
 ![Optimized business process flowchart that removes extra steps in the accounting process, as described in the article](media/optimized-business-process.png "Optimized business process flowchart that removes extra steps in the accounting process, as described in the article")
-
-> [!NOTE]
-> If your task is done fully on the desktop you can discover all the steps 
-different people in your organization are performing to complete the task by 
-using our process discovery functionality called [Process advisor](/power-automate/process-advisor-overview.md). 
-Process advisor visualizes your process in a [Process map](/power-automate/process-advisor-visualize.md) 
-and reveals bottleneck and metrics for your process through analytical report.
 
 > [!div class="nextstepaction"]
 > [Next step: Is it worth automating this process?](worth-automating-process.md)
