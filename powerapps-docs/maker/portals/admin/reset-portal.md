@@ -46,9 +46,30 @@ If your portal is not provisioned correctly, it goes into an error state and the
 > [!div class=mx-imgBorder]
 > ![Error while provisioning a portal](../media/provision-portal-error.png "Error while provisioning a portal")
 
-### Completely delete a portal
+### Delete a portal
 
-To learn about how to delete a portal completely, go to [How do I delete a portal completely after it's provisioned?](../faq.md?#how-do-i-delete-a-portal-completely-after-its-provisioned).
+A Power Apps portal consists of the following components:
+
+- **Portal website host**: Portal website host is the Portal code that forms the actual website.
+
+- **Portal configuration**: The portal configuration in the Dataverse environment that defines portal components such as *Websites*, *Pages*, *Content Snippets* and *Web Roles* records.
+
+- **Portal solutions**: Solutions that are installed in the Dataverse environment and contain the metadata entities for any portal.
+
+**To delete a portal**, you must delete the **portal website host** and the  **portal configuration**.
+
+- To delete **portal web site host**, do one of the following:
+    - Option 1: Go to [Power Apps](https://make.powerapps.com), and [delete](manage-existing-portals.md#delete) the portal.
+    - Option 2: Go to [Power Apps portals admin center](admin-overview.md), and reset the portal as explained in this article above.
+
+- To delete **portal configuration**, delete the corresponding website record for the portal you want to delete using the **Portal Management** app.
+
+> [!NOTE]
+> If you [delete](../manage-existing-portals.md#delete), or [reset](reset-portal.md) the portal but do not delete the corresponding website record associated with the portal using the [Portal Management](../configure/configure-portal.md) app, new portal that you create will re-use the existing **portal configuration**.
+
+If you want, you can also delete **portal solutions**. Deleting **portal solutions** is not required to create a new portal with clean configuration. However, you may need to delete the **portal solutions** for other reasons such as a business requirement to not have any more portals in a specific environment.
+
+If you deleted **Portal Management** app by mistake while trying to delete a portal, refer [how to create custom Portal Management app](../configure/create-custom-portal-management-app.md).
 
 ## Troubleshooting
 
