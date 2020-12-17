@@ -1465,7 +1465,11 @@
             - name: Set up Power BI integration
               href: ./portals/admin/set-up-power-bi-integration.md
         - name: Use Portal Checker
-          href: ./portals/admin/portal-checker.md
+          items:
+            - name: Run Portal Checker
+              href: ./portals/admin/portal-checker.md
+            - name: Analyze and resolve results
+              href: ./portals/admin/portal-checker-analysis.md
         - name: Renew portal authentication key
           href: ./portals/admin/manage-auth-key.md
         - name: Restrict IP addresses
