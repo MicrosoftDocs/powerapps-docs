@@ -5,7 +5,7 @@ author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 06/16/2020
+ms.date: 18/12/2020
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -95,6 +95,13 @@ Rebecca is researching how the semiannual audit might be optimized by using AI.
 Our proposed optimized process looks like the following illustration.
 
 ![Optimized business process flowchart that removes extra steps in the accounting process, as described in the article](media/optimized-business-process.png "Optimized business process flowchart that removes extra steps in the accounting process, as described in the article")
+
+> [!NOTE]
+> If your task is done fully on the desktop you can discover all the steps 
+different people in your organization are performing to complete the task by 
+using our process discovery functionality called [Process advisor](/power-automate/process-advisor-overview.md). 
+Process advisor visualizes your process in a [Process map](/power-automate/process-advisor-visualize.md) 
+and reveals bottleneck and metrics for your process through analytical report.
 
 > [!div class="nextstepaction"]
 > [Next step: Is it worth automating this process?](worth-automating-process.md)
