@@ -26,7 +26,7 @@ search.app:
 > This feature has been re-enabled in the majority of regions. Please resume testing, and provide feedback. We thank you for your patience and feedback.<p/>
 > [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the entity data of the target Dataverse environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
+A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the entity data of the target Dataverse environment. This allows you to execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
 ## Applications support
 
@@ -34,7 +34,7 @@ TDS (SQL) endpoint applications support for Power Apps and SQL Server Management
 
 ### Power Apps
 
-You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the SQL connection feature to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi)
+You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi)
 
 > [!NOTE]
 > To enable this feature, see the TDS endpoint setting in [Manage feature settings](/power-platform/admin/settings-features). Once enabled you should see a button **Analyze in Power BI** in the command bar of Power Apps.
@@ -103,6 +103,8 @@ Dates returned in query results are formatted as Universal Time Coordinated (UTC
 > Until a service update planned for January 2021 has deployed, using date filters will be slow.
 
 Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any re-writing of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
+
+Queries using the TDS endpoint execute under the service protection API limits.
 
 ### See also
 
