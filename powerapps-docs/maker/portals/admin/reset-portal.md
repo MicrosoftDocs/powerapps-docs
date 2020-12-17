@@ -46,7 +46,7 @@ If your portal is not provisioned correctly, it goes into an error state and the
 > [!div class=mx-imgBorder]
 > ![Error while provisioning a portal](../media/provision-portal-error.png "Error while provisioning a portal")
 
-### Delete a portal
+## Delete a portal
 
 A Power Apps portal consists of the following components:
 
