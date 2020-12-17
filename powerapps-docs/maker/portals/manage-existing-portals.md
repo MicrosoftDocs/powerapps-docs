@@ -110,7 +110,7 @@ If you want to remove the portal configurations from your environment completely
 
 ### Completely delete a portal
 
-To learn about how to delete a portal completely, go to [How do I delete a portal completely after it's provisioned?](faq.md?#how-do-i-delete-a-portal-completely-after-its-provisioned).
+To learn about how to delete a portal completely, go to [Delete a portal](admin/reset-portal.md#delete-a-portal).
 
 ## Details
 

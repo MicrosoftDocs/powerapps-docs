@@ -59,7 +59,7 @@ A Power Apps portal consists of the following components:
 **To delete a portal**, you must delete the **portal website host** and the  **portal configuration**.
 
 - To delete **portal web site host**, do one of the following:
-    - Option 1: Go to [Power Apps](https://make.powerapps.com), and [delete](manage-existing-portals.md#delete) the portal.
+    - Option 1: Go to [Power Apps](https://make.powerapps.com), and [delete](../manage-existing-portals.md#delete) the portal.
     - Option 2: Go to [Power Apps portals admin center](admin-overview.md), and reset the portal as explained in this article above.
 
 - To delete **portal configuration**, delete the corresponding website record for the portal you want to delete using the **Portal Management** app.
