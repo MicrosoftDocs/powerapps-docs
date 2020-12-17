@@ -199,7 +199,7 @@ For more information about Power BI Embedded service limitations, see [Considera
 This can happen due to multiple reasons such as:
 
 - Your [Power BI Embedded configuration](#enable-power-bi-embedded-service) is incorrect.
-- [Row-level security](https://docs.microsoft.com/power-bi/admin/service-admin-rls) in Power BI is enabled but you didn't pass roles in [Power BI component configuration](add-powerbi.md) (Advanced settings), or *roles* parameter in the [powerbi liquid tag](liquid/portals-entity-tags.md#powerbi).
+- [Row-level security](https://docs.microsoft.com/power-bi/admin/service-admin-rls) in Power BI is enabled but you didn't pass roles in [Power BI component configuration](../add-powerbi.md) (Advanced settings), or *roles* parameter in the [powerbi liquid tag](../liquid/portals-entity-tags.md#powerbi).
 - **Embed content in apps** in Power BI [Developer Settings](https://docs.microsoft.com/power-bi/admin/service-admin-portal#developer-settings) is not enabled.
 
 ## Privacy notice  
