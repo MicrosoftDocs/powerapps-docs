@@ -31,10 +31,6 @@ This can happen when you have the portal URL that exceeds **500 characters**. <b
 
 Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).
 
-### When is an add-on portal in suspended state?
-
-Portal [provisioned using portal add-on plan](provision-portal-add-on.md) purchased earlier is suspended at the end of expiration. This expiration period is 30 days for trial portals while it may vary for an add-on portal in production with a purchased license. Suspended trial portal is deleted after 7 days while suspension period may vary for production portal. For more details, read the [portal lifecycle](./admin/portal-lifecycle.md#considerations-for-add-on-portals) for add-on portals.
-
 ### How do I redirect a user to a default page after signing in?
 
 You can configure a portal to redirect a user to a default page after signing in. To achieve this functionality, you can include a JavaScript code in the Home web template.
