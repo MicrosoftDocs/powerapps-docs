@@ -15,19 +15,19 @@ ms.reviewer: kathyos
 
 With Microsoft Power Platform, you can easily create apps that are tailored to your
 organization's specific needs. Although your needs might be unique, we see some
-common *patterns* among apps most often created by organizations to meet their
-most-pressing needs.
+common patterns among apps that organizations typically create to meet their
+most-pressing needs.<!--note from editor: Suggested, so as not to use "most" twice. Also, I removed the italics because you're not defining "patterns" here.-->
 
-Different scenarios, across different industries, often use the basic same
+Different scenarios, across different industries, often use the same basic 
 patterns. For example, an app for doing aircraft inspections, a situational awareness app for hospitals, and an app for tracking kids' reading levels all
 have a similar structure, even though they have very different purposes and
 audiences.
 
-In this set of articles, we've identified some of the uses for Microsoft Power Platform
-we've seen and the patterns that successful makers have used to bring these
-solutions to life. Each article contains links to the real-world
+In this set of articles, we've identified some of the uses we've seen for Microsoft Power Platform
+and the patterns that successful makers have used to bring these
+solutions to life. Each article contains links to real-world
 customer stories that include best practices for structuring data, using the
-elements of Microsoft Power Platform, and integrating into the overall business. 
+elements of Microsoft Power Platform, and integrating into the overall business.
 
 In the list below, look for a scenario that's similar to what you need and then
 select the pattern to learn more.
