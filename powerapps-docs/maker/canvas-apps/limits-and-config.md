@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/01/2020
+ms.date: 12/14/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -14,7 +14,7 @@ search.app:
   - PowerApps
 ---
 # System requirements, limits, and configuration values for canvas apps
-This topic contains device platform and web browser requirements, as well as limits and configuration values for canvas apps.
+This topic contains device platform and web browser requirements, limits, and configuration values for canvas apps.
 
 ## Supported platforms for running canvas apps using the Power Apps mobile app
 
@@ -26,7 +26,8 @@ This topic contains device platform and web browser requirements, as well as lim
 
 > [!NOTE]
 > - On October 16, 2020 we will no longer support iOS 12. After October 16, 2020 iOS 13 or later will be supported. 
-> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
+> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Microsoft Dataverse option, and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
+> - Canvas apps running on Windows platform must use the legacy Microsoft Dataverse connector. A [warning is displayed](use-native-cds-connector.md) for apps that still use the legacy connector, but using it for Windows platform is supported.
 
 ## Supported browsers for running canvas apps
 
@@ -62,7 +63,7 @@ Requests from Power Apps use IP addresses that depend on the region of the [envi
 
 Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this topic.
 
-You should use these addresses if, for example, you must allow IP addresses for an Azure SQL database.
+For example, use these addresses when you must allow IP addresses for an Azure SQL database.
 
 | Region | Outbound IP |
 | --- | --- |
@@ -92,9 +93,9 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
-| graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g., profile photo) |
+| graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
-| \*.azure-apim.net |https |Api Hubs - Different sub-domains for each locale |
+| \*.azure-apim.net |https |Api Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com,apps.powerapps.com, and make.powerapps.com |
 | \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |

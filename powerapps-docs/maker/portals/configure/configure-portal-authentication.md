@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/20/2020
+ms.date: 12/10/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -27,7 +27,7 @@ The following table lists common identity providers for portals, the protocol th
 | Azure Active Directory (Azure AD) | OpenID Connect | [Azure AD with OpenID Connect](configure-openid-settings.md) |
 | Azure AD | SAML 2.0 | [Azure AD with SAML 2.0](configure-saml2-settings-azure-ad.md) |
 | Azure AD | WS-Federation | [Azure AD with WS-Federation](configure-ws-federation-settings-azure-ad.md) |
-| Azure AD B2C | OpenID Connect | [Azure AD B2C with OpenID Connect](configure-azure-ad-b2c-provider.md) |
+| Azure AD B2C | OpenID Connect | [Azure AD B2C with OpenID Connect](configure-azure-ad-b2c-provider.md) <br> [Azure AD B2C with OpenID Connect (manual configuration)](configure-azure-ad-b2c-provider-manual.md) |
 | Azure Directory Federation Services (AD FS) | SAML 2.0 | [AD FS with SAML 2.0](configure-saml2-settings.md) |
 | AD FS | WS-Federation | [AD FS with WS-Federation](configure-ws-federation-settings.md)
 | Microsoft | OAuth 2.0 | [Microsoft](configure-oauth2-microsoft.md) |
