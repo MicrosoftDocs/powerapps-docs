@@ -106,6 +106,28 @@ Querying data using SQL does not trigger any plug-ins registered on the <xref:Mi
 
 Queries using the TDS endpoint execute under the service protection API limits.
 
+## Troubleshooting authentication problems
+
+Only Azure Active Directory authentication is supported. If you try to use other forms of authentication, you will see errors like the following.
+
+- Error returned when using **Azure Active Directory – Integrated** authentication.
+
+“Login failed: The HTTP request was forbidden with client authentication scheme 'Anonymous'.
+RequestId: TDS;81d8a4f7-0d49-4d21-8f50-04364bddd370;2
+Time: 2020-12-17T01:10:59.8628578Z (.Net SqlClient Data Provider)”
+
+- Error returned when using **SQL Server** authentication.
+
+“Login failed: Request is not authenticated.
+RequestId: TDS;918aa372-ccc4-438a-813e-91b086355343;1
+Time: 2020-12-17T01:13:14.4986739Z (.Net SqlClient Data Provider)”
+
+- Error returned when using **Windows** authentication.
+
+“Login failed: Request is not authenticated.
+RequestId: TDS;fda17c60-93f7-4d5a-ad79-7ddfbb917979;1
+Time: 2020-12-17T01:15:01.0497703Z (.Net SqlClient Data Provider)”
+
 ### See also
 
 [Use FetchXML to construct a query](cds-sql-query.md)  
