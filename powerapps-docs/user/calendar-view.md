@@ -30,6 +30,8 @@ When the **Calendar Control V2** control is added to a table and then the defaul
 > [!div class="mx-imgBorder"]
 > ![Default calendar view](media/cal-view.png "Default calendar view") 
 
+> [!NOTE]
+> To view the week numbers in the calendar view, ask your admin to enable displaying the week numbers in the calendar view for your environment. More information: [Link to Jim’s topic]
 
 ## Switch between calendar view and grid view
 
