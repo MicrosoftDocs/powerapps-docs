@@ -42,3 +42,8 @@ To add text box:
         > [!div class=mx-imgBorder]
         > ![Select text alignment and color](media/text-props.png "Select text alignment and color")  
  
+### See also
+
+- [Power Apps portals Studio](portal-designer-anatomy.md)
+- [Create and manage webpages](create-manage-webpages.md)
+- [WYSIWYG editor](compose-page.md)

@@ -51,3 +51,9 @@ To add sections:
             > ![Add image in the section](media/section-props-image.png "Add image in the section")  
 
 7.    Add the required portal component in the section.
+
+### See also
+
+- [Power Apps portals Studio](portal-designer-anatomy.md)
+- [Create and manage webpages](create-manage-webpages.md)
+- [WYSIWYG editor](compose-page.md)

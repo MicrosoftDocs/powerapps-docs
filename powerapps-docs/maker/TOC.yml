@@ -1332,7 +1332,7 @@
               href: ./portals/compose-page.md
             - name: Add sections
               href: ./portals/add-sections.md
-            - name: Add components
+            - name: Components
               items:
                 - name: Add text
                   href: ./portals/add-text.md

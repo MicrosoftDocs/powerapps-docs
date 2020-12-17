@@ -55,3 +55,7 @@ To run Portal Checker:
 
     > [!div class=mx-imgBorder]
     > ![Refresh diagnostic results](../media/diagnostic-results-refresh.png "Refresh diagnostic results")
+
+## Next steps
+
+[Analyze and resolve Portal Checker diagnostics results](portal-checker-analysis.md)

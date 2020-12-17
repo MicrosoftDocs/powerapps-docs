@@ -12,7 +12,22 @@ ms.reviewer: tapanm
 
 # WYSIWYG editor
 
-After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG editor allows you to add and edit the required components on the canvas easily.
+After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG editor allows you to add and edit the required components on the canvas easily. You can add and edit the following components on the canvas:
+
+- [Sections](add-sections.md)
+    - One column section
+    - Two columns section
+    - Three columns section
+- Components
+    - [Text](add-text.md)
+    - [Image](add-image.md)
+    - [IFrame](add-iframe.md)
+    - [Form](add-form.md)
+    - [List](add-list.md)
+    - [Breadcrumb](add-breadcrumb.md)
+    - [Custom menu](add-custom-menu.md)
+    - [Use code editor](use-code-editor.md)
+    - [Power BI](add-powerbi.md)
 
 > [!NOTE]
 > If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal. 

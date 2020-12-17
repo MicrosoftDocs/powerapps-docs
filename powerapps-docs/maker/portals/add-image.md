@@ -50,3 +50,9 @@ To add image component:
 
     > [!NOTE]
     > You can also select the image on the canvas and drag the handles to resize it.
+
+### See also
+
+- [Power Apps portals Studio](portal-designer-anatomy.md)
+- [Create and manage webpages](create-manage-webpages.md)
+- [WYSIWYG editor](compose-page.md)

@@ -120,3 +120,9 @@ Embedding multiple Power BI workspaces may need additional considerations. Refer
 - [Troubleshooting Power BI Embedded application content rendering](https://docs.microsoft.com/power-bi/developer/embedded/embedded-troubleshoot#content-rendering).
 - [Power BI Embedded performance best practices](https://docs.microsoft.com/power-bi/developer/embedded/embedded-performance-best-practices).
 - [Power BI optimization guide](https://docs.microsoft.com/power-bi/guidance/power-bi-optimization).
+
+### See also
+
+- [Power Apps portals Studio](portal-designer-anatomy.md)
+- [Create and manage webpages](create-manage-webpages.md)
+- [WYSIWYG editor](compose-page.md)

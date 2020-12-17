@@ -23,3 +23,9 @@ To add breadcrumb component to your portal:
 4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **Breadcrumb**.
+
+### See also
+
+- [Power Apps portals Studio](portal-designer-anatomy.md)
+- [Create and manage webpages](create-manage-webpages.md)
+- [WYSIWYG editor](compose-page.md)

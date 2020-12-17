@@ -23,3 +23,9 @@ After you create the web link set:
 1. In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
 
     ![Navigation menu](media/navigation-menu.png "Navigation menu")
+
+### See also
+
+- [Power Apps portals Studio](portal-designer-anatomy.md)
+- [Create and manage webpages](create-manage-webpages.md)
+- [WYSIWYG editor](compose-page.md)
