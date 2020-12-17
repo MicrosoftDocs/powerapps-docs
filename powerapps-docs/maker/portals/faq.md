@@ -66,16 +66,6 @@ For information on deleting a portal and the required privileges, see [Delete a 
 
 [Power Apps portals](overview.md) are now available as standalone in Power Apps. You no longer need to acquire license to provision a portal. User access to the portal requires license depending on persona type. Read more details at [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing).
 
-### How do I change the audience and type of a portal after it's provisioned?
-
-After you've provisioned a portal, the option to change the portal audience is disabled.
-
-However, you can change the audience and type of portal after it's provisioned by following the steps in [Change the Dynamics 365 instance, audience, or type of portal](admin/change-dynamics-instance.md).
-
-> [!NOTE]
-> - It's recommended to reset and provision your portal again to change the audience, type of portal, organization, and so on. More information: [Reset a portal](admin/reset-portal.md)
-> - The changing of Dynamics 365 instance is applicable only to the portals provisioned using the older portal add-ons.
-
 ### How do I change the base URL of a portal after it's provisioned?
 
 You can change the base URL of a portal after it's provisioned by following the steps in [Change the base URL of a portal](admin/change-base-url.md).

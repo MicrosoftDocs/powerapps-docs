@@ -186,6 +186,16 @@ If the package installation has failed, the portal administrator page will open 
 > [!NOTE]
 > Some solutions have prerequisites for their installation, so an installation will fail if the prerequisites are not met. For example, to install the Partner Field Service for a partner portal, the Partner Portal and Field Service solutions must have already been installed. If you attempt to install the Partner Field Service first, the installation will fail and give you an error message.
 
+## Change portal type and audience
+
+After you've provisioned a portal, the option to change the portal audience is disabled.
+
+However, you can change the audience and type of portal after it's provisioned by following the steps in [Change the Dynamics 365 instance, audience, or type of portal](admin/change-dynamics-instance.md).
+
+> [!NOTE]
+> - It's recommended to reset and provision your portal again to change the audience, type of portal, organization, and so on. More information: [Reset a portal](admin/reset-portal.md)
+> - The changing of Dynamics 365 instance is applicable only to the portals provisioned using the older portal add-ons.
+
 ### See also
 
 [Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)
