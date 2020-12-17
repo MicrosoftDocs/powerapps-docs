@@ -48,6 +48,185 @@ Portal metadata is stored in entities called *configuration entities*. If you ch
 
 Clearing the server-side configuration cache for a portal includes refreshing the data from the following *configuration entities*:
 
+:::row:::
+:::column:::
+	adx_contentaccesslevel
+:::column-end:::
+:::column:::
+	adx_contentsnippet
+:::column-end:::
+:::column:::
+	adx_entityform
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_entityformmetadata
+:::column-end:::
+:::column:::
+	adx_entitylist
+:::column-end:::
+:::column:::
+	adx_entitypermission
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_entitypermission_webrole
+:::column-end:::
+:::column:::
+	adx_externalidentity
+:::column-end:::
+:::column:::
+	adx_pagealert
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_pagenotification
+:::column-end:::
+:::column:::
+	adx_pagetag
+:::column-end:::
+:::column:::
+	adx_pagetag_webpage
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_pagetemplate
+:::column-end:::
+:::column:::
+	adx_portallanguage
+:::column-end:::
+:::column:::
+	adx_publishingstate
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_publishingstatetransitionrule
+:::column-end:::
+:::column:::
+	adx_publishingstatetransitionrule_webrole
+:::column-end:::
+:::column:::
+	adx_redirect
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_setting
+:::column-end:::
+:::column:::
+	adx_shortcut
+:::column-end:::
+:::column:::
+	adx_sitemarker
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_sitesetting
+:::column-end:::
+:::column:::
+	adx_urlhistory
+:::column-end:::
+:::column:::
+	adx_webfile
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webfilelog
+:::column-end:::
+:::column:::
+	adx_webform
+:::column-end:::
+:::column:::
+	adx_webformmetadata
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webformsession
+:::column-end:::
+:::column:::
+	adx_webformstep
+:::column-end:::
+:::column:::
+	adx_weblink
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_weblinkset
+:::column-end:::
+:::column:::
+	adx_webnotificationentity
+:::column-end:::
+:::column:::
+	adx_webnotificationurl
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webpage
+:::column-end:::
+:::column:::
+	adx_webpage_tag
+:::column-end:::
+:::column:::
+	adx_webpageaccesscontrolrule
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webpageaccesscontrolrule_webrole
+:::column-end:::
+:::column:::
+	adx_webpagehistory
+:::column-end:::
+:::column:::
+	adx_webpagelog
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webrole_systemuser
+:::column-end:::
+:::column:::
+	adx_website
+:::column-end:::
+:::column:::
+	adx_website_list
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_website_sponsor
+:::column-end:::
+:::column:::
+	adx_websiteaccess
+:::column-end:::
+:::column:::
+	adx_websiteaccess_webrole
+::column-end:::
+:::row-end:::
+:::row:::
+:::column:::
+	adx_websitebinding
+:::column-end:::
+:::column:::
+	adx_websitelanguage
+:::column-end:::
+:::column:::
+	adx_webtemplate
+::column-end:::
+:::row-end:::
+
+<!---
+
 | Configuration entities:| | |
 |-------------------------------------------|---------------------------|--------------------------------------|
 | adx_contentaccesslevel                    | adx_redirect              | adx_webpage_tag                      |
@@ -66,6 +245,8 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 | adx_publishingstate                       | adx_webnotificationentity | adx_webtemplate                      |
 | adx_publishingstatetransitionrule         | adx_webnotificationurl    | adx_urlhistory                       |
 | adx_publishingstatetransitionrule_webrole | adx_webpage               | adx_entitypermission                 |
+
+-->
 
 ## Caching changes for portals with version 9.2.6.x or later
 
