@@ -19,7 +19,7 @@ In this article, you'll learn about the common problems that occur while creatin
 Currently, you can create only one portal of each type in an environment per language. If you try to create more than one portal, you'll see an error message as follows:
 
 > [!div class=mx-imgBorder]
-> ![Maximum portal created error](media/portal-max-error.png "You have reached maximum limit of n portal(s) on this environment. Please choose another environment or create a new environment.")
+> ![Maximum portal created error](media/portal-max-error.png "You have reached maximum limit of 'n' portal(s) on this environment. Please choose another environment or create a new environment.")
 
 To create more portals, you must create a new environment using the **Create new environment** link in the error message.
 
