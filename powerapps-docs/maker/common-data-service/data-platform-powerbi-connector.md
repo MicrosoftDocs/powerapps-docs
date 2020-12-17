@@ -1,6 +1,6 @@
 ---
 title: Create a Power BI report using the Dataverse connector | Microsoft Docs
-description: Connecting to your Dataverse data from Power BI Desktop using the connector.
+description: Connect to your Dataverse data from Power BI Desktop using the connector.
 author: Mattp123
 manager: kvivek
 ms.service: powerapps
@@ -18,8 +18,6 @@ search.app:
 
 Microsoft Dataverse allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users, and accessed cross platform on Power BI mobile apps.
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/PBIDesktop.png "Power BI Desktop")
 
 ## Prerequisites
@@ -29,7 +27,7 @@ To use Power BI with Dataverse, you need the following items:
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
 * Dataverse environment with maker permissions to access the portal and read permissions to access data within tables.
 * You must have the appropriate Power BI [license](/power-bi/admin/service-admin-licensing-organization) to build and share Power BI reports.
-* To use the **Common Data Service (beta)** connector, the **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
+* To use the **Dataverse** connector, the **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Find your Dataverse environment URL
 
@@ -45,13 +43,13 @@ To use Power BI with Dataverse, you need the following items:
 
 1. Select one of the following connectors, and then select **Connect**.
 
-   * **Common Data Service (beta)**: This connector is the most recent version and uses the tabular data stream (TDS) protocol.
-   * **Common Data Service**: This is the earlier version of the connector. Use this connector for large datasets that are greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.  
+   * **Dataverse**: This connector is the most recent version and uses the tabular data stream (TDS) protocol.
+   * **Common Data Service (Legacy)**: This is the earlier version of the connector. Use this connector for large datasets that are greater than 80 MB. This version also supports paging of the query results and building reports that use the image data type.  
 
 1. In the dialog box that appears, paste in your Dataverse environment URL into the **Environment domain** box, in the format *org.crm.dynamics.com*. Don't include the *https://* or ending */*. More information: [Find your Dataverse environment URL](#find-your-dataverse-environment-url)
    
-   If you selected the **Common Data Service (beta)** connector, select from the following **Data Connectivity** mode options: 
-   * **Import**: You should import data to Power BI wherever possible. With this mode, data is cached in the Power BI service and imported on a scheduled interval.
+   If you selected the **Dataverse** connector, select from the following **Data Connectivity** mode options: 
+   * **Import**: We recommend that you import data to Power BI wherever possible. With this mode, data is cached in the Power BI service and imported on a scheduled interval.
    * **DirectQuery**: Connects directly to the data in Dataverse.  Use this mode for real-time data retrieval. This mode can also more strictly enforce the Dataverse security model. More information: [DirectQuery model guidance in Power BI Desktop](/power-bi/guidance/directquery-model-guidance).
 
    Select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Dataverse. Select **Connect**.
@@ -74,10 +72,10 @@ Choices are used in tables to provide a drop-down list of values to a user in ap
 
 For example, if you had a choice column on your table called `approvalstatus`, you would see two columns in Power BI:
 
-* `approvalstatus`  - This will show a unique integer value for each item in your choice , this is help when applying filters so they will not be impacted if you make future changes to the display name.
+* `approvalstatus`  - This will show a unique integer value for each item in your choice. `approvalstatus` can help when you apply filters so the filters will not be impacted when you make future changes to the display name.
 * `approvalstatusname`  - This will show the friendly display name of the item and is most commonly used when presenting the option in a table or chart.
 
-    |approvalstatus |approvalstatusname |
+    |`approvalstatus` |`approvalstatusname` |
     |---------|---------|
     1|Submitted
     2|In Review
@@ -94,14 +92,14 @@ Relationships in Dataverse require you to create a relationship within Power BI 
 While some relationships may be automatically created, you can still review and ensure the correct relationships are established when creating your report:
 
 * The lookup column on the table will contain the GUID of the row in the related table.
-* The related table will have a column in the format "[tableName]ID" that contains the GUID, for example Accountid or MyCustomtableid
-* Using the Power BI desktop Manage Relationships feature, you would create a new relationship between your lookup column, and the id column on the related table.
+* The related table will have a column in the format "[tableName]ID" that contains the GUID, for example `Accountid` or `MyCustomtableid`
+* Using the Power BI desktop Manage Relationships feature, you would create a new relationship between your lookup column, and the ID column on the related table.
 
 ## Troubleshooting 
 
 ## Error message: Return records size cannot exceed 83886080
 
-This error can occur with the Common Data Services (Beta) connector when you run or design a report with a result set greater than 80 MB. TDS has a result set size limit of 80 MB. 
+This error can occur with the Dataverse connector when you run or design a report with a result set greater than 80 MB. TDS has a result set size limit of 80 MB. 
 
 :::image type="content" source="media/tls-record-limit-exceeded.png" alt-text="TLS record limit exceeded error message":::
 To work around this limit, optimize the query adding filters and dropping columns so that the query returns less data.
