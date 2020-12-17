@@ -95,7 +95,7 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 
 ## Limitations
 
-There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Data Export Service](https://docs.microsoft.com/powerapps/developer/common-data-service/data-export-service) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data.
+There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Data Export Service](https://docs.microsoft.com/powerapps/developer/common-data-service/data-export-service) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data. More information: [Importing and exporting data](/powerapps/maker/common-data-service/why-cds-import-export)
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
@@ -108,7 +108,7 @@ Queries using the TDS endpoint execute under the service protection API limits.
 
 ## Troubleshooting authentication problems
 
-Only Azure Active Directory authentication is supported on the Dataverse endpoint SQL connection. If you try to use other forms of authentication, you will see errors like the following.
+Only Azure Active Directory authentication is supported on the Dataverse endpoint SQL connection. The preferred authentication mechanism is "Azure Active Directory – Universal" with multi-factor authentication (MFA). However, "Azure Active Directory – Password" will work if MFA is not configured. If you try to use other forms of authentication, you will see errors like the following.
 
 - Error returned when using **Azure Active Directory – Integrated** authentication.
 
