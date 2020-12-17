@@ -30,13 +30,13 @@ efficient project management applications and workflows.
 ![Illustration of the project management pattern with plan, track, and review steps](media/project-management-illustration.png "Illustration of the project management pattern with plan, track, and review steps")
 
 Business groups within organizations see the need for a tool to manage projects,
-track progress and monitor outcomes.
+track progress, and monitor outcomes.
 
 In a typical scenario:
 
 1. Plan your work to manage ideas, project plans, tasks, and milestones.
 
-2. Track progress against the plan, notify and escalate if needed.
+2. Track progress against the plan, notify, and escalate if needed.
 
 3. Review progress, monitor outcomes and visualize key aspects of the progress.
 
@@ -47,7 +47,7 @@ In a typical scenario:
 [Read the whole
 story.](https://powerapps.microsoft.com/blog/custom-air-products-services-manages-hvac-manufacturing-process-using-the-power-platform/)
 
-Custom Air Products & Services, Inc. (CAPS) is a Houston based provider of
+Custom Air Products & Services, Inc. (CAPS) is a Houston-based provider of
 heating, air conditioning, and ventilation (HVAC) solutions that specializes in
 the design, construction, installation, modification, and servicing of air
 conditioning equipment in both the industrial and commercial segments of the
@@ -57,10 +57,10 @@ The CAPS Project Management (PM) team needed a customized solution to track the
 entire lifecycle of HVAC units as they passed through the manufacturing process,
 with a focus on quality construction. The solution needed to be customized to
 meet the needs of each department and to track quality checks and allow for
-respective owners to sign-off on each stage in the process. Moreover, they
+respective owners to sign off on each stage in the process. Moreover, they
 wanted to empower anyone in the organization to report on issues via their
 mobile devices. One of the key problems they were facing was the “traveler”
-document - a paper document used to track quality checks, getting lost.
+document - a paper document used to track quality checks - getting lost.
 
 The following diagram represents the process that needed to be digitized and
 automated:
@@ -84,7 +84,7 @@ identify common reasons why a particular step wasn’t done.
 
 ![Screenshot of CAPS customized Sign-Off app](media/CAPS-signoff-app.png "Screenshot of CAPS customized Sign-Off app")
 
- *Customized sign-off app for the Electrical team, this is one of ten such
+ *Customized sign-off app for the Electrical team, one of ten such
 customized companion apps*
 
 There are ten such sign-off apps in addition to the main management app that all
@@ -190,7 +190,7 @@ additional Project Portfolio app screenshots, go to the Downloads section in the
 left-hand sidebar*
 
 Administrators can assign security clearances to specific app users according to
-their roles. Administrators can also configure the master list of task types and
+their roles. Administrators can also configure the list of task types and
 the expected time for each task, which in turn is used to generate due dates
 automatically.
 
