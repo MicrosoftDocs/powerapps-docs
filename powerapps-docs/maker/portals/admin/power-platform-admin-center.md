@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Manage portals from the Power Platform admin center
 
-You can now manage portals in the Power Platform admin center. The Power Platform admin center helps you manage both capacity-based and add-on portals. You can also see information such as how many days are left before a trial portal expires. For more information about portal licensing, see the [licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#portals) and [portal differences](overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals). For more information about Power Platform admin center, go to [Administer Power Platform](/power-platform/admin/admin-documentation).
+You can now manage portals in the Power Platform admin center. The Power Platform admin center helps you manage both capacity-based and add-on portals. You can also see information such as how many days are left before a trial portal expires. For more information about portal licensing, see the [licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#portals) and [portal differences](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals). For more information about Power Platform admin center, go to [Administer Power Platform](/power-platform/admin/admin-documentation).
 
 Manage portals in the Power Platform admin center in two ways: Manage all portals for the current tenant from **Resources** > **Portals**. Or, manage portals for a specific environment from **Environments**.
 
