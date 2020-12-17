@@ -16,7 +16,7 @@ ms.reviewer: kathyos
 With Microsoft Power Platform, you can easily create apps that are tailored to your
 organization's specific needs. Although your needs might be unique, we see some
 common patterns among apps that organizations typically create to meet their
-most-pressing needs.<!--note from editor: Suggested, so as not to use "most" twice. Also, I removed the italics because you're not defining "patterns" here.-->
+most-pressing needs.
 
 Different scenarios, across different industries, often use the same basic 
 patterns. For example, an app for doing aircraft inspections, a situational awareness app for hospitals, and an app for tracking kids' reading levels all
