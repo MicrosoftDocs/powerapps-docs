@@ -1318,6 +1318,8 @@
           href: ./portals/create-dynamics-portal.md
         - name: Create a portal using the older portal add-on
           href: ./portals/provision-portal-add-on.md
+        - name: Common problems and resolutions while creating a portal
+          href: ./portals/create-common-problems.md
     - name: Build using portals Studio
       items:
         - name: Portals Studio overview
