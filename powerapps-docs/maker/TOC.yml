@@ -1360,48 +1360,18 @@
               href: ./portals/edit-css.md
         - name: Supported browsers for portals Studio
           href: ./portals/supported-browser.md
+    - name: Configure multiple languages
+      items:
+        - name: Enable multiple-language support
+          href: ./portals/configure/enable-multiple-language-support.md
+        - name: Behavior and format of the date and time field
+          href: ./portals/configure/behavior-format-date-time-field.md
     - name: Configure portal using Portal Management app
       items:
         - name: Portal Management app overview
           href: ./portals/configure/configure-portal.md
         - name: Configure site settings
           href: ./portals/configure/configure-site-settings.md
-        - name: Add chart on a web page in portal
-          href: ./portals/configure/add-chart.md
-        - name: Configure advertisements
-          href: ./portals/configure/create-run-advertisement.md
-        - name: Configure content snippets
-          href: ./portals/configure/customize-content-snippets.md
-        - name: Configure header and footer output caching
-          href: ./portals/configure/enable-header-footer-output-caching.md
-        - name: Configure multiple languages
-          items:
-            - name: Enable multiple-language support
-              href: ./portals/configure/enable-multiple-language-support.md
-            - name: Behavior and format of the date and time field
-              href: ./portals/configure/behavior-format-date-time-field.md
-        - name: Configure page templates
-          href: ./portals/configure/page-templates.md
-        - name: Configure polls
-          href: ./portals/configure/gather-feedback-poll.md
-        - name: Configure publishing states
-          href: ./portals/configure/publishing-states.md
-        - name: Configure shortcuts
-          href: ./portals/configure/place-child-nodes.md
-        - name: Configure website redirects
-          href: ./portals/configure/add-redirect-url.md
-        - name: Configure webpage ratings
-          href: ./portals/configure/rate-webpage.md
-        - name: Configure web files
-          href: ./portals/configure/web-files.md
-        - name: Configure web links
-          href: ./portals/configure/manage-web-links.md
-        - name: Configure webpages
-          href: ./portals/configure/web-page.md
-        - name: Configure websites
-          href: ./portals/configure/websites.md
-        - name: Configure website bindings
-          href: ./portals/configure/website-bindings.md
         - name: Work with forms and lists in portals
           items:
             - name: Work with entity forms
@@ -1430,6 +1400,36 @@
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
+        - name: Add chart on a web page in portal
+          href: ./portals/configure/add-chart.md
+        - name: Configure advertisements
+          href: ./portals/configure/create-run-advertisement.md
+        - name: Configure content snippets
+          href: ./portals/configure/customize-content-snippets.md
+        - name: Configure header and footer output caching
+          href: ./portals/configure/enable-header-footer-output-caching.md
+        - name: Configure page templates
+          href: ./portals/configure/page-templates.md
+        - name: Configure polls
+          href: ./portals/configure/gather-feedback-poll.md
+        - name: Configure publishing states
+          href: ./portals/configure/publishing-states.md
+        - name: Configure shortcuts
+          href: ./portals/configure/place-child-nodes.md
+        - name: Configure website redirects
+          href: ./portals/configure/add-redirect-url.md
+        - name: Configure webpage ratings
+          href: ./portals/configure/rate-webpage.md
+        - name: Configure web files
+          href: ./portals/configure/web-files.md
+        - name: Configure web links
+          href: ./portals/configure/manage-web-links.md
+        - name: Configure webpages
+          href: ./portals/configure/web-page.md
+        - name: Configure websites
+          href: ./portals/configure/websites.md
+        - name: Configure website bindings
+          href: ./portals/configure/website-bindings.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
     - name: Manage existing portals
@@ -1440,6 +1440,8 @@
           href: ./portals/admin/admin-overview.md
         - name: Manage portals from admin center
           href: ./portals/admin/power-platform-admin-center.md
+        - name: Roles required for portal administration
+          href: ./portals/admin/portal-admin-roles.md
         - name: Configure portal details
           href: ./portals/admin/portal-details.md
         - name: Configure portal actions
@@ -1468,8 +1470,6 @@
           href: ./portals/admin/ip-address-restrict.md
         - name: View activities in portal timeline
           href: ./portals/configure/view-all-activities-in-portal-timeline.md
-        - name: Roles required for portal administration
-          href: ./portals/admin/portal-admin-roles.md
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
     - name: Configure security
@@ -1577,7 +1577,7 @@
         - name: Set up Power BI integration
           href: ./portals/admin/set-up-power-bi-integration.md
         - name: Add a Power BI report or dashboard to a web page in portal using Power BI component in Studio
-          href: ./portals/compose-page.md#add-power-bi
+          href: ./portals/add-powerbi.md
         - name: Add a Power BI report or dashboard to a web page in portal using powerbi liquid tag
           href: ./portals/admin/add-powerbi-report.md
     - name: For developers

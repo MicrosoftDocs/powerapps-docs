@@ -161,7 +161,7 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 3. In the **Manage Power BI Embedded service integration** window, remove, or move the Power BI workspaces from which dashboards and reports need to be displayed in your portal to the **Selected Workspaces** list.
 
     > [!div class=mx-imgBorder]
-    > ![Select Power BI workspaces - Manage Power BI Embedded service integration](../media/manage-powerbi-embedded-window.png "Select Power BI workspaces - Manage Power BI Embedded service integration")
+    > ![Manage Power BI Embedded service integration](../media/manage-powerbi-embedded-window.png "Manage Power BI Embedded service integration")
     
     > [!NOTE]
     > After removing the workspaces from the **Selected Workspaces** list, it can take up to 1 hour to reflect the changes. Until then, the databases and reports are rendered on the portal without any issues.
@@ -198,7 +198,7 @@ For more information about Power BI Embedded service limitations, see [Considera
 
 ### See also
 
-- [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi)
+- [Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md)
 - [Add a Power BI report or dashboard to a webpage using liquid tag in portal](add-powerbi-report.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
 - [Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)

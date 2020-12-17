@@ -17,7 +17,7 @@ You can add a Power BI report or dashboard to a web page in portal by using the 
 If adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as **powerbiembedded** in the *powerbi* Liquid tag.
 
 > [!TIP]
-> This article explains how to add a Power BI report or dashboard using *powerbi* liquid tag. To add **Power BI component** on a webpage in your portal using the portals Studio, go to [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi).
+> This article explains how to add a Power BI report or dashboard using *powerbi* liquid tag. To add **Power BI component** on a webpage in your portal using the portals Studio, go to [Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md).
 
 For example: 
 
@@ -168,6 +168,6 @@ More information: [Handling events](https://github.com/Microsoft/PowerBI-JavaScr
 
 ### See also
 
-- [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi)
+- [Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md)
 - [Set up Power BI integration](set-up-power-bi-integration.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)

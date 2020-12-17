@@ -59,7 +59,7 @@ When this happens, you can select **Sync Configuration** to see the changes to t
 > [!IMPORTANT]
 > Direct changes to the **Default** web link set using the Portal Management app is not supported. To customize your portal's navigation menu using the Portal Management app, create a new web link set or customize a different web link set. You can add new web pages using the portals Studio with **Default** navigation menu selected that creates new pages inside the **Default** web link set instead.
 
-More information: [Add a custom navigation menu](../compose-page.md#add-a-custom-menu). For more information about creating and managing web pages, go to [Create and manage web pages](../create-manage-webpages.md).
+More information: [Add a custom navigation menu](../add-custom-menu.md). For more information about creating and managing web pages, go to [Create and manage web pages](../create-manage-webpages.md).
 
 ## Web link set attributes and relationships
 
@@ -106,5 +106,5 @@ The table below explains many of the standard Web Link properties used by portal
 ### See also
 
 - [Manage a web page and navigation menu](../create-manage-webpages.md#manage-webpage)
-- [Add a custom menu to a page](../compose-page.md#add-a-custom-menu)
+- [Add a custom menu to a page](../add-custom-menu.md)
 - [Customize content by using content snippets](customize-content-snippets.md)
