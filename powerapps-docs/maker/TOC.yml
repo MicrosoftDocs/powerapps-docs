@@ -1360,7 +1360,7 @@
               href: ./portals/edit-css.md
         - name: Supported browsers for portals Studio
           href: ./portals/supported-browser.md
-    - name: Configure multiple languages
+    - name: Enable multiple languages
       items:
         - name: Enable multiple-language support
           href: ./portals/configure/enable-multiple-language-support.md
