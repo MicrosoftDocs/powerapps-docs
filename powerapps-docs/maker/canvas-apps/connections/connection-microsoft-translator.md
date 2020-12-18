@@ -63,7 +63,7 @@ If you haven't already, follow the steps in the previous section to translate so
 3. Add an **Audio** control (**Insert** menu > **Media**), and set its **Media** property to the following formula:  
 
     `MicrosoftTranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)`
-4. Press F5, or select the Preview button (![](./media/connection-microsoft-translator/preview.png)). Type some text into **Source**, select a language in **TargetLang**, and then select the play button in the audio control.
+4. Press F5, or select the Preview button (![Preview](./media/connection-microsoft-translator/preview.png)). Type some text into **Source**, select a language in **TargetLang**, and then select the play button in the audio control.
 
     The app plays an audio version of the text that you entered in the language you chose.
 5. Press Esc to return to the default workspace.
