@@ -55,10 +55,9 @@ new record. Testing whether the user can create a new record requires using the
 other strategy (mentioned above) to check the user’s security privileges.
 
 However, if the user was successful in retrieving entity records using a query, you
-can then test an entity instance using the `RetrievePrincipalAccess` message (<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess>, <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>).
+can then test an entity instance using the `RetrievePrincipalAccess` message.
 
-The following sample method uses the .NET SDK assemblies to allow retrieving a
-set of access rights defined within the [AccessRights Enum](/dotnet/api/microsoft.crm.sdk.messages.accessrights).
+The following method uses the SDK <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest> class to allow retrieving a set of access rights defined within the <xref:Microsoft.Crm.Sdk.Messages.AccessRights> enumeration.
 
 ```csharp
 /// <summary>
@@ -85,6 +84,8 @@ user, EntityReference entity) {
   }
 }
 ```
+
+For the Web API use the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess> function and <xref:Microsoft.Dynamics.CRM.AccessRights> EnumType.
 
 With the value returned by this method, you can use the [Enum.HasFlag Method](/dotnet/api/system.enum.hasflag#System_Enum_HasFlag_System_Enum_)
 to return a Boolean value when the user has access to perform specific
@@ -114,10 +115,10 @@ that isn’t bound to a specific entity.
 ### Get Principals with access to a record
 
 Some data operations require another user have access to a record. If you have
-just one specific user or team, you can test the other user using <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>.
+just one specific user or team, you can test the other user using the `RetrievePrincipalAccess` message (<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess> function, <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest> class).
 
 Get a list of all users and teams who have access rights and details about
-those access rights on a record using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>.
+those access rights on a record using the the `RetrieveSharedPrincipalsAndAccess` message (<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess> function, <xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest> class).
 
 ## Check a user’s security privileges
 
@@ -170,8 +171,10 @@ following query to retrieve these.
 
 Use these messages to retrieve privileges by privilege ID or name. They include privileges that the user might have from teams.
 
-<xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest>  
-<xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest>
+| Message | Web API function,<br/> SDK API class |
+| --- | --- |
+| RetrieveUserPrivilegeByPrivilegeId | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeIdRequest> |
+| RetrieveUserPrivilegeByPrivilegeName | <xref:Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId>,<br/> <xref:Microsoft.Crm.Sdk.Messages.RetrieveUserPrivilegeByPrivilegeNameRequest> |
 
 ### See Also
 
