@@ -17,7 +17,7 @@ search.app:
   - PowerApps
 ---
 # Model-driven app frequently asked questions
-<!--note from editor: Note the change to the title; it shouldn't be the same as the H1. This will become a build warning sometime soon.-->
+
 These frequently asked questions (FAQ) can help you resolve issues that might occur when you work with model-driven apps.
 
 ## What is an app module?
@@ -32,13 +32,13 @@ We recommend that you create your app in a dedicated solution. By creating a sol
 
 ## Why can't I create a model-driven app?
 
-The most common reasons you can't create model-driven apps are:<!--note from editor: Suggested.-->
+The most common reasons you can't create model-driven apps are:
 
 * Licensing
 * Security
 * Environment configuration
 
-A Power Apps or Dynamics 365 license is required to create a model-driven app. More information: [Licensing requirements for tables in the Power Apps Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2085130)<!--note from editor: Edit okay? Patterned this after a similar link in data-platform-complex-entities.md--> and [Understanding Power Platform Licensing](/microsoft-365/community/powerplatformlicensingforcitizendeveloper)<!--note from editor: I removed this from line 44.-->
+A Power Apps or Dynamics 365 license is required to create a model-driven app. More information: [Licensing requirements for tables in the Power Apps Licensing Guide](https://go.microsoft.com/fwlink/p/?linkid=2085130) and [Understanding Power Platform Licensing](/microsoft-365/community/powerplatformlicensingforcitizendeveloper)
 
 Make sure you have sufficient privilege to create model-driven apps in your environment. More information:
 
@@ -57,7 +57,7 @@ Make sure you have the appropriate Dynamics 365 application license when working
 
 ## Why can't you see my model-driven app?
 
-Make sure you have the appropriate privileges on the app. Work with your app maker or admin to ensure you have the proper security roles for the app. 
+Make sure you have the appropriate privileges on the app. Work with your app maker or admin to ensure you have the proper security roles for the app.
 More information:
 
 * [Privileges required to view and access apps](app-visibility-privileges.md)
