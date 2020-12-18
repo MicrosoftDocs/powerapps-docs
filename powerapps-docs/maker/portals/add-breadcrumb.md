@@ -12,6 +12,8 @@ ms.reviewer: tapanm
 
 # Add breadcrumb
 
+Breadcrumb shows the links to pages in the hierarchy of the current page. This hierarchy allows users to follow through the trail up to the root page.
+
 To add breadcrumb component to your portal:
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
