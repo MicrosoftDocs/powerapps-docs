@@ -57,7 +57,6 @@ The Office 365 Users connection has been created and added to your app. Now, it'
    `Office365Users.MyProfile().TelephoneNumber`  
    `Office365Users.MyProfile().UserPrincipalName`  
    `Office365Users.MyProfile().AccountEnabled`  
-   `Office365Users.MyProfile().BusinessPhones`
 
 The label shows the information that you entered about the current user.
 
