@@ -58,8 +58,10 @@
       href: quick-find-limit.md
     - name: Improve FetchXML request performance
       href: fetchxml-performance.md
-  - name: "Use SQL to query data (Preview)"
+  - name: "Use SQL to query data"
     href: cds-sql-query.md
+  - name: "Dataverse SQL"
+    href: how-cds-sql-differs-from-transact-sql.md
   - name: Saved Queries
     href: saved-queries.md
   - name: Query Hierarchical data
