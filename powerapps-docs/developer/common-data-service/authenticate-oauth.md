@@ -125,8 +125,8 @@ class SampleProgram
 
         AuthenticationContext authContext = 
         new AuthenticationContext("https://login.microsoftonline.com/common", false);  
-        UserCredential credential = new UserCredential(userName, password);
-        AuthenticationResult result = authContext.AcquireToken(serviceUrl, clientId, credential);
+        UserCredential credential = new UserPasswordCredential(userName, password);
+        AuthenticationResult result = authContext.AcquireTokenAsync(serviceUrl, clientId, credential).Result;
         //The access token
         string accessToken = result.AccessToken;
 
@@ -178,24 +178,19 @@ The following is an example of a custom class derived from <xref:System.Net.Http
             HttpMessageHandler innerHandler)
         : base(innerHandler)
     {
-      _credential = new UserCredential(userName, password);
+      _credential = new UserPasswordCredential(userName, password);
       _clientId = clientId;
       _serviceUrl = serviceUrl;
     }
 
-    protected override Task<HttpResponseMessage> SendAsync(
-             HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
+    protected override async Task<HttpResponseMessage> SendAsync(
+      HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
     {
-      try
-      {
-        request.Headers.Authorization =
-        new AuthenticationHeaderValue("Bearer", _authContext.AcquireToken(_serviceUrl, _clientId, _credential).AccessToken);
-      }
-      catch (Exception ex)
-      {
-        throw ex;
-      }      
-      return base.SendAsync(request, cancellationToken);
+      AuthenticationResult token = await _authContext.AcquireTokenAsync(_serviceUrl, _clientId, _credential);
+
+      request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token.AccessToken);
+
+      return await base.SendAsync(request, cancellationToken);
     }
   }
 ```
@@ -375,7 +370,7 @@ string secret = "<your app secret>";
 AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/<Tenant-ID-here>");
 ClientCredential credential = new ClientCredential(clientId, secret);
 
-AuthenticationResult result = authContext.AcquireToken(serviceUrl, credential);
+AuthenticationResult result = authContext.AcquireTokenAsync(serviceUrl, credential).Result;
 
 string accessToken = result.AccessToken;
 ```
