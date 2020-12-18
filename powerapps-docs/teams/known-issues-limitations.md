@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/16/2020
+ms.date: 12/18/2020
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
@@ -45,12 +45,6 @@ Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't suppo
 ## Required fields
 
 There is no enforcement of user-created required table fields. Rows that have empty values in those fields can be saved successfully. System required fields are enforced and cannot be saved without a value.
-
-## Sharing
-
-You can't share apps or data outside of a team currently.
-
-![Share with your colleagus](media/share-with-colleagues.png "Share with your colleagues")
 
 ## Studio
 
