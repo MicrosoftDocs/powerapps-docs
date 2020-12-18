@@ -79,4 +79,4 @@ operation. If **Share reassigned records with original owner** is selected (se
 shares the record with all access rights after the assign operation. Otherwise,
 the previous owner does not share the record and may not have access to the
 record, depending on his or her privileges. The Organization entity's
-[ShareToPreviousOwnerOnAssign](reference/entities/organization#sharetopreviousowneronassign-options) attribute controls this setting.
+[ShareToPreviousOwnerOnAssign](reference/entities/organization.md#sharetopreviousowneronassign-options) attribute controls this setting.

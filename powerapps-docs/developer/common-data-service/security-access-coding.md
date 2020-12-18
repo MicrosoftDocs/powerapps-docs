@@ -15,6 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Verifying access in code
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
@@ -54,7 +55,7 @@ new record. Testing whether the user can create a new record requires using the
 other strategy (mentioned above) to check the user’s security privileges.
 
 However, if the user was successful in retrieving entity records using a query, you
-can then test an entity instance using <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>.
+can then test an entity instance using the `RetrievePrincipalAccess` message (<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess>, <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>).
 
 The following sample method uses the .NET SDK assemblies to allow retrieving a
 set of access rights defined within the [AccessRights Enum](/dotnet/api/microsoft.crm.sdk.messages.accessrights).
@@ -70,8 +71,6 @@ set of access rights defined within the [AccessRights Enum](/dotnet/api/microsof
 
 static AccessRights GetAccessRights(IOrganizationService svc, EntityReference
 user, EntityReference entity) {
-
-// TODO Consider adding a test for the user being a system user or part of a team.
 
   try
   {
@@ -124,7 +123,7 @@ those access rights on a record using the <xref:Microsoft.Crm.Sdk.Messages.Retri
 
 When you don’t have a specific entity record to test, such as whether they can
 create a new entity record, you must rely on checking the user’s security
-privileges. These privileges are stored in the [Privilege entity](reference/entities/privilege).
+privileges. These privileges are stored in the [Privilege entity](reference/entities/privilege.md).
 
 There are nearly one thousand individual privileges in the Dataverse database and the
 number will grow with every entity or custom action that is added to the system.

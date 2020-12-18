@@ -1,5 +1,5 @@
 ---
-title: "Security concepts (Microsoft Dataverse) | Microsoft Docs" 
+title: "Security concepts for developers (Microsoft Dataverse) | Microsoft Docs" 
 description: "A brief summary of security concepts." 
 ms.custom: ""
 ms.date: 12/10/2020
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Security concepts
+# Security concepts for developers
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 

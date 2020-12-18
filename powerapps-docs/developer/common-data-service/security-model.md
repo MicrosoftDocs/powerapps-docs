@@ -34,6 +34,3 @@ As a developer, you should know that the data operations in your code run in the
 The first step is to understand the security concepts that apply to data access. You should understand how to configure and manage security roles because you will need to apply them when you test your code. But this is beyond the scope of this topic.  You can find more information about security concepts in general and security configuration tasks in [Security concepts in Microsoft Dataverse](/power-platform/admin/wp-security-cds).
 
 In the security related topics that follow, we will assume that you have have a basic understanding of Microsoft Dataverse security concepts and administration so that we can proceed with addressing the security and data access APIs that you will need to use in your plug-in or application.
-
-### See Also
-
