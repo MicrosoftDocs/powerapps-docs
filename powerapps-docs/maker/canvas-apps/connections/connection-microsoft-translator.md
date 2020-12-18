@@ -30,12 +30,12 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 2. In the right-hand pane, click or tap **Data** tab, and then click or tap **Add data source**.
 3. Select **New connection**, and then select **Microsoft Translator**:  
 
-    ![Connect to Microsoft Translator](./media/connection-microsoft-translator/addconnection.png)
+    ![Add connection](./media/connection-microsoft-translator/addconnection.png "Add connection")
 
     ![Connect to Microsoft Translator](./media/connection-microsoft-translator/add-translator.png)
 4. Select **Connect**. Your connection appears under **Data sources**:  
 
-    ![Connect to Microsoft Translator](./media/connection-microsoft-translator/translatordatasource.png)
+    ![Connect](./media/connection-microsoft-translator/translatordatasource.png "Connect")
 
 ## Use the Microsoft Translator connection in your app
 ### Translate text

@@ -86,7 +86,7 @@ Convert dates and times from strings of text to values, which you can format in 
 3. Change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
    <br>**DateTimeValue(ArrivalDateTime.Text, "fr")**
    
-    ![Show a date/time value in French format](./media/show-text-dates-times/date-value-fr.png)
+    ![Change ShowDate](./media/show-text-dates-times/date-value-fr.png "Change ShowDate")
    
     **ShowDate** shows the day before the month, as a French user would expect.
    
@@ -99,7 +99,7 @@ Convert dates and times from strings of text to values, which you can format in 
 4. To use one of several built-in formats, change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
    <br>**Text(DateTimeValue(ArrivalDateTime.Text), DateTimeFormat.LongDateTime)**
    
-    ![Show a date/time value in French format](./media/show-text-dates-times/long-date-time.png)
+    ![Use built-in formulas](./media/show-text-dates-times/long-date-time.png "Use built-in formulas")
    
     **ShowDate** shows the day of the week, the date, and the time.
    
@@ -110,7 +110,7 @@ Convert dates and times from strings of text to values, which you can format in 
 5. To use a custom format, change the **[Text](controls/properties-core.md)** property of **ShowDate** to this formula:
    <br>**Text(DateTimeValue(ArrivalDateTime.Text), "mm/dd/yyyy hh:mm:ss.fff AM/PM")**
    
-    ![Show a date/time value in French format](./media/show-text-dates-times/format-milliseconds.png)
+    ![Use custom format](./media/show-text-dates-times/format-milliseconds.png "Use custom format")
    
     **ShowDate** shows the date/time value in the format that you specified, including milliseconds.
    

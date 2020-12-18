@@ -45,7 +45,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
    
    * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
      
-       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure.png)
+       ![Connect directly (cloud services)](./media/connection-azure-sqldatabase/connect-azure.png "Connect directly (cloud services)")
    * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
      
        ![Connect to an on-premises database](./media/connection-azure-sqldatabase/connect-onprem.png)
@@ -68,10 +68,10 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
    
    * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
      
-       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-portal.png)
+       ![Connect directly (cloud services)](./media/connection-azure-sqldatabase/connect-azure-portal.png "Connect directly (cloud services)")
    * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
      
-       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-portal.png)
+       ![Connect using on-premises data gateway](./media/connection-azure-sqldatabase/connect-onprem-portal.png "Connect using on-premises data gateway")
      
        > [!NOTE]
      > If you don't have a gateway, [install one](../gateway-reference.md), and then click or tap the clockwise icon to refresh the list.
@@ -89,7 +89,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
    
    * Specify **Connect directly (cloud services)**, and then type or paste the server name, the database name, the user name, and the password for the database that you want to use.
      
-       ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-azure-fromblank.png)
+       ![Connect to a database in Azure - cloud services](./media/connection-azure-sqldatabase/connect-azure-fromblank.png "Connect to a database in Azure - cloud services")
    * Specify **Connect using on-premises data gateway**, type or paste the server name, the database name, the user name, and the password for the database that you want to use, and specify the authentication type and the gateway.
      
        ![Connect to a database in Azure](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
