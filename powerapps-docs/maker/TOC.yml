@@ -1203,6 +1203,8 @@
           href: ./model-driven-apps/rich-text-editor-control.md
         - name: Add the news control to a table
           href: ./model-driven-apps/stay-current-with-news-control.md
+        - name: Add the form component control
+          href: ./model-driven-apps/form-component-control.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
@@ -1269,7 +1271,9 @@
       href: ./model-driven-apps/checklist-transition-unified-interface.md
     - name: "FAQs: Unified Interface transition"
       href: ./model-driven-apps/faqs-transition-unified-interface.md
-  - name: Accessibility in Power Apps app designer
+    - name: Model-driven app FAQ
+      href: ./model-driven-apps/model-app-faq.md
+    - name: Accessibility in Power Apps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook
     href: ./model-driven-apps/app-for-outlook-customize.md
