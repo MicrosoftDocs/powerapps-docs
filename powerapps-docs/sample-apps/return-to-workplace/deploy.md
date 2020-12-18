@@ -48,9 +48,6 @@ You can install the Return to the Workplace solution from AppSource.
 > [!NOTE]
 > If you are a US Government customer, you'll have to install using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
-> [!NOTE]
-> Important you can download the pbix files via Github.
-
 1. Go to [AppSource](https://aka.ms/rtw-app) to install the **Return to the Workplace solution**.
 
     > [!div class="mx-imgBorder"]
@@ -72,6 +69,9 @@ The Return to the Workplace solution has three Power BI dashboards, one for exec
 
 > [!NOTE]
 > If you are a US Government customer, you'll have to publish Power BI dashboards using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
+
+> [!NOTE]
+> If you intent to customize the report, we advise to use the PBIX files which can be found on GitHub. More information:[Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
 ### Install template app for dashboards
 
@@ -335,7 +335,7 @@ This section provides information on how to install the Return to the Workplace 
 3. Enter appropriate values and then select **Create**.
 
 - Name. This is the name that will be displayed in Power Apps Studio. 
-- Adress. The URL that will be created for the portal. Make sure to save this info. for further steps.
+- Address. The URL that will be created for the portal. Make sure to save this info for further steps.
 - Language. Portals language.        
 
    > [!div class="mx-imgBorder"]
@@ -367,7 +367,7 @@ You can install the Return to the Workplace Portal from AppSource.
 
 ### Step 3: Restart the Portal
 
-The deployment package also contains the sample portal data. To import data into the right portal: 
+The deployment package also contains the actual portal data. To make sure the portal is setup correctly follow the steps below: 
 
 1. Go to [Power Apps](https://make.powerapps.com). Select **Apps** from the left navigation pane and then select **Portal Management** app.
 
