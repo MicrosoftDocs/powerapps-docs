@@ -38,7 +38,7 @@ specific access rights, and he or she might also be on a team in which the same
 record is shared with different access rights. In this case, the access rights
 that this user has on the record are the union of all the rights.
 
-When you share a record with another user using the `GrantAccess` message (<xref:Microsoft.Dynamics.CRM.GrantAccess> function, <xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest> class), or modify access using the `ModifyAccess` message (<xref:Microsoft.Dynamics.CRM.ModifyAccess> function, <xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest> class), you must indicate what access rights you want to
+When you share a record with another user using the `GrantAccess` message (<xref:Microsoft.Dynamics.CRM.GrantAccess> action, <xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest> class), or modify access using the `ModifyAccess` message (<xref:Microsoft.Dynamics.CRM.ModifyAccess> action, <xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest> class), you must indicate what access rights you want to
 grant to the other user. Access rights on a shared record can be different for
 each user with whom the record is shared. However, you cannot give a user any
 rights that he or she would not have for that type of entity, based on the role
