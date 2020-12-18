@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/07/2020
+ms.date: 12/18/2020
 ms.author: jshum
 ms.reviewer: 
 ---

@@ -5,7 +5,7 @@ author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/30/2020
+ms.date: 12/18/2020
 ms.author: kvivek
 ms.reviewer: 
 ---
