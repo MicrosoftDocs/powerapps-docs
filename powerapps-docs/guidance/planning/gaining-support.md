@@ -34,16 +34,9 @@ the project. Nick's sponsorship will ensure that employees adopt the new
 process. Charlotte's sponsorship will provide some funds in addition to permission
 to access key data.
 
-:::row:::
-    :::column:::
-        If you're designing an app using Power Apps:
-        > [!div class="nextstepaction"]
-        > [Next step: Design the app](designing-phase.md)
-    :::column-end:::
-    :::column:::
-        If you're designing an automation using Power Automate:
-        > [!div class="nextstepaction"]
-        > [Next step: Design the automation](/../../../power-automate/guidance/planning/process-design.md)
-    :::column-end:::
-:::row-end:::
+### Next steps
+
+- If you're designing an app using Power Apps, see [Design the app](designing-phase.md)
+
+- If you're designing an automation using Power Automate, see [Design the automation](/power-automate/guidance/planning/process-design) in Power Automate guidance docs.
 
