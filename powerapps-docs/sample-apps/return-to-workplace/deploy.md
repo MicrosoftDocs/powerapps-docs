@@ -327,17 +327,21 @@ This section provides information on how to install the Return to the Workplace 
 
 1. Go to [Power Apps](https://make.powerapps.com). Select the environment you want to install the portal.
 
-1. Select **Apps** from the left navigation pane, select **New app** and then select **Portal**.
+2. Select **+ Create** from the left navigation pane, select **Portal from blank** option.
 
    > [!div class="mx-imgBorder"]
    > ![Create portal](media/create-portal.png "Create portal")
 
-1. Enter appropriate values and then select **Create**.
+3. Enter appropriate values and then select **Create**.
+
+- Name. This is the name that will be displayed in Power Apps Studio. 
+- Adress. The URL that will be created for the portal. Make sure to save this info. for further steps.
+- Language. Portals language.        
 
    > [!div class="mx-imgBorder"]
    > ![Portal details](media/enter-portal-name.png "Portal details")
 
-1. You'll see a popup appearing on the top right displaying that the portal provisioning has started. Select **Apps** from the left navigation pane, you'll see the name of your portal from the list of available apps. As soon as provisioning completes, the link will be active.
+4. You'll see a popup appearing on the top right displaying that the portal provisioning has started. Select **Apps** from the left navigation pane, you'll see the name of your portal from the list of available apps. As soon as provisioning completes, the link will be active.
 
    > [!div class="mx-imgBorder"]
    > ![Portal provisioning notice](media/portal-provisioning.png "Portal provisioning notice")
@@ -369,16 +373,23 @@ The deployment package also contains the sample portal data. To import data into
 
 2. Select **Website** and then select **Return to the Workplace** website, change the url to the url that you have created earlier.
 
-3. Select **Save and Close** and then deactivate the **Basic** website.
+3. Select **Save and Close** and then deactivate the **Basic** website. If you do not see a website named **Basic** here, skip this step.
 
 4. Select **Website Bindings**. Validate if there is a binding for the url indicated for the **Return to the Workplace** website.
 
-5. Go to [Power Apps](https://make.powerapps.com). Select **...** and then select **Settings**. Select **Administration** to open the portal administration. Select **Portal Actions** and then select **Restart**.
+5. Go to [Power Apps](https://make.powerapps.com). Select **Apps** from the left navigation pane. On the Portla, click on **...** and then select **Settings**. 
+
+6. From the right, a Portal Settings pane will open. Select **Administration** to open the portal administration. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Portal restart](media/portal-administrator-pane.png "Portal restart")
+
+7. Select **Portal Actions** and then select **Restart**.
 
    > [!div class="mx-imgBorder"]
    > ![Portal restart](media/portal-restart.png "Portal restart")
 
-6. Go to [Power Apps](https://make.powerapps.com). Select the portal and select **Browse**.
+8. Go to [Power Apps](https://make.powerapps.com). Select the portal and select **Browse**.
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 
