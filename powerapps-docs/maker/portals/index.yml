@@ -139,3 +139,18 @@ landingContent:
           - text: Error logging and diagnostics
             url: admin/view-portal-error-log.md
 
+  # Card
+  - title: Learn
+    linkLists:
+       - linkListType: learn
+         links:
+          - text: Get Started with Power Apps portals
+            url: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/
+          - text: Work with Power Apps portals
+            url: https://docs.microsoft.com/learn/paths/work-power-apps-portals/
+          - text: Administer Power Apps portals
+            url: https://docs.microsoft.com/learn/paths/administer-portals/
+          - text: Extend Power Apps portals
+            url: https://docs.microsoft.com/learn/paths/extend-power-apps-portals/
+          - text: Manage permissions and administration for Dataverse
+            url: https://docs.microsoft.com/learn/paths/manage-permissions-administration-common-data-service/
