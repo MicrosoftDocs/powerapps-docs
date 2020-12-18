@@ -1300,6 +1300,8 @@
       href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
+    - name: "Microsoft Learn: Get started with Power Apps portals"
+      href: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/
     - name: Power Apps portals architecture
       items:
         - name: Portal lifecycle
