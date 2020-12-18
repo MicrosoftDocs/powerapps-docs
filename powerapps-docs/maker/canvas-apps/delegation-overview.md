@@ -145,7 +145,7 @@ Marching dots appear momentarily near the top of the screen as the app communica
 
 ![Search text-input control](./media/delegation-overview/products-apple.png)
 
-The search results include **"Apples"**, **"Crab apples"**, and **"Pineapple"** because the **Search** function looks everywhere in a text column. If you wanted to find only records that contain the search team at the start of the fruit's name, you can use another delegable function, **Filter**, with a more complicated search term. (For simplicity, remove the **SortByColumns** call.)
+The search results include **"Apples"**, **"Crab apples"**, and **"Pineapple"** because the **Search** function looks everywhere in a text column. If you wanted to find only records that contain the search term at the start of the fruit's name, you can use another delegable function, **Filter**, with a more complicated search term. (For simplicity, remove the **SortByColumns** call.)
 
 ![Remove SortByColumns call](./media/delegation-overview/products-apple-delegationwarning.png)
 
