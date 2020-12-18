@@ -139,7 +139,7 @@ If you create a contact and select that contact in the browse screen of the app,
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.
 2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
 
-    `Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
+    `Office365Users.SearchUserV2({searchTerm: SearchTerm.Text})`
 
     The gallery shows users whose name contains the search text you entered.
 
