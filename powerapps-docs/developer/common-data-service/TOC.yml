@@ -7,6 +7,17 @@
   items:
   - name: Supported customizations
     href: supported-customizations.md
+- name: Security and data access
+  href: security-model.md
+  items:
+  - name: Security concepts
+    href: security-concepts.md
+  - name: Data operations and access rights
+    href: security-access-rights.md
+  - name: Sharing and assigning
+    href: security-sharing-assigning.md
+  - name: Verifying access in code
+    href: security-access-coding.md
 - name: Work with data using code
   href: work-with-data-cds.md
   items:
@@ -253,22 +264,19 @@
     href: use-category-entity.md
   - name: Feedback entity
     href: use-feedback-entity-manage-feedback-ratings-records.md
-  - name: Security entities
-    href: security-model.md 
+  - name: User and team entities
+    href: user-team-entities.md
     items:
-    - name: User and team entities
-      href: user-team-entities.md
-      items:
-      - name: Specify time zone settings for a user
-        href: specify-time-zone-settings-user.md
-      - name: Time zone entities
-        href: time-zone-entities.md
-      - name: BusinessUnit entity
-        href: businessunit-entity.md
-      - name: Field security entities
-        href: field-security-entities.md
-      - name: Use access teams and owner teams to collaborate and share information
-        href: use-access-teams-owner-teams-collaborate-share-information.md
+    - name: Specify time zone settings for a user
+      href: specify-time-zone-settings-user.md
+    - name: Time zone entities
+      href: time-zone-entities.md
+    - name: BusinessUnit entity
+      href: businessunit-entity.md
+    - name: Field security entities
+      href: field-security-entities.md
+    - name: Use access teams and owner teams to collaborate and share information
+      href: use-access-teams-owner-teams-collaborate-share-information.md
   - name: Template entities
     href: upload-manage-document-templates.md
 - name: Work with metadata using code
