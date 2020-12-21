@@ -18,11 +18,11 @@ Notice that the currency feature will always use the default currency for the co
 
 For more information about the columns available, see these Dataverse articles:
 
-- [Fields overview](../maker/data-platform//fields-overview.md)
-- [Create and edit global option sets overview](../maker/data-platform//create-edit-global-option-sets.md)
-- [Autonumber fields](../maker/data-platform//autonumber-fields.md)
-- [Set managed properties for fields](../maker/data-platform//set-managed-properties-for-field.md)
-- [Behavior and format of the Date and Time field](../maker/data-platform//behavior-format-date-time-field.md)
+- [Fields overview](../maker/data-platform/fields-overview.md)
+- [Create and edit global option sets overview](../maker/data-platform/create-edit-global-option-sets.md)
+- [Autonumber fields](../maker/data-platform/autonumber-fields.md)
+- [Set managed properties for fields](../maker/data-platform/set-managed-properties-for-field.md)
+- [Behavior and format of the Date and Time field](../maker/data-platform/behavior-format-date-time-field.md)
 
 ## Create a column
 
@@ -32,16 +32,16 @@ For more information about the columns available, see these Dataverse articles:
     > ![Create a table column](media/create-table-column.png "Create a table column")
 
 The rest of the process to add and manage columns is the same as in Dataverse, which is documented in these articles:
-- [Create and edit fields for Dataverse using Power Apps portal](../maker/data-platform//create-edit-field-portal.md)
-- [Manage custom fields in an entity](../maker/data-platform//data-platform-manage-fields.md)
+- [Create and edit fields for Dataverse using Power Apps portal](../maker/data-platform/create-edit-field-portal.md)
+- [Manage custom fields in an entity](../maker/data-platform/data-platform-manage-fields.md)
 
 ## Choice columns
 
-In Dataverse for Teams, choices can only be created as a column within a table. Creating choices is otherwise the same as creating an option set in Dataverse. More information: [Create an Option set](../maker/data-platform//custom-picklists.md)
+In Dataverse for Teams, choices can only be created as a column within a table. Creating choices is otherwise the same as creating an option set in Dataverse. More information: [Create an Option set](../maker/data-platform/custom-picklists.md)
 
 ## Calculated and rollup columns
 
-The calculated columns and rollup columns that are available in Dataverse for Teams are equivalent to what's available in Dataverse. More information: [Define calculated fields to automate manual calculations](../maker/data-platform//define-calculated-fields.md) and [Define rollup fields that aggregate values](../maker/data-platform//define-rollup-fields.md)
+The calculated columns and rollup columns that are available in Dataverse for Teams are equivalent to what's available in Dataverse. More information: [Define calculated fields to automate manual calculations](../maker/data-platform/define-calculated-fields.md) and [Define rollup fields that aggregate values](../maker/data-platform/define-rollup-fields.md)
 
 ### See also
 

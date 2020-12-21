@@ -308,7 +308,7 @@ an image on the page and then copying it to other pages. More information:  [Cop
 
 ## Connect to Dataverse
 
-To use your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection in the template. More information: [Create a Power BI report using the Common Data Service connector](https://docs.microsoft.com/powerapps/maker/data-platform//data-platform-powerbi-connector)
+To use your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection in the template. More information: [Create a Power BI report using the Common Data Service connector](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-powerbi-connector)
 
 To change the data source, select **Transform data** to open Query Editor. In the **Applied Steps** of Query Editor, change the **Source** for each entity. Use the Dataverse environment URL. 
 

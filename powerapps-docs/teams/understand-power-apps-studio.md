@@ -391,7 +391,7 @@ are available when creating a new column using visual editor inside Power Apps S
 
 ###### Advanced options
 
-The advanced options for columns change depending on the type of column. For example, a **Text** column type has an advanced option for **Max length**. By contrast, an **Auto number** column type has options such as the type of auto-numbering, prefixes, and maximum number of digits. More information: [Types of fields](../maker/data-platform//types-of-fields.md)
+The advanced options for columns change depending on the type of column. For example, a **Text** column type has an advanced option for **Max length**. By contrast, an **Auto number** column type has options such as the type of auto-numbering, prefixes, and maximum number of digits. More information: [Types of fields](../maker/data-platform/types-of-fields.md)
 
 ##### Show/hide columns
 

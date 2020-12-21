@@ -25,7 +25,7 @@ The following are the basic steps for creating canvas apps.
 
 1. Set up the data source.
 
-   - [Set up entities](../../maker/data-platform//create-edit-entities.md)
+   - [Set up entities](../../maker/data-platform/create-edit-entities.md)
         (when using Microsoft Dataverse).
 
    - Set up tables (when using a database).
@@ -59,8 +59,8 @@ The following are the basic steps for creating model-driven apps.
 1. Create a [solution](../../maker/model-driven-apps/distribute-model-driven-app.md).
 
 2. Set up data models by defining
-    [entities](../../maker/data-platform//entity-overview.md)
-    and [fields](../../maker/data-platform//fields-overview.md).
+    [entities](../../maker/data-platform/entity-overview.md)
+    and [fields](../../maker/data-platform/fields-overview.md).
 
 3. Set up [security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).
 
@@ -91,7 +91,7 @@ components you've created. More information: [Collaborative Development for Powe
 ### Model-driven apps
 
 When developing model-driven apps, consider using solutions and
-environments designated for multiple app makers. More information: [Solutions overview](/powerapps/maker/data-platform//solutions-overview)
+environments designated for multiple app makers. More information: [Solutions overview](/powerapps/maker/data-platform/solutions-overview)
 
 > [!div class="nextstepaction"]
 > [Next step: Test the app](testing-phase.md)
