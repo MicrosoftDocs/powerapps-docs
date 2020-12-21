@@ -1,6 +1,6 @@
 ---
-title: "Power Apps pattern: Approval | Microsoft Docs"
-description: Learn how approval apps make it easier to get reviews and sign-off decisions.
+title: Approval pattern in Power Apps | Microsoft Docs
+description: Learn how approval apps make it easier to get reviews and sign off on decisions.
 author: topness-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,77 +14,74 @@ ms.reviewer: kathyos
 
 ![Collage of approval app screenshots](media/approvals-collage.jpg "Collage of approval app screenshots")
 
-Power Apps makers use the approval pattern to ensure that that data, decisions
-and documents are reviewed by a stakeholder or multiple stakeholders, either at
-once or in a sequence. The approval pattern can be valuable on its own but is
-frequently combined with other patterns, especially the [inspection or audit
-pattern](/inspection-pattern).
-Approvals can be easily implemented with Power Automate [Modern
-Approvals](https://docs.microsoft.com/power-automate/modern-approvals) but
+Power Apps makers use the approval pattern to ensure that data, decisions,
+and documents are reviewed by a stakeholder or multiple stakeholders, either all at
+once or in sequence. Although the approval pattern can be valuable on its own, it's
+frequently combined with other patterns, especially the [inspection or audit pattern](/inspection-pattern).
+Approvals can be easily implemented with [Power Automate approval workflows](https://docs.microsoft.com/power-automate/modern-approvals), but
 can also be implemented with capability you build into your app.
 
-## How to recognize the Approval pattern
+## How to recognize the approval pattern
 
 ![Illustration of the approval pattern with request, review, and respond steps](media/approval-illustration.png "Illustration of the project management pattern with request, review, and respond steps")
 
 In a typical approval scenario:
 
-1. Data is collected from user input, external systems or other sources. The
-    data could be a document, multiple documents, a single value or the results
+1. Data is collected from user input, external systems, or other sources. The
+    data might be a document, multiple documents, a single value, or the results
     from another system. The user initiates a request for approval, or the
-    system may automatically initiate an approval based upon criteria (for
-    example, purchases over \$1000 require approval) or scenario (for example,
+    system might automatically initiate an approval based on criteria (for
+    example, purchases over \$1,000 require approval) or scenario (for example,
     international travel requires executive approval).
 
-2. An approver or multiple approvers evaluate the information and take an
-    action that either:
+2. An approver, or multiple approvers, evaluates the information and takes
+    action that does one of the following:<!--note from editor: Edit suggested, because "either" implies there are only two options. -->
 
-    - Advances it to another approver
+    - Advances the request to another approver.
 
-    - Approves the request
+    - Approves the request.
 
-    - Reassigns the approval to another person
+    - Reassigns the request to another person.
 
-    - Rejects the request
+    - Rejects the request.
 
-3. The system takes action based upon the response of the approver(s).
+3. The system takes action based on the response of the approver.
 
-## How customers are using the Approval pattern
+## How customers are using the approval pattern
 
-### Toyota uses Power Automate for Travel Approvals
+### Toyota uses Power Automate for travel approvals
 
 [Read the whole story.](https://preview.flow.microsoft.com/blog/toyota-uses-power-automate-and-microsoft-forms-for-travel-approval/)
 
-Toyota Motor North America sends its Team Members all around the world to visit
-Toyota business locations, dealers and suppliers. With only a general
+Toyota Motor North America sends its team members all around the world to visit
+Toyota business locations, dealers, and suppliers. With only a general
 understanding of Power Automate, one engineer within Toyota Motor North
-America’s Quality Division created and deployed a solution to the division in
-only two weeks.
+America's Quality Division created and deployed a solution to the division in
+just two weeks.
 
 When the form is submitted, Power Automate uses the Office 365 Users connector
-to step through the reporting structure to find the requestor’s appropriate
-approver within the management hierarchy. In certain conditions, for example
-international travel, the logic will identify the secondary approver necessary
-for final approval.
+to step through the reporting structure to find the requester's appropriate
+approver in the management hierarchy. In certain conditions, for example
+international travel, the logic identifies the secondary approver who's needed to finalize the request.<!--note from editor: Suggested.-->
 
 Approvers and managers get an email with highlights of the request and an
-attached PDF detailing the request from Microsoft Forms. Josh used the built-in
-Word and One Drive actions to populate a Word document and convert it to PDF.
-The requester and approvers get a summary email with the PDF attached in
+attached PDF detailing the request from Microsoft Forms. The engineer used built-in
+Word and OneDrive actions to populate a Word document and convert it to PDF.
+The requester and approvers get a summary email with the PDF attached, in
 addition to the approval notification over email and in the Microsoft Flow
 mobile app. Executive approvers have quickly taken to the ability to approve
-requests on their mobile devices.
+requests on their mobile devices.<!--note from editor: I took away "Josh" because you hadn't introduced him yet.-->
 
-![Screenshot of Power Automate flow for finding manager to approve a travel request](media/toyota-travel-request-flow.png "Screenshot of Power Automate flow for finding manager to approve a travel request")
+![Screenshot of a Power Automate flow for finding a manager to approve a travel request](media/toyota-travel-request-flow.png "Screenshot of a Power Automate flow for finding a manager to approve a travel request")
 
-### T-Mobile ORBIT App for Customer Initiative Approvals
+### T-Mobile Orbit app for customer initiative approvals
 
 [Read the whole story.](https://powerapps.microsoft.com/blog/tmobile/)
 
 For T-Mobile to be competitive and a leader in the telecommunications industry,
-there are a myriad of customer initiatives that are constantly being run, such
-as device promotions, service offers, technical initiatives, etc. The complex
-customer initiatives process, from initial input to final approval takes months
+it constantly runs a myriad of customer initiatives, such
+as device promotions, service offers, and technical initiatives. The complex
+customer initiative process, from initial input to final approval, takes months
 to complete and involves anywhere from 5 to 15 employees at every stage.
 
 When a project member needs to create a new initiative, such as a promotion for
@@ -92,59 +89,58 @@ a new device, they go into the app, input the details, and attach all relevant
 documentation for their team leader to review. The app is also used by T-Mobile
 executives to review and approve initiatives.
 
-This app uses a customizable view of Power Automate approvals within a Canvas
-app. [Find out
-how](https://powerapps.microsoft.com/blog/building-an-approval-experience-in-canvas-apps/)
+This app uses a customizable view of Power Automate approvals within a canvas
+app. [Find out how](https://powerapps.microsoft.com/blog/building-an-approval-experience-in-canvas-apps/)
 to deploy this capability in your own apps.
 
-![Screenshot of T-Mobile Orbit app](media/tmobile-orbit-app.jpg "Screenshot of T-Mobile Orbit app")
+![Screenshot of the T-Mobile Orbit app](media/tmobile-orbit-app.jpg "Screenshot of the T-Mobile Orbit app")
 
-### Virgin Atlantic Employee Credit Card Approvals
+### Virgin Atlantic employee credit card approvals
 
 [Read the whole
-story.](https://powerapps.microsoft.com/en-us/blog/virgin-atlantic-drives-agile-wins-for-mobile-workforce-with-the-power-platform/)
+story.](https://powerapps.microsoft.com/blog/virgin-atlantic-drives-agile-wins-for-mobile-workforce-with-the-power-platform/)
 
 Virgin Atlantic created an app for employees to request a corporate credit card.
-Once this request has been submitted by the employee, it goes to the relevant
-manager to approve. This process was previously managed using paper forms, which
-were printed out and handed to the Procurement team. It is now being digitized
-using Power Apps.
+After an employee submits this request, it goes to the relevant
+manager to approve. This process was previously managed by using paper forms, which
+were printed out and handed to the Procurement team. It has now been digitized
+by using Power Apps.
 
-![Screenshot of Virgin Atlantic Credit Card Application app](media/virgin-atlantic-credt-card-app.png "Screenshot of Virgin Atlantic Credit Card Application app")
+![Screenshot of the Virgin Atlantic credit card application app](media/virgin-atlantic-credt-card-app.png "Screenshot of the Virgin Atlantic credit card application app")
 
-## Template: Microsoft Building Access App
+## Template: Microsoft Building Access app
 
-This Building Access app is used by organizations to bring employees back into
-the office facilities safely, as organizations plan gradual reopening of their
+This Building Access app is used by organizations to bring employees back to
+the office safely, as organizations plan the gradual reopening of their
 office facilities. Facilities teams globally are working to restructure building
-layouts, and seating arrangements to maintain social distancing norms and
-control building occupancy thresholds. This app allows employees to reserve an
+layouts and seating arrangements to maintain social distancing norms, and
+control building occupancy thresholds. Employees use this app to reserve an
 office space to work. If the office space is near capacity, an approval is sent
-to their manager before the visit is permitted. Managers approve visits using a
-Canvas app custom approval screen or an Adaptive Card in Microsoft Teams. 
+to their manager before the visit is permitted. Managers approve visits by using a
+canvas app custom approval screen or an adaptive card in Microsoft Teams.
 
 [Learn how to deploy this solution within your own
-Power Platform environment.](https://aka.ms/BuildingAccessApp)
-
+Microsoft Power Platform environment.](https://aka.ms/BuildingAccessApp)
+<!--note from editor: Can you please obscure Phil Topness's name, or use another? He's in the Microsoft address list, so we can't use him.-->
 :::row:::
    :::column span="":::
-      ![Screenshot of Microsoft Building Access App request screen](media/microsoft-building-app-request.png "Screenshot of Microsoft Building Access App request screen")
+      ![Screenshot of the Building Access app request screen](media/microsoft-building-app-request.png "Screenshot of the Building Access app request screen")
    :::column-end:::
    :::column span="":::
-      ![Screenshot of Microsoft Building Access App approvals screen](media/microsoft-building-app-approvals.png "Screenshot of Microsoft Building Access App approvals screen")
+      ![Screenshot of the Building Access app approvals screen](media/microsoft-building-app-approvals.png "Screenshot of the Building Access app approvals screen")
    :::column-end:::
 :::row-end:::
 
-### Additional Examples
+### Additional examples
 
-- [Hexion uses Power Platform to automate IT Request
-Approvals](https://customers.microsoft.com/en-us/story/810656-hexion-manufacturing-power-platform)
+- [Hexion uses Microsoft Power Platform to automate IT request
+approvals](https://customers.microsoft.com/story/810656-hexion-manufacturing-power-platform)
 
-- [Microsoft Transforms payroll processes with Microsoft Power
+- [Microsoft transforms payroll processes with Microsoft Power
 Automate](https://www.microsoft.com/en-us/itshowcase/transforming-payroll-processes-with-microsoft-power-automate)
 
 - [How Microsoft used Power Automate to create its new centralized banking
 portal](https://www.microsoft.com/itshowcase/blog/how-microsoft-used-power-automate-to-create-its-new-centralized-banking-portal/)
 
-- [Streamlining Microsoft’s payment processes with Microsoft Power
+- [Streamlining Microsoft's payment processes with Microsoft Power
 Automate](https://www.microsoft.com/itshowcase/blog/streamlining-microsofts-payment-processes-with-microsoft-power-automate/)
