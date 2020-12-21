@@ -27,15 +27,15 @@ By default, the Common Data Service connector connects to data in your app's cur
 
 When you add a data source with the Common Data Service connector, you can change the environment and then select one or more entities. By default, the app connects to data in the current environment.
 
-![Default environment](media/connection-common-data-service/common-data-service-connection-change-environment.png)
+![Default environment](media/connection-data-platform/common-data-service-connection-change-environment.png)
 
 If you select **Change**, you can specify a different environment to pull data from it instead of or in addition to the current environment.
 
-![Other environments](media/connection-common-data-service/common-data-service-connection-select-environment.png)
+![Other environments](media/connection-data-platform/common-data-service-connection-select-environment.png)
 
 The name of the selected environment appears under the entities list.
 
-![New environments](media/connection-common-data-service/common-data-service-connection-after-change-environment.png)
+![New environments](media/connection-data-platform/common-data-service-connection-after-change-environment.png)
 
 The Common Data Service connector is more robust than the Dynamics 365 connector and approaching feature parity.
 

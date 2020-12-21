@@ -16,7 +16,7 @@ search.app:
 # RibbonMetadataToProcess entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
 
 Container for Ribbon Metadata To Process
 
@@ -25,7 +25,7 @@ Container for Ribbon Metadata To Process
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/RibbonMetadataSetToProcess<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/RibbonMetadataSetToProcess<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Entity properties
 

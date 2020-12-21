@@ -32,4 +32,4 @@ Using the Online Management API, you can perform various tasks on your environme
 
 [Online Management REST API Reference](/rest/api/admin.services.crm.dynamics.com)
 
-[Dataverse Developer Guide](/powerapps/developer/common-data-service/overview)
+[Dataverse Developer Guide](/powerapps/developer/data-platform/overview)

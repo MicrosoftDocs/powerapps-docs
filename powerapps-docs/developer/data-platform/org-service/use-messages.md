@@ -131,7 +131,7 @@ This can also be done using the Web API: [Add a Shared Variable from the Web API
 
 ## Private Messages
 
-Microsoft Dataverse contains some messages which are not intended for 3rd party developers to use. These messages are typically added by Microsoft to enable feature functionality, but can also be added by 3rd party solutions with the Custom API feature. Private messages are indicated by the [SdkMessage.IsPrivate](/powerapps/developer/common-data-service/reference/entities/sdkmessage#BKMK_IsPrivate) property.
+Microsoft Dataverse contains some messages which are not intended for 3rd party developers to use. These messages are typically added by Microsoft to enable feature functionality, but can also be added by 3rd party solutions with the Custom API feature. Private messages are indicated by the [SdkMessage.IsPrivate](/powerapps/developer/data-platform/reference/entities/sdkmessage#BKMK_IsPrivate) property.
 
 > [!CAUTION]
 > You should not use private messages unless you created them as a Custom API. By marking a message as private, the solution publisher is explicitly calling out that they do not support other apps to use the message. They may remove the message or introduce breaking changes at any time. Use of these messages by anyone other than the solution publisher are not supported.

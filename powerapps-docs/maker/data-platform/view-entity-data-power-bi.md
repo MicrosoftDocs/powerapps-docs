@@ -66,4 +66,4 @@ For more information about Power BI Desktop, see [Get started with Power BI Desk
 > SQL options, such as a T-SQL queries aren’t supported.
 
 ### See also
-[Use SQL to query data](../../developer/common-data-service/cds-sql-query.md)
+[Use SQL to query data](../../developer/data-platform/dataverse-sql-query.md)

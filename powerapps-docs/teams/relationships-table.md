@@ -20,7 +20,7 @@ Table relationships define the ways that table records can be associated with re
 
 - **Many-to-many relationships**. In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
-More information: [Entity relationships](../maker/common-data-service/create-edit-entity-relationships.md)
+More information: [Entity relationships](../maker/data-platform//create-edit-entity-relationships.md)
 
 ## Create a table relationship
 
@@ -41,14 +41,14 @@ To add a lookup relation to a table, create a relation on the **Relationships** 
    > [!div class="mx-imgBorder"] 
    > ![Add a relationship](media/create-relate-table3.png "Add a relationship")
 
-More information: [Create a relationship between entities](../maker/common-data-service/data-platform-entity-lookup.md) 
+More information: [Create a relationship between entities](../maker/data-platform//data-platform-entity-lookup.md) 
 
 > [!NOTE]
 > When defining columns of type lookup within a table, a many-to-one relationship is created automatically.
 
 ## Edit a table relationship
 
-Editing relationships in Dataverse for Teams works the same as Dataverse except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/powerapps/maker/common-data-service/create-edit-entity-relationships#actions)
+Editing relationships in Dataverse for Teams works the same as Dataverse except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/powerapps/maker/data-platform//create-edit-entity-relationships#actions)
 
 ## Delete a table relationship
 

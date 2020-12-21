@@ -32,13 +32,13 @@ In some cases, integration with an app can be achieved by using business logic c
 
 tables in Dataverse can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in a table.
 
-- **Business rules**: Validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for a table](/powerapps/maker/common-data-service/data-platform-create-business-rule)
+- **Business rules**: Validate data across multiple columns and tables, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for a table](/powerapps/maker/data-platform/data-platform-create-business-rule)
 
 - **Business process flows**: Guide users to ensure that they enter data consistently and follow the same steps every time. Business process flows are currently only supported for model-driven apps. More information: [Business processes flows overview](/power-automate/business-process-flows-overview)
 
 - **Workflows**: Automate business processes without user interaction. More information: [Classic Dataverse workflows](/power-automate/workflow-processes)
 
-- **Business logic with code**: Supports advanced developer scenarios to extend the app directly through code. More information: [Apply business logic using code](/powerapps/developer/common-data-service/apply-business-logic-with-code)
+- **Business logic with code**: Supports advanced developer scenarios to extend the app directly through code. More information: [Apply business logic using code](/powerapps/developer/data-platform/apply-business-logic-with-code)
 
 ## Integrating with apps by using events
 
@@ -105,9 +105,9 @@ Dataverse takes an "API first" approach. This means that the service doesn't jus
 
 The API is secured by using OAuth. OAuth requires an idtable provider for authentication. For Dataverse, the idtable provider is Azure Active Directory (Azure AD). To authenticate with Azure AD by using a Microsoft work or school account, use the Azure AD Authentication Libraries (ADAL).
 
-For more information about getting started with the Dataverse Web API, see [Use the Dataverse Web API](/powerapps/developer/common-data-service/webapi/overview).
+For more information about getting started with the Dataverse Web API, see [Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/overview).
 
-For more information about using the Dataverse Web API with OAuth, see [Use OAuth with Dataverse](/powerapps/developer/common-data-service/authenticate-oauth).
+For more information about using the Dataverse Web API with OAuth, see [Use OAuth with Dataverse](/powerapps/developer/data-platform/authenticate-oauth).
 
 ## Plug-ins
 
@@ -150,4 +150,4 @@ Azure Functions provides a serverless code execution option for business and int
 Functions are triggered by a call from an external system, service, or code. For Dataverse, that trigger can come directly from Dataverse using Service Bus, a webhook, or a call from a plug-in. Additionally, the Azure Functions call can be initiated via a flow in either Logic Apps or Power Automate that involves the Common Data Service connector.
 
 More information:
-[Use plug-ins to extend business processes](/powerapps/developer/common-data-service/plug-ins)
+[Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins)

@@ -34,7 +34,7 @@ TDS (SQL) endpoint applications support for Power Apps and SQL Server Management
 
 ### Power Apps
 
-You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi)
+You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
 
 > [!NOTE]
 > To enable this feature, see the TDS endpoint setting in [Manage feature settings](/power-platform/admin/settings-features). Once enabled you should see a button **Analyze in Power BI** in the command bar of Power Apps.
@@ -76,7 +76,7 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 
 ## Supported operations and data types
 
-For a detailed list of supported SQL operations on the Dataverse endpoint see [How Dataverse SQL differs from Transact-SQL](how-cds-sql-differs-from-transact-sql.md).
+For a detailed list of supported SQL operations on the Dataverse endpoint see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
 Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. Dataverse option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
 
@@ -95,7 +95,7 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 
 ## Limitations
 
-There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Data Export Service](https://docs.microsoft.com/powerapps/developer/common-data-service/data-export-service) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data. More information: [Importing and exporting data](/powerapps/maker/common-data-service/why-cds-import-export)
+There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Data Export Service](https://docs.microsoft.com/powerapps/developer/data-platform/data-export-service) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data. More information: [Importing and exporting data](/powerapps/maker/data-platform/import-export-data)
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
@@ -130,5 +130,5 @@ Time: 2020-12-17T01:15:01.0497703Z (.Net SqlClient Data Provider)”
 
 ### See also
 
-[Use FetchXML to construct a query](cds-sql-query.md)  
+[Use FetchXML to construct a query](dataverse-sql-query.md)  
 [Service Protection API Limits](api-limits.md)

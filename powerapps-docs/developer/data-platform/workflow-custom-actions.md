@@ -35,7 +35,7 @@ For developers, the creation of a new message means you can use the message in c
     - [Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)
     - [Use messages with the Organization service](org-service/use-messages.md)
 
-For information about creating a Workflow Custom Action using the workflow designer see: [Create a custom action](../../maker/common-data-service/create-actions.md)
+For information about creating a Workflow Custom Action using the workflow designer see: [Create a custom action](../../maker/data-platform/create-actions.md)
 
 ## Extend Workflow Custom Actions
 
@@ -72,7 +72,7 @@ The existing <xref:Microsoft.Xrm.Sdk.IExecutionContext.Depth> platform checks en
 >  A best practice recommendation is that long running operations should be executed outside of Dataverse using Power Automate, Logic Apps, or other capabilities offered by Azure.
   
 ### See also  
- [Create a custom action](../../maker/common-data-service/create-actions.md)<br />
- [Use actions](../../maker/common-data-service/actions.md)<br />
+ [Create a custom action](../../maker/data-platform/create-actions.md)<br />
+ [Use actions](../../maker/data-platform/actions.md)<br />
  [Classic Dataverse workflows](/flow/workflow-processes)<br />
 

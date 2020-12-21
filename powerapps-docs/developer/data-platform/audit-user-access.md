@@ -42,7 +42,7 @@ Microsoft Dataverse support the ability to audit user access. The information th
  `UserAccessviaWeb` indicates access from the Dataverse web application or Dynamics 365 for Outlook. `UserAccessviaWebServices` indicates a web service request from the SDK. The `AuditAction` enumeration is available to your code when you include `OptionSets.cs` in your application’s project.  
   
 ### See also  
- [Audit data changes](/powerapps/developer/common-data-service/auditing-overview)   
- [Configure entities and attributes for auditing](/powerapps/developer/common-data-service/configure-entities-attributes-auditing)     
- [Sample: Audit entity data changes](/powerapps/developer/common-data-service/org-service/samples/audit-entity-data-changes)   
- [Sample: Audit user access](/powerapps/developer/common-data-service/org-service/samples/audit-user-access)
+ [Audit data changes](/powerapps/developer/data-platform/auditing-overview)   
+ [Configure entities and attributes for auditing](/powerapps/developer/data-platform/configure-entities-attributes-auditing)     
+ [Sample: Audit entity data changes](/powerapps/developer/data-platform/org-service/samples/audit-entity-data-changes)   
+ [Sample: Audit user access](/powerapps/developer/data-platform/org-service/samples/audit-user-access)

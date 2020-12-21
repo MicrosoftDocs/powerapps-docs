@@ -22,7 +22,7 @@ search.app:
 A plug-in is a .NET assembly that you can upload to the Microsoft Dataverse. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform.
 
 > [!IMPORTANT]
-> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Dataverse](../../maker/common-data-service/cds-processes.md)<br/><br/>
+> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Dataverse](../../maker/data-platform/processes.md)<br/><br/>
 > Use plug-ins when a declarative process doesn’t meet your requirement.
 
 The classes in the assembly that can be registered to a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface. This interface exposes a single method: <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*>. When an event occurs that has a class registered to it, contextual data is passed to the `Execute` method. Within the `Execute` method you can:

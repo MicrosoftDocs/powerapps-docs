@@ -42,8 +42,8 @@ There are two designers you can use to create or edit columns:
 > You can also create columns in your environment using the following:
 > - In model-driven apps, select **New Column** from the form editor.
 > - Import a solution that contains the definition of the columns.
-> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
-> - A developer can use [Metadata services](/powerapps/developer/common-data-service/use-web-services#metadata-services) to write a program to create and update columns.
+> - Use Power Query to create new tables and fill them with data.<br />More information: [Add data to a table in the Dataverse by using Power Query](/powerapps/maker/data-platform/add-data-power-query).
+> - A developer can use [Metadata services](/powerapps/developer/data-platform/use-web-services#metadata-services) to write a program to create and update columns.
 
 Information in this topic will help you choose which designer you can use. 
 
@@ -57,9 +57,9 @@ You should use the Power Apps portal to create and edit columns for Dataverse un
    - More information: [Define status reason transitions for the Case or custom tables](define-status-reason-transitions.md)
 - Edit multiple columns at once.
 - Enable Auditing. 
-   - More information: [Auditing overview](../../developer/common-data-service/auditing-overview.md)
+   - More information: [Auditing overview](../../developer/data-platform/auditing-overview.md)
 - Enable Column Level Security. 
-   - More information: [Column security tables](../../developer/common-data-service/field-security-entities.md)
+   - More information: [Column security tables](../../developer/data-platform/field-security-entities.md)
 - Select whether the column appears in global filter in interactive experience. 
    - More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
 - Select whether the column is sortable in interactive experience dashboards. 

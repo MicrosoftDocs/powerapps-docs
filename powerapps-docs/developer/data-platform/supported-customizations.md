@@ -38,7 +38,7 @@ There are a variety of tools included with Dataverse that you can use to customi
 
 The following customization methods can be used to produce fully supported customizations:
 
-- Customization in the Power Apps portal or solution explorer. For more information, see [What is Dataverse?](../../maker/common-data-service/data-platform-intro.md)
+- Customization in the Power Apps portal or solution explorer. For more information, see [What is Dataverse?](../../maker/data-platform/data-platform-intro.md)
 
 - Settings in the web application. For more information, see [Administer Power Apps](../../administrator/admin-guide.md).
 
@@ -47,7 +47,7 @@ The following customization methods can be used to produce fully supported custo
 > [!NOTE]
 > Fully supported means that developer support can provide assistance for customizations and that application support can help customers running those modifications.
 
-For more information about using the customization tools in the web application, see the [What is Dataverse?](../../maker/common-data-service/data-platform-intro.md).
+For more information about using the customization tools in the web application, see the [What is Dataverse?](../../maker/data-platform/data-platform-intro.md).
 
 
 ## Customizations applied using code

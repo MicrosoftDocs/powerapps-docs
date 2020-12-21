@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can map attributes between entities that have an entity relationship. This lets you set default values for a record that is created in the context of another record. Use the customization tools in the application to map attributes; see [Map entity fields](../../maker/common-data-service/map-entity-fields.md).
+You can map attributes between entities that have an entity relationship. This lets you set default values for a record that is created in the context of another record. Use the customization tools in the application to map attributes; see [Map entity fields](../../maker/data-platform/map-entity-fields.md).
 
 <a name="bkmk_BehaviorintheApplication"></a>
 
@@ -73,7 +73,7 @@ For more information see [Create a new entity record from another entity](webapi
  You can edit attribute mappings between entities for entity relationships that support mapping. 
 
  In addition to creating each attribute map manually, you can use the 
- `AutoMapEntity` message(<xref href="Microsoft.Dynamics.CRM.AutoMapEntity?text=AutoMapEntity Action" /> or <xref:Microsoft.Crm.Sdk.Messages.AutoMapEntityRequest> class) to generate a new set of attribute mappings. This message performs the action found under the **Generate Mappings** menu option in the **More Actions** menu on the toolbar (see [Automatically generate column mappings](../../maker/common-data-service/map-entity-fields.md#automatically-generate-column-mappings)). This message maps all the attributes between the two related entities where the attribute names and types are identical. This message is provided as a productivity enhancement so that you do not have to manually add all attribute mappings. Instead, you can generate a set of likely mappings and minimize the amount of manual work to add or remove individual mappings to meet your requirements. 
+ `AutoMapEntity` message(<xref href="Microsoft.Dynamics.CRM.AutoMapEntity?text=AutoMapEntity Action" /> or <xref:Microsoft.Crm.Sdk.Messages.AutoMapEntityRequest> class) to generate a new set of attribute mappings. This message performs the action found under the **Generate Mappings** menu option in the **More Actions** menu on the toolbar (see [Automatically generate column mappings](../../maker/data-platform/map-entity-fields.md#automatically-generate-column-mappings)). This message maps all the attributes between the two related entities where the attribute names and types are identical. This message is provided as a productivity enhancement so that you do not have to manually add all attribute mappings. Instead, you can generate a set of likely mappings and minimize the amount of manual work to add or remove individual mappings to meet your requirements. 
 
 > [!NOTE]
 > Automatically generating mappings in this manner will remove any previously defined attribute mappings and may include mappings that you do not want.  
@@ -100,4 +100,4 @@ For more information see [Create a new entity record from another entity](webapi
 
 ### See also
 
- [Map entity fields](../../maker/common-data-service/map-entity-fields.md)
+ [Map entity fields](../../maker/data-platform/map-entity-fields.md)

@@ -46,7 +46,7 @@ If you are a JavaScript developer and want to use the Web API in model-driven ap
   
 ### Related Sections
 
-[Work with data using code](../work-with-data-cds.md)<br />
+[Work with data using code](../work-with-data.md)<br />
 [OData - the best way to REST](https://www.odata.org/)<br />
 [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)<br />
 [OData Version 4.0 Part 2: URL Conventions Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)<br />

@@ -33,7 +33,7 @@ You can find schema  in the `Schemas\9.0.0.2090\CustomizationsSolution.xsd` fold
 
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
-For more information, see [Solutions overview](../../maker/common-data-service/solutions-overview.md)
+For more information, see [Solutions overview](../../maker/data-platform/solutions-overview.md)
   
 ## Schema  
   

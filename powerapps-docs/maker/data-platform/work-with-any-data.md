@@ -61,7 +61,7 @@ Each of these columns can be associated with one of many data types supported by
 
 ![Create a column](media/entity-field.png "Create a column")
 
-More information: [Types of columns](/powerapps/maker/common-data-service/types-of-fields)
+More information: [Types of columns](/powerapps/maker/data-platform/types-of-fields)
 
 ## Relationships
 
@@ -81,12 +81,12 @@ The relationship types are:
 
 Because many-to-one relationships are the most common, Dataverse provides a specific data type named *lookup*, which not only makes it easy to define this relationship but adds productivity to building forms and apps.
 
-For more information about creating table relationships, see [Create a relationship between tables](/powerapps/maker/common-data-service/data-platform-table-lookup).
+For more information about creating table relationships, see [Create a relationship between tables](/powerapps/maker/data-platform/data-platform-table-lookup).
 
 Organizations often need to be in compliance with various regulations to ensure the availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations might want to track changes in Dataverse data for security and analytical purposes.
 
 Dataverse provides an auditing capability where changes to tables and attribute data in an organization can be rowed over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;tables and attributes. Auditing isn't supported on metadata
-changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](/powerapps/developer/common-data-service/configure-entities-attributes-auditing).
+changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure tables and attributes for auditing](/powerapps/developer/data-platform/configure-entities-attributes-auditing).
 
 Dataverse supports analytics by providing the capability to choose tables for machine learning models to run. It has a prebuilt AI capability through AI Builder.
 
@@ -146,4 +146,4 @@ Data is stored in the Common Data Model format, which provides semantic consiste
 
 ### See also
 
-[Importing and exporting data](why-cds-import-export.md)
+[Importing and exporting data](import-export-data.md)

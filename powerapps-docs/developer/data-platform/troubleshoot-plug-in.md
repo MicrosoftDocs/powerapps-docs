@@ -61,7 +61,7 @@ When writing plug-ins, it is essential to understand how to design customization
 
 Certain actions you make in your plug-in, such as assigning or deleting a record, can initiate cascading operations on related records. These actions could apply locks on related records causing subsequent data operations to be blocked which in turn can lead to a SQL timeout. 
 
-You should consider the possible impact of these cascading operations on data operations in your plug-in. More information: [Entity relationship behavior](../../maker/common-data-service/entity-relationship-behavior.md)
+You should consider the possible impact of these cascading operations on data operations in your plug-in. More information: [Entity relationship behavior](../../maker/data-platform/entity-relationship-behavior.md)
 
 Because these behaviors can be configured differently between environments, the behavior may be difficult to reproduce unless the environments are configured in the same way.
 

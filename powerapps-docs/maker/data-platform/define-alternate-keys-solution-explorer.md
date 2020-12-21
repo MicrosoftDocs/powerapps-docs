@@ -73,4 +73,4 @@ While [viewing alternate keys](#view-alternate-keys), select ![Delete command](m
 
 [Define alternate keys to reference rows](define-alternate-keys-reference-records.md)<br />
 [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
-[Developer Documentation: Work with alternate keys](../../developer/common-data-service/define-alternate-keys-entity.md)
+[Developer Documentation: Work with alternate keys](../../developer/data-platform/define-alternate-keys-entity.md)

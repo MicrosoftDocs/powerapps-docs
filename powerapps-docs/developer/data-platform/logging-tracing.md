@@ -46,7 +46,7 @@ Recording of run-time tracing information for Microsoft Dataverse is provided by
 
 ## Enable trace logging
 
-Whether trace logs will be written depends on the value of the [Organization](/powerapps/developer/common-data-service/reference/entities/organization) Entity [PluginTraceLogSetting](/powerapps/developer/common-data-service/reference/entities/organization#BKMK_PluginTraceLogSetting) attribute value.
+Whether trace logs will be written depends on the value of the [Organization](/powerapps/developer/data-platform/reference/entities/organization) Entity [PluginTraceLogSetting](/powerapps/developer/data-platform/reference/entities/organization#BKMK_PluginTraceLogSetting) attribute value.
 
 To enable trace logging you can programmatically update this value or in the web application navigate to **Settings** > **Administration** > **System Settings**. In the **Customization** tab, locate the drop-down menu labeled **Enable logging to plug-in trace log** and select one of the available options.  
   

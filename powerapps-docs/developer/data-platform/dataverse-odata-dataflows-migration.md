@@ -17,7 +17,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Dataverse [Web API](/powerapps/developer/common-data-service/webapi/overview) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Dataverse. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Dataverse. 
+Dataverse [Web API](/powerapps/developer/data-platform/webapi/overview) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Dataverse. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Dataverse. 
 
 In this article, we walk you through how to migrate data between Dataverse environments using the dataflows OData connector. 
 
@@ -53,10 +53,10 @@ In this article, we walk you through how to migrate data between Dataverse envir
 
 Dataverse provides an OData endpoint that does not require additional configuration to authenticate with the dataflows' connector. It is relatively easy to connect to the source environment. 
 
-This article will walk through how to set up a new dataflow with the OData connector. For information on connecting to all data sources supported by dataflows, see [Create and use dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows). 
+This article will walk through how to set up a new dataflow with the OData connector. For information on connecting to all data sources supported by dataflows, see [Create and use dataflows](https://docs.microsoft.com/powerapps/maker/data-platform/create-and-use-dataflows). 
 
 
-From the **source** environment, get the [OData endpoint](https://docs.microsoft.com/powerapps/developer/common-data-service/view-download-developer-resources) for that environment:
+From the **source** environment, get the [OData endpoint](https://docs.microsoft.com/powerapps/developer/data-platform/view-download-developer-resources) for that environment:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 

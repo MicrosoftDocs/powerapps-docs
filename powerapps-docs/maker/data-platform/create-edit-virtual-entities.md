@@ -35,7 +35,7 @@ Virtual tables are made up of three main components, a *data provider*, a *data 
   
 Dataverse includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
   
-Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual tables](../../developer/common-data-service/virtual-entities/get-started-ve.md)
+Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual tables](../../developer/data-platform/virtual-entities/get-started-ve.md)
   
  <!-- ![Virtual table diagram](media/virtual-entity-diagram.png "Virtual table diagram")  -->
   

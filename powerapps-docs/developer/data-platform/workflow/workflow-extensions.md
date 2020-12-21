@@ -23,7 +23,7 @@ You can extend the options available within the designer for workflows used in M
 You can use these custom extensions within the designer used for workflows, custom actions, and dialogs (deprecated).
 
 > [!IMPORTANT]
-> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Dataverse](../../../maker/common-data-service/cds-processes.md)
+> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Dataverse](../../../maker/data-platform/processes.md)
 > 
 > Use workflow extensions when a declarative process doesn’t meet your requirement.
 

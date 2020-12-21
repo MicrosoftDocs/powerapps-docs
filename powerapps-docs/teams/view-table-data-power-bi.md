@@ -71,5 +71,5 @@ For more information about working with Power BI Desktop, see [Get started with 
 
 ### See also
 
-[View Dataverse table data in Power BI Desktop (Preview)](/powerapps/maker/common-data-service/view-entity-data-power-bi) <br/>
+[View Dataverse table data in Power BI Desktop (Preview)](/powerapps/maker/data-platform//view-entity-data-power-bi) <br/>
 [Dataverse for Teams FAQs](data-platform-faqs.md)

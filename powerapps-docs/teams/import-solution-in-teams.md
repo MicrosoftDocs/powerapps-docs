@@ -35,11 +35,11 @@ The first step to move your customizations is to create a solution in Dataverse.
 
 For information about the differences between Dataverse for Teams and Dataverse, go to [How are Dataverse for Teams and Dataverse different?](data-platform-compare.md)<!-- Edit note: This is per Style, but you might want to hold this kind of update for a broader future pass. -->
 
-For information about how to create a solution with Dataverse, go to [Create a solution](../maker/common-data-service/create-solution.md).
+For information about how to create a solution with Dataverse, go to [Create a solution](../maker/data-platform//create-solution.md).
 
 ## Export the solution from Dataverse
 
-Typically, you want to export your solution from Dataverse as managed. However, if your goal is to transport your customizations to Dataverse for Teams and continue your development from there, export your solution as an unmanaged solution. More information: [Export solutions](../maker/common-data-service/export-solutions.md) 
+Typically, you want to export your solution from Dataverse as managed. However, if your goal is to transport your customizations to Dataverse for Teams and continue your development from there, export your solution as an unmanaged solution. More information: [Export solutions](../maker/data-platform//export-solutions.md) 
 
 ## Import the solution into Dataverse for Teams
 
@@ -79,4 +79,4 @@ To work around this issue, create and save an app in the environment. When an it
 
 ### See also
 
-[Export solutions](../maker/common-data-service/export-solutions.md)
+[Export solutions](../maker/data-platform//export-solutions.md)

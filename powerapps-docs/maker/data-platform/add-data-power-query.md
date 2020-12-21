@@ -98,7 +98,7 @@ If you select **Load to existing table**, you can specify a table into which you
 
 We're excited about this functionality and eager to hear your feedback. Please [send us your suggestions and feedback](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) about this feature!
 
-If an [error message about permissions](data-platform-cds-newentity-troubleshooting-mashup.md) appears, talk to your administrator.
+If an [error message about permissions](troubleshoot-power-query-issues.md) appears, talk to your administrator.
 
 > [!WARNING]
 > There is a limit of 500,000 rows per run and per project that can be loaded using this feature.

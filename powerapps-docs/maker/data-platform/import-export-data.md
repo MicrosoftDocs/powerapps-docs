@@ -35,7 +35,7 @@ Power Query is a data connection technology you can use to discover, connect, co
 
 ![Dataflows and Power Query with Dataverse](media/dataflows-power-query-with-cds.png "Dataflows and Power Query with Dataverse")
 
-More information: [Create and use dataflows in Power Apps](/powerapps/maker/common-data-service/create-and-use-dataflows) and [Add data to a table in Dataverse by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq)
+More information: [Create and use dataflows in Power Apps](/powerapps/maker/data-platform/create-and-use-dataflows) and [Add data to a table in Dataverse by using Power Query](/powerapps/maker/data-platform/add-data-power-query)
 
 ## Azure Data Factory
 
@@ -60,4 +60,4 @@ Data Service schema and data initially and, thereafter, synchronizes on a contin
 
 ### See also
 
-[Work with any type of app](why-cds-any-type-app.md)
+[Work with any type of app](work-with-any-type-app.md)

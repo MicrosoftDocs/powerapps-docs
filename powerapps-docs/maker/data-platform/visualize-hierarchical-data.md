@@ -25,9 +25,9 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-When a table is configured to have a hierarchical self-referential relationship you can configure visualizations using that hierarchy. More information: [Define and query hierarchically related data](../common-data-service/define-query-hierarchical-data.md)
+When a table is configured to have a hierarchical self-referential relationship you can configure visualizations using that hierarchy. More information: [Define and query hierarchically related data](../data-platform/define-query-hierarchical-data.md)
 
-The  tables that have visualizations available by default include [Account](/powerapps/developer/common-data-service/reference/tables/account), [Position](/powerapps/developer/common-data-service/reference/tables/position), and [User](/powerapps/developer/common-data-service/reference/tables/systemuser). In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that are related using the hierarchical relationship.  
+The  tables that have visualizations available by default include [Account](/powerapps/developer/data-platform/reference/tables/account), [Position](/powerapps/developer/data-platform/reference/tables/position), and [User](/powerapps/developer/data-platform/reference/tables/systemuser). In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that are related using the hierarchical relationship.  
 > [!div class="mx-imgBorder"] 
 > ![View hierarchy button](media/view-hierarchy-button.png)  
   
@@ -36,7 +36,7 @@ The  tables that have visualizations available by default include [Account](/pow
 > [!div class="mx-imgBorder"] 
 > ![Tree and tile view in hierarchy](media/tree-view-and-tile-view-in-hierarchy.png)  
   
- A few other tables can be enabled for a hierarchy. These tables include [Contact](/powerapps/developer/common-data-service/reference/tables/contact) and [Team](/powerapps/developer/common-data-service/reference/tables/team). All custom tables can be enabled for a hierarchy.  
+ A few other tables can be enabled for a hierarchy. These tables include [Contact](/powerapps/developer/data-platform/reference/tables/contact) and [Team](/powerapps/developer/data-platform/reference/tables/team). All custom tables can be enabled for a hierarchy.  
   
 ## Important things to remember 
   
@@ -52,7 +52,7 @@ To enable visualizations for a hierarchy you must connect the hierarchy to a qui
 
 The hierarchy settings are associated to a table in the solution explorer. 
 
-1. While [viewing tables](../common-data-service/create-edit-entities-solution-explorer.md#view-tables), select **Hierarchy Settings**.
+1. While [viewing tables](../data-platform/create-edit-entities-solution-explorer.md#view-tables), select **Hierarchy Settings**.
 2. If an existing hierarchy setting exists you can edit it. Otherwise click **New** to create a new one.
     
     > [!NOTE]
@@ -80,7 +80,7 @@ Let’s look at an example of creating the visualization for a custom table. We 
 Next, in the **Hierarchy Settings** grid view, we selected the `new_new_widget_new_widget` hierarchical relationship. In the form, we filled in the required columns. If you haven’t yet marked the (1:N) relationship as hierarchical, the link on the form will take you back to the relationship definition form, where you can mark the relationship as hierarchical.  
 
 > [!IMPORTANT]
-> Each table can have only one hierarchical relationship at a time. Changing this to a different self-referential relationship can have consequences. More information: [Define hierarchical data](../common-data-service/define-query-hierarchical-data.md#define-hierarchical-data)
+> Each table can have only one hierarchical relationship at a time. Changing this to a different self-referential relationship can have consequences. More information: [Define hierarchical data](../data-platform/define-query-hierarchical-data.md#define-hierarchical-data)
 
 > [!div class="mx-imgBorder"] 
 > ![Hierarchy settings](media/hierarchy-settings.png)  
@@ -107,5 +107,5 @@ Based on your needs, you can choose between using a tree view, which shows the e
 
 ### See also 
 
-[Define and query hierarchically related data](../common-data-service/define-query-hierarchical-data.md)<br />
+[Define and query hierarchically related data](../data-platform/define-query-hierarchical-data.md)<br />
 [Video: Hierarchy Visualization](https://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)

@@ -16,7 +16,7 @@ search.app:
 # Role entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
 
 Grouping of security privileges. Users are assigned roles that authorize their access to the Microsoft CRM system.
 
@@ -26,14 +26,14 @@ Grouping of security privileges. Users are assigned roles that authorize their a
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
 |AddPrivilegesRole|<xref href="Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/roles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.0/roles<br />See [Create](/powerapps/developer/data-platform/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Delete](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |RemovePrivilegeRole|<xref href="Microsoft.Dynamics.CRM.RemovePrivilegeRole?text=RemovePrivilegeRole Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemovePrivilegeRoleRequest>|
 |ReplacePrivilegesRole|<xref href="Microsoft.Dynamics.CRM.ReplacePrivilegesRole?text=ReplacePrivilegesRole Action" />|<xref:Microsoft.Crm.Sdk.Messages.ReplacePrivilegesRoleRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/roles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/roles<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveRolePrivilegesRole|<xref href="Microsoft.Dynamics.CRM.RetrieveRolePrivilegesRole?text=RetrieveRolePrivilegesRole Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRolePrivilegesRoleRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/roles(*roleid*)<br />See [Update](/powerapps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Entity properties
 

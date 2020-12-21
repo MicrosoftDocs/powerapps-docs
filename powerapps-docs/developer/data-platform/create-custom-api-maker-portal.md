@@ -35,7 +35,7 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 :::image type="content" source="media/solution-publisher-with-sample-prefix.png" alt-text="Solution publisher with sample prefix":::
 
 > [!NOTE]
-> This topic assumes you are familar with solutions. If you are not, see [Create a solution](../../maker/common-data-service/create-solution.md)
+> This topic assumes you are familar with solutions. If you are not, see [Create a solution](../../maker/data-platform/create-solution.md)
 
 ## Create a Custom API record
 

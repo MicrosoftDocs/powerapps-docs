@@ -41,7 +41,7 @@ There are two additional ways to create queries to retrieve records from Dataver
 <!-- This doesn't belong here. It should be in model driven app configuration -->
 ## Configuration for Quick find
 
-In Model-driven apps, there is a Quick Find feature. If a user provides search criteria in quick find that is not selective enough, the system detects this and stops the search. This supports a faster form of quick find and can make a big performance difference. This is controlled by the [Organization entity QuickFindRecordLimitEnabled](/powerapps/developer/common-data-service/reference/entities/organization#BKMK_QuickFindRecordLimitEnabled) attribute. When this `Boolean` attribute value is `true`, a limit is imposed on quick find queries.
+In Model-driven apps, there is a Quick Find feature. If a user provides search criteria in quick find that is not selective enough, the system detects this and stops the search. This supports a faster form of quick find and can make a big performance difference. This is controlled by the [Organization entity QuickFindRecordLimitEnabled](/powerapps/developer/data-platform/reference/entities/organization#BKMK_QuickFindRecordLimitEnabled) attribute. When this `Boolean` attribute value is `true`, a limit is imposed on quick find queries.
 
 ## In This Section
 

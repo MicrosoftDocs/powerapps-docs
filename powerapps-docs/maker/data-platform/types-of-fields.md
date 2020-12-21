@@ -58,7 +58,7 @@ For more descriptions for each type you can add or edit, see the article for the
  - [Create and edit columns for Microsoft Dataverse using Power Apps portal: Column Data types](create-edit-field-portal.md#column-data-types)
  - [Create and edit columns for Dataverse using Power Apps solution explorer: Column Data types](create-edit-field-solution-explorer.md#column-data-types)
 
-For more information about how column data types are defined in the API, see [Attribute metadata](/powerapps/developer/common-data-service/entity-attribute-metadata)
+For more information about how column data types are defined in the API, see [Attribute metadata](/powerapps/developer/data-platform/entity-attribute-metadata)
 
 ## Column Types used by the system
 
@@ -161,7 +161,7 @@ Even though a table has an image column, displaying that image in a model-driven
 When image display is enabled for a table, any rows that don’t have an image will display a placeholder image. For example:
 
 > [!div class="mx-imgBorder"] 
-> ![Sample table image for an account row](../common-data-service/media/account-record-default-image.png "Default account table image")
+> ![Sample table image for an account row](../data-platform/media/account-record-default-image.png "Default account table image")
   
 People can choose the default image to upload a picture from their computer. Images must be less than 10 MB and must be in one of the following formats:  
   
@@ -227,16 +227,16 @@ Once a table form has an image column, app users can change the image for a give
 
 1. Open the app that includes the table form, and then select the image on the form. 
    > [!div class="mx-imgBorder"] 
-   > ![Default table image](../common-data-service/media/default-entity-image-on-form.png "Default table image")
+   > ![Default table image](../data-platform/media/default-entity-image-on-form.png "Default table image")
 
 2. Select **Upload image**, browse and select the image you want displayed on the table form, and then select **Change**. The image appears on the row. 
    > [!div class="mx-imgBorder"] 
-   > ![Changed image saved to a row](../common-data-service/media/custom-entity-icon-record.png "Changed image saved to a row")
+   > ![Changed image saved to a row](../data-platform/media/custom-entity-icon-record.png "Changed image saved to a row")
 
 
 More information for developers working with image data:
-- [table metadata > table images](/powerapps/developer/common-data-service/table-metadata#table-images)
-- [Image attributes](/powerapps/developer/common-data-service/image-attributes)
+- [table metadata > table images](/powerapps/developer/data-platform/table-metadata#table-images)
+- [Image attributes](/powerapps/developer/data-platform/image-attributes)
 
 
 ## File columns
@@ -254,4 +254,4 @@ To create a file column, on the left pane in Power Apps select **Solutions**, op
 > [!div class="mx-imgBorder"] 
 > ![File data type](media/file-data-type.png)
 
-More information for developers working with file data: [File attributes](/powerapps/developer/common-data-service/file-attributes)
+More information for developers working with file data: [File attributes](/powerapps/developer/data-platform/file-attributes)

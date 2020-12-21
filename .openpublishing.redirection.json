@@ -1822,12 +1822,12 @@
     },
     {
       "source_path": "powerapps-docs/maker/model-driven-apps/run-app-client-model-driven.md",
-      "redirect_url": "/powerapps-docs/user/run-app-client-model-driven",
+      "redirect_url": "powerapps-docs/user/run-app-client-model-driven",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/generate-app-from-sharepoint-list-interface.md",
-      "redirect_url": "/powerapps-docs/maker/canvas-apps/app-from-sharepoint",
+      "redirect_url": "powerapps-docs/maker/canvas-apps/app-from-sharepoint",
       "redirect_document_id": "false"
     },
     {
@@ -1926,517 +1926,517 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/actions.md",
+      "source_path": "powerapps-docs/maker/common-data-service/actions.md",
       "redirect_url": "../data-platform/actions",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/api-limits-overview.md",
+      "source_path": "powerapps-docs/maker/common-data-service/api-limits-overview.md",
       "redirect_url": "../data-platform/api-limits-overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/autonumber-fields.md",
+      "source_path": "powerapps-docs/maker/common-data-service/autonumber-fields.md",
       "redirect_url": "../data-platform/autonumber-fields",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/behavior-format-date-time-field.md",
+      "source_path": "powerapps-docs/maker/common-data-service/behavior-format-date-time-field.md",
       "redirect_url": "../data-platform/behavior-format-date-time-field",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/best-practices-workflow-processes.md",
+      "source_path": "powerapps-docs/maker/common-data-service/best-practices-workflow-processes.md",
       "redirect_url": "../data-platform/best-practices-workflow-processes",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/cds-processes.md",
+      "source_path": "powerapps-docs/maker/common-data-service/cds-processes.md",
       "redirect_url": "../data-platform/processes",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/change-color-scheme-add-logo-match-organizations-brand.md",
+      "source_path": "powerapps-docs/maker/common-data-service/change-color-scheme-add-logo-match-organizations-brand.md",
       "redirect_url": "../data-platform/change-color-scheme-add-logo-match-organizations-brand",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/change-solution-publisher-prefix.md",
+      "source_path": "powerapps-docs/maker/common-data-service/change-solution-publisher-prefix.md",
       "redirect_url": "../data-platform/change-solution-publisher-prefix",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/common-issues-resolutions-solution-checker.md",
+      "source_path": "powerapps-docs/maker/common-data-service/common-issues-resolutions-solution-checker.md",
       "redirect_url": "../data-platform/common-issues-resolutions-solution-checker",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/configure-actions.md",
+      "source_path": "powerapps-docs/maker/common-data-service/configure-actions.md",
       "redirect_url": "../data-platform/configure-actions",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/configure-connection-roles.md",
+      "source_path": "powerapps-docs/maker/common-data-service/configure-connection-roles.md",
       "redirect_url": "../data-platform/configure-connection-roles",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/configure-entity-feedback.md",
+      "source_path": "powerapps-docs/maker/common-data-service/configure-entity-feedback.md",
       "redirect_url": "../data-platform/configure-entity-feedback",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/configure-workflow-steps.md",
+      "source_path": "powerapps-docs/maker/common-data-service/configure-workflow-steps.md",
       "redirect_url": "../data-platform/configure-workflow-steps",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow.md",
+      "source_path": "powerapps-docs/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow.md",
       "redirect_url": "../data-platform/connect-azure-data-lake-storage-for-dataflow",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-actions.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-actions.md",
       "redirect_url": "../data-platform/create-actions",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-and-use-dataflows.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-and-use-dataflows.md",
       "redirect_url": "../data-platform/create-and-use-dataflows",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-connection-reference.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-connection-reference.md",
       "redirect_url": "../data-platform/create-connection-reference",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-custom-entity.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-custom-entity.md",
       "redirect_url": "../data-platform/create-custom-entity",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-custom-help-pages.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-custom-help-pages.md",
       "redirect_url": "../data-platform/create-custom-help-pages",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-1n-relationships-portal.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-1n-relationships-portal.md",
       "redirect_url": "../data-platform/create-edit-1n-relationships-portal",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-1n-relationships-solution-explorer.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-1n-relationships-solution-explorer.md",
       "redirect_url": "../data-platform/create-edit-1n-relationships-solution-explorer",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-1n-relationships.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-1n-relationships.md",
       "redirect_url": "../data-platform/create-edit-1n-relationships",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-entities-portal.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-entities-portal.md",
       "redirect_url": "../data-platform/create-edit-entities-portal",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-entities-solution-explorer.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-entities-solution-explorer.md",
       "redirect_url": "../data-platform/create-edit-entities-solution-explorer",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-entity-relationships.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-entity-relationships.md",
       "redirect_url": "../data-platform/create-edit-entity-relationships",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-field-portal.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-field-portal.md",
       "redirect_url": "../data-platform/create-edit-field-portal",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-field-solution-explorer.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-field-solution-explorer.md",
       "redirect_url": "../data-platform/create-edit-field-solution-explorer",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-fields.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-fields.md",
       "redirect_url": "../data-platform/create-edit-fields",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-global-option-sets-solution-explorer.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-global-option-sets-solution-explorer.md",
       "redirect_url": "../data-platform/create-edit-global-option-sets-solution-explorer",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-global-option-sets.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-global-option-sets.md",
       "redirect_url": "../data-platform/create-edit-global-option-sets",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-metadata.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-metadata.md",
       "redirect_url": "../data-platform/create-edit-metadata",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-nn-relationships-portal.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-nn-relationships-portal.md",
       "redirect_url": "../data-platform/create-edit-nn-relationships-portal",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-nn-relationships-solution-explorer.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-nn-relationships-solution-explorer.md",
       "redirect_url": "../data-platform/create-edit-nn-relationships-solution-explorer",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-nn-relationships.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-nn-relationships.md",
       "redirect_url": "../data-platform/create-edit-nn-relationships",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-edit-virtual-entities.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-virtual-entities.md",
       "redirect_url": "../data-platform/create-edit-virtual-entities",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/create-solution.md",
+      "source_path": "powerapps-docs/maker/common-data-service/create-solution.md",
       "redirect_url": "../data-platform/create-solution",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/custom-picklists.md",
+      "source_path": "powerapps-docs/maker/common-data-service/custom-picklists.md",
       "redirect_url": "../data-platform/custom-picklists",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-cds-newentity-pq.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-cds-newentity-pq.md",
       "redirect_url": "../data-platform/add-data-power-query",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md",
       "redirect_url": "../data-platform/troubleshoot-power-query-issues",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-complex-entities.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-complex-entities.md",
       "redirect_url": "../data-platform/data-platform-complex-entities",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-create-business-rule.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-create-business-rule.md",
       "redirect_url": "../data-platform/data-platform-create-business-rule",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-create-entity.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-create-entity.md",
       "redirect_url": "../data-platform/data-platform-create-entity",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-delete-entity.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-delete-entity.md",
       "redirect_url": "../data-platform/data-platform-delete-entity",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-entity-licenses.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-entity-licenses.md",
       "redirect_url": "../data-platform/data-platform-entity-licenses",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-entity-lookup.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-entity-lookup.md",
       "redirect_url": "../data-platform/data-platform-entity-lookup",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-excel-addin.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-excel-addin.md",
       "redirect_url": "../data-platform/data-platform-excel-addin",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-import-export.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-import-export.md",
       "redirect_url": "../data-platform/data-platform-import-export",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-intro.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-intro.md",
       "redirect_url": "../data-platform/data-platform-intro",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-manage-fields.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-manage-fields.md",
       "redirect_url": "../data-platform/data-platform-manage-fields",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-powerbi-connector.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-powerbi-connector.md",
       "redirect_url": "../data-platform/data-platform-powerbi-connector",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/data-platform-restricted-entities.md",
+      "source_path": "powerapps-docs/maker/common-data-service/data-platform-restricted-entities.md",
       "redirect_url": "../data-platform/data-platform-restricted-entities",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/define-alternate-keys-portal.md",
+      "source_path": "powerapps-docs/maker/common-data-service/define-alternate-keys-portal.md",
       "redirect_url": "../data-platform/define-alternate-keys-portal",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/define-alternate-keys-reference-records.md",
+      "source_path": "powerapps-docs/maker/common-data-service/define-alternate-keys-reference-records.md",
       "redirect_url": "../data-platform/define-alternate-keys-reference-records",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/define-alternate-keys-solution-explorer.md",
+      "source_path": "powerapps-docs/maker/common-data-service/define-alternate-keys-solution-explorer.md",
       "redirect_url": "../data-platform/define-alternate-keys-solution-explorer",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/define-calculated-fields.md",
+      "source_path": "powerapps-docs/maker/common-data-service/define-calculated-fields.md",
       "redirect_url": "../data-platform/define-calculated-fields",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/define-query-hierarchical-data.md",
+      "source_path": "powerapps-docs/maker/common-data-service/define-query-hierarchical-data.md",
       "redirect_url": "../data-platform/define-query-hierarchical-data",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/define-rollup-fields.md",
+      "source_path": "powerapps-docs/maker/common-data-service/define-rollup-fields.md",
       "redirect_url": "../data-platform/define-rollup-fields",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/define-status-reason-transitions.md",
+      "source_path": "powerapps-docs/maker/common-data-service/define-status-reason-transitions.md",
       "redirect_url": "../data-platform/define-status-reason-transitions",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/delete-fields.md",
+      "source_path": "powerapps-docs/maker/common-data-service/delete-fields.md",
       "redirect_url": "../data-platform/delete-fields",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/display-custom-icons-instead.md",
+      "source_path": "powerapps-docs/maker/common-data-service/display-custom-icons-instead.md",
       "redirect_url": "../data-platform/display-custom-icons-instead",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/edit-entities.md",
+      "source_path": "powerapps-docs/maker/common-data-service/edit-entities.md",
       "redirect_url": "../data-platform/edit-entities",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/edit-system-entity-messages.md",
+      "source_path": "powerapps-docs/maker/common-data-service/edit-system-entity-messages.md",
       "redirect_url": "../data-platform/edit-system-entity-messages",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/entity-overview.md",
+      "source_path": "powerapps-docs/maker/common-data-service/entity-overview.md",
       "redirect_url": "../data-platform/entity-overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/EnvironmentVariables.md",
+      "source_path": "powerapps-docs/maker/common-data-service/EnvironmentVariables.md",
       "redirect_url": "../data-platform/EnvironmentVariables",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/export-customized-entity-field-text-translation.md",
+      "source_path": "powerapps-docs/maker/common-data-service/export-customized-entity-field-text-translation.md",
       "redirect_url": "../data-platform/export-customized-entity-field-text-translation",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/export-solutions.md",
+      "source_path": "powerapps-docs/maker/common-data-service/export-solutions.md",
       "redirect_url": "../data-platform/export-solutions",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/export-to-data-lake-data-adf.md",
+      "source_path": "powerapps-docs/maker/common-data-service/export-to-data-lake-data-adf.md",
       "redirect_url": "../data-platform/export-to-data-lake-data-adf",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/export-to-data-lake-data-powerbi.md",
+      "source_path": "powerapps-docs/maker/common-data-service/export-to-data-lake-data-powerbi.md",
       "redirect_url": "../data-platform/export-to-data-lake-data-powerbi",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/export-to-data-lake.md",
+      "source_path": "powerapps-docs/maker/common-data-service/export-to-data-lake.md",
       "redirect_url": "../data-platform/export-to-data-lake",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/fields-overview.md",
+      "source_path": "powerapps-docs/maker/common-data-service/fields-overview.md",
       "redirect_url": "../data-platform/fields-overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/import-translated-entity-field-text.md",
+      "source_path": "powerapps-docs/maker/common-data-service/import-translated-entity-field-text.md",
       "redirect_url": "../data-platform/import-translated-entity-field-text",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/import-update-export-solutions.md",
+      "source_path": "powerapps-docs/maker/common-data-service/import-update-export-solutions.md",
       "redirect_url": "../data-platform/import-update-export-solutions",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/index.yml",
+      "source_path": "powerapps-docs/maker/common-data-service/index.yml",
       "redirect_url": "../data-platform/index",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/invoke-custom-actions-workflow-dialog.md",
+      "source_path": "powerapps-docs/maker/common-data-service/invoke-custom-actions-workflow-dialog.md",
       "redirect_url": "../data-platform/invoke-custom-actions-workflow-dialog",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/map-entity-fields.md",
+      "source_path": "powerapps-docs/maker/common-data-service/map-entity-fields.md",
       "redirect_url": "../data-platform/map-entity-fields",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/monitor-manage-processes.md",
+      "source_path": "powerapps-docs/maker/common-data-service/monitor-manage-processes.md",
       "redirect_url": "../data-platform/monitor-manage-processes",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/overview-realtime-workflows.md",
+      "source_path": "powerapps-docs/maker/common-data-service/overview-realtime-workflows.md",
       "redirect_url": "../data-platform/overview-realtime-workflows",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/query-visualize-hierarchical-data.md",
+      "source_path": "powerapps-docs/maker/common-data-service/query-visualize-hierarchical-data.md",
       "redirect_url": "../data-platform/query-visualize-hierarchical-data",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/relationships-overview.md",
+      "source_path": "powerapps-docs/maker/common-data-service/relationships-overview.md",
       "redirect_url": "../data-platform/relationships-overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/self-service-data-prep-with-dataflows.md",
+      "source_path": "powerapps-docs/maker/common-data-service/self-service-data-prep-with-dataflows.md",
       "redirect_url": "../data-platform/self-service-data-prep-with-dataflows",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/set-managed-properties-for-field.md",
+      "source_path": "powerapps-docs/maker/common-data-service/set-managed-properties-for-field.md",
       "redirect_url": "../data-platform/set-managed-properties-for-field",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/set-managed-properties-relationships.md",
+      "source_path": "powerapps-docs/maker/common-data-service/set-managed-properties-relationships.md",
       "redirect_url": "../data-platform/set-managed-properties-relationships",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/sharepoint-onedrive-onenote-intro.md",
+      "source_path": "powerapps-docs/maker/common-data-service/sharepoint-onedrive-onenote-intro.md",
       "redirect_url": "../data-platform/sharepoint-onedrive-onenote-intro",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/solution-history.md",
+      "source_path": "powerapps-docs/maker/common-data-service/solution-history.md",
       "redirect_url": "../data-platform/solution-history",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/solution-layers.md",
+      "source_path": "powerapps-docs/maker/common-data-service/solution-layers.md",
       "redirect_url": "../data-platform/solution-layers",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/solutions-overview.md",
+      "source_path": "powerapps-docs/maker/common-data-service/solutions-overview.md",
       "redirect_url": "../data-platform/solutions-overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/translate-entity-label-text.md",
+      "source_path": "powerapps-docs/maker/common-data-service/translate-entity-label-text.md",
       "redirect_url": "../data-platform/translate-entity-label-text",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/types-of-entities.md",
+      "source_path": "powerapps-docs/maker/common-data-service/types-of-entities.md",
       "redirect_url": "../data-platform/types-of-entities",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/types-of-fields.md",
+      "source_path": "powerapps-docs/maker/common-data-service/types-of-fields.md",
       "redirect_url": "../data-platform/types-of-fields",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/update-solutions.md",
+      "source_path": "powerapps-docs/maker/common-data-service/update-solutions.md",
       "redirect_url": "../data-platform/update-solutions",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/use-powerapps-checker.md",
+      "source_path": "powerapps-docs/maker/common-data-service/use-powerapps-checker.md",
       "redirect_url": "../data-platform/use-powerapps-checker",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/use-powerbi-with-cds.md",
+      "source_path": "powerapps-docs/maker/common-data-service/use-powerbi-with-cds.md",
       "redirect_url": "../data-platform/use-powerbi-dataverse",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/using-dataflows-with-on-premises-data.md",
+      "source_path": "powerapps-docs/maker/common-data-service/using-dataflows-with-on-premises-data.md",
       "redirect_url": "../data-platform/using-dataflows-with-on-premises-data",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/view-component-dependencies.md",
+      "source_path": "powerapps-docs/maker/common-data-service/view-component-dependencies.md",
       "redirect_url": "../data-platform/view-component-dependencies",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/view-entity-data-power-bi.md",
+      "source_path": "powerapps-docs/maker/common-data-service/view-entity-data-power-bi.md",
       "redirect_url": "../data-platform/view-entity-data-power-bi",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/virtual-entity-documentdb-provider-requirements.md",
+      "source_path": "powerapps-docs/maker/common-data-service/virtual-entity-documentdb-provider-requirements.md",
       "redirect_url": "../data-platform/virtual-entity-documentdb-provider-requirements",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/virtual-entity-odata-provider-requirements.md",
+      "source_path": "powerapps-docs/maker/common-data-service/virtual-entity-odata-provider-requirements.md",
       "redirect_url": "../data-platform/virtual-entity-odata-provider-requirements",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/virtual-entity-walkthrough-using-odata-provider.md",
+      "source_path": "powerapps-docs/maker/common-data-service/virtual-entity-walkthrough-using-odata-provider.md",
       "redirect_url": "../data-platform/virtual-entity-walkthrough-using-odata-provider",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/visualize-hierarchical-data.md",
+      "source_path": "powerapps-docs/maker/common-data-service/visualize-hierarchical-data.md",
       "redirect_url": "../data-platform/visualize-hierarchical-data",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/why-cds-any-type-app.md",
+      "source_path": "powerapps-docs/maker/common-data-service/why-cds-any-type-app.md",
       "redirect_url": "../data-platform/work-with-any-type-app",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/why-cds-import-export.md",
+      "source_path": "powerapps-docs/maker/common-data-service/why-cds-import-export.md",
       "redirect_url": "../data-platform/import-export-data",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/why-cds-overview.md",
+      "source_path": "powerapps-docs/maker/common-data-service/why-cds-overview.md",
       "redirect_url": "../data-platform/why-dataverse-overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powerapps-docs/maker/common-data-service/why-cds-work-with-data.md",
+      "source_path": "powerapps-docs/maker/common-data-service/why-cds-work-with-data.md",
       "redirect_url": "../data-platform/work-with-any-data",
       "redirect_document_id": false
     },

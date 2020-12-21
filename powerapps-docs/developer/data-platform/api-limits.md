@@ -188,7 +188,7 @@ Most scenarios will be fastest sending single requests with a high degree of par
 When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. The total amount of payload that is sent using $batch is greater than sending individual requests. Only use $batch if you want to manage transactions using changesets. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
 
 > [!NOTE]
-> Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/common-data-service/api-limits-overview.md#entitlement-limits)
+> Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
 
 ### Remove the affinity cookie
 
@@ -355,6 +355,6 @@ Work with the ETL application vendor to learn which settings to apply. Make sure
 ### See also
 
 [Administer Power Platform / Licensing and license management / Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)<br />
-[Dataverse API limits overview](../../maker/common-data-service/api-limits-overview.md)<br />
+[Dataverse API limits overview](../../maker/data-platform/api-limits-overview.md)<br />
 [Use Dataverse Web API](webapi/overview.md)<br />
 [Use Dataverse Organization Service](org-service/overview.md)

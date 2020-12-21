@@ -104,10 +104,10 @@ For more information about preventing Office Store Add-in downloading from the O
 
 ## Other ways to export and view table row data
 For more information about ways to export and view table row data, see these articles.
-- [Export data to CSV](/powerapps/maker/common-data-service/data-platform-import-export#export-data-to-csv) 
+- [Export data to CSV](/powerapps/maker/data-platform/data-platform-import-export#export-data-to-csv) 
 - [Export your data to Excel Online](/powerapps/user/export-to-excel-online)
-- [Export table data to Azure Data Lake Storage Gen2](/powerapps/maker/common-data-service/export-to-data-lake)
-- [Self-service data prep with dataflows](/powerapps/maker/common-data-service/self-service-data-prep-with-dataflows)
+- [Export table data to Azure Data Lake Storage Gen2](/powerapps/maker/data-platform/export-to-data-lake)
+- [Self-service data prep with dataflows](/powerapps/maker/data-platform/self-service-data-prep-with-dataflows)
 
 
 ### See also

@@ -16,7 +16,7 @@
           "Currencies"
         ],
         "summary": "Retrieves currencies in a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetCurrencies",
         "consumes": [],
         "produces": [
@@ -43,7 +43,7 @@
           "InstanceBackups"
         ],
         "summary": "Retrieves all backups of a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstanceBackups",
         "consumes": [],
         "produces": [
@@ -80,7 +80,7 @@
           "InstanceBackups"
         ],
         "summary": "Backs up a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "BackupInstance",
         "consumes": [
           "application/json",
@@ -123,7 +123,7 @@
           "InstanceBackups"
         ],
         "summary": "Retrieves a Dataverse environment backup based on the restore point. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstanceBackup",
         "consumes": [],
         "produces": [
@@ -167,7 +167,7 @@
           "Instances"
         ],
         "summary": "Retrieves all Dataverse environments in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstances",
         "consumes": [],
         "produces": [
@@ -194,7 +194,7 @@
           "Instances"
         ],
         "summary": "Retrieves a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstance",
         "consumes": [],
         "produces": [
@@ -230,7 +230,7 @@
           "Instances"
         ],
         "summary": "Provisions (creates) a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "ProvisionInstance",
         "consumes": [
           "application/json",
@@ -345,7 +345,7 @@
           "Instances"
         ],
         "summary": "Resets a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "ResetInstance",
         "consumes": [
           "application/json",
@@ -404,7 +404,7 @@
           "Instances"
         ],
         "summary": "Restores a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "RestoreInstance",
         "consumes": [
           "application/json",
@@ -458,7 +458,7 @@
           "Instances"
         ],
         "summary": "Force applies a user on a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "ApplyUser",
         "consumes": [],
         "produces": [
@@ -508,7 +508,7 @@
           "Instances"
         ],
         "summary": "Updates the Admin Mode settings of a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "UpdateInstanceAdminMode",
         "consumes": [
           "application/json",
@@ -569,7 +569,7 @@
           "Instances"
         ],
         "summary": "Updates instance settings for the specified Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "ConfigureInstance",
         "consumes": [
           "application/json",
@@ -630,7 +630,7 @@
           "Instances"
         ],
         "summary": "Deletes a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "DeleteInstance",
         "consumes": [],
         "produces": [
@@ -685,7 +685,7 @@
           "InstanceTypeInfo"
         ],
         "summary": "Retrieve information about all the environment types in Dataverse. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstanceTypesInfo",
         "consumes": [],
         "produces": [
@@ -712,7 +712,7 @@
           "InstanceTypeInfo"
         ],
         "summary": "Retrieve information about a Dataverse environment type. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetInstanceTypeInfo",
         "consumes": [],
         "produces": [
@@ -761,7 +761,7 @@
         ],
         "summary": "Retrieves available tenant protection (encryption) keys. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
         "operationId": "RetrieveAvailableTenantProtectionKeys",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "consumes": [],
         "produces": [
           "application/json",
@@ -800,7 +800,7 @@
           "Keys"
         ],
         "summary": "Retrieves the current tenant protection (encryption) key. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "RetrieveTenantProtectionKey",
         "consumes": [],
         "produces": [
@@ -827,7 +827,7 @@
           "Keys"
         ],
         "summary": "Imports tenant protection (encryption) key. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "ImportKey",
         "consumes": [
           "application/json",
@@ -911,7 +911,7 @@
           "Keys"
         ],
         "summary": "Generates tenant protection (encryption) key. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GenerateKey",
         "consumes": [
           "application/json",
@@ -954,7 +954,7 @@
           "Keys"
         ],
         "summary": "Sets the tenant protection (encryption) key. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "SetTenantProtectionKey",
         "consumes": [],
         "produces": [
@@ -992,7 +992,7 @@
           "Languages"
         ],
         "summary": "Retrieves languages supported by Dataverse instance. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetLanguages",
         "consumes": [],
         "produces": [
@@ -1031,7 +1031,7 @@
           "Notification"
         ],
         "summary": "Retrieves notifications from the Notification service. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetAllNotifications",
         "consumes": [
           "application/json",
@@ -1087,7 +1087,7 @@
           "Notification"
         ],
         "summary": "Post user notifications to the Notification service. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "PostUserNotification",
         "consumes": [
           "application/json",
@@ -1133,7 +1133,7 @@
           "OperationStatus"
         ],
         "summary": "Retrieves status of an operation in your Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetOperationStatus",
         "consumes": [],
         "produces": [
@@ -1169,7 +1169,7 @@
           "OperationStatus"
         ],
         "summary": "Retrieves operation status of a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetOperationStatusByQuery",
         "consumes": [],
         "produces": [
@@ -1209,7 +1209,7 @@
           "ServiceVersions"
         ],
         "summary": "Retrieves information about all the supported releases for Dataverse. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetServiceVersions",
         "consumes": [],
         "produces": [
@@ -1236,7 +1236,7 @@
           "Templates"
         ],
         "summary": "Retrieves templates supported for provisioning a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetTemplates",
         "consumes": [],
         "produces": [
@@ -1288,7 +1288,7 @@
           "TenantApplicationIdentities"
         ],
         "summary": "Registers a tenant application identity to be used with Online Management API. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "CreateTenantApplicationIdentity",
         "consumes": [
           "application/json",
@@ -1324,7 +1324,7 @@
           "TenantApplicationIdentities"
         ],
         "summary": "Retrieves a Tenant Application Identity. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "operationId": "GetTenantApplicationIdentity",
         "consumes": [],
         "produces": [
@@ -1359,7 +1359,7 @@
         ],
         "operationId": "DeleteTenantApplicationIdentity",
         "summary": "Deletes a Tenant Application Identity. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1388,7 +1388,7 @@
         ],
         "operationId": "EnableTenantApplicationIdentity",
         "summary": "Enables a Tenant Application Identity. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "consumes": [],
         "produces": [
           "application/json",
@@ -1417,7 +1417,7 @@
         ],
         "operationId": "DisableTenantApplicationIdentity",
         "summary": "Disables a Tenant Application Identity. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
-        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/common-data-service/online-management-api/get-started-online-management-api#service-url)",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
         "consumes": [],
         "produces": [
           "application/json",

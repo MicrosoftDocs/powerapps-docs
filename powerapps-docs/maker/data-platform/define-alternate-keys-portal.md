@@ -61,4 +61,4 @@ While [viewing alternate keys](#view-alternate-keys), select the key you want to
 
 ### See also
 
-[Developer Documentation: Work with alternate keys](../../developer/common-data-service/define-alternate-keys-entity.md)
+[Developer Documentation: Work with alternate keys](../../developer/data-platform/define-alternate-keys-entity.md)

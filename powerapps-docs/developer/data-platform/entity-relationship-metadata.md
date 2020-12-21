@@ -38,7 +38,7 @@ The `EntityMetadata` `ManyToOneRelationships` collection contains [OneToManyRela
 > [!NOTE]
 > Although related entities are sometimes called *child entities*, don't confuse these with [Child entities](entity-metadata.md#child-entities), which refers to how security is applied to related entities.
 
-More information: [Create relationships between entities](../../maker/common-data-service/data-platform-entity-lookup.md).
+More information: [Create relationships between entities](../../maker/data-platform/data-platform-entity-lookup.md).
 
 ## Cascade configuration
 

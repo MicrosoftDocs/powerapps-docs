@@ -30,7 +30,7 @@ Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com
 
 2. On the command bar, select **New table**.
 
-    Before you create a table, check out the [table reference](../../developer/common-data-service/reference/about-entity-reference.md) for a description of available standard tables. These tables cover typical scenarios. If one of these tables meets your requirements as is or after minor changes, you can save time by starting with that table. 
+    Before you create a table, check out the [table reference](../../developer/data-platform/reference/about-entity-reference.md) for a description of available standard tables. These tables cover typical scenarios. If one of these tables meets your requirements as is or after minor changes, you can save time by starting with that table. 
 
 3. In the **New table** panel, enter the following information columns. Required columns are designated with an asterisk (*) next to the column label. 
 

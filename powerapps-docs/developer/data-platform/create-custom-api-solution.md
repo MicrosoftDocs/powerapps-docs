@@ -37,13 +37,13 @@ A solution file is a compressed (zip) file that has been exported from a Microso
 
 You should not try to compose a solution file manually. Use the tools in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to generate a solution file. Use the steps in the following topics to create and export a solution. The solution doesn't need to contain any solution components.
 
-1. [Create a solution](../../maker/common-data-service/create-solution.md)
+1. [Create a solution](../../maker/data-platform/create-solution.md)
 
     For this example, the solution is defined simply like this:
 
     :::image type="content" source="media/custom-api-solution.png" alt-text="An empty solution":::
 
-1. [Export solutions](../../maker/common-data-service/export-solutions.md)
+1. [Export solutions](../../maker/data-platform/export-solutions.md)
 
     For this example, make sure you export an unmanaged solution. Managed solution is the default.
 

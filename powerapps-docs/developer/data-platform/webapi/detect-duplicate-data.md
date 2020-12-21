@@ -24,13 +24,13 @@ search.app:
 Related topics
 
 Tells the high level story
-powerapps-docs/developer/common-data-service/detect-duplicate-data-for-developers.md 
+powerapps-docs/developer/data-platform/detect-duplicate-data-for-developers.md 
 Tells the org service story
-powerapps-docs/developer/common-data-service/org-service/detect-duplicate-data.md
+powerapps-docs/developer/data-platform/org-service/detect-duplicate-data.md
 Tells the Web API Story
-powerapps-docs/developer/common-data-service/webapi/detect-duplicate-data.md
+powerapps-docs/developer/data-platform/webapi/detect-duplicate-data.md
 
-Also: powerapps-docs/developer/common-data-service/webapi/manage-duplicate-detection-create-update.md
+Also: powerapps-docs/developer/data-platform/webapi/manage-duplicate-detection-create-update.md
 
 
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/detect-duplicate-data-for-developers

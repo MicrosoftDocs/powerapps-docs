@@ -272,7 +272,7 @@ Together with options to manage views, the following options to manage system jo
 
 |Option|Description|
 |--|--|
-|Delete|Using the ![delete command](../../maker/common-data-service/media/delete.gif) command.<br />Deletes a system job|
+|Delete|Using the ![delete command](../../maker/data-platform/media/delete.gif) command.<br />Deletes a system job|
 |Bulk Delete|Using the **More Actions** menu.<br />Opens a wizard to define conditions and create a new Bulk Deletion system job to delete the matching system jobs.|
 |Cancel|Using the **More Actions** menu.<br />Cancels the system job.|
 |Resume|Using the **More Actions** menu.<br />Resumes a paused system job.|

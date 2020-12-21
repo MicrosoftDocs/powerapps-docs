@@ -18,7 +18,7 @@ search.app:
 # Manage custom columns in a table
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can create and update one or more custom columns in any table. When you create a custom column, you specify a set of properties, such as the column's name, its display name, and the type of data that it will contain. For more information, see [table attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
+You can create and update one or more custom columns in any table. When you create a custom column, you specify a set of properties, such as the column's name, its display name, and the type of data that it will contain. For more information, see [table attribute metadata](../../developer/data-platform/entity-attribute-metadata.md).
 
 > [!NOTE]
 > Every table has system columns, such as columns that indicate when a row was last updated, and who updated it. In addition, standard tables have standard (default) columns. You can't modify or delete system columns or standard columns. If you create a custom column, it should provide functionality on top of these built-in columns.
@@ -40,7 +40,7 @@ You can create and update one or more custom columns in any table. When you crea
     > [!div class="mx-imgBorder"] 
     > ![New Column panel](./media/data-platform-cds-create-entity/newfieldpanel.png "New Column Panel")
 
-5. Select the **Data type** of your column, this controls the way the information is stored as well as how it is presented in apps. For example, text is stored different to a decimal number or a URL. For more detailed information of the data types available, see [table attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
+5. Select the **Data type** of your column, this controls the way the information is stored as well as how it is presented in apps. For example, text is stored different to a decimal number or a URL. For more detailed information of the data types available, see [table attribute metadata](../../developer/data-platform/entity-attribute-metadata.md).
 
     If you're prompted, specify additional information for the data type that you specified. Depending on the data type, different columns will be presented. If you're creating a column of type Choice or Multi Select Option Set, you can select **New Option Set** and create a new Choice while creating your column. For more information, see [Create Option set](custom-picklists.md)
 

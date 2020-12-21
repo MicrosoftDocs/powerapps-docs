@@ -16,7 +16,7 @@ search.app:
 # TimeZoneDefinition entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
 
 Time zone definition, including name and time zone code.
 
@@ -28,8 +28,8 @@ Time zone definition, including name and time zone code.
 |GetAllTimeZonesWithDisplayName|<xref href="Microsoft.Dynamics.CRM.GetAllTimeZonesWithDisplayName?text=GetAllTimeZonesWithDisplayName Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetAllTimeZonesWithDisplayNameRequest>|
 |GetTimeZoneCodeByLocalizedName|<xref href="Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedName?text=GetTimeZoneCodeByLocalizedName Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetTimeZoneCodeByLocalizedNameRequest>|
 |LocalTimeFromUtcTime|<xref href="Microsoft.Dynamics.CRM.LocalTimeFromUtcTime?text=LocalTimeFromUtcTime Function" />|<xref:Microsoft.Crm.Sdk.Messages.LocalTimeFromUtcTimeRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/timezonedefinitions(*timezonedefinitionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/timezonedefinitions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/timezonedefinitions(*timezonedefinitionid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/timezonedefinitions<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |UtcTimeFromLocalTime||<xref:Microsoft.Crm.Sdk.Messages.UtcTimeFromLocalTimeRequest>|
 
 ## Entity properties

@@ -21,7 +21,7 @@ search.app:
 
 <!-- A higher level topic to make information about outlook client discoverable since otherwise it may be hidden?
 
-All outlook client topics ought to be in powerapps-docs/developer/common-data-service/outlook-client/
+All outlook client topics ought to be in powerapps-docs/developer/data-platform/outlook-client/
 
 
 A replacement for 

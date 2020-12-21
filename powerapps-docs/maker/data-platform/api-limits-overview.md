@@ -57,11 +57,11 @@ We limit the number of concurrent connections per user account, the number of AP
 
 Because service protection limits are usually only encountered by applications that perform a high volume of data operations, we recommend that developers building those applications apply patterns to retry operations after a period of time when these exceptions are returned. This will allow the application to respond to exceptions the service sends and reduce the total number of requests and achieve the highest possible throughput.
 
-For information about the specific errors that can be returned and how developers can apply patterns to respond to these errors, see [Service Protection API Limits](../../developer/common-data-service/api-limits.md).
+For information about the specific errors that can be returned and how developers can apply patterns to respond to these errors, see [Service Protection API Limits](../../developer/data-platform/api-limits.md).
 
 
 ### See also
 
 [Administer Power Platform / Licensing and license management / Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)<br />
-[Developer / Work with data using code / Service Protection API Limits](../../developer/common-data-service/api-limits.md)
+[Developer / Work with data using code / Service Protection API Limits](../../developer/data-platform/api-limits.md)
 

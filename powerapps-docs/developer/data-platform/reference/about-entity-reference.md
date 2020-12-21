@@ -30,7 +30,7 @@ Use this reference to understand the available operations that can be performed 
 > - The entity supports some kind of direct data modification operation.
 >    - This excludes entities which you can't work with directly. 
 >
-> To see all entity metadata information for your environment, see [Browse the metadata for your organization](/powerapps/developer/common-data-service/browse-your-metadata).
+> To see all entity metadata information for your environment, see [Browse the metadata for your organization](/powerapps/developer/data-platform/browse-your-metadata).
 
 
 ## Entity Properties

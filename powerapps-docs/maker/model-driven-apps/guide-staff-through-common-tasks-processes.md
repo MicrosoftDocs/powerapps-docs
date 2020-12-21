@@ -41,7 +41,7 @@ Business rules provide a simple interface to implement and maintain fast-changin
 For more information about defining business rules for a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](create-business-rules-recommendations-apply-logic-form.md)
 
 > [!NOTE]
-> To define a business rule for a table so that it applies at the server level to both *canvas apps* and *model-driven apps*, see [Create a business rule for a table](/powerapps/maker/common-data-service/data-platform-create-business-rule).
+> To define a business rule for a table so that it applies at the server level to both *canvas apps* and *model-driven apps*, see [Create a business rule for a table](/powerapps/maker/data-platform/data-platform-create-business-rule).
 
 ## Flows  
   
@@ -55,7 +55,7 @@ Power Automate includes several types of processes, each designed for a differen
   
 -   Business process flows.  Ensure that people enter data consistently and follow the same steps every time they work in an app by creating a business process flow. More information: [Business process flows overview](/flow/business-process-flows-overview)
 
--   Workflows and actions. Dynamics 365 customizers may be familiar with the classic Microsoft Dataverse processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/powerapps/maker/common-data-service/actions)
+-   Workflows and actions. Dynamics 365 customizers may be familiar with the classic Microsoft Dataverse processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/powerapps/maker/data-platform/actions)
   
 ## Next step
 
@@ -63,4 +63,4 @@ Power Automate includes several types of processes, each designed for a differen
 
 ### See also
 
-[Apply business logic with Dataverse](../common-data-service/cds-processes.md)
+[Apply business logic with Dataverse](../data-platform/processes.md)

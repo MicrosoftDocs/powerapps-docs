@@ -48,7 +48,7 @@ Because web resources are data in the system and are solution aware, you can mov
   
 ## Solution publisher prefix
 
-Part of the name of any web resource you create is the solution publisher prefix. This is set based on the solution publisher for the solution you’re working in. Make sure that you are working in the unmanaged solution where the publisher prefix is the one you want for this web resource. More information: [Solution publisher](../common-data-service/create-solution.md#solution-publisher)  
+Part of the name of any web resource you create is the solution publisher prefix. This is set based on the solution publisher for the solution you’re working in. Make sure that you are working in the unmanaged solution where the publisher prefix is the one you want for this web resource. More information: [Solution publisher](../data-platform/create-solution.md#solution-publisher)  
 
 ## View and add web resources
 1. Sign in to [Power Apps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. 

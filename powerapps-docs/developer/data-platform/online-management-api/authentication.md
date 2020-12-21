@@ -26,7 +26,7 @@ The recommended authentication API to use with the Online Management API is [Azu
 
 These are the broad steps to authenticate to the Online Management API service. 
 
-1. Register an app with Azure Active Directory to obtain *clientId* and *redirectUrl* values for your app. For information about this, see the "App registration for OAuth authentication" section in [Walkthrough: Register an app with Azure Active Directory](/powerapps/developer/common-data-service/walkthrough-register-app-azure-active-directory)
+1. Register an app with Azure Active Directory to obtain *clientId* and *redirectUrl* values for your app. For information about this, see the "App registration for OAuth authentication" section in [Walkthrough: Register an app with Azure Active Directory](/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory)
 
 1. Specify the values obtained from step# 1 in the authentication [helper code](sample-authentication-helper.md):
 

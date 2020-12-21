@@ -43,8 +43,8 @@ Whether the relationship is a one-to-many or many-to-many relationship doesn't m
 You can discover the names of the relationships by viewing the customization UI or in the metadata using the Metadata Browser. 
 More information: 
 
-- [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](../../../maker/common-data-service/create-edit-1n-relationships.md)
-- [Create and edit Many-to-many (N:N) entity relationships](../../../maker/common-data-service/create-edit-nn-relationships.md)
+- [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](../../../maker/data-platform/create-edit-1n-relationships.md)
+- [Create and edit Many-to-many (N:N) entity relationships](../../../maker/data-platform/create-edit-nn-relationships.md)
 - [Browse the metadata for your environment](../browse-your-metadata.md)
 
 The following example will set a specific contact entity (`jimGlynn`) as the primary contact for all accounts that are in Redmond.

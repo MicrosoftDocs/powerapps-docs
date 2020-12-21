@@ -25,7 +25,7 @@ All Microsoft Dataverse records have unique identifiers defined as GUIDs. These 
 
 ## Create alternate keys  
 
-You can create alternate keys programmatically or by using the customizations tools. For more information about using the customization tools, see [Define alternate keys using Power Apps portal](../../maker/common-data-service/define-alternate-keys-portal.md).
+You can create alternate keys programmatically or by using the customizations tools. For more information about using the customization tools, see [Define alternate keys using Power Apps portal](../../maker/data-platform/define-alternate-keys-portal.md).
 
 To define alternate keys programmatically, you first have to create an object of type <xref:Microsoft.Xrm.Sdk.Metadata.EntityKeyMetadata> (or use <xref href="Microsoft.Dynamics.CRM.EntityKeyMetadata?text=EntityKeyMetadata EntityType" /> if working with Web API). This class contains the key attributes. Once the key attributes are set, you can use `CreateEntityKey` to create the keys for an entity. This message takes the entity name and `EntityKeyMetadata` values as input to create the key.  
 
@@ -90,5 +90,5 @@ If the alternate key is deleted while an index creation job is still pending or 
  [Using alternate keys](use-alternate-key-create-record.md)<br />
  [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)<br />
  [Use Upsert to insert or update a record](use-upsert-insert-update-record.md)
- [Define alternate keys to reference records](../../maker/common-data-service/define-alternate-keys-reference-records.md)
+ [Define alternate keys to reference records](../../maker/data-platform/define-alternate-keys-reference-records.md)
  

@@ -16,7 +16,7 @@ search.app:
 # Audit entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
 
 Track changes to records for analysis, record keeping, and compliance.
 
@@ -27,11 +27,11 @@ Track changes to records for analysis, record keeping, and compliance.
 |-|-|-|
 |DeleteAuditData|<xref href="Microsoft.Dynamics.CRM.DeleteAuditData?text=DeleteAuditData Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteAuditDataRequest>|
 |DeleteRecordChangeHistory|<xref href="Microsoft.Dynamics.CRM.DeleteRecordChangeHistory?text=DeleteRecordChangeHistory Action" />|<xref:Microsoft.Crm.Sdk.Messages.DeleteRecordChangeHistoryRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/audits(*auditid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/audits(*auditid*)<br />See [Retrieve](/powerapps/developer/data-platform/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveAttributeChangeHistory|<xref href="Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory?text=RetrieveAttributeChangeHistory Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest>|
 |RetrieveAuditDetails|<xref href="Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest>|
 |RetrieveAuditPartitionList|<xref href="Microsoft.Dynamics.CRM.RetrieveAuditPartitionList?text=RetrieveAuditPartitionList Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditPartitionListRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/audits<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/audits<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrieveRecordChangeHistory|<xref href="Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory?text=RetrieveRecordChangeHistory Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest>|
 
 ## Entity properties

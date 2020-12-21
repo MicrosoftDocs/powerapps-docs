@@ -49,7 +49,7 @@ As a result, a wide range of enterprise integration scenarios&mdash;from retriev
 data sent in a spreadsheet as an email attachment to emerging scenarios like
 using Dataverse data in a blockchain network&mdash;can be achieved with ease and with little to no code required. Integration efforts that previously were measured in days and weeks can now often be measured in hours and minutes.
 
-In addition to providing the ability to create data or import it from other systems, Dataverse also supports *virtual tables*. Virtual tables map data in an external data source so that it appears to exist in Dataverse. This enables Dataverse to execute real-time data operations against the external data source. More information: [Work with any data](why-cds-work-with-data.md)
+In addition to providing the ability to create data or import it from other systems, Dataverse also supports *virtual tables*. Virtual tables map data in an external data source so that it appears to exist in Dataverse. This enables Dataverse to execute real-time data operations against the external data source. More information: [Work with any data](work-with-any-data.md)
 
 ## Work with any type of app
 
@@ -66,7 +66,7 @@ You can also use Dataverse in bot-based apps that deliver intuitive,
 interactive dialogues with employees, partners, and customers. Whether they're embedded within Power Apps or custom code, bots can be built quickly
 by using Power Virtual Agents and powered by Dataverse data.
 
-The goal of Dataverse working with any app means it should also work with the tools that knowledge workers and professional developers use. To help them be even more productive, Dataverse is integrated into popular tools such as Excel, Outlook, Dynamics 365 customer engagement apps, Power BI Desktop, Power Query, Azure Data Factory, Data Export Service, and SQL Server Management Studio. More information: [Work with any type of app](why-cds-any-type-app.md)
+The goal of Dataverse working with any app means it should also work with the tools that knowledge workers and professional developers use. To help them be even more productive, Dataverse is integrated into popular tools such as Excel, Outlook, Dynamics 365 customer engagement apps, Power BI Desktop, Power Query, Azure Data Factory, Data Export Service, and SQL Server Management Studio. More information: [Work with any type of app](work-with-any-type-app.md)
 
 ## Analytics and reporting
 
@@ -151,7 +151,7 @@ Service limits aren't expected to negatively affect normal usage of Dataverse.
 
 For information about current service protection limits for each service, see:
 
-- [Dataverse API request limits](/powerapps/developer/common-data-service/api-limits): Applicable to Dynamics 365 customer engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, in addition to connections from Power Apps and Power Automate to Dataverse.
+- [Dataverse API request limits](/powerapps/developer/data-platform/api-limits): Applicable to Dynamics 365 customer engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, in addition to connections from Power Apps and Power Automate to Dataverse.
 
 - [Microsoft Power Automate limits](/flow/limits-and-config#looping-and-debatching-limits): Applicable for Power Automate. 
 
@@ -196,4 +196,4 @@ For the current list of datacenter regions, see [Datacenter regions](/power-plat
 
 ### See also
 
-[Work with any data](why-cds-work-with-data.md)
+[Work with any data](work-with-any-data.md)

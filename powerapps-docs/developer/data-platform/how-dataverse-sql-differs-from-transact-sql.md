@@ -421,4 +421,4 @@ Hints are not supported.
 
 ### See also
 
-[Use SQL to query data](cds-sql-query.md)
+[Use SQL to query data](dataverse-sql-query.md)

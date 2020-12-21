@@ -333,7 +333,7 @@ The first thing you must do is create a custom security role that will define wh
 
 After you have created the custom security role, you must create the user account which will use it.
 
-<!-- Almost exactly the same intructions below can be found in powerapps-docs\developer\common-data-service\use-multi-tenant-server-server-authentication.md -->
+<!-- Almost exactly the same intructions below can be found in powerapps-docs\developer\data-platform\use-multi-tenant-server-server-authentication.md -->
 
 #### Manually create a Dataverse application user  
 

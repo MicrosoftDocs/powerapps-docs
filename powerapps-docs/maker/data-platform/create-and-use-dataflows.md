@@ -221,7 +221,7 @@ issues. This section provides troubleshooting tips when issues occur.
 ## Next steps
 The following articles are useful for further information and scenarios when using dataflows:
 
--   [Add data to a table in Dataverse](data-platform-cds-newentity-pq.md)
+-   [Add data to a table in Dataverse](add-data-power-query.md)
 
 -   [Using dataflows with on-premises data sources](using-dataflows-with-on-premises-data.md)
 

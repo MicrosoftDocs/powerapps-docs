@@ -222,7 +222,7 @@ More information: [Use FetchXML to construct a query](use-fetchxml-construct-que
 
 ### Using SQL
 
-More information: [Use SQL to query data (Preview)](cds-sql-query.md)
+More information: [Use SQL to query data (Preview)](dataverse-sql-query.md)
 
 ```sql
 SELECT api.customapiid,
@@ -386,7 +386,7 @@ The following represent questions you may have:
 
 A: While Custom API has an Execute Privilege Name (`ExecutePrivilegeName`) property, there is currently no supported way for you to create a new privilege just for this API. This is planned for a future release. In the meantime, there are two options:
 
-- You can use an existing [Privilege.Name](/powerapps/developer/common-data-service/reference/entities/privilege#BKMK_Name) value.
+- You can use an existing [Privilege.Name](/powerapps/developer/data-platform/reference/entities/privilege#BKMK_Name) value.
 - You can create a custom entity and use one of the privileges created for that entity. For example, create an entity named `new_myaction` and privileges for CRUD operations will be generated for it. For example `prvCreatenew_myaction`. You will need to include this custom entity with the solution that includes the Custom API.
 
 ### Q: Can I activate or deactivate Custom API records?

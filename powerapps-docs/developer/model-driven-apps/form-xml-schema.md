@@ -1877,6 +1877,6 @@ The following is the schema definition for form customizations for model-driven 
   
 ### See also  
  [Customize entity forms](customize-entity-forms.md)   
- [Create, install, and update a managed solution](../common-data-service/create-install-update-managed-solution.md)<br/>
- [Create, export, or import an Unmanaged solution](../common-data-service/create-export-import-unmanaged-solution.md)<br/>
+ [Create, install, and update a managed solution](../data-platform/create-install-update-managed-solution.md)<br/>
+ [Create, export, or import an Unmanaged solution](../data-platform/create-export-import-unmanaged-solution.md)<br/>
  [Form XML schema](form-xml-schema.md)

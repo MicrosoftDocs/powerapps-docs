@@ -27,7 +27,7 @@ landingContent:
           - text: Developer overview
             url: overview.md
           - text: "Developers: Get started"
-            url: get-started-CDS-developers.md
+            url: get-started-developers.md
        - linkListType: learn
          links:
           - text: Introduction to Dataverse for developers
@@ -40,15 +40,15 @@ landingContent:
        - linkListType: overview
          links:
           - text: Work with data using code
-            url: work-with-data-cds.md
+            url: work-with-data.md
           - text: Types and operations (Web API)
-            url: /powerapps/developer/common-data-service/webapi/web-api-types-operations
+            url: /powerapps/developer/data-platform/webapi/web-api-types-operations
           - text: Entity operations (Organization service)
-            url: /powerapps/developer/common-data-service/org-service/entity-operations
+            url: /powerapps/developer/data-platform/org-service/entity-operations
           - text: Use FetchXML to query data
-            url: /powerapps/developer/common-data-service/use-fetchxml-construct-query
+            url: /powerapps/developer/data-platform/use-fetchxml-construct-query
           - text: Use SQL to query data
-            url: /powerapps/developer/common-data-service/cds-sql-query
+            url: /powerapps/developer/data-platform/dataverse-sql-query
 
   # Card
   - title: Integrate external data
@@ -56,15 +56,15 @@ landingContent:
       - linkListType: overview
         links:
           - text: Azure integration
-            url: /powerapps/developer/common-data-service/azure-integration
+            url: /powerapps/developer/data-platform/azure-integration
           - text: Webhooks
-            url: /powerapps/developer/common-data-service/use-webhooks
+            url: /powerapps/developer/data-platform/use-webhooks
           - text: Synchronize data with external system
-            url: /powerapps/developer/common-data-service/data-synchronization
+            url: /powerapps/developer/data-platform/data-synchronization
           - text: Import data
-            url: /powerapps/developer/common-data-service/import-data
+            url: /powerapps/developer/data-platform/import-data
           - text: Data Export Service
-            url: /powerapps/developer/common-data-service/data-export-service
+            url: /powerapps/developer/data-platform/data-export-service
       
 
   # Card
@@ -73,17 +73,17 @@ landingContent:
       - linkListType: concept
         links:
           - text: Event framework
-            url: /powerapps/developer/common-data-service/event-framework
+            url: /powerapps/developer/data-platform/event-framework
       - linkListType: overview
         links:
           - text: Plug-ins
-            url: /powerapps/developer/common-data-service/plug-ins
+            url: /powerapps/developer/data-platform/plug-ins
           - text: Workflow extensions
-            url: /powerapps/developer/common-data-service/workflow/workflow-extensions
+            url: /powerapps/developer/data-platform/workflow/workflow-extensions
       - linkListType: tutorial
         links:
           - text: Write and register a plug-in
-            url: /powerapps/developer/common-data-service/tutorial-write-plug-in
+            url: /powerapps/developer/data-platform/tutorial-write-plug-in
   
   # Card
   - title: Deploy and publish
@@ -91,7 +91,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Solution concepts
-            url: /powerapps/developer/common-data-service/introduction-solutions
+            url: /powerapps/developer/data-platform/introduction-solutions
           - text: ALM for developers
             url: https://docs.microsoft.com/power-platform/alm/alm-for-developers
       - linkListType: sample
@@ -101,7 +101,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Publish your app on AppSource
-            url: /powerapps/developer/common-data-service/publish-app-appsource          
+            url: /powerapps/developer/data-platform/publish-app-appsource          
 
     # Card
   - title: Create client applications
@@ -113,7 +113,7 @@ landingContent:
           - text: Build web applications using Server-to-Server (S2S) authentication
             url: build-web-applications-server-server-s2s-authentication.md
           - text: Use OAuth with CORS to connect an SPA
-            url: /powerapps/developer/common-data-service/oauth-cross-origin-resource-sharing-connect-single-page-application
+            url: /powerapps/developer/data-platform/oauth-cross-origin-resource-sharing-connect-single-page-application
           - text: Build Windows client applications using the XRM tools
             url: xrm-tooling/build-windows-client-applications-xrm-tools.md
        - linkListType: tutorial
@@ -127,13 +127,13 @@ landingContent:
       - linkListType: overview
         links:
           - text: View the developer resources page
-            url: /powerapps/developer/common-data-service/view-download-developer-resources
+            url: /powerapps/developer/data-platform/view-download-developer-resources
           - text: Developer tools
-            url: /powerapps/developer/common-data-service/developer-tools
+            url: /powerapps/developer/data-platform/developer-tools
           - text: Microsoft Power Apps CLI
-            url: /powerapps/developer/common-data-service/powerapps-cli
+            url: /powerapps/developer/data-platform/powerapps-cli
           - text: Community tools
-            url: /powerapps/developer/common-data-service/community-tools
+            url: /powerapps/developer/data-platform/community-tools
   
   # Card
   - title: Entity and API reference

@@ -16,7 +16,7 @@ search.app:
 # ActivityParty entity reference
 
 > [!NOTE]
-> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro).
+> Effective Nov 2020, Common Data Service has been renamed to [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
 
 Person or group associated with an activity. An activity can have multiple activity parties.
 
@@ -25,7 +25,7 @@ Person or group associated with an activity. An activity can have multiple activ
 
 |Message|Web API Operation|SDK Assembly|
 |-|-|-|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activityparties<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activityparties<br />See [Query Data](/powerapps/developer/data-platform/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 
 ## Entity properties
 

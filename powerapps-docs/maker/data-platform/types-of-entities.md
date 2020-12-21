@@ -58,13 +58,13 @@ The following table lists activity tables that are available in a default Datave
   
 |Name|Description|Display in activity menus|Reference|
 |----------|-----------------|----------------|---------------|  
-|**Appointment**|Commitment representing a time interval with start/end times and duration.|Yes|[Appointment](/powerapps/developer/common-data-service/reference/tables/appointment)|
-|**Email**|Activity that is delivered using email protocols.|Yes|[Email](/powerapps/developer/common-data-service/reference/tables/email)|
-|**Fax**|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|Yes|[Fax](/powerapps/developer/common-data-service/reference/tables/fax)|
-|**Letter**|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|Yes|[Letter](/powerapps/developer/common-data-service/reference/tables/letter)|
-|**Phone Call**|Activity to track a telephone call.|Yes|[PhoneCall](/powerapps/developer/common-data-service/reference/tables/phonecall)|
-|**Recurring Appointment**|The master appointment of a recurring appointment series.|Yes|[RecurringAppointmentMaster](/powerapps/developer/common-data-service/reference/tables/recurringappointmentmaster)|
-|**Task**|Generic activity representing work needed to be done.|Yes|[Task](/powerapps/developer/common-data-service/reference/tables/task)|
+|**Appointment**|Commitment representing a time interval with start/end times and duration.|Yes|[Appointment](/powerapps/developer/data-platform/reference/tables/appointment)|
+|**Email**|Activity that is delivered using email protocols.|Yes|[Email](/powerapps/developer/data-platform/reference/tables/email)|
+|**Fax**|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|Yes|[Fax](/powerapps/developer/data-platform/reference/tables/fax)|
+|**Letter**|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|Yes|[Letter](/powerapps/developer/data-platform/reference/tables/letter)|
+|**Phone Call**|Activity to track a telephone call.|Yes|[PhoneCall](/powerapps/developer/data-platform/reference/tables/phonecall)|
+|**Recurring Appointment**|The master appointment of a recurring appointment series.|Yes|[RecurringAppointmentMaster](/powerapps/developer/data-platform/reference/tables/recurringappointmentmaster)|
+|**Task**|Generic activity representing work needed to be done.|Yes|[Task](/powerapps/developer/data-platform/reference/tables/task)|
   
 You can create new custom activity tables. For example you might create a custom activity table to row instant message communications. Creating an activity table is different from creating a non-activity table because you don’t specify a primary column. All activity tables have a **Primary Field** set to **Subject** and other common columns that are defined by the Activity table. This allows all types of activities to be shown in a view where just the common columns are displayed.  
 

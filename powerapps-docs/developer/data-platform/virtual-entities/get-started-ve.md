@@ -26,7 +26,7 @@ Virtual entities enable the integration of data residing in external systems by 
 Virtual entities replace previous client-side and server-side approaches to integrating external data, which required customized code and suffered from numerous limitations, including imperfect integration, data duplication, or extensive commitment of development resources.  In addition, for administrators and system customizers, the use of virtual entities greatly simplifies administration and configuration.
 
 > [!NOTE]
-> This section discusses the implications of virtual entities for developers. For more information about managing virtual entities from the user interface, see [Create and edit virtual entities that contain data from an external data source](../../../maker/common-data-service/create-edit-virtual-entities.md).
+> This section discusses the implications of virtual entities for developers. For more information about managing virtual entities from the user interface, see [Create and edit virtual entities that contain data from an external data source](../../../maker/data-platform/create-edit-virtual-entities.md).
 
 ## Virtual entities, data providers and data sources
 

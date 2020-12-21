@@ -37,14 +37,14 @@ Some examples of model-driven apps available from Microsoft are [Dynamics 365 Cu
 
 Because Dataverse includes many capabilities for people to configure custom business logic without writing code, the most common scenarios for developers to contribute involve filling spaces in-between where existing features may not provide functionality you need to meet a requirement. Fortunately, Dataverse provides many points for developers to extend the common functionality using code.
 
-For a developer who will contribute to projects it is important that they understand what can be done without writing code. You should familiarize yourself with these capabilities. More information: [What is Dataverse?](../../maker/common-data-service/data-platform-intro.md) 
+For a developer who will contribute to projects it is important that they understand what can be done without writing code. You should familiarize yourself with these capabilities. More information: [What is Dataverse?](../../maker/data-platform/data-platform-intro.md) 
 
 ## Content for on-premises deployments
 
 Dataverse is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing deployments (IFD). For information related to these options, see the [Developer Guide for Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/developer/overview).
 
 > [!div class="nextstepaction"]
-> [Get started](get-started-cds-developers.md)
+> [Get started](get-started-developers.md)
 
 ### See also
 

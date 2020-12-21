@@ -44,8 +44,8 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 > - In model-driven apps, select **New Column** from the form editor and create a *Lookup* column. <br />More information: [Add a column to a form](../model-driven-apps/add-field-form.md)
 > - Create a new Lookup column for the related table. <br />More information: [Create and edit columns](create-edit-fields.md)
 > - Import a solution that contains the definition of the table relationship. <br />More information: [Import, update, and export solutions](import-update-export-solutions.md)
-> - Use Power Query to create new tables and fill them with data. <br />More information: [Add data to a table in Dataverse by using Power Query](data-platform-cds-newentity-pq.md).
-> - A developer can use [Metadata services](../../developer/common-data-service/metadata-services.md) to write a program to create and update table relationships. <br />More information: [Customize table relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-table-relationship-metadata)
+> - Use Power Query to create new tables and fill them with data. <br />More information: [Add data to a table in Dataverse by using Power Query](add-data-power-query.md).
+> - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to create and update table relationships. <br />More information: [Customize table relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-table-relationship-metadata)
 
 Information in this topic will help you choose which designer you can use. 
 

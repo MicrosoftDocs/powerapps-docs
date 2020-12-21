@@ -52,7 +52,7 @@ A solution can contain entity metadata and other customized components. Importin
 
 ### From a data source using Power Query
 
-You can create new entities and fill them with data using Power Query. More information: [Add data to an entity in Dataverse by using Power Query](../../maker/common-data-service/data-platform-cds-newentity-pq.md)
+You can create new entities and fill them with data using Power Query. More information: [Add data to an entity in Dataverse by using Power Query](../../maker/data-platform/add-data-power-query.md)
 
 ### Use metadata services
 

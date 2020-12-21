@@ -24,7 +24,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Whenever possible, you should first consider applying one of the several declarative process options to define or apply business logic. More information: [Apply business logic in Microsoft Dataverse](../../maker/common-data-service/cds-processes.md)
+Whenever possible, you should first consider applying one of the several declarative process options to define or apply business logic. More information: [Apply business logic in Microsoft Dataverse](../../maker/data-platform/processes.md)
 
 When a declarative process doesn’t meet a requirement, as a developer you have several options. This topic will introduce common options to write code.
 

@@ -241,7 +241,7 @@ If Solution Checker exports a solution that contains no components to analyze, i
 
 The primary scenario for failure to export a large solution from the Dataverse environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check will not complete successfully. If solution checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
 
-The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, see guidance to [Optimize custom assembly development](../../developer/common-data-service/best-practices/business-logic/optimize-assembly-development.md).
+The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, see guidance to [Optimize custom assembly development](../../developer/data-platform/best-practices/business-logic/optimize-assembly-development.md).
 
 > [!IMPORTANT]
 > To minimize false positives, ensure you add dependent customizations. When you create a solution and add these components, include the following:
@@ -273,6 +273,6 @@ The solution checker will list the number of the errors found in the app, *inclu
 
 ## See also
 
-[Best practices and guidance for the Dataverse](../../developer/common-data-service/best-practices/index.md)
+[Best practices and guidance for the Dataverse](../../developer/data-platform/best-practices/index.md)
 
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)

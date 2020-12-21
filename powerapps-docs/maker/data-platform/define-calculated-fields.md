@@ -52,7 +52,7 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 - **Follow Up By**: Follow up on an activity by a specified number of days based on priority  
   
 > [!IMPORTANT]
->  To create a calculated column you must have the Write privilege on the [Column Security Profile table](/powerapps/developer/common-data-service/reference/tables/columnsecurityprofile). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Column level security to control access](/dynamics365/customer-engagement/admin/column-level-security).  
+>  To create a calculated column you must have the Write privilege on the [Column Security Profile table](/powerapps/developer/data-platform/reference/tables/columnsecurityprofile). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Column level security to control access](/dynamics365/customer-engagement/admin/column-level-security).  
 
 ## Create a calculated column
 
@@ -207,7 +207,7 @@ The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functi
  
 You should be aware of certain conditions and limitations when working with calculated columns:  
   
-- [Saved queries](/powerapps/developer/common-data-service/saved-queries), charts, and visualizations can have a maximum of 10 unique calculated columns.  
+- [Saved queries](/powerapps/developer/data-platform/saved-queries), charts, and visualizations can have a maximum of 10 unique calculated columns.  
 - The calculated column values are not displayed in the Outlook Client Offline mode in the tile views or on table main forms.  
 - A maximum number of chained calculated columns is 5.  
 - A calculated column can’t refer to itself or have cyclic chains.  

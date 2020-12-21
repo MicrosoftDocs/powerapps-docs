@@ -33,7 +33,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Sanity Check</td>
 <td><ul>
 <li>Check for app registration type: Free, Trial or Contact me.</li>
-<li>Verify the submitted <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/create-package-app-appsource">package</a> contains all the artifacts required to publish on AppSource.</li>
+<li>Verify the submitted <a href="https://docs.microsoft.com/powerapps/developer/data-platform/create-package-app-appsource">package</a> contains all the artifacts required to publish on AppSource.</li>
 <li>Download the end-to-end (E2E) functional document from <a href="https://partner.microsoft.com/dashboard">Partner Center</a> and validate if document is updated with functional scenarios and user/admin journey.</li>
 </ul>
 </td>

@@ -130,7 +130,7 @@ namespace PowerApps.Samples
                     // 3) Using filter operators and logical operators (e.g.: eq, ne, gt, and, or, etc…)
                     // 4) Set precedence using parenthesis (e.g.: ((criteria1) and (criteria2)) or (criteria3)
                     // For more info, see:
-                    //https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/query-data-web-api#filter-results
+                    //https://docs.microsoft.com/en-us/powerapps/developer/data-platform/webapi/query-data-web-api#filter-results
 
                     Console.WriteLine("-- Filter Criteria --");
                     //Filter 1: Using standard query functions to filter results.  In this operation, we
@@ -161,7 +161,7 @@ namespace PowerApps.Samples
 
                     //Filter 3: Using operators. Building on the previous operation, we further limit
                     //the results by the contact's income. For more info on standard filter operators,
-                    //https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/query-data-web-api#filter-results
+                    //https://docs.microsoft.com/powerapps/developer/data-platform/webapi/query-data-web-api#filter-results
 
                     JToken highIncomeContacts = svc.Get("contacts?" +
                         "$select=fullname,jobtitle,annualincome&" +
@@ -212,7 +212,7 @@ namespace PowerApps.Samples
                     //Parameterized aliases can be used as parameters in a query. These parameters can be used
                     //in $filter and $orderby options. Using the previous operation as basis, parameterizing the
                     //query will give us the same results. For more info, see:
-                    //https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/use-web-api-functions#passing-parameters-to-a-function
+                    //https://docs.microsoft.com/powerapps/developer/data-platform/webapi/use-web-api-functions#passing-parameters-to-a-function
 
                     Console.WriteLine("\n-- Parameterized Aliases --");
 
@@ -239,7 +239,7 @@ namespace PowerApps.Samples
                     //To limit records returned, use the $top query option.  Specifying a limit number for $top
                     //returns at most that number of results per request. Extra results are ignored.
                     //For more information, see:
-                    // https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/query-data-web-api#use-top-query-option
+                    // https://docs.microsoft.com/powerapps/developer/data-platform/webapi/query-data-web-api#use-top-query-option
                     Console.WriteLine("\n-- Top Results --");
 
                     JToken topFive = svc.Get("contacts?" +
@@ -390,7 +390,7 @@ namespace PowerApps.Samples
 
                     //Use FetchXML to query for all contacts whose fullname contains '(sample)'.
                     //Note: XML string must be URI encoded. For more information, see:
-                    //https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/retrieve-and-execute-predefined-queries#use-custom-fetchxml
+                    //https://docs.microsoft.com/powerapps/developer/data-platform/webapi/retrieve-and-execute-predefined-queries#use-custom-fetchxml
                     Console.WriteLine("\n-- FetchXML -- ");
                     string fetchXmlQuery =
                         "<fetch mapping='logical' output-format='xml-platform' version='1.0' distinct='false'>" +
@@ -419,7 +419,7 @@ namespace PowerApps.Samples
                     //  1) Saved query (system view)
                     //  2) User query (saved view)
                     //For more info, see:
-                    //https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/retrieve-and-execute-predefined-queries#predefined-queries
+                    //https://docs.microsoft.com/powerapps/developer/data-platform/webapi/retrieve-and-execute-predefined-queries#predefined-queries
 
                     //1) Saved Query - retrieve "Active Accounts", run it, then display the results.
                     Console.WriteLine("\n-- Saved Query -- ");
@@ -436,7 +436,7 @@ namespace PowerApps.Samples
 
                     //2) Create a user query, then retrieve and execute it to display its results.
                     //For more info, see:
-                    //https://docs.microsoft.com/powerapps/developer/common-data-service/saved-queries
+                    //https://docs.microsoft.com/powerapps/developer/data-platform/saved-queries
                     Console.WriteLine("\n-- User Query -- ");
                     var userQuery = new JObject
                     {

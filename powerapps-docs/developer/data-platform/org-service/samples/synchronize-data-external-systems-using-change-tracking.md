@@ -23,7 +23,7 @@ search.app:
 
 This sample code shows how to retrieve changes from an entity and synchronize data with external systems by using the `RetrieveEntityChanges` message with the [RetrieveEntityChangesRequest](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesrequest) and [RetrieveEntityChangesResponse](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.retrieveentitychangesresponse) classes. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Changetracking).
 
-For more information about the feature that this sample demonstrates, see [Use change tracking to synchronize data with external systems](https://docs.microsoft.com/powerapps/developer/common-data-service/use-change-tracking-synchronize-data-external-systems).
+For more information about the feature that this sample demonstrates, see [Use change tracking to synchronize data with external systems](https://docs.microsoft.com/powerapps/developer/data-platform/use-change-tracking-synchronize-data-external-systems).
 <!-- The link above won't work until the topic is published -->
 
 ## How to run this sample

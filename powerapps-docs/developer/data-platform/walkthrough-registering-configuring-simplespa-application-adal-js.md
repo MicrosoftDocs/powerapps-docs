@@ -371,7 +371,7 @@ Finally, you can click on **Logout** button to logout.
 If you don't get the results you expect, double-check the values you set while registering the application and configuring the `SimpleSPA.html` code.  
   
 ## See also  
- [Create client applications](connect-cds.md)<br />
+ [Create client applications](connect-dataverse.md)<br />
  [Tutorial: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md) <br />
  [Build web applications using Server to Server(S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
  [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application to Dataverse](oauth-cross-origin-resource-sharing-connect-single-page-application.md)

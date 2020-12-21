@@ -235,7 +235,7 @@ Update the file to include a new `CDSWebAPI` section that includes the root of t
     // Create an named definition of an HttpClient that can be created in a component page
     builder.Services.AddHttpClient("CDSClient", client =>
     {
-        // See https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors
+        // See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors
         client.BaseAddress = new Uri($"{resourceUrl}/api/data/{version}/");
         client.Timeout = TimeSpan.FromSeconds(timeoutSeconds);
         client.DefaultRequestHeaders.Add("OData-Version", "4.0");
@@ -449,7 +449,7 @@ This is a new page that will display the account information.
         }
 
         //Contains data from the Web API
-        //See https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors#parse-errors-from-the-response
+        //See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors#parse-errors-from-the-response
         public class ErrorDetail
         {
             public string code { get; set; }

@@ -25,7 +25,7 @@ Was Mike Carter's
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/configure-data-import 
 
 Child topic of 
-powerapps-docs/developer/common-data-service/import-data.md
+powerapps-docs/developer/data-platform/import-data.md
 -->
 
 The configuration information that is required for importing data is contained in the data import (`Import`) entity and the import source file (`ImportFile`) entity.  

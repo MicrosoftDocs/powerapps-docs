@@ -105,7 +105,7 @@ section, you get a tour of how dataflows can be used in an organization.
 
 ### Load data to Dataverse
 Dataflows can be used to populate tables in the [Common Data
-Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
+Service](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro)
 that are then used in Power Apps applications. With a few clicks, you can
 integrate data from online and on-premises sources data sources.
 

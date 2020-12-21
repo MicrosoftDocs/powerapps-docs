@@ -27,11 +27,11 @@ landingContent:
           - text: What is Dataverse?
             url: data-platform-intro.md
           - text: Why choose Dataverse
-            url: why-cds-overview.md
+            url: why-dataverse-overview.md
        - linkListType: learn
          links:
           - text: Introduction to Dataverse
-            url: https://docs.microsoft.com/learn/modules/introduction-common-data-service/
+            url: https://docs.microsoft.com/learn/modules/introduction-data-platform/
 
   # Card
   - title: Define data
@@ -77,7 +77,7 @@ landingContent:
           - text: Actions
             url: actions.md
           - text: More >
-            url: cds-processes.md
+            url: processes.md
 
   # Card
   - title: Work with dataflows
@@ -99,7 +99,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Use Power BI 
-            url: use-powerbi-with-cds.md
+            url: use-powerbi-dataverse.md
           - text: Use SharePoint, OneNote, and OneDrive
             url: sharepoint-onedrive-onenote-intro.md
       - linkListType: how-to-guide
@@ -130,10 +130,10 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Work with data using code
-            url: ../../developer/common-data-service/work-with-data-cds.md
+            url: ../../developer/data-platform/work-with-data.md
           - text: Apply business logic using code
-            url: ../../developer/common-data-service/apply-business-logic-with-code.md      
+            url: ../../developer/data-platform/apply-business-logic-with-code.md      
           - text: Work with metadata using code
-            url: ../../developer/common-data-service/metadata-services.md
+            url: ../../developer/data-platform/metadata-services.md
           - text: More >
-            url: /powerapps/developer/common-data-service        
+            url: /powerapps/developer/data-platform/        

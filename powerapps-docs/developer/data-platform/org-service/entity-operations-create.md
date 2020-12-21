@@ -219,7 +219,7 @@ account["primarycontactid"] = new EntityReference("contact", "sample_username", 
 > Alternate keys are usually used only for data integration scenarios
 
 More information: 
-- [Define alternate keys to reference records](../../../maker/common-data-service/define-alternate-keys-reference-records.md)
+- [Define alternate keys to reference records](../../../maker/data-platform/define-alternate-keys-reference-records.md)
 - [Use an alternate key to create a record](../use-alternate-key-create-record.md)
 - [Work with alternate keys](../define-alternate-keys-entity.md)
 
@@ -235,7 +235,7 @@ When people create new records in the application they are usually created in th
 The values that will be copied over when a new record is created this way is controlled by configurations applied to the Microsoft Dataverse environment, so it can vary between environments. 
 
 More information: 
-- [Map entity fields](../../../maker/common-data-service/map-entity-fields.md)
+- [Map entity fields](../../../maker/data-platform/map-entity-fields.md)
 - [Customize entity and attribute mappings](../customize-entity-attribute-mappings.md)
 
 As a developer, you can use the <xref:Microsoft.Crm.Sdk.Messages.InitializeFromRequest> class to generate an entity with those default values already set.
