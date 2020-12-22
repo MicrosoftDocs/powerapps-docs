@@ -153,7 +153,7 @@ A web resource control configured to use a certain number of rows will have diff
  [Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)<br />
  [Data (XML) Web Resources](data-xml-web-resources.md)<br />
  [Style Sheet (CSS) Web Resources](css-web-resources.md)<br />
- [WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br />
+ [WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br />
  [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
  [Sample: Importing Files as Web Resources](sample-import-files-web-resources.md)<br />
  [Streamline web resource development using Fiddler AutoResponder](streamline-javascript-development-fiddler-autoresponder.md)

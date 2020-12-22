@@ -16,7 +16,7 @@ If you want to build skills and learn more about Power Apps, Power Automate, and
 * Learn to build business apps and workflows with the full functionality of Power Apps and Power Automate.
 * Connect to any data source by using our 100+ [out of the box connectors](./canvas-apps/connections-list.md) or by creating your own [custom connectors](./canvas-apps/register-custom-api.md).
 * Explore how you can use [the Dataverse](https://docs.microsoft.com/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
-* Export the solutions you create in your individual environment, and [publish them on Microsoft AppSource](../developer/common-data-service/publish-app-appsource.md) so your customers can test-drive them.
+* Export the solutions you create in your individual environment, and [publish them on Microsoft AppSource](../developer/data-platform/publish-app-appsource.md) so your customers can test-drive them.
 
 ## Who can sign up for the Power Apps Community Plan?
 Anyone with a [work or school account](signup-for-powerapps.md#faq) can sign up for the Power Apps Community Plan. But we especially recommend this plan if you:
@@ -80,7 +80,7 @@ You cannot apply add-ons to the quantities that we include. If you hit capacity 
 > The capacity of the individual environment, whether or not it's used, doesn't contribute to your company's overall quota.
 
 ## Publishing to Microsoft AppSource
-Do you have an app you would like to share with customers? We now support Power Apps solutions on [Microsoft AppSource](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Publish your app on AppSource](../developer/common-data-service/publish-app-appsource.md).
+Do you have an app you would like to share with customers? We now support Power Apps solutions on [Microsoft AppSource](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Publish your app on AppSource](../developer/data-platform/publish-app-appsource.md).
 
 ## Frequently Asked Questions
 

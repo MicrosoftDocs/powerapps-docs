@@ -124,7 +124,7 @@ When you add .glb files to the **Document Library**, they'll be converted to a b
 
 **To use Microsoft Dataverse**
 
-The [Note entity](/powerapps/developer/common-data-service/annotation-note-entity) in Dataverse converts any attached file to base64 in the **Document** field.
+The [Note entity](/powerapps/developer/data-platform/annotation-note-entity) in Dataverse converts any attached file to base64 in the **Document** field.
 
 ### Loading models as attachments or media content
 

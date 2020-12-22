@@ -22,13 +22,13 @@ These frequently asked questions (FAQ) can help you resolve issues that might oc
 
 ## What is an app module?
 
-The term *app module* has been used to describe model-driven apps, and *appmodule* is the name referenced in the Microsoft Dataverse and customer engagement apps schema. **Model-Driven App** is included in the display names for some of the tables referenced in Power Apps. For information about the `appmodule` table, go to [AppModule entity reference](../../developer/common-data-service/reference/entities/appmodule.md). For information about using the `appmodule` table API, go to [Create, manage, and publish model-driven apps using code](../../developer/model-driven-apps/create-manage-model-driven-apps-using-code.md).
+The term *app module* has been used to describe model-driven apps, and *appmodule* is the name referenced in the Microsoft Dataverse and customer engagement apps schema. **Model-Driven App** is included in the display names for some of the tables referenced in Power Apps. For information about the `appmodule` table, go to [AppModule entity reference](../../developer/data-platform/reference/entities/appmodule.md). For information about using the `appmodule` table API, go to [Create, manage, and publish model-driven apps using code](../../developer/model-driven-apps/create-manage-model-driven-apps-using-code.md).
 
 App modules, which are referred to as model-driven apps in Power Apps, are created and customized within a solution. Solutions are used for application lifecycle management, and you can use them to migrate customizations from one environment to another. It's beneficial to be familiar with the [solution layering](/power-platform/alm/solution-layers-alm) concepts.
 
 ## What's the best way to define and manage my model-driven app?
 
-We recommend that you create your app in a dedicated solution. By creating a solution for your app, you can maintain your other solutions without creating any dependencies with your app. Only make changes to that solution when you want to update your app&mdash;for example, when you add, change, or remove components from the app. More information: [Create a solution](../common-data-service/create-solution.md)
+We recommend that you create your app in a dedicated solution. By creating a solution for your app, you can maintain your other solutions without creating any dependencies with your app. Only make changes to that solution when you want to update your app&mdash;for example, when you add, change, or remove components from the app. More information: [Create a solution](../data-platform/create-solution.md)
 
 ## Why can't I create a model-driven app?
 
@@ -53,7 +53,7 @@ Additionally, you might be working with a restricted table. The following Dynami
 * Dynamics 365 Marketing
 * Dynamics 365 Project Service Automation
 
-Make sure you have the appropriate Dynamics 365 application license when working with these tables. More information: [Restricted tables](../common-data-service/data-platform-entity-licenses.md#restricted-tables)
+Make sure you have the appropriate Dynamics 365 application license when working with these tables. More information: [Restricted tables](../data-platform/data-platform-entity-licenses.md#restricted-tables)
 
 ## Why can't you see my model-driven app?
 
@@ -67,10 +67,10 @@ More information:
 
 Make sure you publish your app customizations. More information:
 
-* [Publish changes from Power Apps](../common-data-service/create-solution.md#publish-changes)
+* [Publish changes from Power Apps](../data-platform/create-solution.md#publish-changes)
 * [Publish your model-driven app using code](../../developer/model-driven-apps/create-manage-model-driven-apps-using-code.md#publish-your-model-driven-app)
 
-Also, verify your component changes in the active layer. You can use the solution layer feature in Power Apps to review solution layering for a component. More information: [View the solution layers for a component](../common-data-service/solution-layers.md#view-the-solution-layers-for-a-component)
+Also, verify your component changes in the active layer. You can use the solution layer feature in Power Apps to review solution layering for a component. More information: [View the solution layers for a component](../data-platform/solution-layers.md#view-the-solution-layers-for-a-component)
 
 ## How do I add more tables to my app?
 
@@ -82,11 +82,11 @@ You use security roles that contain the appropriate privileges and assign them t
 
 ## I'm a developer. Where do I get started?
 
-Go to [Supported Customizations for Dataverse](../../developer/common-data-service/supported-customizations.md).
+Go to [Supported Customizations for Dataverse](../../developer/data-platform/supported-customizations.md).
 
 ## Why don't I see all the views after importing a solution?
 
-A model-driven app change that was made by selecting **All** when selecting a component, such as a view, isn't reflected after importing an update to the app in the target environment. More information: [Newly added components don't appear in the app after importing an update to the app](../common-data-service/import-update-export-solutions.md#newly-added-components-dont-appear-in-the-app-after-importing-an-update-to-the-app)
+A model-driven app change that was made by selecting **All** when selecting a component, such as a view, isn't reflected after importing an update to the app in the target environment. More information: [Newly added components don't appear in the app after importing an update to the app](../data-platform/import-update-export-solutions.md#newly-added-components-dont-appear-in-the-app-after-importing-an-update-to-the-app)
 
 ## What is `solutionaction`?
 
@@ -96,7 +96,7 @@ More advanced users can review the solution's customization.xml file. When you i
 * Removed
 * Modified
 
-This value specifies the changes in the current layer with respect to the previous managed layer. For example, on solution import, `solutionAction="Removed"` will remove the component from the app. More information: [*Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form message during solution import](../common-data-service/import-update-export-solutions.md#microsoftcrmcrminvalidoperationexception-full-formxml-is-expected-to-create-a-form--message-during-solution-import)
+This value specifies the changes in the current layer with respect to the previous managed layer. For example, on solution import, `solutionAction="Removed"` will remove the component from the app. More information: [*Microsoft.Crm.CrmInvalidOperationException: full formXml is expected to create a form message during solution import](../data-platform/import-update-export-solutions.md#microsoftcrmcrminvalidoperationexception-full-formxml-is-expected-to-create-a-form--message-during-solution-import)
 
 ## How do I get help?
 

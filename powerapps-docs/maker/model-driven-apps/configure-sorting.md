@@ -49,4 +49,4 @@ To change the sort order in the view designer, see [Create a public view in Powe
 
 ## Next steps
 [Create or edit a view](create-edit-views.md)
-[Use FetchXML to query data](../../developer/common-data-service/use-fetchxml-construct-query.md)
+[Use FetchXML to query data](../../developer/data-platform/use-fetchxml-construct-query.md)

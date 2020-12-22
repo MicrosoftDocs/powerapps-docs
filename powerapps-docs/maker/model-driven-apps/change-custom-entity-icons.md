@@ -69,12 +69,12 @@ You must use solution explorer to set table icons.
   
 ## Community tools
 
-**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Power Apps. See the [Developer tools for Microsoft Dataverse](/powerapps/developer/common-data-service/developer-tools) topic for community developed tools.
+**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Power Apps. See the [Developer tools for Microsoft Dataverse](/powerapps/developer/data-platform/developer-tools) topic for community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ## Next steps  
-[Create a table](../common-data-service/create-edit-entities.md)<br />
-[Edit a table](../common-data-service/edit-entities.md)
+[Create a table](../data-platform/create-edit-entities.md)<br />
+[Edit a table](../data-platform/edit-entities.md)
