@@ -89,4 +89,4 @@ Located on the right-pane of the model-driven form designer, the property pane l
 [Add and configure a sub-grid component on a form](form-designer-add-configure-subgrid.md)  
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit columns](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../data-platform/create-edit-field-portal.md)  

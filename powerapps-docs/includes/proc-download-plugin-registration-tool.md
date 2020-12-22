@@ -1,1 +1,1 @@
-To get the Plug-in Registration Tool, see [Download tools from NuGet](../developer/common-data-service/download-tools-nuget.md).
+To get the Plug-in Registration Tool, see [Download tools from NuGet](../developer/data-platform/download-tools-nuget.md).

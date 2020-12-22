@@ -192,7 +192,7 @@ The following sample rich text editor configuration code sample data can be used
 
 ## Sample rich text editor configuration file
 
-The following sample sets several of the options in the rich text editor&mdash;such as the height, location, and default font type&mdash;and uses plug-in logic. For more information about plug-ins, see [Use plug-ins to extend business processes](../../developer/common-data-service/plug-ins.md).
+The following sample sets several of the options in the rich text editor&mdash;such as the height, location, and default font type&mdash;and uses plug-in logic. For more information about plug-ins, see [Use plug-ins to extend business processes](../../developer/data-platform/plug-ins.md).
 
 ```json
 {
@@ -359,4 +359,4 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
 
 ### See also
 
-[Create and edit columns for Microsoft Dataverse using Power Apps portal](../common-data-service/create-edit-field-portal.md)
+[Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)

@@ -42,7 +42,7 @@ To perform actions on an organization-owned visualization (`SavedQueryVisualizat
   > [!NOTE]
   >  Using the Dataverse Web Services, if you set an organization-owned visualization as default for an entity that already has another visualization set as default, both the visualizations are marked as default visualizations for the entity.  To set a visualization as a default visualization for an entity, make sure that no other visualization is set as the default visualization for the entity.  
   
-  For a list of supported messages on the organization-owned visualization entity, see [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md).
+  For a list of supported messages on the organization-owned visualization entity, see [SavedQueryVisualization Entity](../data-platform/reference/entities/savedqueryvisualization.md).
   
 ## Actions on user-owned visualizations  
 
@@ -61,7 +61,7 @@ To perform actions on an organization-owned visualization (`SavedQueryVisualizat
   
 - Collaborate with other users and teams on specific areas by sharing a user-owned visualization with them using <xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>, <xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>, and <xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>.  
   
-  For a list of supported messages on the user-owned visualization entity, see [UserQueryVisualization Entity](../common-data-service/reference/entities/userqueryvisualization.md).
+  For a list of supported messages on the user-owned visualization entity, see [UserQueryVisualization Entity](../data-platform/reference/entities/userqueryvisualization.md).
 
 ### See also  
 
@@ -72,5 +72,5 @@ To perform actions on an organization-owned visualization (`SavedQueryVisualizat
  [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart)  
  [Sample: Retrieve all Charts Attached to an Entity](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveChartsAttachedToEntity)   
  [Sample: Assign a Chart to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignChartToAnotherUser)   
- [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md)   
- [UserQueryVisualization Entity](../common-data-service/reference/entities/userqueryvisualization.md)
+ [SavedQueryVisualization Entity](../data-platform/reference/entities/savedqueryvisualization.md)   
+ [UserQueryVisualization Entity](../data-platform/reference/entities/userqueryvisualization.md)

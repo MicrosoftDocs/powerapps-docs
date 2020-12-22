@@ -58,7 +58,7 @@
     "fileMetadata": {
       "bilingual_type": {
         "**/*": "hover over",
-        "maker/common-data-service/**/*": "",
+        "maker/data-platform/**/*": "",
         "maker/model-driven-apps/**/*": "",
         "maker/TOC.yml": "",
         "maker/dev-community-plan.md": "",

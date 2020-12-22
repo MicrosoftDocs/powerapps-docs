@@ -117,4 +117,4 @@ You can set one type of custom control to appear in the web browser client while
 With editable grids, users can do rich in-line editing directly from views and sub-grids whether they’re using a web app, tablet, or phone. More information: [Make grids (lists) editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md) 
   
 ## Next steps  
-[Create and edit columns](../common-data-service/create-edit-fields.md)
+[Create and edit columns](../data-platform/create-edit-fields.md)

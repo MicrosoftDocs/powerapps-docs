@@ -49,7 +49,7 @@ You can use these functions only in [behavior formulas](../working-with-formulas
 
 ## Examples
 
-Consider a **Products** entity with the following relationships as seen in the [Power Apps portal's entity viewer](../../common-data-service/create-edit-entities-portal.md):
+Consider a **Products** entity with the following relationships as seen in the [Power Apps portal's entity viewer](../../data-platform/create-edit-entities-portal.md):
 
 | Relationship display name | Related entity | Relationship type |
 | --- | --- |
