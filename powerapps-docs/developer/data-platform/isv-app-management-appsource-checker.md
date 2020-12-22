@@ -1,16 +1,10 @@
 ---
 title: Introduction to the AppSource checker | Microsoft Docs
 description: Learn how to use AppSource checker
-services: ''
-suite: powerapps
-documentationcenter: na
 author: "nkrb" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: article
+ms.author: nabuthuk
 ms.reviewer: pehecke
 ms.workload: na
 ms.date: 04/07/2020
