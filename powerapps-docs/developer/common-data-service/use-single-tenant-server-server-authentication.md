@@ -92,7 +92,7 @@ To create an unlicensed "application user" in your environment, follow these ste
     > [!div class="mx-imgBorder"]
     > ![New app user](media/S2S-new-appuser1.png)
 
-6. If all goes well, after selecting **SAVE**, the **Application ID URI** and **Azure AD Object Id** fields will auto-populate with correct values.
+6. After selecting **SAVE**, if all goes well, the **Application ID URI** and **Azure AD Object Id** fields will auto-populate with correct values.
 
     > [!div class="mx-imgBorder"]
     > ![New app user](media/S2S-new-appuser.PNG)
