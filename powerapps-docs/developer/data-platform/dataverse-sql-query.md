@@ -97,7 +97,14 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 
 There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Data Export Service](https://docs.microsoft.com/powerapps/developer/data-platform/data-export-service) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data. More information: [Importing and exporting data](/powerapps/maker/data-platform/import-export-data)
 
-Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
+Dates returned in query results are in local time for the executing user. The corresponding time in Universal Time Coordinated (UTC) can also be retrieved from the corresponding column with a `utc` suffix, e.g.:
+
+```tsql
+select createdon, createdonutc
+from account
+```
+
+The UTC columns are not available from Power BI, but can be accessed from SSMS.
 
 > [!NOTE]
 > Until a service update planned for January 2021 has deployed, using date filters will be slow.
