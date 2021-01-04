@@ -1,5 +1,5 @@
 ---
-title: Power Apps pattern: Approval | Microsoft Docs
+title: "Power Apps pattern: Approval | Microsoft Docs"
 description: Learn how approval apps make it easier to get reviews and sign off on decisions.
 author: topness-msft
 ms.service: powerapps
