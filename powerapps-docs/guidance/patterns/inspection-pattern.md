@@ -13,7 +13,7 @@ ms.reviewer: kathyos
 
 # Pattern: Inspection
 
-![Collage of inspection app screenshots](media/inspection-collage.png "Collage of inspection app screenshots")
+<!--![Collage of inspection app screenshots](media/inspection-collage.png "Collage of inspection app screenshots")-->
 
 There are a variety of reasons why organizations need to perform inspections,
 and Microsoft Power Platform provides a no-code or low-code solution for enabling

@@ -1,5 +1,5 @@
 ---
-title: Project management pattern in Power Apps | Microsoft Docs
+title: Power Apps pattern: Project management | Microsoft Docs
 description: Learn how project management apps help you manage projects to ensure teams achieve their goals and meet success criteria as planned.
 author: Vasavib
 ms.service: powerapps
@@ -12,13 +12,13 @@ ms.reviewer: kathyos
 
 # Pattern: Project management
 
-![Collage of project management app screenshots](media/project-management-collage.jpg "Collage of project management app screenshots")
+<!--![Collage of project management app screenshots](media/project-management-collage.jpg "Collage of project management app screenshots")-->
 
 Organizations need a central place to manage multiple projects as they ensure
 various teams achieve their goals and meet success criteria as planned.
 
 Some common use cases for project management include managing new product
-ideas, creating project plans and identifying milestones, and team performance management.
+ideas, creating project plans and tracking milestones, and team performance management.
 
 Microsoft Power Platform provides a no-code, low-code solution for organizations to create
 easy-to-use solutions to manage projects throughout their lifecycle. This article provides
@@ -36,7 +36,7 @@ In a typical project management scenario, you:
 
 1. Plan your work to manage ideas, plans, tasks, and milestones.
 
-2. Track progress against the plan, notify stakeholders of project status, and escalate blockers if needed.<!--note from editor: Edit okay? I didn't understand this. -->
+2. Track progress against the plan, notify stakeholders of project status, and escalate blockers if needed.
 
 3. Review progress, monitor outcomes, and visualize key aspects of the progress of the project.
 
@@ -60,13 +60,7 @@ respective owners to sign off on each stage in the process. Moreover, the team
 wanted to empower anyone in the organization to report on issues via their
 mobile devices. One of the key problems they were facing was that the "traveler"
 document&mdash;a paper document that was used to track quality checks&mdash;was getting lost.
-<!--note from editor: Suggest deleting. This flowchart actually shows the process ~after~ it was digitized and automated. You could replicate the prose version of the pre-automation process from the blog post, but then you'd practically be duplicating the whole post.
 
-The following image shows the process that needed to be digitized and
-automated.
-
-![Flowchart of the sign-off process](media/CAPS-flowchart.png "Flowchart of the sign-off process")
--->
 Rebecca Sackett, a data analyst assistant, found Power Apps in her Office
 365 subscription and began experimenting with creating apps against SharePoint
 lists to replace manual processes. She built a Power Apps solution to digitize the

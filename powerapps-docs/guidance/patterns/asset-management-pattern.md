@@ -1,5 +1,5 @@
 ---
-title: Asset management pattern in Power Apps | Microsoft Docs
+title: Power Apps pattern: Asset management | Microsoft Docs
 description: See real-world examples of how customers have used Power Apps to find, reserve, and manage assets such as meeting rooms, vehicles, and gear along with asset checkout, reservations, booking, and assignment.
 author: kathyos
 ms.service: powerapps
@@ -12,16 +12,15 @@ ms.reviewer: kathyos
 ---
 # Pattern: Asset management
 
-![Collage of asset management app screenshots](media/asset-management-collage.jpg "Collage of asset management app screenshots")
+<!--![Collage of asset management app screenshots](media/asset-management-collage.jpg "Collage of asset management app screenshots")-->
 
 Power Apps provides a great platform for managing your company's physical
 assets.
 
 Whether you just want to know who currently has what gear, or you want to
 create a reservation system for limited resources such as workspace or vehicles,
-Power Apps can help you create tools that are easy for your employees to use and
-harness timely business intelligence to help you track, manage, and analyze patterns in
-resource use.<!--note from editor: Edit okay? It seemed that the "timely business intelligence..." phrase needed a verb in front of it.-->
+Power Apps can help you create tools that are easy for your employees to use and timely business intelligence to help you track, manage, and analyze patterns in
+resource use.
 
 Below are several examples of real-world use cases that showcase organizations
 who replaced paper and email-based systems with Power Apps solutions.
@@ -81,7 +80,7 @@ your workforce.
 
 ### Additional apps and templates
 
-- Available at create.powerapps.com:<!--note from editor: Please check the following links. I went to create.powerapps.com but couldn't figure out how to find these apps from there.-->
+- Available at create.powerapps.com:
 
   - [Asset Checkout (canvas app or model-driven app)](https://powerusers.microsoft.com/t5/Community-App-Samples/Asset-Checkout-Microsoft-sample/td-p/43221#)
 
@@ -98,7 +97,7 @@ your workforce.
 Sometimes it's not how much you have, but how you use it. Armanino—one of the 20
 largest independent accounting and business consulting firms in the United
 States—is caught between a traditional office model and the need for an
-agile workforce.<!--note from editor: Suggested; I don't think it's quite right to say someone has a "need" for a model.--> It uses office space for teamwork and client meetings in 16
+agile workforce. It uses office space for teamwork and client meetings in 16
 office locations in 15 major urban centers where it has bases, yet it also
 deploys specialized professionals wherever they're needed. The firm wanted to
 make sure office space is always available for its highly mobile workforce, but
@@ -107,9 +106,9 @@ avoid overspending on underutilized space.
 So Armanino created the Workspace Scheduler mobile app by using Power Apps. To do
 so, the firm worked with its own dedicated team of Microsoft Dynamics 365 experts—a
 longstanding member of the Microsoft AI Inner Circle program and a Gold
-Certified Partner.<!--note from editor: I removed the link to "Workplace Scheduler" because it threw a 500 error. Since you've already linked to the blog post, and now you're just further describing it, I don't think you want to supply any more links in here. Same goes for the link to the Power Apps marketing page; this is kind of deep in  the article to have a general link like that.-->
+Certified Partner.
 
-The mobile app gives every staff member fast, accurate information about what space is available and a reservation capability enhanced with Microsoft Outlook, Microsoft 365 Users<!--note from editor: According to Manuela, the connector name is still "Office 365 Users." Do you think it's important to make that distinction here, or can we sort of slide by it because these connectors are just being mentioned in passing?-->, and
+The mobile app gives every staff member fast, accurate information about what space is available and a reservation capability enhanced with Microsoft Outlook, Office 365 Users, and
 SQL Server connectors.
 
 ![Screenshot of Armanino Workplace Scheduler mobile app](media/armanino-mobile-app.png "Screenshot of Armanino Workplace Scheduler mobile app")
@@ -132,7 +131,7 @@ work together.
 Eneco met that challenge with Microsoft Office 365 cloud-based services, using
 Power Apps, Power Automate, and Power BI to develop the RoomFinder app that now connects
 people and ideas.
-<!--note from editor: Suggest adding an H4 like the following so you don't have just one H4.-->
+
 #### The challenge
 
 Although Eneco employees benefited from having everyone in the same office, it
@@ -141,7 +140,7 @@ Eneco employees were using default room booking functionality in Microsoft
 Exchange to book the official meeting rooms at the headquarters building, but
 there were also approximately 200 smaller rooms for which employees needed access
 on a daily basis. These included quiet rooms for one or two employees to
-use for concentration or collaboration<!--note from editor: Edits suggested. I didn't like "concentration rooms" had a bad -->, rooms for small meetings, and scrum rooms for project teams.
+use for concentration or collaboration, rooms for small meetings, and scrum rooms for project teams.
 
 Until recently, employees would search the 14 floors to find open meeting rooms
 and put their names on sheets of paper to reserve them. "It's a big building,"

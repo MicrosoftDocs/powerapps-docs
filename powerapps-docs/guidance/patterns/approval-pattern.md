@@ -1,5 +1,5 @@
 ---
-title: Approval pattern in Power Apps | Microsoft Docs
+title: Power Apps pattern: Approval | Microsoft Docs
 description: Learn how approval apps make it easier to get reviews and sign off on decisions.
 author: topness-msft
 ms.service: powerapps
@@ -35,7 +35,7 @@ In a typical approval scenario:
     international travel requires executive approval).
 
 2. An approver, or multiple approvers, evaluates the information and takes
-    action that does one of the following:<!--note from editor: Edit suggested, because "either" implies there are only two options. -->
+    action that does one of the following:
 
     - Advances the request to another approver.
 
@@ -62,7 +62,7 @@ just two weeks.
 When the form is submitted, Power Automate uses the Office 365 Users connector
 to step through the reporting structure to find the requester's appropriate
 approver in the management hierarchy. In certain conditions, for example
-international travel, the logic identifies the secondary approver who's needed to finalize the request.<!--note from editor: Suggested.-->
+international travel, the logic identifies the secondary approver who's needed to finalize the request.
 
 Approvers and managers get an email with highlights of the request and an
 attached PDF detailing the request from Microsoft Forms. The engineer used built-in
@@ -70,7 +70,7 @@ Word and OneDrive actions to populate a Word document and convert it to PDF.
 The requester and approvers get a summary email with the PDF attached, in
 addition to the approval notification over email and in the Microsoft Flow
 mobile app. Executive approvers have quickly taken to the ability to approve
-requests on their mobile devices.<!--note from editor: I took away "Josh" because you hadn't introduced him yet.-->
+requests on their mobile devices.
 
 ![Screenshot of a Power Automate flow for finding a manager to approve a travel request](media/toyota-travel-request-flow.png "Screenshot of a Power Automate flow for finding a manager to approve a travel request")
 
@@ -79,7 +79,7 @@ requests on their mobile devices.<!--note from editor: I took away "Josh" becaus
 [Read the whole story.](https://powerapps.microsoft.com/blog/tmobile/)
 
 For T-Mobile to be competitive and a leader in the telecommunications industry,
-it constantly runs a myriad of customer initiatives, such
+it constantly runs myriad customer initiatives, such
 as device promotions, service offers, and technical initiatives. The complex
 customer initiative process, from initial input to final approval, takes months
 to complete and involves anywhere from 5 to 15 employees at every stage.
@@ -121,7 +121,7 @@ canvas app custom approval screen or an adaptive card in Microsoft Teams.
 
 [Learn how to deploy this solution within your own
 Microsoft Power Platform environment.](https://aka.ms/BuildingAccessApp)
-<!--note from editor: Can you please obscure Phil Topness's name, or use another? He's in the Microsoft address list, so we can't use him.-->
+
 :::row:::
    :::column span="":::
       ![Screenshot of the Building Access app request screen](media/microsoft-building-app-request.png "Screenshot of the Building Access app request screen")
