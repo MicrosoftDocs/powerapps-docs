@@ -15,7 +15,7 @@ ms.reviewer: kathyos
 
 These real-world stories show how enterprise customers are using Microsoft Power Platform and the patterns that successful makers have used to bring these solutions to life.
 
-See also: [Pattern: Calculation](calculator-pattern.md) | [Pattern: Communication](communication-pattern.md) | [Pattern: Inspection](inspection-pattern.md)
+See also: [Pattern: Approval](approval-pattern.md) | [Pattern: Asset management](asset-management-pattern.md) | [Pattern: Calculation](calculator-pattern.md) | [Pattern: Communication](communication-pattern.md) | [Pattern: Inspection](inspection-pattern.md) | [Pattern: Project management](project-management-pattern.md)
 
 ## Event management
 

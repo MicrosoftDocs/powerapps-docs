@@ -12,7 +12,7 @@ ms.reviewer: kathyos
 
 # Pattern: Approval
 
-![Collage of approval app screenshots](media/approvals-collage.jpg "Collage of approval app screenshots")
+<!--![Collage of approval app screenshots](media/approvals-collage.jpg "Collage of approval app screenshots")-->
 
 Power Apps makers use the approval pattern to ensure that data, decisions,
 and documents are reviewed by a stakeholder or multiple stakeholders, either all at
