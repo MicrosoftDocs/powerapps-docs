@@ -8,13 +8,13 @@
       href: patterns/overview.md
     - name: Approval pattern
       href: patterns/approval-pattern.md
-    - name: Asset management / resource booking pattern
+    - name: Asset management/resource booking pattern
       href: patterns/asset-management-pattern.md  
-    - name: Calculation / transformation pattern
+    - name: Calculation/transformation pattern
       href: patterns/calculator-pattern.md
-    - name: Communication / announcement pattern
+    - name: Communication/announcement pattern
       href: patterns/communication-pattern.md
-    - name: Inspection / audit pattern
+    - name: Inspection/audit pattern
       href: patterns/inspection-pattern.md
     - name: Project management pattern
       href: patterns/project-management-pattern.md
