@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/31/2018
+ms.date: 12/03/2020
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -85,6 +85,27 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 
 > [!NOTE]
 > When performing a merge between two custom entities, DateTime values will not merge. The DateTime of the target record will remain unchanged.
+
+## Cascade notification
+
+You can use two Cascade Async Notification Helper messages to provide notification to a user or log when a cascading asynchronous job fails or succeeds. This is accomplished by writing and registering a custom plug-in that executes when those messages are processed and provides success or failure notification.
+
+The two notification messages are:
+
+- ``cds_cascadeAsyncFailureAPI`` <br/>This message is processed (executed) when an asynchronous cascade job is paused due to multiple failures. This can be used to inform users they need to review their dataset for issues with existing plug-ins, data issues, or workflow problems.
+- ``cds_cascadeAsyncSuccessAPI`` <br/>This message is processed (executed) when the asynchronous cascade job is successfully completed. This is helpful to let users know when longer running jobs are finished.
+
+The custom plug-in must be registered during the post-operation stage and must be set to asynchronous mode. The following figure shows an example plug-in registration using the Plug-in Registration tool.
+
+:::image type="content" source="media/plugin-cascade-notification.png" alt-text="Register a plug-in for cascade notification":::
+
+Some examples of the kind of notifications that your custom plug-in can provide is as follows:
+
+- On success, add an entry to a run-time log
+-	On failure, add an entry to a run-time log, and then send an email (or other communication) to the administrator indicating the date/time and nature of the failure
+- Display a message to the interactive user
+
+For more information about plug-ins see [Use plug-ins to extend business processes](plug-ins.md).
 
 ### See also
 
