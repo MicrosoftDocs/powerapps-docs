@@ -2,7 +2,7 @@
 title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft Docs"
 description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve data"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 01/04/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -162,6 +162,9 @@ A paging cookie must be requested as an annotation. Set the `odata.include-annot
 ### Use FetchXML within a Batch request
 
 The length of a URL in a `GET` request is limited. Including FetchXML as a parameter in the URL can reach this limit.  You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where this limit will not apply. More information:[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
+
+> [!NOTE]
+> Sending a `GET` request within a Batch allows for URLs up to 32768 characters in length. Much more than with a normal `GET` request, but it isn't unlimited.
 
 #### Example
 
