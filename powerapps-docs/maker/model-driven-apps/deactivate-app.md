@@ -2,8 +2,8 @@
 title: Hide a model-driven app  | MicrosoftDocs
 description: Find out how to hide a model-driven app from users with Power Apps
 Keywords: 
-author: alcerri
-ms.author: ansjan
+author: matp
+ms.author: ansja
 ms.reviewer: matp
 manager: kvivek
 ms.date: 01/05/2021
