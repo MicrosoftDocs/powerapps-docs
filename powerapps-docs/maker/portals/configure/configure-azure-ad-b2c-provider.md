@@ -76,7 +76,7 @@ Select **Next** to continue.
 
 ### Option 2. New Azure AD B2C tenant
 
-Select this option to create a new Azure AD B2C tenant for the selected Azure AD instance.<!--note from editor: Edit okay? Or should it be "selected Azure AD directory"? "Azure AD" must modify something.-->
+Select this option to create a new Azure AD B2C tenant.
 
 > [!NOTE]
 > Ensure that the account you use to sign in to Power Apps has been assigned at least the [Contributor role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) for the subscription or for a resource group within the subscription.
@@ -139,7 +139,7 @@ In this step, you configure the **Sign up and sign in** and **Password reset** u
 
 ![Configure user flows](media/authentication/b2c-user-flows.png "Configure user flows")
 
-- **New policy**: Select this option if you want to create a new policy, or if you want to change the name of the policy. This option creates the flow by using the *local account* identity provider with the email address.<!--note from editor: Edits okay? Here's a case where "using" is ambiguous ("using email address").-->
+- **New policy**: Select this option if you want to create a new policy. You can also change the default name of the policy. This option creates the flow by using the *local account* identity provider with the email address.
 - **Existing policy**: Select this option if you want to select an existing policy from the Azure AD B2C tenant.
 
 > [!NOTE]
