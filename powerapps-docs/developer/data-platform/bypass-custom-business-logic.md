@@ -21,15 +21,15 @@ There are times when you want to be able to perform data operations without havi
 
 For these kinds of situations, you have the option to disable custom business logic which would normally be applied. There are two requirements:
 
-1. You must send the requests using the `BypassCustomPluginExecution` option.
-1. The user sending the requests must have the `prvByPassPlugins` privilege. By default, only users with the system administrator security role have this privilege.
+- You must send the requests using the `BypassCustomPluginExecution` option.
+- The user sending the requests must have the `prvByPassPlugins` privilege. By default, only users with the system administrator security role have this privilege.
 
 ## What does this do?
 
 This solution targets the custom business logic that has been applied for your organization. When you send requests that bypass custom business logic, all plug-ins and workflows are disabled except:
 
-1. Plug-ins which are part of the core Dataverse system or part of a solution shipped by Microsoft.
-1. Workflows included in a solution where Microsoft is the publisher.
+- Plug-ins which are part of the core Dataverse system or part of a solution where Microsoft is the publisher.
+- Workflows included in a solution where Microsoft is the publisher.
 
 System plug-ins define the core behaviors for specific entities. Without these plug-ins you would encounter data inconsistencies that may not be easily fixed.
 
@@ -67,7 +67,30 @@ Accept: */*
 
 There are two ways to use this with the Organization Service.
 
-#### 1. You can set the value as an optional parameter with one of the Request classes
+#### You can set CrmServiceClient.BypassPluginExecution Property to true
+
+> [!NOTE]
+> There is a problem using this method at the time of this writing. It should be fixed soon.
+
+The following example sets the [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) when creating a new account record:
+
+```csharp
+var svc = new CrmServiceClient(conn);
+
+svc.BypassPluginExecution = true;
+
+var account = new Entity("account")
+{
+    Attributes = {
+        { "name", "Test Account" }
+    }
+};
+
+svc.Create(account);
+```
+Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to false.
+
+#### You can set the value as an optional parameter with one of the Request classes
 
 The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record:
 
@@ -89,33 +112,7 @@ createRequest.Parameters.Add("BypassCustomPluginExecution", true);
 
 svc.Execute(createRequest);
 ```
-
-#### 2. You can set [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) to true
-
-> [!NOTE]
-> There is a problem using this method at the time of this writing. It should be fixed soon.
-
-```csharp
-var svc = new CrmServiceClient(conn);
-
-svc.BypassPluginExecution = true;
-
-var account = new Entity("account")
-{
-    Attributes = {
-        { "name", "Test Account" }
-    }
-};
-
-var createRequest = new CreateRequest
-{
-    Target = account
-};
-
-svc.Execute(createRequest);
-```
-
-
+This optional parameter must be applied to each request individually. You cannot use this with the 7 other IOrganizationService Methods, such as Create, Update, Delete. You can only use the [Execute method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.execute) using one of the classes that are derived from the [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
 
 ## Frequently asked questions (FAQ)
 
