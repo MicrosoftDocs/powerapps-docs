@@ -43,11 +43,13 @@ In this article, we walk you through how to migrate data between Dataverse envir
 
     - The **target environment** is where the data is migrated to. 
 
-1. Ensure that the entities are already defined in the target environment. Ideally both environments should have the same entities defined with the same solution.
+1. Ensure that the tables are already defined in the target environment. Ideally both environments should have the same tables defined with the same solution.
 
 1. When importing relationships, multiple dataflows are required.
 
-    Entities that are one (parent/independent) to many (children/dependent) require separate dataflows. Configure the parent dataflow to run before any child entities, since the data in the parent needs to be loaded first to correctly map to the fields in the corresponding child entities.
+    Tables that are one (parent/independent) to many (children/dependent) require separate dataflows. Configure the parent dataflow to run before any child tables, since the data in the parent needs to be loaded first to correctly map to the columns in the corresponding child tables.
+    
+    Additionally, you must create an [alternate key](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) in the parent table before being given the option to set a lookup column on the child table. Without a key defined on a parent table, you will be unable to populate lookup columns on any child tables.   
 
 ## Step 2: Get the OData endpoint 
 
@@ -92,10 +94,10 @@ In the **target** environment, create a new dataflow with the OData connector.
     > [!div class="mx-imgBorder"]
     > ![Select OData source](media/select-odata-data-source.png "Select OData source")
 
-1. In the **Connection settings** dialog box, type the field values:
+1. In the **Connection settings** dialog box, type the column values:
 
     > [!div class="mx-imgBorder"]
-    > ![Confirm the field values are correct](./media/enter-odata-connector-parameters.png "Confirm the field values are correct")
+    > ![Confirm the field values are correct](./media/enter-odata-connector-parameters.png "Confirm the column values are correct")
 
 
     | Field | Description |
@@ -115,15 +117,15 @@ In the **target** environment, create a new dataflow with the OData connector.
 
 Use Power Query to select the tables and also transform data as per your requirement.
 
-First, select the entities that need to be transferred. You can browse all entities in the source environment and preview some of the data in each entity.
+First, select the tables that need to be transferred. You can browse all tables in the source environment and preview some of the data in each table.
 
 > [!div class="mx-imgBorder"]
 > ![Power query navigator](./media/edit-queries-for-selected-entities.png "Power query navigator")
 
-1. Select one or multiple entities as needed, and then select **Transform data**.
+1. Select one or multiple tables as needed, and then select **Transform data**.
 
     > [!NOTE]
-    > When importing relationships, remember that the parent entity dataflow needs to be imported before the child ones. The data for the child dataflow will require data to be in the parent entity for it to correctly map, otherwise it might throw an error.
+    > When importing relationships, remember that the parent table dataflow needs to be imported before the child ones. The data for the child dataflow will require data to be in the parent table for it to correctly map, otherwise it might throw an error.
  
 1. In the **Power Query - Edit queries** window, you can transform the query before import.
 
@@ -140,32 +142,30 @@ First, select the entities that need to be transferred. You can browse all entit
 
 This section describes how to define the target environment settings.
 
-### Step 5.1: Map entities 
+### Step 5.1: Map tables 
 
-For each entity chosen, select the behavior for importing that entity in these settings and then select **Next**.
+For each table chosen, select the behavior for importing that table in these settings and then select **Next**.
 
 > [!div class="mx-imgBorder"]
 > ![Map entities](./media/map-entities-to-target.png "Map entities")
 
-- **Load to existing entity (recommended)**
+- **Load to existing table (recommended)**
 
-    - The dataflow syncs data from the source environment's entity to the target environment, and the same entity schema is already defined in the target environment.
+    - The dataflow syncs data from the source environment's table to the target environment, and the same table schema is already defined in the target environment.
 
-    - Ideally, use the same solution in both target and source environments to make data transfer seamless. Another advantage to having a predefined entity is more control over which solution the entity is defined in and the prefix.
+    - Ideally, use the same solution in both target and source environments to make data transfer seamless. Another advantage to having a predefined table is more control over which solution the table is defined in and the prefix.
     
-    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups.
+    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups. To use this feature, you must first define an [alternate key](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) on the target/existing table so the dataflow can determine whether to update existing records or create new ones. 
     
-    - If the schema is identical in both source and target tables, you can select **Auto map** to quickly map the fields.
+    - If the schema is identical in both source and target tables, you can select **Auto map** to quickly map the columns.
 
-    - Requires a key configuration in the target environment (as the unique identifier fields are not available to modify).
+- **Load to new table (not recommended)**
 
-- **Load to new entity (not recommended)**
+    - Ideally there should be an table predefined in the target environment from the same solution import as the source environment. However, there are cases where this might not be feasible, so this is an option if there is no existing table to load to. 
 
-    - Ideally there should be an entity predefined in the target environment from the same solution import as the source environment. However, there are cases where this might not be feasible, so this is an option if there is no existing entity to load to. 
+    - It creates a new custom table in the target environment's default solution.
 
-    - It creates a new custom entity in the target environment's default solution.
-
-- There is an option to **Do not load**, but do not include entities in the dataflow that are not being loaded. You can select **Back** from this menu to return to the Power Query menu and remove the entities that are not needed.
+- There is an option to **Do not load**, but do not include tables in the dataflow that are not being loaded. You can select **Back** from this menu to return to the Power Query menu and remove the tables that are not needed.
 
 ### Step 5.2: Refresh settings
 
@@ -185,11 +185,11 @@ You can manually initiate a dataflow by selecting **(...)** in the dataflows lis
 
 ## Tips
 
-- Try out one entity first to walk through the steps, then build out all the dataflows.
+- Try out one table first to walk through the steps, then build out all the dataflows.
 
-- If there are more entities that contain larger amounts of data, consider configuring multiple separate dataflows for individual entities.
+- If there are more tables that contain larger amounts of data, consider configuring multiple separate dataflows for individual tables.
 
-- One-to-many relationships will require separate dataflows for each entity. Configure and run the parent (aka one, or independently) entity dataflow before the child entity.
+- One-to-many relationships will require separate dataflows for each table. Configure and run the parent (aka one, or independently) table dataflow before the child table.
 
 - If there are errors with the dataflow refresh, you can view the refresh history in the **(...)** menu in the dataflows list and download each refresh log.
 
