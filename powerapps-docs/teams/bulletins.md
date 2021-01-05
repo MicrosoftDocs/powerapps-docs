@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/17/2020
+ms.date: 01/07/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -36,6 +36,10 @@ The Bulletins app solution consists of two apps.
 
     - Central location for all company communication such as memos, broadcasts, and news.
     - Shows bulletins, FAQs, links, and contacts created using the **Manage bulletins** app.
+
+> [!NOTE]
+> - Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+> - Bulletins app is available in three different Teams themes: Default, Dark and High contrast. When you [change the theme in Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7), the app automatically updates to match the selected theme. More information: [Get the Teams theme using the Teams integration object](use-teams-integration-object.md#get-the-teams-theme)
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -237,11 +241,17 @@ To edit or delete a FAQ bulletin post:
 
 1. Select the FAQ that you want to edit or delete.
 
-    - To edit the FAQ, update the category, question, or answer. And then, select **Save**
+    - To edit the FAQ, update the category, question, or answer. And then, select **Save**.
 
-    - To delete the FAQ, select **Delete**
+    - To delete the FAQ:
 
-    ![Edit or delete FAQ](media/bulletins/edit-delete-faq.png "Edit or delete FAQ")
+        1. Select **Delete**.
+
+        ![Edit or delete FAQ](media/bulletins/edit-delete-faq.png "Edit or delete FAQ")
+
+        1. Select **I understand** checkbox.
+    
+        1. Select **Delete**.
 
 ### Manage links and contacts
 
@@ -277,9 +287,15 @@ To edit, or delete a link:
 
     - To edit link, update information, and select **Save.**
 
-    - To delete a link, select **Delete**.
+    - To delete the link:
 
-    ![Edit link](media/bulletins/edit-link.png "Edit link")
+        1. Select **Delete**.
+
+            ![Edit link](media/bulletins/edit-link.png "Edit link")
+
+        1. Select **I understand** checkbox.
+    
+        1. Select **Delete**.
 
 #### Add a contact
 
