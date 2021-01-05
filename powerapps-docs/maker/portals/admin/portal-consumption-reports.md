@@ -26,9 +26,7 @@ The individual reports contain data for a duration of 30 days preceding the date
 
 1. On the left pane, expand **Resources**.
 
-1. Select **Capacity**.<!--note from editor: The BAG UX leadership team wants us to start questioning the number of images we use. I think the following image is a good example of an image that isn't necessary. There's nothing complicated about the UI here, it can be (and has been, in many similar cases) fully described in text. If you want to keep it, please note that there's actually a minimum requirement of 40 characters for alt text. I can't think of 40 characters' worth of text here (maybe that's a good guideline for whether we include an image or not!).-->
-
-    ![Capacity](media/portal-consumption-reports/select-capacity.png "Capacity")
+1. Select **Capacity**.
 
 1. In the **Add-ons** section, select **Download reports**.
 
@@ -51,7 +49,7 @@ The individual reports contain data for a duration of 30 days preceding the date
     > [!TIP]
     > To quickly regenerate the report for the selected report type and target date, select **Regenerate report** in the notification.
 
-1. In the downloaded Excel workbook<!--note from editor: Edit okay? I wasn't sure where this happened.-->, select **Save**, and then select **Open**.
+1. Select **Save**, and then select **Open**.
 
 ## Analyze reports
 
@@ -69,7 +67,7 @@ The following table describes the columns in the downloaded report.
 | **EnvironmentId** | The ID of the Microsoft Power Platform environment. To check the ID of an environment: <ul><li> Go to [Power Apps](https://make.powerapps.com). </li><li> Select the environment from the environments list in the upper-right corner. </li> <li> Copy the environment ID from the browser's address bar. <br> For example, `https://make.powerapps.com/environments/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/home` is the ID of the environment. </li> </ul> |
 | **Consumption** | The total number of sign-ins or views, depending on the report you downloaded. You can compare the consumption number in the report for each environment by date with the configured maximum allowed numbers for sign-ins or views by using [Power Platform admin center - Manage add-ons](https://admin.powerplatform.microsoft.com/resources/capacity#add-ons). More information: [Microsoft Power Platform add-on capacity management](https://docs.microsoft.com/power-platform/admin/capacity-add-on) |
 | **PortalType** | The type of the portal: **Prod** for production or **Trial** for trial. |
-| **LicenseType** | The type of the license, **Capacity** in this case<!--note from editor: Edit okay? Or are there other types that need describing?-->. More information: [Licensing FAQ for Power Apps](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) and [Download the Power Apps Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
+| **LicenseType** | The type of the license: **Capacity**. More information: [Licensing FAQ for Power Apps](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) and [Download the Power Apps Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
 
 ### See also
 
