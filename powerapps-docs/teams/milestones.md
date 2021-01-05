@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/17/2020
+ms.date: 01/07/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -26,6 +26,10 @@ Benefits of using the Milestones app:
 - Assign work items to employees.
 - Classify work items by milestones.
 - Configure work item categories, priorities, and status options.
+
+> [!NOTE]
+> - Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+> - This app is available in three different Teams themes: Default, Dark and High contrast. When you [change the theme in Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7), the app automatically updates to match the selected theme. More information: [Get the Teams theme using the Teams integration object](use-teams-integration-object.md#get-the-teams-theme)
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -119,7 +123,7 @@ To create a new project:
 
     ![Add project members, and create project](media/milestones/project-members.png "Add project members, and create project")
 
-## Add theme to project
+## Add theme to your project
 
 Once your project is created, select the image button to select an existing image, choose a color, or upload a custom image as the project theme.
 
@@ -143,7 +147,7 @@ To add work items to a project:
 
     ![New work item](media/milestones/new-work-item.png "New work item")
 
-## Edit a project
+## Edit an existing project
 
 To edit project details:
 
@@ -159,7 +163,7 @@ To edit project details:
 
     ![Edit project](media/milestones/edit-project.png "Edit project")
 
-## Create category, priority, and status
+## Work with category, priority, and status
 
 You can change the options and color coding for options used for priority,
 status, and category.
@@ -168,17 +172,41 @@ status, and category.
 
 1. Select **Settings** (![Settings - icon](media/milestones/settings-icon.png "Settings - icon")).
 
-1. In the **Global settings** area, select the color for the option you want to change to select a new color
+1. In the **Global settings** area, select the color for the option you want to change to select a new color.
 
     ![Global settings](media/milestones/global-settings.png "Global settings")
 
-1. To rename a category, select the name of the category that you wish to change, and enter a new name.
+    - To rename a category, select the name of the category that you wish to change, and enter a new name.
 
-1. To add an additional option, select **Add**. And then, select the color, and enter the name.
+    - To add an additional option, select **Add**. And then, select the color, and enter the name.
 
-1. To delete an option, select the field, then select the **Delete**.
+    - To delete an option, select the field, then select the **Delete**.
+
+        1. Select **Delete**.
+
+        1. Select **I understand** checkbox.
+    
+        1. Select **Delete**.
 
 1. When finished, select **Save** to save your changes.
+
+## Delete an existing project
+
+To delete an existing project:
+
+1. Open **Milestones** app.
+
+1. Select **Settings** (![Settings - icon](media/milestones/settings-icon.png "Settings - icon")).
+
+1. Select the project that you want to delete from the list of projects on the left pane.
+
+1. Select **Delete project**.
+
+    ![Delete project](media/milestones/delete-project.png "Delete project")
+
+1. Select **I understand** checkbox.
+    
+1. Select **Delete**.
 
 ### See also
 
