@@ -94,6 +94,8 @@
     href: impersonate-another-user.md
   - name: Service protection API limits
     href: api-limits.md
+  - name: Bypass Custom Business logic
+    href: bypass-custom-business-logic.md
   - name: Best Practices
     href: best-practices/work-with-data/index.md
   - name: Add and remove sample data
