@@ -46,10 +46,76 @@ You can use this option with either the Web API or the Organization service.
 
 To apply this option using the Web API, pass `MSCRM.BypassCustomPluginExecution : true` as a header in the request.
 
+**Example request:**
+
+The following Web API request will create a new account record without custom business logic applied:
+
+```http
+POST https://yourorg.api.crm.dynamics.com/api/data/v9.1/accounts HTTP/1.1
+MSCRM.BypassCustomPluginExecution: true
+Authorization: Bearer [REDACTED]
+Content-Type: application/json
+Accept: */*
+
+{
+  "name":"Test Account"
+}
+```
+
 
 ### Using the Organization Service
 
-To apply this option using the Organization Service, set the [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) to true.
+There are two ways to use this with the Organization Service.
+
+#### 1. You can set the value as an optional parameter with one of the Request classes
+
+The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record:
+
+```csharp
+var svc = new CrmServiceClient(conn);
+
+var account = new Entity("account")
+{
+    Attributes = {
+        { "name", "Test Account" }
+    }
+};
+
+var createRequest = new CreateRequest
+{
+    Target = account
+};
+createRequest.Parameters.Add("BypassCustomPluginExecution", true);
+
+svc.Execute(createRequest);
+```
+
+#### 2. You can set [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) to true
+
+> [!NOTE]
+> There is a problem using this method at the time of this writing. It should be fixed soon.
+
+```csharp
+var svc = new CrmServiceClient(conn);
+
+svc.BypassPluginExecution = true;
+
+var account = new Entity("account")
+{
+    Attributes = {
+        { "name", "Test Account" }
+    }
+};
+
+var createRequest = new CreateRequest
+{
+    Target = account
+};
+
+svc.Execute(createRequest);
+```
+
+
 
 ## Frequently asked questions (FAQ)
 
@@ -61,8 +127,8 @@ No. If a plug-in or workflow in a Microsoft solution performs operations on othe
 
 No. Plug-ins cannot use the Web API, they must use the Organization Service. Specifically, they use the methods exposed by the [IOrganizationService Interface](org-service/iorganizationservice-interface.md). There is no way to set this option from within a plug-in.
 
-### Why was this only exposed for the CrmServiceClient class?
+## See also
 
-There are other older proxy classes that expose the IOrganizationService interface: [OrganizationServiceProxy Class](/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy?view=dynamics-general-ce-9) and [OrganizationWebProxyClient Class](/dotnet/api/microsoft.xrm.sdk.webserviceclient.organizationwebproxyclient?view=dynamics-general-ce-9). This option is only available for the [CrmServiceClient Class](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) because we recommend using this class rather than the older classes when creating client applications.
-
+[Web API: Compose HTTP requests and handle errors](webapi/compose-http-requests-handle-errors.md)<br />
+[Passing optional parameters with a request](org-service/use-messages.md#passing-optional-parameters-with-a-request)
 
