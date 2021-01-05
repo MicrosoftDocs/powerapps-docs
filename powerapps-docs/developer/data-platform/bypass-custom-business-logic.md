@@ -114,15 +114,17 @@ svc.Execute(createRequest);
 ```
 This optional parameter must be applied to each request individually. You cannot use this with the 7 other IOrganizationService Methods, such as Create, Update, Delete. You can only use the [Execute method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.execute) using one of the classes that are derived from the [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
 
+You can use this method for data operations you initiate in your plug-ins.
+
 ## Frequently asked questions (FAQ)
 
-### Does this bypass plug-ins for records created by Microsoft plug-ins?
+### Does this bypass plug-ins for data operations by Microsoft plug-ins?
 
 No. If a plug-in or workflow in a Microsoft solution performs operations on other records, the plug-ins for those operations are not bypassed. Only those plugins or workflows that apply to the specific first level operation will be bypassed.
 
 ### Can I use this option for data operations I perform within a plug-in?
 
-No. Plug-ins cannot use the Web API, they must use the Organization Service. Specifically, they use the methods exposed by the [IOrganizationService Interface](org-service/iorganizationservice-interface.md). There is no way to set this option from within a plug-in.
+Yes. Using the option for the Organization Service which uses the optional parameter on the class derived from [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
 
 ## See also
 
