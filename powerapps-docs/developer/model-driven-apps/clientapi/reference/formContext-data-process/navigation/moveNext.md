@@ -20,8 +20,6 @@ search.app:
 
 [!INCLUDE[./includes/moveNext-description.md](./includes/moveNext-description.md)]
 
-You can also move to a next stage in a different entity. 
-
 ## Syntax
 
 `formContext.data.process.moveNext(callbackFunction);`
