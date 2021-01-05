@@ -95,7 +95,9 @@ Note the following limitations when you add the form component control to a tabl
 
 - Forms with a business process flow aren’t supported.  If you have a form with a business process flow, you may encounter unexpected behavior.  We recommend that you do not use a form component with a form that uses a business process flow.
 
-- You can add a form component control on a form's tab. Adding additional form component controls on additional tabs on the same form isn't supported. Notice that the form component rendered will only display on the first tab if multiple tabs are included on the form.  
+- The form component control does not supported embedded form component controls, e.g. by adding a form component control to a form that is used by a form component control. 
+
+- The form component control will only display the first tab of the form it uses if multiple tabs are included in that form.  
 
 - The form that you use with a form component must be included in your app. More information: [Add components to your app](build-first-model-driven-app.md#add-components-to-your-app).
 
