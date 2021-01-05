@@ -1238,6 +1238,8 @@
       href: ./model-driven-apps/manage-app-properties.md
     - name: Specify properties for Unified Interface apps
       href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
+    - name: Hide an app
+      href: ./model-driven-apps/deactivate-app.md
     - name: Delete an app
       href: ./model-driven-apps/delete-model-driven-app.md
   - name: Advanced app making and customization
