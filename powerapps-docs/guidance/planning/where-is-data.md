@@ -60,7 +60,7 @@ data from another system to Dataverse or Azure Data Lake storage.
 Unlike a connector, it fetches data in a scheduled batch. Instead of just
 retrieving the data as-is from the data source, you can use Power Query
 Online to manipulate, cleanse, and transform data before you store it to the
-target storage. More information: [Self-service data prep with dataflows](../../maker/common-data-service/self-service-data-prep-with-dataflows.md)
+target storage. More information: [Self-service data prep with dataflows](../../maker/data-platform/self-service-data-prep-with-dataflows.md)
 
 The method you choose depends on your use cases and how data needs to be handled. The following table lists some items to use for comparison.
 

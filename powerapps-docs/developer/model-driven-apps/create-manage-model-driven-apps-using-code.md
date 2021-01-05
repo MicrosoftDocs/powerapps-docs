@@ -28,7 +28,7 @@ In addition to creating a model-driven app using the Power Apps app designer, yo
   
 Creating a model-driven app involves the following steps:
 
-1. Create an [AppModule Entity](../common-data-service/reference/entities/appmodule.md) instance to define your app and its properties.
+1. Create an [AppModule Entity](../data-platform/reference/entities/appmodule.md) instance to define your app and its properties.
 2. Add or remove components to your app such as entity, sitemap, and other components for your custom app using the <xref:Microsoft.Dynamics.CRM.AddAppComponents> and <xref:Microsoft.Dynamics.CRM.RemoveAppComponents> actions.
 3. Check your app for any required components thats missing by using the <xref:Microsoft.Dynamics.CRM.ValidateApp> function.
 4. Publish your app.
@@ -209,7 +209,7 @@ Accept: application/json
 
 To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your model-driven apps. Users assigned to the associated security roles and can see and use your model-driven apps in Dataverse. 
 
-Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../common-data-service/reference/entities/appmodule.md) entity to associate a model-driven app with a security role. The following request shows how to associate a model-driven app with a security role:
+Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../data-platform/reference/entities/appmodule.md) entity to associate a model-driven app with a security role. The following request shows how to associate a model-driven app with a security role:
 
 ```http
 POST [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)appmoduleroles_association/$ref HTTP/1.1

@@ -76,15 +76,15 @@ Use these topics to quickly get started with portals:
 
 ## Dataverse
 
-[Dataverse](common-data-service/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you’re a Dynamics 365 customer, your data is already in Dataverse.
+[Dataverse](data-platform/data-platform-intro.md) is the data platform that comes with Power Apps and allows you to store and model business data. It's the platform on which Dynamics 365 apps (such as Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation) are built. If you’re a Dynamics 365 customer, your data is already in Dataverse.
 
 Dataverse allows you to securely store and manage data within a set of standard and custom *tables*, and you can add columns to those tables when you need them.
 
 Getting started with Dataverse is easy. For example, you can start with these items:
 
-- [Create a custom table](common-data-service/data-platform-create-entity.md)
-- [Manage columns](common-data-service/data-platform-manage-fields.md)
-- [Create custom choices](common-data-service/custom-picklists.md)
+- [Create a custom table](data-platform/data-platform-create-entity.md)
+- [Manage columns](data-platform/data-platform-manage-fields.md)
+- [Create custom choices](data-platform/custom-picklists.md)
 - [Create a business rule](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
 ## Planning a Power Apps app or project

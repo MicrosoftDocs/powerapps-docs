@@ -1,0 +1,2577 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1.4",
+    "title": "(Deprecated) Online Management API for Microsoft Dataverse",
+    "description": "The REST API provides the ability to manage the Dataverse environments in an Office 365 tenant."
+  },
+  "host": "{ServiceUrl}",
+  "schemes": [
+    ""
+  ],
+  "paths": {
+    "/api/v1.2/Currencies": {
+      "get": {
+        "tags": [
+          "Currencies"
+        ],
+        "summary": "Retrieves currencies in a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetCurrencies",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of available currencies in a Dataverse environment.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Region"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/InstanceBackups": {
+      "get": {
+        "tags": [
+          "InstanceBackups"
+        ],
+        "summary": "Retrieves all backups of a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstanceBackups",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "instanceId",
+            "in": "query",
+            "description": "Instance ID for retrieving the backups.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of backups available for a Dataverse environment.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InstanceBackup"
+              }
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "InstanceBackups"
+        ],
+        "summary": "Backs up a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "BackupInstance",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "backupInfo",
+            "in": "body",
+            "description": "Object containing information about the backup.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewInstanceBackup"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Backup operation started.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the backup operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/InstanceBackups/{instanceId}/{restorePointId}": {
+      "get": {
+        "tags": [
+          "InstanceBackups"
+        ],
+        "summary": "Retrieves a Dataverse environment backup based on the restore point. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstanceBackup",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "instanceId",
+            "in": "path",
+            "description": "Id of the instance to retrieve the backup from.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "restorePointId",
+            "in": "path",
+            "description": "Restore point of an existing instance backup.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A Dataverse environment backup.",
+            "schema": {
+              "$ref": "#/definitions/InstanceBackup"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Instances": {
+      "get": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Retrieves all Dataverse environments in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstances",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Dataverse environments retrieved from your Office 365 tenant.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Instance"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/Instances/{id}": {
+      "get": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Retrieves a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstance",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of an instance to retrieve.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The retrieved Dataverse environment.",
+            "schema": {
+              "$ref": "#/definitions/Instance"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Instances/Provision": {
+      "put": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Provisions (creates) a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "ProvisionInstance",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "newInstance",
+            "in": "body",
+            "description": "Allowed state for the new environment.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewInstance"
+            }
+          },
+          {
+            "name": "validate",
+            "in": "query",
+            "description": "Indicates whether to validate or create an instance. Set True to validate; set False to create.",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "If validate was set, validation was successful. If validation was not set, the instance was provisioned without requiring an operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "operationId": "00000000-0000-0000-0000-000000000000",
+                  "status": "Succeeded",
+                  "errors": [],
+                  "information": [],
+                  "operationLocation": null,
+                  "resourceLocation": null,
+                  "context": {
+                    "items": {
+                      "instanceState": "Pending",
+                      "admin.InstanceId": "b12d586f-8ffc-4b0f-97f7-7fb89bcc3f26"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "202": {
+            "description": "Provision operation started.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "operationId": "accac4b5-2478-4fc7-b8b0-6b979e837bb1",
+                  "status": "NotStarted",
+                  "errors": [],
+                  "information": [],
+                  "operationLocation": null,
+                  "resourceLocation": null,
+                  "context": {
+                    "items": {
+                      "instanceState": "Pending",
+                      "admin.InstanceId": "e2a9c8b3-2ead-4a83-b8ad-d1587b6415de"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the provision operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "operationId": "00000000-0000-0000-0000-000000000000",
+                  "status": "FailedToCreate",
+                  "errors": [
+                    {
+                      "subject": "ProvisioningJobCreation",
+                      "description": "There was an error creating the provisioning job.",
+                      "code": null
+                    }
+                  ],
+                  "information": [],
+                  "operationLocation": null,
+                  "resourceLocation": null,
+                  "context": {
+                    "items": {
+                      "instanceState": "FailedProvisioning"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/Instances/{targetInstanceId}/Reset": {
+      "post": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Resets a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "ResetInstance",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "targetInstanceId",
+            "in": "path",
+            "description": "ID of the Dataverse environment that you want to reset.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "resetRequest",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ResetRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sandbox Operation completed",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "202": {
+            "description": "Reset Instance Operation Started",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the reset operation",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Instances/{targetInstanceId}/Restore": {
+      "post": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Restores a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "RestoreInstance",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "targetInstanceId",
+            "in": "path",
+            "description": "ID of the Dataverse environment that you want to restore.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "instanceRestorePoint",
+            "in": "body",
+            "description": "The restore point of an existing instance backup.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InstanceRestorePoint"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Restore Instance Operation Started.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the restore operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Instances/{id}/Users/{userObjectId}/ApplyUser": {
+      "post": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Force applies a user on a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "ApplyUser",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the Dataverse environment to force apply the user.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "userObjectId",
+            "in": "path",
+            "description": "UserObjectID of the user to force apply on the instance.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "The ApplyUser operation started.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the ApplyUser operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Instances/{id}/UpdateAdminMode": {
+      "post": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Updates the Admin Mode settings of a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "UpdateInstanceAdminMode",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the Dataverse environment to update the admin mode settings.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "adminModeSettings",
+            "in": "body",
+            "description": "The admin mode settings to update.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InstanceAdminModeSettings"
+            }
+          },
+          {
+            "name": "validate",
+            "in": "query",
+            "description": "Indicates whether to validate or update an instance. Set True to validate; set False to update.",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Update Instance Admin Mode Operation Executed.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or executing the update admin mode update operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Instances/{id}/ConfigureInstance": {
+      "post": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Updates instance settings for the specified Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "ConfigureInstance",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the instance to update the settings.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "settings",
+            "in": "body",
+            "description": "The instance settings to update.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ConfigureInstanceSettings"
+            }
+          },
+          {
+            "name": "validate",
+            "in": "query",
+            "description": "Indicates whether to validate or update an instance. Set True to validate; set False to update.",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Configure Instance Operation Executed",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or executing the configure instance operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Instances/{id}/Delete": {
+      "delete": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Deletes a Dataverse environment in your Office 365 tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "DeleteInstance",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the Dataverse environment to delete.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "validate",
+            "in": "query",
+            "description": "Indicates whether to validate or delete an instance. Set True to validate; set False to delete.",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "If validate was set, validation was executed.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "202": {
+            "description": "Delete Instance Operation Started.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the delete operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/InstanceTypeInfo": {
+      "get": {
+        "tags": [
+          "InstanceTypeInfo"
+        ],
+        "summary": "Retrieve information about all the environment types in Dataverse. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstanceTypesInfo",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of instance types information.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InstanceTypeInfo"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/InstanceTypeInfo/{type}": {
+      "get": {
+        "tags": [
+          "InstanceTypeInfo"
+        ],
+        "summary": "Retrieve information about a Dataverse environment type. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstanceTypeInfo",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "An instance type",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "None",
+              "Production",
+              "Sandbox",
+              "Support",
+              "Preview",
+              "Trial",
+              "Default",
+              "Developer"
+            ],
+            "x-ms-enum": {
+              "name": "InstanceType"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Instance Type Information",
+            "schema": {
+              "$ref": "#/definitions/InstanceTypeInfo"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Keys": {
+      "get": {
+        "tags": [
+          "Keys"
+        ],
+        "summary": "Retrieves available tenant protection (encryption) keys. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "operationId": "RetrieveAvailableTenantProtectionKeys",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of available tenant protection keys",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Key"
+              }
+            },
+            "examples": {
+              "application/json": [
+                [
+                  {
+                    "tenantId": "14af7e3d-7b14-4e5a-83e1-7d0ac773f4f7",
+                    "keyName": "exampleKey",
+                    "keyState": 3,
+                    "createdOn": "2019-04-30T00:00:00-03:00",
+                    "lockedOn": null
+                  }
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/Keys/RetrieveTenantKey": {
+      "get": {
+        "tags": [
+          "Keys"
+        ],
+        "summary": "Retrieves the current tenant protection (encryption) key. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "RetrieveTenantProtectionKey",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "The retrieved tenant protection key",
+            "schema": {
+              "$ref": "#/definitions/Key"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Keys/Import": {
+      "post": {
+        "tags": [
+          "Keys"
+        ],
+        "summary": "Imports tenant protection (encryption) key. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "ImportKey",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "importKeyData",
+            "in": "body",
+            "description": "The key data to import",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ImportKeyData"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Import Key Operation Succeeded",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "operationId": "00000000-0000-0000-0000-000000000000",
+                  "status": "Succeeded",
+                  "errors": [],
+                  "information": [],
+                  "operationLocation": null,
+                  "resourceLocation": null,
+                  "context": {
+                    "items": {
+                      "importKeyState": "Ready",
+                      "admin.InstanceId": "e746736c-32dd-49cd-a0e4-e80586b56a30"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "400": {
+            "description": "There was an issue when either validating or importing the key",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "operationId": "00000000-0000-0000-0000-000000000000",
+                  "status": "FailedToCreate",
+                  "errors": [
+                    {
+                      "subject": "ImportKey",
+                      "description": "There was an error validating or importing the key.",
+                      "code": null
+                    }
+                  ],
+                  "information": [],
+                  "operationLocation": null,
+                  "resourceLocation": null,
+                  "context": {
+                    "items": {
+                      "importeKeyState": "FailedImporting"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/Keys/Generate": {
+      "post": {
+        "tags": [
+          "Keys"
+        ],
+        "summary": "Generates tenant protection (encryption) key. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GenerateKey",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "generateKeyData",
+            "in": "body",
+            "description": "Set of values required for generating the tenant protection (encryption) key",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GenerateKeyData"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tenant protection key generated",
+            "schema": {
+              "format": "byte",
+              "type": "string"
+            },
+            "examples": {
+              "application/json": [
+                "Qnl0ZUFycmF5Q29udGVudEV4YW1wbGU="
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/Keys/{keyName}/SetTenantProtectionKey": {
+      "post": {
+        "tags": [
+          "Keys"
+        ],
+        "summary": "Sets the tenant protection (encryption) key. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "SetTenantProtectionKey",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "keyName",
+            "in": "path",
+            "description": "The name of the key being set",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Set Tenant Protection Key operation started",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue with either validating or setting the tenant protection key",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/Languages": {
+      "get": {
+        "tags": [
+          "Languages"
+        ],
+        "summary": "Retrieves languages supported by Dataverse instance. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetLanguages",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "releaseId",
+            "in": "query",
+            "description": "ID of the release of Dataverse.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of supported languages",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Language"
+              }
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Notifications/{tenantId}/{userObjectId}": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Retrieves notifications from the Notification service. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetAllNotifications",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "userObjectId",
+            "in": "path",
+            "description": "The userObjectId, which is the same as the adminId.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "tenantId",
+            "in": "path",
+            "description": "ID of the tenant.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "environments",
+            "in": "query",
+            "description": "IDs of the instances you want notifications for.",
+            "required": true,
+            "type": "array",
+            "items": {},
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Notifications",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserNotification"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/Notifications": {
+      "post": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Post user notifications to the Notification service. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "PostUserNotification",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "userNotification",
+            "in": "body",
+            "description": "The user notification to be posted.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserNotification"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "PostUserNotification Operation Started",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the PostUserNotification operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Operation/{id}": {
+      "get": {
+        "tags": [
+          "OperationStatus"
+        ],
+        "summary": "Retrieves status of an operation in your Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetOperationStatus",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the operation to get the status for.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OperationStatus",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/Operation": {
+      "get": {
+        "tags": [
+          "OperationStatus"
+        ],
+        "summary": "Retrieves operation status of a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetOperationStatusByQuery",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "query.operationProvider",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "query.instanceId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OperationStatus",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1.2/ServiceVersions": {
+      "get": {
+        "tags": [
+          "ServiceVersions"
+        ],
+        "summary": "Retrieves information about all the supported releases for Dataverse. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetServiceVersions",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Available Service Versions",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ServiceVersion"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/Templates": {
+      "get": {
+        "tags": [
+          "Templates"
+        ],
+        "summary": "Retrieves templates supported for provisioning a Dataverse environment. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetTemplates",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of available templates",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Template"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/TenantApplicationIdentities": {
+      "get": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "summary": "Retrieves all Tenant Application Identities for a tenant. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api.#service-url)",
+        "operationId": "GetTenantApplicationIdentities",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of tenant application identities for a tenant.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TenantApplicationIdentity"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "summary": "Registers a tenant application identity to be used with Online Management API. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "CreateTenantApplicationIdentity",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "tenantApplicationIdentity",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TenantApplicationIdentity"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "New Tenant Application Identity created",
+            "schema": {
+              "$ref": "#/definitions/TenantApplicationIdentity"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1.2/TenantApplicationIdentities/{id}": {
+      "get": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "summary": "Retrieves a Tenant Application Identity. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetTenantApplicationIdentity",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of a Tenant Application Identity to retrieve.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "TenantApplicationIdentity",
+            "schema": {
+              "$ref": "#/definitions/TenantApplicationIdentity"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "operationId": "DeleteTenantApplicationIdentity",
+        "summary": "Deletes a Tenant Application Identity. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "TenantApplicationIdentity is deleted."
+          }
+        }
+      }
+    },
+    "/api/v1.2/TenantApplicationIdentities/{id}/Enable": {
+      "post": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "operationId": "EnableTenantApplicationIdentity",
+        "summary": "Enables a Tenant Application Identity. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tenant Application Identity is enabled."
+          }
+        }
+      }
+    },
+    "/api/v1.2/TenantApplicationIdentities/{id}/Disable": {
+      "post": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "operationId": "DisableTenantApplicationIdentity",
+        "summary": "Disables a Tenant Application Identity. This API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated).",
+        "description": "For a list of region-specific service URLs, see [Service URL](/powerapps/developer/data-platform/online-management-api/get-started-online-management-api#service-url)",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tenant Application Identity is disabled."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Region": {
+      "required": [
+        "RegionCode",
+        "Name",
+        "Currencies"
+      ],
+      "type": "object",
+      "properties": {
+        "RegionCode": {
+          "type": "string",
+          "description": "Code of the region"
+        },
+        "Name": {
+          "type": "string",
+          "description": "Name of the region"
+        },
+        "Currencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Currency"
+          }
+        }
+      }
+    },
+    "Currency": {
+      "type": "object",
+      "properties": {
+        "Code": {
+          "description": "Code of the Currency in Dataverse",
+          "maxLength": 3,
+          "minLength": 3,
+          "type": "string"
+        },
+        "Precision": {
+          "description": "Precision of the Currency in Dataverse",
+          "format": "int32",
+          "maximum": 4,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "Symbol": {
+          "description": "Symbol of the Currency in Dataverse",
+          "maxLength": 4,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Name": {
+          "description": "Name of the Currency in Dataverse",
+          "type": "string"
+        }
+      }
+    },
+    "InstanceBackup": {
+      "required": [
+        "Id",
+        "Status",
+        "CreatedBy",
+        "CreatedOn",
+        "ExpiresOn",
+        "Version",
+        "Label"
+      ],
+      "description": "An object defining the instance backup",
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the instance backup"
+        },
+        "Status": {
+          "type": "string",
+          "description": "Status of the instance backup"
+        },
+        "CreatedBy": {
+          "type": "string",
+          "description": "User who created the instance backup"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "type": "string",
+          "description": "Date and time of the creation of the instance backup"
+        },
+        "ExpiresOn": {
+          "format": "date-time",
+          "type": "string",
+          "description": "Expiration date and time of the instance backup"
+        },
+        "Version": {
+          "type": "string",
+          "description": "Version of the instance backup"
+        },
+        "Notes": {
+          "type": "string",
+          "description": "Notes associated with the instance backup"
+        },
+        "Label": {
+          "description": "Label of the instance backup",
+          "type": "string"
+        },
+        "IsAzureBackup": {
+          "description": "For internal use only",
+          "type": "boolean"
+        },
+        "AzureStorageInformation": {
+          "$ref": "#/definitions/AzureStorage"
+        }
+      }
+    },
+    "AzureStorage": {
+      "required": [
+        "ContainerName",
+        "StorageAccountKey",
+        "StorageAccountName"
+      ],
+      "type": "object",
+      "description": "For internal use only. Azure storage is not supported.",
+      "properties": {
+        "ContainerName": {
+          "type": "string",
+          "description": "For internal use only."
+        },
+        "StorageAccountKey": {
+          "type": "string",
+          "description": "For internal use only."
+        },
+        "StorageAccountName": {
+          "type": "string",
+          "description": "For internal use only."
+        }
+      }
+    },
+    "NewInstanceBackup": {
+      "required": [
+        "InstanceId",
+        "Label"
+      ],
+      "type": "object",
+      "properties": {
+        "InstanceId": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the instance to backup."
+        },
+        "Label": {
+          "type": "string",
+          "description": "Label to help identify this backup for future restoration."
+        },
+        "Notes": {
+          "type": "string",
+          "description": "Notes to help identify this backup for future restoration."
+        },
+        "IsAzureBackup": {
+          "type": "boolean",
+          "description": "For internal use only."
+        },
+        "AzureStorageInformation": {
+          "$ref": "#/definitions/AzureStorage"
+        }
+      }
+    },
+    "OperationStatus": {
+      "required": [
+        "OperationId",
+        "Status"
+      ],
+      "type": "object",
+      "description": "Status of the operation",
+      "properties": {
+        "OperationId": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the operation"
+        },
+        "Status": {
+          "enum": [
+            "None",
+            "FailedToCreate",
+            "NotStarted",
+            "Ready",
+            "Pending",
+            "Running",
+            "Succeeded",
+            "Failed",
+            "Cancelling",
+            "Cancelled",
+            "Aborting",
+            "Aborted",
+            "Tombstone",
+            "Deleting",
+            "Deleted",
+            "NotFound",
+            "Conflict"
+          ],
+          "type": "string",
+          "description": "State of the operation",
+          "x-ms-enum": {
+            "name": "OperationState"
+          }
+        },
+        "Errors": {
+          "type": "array",
+          "description": "Set of values to display errors during an operation",
+          "items": {
+            "$ref": "#/definitions/ItemDescription"
+          },
+          "readOnly": true
+        },
+        "Information": {
+          "type": "array",
+          "description": "Set of values to display information during an operation",
+          "items": {
+            "$ref": "#/definitions/ItemDescription"
+          },
+          "readOnly": true
+        },
+        "OperationLocation": {
+          "type": "string",
+          "description": "Location of the operation"
+        },
+        "ResourceLocation": {
+          "type": "string",
+          "description": "Location of the resource"
+        },
+        "Context": {
+          "$ref": "#/definitions/OperationContext",
+          "readOnly": true
+        }
+      }
+    },
+    "ItemDescription": {
+      "type": "object",
+      "description": "Set of values to define an error or information item",
+      "properties": {
+        "Subject": {
+          "type": "string",
+          "description": "Subject of the item"
+        },
+        "Description": {
+          "type": "string",
+          "description": "Description of the item"
+        },
+        "Code": {
+          "type": "string",
+          "description": "Code of the item"
+        }
+      }
+    },
+    "OperationContext": {
+      "type": "object",
+      "description": "The operation context object",
+      "properties": {
+        "Items": {
+          "type": "object",
+          "description": "The item object",
+          "additionalProperties": {
+            "type": "object",
+            "description": "An object defining additional properties for an item"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "Instance": {
+      "description": "A representation of an environment",
+      "required": [
+        "Id",
+        "UniqueName",
+        "Version",
+        "ApplicationUrl",
+        "ApiUrl",
+        "State",
+        "Type",
+        "FriendlyName",
+        "DomainName"
+      ],
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "uuid",
+          "description": "ID of the instance",
+          "type": "string"
+        },
+        "UniqueName": {
+          "description": "Unique name of the instance",
+          "type": "string"
+        },
+        "Version": {
+          "description": "Version of the instance",
+          "type": "string"
+        },
+        "ApplicationUrl": {
+          "description": "URL to the web application of the instance",
+          "type": "string"
+        },
+        "ApiUrl": {
+          "description": "URL of the Web API for the instance",
+          "type": "string"
+        },
+        "State": {
+          "description": "State of the instance",
+          "enum": [
+            "None",
+            "Ready",
+            "Pending",
+            "Inactive",
+            "Disabled",
+            "FailedProvisioning",
+            "PreparingInstance",
+            "ReadyToConfigure",
+            "Locked"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "InstanceState"
+          }
+        },
+        "InitialUserPrincipalName": {
+          "description": "UserPrincipalName of the initial user",
+          "type": "string"
+        },
+        "StateIsSupportedForDelete": {
+          "description": "Indicates whether the instance can be deleted",
+          "type": "boolean"
+        },
+        "AdminMode": {
+          "description": "Indicates whether the instance is in admin mode",
+          "type": "boolean"
+        },
+        "IsLocked": {
+          "description": "Indicates whether the instance is locked",
+          "type": "boolean"
+        },
+        "ProtectionStatus": {
+          "description": "Indicated whether the instance is Microsoft or Tenant encrypted",
+          "enum": [
+            "MicrosoftEncrypted",
+            "TenantEncrypted"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "ProtectionStatus"
+          }
+        },
+        "Type": {
+          "description": "The type of instance",
+          "enum": [
+            "None",
+            "Production",
+            "Sandbox",
+            "Support",
+            "Preview",
+            "Trial",
+            "Default",
+            "Developer"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "InstanceType"
+          }
+        },
+        "Purpose": {
+          "description": "Purpose of the instance",
+          "type": "string"
+        },
+        "FriendlyName": {
+          "description": "Friendly name of the instance",
+          "type": "string"
+        },
+        "DomainName": {
+          "description": "Public domain name of the instance.",
+          "type": "string"
+        },
+        "BaseLanguage": {
+          "format": "int32",
+          "description": "Base language code for the instance",
+          "type": "integer"
+        },
+        "InitialUserEmail": {
+          "description": "The object id of the user that created the instance",
+          "type": "string"
+        },
+        "SecurityGroupId": {
+          "format": "uuid",
+          "description": "Security group set for the instance.",
+          "type": "string"
+        },
+        "AdditionalProperties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "FeatureStatus": {
+      "type": "object",
+      "properties": {
+        "FeatureName": {
+          "type": "string"
+        },
+        "DisplayName": {
+          "type": "string"
+        },
+        "CanBeReset": {
+          "type": "boolean"
+        },
+        "Enabled": {
+          "type": "boolean"
+        },
+        "IsAllowed": {
+          "type": "boolean"
+        },
+        "NotBefore": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "NotAfter": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "MinVersion": {
+          "type": "string"
+        },
+        "MaxVersion": {
+          "type": "string"
+        },
+        "AdditionalProperties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "NewInstance": {
+      "description": "The set of instance values that will be used to create a new instance",
+      "required": [
+        "ServiceVersionId",
+        "Type",
+        "FriendlyName",
+        "DomainName",
+        "InitialUserEmail"
+      ],
+      "type": "object",
+      "properties": {
+        "Currency": {
+          "$ref": "#/definitions/Currency",
+          "description": "The Currency settings for the instance"
+        },
+        "ServiceVersionId": {
+          "format": "uuid",
+          "description": "ID of the available service to use for the new instance",
+          "type": "string"
+        },
+        "Templates": {
+          "description": "The set of templates to be used when creating a new instance",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Type": {
+          "description": "The type of the instance",
+          "enum": [
+            "None",
+            "Production",
+            "Sandbox",
+            "Support",
+            "Preview",
+            "Trial",
+            "Default",
+            "Developer"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "InstanceType"
+          }
+        },
+        "Purpose": {
+          "description": "The purpose of the instance.",
+          "type": "string"
+        },
+        "FriendlyName": {
+          "description": "The friendly name of the instance.",
+          "type": "string"
+        },
+        "DomainName": {
+          "description": "The public domain name of the instance.",
+          "type": "string"
+        },
+        "BaseLanguage": {
+          "format": "int32",
+          "description": "The base language code for the instance",
+          "type": "integer"
+        },
+        "InitialUserEmail": {
+          "description": "The object ID of the user who created the instance.",
+          "type": "string"
+        },
+        "SecurityGroupId": {
+          "format": "uuid",
+          "description": "The (optional) security group set for the instance.",
+          "type": "string"
+        },
+        "AdditionalProperties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "LockTenantKeyData": {
+      "type": "object",
+      "description": "The set of values to lock the tenant protection key",
+      "properties": {
+        "KeyName": {
+          "type": "string",
+          "description": "Name of the protection key to lock"
+        }
+      }
+    },
+    "CopyRequest": {
+      "type": "object",
+      "properties": {
+        "FriendlyName": {
+          "description": "Friendly name of the instance.\r\nThis value is from the required \"Name\" input of the Copy UI and is mapped to OrganizationLifecycle.OrganizationFriendlyName in Geo config db.",
+          "type": "string"
+        },
+        "SecurityGroupId": {
+          "format": "uuid",
+          "description": "ID of the security group for which members will sync to this instance\r\nThis value is from the optional Security Group input of the Copy UI and is mapped to OrganizationLifecycle.SecurityGroup in Geo config db.",
+          "type": "string"
+        },
+        "TargetInstanceId": {
+          "format": "uuid",
+          "description": "Target instance ID",
+          "type": "string"
+        },
+        "CopyType": {
+          "description": "Copy Type.",
+          "enum": [
+            "FullCopy",
+            "MinimalCopy"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "CopyType"
+          }
+        },
+        "AdditionalProperties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ResetRequest": {
+      "type": "object",
+      "properties": {
+        "FriendlyName": {
+          "description": "Friendly name of the instance.\r\nThis value is from the required \"Name\" input of the Reset UI and is mapped to OrganizationLifecycle.OrganizationFriendlyName in Geo config db.",
+          "type": "string"
+        },
+        "DomainName": {
+          "description": "The domain name portion for the org in the org URL, such as \"contoso\".\r\nThis value is from the required \"URL\" input of the Reset UI and is mapped to OrganizationLifecycle.DomainName in Geo config db.",
+          "type": "string"
+        },
+        "Purpose": {
+          "description": "Purpose specified for this instance in the Rest UI.\r\nThis value is from the optional \"Purpose\" input of the Reset UI and is mapped to OrganizationLifecycle.Purpose in Geo config db.",
+          "type": "string"
+        },
+        "SecurityGroupId": {
+          "format": "uuid",
+          "description": "Guid of the security group for which members will sync to this instance\r\nThis value is from the optional Security Group input of the Reset UI and is mapped to OrganizationLifecycle.SecurityGroup in Geo config db.",
+          "type": "string"
+        },
+        "TargetRelease": {
+          "description": "The name of the target release.\r\nThis is mapped a specific ReleaseName defined in ScaleGroupReleases table.",
+          "type": "string"
+        },
+        "BaseLanguageCode": {
+          "format": "int32",
+          "description": "Base language code LCID of the new instance\r\nFor example, 1033 for English.",
+          "type": "integer"
+        },
+        "Currency": {
+          "$ref": "#/definitions/Currency",
+          "description": "Gets or sets the currency."
+        },
+        "ApplicationNames": {
+          "description": "Applications to have installed initially for the new instance.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "PreferredCulture": {
+          "format": "int32",
+          "description": "Indicates if the customer prefers a certain culture for formatting for the new instance.",
+          "type": "integer"
+        },
+        "AdditionalProperties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "InstanceRestorePoint": {
+      "required": [
+        "SourceInstanceId"
+      ],
+      "type": "object",
+      "properties": {
+        "SourceInstanceId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "InstanceBackupId": {
+          "format": "uuid",
+          "description": "The Id of a legacy instance backup to use.  If set, this will be used instead of Label or RestorePoint.",
+          "type": "string"
+        },
+        "Label": {
+          "description": "The label of an existing instance backup to use.  If set, this will be used instead of RestorePoint.",
+          "maxLength": 100,
+          "minLength": 0,
+          "type": "string"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "description": "The CreatedOn date and time of an existing instance backup to use.",
+          "type": "string"
+        }
+      }
+    },
+    "InstanceAdminModeSettings": {
+      "type": "object",
+      "properties": {
+        "OverrideUserObjectId": {
+          "format": "uuid",
+          "description": "If set, will be used instead of the UserObjectID of the calling user.",
+          "type": "string"
+        },
+        "AdminMode": {
+          "description": "Indicates whether to enable or disable the Admin Mode settings.",
+          "type": "boolean"
+        },
+        "BackgroundOperationsEnabled": {
+          "description": "Indicates whether to enable or disable the background operations.",
+          "type": "boolean"
+        },
+        "NotificationText": {
+          "type": "string"
+        }
+      }
+    },
+    "DomainNameSettings": {
+      "required": [
+        "DomainName"
+      ],
+      "type": "object",
+      "description": "An object defining the domain name settings",
+      "properties": {
+        "DomainName": {
+          "type": "string",
+          "description": "Name of the domain"
+        },
+        "AdditionalProperties": {
+          "type": "object",
+          "description": "An object defining additional properties for the domain",
+          "additionalProperties": {
+            "type": "string",
+            "description": "Additional properties for the domain"
+          }
+        }
+      }
+    },
+    "ConfigureInstanceSettings": {
+      "type": "object",
+      "properties": {
+        "Purpose": {
+          "type": "string"
+        },
+        "AdditionalProperties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "InstanceTypeInfo": {
+      "required": [
+        "Type",
+        "Total",
+        "Consumed"
+      ],
+      "type": "object",
+      "description": "Object containing the information about the instance type",
+      "properties": {
+        "Type": {
+          "enum": [
+            "None",
+            "Production",
+            "Sandbox",
+            "Support",
+            "Preview",
+            "Trial",
+            "Default",
+            "Developer"
+          ],
+          "type": "string",
+          "description": "Type of instance",
+          "x-ms-enum": {
+            "name": "InstanceType"
+          }
+        },
+        "Total": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Total storage capacity for the instance"
+        },
+        "Consumed": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Consumed storage capacity for the instance"
+        }
+      }
+    },
+    "Key": {
+      "description": "Set of values to define a tenant protection (encryption) key",
+      "required": [
+        "TenantId"
+      ],
+      "type": "object",
+      "properties": {
+        "TenantId": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the tenant where the key is present"
+        },
+        "KeyName": {
+          "type": "string",
+          "description": "Name of the key"
+        },
+        "KeyState": {
+          "enum": [
+            "Imported",
+            "Installing",
+            "Available",
+            "Active",
+            "Locked",
+            "InstallationFailed",
+            "None"
+          ],
+          "type": "string",
+          "description": "State of the key",
+          "x-ms-enum": {
+            "name": "KeyState"
+          }
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "description": "Date on which the key was created",
+          "type": "string"
+        },
+        "LockedOn": {
+          "format": "date-time",
+          "type": "string",
+          "description": "Date on which the key was locked"
+        }
+      }
+    },
+    "ImportKeyData": {
+      "type": "object",
+      "description": "Set of values to import a tenant protection (encryption) key",
+      "properties": {
+        "KeyName": {
+          "type": "string",
+          "description": "The name of the key to import"
+        },
+        "KeyType": {
+          "format": "int32",
+          "type": "integer",
+          "description": "The type of the key to import"
+        },
+        "KeyPassword": {
+          "type": "string",
+          "description": "The password of the key to import"
+        },
+        "Key": {
+          "format": "byte",
+          "type": "string",
+          "description": "The raw data of the key certificate as a byte array"
+        }
+      }
+    },
+    "GenerateKeyData": {
+      "type": "object",
+      "description": "Set of values required for generating the tenant protection (encryption) key",
+      "properties": {
+        "SubjectName": {
+          "type": "string",
+          "description": "Subject name for the protection key"
+        },
+        "KeyPassword": {
+          "type": "string",
+          "description": "Password for the protection key"
+        }
+      }
+    },
+    "Language": {
+      "required": [
+        "LCID",
+        "Name",
+        "LocalizedName"
+      ],
+      "type": "object",
+      "description": "Set of values required for defining a language",
+      "properties": {
+        "LCID": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Locale ID of the language"
+        },
+        "Name": {
+          "type": "string",
+          "description": "The language name"
+        },
+        "LocalizedName": {
+          "type": "string"
+        }
+      }
+    },
+    "EnvironmentMetadata": {
+      "description": "A representation of an environment metadata of an user notification.",
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "uuid",
+          "description": "ID of the environment metadata",
+          "type": "string"
+        },
+        "Name": {
+          "description": "Name of the environment metadata",
+          "type": "string"
+        },
+        "Geo": {
+          "description": "Geographic location of the environment metadata",
+          "type": "string"
+        }
+      }
+    },
+    "UserNotification": {
+      "description": "A representation of a notification that has been retrieved from or already exists in the Notification Service",
+      "type": "object",
+      "properties": {
+        "NotificationId": {
+          "format": "uuid",
+          "description": "ID of the current notification",
+          "type": "string"
+        },
+        "AdminId": {
+          "format": "uuid",
+          "description": "ID of the admin associated with the notification",
+          "type": "string"
+        },
+        "TenantId": {
+          "format": "uuid",
+          "description": "ID of the tenant associated with the notification",
+          "type": "string"
+        },
+        "CreatedAt": {
+          "format": "date-time",
+          "description": "The date and time of when the notification was created.",
+          "type": "string"
+        },
+        "Environments": {
+          "description": "The environments associated with the notification.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EnvironmentMetadata"
+          }
+        },
+        "State": {
+          "description": "The state of the notification",
+          "enum": [
+            "None",
+            "Ready",
+            "Unread",
+            "Read",
+            "Pending",
+            "Inactive",
+            "Disabled",
+            "FailedProvisioning",
+            "ReadyToConfigure",
+            "Locked"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "NotificationState"
+          }
+        },
+        "Priority": {
+          "description": "The priority of the notification.",
+          "enum": [
+            "Unknown",
+            "High",
+            "Low"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "NotificationPriority"
+          }
+        },
+        "OrgId": {
+          "format": "uuid",
+          "description": "The id of the org associated with the notification.",
+          "type": "string"
+        },
+        "Content": {
+          "$ref": "#/definitions/NotificationContent",
+          "description": "The content associated with the notification."
+        }
+      }
+    },
+    "NotificationContent": {
+      "description": "A representation of the content associated with a notification.",
+      "type": "object",
+      "properties": {
+        "TemplateId": {
+          "description": "The id of the template associated with this NotificationContent.",
+          "type": "string"
+        },
+        "TemplateType": {
+          "description": "The type of the template associated with this NotificationContent.",
+          "type": "string"
+        },
+        "Slugs": {
+          "description": "The slugs to be populated into the NotificationContent.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "QueryOptions": {
+      "type": "object",
+      "properties": {
+        "OperationProvider": {
+          "type": "string"
+        },
+        "InstanceId": {
+          "type": "string"
+        }
+      }
+    },
+    "ServiceVersion": {
+      "required": [
+        "LocalizedName",
+        "LCID",
+        "Version",
+        "Id",
+        "Name"
+      ],
+      "type": "object",
+      "description": "Set of values to define a service (release) version",
+      "properties": {
+        "LocalizedName": {
+          "type": "string",
+          "description": "Localized name of the service (release)"
+        },
+        "LCID": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Locale ID of the service (release)"
+        },
+        "Version": {
+          "type": "string",
+          "description": "Version of the service (release)"
+        },
+        "Id": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the service (release)"
+        },
+        "Name": {
+          "type": "string",
+          "description": "Name of the service (release)"
+        }
+      }
+    },
+    "IsSupportUserRequest": {
+      "required": [
+        "UserName"
+      ],
+      "type": "object",
+      "properties": {
+        "UserName": {
+          "type": "string",
+          "description": "Name of the user"
+        }
+      }
+    },
+    "Template": {
+      "required": [
+        "Name",
+        "LocalizedName",
+        "LocalizedDescription",
+        "SupportedReleases"
+      ],
+      "type": "object",
+      "description": "Set of values to define a template",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "description": "Name of the template"
+        },
+        "LocalizedName": {
+          "type": "string",
+          "description": "Localized name of the template"
+        },
+        "LocalizedDescription": {
+          "type": "string",
+          "description": "Localized description of the template"
+        },
+        "SupportedReleases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SupportedReleases"
+          }
+        }
+      }
+    },
+    "SupportedReleases": {
+      "type": "object",
+      "description": "Set of values to define supported releases",
+      "properties": {
+        "Id": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the supported release"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Types": {
+          "type": "array",
+          "description": "Type of the supported release",
+          "items": {
+            "enum": [
+              "None",
+              "Production",
+              "Sandbox",
+              "Support",
+              "Preview",
+              "Trial",
+              "Default",
+              "Developer"
+            ],
+            "type": "string"
+          }
+        }
+      }
+    },
+    "TenantApplicationIdentity": {
+      "required": [
+        "AadApplicationId",
+        "TenantId",
+        "Enabled"
+      ],
+      "type": "object",
+      "description": "Set of values to define Tenant Application Identity",
+      "properties": {
+        "Id": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the Tenant Application Identity"
+        },
+        "AadApplicationId": {
+          "format": "uuid",
+          "description": "Azure Application ID",
+          "type": "string"
+        },
+        "TenantId": {
+          "format": "uuid",
+          "description": "Tenant ID",
+          "type": "string"
+        },
+        "Enabled": {
+          "type": "boolean",
+          "description": "Indicates whether the Tenant Application Identity is enabled"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "description": "Entity created on",
+          "type": "string"
+        },
+        "ModifiedOn": {
+          "format": "date-time",
+          "description": "Entity last modified on",
+          "type": "string"
+        }
+      }
+    },
+    "UserInfoApi": {
+      "type": "object",
+      "properties": {
+        "UserName": {
+          "type": "string"
+        },
+        "Password": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "oauth2": {
+      "type": "oauth2",
+      "description": "",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+      "tokenUrl": "https://login.windows.net/common/oauth2/token",
+      "scopes": {}
+    }
+  }
+}

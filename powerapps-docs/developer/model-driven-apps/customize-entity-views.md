@@ -21,14 +21,14 @@ search.app:
 
 Entity views are special saved queries that retrieve data by using a specific filter. They also contain information about how the data in the view should be displayed in the application. Entity views are `SavedQuery` records that you can create programmatically. You can also define them as XML, and import them with an unmanaged solution.  
   
- An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [Saved queries](../common-data-service/saved-queries.md) 
+ An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [Saved queries](../data-platform/saved-queries.md) 
   
  You can also use the customization tool to customize views. More information: [Create and edit views](../../maker/model-driven-apps/create-edit-views.md)
   
 <a name="BKMK_TypesOfViews"></a>  
  
 ## Types of views  
- The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` attribute. Note that there are other valid values for the `QueryType` attribute not listed here because this entity is also used to store Office Outlook filters and templates. For more information, see [Offline and Outlook Filters and Templates](../common-data-service/outlook-client/offline-outlook-filters-templates.md). 
+ The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` attribute. Note that there are other valid values for the `QueryType` attribute not listed here because this entity is also used to store Office Outlook filters and templates. For more information, see [Offline and Outlook Filters and Templates](../data-platform/outlook-client/offline-outlook-filters-templates.md). 
   
  When views are defined for a specific entity, the `SavedQuery.ReturnedTypeCode` attribute returns the entity logical name.  
   
@@ -48,9 +48,9 @@ Entity views are special saved queries that retrieve data by using a specific fi
   
 - `SavedQuery.ReturnedTypeCode`: Matches the logical name of the entity. 
   
-- `SavedQuery.FetchXml`: See [Use FetchXML to Construct a Query](../common-data-service/use-fetchxml-construct-query.md).  
+- `SavedQuery.FetchXml`: See [Use FetchXML to Construct a Query](../data-platform/use-fetchxml-construct-query.md).  
   
-- `SavedQuery.LayoutXml`: See the `layoutxml` element in the [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md)  for the valid elements.
+- `SavedQuery.LayoutXml`: See the `layoutxml` element in the [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)  for the valid elements.
   
 - `SavedQuery.QueryType`: Must always be zero (0).  
   
@@ -221,7 +221,7 @@ service.Execute(ssreq);
   
 <a name="BKMK_EditFilterOrSorting"></a>   
 ## Edit filter criteria or configure sorting  
- To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](/powerapps/developer/common-data-service/use-fetchxml-construct-query).  
+ To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](/powerapps/developer/data-platform/use-fetchxml-construct-query).  
   
 > [!TIP]
 >  If you are not familiar with FetchXML the following messages can be used to convert between QueryExpression and FetchXML:<xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest>.  
@@ -229,7 +229,7 @@ service.Execute(ssreq);
 <a name="BKMK_EditColumns"></a>   
 ## Edit columns  
  The columns that you want to display in views can be taken from the entity or related entities. 
- For more information about how to specify the columns to display, see the `layoutxml` element in the [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md).  
+ For more information about how to specify the columns to display, see the `layoutxml` element in the [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md).  
   
 <a name="BKMK_CustomIcons"></a>   
 ## Add custom icons with tooltip for a column  

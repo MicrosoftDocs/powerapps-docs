@@ -318,8 +318,8 @@ An object returned with the following properties in addition to the <i>base</i> 
 <li><b>OptionSet</b>: Object. Options for the attribute where each option is a key:value pair.</li></ul>
 <p>The object also contains the following methods:</p>
 <ul>
-<li><b>getDefaultStatus(arg)</b>: Returns the default status (number) based on the passed in state value for an entity. For default state and status values for an entity, see entity metadata information of the entity in <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference">entity reference</a>.</li>
-<li><b>getStatusValuesForState(arg)</b>: Returns possible status values (array of numbers) for a specified state value. For state and status values for an entity, see entity metadata information of the entity in <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference">entity reference</a>.</li></ul>
+<li><b>getDefaultStatus(arg)</b>: Returns the default status (number) based on the passed in state value for an entity. For default state and status values for an entity, see entity metadata information of the entity in <a href="https://docs.microsoft.com/powerapps/developer/data-platform/reference/about-entity-reference">entity reference</a>.</li>
+<li><b>getStatusValuesForState(arg)</b>: Returns possible status values (array of numbers) for a specified state value. For state and status values for an entity, see entity metadata information of the entity in <a href="https://docs.microsoft.com/powerapps/developer/data-platform/reference/about-entity-reference">entity reference</a>.</li></ul>
 
 <p><b>Attribute metadata for the <i>status</i> type</b><br/>
 An object returned with the following properties in addition to the <i>base</i> attribute metadata type properties:</p>
@@ -327,7 +327,7 @@ An object returned with the following properties in addition to the <i>base</i> 
 <li><b>OptionSet</b>: Object. Options for the attribute where each option is a key:value pair.</li></ul>
 <p>The object also contains the following method:</p>
 <ul>
-<li><b>getState(arg)</b>: Returns the state value (number) for the specified status value (number). For default state and status values for an entity, see entity metadata information of the entity in <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference">entity reference</a>.</li>
+<li><b>getState(arg)</b>: Returns the state value (number) for the specified status value (number). For default state and status values for an entity, see entity metadata information of the entity in <a href="https://docs.microsoft.com/powerapps/developer/data-platform/reference/about-entity-reference">entity reference</a>.</li>
 </ul>
 </td>
 </tr>

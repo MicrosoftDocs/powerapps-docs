@@ -143,4 +143,4 @@ In this topic, you create or edit filters by performing the following tasks:
 [Edit or create personal views using advanced grid filters](../../user/grid-filters-advanced.md)
 [Choose and configure columns](choose-and-configure-columns.md)  
 [Edit filter criteria](edit-filter-criteria.md)  
-[Create 1:N (one-to-many) or N:1 (many-to-one) relationships](../common-data-service/create-edit-1n-relationships.md)
+[Create 1:N (one-to-many) or N:1 (many-to-one) relationships](../data-platform/create-edit-1n-relationships.md)

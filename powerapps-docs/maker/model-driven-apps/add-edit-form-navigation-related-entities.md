@@ -81,4 +81,4 @@ In this topic, you use the form navigation pane that is used to add links to rel
 > Installing a solution or publishing customizations can interfere with normal system operation. We recommend that you schedule a solution import when it's least disruptive to users.
   
 ## Next steps  
- [Create and edit table relationships for Microsoft Dataverse](../common-data-service/create-edit-entity-relationships.md)
+ [Create and edit table relationships for Microsoft Dataverse](../data-platform/create-edit-entity-relationships.md)

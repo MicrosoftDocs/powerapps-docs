@@ -97,7 +97,7 @@ landingContent:
           - text: Distribute an app
             url: distribute-model-driven-app.md
           - text: Use solutions for ALM
-            url: ../common-data-service/solutions-overview.md
+            url: ../data-platform/solutions-overview.md
 
   # Card
   - title: Transition to Unified Interface
