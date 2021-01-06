@@ -43,6 +43,8 @@ Several sample apps are available from the Teams store that you can add to your 
    :::column span="":::
       ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones (Preview)](milestones.md) <br> App to keep track of projects, and initiatives.
    :::column-end:::
+   :::column span="":::
+   :::column-end:::
 :::row-end:::
 
 The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
