@@ -27,34 +27,23 @@ Several sample apps are available from the Teams store that you can add to your 
 
 :::row:::
    :::column span="":::
-      ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins(Preview)](bulletins.md) <br> Manager and user apps for company communications.
+      ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins (Preview)](bulletins.md) <br> Manager and user apps for company communications.
    :::column-end:::
    :::column span="":::
       ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](employee-ideas.md) <br> App for campaigns and ideas.
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.
    :::column-end:::
-   :::column span="":::
-      ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) <br> Manager and user apps for issue reporting.
-   :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones(Preview)](milestones.md) <br> App to keep track of projects, and initiatives.
+      ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) <br> Manager and user apps for issue reporting.
+   :::column-end:::
+   :::column span="":::
+      ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones (Preview)](milestones.md) <br> App to keep track of projects, and initiatives.
    :::column-end:::
 :::row-end:::
-<!---
-| Sample app | Description |
-| - | - |
-| ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins(Preview)](bulletins.md) | Manager and user apps for company communications.
-| ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](employee-ideas.md) | App for campaigns and ideas. |
-| ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) | Manager and user apps for area inspections. |
-| ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
-| ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones(Preview)](milestones.md) | App to keep track of projects, and initiatives. |
--->
 
 The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
 
