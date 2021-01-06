@@ -18,8 +18,6 @@ search.app:
 ---
 # Hide a model-driven app from users
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Deactivate a model-driven app to hide it from users who otherwise would be able to find and run it. When you deactivate a model-drive app, it no longer appears in the common places where apps are found, such as from the list of model-driven apps displayed in the Power Apps mobile app or [Office apps](https://www.office.com/apps).
 
 ## Deactivate a model-driven app
