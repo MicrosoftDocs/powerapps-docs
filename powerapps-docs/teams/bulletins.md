@@ -131,7 +131,7 @@ Each bulletin post, FAQ, link, or contact has an associated category. To add, ed
 
     - To edit a category, select the category, and update the name.
 
-1. Select **Save**.
+1. Select **Update**.
 
 ### Create a new bulletin post
 
@@ -360,11 +360,15 @@ To edit, or delete a contact:
 
 1. Select the contact that you want to edit, or delete.
 
+    ![Edit contact](media/bulletins/edit-contact.png "Edit contact")
+
     - To edit contact, update information, and select **Save.**
 
-    - To delete contact, select **Delete**.
+    - To delete contact:
 
-    ![Edit contact](media/bulletins/edit-contact.png "Edit contact")
+        - Select **Delete**.
+        - Select **I understand**.
+        - Select **Delete** to permanently delete the contact.
 
 ## Bulletins app
 
