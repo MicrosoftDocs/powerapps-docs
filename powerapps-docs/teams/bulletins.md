@@ -300,7 +300,7 @@ To edit, or delete a link:
 #### Add a contact
 
 You can add internal, and external contacts to Bulletins to provide helpful
-contacts related to bulletin categories.
+contacts related to bulletin categories. 
 
 ##### Add an internal contact
 
