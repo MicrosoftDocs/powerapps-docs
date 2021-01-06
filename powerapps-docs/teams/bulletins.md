@@ -251,7 +251,7 @@ To edit or delete a FAQ bulletin post:
 
         1. Select **I understand** checkbox.
     
-        1. Select **Delete**.
+        1. Select **Delete** to permanently delete the selected FAQ.
 
 ### Manage links and contacts
 
@@ -295,7 +295,7 @@ To edit, or delete a link:
 
         1. Select **I understand** checkbox.
     
-        1. Select **Delete**.
+        1. Select **Delete** to permanently delete the selected link.
 
 #### Add a contact
 

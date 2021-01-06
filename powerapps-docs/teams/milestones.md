@@ -176,17 +176,16 @@ status, and category.
 
     ![Global settings](media/milestones/global-settings.png "Global settings")
 
-    - To rename a category, select the name of the category that you wish to change, and enter a new name.
+    - To rename, select the name of the category, priority, or status that you wish to change, and enter a new name.
 
-    - To add an additional option, select **Add**. And then, select the color, and enter the name.
+    - To add, select **Add** next to the category, priority, or status. And then, select the color, and enter the name.
 
-    - To delete an option, select the field, then select the **Delete**.
-
-        1. Select **Delete**.
-
-        1. Select **I understand** checkbox.
+    - To delete:
     
-        1. Select **Delete**.
+        - Select the field.
+        - Select **Delete** (![Delete icon](media/milestones/delete-icon.png "Delete icon")). 
+        - Select **I understand** checkbox.
+        - Select **Delete** to permanently delete the selection.
 
 1. When finished, select **Save** to save your changes.
 
@@ -206,7 +205,7 @@ To delete an existing project:
 
 1. Select **I understand** checkbox.
     
-1. Select **Delete**.
+1. Select **Delete** to permanently delete the project.
 
 ### See also
 
