@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/12/2020
+ms.date: 01/06/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -99,15 +99,31 @@ Users in this role can access all leads via entity lists or forms on the portal.
 
 ![Grant global permissions to a lead](../media/grant-global-permission-leads.png "Grant global permissions to a lead")  
 
-We'll now add a Child permission to the Global Lead permission. With the Parent Permission record open, go to the **Child Entity Permissions** subgrid, select **New** to open a lookup for entity permissions, select the magnifying glass, and then select **New** to add a new record.
+We'll now add a Child permission to the Global Lead permission. With the Parent Permission record open, go to the **Child Entity Permissions** subgrid, select **New Entity Permission** to add a new record.
 
-![Add entity permissions to a web role](../media/add-entity-permission-web-role.png "Add entity permissions to a web role")  
+![Add entity permissions to a web role](media\assign-entity-permissions\global-lead-child-permissions-new.png "Add entity permissions to a web role")  
 
 Select the entity as Tasks and the scope as Parental. You can then select the parent relationship (**Lead\_Tasks**). This permission implies that a contact that is in a web role with the parent permission will then have global permission to all tasks that are related to leads.
 
-Remember that in order for your list to respect these permissions, you must have enabled Entity Permissions on the list AND there must be actions that will actually allow users to do the actions for which their permissions have been granted. Furthermore, permissions must also be enabled on the [entity form](entity-forms.md) record, and that form must be surfacing a page that has a subgrid on it for the entity that you want to enable with child permissions, in this case Tasks. Furthermore, to enable Read or Create permissions for tasks, you'll need to configure those entity forms too, and edit the forms to remove the Regarding lookup field.  
+In order for your list to respect these permissions:
 
-![Edit a web page form](../media/edit-webpage-form.png "Edit a web page form")  
+- Entity Permissions must be enabled on the list.
+    
+    ![Enable Entity Permissions on the list](media\assign-entity-permissions\enable-entity-permissions.png "Enable Entity Permissions on the list") 
+
+- There must be actions that will actually allow users to do the actions for which their permissions have been granted. 
+
+    ![Actions for which permissions have been granted](media\assign-entity-permissions\form-actions.png "Actions for which permissions have been granted") 
+
+- Permissions must also be enabled on the [entity form](entity-forms.md) record.
+
+    ![Enabled permissions on the entity form record](media\assign-entity-permissions\lead-entity-form.png "Enabled permissions on the entity form record")
+ 
+- The form must be surfacing a page that has a subgrid on it for the entity that you want to enable with child permissions, in this case Tasks.
+
+    ![Subgrid with the entity - Tasks](media\assign-entity-permissions\subgrid-on-form.png "Subgrid with the entity - Tasks")
+
+Also, if you want to enable Read or Create permissions for tasks, you'll need to configure those entity forms too, and edit the forms to remove the Regarding lookup field.  
 
 This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on an entity list, a filter is added to the list so that only tasks that are related to a lead will appear in the list. In our example, they're being surfaced with a subgrid on an entity form.
 
