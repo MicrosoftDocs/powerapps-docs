@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/01/2020
+ms.date: 01/05/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -55,6 +55,14 @@ by Omar Aftab and Marina Kolomiets
 **Deliver Java Apps Quickly Using Custom Connectors in Microsoft Power Apps**  
 by Sandra Ahlgrimm and Dawid van Heerden  
 [Register and watch now](https://info.microsoft.com/ww-Landing-DeliverJavaAppsQuicklyUsingCustomConnectors.html?LCID=EN-US)
+
+**Develop, test and deliver applications with GitHub Actions for Power Platform**  
+by Pierce Boggan and Hailey Huber  
+[Register and watch now](https://info.microsoft.com/ww-landing-develop-test-and-deliver-applications-with-github-actions-for-power-platform.html?lcid=en-us)
+
+**Get Your Business On Board with Microsoft Power Apps**  
+by Georgia Tsoraklidou and Alan Chai  
+[Register and watch now](https://info.microsoft.com/ww-Landing-GetYourBusinessOnBoard.html?LCID=EN-US)
 
 ### See also
 
