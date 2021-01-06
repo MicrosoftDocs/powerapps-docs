@@ -25,9 +25,9 @@ search.app:
 ---
 # Create or edit model-driven app quick create forms for a streamlined data entry experience
 
-In this topic, you create and edit a quick create form.
+In this article, you create and edit a quick create form.
 
- With quick create forms, your app can have a streamlined data entry experience with full support for logic defined by form scripts and business rules. In a Power Apps model-driven app, quick create forms appear when you select the **Create** button in the navigation bar or when you choose **+ New** when creating a new row from a lookup or sub-grid.
+ With quick create forms, your app can have a streamlined data entry experience with full support for logic defined by form scripts and business rules. In a Power Apps model-driven app, quick create forms appear when you select the **Create** button in the navigation bar or when you choose **+ New** when creating a new row from a lookup or subgrid.
   
  Dynamics 365 mobile apps use quick create forms for creating new rows. If a table already has a quick create form configured for it, the mobile apps use that form. If a table doesn't have a configured quick create form, Power Apps generates a quick create form  for creating rows in the mobile apps based on the main form definition.  
   
@@ -35,11 +35,11 @@ In this topic, you create and edit a quick create form.
 ## Tables with quick create forms  
  By default only these system tables have quick create forms: account, <sup>1</sup>campaign response, <sup>1</sup>case, <sup>1</sup>competitor, contact, <sup>1</sup>lead, <sup>1</sup>opportunity.  
  
-<sup>1</sup>Requires a Dynamics 365 customer engagement app.
+<sup>1</sup>Requires a customer engagement app.
  
-Although you can create quick create forms for system activity tables, with the exception of the appointment table, they do not support quick create forms. Currently, the option to disable the quick create form for the appointment table is not supported. Any of the other [updated tables](create-design-forms.md) and any custom tables can be enabled to support these forms by selecting **Enable quick create forms** in the table definition and creating a quick create form for the table. 
+Although you can create quick create forms for system activity tables, except for the appointment table, they do not support quick create forms. Currently, the option to disable the quick create form for the appointment table is not supported. Any of the other [updated tables](create-design-forms.md) and any custom tables can be enabled to support these forms by selecting **Enable quick create forms** in the table definition and creating a quick create form for the table. 
 
-You can enable custom activity tables to support quick create forms, and you can create quick create forms for those tables. However, the quick create form for custom activity tables will not be used when people select **Create** on the navigation bar. These quick create forms can be used only when people add a new row for a sub-grid that displays that specific custom activity table.  
+You can enable custom activity tables to support quick create forms, and you can create quick create forms for those tables. However, the quick create form for custom activity tables will not be used when people select **Create** on the navigation bar. These quick create forms can be used only when people add a new row for a subgrid that displays that specific custom activity table.  
   
 <a name="BKMK_CreateQuickCreate"></a>   
 ## Create a quick create form  
@@ -56,7 +56,7 @@ You can enable custom activity tables to support quick create forms, and you can
 
 2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
 
-3.  On the toolbar select **Add form** > **Quick Create Form**.  
+3.  On the toolbar, select **Add form** > **Quick Create Form**.  
   
 4.  In the form designer drag any columns from the **Column Explorer** into the sections on the form.  
   
@@ -66,11 +66,11 @@ You can enable custom activity tables to support quick create forms, and you can
   
 <a name="BKMK_EditQuickCreate"></a>   
 ## Edit a quick create form  
- While quick create forms support form scripts and business rules, their purpose is different from main forms and they don't support all the capabilities of main forms. Quick create forms always have one section with three columns. You can't add additional sections or columns.  
+ While quick create forms support form scripts and business rules, their purpose is different from main forms and they don't support all the capabilities of main forms. Quick create forms always have one section with three columns. You can't add more sections or columns.  
   
  The following controls cannot be added to quick create forms:  
   
--   Sub-grids  
+-   Subgrids  
   
 -   Quick View Forms  
   
@@ -105,19 +105,19 @@ The **Enable quick create forms** property can be enabled or disabled for all st
 
 >  <img src = "media/allow-quick-create.png" alt = "Allow Quick Create property on appointment table" width = "413" height = "975">
 
-### Unified interface client form display behavior
-The following table indicates what form is displayed by default when the **Enable quick create forms** property is *enabled* in the unified interface client.
+### Unified Interface client form display behavior
+The following table indicates what form is displayed by default when the **Enable quick create forms** property is *enabled* in the Unified Interface client.
  
 |Location where form is accessed  |Form displayed  |
 |---------|---------|
 |Specific activity associated grid  | Quick create      |
 |Specific activity sub grid   |  Quick create     |
-|Activities (activitypointer) grid     | Quick create     |
-|Activities (activitypointer) associated grid   | Quick create    |
-|Activities (activitypointer) sub grid  | Quick create    |
+|Activities (`activitypointer`) grid     | Quick create     |
+|Activities (`activitypointer`) associated grid   | Quick create    |
+|Activities (`activitypointer`) sub grid  | Quick create    |
 |Global command bar + button<sup>1</sup>    | Quick create    |
 |Timeline wall   | Quick create    |
-|Activities (activitypointer) grid   | Main   |
+|Activities (`activitypointer`) grid   | Main   |
 |Specific activity grid    | Main   |
 
 <sup>1</sup>Activities appear in the global **Create** or **+ New** buttons when the **Enable quick create forms** property is enabled. In this case, the quick create form is used if it exists or the main form if it does not. If **Enable quick create forms** is disabled, the entry for the table will not appear.
