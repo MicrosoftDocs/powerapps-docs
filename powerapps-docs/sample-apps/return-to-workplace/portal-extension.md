@@ -75,9 +75,7 @@ On the home screen you have several options:
   - RESOURCES
   - PROFILE 
   - SIGN OUT
-
-  > [!div class="mx-imgBorder"]
-  > ![Portal Hamburger Menu](media/portals-hamburguer-menu.png "Portal Hamburger Menu")
+  - NOTIFICATIONS
 
 - CREATE PASS 
 - VIEW PASS 
@@ -86,6 +84,21 @@ On the home screen you have several options:
   > [!div class="mx-imgBorder"]
   > ![Welcome screen](media/portals-home-welcome.png "Welcome screen")
 
+  #### Notification
+
+  Send notifications to employees through the **Facility Management App**, this notifications will show in the portal. 
+
+  To access **Notifications** click on the bell on the right top corner of the **Home Page**.
+
+  
+  > [!div class="mx-imgBorder"]
+  > ![Portal Hamburger Menu](media/portals-home-notifications.png "Portal Home Notifications")
+
+
+  > [!div class="mx-imgBorder"]
+  > ![Portal Hamburger Menu](media/portals-notifications-pass.png "Portal Home Notifications")
+
+  
 #### Creating a pass
 
 To create a guest pass using the portal: 
