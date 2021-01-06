@@ -5,7 +5,7 @@ author: topness-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 07/20/2020
+ms.date: 01/04/2021
 ms.author: phtopnes
 ms.reviewer: kathyos
 ---
