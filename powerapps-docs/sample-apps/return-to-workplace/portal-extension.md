@@ -203,7 +203,7 @@ Non-mandatory fields:
 > ![Portal Register Guest or dependent](media/portals-register-dependent.png "Portal Register Guest or dependent")
 
 
-After creating dependents, the user will see them listed when creating a pass for the dependents.
+After creating dependents, the user will see them listed. First the two most recent dependents and the list of all when creating a pass.
 
 > [!div class="mx-imgBorder"]
 > ![Create pass for guests](media/portals-select-dependent.png "Create pass for guests")
