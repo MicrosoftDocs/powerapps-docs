@@ -25,6 +25,24 @@ In this tutorial, you'll learn how to search for a sample app in the Teams store
 
 Several sample apps are available from the Teams store that you can add to your Teams channels and use for different purposes.
 
+:::row:::
+   :::column span="2":::
+      ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins(Preview)](bulletins.md) <br> Manager and user apps for company communications.
+   :::column-end:::
+   :::column span="":::
+      ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](employee-ideas.md) <br> App for campaigns and ideas.
+   :::column-end:::
+   :::column span="2":::
+      ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.
+   :::column-end:::
+   :::column span="":::
+      ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) <br> Manager and user apps for issue reporting.
+   :::column-end:::
+   :::column span="2":::
+      ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones(Preview)](milestones.md) <br> App to keep track of projects, and initiatives.
+   :::column-end:::
+:::row-end:::
+<!---
 | Sample app | Description |
 | - | - |
 | ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins(Preview)](bulletins.md) | Manager and user apps for company communications.
@@ -32,6 +50,7 @@ Several sample apps are available from the Teams store that you can add to your 
 | ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) | Manager and user apps for area inspections. |
 | ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
 | ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones(Preview)](milestones.md) | App to keep track of projects, and initiatives. |
+-->
 
 The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
 
