@@ -28,7 +28,7 @@ For these kinds of situations, you have the option to disable custom business lo
 
 This solution targets the custom business logic that has been applied for your organization. When you send requests that bypass custom business logic, all plug-ins and workflows are disabled except:
 
-- Plug-ins which are part of the core Dataverse system or part of a solution where Microsoft is the publisher.
+- Plug-ins which are part of the core Microsoft Dataverse system or part of a solution where Microsoft is the publisher.
 - Workflows included in a solution where Microsoft is the publisher.
 
 System plug-ins define the core behaviors for specific entities. Without these plug-ins you would encounter data inconsistencies that may not be easily fixed.
@@ -120,11 +120,11 @@ You can use this method for data operations you initiate in your plug-ins.
 
 ### Does this bypass plug-ins for data operations by Microsoft plug-ins?
 
-No. If a plug-in or workflow in a Microsoft solution performs operations on other records, the plug-ins for those operations are not bypassed. Only those plugins or workflows that apply to the specific first level operation will be bypassed.
+No. If a plug-in or workflow in a Microsoft solution performs operations on other records, the logic for those operations are not bypassed. Only those plugins or workflows that apply to the specific operation will be bypassed.
 
 ### Can I use this option for data operations I perform within a plug-in?
 
-Yes. Using the option for the Organization Service which uses the optional parameter on the class derived from [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
+Yes. For the Organization Service, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
 
 ## See also
 
