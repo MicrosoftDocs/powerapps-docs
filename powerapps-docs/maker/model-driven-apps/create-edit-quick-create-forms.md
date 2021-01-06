@@ -103,7 +103,6 @@ If you add a composite column to a quick create form, it will be displayed as se
 ## Enable Quick Create Form property behavior for activities
 The **Enable quick create forms** property can be enabled or disabled for all standard activities except recurring appointments. This property lets you change the form that is displayed by default for most activities. By default, the **Enable quick create forms** property is enabled and the quick create form is the form displayed in the app areas and activity tables that support it. 
 
-> ![Allow Quick Create property on appointment table](media/allow-quick-create.png "Allow Quick Create property on appointment table")
 >  <img src = "media/allow-quick-create.png" alt = "Allow Quick Create property on appointment table" width = "413" height = "975">
 
 ### Unified interface client form display behavior
