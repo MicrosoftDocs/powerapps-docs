@@ -75,7 +75,7 @@ These are the properties available to configure a column when you create or edit
 |**Formatting** | **Column width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
 
 > [!NOTE]
-> Information the user should notice even if skimmingIn the Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
+> In the Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
 
 ## Move columns on a form
 You can move a column on a form using drag and drop or cut and paste actions. 
