@@ -33,7 +33,7 @@ Depends on the type of attribute.
 | Attribute Type|Parameters Type|
 -------|------|
 | boolean| [Boolean](https://msdn.microsoft.com/library/t7bkhaz6.aspx) |
-| datetime|[Date](https://msdn.microsoft.com/library/cd9w2te4.aspx) <br/><br/>In the Unified Interface, date values are assumed to be UTC.<br/>In the legacy web client, date values are assumed to be in the user's time zone.|
+| datetime|[Date](https://msdn.microsoft.com/library/cd9w2te4.aspx) <br/><br/>In Unified Interface, date values are assumed to be UTC.<br/>In the legacy web client, date values are assumed to be in the user's time zone.|
 | decimal| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|
 | double| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx) |
 | Integer|[Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|
