@@ -49,7 +49,7 @@ For details about the above steps, go to [Use sample apps from the Teams store](
 
 To open the Milestones app:
 
-1. Sign in to Teams.
+1. Sign-in to Teams.
 
 1. Select the Team.
 
@@ -66,7 +66,7 @@ To open the Milestones app:
 ## Understand the Milestones interface
 
 The Milestones app gives you easy access to your projects, work items,
-activities, and project milestones
+activities, and project milestones.
 
 ![Understand the Milestone app interface](media/milestones/understand-interface.png "Understand the Milestone app interface")
 
@@ -119,7 +119,7 @@ To create a new project:
 
 1. Add team members to the project.
 
-1. Select **Create** to create the project
+1. Select **Create** to create the project.
 
     ![Add project members, and create project](media/milestones/project-members.png "Add project members, and create project")
 

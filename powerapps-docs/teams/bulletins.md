@@ -75,7 +75,7 @@ In this section, you'll learn about the following capabilities in the Manage bul
 
 To open the Manage bulletins app:
 
-1. Sign in to Teams.
+1. Sign-in to Teams.
 
 1. Select the Team.
 
@@ -382,7 +382,7 @@ In this section, you'll learn about the following capabilities in the Bulletins 
 
 ### Open the Bulletins app
 
-1. Sign in to Teams.
+1. Sign-in to Teams.
 
 1. Select the Team.
 
