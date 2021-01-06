@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[./includes/moveNext-description.md](./includes/moveNext-description.md)]
 
-Does not support move to next stage in a different entity.
+Moving to next stage is not supported for different entity.
 
 ## Syntax
 
