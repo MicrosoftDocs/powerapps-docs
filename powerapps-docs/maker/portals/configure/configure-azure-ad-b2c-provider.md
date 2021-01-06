@@ -107,8 +107,8 @@ Select this option to create a new Azure AD B2C tenant.
     > [!NOTE]
     > If the subscription doesn't have the **Microsoft.AzureActiveDirectory** resource provider registered, creating the new Azure AD B2C tenant fails with this error: 
     > <br> `Error occurred while creating Azure AD B2C tenant. The subscription is not registered to use namespace 'Microsoft.AzureActiveDirectory'. See https://aka.ms/rps-not-found for how to register subscriptions.`
-    > When this happens, register the resource provider in Azure, and then try again. 
-    > <br> More information: [Resolve errors for resource provider registration](https://docs.microsoft.com/azure/azure-resource-manager/templates/error-register-resource-provider)
+    > <br> When this happens, register the resource provider in Azure, and then try again. 
+    > <br> More information: [Resolve errors for resource provider registration in Azure](https://docs.microsoft.com/azure/azure-resource-manager/templates/error-register-resource-provider)
 
 ## Step 3. Register the application
 
