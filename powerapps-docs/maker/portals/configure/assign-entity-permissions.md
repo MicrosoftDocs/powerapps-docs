@@ -101,7 +101,7 @@ Users in this role can access all leads via entity lists or forms on the portal.
 
 We'll now add a Child permission to the Global Lead permission. With the Parent Permission record open, go to the **Child Entity Permissions** subgrid, select **New Entity Permission** to add a new record.
 
-![Add entity permissions to a web role](media\assign-entity-permissions\global-lead-child-permissions-new.png "Add entity permissions to a web role")  
+![Add child permissions to the Global Lead permission](media\assign-entity-permissions\global-lead-child-permissions-new.png "Add child permissions to the Global Lead permission")  
 
 Select the entity as Tasks and the scope as Parental. You can then select the parent relationship (**Lead\_Tasks**). This permission implies that a contact that is in a web role with the parent permission will then have global permission to all tasks that are related to leads.
 
