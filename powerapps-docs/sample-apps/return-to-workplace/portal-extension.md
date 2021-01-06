@@ -98,7 +98,7 @@ On the home screen you have several options:
   > [!div class="mx-imgBorder"]
   > ![Portal Hamburger Menu](media/portals-notifications-pass.png "Portal Home Notifications")
 
-  
+
 #### Creating a pass
 
 To create a guest pass using the portal: 
@@ -222,6 +222,17 @@ After creating dependents, the user will see them listed. First the two most rec
 > ![Create pass for guests](media/portals-select-dependent.png "Create pass for guests")
 
 To find dependents in the Facility Management app, go to **Solution Setup** and select **Employees**. On **My Active Contacts** view, open a record and find dependents on the **Guest** tab. All dependents can be found on the **Active Guests** view.
+
+#### Block
+
+When an employee or guest are blocked, they wont be able to create a pass. This block is managed through the **Facility Management App**, under **Access** for each contact. 
+
+> [!div class="mx-imgBorder"]
+> ![Create pass for guests](media/portals-employee-blocked-portal.png "Block guest")
+
+
+> [!NOTE]
+> System administrator can configure this information in the solution settings, therefore the information displayed depends on the default facility and facility group associated with that facility.
 
 ## Extend portal
 
