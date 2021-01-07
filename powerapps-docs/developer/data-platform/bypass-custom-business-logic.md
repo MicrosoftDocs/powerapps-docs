@@ -124,7 +124,7 @@ No. If a plug-in or workflow in a Microsoft solution performs operations on othe
 
 ### Can I use this option for data operations I perform within a plug-in?
 
-Yes. For the Organization Service, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
+Yes, But only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For the Organization Service, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest). You cannot use the CrmServiceClient in a plug-in.
 
 ## See also
 
