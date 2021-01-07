@@ -548,4 +548,4 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### See also
 
-[Limitations of controls in Power Apps](controls/control-limitations.md)
+[Limitations of controls in Power Apps](control-limitations.md)
