@@ -89,6 +89,6 @@ Getting started with Dataverse is easy. For example, you can start with these it
 
 ## Planning a Power Apps app or project
 
-It's easy to try building out your first app. We have a [30-day trial plan](signup-for-powerapps.md) and a free [community plan](dev-community-plan.md); find out which one is best for you and get started.
+It's easy to try building out your first app. Simply [sign in to Power Apps](maker/canvas-apps/intro-maker-portal.md). If you're interested in exploring even more functionality, like creating environments, we have a [30 day trial](signup-for-powerapps.md) or [community plan](dev-community-plan.md).
 
 If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
