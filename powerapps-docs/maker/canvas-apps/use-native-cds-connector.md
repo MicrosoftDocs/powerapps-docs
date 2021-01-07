@@ -170,7 +170,7 @@ You'll need to edit this formula. Option set text identifer is no longer used fo
 Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
 ```
 
-'Category(Accounts)' is the name of enum used in the Category field of the Accounts entity. This is a local option set.  You can read more about local and global option sets here: [Global option sets.](https://docs.microsoft.com/powerapps/maker/common-data-service/create-edit-global-option-sets)
+'Category(Accounts)' is the name of enum used in the Category field of the Accounts entity. This is a local option set.  You can read more about local and global option sets here: [Global option sets.](https://docs.microsoft.com/powerapps/maker/data-platform/create-edit-global-option-sets)
 
 #### Editing Option Set Patch statements to use new syntax
 
@@ -291,7 +291,7 @@ Read [Regarding lookup fields](https://docs.microsoft.com/powerapps/maker/canvas
 
 #### Access the list of all Activities for a record
 
-In Dataverse, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/common-data-service/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/common-data-service/custom-activities).
+In Dataverse, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/data-platform/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/data-platform/custom-activities).
 
 You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with an entity such as account. Add the Activities entity and other individual entities whose data you plan to display in the canvas app.
 
@@ -344,4 +344,4 @@ Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", 
 
 ### See also
 
-[What is Dataverse?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)
+[What is Dataverse?](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro)

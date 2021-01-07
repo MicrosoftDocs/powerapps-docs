@@ -20,7 +20,7 @@ search.app:
 ---
 # Define data for your model-driven app
 
-Data for your model-driven app is defined in [Microsoft Dataverse](../common-data-service/data-platform-intro.md). 
+Data for your model-driven app is defined in [Microsoft Dataverse](../data-platform/data-platform-intro.md). 
 
 You define your app data using the following components: *table*, *column*, and *relationship*.
 
@@ -28,9 +28,9 @@ For detailed information about working with these components in Dataverse to def
 
 |Component |Topic|
 |-----|----|
-|Table| [Work with tables](../common-data-service/entity-overview.md)|
-|Column| [Work with columns](../common-data-service/fields-overview.md)|
-|Relationships| [Work with relationships](../common-data-service/relationships-overview.md)|
+|Table| [Work with tables](../data-platform/entity-overview.md)|
+|Column| [Work with columns](../data-platform/fields-overview.md)|
+|Relationships| [Work with relationships](../data-platform/relationships-overview.md)|
 
 ## Next step
 

@@ -38,7 +38,7 @@ In order to distribute your app, you create a solution so the app can be package
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2. Select **Solutions** and then select **New solution**.
-3. Complete the columns on the **New Solution** page, and then select **Save**. More information: [Create a solution](../common-data-service/create-solution.md)
+3. Complete the columns on the **New Solution** page, and then select **Save**. More information: [Create a solution](../data-platform/create-solution.md)
 4. The **Solution** page appears. Select **Add Existing**, select **App**, select the app that you want to add to the solution, and then select **OK**. 
 
     ![Select solution components](media/select-solution-components.png)
@@ -54,7 +54,7 @@ To distribute your app so it can be imported into other environment or made avai
 3. On the **Publish Customizations** page, select **Next**.
 4. If the **Missing Required Components** page appears, select **Next**. 
 5. On the **Export System Settings** page, select the optional features that you want to include, and then select **Next**. 
-6. On the **Package Type** page, select **Unmanaged** or **Managed**, and the select **Export**. For more information about solution package types, see [Solutions overview](../common-data-service/solutions-overview.md).
+6. On the **Package Type** page, select **Unmanaged** or **Managed**, and the select **Export**. For more information about solution package types, see [Solutions overview](../data-platform/solutions-overview.md).
 7. Depending on your browser and settings, a .zip package file is built and copied to the default downloads folder. The file name of the package is based on the unique name of the solution appended with underscores and the solution version number.
 
 	> [!NOTE]
@@ -70,4 +70,4 @@ When you receive a solution zip file which contains the app that you want to imp
 4. Select **Import**.
 
 ## See also
-[Change the solution publisher prefix](../common-data-service/change-solution-publisher-prefix.md)
+[Change the solution publisher prefix](../data-platform/change-solution-publisher-prefix.md)

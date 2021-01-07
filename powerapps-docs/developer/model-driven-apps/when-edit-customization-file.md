@@ -92,7 +92,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
 
 ### See also  
  [Customization XML reference](customization-xml-reference.md)   
- [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md)   
+ [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)   
  [Ribbon core schema](ribbon-core-schema.md)
  [Ribbon types schema](ribbon-types-schema.md)
  [Ribbon WSS schema](ribbon-wss-schema.md)   
