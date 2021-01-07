@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/05/2021
+ms.date: 01/06/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -63,6 +63,14 @@ by Pierce Boggan and Hailey Huber
 **Get Your Business On Board with Microsoft Power Apps**  
 by Georgia Tsoraklidou and Alan Chai  
 [Register and watch now](https://info.microsoft.com/ww-Landing-GetYourBusinessOnBoard.html?LCID=EN-US)
+
+**Transforming Companies and Careers in Nigeria with Microsoft Power Apps**  
+by Foyin Olajide-Bello  
+[Register and watch now](https://info.microsoft.com/ww-Landing-TransformingCompanieswithPowerApps.html?LCID=EN-US)
+
+**Easily build your own low-code apps with Microsoft Power Apps**  
+by Brian Dang and April Dunnam  
+[Register and watch now](https://info.microsoft.com/ww-Landing-EasilyBuildBusinessApps.html?LCID=EN-US)
 
 ### See also
 
