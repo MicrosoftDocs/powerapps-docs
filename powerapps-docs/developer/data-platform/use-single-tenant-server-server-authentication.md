@@ -97,7 +97,7 @@ To create an unlicensed "application user" in your environment, follow these ste
 &nbsp;&nbsp;**Primary Email** == **User Name**
 
     > [!div class="mx-imgBorder"]
-    > ![New app user](media/S2S-new-appuser.png)
+    > ![New app user populated](media/S2S-new-appuser.png)
 
 7. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
 
