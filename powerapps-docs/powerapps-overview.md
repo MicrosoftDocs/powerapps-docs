@@ -68,7 +68,7 @@ Dynamics 365 apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dy
 
 You can build Power Apps for free. Simply [sign in to Power Apps](maker/canvas-apps/intro-maker-portal.md). Initially, you'll have access to the default environment. 
 
-A license is needed to play Power Apps. You can both build and play Power Apps for free by signing up either for a [30 day trial](maker/signup-for-powerapps.md) or [community plan](maker/dev-community-plan.md).. 
+A license is needed to play Power Apps. You can both build and play Power Apps for free by signing up either for a [30 day trial](maker/signup-for-powerapps.md) or [community plan](maker/dev-community-plan.md). 
 
 ## Purchase Power Apps
 
