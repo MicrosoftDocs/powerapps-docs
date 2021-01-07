@@ -71,7 +71,7 @@ A notification is displayed when the environment variables do not have any value
 
 ## Security
 
-The environmentvariabledefinition table is [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-tables). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the environmentvariablevalue table is inherited from the parent environmentvariabledefinition table and therefore does not require separate privileges. More information: [Security in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security).
+The environmentvariabledefinition table is [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-tables). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the environmentvariablevalue table is inherited from the parent environmentvariabledefinition table and therefore does not require separate privileges. More information: [Security in Dataverse](/power-platform/admin/wp-security).
 
 ## Current limitations
 
