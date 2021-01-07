@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/31/2020
+ms.date: 01/07/2021
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 
 # Limitations of controls in Power Apps
 
-In this article, learn about the limitations of the controls used in canvas apps (Microsoft Dataverse environments), and Power Apps apps created inside Microsoft Teams (Microsoft Dataverse for Teams environments).
+In this article, learn about the limitations of the controls used in canvas apps inside Microsoft Dataverse environments, and apps made with Power Apps inside Microsoft Teams (Microsoft Dataverse for Teams environments). For more information about environments, go to [Types of environments](https://docs.microsoft.com/power-platform/admin/environments-overview#types-of-environments).
 
 ## Limitations of controls in Dataverse environments
 
@@ -52,7 +52,7 @@ This section lists limitations of controls used by apps created inside Dataverse
 
 ### General limitations
 
-Power Apps apps created in a Dataverse for Teams environment can't be opened outside of Teams. To use controls like *Camera*, upgrade your Power Apps license so that the app can be opened outside of Teams&mdash;for example&mdash;in the Power Apps mobile app.
+Apps made with Power Apps in a Dataverse for Teams environment can't be opened outside of Teams. To use controls like *Camera*, upgrade your Power Apps license so that the app can be opened outside of Teams&mdash;for example&mdash;in the Power Apps mobile app.
 
 ### Limitations of specific controls
 
@@ -73,7 +73,7 @@ Power Apps apps created in a Dataverse for Teams environment can't be opened out
 
 ### Unsupported controls
 
-The following controls aren't supported by Power Apps apps created inside Dataverse for Teams environments:
+The following controls aren't supported by apps made with Power Apps created inside Dataverse for Teams environments:
 
 - [Address Input](geospatial-component-input-address.md)
 - [Camera](controls/control-camera.md) (in Teams Mobile)
