@@ -86,16 +86,18 @@ To create an unlicensed "application user" in your environment, follow these ste
 4. Select **+ New**.
 5. In the **Application User** form, enter the required information. 
 
-    1. The user name information must not match a user that exists in the Azure Active Directory.
-    1. In the **Application ID** field, enter the application ID of the app you registered earlier in the Azure AD.
+   1. In the **Application ID** field, enter the application ID of the app you registered earlier in Azure AD.
 
     > [!div class="mx-imgBorder"]
     > ![New app user](media/S2S-new-appuser1.png)
 
-6. After selecting **SAVE**, if all goes well, the **Application ID URI** and **Azure AD Object Id** fields will auto-populate with correct values.
+6. After selecting **SAVE**, if all goes well, the **User Name**, **Application ID URI**, **Azure AD Object Id**, **Full Name**, and **Primary Email** fields will auto-populate with correct values where:<p/>
+&nbsp;&nbsp;**User Name** == 'Application Name + Application ID'@TenantID.com<br/>
+&nbsp;&nbsp;**Full Name** == 'Application Name'<br/>
+&nbsp;&nbsp;**Primary Email** == **User Name**
 
     > [!div class="mx-imgBorder"]
-    > ![New app user](media/S2S-new-appuser.PNG)
+    > ![New app user populated](media/S2S-new-appuser.png)
 
 7. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
 
