@@ -1001,6 +1001,18 @@
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
       href: ./canvas-apps/embedding-sdk.md
+  - name: Performance and optimization
+    items:
+    - name: Understand canvas apps execution phases and data flow
+      href: ./canvas-apps/execution-phases-data-flow.md
+    - name: Possible sources of slow performance
+      href: ./canvas-apps/possible-sources-slow-performance.md
+    - name: Common performance issues and resolutions
+      href: ./canvas-apps/common-perf-issue-fixes.md
+    - name: Best practices
+      href: ./canvas-apps/performance-tips.md
+    - name: Tools
+      href: ./canvas-apps/perf-optimize-tools.md
 - name: Model-driven apps
   items:
   - name: Model-driven apps
