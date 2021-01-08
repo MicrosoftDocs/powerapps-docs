@@ -144,7 +144,7 @@ You can choose to use either early- or late-bound code to invoke your custom API
 For late-bound code, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
 
 * Entity-bound custom APIs have an implicit request property named `Target` that should be set to an `EntityReference` of the record to invoke the API on.
-* Collection-bound custom APIs have an implicit `InputCollection` request property that should be set to a `QueryBase` instance (`FetchExpression`, `QueryExpression` or `QueryByAttribute`)
+* Collection-bound custom APIs have an implicit `InputCollection` request property that should be set to a `QueryBase` instance (`FetchExpression`, `QueryExpression` or `QueryByAttribute`). The query must be for the entity type the custom API is bound to.
 
 You can access response properties from the parameters of the returned response.
 
@@ -177,6 +177,13 @@ Content-Type: application/json; charset=utf-8
 
 ```http
 GET [Organization URI]/api/v9.1/accounts(ed5d4e42-850c-45b7-8b38-2677545107cc)/Microsoft.Dynamics.CRM.myapi_CustomBoundAPI()
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Content-Type: application/json; charset=utf-8
+```
+
+```http
+GET [Organization URI]/api/v9.1/accounts/Microsoft.Dynamics.CRM.myapi_CustomEntityCollectionBoundAPI()?$filter=name eq 'Microsoft'&$select=name,telephone1&$top=10
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 Content-Type: application/json; charset=utf-8
