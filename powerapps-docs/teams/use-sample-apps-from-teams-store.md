@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 12/17/2020
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -25,13 +25,30 @@ In this tutorial, you'll learn how to search for a sample app in the Teams store
 
 Several sample apps are available from the Teams store that you can add to your Teams channels and use for different purposes.
 
-| Name | Description |
-| - | - |
-| [Employee ideas](employee-ideas.md) | Manager and employee apps for campaigns and ideas. |
-| [Inspection](inspection.md) | Manager and user apps for area inspections. |
-| [Issue reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
+:::row:::
+   :::column span="":::
+      ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins (Preview)](bulletins.md) <br> Manager and user apps for company communications.
+   :::column-end:::
+   :::column span="":::
+      ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](employee-ideas.md) <br> App for campaigns and ideas.
+   :::column-end:::
+   :::column span="":::
+      ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](inspection.md) <br> Manager and user apps for area inspections.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](issue-reporting.md) <br> Manager and user apps for issue reporting.
+   :::column-end:::
+   :::column span="":::
+      ![Milestones app](media/app-icons/milestones-app-icon.png "Milestones app") <br> [Milestones (Preview)](milestones.md) <br> App to keep track of projects, and initiatives.
+   :::column-end:::
+             
+   :::column span="":::
+   :::column-end:::
+:::row-end:::
 
-The following tutorial shows how to install the Employee ideas app.
+The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
 
 ## Install the sample app
 
@@ -113,11 +130,11 @@ You can further customize and edit the components of an installed Power Apps app
 
 ## Report installation errors
 
-If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively by selecting **Ctrl**+**Alt**+**A** on the keyboard to get the session details. For more information about session details, go to [About tab](overview-of-the-power-apps-app.md#about-tab).
+If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively by selecting **Ctrl**+**Alt**+**A** on the keyboard to get the session details. For more information about session details, go to [About tab](overview-of-the-power-apps-app.md#about).
 
 ## Sample app updates
 
-Updates to the sample apps are published immediately. If you already have a sample app in use when this happens, a new version of the app is created with these updates and published as the live version. If you [customized a sample app](customize-sample-apps.md), you can [restore the app to a previous version](manage-your-apps?#restore-an-app) with your customizations, or recreate the customizations on top of the updated live version. When restoring the app to preserve your customizations, ensure to check the app functionality for compatibility with the updates.
+Updates to the sample apps are published immediately. If you already have a sample app in use when this happens, a new version of the app is created with these updates and published as the live version. If you [customized a sample app](customize-sample-apps.md), you can [restore the app to a previous version](manage-your-apps.md#restore-an-app) with your customizations, or recreate the customizations on top of the updated live version. When restoring the app to preserve your customizations, ensure to check the app functionality for compatibility with the updates.
 
 ## Sample apps FAQs
 
@@ -125,7 +142,11 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 
 ### See also
 
-- [Employee ideas app](employee-ideas.md)  
-- [Inspection sample app](inspection.md)  
-- [Issue Reporting sample apps](issue-reporting.md)
+- [Bulletins (Preview) sample app](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones (Preview) sample app](milestones.md)
 - [Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+ 

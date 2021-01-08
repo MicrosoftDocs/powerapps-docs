@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 09/22/2020
+ms.date: 12/15/2020
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -17,6 +17,11 @@ search.app:
 # Common issues and resolutions for Power Apps
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
+
+1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
+<br> A pop-up dialog will show the following message in this situation: <br>
+  `Upgrade browser to use Dropbox`
+<br> When this happens, consider using web player on Windows platform.
 
 1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
    When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, please use your browser.
@@ -156,7 +161,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Changing a Title field in an entity**
 
-    If you change the Title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](../common-data-service/data-platform-entity-lookup.md).
+    If you change the Title field for an entity that other entities reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the entity for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between entities](../data-platform/data-platform-entity-lookup.md).
 
 1. **Apps that connect to on-premises SharePoint**
 

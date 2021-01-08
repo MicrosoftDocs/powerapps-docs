@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 10/08/2020
+ms.date: 12/18/2020
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -192,7 +192,7 @@ The following sample rich text editor configuration code sample data can be used
 
 ## Sample rich text editor configuration file
 
-The following sample sets several of the options in the rich text editor&mdash;such as the height, location, and default font type&mdash;and uses plug-in logic. For more information about plug-ins, see [Use plug-ins to extend business processes](../../developer/common-data-service/plug-ins.md).
+The following sample sets several of the options in the rich text editor&mdash;such as the height, location, and default font type&mdash;and uses plug-in logic. For more information about plug-ins, see [Use plug-ins to extend business processes](../../developer/data-platform/plug-ins.md).
 
 ```json
 {
@@ -219,12 +219,144 @@ The following sample sets several of the options in the rich text editor&mdash;s
 }
 ```
 
-## Known issue
+## Create plain text surface that makes the strips html (except for <br /> tags)
 
-HTML markup is displayed for columns configured to use the rich text editor control that are displayed in components other than a column on a form. For example, this occurs in views, subgrids, paginated reports, and portals.
+`{ "defaultSupportedProps": {     "enterMode": 2 ,     "shiftEnterMode": 2 ,     "allowedContent":"*",     "disallowedContent":"*",     "forcePasteAsPlainText": true ,     "toolbar":[],     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  },  "disableImages": true}}`
+
+:::image type="content" source="media/rte-plain-text-surface.png" alt-text="Creating a plain text surface makes the strips html":::
+
+## Remove the context menu so right-clicking will work with the default browser spell check
+
+Enabling this functionality removes the contextual right-click editing capability.
+
+`{  "defaultSupportedProps": {     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  }}`
+
+:::image type="content" source="media/rte-right-click-config.png" alt-text="Remove the context menu so right-clicking will work with the default browser spell check":::
+
+## Use the webresource for organization-wide changes
+
+The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control.
+
+```json
+{
+  "defaultSupportedProps": {
+ 
+        "autoGrow_onStartup": true,
+ 
+        "basicEntities": true,
+ 
+        "browserContextMenuOnCtrl": true,
+ 
+        "copyFormatting_allowRules": true,
+ 
+        "customConfig": "",
+ 
+        "dialog_backgroundCoverColor": "black",
+ 
+        "disableNativeSpellChecker": false,
+ 
+        "enterMode": 3,
+ 
+        "extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi,blockquote,button,collapser,colorbutton,colordialog,confighelper,contextmenu,copyformatting,dialog,find,floatpanel,font,indentblock,justify,panel,panelbutton,pastefromword,quicktable,selectall,stickystyles,superimage,tableresize,tableselection,tabletools",
+ 
+        "fillEmptyBlocks": true,
+ 
+        "font_defaultLabel": "Segoe UI",
+ 
+        "font_names": "Angsana New/'Angsana New', 'Leelawadee UI', Sathu, serif;Arial/Arial, Helvetica, sans-serif;Arial Black/'Arial Black', Arial, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;Calibri/Calibri, Helvetica, sans-serif;Cambria/Cambria, Georgia, serif;Candara/Candara, Optima, sans-serif;Century Gothic/'Century Gothic', sans-serif;Comic Sans MS/'Comic Sans MS';Consolas/Consolas, Courier, monospace;Constantia/Constantia, 'Hoefler Text', serif;Corbel/Corbel, Skia, sans-serif;Cordia New/'Cordia New', 'Leelawadee UI', Silom, sans-serif;Courier New/'Courier New';DaunPenh/DaunPenh, 'Leelawadee UI', 'Khmer MN', sans-serif;Franklin Gothic Book/'Franklin Gothic Book', 'Avenir Next Condensed', sans-serif;Franklin Gothic Demi/'Franklin Gothic Demi', 'Avenir Next Condensed Demi Bold', sans-serif;Franklin Gothic Medium/'Franklin Gothic Medium', 'Avenir Next Condensed Medium', sans-serif;Garamond/Garamond, Georgia, serif;Gautami/Gautami, 'Nirmala UI', 'Telugu MN', sans-serif;Georgia/Georgia, serif;Impact/Impact, Charcoal, sans-serif;Iskoola Pota/'Iskoola Pota', 'Nirmala UI', 'Sinhala MN', sans-serif;Kalinga/Kalinga, 'Nirmala UI', 'Oriya MN', sans-serif;Kartika/Kartika, 'Nirmala UI', 'Malayalam MN', sans-serif;Latha/Latha, 'Nirmala UI', 'Tamil MN', sans-serif;Leelawadee UI/'Leelawadee UI', Thonburi, sans-serif;Lucida Console/'Lucida Console', Monaco, monospace;Lucida Handwriting/'Lucida Handwriting', 'Apple Chancery', cursive;Lucida Sans Unicode/'Lucida Sans Unicode';Mangal/Mangal, 'Nirmala UI', 'Devanagari Sangam MN', sans-serif;Nirmala UI/'Nirmala UI', sans-serif;Nyala/Nyala, Kefa, sans-serif;Palatino Linotype/'Palatino Linotype', 'Book Antiqua', Palatino, serif;Raavi/Raavi, 'Nirmala UI', 'Gurmukhi MN', sans-serif;Segoe UI/'Segoe UI', 'Helvetica Neue', sans-serif;Shruti/Shruti, 'Nirmala UI', 'Gujarati Sangam MN', sans-serif;Sitka Heading/'Sitka Heading', Cochin, serif;Sitka Text/'Sitka Text', Cochin, serif;Sylfaen/Sylfaen, Mshtakan, Menlo, serif;TW Cen MT/'TW Cen MT', 'Century Gothic', sans-serif;Tahoma/Tahoma, Geneva, sans-serif;Times New Roman/'Times New Roman', Times, serif;Times/Times, 'Times New Roman', serif;Trebuchet MS/'Trebuchet MS';Tunga/Tunga, 'Nirmala UI', 'Kannada MN', sans-serif;Verdana/Verdana, Geneva, sans-serif;Vrinda/Vrinda, 'Nirmala UI', 'Bangla MN', sans-serif;メイリオ/Meiryo, メイリオ, 'Hiragino Sans', sans-serif;仿宋/FangSong, 仿宋, STFangsong, serif;微軟正黑體/'Microsoft JhengHei', 微軟正黑體, 'Apple LiGothic', sans-serif;微软雅黑/'Microsoft YaHei', 微软雅黑, STHeiti, sans-serif;新宋体/NSimSun, 新宋体, SimSun, 宋体, SimSun-ExtB, 宋体-ExtB, STSong, serif;新細明體/PMingLiU, 新細明體, PMingLiU-ExtB, 新細明體-ExtB, 'Apple LiSung', serif;楷体/KaiTi, 楷体, STKaiti, serif;標楷體/DFKai-SB, 標楷體, BiauKai, serif;游ゴシック/'Yu Gothic', 游ゴシック, YuGothic, sans-serif;游明朝/'Yu Mincho', 游明朝, YuMincho, serif;隶书/SimLi, 隶书, 'Baoli SC', serif;黑体/SimHei, 黑体, STHeiti, sans-serif;굴림/Gulim, 굴림, 'Nanum Gothic', sans-serif;궁서/Gungsuh, 궁서, GungSeo, serif;돋움/Dotum, 돋움, AppleGothic, sans-serif;맑은 고딕/'Malgun Gothic', '맑은 고딕', AppleGothic, sans-serif;바탕/Batang, 바탕, AppleMyungjo, serif;바탕체/BatangChe, 바탕체, AppleMyungjo, serif;ＭＳ Ｐゴシック/'MS PGothic', 'ＭＳ Ｐゴシック', 'MS Gothic', 'ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN', sans-serif;ＭＳ Ｐ明朝/'MS PMincho', 'ＭＳ Ｐ明朝', 'MS Mincho', 'ＭＳ 明朝', 'Hiragino Mincho ProN', serif",
+ 
+        "fontSize_defaultLabel": "9",
+ 
+        "fontSize_sizes": "8/8pt;9/9pt;10/10pt;11/11pt;12/12pt;14/14pt;16/16pt;18/18pt;20/20pt;22/22pt;24/24pt;26/26pt;28/28pt;36/36pt;48/48pt;72/72pt;",
+ 
+        "height": 185,
+ 
+        "keystrokes": [],
+ 
+        "qtCellBorderColor": "rgb(171, 171, 171)",
+ 
+        "qtCellBorderStyle": "solid",
+ 
+        "qtCellBorderWidth": "1px",
+ 
+        "qtCellPadding": "1",
+ 
+        "qtCellSpacing": "0",
+ 
+        "qtCellWith": "120px",
+ 
+        "qtColumns": 8,
+ 
+        "qtRows": 6,
+ 
+        "qtStyle": {
+ 
+            "border-collapse": "collapse",
+ 
+            "font-size": "9pt"
+ 
+        },
+ 
+        "removeDialogTabs": "flash:Upload;link:upload",
+ 
+        "removePlugins": "a11yhelp,codemirror,liststyle,magicline,scayt,showborders",
+ 
+        "skin": "superowa",
+ 
+        "stickyStyle": {
+ 
+            "font-size": "9pt",
+ 
+            "font-family": "'Segoe UI','Helvetica Neue',sans-serif"
+ 
+        },
+ 
+        "stickyStyles_defaultTag": "div",
+ 
+        "superimageImageMaxSize": 5,
+ 
+        "toolbarcollapser_enableResizer": true,
+ 
+        "toolbarLocation": "bottom",
+ 
+        "uploadRecordId": []
+ 
+    },
+ 
+    "disableContentSanitization": false,
+ 
+    "disableDefaultImageProcessing": false,
+ 
+    "disableImages": false,
+ 
+    "imageEntity": {
+ 
+        "imageEntityName": "msdyn_richtextfiles",
+ 
+        "imageFileAttributeName": "msdyn_imageblob"
+ 
+    },
+ 
+    "showAsTabControl": false,
+ 
+    "showFullScreenExpander": false,
+ 
+    "showHtml": false,
+ 
+    "showPreview": false,
+ 
+    "showPreviewHeaderWarning": false}
+}
+``` 
+
+## Known issues
+
+- HTML markup is displayed for columns configured to use the rich text editor control that are displayed in components other than a column on a form. For example, this occurs in views, subgrids, paginated reports, and portals.
 > [!div class="mx-imgBorder"] 
 > ![HTML markup displayed in a column on a subgrid.](media/html-markup-issue.png)
 
+- Don't replace the email activity control with the rich text editor control because it impacts the way images need to be saved and converted. We are working to fully enable using RTE as a replacement for the email activity editor in a future release.
+
 ### See also
 
-[Create and edit columns for Microsoft Dataverse using Power Apps portal](../common-data-service/create-edit-field-portal.md)
+[Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)

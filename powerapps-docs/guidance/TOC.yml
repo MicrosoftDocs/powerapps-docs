@@ -6,12 +6,18 @@
     items:
     - name: Patterns overview
       href: patterns/overview.md
-    - name: Calculation or Transformation pattern
+    - name: Approval pattern
+      href: patterns/approval-pattern.md
+    - name: Asset management/resource booking pattern
+      href: patterns/asset-management-pattern.md  
+    - name: Calculation/transformation pattern
       href: patterns/calculator-pattern.md
-    - name: Communication or Announcement pattern
+    - name: Communication/announcement pattern
       href: patterns/communication-pattern.md
-    - name: Inspection or Audit pattern
+    - name: Inspection/audit pattern
       href: patterns/inspection-pattern.md
+    - name: Project management pattern
+      href: patterns/project-management-pattern.md
     - name: More patterns
       href: patterns/more-patterns.md
   - name: Planning a Power Apps project

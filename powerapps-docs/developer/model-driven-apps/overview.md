@@ -25,7 +25,7 @@ search.app:
 Model-driven apps are primarily a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code, begin with [learning how to build model-driven apps](/powerapps/maker/model-driven-apps/model-driven-app-components) and what options can be applied without code.
 
 > [!NOTE]
-> Model-driven apps connect to Microsoft Dataverse. For information about how developers can add value at the service level, see [Dataverse Developer Overview](../common-data-service/overview.md).
+> Model-driven apps connect to Microsoft Dataverse. For information about how developers can add value at the service level, see [Dataverse Developer Overview](../data-platform/overview.md).
 >
 > Content in this section will refer only to extensions developers can do that apply to the experience for users of model-driven apps. 
 

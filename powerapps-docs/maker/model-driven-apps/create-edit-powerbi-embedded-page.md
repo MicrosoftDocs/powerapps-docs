@@ -15,16 +15,11 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create or edit a Power BI embedded system dashboard (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create or edit a Power BI embedded system dashboard
 
 This article explains how to set up and use a system dashboard that references a Power BI report or dashboard in a model-driven app. System administrators and system customizers can create system reports and dashboards, which can be made available to model-driven app users.  Users need to have the relevant Power BI license and authorization to consume content.  Read more about relevant Power BI licenses at [Power BI pricing](https://powerbi.microsoft.com/en-us/pricing/).
 
 To learn more about Power BI reports and dashboards, see [Create reports and dashboards in Power BI](https://docs.microsoft.com/power-bi/create-reports/).
-
-> [!IMPORTANT]
-> [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 > [!NOTE]
 > Power BI embedded in a system dashboard or form ignores the Power Platform admin center **Power BI visualization embedding** environment setting. That setting controls whether end users can add embedded Power BI reports to personal views, charts, and dashboards.
@@ -92,7 +87,7 @@ When a solution with a Power BI embedded component will be moved to other enviro
 
     A nested panel opens where you create the environment variable. The environment variable properties are automatically filled using the dashboard **Display Name** and **Name**.
 
-    You can configure the workspace and report or dashboard. The values are stored as JSON. More information: [Environment variables overview](../common-data-service/environmentvariables.md)
+    You can configure the workspace and report or dashboard. The values are stored as JSON. More information: [Environment variables overview](../data-platform/environmentvariables.md)
 
     > [!div class="mx-imgBorder"] 
     > ![Power BI embedded Environment Variable panel](media/create-edit-powerbi-embedded-page/powerbi-embedded-env-var-panel.png  "Power BI embedded Environment Variable panel")
@@ -105,7 +100,7 @@ When a solution with a Power BI embedded component will be moved to other enviro
 ### See also
 
 [Create or edit model-driven app dashboards](create-edit-dashboards.md) <br />
-[View table data in Power BI Desktop](../common-data-service/view-entity-data-power-bi.md) <br />
+[View table data in Power BI Desktop](../data-platform/view-entity-data-power-bi.md) <br />
 [Use Power BI](use-power-bi.md) <br />
-[Use Power BI with Microsoft Dataverse](../common-data-service/use-powerbi-with-cds.md) <br />
-[Create a Power BI report using the Common Data Service connector](../common-data-service/data-platform-powerbi-connector.md)
+[Use Power BI with Microsoft Dataverse](../data-platform/use-powerbi-dataverse.md) <br />
+[Create a Power BI report using the Common Data Service connector](../data-platform/data-platform-powerbi-connector.md)

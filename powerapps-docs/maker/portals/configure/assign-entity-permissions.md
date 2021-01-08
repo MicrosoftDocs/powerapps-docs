@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/12/2020
+ms.date: 01/06/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -80,7 +80,7 @@ The following table explains the entity permission attributes.
 | Name                     | The descriptive name of the record. This field is required.                                                                                                                                                                                                                                                               |
 | Entity Name              | The logical name of the entity that is to be secured or that will define the contact relationship or parent relationship to secure a related entity on a child permission. This field is required.                                                                                                                        |
 | Scope (mandatory)                   | <ul><li>**Global**: Grant privileges to the entity record without any requirement for an owner (contact).</li><li>**Contact**: Grant privileges to the entity record that has a direct relationship to an owner (contact).</li><li>**Account**: Grant privileges to the entity record that has a relationship to an account, which serves as the owner assuming the account is the parent customer of the contact.</li><li>**Parent**: Grant privileges to the entity record through the chain of its parent permissions' relationships.</li></ul>|
-| Relationship for Scope | Depends on the selected Scope. <ul> <li> **Contact Relationship**: Required only if Scope = Contact. <br> The schema name of the relationship between the contact and the entity specified by the Entity Name field. </li> <li> **Account Relationship**: Required only if Scope = Account. <br> The schema name of the relationship between the account and the entity specified by the Entity Name field. </li> <li> **Parent Relationship**: Required only if a parent entity permission is assigned. <br> The schema name of the relationship between the entity specified by the Entity Name field and the entity specified by the Entity Name field on its Parent Entity Permission record. <ul> <li> **Parent Entity Permission**:  Required only if Scope = Parent. </li> </li> </ul>  </ul> <br> **Note**: Available relationships will be empty if the Contact, or the Account has no existing relationships with the selected entity. To create entity relationships, see [Entity relationships overview](../../common-data-service/create-edit-entity-relationships.md).
+| Relationship for Scope | Depends on the selected Scope. <ul> <li> **Contact Relationship**: Required only if Scope = Contact. <br> The schema name of the relationship between the contact and the entity specified by the Entity Name field. </li> <li> **Account Relationship**: Required only if Scope = Account. <br> The schema name of the relationship between the account and the entity specified by the Entity Name field. </li> <li> **Parent Relationship**: Required only if a parent entity permission is assigned. <br> The schema name of the relationship between the entity specified by the Entity Name field and the entity specified by the Entity Name field on its Parent Entity Permission record. <ul> <li> **Parent Entity Permission**:  Required only if Scope = Parent. </li> </li> </ul>  </ul> <br> **Note**: Available relationships will be empty if the Contact, or the Account has no existing relationships with the selected entity. To create entity relationships, see [Entity relationships overview](../../data-platform/create-edit-entity-relationships.md).
 | Read                     | Privilege that controls whether the user can read a record.                                                                                                                                                                                                                                                               |
 | Write                    | Privilege that controls whether the user can update a record.                                                                                                                                                                                                                                                             |
 | Create                   | Privilege that controls whether the user can create a new record. The right to create a record for an entity type doesn't apply to an individual record, but instead to a class of entities.                                                                                                                             |
@@ -99,15 +99,31 @@ Users in this role can access all leads via entity lists or forms on the portal.
 
 ![Grant global permissions to a lead](../media/grant-global-permission-leads.png "Grant global permissions to a lead")  
 
-We'll now add a Child permission to the Global Lead permission. With the Parent Permission record open, go to the **Child Entity Permissions** subgrid, select **New** to open a lookup for entity permissions, select the magnifying glass, and then select **New** to add a new record.
+We'll now add a Child permission to the Global Lead permission. With the Parent Permission record open, go to the **Child Entity Permissions** subgrid, select **New Entity Permission** to add a new record.
 
-![Add entity permissions to a web role](../media/add-entity-permission-web-role.png "Add entity permissions to a web role")  
+![Add child permissions to the Global Lead permission](media\assign-entity-permissions\global-lead-child-permissions-new.png "Add child permissions to the Global Lead permission")  
 
 Select the entity as Tasks and the scope as Parental. You can then select the parent relationship (**Lead\_Tasks**). This permission implies that a contact that is in a web role with the parent permission will then have global permission to all tasks that are related to leads.
 
-Remember that in order for your list to respect these permissions, you must have enabled Entity Permissions on the list AND there must be actions that will actually allow users to do the actions for which their permissions have been granted. Furthermore, permissions must also be enabled on the [entity form](entity-forms.md) record, and that form must be surfacing a page that has a subgrid on it for the entity that you want to enable with child permissions, in this case Tasks. Furthermore, to enable Read or Create permissions for tasks, you'll need to configure those entity forms too, and edit the forms to remove the Regarding lookup field.  
+In order for your list to respect these permissions:
 
-![Edit a web page form](../media/edit-webpage-form.png "Edit a web page form")  
+- Entity Permissions must be enabled on the list.
+    
+    ![Enable Entity Permissions on the list](media\assign-entity-permissions\enable-entity-permissions.png "Enable Entity Permissions on the list") 
+
+- There must be actions that will actually allow users to do the actions for which their permissions have been granted. 
+
+    ![Actions for which permissions have been granted](media\assign-entity-permissions\form-actions.png "Actions for which permissions have been granted") 
+
+- Permissions must also be enabled on the [entity form](entity-forms.md) record.
+
+    ![Enabled permissions on the entity form record](media\assign-entity-permissions\lead-entity-form.png "Enabled permissions on the entity form record")
+ 
+- The form must be surfacing a page that has a subgrid on it for the entity that you want to enable with child permissions, in this case Tasks.
+
+    ![Subgrid with the entity - Tasks](media\assign-entity-permissions\subgrid-on-form.png "Subgrid with the entity - Tasks")
+
+Also, if you want to enable Read or Create permissions for tasks, you'll need to configure those entity forms too, and edit the forms to remove the Regarding lookup field.  
 
 This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on an entity list, a filter is added to the list so that only tasks that are related to a lead will appear in the list. In our example, they're being surfaced with a subgrid on an entity form.
 
