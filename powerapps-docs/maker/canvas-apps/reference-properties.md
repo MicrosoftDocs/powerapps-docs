@@ -545,3 +545,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 ### Z
 
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.  Applies to **[Camera](controls/control-camera.md)** and **[PDF viewer](controls/control-pdf-viewer.md)** controls.
+
+### See also
+
+[Limitations of controls in Power Apps](control-limitations.md)

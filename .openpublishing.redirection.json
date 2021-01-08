@@ -21,6 +21,11 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerapps-docs/developer/data-platform/authenticate-office-365-users-web-services.md",
+      "redirect_url": "authenticate-office365-deprecation",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/webapi/samples/basic-operations-csharp.md",
       "redirect_url": "cdswebapiservice-basic-operations",
       "redirect_document_id": "false"
