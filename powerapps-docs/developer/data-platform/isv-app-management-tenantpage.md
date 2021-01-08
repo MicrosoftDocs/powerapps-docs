@@ -4,29 +4,26 @@ description: Learn about the Tenant page capabilities provided by the ISV Studio
 services: ''
 suite: powerapps
 documentationcenter: na
-author: "phecke" # GitHub ID
+author: "nkrb" # GitHub ID
 manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
 ms.topic: article
-ms.reviewer: pehecke
+ms.reviewer: nabuthuk
 ms.workload: na
-ms.date: 07/11/2019
-ms.author: prkoduku
+ms.date: 01/11/2021
+ms.author: nabuthuk
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 
 # The Tenant page
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 To view the install history of a tenant, the ISV can switch to **Top tenants** view on the home page and select a tenant.
 
@@ -36,51 +33,59 @@ The Tenant page contains the following graphs and metrics:
 
 ![Tenant page](media/isv-portal-tenantpage.png)
 
-## Successfully installed apps
+## Installs by date
 
-The pie chart shown below visualizes the ISV app distribution across all environments in the selected tenant.
+The line chart shown below illustrates the number of app installations occurred by date. 
 
-When hovering over the items of the graph, the following information is shown:
+When hovering over the graph, the following information is shown:
 
-1. App name
-2. Package install count of the app in the selected tenant
+instanceInstallCount: Number of app installations happened on a particular date.
 
-![Successfully installed apps](media/isv-portal-tenantpage-graph1.png)
+> [!div class="mx-imgBorder"]
+> ![Successfully installed apps](media/isv-portal-tenantpage-graph1.png)
 
-## Successful production vs. sandbox package installs by environment
+## Installs by geo
 
-The bar chart shown below visualizes the productions vs. sandbox installations of the ISV apps in the selected tenant. Due to privacy reasons, the environment name cannot be shown at this time.
+The pie chart shown below illustrates the number of app installations occurred by Geo.
+
+When hovering over the graph, the following information is shown:
+
+1. Geo
+2. instanceInstallCount
+
+> [!div class="mx-imgBorder"]
+> ![Package installs by environment type](media/isv-portal-tenantpage-graph2.png)
+
+## Installs by environment
+
+The pie chart shown below illustrates the ratio of production vs. sandbox app installs across the install base.
+
+When hovering over the graph, the following information is shown:
+
+1. Environment
+2. instanceInstallCount
+
+> [!div class="mx-imgBorder"]
+> ![Package Installs by environment location](media/isv-portal-tenantpage-graph3.png)
+
+## Installs by application
+
+The column chart shown below displays the package unique names where versions of the selected app are displayed. All packages are selected by default, and all installed versions of all package (by tenant) are displayed on the graph. The user can select one or more packages and versions for further slicing and dicing. When the user selects a package, the version drop-down is updated to have the corresponding version of the selected package.
 
 When hovering over any item of the graph, the following information is shown:
 
-1. Environment ID
-2. Environment type (production or sandbox)
-3. Package install count in the environment
+1. Application
+1. Count
+1. Package
+1. Version 
+1. Environment
 
-![Package installs by environment type](media/isv-portal-tenantpage-graph2.png)
+> [!div class="mx-imgBorder"]
+> ![Package and version installs by environment](media/isv-portal-tenantpage-graph4.png)
 
-## Successful package Installs by environment location
+## Filtering the tenant page
 
-The map shown below illustrates the geographical distribution of the ISV package installs by environment location.
-
-When hovering over any location of the graph, the following information is shown:
-
-1. Location
-2. Package install count in the selected location
-
-![Package Installs by environment location](media/isv-portal-tenantpage-graph3.png)
-
-## Successful app package and version installs by environment
-
-The column chart shown below visualizes the app names, package unique names, and versions of the selected tenant in drop-down menus. All apps are selected by default and an ISV can further drill down by selecting one or multiple apps, packages, and versions. When the user selects an app, the **Package** drop-down is updated to display the corresponding packages of the selected app. When the user selects a package, the **Versions** drop-down is updated to display the corresponding versions of the selected package.
-
-When hovering over any item of the graph, the following information is shown:
-
-1. Environment ID
-2. Package version
-3. Package install count of the version in the environment
-
-![Package and version installs by environment](media/isv-portal-tenantpage-graph4.png)
+ISVs can filter the tenant page using the filters available. For example, an ISV can filter to see the metrics at Package & Solution version, Geo, and Date range level.
 
 ### See also
 
