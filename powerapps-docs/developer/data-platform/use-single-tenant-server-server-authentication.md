@@ -66,7 +66,7 @@ To create an application registration in Azure AD, follow these steps.
     > [!div class="mx-imgBorder"]
     > ![Setting API permissions](media/S2S-api-permission-started.PNG)
 
-10. On the **API permissions** page below **Grant consent**, select **Grant admin consent for "org-name"** and when prompted choose **Yes** 
+10. On the **API permissions** page select **Grant admin consent for "org-name"** and when prompted choose **Yes** 
 
     > [!div class="mx-imgBorder"]
     > ![Granting API permissions](media/S2S-api-permission-completed.PNG)
