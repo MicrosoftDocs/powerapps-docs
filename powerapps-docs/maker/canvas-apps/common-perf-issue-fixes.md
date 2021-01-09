@@ -16,18 +16,29 @@ search.app:
 
 # Common canvas app performance issues and resolutions
 
-Regardless of data sources you pick, there are common issues making your canvas app slow in the playing of your app. In this article, you'll learn about some of the most common performance issues, and resolutions for popular events such as OnStart, and data sources such as SQL Server (on-premises), Azure SQL Database, SharePoint, Microsoft Dataverse, and Excel.
+You can build canvas apps with diverse options of data sources. Choose the right data source and a connector depending on the business needs and scenarios that the app is designed for. For enterprise apps, Microsoft Dataverse is the recommended data source since it comes with a lot of performance benefits. For apps with small amount of transactions, you can go with any other available data sources in your environment.
 
-This information will help you to choose the right data source with your
-business plan and growth in mind.
+Think about the number of users who will use the app when it has published, the volume of CRUD (Create/Update/Delete) transactions, type of data interactions, geographical access, and user’s devices.
 
-## General performance guidelines
+Common issues can make your canvas app to run slowly. In this article, you'll learn about some of the most common performance issues, and resolutions for general scenarios, popular events such as OnStart, and data sources such as SQL Server (on-premises), Azure SQL Database, SharePoint, Microsoft Dataverse, and Excel. This information will help you to choose the right data source with your business plan, and growth in mind.
+
+## General performance
+
+Some of the performance issues impact canvas apps regardless of the data source type, or the connector you choose. Let's take a look at the general performance problems and guidelines that apply to all apps and clients running those apps.
+
+### Large data sets loading slowly on different platforms
+
+An app performance may vary when loading large sets of data on different platform like iOS or Android. This variation happens because of different network request limitations for each platform.
+
+Furthermore, the number of concurrent network requests allowed may be different on different platforms. This difference can have a major impact on the data load time for large data sets.
+
+Hence, as a recommendation, restrict loading of data that you need to display on the screen immediately. For additional data, paginate, and cache your data. Refer to the [performance tips and best practices](performance-tips.md) for additional ways to improve the app performance.
 
 ### Unsupported or legacy browsers
 
 Users using unsupported, or legacy browsers such as Internet Explorer may experience performance issues. Ensure the users only use the [supported browsers for running canvas apps](limits-and-config.md#supported-browsers-for-running-canvas-apps).
 
-### User location
+### Slow performance because of geographical distance
 
 Geographical location of the Dataverse environment, and the proximity of the data source to the end-users impacts performance.
 
@@ -35,7 +46,7 @@ Having an environment close to users is recommended. Though Power Apps uses Cont
 
 Geographical location distances impact performance in different forms, such as latency, reduced throughput, lower bandwidth, and packet loss.
 
-### Allow list
+### Allow list not configured
 
 Ensure that you don't block the required service URLs, or add them to your firewall's allow list. For a complete list of all service URLs required to be allowed for Power Apps, go to [Required services](limits-and-config.md#required-services).
 
@@ -71,11 +82,9 @@ When using data from the sources such as Microsoft Dataverse, or SQL Server (on
 
 Developer tools for most browsers allow you to profile memory. It would visualize heap size, document, nodes, and listeners.
 
-![](media/47a38d822105608e02dda54b6c206ca4.png)
+![An example of memory pressure for an app as seen from the developer tools of a browser](media/common-perf-issue-fixes/memory-pressure.png "An example of memory pressure for an app as seen from the developer tools of a browser")
 
 If client-heavy operations like JOIN, or Group By happened at client with a data set having 2000 records or more, the objects in heap would be increasing resulting in hitting the ceiling.
-
-
 
 ## SQL Server (online and on-premises)
 
@@ -482,30 +491,3 @@ Recommendations
 The Excel connector and Excel file will be a good fit for small transactions and
 data. However, it might not be good enough on the enterprise scale.
 
- 
-
-
-
- 
-
-## Conclusion
-
-
-Makers can build Power Apps applications with diverse options of data sources.
-In this article, we walked through many options you could choose with
-considerations per data source and connector. While selecting the data sources,
-each way has pros and cons.
-
-Depending on the app covering different business needs and scenarios, makers
-would be suggested to pick the right data source and a connector.
-
-In the enterprise level of applications, picking up the Microsoft Dataverse data
-source and Microsoft Dataverse connector would be the recommended choice as it
-comes with lots of benefits and this combination performs well above.
-
-If your application would have small amount of transactions, you can go with
-whatever available data sources in your environment.
-
-Plus, the maker should think about the number of users who will use the app when
-it has published, the volume of Create/Update/Delete transactions, type of data
-interactions, geographical access, and user’s devices as well.

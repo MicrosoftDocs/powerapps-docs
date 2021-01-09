@@ -1009,7 +1009,7 @@
       href: ./canvas-apps/possible-sources-slow-performance.md
     - name: Common performance issues and resolutions
       href: ./canvas-apps/common-perf-issue-fixes.md
-    - name: Best practices
+    - name: Performance tips and best practices
       href: ./canvas-apps/performance-tips.md
     - name: Tools
       href: ./canvas-apps/perf-optimize-tools.md
