@@ -35,9 +35,11 @@ This topic contains device platform and web browser requirements, limits, and co
 | --- | --- |
 | Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>Android 5 or later <br>iOS 8 or later<br>macOS |
 | Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
-| Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
+| *Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
 | Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android 5 or later <br>iOS 8 or later <br>macOS |
 | Apple Safari (latest version) |iOS 8 or later <br>macOS |
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 ## Supported browsers for Power Apps Studio
 
@@ -45,7 +47,9 @@ This topic contains device platform and web browser requirements, limits, and co
 | --- | --- |
 | Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS |
 | Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
-| Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
+| *Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 ## Request limits
 These limits apply to each single outgoing request:

@@ -14,109 +14,89 @@ search.app:
   - PowerApps
 ---
 
-## Common canvas app performance issues and resolutions
+# Common canvas app performance issues and resolutions
 
-Regardless of data sources you pick, there are common issues making your apps
-slow in the playing of your app. In this section, let us walk through what they
-might be.
+Regardless of data sources you pick, there are common issues making your canvas app slow in the playing of your app. In this article, you'll learn about some of the most common performance issues, and resolutions for popular events such as OnStart, and data sources such as SQL Server (on-premises), Azure SQL Database, SharePoint, Microsoft Dataverse, and Excel.
 
-### OnStart
+This information will help you to choose the right data source with your
+business plan and growth in mind.
 
-The OnStart event  runs when the application is loading and having lots of data
-called in the OnStart command will slow down the load of the app. If a screen,
-to be open, has a heavy dependency of controls and values defined on other
-screens, page load would also be affected by slow screen navigation. N+1 query
-problem at a gallery got commonly reported.
+## General performance guidelines
 
-The following are some issues observed in many cases.
+### Unsupported or legacy browsers
 
-1.  Many data calls happened within OnStart event which made the app start slow.
-    In enterprise, volume of data calls onto a central data source could drive
-    server bottleneck, resource contention as well.
+Users using unsupported, or legacy browsers such as Internet Explorer may experience performance issues. Ensure the users only use the [supported browsers for running canvas apps](limits-and-config.md#supported-browsers-for-running-canvas-apps).
 
-2.  N+1 query problem observed from some galleries and it triggered too many
-    requests to servers.
+### User location
 
-3.  Queries in database got SCAN data tables instead of SEEK over Index.
+Geographical location of the Dataverse environment, and the proximity of the data source to the end-users impacts performance.
 
-4.  Big latency on OnStart due to heavy scripts. This is a common mistake from
-    many canvas apps. Makers should get only the necessary data from the moment
-    of app start.
+Having an environment close to users is recommended. Though Power Apps uses Content Delivery Network (CDN) for content, data calls still get the data from the data source. Data source located in another geographical location may adversely impact the performance of the app.
 
-5.  Too many columns were retrieved. In fact, all columns of a data entity would
-    be downloading along with operations. Depending on operation type of
-    operation, the number of records would be changed though. In fact, this adds
-    to unnecessary memory usage in clients and network overheads. It is better
-    to select only the necessary columns.
+Geographical location distances impact performance in different forms, such as latency, reduced throughput, lower bandwidth, and packet loss.
 
-6.   Users used the Internet Explorer browser while experiencing Power Apps
-    applications.
+### Allow list
 
-7.  Location of environment vs. end-users is a matter.
+Ensure that you don't block the required service URLs, or add them to your firewall's allow list. For a complete list of all service URLs required to be allowed for Power Apps, go to [Required services](limits-and-config.md#required-services).
 
-8.  Whitelist [apps.powerapps.com](http://apps.powerapps.com/) in Firewall.
-    Check Proxy settings of your clients if network proxy configured.
+## OnStart event
 
-Recommendations
+The OnStart event runs when the application is loading. Calling a lot of data in the OnStart event will slow down the load of the app. A screen with heavy dependency of controls and values defined on another screen will be affected with slow screen navigation.
 
-1.  Leverage cache mechanism and optimize data calls. Your application would be
-    used by N users at the end. Hence, the number of data calls per user would
-    be landing at the server’s endpoints, which could be a spot where bottleneck
-    or throttling could be occurred from.
+Some of the most common problems experienced in many such situations are:
 
-2.  Use View objects in SQL to avoid N+1 query problem or change the UI (user
-    interface) scenarios not to trigger the problem. There are many great posts
-    explaining what N+1 query problem is and how to avoid.
+### High number of calls in OnStart event causing app to start slow
 
-3.  Use ‘StartsWith’ instead of ‘IN’ in formula. If you use SQL data source, for
-    instance, StartWith operator would use index SEEK in SQL database. However,
-    the IN operator would require Index or table scan.
+In an enterprise, volume of data calls to a central data source can drive server bottleneck, or resource contention.
 
-4.  Optimize formula in an OnStart event. You can move some formulas to
-    OnVisible event instead. By doing this way, you can let the app start fast
-    and other steps can be continued along with app launching.
+Leverage cache mechanism, and optimize data calls. A single app may be used by many users. Hence, a number of data calls per user reach at the server’s endpoints, which could be a spot where the bottleneck, or throttling can happen.
 
-5.  If you use Microsoft Dataverse, make sure you enabled Explicit Column
-    Selection (ECS) at an advanced setting. Then, Microsoft Dataverse connector
-    will interpret what columns been used in the app and only used columns in
-    the app would be retrieved.
+### Latency on OnStart because of heavy scripts
 
-6.  We recommend that users should use the new Microsoft Edge instead of IE
-    (Internet Explorer). IE has some defects when it comes to execute JS
-    scripts.
+This is one of the most common mistake while designing canvas apps. Makers should only get the necessary data required for the app to start.
 
-7.  Having an environment close to users is also suggested. Although Power Apps
-    has already put in place the Content Delivery Network (CDN) delivering
-    necessary contents of the app from the nearest CDN, data calls would still
-    get the data from the backend data source which might be in different
-    geographical locations. If your app gets a small set of data per request,
-    the impacts would be minimized. Network footprints such as latency,
-    throughput, bandwidth, and packet loss would be another crucial fact
-    affecting performance.
+Optimize formula in an OnStart event. You can move some formulas to OnVisible event instead. This way, you can let the app start fast, and other steps can continue while the app launches.
 
-8.  Cross check with your network team to make sure
-    \*.[PowerApps.com](http://powerapps.com/) got whitelisted.
+## Memory pressure
 
-In the next chapter, let us take a close look at each data source and see what
-common issues and recommendations are there.
+A check on memory consumption of a canvas app becomes very important as most of the times, the apps run on mobile devices. Memory exceptions in the heap is the most likely cause behind a canvas app that crashes or freezes (hangs) on certain devices.
 
- 
+JavaScript (JS) heap may hit the memory heap celing because to heavy scripts running at client side for adding columns, joining, filtering, sorting, and grouping.
 
-Issue types per data source
-===========================
+In most cases, out-of-memory exception at the heap in client may trigger the app to crash, or hang.
 
-SQL Server (on-premise)
------------------------
+Profile the app performance using a browser such as [developer tools for Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/). Check the scenarios that hit the ceiling of JS heap.
 
-Canvas app can reach out the data out of on-premises SQL via [on-premises data
-gateway](https://docs.microsoft.com/en-us/power-bi/service-gateway-onprem). Once
-on-premises data gateway is configured, Power Apps canvas app can manage data
-with various on-premises data sources such as SQL, Oracle, SharePoint on
-on-premises networks.
+When using data from the sources such as Microsoft Dataverse, or SQL Server (online/on-premises), you can use a **View** object to ensure joining/filtering/grouping/sorting occurs on server-side instead of client-side. This approach reduces client overhead of scripting for such actions.
 
-However, accessing on-premises data sources could suffer from slowness due to
-the following common causes. Although this topic is focusing on SQL on-premises.
-They are still valid for other data sources on-premises.
+Developer tools for most browsers allow you to profile memory. It would visualize heap size, document, nodes, and listeners.
+
+![](media/47a38d822105608e02dda54b6c206ca4.png)
+
+If client-heavy operations like JOIN, or Group By happened at client with a data set having 2000 records or more, the objects in heap would be increasing resulting in hitting the ceiling.
+
+
+
+## SQL Server (online and on-premises)
+
+> [!NOTE]
+> Though this section references SQL Server connector with performance issues, resolutions for online and on-premises SQL data sources, most of the recommendations also apply when using in general any database type as the data source&mdash;such as MySQL, or PostgreSQL.
+
+### N+1 query
+
+Galleries generating too many requests to servers caused N+1 query problem. **N+1** query problem is one of the most commonly experienced problem when using the [gallery](add-gallery.md) control.
+
+Use View objects in SQL backend to avoid the N+1 query problem. Or, change the UI (user interface) scenarios to avoid the problem.
+
+### Table SCAN instead of Index SEEK (SQL)
+
+Queries in database ran table scans instead of index seek. More information: [Hints](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-table?view=sql-server-ver15)
+
+Use [StartsWith](functions/function-startswith.md) instead of [IN](functions/operators#in-and-exactin-operators.md) in formula. For example, when using a SQL data source, the `StartWith` operator results in an index seek; whereas the `IN` operator results in an index or table scan.
+
+### SQL Server on-premises data source
+
+Performance of a canvas apps using SQL Server connector with an on-premises data gateway may get affected in various ways. This section lists the common performance issues, and resolutions when using an on-premises database source.
 
 Common causes
 
@@ -203,10 +183,7 @@ As it is named, it would create missing indexes automatically and fix the
 execution plan performance problems. Consider turning on this feature on SQL
 instance.
 
- 
-
-Azure SQL Online
-----------------
+### Azure SQL Database data source
 
 Organizations can connect to Azure SQL Online via SQL connector. In this case,
 slow requests were caused by slow queries in the database and/or the huge volume
@@ -271,8 +248,7 @@ Recommendations
 
  
 
-SharePoint online
------------------
+## SharePoint online
 
 SharePoint connector pipelines to SharePoint list(s). From SharePoint list
 itself, maker can see Power App menu which wizard would create a canvas app
@@ -352,8 +328,13 @@ tune these two knobs.
 
  
 
-Microsoft Dataverse
--------------------
+## Microsoft Dataverse
+
+### Too many columns retrieved
+
+It's recommended to select only the necessary columns for the app. Adding more, or all columns from the data source downloads all column data. This action results in network overheads, and high memory usage in client devices. And this problem can impact users with mobile devices even more if the network bandwidth is limited, or a device with limited memory, or a legacy processor.
+
+If you use Microsoft Dataverse, make sure you have enabled the [Explicit Column Selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict the data retrieval for only the columns used in the app.
 
 As you can check this article ‘[What is
 Microsoft Dataverse](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro)’,
@@ -422,8 +403,7 @@ Figure 4 Security Role privilege editor
 
  
 
-Excel
------
+## Excel
 
 People in the business world use Excel sheets to manage their business data. The
 Excel connector in PowerApps provides connectivity from a canvas app to the data
@@ -504,47 +484,12 @@ data. However, it might not be good enough on the enterprise scale.
 
  
 
-Memory pressure
-===============
 
-Another important topic would be to check memory pressure. but here, let us
-briefly check it out.
-
-Memory consumption of your canvas app is matter as it would be running at mobile
-player, window player and browsers via various devices like tablet, mobile,
-laptop and desktop.  If your canvas apps get crashed or hung at certain device,
-chances are it caused by the out of memory exception at Heap.
-
-Common issues
-
-1.  JS Heap hit the ceiling due to heavy scripts running at client side for
-    adding columns, joining, Filtering, Sorting and Group By.
-
-Recommendations
-
-1.  In most cases, out-of-memory exception at the heap in client triggered
-    crashing/hung the app.
-
-2.  Do profile Performance from a browser and check what scenarios hits the
-    ceiling of JS Heap.  
-    In Microsoft Dataverse/SQL/Dynamics CE, makers can use a View object to
-    avoid joining/filtering/grouping/sorting from client side but on server
-    side. This approach would reduce client overhead of Java scripting for such
-    actions.
-
-From developer tools in browser, you can profile memory. It would visualize heap
-size, document, nodes, and listeners. If client-heavy operations like JOIN,
-Group By happened at client with a data set having records 2000, objects in heap
-would be increasing and it could hit the ceiling.
-
-![](media/47a38d822105608e02dda54b6c206ca4.png)
-
-Check JS heap size in Browser
 
  
 
-Conclusion
-==========
+## Conclusion
+
 
 Makers can build Power Apps applications with diverse options of data sources.
 In this article, we walked through many options you could choose with
