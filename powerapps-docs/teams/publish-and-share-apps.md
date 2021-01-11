@@ -65,7 +65,7 @@ colleagues](https://docs.microsoft.com/microsoftteams/manage-power-platform-apps
 ![Built by your colleagues](media/built-for-your-colleagues.png "Built by your colleagues")
 
 > [!NOTE]
-> - If your app doesn't appear in the **Built by your colleagues** section, your Teams app might be caching information. If this happens, try signing out, and sign back in if you're using the desktop app. If you're using Teams web app, try refreshing your browser.
+> - If your app doesn't appear in the **Built by your colleagues** section, your Teams app might be caching information. If this happens, try signing out, and sign back in if you're using the Teams desktop app. If you're using Teams web app, try refreshing your browser.
 > - You need to be an owner within the team to share apps and edit table
 permissions. If you are not an owner, the **Manage permission** and **Share with colleagues** options won't appear.
 
