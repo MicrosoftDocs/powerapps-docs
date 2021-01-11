@@ -16,7 +16,7 @@ search.app:
 
 # Limitations of controls in Power Apps
 
-In this article, learn about the general limitations of the controls used in canvas apps. In addition, [limitations of controls in Teams](#limitations-of-controls-in-teams) lists the control limitations applicable to only the apps made with Power Apps inside Microsoft Teams (Microsoft Dataverse for Teams environments). For more information about environments, go to [Types of environments](https://docs.microsoft.com/power-platform/admin/environments-overview#types-of-environments).
+In this article, learn about the general limitations of the controls used in canvas apps. In addition, [limitations of controls in Teams](#limitations-of-controls-in-teams) lists the control limitations applicable to apps played inside Microsoft Teams. For more information about environments, go to [Types of environments](https://docs.microsoft.com/power-platform/admin/environments-overview#types-of-environments).
 
 - [Attachments control](controls//control-attachments.md) - see [Attachments control limitations](controls//control-attachments.md#limitations).
 
