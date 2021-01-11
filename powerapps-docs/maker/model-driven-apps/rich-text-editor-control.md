@@ -103,19 +103,19 @@ The following two images visually identify the two configuration sections. For t
 You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).
 
 
-|Attribute  |Description  |Default value  |
-|---------|---------|---------|
-|height     |Sets the initial height of the content editor. The default is 185 px.     |"height": 185     |
-|font_defaultLabel     |Sets the default label that is displayed in the toolbar for font style. The default is Segoe UI.    |"font_defaultLabel": "Segoe UI"     |
-|fontSize_defaultLabel     |Sets the default label that is displayed in the toolbar for font size. The default is 9.     |"fontSize_defaultLabel": "9"     |
-|stickyStyle     |Sets the actual default font size and style. Additionally, you can include any other CSS properties you'd like to set as part of your default styling. <br /> 
-The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".     | 
-```xml
+| Attribute  | Description  | Default value  |
+| --------- | --------- | --------- |
+| height     | Sets the initial height of the content editor. The default is 185 px.     | "height": 185     |
+| font_defaultLabel     | Sets the default label that is displayed in the toolbar for font style. The default is Segoe UI.    | "font_defaultLabel": "Segoe UI"     |
+| fontSize_defaultLabel     | Sets the default label that is displayed in the toolbar for font size. The default is 9.     | "fontSize_defaultLabel": "9"     |
+|stickyStyle     |Sets the actual default font size and style. Additionally, you can include any other CSS properties you'd like to set as part of your default styling. <br><br> 
+The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".   | <pre>
+xml
 "stickyStyle": {
      "font-size": "9pt",
      "font-family": "'Segoe UI','Helvetica Neue',sans-serif"
 }   
-```     |
+</pre>    |
 |toolbarLocation     |  The location of the user interface where the toolbar will be rendered. Supported values are *top* and *bottom*. The default is bottom.     | "toolbarLocation": "bottom"     |
 |toolbar | A list of toolbar buttons that will be loaded. | "toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]     |
 |plugins     | Comma-separated list of plug-ins to be used in an editor instance. Note that the actual plug-ins that are loaded might still be affected by two other settings: *extraPlugins* and *removePlugins*. <br /> Updating this setting might remove the plug-ins from the toolbar. If you set this property to an empty string, the editor will load without the toolbar. <br /> If you want to add one or more plug-ins to the toolbar, we recommend that you use *extraPlugins*. If you want to remove one or more from the default list, use *removePlugins*.     | "plugins": "dialogui,dialog,about,a11yhelp,basicstyles,notification,button, toolbar,clipboard,panel,floatpanel,menu,contextmenu,resize,elementspath, enterkey,entities,popup,filetools,filebrowser,floatingspace,listblock, richcombo,format,horizontalrule,htmlwriter,wysiwygarea,image,indent, indentlist,fakeobjects,link,list,magicline,maximize,pastetext,pastefromword, removeformat,showborders,sourcearea,specialchar,menubutton,scayt, stylescombo,tab,table,tabletools,undo,lineutils,widgetselection,widget, notificationaggregator,uploadwidget,uploadimage,wsc"     |
