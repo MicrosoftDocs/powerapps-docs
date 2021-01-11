@@ -208,7 +208,7 @@ After creating dependents, the user will see them listed. First the two most rec
 
 To find dependents in the Facility Management app, go to **Solution Setup** and select **Employees**. On **My Active Contacts** view, open a record and find dependents on the **Guest** tab. All dependents can be found on the **Active Guests** view.
 
-## Notification
+## Notifications
 
 Send notifications to employees through the **Facility Management App**, this notifications will show in the portal. 
 
@@ -222,7 +222,7 @@ To access **Notifications** click on the bell on the right top corner of the **H
 > [!div class="mx-imgBorder"]
 > ![Portal Hamburger Menu](media/portals-notifications-pass.png "Portal Home Notifications")
 
-## Block
+## Facility access not available
 
 When an employee or guest are blocked, they wont be able to create a pass. This block is managed through the **Facility Management App**, under **Access** for each contact. 
 
