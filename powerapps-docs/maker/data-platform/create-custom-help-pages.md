@@ -71,7 +71,7 @@ To author custom help panes, you need the following:
 ## Context-sensitive custom help
 Each help pane is unique for these contexts: 
 - Application 
-- table
+- Table
 - Form 
 - Language   
 

@@ -57,6 +57,8 @@ The following is required to build and run the CDSWebApiService C# samples :
             TimeoutInSeconds=180;
             "/>
     ```
+    > [!NOTE]
+    > The `ClientId` and `RedirectUrl` shown above can be used to test the code in this article. You are not required to register an application just to test the article code.
 
 1. Make sure that the **BasicOperations** project is set as the startup project. The name of the project should be bold to indicate it is the startup project. If the name is not bold, right-click it in the solution explorer and select **Set as Startup Project**.
 
