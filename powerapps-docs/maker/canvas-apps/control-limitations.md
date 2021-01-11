@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/07/2021
+ms.date: 01/11/2021
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -16,11 +16,7 @@ search.app:
 
 # Limitations of controls in Power Apps
 
-In this article, learn about the limitations of the controls used in canvas apps.
-
-## General limitations of canvas controls
-
-This section lists limitations of controls used inside the canvas apps embedded inside of Teams.
+In this article, learn about the general limitations of the controls used in canvas apps. In addition, [limitations of controls in Teams](#limitations-of-controls-in-teams) lists the control limitations applicable to only the apps made with Power Apps inside Microsoft Teams (Microsoft Dataverse for Teams environments). For more information about environments, go to [Types of environments](https://docs.microsoft.com/power-platform/admin/environments-overview#types-of-environments).
 
 - [Attachments control](controls//control-attachments.md) - see [Attachments control limitations](controls//control-attachments.md#limitations).
 
@@ -48,7 +44,7 @@ This section lists limitations of controls used inside the canvas apps embedded 
 
 ## Limitations of controls in Teams
 
-This section lists limitations of controls played within Microsoft Teams
+This section lists limitations of canvas apps controls for apps within Microsoft Teams.
 
 ### General limitations
 
@@ -65,7 +61,6 @@ Apps made with Power Apps in a Dataverse for Teams environment can't be opened o
     - The audio format for microphone recordings in Teams will always be *AAC* with a file extension of .MP4.
     - Teams has its own recording experience. The microphone control inside apps created using Power Apps will be disabled during the recording period.
     - Microphone recordings are limited to a maximum duration of 10 minutes.
-
 
 ### Unsupported controls
 
