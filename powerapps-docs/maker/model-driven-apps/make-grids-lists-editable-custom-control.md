@@ -104,7 +104,7 @@ In previous releases of Dynamics CRM, users couldn't enter data directly in grid
     > [!TIP]
     >  This is mostly useful for sub-grids on forms.  
   
-8.  If you want to add JavaScript events, select the **Events** tab, and then select the appropriate tables, columns, and events. More information: [Developer Documentation: Use editable grids](/dynamics365/customer-engagement/developer/customize-dev/use-editable-grids-dynamics-365.md)  
+8.  If you want to add JavaScript events, select the **Events** tab, and then select the appropriate tables, columns, and events. More information: [Developer Documentation:Use editable grids](../../developer/model-driven-apps/use-editable-grids.md)
   
      ![Add events in Editable Grid control](media/add-events-in-editable-grid-control.png "Add events in Editable Grid control")  
   
