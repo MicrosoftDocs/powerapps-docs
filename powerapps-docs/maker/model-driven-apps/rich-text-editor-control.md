@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 12/18/2020
+ms.date: 01/11/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -26,13 +26,15 @@ The rich text editor control provides the app user a WYSIWYG editing area for fo
 
 Some of the format options available are:
 
-- Bold, italic, underline, and strikethrough.
-- Text color, highlight color.
-- Font type and size.
-- Numbered lists and bulleted lists.
-- Hyperlinks.
-- Tables.
-- Images.
+- Bold, italic, underline, and strikethrough
+- Text color, highlight color
+- Font type and size
+- Numbered lists and bulleted lists
+- Hyperlinks
+- Tables
+- Images
+
+For a full list of default options, see [Use the rich text editor toolbar](#use-the-rich-text-editor-toolbar)
 
 <img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app" height="500" width="520"> 
 
@@ -64,27 +66,72 @@ The rich text editor control comes with a rich set of configuration options that
 5. Select **OK** to close the **Column Properties** page.
 6. On the form editor command bar, select **Publish**.
 
+## Best practices for using the rich text editor
+
+Consider the following when using the rich text editor: 
+
+- The best performance is achieved when the HTML content size is 1 MB or less. When your HTML content size exceeds 1 MB, you may notice slower response times for loading and editing content. By default, image content is referenced from the content HTML but isn't stored as part of the HTML content, so in the default configuration, images don't negatively impact performance. 
+
+- Rich text fields will store HTML tags which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
+
+- By default, the rich text editor will upload images to the blob store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the msdyn_richtextfiles entity. Base64 content is extremely large, so you generally don't want to store images as base64. 
+
 ## Rich text editor properties
+
+The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the defaultSupportedProps section, and individual configuration settings that provide various functionality. 
+
+The defaultSupportedProps is a set of properties for the plugins, and includes support for all the the CKEditor configurations. For more information, see defaultSupportProps. The defaultSupportedProps isn’t limited to only plugin properties documented from CKEditor, but also allows you to set properties for additional plugins you add or create. For more information about plug-ins, see Use plug-ins to extend business processes. 
+
+The individual configuration settings allow you to change how your editor behaves and functions.
+
+### Visualization of the rich text editor configuration file
+
+The following two images visually identify the two configuration sections. For the full configuration file, see [Use the webresource for organization-wide changes](#use-the-webresource-for-organization-wide-changes).
+
+**defaultSupportedProps**
+
+:::image type="content" source="media/defaultsupportedprops-visualization.png" alt-text="defaultsupportedprops configuration visualation":::
+
+**Individual configuration settings**
+
+:::image type="content" source="media/individual-config-visualization.png" alt-text="Individual configuration settings visualization":::
+
 
 ### defaultSupportedProps
 
-You can configure all the ckEditor supported properties under this property. A few of the commonly used configurations are described here. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).
+You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).
 
 
-|Attribute  |Description  |
-|---------|---------|
-|height     | Sets the height of the content editor. The default is 185 px.     |
-|font_defaultLabel     | Sets the default font style. The default is Segoe UI.    |
-|fontSize_defaultLabel     | Sets the default font size. The default is 14.        |
-|toolbarLocation     |  The location of the user interface where the toolbar will be rendered. Supported values are *top* and *bottom*. Default is bottom.     |
-|plugins     | Comma-separated list of plug-ins to be used in an editor instance. Note that the actual plug-ins that are loaded might still be affected by two other settings: *extraPlugins* and *removePlugins*. <br /> Updating this setting might remove the plug-ins from the toolbar. If you set this property to an empty string, the editor will load without the toolbar. <br /> If you want to add one or more plug-ins to the toolbar, we recommend that you use *extraPlugins*. If you want to remove one or more from the default list, use *removePlugins*.     |
-|extraPlugins     |  A comma-separated list of additional plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br /> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting will simply append new plug-ins to the previous list. <br /> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.     |
-| removePlugins   | A list of plug-ins that must not be loaded. This setting makes it possible to avoid loading some plug-ins defined in the plugins/extraPlugins setting without having to touch them.   | 
+|Attribute  |Description  |Default value  |
+|---------|---------|---------|
+|height     |Sets the initial height of the content editor. The default is 185 px.     |"height": 185     |
+|font_defaultLabel     |Sets the default label that is displayed in the toolbar for font style. The default is Segoe UI.    |"font_defaultLabel": "Segoe UI"     |
+|fontSize_defaultLabel     |Sets the default label that is displayed in the toolbar for font size. The default is 9.     |"fontSize_defaultLabel": "9"     |
+|stickyStyle     |Sets the actual default font size and style. Additionally, you can include any other CSS properties you'd like to set as part of your default styling. <br /> 
+The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".     | 
+```xml
+"stickyStyle": {
+     "font-size": "9pt",
+     "font-family": "'Segoe UI','Helvetica Neue',sans-serif"
+}   
+```     |
+|toolbarLocation     |  The location of the user interface where the toolbar will be rendered. Supported values are *top* and *bottom*. The default is bottom.     | "toolbarLocation": "bottom"     |
+|toolbar | A list of toolbar buttons that will be loaded. | "toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]     |
+|plugins     | Comma-separated list of plug-ins to be used in an editor instance. Note that the actual plug-ins that are loaded might still be affected by two other settings: *extraPlugins* and *removePlugins*. <br /> Updating this setting might remove the plug-ins from the toolbar. If you set this property to an empty string, the editor will load without the toolbar. <br /> If you want to add one or more plug-ins to the toolbar, we recommend that you use *extraPlugins*. If you want to remove one or more from the default list, use *removePlugins*.     | "plugins": "dialogui,dialog,about,a11yhelp,basicstyles,notification,button, toolbar,clipboard,panel,floatpanel,menu,contextmenu,resize,elementspath, enterkey,entities,popup,filetools,filebrowser,floatingspace,listblock, richcombo,format,horizontalrule,htmlwriter,wysiwygarea,image,indent, indentlist,fakeobjects,link,list,magicline,maximize,pastetext,pastefromword, removeformat,showborders,sourcearea,specialchar,menubutton,scayt, stylescombo,tab,table,tabletools,undo,lineutils,widgetselection,widget, notificationaggregator,uploadwidget,uploadimage,wsc"     |
+|extraPlugins     |  A comma-separated list of additional plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br /> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting will simply append new plug-ins to the previous list. <br /> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.     | "extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi, blockquote,button,collapser,colorbutton,colordialog,onfighelper, contextmenu,copyformatting,dialog,find,floatpanel,font,indentblock, justify,panel,panelbutton,pastefromword,quicktable,selectall, stickystyles,superimage,tableresize,tableselection,tabletools" |
+| removePlugins   | A list of plug-ins that must not be loaded. This setting makes it possible to avoid loading some plug-ins defined in the plugins/extraPlugins setting without having to touch them.   | "removePlugins": "a11yhelp,codemirror,liststyle,magicline,scayt,showborders"     |
+| superimageImageMaxSize | The maximum size in megabytes (MB) allowed for embedded images when using the superimage plugin. Default is 5. | "superimageImageMaxSize": 5     |
 
-### externalPlugins
+### Individual configuration settings
 
-By using this property, you can write your own plug-ins and use them in the rich text editor control. Below is the schema for externalPlugins property.
+You can configure additional configuration settings that affect how your editor functions.
 
+|Attribute  |Description  |Default value  |
+|---------|---------|---------|
+|disableContentSanitization     |     |"disableContentSanitization": false     | 
+|disableDefaultImageProcessing     |By default, images will be uploaded using the client API. As soon as an image gets added to the editor, it will be uploaded to the platform. To process images, set this property to true. |"disableDefaultImageProcessing": false     |
+|disableImages     |Setting this property to true will disable images. This property will have highest priority. This means that when this property is set to true, irrespective of the imageEntity property value, images will be disabled. By default, images are enabled.     | "disableImages": false    |
+|externalPlugins    | By using this property, you can write your own plug-ins and use them in the rich text editor control. Below is the schema for externalPlugins property.
 ```xml
 "externalPlugins": [
     {
@@ -101,24 +148,9 @@ Example:
     }
   ]
 ```
+   |
+|
 
-### imageEntity
-
-By setting this property, you can avoid using the default table for images so that you can enforce additional security if needed.
-
-
-|Attribute  |Description  |
-|---------|---------|
-|ImageEntityName      |  The name of the image table.    |
-|ImageFileAttributeName      | The attribute name of the blob reference.      |
-
-### disableImages
-
-Setting this property to true will disable images. This property will have highest priority. This means that when this property is set to true, irrespective of the [imageEntity](#imageentity) property value, images will be disabled. By default, images are enabled.
-
-### disableDefaultImageProcessing
-
-By default, images will be uploaded using the client API. As soon as an image gets added to the editor, it will be uploaded to the platform. To process images, set this property to true.
 
 ## Sample rich text editor configurations
 
@@ -172,54 +204,8 @@ The following sample rich text editor configuration code sample data can be used
 
 :::image type="content" source="media/cke-fixed-height.png" alt-text="With a fixed height, the editor remains at the same height. When enough content is added, a scroll bar appears.":::
 
-## Find the current setting for a rich text editor configuration
 
-1. In a Microsoft Edge or Google Chrome web browser, run your model-driven app and open a form that has the rich text editor control, such as an account row.
-1. Hold down **Ctrl** while clicking the rich text editor control area, and then select **Inspect**.
-1. In the inspection pane, select the **Console** tab, and then select the parent **Main.aspx** page in the drop-down list box on the command bar.
-
-   :::image type="content" source="media/cke-select-parent-main.png" alt-text="Select the Console tab and then select the parent main.aspx page from the drop-down list box":::
-
-1. Select **Clear console** on the inspection pane command bar.
-
-   :::image type="content" source="media/cke-clear-console.png" alt-text="Clear console command":::
-
-1. In the inspection pane console, enter **CKEDITOR.config.** to display the different configurations.
-
-   :::image type="content" source="media/cke-configs.png" alt-text="List of CK Editor configurations":::
-
-1. Select a configuration, such as **autoGrow_minHeight**, to display the current setting.
-
-## Sample rich text editor configuration file
-
-The following sample sets several of the options in the rich text editor&mdash;such as the height, location, and default font type&mdash;and uses plug-in logic. For more information about plug-ins, see [Use plug-ins to extend business processes](../../developer/data-platform/plug-ins.md).
-
-```json
-{
-  "defaultSupportedProps": {
-    "height": 200,
-    "toolbarLocation": "bottom",
-	"font_defaultLabel": "Arial",
-    "fontSize_defaultLabel": "20",
-    "removePlugins": "iframe",
-    "extraPlugins": "uploadimage",
-    "plugins": "Image"
-  },
-  "externalPlugins": [
-    {
-      "name": "EmbedMedia",
-      "path": "/WebResources/msdyncrm_/AssistEditControl/KBEditor/libs/ckeditor/plugins/embedmedia/"
-    }
-  ],
-  "disableImages": true,
-  "imageEntity" : {
-     "imageEntityName": "msdyn_richtextfiles",
-     "imageFileAttributeName": "msdyn_fileblob"
- }
-}
-```
-
-## Create plain text surface that makes the strips html (except for <br /> tags)
+## Create plain text surface that removes all html tage (except for "br" tags)
 
 `{ "defaultSupportedProps": {     "enterMode": 2 ,     "shiftEnterMode": 2 ,     "allowedContent":"*",     "disallowedContent":"*",     "forcePasteAsPlainText": true ,     "toolbar":[],     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  },  "disableImages": true}}`
 
@@ -348,6 +334,99 @@ The default RTE webresource is available with the display name RTEGlobalConfigur
     "showPreviewHeaderWarning": false}
 }
 ``` 
+## Find the current setting for a rich text editor configuration
+
+1. In a Microsoft Edge or Google Chrome web browser, run your model-driven app and open a form that has the rich text editor control, such as an account row.
+2. Hold down **Ctrl** while clicking the rich text editor control area, and then select **Inspect**.
+3. In the inspection pane, select the **Console** tab, and then select the parent **Main.aspx** page in the drop-down list box on the command bar.
+
+   :::image type="content" source="media/cke-select-parent-main.png" alt-text="Select the Console tab and then select the parent main.aspx page from the drop-down list box":::
+
+4. Select **Clear console** on the inspection pane command bar.
+
+   :::image type="content" source="media/cke-clear-console.png" alt-text="Clear console command":::
+
+5. In the inspection pane console, enter **CKEDITOR.config.** to display the different configurations.
+
+   :::image type="content" source="media/cke-configs.png" alt-text="List of CK Editor configurations":::
+
+6. Select a configuration, such as **autoGrow_minHeight**, to display the current setting.
+
+## Use the rich text editor toolbar
+
+The rich text editor toolbar provides features and functionality that allows you to work with rich text format in notes and email.    
+
+### Formatting options
+The following table describes the different formatting features and functionality options that are available in the rich text editor that you can use in notes and email. 
+
+> [!Note]
+> You can access your browser's context menu by selecting Ctrl + right-click. This is useful if you need to use your browser's built-in spellchecker. Otherwise, you can right-click to provide contextual formatting for any element you are using.
+
+
+|Icon | Name | Shortcut key | Description |
+|----------------------|-------------------------|-----------------------------|-----------------------------|
+|![Format Painter](../customer-service/media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
+|![Font](../customer-service/media/format-font.png "Font") | Font | Ctrl+Shift+F | Select your desired font. The default font is Segoe UI.<br /><br /> **Note**: When you select any formatted content, the font name for that content displays. If your selection contains multiple fonts, the topmost font name of your selection is displayed. |
+|![Font Size](../customer-service/media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The default size is 12.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
+|![Bold](../customer-service/media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
+|![Italic](../customer-service/media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
+|![Underline](../customer-service/media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
+|![Text Highlight Color](../customer-service/media/text-highlight-color.png "Text Highlight Color")| Text Highlight Color |  | Make your text stand out by highlighting it in a bright color. |
+|![Font Color](../customer-service/media/font-color.png "Font Color")| Font Color |  | Change the color of your text. |
+|![Bullets](../customer-service/media/format-bullets.png "Bullets")| Bullets |  | Create a bulleted list. |
+|![Numbering](../customer-service/media/format-numbering.png "Numbering")| Numbering |  | Create a numbered list. |
+|![Decrease Indent](../customer-service/media/decrease-indent.png "Decrease Indent")| Decrease Indent |  | Move your paragraph closer to the margin. |
+|![Increase Indent](../customer-service/media/increase-indent.png "Increase Indent")| Increase Indent |  | Move your paragraph farther away from the margin. |
+|![Block Quote](../customer-service/media/block-quote.png "Block Quote")| Block Quote |  | Apply a block-level quotation format in your content. |
+|![Align Left](../customer-service/media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
+|![Align Center](../customer-service/media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
+|![Align Right](../customer-service/media/align-right.png "Align Right")| Align Right | Ctrl+R | Center your content on the page. (Commonly used for a formal appearance.) |
+|![Link](../customer-service/media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it. |
+|![Remove Link](../customer-service/media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
+|![Superscript](../customer-service/media/format-superscript.png "Superscript")| Superscript |  | Type very small letters just above the line of text. |
+|![Subscript](../customer-service/media/format-subscript.png "Subscript")| Subscript |  | Type very small letters just below the line of text. |
+|![Strikethrough](../customer-service/media/format-strikethrough.png "Strikethrough")| Strikethrough |  | Cross out text by drawing a line through it. |
+|![Insert Image](media\insert-picture.png "Insert Image")| Insert Image|	|You can insert an image by directly copying and pasting it inline in the editor, dragging and dropping it from your desktop or local folder directly into the editor, or by typing a URL. The following formats are supported: .PNG, .JPG., or .GIF.<br /><br />To insert an image inline in your article: <br />1. Drag and drop the image or copy and paste it directly into the article. <br />2. Drag any corner of the image to resize it.<br /><br />To insert an image using a URL or navigating to the local image:<br />1. Choose Insert Image.<br />2. In the **Image** property dialog, choose from the following options:<br /><ul><li>Select **Browse** to navigate to the image on your computer.</li><li>Or specify the web address of the image, and properties to define how the image will appear in the email or article.</li><br />**Note:**<ul><li>If the image is located on the external server, use the full absolute path. </li><li>If the image is located on a local server, you can use a relative path. </li><li>If you want the image to be linked to a target, add a URL for the image.</li><li>You can also specify if you want the targeted page to open in a new window, topmost window, same window, or parent window.</li></ul>
+|![Left to Right](../customer-service/media/left-to-right.png "Left to Right")| Left to Right |  | Change the text to left-to-right for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. This is the default setting.|
+|![Right to Left](../customer-service/media/right-to-left.png "Right to Left")| Right to Left |  | Change the text to right-to-left for content such as a paragraph, header, table, or list. Commonly used for bi-directional language content. The default setting is left-to-right. |
+|![Undo Typing](../customer-service/media/undo-typing.png "Undo Typing")| Undo Typing |  | Undo changes you made to the content. |
+|![Redo Typing](../customer-service/media/redo-typing.png "Redo Typing")| Redo Typing |  | Redo changes you made to the content. |
+|![Clear All Formatting](../customer-service/media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
+|![Add a Table](../customer-service/media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
+|![Expand Toolbar](../customer-service/media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Displays when the toolbar is collapsed and not all options appear. Click to expand the toolbar and make all options visible. |
+
+> [!Note]
+> You can access your browser's context menu by pressing **Ctrl** + right-click. This is useful if you need to use your browser's built-in spell checker. Otherwise, you can use the right-click to provide contextual formatting for any element you might be using.
+
+## Accessibility shortcuts
+
+The following table outlines a list of accessibility shortcuts available when using email. You can access this list while composing email by pressing **Alt+0**.
+
+|Type | Shortcut key | Description |
+|----------------------|-------------------------|-----------------------------|
+| General | Alt+F11 | Toggle full-screen view. |
+| Tab navigation | Alt+Ctrl+0 | Go to menu bar. |
+| Tab navigation | Alt+1 | Go to the rich-text editor. |
+| Tab navigation | Alt+2 | Go to the HTML editor. |
+| Tab navigation | Alt+3 | Go to the preview view. |
+| General editor commands | Alt+F10 | Navigate to the editor toolbar. Move to the next and previous toolbar group with Tab and Shift+Tab. Move to the next and previous toolbar button with Right Arrow or Left Arrow. Press Space or Enter to activate the toolbar button. |
+| General editor commands |  | Editor dialog: Inside a dialog, press Tab to navigate to the next dialog element, press Shift+Tab to move to the previous dialog element, press Enter to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with Alt+F10 or with Tab, following the dialog tabbing order. With a tab list focused, move to the next and previous tab with Right and Left Arrow, respectively.. |
+| General editor commands |  | Editor list box: Inside a list box, move to next list item with Tab or Down Arrow. Move to previous list item with Shift+Tab or Up Arrow. Press Space or Enter to select the list option. Press ESC to close the list box. |
+| Base commands | Ctrl+Z | Undo command. |
+| Base commands | Shift+Ctrl+Z | Redo command. |
+| Base commands | Ctrl+B | Bold command. |
+| Base commands | Ctrl+I | Italic command. |
+| Base commands | Ctrl+U | Underline command. |
+| Base commands | Alt+0 | Accessibility help. |
+| Base commands | Esc | Cancel operation. |
+
+
+## Frequently asked questions
+
+Q: Why are typed characters are slow to display?
+
+A. Large content size can cause latency. For more information, see [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Also, spelling or grammar checks can also slow the typing performance.
+
 
 ## Known issues
 
