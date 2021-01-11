@@ -64,6 +64,11 @@ colleagues](https://docs.microsoft.com/microsoftteams/manage-power-platform-apps
 
 ![Built by your colleagues](media/built-for-your-colleagues.png "Built by your colleagues")
 
+
+> [!NOTE]
+> If your app doesn't appear in the Built by your colleagues section, your Teams app might be caching information. Try signing out and back in again (if you're using the desktop app) or refreshing your browser (if you're using the web app of Teams).
+
+
 > [!NOTE]
 > You need to be an owner within the team to share apps and edit table
 permissions. If you are not an owner, the **Manage permission** and **Share with colleagues** options won't appear.
@@ -120,6 +125,7 @@ ready to share the app with an existing security group.
 
 > [!NOTE]
 > - You can share an app to a single security group.
+> - If you want to share to an M365 group, it must be [security enabled](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/share-app#share-an-app-with-office-365-groups).
 > - You can only share apps to security groups with less than 1000 members.
 
 To share an app:
