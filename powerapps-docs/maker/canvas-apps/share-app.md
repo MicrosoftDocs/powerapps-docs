@@ -108,7 +108,7 @@ To change permissions for a user or a security group:
 
 ### Share an app with Microsoft 365 Groups
 
-You can share an app with [Microsoft 365 groups](https://docs.microsoft.com/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide#office-365-groups). However, the group must be security enabled. Enabling security ensures the Microsoft 365 group can receive security tokens for authentication to access apps or resources.
+You can share an app with [Microsoft 365 groups](https://docs.microsoft.com/microsoft-365/admin/create-groups/compare-groups). However, the group must be security enabled. Enabling security ensures the Microsoft 365 group can receive security tokens for authentication to access apps or resources.
 
 Follow these steps to check if an Microsoft 365 group has security enabled:
 

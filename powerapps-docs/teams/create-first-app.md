@@ -53,7 +53,7 @@ When you select **Create** to create an app in the selected team, Power Apps aut
 `The request failed with error: 'Insufficient privileges to complete the operation.' The tracking Id is '[xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx]'`.
 
 To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
-*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](https://docs.microsoft.com/microsoftteams/office-365-groups)
+*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](https://docs.microsoft.com/microsoftteams/office-365-groups)
 
 ### Enabling security for teams with same names
 
