@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/03/2020
+ms.date: 01/11/2021
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -106,11 +106,11 @@ To change permissions for a user or a security group:
 
 - Every member of a security group has the same permission for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A permission to run an app. And then, you can also give User B, who belongs to that group, **Co-owner** permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A **Co-owner** permission and User B permission to run the app, that user can still edit the app.
 
-### Share an app with Office 365 Groups
+### Share an app with Microsoft 365 Groups
 
-You can share an app with [Office 365 groups](https://docs.microsoft.com/office365/admin/create-groups/compare-groups#office-365-groups). However, the group must be security enabled. Enabling security ensures the Office 365 group can receive security tokens for authentication to access apps or resources.
+You can share an app with [Microsoft 365 groups](https://docs.microsoft.com/microsoft-365/admin/create-groups/compare-groups). However, the group must be security enabled. Enabling security ensures the Microsoft 365 group can receive security tokens for authentication to access apps or resources.
 
-Follow these steps to check if an Office 365 group has security enabled:
+Follow these steps to check if an Microsoft 365 group has security enabled:
 
 1. Ensure you have access to the [Azure AD cmdlets](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
 
@@ -133,8 +133,8 @@ If the group isn't security enabled, you can enable it using PowerShell cmdlet [
 ![Set SecurityEnabled to True](media/share-app/azure_cmdlet_set_security_enabled.png)
 
 > [!NOTE]
-> You must be the owner of the Office 365 group to enable security.
-> Setting SecurityEnabled property to *true* does not affect how Power Apps and Office 365 features work. This command is required as SecurityEnabled property is set to *false* by default when creating Office 365 Groups outside of Azure AD.
+> You must be the owner of the Microsoft 365 group to enable security.
+> Setting SecurityEnabled property to *true* does not affect how Power Apps and Microsoft 365 features work. This command is required as SecurityEnabled property is set to *false* by default when creating Microsoft 365 Groups outside of Azure AD.
 
 After a while, you can discover this group in the Power Apps sharing panel and share apps with this group.
 
