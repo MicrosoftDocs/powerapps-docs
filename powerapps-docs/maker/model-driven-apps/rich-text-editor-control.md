@@ -37,7 +37,7 @@ Some of the format options available are:
 For a full list of default options, see [Use the rich text editor toolbar](#use-the-rich-text-editor-toolbar).
 
 
-<img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app" height="500" width="520"> 
+<img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app" height="497" width="485"> 
 
 ## Add or replace a text column for rich text editing
 
