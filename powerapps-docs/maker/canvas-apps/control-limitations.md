@@ -16,11 +16,11 @@ search.app:
 
 # Limitations of controls in Power Apps
 
-In this article, learn about the limitations of the controls used in canvas apps inside Microsoft Dataverse environments, and apps made with Power Apps inside Microsoft Teams (Microsoft Dataverse for Teams environments). For more information about environments, go to [Types of environments](https://docs.microsoft.com/power-platform/admin/environments-overview#types-of-environments).
+In this article, learn about the limitations of the controls used in canvas apps.
 
-## Limitations of controls in Dataverse environments
+## General limitations of canvas controls
 
-This section lists limitations of controls used inside the canvas apps created using Power Apps Studio for Dataverse environments.
+This section lists limitations of controls used inside the canvas apps embedded inside of Teams.
 
 - [Attachments control](controls//control-attachments.md) - see [Attachments control limitations](controls//control-attachments.md#limitations).
 
@@ -46,9 +46,9 @@ This section lists limitations of controls used inside the canvas apps created u
 
 - [Stream Video control](controls/control-stream-video.md) - see [Stream Video control limitations](controls/control-stream-video.md#limitations).
 
-## Limitations of controls in Dataverse for Teams environments
+## Limitations of controls in Teams
 
-This section lists limitations of controls used by apps created inside Dataverse for Teams environments (Microsoft Teams integrated Power Apps):
+This section lists limitations of controls played within Microsoft Teams
 
 ### General limitations
 
@@ -66,19 +66,16 @@ Apps made with Power Apps in a Dataverse for Teams environment can't be opened o
     - Teams has its own recording experience. The microphone control inside apps created using Power Apps will be disabled during the recording period.
     - Microphone recordings are limited to a maximum duration of 10 minutes.
 
-- [Mixed Reality](mixed-reality-overview.md) - within Teams, the Mixed Reality controls aren't supported:
-    - View in MR
-    - View Shape in MR
-    - Measure in MR
 
 ### Unsupported controls
 
-The following controls aren't supported by apps made with Power Apps created inside Dataverse for Teams environments:
+The following controls aren't supported by apps embedded in Teams:
 
 - [Address Input](geospatial-component-input-address.md)
 - [Camera](controls/control-camera.md) (in Teams Mobile)
 - [Map](geospatial-component-map.md)
 - [Mixed reality](mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
+- [Power BI tile control](controls/control-power-bi-tile.md)
 
 ## Next steps
 
