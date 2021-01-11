@@ -106,7 +106,7 @@ To create a guest pass using the portal:
 1. Sign in to the portal.
 2. On the home screen, select **CREATE PASS**.
 3. Select the guest name. Only guests with no access action on them, like being blocked, will be option for creating a pass. 
-4. From the list of available facilities, select the facility and then select **NEXT**. Notice that you are not able to click on closed facilities.
+4. From the list of available facilities, select the facility and then select **NEXT**. Facilities which are closed are not clickable and indicated as closed.
 
    > [!div class="mx-imgBorder"]
    > ![Create pass](media/portals-facility.png "Create pass")
