@@ -34,7 +34,7 @@ Some of the format options available are:
 - Tables
 - Images
 
-For a full list of default options, see [Use the rich text editor toolbar](#use-the-rich-text-editor-toolbar)
+For a full list of default options, see [Use the rich text editor toolbar](#use-the-rich-text-editor-toolbar).
 
 <img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app" height="500" width="520"> 
 
@@ -365,7 +365,7 @@ The following table describes the different formatting features and functionalit
 
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
-|![Format Painter](../media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
+|![Format Painter](media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
 |![Font](../media/format-font.png "Font") | Font | Ctrl+Shift+F | Select your desired font. The default font is Segoe UI.<br /><br /> **Note**: When you select any formatted content, the font name for that content displays. If your selection contains multiple fonts, the topmost font name of your selection is displayed. |
 |![Font Size](../media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The default size is 12.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
 |![Bold](../media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
