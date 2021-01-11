@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/14/2020
+ms.date: 01/11/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -39,7 +39,9 @@ This topic contains device platform and web browser requirements, limits, and co
 | Mozilla Firefox (latest version)|Latest three major releases|
 | Apple Safari|13 and later|
 
-| **Operting Systems** | **Supported Versions** |
+### Supported Operating Systems for browsers running canvas apps
+
+| **Operating System** | **Supported Versions** |
 | --- | --- |
 | Windows |Windows 8.1 or later|
 | Mac OS|10.13 or later|
@@ -48,13 +50,15 @@ This topic contains device platform and web browser requirements, limits, and co
 
 ## Supported browsers for Power Apps Studio
 
-| **Browser** | **Operating system** |
+| **Browser** | **Supported Versions** |
 | --- | --- |
 | Google Chrome|Latest three major releases|
 | Microsoft Edge|Latest three major releases|
 | Microsoft Internet Explorer|11 (with Compatibility View off)|
 
-| **Operting Systems** | **Supported Versions** |
+### Supported Operating Systems for browsers running Power Apps Studio
+
+| **Operating Systems** | **Supported Versions** |
 | --- | --- |
 | Windows |Windows 8.1 or later|
 | Mac OS|10.13 or later|
