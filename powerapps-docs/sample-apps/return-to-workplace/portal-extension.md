@@ -84,21 +84,6 @@ On the home screen you have several options:
   > [!div class="mx-imgBorder"]
   > ![Welcome screen](media/portals-home-welcome.png "Welcome screen")
 
-  #### Notification
-
-  Send notifications to employees through the **Facility Management App**, this notifications will show in the portal. 
-
-  To access **Notifications** click on the bell on the right top corner of the **Home Page**.
-
-  
-  > [!div class="mx-imgBorder"]
-  > ![Portal Hamburger Menu](media/portals-home-notifications.png "Portal Home Notifications")
-
-
-  > [!div class="mx-imgBorder"]
-  > ![Portal Hamburger Menu](media/portals-notifications-pass.png "Portal Home Notifications")
-
-
 #### Creating a pass
 
 To create a guest pass using the portal: 
@@ -165,16 +150,6 @@ The resources screen displays general information from your organization to the 
 > [!NOTE]
 > System administrator can configure this information in the solution settings, therefore the information displayed depends on the default facility and facility group associated with that facility.
 
-#### Update profile
-
-On the profile screen, guests can perform basic operations. They can update their personal information, change their password, or change their login method.
-
-> [!div class="mx-imgBorder"]
-> ![Portal profile](media/portals-profile.png "Portal profile")
-
-> [!NOTE]
-> The options presented to **Manage external authorization** depend on the authentication methods configured by the system administrator.
-
 ## Inviting users to the portal
 
 This section describes the way guests can start interacting with the portal.
@@ -196,6 +171,16 @@ To invite a contact to the portal:
 In the background, an invite will be created and an e-mail is sent to the contact. The email contains a personal link that allows the contact to redeem the invitation and create an account that will be linked to the contact.
 
 In the Workplace Care Management app, skip steps 1 and 2 described above. The **Employees** section is directly available from the side menu.
+
+#### Update profile
+
+On the profile screen, guests can perform basic operations. They can update their personal information, change their password, or change their login method.
+
+> [!div class="mx-imgBorder"]
+> ![Portal profile](media/portals-profile.png "Portal profile")
+
+> [!NOTE]
+> The options presented to **Manage external authorization** depend on the authentication methods configured by the system administrator.
 
 ## Creating dependents for guests
 
@@ -223,7 +208,21 @@ After creating dependents, the user will see them listed. First the two most rec
 
 To find dependents in the Facility Management app, go to **Solution Setup** and select **Employees**. On **My Active Contacts** view, open a record and find dependents on the **Guest** tab. All dependents can be found on the **Active Guests** view.
 
-#### Block
+## Notification
+
+Send notifications to employees through the **Facility Management App**, this notifications will show in the portal. 
+
+To access **Notifications** click on the bell on the right top corner of the **Home Page**.
+
+  
+> [!div class="mx-imgBorder"]
+> ![Portal Hamburger Menu](media/portals-home-notifications.png "Portal Home Notifications")
+
+
+> [!div class="mx-imgBorder"]
+> ![Portal Hamburger Menu](media/portals-notifications-pass.png "Portal Home Notifications")
+
+## Block
 
 When an employee or guest are blocked, they wont be able to create a pass. This block is managed through the **Facility Management App**, under **Access** for each contact. 
 
