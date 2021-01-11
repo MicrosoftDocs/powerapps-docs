@@ -35,9 +35,11 @@ This topic contains device platform and web browser requirements, limits, and co
 | --- | --- |
 | Google Chrome|Latest three major releases|
 | Microsoft Edge|Latest three major releases|
-| Microsoft Internet Explorer|11 (with Compatibility View off)|
+| *Microsoft Internet Explorer|11 (with Compatibility View off)|
 | Mozilla Firefox (latest version)|Latest three major releases|
 | Apple Safari|13 and later|
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 ### Supported Operating Systems for browsers running canvas apps
 
@@ -54,7 +56,9 @@ This topic contains device platform and web browser requirements, limits, and co
 | --- | --- |
 | Google Chrome|Latest three major releases|
 | Microsoft Edge|Latest three major releases|
-| Microsoft Internet Explorer|11 (with Compatibility View off)|
+| *Microsoft Internet Explorer|11 (with Compatibility View off)|
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 ### Supported Operating Systems for browsers running Power Apps Studio
 
