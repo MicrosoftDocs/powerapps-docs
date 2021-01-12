@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 01/11/2021
+ms.date: 01/12/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -102,26 +102,173 @@ The following two images visually identify the two configuration sections. For t
 
 You can configure all of the CKEditor-supported properties under this property. A few of the commonly used and custom configurations are described below. For complete documentation about CKEditor configurations, see [CKEditor.config](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).
 
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Description</th>
+    <th>Default value</th>
+  </tr>
+  <tr>
+<td>
+  height
+</td>
 
-| Attribute  | Description  | Default value  |
-| --------- | --------- | --------- |
-| height     | Sets the initial height of the content editor. The default is 185 px.     | "height": 185     |
-| font_defaultLabel     | Sets the default label that is displayed in the toolbar for font style. The default is Segoe UI.    | "font_defaultLabel": "Segoe UI"     |
-| fontSize_defaultLabel     | Sets the default label that is displayed in the toolbar for font size. The default is 9.     | "fontSize_defaultLabel": "9"     |
-|stickyStyle     |Sets the actual default font size and style. Additionally, you can include any other CSS properties you'd like to set as part of your default styling. <br><br> 
-The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".   | <pre>
-xml
-"stickyStyle": {
+<td>
+
+  Sets the initial height of the content editor. The default is 185 px.
+</td>
+<td>
+
+  ```"height": 185```
+</td>
+
+</tr>
+<tr>
+<td>
+  font_defaultLabel
+</td>
+
+<td>
+
+  Sets the default label that is displayed in the toolbar for font style. The default is Segoe UI.
+</td>
+<td>
+
+  ```"font_defaultLabel": "Segoe UI"```
+</td>
+
+</tr>
+
+<tr>
+<td>
+  fontSize_defaultLabel
+</td>
+
+<td>
+
+  Sets the default label that is displayed in the toolbar for font size. The default is 9.
+</td>
+<td>
+
+  ```"fontSize_defaultLabel": "9"```
+</td>
+
+<tr>
+<td>
+  stickyStyle
+</td>
+
+<td>
+
+  Sets the actual default font size and style. Additionally, you can include any other CSS properties you'd like to set as part of your default styling. <br></br> The stickyStyle plugin creates a wrapper around your content using the element specified by "stickyStyles_defaultTag", which is initially configured as "div".
+</td>
+<td>
+
+  ```
+  "stickyStyle": {
      "font-size": "9pt",
      "font-family": "'Segoe UI','Helvetica Neue',sans-serif"
-}   
-</pre>    |
-|toolbarLocation     |  The location of the user interface where the toolbar will be rendered. Supported values are *top* and *bottom*. The default is bottom.     | "toolbarLocation": "bottom"     |
-|toolbar | A list of toolbar buttons that will be loaded. | "toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]     |
-|plugins     | Comma-separated list of plug-ins to be used in an editor instance. Note that the actual plug-ins that are loaded might still be affected by two other settings: *extraPlugins* and *removePlugins*. <br /> Updating this setting might remove the plug-ins from the toolbar. If you set this property to an empty string, the editor will load without the toolbar. <br /> If you want to add one or more plug-ins to the toolbar, we recommend that you use *extraPlugins*. If you want to remove one or more from the default list, use *removePlugins*.     | "plugins": "dialogui,dialog,about,a11yhelp,basicstyles,notification,button, toolbar,clipboard,panel,floatpanel,menu,contextmenu,resize,elementspath, enterkey,entities,popup,filetools,filebrowser,floatingspace,listblock, richcombo,format,horizontalrule,htmlwriter,wysiwygarea,image,indent, indentlist,fakeobjects,link,list,magicline,maximize,pastetext,pastefromword, removeformat,showborders,sourcearea,specialchar,menubutton,scayt, stylescombo,tab,table,tabletools,undo,lineutils,widgetselection,widget, notificationaggregator,uploadwidget,uploadimage,wsc"     |
-|extraPlugins     |  A comma-separated list of additional plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br /> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting will simply append new plug-ins to the previous list. <br /> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.     | "extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi, blockquote,button,collapser,colorbutton,colordialog,onfighelper, contextmenu,copyformatting,dialog,find,floatpanel,font,indentblock, justify,panel,panelbutton,pastefromword,quicktable,selectall, stickystyles,superimage,tableresize,tableselection,tabletools" |
-| removePlugins   | A list of plug-ins that must not be loaded. This setting makes it possible to avoid loading some plug-ins defined in the plugins/extraPlugins setting without having to touch them.   | "removePlugins": "a11yhelp,codemirror,liststyle,magicline,scayt,showborders"     |
-| superimageImageMaxSize | The maximum size in megabytes (MB) allowed for embedded images when using the superimage plugin. Default is 5. | "superimageImageMaxSize": 5     |
+}
+  ```
+</td>
+<tr>
+<td>
+  toolbarLocation
+</td>
+
+<td>
+
+  The location of the user interface where the toolbar will be rendered. Supported values are *top* and *bottom*. The default is bottom.
+</td>
+<td>
+
+  ```"toolbarLocation": "bottom"```
+</td>
+
+<tr>
+<td>
+  toolbar
+</td>
+
+<td>
+
+  A list of toolbar buttons that will be loaded.
+</td>
+<td>
+
+  ```
+  "toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]
+  ```
+  
+</td>
+
+<tr>
+<td>
+  plugins
+</td>
+
+<td>
+
+  Comma-separated list of plug-ins to be used in an editor instance. Note that the actual plug-ins that are loaded might still be affected by two other settings: *extraPlugins* and *removePlugins*. <br></br> Updating this setting might remove the plug-ins from the toolbar. If you set this property to an empty string, the editor will load without the toolbar. <br></br> If you want to add one or more plug-ins to the toolbar, we recommend that you use *extraPlugins*. If you want to remove one or more from the default list, use *removePlugins*.     
+</td>
+<td>
+
+  ```
+  "plugins": "dialogui,dialog,about,a11yhelp,basicstyles,notification,button, toolbar,clipboard,panel,floatpanel,menu,contextmenu,resize,elementspath, enterkey,entities,popup,filetools,filebrowser,floatingspace,listblock, richcombo,format,horizontalrule,htmlwriter,wysiwygarea,image,indent, indentlist,fakeobjects,link,list,magicline,maximize,pastetext,pastefromword, removeformat,showborders,sourcearea,specialchar,menubutton,scayt, stylescombo,tab,table,tabletools,undo,lineutils,widgetselection,widget, notificationaggregator,uploadwidget,uploadimage,wsc"
+  ```
+</td>
+</tr>
+
+<tr>
+<td>
+  extraPlugins
+</td>
+
+<td>
+
+  A comma-separated list of additional plug-ins to be loaded. This setting makes it easier to add new plug-ins without touching the plugins setting. <br></br> There are many plug-ins that are required for other plug-ins to work. For example, the dialog plug-in is required for the link plug-in. The rich text editor automatically adds those, and you can't override them by updating this property. This setting will simply append new plug-ins to the previous list. <br></br> If you want to remove any of the presets, we recommend that you use the *removePlugins* property.
+</td>
+<td>
+
+  ```
+  "extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi, blockquote,button,collapser,colorbutton,colordialog,onfighelper, contextmenu,copyformatting,dialog,find,floatpanel,font,indentblock, justify,panel,panelbutton,pastefromword,quicktable,selectall, stickystyles,superimage,tableresize,tableselection,tabletools"
+  ```
+</td>
+</tr>
+
+<tr>
+<td>
+  removePlugins
+</td>
+
+<td>
+
+  A list of plug-ins that must not be loaded. This setting makes it possible to avoid loading some plug-ins defined in the plugins/extraPlugins setting without having to touch them.
+  
+</td>
+<td>
+
+  ```"removePlugins": "a11yhelp,codemirror,liststyle,magicline,scayt,showborders"```
+</td>
+</tr>
+
+<tr>
+<td>
+  superimageImageMaxSize
+</td>
+
+<td>
+
+  The maximum size in megabytes (MB) allowed for embedded images when using the superimage plugin. The default is 5.
+</td>
+<td>
+
+  ```"superimageImageMaxSize": 5```
+</td>
+
+</tr>
+</table>
+
 
 ### Individual configuration settings
 
