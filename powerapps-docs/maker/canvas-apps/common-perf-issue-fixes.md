@@ -287,67 +287,28 @@ Let's take a look at the common performance problems when using Excel as the dat
 
 ### Too many data tables and large data size
 
-Too many data tables are defined, and each data table has an immense size of
-    data over many columns. As Excel is not a relational database nor data
-    source providing some delegable functions, PowerApps should load data from
-    defined data tables and then you can use functions that PowerApps provides
-    such as Filter, Sort, JOIN, Group By and Search. If you have defined too
-    many data tables and each contains many columns and stores many records,
-    obviously launching App would be affected by because each data table should
-    be manipulated within [JS heap](#memory-pressure) in Browser and the app would also consume
-    certain amount of memory for the data(refer to a section how to check memory
-    usage of your app using developer tool.)
+Slowness in the app can be experienced when it uses Excel file with too many data tables, and each data table having an immense size of data over several columns. An file Excel isn't a relational database, or a data source that provides delegable functions. Power Apps has to load data from the defined data tables first. And then, you can use functions that Power Apps provides such as Filter, Sort, JOIN, Group By, and Search.
 
-Define only the necessary columns on the data table at Excel. Loading
-    unnecessary columns hurts the performance, obviously.
+Too many data tables, with high number of rows and columns affects app performance and client-side overhead because each data table needs to be manipulated within the [JS heap](#memory-pressure). This effect also leads to the app consuming more client-side memory.
 
-**Common issues**
+To ensure your app doesn't get affected by such behaviors, define only the necessary columns on the data table in an Excel file.
 
-1.  
+### Heavy transactions
 
-    1.  Heavy transactions from many users get slow down the app too. We know
-        Excel is a product dealing with data in its spread sheets. It is not a
-        system nor a relational database. Which means that any data changes from
-        your app would be managed by Excel in the same way that Excel does for
-        data in spread sheets.  
-        If the app mainly reads data from the excel file but rarely triggers
-        transactions like Create/Update/Delete, the app will perform well
-        although hundreds of thousands of users use the app. However, if heavy
-        transactions happen from a small group of users, it would be a big
-        offender of slow performance.  
-        There is no simple number saying what is the threshold of transactions
-        because it is also related to data itself and the size of the data table
-        and others like network footprint and user’s devices.
+Since Excel data source deals with spread sheets, it's not a relational database system. Any changes from an app is managed by Excel in the same way as a user changing data in an Excel file. If the app has high number of reads, but less CRUD (Create/Update/Delete) operations, app may perform well. However, if the app makes heavy transactions, it may adversely affect the performance of the app.
 
->   The location and size of the excel file. If all data tables are defined
->   within a single file and the file size is big, then extra overheads for
->   downloading the file and reading data to load are expected.  
->   Meanwhile, you can select various storage to store the excel file(s): Azure
->   Blob storage, One Drive for business and so on. Please be aware that the
->   Excel file should be downloaded to the client before loading data out of the
->   data tables defined within the file. You can naturally imagine the
->   downloading time of the file would be adding up on overall performance of
->   your app start.
+There's no specific threshold value of the number of transactions since it also relates to the data being manipulated, and several other aspects such as the network overhead, or the user's device.
 
- 
+If you have read-only data, you can import such data into the app locally instead of loading it from the data source. For enterprise apps, leverage data sources such as Dataverse, SQL Server, or SharePoint instead.
 
-Recommendations
+### Size of Excel file
 
-1.  It is better to keep the file near your end-users so that the file can be
-    downloaded quickly instead of putting it in a remote location.
+You can choose from a wide-range of [cloud storage](connections/cloud-storage-blob-connections.md) options with varying, or configurable storage capacity for the Excel file when using with canvas app. However, a single large Excel file with all tables defined in one file adds an extra overhead for the app while downloading the file, and reading the data to load at the client-side.
 
-2.  Leverage other data sources like Microsoft Dataverse, SQL, or SharePoint
-    instead, especially for the Enterprise scale app.
+Instead of using one large file, split the data into multiple Excel files with minimum data tables. And then, load a file when it really requires so that the transmission of a file. This way, loading the data from the data table happens in fragments, reducing the overhead of many tables, or large data set.
 
-3.  If you have Read-only data, you can import such data into the app itself
-    instead of loading it whenever the Power Apps app start.
+### Location of the file
 
-4.  Split to multiple Excel files with minimum data tables(sheets) and load a
-    file when it really requires so that transmitting a file and loading data
-    from data table would be scattered.
+Geographic location of the data source, and proximity to the [client locations](possible-sources-slow-performance.md#client-browsers-devices-and-locations) can result in a common performance bottleneck for the app, and induce network latency. This effect can get amplified with a mobile client with limited bandwidth for connectivity.
 
-5.  
-
-The Excel connector and Excel file will be a good fit for small transactions and
-data. However, it might not be good enough on the enterprise scale.
-
+It's better to keep the file near your end-users (or, majority of the end users&mdash;for global audience) so that the file can be downloaded quickly.
