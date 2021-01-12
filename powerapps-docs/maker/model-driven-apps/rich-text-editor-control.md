@@ -34,7 +34,7 @@ Some of the format options available are:
 - Tables
 - Images
 
-For a full list of default options, see [Use the rich text editor toolbar](#use-the-rich-text-editor-toolbar).
+For a full list of default options, see [Use the rich text editor toolbar](#use-the-rich-text-editor-toolbar).<br></br>
 
 
 <img src="media/rich-text-control.png" alt="Rich text control editor in a model-driven app" height="497" width="485"> 
@@ -274,30 +274,218 @@ You can configure all of the CKEditor-supported properties under this property. 
 
 You can configure additional configuration settings that affect how your editor functions.
 
-|Attribute  |Description  |Default value  |
-|---------|---------|---------|
-|disableContentSanitization     |     |"disableContentSanitization": false     | 
-|disableDefaultImageProcessing     |By default, images will be uploaded using the client API. As soon as an image gets added to the editor, it will be uploaded to the platform. To process images, set this property to true. |"disableDefaultImageProcessing": false     |
-|disableImages     |Setting this property to true will disable images. This property will have highest priority. This means that when this property is set to true, irrespective of the imageEntity property value, images will be disabled. By default, images are enabled.     | "disableImages": false    |
-|externalPlugins    | By using this property, you can write your own plug-ins and use them in the rich text editor control. Below is the schema for externalPlugins property.
-```xml
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Description</th>
+    <th>Default value</th>
+  </tr>
+  <tr>
+<td>
+  disableContentSanitization
+</td>
+
+<td>
+
+</td>
+<td>
+
+  ```"disableContentSanitization": false```
+</td>
+
+</tr>
+<tr>
+<td>
+  disableDefaultImageProcessing
+</td>
+
+<td>
+
+  By default, images will be uploaded using the client API. As soon as an image gets added to the editor, it will be uploaded to the platform. To process images, set this property to true.
+</td>
+<td>
+
+  ```"disableDefaultImageProcessing": false```
+</td>
+
+</tr>
+
+<tr>
+<td>
+  disableImages
+</td>
+
+<td>
+
+  Setting this property to true will disable images. This property will have highest priority. This means that when this property is set to true, irrespective of the imageEntity property value, images will be disabled. By default, images are enabled.
+</td>
+<td>
+
+  ```"disableImages": false```
+</td>
+
+<tr>
+<td>
+  externalPlugins
+</td>
+
+<td>
+
+  By using this property, you can write your own plug-ins and use them in the rich text editor control. The following is the schema for externalPlugins property: <br></br>
+ 
+ ```
+  XMLCopy
 "externalPlugins": [
     {
       "name": "<<Plugin Name>>",
       "path": "<<Plugin’s folder path>>”
     }
   ]
+  ```
+  
+  
+</td>
+<td>
+
+No default value as this is how you can extend your functionality by adding additional plugins not originally provided.
 
 Example:
-"externalPlugins": [
+
+  ```
+  "externalPlugins": [
     {
       "name": "EmbedMedia",
-      "path": "http://aurorav32308.aurorav32308dom.extest.microsoft.com/CITTest/%7B637230928490017310%7D/WebResources/msdyncrm_/AssistEditControl/KBEditor/libs/ckeditor/plugins/embedmedia/"
+      "path": "http://mydomain.crm.dynamics.com/CITTest/%7B637230928490017310%7D/WebResources/msdyncrm_/myplugins/embedmedia/"
     }
   ]
-```
-   |
-|
+  ```
+  
+</td>
+<tr>
+<td>
+  imageEntity
+</td>
+
+<td>
+
+  By setting this property, you can avoid using the default table for images so that you can enforce additional security if needed. <br></br>
+  
+  ```
+  "imageEntity": {
+	"imageEntityName": "<<name of the image table>>",
+	"imageFileAttributeName": "<<attribute name of the blob reference>>"
+}
+  ```
+  
+  
+</td>
+<td>
+
+  ```
+  "imageEntity": {
+	"imageEntityName": "msdyn_richtextfiles",
+	"imageFileAttributeName": "msdyn_imageblob"
+}
+  ```
+</td>
+
+<tr>
+<td>
+  showAsTabControl
+</td>
+
+<td>
+
+By setting this property, you can display additional commands above the editor window. 
+
+Must be set to true to enable the following attributes:
+- showFullScreenExpander
+- showHtml
+- showPreview
+- showPreviewHeaderWarning
+
+</td>
+<td>
+
+  ```"showAsTabControl": false```
+  
+</td>
+
+<tr>
+<td>
+  showFullScreenExpander
+</td>
+
+<td>
+
+  This property adds the full screen expand/collapse functionality, which allows you to expand and use the editor in full screen mode. <br></br>
+  
+  Depends on showAsTabControl set to true.
+  
+</td>
+<td>
+
+  ```"showFullScreenExpander": false```
+</td>
+</tr>
+
+<tr>
+<td>
+  showHtml
+</td>
+
+<td>
+
+This property adds the option to display and edit the html content directly. <br></br>
+
+Depends on showAsTabControl set to true.
+
+</td>
+<td>
+
+  ```"showHtml": false```
+  
+</td>
+</tr>
+
+<tr>
+<td>
+  showPreview
+</td>
+
+<td>
+
+  This property adds the option to preview the editor content rendered as html. Previewing lets you see how your content will display if you share and render the content as HTML outside of the editor. <br></br>
+
+Depends on showAsTabControl set to true.
+
+  
+</td>
+<td>
+
+  ```"showPreview": false```
+</td>
+</tr>
+
+<tr>
+<td>
+  showPreviewHeaderWarning
+</td>
+
+<td>
+
+  This property allows you to show/hide the warning message that is displayed when previewing content.<br></br>
+
+Depends on showAsTabControl and showPreview set to true.
+
+</td>
+<td>
+
+  ```"showPreviewHeaderWarning": false```
+</td>
+
+</tr>
+</table>
 
 
 ## Sample rich text editor configurations
