@@ -279,7 +279,7 @@ In addition, Enable the [Explicit column selection](#too-many-columns-retrieved)
 
 The app may perform slowly if it runs client-heavy scripting such as Filter By, or Join at client-side instead of doing such operation at server-side.
 
-Leverage [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities, and filter their data, you can [define a view](model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the required columns. Then, use this view in your app that creates this overhead on server-side for join/filter instead of the client-side. This method not only reduces the extra operations, but also data transmission. For information about editing filter, and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
+Leverage [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities, and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the required columns. Then, use this view in your app that creates this overhead on server-side for join/filter instead of the client-side. This method not only reduces the extra operations, but also data transmission. For information about editing filter, and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
 
 ### Using old connector
 
@@ -315,7 +315,7 @@ Instead of using one large file, split the data into multiple Excel files with m
 
 ### Location of the file
 
-Geographic location of the data source, and proximity to the [client locations](possible-sources-slow-performance.md#client-browsers-devices-and-locations) can result in a common performance bottleneck for the app, and induce network latency. This effect can get amplified with a mobile client with limited bandwidth for connectivity.
+Geographic location of the data source, and proximity to the [client locations](slow-performance-sources.md#client-browsers-devices-and-locations) can result in a common performance bottleneck for the app, and induce network latency. This effect can get amplified with a mobile client with limited bandwidth for connectivity.
 
 It's better to keep the file near your end-users (or, majority of the end users&mdash;for global audience) so that the file can be downloaded quickly.
 
@@ -325,8 +325,8 @@ It's better to keep the file near your end-users (or, majority of the end users&
 
 ### See also
 
-[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md)
-[Common canvas app performance issues and resolutions](common-perf-issue-fixes.md)
-[Possible sources of slow performance for canvas apps](slow-perf-sources.md)
-[Common issues and resolutions](common-issues-and-resolutions.md)
-[Troubleshooting startup issues for Power Apps](troubleshooting-startup-issues.md)
+[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md) <br>
+[Common canvas app performance issues and resolutions](common-performance-issue-fixes.md) <br>
+[Possible sources of slow performance for canvas apps](slow-perf-sources.md) <br>
+[Common issues and resolutions](common-issues-and-resolutions.md) <br>
+[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)

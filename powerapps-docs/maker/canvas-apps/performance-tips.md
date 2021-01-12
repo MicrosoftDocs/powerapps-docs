@@ -128,7 +128,7 @@ Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maxi
 ### See also
 
 [Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md)
-[Common canvas app performance issues and resolutions](common-perf-issue-fixes.md)
-[Possible sources of slow performance for canvas apps](slow-perf-sources.md)
+[Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md)
+[Possible sources of slow performance for canvas apps](slow-performance-sources.md)
 [Common issues and resolutions](common-issues-and-resolutions.md)
-[Troubleshooting startup issues for Power Apps](troubleshooting-startup-issues.md)
+[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)

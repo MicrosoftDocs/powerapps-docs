@@ -73,11 +73,11 @@ performance, maintenance, scalability, and so on.
 
 ## Next steps
 
-[Common performance issues and resolutions](common-perf-issue-fixes.md)
+[Common performance issues and resolutions](common-performance-issue-resolutions.md)
 
 ### See also
 
 [Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md)
 [Tips and best practices to improve canvas apps performance](performance-tips.md)
 [Common issues and resolutions](common-issues-and-resolutions.md)
-[Troubleshooting startup issues for Power Apps](troubleshooting-startup-issues.md)
+[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
