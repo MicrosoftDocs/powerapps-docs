@@ -18,6 +18,9 @@ search.app:
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
+> [!NOTE]
+> For help with performance problems in canvas apps, read the topics under canvas apps [performance and optimization](execution-phases-data-flow.md) section.
+
 1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
 <br> A pop-up dialog will show the following message in this situation: <br>
   `Upgrade browser to use Dropbox`

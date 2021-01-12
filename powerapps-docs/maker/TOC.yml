@@ -2069,8 +2069,6 @@
       href: monitor-collaborative-debugging.md
     - name: Advanced monitoring
       href: monitor-advanced.md
-  - name: Performance tips for canvas apps
-    href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
