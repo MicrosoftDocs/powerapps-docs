@@ -136,7 +136,7 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
   
 -   Certain areas must use dark or light colors to contrast with the default icon colors. The icon color isn’t customizable.  
   
--   An table can’t be displayed in different colors under different Sitemap nodes.  
+-   A table can’t be displayed in different colors under different Sitemap nodes.  
   
 -   The Sitemap nodes colors aren’t customizable.  
   
