@@ -77,7 +77,7 @@ performance, maintenance, scalability, and so on.
 
 ### See also
 
-[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md)
-[Tips and best practices to improve canvas apps performance](performance-tips.md)
-[Common issues and resolutions](common-issues-and-resolutions.md)
+[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md) <br>
+[Tips and best practices to improve canvas apps performance](performance-tips.md) <br>
+[Common issues and resolutions](common-issues-and-resolutions.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)

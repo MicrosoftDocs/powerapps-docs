@@ -105,10 +105,10 @@ For example, SharePoint lists support delegation from the [**Filter**](functions
 Turn on the [experimental feature](working-with-experimental.md) for Delayed Load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and that are directly bound to the data source. If you build this type of app and don’t enable this feature, app performance may suffer because the controls in all screens must be populated even on screens that aren’t open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
 
 ## Working with large data sets
-Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, those indexes of columns are designed well as these docs describe for [SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide?view=sql-server-2017) and [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).
+Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, those indexes of columns are designed well as these docs describe for [SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide) and [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).
 
 > [!TIP]
-> For additional information about how large data sets can cause common performance problems on different platforms, read [Large data sets loading slowly on different platforms](common-perf-issue-fixes.md#large-data-sets-loading-slowly-on-different-platforms).
+> For additional information about how large data sets can cause common performance problems on different platforms, read [Large data sets loading slowly on different platforms](common-performance-issue-fixes.md#large-data-sets-loading-slowly-on-different-platforms).
 
 ## Republish apps regularly
 [Republish your apps](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blog post) to get performance improvements and additional features from the Power Apps platform.
@@ -127,8 +127,8 @@ Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maxi
 
 ### See also
 
-[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md)
-[Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md)
-[Possible sources of slow performance for canvas apps](slow-performance-sources.md)
-[Common issues and resolutions](common-issues-and-resolutions.md)
+[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md) <br>
+[Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
+[Possible sources of slow performance for canvas apps](slow-performance-sources.md) <br>
+[Common issues and resolutions](common-issues-and-resolutions.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
