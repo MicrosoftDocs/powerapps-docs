@@ -38,7 +38,9 @@ Hence, as a recommendation, restrict loading of data that you need to display on
 
 It's recommended to select only the necessary columns for the app. Adding more, or all columns from the data source downloads all column data. This action results in network overheads, and high memory usage in client devices. And this problem can impact users with mobile devices even more if the network bandwidth is limited, or a device with limited memory, or a legacy processor.
 
-For example, if you use Microsoft Dataverse as the data source for your app, make sure you have enabled the [Explicit Column Selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict the data retrieval for only the columns used in the app.
+For example, if you use Microsoft Dataverse as the data source for your app, make sure you have enabled the [Explicit column selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict the data retrieval for only the columns used in the app.
+
+To turn the **Explicit Column Selection** feature on the canvas app, go to **File** -> **Settings** -> **Advanced Settings** -> Turn **Explicit column selection** feature *On*.
 
 ### Unsupported or legacy browsers
 
@@ -55,6 +57,12 @@ Geographical location distances impact performance in different forms, such as l
 ### Allow list not configured
 
 Ensure that you don't block the required service URLs, or add them to your firewall's allow list. For a complete list of all service URLs required to be allowed for Power Apps, go to [Required services](limits-and-config.md#required-services).
+
+### Inappropriate data row limit for non-delegable queries
+
+Data row limit for non-delegable queries allow you to restrict the number of rows returned from a server-based connection where delegation isn't supported. By default, this limit is set to 500 rows. You can change this value from 1 through 2000. Setting this value to a higher limit causes more data to be retrieved, which in turn can result in the app to slow down.
+
+To configure data row limit for non-delegable queries, open the app in Power Apps Studio, and then go to **File** -> **Settings** -> **Advanced settings** -> update the value for **Data row limit for non-delegable queries**.
 
 ## OnStart event
 
@@ -82,7 +90,7 @@ JavaScript (JS) heap may hit the memory heap celing because to heavy scripts run
 
 In most cases, out-of-memory exception at the heap in client may trigger the app to crash, or hang.
 
-Profile the app performance using a browser such as [developer tools for Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/). Check the scenarios that hit the ceiling of JS heap.
+Profile the app performance using a browser such as [developer tools for Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/). Check the scenarios that hit the ceiling of JS heap. More information: [Fixing memory problems](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/memory-problems/)
 
 When using data from the sources such as Microsoft Dataverse, or SQL Server (online/on-premises), you can use a **View** object to ensure joining/filtering/grouping/sorting occurs on server-side instead of client-side. This approach reduces client overhead of scripting for such actions.
 
@@ -143,7 +151,7 @@ Enure the data source&mdash;SQL database has no resource contentions such as pro
 
 ### Thick client or excessive requests
 
-An app running Group By, Filter By, JOIN operations client-side uses processor, and memory resources from the client devices. Depending on the data size, these operations may take more scripting time on client-side, increasing JS heap size on the client.
+An app running Group By, Filter By, JOIN operations client-side uses processor, and memory resources from the client devices. Depending on the data size, these operations may take more scripting time on client-side, increasing [JS heap](#memory-pressure) size on the client.
 
 Since each lookup data call travels to the data source through the data gateway, the total number of data calls becomes more important.
 
@@ -158,7 +166,7 @@ You can create view(s) with only necessary columns which require for canvas app.
 
 By default, a canvas app shows data using the tables, or views from the available database objects. Retrieving all columns from a table may result in a slow response, especially when using big data types such as NVARCHAR(MAX).
 
-Transferring large amounts of data to clients take time. In addition, this also results in more scripting time with large amounts of data in the JS heap on the client-side.
+Transferring large amounts of data to clients take time. In addition, this also results in more scripting time with large amounts of data in the [JS heap](#memory-pressure) on the client-side.
 
 ### SQL Server on-premises
 
@@ -204,11 +212,11 @@ SharePoint connector pipelines to SharePoint list(s). In addition, you can also 
 
 ### Delegation and data size
 
-The size of the data transmitting to the client matters, especially when the SharePoint data source is remote. If formula in the events at canvas app has [non-delegable](delegation-overview.md) functions inside, Power Apps platform retrieves records upto the defined Data Row Limits (500, by default) that can be increased to 2000. If Data Row Limits is set to 2000, and the SharePoint list has many columns, data size transmitting to client can be huge leading to the slowness of the app.
+The size of the data transmitting to the client matters, especially when the SharePoint data source is remote. If formula in the events at canvas app has [non-delegable](delegation-overview.md) functions inside, Power Apps platform retrieves records upto the defined [data row limit for non-delegable queries](#inappropriate-data-row-limit-for-non-delegable-queries) (500, by default) that can be increased to 2000. If this limit is set to 2000, and the SharePoint list has many columns, data size transmitting to client can be huge leading to the slowness of the app.
 
-SharePoint provides many [delegable functions](https://docs.microsoft.com/connectors/sharepointonline/#power-apps-delegable-functions-and-operations-for-sharepoint). Check your formula to see if it's delegable. If not, Power Apps retrieves a number of records to the client, set as Data Row Limits (Default 500). And then, applies the formula on this retrieved data set at the client side.
+SharePoint provides many [delegable functions](https://docs.microsoft.com/connectors/sharepointonline/#power-apps-delegable-functions-and-operations-for-sharepoint). Check your formula to see if it's delegable. If not, Power Apps retrieves a number of records to the client, set as data row limit for non-delegable queries (500 by default). And then, applies the formula on this retrieved data set at the client side.
 
-A reduced Data Row Limit inside SharePoint, and use of delegable functions in the Power Apps formula are important for the app to perform.
+A reduced data row limit for non-delegable queries, and use of delegable functions in the Power Apps formula are important for the app to perform.
 
 For a delegable function example, consider an ID column defined as Number data type in the SharePoint list. Both formulas below will return the results as expected. However, the former is non-delegable while the latter is delegable.
 
@@ -231,7 +239,7 @@ Size of an image, and attached file can attribute to a slow response while retri
 
 Review your SharePoint list, and ensure only the necessary columns have been defined. The number of columns in the list affects performance of the data requests. This effect is because of the matched records, or the records up to the defined Data Low Limits is retrieved, and transmitted back to client with all columns defined in the list&mdash;whether the app uses all of them, or not.
 
-Enable the **Explicit Column Selection** feature on the canvas app (**File** -> **Settings** -> **Advanced Settings** -> Turn **Explicit column selection** feature *On*) is highly recommended to only query the columns used by the app.
+Enable the [Explicit column selection](#too-many-columns-retrieved) feature to only query the columns used by the app.
 
 ### Large lists
 
@@ -240,104 +248,62 @@ If you have a large list with hundreds of thousands of records, consider partiti
 For instance, your data could be stored on different lists on a yearly, or monthly basis. Then, you can implement the app to let a user select a time window to retrieve the data within that range.
 
 Within a controlled environment, the performance benchmark has proved that the
-performance of OData requests against a SharePoint list are highly related to the number of columns in the list and the number of rows retrieving limited by Data row Limits. The lower number of columns, and the lower data row limits setting perform better.
+performance of OData requests against a SharePoint list are highly related to the number of columns in the list and the number of rows retrieving limited by [data row limit for non-delegable queries](#inappropriate-data-row-limit-for-non-delegable-queries). The lower number of columns, and the lower data row limit setting perform better.
 
 However, in the real-world apps designed for business requirements, it may not be quick or simple to reduce the data rows limits, and columns. Hence,it's recommended to monitor the OData requests at the client side, and
-tune Data Row Limits, and the number of columns in a SharePoint list.
+tune data row limit for non-delegable queries, and the number of columns in a SharePoint list.
 
 ## Microsoft Dataverse
 
-When you use the Common Data Service connector to access a Microsoft Dataverse environment, data requests go to the environment instance directly—without passing through API management. More information: [Data call flow with Common Data Service connector](execution-phases-data-flow.md#data-call-flow-with-common-data-service-connector-for-microsoft-dataverse-environment) Microsoft Dataverse has enabled by default so that when you create a
-new canvas app connecting to your Microsoft Dataverse instance, data requests
-from your app will execute through Microsoft Dataverse onto your
-Microsoft Dataverse instance.
+When you use the [Common Data Service connector](connections/connection-common-data-service.md) to access a Microsoft Dataverse environment, data requests go to the environment instance directly—without passing through API management. More information: [Data call flow with Common Data Service connector](execution-phases-data-flow.md#data-call-flow-with-common-data-service-connector-for-microsoft-dataverse-environment)
 
-Microsoft Dataverse connector performs much faster than the old connector. If
-you have existing canvas apps using an old connector, we highly recommend
-migrating the app to the Microsoft Dataverse connector.
+> [!TIP]
+> - Ensure you're using the upgraded connector to connect to Microsoft Dataverse for apps created before November 2019. More information: [Improved data source experience for Dataverse](connections/connection-common-data-service.md#dataverse-and-the-improved-data-source-experience)
+> - When using a custom entity in Dataverse, additional security configuration may be required for users to be able to view the records using the canvas app. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security in Dataverse](https://docs.microsoft.com/power-platform/admin/database-security), [Security roles, and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
-**Common issues**
+Let's take a look at the common performance problems when using Dataverse as the data source for canvas apps, and how to resolve such problems.
 
-1.  Too much data transmitted to a client also made requests be slow. For
-    instance, if your app has set Data Row Limits to 2000, instead of default
-    500, it adds up extra overhead on transferring data and manipulating
-    received data to JS Heap at client side.
+### Excessive data transmission
 
-2.  The app did run client-heavy scripting such as Filter By/Join at client side
-    instead of doing such operation at server side.
+Too much data transmitted to a client makes requests slower. For instance, if your app has set [data row limit for non-delegable queries](#inappropriate-data-row-limit-for-non-delegable-queries) to 2000, instead of default 500, it adds up extra overhead on transferring data, and manipulating the received data to [JS heap](#memory-pressure) at client-side.
 
-3.  Canvas app had used old commondataservice connectors. Firstly, the old
-    commondatasource connectors got some overheads. Hence, OData requests via
-    the connector were slower than that via Microsoft Dataverse connector.
+In addition, Enable the [Explicit column selection](#too-many-columns-retrieved) feature to only query the columns used by the app.
 
-Recommendations
+### Heavy scripting on client-side
 
-1.  **Enable Explicit Column Selection (ECS)** which would select only used
-    columns in your app instead of retrieving all columns of the entity you used
-    in your app.
+The app may perform slowly if it runs client-heavy scripting such as Filter By, or Join at client-side instead of doing such operation at server-side.
 
-2.  **Leverage Microsoft Dataverse View.  **Microsoft Dataverse View makes a
-    logical view out of entities with joining/ filtering entities. For instance,
-    if you should join entities and filter their data, you can define a view via
-    Microsoft Dataverse View designer by joining them and define only necessary
-    columns. Then, use this view in your app which put load to server by avoid
-    the app from joining overhead at client side. This would reduce not only
-    extra operations but also data transmission.
+Leverage [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities, and filter their data, you can [define a view](model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the required columns. Then, use this view in your app that creates this overhead on server-side for join/filter instead of the client-side. This method not only reduces the extra operations, but also data transmission. For information about editing filter, and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
 
-3.  **Migrate your app to use Microsoft Dataverse **connector in case your app
-    is still using the old connectors such as commondataservice or
-    dynamicscrmonline.
+### Using old connector
 
-4.  Reduce Data Row Limits to 500 at least. Please think about your app really
-    requires retrieving more than 500 records or not. As your app might be
-    running at mobile/tablet devices, having light-weight data at clients would
-    perform better. In many cases, delegable functions cover your business
-    logic.
-
-Note: Microsoft Dataverse View only support sorting and filtering as of today.
-Group By would be in the future.
-
-| **Note**: By default, out-of-box entities set minimum privileges as Figure4. You can configure many privileges. If you defined custom entities, however, you must set privileges for your custom entities from the Custom Entities tab. Otherwise, app users might not be able to see data from the app you published when users are under Microsoft Dataverse User role. Microsoft Dataverse comes with the built-in [security model](https://docs.microsoft.com/en-us/power-platform/admin/wp-security-cds) which administrators can configure or edit security role privileges and access level for out-of-box entities and custom entities. From PowerApps portal, select a gear icon positioned at the right top, then select Advanced settings. The page would be redirected to Dynamics 365 settings page.  Within the page, click the Settings menu at the top. Find and click Security under System. If you click Security Roles among many menus, it will list up defined Security roles. Find Common Data Service User from the list. When you click the role, you would be landing at Security Role privilege editor [Figure 4], where you can configure security privileges per security role and entities. |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-
-![](media/f8391683e9b7c1e97d9b31af8584a47f.png)
-
-Figure 4 Security Role privilege editor
-
- 
+If you created a canvas app with a Common Data Service connector prior to November 2019, then you might not have the benefit of the most current version of the Dataverse. Read [Dataverse connection improvements](use-native-cds-connector.md) for more details and to upgrade your connection.
 
 ## Excel
 
-People in the business world use Excel sheets to manage their business data. The
-Excel connector in PowerApps provides connectivity from a canvas app to the data
-in Excel data table. By following steps here, you can define a data table(s)
-within an Excel file and retrieve such data onto a canvas app.
+[Excel connector](https://docs.microsoft.com/connectors/excel/) provides connectivity from a canvas app to the data in a table inside an Excel file. This connector has limitations compared to other data sources&mdash;for example, little delegable functions&mdash;enabling the canvas app to load data from the table only up to [2000 records](#inappropriate-data-row-limit-for-non-delegable-queries). To load more than 2000 records, partition your data in different data tables as additional data sources.
 
-Although a maker knows a little about other data sources, Excel would be enough
-to store your business data based on your format.
+Let's take a look at the common performance problems when using Excel as the data source for canvas apps, and how to resolve such problems.
 
-However, please be aware that the Excel connector has limitations compared to
-other data sources. As it provides little delegable functions, PowerApps loads
-data from data table up to 2000 records, nothing more than that. If you really
-want to load more than 2000 records, you should do partition your data onto a
-different data table and then load both data tables.
+### Too many data tables and large data size
 
-Apart from this limitation, there are some cases when slow performance happens.
-Let us see what common issues are there.
-
-**Common issues**
-
-1.  Too many data tables are defined, and each data table has an immense size of
+Too many data tables are defined, and each data table has an immense size of
     data over many columns. As Excel is not a relational database nor data
     source providing some delegable functions, PowerApps should load data from
     defined data tables and then you can use functions that PowerApps provides
     such as Filter, Sort, JOIN, Group By and Search. If you have defined too
     many data tables and each contains many columns and stores many records,
     obviously launching App would be affected by because each data table should
-    be manipulated within JS heap in Browser and the app would also consume
+    be manipulated within [JS heap](#memory-pressure) in Browser and the app would also consume
     certain amount of memory for the data(refer to a section how to check memory
     usage of your app using developer tool.)
+
+Define only the necessary columns on the data table at Excel. Loading
+    unnecessary columns hurts the performance, obviously.
+
+**Common issues**
+
+1.  
 
     1.  Heavy transactions from many users get slow down the app too. We know
         Excel is a product dealing with data in its spread sheets. It is not a
@@ -380,8 +346,7 @@ Recommendations
     file when it really requires so that transmitting a file and loading data
     from data table would be scattered.
 
-5.  Define only the necessary columns on the data table at Excel. Loading
-    unnecessary columns hurts the performance, obviously.
+5.  
 
 The Excel connector and Excel file will be a good fit for small transactions and
 data. However, it might not be good enough on the enterprise scale.
