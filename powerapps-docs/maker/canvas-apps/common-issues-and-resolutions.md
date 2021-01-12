@@ -219,3 +219,15 @@ This article lists some common issues that you might encounter while using Power
  1.   **Power Apps per app plans does not support Power Apps for Windows app**
  
         Power Apps for Windows app is not supported if you're on the [Power Apps per app plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp). 
+
+## Next steps
+
+If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). More information: [Get Help + Support](https://docs.microsoft.com/power-platform/admin/get-help-support)
+
+### See also
+
+[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md) <br>
+[Possible sources of slow performance for canvas apps](slow-performance-sources.md) <br>
+[Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
+[Tips and best practices to improve canvas apps performance](performance-tips.md) <br>
+[Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
