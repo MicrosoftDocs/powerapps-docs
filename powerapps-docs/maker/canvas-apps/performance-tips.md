@@ -68,6 +68,9 @@ With this change, the app fetches the tables in parallel:
 
 ![Parallel ClearCollect](./media/performance-tips/perfconcurrent2.png)	
 
+> [!NOTE]
+> For more information about the performance problems and resolutions related to OnStart, read [OnStart event](common-performance-issue-resolutions.md#onstart-event).
+
 ## Cache lookup data
 Use the **Set** function to cache data from lookup tables locally to avoid repeatedly retrieving data from the source. This technique
 optimizes performance if the data probably won’t change during a session. As in this example, the data is retrieved from the source once,
@@ -106,7 +109,7 @@ Turn on the [experimental feature](working-with-experimental.md) for Delayed Loa
 ## Working with large data sets
 Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, those indexes of columns are designed well as these docs describe for [SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide) and [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).
 
-> [!TIP]
+> [!NOTE]
 > For additional information about how large data sets can cause common performance problems on different platforms, read [Large data sets loading slowly on different platforms](common-performance-issue-resolutions.md#large-data-sets-loading-slowly-on-different-platforms).
 
 ## Republish apps regularly

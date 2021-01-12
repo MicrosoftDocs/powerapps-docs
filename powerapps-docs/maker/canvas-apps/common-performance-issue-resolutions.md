@@ -68,7 +68,7 @@ To configure data row limit for non-delegable queries, open the app in Power App
 
 The OnStart event runs when the application is loading. Calling large amounts of data in the OnStart event will slow down the load of the app. A screen with heavy dependency of controls and values defined on another screen will be affected with slow screen navigation.
 
-> [!TIP]
+> [!NOTE]
 > For additional information about optimizing the OnStart function, read [Optimize the OnStart function](performance-tips.md#optimize-the-onstart-function).
 
 Some of the most common problems experienced in many such situations are:
@@ -230,7 +230,7 @@ For a delegable function example, consider an ID column defined as Number data t
 
 As we assume that the ID column in SharePoint is defined with the data type as Number, the right-hand side value should be numeric variable instead of string variable. Otherwise, such mismatch may trigger the formula to be non-delegable.
 
-> [!TIP]
+> [!NOTE]
 > For more information about delegation, see [Use delegation](performance-tips.md#use-delegation).
 
 ### Too many dynamic lookup columns
