@@ -21,8 +21,13 @@ The execution context defines the event context in which your code executes. The
 
 The execution context is passed in one of the following ways:
 
-- **Defining event handlers using UI**: The execution context is an *optional* parameter that can be passed to a JavaScript library function through an event handler. Use the **Pass execution context as first parameter** option in the **Handler Properties** dialog while specify the name of the function to pass the event execution context. The execution context is the first parameter passed to a function.<br/><br/>
-![Pass execution context](../media/ClientAPI-PassExecutionContext.png)<br/><br/>
+- **Defining event handlers using UI**: The execution context is an *optional* parameter that can be passed to a JavaScript library function through an event handler. Use the **Pass execution context as first parameter** option in the **Handler Properties** dialog while specify the name of the function to pass the event execution context. The execution context is the first parameter passed to a function.
+
+   - In the classic UI
+     ![Pass execution context](../media/ClientAPI-PassExecutionContext.png "Pass execution context")
+
+   - In Unified Interface
+     ![Pass execution context as parameter](../media/pass-execution-context-as-first-parameter.png "Pass execution context as parameter")
 
 - **Defining event handlers using code**: The execution context is automatically passed as the first parameter to functions set using code. For a list of methods that can be used to define event handlers in code, see [Add or remove functions to events using code](events-forms-grids.md#add-or-remove-event-handler-function-to-event-using-code). 
 
