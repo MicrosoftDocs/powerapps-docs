@@ -79,10 +79,10 @@ Themes aren't solution aware. The changes made for an organization's theme arenâ
 For example, the **CRM Default Theme** was cloned and changed using mostly varying shades of green color. The following screenshots show the new colors for navigation and highlighting. A custom logo was also added that will appear in the upper left corner of an app.  
  
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme colors](media/theme-gentle-green.png "Gentle green theme colors")
+ > ![Gentle green theme colors for navigation bar](media/theme-gentle-green.png "Gentle green theme colors for navigation bar")
 
  > [!div class="mx-imgBorder"] 
- > ![Gentle green theme colors](media/theme-gentle-green2.png "Gentle green theme colors")  
+ > ![Gentle green theme colors for UI elements](media/theme-gentle-green2.png "Gentle green theme colors for UI elements")  
   
  The following image shows an app account view with the new colors and logo.
 
