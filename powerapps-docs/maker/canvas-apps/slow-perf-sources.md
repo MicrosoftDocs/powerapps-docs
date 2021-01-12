@@ -1,6 +1,6 @@
 ---
-title: Possible sources of slow performance for a canvas app | Microsoft Docs
-description: Learn about the possible sources of slow performance for a canvas app.
+title: Common sources of slow performance for a canvas app | Microsoft Docs
+description: Learn about the common sources of slow performance for a canvas app.
 author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,12 +14,9 @@ search.app:
   - PowerApps
 ---
 
-# Possible sources of slow performance for a canvas app
+# Common sources of slow performance for a canvas app
 
 Slow performance of a canvas app can be because of several different possibilities. In this article, you'll learn about the most common possible sources of slow performance for a canvas app.
-
-In many enterprises, the slow performance of Power Apps has statistically been
-related to the following factors.
 
 Before you begin, ensure you understand the [execution phases and flow of data calls](execution-phases-data-flow.md) in canvas apps.
 
@@ -36,7 +33,7 @@ To review the app design as a possible source of slow app performance, monitor t
 
 In addition, balance the workload between the client, and the server. Delegating the workload to the server is recommended. From the client memory consumption perspective, it's important to make the client app lightweight.
 
-## Bottleneck in the data source(s)
+## Bottleneck in the data source
 
 There are many possibilities that can result in the bottleneck of the data source(s). Usually, tables in the data source are at the center of activity when many transactional/non-transactional queries are directed to the same table, or record from different users.
 
@@ -77,3 +74,10 @@ performance, maintenance, scalability, and so on.
 ## Next steps
 
 [Common performance issues and resolutions](common-perf-issue-fixes.md)
+
+### See also
+
+[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md)
+[Tips and best practices to improve canvas apps performance](performance-tips.md)
+[Common issues and resolutions](common-issues-and-resolutions.md)
+[Troubleshooting startup issues for Power Apps](troubleshooting-startup-issues.md)

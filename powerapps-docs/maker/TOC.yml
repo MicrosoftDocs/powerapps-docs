@@ -1005,14 +1005,12 @@
     items:
     - name: Understand canvas apps execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
-    - name: Possible sources of slow performance
-      href: ./canvas-apps/possible-sources-slow-performance.md
+    - name: Common sources of slow performance
+      href: ./canvas-apps/slow-perf-sources.md
     - name: Common performance issues and resolutions
       href: ./canvas-apps/common-perf-issue-fixes.md
     - name: Performance tips and best practices
       href: ./canvas-apps/performance-tips.md
-    - name: Tools
-      href: ./canvas-apps/perf-optimize-tools.md
 - name: Model-driven apps
   items:
   - name: Model-driven apps

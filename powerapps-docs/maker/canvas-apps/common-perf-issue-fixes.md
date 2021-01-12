@@ -68,13 +68,16 @@ To configure data row limit for non-delegable queries, open the app in Power App
 
 The OnStart event runs when the application is loading. Calling a lot of data in the OnStart event will slow down the load of the app. A screen with heavy dependency of controls and values defined on another screen will be affected with slow screen navigation.
 
+> [!TIP]
+> For additional information about optimizing the OnStart function, read [Optimize the OnStart function](performance-tips.md#optimize-the-onstart-function).
+
 Some of the most common problems experienced in many such situations are:
 
 ### High number of calls in OnStart event causing app to start slow
 
 In an enterprise, volume of data calls to a central data source can drive server bottleneck, or resource contention.
 
-Leverage cache mechanism, and optimize data calls. A single app may be used by many users. Hence, a number of data calls per user reach at the server’s endpoints, which could be a spot where the bottleneck, or throttling can happen.
+Leverage [cache mechanism](performance-tips.md#cache-lookup-data), and optimize data calls. A single app may be used by many users. Hence, a number of data calls per user reach at the server’s endpoints, which could be a spot where the bottleneck, or throttling can happen.
 
 ### Latency on OnStart because of heavy scripts
 
@@ -86,7 +89,7 @@ Optimize formula in an OnStart event. You can move some formulas to OnVisible ev
 
 A check on memory consumption of a canvas app becomes very important as most of the times, the apps run on mobile devices. Memory exceptions in the heap is the most likely cause behind a canvas app that crashes or freezes (hangs) on certain devices.
 
-JavaScript (JS) heap may hit the memory heap celing because to heavy scripts running at client side for adding columns, joining, filtering, sorting, and grouping.
+JavaScript (JS) heap may hit the memory heap ceiling because to heavy scripts running at client side for adding columns, joining, filtering, sorting, and grouping.
 
 In most cases, out-of-memory exception at the heap in client may trigger the app to crash, or hang.
 
@@ -118,9 +121,9 @@ Use View objects in SQL backend to avoid the N+1 query problem. Or, change the U
 
 ### Table SCAN instead of Index SEEK (SQL)
 
-Queries in database ran table scans instead of index seek. More information: [Hints](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-table?view=sql-server-ver15)
+Queries in database ran table scans instead of index seek. More information: [Hints](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-table)
 
-Use [StartsWith](functions/function-startswith.md) instead of [IN](functions/operators#in-and-exactin-operators.md) in formula. For example, when using a SQL data source, the `StartWith` operator results in an index seek; whereas the `IN` operator results in an index or table scan.
+Use [StartsWith](functions/function-startswith.md) instead of [IN](functions/operators.md#in-and-exactin-operators) in formula. For example, when using a SQL data source, the `StartWith` operator results in an index seek; whereas the `IN` operator results in an index or table scan.
 
 ### Slow queries
 
@@ -227,6 +230,9 @@ For a delegable function example, consider an ID column defined as Number data t
 
 As we assume that the ID column in SharePoint is defined with the data type as Number, the right-hand side value should be numeric variable instead of string variable. Otherwise, such mismatch may trigger the formula to be non-delegable.
 
+> [!TIP]
+> For additional information about delegation, see [Use delegation](performance-tips.md#use-delegation).
+
 ### Too many dynamic lookup columns
 
 SharePoint supports various data types&mdash;including dynamic lookups such as *Person*, *Group*, and *Calculated*. If a SharePoint list defines too many dynamics columns, it takes more time to manipulate these dynamic columns within SharePoint before returning data to the client running the canvas app.
@@ -312,3 +318,15 @@ Instead of using one large file, split the data into multiple Excel files with m
 Geographic location of the data source, and proximity to the [client locations](possible-sources-slow-performance.md#client-browsers-devices-and-locations) can result in a common performance bottleneck for the app, and induce network latency. This effect can get amplified with a mobile client with limited bandwidth for connectivity.
 
 It's better to keep the file near your end-users (or, majority of the end users&mdash;for global audience) so that the file can be downloaded quickly.
+
+## Next steps
+
+[Tips and best practices to improve canvas apps performance](performance-tips.md)
+
+### See also
+
+[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md)
+[Common canvas app performance issues and resolutions](common-perf-issue-fixes.md)
+[Possible sources of slow performance for canvas apps](slow-perf-sources.md)
+[Common issues and resolutions](common-issues-and-resolutions.md)
+[Troubleshooting startup issues for Power Apps](troubleshooting-startup-issues.md)

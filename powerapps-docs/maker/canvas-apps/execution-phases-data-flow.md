@@ -88,4 +88,11 @@ With the understanding this high-level concept of how data calls travel, you can
 
 ## Next steps
 
-[Possible sources of slow performance for canvas apps](possible-sources-slow-performance.md)
+[Possible sources of slow performance for canvas apps](slow-perf-sources.md)
+
+### See also
+
+[Common canvas app performance issues and resolutions](common-perf-issue-fixes.md)
+[Tips and best practices to improve canvas apps performance](performance-tips.md)
+[Common issues and resolutions](common-issues-and-resolutions.md)
+[Troubleshooting startup issues for Power Apps](troubleshooting-startup-issues.md)

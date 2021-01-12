@@ -14,15 +14,11 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Optimize canvas-app performance in Power Apps
+# Tips and best practices to improve canvas apps performance
+
 Microsoft is working hard to improve the performance of all apps that run on the Power Apps platform. 
 But you can follow the best practices in this topic to boost the performance of apps that you create.
 
-When a user opens an app, it goes through these phases of execution before showing any user interface: 
-1. **Authenticates the user** - Prompts the user, if that person has never opened the app before, to sign in with credentials for whatever connections the app needs. If the same user opens the app again, that person might be prompted again, depending on the organization’s security policies. 
-2. **Gets metadata** - Retrieves metadata such as the version of the Power Apps platform on which the app runs and the sources from which it must retrieve data. 
-3. **Initializes the app** - Performs any tasks specified in the **OnStart** property. 
-4. **Renders screens** - Renders the first screen with controls that the app has populated with data. If the user opens other screens, the app renders them by using the same process.  
 
 ## Limit data connections 
 **Don’t connect to more than 30 data sources from the same app**. Apps prompt new users to sign in to each connector, so every 
@@ -109,7 +105,10 @@ For example, SharePoint lists support delegation from the [**Filter**](functions
 Turn on the [experimental feature](working-with-experimental.md) for Delayed Load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and that are directly bound to the data source. If you build this type of app and don’t enable this feature, app performance may suffer because the controls in all screens must be populated even on screens that aren’t open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
 
 ## Working with large data sets
-Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, those indexes of columns are designed well as these docs describe for [SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide?view=sql-server-2017) and [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).  
+Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, those indexes of columns are designed well as these docs describe for [SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide?view=sql-server-2017) and [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).
+
+> [!TIP]
+> For additional information about how large data sets can cause common performance problems on different platforms, read [Large data sets loading slowly on different platforms](common-perf-issue-fixes.md#large-data-sets-loading-slowly-on-different-platforms).
 
 ## Republish apps regularly
 [Republish your apps](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blog post) to get performance improvements and additional features from the Power Apps platform.
@@ -125,3 +124,11 @@ If you reference a user-input value in a rule or a formula by using a **Form.Upd
 
 ## Next steps
 Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
+
+### See also
+
+[Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md)
+[Common canvas app performance issues and resolutions](common-perf-issue-fixes.md)
+[Possible sources of slow performance for canvas apps](slow-perf-sources.md)
+[Common issues and resolutions](common-issues-and-resolutions.md)
+[Troubleshooting startup issues for Power Apps](troubleshooting-startup-issues.md)
