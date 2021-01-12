@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/14/2020
+ms.date: 01/11/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -31,21 +31,41 @@ This topic contains device platform and web browser requirements, limits, and co
 
 ## Supported browsers for running canvas apps
 
-| **Browser** | **Operating system** |
+| **Browser** | **Supported Versions** |
 | --- | --- |
-| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>Android 5 or later <br>iOS 8 or later<br>macOS |
-| Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
-| Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
-| Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android 5 or later <br>iOS 8 or later <br>macOS |
-| Apple Safari (latest version) |iOS 8 or later <br>macOS |
+| Google Chrome|Latest three major releases|
+| Microsoft Edge|Latest three major releases|
+| *Microsoft Internet Explorer|11 (with Compatibility View off)|
+| Mozilla Firefox (latest version)|Latest three major releases|
+| Apple Safari|13 and later|
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+
+### Supported platforms for browsers running canvas apps
+
+| **Operating System** | **Supported Versions** |
+| --- | --- |
+| Windows |Windows 8.1 or later|
+| Mac OS|10.13 or later|
+| iOS |iOS 13 or later|
+| Android |10 or later |
 
 ## Supported browsers for Power Apps Studio
 
-| **Browser** | **Operating system** |
+| **Browser** | **Supported Versions** |
 | --- | --- |
-| Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS |
-| Microsoft Edge (latest version)<br>(recommended) |Windows 10 |
-| Microsoft Internet Explorer 11 (with Compatibility View off) |Windows 7 SP1, 8.1, and 10 |
+| Google Chrome|Latest three major releases|
+| Microsoft Edge|Latest three major releases|
+| *Microsoft Internet Explorer|11 (with Compatibility View off)|
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+
+### Supported platforms for browsers running Power Apps Studio
+
+| **Operating Systems** | **Supported Versions** |
+| --- | --- |
+| Windows |Windows 8.1 or later|
+| Mac OS|10.13 or later|
 
 ## Request limits
 These limits apply to each single outgoing request:
