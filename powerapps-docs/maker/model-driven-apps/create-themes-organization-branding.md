@@ -73,11 +73,10 @@ Themes aren't solution aware. The changes made for an organization's theme arenâ
  
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Settings** ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
 1. Select **Customizations**, and then select **Themes**.
-1. Under **All themes**, select the theme you want to clone, such as the **CRM Default Theme**. 
-1. Select **Clone** on the command bar. 
-1. Replace an existing row's hexadecimal number with the hexadecimal value that represents the color you want.
+1. Under **All themes**, select the theme you want to clone, such as the **CRM Default Theme**. Select **Clone** on the command bar.
+1. Replace an existing UI item's hexadecimal number, such as the **Title Text Color**, with the hexadecimal value that represents the color you want.
 
-For example, the **CRM Default Theme** was cloned and changed using mostly varying shades of green color. The following screenshots show the new colors for navigation and highlighting. A custom logo was also added that will appear in the upper right corner of an app.  
+For example, the **CRM Default Theme** was cloned and changed using mostly varying shades of green color. The following screenshots show the new colors for navigation and highlighting. A custom logo was also added that will appear in the upper left corner of an app.  
  
  > [!div class="mx-imgBorder"] 
  > ![Gentle green theme colors](media/theme-gentle-green.png "Gentle green theme colors")
@@ -85,7 +84,7 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
  > [!div class="mx-imgBorder"] 
  > ![Gentle green theme colors](media/theme-gentle-green2.png "Gentle green theme colors")  
   
- The following screenshot shows an app account view with the new colors and logo.
+ The following image shows an app account view with the new colors and logo.
 
 > [!IMPORTANT]
 > Logos that are too large won't display. The image used in this example is 156 pixels wide x 48 pixels height.
