@@ -34,6 +34,12 @@ Furthermore, the number of concurrent network requests allowed may be different 
 
 Hence, as a recommendation, restrict loading of data that you need to display on the screen immediately. For additional data, paginate, and cache your data. Refer to the [performance tips and best practices](performance-tips.md) for additional ways to improve the app performance.
 
+### Too many columns retrieved
+
+It's recommended to select only the necessary columns for the app. Adding more, or all columns from the data source downloads all column data. This action results in network overheads, and high memory usage in client devices. And this problem can impact users with mobile devices even more if the network bandwidth is limited, or a device with limited memory, or a legacy processor.
+
+For example, if you use Microsoft Dataverse as the data source for your app, make sure you have enabled the [Explicit Column Selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict the data retrieval for only the columns used in the app.
+
 ### Unsupported or legacy browsers
 
 Users using unsupported, or legacy browsers such as Internet Explorer may experience performance issues. Ensure the users only use the [supported browsers for running canvas apps](limits-and-config.md#supported-browsers-for-running-canvas-apps).
@@ -88,8 +94,13 @@ If client-heavy operations like JOIN, or Group By happened at client with a data
 
 ## SQL Server (online and on-premises)
 
+You can use [SQL Server connector for Power Apps](https://docs.microsoft.com/connectors/sql/) to connect to SQL Server on-premises, or Azure SQL Database.
+In this section, you'll learn about common performance related problems with SQL Server as the connector for a canvas app, and resolutions. More information: [Connect to SQL Server from Power Apps](connections/connection-azure-sqldatabase.md), [Create a canvas app from Azure SQL Database](app-from-azure-sql-database.md).
+
 > [!NOTE]
 > Though this section references SQL Server connector with performance issues, resolutions for online and on-premises SQL data sources, most of the recommendations also apply when using in general any database type as the data source&mdash;such as MySQL, or PostgreSQL.
+
+The following are the common performance problems that you may encounter with SQL Server connector for canvas apps. Later sections&mdash;[SQL Server on-premises](#sql-server-on-premises), and [Azure SQL Database](#azure-sql-database), list performance problems more relevant to the respective type of data sources.
 
 ### N+1 query
 
@@ -103,256 +114,140 @@ Queries in database ran table scans instead of index seek. More information: [Hi
 
 Use [StartsWith](functions/function-startswith.md) instead of [IN](functions/operators#in-and-exactin-operators.md) in formula. For example, when using a SQL data source, the `StartWith` operator results in an index seek; whereas the `IN` operator results in an index or table scan.
 
-### SQL Server on-premises data source
+### Slow queries
+
+Profile slow queries in a SQL database, and tune if any slow queries are found. This includes index, and query tuning.
+
+For instance, if there was a formula getting certain data with descending (DESC) order on a certain column, that sorting column should have an index with descending order. Be aware that an index key would be creating an ascending (ASC) order by default unless specified otherwise.
+
+You can can also check the URL address of data requests. For example, following data request snippet (partial OData call) asks SQL to return 500 records matching column to *Value* and order by *ID* in descending order.
+
+`Items? \$filter=Column eq ‘Value’ & Orderby = ID desc & top 500`
+
+This helps ascertain index requirements to cover such request conditions. In this situation for example, the ID column should have an index with descending order to perform the query fast.
+
+Check the execution plan of slow queries to see if any table or index scan exists. Check if any excessive cost of Key Lookup in the execution plan of slow queries observed or not. For more information, read [monitor and tune for performance](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
+
+Additional resources:
+
+- [Monitor and tune for performance](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance)
+- [Monitor Query Store performance](https://docs.microsoft.com/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
+- [Use Extended Events to identify, or troubleshoot performance problems](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
+
+### Database resource contention
+
+Enure the data source&mdash;SQL database has no resource contentions such as processor bottleneck, I/O contention, memory pressure, *tempDB* contention. Also check for Locks & Waits, Deadlock, and timeout of queries.
+
+> [!TIP]
+> Use [automatic tuning](https://docs.microsoft.com/sql/relational-databases/automatic-tuning/automatic-tuning) for insights into potential query performance problems, recommend solutions, and automatically fix identified problems.
+
+### Thick client or excessive requests
+
+An app running Group By, Filter By, JOIN operations client-side uses processor, and memory resources from the client devices. Depending on the data size, these operations may take more scripting time on client-side, increasing JS heap size on the client.
+
+Since each lookup data call travels to the data source through the data gateway, the total number of data calls becomes more important.
+
+In such situations, use the **View** object in SQL database for Group By, Filter By, or JOIN operations instead of doing such operations at Power Apps client-side. View can select columns and remove some big data type like NVARCHAR(MAX), VARCHAR(MAX), and VARBINARY(MAX) unless necessary.
+
+You can create view(s) with only necessary columns which require for canvas app. Then, use the view entity in canvas app.
+
+> [!TIP]
+> This approach also addresses [N+1 query problem](#n1-query).
+
+### Data size transferred to the client
+
+By default, a canvas app shows data using the tables, or views from the available database objects. Retrieving all columns from a table may result in a slow response, especially when using big data types such as NVARCHAR(MAX).
+
+Transferring large amounts of data to clients take time. In addition, this also results in more scripting time with large amounts of data in the JS heap on the client-side.
+
+### SQL Server on-premises
 
 Performance of a canvas apps using SQL Server connector with an on-premises data gateway may get affected in various ways. This section lists the common performance issues, and resolutions when using an on-premises database source.
 
-Common causes
+#### Unhealthy on-premises data gateway
 
-1.  **Thick client or excessive requests:** some canvas app formed formula to do
-    Group By, Filter By, JOIN operations client-side. Although canvas app can do
-    such operations, they would need CPU and memory resources from client
-    devices. Depending on data size, these operations make extra scripting time
-    at the client side on top of increasing JS heap size of the client. Be aware
-    of each lookup data call also travel to data source via data gateway. In
-    this case, the number of data calls is really a matter.
+As oOrganizations can define multiple nodes of on-premises data gateway. All such configured nodes should be healthy, on-premises data gateway service should be up and running.
 
-2.  **Unhealthy on-premises data gateway: **As organizations can define multiple
-    nodes of on-premises data gateway, all configured nodes should be healthy,
-    on-premises data gateway service should be up and running. If one of nodes
-    was unreachable, data requests onto the unhealthy node would not return the
-    result within a decent time but ‘unreachable’ error message after waiting
-    for a while.
+If one of nodes is unreachable, data requests onto the unhealthy node won't not return the result within a decent time resulting in `unreachable` error message after waiting for a while.
 
-3.  **The location of on-premises data gateway: **data gateway requires some
-    network calls to on-premises data sources to interpret OData requests. For
-    instance, data gateway needs to understand the data entity schema so that
-    she could translate OData requests into SQL DML (data manipulation language)
-    statement. However, when the data gateway configured at the other continent
-    with high** network latency **between the data gateway and SQL instance, it
-    would spawn extra overhead.
+Ensure all on-premises data gateway nodes are healthy, and configured at with a decent network latency between the nodes and the SQL instance.
 
-4.  **Scalability:** In some enterprises, a high volume of data access onto the
-    on-premises data gateway would be expected. In this case, just one node of
-    the on-premises data gateway could be a bottleneck to cover a large volume
-    of requests. A single node of the on-premises data gateway can deal with
-    concurrent connections up to 200. If all these concurrent connections are
-    executing queries actively, other requests would be waiting for an available
-    connection.
+#### Location of on-premises data gateway
 
-Recommendations
+Data gateway requires some network calls to on-premises data sources to interpret the OData requests. For instance, data gateway needs to understand the data entity schema to translate OData requests into SQL DML (data manipulation language) statement. However, when the data gateway configured at the other continent with **high network latency** between the data gateway and the SQL instance, it adds extra overhead.
 
-1.  Do **use the View object in** SQL database for Group By, Filter By, JOIN
-    operations instead of doing such operations at PowerApps client-side. Maker
-    or DBA (Database administrator) can create view(s) with only necessary
-    columns which require for canvas app. Then, use the view entity in canvas
-    app. This approach would also address N+1 query problem.
+In an enterprise environment, having a scalable data gateway cluster is recommended when heavy data requests are expected. Check how many connections are established between data gateway nodes and the SQL instance.
 
-2.  Make sure all on-premises data gateway nodes are healthy and configured at
-    decent network latency between the nodes and SQL instance.
+By checking concurrent connections in an on-premises data gateway or in a SQL server, your organization can decide the point when the data gateway needs to scale out, and with how many nodes.
 
-3.  In enterprises, having a scalable data gateway cluster would be recommended
-    in case heavy data requests are expected. DBA (Database administrator) can
-    check how many connections get set up between data gateway nodes and the SQL
-    instance. By checking concurrent connections in an on-premises data gateway
-    or in a SQL server, your organization can decide the point when the data
-    gateway should be scaled out how many nodes are.
+#### Data gateway scalability
 
-4.  Please do [monitor and optimize on-prem data gateway
-    performance](https://docs.microsoft.com/en-us/data-integration/gateway/service-gateway-performance) by
-    following instructions in the link. As an on-premises data gateway is in
-    organization’s network, Microsoft could not check its performance nor
-    health, but organizations should do.
+If a large volume of data is expected to be accessed from the on-premises data gateway, just a single node of the on-premises data gateway can become a bottleneck to cover such large volume of requests.
 
-5.  Do profile slow queries in a SQL database and tune if any slow queries are
-    found. That is, tune indexes and queries. For instance, if there was a
-    formula getting certain data with descending (DESC) order on a certain
-    column, that sorting column should have an index with descending order. Be
-    aware that an index key would be creating an ascending (ASC) order by
-    default unless specified. Makers can also check the URL address of data
-    requests. For example, following data request snippet asks SQL to return 500
-    records matching Column to Value and order by ID descending. Hence, makers
-    can imagine what index requires to cover the request condition.In the
-    example below which shows a partial part of an OData call, the ID column
-    should have an index with descending order to perform the query
-    fast.**Items? \$filter=Column eq ‘Value’ & Orderby = ID desc & top
-    500 **Check the execution plan of slow queries to see if any table or index
-    scan exists. Check if any excessive cost of Key Lookup in the execution plan
-    of slow queries observed or not. When it comes to tune SQL queries, refer to
-    this doc, [monitor and tune for
-    performance](https://docs.microsoft.com/en-us/sql/relational-databases/performance/monitor-and-tune-for-performance?view=sql-server-ver15).
+A single node of the on-premises data gateway may be sufficient to deal with 200 or less concurrent connections. Furthermore, if all these concurrent connections are executing queries actively, other requests end up waiting for an available connection.
 
-6.  Make sure your SQL database has no resource contentions such as CPU
-    bottleneck, IO contention, Memory pressure and/or tempDB contention, apart
-    from checking Locks & Waits, Deadlock and timeout of queries.
+To ensure on-premises data gateway scales as per the volume of data and requests, [monitor and optimize on-prem data gateway performance](https://docs.microsoft.com/data-integration/gateway/service-gateway-performance).
 
-**Note**: Azure SQL provides a feature called [Automatic
-tuning](https://docs.microsoft.com/en-us/sql/relational-databases/automatic-tuning/automatic-tuning?view=sql-server-ver15).
-As it is named, it would create missing indexes automatically and fix the
-execution plan performance problems. Consider turning on this feature on SQL
-instance.
+### Azure SQL Database
 
-### Azure SQL Database data source
+Canvas apps can Azure SQL Database using the SQL Server connector. A common performance problem can be introduced when using Azure SQL Database is the selection of an incorrect tier depending on the business requirement.
 
-Organizations can connect to Azure SQL Online via SQL connector. In this case,
-slow requests were caused by slow queries in the database and/or the huge volume
-of data had to be transmitted to the client. There were the main concerns. In
-some case, Service tier of a SQL server was also attributed to slow response.
+Azure SQL Database is available in different service tiers, with varied capabilities for matching business requirements. For more information, read the service tiers information in [Azure SQL Database documentation](https://docs.microsoft.com/azure/azure-sql/database/sql-database-paas-overview).
 
-Common issues
+Under heavy data requests, the resources on the tier you select may get throttled once the threshold value is hit. The performance of queries thereafter are compromised.
 
-1.  **Data size** **transfer **to client: by default, PowerApps canvas app shows
-    data entities which would be either tables or views from database objects.
-    All columns of entities would be retrieving, which prompts slow response of
-    data requests in case entities have many columns and define many big data
-    types like NVARCHAR(MAX). Simply, total data size of transferring data to
-    client requires transferring time and scripting time to keep that amount
-    data in the JS heap at client side.
+Check the service tier of Azure SQL Database&mdash;if it is on DTU-Based purchase model. Lower tier would have some limitations and constraints. From a performance perspective, CPU, IO throughput, and latency are important. Hence, check the performance of the SQL database periodically, and check if resource usage exceeds the threshold. For example, on-premises SQL Server normally sets the threshold of CPU usage on around 75%.
 
-2.  **Slow queries**: depending on filtering conditions of data requests, the
-    SQL statement which was converted to could be executed with a certain
-    execution plan. If the query executed with heavy IO operation by table scan
-    or index scan, it means data entities might not have proper indexes covering
-    the query. Although the execution plan of queries uses indexes, it could be
-    slow too in case Key Lookup costs high. Refer to item\#3,5 and 6 from
-    on-premises SQL section above.
+## SharePoint
 
-3.  [Service
-    tier](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-dtu):
-    Three Azure SQL Database service tiers—Basic, Standard, and Premium—are
-    available. Each tier has a bit different CPU, IO Throughput and
-    IO(Input/output) latency. Under heavy data requests, these resources could
-    be throttled once the threshold hits. Then, query performance would be
-    compromised.
+SharePoint connector pipelines to SharePoint list(s). In addition, you can also create canvas apps directly from the SharePoint list. Let's take a look at the common performance problems and resolutions when using a SharePoint data source type.
 
-Recommendations
+### Delegation and data size
 
-1.  **Monitor and turn slow queries**. check this article: [Monitor and Tune for
-    Performance](https://docs.microsoft.com/en-us/sql/relational-databases/performance/monitor-and-tune-for-performance?view=sql-server-ver15).  
-    [Query
-    Store](https://docs.microsoft.com/en-us/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=sql-server-ver15) would
-    also provide the necessary information to find slow queries. You can
-    use [Extended
-    Events](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events?view=sql-server-ver15) to
-    trace SQL. If you need more details, please refer to [Quick Start: Extended
-    events in SQL
-    Server ](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server?view=sql-server-ver15)and SSMS
-    XEvent Profiler.
+The size of the data transmitting to the client matters, especially when the SharePoint data source is remote. If formula in the events at canvas app has [non-delegable](delegation-overview.md) functions inside, Power Apps platform retrieves records upto the defined Data Row Limits (500, by default) that can be increased to 2000. If Data Row Limits is set to 2000, and the SharePoint list has many columns, data size transmitting to client can be huge leading to the slowness of the app.
 
-2.  **Do use View** object in Azure SQL online for Group By, Filter By, JOIN
-    operations instead of doing such operations at PowerApps client-side. In
-    addition, View can define only necessary columns. View can select columns
-    and remove some big data type like NVARCHAR(MAX), VARCHAR(MAX) and
-    VARBINARY(MAX) unless necessary.  Maker or DBA (Database administrator) can
-    create view(s) with only necessary columns which require for canvas app.
-    Then, use the view entity in canvas app. This approach would also address
-    N+1 query problem.
+SharePoint provides many [delegable functions](https://docs.microsoft.com/connectors/sharepointonline/#power-apps-delegable-functions-and-operations-for-sharepoint). Check your formula to see if it's delegable. If not, Power Apps retrieves a number of records to the client, set as Data Row Limits (Default 500). And then, applies the formula on this retrieved data set at the client side.
 
-3.  **Check the service tier of Azure SQL online if it is on DTU-Based purchase
-    model**. Lower tier would have some limitations and constraints. From a
-    performance perspective, CPU, IO throughput and latency would be matter.
-    Hence, check the performance of the SQL database and check if resource usage
-    exceeds the threshold or not. on-premises SQL normally sets the threshold of
-    CPU usage on around 75%, for example.
+A reduced Data Row Limit inside SharePoint, and use of delegable functions in the Power Apps formula are important for the app to perform.
 
- 
+For a delegable function example, consider an ID column defined as Number data type in the SharePoint list. Both formulas below will return the results as expected. However, the former is non-delegable while the latter is delegable.
 
-## SharePoint online
+| Formula                                           | Delegable? |
+|---------------------------------------------------|------------|
+| `Filter (‘SharePoint list data source’, ID = 123 )` | Yes        |
+| `Filter(‘SharePoint list data source’, ID ="123")`  | No         |
 
-SharePoint connector pipelines to SharePoint list(s). From SharePoint list
-itself, maker can see Power App menu which wizard would create a canvas app
-quickly.
+As we assume that the ID column in SharePoint is defined with the data type as Number, the right-hand side value should be numeric variable instead of string variable. Otherwise, such mismatch may trigger the formula to be non-delegable.
 
-Common issues
+### Too many dynamic lookup columns
 
-1.  **Data size **transmitting back to client is matter, especially when the
-    SharePoint data source is remote. If formula in events at canvas app has
-    nondelegable functions inside, Power Apps platform would retrieve records up
-    to Data Row Limits, default 500 but maker can change it up to 2000. If Data
-    Row Limits were set to 2000 and the SharePoint list has many columns, data
-    size transmitting to client could be huge and it could lead to slowness.
+SharePoint supports various data types&mdash;including dynamic lookups such as *Person*, *Group*, and *Calculated*. If a SharePoint list defines too many dynamics columns, it takes more time to manipulate these dynamic columns within SharePoint before returning data to the client running the canvas app.
 
-2.  **Too many dynamic lookup columns: **SharePoint supports various data types
-    including dynamic lookup, Person or Group and Calculated. If a SharePoint
-    list defines too many dynamics columns, it would take time to manipulate
-    these dynamic columns within SharePoint itself before serving asked data
-    requests. This would depend on the volume of data rows on the SharePoint
-    list.
+Don't overuse dynamic lookup columns, and Person or Group type in SharePoint. This overuse may result in avoidable but additional overhead on the SharePoint side for manipulation of data. For example, you can use static column to keep email aliases, or names of people instead.
 
-3.  Picture column and Attachment: size of image and attached file will
-    attribute to slow response if they are all retrieving to client unless
-    specific columns specified.
+### Picture column and Attachment
 
-Recommendations
+Size of an image, and attached file can attribute to a slow response while retrieving to the client unless specific columns are specified.
 
-1.  As SharePoint provides many [delegable
-    functions](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/delegation-overview),it
-    is worthy checking your formula to see if it would be delegable or not. 
-    Otherwise, PowerApps would retrieve the number of records to client, which
-    defined within Data Row Limits (Default 500), and then apply formula on a
-    retrieved data set at client side. **Not only reducing Data Row Limits to a
-    low value or at least staying at the default but also forming the formula to
-    be delegable are important to make the app performant**.  
-    For instance, let say you have an ID column defined Number data type in the
-    list. Both formulas below will return the results as expected. However, the
-    former is nondelegable and the latter delegable.
+Review your SharePoint list, and ensure only the necessary columns have been defined. The number of columns in the list affects performance of the data requests. This effect is because of the matched records, or the records up to the defined Data Low Limits is retrieved, and transmitted back to client with all columns defined in the list&mdash;whether the app uses all of them, or not.
 
-| Formula                                           | Delegable? |   |
-|---------------------------------------------------|------------|---|
-| Filter (‘SharePoint list data source’, ID = 123 ) | Yes        |   |
-| Filter(‘SharePoint list data source’, ID =”123”)  | No         |   |
+Enable the **Explicit Column Selection** feature on the canvas app (**File** -> **Settings** -> **Advanced Settings** -> Turn **Explicit column selection** feature *On*) is highly recommended to only query the columns used by the app.
 
-2.  As we assume that the ID column in SharePoint defined data type as Number,
-    right-hand side value should be numeric variable instead of string variable.
-    Otherwise, this type of mismatch would trigger the formula to be
-    nondelegable.
+### Large lists
 
-3.  Review your SharePoint list and make sure only the necessary columns have
-    been defined. As number of columns in the list would affect performance of
-    data requests because either matched records or records up to data low
-    limits would be retrieving and transmitting back to client with all columns
-    defined in the list whether the app uses some or not.  
-    Enabling Explicit Column Selection (ECS) is highly recommended so that data
-    requests would ask only used columns on the app.
+If you have a large list with hundreds of thousands of records, consider partitioning the list, or split the list into several lists based on parameters such as the categories, or date and time.
 
-4.  Do not overuse dynamic Lookup columns and Person or Group type in
-    SharePoint. Otherwise, extra overheads would be seen on the SharePoint side
-    to manipulate data before applying any filter or search on.  You can use a
-    static column to keep email aliases or names of people instead.
-
-5.  If you have a gigantic list having hundreds of thousands of records,
-    consider partitioning the list to split into several ones per category or
-    datetime. For instance, your data could be stored on different lists on a
-    yearly or monthly base. Then, you can implement the app to let a user select
-    a time window to retrieve data within that range.
+For instance, your data could be stored on different lists on a yearly, or monthly basis. Then, you can implement the app to let a user select a time window to retrieve the data within that range.
 
 Within a controlled environment, the performance benchmark has proved that the
-performance of OData requests against SharePoint list were highly related to the
-number of columns in the list and the number of rows retrieving limited by Data
-Low Limits. The lower column and the lower data row limits setting perform the
-better. In the real world, however, it is quite hard to simply reduce data rows
-limits and columns because the app needs a certain amount of data to cover
-business scenarios.  Hence, please monitor OData requests at the client side and
-tune these two knobs.
+performance of OData requests against a SharePoint list are highly related to the number of columns in the list and the number of rows retrieving limited by Data row Limits. The lower number of columns, and the lower data row limits setting perform better.
 
- 
+However, in the real-world apps designed for business requirements, it may not be quick or simple to reduce the data rows limits, and columns. Hence,it's recommended to monitor the OData requests at the client side, and
+tune Data Row Limits, and the number of columns in a SharePoint list.
 
 ## Microsoft Dataverse
 
-### Too many columns retrieved
-
-It's recommended to select only the necessary columns for the app. Adding more, or all columns from the data source downloads all column data. This action results in network overheads, and high memory usage in client devices. And this problem can impact users with mobile devices even more if the network bandwidth is limited, or a device with limited memory, or a legacy processor.
-
-If you use Microsoft Dataverse, make sure you have enabled the [Explicit Column Selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict the data retrieval for only the columns used in the app.
-
-As you can check this article ‘[What is
-Microsoft Dataverse](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro)’,
-Microsoft Dataverse provides a handy way to define custom entities with built-in
-security model where you can securely store your business data in.
-
-Canvas app can access a Microsoft Dataverse data source which directly connect
-to Microsoft Dataverse instance without through API management layer (Refer to
-Figure 3.) Microsoft Dataverse has enabled by default so that when you create a
+When you use the Common Data Service connector to access a Microsoft Dataverse environment, data requests go to the environment instance directly—without passing through API management. More information: [Data call flow with Common Data Service connector](execution-phases-data-flow.md#data-call-flow-with-common-data-service-connector-for-microsoft-dataverse-environment) Microsoft Dataverse has enabled by default so that when you create a
 new canvas app connecting to your Microsoft Dataverse instance, data requests
 from your app will execute through Microsoft Dataverse onto your
 Microsoft Dataverse instance.
