@@ -2,7 +2,7 @@
 title: "Service Protection API Limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 04/20/2020
+ms.date: 01/08/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -148,7 +148,7 @@ This limit can be encountered when strategies using batch operations and concurr
 
 ### Concurrent requests
 
-This limit tracks the total number of concurrent requests during the preceding 300 second period.
+This limit tracks the number of concurrent requests during the preceding 300 second period.
 
 | Error code | Hex code | Message |
 |------------|------------|-------------------------------------|

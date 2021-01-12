@@ -348,7 +348,10 @@ To review and edit existing issues in Planner:
 
 ### See also
 
+- [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Inspection sample app](inspection.md)  
-- [Employee ideas sample app](employee-ideas.md)
-- [Customize sample app](customize-sample-apps.md)
+- [Bulletins (Preview) sample apps](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Milestones (Preview) sample app](milestones.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

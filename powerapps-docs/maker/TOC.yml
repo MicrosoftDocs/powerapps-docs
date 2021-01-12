@@ -365,6 +365,8 @@
             items:
             - name: List of controls and properties
               href: ./canvas-apps/reference-properties.md
+            - name: Limitations of controls
+              href: ./canvas-apps/control-limitations.md
             - name: Add picture
               href: ./canvas-apps/controls/control-add-picture.md
             - name: Attachments
@@ -1271,9 +1273,9 @@
       href: ./model-driven-apps/checklist-transition-unified-interface.md
     - name: "FAQs: Unified Interface transition"
       href: ./model-driven-apps/faqs-transition-unified-interface.md
-    - name: Model-driven app FAQ
-      href: ./model-driven-apps/model-app-faq.md
-    - name: Accessibility in Power Apps app designer
+  - name: Model-driven app FAQ
+    href: ./model-driven-apps/model-app-faq.md
+  - name: Accessibility in Power Apps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook
     href: ./model-driven-apps/app-for-outlook-customize.md
@@ -1938,12 +1940,16 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
+        - name: Bulletins (Preview)
+          href: ../teams/bulletins.md
         - name: Employee ideas
           href: ../teams/employee-ideas.md
         - name: Inspection
           href: ../teams/inspection.md
         - name: Issue reporting
           href: ../teams/issue-reporting.md
+        - name: Milestones (Preview)
+          href: ../teams/milestones.md
         - name: Customize sample apps
           href: ../teams/customize-sample-apps.md
         - name: FAQs for sample apps
