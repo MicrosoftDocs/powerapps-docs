@@ -108,7 +108,7 @@ Turn on the [experimental feature](working-with-experimental.md) for Delayed Loa
 Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, and avoid hitting the data row limit of 2000 for non-delegable queries. For data-record columns on which users can search, filter, or sort data, those indexes of columns are designed well as these docs describe for [SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide) and [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).
 
 > [!TIP]
-> For additional information about how large data sets can cause common performance problems on different platforms, read [Large data sets loading slowly on different platforms](common-performance-issue-fixes.md#large-data-sets-loading-slowly-on-different-platforms).
+> For additional information about how large data sets can cause common performance problems on different platforms, read [Large data sets loading slowly on different platforms](common-performance-issue-resolutions.md#large-data-sets-loading-slowly-on-different-platforms).
 
 ## Republish apps regularly
 [Republish your apps](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blog post) to get performance improvements and additional features from the Power Apps platform.
