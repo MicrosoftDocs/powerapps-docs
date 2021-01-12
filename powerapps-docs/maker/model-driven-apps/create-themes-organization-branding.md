@@ -86,12 +86,12 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
   
  The following image shows an app account view with the new colors and logo.
 
-> [!IMPORTANT]
-> Logos that are too large won't display. The image used in this example is 156 pixels wide x 48 pixels height.
- 
  > [!div class="mx-imgBorder"] 
  > ![Gentle green theme account grid](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
-  
+
+> [!IMPORTANT]
+> Logos that are too large won't display. The image used in the example is 156 pixels wide x 48 pixels height.
+
 <a name="Publish"></a>   
 ## Preview and publish a theme  
  To preview and publish a theme, do the following steps:  
