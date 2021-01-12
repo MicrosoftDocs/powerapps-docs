@@ -307,13 +307,13 @@ There's no specific threshold value of the number of transactions since it also 
 
 If you have read-only data, you can import such data into the app locally instead of loading it from the data source. For enterprise apps, use data sources such as Dataverse, SQL Server, or SharePoint instead.
 
-### Size of Excel file
+### File size
 
 You can choose from a wide-range of [cloud storage](connections/cloud-storage-blob-connections.md) options with varying, or configurable storage capacity for the Excel file when using with canvas app. However, a single large Excel file with all tables defined in one file adds an extra overhead for the app while downloading the file, and reading the data to load at the client-side.
 
 Instead of using one large file, split the data into multiple Excel files with minimum data tables. And then, load a file when it really requires so that the transmission of a file. This way, loading the data from the data table happens in fragments, reducing the overhead of many tables, or large data set.
 
-### Location of the file
+### File location
 
 Geographic location of the data source, and proximity to the [client locations](slow-performance-sources.md#client-browsers-devices-and-locations) can result in a common performance bottleneck for the app, and induce network latency. This effect can get amplified with a mobile client with limited bandwidth for connectivity.
 
