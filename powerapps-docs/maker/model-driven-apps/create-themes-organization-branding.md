@@ -64,7 +64,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
 <a name="Solution"></a>   
 ## Solution awareness
 
- Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and re-imported in another environment. The imported theme must be published to take effect.  
+Themes aren't solution aware. The changes made for an organization's theme aren’t included in  solutions exported from the organization. The data is stored in the theme table that can be exported and re-imported in another environment. The imported theme must be published to take effect.  
   
 <a name="CloneAlter"></a>   
 ## Copy and alter the existing theme
@@ -77,7 +77,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
 1. Select **Clone** on the command bar. 
 1. Replace an existing row's hexadecimal number with the hexadecimal value that represents the color you want.
 
-For example, the **CRM Default Theme** was cloned and changed using these colors. The following screenshots show the new colors for navigation and highlighting. You can also choose a new logo that's displayed in the upper right of an app.  
+For example, the **CRM Default Theme** was cloned and changed using mostly varying shades of green color. The following screenshots show the new colors for navigation and highlighting. A custom logo was also added that will appear in the upper right corner of an app.  
  
  > [!div class="mx-imgBorder"] 
  > ![Gentle green theme colors](media/theme-gentle-green.png "Gentle green theme colors")
