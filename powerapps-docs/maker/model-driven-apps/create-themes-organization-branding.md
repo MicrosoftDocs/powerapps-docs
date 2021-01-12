@@ -39,7 +39,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
   
 - Provide table-specific coloring.
     
-- Logo.
+- Logo. (Use an existing or add a new image file as a web resource.)
   
 - Logo tooltip.
   
@@ -85,7 +85,10 @@ For example, the **CRM Default Theme** was cloned and changed using these colors
  > [!div class="mx-imgBorder"] 
  > ![Gentle green theme colors](media/theme-gentle-green2.png "Gentle green theme colors")  
   
- The following screenshot shows an app account view with the new colors and logo.  
+ The following screenshot shows an app account view with the new colors and logo.
+
+> [!IMPORTANT]
+> Logos that are too large won't display. The image used in this example is 156 pixels wide x 48 pixels height.
  
  > [!div class="mx-imgBorder"] 
  > ![Gentle green theme account grid](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
