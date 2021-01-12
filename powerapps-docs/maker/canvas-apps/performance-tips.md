@@ -16,13 +16,12 @@ search.app:
 ---
 # Tips and best practices to improve canvas apps performance
 
-Microsoft is working hard to improve the performance of all apps that run on the Power Apps platform. 
-But you can follow the best practices in this topic to boost the performance of apps that you create.
+We're working hard to improve the performance of all apps that run on the Power Apps platform. But you can follow the best practices in this topic to boost the performance of apps that you create.
 
 
 ## Limit data connections 
 **Don’t connect to more than 30 data sources from the same app**. Apps prompt new users to sign in to each connector, so every 
-additional connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources,
+extra connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources,
 memory, and network bandwidth when the app requests data from that source. 
 
 You can quickly measure your app’s performance by turning on Developer Tools in [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests
@@ -71,8 +70,8 @@ With this change, the app fetches the tables in parallel:
 
 ## Cache lookup data
 Use the **Set** function to cache data from lookup tables locally to avoid repeatedly retrieving data from the source. This technique
-optimizes performance if the data probably won’t change during a session. As in this example, the data is retrieved from the source once
-and then referenced locally after that until the user closes the app. 
+optimizes performance if the data probably won’t change during a session. As in this example, the data is retrieved from the source once,
+and then, referenced locally until the user closes the app. 
 
 ```
 Set(CustomerOrder, Lookup(Order, id = “123-45-6789”));
@@ -86,11 +85,11 @@ Contact information doesn’t change frequently, and neither do default values a
 technique with the **Defaults** and **User** functions also. 
 
 ## Avoid controls dependency between screens
-To improve performance, the screens of an app are loaded into memory only as they are needed. This optimization can be hampered if, for example, screen 1 is loaded and one of its formulas uses a property of a control from screen 2. Now screen 2 must be loaded to fulfill the dependency before screen 1 can be displayed. Imagine screen 2 has a dependency on screen 3, which has another dependency on screen 4, and so on. This dependency chain can cause many screens to be loaded.
+To improve performance, the screens of an app are loaded into memory only as they're needed. This optimization can be hampered if, for example, screen 1 is loaded and one of its formulas uses a property of a control from screen 2. Now screen 2 must be loaded to fulfill the dependency before screen 1 can be displayed. Imagine screen 2 has a dependency on screen 3, which has another dependency on screen 4, and so on. This dependency chain can cause many screens to be loaded.
 
-For this reason avoid formula dependencies between screens. In some cases you can use a global variable or collection to share information between screens.
+For this reason, avoid formula dependencies between screens. In some cases, you can use a global variable or collection to share information between screens.
 
-There is an exception. In the previous example imagine that the only way to display screen 1 is by navigating from screen 2. Then screen 2 would have already been loaded in memory when screen 1 was to be loaded. No additional work is needed to fulfill the dependency for screen 2 and therefore there's no performance impact.
+There's an exception. In the previous example, imagine that the only way to display screen 1 is by navigating from screen 2. Then screen 2 would have already been loaded in memory when screen 1 was to be loaded. No extra work is needed to fulfill the dependency for screen 2 and therefore there's no performance impact.
 
 ## Use delegation
 Where possible, use functions that delegate data processing to the data source instead of retrieving data to the local device for processing. If an app must process data locally, the operation requires much more processing power, memory, and network bandwidth, especially if the data set is large.
@@ -111,16 +110,16 @@ Use data sources and formulas that can be delegated to keep your apps performing
 > For additional information about how large data sets can cause common performance problems on different platforms, read [Large data sets loading slowly on different platforms](common-performance-issue-resolutions.md#large-data-sets-loading-slowly-on-different-platforms).
 
 ## Republish apps regularly
-[Republish your apps](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blog post) to get performance improvements and additional features from the Power Apps platform.
+[Republish your apps](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blog post) to get performance improvements and more features from the Power Apps platform.
 
 ## Avoid repeating the same formula in multiple places
-If multiple properties run the same formula (especially if it's complex), consider setting it once and then referencing the output of the first property in subsequent ones. For example, don't set the **DisplayMode** property of controls A, B, C, D and E to the same complex formula. Instead, set A's **DisplayMode** property to the complex formula, set B's **DisplayMode** property to the result of A's **DisplayMode** property, and so on for C, D, and E.
+If multiple properties run the same formula (especially if it's complex), consider setting it once and then referencing the output of the first property in subsequent ones. For example, don't set the **DisplayMode** property of controls A, B, C, D, and E to the same complex formula. Instead, set A's **DisplayMode** property to the complex formula, set B's **DisplayMode** property to the result of A's **DisplayMode** property, and so on for C, D, and E.
 
 ## Enable DelayOutput on all Text input controls
-If you have multiple formulas or rules that reference the value of a **Text input** control, set the **DelayedOutput** property of that control to true. The **Text** property of that control will be updated only after keystrokes entered in quick succession have ceased. The formulas or rules won't run as many times, and app performance will improve.
+If you have multiple formulas or rules that reference the value of a **Text input** control, set the **DelayedOutput** property of that control to true. The **Text** property of that control will be updated only after keystrokes entered in quick succession have stopped. The formulas or rules won't run as many times, and app performance will improve.
 
 ## Avoid using Form.Updates in rules and formulas
-If you reference a user-input value in a rule or a formula by using a **Form.Updates** variable, it iterates over all the form’s data cards and creates a record each time. To make your app more efficient, reference the value directly from the data card or the control value.
+If you reference a user-input value in a rule or a formula by using a `Form.Updates` variable, it iterates over all the form’s data cards and creates a record each time. To make your app more efficient, reference the value directly from the data card or the control value.
 
 ## Next steps
 Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.

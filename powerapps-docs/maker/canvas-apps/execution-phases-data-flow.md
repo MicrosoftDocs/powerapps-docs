@@ -52,7 +52,7 @@ In this section, you'll learn about how the data call flows in canvas apps with 
 ### Data call flow with online data sources
 
 The following diagram shows how a typical data request in a canvas
-app (left side) is travels server-side layers, and reaches out to the target data source (right side). And then, returns the data back to the client.
+app (left side) travels server-side layers, and reaches out to the target data source (right side). And then, returns the data back to the client.
 
 ![Typical data call flow for all connectors except the connector for Microsoft Dataverse](media\execution-phases-data-flow\all-connectors-general.png "Typical data call flow for all connectors except the connector for Microsoft Dataverse")
 
@@ -80,7 +80,7 @@ If the app uses a data source on-premises, the location and the specification of
 ### Data call flow with Common Data Service connector (for Microsoft Dataverse environment)
 
 When you use the Common Data Service connector to access a Microsoft Dataverse
-environment, data requests go to the environment instance directly&mdash;without passing through API management. Hence, the performance of data calls is much faster. The Common Data Service connector is created by default when you create a new canvas app.
+environment, data requests go to the environment instance directly&mdash;without passing through API management. As such, the performance of data calls is much faster. The Common Data Service connector is created by default when you create a new canvas app.
 
 ![Data call flow Common Data Service connector](media\execution-phases-data-flow\on-premiess-connectors.png "Data call flow Common Data Service connector")
 

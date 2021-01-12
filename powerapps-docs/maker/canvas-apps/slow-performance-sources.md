@@ -26,12 +26,12 @@ Depending on how a particular canvas app is designed, the app may have many diff
 
 Some of the aspects to consider in the app design that may result in slow performance are:
 
-- **App is client-heavy**&mdash;By getting large sets of data into data collections at the very initial moment, and use such data within multiple screens over client-heavy operations like JOIN, Sort, AddColumn and GroupBy.
+- **App is client-heavy**&mdash;By getting large sets of data into data collections at the initial moment, and use such data within multiple screens over client-heavy operations like JOIN, Sort, AddColumn, and GroupBy.
 - **App has long formula in OnStart**&mdash;If the app triggers many unnecessary data calls in screens, and if each data call returns large data records.
 
 To review the app design as a possible source of slow app performance, monitor the app’s behavior by using [Monitor](../monitor-overview.md). Check which data calls are taking a long time, and how many data calls trigger such behaviors in the app.
 
-In addition, balance the workload between the client, and the server. Delegating the workload to the server is recommended. From the client memory consumption perspective, it's important to make the client app lightweight.
+Also, balance the workload between the client, and the server. Delegating the workload to the server is recommended. From the client memory consumption perspective, it's important to make the client app lightweight.
 
 ## Bottleneck in the data source
 
@@ -43,7 +43,7 @@ OData calls get slow down if:
 - The backend SQL instance has blockings, deadlocks, and if there's resource contention.
 - You have an unhealthy on-premises data gateway, resulting in the OData calls to slow down.
 
-Tune the backend data source(s) when this happens to avoid slow performance of the app.
+Tune the backend data source(s) when these problems occur to avoid slow performance of the app.
 
 ## Client browsers, devices, and locations
 
@@ -55,19 +55,21 @@ Makers are suggested to publish the app regularly. As the Power Apps platform is
 
 ## Geographical location of the on-premises data gateway and environment
 
-Users can access canvas apps globally. However, it's recommended to have the data source near most of the end users. For example, when your app access your on-premises data source, the location of on-premises data gateway should be close to the data source to minimize any extra overhead between the gateway, and the data source.
+Users can access canvas apps globally. However, it's recommended to have the data source near most of the end users.
+
+For example, when your app accesses your on-premises data source, the location of on-premises data gateway should be close to the data source to minimize any extra overhead between the gateway, and the data source.
 
 ## Temporary throttling of high volume requests at the backend
 
-Depending on how you design a canvas app, it may generate a lot of data calls within a small period intentionally. For example, an app connecting to a Microsoft Dataverse environment&mdash;subject to the [Dataverse service protection API limits](https://docs.microsoft.com/powerapps/developer/data-platform/api-limits).
+Depending on how you design a canvas app, it may generate many data calls within a small period intentionally. For example, an app connecting to a Microsoft Dataverse environment&mdash;subject to the [Dataverse service protection API limits](https://docs.microsoft.com/powerapps/developer/data-platform/api-limits).
 
 Another example is when using [Content Conversation](https://docs.microsoft.com/connectors/conversionservice/) connector. Calls per connection per user are limited to 600 over 60 seconds for this connector.
 
-If an app exceeds the connector's throttling limits, the app is subject to a temporary throttle. When this happens, profiling the app using [Monitor](../monitor-overview.md) would help you to avoid this problem. In addition, if your app is built to generate many such data calls, whether calls get throttled or not, your users may not experience the best experience.
+If an app exceeds the connector's throttling limits, the app is subject to a temporary throttle. When throttled, profiling the app using [Monitor](../monitor-overview.md) would help you to avoid this problem. Also, if your app is built to generate many such data calls, whether calls get throttled or not, your users may not experience the best experience.
 
 Connector-specific limits are available in [Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors) documentation, and may vary in comparison to other connectors.
 
-Makers can select from a number of data sources available for Power Apps using different [connectors](connections-list.md). Although there are many options to choose a data source from, it's important to choose the
+Makers can select from several data sources available for Power Apps using different [connectors](connections-list.md). Although there are many options to choose a data source from, it's important to choose the
 right data source and connector from many perspectives&mdash;architecture,
 performance, maintenance, scalability, and so on.
 
