@@ -16,8 +16,7 @@ search.app:
 ---
 # Tips and best practices to improve canvas apps performance
 
-We're working hard to improve the performance of all apps that run on the Power Apps platform. But you can follow the best practices in this topic to boost the performance of apps that you create.
-
+In the previous articles, you learned about the [execution phases and data call flow](execution-phases-data-flow.md), [common sources of slow performance](slow-performance-sources.md), and [common performance issues/resolutions](common-performance-issue-resolutions.md) in canvas apps. You can also benefit by following the tips, and best practices in this article to boost the performance of apps that you create.
 
 ## Limit data connections 
 **Don’t connect to more than 30 data sources from the same app**. Apps prompt new users to sign in to each connector, so every 
