@@ -157,7 +157,7 @@ After adding the configuration, the Note control will be rendered by using the a
 
 ## Assign entity permissions
 
-The notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the entity or web form unless you create and assign the appropriate entity permissions to the records as follows:
+Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the entity or web form unless you create and assign the appropriate entity permissions to the records as follows:
 
 > [!IMPORTANT]
 > A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them entity permissions.
