@@ -1,7 +1,7 @@
 ---
 title: "Work with rows in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
-ms.date: 12/17/2020
+ms.date: 01/13/2021
 author: mduelae
 ms.author: mkaur
 ms.service: powerapps
@@ -29,6 +29,9 @@ When the **Calendar Control V2** control is added to a table and then the defaul
 
 > [!div class="mx-imgBorder"]
 > ![Default calendar view](media/cal-view.png "Default calendar view") 
+
+> [!NOTE]
+> The **Calendar Control V2** control is not supported in mobile offline.
 
 ## Switch between calendar view and grid view
 
