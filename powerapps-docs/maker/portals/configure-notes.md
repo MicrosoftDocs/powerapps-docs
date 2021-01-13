@@ -198,7 +198,7 @@ The notes, and the **Add**, **Edit**, and **Delete** buttons for the note contro
     
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
-### Enable file attachment on form
+## Enable file attachment on form
 
 Enable **Attach File** option for the **Entity Form** to show the attachment option available with the notes.
 
@@ -216,7 +216,7 @@ To enable attachment on an entity form:
 
     ![Additional settings - attach file](media/configure-notes/additional-settings.png)
 
-#### Additional settings for file attachment
+### Additional settings for file attachment
 
 | Name | Description
 | - | - 
@@ -234,7 +234,7 @@ After you configure the notes and enable notes attachments, you can see the **At
 
 ![Attach file option](media/configure-notes/attach-file-option.png)
 
-### Notes created with rich-text editor
+## Notes created with rich-text editor
 
 You can view the notes created using the [rich-text editor in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
 
