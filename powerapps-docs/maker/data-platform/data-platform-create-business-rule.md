@@ -138,7 +138,7 @@ This section describes common issues that may occur when you use business rules.
 
 ### Composite attributes not supported with Unified Interface apps
 
-Actions or conditions that use [composite attributes](../developer/clientapi/reference/composite-attributes.md) are not supported in apps based on the Unified Interface.  Alternatively, you can use actions or conditions on the attributes that comprise the composite attributes. For example, instead of using the **Full Name** (fullname) attribute, you can use the **First Name** (firstname) and **Last Name** (lastname) attributes. 
+Actions or conditions that use [Composite attributes](../../developer/model-driven-apps/clientapi/reference/composite-attributes.md) are not supported in apps based on the Unified Interface.  Alternatively, you can use actions or conditions on the attributes that comprise the composite attributes. For example, instead of using the **Full Name** (fullname) attribute, you can use the **First Name** (firstname) and **Last Name** (lastname) attributes. 
 
 ### Is your business rule not firing for a form?
 
@@ -149,12 +149,12 @@ A business rule may not execute because the field referenced in the business rul
 4.	In the business rule designer select each condition and action to verify all the fields referenced in each condition and action. 
 
      > [!div class="mx-imgBorder"] 
-     > ![Field referenced in business rule exists in entity](media/business-rule-field.png "Field referenced in business rule exists in entity")
+     > ![Field referenced in business rule exists in entity](media/data-platform-cds-create-business-rule/business-rule-field.png "Field referenced in business rule exists in entity")
 
  5.	Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
 
      > [!div class="mx-imgBorder"] 
-     > ![Account name field on form](media/account-name-on-form.png "Account name field on form")
+     > ![Account name field on form](media/data-platform-cds-create-business-rule/account-name-on-form.png "Account name field on form")
 
 ## Frequently asked questions (FAQ)
 
