@@ -78,12 +78,14 @@ On the home screen you have several options:
   - RESOURCES
   - PROFILE 
   - SIGN OUT
-  - NOTIFICATIONS
+ 
 
 - CREATE PASS 
 - VIEW PASS 
 - REGISTER GUEST OR DEPENDENT
 
+- NOTIIFICATIONS ICON (bell) 
+  
   > [!div class="mx-imgBorder"]
   > ![Welcome screen](media/portals-home-welcome.png "Welcome screen")
 
