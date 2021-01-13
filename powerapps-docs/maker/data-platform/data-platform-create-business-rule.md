@@ -143,7 +143,7 @@ Actions or conditions that use [Composite attributes](../../developer/model-driv
 ### Is your business rule not firing for a form?
 
 A business rule may not execute because the field referenced in the business rule isn’t included with the form. 
-1.	Open solution explorer. Expand the entity that you want and then select **Forms**. 
+1.	Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). Expand the entity that you want and then select **Forms**. 
 2.	Open the form that you want and then on the form designer ribbon select **Business Rules**. 
 3.	In the form designer, open the business rule. 
 4.	In the business rule designer select each condition and action to verify all the fields referenced in each condition and action. 
