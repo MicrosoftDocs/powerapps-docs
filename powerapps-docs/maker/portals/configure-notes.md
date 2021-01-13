@@ -154,7 +154,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Close Button CSS Class   | Specify a CSS class or classes that will be applied to the dialog box's Close (Cancel) button.                                                      |
 |||
 
-### Assign entity permissions
+## Assign entity permissions
 
 The notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the entity or web form unless you create and assign the appropriate entity permissions to the records as follows:
 
