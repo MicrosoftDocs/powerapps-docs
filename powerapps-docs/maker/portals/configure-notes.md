@@ -45,6 +45,10 @@ Similar to subgrids, adding notes to your managed forms on the portal is easy&md
 
 1. Fill in the fields by entering appropriate values. [!include[](../../includes/proc-more-information.md)] [Attributes](#attributes), [Create dialog options](#create-dialog-options), [Edit dialog options](#edit-dialog-options), and [Delete dialog options](#delete-dialog-options)
 
+1. (Optional, for a custom form) If you created a custom form and added the notes section to it, be sure to select **Notes** as the default tab you want to be visible:
+
+    ![Notes in a custom form](media/notes-activities-tab.png "Notes in a custom form")
+
 1. Save the form.
 
 After adding the configuration, the Note control will be rendered by using the appropriate options enabled on the portal.
@@ -154,17 +158,24 @@ After adding the configuration, the Note control will be rendered by using the a
 
 The notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the entity or web form unless you create and assign the appropriate entity permissions to the records as follows:
 
+> [!IMPORTANT]
+> A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them entity permissions.
+
 1. Ensure the **Enable Entity Permissions** checkbox is selected on the entity form, or the web form step for the entity permissions to take effect.
 
-1. Create an entity permission with the required privileges as explained in the table below for the entity that has the Notes control enabled on it.
+    For example, entity form for leads that show notes need to have entity permissions enabled.
+
+    ![Enable entity permissions on an entity form](media/configure-notes/enable-entity-permissions-form.png "Enable entity permissions on an entity form")
+
+1. Create an entity permission with the required privileges as explained in the table below for the entity that has the Notes control enabled on it. The scope should be appropriately set depending on the level of access required to end users.
 
     | Note action | Required permissions |
     | - | - |
     | **Add** | Read, Write, Create, Append, Append To |
     | **Edit** | Read, Write |
-    | **Delete** | Read, Write, Append, Append To |
+    | **Delete** | Read, Write, Create, Append, Append To |
 
-    For example, Account, Contact or Lead entities that show notes on their entity forms. The scope should be appropriately set depending on the level of access required to end users.
+    For example, Lead entity that show the notes on the entity form.
 
     ![Create new entity permissions](media/configure-notes/new-entity-permission.png "Create new entity permissions")
 
@@ -180,18 +191,11 @@ The notes, and the **Add**, **Edit**, and **Delete** buttons for the note contro
     | - | - |
     | **Add** | Read, Write, Create, Append, Append To |
     | **Edit** | Read, Write |
-    | **Delete** | Read, Write, Append, Append To |
+    | **Delete** | Read, Write, Create, Append, Append To |
 
     For example, create an entity permission for the Annotation entity having the entity permission created in step 1 as the parent entity.
     
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
-
-> [!IMPORTANT]
-> A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them entity permissions.
-
-If you created a custom form and added the notes section to it, be sure to select **Notes** as the default tab you want to be visible.
-
-![Notes in a custom form](media/notes-activities-tab.png "Notes in a custom form")
 
 ### Enable file attachment on form
 
