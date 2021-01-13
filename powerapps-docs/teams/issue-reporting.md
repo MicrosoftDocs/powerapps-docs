@@ -34,11 +34,11 @@ Issue reporting consists of two different apps, one for reporting issues and ano
     - Modify existing issues and assist with resolution
     - Get a high-level view of the issues and team issues.
 
+Watch this video for a demonstration of this app.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4MbLW]
+
 > [!NOTE]
 > Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
-
-> [!TIP]
-> For a demonstration of how to use this app, watch this [video](https://aka.ms/TeamsIssueReportingVideo).
 
 ## Prerequisites
 
