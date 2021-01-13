@@ -53,7 +53,7 @@ Portal provides guests with the ability to attest to company health policies. If
 If the user wants to use the **REDEEM INVITATION** option to access the portal, the user needs to do the following:
 
 1. Open the link in the e-mail to redeem the invitation
-2. Select **Register** and enter new account information (email, Username, Password, Conform Password).
+2. Select **Register** and enter new account information (email, Username, Password, Confirm Password).
 2. Select **Register**
 3. Select the checkbox to agree to the portal site's terms and conditions
 4. Select **Continue**
