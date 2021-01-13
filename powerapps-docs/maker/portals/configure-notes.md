@@ -15,7 +15,7 @@ ms.reviewer: tapanm
 Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!NOTE]
-> Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding entity form or web form step for the entity permissions to take effect.
+> Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For the detailed steps, go to [assign entity permissions](#assign-entity-permissions).
 
 ## Notes configuration for Entity Forms
 
@@ -152,18 +152,38 @@ After adding the configuration, the Note control will be rendered by using the a
 
 ### Assign entity permissions
 
-The **Add**, **Edit**, and **Delete** buttons for the note will be hidden on the entity or web form unless you create and assign the appropriate entity permissions to the records as follows:
+The notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the entity or web form unless you create and assign the appropriate entity permissions to the records as follows:
 
-1. Create an entity permission with Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled on it. For example, Account, Contact or Lead entities that show notes on their entity forms. The scope should be appropriately set depending on the level of access required to end users.
+1. Ensure the **Enable Entity Permissions** checkbox is selected on the entity form, or the web form step for the entity permissions to take effect.
+
+1. Create an entity permission with the required privileges as explained in the table below for the entity that has the Notes control enabled on it.
+
+    | Note action | Required permissions |
+    | - | - |
+    | **Add** | Read, Write, Create, Append, Append To |
+    | **Edit** | Read, Write |
+    | **Delete** | Read, Write, Append, Append To |
+
+    For example, Account, Contact or Lead entities that show notes on their entity forms. The scope should be appropriately set depending on the level of access required to end users.
 
     ![Create new entity permissions](media/configure-notes/new-entity-permission.png "Create new entity permissions")
 
 1. [Associate the entity permission](configure/assign-entity-permissions.md#add-entity-permissions-to-a-web-role) created in step 1 with a web role for the user.
 
+    For example, add the entity permission created in the previous step to the web role used in this instance for managing leads.
+
     ![Add web roles to an entity permission](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an entity permission")
 
-1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with Read, Write, Create, Append, and Append To privileges. The **Relationship for Scope** on this entity permission mut be set to the entity permission created in step 1.
+1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with the required privileges as explained in the table below. The **Parent Entity Permission** for the Parent Scope on this entity permission mut be set to the entity permission created in step 1.
 
+    | Note action | Required permissions |
+    | - | - |
+    | **Add** | Read, Write, Create, Append, Append To |
+    | **Edit** | Read, Write |
+    | **Delete** | Read, Write, Append, Append To |
+
+    For example, create an entity permission for the Annotation entity having the entity permission created in step 1 as the parent entity.
+    
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
 > [!IMPORTANT]
