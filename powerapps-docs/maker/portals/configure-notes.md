@@ -156,9 +156,11 @@ The **Add**, **Edit**, and **Delete** buttons for the note will be hidden on the
 
 1. Create an entity permission with Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled on it. For example, Account, Contact or Lead entities that show notes on their entity forms. The scope should be appropriately set depending on the level of access required to end users.
 
+    ![Create new entity permissions](media/configure-notes/new-entity-permission.png "Create new entity permissions")
+
 1. [Associate the entity permission](configure/assign-entity-permissions.md#add-entity-permissions-to-a-web-role) created in step 1 with a web role for the user.
 
-    ![Add web roles to an entity permission](media/entity-permission-web-roles.png "Add web roles to an entity permission")
+    ![Add web roles to an entity permission](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an entity permission")
 
 1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with Read, Write, Create, Append, and Append To privileges. The **Relationship for Scope** on this entity permission mut be set to the entity permission created in step 1.
 
