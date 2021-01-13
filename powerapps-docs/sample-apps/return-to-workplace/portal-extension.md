@@ -52,10 +52,13 @@ Portal provides guests with the ability to attest to company health policies. If
 
 If the user wants to use the **REDEEM INVITATION** option to access the portal, the user needs to do the following:
 
-1. Open the link in the e-mail to redeem the invitation and create an account.
-2. Select **Accept** on the daily health check.
-3. Selects **Agree** on the Health Terms and Agreements.
-4. You can now view the pass. 
+1. Open the link in the e-mail to redeem the invitation
+2. Select **Register** and enter new account information (email, Username, Password, Conform Password).
+2. Select **Register**
+3. Select the checkbox to agree to the portal site's terms and conditions
+4. Select **Continue**
+5. Select **Submit**
+6. You are logged into the portal and the home page is displayed
 
 While logged in to the portal, the guest can do the following things:
 
