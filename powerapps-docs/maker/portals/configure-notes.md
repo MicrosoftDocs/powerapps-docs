@@ -15,7 +15,8 @@ ms.reviewer: tapanm
 Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!NOTE]
-> Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For the detailed steps, go to [assign entity permissions](#assign-entity-permissions).
+> - Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For the detailed steps, go to [assign entity permissions](#assign-entity-permissions).
+> - The description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) for the note to appear on the portal page.
 
 ## Notes configuration for Entity Forms
 
@@ -256,5 +257,3 @@ However, when editing the note from portal web page, you'll see the note in HTML
 
 Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). Create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
 
-> [!NOTE]
-> Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) to display on the portal.
