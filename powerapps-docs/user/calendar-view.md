@@ -31,7 +31,7 @@ When the **Calendar Control V2** control is added to a table and then the defaul
 > ![Default calendar view](media/cal-view.png "Default calendar view") 
 
 > [!NOTE]
-> The **Calendar Control V2** control is not supported in mobile offline.
+> The **Calendar Control V2** control is not supported in mobile offline. For more information about mobile offline, see [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode).
 
 ## Switch between calendar view and grid view
 
