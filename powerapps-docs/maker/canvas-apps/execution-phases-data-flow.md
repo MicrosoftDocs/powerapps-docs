@@ -82,7 +82,7 @@ If the app uses a data source on-premises, the location and the specification of
 When you use the Common Data Service connector to access a Microsoft Dataverse
 environment, data requests go to the environment instance directly&mdash;without passing through API management. As such, the performance of data calls is much faster. The Common Data Service connector is created by default when you create a new canvas app.
 
-![Data call flow Common Data Service connector](media\execution-phases-data-flow\on-premiess-connectors.png "Data call flow Common Data Service connector")
+![Data call flow Common Data Service connector](media\execution-phases-data-flow\dataverse-connector.png "Data call flow Common Data Service connector")
 
 With the understanding this high-level concept of how data calls travel, you can get into the details of performance. Concisely, performance overhead can happen at any of the layers&mdash;from client, APIM (API Management), connector, on-premises data gateway, and the backend data sources.
 
