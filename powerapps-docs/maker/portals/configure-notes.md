@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/25/2020
+ms.date: 01/13/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -152,14 +152,17 @@ After adding the configuration, the Note control will be rendered by using the a
 
 ### Assign entity permissions
 
-You must create and assign the appropriate entity permission to the records as follows, otherwise the **Add**, **Edit**, and **Delete** buttons for the note will be hidden:
+The **Add**, **Edit**, and **Delete** buttons for the note will be hidden on the entity or web form unless you create and assign the appropriate entity permissions to the records as follows:
 
-- Read, Write, Create, Append, and Append To privileges for the **Annotation** entity with the scope as **Global**. This entity permission must be associated with a web role for the user.
-- Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled in it. For example, Account, Contact or Lead entities that show notes on their entity forms. The scope should be set to **Global**. This entity permission must be associated with a web role for the user.
+1. Create an entity permission with Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled on it. For example, Account, Contact or Lead entities that show notes on their entity forms. The scope should be appropriately set depending on the level of access required to end users.
 
-    ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
+1. [Associate the entity permission](assign-entity-permissions.md#add-entity-permissions-to-a-web-role) created in step 1 with a web role for the user.
 
     ![Add web roles to an entity permission](media/entity-permission-web-roles.png "Add web roles to an entity permission")
+
+1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with Read, Write, Create, Append, and Append To privileges. The **Relationship for Scope** on this entity permissions mut be set to the entity permission created in step 1.
+
+    ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
 > [!IMPORTANT]
 > A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them entity permissions.
