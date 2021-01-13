@@ -56,11 +56,11 @@ After adding the configuration, the Note control will be rendered by using the a
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Basic settings**    |                                                                                                                                                              |
 | Create Enabled        | Enables the ability to add new notes to the entity.                                                                                                          |
-| Create Dialog Options | Contains settings for configuring the dialog box when **Create Enabled** is true. See Create Dialog Options for more details.                                    |
+| Create Dialog Options | Contains settings for configuring the dialog box when **Create Enabled** is true. More information: [Create Dialog Options](#create-dialog-options)                                 |
 | Edit Enabled          | Enables the ability to edit existing notes on the entity.                                                                                                    |
-| Edit Dialog Options   | Contains settings for configuring the dialog box when **EditEnabled** is true. See Edit Dialog Options for more details.                                         |
+| Edit Dialog Options   | Contains settings for configuring the dialog box when **EditEnabled** is true. More information: [Edit Dialog Options](#edit-dialog-options)                                         |
 | Delete Enabled        | Enables the ability to delete notes from the entity.                                                                                                         |
-| Delete Dialog Options | Contains settings for configuring the dialog box when **DeleteEnabled** is true. See Delete Dialog Options for more details.                                     |
+| Delete Dialog Options | Contains settings for configuring the dialog box when **DeleteEnabled** is true. More information: [Delete Dialog Options](#delete-dialog-options)           |
 |File Attachment Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>|
 |Accept MIME Type(s) | Allows you to specify a list of accepted MIME types. |
 |Restrict MIME Types | Select whether to allow or restrict MIME types.|
@@ -72,8 +72,8 @@ After adding the configuration, the Note control will be rendered by using the a
 | Loading Message       | Overrides the message shown while the list of notes is loading.                                                                                              |
 | Error Message         | Overrides the message shown when an error occurs while trying to load the list of notes.                                                                     |
 | Access Denied Message | Overrides the message shown when the user doesn't have sufficient permissions to view the list of notes.                                                    |
-| Empty Message         | Overrides the message shown when the current entity does not have any notes that can be viewed.                                                              |
-| List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders") <br>  To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
+| Empty Message         | Overrides the message shown when the current entity doesn't have any notes that can be viewed.                                                              |
+| List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following options: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders") <br>  To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
 
 ## Create Dialog Options
@@ -87,8 +87,8 @@ After adding the configuration, the Note control will be rendered by using the a
 | Attach File Accept                 | The MIME type accepted by the file upload input.                                                                                            |
 | **Advanced settings**              |                                                                                                                                             |
 | Note Field Label                   | Overrides the label for the Note field in the Add Note dialog box.                                                                              |
-| Note Field Columns                 | Sets the columns value in the Note &lt;textarea&gt;                                                                                            |
-| Note Field Rows                    | Sets the rows value in the Note &lt;textarea&gt;                                                                                            |
+| Note Field Columns                 | Sets the columns value in the Note &lt;textarea&gt;.                                                                                            |
+| Note Field Rows                    | Sets the rows value in the Note &lt;textarea&gt;.                                                                                            |
 | Privacy Option Field Label         | Overrides the label for the Privacy Option field (if enabled).                                                                              |
 | Attach File Label                  | Overrides the label for the Attach File field (if enabled)                                                                                  |
 | Left Column CSS Class              | Adds the CSS class or classes to the leftmost column containing labels in the Add Note dialog box.                                                  |
@@ -115,8 +115,8 @@ After adding the configuration, the Note control will be rendered by using the a
 | Attach File Accept                 | The MIME type accepted by the file upload input. |
 | **Advanced settings**              |                                                                                              |
 | Note Field Label                   | Overrides the label for the Note field in the Edit Note dialog box.|
-| Note Field Columns                 | Sets the columns value in the Note &lt;textarea&gt;                                                                                             |
-| Note Field Rows                    | Sets the rows value in the Note &lt;textarea&gt;                                                                                             |
+| Note Field Columns                 | Sets the columns value in the Note &lt;textarea&gt;.                                                                                             |
+| Note Field Rows                    | Sets the rows value in the Note &lt;textarea&gt;.                                                                                             |
 | Privacy Option Field Label         | Overrides the label for the Privacy Option field (if enabled).                                                                                
 | Attach File Label                  | Overrides the label for the Attach File field (if enabled)                                                                                   |
 | Left Column CSS Class              | Adds the CSS class or classes to the leftmost column containing labels in the Edit Note dialog box.                                                  |
@@ -156,11 +156,11 @@ The **Add**, **Edit**, and **Delete** buttons for the note will be hidden on the
 
 1. Create an entity permission with Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled on it. For example, Account, Contact or Lead entities that show notes on their entity forms. The scope should be appropriately set depending on the level of access required to end users.
 
-1. [Associate the entity permission](assign-entity-permissions.md#add-entity-permissions-to-a-web-role) created in step 1 with a web role for the user.
+1. [Associate the entity permission](configure/assign-entity-permissions.md#add-entity-permissions-to-a-web-role) created in step 1 with a web role for the user.
 
     ![Add web roles to an entity permission](media/entity-permission-web-roles.png "Add web roles to an entity permission")
 
-1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with Read, Write, Create, Append, and Append To privileges. The **Relationship for Scope** on this entity permissions mut be set to the entity permission created in step 1.
+1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with Read, Write, Create, Append, and Append To privileges. The **Relationship for Scope** on this entity permission mut be set to the entity permission created in step 1.
 
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
@@ -173,7 +173,7 @@ If you created a custom form and added the notes section to it, be sure to selec
 
 ### Enable file attachment on form
 
-You must enable **Attach File** option for the **Entity Form** to show the attachment option available with the notes. 
+Enable **Attach File** option for the **Entity Form** to show the attachment option available with the notes.
 
 To enable attachment on an entity form:
 
@@ -185,7 +185,7 @@ To enable attachment on an entity form:
 
 1. From the list of forms, select to open a record of the form to which you want to add note configuration.
 
-1. Select **Additional Settings** for the form. You need to configure the additional settings as per fields explained in the [attachment options](#additional-settings-for-file-attachment):
+1. Select **Additional Settings** for the form. Configure the additional settings as per fields explained in the [attachment options](#additional-settings-for-file-attachment):
 
     ![Additional settings - attach file](media/configure-notes/additional-settings.png)
 
@@ -228,7 +228,7 @@ However, when editing the note from portal web page, you'll see the note in HTML
 
 ## Notes configuration for web forms
 
-Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). You must create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
+Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). Create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
 
 > [!NOTE]
-> Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) in order to display on the portal.
+> Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) to display on the portal.
