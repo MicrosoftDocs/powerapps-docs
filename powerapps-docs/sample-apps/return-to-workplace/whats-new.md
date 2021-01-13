@@ -18,13 +18,15 @@ This article provides resources where you can learn about the new features that 
 
 ### Facility management app
 
-- Solution Settings now includes a switch to toggle between 12-Hour and 24-Hour time format in the Employee App.
+Solution Settings now includes a switch to toggle between 12-Hour and 24-Hour time format in the Employee App.
 
 ### Workplace care management app
 
-- On the exposures tab of an Employee Case, the Employee Attestation lookup now only shows positive 'Yes' attestations to link to the case.
+On the exposures tab of an Employee Case, the Employee Attestation lookup now only shows positive 'Yes' attestations to link to the case.
 
-### Return to the Workplace Portal
+### Access control & Notifications
+
+Notifications and access controls are now also available within the Power Apps Portals.
 
 ## New and updated features in December 2020 (v1.3)
 
