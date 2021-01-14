@@ -51,7 +51,7 @@ The pie chart shown below illustrates the number of app installations occurred b
 When hovering over the graph, the following information is shown:
 
 1. Geo
-2. instanceInstallCount
+2. Install Count
 3. Highlighted
 
 > [!div class="mx-imgBorder"]
@@ -64,7 +64,7 @@ The pie chart shown below illustrates the ratio of production vs. sandbox app in
 When hovering over the graph, the following information is shown:
 
 1. Environment
-2. instanceInstallCount
+2. Install Count
 
 > [!div class="mx-imgBorder"]
 > ![Package installs by location of tenants](media/isv-portal-apppage-graph3.png)
@@ -75,9 +75,9 @@ The column chart shown below displays the package unique names where versions of
 
 When hovering over any item of the graph, the following information is shown:
 
-1. Tenant name 
+1. Tenant 
 1. Count
-1. Package name
+1. Package 
 1. Version 
 1. Environment
 
