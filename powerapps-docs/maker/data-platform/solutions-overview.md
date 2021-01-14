@@ -138,7 +138,7 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 - Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
 - You can’t add an instant flow into a solution when the following are true:
    - The flow was created outside of a solution.
-   - The is trigger set to manual.
+   - The flow trigger is set to manual.
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
 - Flows that connect to SharePoint are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
