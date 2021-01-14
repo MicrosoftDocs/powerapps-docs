@@ -140,7 +140,6 @@ The following limitations apply to the use of canvas apps, flows, and custom con
    - The flow was created outside of a solution.
    - The flow trigger is set to manual.
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
-<!-- Flows that connect to SharePoint are not available in solutions.  Removing per GitHub issues 1768, 1835, 1982 -->
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
 
