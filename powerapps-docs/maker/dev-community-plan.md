@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
-ms.date: 10/11/2020
+ms.date: 01/14/2021
 ms.author: dileeps
 ms.reviewer:
 ---
@@ -43,14 +43,14 @@ With the individual environment, you get the following functionality:
 | --- | --- |
 | **Key features** | |
 | Create and run apps |Yes. You can create unlimited apps |
-| Share apps\* |No |
+| Share apps |No&sup1; |
 | Use the Dataverse |Yes |
 | Model your data using the Dataverse |Yes|
 | Enterprise-grade administration of the environment and user policies |Yes |
 | **Connectivity** | |
 | Connect to Office 365, Dynamics 365, and other connectors |Yes |
 | Connect to cloud-based services like Azure SQL, Dropbox, Twitter, and many more |Yes |
-| Use premium connectors like Salesforce, DB2 and many more |Yes |
+| Use premium connectors like Salesforce, DB2 and many more |Yes&sup2; |
 | Access on‐premises data using an on-premises gateway |Yes |
 | Create custom connectors to connect to your own systems |Yes. You can create unlimited custom connectors |
 | **Common Data Service** | |
@@ -58,13 +58,17 @@ With the individual environment, you get the following functionality:
 | Model your data in the Dataverse |Yes |
 | Create a database in the Dataverse |Yes |
 | Create and use dataflows |No |
-| **Management** | |
+| **Management**&sup3; | |
 | Add co-workers as environment makers and admins |No |
 | Add co-workers to the database roles |No |
 | Supports data policies established by the Office 365 administrator |Yes |
 | Establish data policies for the individual environment |Yes |
 
-*You can't share apps, flows, connections, etc. with any other users of your tenant. You also can't add any other user as an environment admin or maker, or to the database roles from the admin center.
+&sup1;You can't share resources such as apps, flows, or connections with any other users from your tenant.
+<br> 
+&sup2;Using [premium connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-premium-connectors) to connect to the data sources outside Power Apps will require you to have [standalone plans](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#power-apps-and-power-automate-standalone-plans).
+<br> 
+&sup3;You can't add any other user as an environment admin or a maker, or to the database roles from the admin center.
 
 ## What are the capacity limits for the individual environment?
 
