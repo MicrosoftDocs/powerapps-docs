@@ -72,7 +72,7 @@ With the individual environment, you get the following functionality:
 
 ## What are the capacity limits for the individual environment?
 
-| **Capacity** |  |
+| **Capacity** | **Limits** |
 | --- | --- |
 | Flow runs/month |750 |
 | Database size |200 MB |
@@ -92,7 +92,7 @@ Do you have an app you would like to share with customers? We now support Power 
 
 There is a limited capacity provided because this environment is meant for individual use, not for a team or production use. The capacity provided is:
 
-| **Capacity** |  |
+| **Capacity** | **Limits** |
 | --- | --- |
 | Flow runs/month |750 |
 | Database size |200 MB |
