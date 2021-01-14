@@ -39,7 +39,7 @@ The line chart shown below illustrates the number of app installations occurred 
 
 When hovering over the graph, the following information is shown:
 
-instanceInstallCount: Number of app installations happened on a particular date.
+Install Count: Number of app installations happened on a particular date.
 
 > [!div class="mx-imgBorder"]
 > ![Successfully installed apps](media/isv-portal-tenantpage-graph1.png)
@@ -51,7 +51,7 @@ The pie chart shown below illustrates the number of app installations occurred b
 When hovering over the graph, the following information is shown:
 
 1. Geo
-2. instanceInstallCount
+2. Install Count
 
 > [!div class="mx-imgBorder"]
 > ![Package installs by environment type](media/isv-portal-tenantpage-graph2.png)
@@ -63,7 +63,7 @@ The pie chart shown below illustrates the ratio of production vs. sandbox app in
 When hovering over the graph, the following information is shown:
 
 1. Environment
-2. instanceInstallCount
+2. Install Count
 
 > [!div class="mx-imgBorder"]
 > ![Package Installs by environment location](media/isv-portal-tenantpage-graph3.png)
