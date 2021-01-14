@@ -108,7 +108,8 @@ Let's look at the code in detail:
 
 Now that your code is ready, you want to associate it with events in model-driven apps. You use [Script web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
 
-1. Navigate to your model-driven apps instance in browser, and go to **Settings** > **Customizations**.
+1. Navigate to your model-driven apps instance in browser, select the gear icon on the top-right corner and then select **Advance Settings**.
+1. Navigate to **Settings** > **Customizations**.
 1. In the Customization area, choose **Customize the System**.
 1. In the solutions explorer, under **Components**, choose **Web Resources**.  
 1. Choose **New** to create a web resource.
@@ -120,14 +121,24 @@ Now that your code is ready, you want to associate it with events in model-drive
 
 ### [Unified Interface](#tab/unified-interface)
 
+Now that your code is ready, you want to associate it with events in model-driven apps. You use [Script web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
+
 1. Navigate to [Power Apps](https://make.powerapps.com).
 1. In the left navigation pane, select **Data** and then select **Entities**.
 1. From the list of entities, select the entity where you want to add the JavaScript web resource.
 1. Select **Forms** tab, and then from the list of forms select the desired form.
+
+   ![Select form from list](../media/select-form-from-list.png "Select form from list")
+
 1. Select **Form libraries** from the left navigation pane and then select **Add library**.
+
+   ![Select form libraries](../media/select-form-libraries.png "Select form libraries")
 1. Select **New** to create a JavaScript web resource.
 1. In the new web resource dialog, specify the **Name** and **Display Name** for your web resource. For example: "mySampleScript.js" and "Sample: Walk through" Script. 
 1. Select **Script (JScript)** from the **Type** drop-down list. You can either upload a file containing your JavaScript code by selecting **Choose File**, or select **Text Editor** and then paste your JavaScript code in the editor.
+
+    ![Create Web resource](../media/clientapi_walkThrough-img1.png)
+
 1. Select **Save** to create the web resource containing your JavaScript code.
 1. Select **Publish** to publish your web resource.
 
@@ -137,7 +148,7 @@ Now that your code is ready, you want to associate it with events in model-drive
 
 ### [Legacy](#tab/legacy-add-web-resource)
 
-Associate the web resource containing your JavaScript code to model-driven apps forms to be able to associate functions in your code with events. As the JavaScript code in this walkthrough is targeted at the account record, we will associate the web resource with the account form.
+Associate the web resource containing your JavaScript code to model-driven apps forms to be able to associate functions in your code with events. As the JavaScript code in this walk through is targeted at the account record, we will associate the web resource with the account form.
 
 1. Navigate to your model-driven apps instance in browser, and go to **Sales** > **Accounts** or **Service** > **Accounts**.
 1. Open an account record, and select **Form** to open the form editor.
@@ -193,7 +204,7 @@ That's it! You have completed the steps to configure the account form to use cus
 ### [Unified Interface](#tab/unified-add-web-resource)
 
 1. Go to [Power Apps](https://make.powerapps.com).
-1. In the left navigation pane, select **Data** and then select **entities**. 
+1. In the left navigation pane, select **Data** and then select **Entities**. 
 1. From the list of entities, select the entity where you want to add the event handlers.
 1. Select **Forms** tab from the command bar and then select the form where you want to add.
 
@@ -207,11 +218,13 @@ That's it! You have completed the steps to configure the account form to use cus
 
      ![Onchange handler](../media/onchange-event-handler.png "Onchange handler")
 
+That's it! You have completed the steps to configure the account form to use custom business logic specified in your JavaScript code.
+
 ---
 
 ## Test your JavaScript code
 
-It is recommended that you refresh your browser for the changes to take effect in your model-driven apps instance. To test custom business logic you configured in this walkthrough:
+It is recommended that you refresh your browser for the changes to take effect in your model-driven apps instance. To test custom business logic you configured in this walk through:
 
 1. Sign in to your model-driven apps instance.
 1. Browse to **Accounts**, and try to open or create a new account. In this case, we will open an existing account to load the account form. You will see a notification containing your user name that will automatically disappear in 5 seconds.
@@ -226,7 +239,7 @@ It is recommended that you refresh your browser for the changes to take effect i
 
       ![Alert dialog](../media/clientapi_walkThrough-img13.png)
 
-## Complete sample code used in the walkthrough
+## Complete sample code used in the walk through
 
 ```JavaScript
 // A namespace defined for the sample code

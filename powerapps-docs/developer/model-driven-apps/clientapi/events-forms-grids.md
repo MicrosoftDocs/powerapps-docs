@@ -19,13 +19,15 @@ All client-side code is initiated by events. In model-driven apps, you associate
 
 You can associate event handlers to only some events using the UI. For events that are not available to be associated through UI, Client API provides methods that can be used to attach event handlers to such events. 
 
-## Add or remove event handler function to event using classic UI
+## Add or remove event handler function to event using UI
+
+### [Legacy](#tab/add-event-handlers-legacy)
 
 Use the **Event Handlers** section of the **Form Properties** dialog box to associate your script with an event for forms and fields.
 
 ![Event Handler section in Form Properties](../media/Form-EventHandlers.png "Event Handler section in Form Properties")
 
-## Add or remove event handler function to event using the new UI
+### [Unified Interface](#tab/add-event-handlers-unified-interface)
 
 To add or remove event handler functions to events in the new Unified Interface:
 
@@ -43,6 +45,8 @@ To add or remove event handler functions to events in the new Unified Interface:
 1. If you wish to add the event handler for the on change event, select the field and then select **Event** tab.
 
      ![Onchange handler](../media/onchange-event-handler.png "Onchange handler")
+
+---
 
 ## Add or remove event handler function to event using code
 
