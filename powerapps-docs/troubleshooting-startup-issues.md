@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/11/2020
+ms.date: 01/14/2021
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -74,12 +74,14 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 
 ## Resolutions for common errors
 
-| Error | Microsoft Edge | Google Chrome | Microsoft Internet Explorer 11 |  Safari (iOS) |
+| Error | Microsoft Edge | Google Chrome | *Microsoft Internet Explorer 11 |  Safari (iOS) |
 | - | - | - | - | - |
 | <ul> <li> Sign in required </li> <li> UserInterventionNeeded_CookiesBlocked </li> <li> UserInterventionNeeded_StorageBlocked </li> </ul> | [Enable third-party cookies and local data](#instructions-for-microsoft-edge) | [Enable third-party cookies and local data](#instructions-for-google-chrome) | [Enable third-party cookies and local data](#instructions-for-internet-explorer-11) | [Enable third-party cookies and local data](#instructions-for-safari-ios) |
 | <ul> <li> UserInterventionNeeded_NavigateToAadTimeout </li> </ul> | Possible network problem | Possible network problem | Possible network problem | Possible network problem |
 | <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | [Configure Trust Zones](#configure-trust-zones-for-internet-explorer) | Not applicable |
 | <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) |
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 ## Enable storage of third-party cookies and local data in your browser
 
@@ -97,7 +99,7 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     1. Ensure that **Block third-party cookies** is disabled.
     1. Ensure these sites aren't added in site-specific cookie configuration that doesn't allow cookies, or deletes cookies when windows are closed:
         - `https://create.powerapps.com`
-        - `https://*.create.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://[*.]create.powerapps.com`  (the asterisk is part of the address, don't replace it)
         - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
         - `https://make.powerapps.com`
         - `https://login.microsoftonline.com`
@@ -124,7 +126,7 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     1. Make sure that **Block third-party cookies** or **Block all cookies** isn't selected.
     1. Ensure these sites aren't added in site-specific cookie configuration that doesn't allow cookies, or deletes cookies when windows are closed:
         - `https://create.powerapps.com`
-        - `https://*.create.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://[*.]create.powerapps.com`  (the asterisk is part of the address, don't replace it)
         - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
         - `https://make.powerapps.com`
         - `https://login.microsoftonline.com`
@@ -190,10 +192,10 @@ Internet Explorer uses *Trust Zones*. Problems can occur if services on which Po
     6. Add the following sites by typing the address and selecting **Add** for each:
         - `https://login.microsoftonline.com`
         - `https://create.powerapps.com`
-        - `https://*.create.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://[*.]create.powerapps.com` (the asterisk is part of the address, don't replace it)
         - `https://make.powerapps.com`
         - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
-        - `https://*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://[*.]powerapps.com` (the asterisk is part of the address, don't replace it)
         - `https://apps.*.powerapps.com` (the asterisk is part of the address, don't replace it)
         - `https://apps.powerapps.com`
     7. Select **Close**.
@@ -209,7 +211,7 @@ Internet Explorer uses *Trust Zones*. Problems can occur if services on which Po
     6. Remove all existing entries for the following sites:
         - `https://login.microsoftonline.com`
         - `https://create.powerapps.com`
-        - `https://*.create.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://[*.]create.powerapps.com` (the asterisk is part of the address, don't replace it)
         - `https://make.powerapps.com`
         - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
         - `https://*.powerapps.com` (the asterisk is part of the address, don't replace it)
