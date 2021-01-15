@@ -39,7 +39,7 @@ The line chart shown below illustrates the number of app installations occurred 
 
 When hovering over the graph, the following information is shown:
 
-instanceInstallCount: Number of app installations happened on a particular date.
+Install Count: Number of app installations happened on a particular date.
 
 > [!div class="mx-imgBorder"]
 > ![Package installs by environment type](media/isv-portal-apppage-graph1.png)
@@ -52,7 +52,7 @@ When hovering over the graph, the following information is shown:
 
 1. Geo
 2. Install Count
-3. Highlighted
+
 
 > [!div class="mx-imgBorder"]
 > ![Package install attempts by tenant (last 28 days)](media/isv-portal-apppage-graph2.png)
