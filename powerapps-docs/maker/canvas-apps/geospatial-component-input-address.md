@@ -41,9 +41,6 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
 
-4. (Optional) Select **Allow** in the window that asks to know your location. This enables the component to bias results by the user's current location.
-
-    ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
 You can modify the component by using a number of [properties](#input-properties).
 
