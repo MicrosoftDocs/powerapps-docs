@@ -122,7 +122,6 @@ In previous versions, it was possible to indicate on an employee case whether th
 
 With the introduction of guest passes, you can share passes with guests. From within the employee app, these **Share** buttons send an email via Outlook to the guest who is invited. To set this up, go to [Deploy the solution - Turn on Flows](deploy.md).
 
-
 ## Upgrade from version 1.2 to 1.3
 
 ### Step 1: Return to the Workplace Portal
@@ -143,9 +142,9 @@ The Power BI Dashboards now contain information about the activities in the Retu
 
 ## Upgrade from version 1.3 to 1.4
 
-### Step 1: Configure the solution settings
+### Step 1: Configure the solution settings for 24 hour format
 
-A new option to switch between a 12-Hour or 24-Hour time format for Employee Passes is introduced in the solution settings. For more information: [Configure the solution](configure.md#set-solution-settings)
+A new option to switch between a 12-Hour or 24-Hour time format for employee passes is introduced in the solution settings. For more information: [Configure the solution](configure.md#set-solution-settings)
 
 ## Give feedback about the solution
 

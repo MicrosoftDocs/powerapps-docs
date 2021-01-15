@@ -71,7 +71,7 @@ The Return to the Workplace solution has three Power BI dashboards, one for exec
 > If you are a US Government customer, you'll have to publish Power BI dashboards using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
 > [!NOTE]
-> If you intent to customize the report, we advise to use the PBIX files which can be found on GitHub. More information:[Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
+> If you intend to customize the report, we advise that you use the PBIX files that can be found on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
 ### Install template app for dashboards
 
@@ -327,16 +327,16 @@ This section provides information on how to install the Return to the Workplace 
 
 1. Go to [Power Apps](https://make.powerapps.com). Select the environment you want to install the portal.
 
-2. Select **+ Create** from the left navigation pane, select **Portal from blank** option.
+2. Select **+ Create** from the left pane, and then select **Portal from blank**.
 
    > [!div class="mx-imgBorder"]
    > ![Create portal](media/create-portal.png "Create portal")
 
 3. Enter appropriate values and then select **Create**.
 
-- Name. This is the name that will be displayed in Power Apps Studio. 
-- Address. The URL that will be created for the portal. Make sure to save this info for further steps.
-- Language. Portals language.        
+- Name. The name of the portal that is displayed in Power Apps Studio. 
+- Address. The URL that is created for the portal. Make sure to save this info for further configuration steps.
+- Language. The language of the portal.
 
    > [!div class="mx-imgBorder"]
    > ![Portal details](media/enter-portal-name.png "Portal details")
@@ -367,22 +367,22 @@ You can install the Return to the Workplace Portal from AppSource.
 
 ### Step 3: Restart the Portal
 
-The deployment package also contains the actual portal data. To make sure the portal is setup correctly follow the steps below: 
+The deployment package also contains the actual portal data. To make sure the portal is setup correctly follow the steps: 
 
 1. Go to [Power Apps](https://make.powerapps.com). Select **Apps** from the left navigation pane and then select **Portal Management** app.
 
 2. Select **Website** and then select **Return to the Workplace** website, change the url to the url that you have created earlier.
 
-3. Select **Save and Close** and then deactivate the **Basic** website. If you do not see a website named **Basic** here, skip this step.
+3. Select **Save and Close** and then deactivate the **Basic** website. If you do not see a website named **Basic** here, proceed to the next step.
 
 4. Select **Website Bindings**. Validate if there is a binding for the url indicated for the **Return to the Workplace** website.
 
-5. Go to [Power Apps](https://make.powerapps.com). Select **Apps** from the left navigation pane. On the Portla, click on **...** and then select **Settings**. 
+5. Go to [Power Apps](https://make.powerapps.com). Select **Apps** from the left pane. On the Portal, select on **...** and then select **Settings**.
 
-6. From the right, a Portal Settings pane will open. Select **Administration** to open the portal administration. 
+6. In the Portal Settings pane on the right, select **Administration** to open the portal administration.
 
    > [!div class="mx-imgBorder"]
-   > ![Portal restart](media/portal-administrator-pane.png "Portal restart")
+   > ![Portal administration](media/portal-administrator-pane.png "Portal restart")
 
 7. Select **Portal Actions** and then select **Restart**.
 

@@ -52,13 +52,19 @@ Portal provides guests with the ability to attest to company health policies. If
 
 If the user wants to use the **REDEEM INVITATION** option to access the portal, the user needs to do the following:
 
-1. Open the link in the e-mail to redeem the invitation
-2. Select **Register** and enter new account information (email, Username, Password, Confirm Password).
-2. Select **Register**
-3. Select the checkbox to agree to the portal site's terms and conditions
-4. Select **Continue**
-5. Select **Submit**
-6. You are logged into the portal and the home page is displayed
+1. Open the link in the e-mail to redeem the invitation.
+ 
+1. Select **Register** and enter new account information (email, username, password).
+
+1. Select **Register**.
+
+1. Select the checkbox to agree to the portal site's terms and conditions.
+
+1. Select **Continue**.
+
+1. Select **Submit**.
+
+    You are logged into the portal and the home page is displayed
 
 While logged in to the portal, the guest can do the following things:
 
@@ -73,17 +79,15 @@ The first two options are directly available from the home screen. The second tw
 
 On the home screen you have several options:
 
-- Hamburger menu that displays
-  - HOME
-  - RESOURCES
-  - PROFILE 
-  - SIGN OUT
- 
-- CREATE PASS 
-- VIEW PASS 
-- REGISTER GUEST OR DEPENDENT
-
-- NOTIFICATIONS (bell) 
+- Options menu:
+  - Home
+  - Resources
+  - Profile
+  - Sign Out
+- Create Pass
+- View Pass
+- Register Guest or Dependent
+- Notifications (bell)
   
   > [!div class="mx-imgBorder"]
   > ![Welcome screen](media/portals-home-welcome.png "Welcome screen")
@@ -94,7 +98,7 @@ To create a guest pass using the portal:
 
 1. Sign in to the portal.
 2. On the home screen, select **CREATE PASS**.
-3. Select the guest name. Only guests with no access action on them, like being blocked, will be option for creating a pass. 
+3. Select the guest name. Only guests that have no access action on them, such as being blocked, will be an option for creating a pass.
 4. From the list of available facilities, select the facility and then select **NEXT**. Facilities which are closed are not clickable and indicated as closed.
 
    > [!div class="mx-imgBorder"]
@@ -178,13 +182,13 @@ In the Workplace Care Management app, skip steps 1 and 2 described above. The **
 
 #### Update profile
 
-On the profile screen, guests can perform basic operations. They can update their personal information, change their password, or change their login method.
+Guests can perform basic operations on the profile screen. Guests can update their personal information, change their password, or change their sign in method.
 
 > [!div class="mx-imgBorder"]
 > ![Portal profile](media/portals-profile.png "Portal profile")
 
 > [!NOTE]
-> The options presented to **Manage external authorization** depend on the authentication methods configured by the system administrator.
+> The options available for **Manage external authorization** depend on the authentication methods configured by the system administrator.
 
 ## Creating dependents for guests
 
@@ -204,7 +208,6 @@ Non-mandatory fields:
 > [!div class="mx-imgBorder"]
 > ![Portal Register Guest or dependent](media/portals-register-dependent.png "Portal Register Guest or dependent")
 
-
 After creating dependents, the user will see them listed. First the two most recent dependents and the list of all when creating a pass.
 
 > [!div class="mx-imgBorder"]
@@ -214,28 +217,25 @@ To find dependents in the Facility Management app, go to **Solution Setup** and 
 
 ## Notifications
 
-Send notifications to employees through the **Facility Management App**, this notifications will show in the portal. 
+Send notifications to employees through the **Facility Management App**. The notifications will show in the portal. 
 
-To access **Notifications** click on the bell on the right top corner of the **Home Page**.
-
-  
-> [!div class="mx-imgBorder"]
-> ![Portal Hamburger Menu](media/portals-home-notifications.png "Portal Home Notifications")
-
+To access **Notifications**, select the bell icon in the upper right of the home page.
 
 > [!div class="mx-imgBorder"]
-> ![Portal Hamburger Menu](media/portals-notifications-pass.png "Portal Home Notifications")
+> ![Portal Options Menu](media/portals-home-notifications.png "Portal Home Notifications")
+
+> [!div class="mx-imgBorder"]
+> ![Notifications access](media/portals-notifications-pass.png "Portal Home Notifications")
 
 ## Facility access not available
 
-When an employee or guest are blocked, they wont be able to create a pass. This block is managed through the **Facility Management App**, under **Access** for each contact. 
+An employee or guest that is blocked cannot create a pass. This block is managed through the **Facility Management App**, under **Access** for each contact.
 
 > [!div class="mx-imgBorder"]
-> ![Create pass for guests](media/portals-employee-blocked-portal.png "Block guest")
-
+> ![Create pass for guests or employees](media/portals-employee-blocked-portal.png "Block guest")
 
 > [!NOTE]
-> System administrator can configure this information in the solution settings, therefore the information displayed depends on the default facility and facility group associated with that facility.
+> Because a system administrator can configure this information in the solution settings, the information that is displayed depends on the default facility and facility group that is associated with that facility.
 
 ## Extend portal
 
@@ -243,7 +243,6 @@ To learn more about how to extend portals to fit into your business needs, see:
 
 [Extend the Return to the Workplace solution](extend.md)<br/>
 [Power Apps portals documentation](https://docs.microsoft.com/powerapps/maker/portals/)
-
 
 ## Give feedback about the solution
 

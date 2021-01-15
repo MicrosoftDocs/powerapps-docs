@@ -531,7 +531,6 @@ The data definitions section provides information about a list of tables, column
 | Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                | Base |
 | Resources Text                          | Text       | Instruction provided to resources when registering to the portal.         | Model-driven app and Portal      | Portal |
 | Use 24-Hour Format                      | Option Set | Switches between 24 or 12 hour time format on the passes.                 | Model-drive app and canvas app | Base |
-||||||
 
 ### State
 

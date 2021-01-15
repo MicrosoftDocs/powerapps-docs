@@ -258,11 +258,11 @@ To link an employee attestation record to a case:
 
 1. Open an employee case record and select the **Exposures** tab.
 2. In the grid, select **Add Existing Employee Attestation**.
-3. Use the lookup to search for the attestation records for the employee under investigation. When selecting the lookup, only positive attestations will show since these indicate people could actual enter a facility. 
+3. Use the lookup to search for the attestation records for the employee under investigation. When you select the lookup, only positive attestations are listed since these indicate people that could actually enter a facility. 
 4. Select the applicable employee attestation records and then select **Add**.
 
   > [!div class="mx-imgBorder"]
-  > ![Deactivate employee case](media/health-safety-linkedrecord.png "Linked Record")
+  > ![Link an employee attestation record to a case](media/health-safety-linkedrecord.png "Linked Record")
 
 The employee attestation record is now linked to the case record. This triggers the background suggestion process that creates case contact suggestions that can assist in the manual contact tracing procedure.
 
