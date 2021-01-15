@@ -26,7 +26,7 @@ You can use the Entity Metadata Browser to view entities and their properties in
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Dataverse | [Microsoft Downloads: MetadataBrowser_3_0_0_5_managed.zip](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip) |
 
-After you download the solution, you must install it. For information about how to install a managed solution, see [Import solutions](/data-platform/import-update-export-solutions)  
+After you download the solution, you must install it. For information about how to install a managed solution, see [Import solutions](import-update-export-solutions)  
 
 ## Open as an app
 Dataverse is configured as an app. After you install the **Entity Metadata Browser** solution, locate the **Metadata Tools** app and open it. **Entities** is the default view. From the **Tools** navigation area you can select **Entity Metadata** to inspect individual entities.
