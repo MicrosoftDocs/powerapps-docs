@@ -27,7 +27,7 @@ Tables are used to model and manage business data. When you develop an app, you 
 ![tables-dataverse](media/tables-dataverse.png "Tables in Dataverse")
 
 ### See also
-[Types of tables](types-of-entities.md)
-[Create a custom table](data-platform-create-entity.md) <br/>
+[Types of tables](types-of-entities.md)<br/>
+[Create a custom table](data-platform-create-entity.md)
 
 
