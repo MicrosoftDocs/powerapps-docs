@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 01/12/2021
+ms.date: 01/15/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -196,9 +196,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 <td>
 
-  ```
-  "toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]
-  ```
+  ```"toolbar":[["CopyFormatting"], ["Font"], ["FontSize"], ["Bold"], ["Italic"], ["Underline"], ["BGColor"], ["TextColor"], ["BulletedList"], ["NumberedList"], ["Outdent"], ["Indent"], ["Blockquote"], ["JustifyLeft"], ["JustifyCenter"], ["JustifyRight"], ["Link"], ["Unlink"], ["Subscript"], ["Superscript"], ["Strike"], ["Image"], ["BidiLtr"], ["BidiRtl"], ["Undo"], ["Redo"], ["RemoveFormat"], ["Table"]]```
   
 </td>
 
@@ -213,9 +211,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 <td>
 
-  ```
-  "plugins": "dialogui,dialog,about,a11yhelp,basicstyles,notification,button, toolbar,clipboard,panel,floatpanel,menu,contextmenu,resize,elementspath, enterkey,entities,popup,filetools,filebrowser,floatingspace,listblock, richcombo,format,horizontalrule,htmlwriter,wysiwygarea,image,indent, indentlist,fakeobjects,link,list,magicline,maximize,pastetext,pastefromword, removeformat,showborders,sourcearea,specialchar,menubutton,scayt, stylescombo,tab,table,tabletools,undo,lineutils,widgetselection,widget, notificationaggregator,uploadwidget,uploadimage,wsc"
-  ```
+  ```"plugins": "dialogui,dialog,about,a11yhelp,basicstyles,notification,button, toolbar,clipboard,panel,floatpanel,menu,contextmenu,resize,elementspath, enterkey,entities,popup,filetools,filebrowser,floatingspace,listblock, richcombo,format,horizontalrule,htmlwriter,wysiwygarea,image,indent, indentlist,fakeobjects,link,list,magicline,maximize,pastetext,pastefromword, removeformat,showborders,sourcearea,specialchar,menubutton,scayt, stylescombo,tab,table,tabletools,undo,lineutils,widgetselection,widget, notificationaggregator,uploadwidget,uploadimage,wsc"```
 </td>
 </tr>
 
@@ -230,9 +226,7 @@ You can configure all of the CKEditor-supported properties under this property. 
 </td>
 <td>
 
-  ```
-  "extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi, blockquote,button,collapser,colorbutton,colordialog,onfighelper, contextmenu,copyformatting,dialog,find,floatpanel,font,indentblock, justify,panel,panelbutton,pastefromword,quicktable,selectall, stickystyles,superimage,tableresize,tableselection,tabletools"
-  ```
+  ```"extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi, blockquote,button,collapser,colorbutton,colordialog,onfighelper, contextmenu,copyformatting,dialog,find,floatpanel,font,indentblock, justify,panel,panelbutton,pastefromword,quicktable,selectall, stickystyles,superimage,tableresize,tableselection,tabletools"```
 </td>
 </tr>
 
@@ -331,9 +325,16 @@ You can configure additional configuration settings that affect how your editor 
 
 <td>
 
-  By using this property, you can write your own plug-ins and use them in the rich text editor control. The following is the schema for externalPlugins property: <br></br>
- 
- ```
+  By using this property, you can write your own plug-ins and use them in the rich text editor control.
+  
+</td>
+<td>
+
+No default value as this is how you can extend your functionality by adding additional plugins not originally provided.
+
+Example:
+
+```
   XMLCopy
 "externalPlugins": [
     {
@@ -343,19 +344,13 @@ You can configure additional configuration settings that affect how your editor 
   ]
   ```
   
-  
-</td>
-<td>
-
-No default value as this is how you can extend your functionality by adding additional plugins not originally provided.
-
 Example:
 
   ```
   "externalPlugins": [
     {
       "name": "EmbedMedia",
-      "path": "http://mydomain.crm.dynamics.com/CITTest/%7B637230928490017310%7D/WebResources/msdyncrm_/myplugins/embedmedia/"
+      "path": "http://mydomain.crm.dynamics.com/WebResources/msdyncrm_/myplugins/embedmedia/"
     }
   ]
   ```
@@ -370,17 +365,20 @@ Example:
 
   By setting this property, you can avoid using the default table for images so that you can enforce additional security if needed. <br></br>
   
-  ```
+ 
+  
+  
+</td>
+<td>
+
+
+ ```
   "imageEntity": {
 	"imageEntityName": "<<name of the image table>>",
 	"imageFileAttributeName": "<<attribute name of the blob reference>>"
 }
   ```
   
-  
-</td>
-<td>
-
   ```
   "imageEntity": {
 	"imageEntityName": "msdyn_richtextfiles",
@@ -494,54 +492,70 @@ The following sample rich text editor configuration code sample data can be used
 
 ### Add the full screen expander
 
-`{ "showAsTabControl": true, "showFullScreenExpander": true }`
+ ```
+{ "showAsTabControl": true, "showFullScreenExpander": true }
+ ```
 
 :::image type="content" source="media/cke-screen-expander.png" alt-text="Screen expander control":::
 
 ### Add the HTML source view tab
 
-`{ "showAsTabControl": true, "showHtml": true }`
+ ```
+{ "showAsTabControl": true, "showHtml": true }
+ ```
 
 :::image type="content" source="media/cke-html-source.png" alt-text="HTML tab control":::
 
 ### Add a simple toolbar with font size, bold, italic, underline, and highlight
 
-`{ "defaultSupportedProps": {"toolbar":[{ "items": ["FontSize", "Bold", "Italic", "Underline", "BGColor"]}]  }}`
+ ```
+ { "defaultSupportedProps": {"toolbar":[{ "items": ["FontSize", "Bold", "Italic", "Underline", "BGColor"]}]  }}
+ ```
 
 :::image type="content" source="media/cke-simple-editor.png" alt-text="Controls for a simple editor":::
 
 ### Remove the toolbar to make a rich text rendering surface
 
-`{ "defaultSupportedProps": {"toolbar":[]  }}`
+ ```
+{ "defaultSupportedProps": {"toolbar":[]  }}
+ ```
 
 :::image type="content" source="media/cke-no-toolbar.png" alt-text="No toolbar":::
 
 ### Add a new font list and set Brush Script MT as the default font with a default size of 20 px
 
-`{ "defaultSupportedProps": {"font_names":"Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;", "font_defaultLabel":"Brush Script MT", "fontSize_sizes":"8/8px;12/12px;20/20px;32/32px", "fontSize_defaultLabel":"20", "stickyStyle":{"font-size":"20px", "font-family":"'Brush Script MT', cursive"}  }}`
+ ```
+ { "defaultSupportedProps": {"font_names":"Brush Script MT/'Brush Script MT', cursive;Calibri/Calibri, Helvetica, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;", "font_defaultLabel":"Brush Script MT", "fontSize_sizes":"8/8px;12/12px;20/20px;32/32px", "fontSize_defaultLabel":"20", "stickyStyle":{"font-size":"20px", "font-family":"'Brush Script MT', cursive"}  }}
+ ```
 
 :::image type="content" source="media/cke-default-font.png" alt-text="Set a new default font":::
 
 ### Position the toolbar at the top of the rich text editor
 
-`{ "defaultSupportedProps": {"toolbarLocation":"top"  }}`
+ ```
+ { "defaultSupportedProps": {"toolbarLocation":"top"  }}
+ ```
 
 :::image type="content" source="media/cke-toolbar-top.png" alt-text="Toolbar positioned at the top of the rich text editor":::
 
 ### Start the editor at 30 px height and then auto-grow to fit content
 
-`{ "defaultSupportedProps": { "autoGrow_onStartup": false , "autoGrow_maxHeight": 0 , "autoGrow_minHeight": 30 , "height": 30  }}`
+ ```
+ { "defaultSupportedProps": { "autoGrow_onStartup": false , "autoGrow_maxHeight": 0 , "autoGrow_minHeight": 30 , "height": 30  }}
+ ```
 
 :::image type="content" source="media/cke-autogrow.png" alt-text="Typing into the rich text area will increase it to fit the content":::
 
 ### Fix the height of the editor at 500 px
 
-`{ "defaultSupportedProps": { "removePlugins":["autogrow"], "height": 500   }}`
+ ```
+ { "defaultSupportedProps": { "removePlugins":["autogrow"], "height": 500   }}
+ ```
 
 :::image type="content" source="media/cke-fixed-height.png" alt-text="With a fixed height, the editor remains at the same height. When enough content is added, a scroll bar appears.":::
 
 
-## Create plain text surface that removes all html tage (except for "br" tags)
+## Create plain text surface that removes all html tag (except for the "br" tag)
 
 `{ "defaultSupportedProps": {     "enterMode": 2 ,     "shiftEnterMode": 2 ,     "allowedContent":"*",     "disallowedContent":"*",     "forcePasteAsPlainText": true ,     "toolbar":[],     "removePlugins":"contextmenu,liststyle,openlink,tableresize,tableselection,tabletools"  },  "disableImages": true}}`
 
@@ -761,7 +775,7 @@ The following table outlines a list of accessibility shortcuts available when us
 
 Q: Why are typed characters are slow to display?
 
-A. Large content size can cause latency. For more information, see [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Also, spelling or grammar checks can also slow the typing performance.
+A. Large content size can cause latency. For more information, see [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Spelling or grammar checks can also slow the typing performance.
 
 
 ## Known issues
