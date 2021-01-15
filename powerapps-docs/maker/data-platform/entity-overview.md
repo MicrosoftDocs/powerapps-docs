@@ -2,7 +2,7 @@
 title: "Tables in Dataverse | MicrosoftDocs"
 description: "Learn about tables in Power Apps"
 ms.custom: ""
-ms.date: 07/25/2018
+ms.date: 01/14/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
