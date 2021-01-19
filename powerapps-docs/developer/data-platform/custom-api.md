@@ -135,7 +135,7 @@ This table includes attributes of the Custom API Response Property entity that y
 
 ## Invoking Custom APIs
 
-A Custom API creates a new message which can be invoked via the SDK API or Web API.
+A Custom API creates a new message which can be invoked via the SDK or Web API.
 
 ### Invoking Custom APIs from SDK based applications or plug-ins
 
@@ -161,7 +161,7 @@ var newOwner = (EntityReference) resp["AssignedTo"];
 
 ### Invoking Custom APIs from the Web API
 
-Custom APIs can be called in the same way as any [standard Web API function or action](webapi/web-api-functions-actions-sample.md). If your custom API has the `IsFunction` field set to `true` then it needs to be invoked as a function using a `GET` request, otherwise it needs to be used as an action using a `POST` request:
+Custom APIs can be called in the same way as any standard Web API [functions](webapi/use-web-api-functions.md) or [actions](webapi/use-web-api-actions.md). If your custom API has the `IsFunction` field set to `true` then it needs to be invoked as a function using a `GET` request, otherwise it needs to be used as an action using a `POST` request:
 
 ```http
 POST [Organization URI]/api/data/v9.1/myapi_CustomUnboundAPI
