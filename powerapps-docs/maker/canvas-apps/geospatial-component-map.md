@@ -41,7 +41,7 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 1. Open the **Insert** tab.
 2. Expand **Media**.
 3. Select the component **Map** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
-4. To show user's current location, 
+4. To show the user's current location, 
 	- Toggle "Show current location" to "On". 
 	- Under the property "Current location latitude", insert "Location.Latitude". 
 	- Under the property "Current location longitude", insert "Location.Longitde". 
