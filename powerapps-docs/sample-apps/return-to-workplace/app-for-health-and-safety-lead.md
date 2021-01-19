@@ -69,8 +69,8 @@ The Workplace Care Management app has the following components:
 
 - **Case Managers**: List of all users who have access to the **Employee Cases** area.
 
-> [!div class="mx-imgBorder"]
-> ![Master data](media/health-safety-master-data.png "Master data")
+   > [!div class="mx-imgBorder"]
+   > ![Master data](media/health-safety-master-data.png "Master data")
 
 ## Getting started with the Workplace Care Management app
 
@@ -261,8 +261,8 @@ To link an employee attestation record to a case:
 3. Use the lookup to search for the attestation records for the employee under investigation. When you select the lookup, only positive attestations are listed since these indicate people that could actually enter a facility. 
 4. Select the applicable employee attestation records and then select **Add**.
 
-  > [!div class="mx-imgBorder"]
-  > ![Link an employee attestation record to a case](media/health-safety-linkedrecord.png "Linked Record")
+    > [!div class="mx-imgBorder"]
+    > ![Link an employee attestation record to a case](media/health-safety-linkedrecord.png "Linked Record")
 
 The employee attestation record is now linked to the case record. This triggers the background suggestion process that creates case contact suggestions that can assist in the manual contact tracing procedure.
 

@@ -109,7 +109,7 @@ The Return to the Workplace solution has three Power BI dashboards, one for exec
 4. Determine where the displayed URL is pointing to in the Dataverse environment:
 
     - If it's pointing to Dataverse, set the **Authentication method** to **OAuth2** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
-    - If it's not pointing to Dataverse, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**
+    - If it's not pointing to Dataverse, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**.
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png "Privacy")
 
@@ -310,15 +310,14 @@ In the Return to the Workplace solution, the following security roles are define
 
 6. Repeat step 4 and 5 for the following flows:
 
- - Notification - Send as email
- - Share Guest attestation - email
- - Share Guest attestation - email with portal link (portal only)
- - Contact - Create portal invitation (portal only)
+    - Notification - Send as email
+    - Share Guest attestation - email
+    - Share Guest attestation - email with portal link (portal only)
+    - Contact - Create portal invitation (portal only)
 
 ## Appendix: Deploy the Return to the Workplace Portal
 
 This section provides information on how to install the Return to the Workplace portal.  
-
 
    > [!IMPORTANT]
    > Return to the Workplace Portal is introduced in version 1.3. You need to update the existing Return to the Workplace solution in order to use the portal.
@@ -334,14 +333,14 @@ This section provides information on how to install the Return to the Workplace 
 
 3. Enter appropriate values and then select **Create**.
 
-- Name. The name of the portal that is displayed in Power Apps Studio. 
-- Address. The URL that is created for the portal. Make sure to save this info for further configuration steps.
-- Language. The language of the portal.
+    - Name. The name of the portal that is displayed in Power Apps Studio. 
+    - Address. The URL that is created for the portal. Make sure to save this info for further configuration steps.
+    - Language. The language of the portal.
 
    > [!div class="mx-imgBorder"]
    > ![Portal details](media/enter-portal-name.png "Portal details")
 
-4. You'll see a popup appearing on the top right displaying that the portal provisioning has started. Select **Apps** from the left navigation pane, you'll see the name of your portal from the list of available apps. As soon as provisioning completes, the link will be active.
+4. You'll see a popup appearing on the top right displaying that the portal provisioning has started. Select **Apps** from the left pane and you'll see the name of your portal from the list of available apps. As soon as provisioning completes, the link will be active.
 
    > [!div class="mx-imgBorder"]
    > ![Portal provisioning notice](media/portal-provisioning.png "Portal provisioning notice")
@@ -367,7 +366,7 @@ You can install the Return to the Workplace Portal from AppSource.
 
 ### Step 3: Restart the Portal
 
-The deployment package also contains the actual portal data. To make sure the portal is setup correctly follow the steps: 
+The deployment package also contains the actual portal data. To make sure the portal is setup correctly follow these steps: 
 
 1. Go to [Power Apps](https://make.powerapps.com). Select **Apps** from the left navigation pane and then select **Portal Management** app.
 

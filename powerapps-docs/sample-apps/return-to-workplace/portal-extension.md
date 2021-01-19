@@ -88,18 +88,18 @@ On the home screen you have several options:
 - View Pass
 - Register Guest or Dependent
 - Notifications (bell)
-  
+
   > [!div class="mx-imgBorder"]
   > ![Welcome screen](media/portals-home-welcome.png "Welcome screen")
 
-#### Creating a pass
+#### Create a pass
 
 To create a guest pass using the portal: 
 
 1. Sign in to the portal.
 2. On the home screen, select **CREATE PASS**.
 3. Select the guest name. Only guests that have no access action on them, such as being blocked, will be an option for creating a pass.
-4. From the list of available facilities, select the facility and then select **NEXT**. Facilities which are closed are not clickable and indicated as closed.
+4. From the list of available facilities, select the facility and then select **NEXT**. You can't select facilities which that are closed.
 
    > [!div class="mx-imgBorder"]
    > ![Create pass](media/portals-facility.png "Create pass")
@@ -114,7 +114,7 @@ To create a guest pass using the portal:
    > [!div class="mx-imgBorder"]
    > ![Agree terms](media/portals-attestation.png "Agree terms")
 
-7. A pass is generated for the guest/dependent for that day.
+   A pass is generated for the guest/dependent for that day.
 
    > [!div class="mx-imgBorder"]
    > ![Pass generation](media/portals-own-pass.png "Pass generation")
@@ -162,7 +162,7 @@ The resources screen displays general information from your organization to the 
 
 This section describes the way guests can start interacting with the portal.
 
-### Sending invites to contacts
+### Send invites to contacts
 
 In the Facility Management app and the Workplace Care Management app, the facility manager, or the health and safety leader can invite contacts to the portal.
 

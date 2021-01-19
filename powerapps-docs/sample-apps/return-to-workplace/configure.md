@@ -368,28 +368,28 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 
 **To create bulk record-delete jobs**
 
-1.	Select **Settings**, and then select **Data Management**
+1. Select **Settings**, and then select **Data Management**
 
-2.	Under **Data Management**, select **Bulk Record Deletion**.
+2. Under **Data Management**, select **Bulk Record Deletion**.
 
    > [!div class="mx-imgBorder"]
    > ![Data Management admin](media/solution-admin-dm.png "Data Management admin")
 
-3.	Select **New**.
+3. Select **New**.
 
-4.	Go through the **Bulk Deletion Wizard**.
+4. Go through the **Bulk Deletion Wizard**.
 
-5.	Select the appropriate **table** and **criteria**.
+5. Select the appropriate **table** and **criteria**.
 
    > [!div class="mx-imgBorder"]
    > ![Criteria](media/solution-admin-criteria.png "Criteria")
 
-6.	Add a name and a schedule for the bulk record-delete job to run.
+6. Add a name and a schedule for the bulk record-delete job to run.
 
    > [!div class="mx-imgBorder"]
    > ![Bulk record delete job](media/solution-admin-brd.png "Bulk record delete job")
 
-7.	Submit the bulk record-delete job.
+7. Submit the bulk record-delete job.
 
 ## Feedback about the solution
 

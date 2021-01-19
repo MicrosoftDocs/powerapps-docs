@@ -22,7 +22,7 @@ This article provides step-by-step instructions for how to upgrade the existing 
 - You must have installed the earlier version of Return to the Workplace and have the environment details. 
 
 > [!TIP]
-> Upgrading the solution affects the user experience. We recommend that you upgrade the solution outside of normal business hours, and test the changes on a development or test environment before moving it to a production environment. 
+> Upgrading the solution affects the user experience. We recommend that you upgrade the solution outside of normal business hours, and test the changes on a development or test environment before moving it to a production environment.
 
 ## Step 1: Update the solution
 
@@ -75,7 +75,6 @@ When a new version of the  **Return to the Workplace** solution is available, yo
     - [Step 4: Schedule report refresh](/powerapps/sample-apps/return-to-workplace/deploy#step-4-schedule-report-refresh)
     - [Step 5: Embed the Power BI report in the model-driven app](/powerapps/sample-apps/return-to-workplace/deploy#step-5-embed-the-power-bi-report-in-the-model-driven-app)
 
-
 ## Upgrade from version 1.0 to 1.1
 
 ### Step 1: Install the Workplace Care Management dashboard
@@ -84,23 +83,19 @@ You can use the Workplace Care Management dashboard to track overall employee ca
 
 To install the Workplace Care Management dashboard, follow the instructions in [Deploy the Return to the Workplace solution](deploy.md#step-3-configure-and-publish-power-bi-dashboards).
 
-
 ### Step 2: Update facilities
 
 With the new version, we are introducing the notion of areas and floors for a facility. A floor indicates how many levels are present within a facility. An area allows you to define a space within a floor that has a certain capacity. Through bookings in the Employee app, you can book an area. More information: [Use the Facility Safety Management app](app-for-facility-manager.md).
 
 Facilities now also have entry windows defined, which allow you to indicate in which time window people can enter the building. More information: [Use the Facility Safety Management app](app-for-facility-manager.md).
 
-
 ### Step 3: Define capacity for your reopen phases
 
 Capacity is defined for an area, but it's also bound by the phase your facility is in. Every reopen phase defines the percentage by which capacity will be limited. More information: [Configure the solution](configure.md)
 
-
 ### Step 4: Make employee cases inactive
 
 In the new version of the solution, employee cases become inactive when they're completed. More information: [Use the Workplace Care Management app](app-for-health-and-safety-lead.md#manage-employee-cases)
-
 
 ## Upgrade from version 1.1 to 1.2
 
@@ -108,11 +103,9 @@ In the new version of the solution, employee cases become inactive when they're 
 
 With the introduction of version 1.2, you will see more options in the solution settings. Numerous features are now configurable in the solution settings. For guests, we added new terms of agreements that are required. More information: [Configure the solution](configure.md#set-solution-settings)
 
-
 ### Step 2: Set up duplicate detection rules for employee cases
 
 To limit the number of employee cases on an employee, it's possible to set up duplicate detection rules that warn you when making multiple employee cases. More information: [Configure the solution](configure.md#set-duplicate-detection-rules-for-employee-cases)
-
 
 ### Step 3: Facility access available
 

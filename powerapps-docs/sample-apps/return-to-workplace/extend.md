@@ -530,7 +530,7 @@ The data definitions section provides information about a list of tables, column
 | Guest Privacy Terms & Agreement         | Text       | Instructions provided to an employee when registration a guest.           | Model-driven app and canvas app | Base |
 | Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                | Base |
 | Resources Text                          | Text       | Instruction provided to resources when registering to the portal.         | Model-driven app and Portal      | Portal |
-| Use 24-Hour Format                      | Option Set | Switches between 24 or 12 hour time format on the passes.                 | Model-drive app and canvas app | Base |
+| Use 24-Hour Format                      | Option Set | Switches between 24 or 12 hour time format on the passes.                 | Model-driven app and canvas app | Base |
 
 ### State
 
@@ -539,7 +539,6 @@ The data definitions section provides information about a list of tables, column
 | Name         | Text        | User-friendly name of the state.   | Model-driven app |
 | State Code   | Text        | ISO identifier of the state.       | Model-driven app |
 | Country      | Lookup      | Association to the parent company. | Model-driven app |
-|||||
 
 ## Power Automate flows
 
