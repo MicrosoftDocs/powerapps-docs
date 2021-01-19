@@ -28,7 +28,7 @@ The map component also supports road and satellite views.
 
 ![Map component](./media/augmented-geospatial/geospatial-map-component.png "Map component")
 
-To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment) in addition to [enabling geospatial features for each app](geospatial-overview.md#enable-the-geospatial-features-for-each-app) that you want to use it in.
+To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
 
 Make sure you also [review the prerequisites for using geospatial components](geospatial-overview.md#prerequisites).
 
