@@ -135,11 +135,11 @@ This table includes attributes of the Custom API Response Property entity that y
 
 ## Invoking Custom APIs
 
-A Custom API creates a new message which can be invoked via the SDK or Web API.
+A Custom API creates a new message which can be invoked via the SDK API or Web API.
 
-### Invoking Custom APIs from SDK applications or plugins
+### Invoking Custom APIs from SDK based applications or plug-ins
 
-You can choose to use either early- or late-bound code to invoke your custom API. Use the `CrmSvcUtil` tool to generate helper request and response classes to mirror the request and response properties of your custom API.
+You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
 
 For late-bound code, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
 
@@ -159,7 +159,7 @@ var resp = svc.Execute(req);
 var newOwner = (EntityReference) resp["AssignedTo"];
 ```
 
-### Invoking Custom APIs with Web API
+### Invoking Custom APIs from the Web API
 
 Custom APIs can be called in the same way as any [standard Web API function or action](webapi/web-api-functions-actions-sample.md). If your custom API has the `IsFunction` field set to `true` then it needs to be invoked as a function using a `GET` request, otherwise it needs to be used as an action using a `POST` request:
 
