@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 11/10/2020
+ms.date: 1/19/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -16,9 +16,7 @@ search.app:
 ---
 
 
-# Interactive map component (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Interactive map component 
 
 Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of entities from a data source, or by inputting new physical locations.
 
@@ -43,12 +41,12 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 1. Open the **Insert** tab.
 2. Expand **Media**.
 3. Select the component **Map** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
-4. (Optional) Select **Allow** in the window that asks to know your location. This setting allows the component to display the user's current location.
-
-    ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
-
-You can modify the component by using a number of [properties](#input-properties).
-
+4. To show user's current location, 
+	- Toggle "Show current location" to "On". 
+	- Under the property "Current location latitude", insert "Location.Latitude". 
+	- Under the property "Current location longitude", insert "Location.Longitde". 
+	- The current location pin should now appear on the map.
+	
 ### Use the map component with data from Excel
 
 You can load a table that contains existing data from an Excel workbook into the map component. The component will then plot each row in your table as a map pin.
@@ -176,7 +174,9 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | Default longitude | Longitude the map would go to when it's loaded if **Use default location** is enabled. | Floating point number | Properties |
 | Default latitude | Latitude the map would go to when it's loaded if **Use default location** is enabled. | Floating point number | Properties |
 | Default zoom level | Zoom level the map would be set to when it's loaded if **Use default location** is enabled. | Integer | Properties |
-| Show current location | Whether the map should display the current location of the user (if it has permission). | Boolean | Properties |
+| Show current location | Whether the map should display the current location of the user. | Boolean | Properties |
+| Current location latitude | The latitude of the current location of the user if **Show Current Location** is enabled. | Floating point number | Properties |
+| Current location longitude | The longitude of the current location of the user if **Show Current Location** is enabled. | Floating point number | Properties | 
 | Satellite view | Whether the style of the map is a satellite view or a road view. | Boolean | Properties |
 | Cluster pins | Whether the map pins are clustered. | Boolean | Properties |
 | Zoom control | Whether the zoom component appears on the map. | Boolean | Properties |
@@ -201,6 +201,7 @@ The following table lists the output properties available.
 | Property | Description |
 | -- | -- |
 | CenterLocation | Center location of the map. |
+| OnMapClick | The last clicked location on the map. |
 
 ### Additional (common) properties
 
