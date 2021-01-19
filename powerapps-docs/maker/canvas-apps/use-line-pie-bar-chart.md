@@ -1,6 +1,6 @@
 ---
 title: Create a chart in a canvas app | Microsoft Docs
-description: In Power Apps, show categories of data as line charts, pie charts, or bar charts in a canvas app
+description: In Power Apps, show categories of data as line charts, pie charts, or column charts in a canvas app
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -16,7 +16,7 @@ search.app:
 ---
 # Show data in a line, pie, or bar chart in Power Apps
 
-Use line charts, pie charts, and bar charts to display your data in a canvas app. When you work with charts, the data that you import should be structured based on these criteria:
+Use line charts, pie charts, and column charts to display your data in a canvas app. When you work with charts, the data that you import should be structured based on these criteria:
 
 * Each series should be in the first row.
 * Labels should be in the leftmost column.
@@ -78,8 +78,8 @@ In these steps, we import the sample data into a collection, named **ProductReve
 
     ![][3]  
 
-## Add a bar chart to display your data
-Now, let's use this ProductRevenue collection in a bar chart:
+## Add a column chart to display your data
+Now, let's use this ProductRevenue collection in a column chart:
 
 1. On the **Home** tab, add a screen.]
 
