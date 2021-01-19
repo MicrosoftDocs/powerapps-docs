@@ -75,7 +75,7 @@ Consider the following when using the rich text editor:
 
 - Rich text fields will store HTML tags which are required for formatting along with user entered data. When setting the maximum size for your field, make sure to assign a large enough size for both the HTML tags and user-entered data. 
 
-- By default, the rich text editor will upload images to the blob store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the msdyn_richtextfiles entity. Base64 content is extremely large, so you generally don't want to store images as base64. 
+- By default, the rich text editor will upload images to the Azure Blob storage store and they won’t be stored as part of the field. Images will be stored in the same field as base64 when the submitter doesn’t have permissions to the msdyn_richtextfiles entity. Base64 content is extremely large, so you generally don't want to store images as base64. 
 
 ## Rich text editor properties
 
@@ -730,7 +730,7 @@ The following table describes the different formatting features and functionalit
 |![Block Quote](media/block-quote.png "Block Quote")| Block Quote |  | Apply a block-level quotation format in your content. |
 |![Align Left](media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
 |![Align Center](media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
-|![Align Right](media/align-right.png "Align Right")| Align Right | Ctrl+R | Center your content on the page. (Commonly used for a formal appearance.) |
+|![Align Right](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align your content with the right margin. (Commonly used for a formal appearance.) |
 |![Link](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it. |
 |![Remove Link](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
 |![Superscript](media/format-superscript.png "Superscript")| Superscript |  | Type very small letters just above the line of text. |
