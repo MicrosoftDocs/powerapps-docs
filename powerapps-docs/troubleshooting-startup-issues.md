@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/14/2021
+ms.date: 01/19/2021
 ms.author: namarwah
 search.audienceType: 
   - maker
@@ -96,11 +96,11 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     1. Select **Settings**.
     1. Select **Cookies and site permissions**.
     1. Expand **Cookies and site data**.
-    1. Ensure that **Block third-party cookies** is disabled.
-    1. Ensure these sites aren't added in site-specific cookie configuration that doesn't allow cookies, or deletes cookies when windows are closed:
+    1. Ensure the setting **Block third-party cookies** is disabled.
+    1. If present, remove these following sites from the site-specific cookie configuration under **Block**, and **Clear on exit**:
         - `https://create.powerapps.com`
-        - `https://[*.]create.powerapps.com`  (the asterisk is part of the address, don't replace it)
-        - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://*.create.powerapps.com`
+        - `https://make.*.powerapps.com`
         - `https://make.powerapps.com`
         - `https://login.microsoftonline.com`
         - `https://apps.*.powerapps.com`
@@ -111,10 +111,14 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     > [!NOTE]
     > The following steps require your Edge browser version to be **87 or above**.
 
-    1. Go to [Power Apps](https://make.powerapps.com).
-    1. Select the cookie icon in the top-right corner of the address bar.
-    1. Select **Site not working?**.
-    1. Select **Allow cookies**.
+    1. Select **Settings**.
+    1. Select **Cookies and site permissions**.
+    1. Expand **Cookies and site data**.
+    1. Select **Add** under **Allow** and add:
+        - `[*.]powerapps.com`
+    1. Select **Clear browsing data on close**.
+    1. Ensure **Cookies and other site data** is disabled. If you want to keep it enabled, select **Add** instead, and add:
+        - `[*.]powerapps.com`
 
 ### Instructions for Google Chrome
 
@@ -124,10 +128,10 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     1. Select **Privacy and security**.
     1. Expand **Cookies and other site data**.
     1. Make sure that **Block third-party cookies** or **Block all cookies** isn't selected.
-    1. Ensure these sites aren't added in site-specific cookie configuration that doesn't allow cookies, or deletes cookies when windows are closed:
+    1. If present, remove these following sites from the site-specific cookie configuration under **Sites that can always use cookies**, and **Always clear cookies when windows are closed**:
         - `https://create.powerapps.com`
-        - `https://[*.]create.powerapps.com`  (the asterisk is part of the address, don't replace it)
-        - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://*.create.powerapps.com`
+        - `https://make.*.powerapps.com`
         - `https://make.powerapps.com`
         - `https://login.microsoftonline.com`
         - `https://apps.*.powerapps.com`
@@ -157,7 +161,7 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     1. Close all Internet Explorer and Microsoft Edge windows.
     2. Select **OK** to close the **Internet Options** dialog box.
     3. Select **OK**.
-    4. Remove any entries for **powerapps.com**.
+    4. Remove any entries for `powerapps.com`.
     5. In the **Settings** section, select **Sites**.
     6. Select **OK**.
     7. Select **Accept** for third-party cookies.
@@ -174,7 +178,7 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     3. Select **Internet Options**.
     4. Select the **Privacy** tab.
     5. In the **Settings** section, select **Sites**.
-    6. Add an entry to “Allow” **powerapps.com**.
+    6. Add an entry to “Allow” `powerapps.com`.
     7. Select **OK**.
     8. Select **OK** to close the Internet Options dialog box.
     9. Close all Internet Explorer and Microsoft Edge windows.
@@ -183,42 +187,45 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
 
 Internet Explorer uses *Trust Zones*. Problems can occur if services on which Power Apps relies are in different Trust Zones in your browser settings.  (You might need assistance from your IT administrator to change some of these settings.)
 
+> [!NOTE]
+> Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+
 - **Option 1: Add the required Power Apps domains to the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
-    2. Select **Internet Options**.
-    3. Select the **Security** tab.
-    4. Select **Trusted sites**.
-    5. Select **Sites**.
-    6. Add the following sites by typing the address and selecting **Add** for each:
-        - `https://login.microsoftonline.com`
+    1. Select **Internet Options**.
+    1. Select the **Security** tab.
+    1. Select **Trusted sites**.
+    1. Select **Sites**.
+    1. Add the following sites by typing the address and selecting **Add** for each:
         - `https://create.powerapps.com`
-        - `https://[*.]create.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://*.create.powerapps.com`
+        - `https://make.*.powerapps.com`
         - `https://make.powerapps.com`
-        - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
-        - `https://[*.]powerapps.com` (the asterisk is part of the address, don't replace it)
-        - `https://apps.*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://login.microsoftonline.com`
+        - `https://apps.*.powerapps.com`
         - `https://apps.powerapps.com`
-    7. Select **Close**.
-    8. Select **OK**.
-    9. Close all Internet Explorer windows.
+        - `https://*.powerapps.com`
+    1. Select **Close**.
+    1. Select **OK**.
+    1. Close all Internet Explorer windows.
 
 - **Option 2: Remove all the Power Apps domains from the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
-    2. Select **Internet Options**.
-    3. Select the **Security** tab.
-    4. Select **Trusted sites**.
-    5. Select **Sites**.
-    6. Remove all existing entries for the following sites:
-        - `https://login.microsoftonline.com`
+    1. Select **Internet Options**.
+    1. Select the **Security** tab.
+    1. Select **Trusted sites**.
+    1. Select **Sites**.
+    1. Remove all existing entries for the following sites:
         - `https://create.powerapps.com`
-        - `https://[*.]create.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://*.create.powerapps.com`
+        - `https://make.*.powerapps.com`
         - `https://make.powerapps.com`
-        - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
-        - `https://*.powerapps.com` (the asterisk is part of the address, don't replace it)
-        - `https://apps.*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://login.microsoftonline.com`
+        - `https://apps.*.powerapps.com`
         - `https://apps.powerapps.com`
-        - Any other address that ends in **powerapps.com** or **create.powerapps.com**.
-  7. Select **Close**.
+        - `https://*.powerapps.com`
+        - Any other address that ends in `powerapps.com` or `create.powerapps.com`.
+    1. Select **Close**.
 
 ## Azure Active Directory Errors
 
