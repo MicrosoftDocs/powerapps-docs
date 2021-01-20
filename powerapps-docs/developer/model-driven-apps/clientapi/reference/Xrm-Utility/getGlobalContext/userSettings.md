@@ -108,7 +108,7 @@ Returns the language ID for the current user.
 
 ## roles 
 
-Returns a collection of lookup objects containing the GUID and display name of each of the security role or teams that the user is associated with. This method is supported only on the Unified Interface.
+Returns a collection of lookup objects containing the GUID and display name of each of the security role assigned to the user and any security roles assigned to a team that the user is associated with. This method is supported only on the Unified Interface.
 
 ### Syntax
 
