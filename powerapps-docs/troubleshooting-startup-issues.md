@@ -97,7 +97,7 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     1. Select **Cookies and site permissions**.
     1. Expand **Cookies and site data**.
     1. Ensure the setting **Block third-party cookies** is disabled.
-    1. If present, remove these following sites from the site-specific cookie configuration under **Block**, and **Clear on exit**:
+    1. If present, remove the following sites from the site-specific cookie configuration under **Block**, and **Clear on exit**:
         - `https://create.powerapps.com`
         - `https://*.create.powerapps.com`
         - `https://make.*.powerapps.com`
@@ -128,7 +128,7 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
     1. Select **Privacy and security**.
     1. Expand **Cookies and other site data**.
     1. Make sure that **Block third-party cookies** or **Block all cookies** isn't selected.
-    1. If present, remove these following sites from the site-specific cookie configuration under **Sites that can always use cookies**, and **Always clear cookies when windows are closed**:
+    1. If present, remove the following sites from the site-specific cookie configuration under **Sites that can always use cookies**, and **Always clear cookies when windows are closed**:
         - `https://create.powerapps.com`
         - `https://*.create.powerapps.com`
         - `https://make.*.powerapps.com`
