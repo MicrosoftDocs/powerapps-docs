@@ -24,6 +24,7 @@ search.app:
 ---
 
 # Customize the screen size and orientation of a canvas app embedded on a model-driven form
+
 This topic explains how to customize the screen size and orientation of a canvas app embedded on a model-driven form.
 
 1.  Follow the steps to add or edit an embedded canvas app on a model-driven form.
@@ -33,6 +34,7 @@ This topic explains how to customize the screen size and orientation of a canvas
 
 
 ## See also
+
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
 [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md) <br />
 [Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
