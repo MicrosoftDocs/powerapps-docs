@@ -19,7 +19,7 @@ In this tutorial, you'll learn how to search for a sample app in the Teams store
 ![Employee ideas sample app](media/sample-app.png "Employee ideas sample app")
 
 > [!IMPORTANT]
-> Installing the sample app automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups)
+> Installing the sample app automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
 
 ## Available sample apps
 
