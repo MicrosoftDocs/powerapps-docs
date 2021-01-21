@@ -28,11 +28,11 @@ Some of the performance issues impact canvas apps regardless of the data source 
 
 ### Large data sets loading slowly on different platforms
 
-An app performance may vary when loading large sets of data on different platform like iOS or Android. This variation happens because of different network request limitations for each platform.
+An app's performance may vary when loading large sets of data on different platform like iOS or Android. This variation happens because of different network request limitations on each platform.
 
-Furthermore, the number of concurrent network requests allowed may be different on different platforms. This difference can have a major impact on the data load time for large data sets.
+For example, the number of concurrent network requests allowed may be different by platforms. This difference can have a major impact on the data load time for large data sets.
 
-As a recommendation, restrict loading of data that you need to display on the screen immediately. For other data, paginate, and cache your data. Refer to the [performance tips and best practices](performance-tips.md) for other ways to improve the app performance.
+As a recommendation, restrict loading of the data to only what you need to display on the screen immediately. For other data, paginate, and cache your data. Refer to the [performance tips and best practices](performance-tips.md) for other ways to improve the app performance.
 
 ### Too many columns retrieved
 
