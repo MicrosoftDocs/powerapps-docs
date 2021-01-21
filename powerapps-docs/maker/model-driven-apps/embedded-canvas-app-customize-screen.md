@@ -1,5 +1,6 @@
 ---
 title: "Customize the screen size and orientation of a canvas app embedded on a model-driven form | MicrosoftDocs"
+description: "Learn how to change the screen and orientation of a canvas app"
 ms.custom: ""
 ms.date: 01/19/2021
 ms.reviewer: ""
