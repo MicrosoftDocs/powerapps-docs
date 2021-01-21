@@ -330,8 +330,6 @@
         href: manifest-schema-reference/css.md
       - name: data-set
         href: manifest-schema-reference/data-set.md
-      - name: html
-        href: manifest-schema-reference/html.md
       - name: img
         href: manifest-schema-reference/img.md
       - name: manifest
