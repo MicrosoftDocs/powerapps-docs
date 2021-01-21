@@ -36,7 +36,7 @@ As a recommendation, restrict loading of the data to only what you need to displ
 
 ### Too many columns retrieved
 
-It's recommended to select only the necessary columns for the app. Adding more, or all columns from the data source downloads all column data. This action results in network overheads, and high memory usage in client devices. And this problem can impact users with mobile devices even more if the network bandwidth is limited, or a device with limited memory, or a legacy processor.
+It's recommended to select only the necessary columns for the app. Adding more, or all columns from the data source downloads all column data. This action results in a high number of network overhead calls, and therefore high memory usage in the client device. This problem can impact users with mobile devices even more if the network bandwidth is limited, or if a device has limited memory, or a legacy processor.
 
 For example, if you use Microsoft Dataverse as the data source for your app, make sure you've enabled the [Explicit column selection](use-native-cds-connector.md) feature. This feature allows Power Apps to restrict the data retrieval for only the columns used in the app.
 
