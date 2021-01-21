@@ -349,7 +349,7 @@
               href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
             - name: Upload photos from mixed reality
               href: ./canvas-apps/mixed-reality-take-upload-photos.md
-          - name: "Add geospatial components"
+          - name: "Add geospatial components (prev)"
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
