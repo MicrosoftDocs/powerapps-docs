@@ -5,7 +5,7 @@ keywords: ""
 ms.date: 02/14/2020
 ms.service: powerapps
 ms.custom: 
-ms.topic: article
+ms.topic: how-to
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -17,7 +17,6 @@ manager: "kvivek"
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-caps.latest.revision: 9
 topic-status: Drafting
 search.audienceType: 
   - maker
@@ -46,11 +45,12 @@ If the component has dependencies, such as relationships, you must remove the de
 > When you delete the app, we recommend that you delete its associated site map. If you do not delete the associated site map, the site map designer displays an error the first time you try to create another app with the same name. However, you can ignore the error, and the error will not appear when you try to create the app again.
 
 ## Delete a model-driven app that was installed as part of a managed solution
+
 To delete a model-driven app or site map that was installed in the environment as part of a managed solution, delete the managed solution. 
 
-### Delete a managed solution 
+### Delete a managed solution
+
 All the components of a managed solution are deleted by deleting the solution.
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.	On the left navigation, select **Solutions**.
-3.	In the **Solutions** list, select the managed solution you want to delete and then on the toolbar select **Delete**. 
-
+3.	In the **Solutions** list, select the managed solution you want to delete and then on the toolbar select **Delete**.
