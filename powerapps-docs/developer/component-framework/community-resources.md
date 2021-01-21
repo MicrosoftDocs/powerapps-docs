@@ -57,6 +57,7 @@ The following is the list of videos created by Power Apps community.
 
 The following is the list of blogs created by Power Apps community.
 
+- [All about Power Apps component framework](https://dianabirkelbach.wordpress.com/category/pcf/)
 - [Add style to code component in Power Apps component framework](https://nishantrana.me/2019/06/06/how-to-add-style-to-custom-component-in-powerapps-component-framework/)
 - [Beyond the Power Apps component framework](https://www.itaintboring.com/dynamics-crm/beyond-the-powerapps-component-framework)
 - [Beyond the citizen developer: Why pros see promise in Microsoft's Power Apps component framework](https://msdynamicsworld.com/story/beyond-citizen-developer-why-pros-see-promise-microsofts-powerapps-component-framework)
