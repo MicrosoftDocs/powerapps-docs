@@ -22,7 +22,7 @@ Power BI is a suite of business analytics tools to analyze data and share insigh
 This topic shows you how to use the Power BI connection in an app, and lists the available functions.
 
 > [!NOTE]
-> The PowerBI connection is not [delegable](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+> The Power BI connection is not [delegable](../delegation-overview).
 
 ## Prerequisites
 * [Sign up](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
