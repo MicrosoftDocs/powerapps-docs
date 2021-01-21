@@ -333,7 +333,7 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
-          - name: "Add mixed reality components (Preview)"
+          - name: "Add mixed reality components"
             items:
             - name: Mixed reality components
               href: ./canvas-apps/mixed-reality-overview.md
@@ -349,7 +349,7 @@
               href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
             - name: Upload photos from mixed reality
               href: ./canvas-apps/mixed-reality-take-upload-photos.md
-          - name: "Add geospatial components (Preview)"
+          - name: "Add geospatial components"
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
