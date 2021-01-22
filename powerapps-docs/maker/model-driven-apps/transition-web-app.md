@@ -37,13 +37,12 @@ To use an existing non-production environment to transition your Web Client appl
 ## Prepare the environment
 First, select a non-production environment and enable **Use Unified Interface only** mode, which will use the Unified Interface for all model-driven apps in the environment. This also includes any Dynamics 365 application modules originally configured for the legacy web client.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Environment**, and then select a sandbox environment. 
+1. Sign in to [Power Platform admin center](https://admin.powerplatform.microsoft.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the **Environments** tab, and then select a sandbox environment. 
 
-2. Select **Settings** > **Behavior** and then turn on **Use Unified Interface only**.
+1. Select **Settings** > **Product** > **Behavior** and then turn on **Use Unified Interface only**.
 
    > [!div class="mx-imgBorder"] 
    > ![Use Unified Interface only setting](media/use-unified-interface-only-pac.png)
-
 
 > [!NOTE]
 > If you need to switch the environment back to its previous state, you can toggle the Unified Interface setting to revert to the original interface. More information: [Enable Unified Interface Only](/dynamics365/customer-engagement/admin/enable-unified-interface-only)
