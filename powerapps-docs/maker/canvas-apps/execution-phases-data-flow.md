@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/07/2021
+ms.date: 01/22/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -42,7 +42,7 @@ A canvas app goes through the following phases of execution before showing the i
 
 ## Data call flow in canvas apps
 
-Data calls from Power Apps canvas apps send data sources using the connectors over the OData protocol. OData requests flow to backend layers to reach out the target data source(s), and retrieve data for the client, or commit data to the data source.
+Data calls from canvas apps send data sources using the connectors over the OData protocol. OData requests flow to backend layers to reach out the target data source, and retrieve data for the client, or commit data to the data source.
 
 Understanding how OData requests travel in the server-side could help you to
 optimize your canvas app performance, and your backend data sources.
@@ -52,7 +52,7 @@ In this section, you'll learn about how the data call flows in canvas apps with 
 ### Data call flow with online data sources
 
 The following diagram shows how a typical data request in a canvas
-app (left side) travels server-side layers, and reaches out to the target data source (right side). And then, returns the data back to the client.
+app (left side) travels server-side layers, and reaches out to the target data source (right side). And then, returns the data to the client.
 
 ![Typical data call flow for all connectors except the connector for Microsoft Dataverse](media\execution-phases-data-flow\all-connectors-general.png "Typical data call flow for all connectors except the connector for Microsoft Dataverse")
 
@@ -84,7 +84,7 @@ environment, data requests go to the environment instance directly&mdash;without
 
 ![Data call flow Common Data Service connector](media\execution-phases-data-flow\dataverse-connector.png "Data call flow Common Data Service connector")
 
-With the understanding this high-level concept of how data calls travel, you can get into the details of performance. Concisely, performance overhead can happen at any of the layers&mdash;from client, APIM (API Management), connector, on-premises data gateway, and the backend data sources.
+With the understanding of this high-level concept of how data calls travel, you can get into the details of performance. Concisely, performance overhead can happen at any of the layers&mdash;from client, APIM (API Management), connector, on-premises data gateway, and the backend data sources.
 
 ## Next steps
 

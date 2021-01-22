@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/17/2019
+ms.date: 01/22/2020
 ms.author: yingchin
 search.audienceType: 
   - maker
@@ -34,7 +34,7 @@ You can, in some cases, achieve the same result and have the app start faster if
 addition, you might want to reduce the number of control types on the same screen. Some controls (such as PDF viewer, data table, and
 combo box) pull in large execution scripts and take longer to render. 
 
-## Optimize the OnStart function
+## Optimize the OnStart property
 Use the [**ClearCollect**](functions/function-clear-collect-clearcollect.md) function to cache data locally if it doesn’t change during the user session. Also, use the [**Concurrent**](functions/function-concurrent.md) function to load data sources simultaneously.
 
 As [this reference topic](functions/function-concurrent.md) demonstrates, you can

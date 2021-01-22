@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/07/2021
+ms.date: 01/22/2021
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -26,8 +26,8 @@ Depending on how a particular canvas app is designed, the app may have many diff
 
 Some of the aspects to consider in the app design that may result in slow performance are:
 
-- **App is client-heavy**&mdash;By getting large sets of data into data collections at the initial moment, and use such data within multiple screens over client-heavy operations like JOIN, Sort, AddColumn, and GroupBy.
-- **App has long formula in OnStart**&mdash;If the app triggers many unnecessary data calls in screens, and if each data call returns large data records.
+- **App is client-heavy** - The app gets large sets of data into data collections at the initial moment. Uses such data within multiple screens over client-heavy operations like JOIN, Sort, AddColumn, and GroupBy.
+- **App has long formula in OnStart** - The app triggers many unnecessary data calls in screens, and such data calls return large data records.
 
 To review the app design as a possible source of slow app performance, monitor the app’s behavior by using [Monitor](../monitor-overview.md). Check which data calls are taking a long time, and how many data calls trigger such behaviors in the app.
 
@@ -35,19 +35,19 @@ Also, balance the workload between the client, and the server. Delegating the wo
 
 ## Bottleneck in the data source
 
-There are many possibilities that can result in the bottleneck of the data source(s). Usually, tables in the data source are at the center of activity when many transactional/non-transactional queries are directed to the same table, or record from different users.
+There are many possibilities that can result in the bottleneck of the data source. Usually, tables in the data source are at the center of activity when many transactional/non-transactional queries are directed to the same table, or record from different users.
 
-OData calls get slow down if:
+OData calls may slow down if:
 
 - The backend machine hosting the data source is a low on resources.
 - The backend SQL instance has blockings, deadlocks, and if there's resource contention.
-- You have an unhealthy on-premises data gateway, resulting in the OData calls to slow down.
+- An unhealthy on-premises data gateway causes the OData calls to slow down.
 
-Tune the backend data source(s) when these problems occur to avoid slow performance of the app.
+Tune the backend data source when these problems occur to avoid slow performance of the app.
 
 ## Client browsers, devices, and locations
 
-Published canvas apps can be used by users on different devices, browsers, and locations with a varying network conditions. As the Power Apps client executes, ensure to use modern, updated, and [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps).
+Canvas apps can be used by users on different devices, browsers, and locations with a varying network conditions. As the Power Apps client executes, ensure to use modern, updated, and [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps).
 
 If some users are using legacy, or unsupported browsers like Internet Explorer 11, their experience could be affected.
 
@@ -59,19 +59,19 @@ Users can access canvas apps globally. However, it's recommended to have the dat
 
 For example, when your app accesses your on-premises data source, the location of on-premises data gateway should be close to the data source to minimize any extra overhead between the gateway, and the data source.
 
-## Temporary throttling of high volume requests at the backend
+## Temporary throttling of high-volume requests at the backend
 
-Depending on how you design a canvas app, it may generate many data calls within a small period intentionally. For example, an app connecting to a Microsoft Dataverse environment&mdash;subject to the [Dataverse service protection API limits](https://docs.microsoft.com/powerapps/developer/data-platform/api-limits).
+Depending on how you design a canvas app, it may generate many data calls within a small amount of time. For example, an app connecting to a Microsoft Dataverse environment is subject to the [Dataverse service protection API limits](https://docs.microsoft.com/powerapps/developer/data-platform/api-limits). Such app may get throttled when the data calls exceed the supported limits.
 
 Another example is when using [Content Conversation](https://docs.microsoft.com/connectors/conversionservice/) connector. Calls per connection per user are limited to 600 over 60 seconds for this connector.
 
-If an app exceeds the connector's throttling limits, the app is subject to a temporary throttle. When throttled, profiling the app using [Monitor](../monitor-overview.md) would help you to avoid this problem. Also, if your app is built to generate many such data calls, whether calls get throttled or not, your users may not experience the best experience.
-
-Connector-specific limits are available in [Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors) documentation, and may vary in comparison to other connectors.
+If an app exceeds the connector's throttling limits, the app is subject to a temporary throttle. If throttled, profiling the app using [Monitor](../monitor-overview.md) would help you to investigate this problem. In addition, apps generating many avoidable data calls may not give the best user experience, whether the calls get throttled, or not.
 
 Makers can select from several data sources available for Power Apps using different [connectors](connections-list.md). Although there are many options to choose a data source from, it's important to choose the
 right data source and connector from many perspectives&mdash;architecture,
 performance, maintenance, scalability, and so on.
+
+Connector-specific limits are available in [Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors) documentation, and may vary in comparison to other connectors.
 
 ## Next steps
 
