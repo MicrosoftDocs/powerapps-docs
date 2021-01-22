@@ -88,6 +88,7 @@ There are a few issues that can be resolved through some easy steps.
 
 * Not all tables support editing and creation of new rows, these tables will open in Excel and allow you to view data but publishing will be disabled.
 * Look up columns must be edited using the add-in to ensure the correct row is referenced, updating these columns via copy and past or typing directly into the column is not supported.
+* The maximum table size when editing in Excel is one million cells. If there are too many rows and/or columns, not all data will be read or published.
 
 If you encounter an issue that isn't described here, contact us via the [support pages](https://powerapps.microsoft.com/support/).
 
