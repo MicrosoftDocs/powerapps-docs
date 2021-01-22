@@ -1,5 +1,5 @@
 ---
-title: Common canvas app performance issues and resolutions | Microsoft Docs
+title: Common canvas apps performance issues and resolutions | Microsoft Docs
 description: Learn about the common performance issues and resolutions for canvas apps.
 author: lancedMicrosoft
 ms.service: powerapps
@@ -14,7 +14,7 @@ search.app:
   - PowerApps
 ---
 
-# Common canvas app performance issues and resolutions
+# Common canvas apps performance issues and resolutions
 
 You can build canvas apps with diverse options of data sources. Choose the right data source and a connector depending on the business needs and scenarios that the app is designed for. For enterprise apps, Microsoft Dataverse is the recommended data source since it comes with several performance benefits. For apps with small number of transactions, you can go with any other available data sources in your environment.
 
@@ -58,15 +58,15 @@ Geographical location distances impact performance in different forms, such as l
 
 Ensure that you don't block the required service URLs, or add them to your firewall's allow list. For a complete list of all service URLs required to be allowed for Power Apps, go to [Required services](limits-and-config.md#required-services).
 
-## Use of non-delgable functions
+## Use of non-delgable functions and inappropriate data row limit for non-delegable queries
 
-Non-delegable functions add extra overhead on data transfer, and results in manipulating the received data to [JS heap](#memory-pressure-at-the-client-side) at the client-side. Ensure to use delegable functions when available to avoid such problems. More information: [Use delegation](performance-tips.md#use-delegation), [Delegation overview](delegation-overview.md)
+Delegable functions delegate the processing of data at the data source, minimizing the overhead at the client-side. When delegation is not possible, you can restrict the data row limit for non-delegable queries so that the number of rows returned from a server-based connection remain optimum.
 
-## Inappropriate data row limit for non-delegable queries
+Use of non-delegable functions, and inappropriate [data row limit for non-delegable queries](delegation-overview.md#non-delegable-limits) add extra overhead on data transfer resulting in manipulation of the received data to [JS heap](#memory-pressure-at-the-client-side) at the client-side. Ensure to use delegable functions for the app whenever available, and the optimum data row limit for non-delegable queries.
 
-Data row limit for non-delegable queries allow you to restrict the number of rows returned from a server-based connection where delegation isn't supported. More information: [Data row limit for non-delegable queries](delegation-overview.md#non-delegable-limits)
+More information: [Use delegation](performance-tips.md#use-delegation), [Delegation overview](delegation-overview.md).
 
-## OnStart event tuning
+## OnStart event needs tuning
 
 The OnStart event runs when the application is loading. Calling large amounts of data using the functions in [OnStart property](functions/object-app.md#onstart-property) of the app will cause app to load slowly. A screen with heavy dependency of controls and values defined on another screen will be affected with slow screen navigation.
 
@@ -89,7 +89,7 @@ Optimize formula in an OnStart event. For example, move some formulas to [OnVisi
 
 ## Memory pressure at the client-side
 
-A check on memory consumption of a canvas app becomes important as most of the times, the apps run on mobile devices. Memory exceptions in the heap are the most likely cause behind a canvas app that crashes or freezes (hangs) on certain devices.
+A check on memory consumption of a canvas apps becomes important as most of the times, the app run on mobile devices. Memory exceptions in the heap are the most likely cause behind a canvas app that crashes or freezes (hangs) on certain devices.
 
 JavaScript (JS) heap may hit the memory heap ceiling because of heavy scripts running at client side for adding columns, joining, filtering, sorting, or grouping.
 
@@ -99,7 +99,7 @@ Profile the app performance using a browser such as [developer tools for Microso
 
 When using data from the sources such as Microsoft Dataverse, or SQL Server, you can use a **View** object to ensure joining, filtering, grouping, or sorting occurs at the server-side instead of the client-side. This approach reduces client overhead of scripting for such actions.
 
-If client-heavy operations like JOIN, or Group By happened at client with a data set having 2000 records or more, the objects in heap would be increasing resulting in hitting the ceiling.
+If client-heavy operations like JOIN, or Group By happened at the client-side with a data set having 2000 records or more, the objects in the heap will increase resulting in hitting the ceiling.
 
 Developer tools for most browsers allow you to profile memory. It would visualize heap size, document, nodes, and listeners.
 
@@ -111,7 +111,7 @@ You can use [SQL Server connector for Power Apps](https://docs.microsoft.com/con
 In this section, you'll learn about the common performance-related problems with SQL Server as the connector for a canvas app, and resolutions. To learn more about using SQL Server on-premises, or Azure SQL Database with canvas apps, refer to [Connect to SQL Server from Power Apps](connections/connection-azure-sqldatabase.md), and [Create a canvas app from Azure SQL Database](app-from-azure-sql-database.md).
 
 > [!NOTE]
-> Though this section references SQL Server connector with performance issues, resolutions for online and on-premises SQL data sources, most of the recommendations also apply when using in general any database type as the data source&mdash;such as MySQL, or PostgreSQL.
+> Though this section references SQL Server connector for performance issues and resolutions, most of the recommendations also apply when using any database type as the data source&mdash;such as MySQL, or PostgreSQL.
 
 The following are the common performance problems that you may come across with SQL Server connector for canvas apps. Later sections&mdash;[SQL Server on-premises](#considerations-specific-to-sql-server-on-premises), and [Azure SQL Database](#considerations-specific-to-azure-sql-database), list performance problems more relevant to the respective type of data source.
 
@@ -129,7 +129,7 @@ To resolve such problems, use [StartsWith](functions/function-startswith.md) ins
 
 ### Slow queries
 
-Profile and tune slow queries, indexes on the SQL database. For instance, if there was a formula getting certain data with descending (DESC) order on a certain column, that sorting column should have an index with descending order. Index key creates ascending (ASC) order by default&mdash;unless specified otherwise.
+Profile and tune slow queries and indexes on the SQL database. For instance, if there was a formula getting certain data with descending (DESC) order on a certain column, that sorting column should have an index with descending order. Index key creates ascending (ASC) order by default.
 
 You can also check the URL address of data requests. For example, the following data request snippet (partial OData call) asks SQL to return 500 records matching column to *Value* and order by *ID* in descending order.
 
@@ -137,7 +137,7 @@ You can also check the URL address of data requests. For example, the following 
 
 This helps understand index requirements to cover such request conditions. In this example, the ID column should have an index with descending order to perform the query faster.
 
-Check the execution plan of slow queries to see if any table or index scan exists. Check if any excessive cost of Key Lookup in the execution plan of slow queries is required, or not. For more information, read [monitor and tune database for performance](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
+Check the execution plan of slow queries to see if any table or index scan exists. Monitor any excessive costs of Key Lookup in the execution plan. For more information, read [monitor and tune database for performance](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
 
 More resources:
 
@@ -154,9 +154,9 @@ Ensure the data source&mdash;SQL database has no resource contentions such as pr
 
 ### Thick client or excessive requests
 
-An app running Group By, Filter By, or JOIN operations at client-side uses processor, and memory resources from the client devices. Depending on the data size, these operations may take more scripting time at client-side, increasing the [JS heap](#memory-pressure-at-the-client-side) size on the client. When using on-premises data source, this problem increases since each lookup data call travels to the data source through the data gateway.
+An app running Group By, Filter By, or JOIN operations at the client-side uses processor, and memory resources from the client devices. Depending on the data size, these operations may take more scripting time at the client-side, increasing the [JS heap](#memory-pressure-at-the-client-side) size on the client. When using on-premises data source, this problem increases since each lookup data call travels to the data source through the data gateway.
 
-In such situations, use the **View** object in SQL database for Group By, Filter By, or JOIN operations instead of doing such operations at Power Apps client-side. Views can use selective columns, and remove some big data types like NVARCHAR(MAX), VARCHAR(MAX), and VARBINARY(MAX) unless necessary.
+In such situations, use the **View** object in SQL database for Group By, Filter By, or JOIN operations. Views can use selective columns, and remove unnecessary columns with big data types such as NVARCHAR(MAX), VARCHAR(MAX), and VARBINARY(MAX).
 
 > [!TIP]
 > This approach also helps address the [N+1 query problem](#n1-query).
@@ -167,6 +167,8 @@ By default, a canvas app shows data using the tables, or views from the availabl
 
 Transferring large amounts of data to clients take time. This transfer also results in more scripting time with large amounts of data in the [JS heap](#memory-pressure-at-the-client-side) at the client-side.
 
+Use Views with selective columns required for the app, and ensure [Explicit Column Selection](#too-many-columns-retrieved) is enabled.
+
 ### Considerations specific to SQL Server on-premises
 
 Performance of a canvas apps using SQL Server connector with an on-premises data gateway may get affected in various ways. This section lists the common performance issues, and resolutions specific to using an on-premises database source.
@@ -175,11 +177,11 @@ Performance of a canvas apps using SQL Server connector with an on-premises data
 
 Organizations can define multiple nodes for on-premises data gateways. Even if one of the nodes is unreachable, data requests onto the unhealthy node won't return the result within a decent time frame, or cause `unreachable` error messages after waiting for a while.
 
-Ensure all on-premises data gateway nodes are healthy, and configured with a decent network latency between the nodes and the SQL instance.
+Ensure all on-premises data gateway nodes are healthy, and configured with a minimum network latency between the nodes and the SQL instance.
 
 #### Location of on-premises data gateway
 
-Data gateway requires some network calls to on-premises data sources to interpret the OData requests. For instance, data gateway needs to understand the data entity schema to translate OData requests into SQL DML (Data Manipulation Language) statements. However, when the data gateway is configured at the other continent with high network latency between the data gateway and the SQL instance, it adds extra overhead.
+Data gateway requires network calls to on-premises data sources to interpret the OData requests. For instance, data gateway needs to understand the data entity schema to translate OData requests into SQL DML (Data Manipulation Language) statements. Extra overhead is added when the data gateway is configured in a separate location with high network latency between the data gateway and the SQL instance.
 
 In an enterprise environment, having a scalable data gateway cluster is recommended when heavy data requests are expected. Check how many connections are established between the data gateway nodes and the SQL instance.
 
@@ -197,11 +199,11 @@ To ensure on-premises data gateway scales as per the volume of data and requests
 
 Canvas apps can connect to Azure SQL Database using the SQL Server connector. A common performance problem can be introduced when using Azure SQL Database is the selection of an incorrect tier depending on the business requirement.
 
-Azure SQL Database is available in different service tiers, with varied capabilities for matching business requirements. For more information, read the service tiers information in [Azure SQL Database documentation](https://docs.microsoft.com/azure/azure-sql/database/sql-database-paas-overview).
+Azure SQL Database is available in different service tiers, with varied capabilities for matching business requirements. For more information about tiers, go to [Azure SQL Database documentation](https://docs.microsoft.com/azure/azure-sql/database/sql-database-paas-overview).
 
-Under heavy data requests, the resources on the tier you select may get throttled once the threshold value is hit. Such throttling compromises the performance of the next set of queries.
+With heavy data requests, the resources on the tier you select may get throttled once the threshold value is hit. Such throttling compromises the performance of the next set of queries.
 
-Check the service tier of Azure SQL Database&mdash;if it is on DTU-Based purchase model. Lower tier would have some limitations and constraints. From a performance perspective, CPU, IO throughput, and latency are important. Hence, check the performance of the SQL database periodically, and check if resource usage exceeds the threshold. For example, on-premises SQL Server normally sets the threshold of CPU usage to around 75%.
+Check the service tier of Azure SQL Database&mdash;if it's on DTU-Based purchase model. Lower tier would have some limitations and constraints. From a performance perspective, CPU, IO throughput, and latency are important. Hence, check the performance of the SQL database periodically, and check if resource usage exceeds the threshold. For example, on-premises SQL Server normally sets the threshold of CPU usage to around 75%.
 
 ## Performance considerations when using SharePoint connector
 
@@ -215,9 +217,9 @@ Don't overuse the dynamic lookup columns in SharePoint. This overuse may result 
 
 ### Picture column and Attachment
 
-Size of an image, and attached file can attribute to a slow response while retrieving to the client unless specific columns are specified.
+Size of an image, and attached file can attribute to a slow response while retrieving to the client.
 
-Review your SharePoint list, and ensure only the necessary columns have been defined. The number of columns in the list affects performance of the data requests. This effect is because of the matched records, or the records up to the defined Data Low Limits is retrieved, and transmitted back to client with all columns defined in the list&mdash;whether the app uses all of them, or not.
+Review your SharePoint list, and ensure only the necessary columns have been defined. The number of columns in the list affects performance of the data requests. This effect is because of the matched records, or the records up to the defined data row limits is retrieved, and transmitted back to client with all columns defined in the list&mdash;whether the app uses all of them, or not.
 
 Enable the [Explicit column selection](#too-many-columns-retrieved) feature to only query the columns used by the app.
 
@@ -230,16 +232,16 @@ For instance, your data could be stored on different lists on a yearly, or month
 Within a controlled environment, the performance benchmark has proved that the
 performance of OData requests against SharePoint lists is highly related to the number of columns in the list, and the number of rows being retrieved (limited by [data row limit for non-delegable queries](delegation-overview.md#changing-the-limit)). Lower number of columns, and lower data row limit setting can make a canvas app to perform better.
 
-In the real-world though, apps are designed to meet certain business requirements. It may not be quick or simple to reduce the data rows limits, and columns. Hence, it's recommended to monitor the OData requests at the client side, and tune the data row limit for non-delegable queries and the number of columns in a SharePoint list.
+In the real-world though, apps are designed to meet certain business requirements. It may not be quick or simple to reduce the data row limit, or the number of columns in a SharePoint list. Hence, it's recommended to monitor the OData requests at the client side, and tune the data row limit for non-delegable queries and the number of columns in a SharePoint list.
 
-## Performance considerations when using Microsoft Dataverse connector
+## Performance considerations when using Microsoft Dataverse data source
 
 When you use the [Common Data Service connector](connections/connection-common-data-service.md) to access a Microsoft Dataverse environment, data requests go to the environment instance directly—without passing through API management. More information: [Data call flow with Common Data Service connector](execution-phases-data-flow.md#data-call-flow-with-common-data-service-connector-for-microsoft-dataverse-environment)
 
 > [!TIP]
 > When using a custom entity in Dataverse, additional security configuration may be required for users to be able to view the records using canvas apps. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security in Dataverse](https://docs.microsoft.com/power-platform/admin/database-security), [Security roles, and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
-Canvas app connected to Dataverse may perform slowly if it runs client-heavy scripting such as Filter By, or Join at the client-side instead of doing such operation at the server-side.
+Canvas app connected to Dataverse may perform slowly if it runs client-heavy scripting such as Filter By, or Join at the client-side instead of server-side.
 
 Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities, and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the required columns. Then, use this view in your app that creates this overhead at the server-side for join/filter instead of the client-side. This method not only reduces the extra operations, but also data transmission. For information about editing filter, and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
 
@@ -251,7 +253,7 @@ Let's take a look at the common performance problems when using Excel as the dat
 
 ### Too many data tables and large data size
 
-Slowness in the app can be experienced when it uses Excel file with too many data tables, and each data table having an immense size of data over several columns. Excel file isn't a relational database, or a data source that provides [delegable](delegation-overview.md) functions. Power Apps has to load data from the defined data tables first. And then, you can use functions that Power Apps provides such as Filter, Sort, JOIN, Group By, and Search.
+Slowness in the app can be experienced when it uses Excel file with too many data tables, or data tables having an immense size of data over several columns. Excel file isn't a relational database, or a data source that provides [delegable](delegation-overview.md) functions. Power Apps has to load data from the defined data tables first. And then, use functions such as Filter, Sort, JOIN, Group By, and Search.
 
 Too many data tables, with high number of rows and columns affects app performance and the client-side overhead because each data table needs to be manipulated within the [JS heap](#memory-pressure-at-the-client-side). This effect also leads to the app consuming more client-side memory.
 
@@ -267,13 +269,13 @@ If you have read-only data, you can import such data into the app locally instea
 
 ### File size
 
-You can choose from a wide-range of [cloud storage](connections/cloud-storage-blob-connections.md) options with varying, or configurable storage capacity for the Excel file when using with canvas app. However, a single large Excel file with all tables defined in one file adds an extra overhead for the app while downloading the file, and reading the data to load at the client-side.
+You can choose from a wide-range of [cloud storage](connections/cloud-storage-blob-connections.md) options with varying, or configurable storage capacity for the Excel file. However, a single large Excel file with all tables defined in one file adds an extra overhead for the app while downloading the file, and reading the data to load at the client-side.
 
 Instead of using one large file, split the data into multiple Excel files with minimum data tables. And then, connect to the file only when required. This way, loading the data from the data table happens in fragments, reducing the overhead of many tables, or large data set.
 
 ### File location
 
-Geographic location of the data source, and proximity to the [client locations](slow-performance-sources.md#client-browsers-devices-and-locations) can result in a common performance bottleneck for the app, and induce network latency. This effect can get amplified with a mobile client having limited bandwidth for connectivity.
+Geographic location of the data source, and the proximity to the [client locations](slow-performance-sources.md#client-browsers-devices-and-locations) can result in a common performance bottleneck for the app, and induce network latency. This effect can get amplified with a mobile client having limited bandwidth for connectivity.
 
 It's better to keep the file near your end users (or, most of the end users&mdash;for global audience) so that the file can be downloaded quickly.
 
