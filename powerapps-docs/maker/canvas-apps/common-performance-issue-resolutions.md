@@ -58,11 +58,13 @@ Geographical location distances impact performance in different forms, such as l
 
 Ensure that you don't block the required service URLs, or add them to your firewall's allow list. For a complete list of all service URLs required to be allowed for Power Apps, go to [Required services](limits-and-config.md#required-services).
 
+### Use of non-delgable functions
+
+Non-delegable functions add extra overhead on data transfer, and results in manipulating the received data to [JS heap](#handling-the-memory-pressure) at the client-side. Ensure to use delegable functions when available to avoid such problems. More information: [Use delegation](performance-tips.md#use-delegation), [Delegation overview](delegation-overview.md)
+
 ### Inappropriate data row limit for non-delegable queries
 
-Data row limit for non-delegable queries allow you to restrict the number of rows returned from a server-based connection where delegation isn't supported. By default, this limit is set to 500 rows. You can change this value from 1 through 2000. Setting this value to a higher limit causes more data to be retrieved, which in turn can result in the app to slow down.
-
-To configure data row limit for non-delegable queries, open the app in Power Apps Studio, and then go to **File** -> **Settings** -> **Advanced settings** -> update the value for **Data row limit for non-delegable queries**.
+Data row limit for non-delegable queries allow you to restrict the number of rows returned from a server-based connection where delegation isn't supported. More information: [Data row limit for non-delegable queries](delegation-overview.md#non-delegable-limits)
 
 ## OnStart event tuning
 
@@ -205,26 +207,6 @@ Check the service tier of Azure SQL Database&mdash;if it is on DTU-Based purchas
 
 SharePoint connector can be used to create apps with data from SharePoint lists. You can also create canvas apps directly from the SharePoint list view. Let's take a look at the common performance problems and resolutions when using a SharePoint data source with canvas apps.
 
-### Delegation and data size
-
-The size of the data transmitting to the client matters, especially when a SharePoint data source is remote. If a formula in the events at canvas app has [non-delegable](delegation-overview.md) functions inside, Power Apps platform retrieves records up to the defined [data row limit for non-delegable queries](#inappropriate-data-row-limit-for-non-delegable-queries) (500, by default). This limit can be increased up to 2000. If this limit is set to 2000, and the SharePoint list has many columns, data size transmitting to client can be huge leading to the slowness of the app.
-
-SharePoint provides many [delegable functions](https://docs.microsoft.com/connectors/sharepointonline/#power-apps-delegable-functions-and-operations-for-sharepoint). Check your formula to see if it's delegable. If not, Power Apps retrieves many records to the client, set as data row limit for non-delegable queries. And then, applies the formula on this retrieved data set at the client side.
-
-A reduced data row limit for non-delegable queries, and use of the delegable functions in the Power Apps formula are important for the app to perform as expected.
-
-For an example of delegable functions, consider an ID column defined as Number data type in the SharePoint list. Formulas in the following example will return the results as expected. However, the former is non-delegable while the latter is delegable.
-
-| Formula                                           | Delegable? |
-|---------------------------------------------------|------------|
-| `Filter (‘SharePoint list data source’, ID = 123 )` | Yes        |
-| `Filter(‘SharePoint list data source’, ID ="123")`  | No         |
-
-As we assume that the ID column in SharePoint is defined with the data type of Number, the right-hand side value should be numeric variable instead of string variable. Otherwise, such mismatch may trigger the formula to be non-delegable.
-
-> [!NOTE]
-> For more information about delegation, see [Use delegation](performance-tips.md#use-delegation).
-
 ### Too many dynamic lookup columns
 
 SharePoint supports various data types&mdash;including dynamic lookups such as *Person*, *Group*, and *Calculated*. If a SharePoint list defines too many dynamic columns, it takes more time to manipulate these dynamic columns within SharePoint before returning data to the client running the canvas app.
@@ -246,7 +228,7 @@ If you have a large list with hundreds of thousands of records, consider partiti
 For instance, your data could be stored on different lists on a yearly, or monthly basis. Then, you can implement the app to let a user select a time window to retrieve the data within that range.
 
 Within a controlled environment, the performance benchmark has proved that the
-performance of OData requests against SharePoint lists is highly related to the number of columns in the list, and the number of rows being retrieved (limited by [data row limit for non-delegable queries](#inappropriate-data-row-limit-for-non-delegable-queries)). Lower number of columns, and lower data row limit setting can make a canvas app to perform better.
+performance of OData requests against SharePoint lists is highly related to the number of columns in the list, and the number of rows being retrieved (limited by [data row limit for non-delegable queries](delegation-overview.md#changing-the-limit)). Lower number of columns, and lower data row limit setting can make a canvas app to perform better.
 
 In the real-world though, apps are designed to meet certain business requirements. It may not be quick or simple to reduce the data rows limits, and columns. Hence, it's recommended to monitor the OData requests at the client side, and tune the data row limit for non-delegable queries and the number of columns in a SharePoint list.
 
@@ -257,17 +239,7 @@ When you use the [Common Data Service connector](connections/connection-common-d
 > [!TIP]
 > When using a custom entity in Dataverse, additional security configuration may be required for users to be able to view the records using canvas apps. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security in Dataverse](https://docs.microsoft.com/power-platform/admin/database-security), [Security roles, and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
-Let's take a look at the common performance problems when using Dataverse as the data source for canvas apps, and how to resolve such problems.
-
-### Excessive data transmission
-
-Too much data transmitted to a client makes requests slower. For instance, if your app has set [data row limit for non-delegable queries](#inappropriate-data-row-limit-for-non-delegable-queries) to 2000, instead of default 500, it adds up extra overhead on transferring data, and manipulating the received data to [JS heap](#handling-the-memory-pressure) at client-side.
-
-Ensure to set the optimum data row limit to avoid this problem. In addition, enable the [Explicit column selection](#too-many-columns-retrieved) feature to only query the columns used by the app.
-
-### Heavy scripting at client-side
-
-App may perform slowly if it runs client-heavy scripting such as Filter By, or Join at client-side instead of doing such operation at server-side.
+Canvas app connected to Dataverse may perform slowly if it runs client-heavy scripting such as Filter By, or Join at client-side instead of doing such operation at server-side.
 
 Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities, and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the required columns. Then, use this view in your app that creates this overhead at server-side for join/filter instead of client-side. This method not only reduces the extra operations, but also data transmission. For information about editing filter, and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
 

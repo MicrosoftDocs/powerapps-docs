@@ -94,13 +94,24 @@ For this reason, avoid formula dependencies between screens. In some cases, you 
 There's an exception. In the previous example, imagine that the only way to display screen 1 is by navigating from screen 2. Then screen 2 would have already been loaded in memory when screen 1 was to be loaded. No extra work is needed to fulfill the dependency for screen 2 and therefore there's no performance impact.
 
 ## Use delegation
+
 Where possible, use functions that delegate data processing to the data source instead of retrieving data to the local device for processing. If an app must process data locally, the operation requires much more processing power, memory, and network bandwidth, especially if the data set is large.
 
-As [this list](delegation-list.md) shows, different data sources support delegation from different functions:
+> [!TIP]
+> To learn about delegable functions supported by specific connectors, refer to the [Connector documentation](https://docs.microsoft.com/connectors/).
 
-![Use delegation](./media/performance-tips/perfdelegation1.png)
+For an example of delegable functions, consider an ID column defined as Number data type in the SharePoint list. Formulas in the following example will return the results as expected. However, the former is non-delegable while the latter is delegable.
 
-For example, SharePoint lists support delegation from the [**Filter**](functions/function-filter-lookup.md) function but not the [**Search**](functions/function-filter-lookup.md) function. So you should use **Filter** instead of **Search** to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in Power Apps](https://powerapps.microsoft.com/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
+| Formula                                           | Delegable? |
+|---------------------------------------------------|------------|
+| `Filter (‘SharePoint list data source’, ID = 123 )` | Yes        |
+| `Filter(‘SharePoint list data source’, ID ="123")`  | No         |
+
+As we assume that the ID column in SharePoint is defined with the data type of Number, the right-hand side value should be numeric variable instead of string variable. Otherwise, such mismatch may trigger the formula to be non-delegable.
+
+Use of non-delegable functions, and inappropriate data row limit for non-delegable functions can have adverse effect on the performance of the app.
+
+For more information about delegation, and data row limits for non-delegable queries, go to [Delegation](delegation-overview.md#non-delegable-limits).
 
 ## Use Delayed Load
 Turn on the [experimental feature](working-with-experimental.md) for Delayed Load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and that are directly bound to the data source. If you build this type of app and don’t enable this feature, app performance may suffer because the controls in all screens must be populated even on screens that aren’t open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
