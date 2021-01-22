@@ -58,7 +58,7 @@ Ensure that you don't block the required service URLs, or add them to your firew
 
 ## Use of non-delgable functions
 
-Non-delegable functions add extra overhead on data transfer, and results in manipulating the received data to [JS heap](#handling-the-memory-pressure) at the client-side. Ensure to use delegable functions when available to avoid such problems. More information: [Use delegation](performance-tips.md#use-delegation), [Delegation overview](delegation-overview.md)
+Non-delegable functions add extra overhead on data transfer, and results in manipulating the received data to [JS heap](#memory-pressure-at-the-client-side) at the client-side. Ensure to use delegable functions when available to avoid such problems. More information: [Use delegation](performance-tips.md#use-delegation), [Delegation overview](delegation-overview.md)
 
 ## Inappropriate data row limit for non-delegable queries
 
@@ -95,7 +95,7 @@ In most cases, out-of-memory exception at the heap in client may trigger the app
 
 Profile the app performance using a browser such as [developer tools for Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/). Check the scenarios that hit the ceiling of JS heap. More information: [Fixing memory problems using Microsoft Edge DevTools](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/memory-problems/)
 
-When using data from the sources such as Microsoft Dataverse, or SQL Server, you can use a **View** object to ensure joining, filtering, grouping, or sorting occurs at server-side instead of client-side. This approach reduces client overhead of scripting for such actions.
+When using data from the sources such as Microsoft Dataverse, or SQL Server, you can use a **View** object to ensure joining, filtering, grouping, or sorting occurs at the server-side instead of the client-side. This approach reduces client overhead of scripting for such actions.
 
 If client-heavy operations like JOIN, or Group By happened at client with a data set having 2000 records or more, the objects in heap would be increasing resulting in hitting the ceiling.
 
@@ -163,7 +163,7 @@ In such situations, use the **View** object in SQL database for Group By, Filte
 
 By default, a canvas app shows data using the tables, or views from the available database objects. Retrieving all columns from a table may result in a slow response, especially when using big data types such as NVARCHAR(MAX).
 
-Transferring large amounts of data to clients take time. This transfer also results in more scripting time with large amounts of data in the [JS heap](#handling-the-memory-pressure) at client-side.
+Transferring large amounts of data to clients take time. This transfer also results in more scripting time with large amounts of data in the [JS heap](#memory-pressure-at-the-client-side) at the client-side.
 
 ### Considerations specific to SQL Server on-premises
 
@@ -237,9 +237,9 @@ When you use the [Common Data Service connector](connections/connection-common-d
 > [!TIP]
 > When using a custom entity in Dataverse, additional security configuration may be required for users to be able to view the records using canvas apps. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security in Dataverse](https://docs.microsoft.com/power-platform/admin/database-security), [Security roles, and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
-Canvas app connected to Dataverse may perform slowly if it runs client-heavy scripting such as Filter By, or Join at client-side instead of doing such operation at server-side.
+Canvas app connected to Dataverse may perform slowly if it runs client-heavy scripting such as Filter By, or Join at the client-side instead of doing such operation at the server-side.
 
-Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities, and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the required columns. Then, use this view in your app that creates this overhead at server-side for join/filter instead of client-side. This method not only reduces the extra operations, but also data transmission. For information about editing filter, and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
+Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities, and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the required columns. Then, use this view in your app that creates this overhead at the server-side for join/filter instead of the client-side. This method not only reduces the extra operations, but also data transmission. For information about editing filter, and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
 
 ## Performance considerations when using Excel connector
 
@@ -251,7 +251,7 @@ Let's take a look at the common performance problems when using Excel as the dat
 
 Slowness in the app can be experienced when it uses Excel file with too many data tables, and each data table having an immense size of data over several columns. Excel file isn't a relational database, or a data source that provides delegable functions. Power Apps has to load data from the defined data tables first. And then, you can use functions that Power Apps provides such as Filter, Sort, JOIN, Group By, and Search.
 
-Too many data tables, with high number of rows and columns affects app performance and client-side overhead because each data table needs to be manipulated within the [JS heap](#handling-the-memory-pressure). This effect also leads to the app consuming more client-side memory.
+Too many data tables, with high number of rows and columns affects app performance and the client-side overhead because each data table needs to be manipulated within the [JS heap](#memory-pressure-at-the-client-side). This effect also leads to the app consuming more client-side memory.
 
 To ensure your app doesn't get affected by such behaviors, define only the necessary columns on the data table in an Excel file.
 
@@ -265,7 +265,7 @@ If you have read-only data, you can import such data into the app locally instea
 
 ### File size
 
-You can choose from a wide-range of [cloud storage](connections/cloud-storage-blob-connections.md) options with varying, or configurable storage capacity for the Excel file when using with canvas app. However, a single large Excel file with all tables defined in one file adds an extra overhead for the app while downloading the file, and reading the data to load at client-side.
+You can choose from a wide-range of [cloud storage](connections/cloud-storage-blob-connections.md) options with varying, or configurable storage capacity for the Excel file when using with canvas app. However, a single large Excel file with all tables defined in one file adds an extra overhead for the app while downloading the file, and reading the data to load at the client-side.
 
 Instead of using one large file, split the data into multiple Excel files with minimum data tables. And then, connect to the file only when required. This way, loading the data from the data table happens in fragments, reducing the overhead of many tables, or large data set.
 
