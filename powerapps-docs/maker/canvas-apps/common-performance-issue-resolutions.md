@@ -22,11 +22,9 @@ For performance considerations of an app, think about the number of users who wi
 
 In this article, you'll learn about some of the most common performance issues that can make canvas apps to run slowly, and how to resolve them. This information will help you to improve the app performance with your business plan, and growth in mind.
 
-## General performance issues and resolutions
+We'll begin with some of the common performance issues, and resolutions regardless of the connector being used. In the later sections, you'll learn about peformance issues, and resolutions more specific to the referenced connectors.
 
-Some of the performance issues impact canvas apps regardless of the data source type, or the connector you choose. Let's take a look at the general performance problems and guidelines that apply to all apps and clients running those apps.
-
-### Large data sets loading slowly on different platforms
+## Large data sets loading slowly on different platforms
 
 Performance of an app may vary when loading large sets of data on different platforms like iOS or Android. This variation happens because of different network request limitations on each platform.
 
@@ -34,7 +32,7 @@ For example, the number of concurrent network requests allowed may be different 
 
 As a recommendation, restrict loading of the data to only what you need to display on the screen immediately. For other data, paginate, and cache your data. You can also refer to the [performance tips and best practices](performance-tips.md) for additional ways to improve the app performance.
 
-### Too many columns retrieved
+## Too many columns retrieved
 
 It's recommended to select only the necessary columns for the app. Adding more, or all columns from the data source downloads all column data. This action results in a high number of network overhead calls, and therefore high memory usage in the client device. This problem can impact users with mobile devices even more if the network bandwidth is limited, or if a device has limited memory, or a legacy processor.
 
@@ -42,11 +40,11 @@ For example, if you use Microsoft Dataverse as the data source for your app, ma
 
 To turn the **Explicit Column Selection** feature on the canvas app, go to **File** -> **Settings** -> **Advanced Settings** -> Turn **Explicit column selection** feature *On*.
 
-### Unsupported or legacy browsers
+## Unsupported or legacy browsers
 
 Users using unsupported, or legacy browsers such as Internet Explorer 11 may experience performance issues. Ensure the users only use the [supported browsers for running canvas apps](limits-and-config.md#supported-browsers-for-running-canvas-apps).
 
-### Slow performance because of geographical distance
+## Slow performance because of geographical distance
 
 Geographical location of the Dataverse environment, and the proximity of the data source to the end-users impacts performance.
 
@@ -54,15 +52,15 @@ Having an environment close to users is recommended. Though Power Apps uses Cont
 
 Geographical location distances impact performance in different forms, such as latency, reduced throughput, lower bandwidth, and packet loss.
 
-### Allow list not configured
+## Allow list not configured
 
 Ensure that you don't block the required service URLs, or add them to your firewall's allow list. For a complete list of all service URLs required to be allowed for Power Apps, go to [Required services](limits-and-config.md#required-services).
 
-### Use of non-delgable functions
+## Use of non-delgable functions
 
 Non-delegable functions add extra overhead on data transfer, and results in manipulating the received data to [JS heap](#handling-the-memory-pressure) at the client-side. Ensure to use delegable functions when available to avoid such problems. More information: [Use delegation](performance-tips.md#use-delegation), [Delegation overview](delegation-overview.md)
 
-### Inappropriate data row limit for non-delegable queries
+## Inappropriate data row limit for non-delegable queries
 
 Data row limit for non-delegable queries allow you to restrict the number of rows returned from a server-based connection where delegation isn't supported. More information: [Data row limit for non-delegable queries](delegation-overview.md#non-delegable-limits)
 
@@ -87,7 +85,7 @@ Optimize formula in an OnStart event. For example, move some formulas to [OnVisi
 > [!NOTE]
 > For more information about OnStart optimization, you can also read [Optimize the OnStart property](performance-tips.md#optimize-the-onstart-property).
 
-## Handling the memory pressure
+## Memory pressure at the client-side
 
 A check on memory consumption of a canvas app becomes important as most of the times, the apps run on mobile devices. Memory exceptions in the heap are the most likely cause behind a canvas app that crashes or freezes (hangs) on certain devices.
 

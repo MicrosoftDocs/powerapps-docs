@@ -159,3 +159,9 @@ But it worked, didn't it? Well, kind of. And that is why this is a warning and n
 
 - If the table contains fewer than 500 records, the formula worked perfectly. All records were brought to the device, and **Filter** was applied locally.
 - If the table contains more than 500 records, the formula won't return record 501 or higher, even if it matches the criteria.
+
+### See also
+
+[Impact of using non-delegable functions on performance](common-performance-issue-resolutions.md#use-of-non-delgable-functions) <br>
+[Impact of inappropriate data row limit for non-delegable queries](common-performance-issue-resolutions.md#inappropriate-data-row-limit-for-non-delegable-queries) <br>
+[Performance tips and best practice to use delegation](performance-tips.md#use-delegation)
