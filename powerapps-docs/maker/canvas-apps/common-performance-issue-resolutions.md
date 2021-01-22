@@ -255,8 +255,7 @@ In the real-world though, apps are designed to meet certain business requirement
 When you use the [Common Data Service connector](connections/connection-common-data-service.md) to access a Microsoft Dataverse environment, data requests go to the environment instance directly—without passing through API management. More information: [Data call flow with Common Data Service connector](execution-phases-data-flow.md#data-call-flow-with-common-data-service-connector-for-microsoft-dataverse-environment)
 
 > [!TIP]
-> - Ensure you're using the upgraded connector to connect to Microsoft Dataverse for apps created before November 2019. More information: [Improved data source experience for Dataverse](connections/connection-common-data-service.md#dataverse-and-the-improved-data-source-experience)
-> - When using a custom entity in Dataverse, additional security configuration may be required for users to be able to view the records using canvas apps. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security in Dataverse](https://docs.microsoft.com/power-platform/admin/database-security), [Security roles, and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
+> When using a custom entity in Dataverse, additional security configuration may be required for users to be able to view the records using canvas apps. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security in Dataverse](https://docs.microsoft.com/power-platform/admin/database-security), [Security roles, and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
 Let's take a look at the common performance problems when using Dataverse as the data source for canvas apps, and how to resolve such problems.
 
@@ -271,10 +270,6 @@ Ensure to set the optimum data row limit to avoid this problem. In addition, ena
 App may perform slowly if it runs client-heavy scripting such as Filter By, or Join at client-side instead of doing such operation at server-side.
 
 Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities, and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the required columns. Then, use this view in your app that creates this overhead at server-side for join/filter instead of client-side. This method not only reduces the extra operations, but also data transmission. For information about editing filter, and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
-
-### Using old connector
-
-If you created a canvas app with a Common Data Service connector before November 2019, then you might not have the benefit of the most current version of the connector. Read [Dataverse connection improvements](use-native-cds-connector.md) for more details and to upgrade your connection.
 
 ## Performance considerations when using Excel connector
 
