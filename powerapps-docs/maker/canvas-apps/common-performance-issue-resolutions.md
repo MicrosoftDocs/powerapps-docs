@@ -154,7 +154,7 @@ Ensure the data source&mdash;SQL database has no resource contentions such as pr
 
 ### Thick client or excessive requests
 
-An app running Group By, Filter By, or JOIN operations at client-side uses processor, and memory resources from the client devices. Depending on the data size, these operations may take more scripting time at client-side, increasing the [JS heap](#handling-the-memory-pressure) size on the client. When using on-premises data source, this problem increases since each lookup data call travels to the data source through the data gateway.
+An app running Group By, Filter By, or JOIN operations at client-side uses processor, and memory resources from the client devices. Depending on the data size, these operations may take more scripting time at client-side, increasing the [JS heap](#memory-pressure-at-the-client-side) size on the client. When using on-premises data source, this problem increases since each lookup data call travels to the data source through the data gateway.
 
 In such situations, use the **View** object in SQL database for Group By, Filter By, or JOIN operations instead of doing such operations at Power Apps client-side. Views can use selective columns, and remove some big data types like NVARCHAR(MAX), VARCHAR(MAX), and VARBINARY(MAX) unless necessary.
 
