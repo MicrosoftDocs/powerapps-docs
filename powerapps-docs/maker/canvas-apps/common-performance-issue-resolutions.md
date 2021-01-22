@@ -243,13 +243,13 @@ Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. 
 
 ## Performance considerations when using Excel connector
 
-[Excel connector](https://docs.microsoft.com/connectors/excel/) provides connectivity from a canvas app to the data in a table inside an Excel file. This connector has limitations compared to other data sources&mdash;for example, little delegable functions&mdash;enabling the canvas app to load data from the table only up to [2000 records](#inappropriate-data-row-limit-for-non-delegable-queries). To load more than 2000 records, partition your data in different data tables as additional data sources.
+[Excel connector](https://docs.microsoft.com/connectors/excel/) provides connectivity from a canvas app to the data in a table inside an Excel file. This connector has limitations compared to other data sources&mdash;for example, limited [delegable](delegation-overview.md) functions&mdash;enabling the canvas app to load data from the table only up to [2000 records](#inappropriate-data-row-limit-for-non-delegable-queries). To load more than 2000 records, partition your data in different data tables as additional data sources.
 
 Let's take a look at the common performance problems when using Excel as the data source for canvas apps, and how to resolve such problems.
 
 ### Too many data tables and large data size
 
-Slowness in the app can be experienced when it uses Excel file with too many data tables, and each data table having an immense size of data over several columns. Excel file isn't a relational database, or a data source that provides delegable functions. Power Apps has to load data from the defined data tables first. And then, you can use functions that Power Apps provides such as Filter, Sort, JOIN, Group By, and Search.
+Slowness in the app can be experienced when it uses Excel file with too many data tables, and each data table having an immense size of data over several columns. Excel file isn't a relational database, or a data source that provides [delegable](delegation-overview.md) functions. Power Apps has to load data from the defined data tables first. And then, you can use functions that Power Apps provides such as Filter, Sort, JOIN, Group By, and Search.
 
 Too many data tables, with high number of rows and columns affects app performance and the client-side overhead because each data table needs to be manipulated within the [JS heap](#memory-pressure-at-the-client-side). This effect also leads to the app consuming more client-side memory.
 
