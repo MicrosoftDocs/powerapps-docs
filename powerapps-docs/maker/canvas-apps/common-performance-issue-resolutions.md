@@ -282,7 +282,7 @@ It's better to keep the file near your end users (or, most of the end users&mdas
 ### See also
 
 [Understand canvas apps execution phases and data call flow](execution-phases-data-flow.md) <br>
-[Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
+[Common canvas apps performance issues and resolutions](common-performance-issue-resolutions.md) <br>
 [Possible sources of slow performance for canvas apps](slow-performance-sources.md) <br>
 [Common issues and resolutions](common-issues-and-resolutions.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)

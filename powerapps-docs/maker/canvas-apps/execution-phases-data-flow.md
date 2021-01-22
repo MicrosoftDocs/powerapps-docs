@@ -44,7 +44,7 @@ A canvas app goes through the following phases of execution before showing the i
 
 Data calls from canvas apps send data sources using the connectors over the OData protocol. OData requests flow to backend layers to reach out the target data source, and retrieve data for the client, or commit data to the data source.
 
-Understanding how OData requests travel in the server-side could help you to
+Understanding of how OData requests travel in canvas apps could help you to
 optimize your canvas app performance, and your backend data sources.
 
 In this section, you'll learn about how the data call flows in canvas apps with different data source types.
@@ -58,17 +58,17 @@ app (left side) travels server-side layers, and reaches out to the target data s
 
 Each layer in the above diagram could perform fast, or have some overheads while processing the request.
 
-In many apps, two spots commonly present noticeable overheads:
+In many apps, two particular spots may commonly present noticeable overheads:
 
 1. **Backend data source** - while processing the request.
 
-1. **Client** - while sending the request&mdash;or while manipulating the received data on the heap memory, and executing the associated JavaScript functions to process data to show in screens.
+1. **Client** - while sending the request&mdash;or while manipulating the received data on the heap memory, and executing the associated JavaScript functions to process data to show inside the screens.
 
 ### Data call flow with on-premises data gateway
 
 If a canvas app connects to an on-premises data source like SQL server, you need to have another layer, called on-premises [data gateway](gateway-reference.md).
 
-The on-premises data gateway is a mandatory part to access on-premises data sources. It takes charge of converting protocol from OData requests to SQL DML (Data Manipulation Language) statement.
+The on-premises data gateway is a mandatory part to access on-premises data sources. It takes charge of converting protocol from OData requests to SQL DML (Data Manipulation Language) statements.
 
 The following diagram shows where and how the on-premises data
 gateway would be put in place and process data requests.
@@ -80,11 +80,11 @@ If the app uses a data source on-premises, the location and the specification of
 ### Data call flow with Common Data Service connector (for Microsoft Dataverse environment)
 
 When you use the Common Data Service connector to access a Microsoft Dataverse
-environment, data requests go to the environment instance directly&mdash;without passing through API management. As such, the performance of data calls is much faster. The Common Data Service connector is created by default when you create a new canvas app.
+environment, data requests go to the environment instance directly&mdash;without passing through API management. As such, the performance of data calls is much faster compared to the rest of the data sources. The Common Data Service connector is created by default when you create a new canvas app.
 
 ![Data call flow Common Data Service connector](media\execution-phases-data-flow\dataverse-connector.png "Data call flow Common Data Service connector")
 
-With the understanding of this high-level concept of how data calls travel, you can get into the details of performance. Concisely, performance overhead can happen at any of the layers&mdash;from client, APIM (API Management), connector, on-premises data gateway, and the backend data sources.
+With the understanding of this high-level concept of how data calls travel, you can get into the details of performance review. Concisely, performance overhead can happen at any of the layers&mdash;from client, APIM (API Management), connector, on-premises data gateway, and the backend data sources.
 
 ## Next steps
 
@@ -92,7 +92,7 @@ With the understanding of this high-level concept of how data calls travel, you 
 
 ### See also
 
-[Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
+[Common canvas apps performance issues and resolutions](common-performance-issue-resolutions.md) <br>
 [Tips and best practices to improve canvas apps performance](performance-tips.md) <br>
 [Common issues and resolutions](common-issues-and-resolutions.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
