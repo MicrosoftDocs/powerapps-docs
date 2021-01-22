@@ -1,6 +1,6 @@
 ---
 title: "Create a model-driven app site map in Power Apps | MicrosoftDocs"
-description: "Learn how to create a site map for you app"
+description: "Learn how to create a site map for your app"
 keywords: ""
 ms.date: 05/29/2018
 ms.service: powerapps
@@ -145,7 +145,7 @@ You can view or set these privileges on the **Customization** tab of a security 
   
     - **Title**: Enter the title for the group in the base language of the organization.  
   
-    - **ID**: A unique ID is automatically generated. Enter a different one if required. We recommend using the automatic ID because if the ID you enter is not unique, you might get an error when you import a solution containing this site map.  
+    - **ID**: A unique ID is automatically generated. Enter a different one if necessary. We recommend using the automatic ID because if the ID you enter is not unique, you might get an error when you import a solution containing this site map.  
   
      Under **Advanced**, do the following:  
   
@@ -187,7 +187,7 @@ You can view or set these privileges on the **Customization** tab of a security 
   
     - **Icon**: A default application icon is selected. Select a different icon for the subarea from the list of web resources available in the solution.  
   
-    - **ID**. A unique ID is automatically generated. Enter a different unique ID if required.  
+    - **ID**. A unique ID is automatically generated. Enter a different unique ID if necessary.  
   
     - **Parameter Passing**. Select this check box to pass information about the organization and language context to the URL. This check box is checked only when the subarea type is a web resource or a URL-based subarea.  
   
