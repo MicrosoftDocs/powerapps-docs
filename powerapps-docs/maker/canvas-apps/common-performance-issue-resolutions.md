@@ -111,7 +111,7 @@ In this section, you'll learn about the common performance-related problems with
 > [!NOTE]
 > Though this section references SQL Server connector with performance issues, resolutions for online and on-premises SQL data sources, most of the recommendations also apply when using in general any database type as the data source&mdash;such as MySQL, or PostgreSQL.
 
-The following are the common performance problems that you may come across with SQL Server connector for canvas apps. Later sections&mdash;[SQL Server on-premises](#sql-server-on-premises), and [Azure SQL Database](#azure-sql-database), list performance problems more relevant to the respective type of data source.
+The following are the common performance problems that you may come across with SQL Server connector for canvas apps. Later sections&mdash;[SQL Server on-premises](#considerations-specific-to-sql-server-on-premises), and [Azure SQL Database](#considerations-specific-to-azure-sql-database), list performance problems more relevant to the respective type of data source.
 
 ### N+1 query
 
@@ -152,7 +152,7 @@ Ensure the data source&mdash;SQL database has no resource contentions such as pr
 
 ### Thick client or excessive requests
 
-An app running Group By, Filter By, or JOIN operations at client-side uses processor, and memory resources from the client devices. Depending on the data size, these operations may take more scripting time at client-side, increasing the [JS heap](#memory-pressure) size on the client. When using on-premises data source, this problem increases since each lookup data call travels to the data source through the data gateway.
+An app running Group By, Filter By, or JOIN operations at client-side uses processor, and memory resources from the client devices. Depending on the data size, these operations may take more scripting time at client-side, increasing the [JS heap](#handling-the-memory-pressure) size on the client. When using on-premises data source, this problem increases since each lookup data call travels to the data source through the data gateway.
 
 In such situations, use the **View** object in SQL database for Group By, Filter By, or JOIN operations instead of doing such operations at Power Apps client-side. Views can use selective columns, and remove some big data types like NVARCHAR(MAX), VARCHAR(MAX), and VARBINARY(MAX) unless necessary.
 
@@ -163,7 +163,7 @@ In such situations, use the **View** object in SQL database for Group By, Filte
 
 By default, a canvas app shows data using the tables, or views from the available database objects. Retrieving all columns from a table may result in a slow response, especially when using big data types such as NVARCHAR(MAX).
 
-Transferring large amounts of data to clients take time. This transfer also results in more scripting time with large amounts of data in the [JS heap](#memory-pressure) at client-side.
+Transferring large amounts of data to clients take time. This transfer also results in more scripting time with large amounts of data in the [JS heap](#handling-the-memory-pressure) at client-side.
 
 ### Considerations specific to SQL Server on-premises
 
@@ -262,7 +262,7 @@ Let's take a look at the common performance problems when using Dataverse as the
 
 ### Excessive data transmission
 
-Too much data transmitted to a client makes requests slower. For instance, if your app has set [data row limit for non-delegable queries](#inappropriate-data-row-limit-for-non-delegable-queries) to 2000, instead of default 500, it adds up extra overhead on transferring data, and manipulating the received data to [JS heap](#memory-pressure) at client-side.
+Too much data transmitted to a client makes requests slower. For instance, if your app has set [data row limit for non-delegable queries](#inappropriate-data-row-limit-for-non-delegable-queries) to 2000, instead of default 500, it adds up extra overhead on transferring data, and manipulating the received data to [JS heap](#handling-the-memory-pressure) at client-side.
 
 Ensure to set the optimum data row limit to avoid this problem. In addition, enable the [Explicit column selection](#too-many-columns-retrieved) feature to only query the columns used by the app.
 
@@ -286,7 +286,7 @@ Let's take a look at the common performance problems when using Excel as the dat
 
 Slowness in the app can be experienced when it uses Excel file with too many data tables, and each data table having an immense size of data over several columns. Excel file isn't a relational database, or a data source that provides delegable functions. Power Apps has to load data from the defined data tables first. And then, you can use functions that Power Apps provides such as Filter, Sort, JOIN, Group By, and Search.
 
-Too many data tables, with high number of rows and columns affects app performance and client-side overhead because each data table needs to be manipulated within the [JS heap](#memory-pressure). This effect also leads to the app consuming more client-side memory.
+Too many data tables, with high number of rows and columns affects app performance and client-side overhead because each data table needs to be manipulated within the [JS heap](#handling-the-memory-pressure). This effect also leads to the app consuming more client-side memory.
 
 To ensure your app doesn't get affected by such behaviors, define only the necessary columns on the data table in an Excel file.
 

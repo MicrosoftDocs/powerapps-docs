@@ -68,7 +68,7 @@ With this change, the app fetches the tables in parallel:
 ![Parallel ClearCollect](./media/performance-tips/perfconcurrent2.png)	
 
 > [!NOTE]
-> For more information about the performance problems and resolutions related to OnStart, read [OnStart event](common-performance-issue-resolutions.md#onstart-event).
+> For more information about the performance problems and resolutions related to OnStart, read [OnStart event](common-performance-issue-resolutions.md#onstart-event-tuning).
 
 ## Cache lookup data
 Use the **Set** function to cache data from lookup tables locally to avoid repeatedly retrieving data from the source. This technique
