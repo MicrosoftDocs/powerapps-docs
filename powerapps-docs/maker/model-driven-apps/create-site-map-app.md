@@ -176,7 +176,7 @@ You can view or set these privileges on the **Customization** tab of a security 
   
     - **Entity**: Select the table that the subarea is for. This column is disabled if the subarea type is other than **Entity** in the **Type** drop-down list.  
   
-    - **URL**: Specify a URL for the main page of the application to show when this subarea is selected. This column is disabled if you've selected **Entity** in the **Type** drop-down list.  
+    - **URL**: Specify a URL to a web page. The URL text displays from this subarea and, when selected, a new browser window opens that displays the page. This column is disabled if you've selected **Entity** in the **Type** drop-down list.  
  
       > [!IMPORTANT]
       > Site map subarea URLs that link to an .aspx page aren’t supported.
