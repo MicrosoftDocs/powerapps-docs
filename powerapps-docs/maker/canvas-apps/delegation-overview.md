@@ -162,6 +162,5 @@ But it worked, didn't it? Well, kind of. And that is why this is a warning and n
 
 ### See also
 
-[Impact of using non-delegable functions on performance](common-performance-issue-resolutions.md#use-of-non-delgable-functions) <br>
-[Impact of inappropriate data row limit for non-delegable queries](common-performance-issue-resolutions.md#inappropriate-data-row-limit-for-non-delegable-queries) <br>
+[Impact of using non-delegable functions and inappropriate data row limit on performance](common-performance-issue-resolutions.md##use-of-non-delgable-functions-and-inappropriate-data-row-limit-for-non-delegable-queries) <br>
 [Performance tips and best practice to use delegation](performance-tips.md#use-delegation)

@@ -68,7 +68,7 @@ With this change, the app fetches the tables in parallel:
 ![Parallel ClearCollect](./media/performance-tips/perfconcurrent2.png)	
 
 > [!NOTE]
-> For more information about the performance problems and resolutions related to OnStart, read [OnStart event](common-performance-issue-resolutions.md#onstart-event-tuning).
+> For more information about the performance problems and resolutions related to OnStart, read [OnStart event needs tuning](common-performance-issue-resolutions.md#onstart-event-needs-tuning).
 
 ## Cache lookup data
 Use the **Set** function to cache data from lookup tables locally to avoid repeatedly retrieving data from the source. This technique
@@ -109,7 +109,7 @@ For an example of delegable functions, consider an ID column defined as Number d
 
 As we assume that the ID column in SharePoint is defined with the data type of Number, the right-hand side value should be numeric variable instead of string variable. Otherwise, such mismatch may trigger the formula to be non-delegable.
 
-[Use of non-delegable functions](common-performance-issue-resolutions.md#use-of-non-delgable-functions), and [inappropriate data row limit for non-delegable queries](common-performance-issue-resolutions.md#inappropriate-data-row-limit-for-non-delegable-queries) can have adverse effect on the performance of the app.
+[Use of non-delgable functions and inappropriate data row limit for non-delegable queries](common-performance-issue-resolutions.md#use-of-non-delgable-functions-and-inappropriate-data-row-limit-for-non-delegable-queries) can have adverse effect on the performance of the app.
 
 For more information about delegation, and data row limits for non-delegable queries, go to [Delegation](delegation-overview.md#non-delegable-limits).
 

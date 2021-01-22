@@ -247,7 +247,7 @@ Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. 
 
 ## Performance considerations when using Excel connector
 
-[Excel connector](https://docs.microsoft.com/connectors/excel/) provides connectivity from a canvas app to the data in a table inside an Excel file. This connector has limitations compared to other data sources&mdash;for example, limited [delegable](delegation-overview.md) functions&mdash;enabling the canvas app to load data from the table only up to [2000 records](#inappropriate-data-row-limit-for-non-delegable-queries). To load more than 2000 records, partition your data in different data tables as additional data sources.
+[Excel connector](https://docs.microsoft.com/connectors/excel/) provides connectivity from a canvas app to the data in a table inside an Excel file. This connector has limitations compared to other data sources&mdash;for example, limited [delegable](delegation-overview.md) functions&mdash;enabling the canvas app to load data from the table only up to [2000 records](#use-of-non-delgable-functions-and-inappropriate-data-row-limit-for-non-delegable-queries). To load more than 2000 records, partition your data in different data tables as additional data sources.
 
 Let's take a look at the common performance problems when using Excel as the data source for canvas apps, and how to resolve such problems.
 
