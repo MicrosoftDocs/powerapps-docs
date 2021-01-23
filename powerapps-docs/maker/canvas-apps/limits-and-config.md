@@ -50,6 +50,8 @@ This topic contains device platform and web browser requirements, limits, and co
 | iOS |iOS 13 or later|
 | Android |10 or later |
 
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
+
 ## Supported browsers for Power Apps Studio
 
 | **Browser** | **Supported Versions** |
