@@ -84,7 +84,7 @@ environment, data requests go to the environment instance directly&mdash;without
 
 ![Data call flow Common Data Service connector](media\execution-phases-data-flow\dataverse-connector.png "Data call flow Common Data Service connector")
 
-With the understanding of this high-level concept of how data calls travel, you can get into the details of performance review. Concisely, performance overhead can happen at any of the layers&mdash;from client, APIM (API Management), connector, on-premises data gateway, and the backend data sources.
+With the understanding of this high-level concept of how data calls travel, you can get into the details of the performance review. Concisely, performance overhead can happen at any of the layers&mdash;from client, APIM (API Management), connector, on-premises data gateway, and the backend data sources.
 
 ## Next steps
 

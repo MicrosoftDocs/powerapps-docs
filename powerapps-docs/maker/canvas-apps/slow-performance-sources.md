@@ -26,7 +26,7 @@ Depending on how a particular canvas app is designed, the app may have many diff
 
 Some of the aspects to consider in the app design that may result in slow performance are:
 
-- **App is client-heavy** - The app gets large sets of data into data collections at the initial moment. Uses such data within multiple screens over client-heavy operations like JOIN, Sort, AddColumn, and GroupBy.
+- **App is client-heavy** - The app gets large sets of data into data collections at the initial moment. And then, uses such data within multiple screens over client-heavy operations like JOIN, Sort, AddColumn, and GroupBy.
 - **App has long formula in OnStart** - The app triggers many unnecessary data calls in screens, and such data calls return large data records.
 
 To review the app design as a possible source of slow app performance, monitor the app by using [Monitor](../monitor-overview.md). Check which data calls are taking a long time, and how many data calls trigger such behaviors in the app.
@@ -35,7 +35,7 @@ Also, balance the workload between the client, and the server. Delegating the wo
 
 ## Bottleneck in the data source
 
-There are many possibilities that can result in the bottleneck of the data source. Usually, tables in the data source are at the center of activity when many transactional/non-transactional queries are directed to the same table, or record from different users.
+There are many possibilities that can result in the bottleneck of the data source. Usually, tables in the data source are at the center of activity when many transactional/non-transactional queries are directed to the same table or record from different users.
 
 OData calls may slow down if:
 
@@ -47,11 +47,9 @@ Tune the backend data source when these problems occur to avoid slow performance
 
 ## Client browsers, devices, and locations
 
-Canvas apps can be used by users on different devices, browsers, and locations with a varying network conditions. As the Power Apps client executes, ensure to use modern, updated, and [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps).
+Canvas apps can be used by users on different devices, browsers, and locations with varying network conditions. As the Power Apps client executes, ensure to use modern, updated, and [supported browsers](limits-and-config.md#supported-browsers-for-running-canvas-apps).
 
 If some users are using legacy, unsupported, or deprecated browsers like Internet Explorer 11, their experience could be affected.
-
-Makers are suggested to publish the app regularly. As the Power Apps platform is continuously optimized and deployed, your app is regenerated within the latest platform optimizations when you republish it.
 
 ## Geographical location of the on-premises data gateway and environment
 
