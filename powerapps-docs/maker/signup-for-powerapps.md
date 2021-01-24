@@ -46,11 +46,11 @@ To start a free, 30-day trial of Power Apps per user plan from an existing licen
 
 Regardless of whether you have a license for Power Apps, you can start a free, 30-day trial of Power Apps per user plan by following these steps:
 
-1. Open the [Power Apps site](https://powerapps.microsoft.com), and then select **Sign up free**.
+1. Open the [Power Apps site](https://powerapps.microsoft.com), and then select **Try free**.
 
-    If you're using a phone, open the menu in the upper-right corner first, and then select **Sign up free**.
+    If you're using a phone, select the menu in the top right corner, and then select **Try free**.
 
-1. Near the middle of the screen, select **Pricing**, and then select **Start free trial**.
+1. In the main view, select **Pricing**, and then select **Try free** on the Per user plan selections..
 
 1. In the dialog box that appears, type or paste your work or school email address, and then select **Submit**.
 
@@ -62,6 +62,12 @@ Regardless of whether you have a license for Power Apps, you can start a free, 3
     ![Sign in with work account](./media/signup-for-powerapps/we-know-you.png)
 
     Otherwise, follow the prompts to check your email, verify your email address, provide more information if necessary, and select **Start**.
+
+
+    >[!NOTE]
+    >Your admin can disable self-service signup. If you see the following message, it means that this feature is turned off. Contact your admin for assistance. 
+
+    ![It turned off sign-ups](./media/signup-for-powerapps/it-turned-off.png)
 
 ## FAQ
 
