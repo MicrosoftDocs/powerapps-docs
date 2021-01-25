@@ -28,11 +28,11 @@ The **CountRows** function counts the number records in a table.
 
 Each of these functions returns a number.
 
-You need to enable the **Enhanced delegation for Dataverse** option in the advance settings to make the function delegation to work. To enable the option:
+You need to enable the **Enhanced delegation for Common Data Service** option in the advance settings to make the function delegation to work. To enable the option:
 
 1. Open the app where you want to use the functions. 
 1. Select **File** > **Settings** > **Advanced settings**.
-1. Turn on the **Enhanced delegation for Microsoft Dataverse** option.
+1. Turn on the **Enhanced delegation for Common Data Service** option.
 
     > [!div class="mx-imgBorder"]
     > ![Enable delegation](media/enable-delegation-functions.png)
