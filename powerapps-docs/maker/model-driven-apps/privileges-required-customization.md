@@ -34,7 +34,7 @@ App users can personalize the system and even share some of their customizations
   
 <a name="BKMK_SysAdminAndSysCustomizer"></a>   
 ## System Administrator and System Customizer security roles  
- Anyone who customizes will have the System Administrator or System Customizer security role associated with their account. These security roles give you the permissions you need to customize the app.  
+ Anyone who customizes will have the System Administrator or System Customizer security role associated with their account. These security roles give you the permissions you need to customize in Dataverse.  
   
 |System Administrator|System Customizer|  
 |--------------------------|-----------------------|  
