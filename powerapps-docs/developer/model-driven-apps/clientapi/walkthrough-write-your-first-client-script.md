@@ -124,8 +124,8 @@ Now that your code is ready, you want to associate it with events in model-drive
 Now that your code is ready, you want to associate it with events in model-driven apps. You use [Script web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
 
 1. Navigate to [Power Apps](https://make.powerapps.com).
-1. In the left navigation pane, select **Data** and then select **Entities**.
-1. From the list of entities, select the entity where you want to add the JavaScript web resource.
+1. In the left navigation pane, select **Data** and then select **Tables**.
+1. From the list of tables, select the table where you want to add the JavaScript web resource.
 1. Select **Forms** tab, and then from the list of forms select the desired form.
 
    ![Select form from list](../media/select-form-from-list.png "Select form from list")
@@ -204,8 +204,8 @@ That's it! You have completed the steps to configure the account form to use cus
 ### [Unified Interface](#tab/unified-add-web-resource)
 
 1. Go to [Power Apps](https://make.powerapps.com).
-1. In the left navigation pane, select **Data** and then select **Entities**. 
-1. From the list of entities, select the entity where you want to add the event handlers.
+1. In the left navigation pane, select **Data** and then select **Tables**. 
+1. From the list of tables, select the table where you want to add the event handlers.
 1. Select **Forms** tab from the command bar and then select the form where you want to add.
 
     ![Select form from list](../media/select-form-from-list.png "Select form from list")
