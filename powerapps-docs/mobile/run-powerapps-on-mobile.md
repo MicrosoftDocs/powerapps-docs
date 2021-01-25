@@ -35,6 +35,12 @@ Legend:
 1. **Model-driven apps**
 2. **Canvas apps**
 
+## Early access feature
+
+If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
+
+Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
+
 ## Required privileges
 
 For privileges required to run model-driven apps on Power Apps Mobile app, see [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges).
@@ -73,12 +79,17 @@ Open Power Apps on your mobile device, and sign in by using your Azure Active Di
 If you have the Microsoft Authenticator app installed on your mobile device, enter your username when prompted, and then approve the notification sent to your device.
 
 
+
 ## Find the app
 
 When you sign in to the app, the **My apps** filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter. 
 
 
-![App filters.](media/filter-menu.png "App filters")
+| **Current** | **Early access** |
+| --- | --- |
+| ![App filters.](media/filter-menu.png "App filters") |![App filters.](media/filter-menu.png "App filters")|
+
+
 
 The following filters are available:
 
