@@ -37,7 +37,7 @@ Legend:
 
 ## Required privileges
 
-For required priviledges to run model-driven apps on Power Apps Mobile app, see [Required privileges](https://docs.microsoft.com/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges).
+For privileges required to run model-driven apps on Power Apps Mobile app, see [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges).
 
 ## Supported devices 
 
