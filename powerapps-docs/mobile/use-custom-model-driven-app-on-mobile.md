@@ -25,7 +25,7 @@ Use the Power Apps mobile app to run model-driven apps on your mobile device. Fo
 > Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
 
 ### Required privileges
-For required priviledges to play model-driven apps on Power Apps Mobile app, see [Required privileges](https://docs.microsoft.com/en-us/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#requirements);
+For required priviledges to run model-driven apps on Power Apps Mobile app, see [Required privileges](https://docs.microsoft.com/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges).
 
 ## Home screen 
 
