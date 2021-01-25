@@ -28,7 +28,16 @@ The **CountRows** function counts the number records in a table.
 
 Each of these functions returns a number.
 
-[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
+You need to enable the **Enhanced delegation for Dataverse** option in the advance settings to make the function delegation to work. To enable the option:
+
+1. Open the app where you want to use the functions. 
+1. Select **File** > **Settings** > **Advanced settings**.
+1. Turn on the **Enhanced delegation for Microsoft Dataverse** option.
+
+    > [!div class="mx-imgBorder"]
+    > ![Enable delegation](media/enable-delegation-functions.png)
+
+<!--[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]-->
 
 ## Syntax
 **Count**( *SingleColumnTable* )<br>
