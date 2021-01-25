@@ -87,7 +87,7 @@ It is also advised that you add the domain https://discovery.crmreplication.azur
 |hasorgacceptedprivacyterms|[GET](https://discovery.crmreplication.azure.net/swagger/ui/index#/Metadata/Metadata_HasOrgAcceptedPrivacyTerms)|Check if the associated organization has accepted the privacy terms|  
 |acceptprivacyterms|[POST](https://discovery.crmreplication.azure.net/swagger/ui/index#/Metadata/Metadata_AcceptOrgPrivacyTerms)|Accept the specified org for data access|  
   
- **Profiles operations** (`[Organization-URI]/crm/exporter/`)  
+ **Profiles operations** (`[ConnectorURL]/crm/exporter/`)  
   
 |Resource|Methods|Description|  
 |--------------|-------------|-----------------|  

@@ -333,7 +333,7 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
-          - name: "Add mixed reality components (Preview)"
+          - name: "Add mixed reality components"
             items:
             - name: Mixed reality components
               href: ./canvas-apps/mixed-reality-overview.md
@@ -349,7 +349,7 @@
               href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
             - name: Upload photos from mixed reality
               href: ./canvas-apps/mixed-reality-take-upload-photos.md
-          - name: "Add geospatial components (Preview)"
+          - name: "Add geospatial components"
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
@@ -365,6 +365,8 @@
             items:
             - name: List of controls and properties
               href: ./canvas-apps/reference-properties.md
+            - name: Limitations of controls
+              href: ./canvas-apps/control-limitations.md
             - name: Add picture
               href: ./canvas-apps/controls/control-add-picture.md
             - name: Attachments
@@ -999,6 +1001,18 @@
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
       href: ./canvas-apps/embedding-sdk.md
+  - name: Performance and optimization
+    items:
+    - name: Understand canvas apps execution phases and data flow
+      href: ./canvas-apps/execution-phases-data-flow.md
+    - name: Common sources of slow performance
+      href: ./canvas-apps/slow-performance-sources.md
+    - name: Common performance issues and resolutions
+      href: ./canvas-apps/common-performance-issue-resolutions.md
+    - name: Performance tips and best practices
+      href: ./canvas-apps/performance-tips.md
+    - name: Canvas apps coding standards and guidelines
+      href: https://aka.ms/powerappscanvasguidelines
 - name: Model-driven apps
   items:
   - name: Model-driven apps
@@ -1271,9 +1285,9 @@
       href: ./model-driven-apps/checklist-transition-unified-interface.md
     - name: "FAQs: Unified Interface transition"
       href: ./model-driven-apps/faqs-transition-unified-interface.md
-    - name: Model-driven app FAQ
-      href: ./model-driven-apps/model-app-faq.md
-    - name: Accessibility in Power Apps app designer
+  - name: Model-driven app FAQ
+    href: ./model-driven-apps/model-app-faq.md
+  - name: Accessibility in Power Apps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook
     href: ./model-driven-apps/app-for-outlook-customize.md
@@ -2055,8 +2069,6 @@
       href: monitor-collaborative-debugging.md
     - name: Advanced monitoring
       href: monitor-advanced.md
-  - name: Performance tips for canvas apps
-    href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
