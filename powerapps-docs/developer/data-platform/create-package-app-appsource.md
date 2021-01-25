@@ -95,7 +95,7 @@ Create an *input.xml* file that provides information about your package and the 
   <PackageFile>package.zip</PackageFile>
   <SolutionAnchorName>SampleSolution.zip</SolutionAnchorName>
   <StartDate>12/01/2017</StartDate>
-  <EndDate>01/01/2021</EndDate>
+  <EndDate>01/01/2031</EndDate>
   <SupportedCountries>US,CA</SupportedCountries>
   <LearnMoreLink>https://www.microsoft.com</LearnMoreLink>
   <Locales>

@@ -333,7 +333,7 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
-          - name: "Add mixed reality components (Preview)"
+          - name: "Add mixed reality components"
             items:
             - name: Mixed reality components
               href: ./canvas-apps/mixed-reality-overview.md
@@ -349,7 +349,7 @@
               href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
             - name: Upload photos from mixed reality
               href: ./canvas-apps/mixed-reality-take-upload-photos.md
-          - name: "Add geospatial components (Preview)"
+          - name: "Add geospatial components"
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
@@ -1001,6 +1001,18 @@
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
       href: ./canvas-apps/embedding-sdk.md
+  - name: Performance and optimization
+    items:
+    - name: Understand canvas apps execution phases and data flow
+      href: ./canvas-apps/execution-phases-data-flow.md
+    - name: Common sources of slow performance
+      href: ./canvas-apps/slow-performance-sources.md
+    - name: Common performance issues and resolutions
+      href: ./canvas-apps/common-performance-issue-resolutions.md
+    - name: Performance tips and best practices
+      href: ./canvas-apps/performance-tips.md
+    - name: Canvas apps coding standards and guidelines
+      href: https://aka.ms/powerappscanvasguidelines
 - name: Model-driven apps
   items:
   - name: Model-driven apps
@@ -2057,8 +2069,6 @@
       href: monitor-collaborative-debugging.md
     - name: Advanced monitoring
       href: monitor-advanced.md
-  - name: Performance tips for canvas apps
-    href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/06/2020
+ms.date: 1/15/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -20,7 +20,6 @@ search.app:
 
 # Check your user access to a record
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 To perform an action on a record, a user needs to have the required privilege assigned through a security role or the user must be a member of a team that has a security role with assigned privileges.
 
