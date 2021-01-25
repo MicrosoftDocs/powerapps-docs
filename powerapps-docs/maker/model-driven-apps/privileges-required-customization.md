@@ -1,6 +1,6 @@
 ---
-title: "Privileges required for model-driven app customizing | MicrosoftDocs"
-description: Understand the privileges required to build model-driven apps
+title: "Privileges required for customizing apps build on Dataverse | MicrosoftDocs"
+description: Understand the privileges required to apps built on Dataverse
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
@@ -23,7 +23,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Privileges required for model-driven app customization
+# Privileges required for Dataverse customization
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
