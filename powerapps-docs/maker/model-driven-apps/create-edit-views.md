@@ -74,12 +74,12 @@ Public views are general purpose views that you can customize as you see fit. Th
 
 |Name  |Type  |
 |---------|---------|
-|Active *entity plural name*     |  Public       |
-|Inactive *entity plural name*    |  Public       |
-|Quick Find Active *entity plural name*     | Quick Find        |
-|*entity name* Advanced Find View     | Advanced Find        |
-|*entity name* Associated View     |  Associated       |
-|*entity name* Lookup View     | Lookup        |
+|Active *table plural name*     |  Public       |
+|Inactive *table plural name*    |  Public       |
+|Quick Find Active *table plural name*     | Quick Find        |
+|*table name* Advanced Find View     | Advanced Find        |
+|*table name* Associated View     |  Associated       |
+|*table name* Lookup View     | Lookup        |
 
 You can create custom public views. You can delete any custom public views you create in an unmanaged solution. You cannot delete any system-defined public views. Custom public views added by importing a managed solution may have managed properties set that can prevent them from being deleted, except by uninstalling the managed solution.
 

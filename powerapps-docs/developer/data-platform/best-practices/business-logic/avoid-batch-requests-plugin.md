@@ -103,7 +103,9 @@ This example includes usage of the type directly with the `Execute` method. The 
 
 ## Additional information
 
-`ExecuteMultiple` and `ExecuteTransaction` messages are considered batch request messages. Their purpose is to minimize round trips between client and server over high-latency connections. Plug-ins either execute directly within the application process or in close proximity when sandbox-isolated, meaning latency is rarely an issue. Plug-in code should be very focused operations that execute quickly and minimize blocking to avoid exceeding timeout thresholds and ensure a responsive system for synchronous scenarios.
+`ExecuteMultiple` and `ExecuteTransaction` messages are considered batch request messages. Their purpose is to minimize round trips between client and server over high-latency connections. Plug-ins either execute directly within the application process or in close proximity when sandbox-isolated, meaning latency is rarely an issue. Plug-in code should be very focused operations that execute quickly and minimize blocking to avoid exceeding timeout thresholds and ensure a responsive system for synchronous scenarios. Simply submit each request directly instead of batching them and submitting as a single request.
+
+For example: `foreach (request in requests) service.Execute(request)`
 
 On the server side, the operations included in a batch request are executed sequentially and aren't done in parallel. This is the case even if the <xref:Microsoft.Xrm.Sdk.ExecuteMultipleSettings>.<xref:Microsoft.Xrm.Sdk.ExecuteMultipleSettings.ReturnResponses> property is set to false. Developers tend to use batch requests in this manner assuming that it will allow for parallel processing. Batch requests won't accomplish this objective. Another common motivator is an attempt to ensure that each operation is included in a transaction. This is unnecessary because the plug-in is often already being executed within the context of a database transaction, negating the need to use the `ExecuteTransaction` message.
 

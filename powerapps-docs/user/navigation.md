@@ -124,16 +124,7 @@ Navigate through multiple rows by using preset views and queries. The row-focuse
 
 The number of rows that you see in the row set navigation pane is based on the number of rows that your system administrator has defined for the subgrid.
 
-**Current**
-
-1. To use row set navigation in the current release, open a page with a list of rows.
-2. Open a row and then select **Open Row Set** ![Row set navigation](media/openrecordset_1.png "Row set button") and then select a row from the list.  
-
- ![Row set navigation](media/recordsetnav.gif "This show how to use the row set navigation feature")     
-
-**Early Access**
-
-1. To use row set navigation in the early access release, open a page with a list of rows.
+1. To use row set navigation, open a page with a list of rows.
 2. Open a row and then select **Open Row Set** ![Row set navigation](media/openrecordset_2.png "Row set button") and then select a row from the list. 
 
 
