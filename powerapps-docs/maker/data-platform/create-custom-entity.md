@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: tutorial
-ms.date: 01/23/2019
+ms.date: 01/26/2021
 ms.author: matp
 search.audienceType: 
   - maker
@@ -19,17 +19,17 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" tables or creating custom tables. A table defines the information you want to track in the form of rows, which typically include properties such as company name, location, products, email, and phone. 
+With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" tables or creating custom tables. A table defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
 
-In this topic you create a table and then add or customize key components such as columns, relationships, views, and forms. You learn how to:
+In this article you create a table and then add or customize key components such as columns, relationships, views, and forms. You learn how to:
 
-- Create a custom table
-- Add custom columns to your table
-- Add a table relationship
-- Customize a view 
-- Customize a form
+- Create a custom table.
+- Add custom columns to your table.
+- Add a table relationship.
+- Customize a view.
+- Customize a form.
 
-The topic will follow the company, Contoso, which is a pet grooming business that grooms dogs and cats. Contoso needs an app for client and pet tracking that can be used by employees across a variety of devices.
+The article will follow the company, Contoso, which is a pet grooming business that grooms dogs and cats. Contoso needs an app for client and pet tracking that can be used by employees across a variety of devices.
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Make sure **Searchable** is selected, and then select **Done**.
 
-1. On the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values, and then select **Done**.
+1. On the table designer toolbar select **Add column**. On the **Column properties** pane, enter or select the following values:
     - **Display name**. *Breed*
     - **Data type**. *Text*
 
@@ -96,8 +96,6 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 1. On the **Column properties** pane, enter or select the following values, and then select **Done**.
     - **Display name**. *Appointment date*
     - **Data type**. *Date and time*
-
-1. Select **Done**.
 
 ## Add a relationship
 
