@@ -28,22 +28,21 @@ To learn how to use model-driven apps running on the Power Apps mobile app, see 
 > [!IMPORTANT]
 > Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide)
 
+## Early access feature
+
+If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
+
+Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
+
 |**Current**  |**Early access** |
 |---------|---------|
 | ![Power Apps mobile user interface.](media/powerappsmobile.png "Power Apps mobile user interface")     |     ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")  |
-
-
 
 Legend:
 
 1. **Model-driven apps**
 2. **Canvas apps**
 
-## Early access feature
-
-If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
-
-Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
 
 ## Required privileges
 
@@ -106,11 +105,13 @@ After you filter your apps, you can sort the filtered list by the date the apps 
 
 ### Search apps
 
-If you know the name of the app you want to run, you can select the search icon at the top, and then type part of its name in the search box. You can search for both canvas apps and model-driven apps.
+If you know the name of the app that you want to run, then then use search to quickly find the app. You can search for both canvas apps and model-driven apps.
 
-![Search for apps.](media/search_apps.png "Search for apps")
+| **Current** | **Early access** |
+| --- | --- |
+|  To find an app, select the search icon at the top, and then type part of its name in the search box. If you filtered your apps, the filtered list will be searched.
+ <div></div> ![Search for apps.](media/search_apps.png "Search for apps") | To find an app, select the **All apps** and then enter the app name in the search field to find the app. <div></div> ![Search for your app.](media/search_apps-1.png "Search for your app")|
 
-If you filtered your apps, the filtered list will be searched.
 
 ### Refresh the list of apps
 
