@@ -78,7 +78,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
         
       c.  Replace **New option** with *Cat*. 
         
-      d. Select **Done**, and then select **Done** again. 
+      d. Select **Done**.
 
     > [!div class="mx-imgBorder"] 
     > ![New choice ](media/create-custom-entity/optionset-add-items.png)
@@ -89,7 +89,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
     - **Display name**. *Breed*
     - **Data type**. *Text*
 
-1. Make sure **Searchable** is selected, and then select **Done**
+1. Make sure **Searchable** is selected, and then select **Done**.
 
 1. On the table designer toolbar select **Add column**. 
 
@@ -117,7 +117,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Select the **Views** tab, and then open the **Active Pets** view. If you don't see the **Active Pets** view, change the filter on the command bar from **Default** to **All**.
 
-1. On the view designer select **+ View column**, select the following columns, and then select **OK**.
+1. On the view designer select the following columns to add them to the view.
 
     - **Account**
     - **Appointment date**
