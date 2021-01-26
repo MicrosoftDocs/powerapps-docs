@@ -82,28 +82,34 @@ If you have the Microsoft Authenticator app installed on your mobile device, ent
 
 ## Find the app
 
-When you sign in to the app, the **My apps** filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter. 
-
+If you don't have any apps then when you sign in, the app will take you to the the default **All apps** screen
 
 | **Current** | **Early access** |
 | --- | --- |
-| When you sign in to the app, the **My apps** filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") | When you sign in to the app, the **My apps** filter is set by default. The list of apps are  organized in alphabetical order. <div></div> ![All apps filter](media/all-apps-screen-iphone.png "All app filter")|
+|  If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") | The list of apps are  organized in alphabetical order. Type in an app name in the search bar to find an app. <div></div> ![All apps filter](media/all-apps-screen-iphone.png "All app filter")|
 
+
+
+## Filter apps 
+
+|Current  |Early access  |
+|---------|---------|
+|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then selecting **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>
 
 
 The following filters are available:
 
-- **All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
+**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
 
-- **My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. 
+2.  **My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. 
 
-- **Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
+3.  **Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
 
-- **Favorites** (canvas apps only): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then selecting **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.
+4. **Favorites** (canvas apps only): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then selecting **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.
 
     ![Mark as Favorite.](media/add_favorite_app.png "Mark as Favorite")
 
-- **Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.
+5 **Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.
 
 ### Sort apps
 
