@@ -106,11 +106,10 @@ After you filter your apps, you can sort the filtered list by the date the apps 
 ### Search apps
 
 If you know the name of the app that you want to run, then then use search to quickly find the app. You can search for both canvas apps and model-driven apps.
-
+ 
 | **Current** | **Early access** |
 | --- | --- |
-|  To find an app, select the search icon at the top, and then type part of its name in the search box. If you filtered your apps, the filtered list will be searched.
- <div></div> ![Search for apps.](media/search_apps.png "Search for apps") | To find an app, select the **All apps** and then enter the app name in the search field to find the app. <div></div> ![Search for your app.](media/search_apps-1.png "Search for your app")|
+|  To find an app, select the search icon at the top, and then type part of its name in the search box. If you filtered your apps, the filtered list will be searched.  <div></div> ![Search for apps.](media/search_apps.png "Search for apps") | To find an app, select the **All apps** and then enter the app name in the search field to find the app. <div></div> ![Search for your app.](media/search_apps-1.png "Search for your app")|
 
 
 ### Refresh the list of apps
