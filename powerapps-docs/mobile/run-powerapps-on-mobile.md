@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/15/2020
+ms.date: 2/1/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -94,22 +94,7 @@ If you don't have any apps then when you sign in, the app will take you to the t
 
 |Current  |Early access  |
 |---------|---------|
-|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then selecting **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li>**Home**: Displays favorites and recent apps. </li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More**: Displays featureed and sample apps. </li> <li>**Favorites**: Apps that you have pinned to favorites. </li> <li>**Recent apps**: Apps that you have used recently. </li> <li>**See all**: If favorite or recent apps have more then 5 apps then the **See all** menu will appear. </li>
-
-
-The following filters are available:
-
-**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
-
-2.  **My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. 
-
-3.  **Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
-
-4. **Favorites** (canvas apps only): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then selecting **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.
-
-    ![Mark as Favorite.](media/add_favorite_app.png "Mark as Favorite")
-
-5 **Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.
+|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then selecting **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li>**Home**: Displays favorite apps and recently accessed apps sorted by open date.</li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More** (canvas apps only): Displays featured and sample apps. </li> <li>**Favorites** (canvas apps only): Dispalys canvas apps that you have pinned to favorites. </li> <li>**Recent apps**: Displays both model-driven and canvan apps that you have recently used. </li> 
 
 ### Sort apps
 
