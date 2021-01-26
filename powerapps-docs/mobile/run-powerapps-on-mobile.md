@@ -119,7 +119,7 @@ If you know the name of the app that you want to run, then then use search to qu
 - **Early access**: On the **Home**, **All apps** or any other screen with a list of apps, swipe down to refresh the app list.
 
    > [!div class="mx-imgBorder"]
-   >![Refresh the app list](media/refresh-apps-iphone.png)
+   >![Refresh the app list](media/refesh-apps-iphone.png)
 
 
 ## Pin to home
