@@ -114,7 +114,9 @@ If you know the name of the app that you want to run, then then use search to qu
 
 ### Refresh the list of apps
 
-Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
+**Current**: Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
+
+**Early access**: Swipe  
 
 
 ## Pin to home
@@ -123,10 +125,17 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 
 ### Use Safari to pin to home (iOS 13 or earlier)
 
-1. Select the ellipsis (...) on the app tile, select **Pin to Home**;
+1. Do one of the following:
+
+- **Current**: Select the ellipsis (...) on the app tile, select **Pin to Home**.
 
    > [!div class="mx-imgBorder"]
    > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
+   
+- **Early access: On the app that you want pin, swipe to the left and select **Shortcut**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
 
 2. Select ![Pin an app on iPhone button.](media/add-to-home-button.png "Pin an app on iPhone button").
  
