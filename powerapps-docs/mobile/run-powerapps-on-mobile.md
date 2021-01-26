@@ -87,7 +87,7 @@ When you sign in to the app, the **My apps** filter is set by default. If you do
 
 | **Current** | **Early access** |
 | --- | --- |
-| When you sign in to the app, the **My apps** filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") | When you sign in to the app, the **My apps** filter is set by default. The list of apps are  organized in alphabetical order. <div></div> ![App filters.](media/filter-menu.png "App filters")|
+| When you sign in to the app, the **My apps** filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") | When you sign in to the app, the **My apps** filter is set by default. The list of apps are  organized in alphabetical order. <div></div> ![All apps filter](media/all-apps-screen-iphone.png "All app filter")|
 
 
 
