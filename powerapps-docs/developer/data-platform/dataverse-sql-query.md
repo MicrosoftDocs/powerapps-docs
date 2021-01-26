@@ -22,9 +22,6 @@ search.app:
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!IMPORTANT]
-> This feature has been re-enabled in the majority of regions. Please resume testing, and provide feedback. We thank you for your patience and feedback.<p/>
-> [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the entity data of the target Dataverse environment. This allows you to execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
@@ -95,7 +92,7 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 
 ## Limitations
 
-There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Data Export Service](https://docs.microsoft.com/powerapps/developer/data-platform/data-export-service) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data. More information: [Importing and exporting data](/powerapps/maker/data-platform/import-export-data)
+There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Export to data lake](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/export-to-data-lake) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data. More information: [Importing and exporting data](/powerapps/maker/data-platform/import-export-data)
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
