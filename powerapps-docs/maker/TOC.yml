@@ -1257,8 +1257,6 @@
   - name: Advanced app making and customization
     href: ./model-driven-apps/advanced-navigation.md
     items:
-    - name: Privileges for customization
-      href: ./model-driven-apps/privileges-required-customization.md
     - name: Create or edit web resources
       href: ./model-driven-apps/create-edit-web-resources.md
     - name: Web resource properties
@@ -1873,6 +1871,8 @@
       href: ./data-platform/export-to-data-lake-data-powerbi.md
   - name: Security in Dataverse
     href: /power-platform/admin/wp-security
+  - name: Privileges for customization
+    href: ./model-driven-apps/privileges-required-customization.md    
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
   - name: For developers
