@@ -28,7 +28,7 @@ To learn how to use model-driven apps running on the Power Apps mobile app, see 
 > [!IMPORTANT]
 > Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide)
 
-## Early access feature
+### Early access feature
 
 If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
 
@@ -114,9 +114,12 @@ If you know the name of the app that you want to run, then then use search to qu
 
 ### Refresh the list of apps
 
-**Current**: Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
+- **Current**: Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
 
-**Early access**: Swipe  
+- **Early access**: On the **Home**, **All apps** or any other screen with a list of apps, swipe down to refresh the app list.
+
+   > [!div class="mx-imgBorder"]
+   >![Refresh the app list](media/refresh-apps-iphone.png)
 
 
 ## Pin to home
