@@ -117,16 +117,16 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 1. Select the **Views** tab, and then open the **Active Pets** view. If you don't see the **Active Pets** view, change the filter on the command bar from **Default** to **All**.
 
-1. On the view designer select the following columns to add them to the view.
+1. On the view designer **Table columns** left pane, select the following columns to add them to the view.
 
     - **Account**
     - **Appointment date**
     - **Breed**
     - **Species**
 
-1. Select the **Created On** column, and then select **Remove**.
+1. On the view designer canvas, select the **Created On** column, and then select **Remove**.
 
-1. To arrange the columns, select the column you want to move and then use **Move Left** and **Move Right** until your view looks like this.
+1. To arrange the columns, on the view designer canvas, select the column you want to move and then use **Move Left** or **Move Right**. Your view should look like this.
     > [!div class="mx-imgBorder"] 
     > ![Active pets view](media/create-custom-entity/active-pets-view.png)
 
