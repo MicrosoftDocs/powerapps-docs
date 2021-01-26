@@ -125,17 +125,17 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 
 ### Use Safari to pin to home (iOS 13 or earlier)
 
-1. Do one of the following:
+1. Do one of the following depending on if you're on the current release or eary acccess:
 
-- **Current**: Select the ellipsis (...) on the app tile, select **Pin to Home**.
+  - **Current**: Select the ellipsis (...) on the app tile, select **Pin to Home**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
+     > [!div class="mx-imgBorder"]
+     > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
    
-- **Early access: On the app that you want pin, swipe to the left and select **Shortcut**.
+  - **Early access**: On the app that you want pin, swipe to the left and select **Shortcut**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
+     > [!div class="mx-imgBorder"]
+     > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
 
 2. Select ![Pin an app on iPhone button.](media/add-to-home-button.png "Pin an app on iPhone button").
  
@@ -163,11 +163,17 @@ The Power Apps mobile app is now integrated with Siri shortcuts, which gives you
 Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen. The new experience works for both model-driven and canvas apps. When you add a Siri shortcut, the app is added to the iOS **Shortcuts** app and from there you can add the app to your home screen.
 
 
-1. To pin an app to the home screen, select the ellipsis (...) on the app tile.
-2. Select **Add shortcut to Siri**.
+1. Do one of the following depending on if you're on the current release or eary acccess:
 
-   > [!div class="mx-imgBorder"]
-   > ![Add shortcut to Siri.](media/add-shortcut.png "Add shortcut to Siri")
+ - **Current**: To pin an app to the home screen, select the ellipsis (...) on the app tile and then select **Add shortcut to Siri**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Add shortcut to Siri.](media/add-shortcut.png "Add shortcut to Siri")
+    
+ - **Early access**: On the app that you want pin, swipe to the left and select **Shortcut**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
    
 3. Add a custom phrase to open the app using voice commands and then select **Add to Siri**.
 
