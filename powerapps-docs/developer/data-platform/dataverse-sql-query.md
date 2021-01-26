@@ -92,7 +92,7 @@ The following Dataverse datatypes are not supported with the SQL connection: `bi
 
 ## Limitations
 
-There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Export to data lake](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/export-to-data-lake) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data. More information: [Importing and exporting data](/powerapps/maker/data-platform/import-export-data)
+There is an 80MB maximum size limit for query results returned from the Dataverse endpoint. Consider using data integration tools such as [Export to data lake](https://docs.microsoft.com/powerapps/maker/data-platform/export-to-data-lake) and [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) for large data queries that return over 80MB of data. More information: [Importing and exporting data](/powerapps/maker/data-platform/import-export-data)
 
 Dates returned in query results are formatted as Universal Time Coordinated (UTC). Previously, dates were returned in local time.
 
