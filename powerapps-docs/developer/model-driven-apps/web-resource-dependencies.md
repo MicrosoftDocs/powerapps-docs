@@ -56,6 +56,6 @@ Before this feature you would need to manually add the attribute to the form and
 [Data (XML) Web resources](data-xml-web-resources.md)<br />
 [CSS web resources](css-web-resources.md)<br />
 [RESX web resources](resx-web-resources.md)<br />
-[WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br />
+[WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br />
 [Sample: Pass multiple values to a  web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
 [Sample: Import files as web resources](sample-import-files-web-resources.md)<br />

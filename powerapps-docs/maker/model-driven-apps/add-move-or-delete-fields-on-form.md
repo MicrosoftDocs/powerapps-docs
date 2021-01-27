@@ -74,7 +74,7 @@ These are the properties available to configure a column when you create or edit
 |**Display options** | **Hide on phone** | The column can be hidden to render a condensed version of the form on phone screens. |
 |**Formatting** | **Column width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
 
-[!NOTE] 
+> [!NOTE]
 > In the Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
 
 ## Move columns on a form
@@ -121,7 +121,7 @@ You can move a column on a form using drag and drop or cut and paste actions.
 5. In the **New column** dialog, select the **Data type** and configure any other required properties of the column.
 
      > [!NOTE]
-     >   -  Some column types are not available when you create a column from within the form designer. If a column type you want is not available, you can follow the steps outlined in [Create and edit columns for Microsoft Dataverse using Power Apps portal](../common-data-service/create-edit-field-portal.md)
+     >   -  Some column types are not available when you create a column from within the form designer. If a column type you want is not available, you can follow the steps outlined in [Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
 
 6. Select **Done** to create a new column on the table. The column appears in the **Columns** pane.
 7. If you want to add the newly created column to the form, follow the steps outlined in the [**Add columns to a form**](add-move-or-delete-fields-on-form.md#add-columns-to-a-form) section.
@@ -140,4 +140,4 @@ You can move a column on a form using drag and drop or cut and paste actions.
 [Add and configure a quick view component on a form](form-designer-add-configure-quickview.md)  
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
-[Create and edit columns](../common-data-service/create-edit-field-portal.md)  
+[Create and edit columns](../data-platform/create-edit-field-portal.md)  

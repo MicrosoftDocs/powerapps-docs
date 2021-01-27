@@ -21,7 +21,7 @@ This sample shows how to export ribbon definitions. It uses the [RetrieveApplica
 
 ## How to run this sample
 
-[!include[cc-how-to-run-samples](../common-data-service/includes/cc-how-to-run-samples.md)]
+[!include[cc-how-to-run-samples](../data-platform/includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
 

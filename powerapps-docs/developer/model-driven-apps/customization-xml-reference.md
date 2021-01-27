@@ -35,7 +35,7 @@ The customizations.xml file is one of the files included in an exported unmanage
  [Ribbon types schema](ribbon-types-schema.md)  
  [Ribbon WSS schema](ribbon-wss-schema.md)  
  [Form XML schema](form-xml-schema.md)  
- [FetchXML schema](../common-data-service/fetchxml-schema.md) 
+ [FetchXML schema](../data-platform/fetchxml-schema.md) 
 
 ## Related Sections
 

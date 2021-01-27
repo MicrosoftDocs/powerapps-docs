@@ -72,13 +72,13 @@ conceptualContent:
     - title: Work with data platform
       links:
         - text: What is Microsoft Dataverse?
-          url: /powerapps/maker/common-data-service/data-platform-intro
+          url: /powerapps/maker/data-platform/data-platform-intro
           itemType: overview
         - text: Tables and metadata
-          url: /powerapps/maker/common-data-service/create-edit-metadata
+          url: /powerapps/maker/data-platform/create-edit-metadata
           itemType: concept
       footerLink:
-        url: /powerapps/maker/common-data-service
+        url: /powerapps/maker/data-platform
         text: More
 
     - title: Integrate with Microsoft Teams
@@ -96,7 +96,7 @@ conceptualContent:
     - title: Use solutions for ALM
       links:
         - text: What are solutions?
-          url: /powerapps/maker/common-data-service/solutions-overview
+          url: /powerapps/maker/data-platform/solutions-overview
           itemType: overview
         - text: Implement healthy ALM using solutions
           url: /power-platform/alm/overview-alm
@@ -120,7 +120,7 @@ conceptualContent:
     - title: Power Apps for developers
       links:
         - text: Dataverse developer
-          url: /powerapps/developer/common-data-service/
+          url: /powerapps/developer/data-platform/
           itemType: reference
         - text: Model-driven apps developer
           url: /powerapps/developer/model-driven-apps

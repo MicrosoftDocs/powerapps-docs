@@ -63,8 +63,8 @@ Determines the business processes, rules, and automation the app will have. Powe
 More information: [Apply business logic in your model-driven app](guide-staff-through-common-tasks-processes.md) 
 
 ### Additional options for adding custom business logic
-[Use plug-ins to extend business processes](../../developer/common-data-service/plug-ins.md) <br />
-[Workflow extensions](../../developer/common-data-service/workflow/workflow-extensions.md)
+[Use plug-ins to extend business processes](../../developer/data-platform/plug-ins.md) <br />
+[Workflow extensions](../../developer/data-platform/workflow/workflow-extensions.md)
 
 ## Visualizations
 Determines what type of data visualizations and reporting the app will have available.

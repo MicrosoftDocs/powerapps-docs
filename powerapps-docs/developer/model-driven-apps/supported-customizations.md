@@ -41,7 +41,7 @@ The following customization methods can be used to produce fully supported custo
 - Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-reporting-to-app).
 
 > [!NOTE]
-> The behavior of model-driven apps depend on customizations applied to the associated Microsoft Dataverse. More information: [Supported Customizations for Dataverse](../common-data-service/supported-customizations.md)
+> The behavior of model-driven apps depend on customizations applied to the associated Microsoft Dataverse. More information: [Supported Customizations for Dataverse](../data-platform/supported-customizations.md)
 > *Fully supported* means that developer support can provide assistance for customizations and that application support can help customers running those modifications.
 
 
@@ -83,7 +83,7 @@ The following is a list of unsupported action types that are frequently asked ab
 
 ### See also
 
-[Supported Customizations for Dataverse](../common-data-service/supported-customizations.md)<br/>
+[Supported Customizations for Dataverse](../data-platform/supported-customizations.md)<br/>
 [Apply business logic using client scripting in Model-driven apps using JavaScript](client-scripting.md)<br/>
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
 [Web resources in model-driven apps](web-resources.md)

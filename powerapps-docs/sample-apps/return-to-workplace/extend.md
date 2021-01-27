@@ -21,15 +21,15 @@ The definitions provided in this article indicate the intended purpose of the ta
 The Return to the Workplace solution is built on Microsoft Power Platform. To learn more about working with model-driven apps and Microsoft Dataverse, go to:
 
 - [Model-driven apps guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
-- [Dataverse developer guide](https://docs.microsoft.com/powerapps/developer/common-data-service/overview)
-- [Dataverse entities](https://docs.microsoft.com/powerapps/developer/common-data-service/entities)
-- [Work with data using code in Dataverse](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds)
-- [Best practices and guidance for Dataverse](https://docs.microsoft.com/powerapps/developer/common-data-service/best-practices/)
+- [Dataverse developer guide](https://docs.microsoft.com/powerapps/developer/data-platform/overview)
+- [Dataverse entities](https://docs.microsoft.com/powerapps/developer/data-platform/entities)
+- [Work with data using code in Dataverse](https://docs.microsoft.com/powerapps/developer/data-platform/work-with-data)
+- [Best practices and guidance for Dataverse](https://docs.microsoft.com/powerapps/developer/data-platform/best-practices/)
 - [Business process flows](https://docs.microsoft.com/power-automate/business-process-flows-overview)
 
 To learn more about solutions and application lifecycle management (ALM) guidance to maintain the solution integrity, go to:
 
-- [Introduction to solutions](https://docs.microsoft.com/powerapps/developer/common-data-service/introduction-solutions)
+- [Introduction to solutions](https://docs.microsoft.com/powerapps/developer/data-platform/introduction-solutions)
 - [ALM with Microsoft Power Platform](https://docs.microsoft.com/power-platform/alm/)
 
 To learn more about supported extension methods, go to:

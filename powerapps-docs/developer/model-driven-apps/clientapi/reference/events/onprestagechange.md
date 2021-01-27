@@ -17,9 +17,7 @@ search.app:
 This event occurs **Before** the stage of a business process flow control changes. This event occurs after the user selects the **Next Stage**, **Move to previous stage** or **Set Active Stage** buttons in the user interface or when a developer uses the `formContext.data.process.moveNext`, `formContext.data.process.movePrevious`, or `formContext.data.process.setActiveStage` methods.
 
 > [!NOTE]
-> The OnPreStageChange event is supported only:
->    - On the Unified Interface.
->    - For single-entity business process flows; it isn't supported for cross-entity processes.
+> The OnPreStageChange event is supported only on the Unified Interface.
 
 From within a web resource script registered to the onPreStageChange event, a developer can invoke the following on the executionContext object passed into the web resource script: 
 

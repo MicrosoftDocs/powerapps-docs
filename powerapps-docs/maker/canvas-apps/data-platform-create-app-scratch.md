@@ -100,7 +100,7 @@ When you build an app from Dataverse, you don't need to create a connection from
     - **Annual Revenue**
 
     > [!NOTE]
-    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../common-data-service/create-edit-field-portal.md#create-a-column).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
+    > Outside of this scenario, you can create a custom field by selecting **New field**, providing the required information, and then selecting **Done**. More information: [Create a column](../data-platform/create-edit-field-portal.md#create-a-column).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Select and add a column")
 
 1. Select **Add**.
 

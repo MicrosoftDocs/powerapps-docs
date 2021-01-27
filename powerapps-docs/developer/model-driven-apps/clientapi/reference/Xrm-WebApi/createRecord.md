@@ -74,7 +74,7 @@ On success, returns a promise object containing the attributes specified earlier
 
 ## Examples
 
-These examples use the same request objects as demonstrated in [Create an entity using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) to define the data object for creating an entity record.
+These examples use the same request objects as demonstrated in [Create an entity using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) to define the data object for creating an entity record.
 
 ### Basic create 
 
@@ -206,6 +206,6 @@ Xrm.WebApi.offline.createRecord("account", data).then(
  
 ### Related topics
 
-[Create an entity using the Web API](../../../../common-data-service/webapi/create-entity-web-api.md) 
+[Create an entity using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) 
 
 [Xrm.WebApi](../xrm-webapi.md)
