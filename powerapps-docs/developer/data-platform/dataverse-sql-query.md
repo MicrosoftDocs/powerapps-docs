@@ -46,7 +46,7 @@ You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-ma
 
 The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all entities to which a user has access to in Dataverse.
 
-Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication are not supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
+Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
 
 ![Connec dialog](media/ssms-connect-dialog.PNG)
 
@@ -73,7 +73,7 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 
 ## Supported operations and data types
 
-For a detailed list of supported SQL operations on the Dataverse endpoint see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
+For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
 Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. Dataverse option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
 
@@ -99,7 +99,7 @@ Dates returned in query results are formatted as Universal Time Coordinated (UTC
 > [!NOTE]
 > Until a service update planned for January 2021 has deployed, using date filters will be slow.
 
-Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any re-writing of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
+Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any rewriting of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
 
 Queries using the TDS endpoint execute under the service protection API limits.
 
