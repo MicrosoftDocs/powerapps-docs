@@ -99,12 +99,12 @@ If you don't have any apps then when you sign in, the app will take you to the t
   
 ## Add to favorites
 
-You can only add canvas app to your list of favorites. 
+You can only add canvas apps to your list of favorite apps.
 
 
 |**Current**  |**Early access**  |
 |---------|---------|
-| <ul><li> by selecting the ellipsis (...) on the app tile, and then selecting **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.  </li> <div></div> <div></div> ![The app-selector menu](media/app-selector1.png "The app-selector menu")     |   <ol><li> Select the
+| <ul><li> Select the ellipsis (...) on the app tile, and then select **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.  </li> <div></div> <div></div> ![The app-selector menu](media/app-selector1.png "The app-selector menu")     | <ul><li> Select the ellipsis (...) on the app tile, and then select **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.  </li> <div></div> <div></div> ![The app-selector menu](media/app-selector1.png "The app-selector menu")     |
 
 
 ## Sort apps
