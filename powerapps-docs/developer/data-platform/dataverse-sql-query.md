@@ -23,7 +23,7 @@ search.app:
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 
-A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the entity data of the target Dataverse environment, allowing you to execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
+A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the entity data of the target Dataverse environment thereby allowing you to execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
 ## Applications support
 
