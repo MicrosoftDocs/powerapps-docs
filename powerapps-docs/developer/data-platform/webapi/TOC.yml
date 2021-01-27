@@ -56,7 +56,7 @@
     href: perform-conditional-operations-using-web-api.md
   - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
-  - name: Use partitions for faster document access
+  - name: Access documents faster using partitions
     href: azure-storage-partitioning.md
 - name: Work with metadata
   items:
