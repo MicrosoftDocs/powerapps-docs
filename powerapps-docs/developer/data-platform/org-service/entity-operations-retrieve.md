@@ -167,6 +167,9 @@ Console.WriteLine(entity["name"]);
 > [!NOTE]
 > Alternate keys are usually used only for data integration scenarios
 
+## Retrieve documents in storage partitions
+
+If you are retrieving entities containing documents that are stored in partitions be sure to specify the partition key when retrieving those documents. More information: [Improve performance when accessing documents using storage partitions](azure-storage-partitioning-sdk.md)
 
 ## Access Formatted values
 

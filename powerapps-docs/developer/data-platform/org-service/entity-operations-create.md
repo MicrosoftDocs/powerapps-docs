@@ -272,6 +272,10 @@ Another way to create an entity is by using the <xref:Microsoft.Xrm.Sdk.Messages
 
 More information: [Use Upsert](entity-operations-update-delete.md#use-upsert)
 
+## Create documents in storage partitions
+
+If you are creating large numbers of entities that contain documents, you can create the entities in storage partitions to speed up access to those entity records. More information: [Improve performance when accessing documents using storage partitions](azure-storage-partitioning-sdk.md)
+
 
 ### See also
 
