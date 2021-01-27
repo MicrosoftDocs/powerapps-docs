@@ -67,7 +67,7 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
 ## Example
 
-### Add photos to an Image gallery control
+### Add barcode scanner control
 
 1. Add a **barcode scanner** control, name it **Mybarcode scanner**
 
