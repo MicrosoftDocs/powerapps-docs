@@ -200,4 +200,4 @@ When the portal creation is disabled in a tenant, non-administrators will see an
 ### See also
 
 - [Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)
-- [Microsoft Learn: Access Dataverse in Power Apps portals](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/)
+- [Microsoft Learn: Access Dataverse in Power Apps portals](https://docs.microsoft.com/learn/modules/portals-access-data-platform/)

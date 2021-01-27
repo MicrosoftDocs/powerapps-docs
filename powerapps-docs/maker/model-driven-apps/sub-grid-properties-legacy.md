@@ -100,7 +100,7 @@ These are the properties available to configure when using a sub-grid component 
 ## Add row behavior  
  When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each sub-grid displays the **Add row** button ![Add button](media/crm-itpro-cust-subgridadd.PNG "Add button") in the top right side of the sub-grid. Choosing this button will allow you to add a row. This behavior will change depending on the option chosen for the **Rows** property and if the lookup is for activity rows.  
   
- When you select **Only Related Rows** the default behavior is the behavior to add existing rows. People see an in-line lookup to search for an existing row first. This helps prevent creating duplicate rows.  If they can't find an existing row, they can choose the **New** option. When a new row is created any of the column mappings defined in the relationship will be applied. More information: [Map table columns](../common-data-service/map-entity-fields.md)   
+ When you select **Only Related Rows** the default behavior is the behavior to add existing rows. People see an in-line lookup to search for an existing row first. This helps prevent creating duplicate rows.  If they can't find an existing row, they can choose the **New** option. When a new row is created any of the column mappings defined in the relationship will be applied. More information: [Map table columns](../data-platform/map-entity-fields.md)   
   
  When you select **All Row Types** the default behavior is to add a new row. The quick create form will be shown if the target table has one. If not, the default table main form is shown.  
   

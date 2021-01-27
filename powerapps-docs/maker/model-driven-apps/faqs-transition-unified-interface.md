@@ -41,7 +41,7 @@ From a technology standpoint, the retraining should be minimal as your business 
 
 ### Will I need to re-create my solution customizations?
 
-No, you should not have to recreate any customizations, provided you have followed the [Microsoft Dataverse Developer Guide](/powerapps/developer/common-data-service/overview) and kept up to date with any changes. However, there may be new opportunities to take on our latest investments that could lead to customization alterations.
+No, you should not have to recreate any customizations, provided you have followed the [Microsoft Dataverse Developer Guide](/powerapps/developer/data-platform/overview) and kept up to date with any changes. However, there may be new opportunities to take on our latest investments that could lead to customization alterations.
 
 ### How long will it take to transition/what is the work effort?
 

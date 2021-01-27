@@ -238,7 +238,7 @@ There are many possible reasons for a form to freeze, load slowly, or throw a "W
 
 **Resolution**:
 
-- Use the **DisableFormCommandbar** flag and refresh the page. If the issue is resolved, it was caused by some command customization.
+- Use the **DisableFormCommandbar** flag and refresh the page. If the issue is resolved, it was caused by some command customization. You may find it helpful to use [Command Checker](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/) to identify which command is malfunctioning.  
 
 - If the issue persists, use the **DisableFormHandlers=true** flag. If the issue still isn't resolved, you can further identify the exact event handler function that's causing the problem.
 

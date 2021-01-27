@@ -109,7 +109,7 @@ you can set up things such as auto-numbering fields, calculated fields, and
 roll-up fields. Pro developers can apply business logic that uses code by
 creating a plug-in or developing workflow extensions.
 
-More information: [Apply business logic in Dataverse](../../maker/common-data-service/cds-processes.md)
+More information: [Apply business logic in Dataverse](../../maker/data-platform/processes.md)
 
 > [!div class="nextstepaction"]
 > [Next step: Secure the app and data](security.md)

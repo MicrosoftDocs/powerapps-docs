@@ -13,7 +13,7 @@ ms.reviewer: kathyos
 
 # Pattern: Calculation
 
-![Collage of calculation app screenshots](media/calculation-collage.png "Collage of calculation app screenshots")
+<!--![Collage of calculation app screenshots](media/calculation-collage.png "Collage of calculation app screenshots")-->
 
 Power Apps makers use the calculation/transformation pattern to teach, to learn,
 and to make their work easier and more accurate. These apps might replace

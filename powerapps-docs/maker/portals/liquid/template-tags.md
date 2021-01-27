@@ -19,7 +19,7 @@ Template tags control the output of a template in various ways, and allow the co
 Allows user to query data from CDS and render the results in a page.
 
 > [!NOTE]
-> You can learn more about querying the data using fetchxml at [use FetchXML to query data](https://docs.microsoft.com/powerapps/developer/common-data-service/use-fetchxml-construct-query).
+> You can learn more about querying the data using fetchxml at [use FetchXML to query data](https://docs.microsoft.com/powerapps/developer/data-platform/use-fetchxml-construct-query).
 
 ```
 {% fetchxml resultVariable %}

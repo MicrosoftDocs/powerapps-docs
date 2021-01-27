@@ -1,5 +1,5 @@
 ---
-title: Functional application sonsultant learning catalog
+title: Functional application consultant learning catalog
 description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article

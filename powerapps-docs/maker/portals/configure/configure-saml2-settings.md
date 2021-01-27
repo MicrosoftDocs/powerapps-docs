@@ -20,7 +20,7 @@ ms.reviewer: tapanm
 > [!NOTE]
 > See [Configure AD FS by using PowerShell](#configure-ad-fs-by-using-powershell), for information about how to perform these steps in a PowerShell script.
 
-1. Using the [AD FS Management tool, go to **Service** > **Claim Descriptions**.
+1. Using the AD FS Management tool, go to **Service** > **Claim Descriptions**.
 
     1.  Select **Add Claim Description**.
     2.  Specify the claim:
