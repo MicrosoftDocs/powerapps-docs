@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/27/2020
+ms.date: 01/27/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
