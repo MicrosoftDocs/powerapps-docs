@@ -35,6 +35,10 @@ Legend:
 1. **Model-driven apps**
 2. **Canvas apps**
 
+## Required privileges
+
+For privileges required to run model-driven apps on Power Apps Mobile app, see [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges).
+
 ## Supported devices 
 
 These are the supported devices for running model-driven apps and canvas apps on the Power Apps mobile app.
