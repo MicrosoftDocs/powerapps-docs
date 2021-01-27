@@ -80,7 +80,7 @@ At the case level, no additional personal or privacy-related information is stor
 
 ## Manage employee and case managers master data
 
-This section explains hoe you can manage employees and case managers data.
+This section explains how you can manage employees and case managers data.
 
 ### Manage employees
 
@@ -198,7 +198,7 @@ The key piece of data to be captured and recorded before moving to the next stag
   > [!div class="mx-imgBorder"]
   > ![Monitoring](media/health-safety-bpf-monitoring.png "Monitoring")
 
-In the **Employee Instructions** section an employee can be blocked from accessing facilities.
+In the **Employee Instructions** section, an employee can be blocked from accessing facilities.
 
    > [!div class="mx-imgBorder"]
    > ![Employee instructions](media/health-safety-employee-block-access.png "Employee instructions")
@@ -258,8 +258,8 @@ To link an employee attestation record to a case:
 
 1. Open an employee case record and select the **Exposures** tab.
 2. In the grid, select **Add Existing Employee Attestation**.
-3. Use the lookup to search for the attestation records for the employee under investigation. When you select the lookup, only positive attestations are listed since these indicate people that could actually enter a facility. 
-4. Select the applicable employee attestation records and then select **Add**.
+3. Use the lookup to search for the attestation records for the employee under investigation. When you select the lookup, only positive attestations are listed since these indicate people that could actually enter a facility.
+4. Select the applicable employee attestation records, and then select **Add**.
 
     > [!div class="mx-imgBorder"]
     > ![Link an employee attestation record to a case](media/health-safety-linkedrecord.png "Linked Record")

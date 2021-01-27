@@ -137,7 +137,7 @@ These tables are used primarily by the Facility Safety Management model-driven a
 
 ## Portal tables
 
-These tables are used primarily by the Portal extension. This list includes the tables from the other sections that been changed.
+These tables are used primarily by the Portal extension. This list includes the tables from the other sections that have been changed.
 
 
 | **Table name**           | **Information in the table**                   |
@@ -422,8 +422,8 @@ The data definitions section provides information about a list of tables, column
 | Notification Type   | Option set    | Used to set warning level                                          | Model-driven app and canvas app |
 | Header              | Text          | Header text to be displayed or subject line of the email.          | Model-driven app and canvas app |
 | Body                | Text          | Main text of the message.                                          | Model-driven app and canvas app |
-| Send as email       | Two option    | Checked if notification has to be send via email.                  | Model-driven app                |
-| Send as push notification | Two option  | Checked if the notification has to be send via push-message.   | Model-driven app                |
+| Send as email       | Two option    | Checked if notification has to be sent by email.                  | Model-driven app                |
+| Send as push notification | Two option  | Checked if the notification has to be sent by push-message.   | Model-driven app                |
 | Read?               | Two option    | Used to capture if the message has been read by the end user.      | Model-driven app and canvas app |
 |||||
 
@@ -526,11 +526,11 @@ The data definitions section provides information about a list of tables, column
 | Health Contact Instructions             | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app | Base |
 | Health & Safety Instructions            | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app | Base |
 | General Terms & Agreement               | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app | Base |
-| Guest Health Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest.          | Model-driven app and canvas app | Base |
-| Guest Privacy Terms & Agreement         | Text       | Instructions provided to an employee when registration a guest.           | Model-driven app and canvas app | Base |
+| Guest Health Terms & Agreement          | Text       | Instructions provided to an employee when registration is for a guest.          | Model-driven app and canvas app | Base |
+| Guest Privacy Terms & Agreement         | Text       | Instructions provided to an employee when registration is for a guest.           | Model-driven app and canvas app | Base |
 | Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                | Base |
 | Resources Text                          | Text       | Instruction provided to resources when registering to the portal.         | Model-driven app and Portal      | Portal |
-| Use 24-Hour Format                      | Option Set | Switches between 24 or 12 hour time format on the passes.                 | Model-driven app and canvas app | Base |
+| Use 24-Hour Format                      | Option Set | Switches between 24-hour or 12-hour time format on the passes.                 | Model-driven app and canvas app | Base |
 
 ### State
 
@@ -590,4 +590,4 @@ Initially in the solution, the flows below were provided to generate sample data
 
 ### Give feedback about the solution
 
-To provide feedback about the Return to the Workplace solution, go to <https://aka.ms/rtw-community>.
+To provide feedback about the Return to the Workplace solution, go to [aka.ms/rtw-community](https://aka.ms/rtw-community).

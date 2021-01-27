@@ -280,7 +280,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
    | Allow QR codes | Enables QR code on the pass in the Employee app and Employee portal.  |
    | Allow Guest Registrations | Enables employees to register guests on their bookings in the Employee app.  |
    | Allow Share Guest Registrations | Enables employees to share passes with guests. |
-   | Use 24-Hour Format | Switches between 24 or 12 hour time format on the passes. | 
+   | Use 24-Hour Format | Switches between 24-hour or 12-hour time format on the passes. | 
    | Health & Safety email | Email address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
    | Health & Safety Instructions | General instructions provided to employee in the Employee app when access is blocked by the case manager. |
    | General Terms & Agreement | Shown in the Employee app during the booking process. |
@@ -368,7 +368,7 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 
 **To create bulk record-delete jobs**
 
-1. Select **Settings**, and then select **Data Management**
+1. Select **Settings**, and then select **Data Management**.
 
 2. Under **Data Management**, select **Bulk Record Deletion**.
 
@@ -393,4 +393,4 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 
 ## Feedback about the solution
 
-To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
+To provide feedback about the Return to the Workplace solution, visit [aka.ms/rtw-community](https://aka.ms/rtw-community).
