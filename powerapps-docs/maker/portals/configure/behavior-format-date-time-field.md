@@ -33,4 +33,4 @@ By default, the portal uses the standard date/time formats specified by the webs
 
 ## Duration
 
-Dataverse forms allow you to add, or edit fields having [duration](../../data-platform/create-edit-field-portal.md) data type with custom values. For example, instead of the default `7 hours`, or `2 days`, you can enter `7.5 hours`, or `2.5 days`. You can't edit this field with such custom values using portals. However, portals will display such custom values when defined for the records from Dataverse.
+Dataverse forms allow you to add, or edit fields having [duration](../../data-platform/create-edit-field-portal.md) data type with custom values. For example, instead of the default `7 hours`, or `2 days`, you can enter `7.5 hours`, or `2.5 days`. You can't add, or edit this field with such custom values using portals. However, portals will display such custom values when defined for the records from Dataverse.
