@@ -27,7 +27,7 @@ To learn how to use model-driven apps running on the Power Apps mobile app, see 
 
 > [!IMPORTANT]
 > - Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
-> - Power Apps mobile app for Windows isn't supported if you have the [Power Apps per app plan](/power-platform/admin/about-powerapps-perapp).
+> - Power Apps for Windows isn't supported if you have the [Power Apps per app plan](/power-platform/admin/about-powerapps-perapp).
 
 ![Power Apps mobile user interface.](media/powerappsmobile.png "Power Apps mobile user interface")
 
