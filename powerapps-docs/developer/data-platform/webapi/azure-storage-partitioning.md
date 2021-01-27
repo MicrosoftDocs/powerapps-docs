@@ -25,29 +25,39 @@ When no partition key is specified, the table is the logical boundary and retrie
 
 A unique new partition key value must be used to create a new logical partition. The same value must be used to create additional items in the same logical partition and to retrieve, update, or delete items belonging to the logical partition.
 
+This HTTP command creates a new customer entity record in a new storage partition named "CustomerPartition".
+
 ```http
-// Create
-POST [Organization URI]/api/data/v9.1/new_msdyn_customers?partitionid=<pID>
+POST [Organization URI]/api/data/v9.1/new_msdyn_customers?partitionid="CustomerPartition"
 Content-Type: application/json
 {
   "new_firstname": "Hello",
   "new_lastname": "World",
 }
+```
 
-// Retrieve
-GET [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionid=<pID>
-GET [Organization URI]/api/data/v9.1/new_msdyn_customers?partitionId=<ID>
+These HTTP commands retrieves one and all customer records from the partition.
 
-// Update
-PATCH [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionid=<pID>
+```http
+GET [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionid="CustomerPartition"
+GET [Organization URI]/api/data/v9.1/new_msdyn_customers?partitionid="CustomerPartition"
+```
+
+This HTTP command updates a customer record in the storage partition.
+
+```http
+PATCH [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionid="CustomerPartition"
 Content-Type: application/json
 {
   "new_firstname": "Hello",
   "new_lastname": "World",
 }
+```
 
-// Delete
-DELETE [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionid=<pID>
+This HTTP command deletes a customer record in the partition.
+
+```http
+DELETE [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionid="CustomerPartition"
 ```
 
 ## Additional information
