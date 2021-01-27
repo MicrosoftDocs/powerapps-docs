@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 02/29/2020
+ms.date: 01/26/2021
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -22,6 +22,9 @@ Mobile users often need to be productive even when they have limited or no conne
 - Open Power Apps Mobile and run apps when offline.
 - Determine when an app is offline, online, or in a metered connection by using the [Connection](functions/signals.md#connection) signal object.
 - Use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic data storage when offline.
+
+> [!NOTE]
+> Offline capability for canvas apps is only available while running the apps using Power Apps Mobile. Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
 
 This article includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
 
