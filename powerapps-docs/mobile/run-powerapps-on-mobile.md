@@ -145,7 +145,7 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
      > [!div class="mx-imgBorder"]
      > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
    
-  - **Early access**: On the app that you want pin, swipe to the left and select **Shortcut**.
+  - **Early access**: On the app that you want pin, swipe to the right and select **Shortcut**.
 
      > [!div class="mx-imgBorder"]
      > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
@@ -183,7 +183,7 @@ Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen
     > [!div class="mx-imgBorder"]
     > ![Add shortcut to Siri.](media/add-shortcut.png "Add shortcut to Siri")
     
- - **Early access**: On the app that you want pin, swipe to the left and select **Shortcut**.
+ - **Early access**: On the app that you want pin, swipe to the right and select **Shortcut**.
 
     > [!div class="mx-imgBorder"]
     > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
