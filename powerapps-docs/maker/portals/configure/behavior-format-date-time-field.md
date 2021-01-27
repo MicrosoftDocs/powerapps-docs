@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 01/26/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -29,5 +29,8 @@ You can also override the default date/time format to be used on portals by crea
 - DateTime/TimeFormat: The time format used on the portal. 
 - DateTime/DateTimeFormat: The format for full date and time used on the portal.
 
-By default, the portal uses the standard date/time formats specified by the website language settings.
-The accepted date/time formats are specified [here](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings).
+By default, the portal uses the standard date/time formats specified by the website language settings. For a complete list of the accepted date/time formats, read [Custom date and time format strings](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings).
+
+## Duration
+
+Dataverse forms allow you to add, or edit fields having [duration](../../data-platform/create-edit-field-portal.md) data type with custom values. For example, instead of the default `7 hours`, or `2 days`, you can enter `7.5 hours`, or `2.5 days`. You can't edit this field with such custom values using portals. However, portals will display such custom values when defined for the records from Dataverse.
