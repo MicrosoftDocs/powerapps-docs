@@ -98,7 +98,7 @@ The apps that you used recently wil show on the default screen when you sign in 
 
 | **Current** | **Early access** |
 | --- | --- |
-|  When you sign in to the app, the My apps filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") |  The **Home** is the default sceen when you sign in. It shows the apps that you used recently and the apps that have marked a favorites. <div></div> ![Default Home screen](media/default-home-screen.png "Default Home screen")|
+|  When you sign in to the app, the My apps filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") |  The **Home** is the default sceen when you sign in. It shows the apps that you used recently and the apps that have marked as favorites. <div></div> ![Default Home screen](media/default-home-screen.png "Default Home screen")|
 
 
 
