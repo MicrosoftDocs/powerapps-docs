@@ -137,7 +137,7 @@ If you know the name of the app that you want to run, then then use search to qu
  
 | **Current** | **Early access** |
 | --- | --- |
-|  To find an app, select the search icon at the top, and then type part of its name in the search box. If you filtered your apps, the filtered list will be searched.  <div></div> ![Search for apps.](media/search_apps.png "Search for apps") | To find an app, select the **All apps** and then enter the app name in the search field to find the app. <div></div> ![Search for your app.](media/search_apps-1.png "Search for your app")|
+|  To find an app, select the search icon at the top, and then type part of its name in the search box. If you filtered your apps, the filtered list will be searched.  <div></div> ![Search for apps.](media/search_apps.png "Search for apps") | To find an app enter the app name in the search field. The app will only search for apps that are on the screen you're on. <div></div> ![Search for your app.](media/search_apps-1.png "Search for your app")|
 
 
 ## Refresh the list of apps
