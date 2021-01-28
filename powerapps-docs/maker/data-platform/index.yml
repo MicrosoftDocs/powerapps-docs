@@ -26,7 +26,7 @@ landingContent:
          links:
           - text: What is Dataverse?
             url: data-platform-intro.md
-          - text: Why choose Dataverse
+          - text: Why choose Dataverse?
             url: why-dataverse-overview.md
        - linkListType: learn
          links:
