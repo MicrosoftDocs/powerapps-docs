@@ -31,7 +31,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Introduction to Dataverse
-            url: https://docs.microsoft.com/learn/modules/introduction-data-platform/
+            url: https://docs.microsoft.com/learn/modules/introduction-common-data-service
 
   # Card
   - title: Define data
