@@ -5,9 +5,9 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/30/2020
+ms.date: 1/28/2021
 ms.author: garybird
-ms.reviewer: nabuthuk
+ms.reviewer: v-iap
 ---
 
 # Return to the Workplace Portal
@@ -73,7 +73,7 @@ While logged in to the portal, the guest can do the following tasks:
 - View resources
 - Update their profile
 
-The first two options are directly available from the home screen. The second two are available in the Options menu located in the upper-left corner or the navigation bar on devices with larger screens. Next to those, the Options menu provides a link **home** to the home screen and a link to sign out.><!-- Edit note: Style guide says to avoid hamburger. Apparently it is the Options menu. We could also add a small icon if necessary here in text. -->
+The first two options are directly available from the home screen. The second two are available in the Options menu located in the upper-left corner or the navigation bar on devices with larger screens. Next to those, the Options menu provides a link **home** to the home screen and a link to sign out.
 
 #### Home screen
 
@@ -109,7 +109,7 @@ To create a guest pass using the portal:
     > [!div class="mx-imgBorder"]
     > ![Accept disclaimers](media/portals-disclaimer.png "Accept disclaimers")
 
-6. Select **I AGREE** if you don't have any symptoms.<!-- edit pass: If I don't have symptoms or the guest has no symptoms, unclear. -->
+6. Select **I AGREE** if the guest has no symptoms.
 
    > [!div class="mx-imgBorder"]
    > ![Agree terms](media/portals-attestation.png "Agree terms")
@@ -208,7 +208,7 @@ Non-mandatory fields:
 > [!div class="mx-imgBorder"]
 > ![Portal Register Guest or dependent](media/portals-register-dependent.png "Portal Register Guest or dependent")
 
-After creating dependents, the user will see them listed. First the two most recent dependents and the list of all when creating a pass.<!-- Edit note: Not sure what this means so unable to edit it. -->
+After creating dependents, the user will see them listed. First the two most recent dependents, and then the list of all dependents when creating a pass.
 
 > [!div class="mx-imgBorder"]
 > ![Create pass for guests](media/portals-select-dependent.png "Create pass for guests")
@@ -219,13 +219,13 @@ To find dependents in the Facility Management app, go to **Solution Setup** and 
 
 Send notifications to employees through the **Facility Management App**. The notifications will show in the portal. 
 
-To access **Notifications**, select the bell icon in the upper-right corner of the home page.<!-- Edit note: Check the ALT text in the next two images to ensure accurate. -->
+To access **Notifications**, select the bell icon in the upper-right corner of the home page.
 
 > [!div class="mx-imgBorder"]
-> ![Portal Options Menu](media/portals-home-notifications.png "Portal Home Notifications")
+> ![Select Notifications on portal home page](media/portals-home-notifications.png "Select Notifications on portal home page")
 
 > [!div class="mx-imgBorder"]
-> ![Notifications access](media/portals-notifications-pass.png "Portal Home Notifications")
+> ![Portal home notifications](media/portals-notifications-pass.png "Portal home notifications")
 
 ## Facility access not available
 
