@@ -216,6 +216,12 @@ By default, duplicate detection is suppressed when you are updating records usin
 
 See [Detect duplicates during Update operation using the Web API](manage-duplicate-detection-create-update.md#bkmk_update) for more information on how to check for duplicate records during Update operation.
 
+## Update and delete documents in storage partitions
+
+If you are updating or deleting entities containing documents that are stored in partitions be sure to specify the partition key when accessing those documents.
+
+More information: [Access documents faster using storage partitions](azure-storage-partitioning.md)
+
 ### See also
 
 [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />

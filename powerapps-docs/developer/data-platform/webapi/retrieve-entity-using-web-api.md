@@ -107,6 +107,12 @@ Any time you need to uniquely identify an entity to retrieve, update, or delete,
 
 <a name="bkmk_retrieveSingleValue"></a>
 
+## Retrieve documents in storage partitions
+
+If you are retrieving entities containing documents that are stored in partitions be sure to specify the partition key when retrieving those documents.
+
+More information: [Access documents faster using storage partitions](azure-storage-partitioning.md)
+
 ## Retrieve a single property value
 
 When you only need to retrieve the value of a single property for an entity, you can append the name of the property to the URI for an entity to return only the value for that property. This is a performance best practice because less data needs to be returned in the response.
