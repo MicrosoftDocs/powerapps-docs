@@ -135,7 +135,7 @@ You can use these formula patterns for expressing common layout relationships be
 | **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of pattern](media/create-responsive-layout/d9.png) |
 |  | **Width** | `Parent.Width - C.X` |  |
 | **C** fills space between **D** and bottom edge of parent | Y | `D.Y + D.Height` | ![Example of pattern](media/create-responsive-layout/d10.png) |
-| | **Height** | ```Parent.Height - D.Y```
+| | **Height** | ```Parent.Height - C.Y```
 
 ## Hierarchical layout
 
