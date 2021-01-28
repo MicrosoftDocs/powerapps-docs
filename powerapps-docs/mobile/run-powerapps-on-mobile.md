@@ -33,7 +33,14 @@ To learn how to use model-driven apps running on the Power Apps mobile app, see 
 
 If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
 
-Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
+To use the early access you will need to enable the **New design (preview)**. There is two ways to do this:
+
+- When you're on the latest version of the app, you'll get a notification to use the new design. Select **Try now** to start using the new design.
+
+  > [!div class="mx-imgBorder"]
+  >![Notiication to use the new design](media/newdesign.png "Notification to use the new design") 
+
+- Or, go to **Settings** menu ![Settings button](media/settings_icon-1.png) and turn on the toggle for **New design (preview)**.
 
 |**Current**  |**Early access** |
 |---------|---------|
