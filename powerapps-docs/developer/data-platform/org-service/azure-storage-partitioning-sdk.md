@@ -30,17 +30,20 @@ public void Run(CrmServiceClient client)
 {
     // Create
     Entity entity = new Entity("new_msdyn_customer");
-    entity["new_firstname"] = "Hello";
-    entity["new_lastname"] = "World";
-    entity["partitionid"] = "CategoryPartition"; // First use of the key.
-    Guid id = client.Create(entity); // This results in the partition being created.
+    entity["new_firstname"] = "Monica";
+    entity["new_lastname"] = "Thompson";
+
+    // First use of the partition ID value during an entity Create operation
+    // also creates the partition where that entity record is stored.
+    entity["partitionid"] = "CustomerPartition"; 
+    Guid id = client.Create(entity); 
 
     // Update
     UpdateRequest updateRequest = new UpdateRequest();
     entity = new Entity("new_msdyn_customer", id);
-    entity["new_firstname"] = "NewHello";
-    //entity["new_lastname"] = "NewWorld";
-    entity["partitionid"] = "CategoryPartition";
+    entity["new_firstname"] = "Cora";
+    //entity["new_lastname"] = "Thomas";
+    entity["partitionid"] = "CustomerPartition";
     updateRequest.Target = entity;
     var updateResponse = (UpdateResponse)client.Execute(updateRequest);
 
@@ -48,7 +51,7 @@ public void Run(CrmServiceClient client)
      RetrieveRequest request = new RetrieveRequest();
      request.ColumnSet = new ColumnSet("new_firstname");
      request.Target = new EntityReference("new_msdyn_customer", id);
-     request["partitionId"] = "CategoryPartition";
+     request["partitionId"] = "CustomerPartition";
      var response = (RetrieveResponse)client.Execute(request);
 
      // RetrieveMultiple
@@ -58,22 +61,22 @@ public void Run(CrmServiceClient client)
          EntityName = "new_msdyn_customer",
          ColumnSet = new ColumnSet("new_firstname")
      };
-     retreiveMultipleRequest["partitionId"] = "CategoryPartition";
+     retreiveMultipleRequest["partitionId"] = "CustomerPartition";
      var retrieveResponse = (RetrieveMultipleResponse)client.Execute(retreiveMultipleRequest);
 
-     // Update
+     // Update and insert
      UpsertRequest upsertRequest = new UpsertRequest();
      entity = new Entity("new_msdyn_customer", id);
-     entity["new_firstname"] = "NewHello";
-     entity["new_lastname"] = "NewWorld";
-     entity["partitionid"] = "CategoryPartition";
+     entity["new_firstname"] = "Andre";
+     entity["new_lastname"] = "Lawson";
+     entity["partitionid"] = "CustomerPartition";
      upsertRequest.Target = entity;
      var upsertResponse = (UpsertResponse)client.Execute(upsertRequest);
 
      // Delete
      DeleteRequest deleteRequest = new DeleteRequest();
      deleteRequest.Target = new EntityReference("new_msdyn_customer", id);
-     deleteRequest["partitionId"] = "CategoryPartition";
+     deleteRequest["partitionId"] = "CustomerPartition";
      var deleteResponse = (DeleteResponse)client.Execute(deleteRequest);
 }
 ```
