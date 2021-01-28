@@ -108,7 +108,7 @@ If you don't have any apps then when you sign in, the app will take you to the t
 
 |Current  |Early access  |
 |---------|---------|
-|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Diispalys canvas apps that you have pinned to favorite.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li> **Settings**: Access app settings and sign out. </li> <li> **Search**: Search for apps. </li> <li>**Favorites** (canvas apps only): Dispalys canvas apps that you have pinned to favorites. </li> <li>**Recent apps**: Displays both model-driven and canvas apps that you have recently used. </li> <li>**Home**: Displays favorite apps and recently accessed apps sorted by open date.</li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More** (canvas apps only): Displays featured and sample apps. </li> <li>**Details**: View information about the app. </li> 
+|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Diispalys canvas apps that you have pinned to favorite.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li> **Settings**: Access app settings and sign out. </li> <li> **Search**: Use the search to search for apps. When you run a search it will only search for apps that are on the screen you're on. </li> <li>**Favorites** (canvas apps only): Dispalys canvas apps that you have pinned to favorites. </li> <li>**Recent apps**: Displays both model-driven and canvas apps that you have recently used. </li> <li>**Home**: Displays favorite apps and recently accessed apps sorted by open date.</li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More** (canvas apps only): Displays featured and sample apps. </li> <li>**Details**: View information about the app including open the app, add a shortcut for the app, and add to favorites. </li> 
   
 ## Add to favorites
 
@@ -145,11 +145,11 @@ If you know the name of the app that you want to run, then then use search to qu
    >![Refresh the app list](media/refesh-apps-iphone.png)
 
 
-## Pin to home
+## Add shortcuts
 
-You can pin both canvas apps and model-driven apps to the home screen of your device for quick access.
+You can add a shortcut for both canvas apps and model-driven apps to the home screen of your device for quick access.
 
-### Use Safari to pin to home (iOS 13 or earlier)
+### Use Safari to add a shortcut (iOS 13 or earlier)
 
 1. Do one of the following depending on if you're on the current release or eary acccess:
 
@@ -158,7 +158,7 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
      > [!div class="mx-imgBorder"]
      > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
    
-  - **Early access**: On the app that you want pin, swipe to the right and select **Shortcut**.
+  - **Early access**: On the app that you want to create a shortcut for, swipe to the right and select **Shortcut**.
 
      > [!div class="mx-imgBorder"]
      > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
@@ -182,21 +182,21 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 > For iOS devices that have multiple browsers installed, use Safari when pinning an app to home. 
 
 
-### Use Siri shortcuts to pin to home (iOS 14 or later) 
+### Use Siri shortcuts to add a shortcut to the Home screen (iOS 14 or later) 
 
-The Power Apps mobile app is now integrated with Siri shortcuts, which gives you the ability to pin to home, launch apps with Siri, and create new workflows. For more information on how shortcuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios). This feature requires Power Apps mobile version 3.20092.x or later.
+The Power Apps mobile app is now integrated with Siri shortcuts, which gives you the ability to add a shortcut to the Home screen, launch apps with Siri, and create new workflows. For more information on how shortcuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios). This feature requires Power Apps mobile version 3.20092.x or later.
 
 Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen. The new experience works for both model-driven and canvas apps. When you add a Siri shortcut, the app is added to the iOS **Shortcuts** app and from there you can add the app to your home screen.
 
 
 1. Do one of the following depending on if you're on the current release or eary acccess:
 
- - **Current**: To pin an app to the home screen, select the ellipsis (...) on the app tile and then select **Add shortcut to Siri**.
+ - **Current**: To adda shortcut to the home screen for an app, select the ellipsis (...) on the app tile and then select **Add shortcut to Siri**.
 
     > [!div class="mx-imgBorder"]
     > ![Add shortcut to Siri.](media/add-shortcut.png "Add shortcut to Siri")
     
- - **Early access**: On the app that you want pin, swipe to the right and select **Shortcut**.
+ - **Early access**: On the app that you want add a shortcut for, swipe to the right and select **Shortcut**.
 
     > [!div class="mx-imgBorder"]
     > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
