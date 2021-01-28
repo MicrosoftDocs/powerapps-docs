@@ -5,9 +5,9 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/14/2020
+ms.date: 1/28/2021
 ms.author: garybird
-ms.reviewer: nabuthuk
+ms.reviewer: v-iap
 ---
 
 # What's new in the Return to the Workplace solution?
@@ -16,13 +16,13 @@ This article provides resources where you can learn about the new features that 
 
 ## New and updated features in January 2021 (v1.4)
 
-### Facility management app
+### Facility Safety Management app
 
-Solution settings now include a switch to toggle between 12-hour and 24-hour time format in the employee app.<!-- Edit note: I see you made employee lowercase. Normally I would expect capping for an app but assume you have evidence for it. Employee app is mentioned under v1.0, and in other topics, so I wonder if that should be the heading here. Also wonder if it should be Facility Safety Management app. -->
+Solution settings now include a switch to toggle between 12-hour and 24-hour time format in the Employee Return to the Workplace app.
 
-### Workplace care management app
+### Workplace Care Management app
 
-On the Exposures tab of an employee case, the employee attestation lookup now shows only positive (Yes) attestations to link to the case.<!-- Edit note: In later sections, it is Workplace Care Management app. -->
+On the Exposures tab of an employee case, the employee attestation lookup now shows only positive (Yes) attestations to link to the case.
 
 ### Access control and notifications
 
