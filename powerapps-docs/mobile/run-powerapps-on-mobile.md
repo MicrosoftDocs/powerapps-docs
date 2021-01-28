@@ -117,7 +117,7 @@ You can only add canvas apps to your list of favorite apps.
 
 |**Current**  |**Early access**  |
 |---------|---------|
-| <ul><li> Select the ellipsis (...) on the app tile, and then select **Favorite**. </li><li> To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.   <div></div> <div></div> ![Mark as Favorite.](media/add_favorite_app.png "Mark as Favorite") | <ul><li> Swipe left and then select **Favorite**. A yellow star will appear next to app name when it's added to favorites. You can also select the **Details** button and then add the app to favorites. </li><li> To remove the app from the list, swipe left again and then select **Unfavorite**.</li>   <div></div> <div></div> ![Add to list of favorites.](media/add-to-favs-1.png "Add to list of favorites")     |
+| <ul><li> Select the ellipsis (...) on the app tile, and then select **Favorite**. </li><li> To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.   <div></div> <div></div> ![Mark as Favorite.](media/add_favorite_app.png "Mark as Favorite") | <ul><li> Swipe left and then select **Favorite**. A yellow star will appear next to app name when it's added to favorites. You can also select **Details** ![Details button](media/detailsbutton.png) and then add the app to favorites. </li><li> To remove the app from the list, swipe left again and then select **Unfavorite**.</li>   <div></div> <div></div> ![Add to list of favorites.](media/add-to-favs-1.png "Add to list of favorites")     |
 
 
 ## Sort apps
