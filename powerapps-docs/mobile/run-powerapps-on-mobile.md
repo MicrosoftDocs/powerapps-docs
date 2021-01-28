@@ -33,15 +33,6 @@ To learn how to use model-driven apps running on the Power Apps mobile app, see 
 
 If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
 
-To use the early access you will need to enable the **New design (preview)**. There is two ways to do this:
-
-- When you're on the latest version of the app, you'll get a notification to use the new design. Select **Try now** to start using the new design.
-
-  > [!div class="mx-imgBorder"]
-  >![Notiication to use the new design](media/newdesign.png "Notification to use the new design") 
-
-- Or, go to **Settings** menu ![Settings button](media/settings_icon-1.png) and turn on the toggle for **New design (preview)**.
-
 |**Current**  |**Early access** |
 |---------|---------|
 | ![Power Apps mobile user interface.](media/powerappsmobile.png "Power Apps mobile user interface")     |     ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")  |
@@ -50,6 +41,18 @@ Legend:
 
 1. **Model-driven apps**
 2. **Canvas apps**
+
+
+### Use the early access design
+
+To use the early access you will need to enable the **New design (preview)**. There is two ways to do this:
+
+- When you're on the latest version of the app, you'll get a notification to use the new design. Select **Try now** to start using the new design.
+
+  > [!div class="mx-imgBorder"]
+  >![Notiication to use the new design](media/newdesign.png "Notification to use the new design") 
+
+- Or, go to **Settings** menu ![Settings button](media/settings_icon-1.png) and turn on the toggle for **New design (preview)**.
 
 
 ## Required privileges
