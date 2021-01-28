@@ -34,15 +34,15 @@
       href: retrieve-related-entities-query.md
   - name: Retrieve and execute predefined queries
     href: retrieve-and-execute-predefined-queries.md
-  - name: Create an entity
+  - name: Create an entity record
     href: create-entity-web-api.md
-  - name: Retrieve an entity
+  - name: Retrieve an entity record
     href: retrieve-entity-using-web-api.md
-  - name: Update and delete entities 
+  - name: Update and delete entity records 
     href: update-delete-entities-using-web-api.md
   - name: Associate and disassociate entities
     href: associate-disassociate-entities-using-web-api.md
-  - name: Merge entities 
+  - name: Merge entity records 
     href: merge-entity-using-web-api.md
   - name: Use functions
     href: use-web-api-functions.md
