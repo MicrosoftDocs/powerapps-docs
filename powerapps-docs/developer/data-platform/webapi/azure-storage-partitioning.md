@@ -39,8 +39,8 @@ Content-Type: application/json
 HTTP commands that retrieve one and all customer records from the named storage partition.
 
 ```http
-GET [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionid="CustomerPartition"
-GET [Organization URI]/api/data/v9.1/new_msdyn_customers?partitionid="CustomerPartition"
+GET [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionId="CustomerPartition"
+GET [Organization URI]/api/data/v9.1/new_msdyn_customers?partitionId="CustomerPartition"
 ```
 
 An HTTP command that updates a customer record in the named storage partition.
@@ -57,8 +57,11 @@ Content-Type: application/json
 An HTTP command that deletes a customer record in the named storage partition.
 
 ```http
-DELETE [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionid="CustomerPartition"
+DELETE [Organization URI]/api/data/v9.1/new_msdyn_customers(<cID>)?partitionId="CustomerPartition"
 ```
+
+> [!IMPORTANT]
+> For a GET or DELETE command, the partition identifier parameter is case sensitive and must be specified with e capital "I" as in "partition**I**d".
 
 ## Additional information
 
