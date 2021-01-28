@@ -71,11 +71,36 @@ Create a blank phone app and add a connection with the **Text Analytics** connec
 
 Your app is now connected to the Cognitive Services resource of Text Analytics API type in Azure.
 
-### Add controls to the app
+### Design the app
 
-The next step in creating the app is to add all the controls. Normally when we build apps, we add formulas to the controls as we go, but in this case we'll focus on the controls first, then add a few formulas in the next section. The following image shows the app with all the controls.
+In this section, you'll design the app controls, and the formulas required to work with the Text Analytics API. After you've completed the app design, this is how it'll look:
 
 ![Finished app](./media/cognitive-services-api/finished-app-no-data.png)
+
+> [!TIP]
+> To learn about how to add controls and formulas to the controls in detail, see [Add and configure controls](add-configure-controls.md).
+
+1. Select ![Insert](./media/cognitive-services-api/insert-icon.png) from the left pane.
+
+1. Select **Text label**.
+
+1. Change the label properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Text | "Text Analytics" |
+    | Size | 36 |
+    | Color | RGBA(255, 255, 255, 1) |
+    | Fill | RGBA(56, 96, 178, 1)|
+
+1. Resize the label as below.
+
+    ![App banner](./media/cognitive-services-api/app-banner.png "App banner")
+
+1. Add 
+
+1. Change **Text** for this label to *Text Analytics*.
+
 
 Follow the steps below to create this screen. If a control name is specified, that name is used in a formula in the next section.
 
