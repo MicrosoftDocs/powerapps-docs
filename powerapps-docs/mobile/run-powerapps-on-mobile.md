@@ -122,9 +122,14 @@ You can only add canvas apps to your list of favorite apps.
 
 ## Sort apps
 
-After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps. You can sort both canvas apps and model-driven apps.
+You can sort both canvas apps and model-driven apps.
 
-![Sort menu.](media/sort_apps.png "Sort menu")
+
+| **Current** | **Early access** |
+| --- | --- |
+|  After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps. You can sort both canvas apps and model-driven apps.  <div></div> ![Sort menu.](media/sort_apps.png "Sort menu") | You can short apps alphabetically by name or by modified date. The short option is aviliable on **Home**, **All apps**, **Featured apps** and **Sample apps** screen. <div></div> ![Sort menu.](media/sort-apps-iphone.png "Sort menu")|
+
+
 
 ## Search apps
 
