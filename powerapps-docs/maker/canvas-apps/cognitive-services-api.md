@@ -39,21 +39,40 @@ Now that you have the Text Analytics API up and running, you connect to it from 
 
 ### Create the app and add a connection
 
-First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in Power Apps](add-manage-connections.md).
+Create a blank phone app and add a connection with the **Text Analytics** connector.
 
-1. In [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), choose **Start from blank** > ![Phone app icon](./media/cognitive-services-api/icon-phone-app.png) (phone) > **Make this app**.
+1. Go to [Power Apps](https://make.powerapps.com).
 
-    ![Start from blank](./media/cognitive-services-api/start-from-blank.png)
+1. Select **Canvas app from blank**.
 
-2. In the middle pane of the Power Apps Studio, choose **connect to data**.
+    ![Create an app from blank](./media/cognitive-services-api/app-from-blank.png "Create an app from blank")
 
-3. On the **Data** panel, click or tap **New connection** > **Text Analytics**.
+1. Enter app name.
 
-4. Copy your key into **Account Key**, then click or tap **Create**.
-   
-    ![Text analytics connector](./media/cognitive-services-api/create-connection-ta.png)
+1. Choose a layout for the app. For this demo, we'll use **Tablet** layout.
+
+    ![Name the app, choose the layout, and select Create](./media/cognitive-services-api/app-name-create.png "Name the app, choose the layout, and select Create")
+
+1. Select **Data** from the left pane.
+
+1. Search for **Text Analytics** connection.
+
+    ![Add Text Analytics connection](./media/cognitive-services-api/text-analytics-data-source.png "Add Text Analytics connection")
+
+1. Enter **Account Key**, and **Site URL** values.
+
+    ![Account Key and Site URL for Text Analytics API in Power Apps](./media/cognitive-services-api/text-analytics-power-apps.png "Account Key and Site URL for Text Analytics API in Power Apps")
+
+    You can find the **Account Key** and **Site URL** from the **KEY** and **Endpoint** values respectively using the Azure portal.
+
+    ![KEY and Endpoint in Azure portal](./media/cognitive-services-api/account-key-endpoint-azure.png "KEY and Endpoint in Azure portal")
+
+1. Select **Connect**.
+
+Your app is now connected to the Cognitive Services resource of Text Analytics API type in Azure.
 
 ### Add controls to the app
+
 The next step in creating the app is to add all the controls. Normally when we build apps, we add formulas to the controls as we go, but in this case we'll focus on the controls first, then add a few formulas in the next section. The following image shows the app with all the controls.
 
 ![Finished app](./media/cognitive-services-api/finished-app-no-data.png)
