@@ -5,9 +5,9 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/14/2020
+ms.date: 1/28/2021
 ms.author: garybird
-ms.reviewer: nabuthuk
+ms.reviewer: v-iap
 ---
 
 # What's new in the Return to the Workplace solution?
@@ -16,23 +16,23 @@ This article provides resources where you can learn about the new features that 
 
 ## New and updated features in January 2021 (v1.4)
 
-### Facility management app
+### Facility Safety Management app
 
-Solution settings now includes a switch to toggle between 12-hour and 24-hour time format in the employee app.
+Solution settings now include a switch to toggle between 12-hour and 24-hour time format in the Employee Return to the Workplace app.
 
-### Workplace care management app
+### Workplace Care Management app
 
-On the Exposures tab of an employee case, the employee attestation lookup now shows only positive 'Yes' attestations to link to the case.
+On the Exposures tab of an employee case, the employee attestation lookup now shows only positive (Yes) attestations to link to the case.
 
-### Access control & Notifications
+### Access control and notifications
 
 Notifications and access controls are now also available within the Power Apps portals.
 
 ## New and updated features in December 2020 (v1.3)
 
-### Return to the Workplace Portal
+### Return to the Workplace portal
 
-Facility managers can provide facility access to third parties. A third party can choose a facility, attest to being symptom-free and receive a day pass for facility entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties. 
+Facility managers can provide facility access to third parties. A third party can choose a facility, attest to being symptom-free and receive a day pass for facility entry. A facility manager can also share resources such as FAQs, guidelines, and restrictions with third parties.
 
 > [!div class="mx-imgBorder"]
 > ![Guest portal](media/whats-new-guest-portal8.png "Guest portal")
@@ -56,7 +56,7 @@ With the introduction of portals, we added a new way for users approaching the s
 |Included in case management|Yes|By company policy|
 |Manual contract tracing|Yes|Limited (manual data entry)|
 
-### Access control 
+### Access control
 
 Facility or case managers can now manage facility access for employees via access controls. They are the new way of blocking facility access for an employee that allows case managers to create them either via Power Automate or an API. Access controls tie in to notifications, so employee can find guidance in the Employee app.
 
@@ -79,14 +79,14 @@ COVID-19 data and insights is now available at the state and county level for US
 
 ## New and updated features in October 2020 (v1.2)
 
-### Guest bookings 
+### Guest bookings
 
 To support guest visits to a facility, employees can now book passes for their guests. Passes can be shared to guests through email (Outlook), so that guests are aware of policies and details of the facility. More information: [Employee app](app-for-employee.md).
 
 > [!div class="mx-imgBorder"]
 > ![Guest Booking](media/whats-new-employee-app-guest-booking.png "Guest Booking")
 
-### QR code 
+### QR code
 
 Employees and guest pass now contains QR code that enable integration with health and safety systems, such as temperature scanning and badge reader systems. Depending on your preferences, you can turn off this feature in the solution settings. More information: [Employee app](app-for-employee.md).
 
