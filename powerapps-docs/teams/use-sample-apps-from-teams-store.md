@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/17/2020
+ms.date: 01/29/2021
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -51,6 +51,9 @@ Several sample apps are available from the Teams store that you can add to your 
 The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample apps.
 
 ## Install the sample app
+
+> [!TIP]
+> If you don't see the sample apps, check whether the [app permission policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-permission-policies) are configured to block some, or all Microsoft apps.
 
 1. Select **Apps** at the bottom of the left pane in Teams.
 
