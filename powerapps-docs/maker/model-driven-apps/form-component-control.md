@@ -93,7 +93,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - The form component control only supports rendering main forms. Similarly, support for adding a form component control is only supported with main forms. Other form types, such as quick create, quick view, and card aren't supported.
 
-- Forms with a business process flow aren’t currently supported. If you have a form with a business process flow, you may encounter unexpected behavior.  We recommend that you do not use a form component with a form that uses a business process flow.
+- Forms with a business process flow aren’t currently supported in either the main table form or the related table form. If you have a form with a business process flow, you may encounter unexpected behavior.  We recommend that you do not use a form component with a form that uses a business process flow.
 
 - The form component control doesn't support embedded form component controls, such as adding a form component control to a form that is used by a form component control. 
 
