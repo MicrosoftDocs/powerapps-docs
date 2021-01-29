@@ -1304,7 +1304,7 @@
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
   - name: Use relevance search on Power Apps mobile 
-    href: ../mobile/relevance-search-mobile.mdd 
+    href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps mobile
