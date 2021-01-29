@@ -30,5 +30,5 @@ Quickly find the information that you are looking for using Relevance search. Th
 Before you begin, make sure that you review this information:
 
 - Relevance Search is already avilable when you're using a model-driven app in a web browser: [Using relevance search to search for rows](https://docs.microsoft.com/powerapps/user/relevance-search).
-- Turn on Releance Search: [Turn on Relevance Search](https://docs.microsoft.com/powerapps/user/relevance-search#turn-on-relevance-search)
+- Turn on Releance Search (for admins): [Turn on Relevance Search](https://docs.microsoft.com/powerapps/user/relevance-search#turn-on-relevance-search)
 
