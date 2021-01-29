@@ -33,7 +33,9 @@ Before you begin using Relevance Search, the new experience needs to be enabled 
 
 ## Run a search 
 
-1. To use Relevance search, select the search button. 
+View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. 
+
+1. To run a search, select the search button. 
 
   > [!div class="mx-imgBorder"]
   > ![Select the search button](media/search-on-mobile-1.png) 
@@ -42,6 +44,11 @@ Before you begin using Relevance Search, the new experience needs to be enabled 
 
   > [!div class="mx-imgBorder"]
   > ![Enter search text](media/search-on-mobile-2.png) 
+  
+3. As you enter the search text, rows that match will start showing.
+
+  > [!div class="mx-imgBorder"]
+  > ![See suggested results as you type](media/suggested-results.png) 
      
 ## View search results
 
