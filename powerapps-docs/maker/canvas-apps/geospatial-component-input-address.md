@@ -71,7 +71,7 @@ You can save addresses that a user inputs into the address component as a data c
 
 5. Set the following properties:
 
-    - **ItemsLabels** as *locations*
+    - **Items** as *locations*
     - **ItemLatitudes** as *locations.Latitude*
     - **ItemsLongitudes** as *locations.Longitude*
 
