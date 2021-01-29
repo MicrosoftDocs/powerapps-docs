@@ -31,7 +31,9 @@ Before you begin using Relevance Search, the new experience needs to be enabled 
 
 ![This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile](media/powerapps-mobile-rel-search.gif "This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile")
 
-1. To use Relevance search, select Search button. 
+## Run a search 
+
+1. To use Relevance search, select the search button. 
 
   > [!div class="mx-imgBorder"]
   > ![Select the search button](media/search-on-mobile-1.png) 
@@ -40,3 +42,18 @@ Before you begin using Relevance Search, the new experience needs to be enabled 
 
   > [!div class="mx-imgBorder"]
   > ![Enter search text](media/search-on-mobile-2.png) 
+     
+## View search results
+
+
+  > [!div class="mx-imgBorder"]
+  > ![Search results page](media/search-results-page.png) 
+  
+  
+  Legend
+  
+  1. **Search box**: This is where you enter the search text.
+  2. **Top results**: Show rows that best matches the search query. 
+  3. **Row type**: To narrow your search results to a specific table, select the table tab.
+  4. **Filter**: Refine the search results by using filters.
+  5. **See all**: Up to three rows will show, if there is more then select **See all** to view the rest.
