@@ -1,6 +1,6 @@
 ---
 title: Use relevance search on Power Apps mobile| Microsoft Docs
-description: How to use relevance search for model-driven apps using using your mobile app.
+description: How to use relevance search for model-driven apps using your mobile app.
 author: mduelae
 ms.service: powerapps
 ms.component: pa-user
@@ -25,7 +25,7 @@ searchScope:
 
 Quickly find the information that you are looking for using Relevance search. The Relevance search experience delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance.
 
-Relevance Search is already avilable when you're using a model-driven app in a web browser. The functionality is the same but it works a little differently when you're using in with the mobile app. For more information, see [Using relevance search to search for rows](https://docs.microsoft.com/powerapps/user/relevance-search).
+Relevance Search is already available when you're using a model-driven app in a web browser. The functionality is the same but it works a little differently when you're using in with the mobile app. For more information, see [Using relevance search to search for rows](https://docs.microsoft.com/powerapps/user/relevance-search).
 
 Before you begin using Relevance Search, the new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/en-us/power-platform/configure-relevance-search-organization#enable-the-new-relevance-search-experience)
 
@@ -61,10 +61,10 @@ Search results are ranked and grouped by table.
   Legend
   
   1. **Search box**: This is where you enter the search text.
-  2. **Top results**: Show rows that best matches the search query. 
+  2. **Top results**: Show rows that best matche the search query. 
   3. **Row type**: To narrow your search results to a specific table, select the table tab.
   4. **Filter**: Refine the search results by using filters. The number of tables that have been filtered on show up next to the filter option.
-  5. **See all**: Up to three rows will show, if there is more then select **See all** to view the rest.
+  5. **See all**: Up to three rows will show, if there is more than select **See all** to view the rest.
   
 ## Filter search results
   
