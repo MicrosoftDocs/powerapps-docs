@@ -65,7 +65,7 @@ As a system administrator or system customizer, you can edit system views. Syste
 
 These views are not shown in the view selector and you can't use them in sublists in a form or as a list in a dashboard. You cannot delete or deactivate these views. More information: [Remove views](remove-views.md)
 
-System views are owned by the organization so that everyone can see them. For example, everyone has organization-level access to read rows for the View (savedquery) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table.  Unified Client (UC) optimizes for performance by caching system views and does not support running plugins on the savedquery table.
+System views are owned by the organization so that everyone can see them. For example, everyone has organization-level access to read rows for the View (savedquery) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table. Unified Interface optimizes for performance by caching system views and does not support running plugins on the savedquery table.
 
 ### Public views
 
