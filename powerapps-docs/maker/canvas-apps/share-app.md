@@ -15,7 +15,7 @@ search.app:
 ---
 # Share a canvas app in Power Apps
 
-After you build a canvas app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name, or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
+After you build a canvas app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name, or specify a security group in Microsoft Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
 
 > [!IMPORTANT]
 > For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
@@ -166,12 +166,17 @@ When you share an app that's based on an older version of Dataverse, you must sh
 
 ## Share with guests
  
-Power Apps canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps. 
-
+Power Apps canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps.
+<!---
 > [!NOTE]
 > - Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
-> - Power Apps canvas app guest access leverages Azure B2B. Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties). Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [Email one-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode).
-
+> - Power Apps canvas app guest access leverages Azure B2B.
+> - Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) when:
+>     - Guest from [Microsoft Azure](https://docs.microsoft.com/azure), or [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government) uses a web browser.
+>     - Guest from Microsoft Azure uses Power Apps Mobile.
+> - Power Apps recognizes guests outlined by states 1, 3, and 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) when the guest uses Power Apps Mobile in Microsoft Government Cloud.
+> - Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [Email one-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode).
+--->
 ### Prerequisites
 
 - In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
@@ -185,8 +190,13 @@ Power Apps canvas apps can be shared with guest users of an Azure Active Directo
     - The tenant hosting the app being shared.
     - The home tenant of the guest user.
 
+<!---
 > [!NOTE]
-> Power Apps Per App Plans are scoped to apps in a specific environment, so they cannot be recognized across tenants. Power Apps included with Office and Power Apps Per User Plans are not bound to a specific environment so they are recognized across tenants in guest scenarios. 
+> - Power Apps Per App Plans are scoped to apps in a specific environment, so they can't be recognized across tenants. 
+> - For Power Apps included with Office and Power Apps Per User Plans in:
+>     - [Microsoft Azure](https://docs.microsoft.com/azure): They're recognized across tenants in guest scenarios as they're are not bound to a specific environment.
+>     - [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government): They're not recognized across tenants in guest scenarios.
+--->
 
 ### Steps to grant guest access
 
@@ -220,6 +230,20 @@ Power Apps canvas apps can be shared with guest users of an Azure Active Directo
 After you share an app for guest access, guests can discover and access apps shared with them from the email sent to them as part of sharing. You can also share the app URL directly with the guest instead. To find the URL, go to [Power Apps](https://make.powerapps.com), select **Apps** from left pane, select an app, and then select the **Details** tab. The app URL is displayed under **Web link**.
 
 ![Guests receive app share email](media/share-app/guest_access_doc_4.png "Guests receive app share email")
+
+### Considerations and limitations for guest access
+
+- Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
+- Power Apps guest access leverages Azure B2B.
+- Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) when:
+    - Guest from [Microsoft Azure](https://docs.microsoft.com/azure), or [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government) uses a web browser.
+    - Guest from [Microsoft Azure](https://docs.microsoft.com/azure) uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads).
+- Power Apps recognizes guests outlined by states 1, 3, and 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) when the guest uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads) in [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government).
+- Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [Email one-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode).
+- Power Apps [Per App Plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants. 
+- For Power Apps [included with Office](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [Per User Plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) in:
+    - [Microsoft Azure](https://docs.microsoft.com/azure): They're recognized across tenants in guest scenarios as they're are not bound to a specific environment.
+    - [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government): They're not recognized across tenants in guest scenarios.
 
 ### Frequently Asked Questions
 
