@@ -241,9 +241,9 @@ After you share an app for guest access, guests can discover and access apps sha
 - Power Apps recognizes guests outlined by states 1, 3, and 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) when the guest uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads) in [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government).
 - Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [Email one-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode).
 - Power Apps [Per App Plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants. 
-- For Power Apps [included with Office](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [Per User Plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) in:
-    - [Microsoft Azure](https://docs.microsoft.com/azure): They're recognized across tenants in guest scenarios as they're are not bound to a specific environment.
-    - [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government): They're not recognized across tenants in guest scenarios.
+- Power Apps [included with Office](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [Per User Plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) in:
+    - [Microsoft Azure](https://docs.microsoft.com/azure): Are recognized across tenants in guest scenarios as they're are not bound to a specific environment.
+    - [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government): Are not recognized across tenants in guest scenarios.
 
 ### Frequently Asked Questions
 
