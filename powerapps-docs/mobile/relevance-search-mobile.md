@@ -19,7 +19,7 @@ searchScope:
   - "Power Apps"
 ---
 
-# Use relevance search for model-driven apps using the Power Apps mobile app (Preview)
+# Use relevance search for model-driven apps using the Power Apps mobile app (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
