@@ -29,7 +29,8 @@ Relevance Search is already avilable when you're using a model-driven app in a w
 
 Before you begin using Relevance Search, the new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/en-us/power-platform/configure-relevance-search-organization#enable-the-new-relevance-search-experience)
 
-![This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile](media/powerapps-mobile-rel-search.gif "This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile")
+  > [!div class="mx-imgBorder"]
+  > ![This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile](media/powerapps-mobile-rel-search.gif "This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile")
 
 ## Run a search 
 
@@ -45,13 +46,14 @@ View suggested search results inline as you type, minimizing keystrokes and simp
   > [!div class="mx-imgBorder"]
   > ![Enter search text](media/search-on-mobile-2.png) 
   
-3. As you enter the search text, rows that match will start showing.
+3. As you enter search text, rows that match start showing.
 
   > [!div class="mx-imgBorder"]
   > ![See suggested results as you type](media/suggested-results.png) 
      
 ## View search results
 
+Search results are ranked and grouped by table. 
 
   > [!div class="mx-imgBorder"]
   > ![Search results page](media/search-results-page.png) 
@@ -64,3 +66,17 @@ View suggested search results inline as you type, minimizing keystrokes and simp
   3. **Row type**: To narrow your search results to a specific table, select the table tab.
   4. **Filter**: Refine the search results by using filters. The number of tables that have been filtered on show up next to the filter option.
   5. **See all**: Up to three rows will show, if there is more then select **See all** to view the rest.
+  
+## Filter search results
+  
+Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search you can filter by  owner, created on, and modified on.
+
+  > [!div class="mx-imgBorder"]
+  > ![Filter results page](media/filter-results-page.png) 
+  
+  
+  Legend
+  
+  1. **Back**: Go back to the search results screen.
+  2. **Filter**: Select a filter type to filter the search results.
+  3. **Clear all**: Clears all filter and takes you back to the search results screen.
