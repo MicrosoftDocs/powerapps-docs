@@ -113,6 +113,8 @@
         href: clientapi/reference/events/onstagechange.md
       - name: OnStageSelected event
         href: clientapi/reference/events/onstageselected.md
+      - name: PostSave event
+        href: clientapi/reference/events/postsave.md
       - name: PostSearch event
         href: clientapi/reference/events/postsearch.md
       - name: PreSearch event

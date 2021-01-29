@@ -50,22 +50,17 @@ Usage - executionContext.getEventArgs(). getSaveErrorInfo ();-->
 ### Example 
 
 ```JavaScript
-function displayOrgName()
+function displayOrgName(executionContext)
 {
+  var formContext = executionContext.getFormContext();
   var orgName = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
-  var alertStrings = { confirmButtonLabel: "Yes", text: "This is an alert.", title: orgName };
-   var alertOptions = { height: 120, width: 260 };
-   Xrm.Navigation.openAlertDialog(alertStrings, alertOptions).then(
-    function (success) {
-        console.log("Alert dialog closed");
-    },
-    function (error) {
-        console.log(error.message);
-    }
-);
+  var myuniqueId = "_myUniqueId";
+  formContext.ui.setNotification(orgName, "INFO", myuniqueId);
+  window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 10000);
+  
 }
 function addMessageToOnPostSave(executionContext) {
-    var formContext = executionContext.getFormContext();
-    var displayName = formContext.data.entity.addOnPostSave(displayOrgName);
+   var formContext = executionContext.getFormContext();
+    formContext.data.entity.addOnPostSave(displayOrgName);
 }
 ```
