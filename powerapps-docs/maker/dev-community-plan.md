@@ -102,7 +102,7 @@ If you reach one or more capacity limits, we recommend you purchase a plan that 
 
 ### Can I transfer the apps, flows, and other resources created in the individual environment, to another environment?
 
-Yes, you should be able to export the resources from this environment to other environments. For more information, see [Environment and tenant app migration](../administrator/environment-and-tenant-migration.md).
+Yes, you should be able to export the resources from this environment to other environments. For more information, see [Solutions](data-platform/solutions-overview.md).
 
 ### Will my Power Apps Community Plan subscription ever expire?
 
