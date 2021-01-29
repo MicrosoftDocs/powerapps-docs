@@ -55,5 +55,5 @@ Before you begin using Relevance Search, the new experience needs to be enabled 
   1. **Search box**: This is where you enter the search text.
   2. **Top results**: Show rows that best matches the search query. 
   3. **Row type**: To narrow your search results to a specific table, select the table tab.
-  4. **Filter**: Refine the search results by using filters.
+  4. **Filter**: Refine the search results by using filters. The number of tables that have been filtered on show up next to the filter option.
   5. **See all**: Up to three rows will show, if there is more then select **See all** to view the rest.
