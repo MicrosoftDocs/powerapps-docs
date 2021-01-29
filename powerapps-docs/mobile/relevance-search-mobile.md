@@ -38,18 +38,18 @@ View suggested search results inline as you type, minimizing keystrokes and simp
 
 1. To run a search, select the search button. 
 
-  > [!div class="mx-imgBorder"]
-  > ![Select the search button](media/search-on-mobile-1.png) 
+   > [!div class="mx-imgBorder"]
+   > ![Select the search button](media/search-on-mobile-1.png) 
   
 2. Enter your search words in the search box.  
 
-  > [!div class="mx-imgBorder"]
-  > ![Enter search text](media/search-on-mobile-2.png) 
+   > [!div class="mx-imgBorder"]
+   > ![Enter search text](media/search-on-mobile-2.png) 
   
 3. As you enter search text, rows that match start showing.
 
-  > [!div class="mx-imgBorder"]
-  > ![See suggested results as you type](media/suggested-results.png) 
+   > [!div class="mx-imgBorder"]
+   > ![See suggested results as you type](media/suggested-results.png) 
      
 ## View search results
 
