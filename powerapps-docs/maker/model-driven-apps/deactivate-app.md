@@ -23,7 +23,7 @@ Deactivate a model-driven app to hide it from users who otherwise would be able 
 ## Deactivate a model-driven app
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left pane, select **Apps**.<!--note from editor: Via https://styleguides.azurewebsites.net/Styleguide/Read?id=2700&topicid=35503 -->
+1. On the left pane, select **Apps**.
 1. Select the app that you want to hide from all users, and then select **Deactivate** on the command bar or app context menu.
 
    :::image type="content" source="media/deactivate-app.png" alt-text="Deactivate command for a model-driven app":::
@@ -32,7 +32,7 @@ Deactivate a model-driven app to hide it from users who otherwise would be able 
 > - Deactivated apps are still visible to other users from the **Apps** area of Power Apps.
 > - While a model-driven app is in a deactivated state, it can't be played or shared.
 
-You can activate a deactivated app by selecting the app and then selecting **Activate**.<!--note from editor: You would use the comma if the verbs were imperative.-->
+You can activate a deactivated app by selecting the app and then selecting **Activate**.
 
 ### See also
 
