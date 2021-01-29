@@ -333,7 +333,7 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
-          - name: "Add mixed reality components (Preview)"
+          - name: "Add mixed reality components"
             items:
             - name: Mixed reality components
               href: ./canvas-apps/mixed-reality-overview.md
@@ -349,7 +349,7 @@
               href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
             - name: Upload photos from mixed reality
               href: ./canvas-apps/mixed-reality-take-upload-photos.md
-          - name: "Add geospatial components (Preview)"
+          - name: "Add geospatial components"
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
@@ -1001,6 +1001,18 @@
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
       href: ./canvas-apps/embedding-sdk.md
+  - name: Performance and optimization
+    items:
+    - name: Understand canvas apps execution phases and data flow
+      href: ./canvas-apps/execution-phases-data-flow.md
+    - name: Common sources of slow performance
+      href: ./canvas-apps/slow-performance-sources.md
+    - name: Common performance issues and resolutions
+      href: ./canvas-apps/common-performance-issue-resolutions.md
+    - name: Performance tips and best practices
+      href: ./canvas-apps/performance-tips.md
+    - name: Canvas apps coding standards and guidelines
+      href: https://aka.ms/powerappscanvasguidelines
 - name: Model-driven apps
   items:
   - name: Model-driven apps
@@ -1240,13 +1252,13 @@
       href: ./model-driven-apps/manage-app-properties.md
     - name: Specify properties for Unified Interface apps
       href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
+    - name: Hide an app
+      href: ./model-driven-apps/deactivate-app.md
     - name: Delete an app
       href: ./model-driven-apps/delete-model-driven-app.md
   - name: Advanced app making and customization
     href: ./model-driven-apps/advanced-navigation.md
     items:
-    - name: Privileges for customization
-      href: ./model-driven-apps/privileges-required-customization.md
     - name: Create or edit web resources
       href: ./model-driven-apps/create-edit-web-resources.md
     - name: Web resource properties
@@ -1861,6 +1873,8 @@
       href: ./data-platform/export-to-data-lake-data-powerbi.md
   - name: Security in Dataverse
     href: /power-platform/admin/wp-security
+  - name: Privileges for customization
+    href: ./model-driven-apps/privileges-required-customization.md    
   - name: API limits overview
     href: ./data-platform/api-limits-overview.md
   - name: For developers
@@ -2057,8 +2071,6 @@
       href: monitor-collaborative-debugging.md
     - name: Advanced monitoring
       href: monitor-advanced.md
-  - name: Performance tips for canvas apps
-    href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
