@@ -1,5 +1,5 @@
 ---
-title: "Avoid usage of batch request types in plug-ins and workflow activities | MicrosoftDocs"
+title: "Do not use batch request types in plug-ins and workflow activities | MicrosoftDocs"
 description: "You shouldn't use ExecuteMultipleRequest or ExecuteTransactionRequest message request classes within the context of a plug-in or workflow activity."
 services: ''
 suite: powerapps
@@ -21,7 +21,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Avoid usage of batch request types in plug-ins and workflow activities
+# Do not use batch request types in plug-ins and workflow activities
 
 [!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
 
