@@ -235,10 +235,8 @@ After you share an app for guest access, guests can discover and access apps sha
 
 - Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
 - Power Apps guest access leverages Azure B2B.
-- Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) when:
-    - Guest from [Microsoft Azure](https://docs.microsoft.com/azure), or [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government) uses a web browser.
-    - Guest from [Microsoft Azure](https://docs.microsoft.com/azure) uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads).
-- Power Apps recognizes guests outlined by states 1, 3, and 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) when the guest uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads) in [Microsoft Government Cloud](https://docs.microsoft.com/azure/azure-government).
+- Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) the guest uses a web browser.
+- Power Apps recognizes guests outlined by states 1, 3, and 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) when the guest uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads). More information: [Open Power Apps Mobile, and sign in](../../mobile/run-powerapps-on-mobile.md#open-power-apps-and-sign-in)
 - Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [Email one-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode).
 - Power Apps [Per App Plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants. 
 - Power Apps [included with Office](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [Per User Plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) in:
