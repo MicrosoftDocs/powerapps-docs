@@ -55,8 +55,7 @@ View suggested search results inline as you type, minimizing keystrokes and simp
 
 Search results are ranked and grouped by table. 
 
-  > [!div class="mx-imgBorder"]
-  > ![Search results page](media/search-results-page.png) 
+![Search results page](media/search-results-page.png) 
   
   
   Legend
@@ -71,8 +70,7 @@ Search results are ranked and grouped by table.
   
 Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search you can filter by  owner, created on, and modified on.
 
-  > [!div class="mx-imgBorder"]
-  > ![Filter results page](media/filter-results-page.png) 
+![Filter results page](media/filter-results-page.png) 
   
   
   Legend
