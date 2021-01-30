@@ -1348,7 +1348,7 @@
               href: ./portals/compose-page.md
             - name: Add sections
               href: ./portals/add-sections.md
-            - name: Components
+            - name: Add Components
               items:
                 - name: Add text
                   href: ./portals/add-text.md
@@ -1378,12 +1378,6 @@
               href: ./portals/edit-css.md
         - name: Supported browsers for portals Studio
           href: ./portals/supported-browser.md
-    - name: Enable multiple languages
-      items:
-        - name: Enable multiple-language support
-          href: ./portals/configure/enable-multiple-language-support.md
-        - name: Behavior and format of the date and time field
-          href: ./portals/configure/behavior-format-date-time-field.md
     - name: Configure portal using Portal Management app
       items:
         - name: Portal Management app overview
@@ -1420,6 +1414,12 @@
                   href: ./portals/configure/add-geolocation.md
         - name: Add chart on a web page in portal
           href: ./portals/configure/add-chart.md
+        - name: Enable multiple languages
+          items:
+            - name: Enable multiple-language support
+              href: ./portals/configure/enable-multiple-language-support.md
+            - name: Behavior and format of the date and time field
+              href: ./portals/configure/behavior-format-date-time-field.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
         - name: Configure content snippets
