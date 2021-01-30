@@ -46,7 +46,7 @@ You can add a chart to a form or change an existing list to a chart. For example
          - **Show Selected Views**. Select this setting to limit the list of views available at runtime. To select the specific views to be displayed, hold down the Ctrl key and tap or select each view you want to include.
      - **Display Chart Selection**: When enabled, users can change the type of chart (column, bar, pie, etc.) on the form. If the user changes the type of chart, the settings aren’t saved. The chart type reverts to the **Default Chart** setting when the form is closed.
 
-5. Publish your customization. More information: [Publish changes](../common-data-service/create-solution.md#publish-changes)
+5. Publish your customization. More information: [Publish changes](../data-platform/create-solution.md#publish-changes)
 
 ### See also
 [Create a model-driven app system chart](create-edit-system-chart.md)

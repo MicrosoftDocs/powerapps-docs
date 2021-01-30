@@ -103,7 +103,7 @@ favorite apps and services to synchronize files, get notifications, collect data
 ### Tables
 
 In Power Apps, a *table* defines information that you want to track in the form of records, which typically include properties such as company name, location,
-products, email, and phone. You can then surface that data by creating an app that refers to the table. For more information about tables, go to [Tables overview](../maker/common-data-service/entity-overview.md).
+products, email, and phone. You can then surface that data by creating an app that refers to the table. For more information about tables, go to [Tables overview](../maker/data-platform/entity-overview.md).
 
 ![Solution explorer - Tables](media/power-apps-overview-12.png "Solution explorer - Tables")
 
@@ -116,7 +116,7 @@ Lists connections available to the environment. Data is stored in a data source,
 ### Other - Environment variables
 
 Lists the environment variables for your selected team's environment. Apps and flows often require different configuration settings across environments.
-You can use environment variables as configurable input parameters separately to manage data, rather than hard-coding values in your customization or using additional tools. More information: [Environment variables overview](../maker/common-data-service/environmentvariables.md).
+You can use environment variables as configurable input parameters separately to manage data, rather than hard-coding values in your customization or using additional tools. More information: [Environment variables overview](../maker/data-platform/environmentvariables.md).
 
 ![Solution explorer - Environment variables](media/power-apps-overview-14.png "Solution explorer - Environment variables")
 

@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/30/2020
+ms.date: 01/27/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -59,6 +59,70 @@ If you don't have sufficient privileges to delete a portal, you'll see an error 
 > ![Delete portal error](media/portal-delete-error.png "Delete portal error")
 
 For information on deleting a portal and the required privileges, see [Delete a portal](manage-existing-portals.md#delete).
+
+### I'm getting an error that I can't create a portal.
+
+If you don't have sufficient privileges to create a portal in an environment, you'll see an error as follows:
+
+> [!div class=mx-imgBorder]
+> ![Create portal error](media/portal-create-error.png "Create portal error")
+
+More information: [Create a portal](create-portal.md), [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md)
+
+### I'm getting the message: "Your data isn't quite ready".
+
+Sometimes the database creation can take time and the correct status might not reflect on the home page. In this case, you'll see the following message:
+
+> [!div class=mx-imgBorder]
+> ![Data not ready](media/data-not-ready.png "Data not ready")
+
+If you keep getting the "create database" prompt or "your data isn't quite ready" prompt, you can try refreshing the Power Apps home page before selecting the **Portal from blank** tile.
+
+### I'm getting an error that I don't have required permissions to create Azure Active Directory applications.
+
+When you create a portal, portal as a new application is registered in Azure Active Directory associated with the tenant. If you don't have sufficient permissions to register an application with your Azure Active Directory tenant, you'll see an error as follows:
+
+> [!div class=mx-imgBorder]
+> ![Azure Active Directory error](media/azure-ad-error.png "Azure Active Directory error")
+
+To create and register applications in Azure Active Directory, you must contact your tenant administrator to turn on the **App registrations** setting for your tenant. For information, see [Required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions).
+
+### I'm getting an error that portal creation is blocked in this tenant by global administrator
+
+If portal creation is blocked in a tenant by your global administrator, you'll see an error as follows:
+
+> [!div class=mx-imgBorder]
+> ![Portal creation blocked error](media/portal-create-blocked-error.png "Portal creation blocked error")
+
+Contact your global administrator to enable creation of portals by non-administrators also.
+
+If you're a global administrator, you must disable the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. Run the following command in a PowerShell window (run PowerShell as an administrator).
+
+```
+Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $false }
+```
+
+More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)
+
+### I'm getting "Page Not Found" error and the page content is different from the default Page Not Found site marker or web page.
+
+You may see a *Page Not Found* error message that may appear different from the default error page content available by default on the **Page Not Found** site marker and web page.
+
+![Page Not Found](media/page-not-found.png "Page Not Found")
+
+This *Page Not Found* page is a system page and appears if: 
+
+- The default **Page Not Found** site marker is configured incorrectly.
+- The default **Page Not Found** site marker is deleted.
+- The default **Page Not Found** web page is deleted.
+
+To resolve this error, ensure that you have the default site marker named **Page Not Found** present and configured correctly. If the site marker is present and correctly configured, check if the **Page Not Found** web page is selected for the site marker or whether the **Page Not Found** web page is present or not.
+
+For steps to create a site marker for **Page Not Found**, go to [An active Page Not Found site marker isn't available for this portal](#an-active-page-not-found-site-marker-isnt-available-for-this-portal).
+
+For steps to check site marker configuration and ensure it points to the correct web page, go to [The Page Not Found site marker isn't pointing to any webpage](#the-page-not-found-site-marker-isnt-pointing-to-any-webpage).
+
+For steps to change the site marker to point to the correct **Page Not Found** web page, go to [The Page Not Found site marker is pointing to a deactivated web page](#the-page-not-found-site-marker-is-pointing-to-a-deactivated-web-page).
 
 ## Licensing and provisioning
 

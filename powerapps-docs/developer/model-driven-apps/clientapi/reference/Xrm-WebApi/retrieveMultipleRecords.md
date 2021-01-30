@@ -84,7 +84,7 @@ On success, returns a promise that contains an array of JSON objects (**entities
 
 ## Examples
 
-Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
+Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md) can be achieved using the **retrieveMultipleRecords** method. Some of the examples are listed below.
 
 ### Basic retrieve multiple
 
@@ -108,7 +108,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3").then(
 ### Retrieve or filter by lookup properties
 For most single-valued navigation properties you will find a computed, read-only property that uses the following naming convention: `_<name>_value` where the `<name>` is the name of the single-valued navigation property. For filtering purposes, the specific value of the single-valued navigation property can also be used.  However, for mobile clients in offline mode, these syntax options are not supported, and the single-value navigation property name should be used for both retrieving and filtering. Also, the comparison of navigation properties to null is not supported in offline mode.
 
-More information: [Lookup properties](../../../../common-data-service/webapi/web-api-types-operations.md#bkmk_lookupProperties)
+More information: [Lookup properties](../../../../data-platform/webapi/web-api-types-operations.md#bkmk_lookupProperties)
 
 Here are code examples for both the scenarios:
 
@@ -308,12 +308,12 @@ Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$exp
 });
 ```
 
-For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md).
+For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md).
 
  
 ### Related topics
 
-[Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md)
+[Query Data using the Web API](../../../../data-platform/webapi/query-data-web-api.md)
 
 [Xrm.WebApi.retrieveRecord](retrieveRecord.md)
 

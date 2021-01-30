@@ -25,7 +25,7 @@ You can use Power BI reports in Power Apps model-driven apps to bring rich repor
 ## Prerequisites
 Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards).
 
-This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) for guidance on installing an update to an existing managed solution.
+This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) for guidance on installing an update to an existing managed solution.
 
 ## Embed without contextual filtering
 You can use your Power BI reports and tiles by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all rows of the table. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
@@ -168,4 +168,4 @@ Additionally, when you export the solution as managed, add the **solutionaction=
 
 [Use Power BI with Dynamics 365 apps](/power-platform/admin/use-power-bi)
 
-[Import, update, and export solutions](../common-data-service/import-update-export-solutions.md)
+[Import, update, and export solutions](../data-platform/import-update-export-solutions.md)

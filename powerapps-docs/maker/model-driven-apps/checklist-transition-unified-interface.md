@@ -36,7 +36,7 @@ The instructions apply to the following Dynamics 365 apps:
 
 ## Run the Power Apps Solution Checker on your solutions
 
-The [Power Apps solution checker](https://docs.microsoft.com/powerapps/maker/common-data-service/use-powerapps-checker) performs a rich static analysis check on your solutions against a set of best practice rules to quickly identify problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the
+The [Power Apps solution checker](https://docs.microsoft.com/powerapps/maker/data-platform/use-powerapps-checker) performs a rich static analysis check on your solutions against a set of best practice rules to quickly identify problematic patterns. After the check completes, you receive a detailed report that lists the issues identified, the
 components and code affected, and links to documentation that describes how to
 resolve each issue.
 

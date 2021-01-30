@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/07/2020
+ms.date: 12/18/2020
 ms.author: jshum
 ms.reviewer: 
 ---
@@ -31,7 +31,7 @@ After installing the Power Apps app from the Teams store:
     
     ![Power Apps](media/power-apps.png "Power Apps")
 
-1. You'll be prompted to select a team where you want to create the app. Select a team to create the app.
+1. You'll be prompted to select a team where you want to create the app. Select the team that will be responsible for customizing and maintaining the app. You will have an opportunity to share the app to other teams once you’re done building the app.
 
     ![Select a team to create the app](media/create-app-2.png "Select a team to create the app")
 
@@ -53,7 +53,7 @@ When you select **Create** to create an app in the selected team, Power Apps aut
 `The request failed with error: 'Insufficient privileges to complete the operation.' The tracking Id is '[xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx]'`.
 
 To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
-*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](https://docs.microsoft.com/microsoftteams/office-365-groups)
+*False* to *True* by using PowerShell. For detailed steps, see [Share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups). More information: [Microsoft 365 Groups and Microsoft Teams](https://docs.microsoft.com/microsoftteams/office-365-groups)
 
 ### Enabling security for teams with same names
 
