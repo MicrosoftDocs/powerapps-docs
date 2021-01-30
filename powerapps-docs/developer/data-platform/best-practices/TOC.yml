@@ -4,7 +4,7 @@
   - name: Apply business logic using code
     href: business-logic/index.md
     items:
-      - name: Avoid usage of batch request types in plug-ins and workflow activities
+      - name: Do not use batch request types in plug-ins and workflow activities
         href: business-logic/avoid-batch-requests-plugin.md
       - name: Develop IPlugin implementations as stateless
         href: business-logic/develop-iplugin-implementations-stateless.md
