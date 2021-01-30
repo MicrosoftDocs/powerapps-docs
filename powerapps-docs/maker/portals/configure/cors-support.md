@@ -29,4 +29,4 @@ The following site settings are used to configure CORS:
 | HTTP/X-Frame-Options | X-Frame-Options | Indicates whether a browser should be allowed to render a page in a *\<frame\>*, *\<iframe\>*, *\<embed\>* or *\<object\>*.
 | HTTP/X-Content-Type-Options | X-Content-Type-Options | Disables MIME sniffing and forces browser to use the type given in *Content-Type*.
 
-For more information about how to configure site settings in portal, go to 'Manage portal site settings'(configure-site-settings.md#manage-portal-site-settings).
+For more information about how to configure site settings in portal, go to [Manage portal site settings](configure-site-settings.md#manage-portal-site-settings).
