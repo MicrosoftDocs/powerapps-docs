@@ -1468,7 +1468,7 @@
               href: ./portals/admin/get-public-key.md
             - name: Diagnostics and error handling
               href: ./portals/admin/view-portal-error-log.md
-            - name: Reset portal
+            - name: Reset or delete a portal
               href: ./portals/admin/reset-portal.md
             - name: Change base URL
               href: ./portals/admin/change-base-url.md
