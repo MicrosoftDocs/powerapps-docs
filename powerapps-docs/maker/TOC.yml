@@ -1330,6 +1330,8 @@
           href: ./portals/provision-portal-add-on.md
         - name: Common problems and resolutions while creating a portal
           href: ./portals/create-common-problems.md
+        - name: Create additional portals in an environment
+          href: ./portals/create-additional-portals.md
         - name: Control portal creation in a tenant
           href: ./portals/control-portal-creation.md
         - name: Manage existing portals
