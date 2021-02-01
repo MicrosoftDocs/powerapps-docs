@@ -75,3 +75,9 @@ function displayOrgName(executionContext)
 }
 
 ```
+
+## Relates articles
+
+[getEntityReference](../save-event-arguments/getEntityReference.md)<br/>
+[getIsSaveSuccess](../save-event-arguments/getIsSaveSuccess.md)<br/>
+[getSaveErrorInfo](../save-event-arguments/getSaveErrorInfo.md)
