@@ -20,6 +20,10 @@ search.app:
 PostSave event occurs after the [Save]() event is complete. This event is used to support or execute custom logic using web resources to perform after `Save` actions when the `save` event is successful or failed due to server errors.
 
 Use the `addOnPostSave`  method to manage event handlers for this event.
+
+> [!NOTE]
+> This method is supported only on Unified Interface.
+
 <!--Some of the post save events include which are used by one of the first party app Field Service.
 1) When we create a work order incident, read incident type, and retrieve all incident products where incident type is equal to incident type on work order incident, then create work order products.
 2) If work order incident is primary incident on work order, modifying the work order incident that is updates the primary inc
@@ -49,7 +53,16 @@ Usage - executionContext.getEventArgs(). getSaveErrorInfo ();-->
 
 ### Example 
 
+The following sample code displays organization unique name as form notification.
+
 ```JavaScript
+function addMessageToOnPostSave(executionContext) {
+   var formContext = executionContext.getFormContext();
+    formContext.data.entity.addOnPostSave(displayOrgName);
+}
+
+// function to display organization unique name.
+
 function displayOrgName(executionContext)
 {
   var formContext = executionContext.getFormContext();
@@ -59,8 +72,5 @@ function displayOrgName(executionContext)
   window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 10000);
   
 }
-function addMessageToOnPostSave(executionContext) {
-   var formContext = executionContext.getFormContext();
-    formContext.data.entity.addOnPostSave(displayOrgName);
-}
+
 ```
