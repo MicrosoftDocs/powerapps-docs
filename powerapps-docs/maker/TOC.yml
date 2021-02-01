@@ -1320,7 +1320,7 @@
       href: ./portals/admin/portal-lifecycle.md
     - name: Available portal templates
       href: ./portals/portal-templates.md
-    - name: Create portal
+    - name: Create and manage portals
       items:
         - name: Create a starter portal
           href: ./portals/create-portal.md
@@ -1330,6 +1330,8 @@
           href: ./portals/provision-portal-add-on.md
         - name: Common problems and resolutions while creating a portal
           href: ./portals/create-common-problems.md
+        - name: Manage existing portals
+          href: ./portals/manage-existing-portals.md
     - name: Connectivity to Microsoft Dataverse
       href: ./portals/admin/connectivity.md
     - name: Server-side cache in portals
@@ -1450,8 +1452,6 @@
           href: ./portals/configure/website-bindings.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
-    - name: Manage existing portals
-      href: ./portals/manage-existing-portals.md
     - name: Administer portal from Power Platform admin center
       items:
         - name: Portals admin center overview
@@ -1494,7 +1494,7 @@
           href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
-    - name: Configure security
+    - name: Configure portal security
       items:
         - name: Portal authentication
           items:
@@ -1556,13 +1556,13 @@
                 href: ./portals/configure/migrate-identity-providers.md
               - name: OAuth 2.0 implicit grant flow
                 href: ./portals/oauth-implicit-grant-flow.md
-        - name: User management
+        - name: User management in portals
           items:
             - name: Configure contacts
               href: ./portals/configure/configure-contacts.md
             - name: Invite contacts
               href: ./portals/configure/invite-contacts.md
-        - name: Roles and permissions
+        - name: Roles and permissions in portals
           items:
             - name: Create web roles
               href: ./portals/configure/create-web-roles.md
@@ -1572,7 +1572,7 @@
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
               href: ./portals/configure/website-access-permission.md
-    - name: Configure search
+    - name: Configure portal search
       items:
         - name: Portal search overview
           href: ./portals/configure/search.md
