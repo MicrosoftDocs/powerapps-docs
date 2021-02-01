@@ -1318,10 +1318,6 @@
       href: ./portals/overview.md
     - name: Portal lifecycle
       href: ./portals/admin/portal-lifecycle.md
-    - name: Connectivity to Microsoft Dataverse
-      href: ./portals/admin/connectivity.md
-    - name: Server-side cache in portals
-      href: ./portals/admin/clear-server-side-cache.md
     - name: Available portal templates
       href: ./portals/portal-templates.md
     - name: Create portal
@@ -1334,6 +1330,10 @@
           href: ./portals/provision-portal-add-on.md
         - name: Common problems and resolutions while creating a portal
           href: ./portals/create-common-problems.md
+    - name: Connectivity to Microsoft Dataverse
+      href: ./portals/admin/connectivity.md
+    - name: Server-side cache in portals
+      href: ./portals/admin/clear-server-side-cache.md
     - name: Build using portals Studio
       items:
         - name: Portals Studio overview
@@ -1416,7 +1416,7 @@
           items:
             - name: Enable multiple-language support
               href: ./portals/configure/enable-multiple-language-support.md
-            - name: Behavior and format of the date and time field
+            - name: Localize data types in portals
               href: ./portals/configure/behavior-format-date-time-field.md
         - name: Configure CORS support
           href: ./portals/configure/cors-support.md

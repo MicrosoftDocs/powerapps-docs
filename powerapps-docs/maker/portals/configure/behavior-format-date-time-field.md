@@ -1,6 +1,6 @@
 ---
-title: "Behavior and format of the date and time field in Microsoft Dataverse | MicrosoftDocs"
-description: "Behavior and format of the date and time fields that are used in a portal."
+title: "Customize the behavior and format of the Microsoft Dataverse fields in portals | MicrosoftDocs"
+description: "Learn about how to customize the behavior and format of the Microsoft Dataverse fields in portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,11 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Behavior and format of the date and time field
+# Customize the behavior and format of the fields in portals
+
+In this article, you'll learn about working with Microsoft Dataverse fields, and the field data types that can be customized in Power Apps portals.
+
+## Date and time
 
 In Microsoft Dataverse, the Date and Time data type is used in many system entity fields. For example, you can show when an account was last used in a marketing campaign, or show the date and time when a case was escalated. You can also create custom entities that include the date and time fields. Depending on what the field represents, you can choose one of the following field behaviors for portal forms and grids: 
 - **User Local**: The field values are displayed in the user’s local time and formatted as per their current portal language/locale. The values are stored in UTC time zone format in Dataverse. When a user in Dataverse (or another portal user) in a different time zone views that value, they see it converted to their own time zone.
