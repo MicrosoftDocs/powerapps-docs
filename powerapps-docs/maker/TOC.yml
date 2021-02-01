@@ -1416,6 +1416,8 @@
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
+            - name: "Walkthrough: Get data from customer engagement apps to display on your portal"
+              href: ./portals/configure/walkthrough-get-data-on-portal.md
         - name: Add chart on a web page in portal
           href: ./portals/configure/add-chart.md
         - name: Enable multiple languages
