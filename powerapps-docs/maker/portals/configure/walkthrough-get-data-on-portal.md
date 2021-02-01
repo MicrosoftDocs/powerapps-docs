@@ -117,7 +117,7 @@ The best way to fully grasp how a web form is used within a portal is to provide
     3. A custom field named **Contoso Ltd. Rating** of data type **Option Set**. For **Use Existing Option Set**, select **Yes** and from the drop-down list, select **Likert Scale Quality**.
     4. To track the current portal user filling out the survey, a custom field named **Regarding Contact** of data type **Lookup** and target record of **Contact**.
 
-4. Open the main **Information** form underneath the **Survey** entity, select the **General** tab, and then select **Change Properties**. On the **Formatting** tab, select **One Column**, and then select **OK**. More information: [Create or edit a form](../../model-driven-apps/create-edit-main-forms)
+4. Open the main **Information** form underneath the **Survey** entity, select the **General** tab, and then select **Change Properties**. On the **Formatting** tab, select **One Column**, and then select **OK**. More information: [Create or edit a form](../../model-driven-apps/create-edit-main-forms.md)
 
 5. Switch to the **Insert** tab of the **Information** form, select **Section**, and choose **Two Columns**. Move the default Name and Owner fields to this section and delete the old one.  Open the properties of the Name field and clear the **Visible by default** option on the **Display** tab.
 
@@ -126,7 +126,7 @@ The best way to fully grasp how a web form is used within a portal is to provide
 6. Save the form, then select **Save As** in the ribbon to create a copy of the form named **Survey Step 2**. Select **Save As** again to create another copy named **Survey Step 1**.
 7. Open the **Survey Step 1** form, switch to the **Insert** tab, and then select **Section** > **Two Columns**.  
 
-8. [Open](../../model-driven-apps/create-edit-main-forms) the properties of the new section, change its label to “Which is your favorite suggestion for a future Contoso improvement?”, and select the check box for **Show the label of this section on the form** option.  
+8. [Open](../../model-driven-apps/create-edit-main-forms.md) the properties of the new section, change its label to “Which is your favorite suggestion for a future Contoso improvement?”, and select the check box for **Show the label of this section on the form** option.  
 
 9. Drag the **Extended Support Hours**, **New Products**, and **More Stores** fields to this section.  
 
@@ -136,7 +136,7 @@ The best way to fully grasp how a web form is used within a portal is to provide
 
     ![Step 1 of the survey form with two questions for a user to answer.](media/create-survey-step-1-form.png "Step 1 of the survey form with two questions for a user to answer.")
 
-12. [Open](../../model-driven-apps/create-edit-main-forms) the **Survey Step 2** form, switch to the **Insert** tab, and select **Section** > **One Column**.  
+12. [Open](../../model-driven-apps/create-edit-main-forms.md) the **Survey Step 2** form, switch to the **Insert** tab, and select **Section** > **One Column**.  
 
 13. Drag the **Contoso Ltd. Rating** field to the new section, and then open the properties of the field on the form and change its label to “Tell us how we're doing!  Please rate the quality of Contoso Ltd.’s various series of products.” Save and close the form.
 

@@ -238,7 +238,7 @@ Immediately, as long as the update changes a primary record and isn't based on i
 
 ## Next steps
 
-[Understand how portals connects to Microsoft Dataverse environment](admin/connectivity.md)
+[Understand how portals connects to Microsoft Dataverse environment](connectivity.md)
 
 ## See also
 

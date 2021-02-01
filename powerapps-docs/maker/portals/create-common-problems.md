@@ -41,23 +41,6 @@ When you create a portal, portal as a new application is registered in Azure Act
 
 To create and register applications in Azure Active Directory, you must contact your tenant administrator to turn on the **App registrations** setting for your tenant. For information, see [Required permissions](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions).
 
-## Portal creation blocked by global administrator
-
-If portal creation is blocked in a tenant by your global administrator, you'll see an error as follows:
-
-> [!div class=mx-imgBorder]
-> ![Portal creation blocked error](media/portal-create-blocked-error.png "You don't have permissions to create a portal in this tenant as it is blocked by your global administrator.")
-
-Contact your global administrator to enable creation of portals by non-administrators also.
-
-If you're a global administrator, you must disable the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. Run the following command in a PowerShell window (run PowerShell as an administrator).
-
-```
-Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $false }
-```
-
-More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)
-
 ### See also
 
 - [Create a Dataverse starter portal](create-portal.md)

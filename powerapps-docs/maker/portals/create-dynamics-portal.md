@@ -36,7 +36,7 @@ To create a portal in an environment containing customer engagement apps:
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).
 > - Provisioning portals from [make.powerapps.com](https://make.powerapps.com) does not consume the older portal add-ons. Also, these portals are not listed under the **Applications** tab on the **Dynamics 365 Administration Center** page.
 > - A Dataverse starter portal cannot be created from the **Dynamics 365 Administration Center** page.
-> - To disable portal creation in a tenant, see [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant).
+> - To disable portal creation in a tenant, see [Control portal creation in a tenant](control-portal-creation.md).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
 ## Next steps
