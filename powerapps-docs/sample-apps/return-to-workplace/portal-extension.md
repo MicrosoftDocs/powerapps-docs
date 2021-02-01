@@ -5,9 +5,9 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/30/2020
+ms.date: 1/28/2021
 ms.author: garybird
-ms.reviewer: nabuthuk
+ms.reviewer: v-iap
 ---
 
 # Return to the Workplace Portal
@@ -22,7 +22,7 @@ Return to the Workplace solution now includes a guest portal. Return to the Work
 
 ## Configuration
 
-To alter the behavior of the portal you can make changes in the solution settings area. You can alter the following portal behavior: 
+To alter the behavior of the portal, you can make changes in the solution settings area. You can alter the following portal behavior: 
 
 - Allow self-registration
 - Allow unauthenticated users to self-screen
@@ -32,7 +32,7 @@ More information: [Configure the solution](configure.md#set-solution-settings)
 
 ## Getting started with the portal
 
-Return to the Workplace Guest Portal provides two ways of authentication for end-users.
+Return to the Workplace Guest Portal provides two ways of authentication for end users.
 
 ### Unauthenticated access to the portal
 
@@ -46,69 +46,75 @@ On the next screen, the user provides contact details. After this, a facility ca
 
 ### Authenticated access to the portal
 
-Guests can be invited to the portal and are prompted to create an account. They can create passes for themselves and their guests or dependents. The unauthenticated way approach is more relevant for frequent visitors, suppliers/vendors, or schools, where a guardian creates a pass for a dependent.
+Guests can be invited to the portal and are prompted to create an account. They can create passes for themselves and their guests or dependents. The unauthenticated approach is more relevant for frequent visitors, suppliers/vendors, or schools, where a guardian creates a pass for a dependent.
 
 Portal provides guests with the ability to attest to company health policies. If a user is not signed in, they are given the options to **SIGN IN**, **REGISTER**, or **REDEEM INVITATION**. More information: [Overview of authentication in Power Apps portals](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal-authentication) 
 
 If the user wants to use the **REDEEM INVITATION** option to access the portal, the user needs to do the following:
 
-1. Open the link in the e-mail to redeem the invitation and create an account.
-2. Select **Accept** on the daily health check.
-3. Selects **Agree** on the Health Terms and Agreements.
-4. You can now view the pass. 
+1. Open the link in the e-mail to redeem the invitation.
+ 
+1. Select **Register** and enter new account information (email, username, password).
 
-While logged in to the portal, the guest can do the following things:
+1. Select **Register**.
+
+1. Select the checkbox to agree to the portal site's terms and conditions.
+
+1. Select **Continue**.
+
+1. Select **Submit**.
+
+    You are logged into the portal and the home page is displayed
+
+While logged in to the portal, the guest can do the following tasks:
 
 - Create a pass
 - View existing passes
 - View resources
 - Update their profile
 
-The first two options are directly available from the home screen. The second two are available in the hamburger menu located on the top-left or the navigation bar on devices with larger screens. Next to those, the hamburger menu provides a link **home** to the home screen and a link to sign out.
+The first two options are directly available from the home screen. The second two are available in the Options menu located in the upper-left corner or the navigation bar on devices with larger screens. Next to those, the Options menu provides a link **home** to the home screen and a link to sign out.
 
 #### Home screen
 
 On the home screen you have several options:
 
-- Hamburger menu that displays
-  - HOME
-  - RESOURCES
-  - PROFILE 
-  - SIGN OUT
-
-  > [!div class="mx-imgBorder"]
-  > ![Portal Hamburger Menu](media/portals-hamburguer-menu.png "Portal Hamburger Menu")
-
-- CREATE PASS 
-- VIEW PASS 
-- REGISTER GUEST OR DEPENDENT
+- Options menu:
+  - Home
+  - Resources
+  - Profile
+  - Sign Out
+- Create Pass
+- View Pass
+- Register Guest or Dependent
+- Notifications (bell)
 
   > [!div class="mx-imgBorder"]
   > ![Welcome screen](media/portals-home-welcome.png "Welcome screen")
 
-#### Creating a pass
+#### Create a pass
 
-To create a guest pass using the portal: 
+To create a guest pass using the portal:
 
 1. Sign in to the portal.
-1. On the home screen, select **CREATE PASS**.
-1. Select the guest name.
-1. From the list of available facilities, select the facility and then select **NEXT**.
+2. On the home screen, select **CREATE PASS**.
+3. Select the guest name. Only guests that have no access action on them, such as being blocked, will be an option for creating a pass.
+4. From the list of available facilities, select the facility, and then select **NEXT**. You can't select facilities that are closed.
 
    > [!div class="mx-imgBorder"]
    > ![Create pass](media/portals-facility.png "Create pass")
 
-1. **Accept** the disclaimers on the **Take the daily health check** screen.
+5. **Accept** the disclaimers on the **Take the daily health check** screen.
 
     > [!div class="mx-imgBorder"]
-    > ![Accept disclaimers](media/portals-disclaimer.png "Accept disclaimer")
+    > ![Accept disclaimers](media/portals-disclaimer.png "Accept disclaimers")
 
-1. Select **I AGREE** if you don't have any symptoms.
+6. Select **I AGREE** if the guest has no symptoms.
 
    > [!div class="mx-imgBorder"]
    > ![Agree terms](media/portals-attestation.png "Agree terms")
 
-1. A pass is generated for the guest/dependent for that day.
+   A pass is generated for the guest/dependent for that day.
 
    > [!div class="mx-imgBorder"]
    > ![Pass generation](media/portals-own-pass.png "Pass generation")
@@ -118,7 +124,7 @@ To create a guest pass using the portal:
 
 #### View existing passes
 
-To view existing guest or dependent passes select **VIEW PASS** on the home screen. If no pass exists, the **VIEW PASS** option will be disabled on the home screen and in the hamburger menu. 
+To view existing guest or dependent passes select **VIEW PASS** on the home screen. If no pass exists, the **VIEW PASS** option will be disabled on the home screen and in the Options menu.
 
 > [!div class="mx-imgBorder"]
 > ![View existing pass](media/portals-view-pass.png "View existing pass")
@@ -129,7 +135,7 @@ The pass displays:
 2. Pass date
 3. Employee contact
 4. Facility
-5. Parent organization 
+5. Parent organization
 6. QR code
 7. CANCEL PASS
 8. SHARE PASS
@@ -137,7 +143,7 @@ The pass displays:
 > [!div class="mx-imgBorder"]
 > ![View pass](media/portals-pass.png "View pass")
 
-When **CANCEL PASS** is selected, the portal asks for confirmation. When a pass is canceled it will no longer show up in the **VIEW PASS** screen and the attestation will be deactivated. The record will still exist in the system.
+When **CANCEL PASS** is selected, the portal asks for confirmation. When a pass is canceled, it will no longer show up in the **VIEW PASS** screen and the attestation will be deactivated. The record will still exist in the system.
 
 > [!div class="mx-imgBorder"]
 > ![Cancel pass](media/portals-cancel-pass.png "Cancel pass")
@@ -152,21 +158,11 @@ The resources screen displays general information from your organization to the 
 > [!NOTE]
 > System administrator can configure this information in the solution settings, therefore the information displayed depends on the default facility and facility group associated with that facility.
 
-#### Update profile
-
-On the profile screen, guests can perform basic operations. They can update their personal information, change their password, or change their login method.
-
-> [!div class="mx-imgBorder"]
-> ![Portal profile](media/portals-profile.png "Portal profile")
-
-> [!NOTE]
-> The options presented to **Manage external authorization** depend on the authentication methods configured by the system administrator.
-
-## Inviting users to the portal
+## Invite users to the portal
 
 This section describes the way guests can start interacting with the portal.
 
-### Sending invites to contacts
+### Send invites to contacts
 
 In the Facility Management app and the Workplace Care Management app, the facility manager, or the health and safety leader can invite contacts to the portal.
 
@@ -184,7 +180,17 @@ In the background, an invite will be created and an e-mail is sent to the contac
 
 In the Workplace Care Management app, skip steps 1 and 2 described above. The **Employees** section is directly available from the side menu.
 
-## Creating dependents for guests
+#### Update profile
+
+Guests can perform basic operations on the profile screen. Guests can update their personal information, change their password, or change their sign-in method.
+
+> [!div class="mx-imgBorder"]
+> ![Portal profile](media/portals-profile.png "Portal profile")
+
+> [!NOTE]
+> The options available for **Manage external authorization** depend on the authentication methods configured by the system administrator.
+
+## Create dependents for guests
 
 To create a pass for the dependents, go to **Home** and select **REGISTER GUEST OR DEPENDENT**. Contact details must first be entered for all the dependents:
 
@@ -202,22 +208,42 @@ Non-mandatory fields:
 > [!div class="mx-imgBorder"]
 > ![Portal Register Guest or dependent](media/portals-register-dependent.png "Portal Register Guest or dependent")
 
-
-After creating dependents, the user will see them listed when creating a pass for the dependents.
+After creating dependents, the user will see them listed. First the two most recent dependents, and then the list of all dependents when creating a pass.
 
 > [!div class="mx-imgBorder"]
 > ![Create pass for guests](media/portals-select-dependent.png "Create pass for guests")
 
 To find dependents in the Facility Management app, go to **Solution Setup** and select **Employees**. On **My Active Contacts** view, open a record and find dependents on the **Guest** tab. All dependents can be found on the **Active Guests** view.
 
+## Notifications
+
+Send notifications to employees through the **Facility Management App**. The notifications will show in the portal. 
+
+To access **Notifications**, select the bell icon in the upper-right corner of the home page.
+
+> [!div class="mx-imgBorder"]
+> ![Select Notifications on portal home page](media/portals-home-notifications.png "Select Notifications on portal home page")
+
+> [!div class="mx-imgBorder"]
+> ![Portal home notifications](media/portals-notifications-pass.png "Portal home notifications")
+
+## Facility access not available
+
+An employee or guest that is blocked cannot create a pass. This block is managed through the **Facility Management App**, under **Access** for each contact.
+
+> [!div class="mx-imgBorder"]
+> ![Create pass for guests or employees](media/portals-employee-blocked-portal.png "Block guest")
+
+> [!NOTE]
+> Because a system administrator can configure this information in the solution settings, the information that is displayed depends on the default facility and the facility group that is associated with that facility.
+
 ## Extend portal
 
-To learn more about how to extend portals to fit into your business needs, see:
+To learn more about how to extend portals to address your business needs, see:
 
 [Extend the Return to the Workplace solution](extend.md)<br/>
 [Power Apps portals documentation](https://docs.microsoft.com/powerapps/maker/portals/)
 
-
 ## Give feedback about the solution
 
-To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
+To provide feedback about the Return to the Workplace solution, visit [aka.ms/rtw-community](https://aka.ms/rtw-community).
