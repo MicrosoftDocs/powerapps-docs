@@ -235,3 +235,11 @@ No.
 
 **4. How long does it take for changes to reflect from portals to Dataverse?** <br>
 Immediately, as long as the update changes a primary record and isn't based on indirect changes to data using plugins or workflows.
+
+## Next steps
+
+[Understand how portals connects to Microsoft Dataverse environment](admin/connectivity.md)
+
+## See also
+
+[Build a portal using portals Studio](../portal-designer-anatomy.md)

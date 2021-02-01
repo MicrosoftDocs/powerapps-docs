@@ -29,7 +29,7 @@ If you choose to create your portal in an existing environment without portal pr
 Based on the selected environment in Power Apps, you can create a Dataverse starter portal or a portal in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service).
 
 > [!NOTE]
-> - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](#create-additional-portals-in-an-environment).
+> - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
 More information on working with environments: [Working with environments and Microsoft Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
@@ -111,35 +111,14 @@ If the portal provisioning fails, the notifications are displayed similarly.
 
 Once the provisioning request is successfully placed, a confirmation email notification is sent to the user creating the portal. Also, an email is sent to the user after the portal provisioning is completed.
 
-## Disable portal creation in a tenant
-
-As a global administrator, if you want to disable portal creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#installation).
-
-After installing the modules, run the following command in a PowerShell window (run PowerShell as an administrator).
-
-```
-Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $true }
-```
-
-Administrators are the users having one of the following Azure roles:
-
-- Global Administrator
-- Dynamics 365 admin
-- Power Platform admin
-
-Users not having any of the above mentioned Azure roles are considered as non-administrators.
-
-When the portal creation is disabled in a tenant, non-administrators will see an error as follows:
-
-> [!div class=mx-imgBorder]
-> ![Portal creation blocked error](media/portal-create-blocked-error.png "Portal creation blocked error")
-
 ## Next steps
 
 [Manage a portal](manage-existing-portals.md)
 
 ### See also
 
+[Common problems and resolutions while creating a portal](create-common-problems.md) <br>
+[Control portal creation in a tenant](control-portal-creation.md) <br>
 [Create additional portals in an environment](create-additional-portals.md) <br>
 [Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/) <br>
 [Microsoft Learn: Access Dataverse in Power Apps portals](https://docs.microsoft.com/learn/modules/portals-access-data-platform/)

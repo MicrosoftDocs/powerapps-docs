@@ -196,6 +196,10 @@ However, you can change the audience and type of portal after it's provisioned b
 > - It's recommended to reset and provision your portal again to change the audience, type of portal, organization, and so on. More information: [Reset a portal](admin/reset-portal.md)
 > - The changing of Dynamics 365 instance is applicable only to the portals provisioned using the older portal add-ons.
 
+## Next steps
+
+[Manage a portal](manage-existing-portals.md)
+
 ### See also
 
 [Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)

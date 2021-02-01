@@ -1336,9 +1336,9 @@
           href: ./portals/control-portal-creation.md
         - name: Manage existing portals
           href: ./portals/manage-existing-portals.md
-    - name: Connectivity to Microsoft Dataverse
+    - name: Understand how portals connects to Microsoft Dataverse
       href: ./portals/admin/connectivity.md
-    - name: Server-side cache in portals
+    - name: Understand and clear server-side cache in portals
       href: ./portals/admin/clear-server-side-cache.md
     - name: Build using portals Studio
       items:

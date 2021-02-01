@@ -39,6 +39,12 @@ To create a portal in an environment containing customer engagement apps:
 > - To disable portal creation in a tenant, see [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
+## Next steps
+
+[Manage a portal](manage-existing-portals.md)
+
 ### See also
 
+[Common problems and resolutions while creating a portal](create-common-problems.md) <br>
+[Control portal creation in a tenant](control-portal-creation.md) <br>
 [Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)

@@ -119,3 +119,11 @@ Displays details such as owner of the portal, date, and time when it was created
 
 > [!div class=mx-imgBorder]
 > ![portal details](media/portal-details.png "Portal details")  
+
+## Next steps
+
+[Understand how portals connects to Microsoft Dataverse environment](admin/connectivity.md)
+
+## See also
+
+[Understand and clear server-side cache in portals](admin/clear-server-side-cache.md)
