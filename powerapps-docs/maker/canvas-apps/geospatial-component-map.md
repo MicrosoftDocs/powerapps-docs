@@ -190,6 +190,7 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | ItemsColors | Color of the pins | [Any CSS color string](/functions/function-colors) | Advanced |
 | ItemsIcons | Icon of the pins | [Icons defined in Azure image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) | Advanced |
 | Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
+| OnMapClick | The last clicked location on the map. |
 
 ### Output properties
 
@@ -200,8 +201,8 @@ The following table lists the output properties available.
 
 | Property | Description |
 | -- | -- |
-| CenterLocation | Center location of the map. |
-| OnMapClick | The last clicked location on the map. |
+| CenterLocation | Center location of the map as either `.Latitude` or `.Longitude`. The output will be an integer. For example, calling `Map1.CenterLocation.Latitude` will output a single integer such as `47.60357`. |
+
 
 ### Additional (common) properties
 
