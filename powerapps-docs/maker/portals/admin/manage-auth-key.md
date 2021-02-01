@@ -10,7 +10,7 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Renew portal authentication key
+# Manage portal authentication key
 
 Power Apps portals connectivity architecture explained how a portal connects to Microsoft Dataverse environment. When a portal is created, a new authentication key is generated with the public key uploaded to Azure Active Directory application. Portals uses this authentication key to connect to the Dataverse environment. You must renew the key every two years to ensure that your portal can connect to Dataverse environment.
 

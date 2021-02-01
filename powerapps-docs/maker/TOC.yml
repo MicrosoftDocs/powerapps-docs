@@ -1486,7 +1486,7 @@
               href: ./portals/admin/portal-checker.md
             - name: Analyze and resolve results
               href: ./portals/admin/portal-checker-analysis.md
-        - name: Renew portal authentication key
+        - name: Manage portal authentication key
           href: ./portals/admin/manage-auth-key.md
         - name: Restrict IP addresses
           href: ./portals/admin/ip-address-restrict.md
