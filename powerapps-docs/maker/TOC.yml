@@ -1316,14 +1316,12 @@
       href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
-    - name: Power Apps portals architecture
-      items:
-        - name: Portal lifecycle
-          href: ./portals/admin/portal-lifecycle.md
-        - name: Connectivity to Microsoft Dataverse
-          href: ./portals/admin/connectivity.md
-        - name: Server-side cache in portals
-          href: ./portals/admin/clear-server-side-cache.md
+    - name: Portal lifecycle
+      href: ./portals/admin/portal-lifecycle.md
+    - name: Connectivity to Microsoft Dataverse
+      href: ./portals/admin/connectivity.md
+    - name: Server-side cache in portals
+      href: ./portals/admin/clear-server-side-cache.md
     - name: Available portal templates
       href: ./portals/portal-templates.md
     - name: Create portal
