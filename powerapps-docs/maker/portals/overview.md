@@ -56,7 +56,9 @@ See [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform
 
 ### See also
 
-- [Microsoft Learn: Get started with Power Apps portals](https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/)
-- [Power Apps portals lifecycle](admin/portal-lifecycle.md)
-- [Portals connectivity to a Microsoft Dataverse environment](admin/connectivity.md)
-- [Server-side cache in portals](admin/clear-server-side-cache.md)
+[Microsoft Learn: Get started with Power Apps portals](https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/) <br>
+[Power Apps portals lifecycle](admin/portal-lifecycle.md) <br>
+[Available portal templates](portal-templates.md) <br>
+[Portals connectivity to a Microsoft Dataverse environment](admin/connectivity.md) <br>
+[Server-side cache in portals](admin/clear-server-side-cache.md)
+

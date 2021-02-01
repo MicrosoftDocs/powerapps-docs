@@ -1318,10 +1318,10 @@
       href: ./portals/overview.md
     - name: Portal lifecycle
       href: ./portals/admin/portal-lifecycle.md
-    - name: Available portal templates
-      href: ./portals/portal-templates.md
     - name: Create and manage portals
       items:
+        - name: Available portal templates
+          href: ./portals/portal-templates.md
         - name: Create a starter portal
           href: ./portals/create-portal.md
         - name: Create a portal with Dynamics 365 environment
@@ -1330,6 +1330,8 @@
           href: ./portals/provision-portal-add-on.md
         - name: Common problems and resolutions while creating a portal
           href: ./portals/create-common-problems.md
+        - name: Control portal creation in a tenant
+          href: ./portals/control-portal-creation.md
         - name: Manage existing portals
           href: ./portals/manage-existing-portals.md
     - name: Connectivity to Microsoft Dataverse
