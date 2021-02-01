@@ -14,15 +14,6 @@ ms.reviewer: tapanm
 
 In this article, you'll learn about the common problems that occur while creating a Power Apps portal, and how to resolve them.
 
-## One portal of each type
-
-Currently, you can create only one portal of each type in an environment per language. If you try to create more than one portal, you'll see an error message as follows:
-
-> [!div class=mx-imgBorder]
-> ![Maximum portal created error](media/portal-max-error.png "You have reached maximum limit of 'n' portal(s) on this environment. Please choose another environment or create a new environment.")
-
-To create more portals, you must create a new environment using the **Create new environment** link in the error message.
-
 ## No permissions to create a portal
 
 If you don't have sufficient privileges to create a portal in an environment, you'll see an error as follows:

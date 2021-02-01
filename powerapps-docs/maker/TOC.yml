@@ -1660,16 +1660,14 @@
             href: ./portals/web-api-http-requests-handle-errors.md          
     - name: Update, upgrade, migrate and convert portals
       items:
-        - name: Convert portal from trial to production
-          href: ./portals/admin/convert-trial-prod.md
-        - name: Convert portal to capacity-based model
-          href: ./portals/admin/convert-addon-capacity
+        - name: Convert a portal
+          href: ./portals/admin/convert-portal.md
+        - name: Upgrade a portal
+          href: ./portals/admin/upgrade-portal.md
         - name: Update portal solution
           href: ./portals/admin/update-portal-solution.md
         - name: Update Dynamics 365 instance
           href: ./portals/admin/update-dynamics365-instance.md
-        - name: Upgrade a portal
-          href: ./portals/admin/upgrade-portal.md
         - name: Migrate portal configuration
           href: ./portals/admin/migrate-portal-configuration.md
     - name: Compliance and accessibility

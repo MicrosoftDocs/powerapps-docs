@@ -1,6 +1,6 @@
 ---
-title: "Power Apps portals lifecycle - different stages of a portal. | MicrosoftDocs"
-description: "Information about the Power Apps portals lifecycle and converting it from trial to production."
+title: "Convert a portal to different lifecycle stages. | MicrosoftDocs"
+description: "Information about how to convert a portal to different lifecycle stages."
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,33 +10,9 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Power Apps portals lifecycle
+# Convert a portal
 
-A portal is always created as a trial. A trial portal, which expires after 30 days, is useful for trying out its capabilities at no cost. After it expires, the portal is suspended and shut down. Seven days after it's suspended, the trial portal is deleted. You'll be notified at every stage of the portal lifecycle&mdash;nearing suspension, suspended, deleted, and converted from trial to production&mdash;through toast notifications and email.
-
-As an administrator, you can convert a trial or suspended portal to a production portal. When converting a portal from trial to production, you must ensure that the environment is also a production environment. You can't convert a trial portal to a production portal in a trial environment. If you delete the environment in which a trial portal is created, the portal is also deleted.
-
-The first portal is free to be created in an environment in a tenant. If you need to create more than one portal, you must have 1 GB of unused storage space in the tenant.
-
-## Stages in the portal lifecycle
-
-![Portal lifecycle stages](./media/portal-lifecycle/portal-lifecycle.png "Portal lifecycle stages")
-
-### Trial portal
-
-Every portal begins as a trial portal that expires after 30 days. You can convert it to a production portal from the Power Apps Portals admin center if you have the required licenses. More information: [Convert a portal from trial to production](#convert-a-portal-from-trial-to-production)
-
-To convert a trial portal to a production portal, the environment should have required add-ons for external users or a license for internal users. More information: [Power Apps and Power Automate licensing FAQs](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq) and [Power Apps portals licensing](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
-
-### Suspended portal
-
-You'll continue to see notifications in the Power Apps Portals admin center about the expiration of your trial portal. Trial portals expire after 30 days. If you don't convert your portal to production within the trial period, the portal is shut down and placed in suspended status.
-
-You can't access your portal after it expires. However, you can still convert the suspended portal to production within seven days of suspension.
-
-### Deleted portal
-
-If you don't convert your portal to production within the seven-day suspension period, the portal is deleted. The portal data isn't deleted from the environment, but the space used by the portal in the environment will be released, and you can create a new portal.
+As explained in the [portal lifecycle](portal-lifecycle.md) article earlier, a Power Apps portals goes through different stages. You can convert a portal from one stage to another, depending on what conversion is allowed, and whether the environment has the required license, or capacity.
 
 ## Convert a portal from trial to production
 
@@ -86,7 +62,7 @@ Consider the following before changing your portal license:
 - You must have administrative privileges to convert the license.
 - Only production environments can be converted from an existing license to a capacity-based license. If you have a [trial environment](https://docs.microsoft.com/power-platform/admin/trial-environments), you must convert it to a production environment first.
 
-## Considerations for add-on portals
+## Considerations for conversion of add-on portals
 
 The following sections describe the conditions that apply to portals that were [provisioned by using the portal add-on plan](../provision-portal-add-on.md).
 
@@ -111,5 +87,6 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 
 ### See also
 
+- [Understand lifecycle of a portal](portal-lifecycle.md) <br>
 - [Microsoft Learn: Portal application lifecycle management](https://docs.microsoft.com/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
 - [Power Apps portals FAQ](../faq.md)
