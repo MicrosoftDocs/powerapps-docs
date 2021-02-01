@@ -35,7 +35,7 @@ To learn about the permissions required to view and upgrade portal packages, rea
 
 To view the portals package details:
 
-1. Select the [portal for your environment](#manage-all-portals-for-an-environment).
+1. Select the [portal for your environment](power-platform-admin-center.md#manage-all-portals-for-an-environment).
 
 1. Select **Portal Package(s) details**.
 
@@ -54,13 +54,13 @@ You can use Power Platform admin center to upgrade portal packages. Choose to up
 
 ### Method 1: Update portals packages using the selected environment
 
-1. Select a [portal for your environment](#manage-all-portals-for-an-environment).
+1. Select a [portal for your environment](power-platform-admin-center.md#manage-all-portals-for-an-environment).
 
 1. Select **Upgrade now** from the notification on the top of the page if an update is available. You can also check for the notification from the [package details](#view-portals-package-details) page.
 
 ### Method 2: Update portals packages using the portals list for a tenant
 
-1. Select a portal from the [list of all portals in a tenant](#manage-all-portals-for-a-tenant).
+1. Select a portal from the [list of all portals in a tenant](power-platform-admin-center.md#manage-all-portals-for-a-tenant).
 
 1. Select **Check portal package(s) for upgrade**.
 

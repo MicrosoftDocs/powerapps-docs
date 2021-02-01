@@ -43,7 +43,7 @@ To convert your portal from trial to production:
     > [!div class=mx-imgBorder]
     > ![Trial to production confirmation](../media/trial-to-prod-confirm.png "Trial to production confirmation")
 
-## Convert an existing portal to a capacity-based model
+## Convert an existing portal to capacity-based model
 
 You can convert your existing portal license to [capacity-based licensing model](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). To change your portal license to capacity-based model:
 
