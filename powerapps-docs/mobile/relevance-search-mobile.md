@@ -63,7 +63,7 @@ Search results are ranked and grouped by table.
   1. **Search box**: This is where you enter the search text.
   2. **Top results**: Show rows that best match the search query. 
   3. **Row type**: To narrow your search results to a specific table, select the table tab.
-  4. **Filter**: Refine the search results by using filters. The number of tables that have been filtered on show up next to the filter option.
+  4. **Filter**: Refine the search results by using filters. When you select filters, the number of tables that have been filtered on show up next to the filter option.
   5. **See all**: Up to three rows will show, if there is more than select **See all** to view the rest.
   
 ## Filter search results
