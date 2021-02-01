@@ -1,5 +1,6 @@
 ---
 title: "PostSave Event (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Information about PostSave event methods.
 ms.date: 01/30/2021
 ms.service: powerapps
 ms.topic: "reference"
@@ -17,7 +18,7 @@ search.app:
 
 # PostSave Event
 
-PostSave event occurs after the [Save]() event is complete. This event is used to support or execute custom logic using web resources to perform after `Save` actions when the `save` event is successful or failed due to server errors.
+PostSave event occurs after the `OnSave` event is complete. This event is used to support or execute custom logic using web resources to perform after `Save` actions when the `save` event is successful or failed due to server errors.
 
 Use the `addOnPostSave`  method to manage event handlers for this event.
 
