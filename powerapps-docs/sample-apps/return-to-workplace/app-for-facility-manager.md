@@ -414,7 +414,7 @@ Every time an access action is created, a notification is created for the employ
    > [!div class="mx-imgBorder"]
    > ![New notification](media/facility-manager-employee-block4.png "New Notification")
 
-4. Select **Notification Type** as information, warning or error. Add a **Header** and **Body** for the notification. Set **Send as email** to **Yes**, if you want to send an email to the employee.
+4. Add **Recipient** and select **Notification Type** as information, warning or error. Add a **Header** and **Body** for the notification. Set **Send as email** to **Yes**, if you want to send an email to the employee.
 
     > [!div class="mx-imgBorder"]
     > ![Notification type](media/facility-manager-employee-block5.png "Notification type")

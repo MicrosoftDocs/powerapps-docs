@@ -262,12 +262,12 @@ Some of these settings have an impact on the Employee app. The solution setting 
 1. Select **Solution Settings** in the left pane, and then select **New**.
 
    > [!div class="mx-imgBorder"]
-   > ![Solution Settings](media/solution-admin-view-solution-settings.png)
+   > ![Solution Settings](media/solution-admin-view-solution-settings.png "Solution Settings")
 
 2. Enter the appropriate values in the fields.
 
    > [!div class="mx-imgBorder"]
-   > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
+   > ![Solution settings form](media/solution-admin-new-setting-24hr.png "Solution settings form")
 
    
    | **Column**              | **Description**                                |
@@ -280,6 +280,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
    | Allow QR codes | Enables QR code on the pass in the Employee app and Employee portal.  |
    | Allow Guest Registrations | Enables employees to register guests on their bookings in the Employee app.  |
    | Allow Share Guest Registrations | Enables employees to share passes with guests. |
+   | Use 24-Hour Format | Switches between 24-hour or 12-hour time format on the passes. | 
    | Health & Safety email | Email address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
    | Health & Safety Instructions | General instructions provided to employee in the Employee app when access is blocked by the case manager. |
    | General Terms & Agreement | Shown in the Employee app during the booking process. |
@@ -304,7 +305,7 @@ Some of these settings have an impact on the Employee app. The solution setting 
 
 For active employee cases, the number of cases can be limited to one active case per employee. When you want to enable this, you need to create a **Duplicate rule**. 
 
-1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com "Power Platform admin center").
 
 2. Select the environment in which the app is located.
 
@@ -367,29 +368,29 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 
 **To create bulk record-delete jobs**
 
-1.	Select **Settings**, and then select **Data Management**
+1. Select **Settings**, and then select **Data Management**.
 
-2.	Under **Data Management**, select **Bulk Record Deletion**.
+2. Under **Data Management**, select **Bulk Record Deletion**.
 
    > [!div class="mx-imgBorder"]
    > ![Data Management admin](media/solution-admin-dm.png "Data Management admin")
 
-3.	Select **New**.
+3. Select **New**.
 
-4.	Go through the **Bulk Deletion Wizard**.
+4. Go through the **Bulk Deletion Wizard**.
 
-5.	Select the appropriate **table** and **criteria**.
+5. Select the appropriate **table** and **criteria**.
 
    > [!div class="mx-imgBorder"]
    > ![Criteria](media/solution-admin-criteria.png "Criteria")
 
-6.	Add a name and a schedule for the bulk record-delete job to run.
+6. Add a name and a schedule for the bulk record-delete job to run.
 
    > [!div class="mx-imgBorder"]
    > ![Bulk record delete job](media/solution-admin-brd.png "Bulk record delete job")
 
-7.	Submit the bulk record-delete job.
+7. Submit the bulk record-delete job.
 
 ## Feedback about the solution
 
-To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
+To provide feedback about the Return to the Workplace solution, visit [aka.ms/rtw-community](https://aka.ms/rtw-community).

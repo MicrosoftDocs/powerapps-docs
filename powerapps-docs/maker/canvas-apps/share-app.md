@@ -376,7 +376,6 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | OneDrive                                          | No                                                                     |
 | OneDrive for Business                             | No                                                                     |
 | OneNote (Business)                                | No                                                                     |
-| Outlook Customer Manager                          | No                                                                     |
 | Outlook Tasks                                     | Yes                                                                    |
 | Outlook.com                                       | No                                                                     |
 | Paylocity                                         | No                                                                     |
