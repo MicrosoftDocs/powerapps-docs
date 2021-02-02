@@ -31,7 +31,7 @@ The editor toolbar has a number of buttons to help with content editing. Move th
 |                          Source                          | Opens a dialog containing the HTML source for the content. The HTML can be directly modified and updated from this window. This dialog will not validate the HTML! It is recommended that only users with knowledge of HTML use this feature. |
 |                     Cut, Copy, Paste                     |                                                                                     Cuts, copies, or pastes the selected text to and from the clipboard.                                                                                      |
 |                   Paste as Plain Text                    |                                                                                    Pastes text from the clipboard with all formatting and styling removed.                                                                                    |
-|                     Paste from Word                      |                                        Pastes text from the clipboard while trying to maintain formatting and styling that originated from [!INCLUDE[cc-microsoft](../includes/cc-microsoft.md)] Word.                                        |
+|                     Paste from Word                      |                                        Pastes text from the clipboard while trying to maintain formatting and styling that originated from Microsoft Word.                                        |
 |                        Undo, Redo                        |                  Will undo the previous change or redo an undone change. Only changes that have been done since the editor was opened can be undone. Changes that have been saved or canceled cannot be undone, or re-done.                   |
 |                           Find                           |                                                                            Opens a dialog for searching content. It also allows you to replace the found content.                                                                             |
 |                           Link                           |                                                                      Inserts or edits a hyperlink for selected text. More information: [Create a link](#create-a-link).                                                                       |
@@ -147,5 +147,5 @@ The table below has more detail about the available buttons, listed in the order
 
 ### See also
 
-[Get started with the portal content editor](get-started-portal-content-editor.md)  <br>
+[Get started with the portal content editor](portal-content-editor.md)  <br>
 [Create and customize portal using Power Apps portals Studio](portal-designer-anatomy.md)
