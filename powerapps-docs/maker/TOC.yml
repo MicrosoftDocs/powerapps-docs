@@ -889,6 +889,8 @@
             href: ./canvas-apps/accessible-apps-content-visibility.md
           - name: Announce dynamic changes with live regions
             href: ./canvas-apps/accessible-apps-live-regions.md
+          - name: Accessibility limitations
+            href: ./canvas-apps/accessibility-limitations.md
       - name: Send notifications from an app
         href: ./canvas-apps/add-notifications.md
       - name: Experimental and preview features
