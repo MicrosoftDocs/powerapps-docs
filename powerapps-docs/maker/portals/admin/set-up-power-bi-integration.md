@@ -206,9 +206,12 @@ This can happen due to multiple reasons such as:
 
 [!INCLUDE[cc_privacy_powerbi_tiles_dashboards](../../../includes/cc-privacy-powerbi-tiles-dashboards.md)]
 
+## Next steps
+
+[Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md)
+
 ### See also
 
-- [Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md)
 - [Add a Power BI report or dashboard to a webpage using liquid tag in portal](add-powerbi-report.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
 - [Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)

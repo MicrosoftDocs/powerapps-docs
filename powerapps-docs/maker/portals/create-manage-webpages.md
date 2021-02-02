@@ -95,3 +95,11 @@ If you are working with a portal created in an environment containing customer e
         > [!div class=mx-imgBorder]
         > ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
 
+## Next steps
+
+[Customize webpages](compose-page.md)
+
+### See also
+
+[Work with templates](work-with-templates.md) <br>
+[Work with themes](theme-overview.md)

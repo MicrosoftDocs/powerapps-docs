@@ -52,6 +52,10 @@ To add sections:
 
 7.    Add the required portal component in the section.
 
+## Next steps
+
+[Add text](add-text.md)
+
 ### See also
 
 - [Power Apps portals Studio](portal-designer-anatomy.md)
