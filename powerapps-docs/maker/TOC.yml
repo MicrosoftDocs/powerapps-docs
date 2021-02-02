@@ -1426,6 +1426,8 @@
               href: ./portals/configure/enable-multiple-language-support.md
             - name: Localize data types in portals
               href: ./portals/configure/behavior-format-date-time-field.md
+        - name: Create and show portal content
+          href: ./portals/configure/create-show-portal-content.md
         - name: Configure CORS support
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
