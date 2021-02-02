@@ -27,7 +27,7 @@ Quickly find the information that you are looking for using Relevance search. Th
 
 Relevance Search is already available when you're using a model-driven app in a web browser. The functionality is the same but it works a little differently when you're using in with the mobile app. For more information, see [Using relevance search to search for rows](https://docs.microsoft.com/powerapps/user/relevance-search).
 
-Before you begin using Relevance Search, the new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/configure-relevance-search-organization#enable-the-new-relevance-search-experience).
+Before you begin using Relevance Search, the new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience).
 
   > [!div class="mx-imgBorder"]
   > ![This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile](media/powerapps-mobile-rel-search.gif "This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile")
