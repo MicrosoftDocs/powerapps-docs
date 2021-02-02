@@ -1382,6 +1382,12 @@
               href: ./portals/edit-css.md
         - name: Supported browsers for portals Studio
           href: ./portals/supported-browser.md
+    - name: Edit portal using portal content editor
+      items:
+        - name: Get started with the portal content editor
+          href: ./portals/portal-content-editor.md
+        - name: Edit page content using portal content editor
+          href: ./portals/use-content-editor.md
     - name: Configure portal using Portal Management app
       items:
         - name: Portal Management app overview
