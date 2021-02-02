@@ -92,7 +92,7 @@ Navigate to the page to be deleted, and select **Delete** in the toolbar. Select
 
 ## Next steps
 
-[Use portal content editor to edit page content](use-code-editor.md)
+[Use portal content editor to edit page content](use-content-editor.md)
 
 ### See also
 
