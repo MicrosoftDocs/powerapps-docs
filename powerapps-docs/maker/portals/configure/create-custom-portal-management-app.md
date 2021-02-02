@@ -100,4 +100,5 @@ To create a custom **Portal Management** app:
 
 ### See also
 
-[FAQ - How to delete a portal?](https://docs.microsoft.com/powerapps/maker/portals/faq#how-do-i-delete-a-portal-completely-after-it-is-provisioned)
+[Delete a portal](../manage-existing-portals.md#delete)
+

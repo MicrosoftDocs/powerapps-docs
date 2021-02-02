@@ -18,8 +18,9 @@ This topic provides resources where you can learn about the new features that ha
 
 For information about new features releasing over the next few months that you can use for planning, see:
 
-- [2020 release wave 1 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave1/microsoft-powerapps/planned-features#power-apps-portals-improvements)
+- [2021 release wave 1 plan](https://docs.microsoft.com/power-platform-release-plan/2021wave1/power-apps-portals/)
 - [2020 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave2/power-apps/planned-features#power-apps-portals-improvements)
+- [2020 release wave 1 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave1/microsoft-powerapps/planned-features#power-apps-portals-improvements)
 
 ## Previous portal updates
 
