@@ -12,6 +12,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - JinManAhn-MSFT
 ---
 
 # Common sources of slow performance for a canvas app
