@@ -46,7 +46,7 @@ This example shows how to retrieve changes made in accounts data using the Web A
 
 Request
 ```http
-GET [Organization URI]/org1/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax HTTP/1.1
+GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax HTTP/1.1
 Prefer: odata.track-changes
 Cache-Control: no-cache
 OData-Version: 4.0
