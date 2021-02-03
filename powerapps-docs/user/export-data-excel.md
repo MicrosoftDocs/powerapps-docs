@@ -27,6 +27,9 @@ searchScope:
 # Export data to Excel
 
 Do you need to analyze your data from and convert that data into actionable items that help you drive more sales? Now you can do this when you export your data to Excel or Excel Online. Also, analyzing large datasets is not a problem because you can export up to 100,000 rows of data.
+
+> [!div class="mx-imgBorder"] 
+> ![Export to excel](media/export_to_excel.png "Select export to Excel")
   
 You can choose to export static worksheets or dynamic worksheets, which you can import back in to the app. If you need more advanced functions, you can export a dynamic PivotTable, which makes it very easy to organize and summarize data.  
   

@@ -39,7 +39,7 @@ Forms that load slowly can reduce productivity and user adoption. Follow these r
 ## Form scripts  
  When you have customizations using form scripts make sure that the developer understands these strategies to improve performance. 
  
-**Minimize the number of network requests and the amount of data requested in the OnLoad event**
+**Minimize the number of network requests and the amount of data requested in the OnLoad event**  
 The higher the number of network requests made during a form load, and the more amount of data downloaded from those requests, the more time it will take for a form to load. Only request the minimum amount of data needed. Also, consider caching the data when possible to avoid requesting data unnecessarily on future page loads.
   
 **Avoid using synchronous network requests**  

@@ -30,7 +30,7 @@ Creating a model-driven app involves the following steps:
 
 1. Create an [AppModule Entity](../data-platform/reference/entities/appmodule.md) instance to define your app and its properties.
 2. Add or remove components to your app such as entity, sitemap, and other components for your custom app using the <xref:Microsoft.Dynamics.CRM.AddAppComponents> and <xref:Microsoft.Dynamics.CRM.RemoveAppComponents> actions.
-3. Check your app for any required components thats missing by using the <xref:Microsoft.Dynamics.CRM.ValidateApp> function.
+3. Check your app for any required components that are missing by using the <xref:Microsoft.Dynamics.CRM.ValidateApp> function.
 4. Publish your app.
 5. Associate appropriate security roles to your model-driven app to provide access to users.
 
@@ -45,7 +45,7 @@ You must specify the following properties at a minimum to create an app:
 - **uniquename**: This can be different than the name of your app, and can only have English characters and numbers. On creating this app, the name is automatically prefixed with your solution publisher prefix (for example 'new_'). 
 - **webresourceid**: ID of the web resource that you want to be set as the image icon for your app. The system provides you with a default web resource (ID: 953b9fac-1e5e-e611-80d6-00155ded156f) that you can use as an icon for your app.
 
-The following Web API request creates an Unified Interface type of an app:
+The following Web API request creates a Unified Interface type of app:
 
 ```http
 POST [Organization URI]/api/data/v9.0/appmodules HTTP/1.1

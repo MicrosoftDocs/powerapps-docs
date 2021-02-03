@@ -12,6 +12,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - JinManAhn-MSFT
 ---
 
 # Understand canvas apps execution phases and data call flow
