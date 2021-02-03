@@ -146,7 +146,7 @@ The solution is to verify the TCP ports 1433 or 5558 from the client are unblock
     1. Select **Turn Windows features on or off**.
     1. Choose the **Telnet Client** option.
     1. Select **OK**. A dialog box appears to confirm the installation. The telnet command should now be available.
-1. Run a telnet command in a Command window: `telnet <environmentname>.crm.dynamics.com 1433`.
+1. Run a telnet command in a Command window.<br/> `telnet <environmentname>.crm.dynamics.com 1433`
 
 If the connection is successful, you will be in an active telnet session. If unsuccessful, you will receive the error:
 
