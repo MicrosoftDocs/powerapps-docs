@@ -3,7 +3,7 @@
 title: Microsoft Power Apps documentation # < 60 chars
 summary: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.
 # brand: aspnet | azure | dotnet | dynamics | m365 | office | sql | windows | visual-studio | xamarin
-brand: dynamics
+brand: power-apps
 
 metadata:
   title: Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
