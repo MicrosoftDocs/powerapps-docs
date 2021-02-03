@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/06/2020
+ms.date: 02/03/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -23,17 +23,22 @@ The Power Apps Portals admin center allows you perform advanced administrative a
 
 ## Open Power Apps Portals admin center
 
-1. Go to the **Recent apps** section on the Power Apps home page and locate your portal.
+1. Sign in to [Power Apps](https://make.powerapps.com). 
 
-    > [!div class=mx-imgBorder]
-    > ![Recent apps](../media/recent-apps.png "Recent apps")  
+1. From the right-upper corner, select the **Environment** drop-down to verify, or choose the environment for your portal.
 
-2. Select **More Commands (...)** > **Settings**.
+    ![Choose environment](media/admin-overview/select-environment.png "Portal settings option")
+
+1. From the left pane, select **Apps**.
+
+1. Select your portal from the list of apps.
+
+1. Select **More Commands (...)** > **Settings**.
 
     > [!div class=mx-imgBorder]
     > ![Portal settings option](../media/portal-settings-option.png "Portal settings option")
 
-3. In the **Portal settings** pane, select **Administration**.
+1. In the **Portal settings** pane, select **Administration**.
 
     > [!div class=mx-imgBorder]
     > ![Portal settings pane](../media/portal-settings-admin.png "Portal settings pane")
