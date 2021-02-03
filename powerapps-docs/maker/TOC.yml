@@ -135,10 +135,10 @@
       items:
       - name: Import data
         href: ../user/import-data.md
-      - name: Export data to Excel Online
-        href: ../user/export-to-excel-online.md
       - name: Export data to Excel
         href: ../user/export-data-excel.md
+      - name: Export data to Excel Online
+        href: ../user/export-to-excel-online.md      
       - name: Export to a dynamic worksheet
         href: ../user/export-excel-dynamic-worksheet.md
       - name: Export to a static worksheet
@@ -1303,6 +1303,8 @@
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
+  - name: Use relevance search on Power Apps mobile (preview) 
+    href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
   - name: Create push notifications for Power Apps mobile
@@ -2017,32 +2019,6 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
-  - name: Return to the Workplace
-    items:
-    - name: Overview
-      href: ../sample-apps/return-to-workplace/overview.md
-    - name: What's new?
-      href: ../sample-apps/return-to-workplace/whats-new.md
-    - name: Deploy the solution
-      href: ../sample-apps/return-to-workplace/deploy.md
-    - name: Upgrade the solution
-      href: ../sample-apps/return-to-workplace/upgrade.md
-    - name: Configure the solution
-      href: ../sample-apps/return-to-workplace/configure.md
-    - name: Location Readiness dashboard
-      href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
-    - name: Workplace Care Management dashboard
-      href: ../sample-apps/return-to-workplace/dashboard-case-management.md
-    - name: Facility Safety Management app
-      href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
-    - name: Workplace Care Management app
-      href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
-    - name: Employee Return to the Workplace app
-      href: ../sample-apps/return-to-workplace/app-for-employee.md
-    - name: Return to the Workplace Portal
-      href: ../sample-apps/return-to-workplace/portal-extension.md
-    - name: Extend the solutions
-      href: ../sample-apps/return-to-workplace/extend.md
 - name: Resources
   items:
   - name: Blog

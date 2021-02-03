@@ -28,7 +28,7 @@ All
 
 ## Return Value
 
-**Type**: Depends on the type of attaribute. 
+**Type**: Depends on the type of attribute. 
 
 | Attribute Type | Return Type| 
 |----|-----|
