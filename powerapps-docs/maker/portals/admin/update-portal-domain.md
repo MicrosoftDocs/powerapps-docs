@@ -17,7 +17,7 @@ If you provision a portal using the older portal add-on, the domain of your port
 > [!NOTE]
 > The `microsoftcrmportals.com` domain is deprecated and is limited only to the portals provisioned using the older portal add-on. In deprecation period, this feature will continue to work and is fully supported until it is officially removed. This deprecation notification can span a few years.
 
-1. Open [Power Apps Portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Update to Power Apps portal domain**.
 

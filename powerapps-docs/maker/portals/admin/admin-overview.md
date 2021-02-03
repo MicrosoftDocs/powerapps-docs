@@ -1,6 +1,6 @@
 ---
-title: "Overview of Power Apps Portals admin center | MicrosoftDocs"
-description: "Information about Power Apps Portals admin center."
+title: "Overview of Power Apps portals admin center | MicrosoftDocs"
+description: "Information about Power Apps portals admin center."
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Power Apps Portals admin center
+# Power Apps portals admin center
 
 > [!NOTE]
 > Effective November 2020:
@@ -19,9 +19,9 @@ ms.reviewer: tapanm
 >
 > Power Apps portals articles will be updated soon to reflect the latest terminology.
 
-The Power Apps Portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
+The Power Apps portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 
-## Open Power Apps Portals admin center
+## Open Power Apps portals admin center
 
 1. Sign in to [Power Apps](https://make.powerapps.com). 
 
@@ -33,21 +33,23 @@ The Power Apps Portals admin center allows you perform advanced administrative a
 
 1. Select your portal from the list of apps.
 
-1. Select **More Commands (...)** > **Settings**.
+1. Select **Settings**.
 
-    > [!div class=mx-imgBorder]
-    > ![Portal settings option](../media/portal-settings-option.png "Portal settings option")
+    ![Portal settings](media/admin-overview/settings.png "Portal settings")
 
 1. In the **Portal settings** pane, select **Administration**.
 
-    > [!div class=mx-imgBorder]
-    > ![Portal settings pane](../media/portal-settings-admin.png "Portal settings pane")
+    ![Portal administration](media/admin-overview/administration.png "Portal administration")
+
+Power Apps portals admin center is now open.
+
+![Power Apps portals admin center](media/admin-overview/admin-center.png "Power Apps portals admin center")
 
 ## Add yourself as an owner of the Azure AD application
 
 If you are not a global administrator and you try to manage a portal that has already been provisioned, or you resubmit the provisioning if it failed, you must be the owner of the Azure Active Directory (Azure AD) application connected to your portal.
 
-1. Go to the Power Apps Portals admin center and open the **Portal Details** tab.
+1. Go to the Power Apps portals admin center and open the **Portal Details** tab.
 
 2. Copy the value from the **Application ID** field.
 
@@ -63,7 +65,7 @@ If you are not a global administrator and you try to manage a portal that has al
     > [!Note]
     > This task can be performed either by a global administrator of your organization or the existing owner of this application.
 
-6. After you've added yourself as an owner, reopen the Power Apps Portals admin center page.
+6. After you've added yourself as an owner, reopen the Power Apps portals admin center page.
 
 ### See also
 
