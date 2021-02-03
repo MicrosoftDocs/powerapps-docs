@@ -22,12 +22,12 @@ If you provision a portal using the older portal add-on, the domain of your port
 2. Go to **Portal Actions** > **Update to Power Apps portal domain**.
 
     > [!div class=mx-imgBorder]
-    > ![Update to Power Apps portal domain](../media/update-portal-domain-button.png "Update to Power Apps portal domain ")
+    > ![Update to Power Apps portal domain - portal actions](../media/update-portal-domain-button.png "Update to Power Apps portal domain - portal actions")
 
 3. In **Portal URL**, enter the address of the website and select **OK**.
 
     > [!div class=mx-imgBorder]
-    > ![Update to Power Apps portal domain](../media/update-portal-domain.png "Update to Power Apps portal domain ")
+    > ![Update to Power Apps portal domain - portal URL](../media/update-portal-domain.png "Update to Power Apps portal domain - portal URL")
 
 If you are already using the Power Apps portals domain and would like to revert to the old domain, you can use the **Update to Power Apps portal domain** action to revert to the old domain. In this case, the message is displayed as follows:
 
