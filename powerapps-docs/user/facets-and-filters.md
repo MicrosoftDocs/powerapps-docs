@@ -1,3 +1,4 @@
+---
 title: "Filter rows with facets| MicrosoftDocs"
 description: How to Filter rows with facets.
 author: mduelae
@@ -14,7 +15,6 @@ search.audienceType:
   - enduser
 search.app: 
   - PowerApps
-  - D365CE
 ---
 
 # Filter rows with facets
