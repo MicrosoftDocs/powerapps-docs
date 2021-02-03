@@ -79,12 +79,11 @@ At a high level, the app performs these tasks:
 
     ```powerapps-dot
     If( Connection.Connected,
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
-            Set( statusText, "Online data" ),
-        LoadData( LocalTweets, "LocalTweets", true );
-            Set( statusText, "Local data" )
+        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) ); //define the LocalTweets collection and load with results
+        SaveData( LocalTweets, "LocalTweets" ); //save the LocalTweets collection to local device
+        //elseif (not connected)
+        LoadData( LocalTweets, "LocalTweets", true ); //retrieve previously saved LocalTweets from local device
     );
-    SaveData( LocalTweets, "LocalTweets" );
     ```
 
     > [!div class="mx-imgBorder"]
@@ -149,9 +148,10 @@ This formula determines whether the device is online. If it is, the label shows 
 
     ```powerapps-dot
     If( Connection.Connected,
-        Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
-        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-            SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
+        Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ), //connected so just post the tweet
+        //elseif
+        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} ); //define the LocalTweetsToPost collection and load with new Tweet
+            SaveData( LocalTweetsToPost, "LocalTweetsToPost" ) //save the LocalTweetsToPost collection to local device
     );
     Reset( NewTweetTextInput );
     ```  
@@ -160,13 +160,12 @@ This formula determines whether the device is online. If it is, the label shows 
 
     ```powerapps-dot
     If( Connection.Connected,
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
-            Set( statusText, "Online data" ),
-        LoadData( LocalTweets, "LocalTweets", true );
-            Set( statusText, "Local data" )
+        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) ); //define the LocalTweets collection and load with data
+        SaveData( LocalTweets, "LocalTweets" ); //save the LocalTweets collection to local device
+        //elseif (not connected)
+        LoadData( LocalTweets, "LocalTweets", true ); //retrieve previously saved LocalTweets from local device
     );
-    SaveData( LocalTweets, "LocalTweets" );
-    LoadData( LocalTweetsToPost, "LocalTweetsToPost", true );  // added line
+    LoadData( LocalTweetsToPost, "LocalTweetsToPost", true );  // added line to retrieve previously saved LocalTweetsToPost from local device
     ```
 
     > [!div class="mx-imgBorder"]
@@ -194,11 +193,11 @@ Then the formula resets the text in the text-input box.
 
     ```powerapps-dot
     If( Connection.Connected,
-        ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
-        Clear( LocalTweetsToPost );
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
-        SaveData( LocalTweets, "LocalTweets" );
-   )
+        ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) ); //iterate through LocalTweetsToPost collection and post Tweets
+        Clear( LocalTweetsToPost ); //clear after posting
+        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) ); //refresh the LocalTweets collection
+        SaveData( LocalTweets, "LocalTweets" ); //save the LocalTweets collection to local device
+   ) //(no elseif)
     ```
 
 This formula determines whether the device is online. If it is, the app tweets all the items in the **LocalTweetsToPost** collection and then clears the collection.
