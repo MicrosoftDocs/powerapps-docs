@@ -137,8 +137,8 @@ conceptualContent:
         - text: Regional Government Emergency Response and Monitoring
           url: /powerapps/sample-apps/regional-emergency-response/overview
           itemType: overview
-        - text: Return to the Workplace
-          url: /powerapps/sample-apps/return-to-workplace/overview
+        - text: Higher Education Crisis Financial Impact Tracker
+          url: /powerapps/sample-apps/crisis-financial-impact-tracker/overview
           itemType: overview
     
     - title: Best practices guidance
