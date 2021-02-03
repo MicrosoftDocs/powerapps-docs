@@ -2,7 +2,7 @@
 title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
 description: "Make data changes which bypass custom business logic" 
 ms.custom: ""
-ms.date: 01/04/2021
+ms.date: 02/04/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -22,7 +22,10 @@ There are times when you want to be able to perform data operations without havi
 For these kinds of situations, you have the option to disable custom business logic which would normally be applied. There are two requirements:
 
 - You must send the requests using the `BypassCustomPluginExecution` option.
-- The user sending the requests must have the `prvByPassPlugins` privilege. By default, only users with the system administrator security role have this privilege.
+- The user sending the requests must have the `prvBypassCustomPlugins` privilege. By default, only users with the system administrator security role have this privilege.
+
+> [!NOTE]
+> The `prvBypassCustomPlugins` is not available to be assigned in the UI at this time. You can add a privilege to a security role using the API.
 
 ## What does this do?
 
