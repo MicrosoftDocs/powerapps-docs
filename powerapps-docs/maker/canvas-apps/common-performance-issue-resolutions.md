@@ -12,6 +12,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - JinManAhn-MSFT
 ---
 
 # Common canvas apps performance issues and resolutions
