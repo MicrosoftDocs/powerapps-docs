@@ -2,7 +2,7 @@
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse entity data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 12/16/2020
+ms.date: 02/02/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -27,9 +27,9 @@ A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL 
 
 ## Applications support
 
-TDS (SQL) endpoint applications support for Power Apps and SQL Server Management Studio is described below.
+TDS (SQL) endpoint applications support for Power BI and SQL Server Management Studio is described below.
 
-### Power Apps
+### Power BI
 
 You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
 
@@ -51,7 +51,7 @@ Only Azure Active Directory authentication is supported. SQL authentication and 
 ![Connec dialog](media/ssms-connect-dialog.PNG)
 
 > [!NOTE]
-> The requirement to specify a port number after the service URL has been removed.
+> Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com;5558.
 
 ## Example entity data queries
 
@@ -103,7 +103,11 @@ Querying data using SQL does not trigger any plug-ins registered on the <xref:Mi
 
 Queries using the TDS endpoint execute under the service protection API limits.
 
-## Troubleshooting authentication problems
+## Troubleshooting connection problems
+
+Below are some know error conditions and how to resolve them.
+
+### Authentication
 
 Only Azure Active Directory authentication is supported on the Dataverse endpoint SQL connection. The preferred authentication mechanism is "Azure Active Directory – Universal" with multi-factor authentication (MFA). However, "Azure Active Directory – Password" will work if MFA is not configured. If you try to use other forms of authentication, you will see errors like the following.
 
@@ -124,6 +128,31 @@ Time: 2020-12-17T01:13:14.4986739Z (.Net SqlClient Data Provider)”
 “Login failed: Request is not authenticated.
 RequestId: TDS;fda17c60-93f7-4d5a-ad79-7ddfbb917979;1
 Time: 2020-12-17T01:15:01.0497703Z (.Net SqlClient Data Provider)”
+
+### Blocked ports
+
+A blocked port error may look something like the following.
+
+![Error message](media/TDS-SQL-blocked-port-error.png)
+
+The solution is to verify the TCP ports 1433 or 5558 from the client are unblocked. One possible method to do that is described below.
+
+#### Establish a telnet session to the TDS service listener
+
+1. On a Microsoft Windows computer, install/enable telnet.
+    1. Choose **Start**.
+    1. Select **Control Panel**.
+    1. Choose **Programs and features**.
+    1. Select **Turn Windows features on or off**.
+    1. Choose the **Telnet Client** option.
+    1. Select **OK**. A dialog box appears to confirm the installation. The telnet command should now be available.
+1. Run a telnet command in a Command window: `telnet <environmentname>.crm.dynamics.com 1433`.
+
+If the connection is successful, you will be in an active telnet session. If unsuccessful, you will receive the error:
+
+“Connecting to <environmentname>.crm.dynamics.com… Could not open connection to the host, on port 1433: connect failed”. 
+
+This means the port has been blocked at the client.
 
 ### See also
 
