@@ -14,6 +14,7 @@ search.app:
   - PowerApps
 contributors:
   - JinManAhn-MSFT
+  - lancedMicrosoft
 ---
 
 # Common canvas apps performance issues and resolutions
