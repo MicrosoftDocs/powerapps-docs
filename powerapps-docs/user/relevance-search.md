@@ -84,7 +84,7 @@ Select **Show more** link at the bottom of a group switches to the table tab.
 
 <Picture from Slide 1>
 
-**Table specific tab**
+### Table specific tab
 
 Specific table tabs are displayed as a horizontal list of tabs along the top of the screen. The exact order of the list of tables from left to right in an LTR environment is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
 
