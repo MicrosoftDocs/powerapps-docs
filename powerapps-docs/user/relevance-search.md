@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/17/2020
+ms.date: 2/4/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -73,16 +73,23 @@ Search results are ranked based on relevance and grouped by tables. The list of 
 
 ### Top results tab
 
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Each group has results for that table in a grid with up to six columns. These columns are the first six columns of the table’s quick find view’s **View Columns set**.
+The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Each group has results for that table in a grid with up to six columns. These columns are the first six columns of the table’s quick find view's **View Columns set**.
 
 > [!NOTE]
-> - The primary column of a table is always used as the first column for a table in the Top results tab.
+> - The primary column of a table is always used as the first column for a table in the **Top results** tab.
 > - For notes and attachment tables, you can see two additional columns to indicate information on the related row for that note or attachment row.
 > - Party list columns on activity tables like To, CC, attendees cannot be searched on or shown and will be blank
 
-Select **Show more** link at the bottom of a group switches to the table tab.
 
-<Picture from Slide 1>
+![Shows top results for the search](media/rel-search-top-results.png)
+
+
+Legend:
+
+ 1. **Top results**:  Shows the top 20 results for the search term.
+ 2. **Rows grouped by table type**: To narrow your search results to a specific table, select the table tab.
+ 3. **Show more**: When you select **Show more** at the bottom of a group switches to the table tab.
+
 
 ### Table specific tab
 
