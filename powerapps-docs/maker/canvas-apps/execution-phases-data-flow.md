@@ -28,11 +28,11 @@ In this article, you'll learn about these different phases of execution and how 
 
 A canvas app goes through the following phases of execution before showing the interface to a user:
 
-1. **Authenticate the user**<!--note from editor: Edited this run-in head to have imperative voice like the others.-->: Prompts the first-time user to sign in with credentials for whatever connections the app needs. If that user opens the app again, that person might be prompted again, depending on the organization's security policies.
+1. **Authenticate the user**: Prompts the first-time user to sign in with credentials for whatever connections the app needs. If that user opens the app again, that person might be prompted again, depending on the organization's security policies.
 
 1. **Get metadata**: Retrieves metadata, such as the version of the Power Apps platform on which the app runs and the sources from which it must retrieve data.
 
-1. **Initialize the app**: Performs any tasks specified in the [OnStart](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/object-app#onstart-property)<!--note from editor: Suggested. I think this URL will be more helpful to the reader.--> property.
+1. **Initialize the app**: Performs any tasks specified in the [OnStart](functions/object-app.md#onstart-property) property.
 
 1. **Render the screens**: Renders the first screen with controls that the app has populated with data. If the user opens other screens, the app renders them by using the same process.  
 
@@ -46,7 +46,7 @@ In this section, you'll learn about how the data call flows in canvas apps with 
 
 ### Data call flow with online data sources
 
-The following diagram shows how a typical data request in a canvas app (on the left side) travels server-side layers, reaches out to the target data source (on the right side), and then returns the data to the client.<!--note from editor: I suggest adding the elements of the formula to the diagram, perhaps using the same italic font so it's clear how the formula and diagram relate to each other.-->
+The following diagram shows how a typical data request in a canvas app (on the left side) travels server-side layers, reaches out to the target data source (on the right side), and then returns the data to the client.
 
 ![Typical data call flow for all connectors except the connector for Dataverse](media\execution-phases-data-flow\all-connectors-general.png "Typical data call flow for all connectors except the connector for Dataverse")
 
@@ -60,7 +60,7 @@ Each layer in the preceding diagram can perform quickly or encounter some overhe
 
 If a canvas app connects to an on-premises data source like SQL Server, you need to have another layer called an [*on-premises data gateway*](gateway-reference.md). This gateway is mandatory for accessing on-premises data sources. It takes charge of converting OData protocol requests to SQL Data Manipulation Language (DML) statements.
 
-The following diagram shows where and how the on-premises data gateway is put in place to process data requests.<!--note from editor: Please double-check my edit to alt text. "On-premises connector" doesn't seem to be the right term to use. Also I have the same observation about the formula in this diagram.-->
+The following diagram shows where and how the on-premises data gateway is put in place to process data requests.
 
 ![Data call flow for an on-premises data gateway](media\execution-phases-data-flow\on-premiess-connectors.png "Data call flow for an on-premises data gateway")
 

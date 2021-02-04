@@ -19,9 +19,9 @@ contributors:
 
 # Common canvas app performance issues and resolutions
 
-You can build canvas apps by using a diverse array of data sources. Choose the data source and connector based on the business needs and scenarios you're designing the app for. For enterprise apps, Microsoft Dataverse is the recommended data source because it provides several performance benefits. For apps with a small number of transactions, you can go with any other available data sources in your environment.<!--note from editor: Edits suggested.-->
+You can build canvas apps by using a diverse array of data sources. Choose the data source and connector based on the business needs and scenarios you're designing the app for. For enterprise apps, Microsoft Dataverse is the recommended data source because it provides several performance benefits. For apps with a small number of transactions, you can go with any other available data sources in your environment.
 
-For performance considerations of an app, think about the number of users who will use the app when it has been published; the volume of create, read, update, and delete (CRUD)<!--note from editor: Note that I added "read" here. If you meant to leave it off, the acronym should be "(CrUD)"--> transactions; the type of data interactions; geographical access; and the kind of devices users have.
+For performance considerations of an app, think about the number of users who will use the app when it has been published; the volume of create, retrieve, update, and delete (CRUD) transactions; the type of data interactions; geographical access; and the kind of devices users have.
 
 In this article, you'll learn about some of the most common performance issues that can make canvas apps run slowly, and how to resolve them. This information will help you to improve app performance with your business plan and growth in mind.
 
@@ -85,27 +85,25 @@ Heavy scripts at the **OnStart** event are one of the most common mistakes while
 
 Optimize the formula in an **OnStart** event. For example, you can move some functions to the [**OnVisible**](controls/control-screen.md#additional-properties) property instead. This way you can let the app start quickly, and other steps can continue while the app opens.
 
-More information: [Optimize the OnStart property](performance-tips.md#optimize-the-onstart-property)<!--note from editor: The Note format isn't the right place for a "more information" link.-->
+More information: [Optimize the OnStart property](performance-tips.md#optimize-the-onstart-property)
 
 ## Memory pressure at the client side
 
 It's important to check the memory consumption of a canvas app because most of the time, the app runs on mobile devices. Memory exceptions in the heap are the most likely cause behind a canvas app that crashes or freezes ("hangs") on certain devices.
 
-A JavaScript (JS) heap might reach the limit<!--note from editor: Edit okay? Or maybe it should be "exceed the memory threshold"? "Hit the ceiling" is charming, but I don't find it used anywhere else in our doc set and I think it could be confusing to non-native English readers.--> because of heavy scripts running at the client side for adding, joining, filtering, sorting, or grouping columns. In most cases, an out-of-memory exception at the heap in a client can trigger the app to crash or hang.
-
-Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/memory-problems/)
+A JavaScript (JS) heap might reach the limit because of heavy scripts running at the client side for adding, joining, filtering, sorting, or grouping columns. In most cases, an out-of-memory exception at the heap in a client can trigger the app to crash or hang.
 
 When using data from sources such as Dataverse or SQL Server, you can use a **View** object to ensure that joining, filtering, grouping, or sorting occurs at the server side instead of the client side. This approach reduces the client overhead of scripting for such actions.
 
 If client-heavy operations like **JOIN** or **Group By** happened at the client side with a dataset that has 2,000 records or more, the objects in the heap will increase, resulting in exceeding memory limits.
 
-Developer tools for most browsers allow you to profile memory. It helps you visualize heap size, documents, nodes, and listeners.<!--note from editor: This sentence kind of floats. Can you move the paragraph from line 93 here, so the discussion of browser tools will hang together better? -->
+Developer tools for most browsers allow you to profile memory. It helps you visualize heap size, documents, nodes, and listeners. Profile the app's performance by using a browser, as described in [Microsoft Edge (Chromium) Developer Tools overview](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/). Check the scenarios that exceed the memory threshold of the JS heap. More information: [Fix memory problems](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/memory-problems/)
 
 ![An example of memory pressure for an app as seen from the developer tools of a browser](media/common-perf-issue-fixes/memory-pressure.png "An example of memory pressure for an app as seen from the developer tools of a browser")
 
 ## Performance considerations for the SQL Server connector
-<!--note from editor: Edit suggested here and throughout, because the phrase "when using the ___ connector" presents a bit of a misplaced modifier.-->
-You can use the [SQL Server connector](connections/connection-azure-sqldatabase.md)<!--note from editor: Edit okay? I think this link will be more relevant to the reader.--> for Power Apps to connect to SQL Server on-premises or Azure SQL Database. This section describes common performance-related problems and resolutions for using this connector for a canvas app. More information: [Connect to SQL Server from Power Apps](connections/connection-azure-sqldatabase.md), [Create a canvas app from Azure SQL Database](app-from-azure-sql-database.md)
+
+You can use the [SQL Server connector](connections/connection-azure-sqldatabase.md) for Power Apps to connect to SQL Server on-premises or Azure SQL Database. This section describes common performance-related problems and resolutions for using this connector for a canvas app. More information: [Connect to SQL Server from Power Apps](connections/connection-azure-sqldatabase.md), [Create a canvas app from Azure SQL Database](app-from-azure-sql-database.md)
 
 > [!NOTE]
 > Though this section references the SQL Server connector for performance issues and resolutions, most of the recommendations also apply to using any database type&mdash;such as MySQL or PostgreSQL&mdash;as the data source.
@@ -129,7 +127,7 @@ To resolve such problems, use [**StartsWith**](functions/function-startswith.md)
 You can profile and tune slow queries and indexes on the SQL database. For instance, if a formula gets data with descending (DESC) order on a certain column, that sorting column should have an index with descending order. The index key creates ascending (ASC) order by default.
 
 You can also check the URL address of data requests. For example, the following data request snippet (partial OData call) asks SQL to return 500 records matching the column to *Value* and order by *ID* in descending order.
-<!--note from editor: Note that the double backticks for the following code snippet make it possible to use straight apostrophes. They also would make it possible to drop the backslash in front of the dollar sign, if it doesn't occur in the literal string.-->
+
 ``Items? \$filter=Column eq 'Value' & Orderby = ID desc & top 500``
 
 This helps in understanding index requirements for covering similar request conditions. In this example, if the ID column has an index with descending order, the query will be performed more quickly.
@@ -156,13 +154,13 @@ An app running **Group By**, **Filter By**, or **JOIN** operations at the client
 In such situations, use the **View** object in SQL database for the **Group By**, **Filter By**, or **JOIN** operations. Views can use selective columns and remove unnecessary columns with big data types such as **NVARCHAR(MAX)**, **VARCHAR(MAX)**, and **VARBINARY(MAX)**.
 
 > [!TIP]
-> This approach also helps address the N+1 query problem.<!--note from editor: Edit suggested, because this link doesn't go to a definition of the problem, it just goes to another general reference.-->
+> This approach also helps address the N+1 query problem.
 
 ### Data size transferred to the client
 
 By default, a canvas app shows data by using the tables, or views, from the available database objects. Retrieving all columns from a table can result in a slow response, especially when using big data types such as **NVARCHAR(MAX)**.
 
-Transferring large amounts of data to clients takes time. This transfer also results in more scripting time when there are large amounts of data in the JS heap at the client side, as [described earlier in this article](#memory-pressure-at-the-client-side).<!--note from editor: Suggest making it clear where this link goes. Unless we're linking to prerequisites or alternate steps in a long procedural article, we want to minimize links within articles, especially if the link doesn't go to a deep dive into more information.-->
+Transferring large amounts of data to clients takes time. This transfer also results in more scripting time when there are large amounts of data in the JS heap at the client side, as [described earlier in this article](#memory-pressure-at-the-client-side).
 
 To reduce the size of data being transferred to the client, use views with the specific columns required for the app and ensure that explicit column selection is enabled, as [described earlier in this article](#too-many-columns-retrieved).
 
@@ -172,17 +170,17 @@ The performance of a canvas app using the SQL Server connector with an on-premis
 
 #### Unhealthy on-premises data gateway
 
-Organizations can define multiple nodes for on-premises data gateways. If even one of the nodes is unreachable<!--note from editor: Edit okay? I didn't know what "Even if one of the nodes is unreachable" meant.-->, data requests to the unhealthy node won't return the result within an acceptable timeframe, or they might cause "unreachable" error messages after waiting for a while.
+Organizations can define multiple nodes for on-premises data gateways. If even one of the nodes is unreachable, data requests to the unhealthy node won't return the result within an acceptable timeframe, or they might cause "unreachable" error messages after waiting for a while.
 
-Ensure that all on-premises data gateway nodes are healthy and configured with a minimum network latency between the nodes and the SQL instance.<!--note from editor: Would it be helpful to link to a definition of a "healthy" gateway? Maybe this article about Azure Application Gateway? https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-backend-health-troubleshooting-->
+Ensure that all on-premises data gateway nodes are healthy and configured with a minimum network latency between the nodes and the SQL instance.
 
 #### Location of the on-premises data gateway
 
-A data gateway requires network calls to on-premises data sources to interpret the OData requests. For instance, the data gateway needs to understand the data entity schema<!--note from editor: Is this mention of "entity" okay, or should it simply be "data schema"?--> to translate OData requests into SQL data manipulation language (DML) statements. Extra overhead is added when the data gateway is configured in a separate location with high network latency between the data gateway and the SQL instance.
+A data gateway requires network calls to on-premises data sources to interpret the OData requests. For instance, the data gateway needs to understand the data entity schema to translate OData requests into SQL data manipulation language (DML) statements. Extra overhead is added when the data gateway is configured in a separate location with high network latency between the data gateway and the SQL instance.
 
 In an enterprise environment, having a scalable data gateway cluster is recommended when heavy data requests are expected. Check how many connections are established between the data gateway nodes and the SQL instance.
 
-By checking the concurrent connections in an on-premises data gateway or a SQL Server instance<!--note from editor: Or should this be "a SQL instance"? We don't use "SQL server" (lowercase "server").-->, your organization can identify the point where the data gateway needs to be scaled out, and with how many nodes.
+By checking the concurrent connections in an on-premises data gateway or a SQL instance, your organization can identify the point where the data gateway needs to be scaled out, and with how many nodes.
 
 #### Data gateway scalability
 
@@ -204,7 +202,7 @@ Check the service tier of Azure SQL Database. A lower tier will have some limita
 
 ## Performance considerations for the SharePoint connector
 
-You can use the [SharePoint connector](connections/connection-sharepoint-online.md)<!--note from editor: Edit okay?--> to create apps by using data from SharePoint lists. You can also create canvas apps directly from the SharePoint list view. Let's take a look at the common performance problems and resolutions for using a SharePoint data source with canvas apps.
+You can use the [SharePoint connector](connections/connection-sharepoint-online.md) to create apps by using data from SharePoint lists. You can also create canvas apps directly from the SharePoint list view. Let's take a look at the common performance problems and resolutions for using a SharePoint data source with canvas apps.
 
 ### Too many dynamic lookup columns
 
@@ -235,15 +233,15 @@ In the real world, though, apps are designed to meet certain business requiremen
 When you use the [Common Data Service connector](connections/connection-common-data-service.md) to access a Dataverse environment, data requests go to the environment instance directly, without passing through Azure API Management. More information: [Data call flow with the Common Data Service connector](execution-phases-data-flow.md#data-call-flow-with-the-common-data-service-connector-for-dataverse-environments)
 
 > [!TIP]
-> When custom entities<!--note from editor: Is "entities" okay here?--> are used in Dataverse, additional security configuration might be required for users to be able to view the records with canvas apps. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security), and [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
+> When custom entities are used in Dataverse, additional security configuration might be required for users to be able to view the records with canvas apps. More information: [Security concepts in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security-cds), [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security), and [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
-A canvas app connected to Dataverse might perform slowly if it runs client-heavy scripting such as **Filter By** or **JOIN**<!--note from editor: Edit okay, to be parallel with other occurrences of all-caps JOIN?--> client-side instead of server-side.<!--note from editor: Alternatively, this could be "...at the client side instead of the server side." There's no hyphen when used as a noun, but there is a hyphen when used as an adjective or adverb.-->
+A canvas app connected to Dataverse might perform slowly if it runs client-heavy scripting such as **Filter By** or **JOIN** client-side instead of server-side.
 
-Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities<!--note from editor: Is "entities" okay here?--> and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the columns you require. Then you can use this view in your app, which creates this overhead at the server side for the join/filter operation instead of the client side. This method reduces not only the extra operations, but also data transmission. For information about editing filter and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
+Use [Dataverse views](../model-driven-apps/create-edit-views.md) when possible. A view with the required join or filter criteria helps reduce the overhead of using an entire table. For instance, if you need to join entities and filter their data, you can [define a view](../model-driven-apps/create-edit-views.md#places-where-you-can-access-the-view-editor-to-create-or-edit-views) by joining them and define only the columns you require. Then you can use this view in your app, which creates this overhead at the server side for the join/filter operation instead of the client side. This method reduces not only the extra operations, but also data transmission. For information about editing filter and sort criteria, go to [Edit filter criteria](../model-driven-apps/edit-filter-criteria.md).
 
 ## Performance considerations for the Excel connector
 
-The [Excel connector](connections/connection-excel.md)<!--note from editor: Edit okay?--> provides connectivity from a canvas app to the data in a table in an Excel file. This connector has limitations compared to other data sources&mdash;for example, limited [delegable](delegation-overview.md) functions&mdash;which restrict the canvas app to loading data from the table only up to 2,000 records<!--note from editor: Suggest removing the link. It goes to a section that doesn't give any more detail than the link you supplied earlier in the sentence.-->. To load more than 2,000 records, partition your data in different data tables as additional data sources.
+The [Excel connector](connections/connection-excel.md) provides connectivity from a canvas app to the data in a table in an Excel file. This connector has limitations compared to other data sources&mdash;for example, limited [delegable](delegation-overview.md) functions&mdash;which restrict the canvas app to loading data from the table only up to 2,000 records. To load more than 2,000 records, partition your data in different data tables as additional data sources.
 
 Let's take a look at the common performance problems with using Excel as the data source for canvas apps, and how to resolve them.
 
@@ -253,11 +251,11 @@ An app can perform slowly when it uses an Excel file that has too many data tabl
 
 Having too many data tables with many rows and columns affects app performance and the client-side overhead because each data table needs to be manipulated within the [JS heap](#memory-pressure-at-the-client-side). This effect also leads to the app's consuming more client-side memory.
 
-To ensure that your app isn't affected by this problem, define only the columns you need on the data table in an Excel file.<!--note from editor: Suggested.-->
+To ensure that your app isn't affected by this problem, define only the columns you need on the data table in an Excel file.
 
 ### Heavy transactions
 
-The source of Excel data is a spreadsheet<!--note from editor: Suggested. Via Style Guide, "spreadsheet" is only used to describe a type of program.-->, not a relational database system. Any changes from an app are managed by Excel in the same way as if a user were changing data in an Excel file. If the app has a high number of reads, but fewer CRUD operations, it might perform well. However, if the app makes heavy transactions, it can adversely affect the performance of the app.
+Excel isn't a relational database system. Any changes from an app are managed by Excel in the same way as if a user were changing data in an Excel file. If the app has a high number of reads, but fewer CRUD operations, it might perform well. However, if the app makes heavy transactions, it can adversely affect the performance of the app.
 
 There's no specific threshold value for the number of transactions, because it also depends on the data being manipulated. Several other aspects also affect the app's performance, such as network overhead or the user's device.
 
@@ -267,7 +265,7 @@ If you have read-only data, you can import such data into the app locally instea
 
 You can choose from a wide range of [cloud storage](connections/cloud-storage-blob-connections.md) options with varying&mdash;or configurable&mdash;storage capacity for the Excel file. However, having a single large Excel file with all tables defined in that file adds extra overhead for the app while it downloads the file and reads data to load at the client side.
 
-Instead of using one large file, split the data into multiple Excel files with minimal data tables. Then connect to each file only when you need it.<!--note from editor: Edit okay?--> This way, loading the data from the data table happens in fragments, reducing the overhead of having many tables or a large dataset.
+Instead of using one large file, split the data into multiple Excel files with minimal data tables. Then connect to each file only when you need it. This way, loading the data from the data table happens in fragments, reducing the overhead of having many tables or a large dataset.
 
 ### File location
 

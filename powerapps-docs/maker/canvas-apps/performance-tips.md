@@ -48,8 +48,8 @@ ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
 ```
 
 You can confirm this behavior in the Developer Tools for your browser, as shown in the following image.
-<!--note from editor: Please double-check the alt text. Remember that someone with low vision should be able to understand what the image is showing.-->
-![Diagram showing the four tables being loaded one after the other](./media/performance-tips/perfconcurrent1.png)
+
+![Diagram showing the four tables being loaded one after the other](./media/performance-tips/perfconcurrent1.png "Diagram showing the four tables being loaded one after the other")
 
 You can enclose the same formula in the **Concurrent** function to reduce the overall time that the operation needs:
 
@@ -97,7 +97,7 @@ Where possible, use functions that delegate data processing to the data source i
 > [!TIP]
 > To learn about delegable functions supported by specific connectors, go to the [connector documentation](https://docs.microsoft.com/connectors/).
 
-For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is non-delegable while the second is delegable.<!--note from editor: Note the straight apostrophe made possible by the double backticks around the formula. -->
+For an example of delegable functions, consider an ID column defined as the **Number** data type in a SharePoint list. Formulas in the following example will return the results as expected. However, the first formula is non-delegable while the second is delegable.
 
 | Formula                                           | Delegable? |
 |---------------------------------------------------|------------|
