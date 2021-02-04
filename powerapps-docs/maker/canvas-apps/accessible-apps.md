@@ -54,8 +54,8 @@ Using the right controls and grouping them will help screen reader users underst
 
 - Include at least one heading on each screen of the app. You can create headings by setting the **TextRole** property on a **[Label](controls/control-text-box.md)**.
 - Use a **[Button](controls/control-button.md)** instead of a **[Label](controls/control-text-box.md)** for interactive text.
-- Group related content in **[Container](controls/control-container.md)** controls.
-- Be aware of [unsupported design patterns](accessibility-limitations.md).
+- Group related content in **[Containers](controls/control-container.md)**.
+- Be aware of [unsupported design patterns](accessible-apps-limitations.md).
 
 ## Multimedia
 Ensure all videos are captioned and a transcript of all audio recordings is available to the user.  **Video** control supports closed captions  in WebVTT format via the **ClosedCaptionsUrl** property.
@@ -70,4 +70,5 @@ If you have a signature field that uses the PenInput control you need to enable 
 Related:
 - [Accessibility properties](controls/properties-accessibility.md)
 - [Use the Accessibility checker](accessibility-checker.md)
+- [Accessible app structure](accessible-apps-structure.md)
 - [Accessible colors in Power Apps](accessible-apps-color.md)
