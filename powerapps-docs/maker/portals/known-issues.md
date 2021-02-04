@@ -47,9 +47,9 @@ ms.reviewer: tapanm
 
 - When switching an environment in Power Apps, the portals within an environment may not show up immediately in **Apps** or **Recent Apps** list. This experience happens particularly on environments that are created in a different region than their tenant. The workaround is to use browser refresh or wait for some time for portal to show up in the apps list.
 
-- If you keep the portal settings pane open in Power Apps home page while resetting the portal from Power Apps Portals admin center, a user will see the "Something went wrong" error message in the portal settings pane, as portal isn't available.
+- If you keep the portal settings pane open in Power Apps home page while resetting the portal from Power Apps portals admin center, a user will see the "Something went wrong" error message in the portal settings pane, as portal isn't available.
 
-- In certain cases, when you create a portal, the styles aren't applied properly to the portal, and the website is displayed without the styles when opened through **Browse website**. This behavior rarely happens and styles can be recovered by restarting the portal from Power Apps Portals admin center.
+- In certain cases, when you create a portal, the styles aren't applied properly to the portal, and the website is displayed without the styles when opened through **Browse website**. This behavior rarely happens and styles can be recovered by restarting the portal from Power Apps portals admin center.
 
 ## Power Apps portals Studio issues
 
