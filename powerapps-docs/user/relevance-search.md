@@ -100,9 +100,12 @@ The tables of the rows in the top 20 results are shown in the first few tabs fro
 ![Diagram explaning top resutls page](media/diagram-top-results.png)
 
 Legend:
- 1. ![Number 1](media/one.png) Shows top 20 results that match (let's say 3 tables).
- 2. ![Number 2](media/two.png) Shows the 3 tables that are part of the top results, ordered by relevance.
- 3. ![Number 3](media/three.png) Shows rest of the matched table types, ordered by number of records that matches the search.
+
+![Number 1](media/one.png) Shows top 20 results that match (let's say 3 tables).
+
+![Number 2](media/two.png) Shows the 3 tables that are part of the top results, ordered by relevance.
+
+![Number 3](media/three.png) Shows rest of the matched table types, ordered by number of records that matches the search.
 
  
 
