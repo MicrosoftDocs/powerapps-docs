@@ -1,6 +1,6 @@
 ---
 title: "Azure Integration (Microsoft Dataverse) | Microsoft Docs"
-description: "<Description>" 
+description: "Learn about integrating your Dataverse application or plug-in with Azure." 
 ms.custom: ""
 ms.date: 06/01/2019
 ms.reviewer: "pehecke"

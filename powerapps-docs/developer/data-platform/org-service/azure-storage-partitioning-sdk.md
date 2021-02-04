@@ -95,7 +95,7 @@ Here are a few more details about the partition key and partition management.
 
 ### See Also
 
-[Passing optional parameters with a request](use-messages#passing-optional-parameters-with-a-request)  
+[Passing optional parameters with a request](use-messages.md#passing-optional-parameters-with-a-request)  
 [Create entities using the Organization Service](entity-operations-create.md)  
 [Retrieve an entity using the Organization Service](entity-operations-retrieve.md)  
 [Update and Delete entities using the Organization Service](entity-operations-update-delete.md)

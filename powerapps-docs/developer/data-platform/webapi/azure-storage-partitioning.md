@@ -1,6 +1,6 @@
 ---
-title: "Improve performance when accessing documents using storage partitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to improve performance when accessing non-relational documents." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Access documents faster using storage partitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to improve access performance for non-relational documents." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/27/2021
 ms.reviewer: "pehecke"
