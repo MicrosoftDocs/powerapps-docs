@@ -32,12 +32,10 @@ Learn how to [announce dynamic changes with live regions](../accessible-apps-liv
 
 **TabIndex** – Determines if the control participates in keyboard navigation.
 
-Keyboard navigation is an important aspect of any app.  For many the keyboard is more efficient than using touch or a mouse and it enables screen readers for the visually impaired.  The navigation order should:
+Keyboard navigation is an important aspect of any app. For many, the keyboard is more efficient than using touch or a mouse. The navigation order should:
 - Mirror what is seen visually.
 - Only have a tab stop at controls that are interactive.
 - Follow either an intuitive across and then down "Z" order or a down and then across "reverse-N" order.
-
-The above requirements will be met with the default **TabIndex** values and we recommend that you do not change them.  The default is what most users expect visually and it will work well with a screen reader.  But there may be cases in which you will want to override the default.  Use the **TabIndex** property and the [**Container**](control-container) to make adjustments to the navigation order.  
 
 The **TabIndex** property has two recommended values:
 
@@ -46,22 +44,21 @@ The **TabIndex** property has two recommended values:
 | 0 | Control participates in keyboard navigation. | [**Button**](control-button.md), [**Text input**](control-text-input.md), [**Combo box**](control-combo-box.md), and other typically interactive controls. |
 | &minus;1 | Control does not participate in keyboard navigation. | [**Label**](control-text-box.md), [**Image**](control-image.md), [**Icon**](control-shapes-icons.md), and other typically non-interactive controls. |
 
-Navigation order generally goes from left-to-right, then top-to-bottom, in a "Z" pattern. The order is based on the **X** and **Y** property values of the controls. If controls are dynamically moved on the screen, for example by having a formula for **X** or **Y** based on a timer or other control, the navigation order will change dynamically too.
+A logical keyboard navigation sequence can be achieved with just these values, along with the use of the [**Container**](control-container) control. We recommend that you do not set **TabIndex** to other values.
 
-Use the [**Container**](control-container) control to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern.  At the top of the following example, the name fields are contained within a Container control which causes navigation to proceed down before moving across. At the bottom of the example, no Container controls are used, and navigation proceeds across and then down as normal, which is not intuitive given the control groupings. 
+When **TabIndex** of all controls are set to either -1 or 0, navigation order goes from left-to-right, then top-to-bottom, in a "Z" pattern. The order is based on the **X** and **Y** property values of the controls. If controls are dynamically moved on the screen, for example, by having its **X** or **Y** value change according to a timer or other control, the navigation order will change dynamically too.
 
-![Animation showing Container control causing navigation to proceed down within a group before moving across](media/properties-accessibility/enhanced-group.gif)
+Use the [**Container**](control-container) control to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern. Controls in **[Form Cards](control-card.md)** and [**Galleries**](control-gallery.md) are automatically grouped. Tabbing through these containers will navigate through all elements of the container before proceeding to the next control outside of the container.  
 
-Similarly, tabbing through containers such as [**Form**](control-form-detail.md) and [**Gallery**](control-gallery.md) controls will navigate through all elements of the container before proceeding to the next control outside of the container.  
+Controls which have a **Visible** property value of *false* or a **DisplayMode** property value of **Disabled** are not included in keyboard navigation.
 
-Controls which have a **Visible** property value of *false* or a **DisplayMode** property value of **Disabled** are not included in the navigation.  
-
-When using a browser, navigating from the last control of the screen will move to the browser's built-in controls, such as the URL address.  
+> [!IMPORTANT]
+> **TabIndex** only affects keyboard navigation. For screen reader users to understand app structure, a [logical control order](../accessible-apps-structure.md) is still necessary.
 
 > [!WARNING]
-> Avoid **TabIndex** values that are greater than 0. Ultimately controls are rendered in HTML where even the [W3C has warned](https://www.w3.org/TR/wai-aria-practices/#kbd_general_between) "Authors are strongly advised NOT to use these values." Many HTML tools warn for values greater than 0 as does the [App Checker](../accessibility-checker.md) when it reports "Check the order of the screen items."  All for good reason: using **TabIndex** in this manner can be very difficult to get right and can make assistive technologies such as screen readers unusable.
+> For rare scenarios where neither visual order nor logical structure should be followed, you can set **TabIndex** to be greater than zero to customize the keyboard navigation order. However, accessibility tools will warn about this. It can be very difficult to get it right and can make for a confusing screen reader experience.
 > 
-> When controls exist with **TabIndex** greater than 0, users will navigate to controls with increasing **TabIndex** values (1, then 2, etc). When users have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0 including the browser's built-in controls. When there are multiple controls with the same **TabIndex**, their **X** and **Y** position determines their relative order.
+> When there are controls with **TabIndex** greater than 0, users will first navigate to controls with increasing positive **TabIndex** values (1, then 2, etc). When users have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0 including the browser's built-in controls. When there are multiple controls with the same **TabIndex**, their **X** and **Y** value and the **Containers** they are in will determine their relative order. Inside a **Gallery**, **TabIndex** is scoped so that the controls inside will be navigated first before the ones outside.
 
 
 
