@@ -14,6 +14,7 @@ search.app:
   - PowerApps
 contributors:
   - JinManAhn-MSFT
+  - lancedMicrosoft
 ---
 
 # Common sources of slow performance for a canvas app
