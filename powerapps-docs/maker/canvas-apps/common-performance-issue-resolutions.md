@@ -1,17 +1,20 @@
 ---
-title: Canvas app performance issues and resolutions | Microsoft Docs
-description: Learn about common performance issues and resolutions for canvas apps.
-author: lancedMicrosoft
+title: Common canvas apps performance issues and resolutions | Microsoft Docs
+description: Learn about the common performance issues and resolutions for canvas apps.
+author: JinManAhn-MSFT
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 01/22/2021
-ms.author: lanced
+ms.author: jiahn
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - JinManAhn-MSFT
+  - lancedMicrosoft
 ---
 
 # Common canvas app performance issues and resolutions

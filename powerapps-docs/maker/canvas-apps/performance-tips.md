@@ -13,6 +13,8 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - yingchin
 ---
 # Tips and best practices to improve canvas app performance
 

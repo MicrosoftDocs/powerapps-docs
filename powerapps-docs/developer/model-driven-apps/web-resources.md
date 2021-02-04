@@ -2,7 +2,7 @@
 title: "Web Resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Web resources are virtual files that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 02/03/2021
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -21,7 +21,12 @@ search.app:
 
 
 Web resources are *virtual files* that are stored in the Microsoft Dataverse database and that you can retrieve by using a unique URL address.  
-  
+
+> [!NOTE]
+> IFRAMEing content that is behind an authentication boundary is not supported through web resources or Power Apps component framework. Some embedded IFRAMEs might work in a browser client if the user directly logs into the external service, but this is not supported in mobile or tablet applications.
+The specific scenario of embedding an entity form within an IFRAME, embedded in another entity form, is not supported. We recommend the use of [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.<p/>Use of [Power Apps component framework](../component-framework/overview.md) is encouraged to build reusable and more tighter external IFRAME based integrations. More information: [IFRAME component](../component-framework/sample-controls/iframe-control.md)
+
+
 <a name="BKMK_CapabilitiesOfWebResources"></a>   
 ## Capabilities of web resources  
  Web resources represent files that can be used to extend the Dataverse web application such as html files, JavaScript, and CSS, and several image formats. You can use web resources in form customizations, the `SiteMap`, or the application ribbon because they can be referenced by using URL syntax.  
@@ -134,7 +139,7 @@ https://MyOrganization.crm.dynamics.com/WebResources/new_/test/test.htm
 <a name="BKMK_rendering_differences"></a>
 ## Layout differences between the legacy web client and Unified Interface
 
-A web resource control configured to use a certain number of rows will have different heights in a Unified Client application compared to a web client application. This is because there is a difference in the height of a row between the Unified Interface and web client. If a form is needed in both the web client and Unified Interface, you can use different forms in the Unified Interface app and the web client app with the control configured to use the appropriate number of rows in each form.
+A web resource control configured to use a certain number of rows will have different heights in a Unified Client application compared to a web client application. This is because there is a difference in the height of a row between Unified Interface and web client. If a form is needed in both the web client and Unified Interface, you can use different forms in the Unified Interface app and the web client app with the control configured to use the appropriate number of rows in each form.
 
 ## Community tools
 

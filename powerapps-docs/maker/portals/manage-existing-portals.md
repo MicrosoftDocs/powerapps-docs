@@ -94,7 +94,7 @@ Your portal should work anonymously and should be accessible by the external use
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also do advanced actions such as administering the portal though the Power Apps Portals admin center and working with site settings. Settings provide links to the Power Apps Portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
+Displays the portal settings and allows you to change the name of the portal. You can also do advanced actions such as administering the portal though the Power Apps portals admin center and working with site settings. Settings provide links to the Power Apps portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
 
 > [!div class=mx-imgBorder]
 > ![portal settings](media/portal-settings.png "Portal settings")  
