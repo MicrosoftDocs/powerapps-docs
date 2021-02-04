@@ -22,111 +22,64 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Relevance search is easy to use, fast, and more accurate in helping you find information that you're looking for. The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
+Relevance search delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance. 
+  
+Relevance search brings the following enhancements and benefits:  
+
+- Improved performance compared to Categorized search.  
+  
+- Finds matches to any word in the search term in any column in the table, compared to quick find where all words from the search term must be found in one column. 
+
+- Finds matches that include inflectional words like **stream**, **streaming**, or **streamed**.  
+  
+- Returns results from all searchable tables in a single list sorted by relevance, so the better the match, the higher the result appears in the list. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than finding the same words in a long article, far apart from each other.
+  
+- Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results. 
+
+    > [!NOTE]
+    > - Certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify rows. Because they're ignored during search, these words are also not highlighted in results.
+    > - Highlighted terms are often returned as a portion of the full value in a column because only the matched terms are highlighted.
+    > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a column has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results where part of the matched column is truncated.
+    
+- Includes search results for text in a document that's stored in Microsoft Dataverse, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON. Note, that File data type is not supported
+  
+- Enables you to search for rows that are shared with you and rows that you own.  
+  
+  > [!NOTE]
+  >  Hierarchical security models aren't supported. Even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see the result in relevance search.  
+  
+- Lets you also search for choices and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry column, which is a searchable option set.
+
+  > [!NOTE]
+  > - Relevance search is text-based, and can search only on columns of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in columns of Numeric, Date, or File data type.
+  
+- Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across table data using relevance search](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/relevance-search).
+  
+  > [!NOTE]
+  > Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.
+
+## Turn on Relevance Search
+
+Relevance Search needs to be enabled on by the administrator for your organization, thus allowing all users in the organization to use it. After Relevance Search is enabled, you might have to wait up to an hour or more, depending on the size of your organization before it is available in your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+
+### Turn on the new Relevance Search experience 
+
+The new Relevance Search experience combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. The new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)
+
+ > [!div class="mx-imgBorder"]
+ > ![Turn on new search experience](media/admin-enable-search.jpg) 
+
+
+## Use the new Relevance Search experience 
+
+The new search experience compliments the performance and intelligence of Relevance Search service and is intuitive and easy to use. 
+
+### Prominent search bar
+
+The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
 
 > [!div class="mx-imgBorder"]
 > ![Search box on header](media/new-search-exp.png)
-
-  
-## Turn on Relevance Search
-
-The new experience needs to be enabled by the administrator for your organization. When relevance search is enabled for your environment, you see the search bar in the header. Search can be accessed in a familiar and recognizable way in all model-driven Power Apps in that environment. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience).
-
-
-## See recent rows and searches
-
-See your recent searches and recently accessed rows when you select the search box. Before you even start typing in the search box, you will see information to help you complete the search quickly. 
-
-Up to three recent search terms appear at the top, based on the three most recent search queries that you accessed and viewed the results. The recent search terms are personalized for you, based on your device and browser.
-
-The next information in the flyout is recently accessed rows. You can see up to seven recently accessed rows. If you frequently access a small set of rows, you can quickly get to it from here. Recently accessed rows are independent of tables that are indexed for Relevance Search, because there is no search performed at this point. The rows are also grouped by table type, allowing you to quickly scan the list.
-
-> [!div class="mx-imgBorder"]
-> ![Legend for new search experience](media/legend-for-new-exp.png) 
-
-Legend
-
-1. **Recent searches**: Shows your recent searches.
-2. **Recently accessed rows**:  Shows recently accessed rows that are grouped by table type.
-
-## Inline suggestions
-
-As you start typing, you will see suggested results which minimize keystrokes and simplify page navigation. Suggested results are quick results based on a search performed on the primary column of a table that is both enabled for Relevance Search and included in the model-driven app.
-
-Suggestions are shown when three or more characters are entered in the search box, and it based on two types of matching.
-
--	**Word completion**: Rows where the primary field contains a word that begins with the search term. For example, entering **work** will show the Account Adventure **Work**s, contact John **Work**er, among other results.
-
-- **Fuzzy search**: Suggestions incorporate fuzzy search where terms that are misspelled by one character are matched. For example, entering **winry** will show the Account Coho **Winery**, among other suggestions. 
-
-With suggestions you can access your information quickly with minimal keystrokes even when the search term is misspelled by up to one character. Text that's highlighted in bold in the suggestions shows the term that is matched.
-
-
-![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif)
-
-
-## Search results page
-
-You can view the full results for a search by pressing Enter or select **Show results for (search term)** at the bottom of the suggested results flyout.
-
-Search results are ranked based on relevance and grouped by tables. The list of tables with rows matching the search term are displayed as a horizontal list of tabs along the top of the screen.
-
-### Top results tab
-
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Each group has results for that table in a grid with up to six columns. These columns are the first six columns of the table’s quick find view’s **View Columns set**.
-
-> [!NOTE]
-> - The primary column of a table is always used as the first column for a table in the Top results tab.
-> - For notes and attachment tables, you can see two additional columns to indicate information on the related row for that note or attachment row.
-> - Party list columns on activity tables like To, CC, attendees cannot be searched on or shown and will be blank
-
-Select **Show more** link at the bottom of a group switches to the table tab.
-
-<Picture from Slide 1>
-
-### Table specific tab
-
-Specific table tabs are displayed as a horizontal list of tabs along the top of the screen. The exact order of the list of tables from left to right in an LTR environment is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
-
-The tables of the rows in the top 20 results are shown in the first few tabs from left to right, based on relevance. The tables corresponding to result rows outside of the top 20 are displayed in descending order of matched rows.
-
-<Picture from Slide 2>
-
-Each of the tabs lets you drill into a specific table and view more information on rows in the results. At the top of the page, you can view the number of results that are shown and the list of columns that was searched on within the table.
-
-<Picture from Slide 3>
-
-Each table tab displays more information than Top results tab along two different dimensions:
-
-- If the quick find view for the table has more than 6 **View Columns**, then all columns are displayed in the table tab, compared to up to 6 columns shown in **Top results** tab.
-- All matching rows for the table are accessiable in the table specific tab as an infinitely scrollable list.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### No search required to see recent rows
@@ -319,3 +272,6 @@ Configure your own facets and filters.
    > [!NOTE]
    > - If a system customizer deletes a column or makes it no longer searchable, and you've saved a facet for that column, it will no longer show up as a facet.  
    >   -   You'll only see the columns that exist in the default solution and that are configured as searchable by your system customizer.  
+
+
+
