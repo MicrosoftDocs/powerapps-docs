@@ -97,7 +97,15 @@ Specific table tabs are displayed as a horizontal list of tabs along the top of 
 
 The tables of the rows in the top 20 results are shown in the first few tabs from left to right, based on relevance. The tables corresponding to result rows outside of the top 20 are displayed in descending order of matched rows.
 
-<Picture from Slide 2>
+![Diagram explaning top resutls page](media/diagram-top-results.png
+
+Legend:
+ 1. Show top 20 results that match (let's say 3 tables).
+ 2. This is the 3 tables that are part of the top results set that are ordered by relevance.
+ 3. Thi is the rest of the matched table types that are ordered by number of records that matches the search.
+
+ 
+
 
 Each of the tabs lets you drill into a specific table and view more information on rows in the results. At the top of the page, you can view the number of results that are shown and the list of columns that was searched on within the table.
 
