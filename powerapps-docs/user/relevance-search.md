@@ -44,6 +44,10 @@ The next information in the flyout is recently accessed rows. You can see up to 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
 
+Legend
+
+1. **Recent searches**: Shows your recent searches.
+2. **Recently accessed rows**:  Shows recently accessed rows that are grouped by table type.
 
 ## Inline suggestions
 
@@ -96,6 +100,8 @@ Each table tab displays more information than Top results tab along two differen
 
 - If the quick find view for the table has more than 6 **View Columns**, then all columns are displayed in the table tab, compared to up to 6 columns shown in **Top results** tab.
 - All matching rows for the table are accessiable in the table specific tab as an infinitely scrollable list.
+
+
 
 
 
