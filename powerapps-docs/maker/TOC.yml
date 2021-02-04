@@ -227,7 +227,7 @@
     items:
       - name: Connect to data
         items:
-        - name: Connections Overview
+        - name: Connections overview
           href: ./canvas-apps/connections-list.md
         - name: Popular connectors
           items:
@@ -1003,7 +1003,7 @@
       href: ./canvas-apps/embedding-sdk.md
   - name: Performance and optimization
     items:
-    - name: Understand canvas apps execution phases and data flow
+    - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
     - name: Common sources of slow performance
       href: ./canvas-apps/slow-performance-sources.md
