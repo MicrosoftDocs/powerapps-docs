@@ -120,7 +120,7 @@ More information: [Behavior and format of the Date and Time column](behavior-for
 
 |Data type|Description|
 |--|--|
-|**Currency**|A money value for any currencies configured for the environment. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization.More information: [Using currency columns](types-of-fields.md#using-currency-columns)|
+|**Currency**|A money value for any currencies configured for the environment. You can set a level of precision or choose to base the precision on a specific currency or a single standard precision used by the organization. More information: [Using currency columns](types-of-fields.md#using-currency-columns)|
 |**Decimal Number**| A decimal value with up to 10 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
 |**File**| For storing binary data.|
 |**Floating Point Number**|A floating point number with up to 5 points of precision. More information: [Using the right type of number](types-of-fields.md#using-the-right-type-of-number)|
@@ -129,7 +129,7 @@ More information: [Behavior and format of the Date and Time column](behavior-for
 |**Multi Select Choice**|Displays a list of options where more than one can be selected.|
 |<a name="multi-line-column"></a> **Multiline Text**|A text value intended to be displayed in a multi-line textbox. Limited to a maximum of 1,048,576 characters. You can also set a lower [Max Length](#max-length). |
 |**Choice**|Displays a list of options where only one can be selected.|
-|**Yes/No**|DisplaysYes/No where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
+|**Yes/No**|Displays Yes/No where only one can be selected. You choose which labels are displayed for each option. The default values are **Yes** and **No**.|
 
 ## Save new column
 
