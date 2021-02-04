@@ -32,7 +32,7 @@ Consider the following:
 * [Create a code component](../../developer/component-framework/overview.md) that implements an accessible tabbed interface.
 
 ## Custom tables
-The only built-in control that supports 2-dimensional data is the **[Data Table](controls/control-data-table.md)**. Avoid using **[Gallery](controls/control-gallery.md)** controls to present data in rows and columns. Rows and columns have to be annotated so that screen reader users can understand their structure and navigate cells.
+The only built-in control that supports 2-dimensional data is the **[Data Table](controls/control-data-table.md)**. Avoid using **[Galleries](controls/control-gallery.md)** to present data in rows and columns. Rows and columns have to be annotated so that screen reader users can understand their structure and navigate cells.
 
 Consider the following:
 * Use the built-in **[Data Table](controls/control-data-table.md)**.
@@ -40,7 +40,7 @@ Consider the following:
 * [Create a code component](../../developer/component-framework/overview.md) that implements an accessible table.
 
 ## Custom combo boxes
-It is possible to emulate a combo box by combining a **[Text Input](controls/control-text-input)** and a **[Gallery](controls/control-gallery.md)**. However, combo boxes assembled from built-in controls are not accessible. Combo boxes must handle arrow keys and set appropriate roles and states on its components.
+It is possible to emulate a combo box by combining a **[Text Input](controls/control-text-input.md)** and a **[Gallery](controls/control-gallery.md)**. However, combo boxes assembled from built-in controls are not accessible. Combo boxes must handle arrow keys and set appropriate roles and states on its components.
 
 Consider the following:
 * Use the built-in **[Combo box](controls/control-combo-box.md)** or **[Drop down](controls/control-drop-down.md)**.
@@ -77,4 +77,4 @@ It is not possible to detect when controls receive or lose focus.
 There is no [aria-hidden](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden) equivalent to show content to sighted users but hide it for screen reader users. Only [a few scenarios](accessible-apps-content-visibility.md) are supported.
 
 ## Next steps
-[Use the accessibility checker](accessibility-checker.md) to scan your app for basic accessibility errors.
+[Use the Accessibility checker](accessibility-checker.md) to scan your app for basic accessibility errors.
