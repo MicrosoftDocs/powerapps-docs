@@ -233,9 +233,15 @@ Similarly, the **OR** operator can be indicated by separating terms with a **|**
 
 ![Example with the or operator](media/bollean-1.png)  
 
-You can use the NOT operator with a minus sign before a keyword to indicate exclusion. For example, searching for evaluation displays all records matching the term, whereas searching for evaluation + -agreed will match all records containing the term evaluation but not the term agreed.
+You can use the **NOT** operator with a minus sign (**-**) before a keyword to indicate exclusion. 
 
-<Pictures from Slide 7 and Slide 8> 
+For example, when you search for **evaluation** it shows all rows matching the term, **evaluation**.
+
+![Search results for the term evaluation](media/eval-1.png)  
+
+However, searching for **evaluation + -agreed** will match all records containing the term **evaluation** but not the term **agreed**.
+
+![Search results for evaluation + -agreed](media/eval-2.png)  
 
 ### Wildcards
 
