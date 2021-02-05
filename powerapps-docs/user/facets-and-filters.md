@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/23/2021
+ms.date: 2/5/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -51,6 +51,6 @@ In the Set **Personal Option**s dialog box, you can personalize the facets for a
    
    ## See also
 
-[What is Eelevance Search](relevance-search-benefits.md)<br/>
+[What is Relevance Search](relevance-search-benefits.md)<br/>
 [Use Relevance search to search for rows](relevance-search.md)<br/>
 [Frequently asked questions about Relevance Search](relevance-faq.md)
