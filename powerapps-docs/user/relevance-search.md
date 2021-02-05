@@ -149,64 +149,137 @@ You can personalize facets for a table, in the **Set Personal Options** dialog b
 
 All lookups and choices types are text-based facets. For example, the text-based facet **Priority** consists of a list of column values and their corresponding counts.
 
-![Shows choices for text based facets](media/text-based-facets-1.png) 
+![Shows choices for text based facets](media/text-based-facets.png) 
+
+
+Filters in these facets are sorted in descending order by count. The top 4 facet values are displayed by default. When there is more than 4 facet values, you can select the **Show more** link to expand the list and see up to 15 values. 
+
+Select each value to filter the search results to show only rows where the column has the value that you selected.
+
+### Date and Time facets
+
+The date and time facets let you filter and see search results for a specific period. Use the **From** and **To** drop-down list to specify a custom period.
+
+![Shows date facets](media/date-facets.png) 
+
+
+## Feedback link
+
+On the search results page, the **Did you find what you were looking for? Yes No** is collected in our product telemetry as a binary feedback. Search parameters like the query text that you entered in the search box is not collected, irrespective of the response to the question. We only **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. 
+
+Currently there isn't an option to disable the feedback question prompt.
+
+![Feedback link](media/feedbacklink.png "Feedback link")  
+   
+
+## Understand the search results 
+
+Relevance search has a powerful set of capabilities to help you put Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
+      
+> [!NOTE]
+> - Relevance Search is text-based and can search only on columns of type single line of text, multiple lines of text, choice, and lookups. Columns of type numeric, date, and file are not searched on.
+> - Relevance Search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means, even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Relevance Search.
+
+   
+### Boosted search results
+
+You can use important attributes as keywords to search for information. Entering table type to boost search results is an easy way to indicated preference of results.  
+
+Searching for **Susan Adatum** indicates the preference of contact record **Susan** related to account **Adatum**.
+
+### Natural language understanding
+
+Search has a better understanding of terms that are used to indicated intent. 
+
+Searching for **open phone calls** will show phone call activity records with status open.
+
+Searching for **contact missing email** will show contacts with an empty email address field rather than treating missing as a keyword.
+
+### Spelling correction
+
+Search is smarter and forgiving of spelling mistakes to still be accurate. For example, searching for **william conatc** will show the contact record with name **William**, even though **contact** is misspelled.
+
+### Synonyms, acronyms, and abbreviations
+
+With support for common abbreviations and synonyms, you can search for your information the way you remember them, not the way it is stored.
+
+Common name variations like **Bob/Robert** are matched with either search term.
+
+Search terms with abbreviations like **active accts** are interpreted semantically as active accounts.
+
+### Power of common knowledge
+
+Search can understand popular locations, date, time, holidays and numbers.
+
+You can search for **account in WA** and see results for accounts located in Washington state.
+
+> [!NOTE]
+> - All the above capabilities are part of intelligent search, that are only available for public cloud environments with English as the base language.
+> - The examples above assume that a specific set of fields per table are indexed to be able to see the results described.
+
+
+## Working with operators
+
+Operators help you craft precise search queries that can tailor your results according to specific conditions. Here are some of the supported operators.
+
+### Boolean operators
+
+You can search on a combination of terms using the **+** operator, which performs an **AND** search and shows results containing all the individual terms separated by **+**.
+For example, **alpine + paul** returns the contact record **Paul Cannon** related to account record **Alpine Ski House**.
+
+![Blooean operators example](media/bollean.png)  
+
+Similarly, the **OR** operator can be indicated by separating terms with a **|**. For example, searching for **alpine | paul** returns records with reference to either term.
+
+![Example with the or operator](media/bollean-1.png)  
+
+You can use the NOT operator with a minus sign before a keyword to indicate exclusion. For example, searching for evaluation displays all records matching the term, whereas searching for evaluation + -agreed will match all records containing the term evaluation but not the term agreed.
+
+<Pictures from Slide 7 and Slide 8> 
+
+### Wildcards
+
+You can use wildcards for operators like begins-with and ends-with. Using an asterisk (*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on *winery will show results for all records associated with a keyword that ends with winery.
+
+<Picture from Slide 9>
+
+### Exact matches
+
+You can use double quotes around a keyword to perform an exact match. Since search ignores some of the commonly used words like the, an, a to improve matching, using double quotes is a way to override that behavior and force an exact match. For example, searching on “Call back for resolution (sample)” will match that keyword literally.
+
+<Picture from Slide 10>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Feedback link
-
-On the search results page, the **Did you find what you were looking for? Yes No** feedback is collected in our product telemetry. Search parameters like the query text that user enters into the search box is not collected irrespective of the response to the question. We only **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. Currently there isn't an option to disable the feedback question prompt.
-
-   > [!div class="mx-imgBorder"]
-   > ![Feedback link](media/feedbacklink.png "Feedback link")  
-
-
-## Set default search experience
-
-If your organization has turned on both Relevance Search and categorized search, you can select a default search experience in your personal settings.
-
-1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
-  
-   > [!div class="mx-imgBorder"]
-   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")  
-
-2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
-
-
-> [!IMPORTANT]
-> If you have the new Relevance Search experience available but you set your default search experience to Categorized Search, then the old Relevance Searchh experience and categorized is available. To use the new Relevance Search experience, you must set your default search experience to, Relevance Search. 
 
 
 ## Use the old Relevance Search experience 
 
 If you're organization has Relevance Search enabled but your administrator has not turned on the [new relevance search experience](https://docs.microsoft.com/powerapps/user/relevance-search#use-the-new-relevance-search-experience) then you will see the old search experience.
-
 
 ### Switch between the old Relevance Search experience and Categorized Search
 
@@ -234,82 +307,4 @@ If your organization has turned on both search options (relevance search and cat
     > [!div class="mx-imgBorder"]
     > ![Relevance Search Box](media/relevance-search-box.png "Relevance search box")   
 
-## Filter rows with facets
-
-With Dataverse, you can now refine your search results by using facets and filters. Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms.
-
-Facets are available in the leftmost pane. Immediately after you perform a search, the following global facets are available for four common columns:  
-  
--   Row Type  
-  
--   Owner  
-  
--   Created On  
-  
--   Modified On  
-  
-### Row Type facets
-
-To narrow your search results to a specific table, select the table under the **Row Type** section.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Row Type facet to narrow the search results](media/relevance-search-record-type-facet.png "Row Type facet used to narrow search results")  
-  
-When you filter on a specific row type, you can include activities and notes that are related to the selected row in your search results. To do that, select the **Related Notes & Activities** check box. The activities and notes will appear in top-level results.
- 
-  > [!div class="mx-imgBorder"]
-  > ![Include notes and activities related to a row type in the search results](media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a row type in the search results")  
-  
-Search results that are found in email attachments or appointment tables are shown in the search results under their parent row, either Email or Appointment.  
-  
-When you refine by row type, the facet scope switches to the selected table, and up to four facets that are specific to the table are shown. For example, if you select the Account table, you'll see the **Primary Contact** facet in addition to the global facets.  
-  
-In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
-  
-#### Text-based facets
-
-All lookups, choices, and row types are text-based facets. For example, the text-based facet Owner consists of a list of column values and their corresponding counts.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in relevance search")  
-  
-Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only rows where the column has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all rows where the owner is Jim Glynn. When you select a lookup or option set facet value, search results are filtered to only include rows with the value that you specified.  
-  
-#### Date and Time facets
-
-Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Date and time facets for Relevance Search](media/relevance-search-date-time-facets.png "Date and time facets for relevance search")  
-
-<a name="BKMK_ConfigureFacets"></a>
-
-## Configure facets and filters
-  
-Configure your own facets and filters.  
-
-> [!NOTE]
-> Your admin can use the Quick Find view to define which fields appear as default facets when you use Relevance Search. The first four view columns with data types other than single line of text and multiple lines of text are displayed as default facets in the result. You can override this setting in your [Personalization Settings](https://docs.microsoft.com/powerapps/user/set-personal-options#to-set-personal-options). At any time up to four fields can be selected as facets.
-  
-1. In the upper-right corner, select **Settings**, and then select **Personalization Settings**.  
-  
-   > [!div class="mx-imgBorder"]
-   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")
-  
-2. On the **General** tab, in the **Select the default search experience** section, for the **Facets and Filters** column, select **Configure**.  
-
-   > [!div class="mx-imgBorder"]
-   > ![Configure Facets and Filters](media/configure-facets-filters.png "Configure Facets and Filters")  
-  
-3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for a table. 
-  
-   - In the **Select Table** drop-down list, select a table you want to configure facets for. This drop-down list contains only the tables that are enabled for relevance search.  
-  
-   - For the selected table, select up to four facet columns. By default, the first four "facet-able" columns in the **Quick Find** view for the selected table are selected in the list. At any time, you can only have four columns selected as facets.  
-  
-   You can update multiple tables at one time. When you select **OK**, the changes for all tables that you've configured are saved. To revert to the default behavior for a table that you previously configured, select **Default**.  
-  
-   > [!NOTE]
-   > - If a system customizer deletes a column or makes it no longer searchable, and you've saved a facet for that column, it will no longer show up as a facet.  
-   >   -   You'll only see the columns that exist in the default solution and that are configured as searchable by your system customizer.  
 
