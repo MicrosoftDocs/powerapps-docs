@@ -139,7 +139,7 @@ On the other tabs the three global facets are pushed down and facets that apply 
 
 |**Top results tab shows global filters only**  |**Other tabs shows facets that is specific for the row type** |
 |---------|---------|
-| ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpain-2.png)  |
+| ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
 
 
 When you click on a table tab, you can see the facets for that table appear at the top of the Filter pane. In the Set Personal Options dialog box, you can personalize the facets you would like to see for a table. For more information, see [Configure facets and filters](facets-and-filters.md).
