@@ -42,7 +42,7 @@ Party list fields are special fields that are not searchable and viewable in the
 
 ## See also
 
-[What is relevance search](relevance-search-benefits.md)<br></br>
-[Use Relevance search to search for rows](relevance-search.md)<br></br>
+[What is relevance search](relevance-search-benefits.md)<br/>
+[Use Relevance search to search for rows](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)
 
