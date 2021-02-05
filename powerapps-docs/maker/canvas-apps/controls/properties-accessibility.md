@@ -56,11 +56,11 @@ The **TabIndex** property has two recommended values:
 | 0 | Control participates in keyboard navigation. | [**Button**](control-button.md), [**Text input**](control-text-input.md), [**Combo box**](control-combo-box.md), and other typically interactive controls. |
 | &minus;1 | Control does not participate in keyboard navigation. | [**Label**](control-text-box.md), [**Image**](control-image.md), [**Icon**](control-shapes-icons.md), and other typically non-interactive controls. |
 
-A logical keyboard navigation sequence can be achieved with just these values, along with the use of the [**Container**](control-container) control. We recommend that you do not set **TabIndex** to other values.
+A logical keyboard navigation sequence can be achieved with just these values, along with the use of the [**Container**](control-container.md) control. We recommend that you do not set **TabIndex** to other values.
 
 When **TabIndex** of all controls are set to either -1 or 0, navigation order goes from left-to-right, then top-to-bottom, in a "Z" pattern. The order is based on the **X** and **Y** property values of the controls. If controls are dynamically moved on the screen, for example, by having its **X** or **Y** value change according to a timer or other control, the navigation order will change dynamically too.
 
-Use the [**Container**](control-container) control to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern. Controls in **[Form Cards](control-card.md)** and [**Galleries**](control-gallery.md) are automatically grouped. Tabbing through these containers will navigate through all elements inside the container before proceeding to the next control outside of the container.  
+Use the [**Container**](control-container.md) control to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern. Controls in **[Form Cards](control-card.md)** and [**Galleries**](control-gallery.md) are automatically grouped. Tabbing through these containers will navigate through all elements inside the container before proceeding to the next control outside of the container.  
 
 Controls that have a **Visible** property value of *false* or a **DisplayMode** property value of **Disabled** are not included in keyboard navigation.
 
