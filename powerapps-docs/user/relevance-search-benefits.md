@@ -20,7 +20,7 @@ search.app:
 
 # What is relevance search 
 
-Relevance Search for model-driven apps helps you quickly finds what you're looking. It delivers fast and comprehensive results across multiple tables in a single list that's sorted by relevance. 
+Relevance Search for model-driven apps helps you quickly find what you're looking. It delivers fast and comprehensive results across multiple tables in a single list that's sorted by relevance. 
   
 Relevance Search brings the following enhancements and benefits:  
 
