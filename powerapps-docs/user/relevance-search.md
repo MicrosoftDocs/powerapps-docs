@@ -18,11 +18,13 @@ search.app:
   - D365CE
 ---
 
-# Using relevance search to search for rows
+# Use Relevance search to search for rows
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Relevance search is easy to use, fast, and more accurate in helping you find information that you're looking for. The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
+
+For more information on what is Relevance Serach and it's benefits, see [What is relevance search](relevance-search-benefits.md).
 
 
 > [!div class="mx-imgBorder"]
@@ -31,7 +33,7 @@ Relevance search is easy to use, fast, and more accurate in helping you find inf
   
 ## Turn on Relevance Search
 
-The new experience needs to be enabled by the administrator for your organization. When relevance search is enabled for your environment, you see the search bar in the header. Search can be accessed in a familiar and recognizable way in all model-driven Power Apps in that environment. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience).
+The new experience needs to be enabled by the administrator for your organization. When relevance search is enabled for your environment, you see the search bar in the header. Search can be accessed in a familiar and recognizable way in all model-driven Power Apps in that environment. For more information, see quick actions next to most recently accessed records and the suggested results that appear as you type
 
 
 ## See recent rows and searches
@@ -332,5 +334,7 @@ If your organization has turned on both search options (relevance search and cat
 
 ## See also
 
-
+[What is relevance search](relevance-search-benefits.md)<br></br>
+[Configure facets and filters](facets-and-filters.md)<br></br>
+[Frequently asked questions about Relevance Search](relevance-faq.md)
 
