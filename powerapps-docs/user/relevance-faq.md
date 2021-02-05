@@ -39,3 +39,10 @@ Currently, relevance search searches on your data in Microsoft Dataverse only. S
 ## Why am I unable to view information for party list fields like To, From, CC and in full results? 
 
 Party list fields are special fields that are not searchable and viewable in the results page. 
+
+## See also
+
+[What is relevance search](relevance-search-benefits.md)<br></br>
+[Use Relevance search to search for rows](relevance-search.md)<br></br>
+[Configure facets and filters](facets-and-filters.md)
+
