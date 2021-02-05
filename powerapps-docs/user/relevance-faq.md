@@ -29,7 +29,7 @@ The scope of content that is searched is defined by your administrator. An admin
 
 ## Why are results that appear in suggestions sometimes not seen in the results page? 
 
-Suggestions are quick results based on a search performed on the primary column of a table, that is both enabled for Relevance Search and included in the model-driven app. For more information, see [Inline suggestions](https://docs.microsoft.com/powerapps/user/relevance-search#inline-suggestions).
+Suggestions are quick results based on a search performed on the primary column of a table. This enabled for Relevance Search in model-driven apps. For more information, see [Inline suggestions](https://docs.microsoft.com/powerapps/user/relevance-search#inline-suggestions).
 
 When you navigate to the results page, the search terms are treated as the complete search query and a lot more types of matching are performed to display a more comprehensive set of results. 
 
