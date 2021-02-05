@@ -24,7 +24,7 @@ search.app:
 
 Relevance search is easy to use, fast, and more accurate in helping you find information that you're looking for. The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
 
-For more information on what is Relevance Serach and it's benefits, see [What is relevance search](relevance-search-benefits.md).
+For more information on what is Relevance Serach and it's benefits, see [What is Relevance Search](relevance-search-benefits.md).
 
 
 > [!div class="mx-imgBorder"]
@@ -33,7 +33,7 @@ For more information on what is Relevance Serach and it's benefits, see [What is
   
 ## Turn on Relevance Search
 
-The new experience needs to be enabled by the administrator for your organization. When relevance search is enabled for your environment, you see the search bar in the header. Search can be accessed in a familiar and recognizable way in all model-driven Power Apps in that environment. For more information, see quick actions next to most recently accessed records and the suggested results that appear as you type
+The new experience needs to be enabled by the administrator for your organization. When Relevance Search is enabled for your environment, you see the search bar in the header. Search can be accessed in a familiar and recognizable way in all model-driven Power Apps in that environment. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
 
 ## See recent rows and searches
@@ -304,7 +304,7 @@ On the results page, hover over the results to see quick actions available for t
 
 ## Use the old Relevance Search experience 
 
-If you're organization has Relevance Search enabled but your administrator has not turned on the [new relevance search experience](https://docs.microsoft.com/powerapps/user/relevance-search#use-the-new-relevance-search-experience) then you will see the old search experience.
+If you're organization has Relevance Search enabled but your administrator has not turned on the [New Relevance Search experience](https://docs.microsoft.com/powerapps/user/relevance-search##turn-on-relevance-search) then you will see the old search experience.
 
 ### Switch between the old Relevance Search experience and Categorized Search
 
