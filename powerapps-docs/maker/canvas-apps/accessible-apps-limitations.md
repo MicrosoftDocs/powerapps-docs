@@ -1,7 +1,7 @@
 ---
 title: Accessibility limitations of canvas apps in Power Apps | Microsoft Docs
 description: Accessibility limitations of canvas apps in Power Apps
-author: tahoon
+author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
@@ -20,7 +20,7 @@ Although built-in controls are accessible, it is possible to combine them to cre
 Dialogs and user interfaces that appear on top of other content are not supported. These overlays require focus management, hiding background content from screen readers, and appropriate control roles.
 
 Consider the following:
-* Use a separate screen for a "dialog".
+* Use a separate screen for a “dialog”.
 * Use the **[Notify](functions/function-showerror.md)** function.
 * [Create a code component](../../developer/component-framework/overview.md) that implements an accessible dialog.
 
@@ -28,7 +28,7 @@ Consider the following:
 Tabbed interfaces are not supported. A tabbed interface is made up of a list of tabs and a panel that shows content associated with the selected tab. The list of tabs should be navigable with arrow keys. Appropriate control roles and states are required.
 
 Consider the following:
-* Put each tab panel on a separate screen. Append the role and state of a tab to its **[AccessibleLabel](controls/properties-accessibility.md)**. For example, if an **[Icon](controls/control-shapes-icons.md)** is used as a tab, its label could be "Documents. Tab. 3 of 5. Selected."
+* Put each tab panel on a separate screen. Append the role and state of a tab to its **[AccessibleLabel](controls/properties-accessibility.md)**. For example, if an **[Icon](controls/control-shapes-icons.md)** is used as a tab, its label could be “Documents. Tab. 3 of 5. Selected.”
 * [Create a code component](../../developer/component-framework/overview.md) that implements an accessible tabbed interface.
 
 ## Custom tables
@@ -49,19 +49,19 @@ Consider the following:
 ## Expandable sections
 Expandable sections, also known as disclosures, contain content that are hidden until the user presses a button. There is no built-in support for these but there is a workaround.
 
-Mention the expanded state in the **[AccessibleLabel](controls/properties-accessibility.md)** of the button. For example, "Show more. Collapsed." Update the **AccessibleLabel** when the expanded state changes. Position the expanded content immediately after the button so that screen reader users can logically navigate to it. Push other content down when the section expands.
+Mention the expanded state in the **[AccessibleLabel](controls/properties-accessibility.md)** of the button. For example, “Show more details. Collapsed.” Update the **AccessibleLabel** when the expanded state changes. Position the expanded content immediately after the button so that screen reader users can logically navigate to it. Push other content down when the section expands.
 
 ## Landmarks
 You can create heading landmarks with **[Label](controls/control-text-box.md)** controls. Navigation, banner, and other landmarks are not supported. Power Apps automatically sets the main landmark to the app screen.
 
-For other types of landmarks, use a heading as a workaround.
+For other landmarks, use a heading as a workaround.
 
 ## Custom roles and states
 There is no built-in support for custom roles and states. Hence, it is not recommended to create composite check boxes, sliders, and toggles from built-in controls.
 
 Consider the following:
-* Mention the control's role and state in its AccessibleLabel. For example, if an **[Icon](controls/control-shapes-icons.md)** is used as a check box, its label could be "Enable notifications. Check box. Checked."
-* [Create a code component](../../developer/component-framework/overview.md) that sets aria roles and states as appropriate.
+* Mention the control's role and state in its AccessibleLabel. For example, if an **[Icon](controls/control-shapes-icons.md)** is used as a check box, its label could be “Enable notifications. Check box. Checked.”
+* [Create a code component](../../developer/component-framework/overview.md) that sets WAI-ARIA [roles](https://www.w3.org/TR/wai-aria-1.1/#usage_intro) and [states](https://www.w3.org/TR/wai-aria-1.1/#introstates) as appropriate.
 
 ## Custom keyboard handling
 It is not possible to react to specific key presses. For example, you can't have custom behavior for arrow keys or the Escape key. Hence, it is not possible to compose list-like controls like radio buttons nor dismissable overlays from built-in controls.

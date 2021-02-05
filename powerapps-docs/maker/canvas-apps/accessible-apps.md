@@ -52,7 +52,7 @@ To ensure a satisfying experience with the screen reader it is recommended to:
 ## Control type and structure
 Using the right controls and grouping them will help screen reader users understand the structure of the app.
 
-- Include at least one heading on each screen of the app. You can create headings by setting the **TextRole** property on a **[Label](controls/control-text-box.md)**.
+- Include at least one heading on each screen of the app. You can create headings by setting the **Role** property of a **[Label](controls/control-text-box.md)**.
 - Use a **[Button](controls/control-button.md)** instead of a **[Label](controls/control-text-box.md)** for interactive text.
 - Group related content in **[Containers](controls/control-container.md)**.
 - Be aware of [unsupported design patterns](accessible-apps-limitations.md).

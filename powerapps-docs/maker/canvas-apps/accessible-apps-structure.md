@@ -1,7 +1,7 @@
 ---
 title: Accessible app structure for canvas apps | Microsoft Docs
 description: Organizing controls for accessibility for canvas apps in Power Apps
-author: tahoon
+author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
@@ -13,18 +13,18 @@ search.app:
   - PowerApps
 ---
 # Accessible app structure for canvas apps in Power Apps
-Controls in an app should be organized logically to help screen reader users navigate sequentially. A logical order also reduces confusion for keyboard users and helps them be more productive.
+Controls in an app should be organized to help screen reader users navigate sequentially. A logical order also reduces confusion for keyboard users and helps them be more productive.
 
 ## Meaningful screen name
 When a screen is loaded, screen readers will say its name. Pick a meaningful name to orientate users.
 
-You can change the screen name in the controls tree in Studio. Select the Screen control. Double-click or press Enter while focused on its name.
+You can change the screen name in the controls tree or properties panel in Power Apps Studio. Select the Screen control. Double-click or press Enter while focused on its name.
 
-![Screen names can be changed from the controls tree panel or properties panel, as highlighted in the picture.](media/accessible-apps-structure/edit-screen-name.png)
+![Screen names can be changed from the controls tree or properties panel, as highlighted in the picture.](media/accessible-apps-structure/edit-screen-name.png)
 
 The first element on a screen is its name. It is visually hidden and accessible only to screen reader users.
 
-When a new screen loads, Power Apps focuses the screen name. If you use **[SetFocus](functions/function-setfocus.md)** immediately when the screen loads, the screen name will not be read. Consider creating a visible title and make it a [live region](accessible-apps-live-regions.md) to announce the change in context.
+When a new screen loads, Power Apps focuses the screen name. If you use **[SetFocus](functions/function-setfocus.md)** immediately when the screen loads, the screen name will not be read. Consider creating a visible title and making it a [live region](accessible-apps-live-regions.md) to announce the change in context.
 
 ## Logical control order
 Screen reader users can navigate content sequentially. The order is determined by the position of controls, starting from top to bottom, then left to right. The size of the control does not matter, only its **[X](controls/properties-size-location.md)** and **[Y](controls/properties-size-location.md)** properties.
@@ -37,12 +37,12 @@ In this example, A appears first in the sequence since it is closest to the top.
 > In **Preview** mode when editing an app, the control order is not updated for performance reasons. The order will be correct when the app is published and run.
 
 > [!NOTE]
-> Control order is not the same as the [hierarchical list of controls](add-configure-controls.md#add-and-select-a-control) shown when editing an app. The latter lists controls according to when they were added to the app. It does not affect the order of controls when the app is run.
+> Control order is not the same as that shown in the [tree view of controls](add-configure-controls.md#add-and-select-a-control) in Power Apps Studio. The tree view sorts controls according to when they were added to the app. It does not affect the order of controls when the app is run.
 
 ### Grouped controls
 The default order is suitable for isolated content but not for grouped content. Consider two tiles side by side, drawn with **[Rectangle](controls/control-shapes-icons.md)** controls. Each tile has a heading. Below the heading are two buttons stacked vertically: A and B for the first tile and C and D for the other.
 
-![Example of bad practice: controls organized in a flat structure.](media/accessible-apps-structure/control-order-isolated.png)
+![Example of bad practice: controls organized in a flat structure.](media/accessible-apps-structure/control-order-no-containers.png)
 
 The default order goes from top to bottom, then left to right. Hence, the order of controls is:
 1. Left **Rectangle**
@@ -54,11 +54,11 @@ The default order goes from top to bottom, then left to right. Hence, the order 
 7. B
 8. D
 
-This structure does not express that A and B belong together and likewise for C and D.
+This structure does not convey that A and B belong together and likewise for C and D.
 
 Use **[Containers](controls/control-container.md)** to group related content. All controls in a **Container** will appear together in sequence. Within a container, controls are ordered with the same rule: top to bottom, then left to right.
 
-Replacing the **Rectangles** of the previous example with **Containers**, the control order is now much more logical for screen reader users:
+Replacing the **Rectangles** of the previous example with **Containers**, the control order is now logical for screen reader users:
 1. Left **Container**
 2. Left heading
 3. A
@@ -68,21 +68,21 @@ Replacing the **Rectangles** of the previous example with **Containers**, the co
 7. C
 8. D
 
-![Example of good practice: controls organized in a hierarchical structure using Containers.](media/accessible-apps-structure/control-order-isolated.png)
+![Example of good practice: controls organized in a hierarchical structure using Containers.](media/accessible-apps-structure/control-order-with-containers.png)
 
-All controls in a **[Form Card](controls/control-card.md)** and **[Gallery](controls/control-gallery.md)** are automatically grouped, so you don't have to use a **Container**. However, if there are sub-groups, you still need **Containers** for them.
+All controls in a **[Form Card](controls/control-card.md)** and **[Gallery](controls/control-gallery.md)** are automatically grouped, so you don't have to use a **Container**. However, if there are sub-groups, you should still use **Containers** for them.
 
-In this example, a **Gallery** row has a thumbnail and 2 pieces of text on the left and 2 buttons on the right. Visually and logically, the two set of controls should be grouped. This ensures that screen reader users will encounter the left group first before the right.
+In this example, a **Gallery** row has a thumbnail and two pieces of text on the left. On the right are two buttons. Visually and logically, the two set of controls should be grouped. This ensures that screen reader users will encounter the left group first before the right.
 
-![Example of good practice: related controls in a gallery are grouped inside Containers.](media/accessible-apps-structure/control-order-isolated.png)
+![Example of good practice: related controls in a gallery are grouped inside Containers.](media/accessible-apps-structure/control-order-gallery.png)
 
-## Logical keyboard tab order
+## Logical keyboard navigation order
 **[TabIndex](controls/properties-accessibility.md)** specifies how controls can be reached by keyboard users. **TabIndex** should either be 0 or -1. With a logical control order as described above, there is little reason to have **TabIndex** greater than 0.
 
-Keyboard navigation order should follow visual flow of controls. If this order is unexpected, you should first check if the app structure is logical.
+Keyboard navigation order should follow visual flow of controls. If the navigation order is unexpected, you should first check if the app structure is logical.
 
 > [!NOTE]
-> Keyboard navigation order is not the same as control order. **TabIndex** only affects Tab key navigation. It does not change how screen reader users navigate an app linearly. Some screen reader users don't even use keyboards. A logical control order is still important for assistive technologies.
+> Keyboard navigation order is not the same as control order. **TabIndex** only affects Tab key navigation. It does not change how screen reader users navigate an app linearly. Some screen reader users don't even use keyboards.
 
 ## Next steps
-For rare scenarios where the keyboard navigation order should be different from control order, learn how to customize **[TabIndex](controls/properties-accessibility.md)**.
+For rare scenarios where the keyboard navigation order should be different from control order, you can customize **[TabIndex](controls/properties-accessibility.md)**.

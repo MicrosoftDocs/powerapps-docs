@@ -20,9 +20,13 @@ Configuration of properties that aid alternative ways of interacting with contro
 
 ## Properties
 
-**AccessibleLabel** – Label for screen readers. An empty value for Image, Icon and Shape controls will make the controls invisible to the screen reader and treated as decorations.
+### AccessibleLabel
+Label for screen readers.
 
-**Live** – How screen readers should announce changes to content. Available only in the **[Label](control-text-box.md)** control.
+An empty value for Image, Icon and Shape controls will hide the controls from screen reader users.
+
+### Live
+How screen readers should announce changes to content. Available only in the **[Label](control-text-box.md)** control.
 
 * When set to **Off**, the screen reader doesn't announce changes.
 * When set to **Polite**, the screen reader finishes speaking before announcing any changes that occurred while the screen reader was speaking.
@@ -30,7 +34,15 @@ Configuration of properties that aid alternative ways of interacting with contro
 
 Learn how to [announce dynamic changes with live regions](../accessible-apps-live-regions.md).
 
-**TabIndex** – Determines if the control participates in keyboard navigation.
+### Role
+Intended purpose of a control. Available only in the **[Label](control-text-box.md)** control.
+
+This lets screen reader users know whether a **Label** is a heading and allows them to navigate quickly to different parts of the app. There should be exactly one **Heading1** in each screen that serves as the main heading. Use **Heading2** for sub-headings. **Heading3** and **Heading4** can be used for finer hierarchies of headings.
+
+Use **Default** for normal text.
+
+### TabIndex
+Determines if the control participates in keyboard navigation.
 
 Keyboard navigation is an important aspect of any app. For many, the keyboard is more efficient than using touch or a mouse. The navigation order should:
 - Mirror what is seen visually.
@@ -48,19 +60,17 @@ A logical keyboard navigation sequence can be achieved with just these values, a
 
 When **TabIndex** of all controls are set to either -1 or 0, navigation order goes from left-to-right, then top-to-bottom, in a "Z" pattern. The order is based on the **X** and **Y** property values of the controls. If controls are dynamically moved on the screen, for example, by having its **X** or **Y** value change according to a timer or other control, the navigation order will change dynamically too.
 
-Use the [**Container**](control-container) control to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern. Controls in **[Form Cards](control-card.md)** and [**Galleries**](control-gallery.md) are automatically grouped. Tabbing through these containers will navigate through all elements of the container before proceeding to the next control outside of the container.  
+Use the [**Container**](control-container) control to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern. Controls in **[Form Cards](control-card.md)** and [**Galleries**](control-gallery.md) are automatically grouped. Tabbing through these containers will navigate through all elements inside the container before proceeding to the next control outside of the container.  
 
 Controls which have a **Visible** property value of *false* or a **DisplayMode** property value of **Disabled** are not included in keyboard navigation.
 
 > [!IMPORTANT]
-> **TabIndex** only affects keyboard navigation. For screen reader users to understand app structure, a [logical control order](../accessible-apps-structure.md) is still necessary.
+> **TabIndex** only affects keyboard navigation. A [logical control order](../accessible-apps-structure.md) is still necessary for screen reader users to understand app structure.
 
 > [!WARNING]
-> For rare scenarios where neither visual order nor logical structure should be followed, you can set **TabIndex** to be greater than zero to customize the keyboard navigation order. However, accessibility tools will warn about this. It can be very difficult to get it right and can make for a confusing screen reader experience.
+> For rare scenarios where neither visual order nor logical structure should be followed, you can customize the keyboard navigation order by setting **TabIndex** to be greater than zero. However, accessibility tools will warn about this. It can be very difficult to get the order right and can make for a confusing screen reader experience.
 > 
-> When there are controls with **TabIndex** greater than 0, users will first navigate to controls with increasing positive **TabIndex** values (1, then 2, etc). When users have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0 including the browser's built-in controls. When there are multiple controls with the same **TabIndex**, their **X** and **Y** value and the **Containers** they are in will determine their relative order. Inside a **Gallery**, **TabIndex** is scoped so that the controls inside will be navigated first before the ones outside.
-
-
+> When there are controls with **TabIndex** greater than 0, users will first navigate to controls with increasing positive **TabIndex** values (1, then 2, etc). When users have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0. When there are multiple controls with the same **TabIndex**, their **X** and **Y** value and the **Containers** they are in will determine their relative order. Inside a **Gallery** or **Form**, **TabIndex** is scoped so that the contained controls will be navigated first before the ones outside.
 
 
 
