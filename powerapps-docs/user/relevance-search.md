@@ -264,7 +264,7 @@ You can use double quotes around a keyword to perform an exact match. Since sear
  
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
  
-This sections lists features that can for early access. For  more information, see [2021 release wave 1 features available for early access](https://aka.ms/Dynamics365Wave1EAFeatures).
+This sections lists features that can for early access by opting in to early acess. For  more information, see [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
 The new Relevance Search experience brings some of the most used actions closer to search results to help you complete your task without requiring navigating to the record page in model-driven Power Apps.
  
