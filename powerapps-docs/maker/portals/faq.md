@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/30/2020
+ms.date: 01/27/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -47,7 +47,7 @@ With the launch of Power Apps portals on October 1, 2019, Dynamics 365 portals a
 
 One of the major changes introduced in portals after October 1, 2019 is the licensing model. Earlier, portals were licensed add-ons to Dynamics 365 apps while certain Dynamics 365 licenses included a default portal add-on. After October 1, 2019, portals are [licensed based on usage](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). All existing portals will be part of a transition period based on current customer contract after which they'll need to be converted to a new licensing model.
 
-You can check the type of a portal from the [Power Apps Portals admin center](./admin/admin-overview.md):
+You can check the type of a portal from the [Power Apps portals admin center](./admin/admin-overview.md):
 
 ![Power Apps portals type](./media/power-apps-portals-type.png)
 
@@ -152,6 +152,26 @@ Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $fa
 
 More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)
 
+### I'm getting "Page Not Found" error and the page content is different from the default Page Not Found site marker or web page.
+
+You may see a *Page Not Found* error message that may appear different from the default error page content available by default on the **Page Not Found** site marker and web page.
+
+![Page Not Found](media/page-not-found.png "Page Not Found")
+
+This *Page Not Found* page is a system page and appears if: 
+
+- The default **Page Not Found** site marker is configured incorrectly.
+- The default **Page Not Found** site marker is deleted.
+- The default **Page Not Found** web page is deleted.
+
+To resolve this error, ensure that you have the default site marker named **Page Not Found** present and configured correctly. If the site marker is present and correctly configured, check if the **Page Not Found** web page is selected for the site marker or whether the **Page Not Found** web page is present or not.
+
+For steps to create a site marker for **Page Not Found**, go to [An active Page Not Found site marker isn't available for this portal](#an-active-page-not-found-site-marker-isnt-available-for-this-portal).
+
+For steps to check site marker configuration and ensure it points to the correct web page, go to [The Page Not Found site marker isn't pointing to any webpage](#the-page-not-found-site-marker-isnt-pointing-to-any-webpage).
+
+For steps to change the site marker to point to the correct **Page Not Found** web page, go to [The Page Not Found site marker is pointing to a deactivated web page](#the-page-not-found-site-marker-is-pointing-to-a-deactivated-web-page).
+
 ## Licensing and provisioning
 
 ### How do I get a portal subscription?
@@ -227,7 +247,7 @@ When a Dataverse environment is restored from a backup, various changes are done
 
 - If the organization ID is the same after the restore operation, and portal solutions are also available:
 
-    1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+    1. Open [Power Apps portals admin center](admin/admin-overview.md).
     2. Go to the **Portal Details** tab.
     3. In the **Portal State** drop-down list, choose **Off**.
     4. Select **Update**. 
@@ -243,7 +263,7 @@ When a Dataverse environment is restored from a backup, various changes are done
 
 When you change the URL of your Dataverse environment, your portal will stop working because it can't identify the Dataverse environment URL anymore. To fix this issue:
 
-1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Update Dynamics 365 URL**.
 3. Follow the instructions in the wizard.
 
@@ -302,7 +322,7 @@ Below is a list of most common causes and their corresponding mitigation steps:
 
 This happens when the URL of Dataverse environment is changed by a user after portal is provisioned against the organization. To fix this issue, update the Dynamics 365 URL:
 
-1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Update Dynamics 365 URL**. 
 
 Once this action is successfully executed, your Dataverse environment URL will be updated and portal will start working.
@@ -317,7 +337,7 @@ If this is the cause, you can disable administration mode by doing actions liste
 
 This issue occurs when the authentication connection between Dynamic 365 organization and portal is broken because either Dataverse environment was restored from a backup or was deleted and recreated from a backup. To fix this issue:
 
-1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps portals admin center](admin/admin-overview.md).
 2. In the **Portal Details** tab, select **Off** from the **Portal State** list.
 3. Select **Update**.
 4. Select **On** from the **Portal State** list.
@@ -329,7 +349,7 @@ In certain situations, especially if the organization ID has changed after the r
 
 This issue is typically a transient issue that can occur if the API requests to your Dataverse environment has timed out. This issue will automatically mitigate itself once the API requests starts working. To mitigate this issue, you can also try restarting the portal:
 
-1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Restart**.
 
 If restarting the portal doesn't work and this issue is occurring for a long period of time, contact Microsoft support for help.
@@ -356,7 +376,7 @@ There are situations in which portal won't be able to recreate website binding r
       - **Sitename**: Type in the hostname of your portal i.e Portal URL without `https://` in the beginning. If your Portal is using custom domain name, then use custom domain name here.
       - Leave all other fields blank.
 
-3. Once website binding record is recreated, restart your portal from Power Apps Portals admin center.
+3. Once website binding record is recreated, restart your portal from Power Apps portals admin center.
 
 #### An unexpected error has occurred while trying to connect to your Dataverse environment
 
@@ -366,7 +386,7 @@ If portal reset and reprovision doesn't solve this issue, contact Microsoft supp
 
 ### Portal isn't displaying updated data from Dataverse environment
 
-Any data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Dataverse environment is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata entity of portal, for example, web pages, web files, content snippet, site setting, and so on, it's advised to clear cache manually or restart the portal from Power Apps Portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](admin/clear-server-side-cache.md). 
+Any data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Dataverse environment is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata entity of portal, for example, web pages, web files, content snippet, site setting, and so on, it's advised to clear cache manually or restart the portal from Power Apps portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](admin/clear-server-side-cache.md). 
 
 However, if you're seeing stale data for a long time in non-portal metadata entities, it can be because of variety of issues listed below:
 
@@ -376,13 +396,13 @@ If you're seeing stale data only for certain entities and not for everything, th
 
 If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities that are referenced on portal in entity list or entity forms and web forms and aren't enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
 
-If you're experiencing stale data issue in any of these entities, you can enable change tracking by using Power Apps Portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
+If you're experiencing stale data issue in any of these entities, you can enable change tracking by using Power Apps portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
 
 #### Organization not enabled for change tracking
 
 Apart from each entity being enabled for change tracking, organizations on a whole have to be enabled for change tracking as well. An organization is enabled for change tracking when a portal provisioning request is submitted. However, this can break if an organization is restored from an old database or reset. To fix this issue:
 
-1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps portals admin center](admin/admin-overview.md).
 2. In the **Portal Details** tab, select **Off** from the **Portal State** list.
 3. Select **Update**.
 4. Select **On** from the **Portal State** list.

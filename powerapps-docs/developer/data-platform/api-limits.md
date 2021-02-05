@@ -53,6 +53,12 @@ Plug-ins and custom workflow activities apply business logic triggered by incomi
 
 If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits. More information: [How Service Protection API Limits are enforced](#how-service-protection-api-limits-are-enforced)
 
+## Impact on relevance search
+
+When using the relevance search API, there is a throttling limit of one request per second for each user.
+
+More information: [Search across entity data using relevance search](webapi/relevance-search.md)
+
 ## Retry operations
 
 When a service protection API limit error occurs, it will provide a value indicating the duration before any new requests from the user can be processed.

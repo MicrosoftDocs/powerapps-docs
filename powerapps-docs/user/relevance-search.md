@@ -272,3 +272,6 @@ Configure your own facets and filters.
    > [!NOTE]
    > - If a system customizer deletes a column or makes it no longer searchable, and you've saved a facet for that column, it will no longer show up as a facet.  
    >   -   You'll only see the columns that exist in the default solution and that are configured as searchable by your system customizer.  
+
+
+

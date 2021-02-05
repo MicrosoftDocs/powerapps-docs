@@ -26,10 +26,10 @@ To open the Portal Management app, go to the **Your apps** section on the Power 
 > [!div class=mx-imgBorder]
 > ![Portal Management app](../media/portal-mgmt.png "Portal Management app")
 
-The Portal Management app is opened in the Unified Interface. You can configure your portal as per your requirement.
+The Portal Management app is opened in Unified Interface. You can configure your portal as per your requirement.
 
 > [!div class=mx-imgBorder]
-> ![Portal Management app in the Unified Interface](../media/portal-mgmt-unified-interface.png "Portal Management app in the Unified Interface")
+> ![Portal Management app in Unified Interface](../media/portal-mgmt-unified-interface.png "Portal Management app in Unified Interface")
 
 ### Browser considerations
 

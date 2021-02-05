@@ -32,7 +32,7 @@ All
 
 **Type**: String
 
-|Return Value |Decsription|
+|Return Value |Description|
 |--|--|
 |standard|A standard control|
 |iframe|An IFRAME control|
