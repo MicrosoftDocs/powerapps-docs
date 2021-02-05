@@ -38,7 +38,7 @@ In the Set **Personal Option**s dialog box, you can personalize the facets for a
   
 3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for a table. 
   
-   - In the **Select Table** drop-down list, select a table you want to configure facets for. This drop-down list contains only the tables that are enabled for relevance search.  
+   - In the **Select Table** drop-down list, select a table you want to configure facets for. This drop-down list contains only the tables that are enabled for Relevance Search.  
   
    - For the selected table, select up to four facet columns. By default, the first four "facet-able" columns in the **Quick Find** view for the selected table are selected in the list. At any time, you can only have four columns selected as facets.  
   
@@ -51,6 +51,6 @@ In the Set **Personal Option**s dialog box, you can personalize the facets for a
    
    ## See also
 
-[What is relevance search](relevance-search-benefits.md)<br/>
+[What is Eelevance Search](relevance-search-benefits.md)<br/>
 [Use Relevance search to search for rows](relevance-search.md)<br/>
 [Frequently asked questions about Relevance Search](relevance-faq.md)
