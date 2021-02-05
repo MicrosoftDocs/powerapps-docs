@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/11/2021
+ms.date: 02/05/2021
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -163,6 +163,10 @@ To assign a role, you must have **System administrator** permissions for a Datav
 ### Dataverse (previous version)
 
 When you share an app that's based on an older version of Dataverse, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
+
+## Share with guests
+
+See [Share a canvas app with guest users](share-app-guests.md).
 
 ## Next steps
 
