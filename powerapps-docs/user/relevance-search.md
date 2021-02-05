@@ -256,16 +256,41 @@ You can use double quotes around a keyword to perform an exact match. Since sear
 ![Search results for exact matched terms](media/exact-match.png)  
  
  
+ ## Quick actions (Preview)
+ 
+ [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+ 
+This sections lists features that can for early access. For  more information, see [2021 release wave 1 features available for early access](https://aka.ms/Dynamics365Wave1EAFeatures).
+
+The new Relevance Search experience brings some of the most used actions closer to search results to help you complete your task without requiring navigating to the record page in model-driven Power Apps.
+ 
+Quick actions is small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven Power Apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
+
+
+|**Table**  |**Quick actions** |
+|---------|---------|
+| Account     |     Assign, Share, Email a link  |
+| Contact     |     Assign, Share, Email a link  |
+| Appointment     |     Mark complete, Cancel, Set Regarding, Assign, Email a link  |
+| Task     |     Mark complete, Cancel, Set Regarding, Assign, Email a link  |
+| Phone Call     |     Mark complete, Cancel, Set Regarding, Assign, Email a link |
+| Email     |     Cancel, Set Regarding, Email a link  |
+| Any custom table     |     Assign, Share, Email a link  |
  
  
+ ### Quick actions and suggested results
  
+ As you interact with search, you will find quick actions next to most recently accessed records and the suggested results that appear as you type.
  
+|**Quick actions for recently accessed rows**  |**Quick actions for suggested results as you type** |
+|---------|---------|
+| ![Quick actions for recently accessed rows](media/recent-accessed-1.png)     |     ![Quick actions for suggested results as you type](media/suggested-results.png)  |
  
- 
- 
- 
- 
- 
+### Quick actions in results page
+
+On the results page, hovering over a result row will display the quick actions for that row in context of the grid row.
+
+<GIF from Slide 14>
  
  
  
