@@ -38,7 +38,7 @@ Benefits of Relevance Search:
 
 - **Operators for advanced search**: Use's simple Boolean operators in your search term and crafts the query to get the results you want. 
 
-- **Intelligence**: Relevance Search applies artificial intelligence technology to interpret natural language expressions such as misspellings, common abbreviations, and synonyms to deliver quality results. 
+- **Intelligence**: Relevance Search applies artificial intelligence technology to interpret natural language expressions such as misspellings, common abbreviations, and synonyms and delivers quality results. 
 
 ## See also
 
