@@ -24,13 +24,13 @@ The first portal is free to be created in an environment in a tenant. If you nee
 
 ### Trial portal
 
-Every portal begins as a trial portal that expires after 30 days. You can convert it to a production portal from the Power Apps Portals admin center if you have the required licenses. More information: [Convert a portal from trial to production](#convert-a-portal-from-trial-to-production)
+Every portal begins as a trial portal that expires after 30 days. You can convert it to a production portal from the Power Apps portals admin center if you have the required licenses. More information: [Convert a portal from trial to production](#convert-a-portal-from-trial-to-production)
 
 To convert a trial portal to a production portal, the environment should have required add-ons for external users or a license for internal users. More information: [Power Apps and Power Automate licensing FAQs](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq) and [Power Apps portals licensing](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
 
 ### Suspended portal
 
-You'll continue to see notifications in the Power Apps Portals admin center about the expiration of your trial portal. Trial portals expire after 30 days. If you don't convert your portal to production within the trial period, the portal is shut down and placed in suspended status.
+You'll continue to see notifications in the Power Apps portals admin center about the expiration of your trial portal. Trial portals expire after 30 days. If you don't convert your portal to production within the trial period, the portal is shut down and placed in suspended status.
 
 You can't access your portal after it expires. However, you can still convert the suspended portal to production within seven days of suspension.
 
@@ -40,7 +40,7 @@ If you don't convert your portal to production within the seven-day suspension p
 
 ## Convert a portal from trial to production
 
-You can convert a trial portal to a production portal from the notifications displayed in the Power Apps Portals admin center.
+You can convert a trial portal to a production portal from the notifications displayed in the Power Apps portals admin center.
 
 > [!NOTE]
 > You must be assigned one of the following roles to convert a portal from trial to production:
@@ -48,7 +48,7 @@ You can convert a trial portal to a production portal from the notifications dis
 > - System administrator
 > <br> More information: [Admin roles required for portal administrative tasks](portal-admin-roles.md)
 
-When you open the [Power Apps Portals admin center](admin-overview.md) and go to the **[Portal Details](portal-details.md)** tab, you'll see the notification about the trial expiration displayed below the **Type** field.
+When you open the [Power Apps portals admin center](admin-overview.md) and go to the **[Portal Details](portal-details.md)** tab, you'll see the notification about the trial expiration displayed below the **Type** field.
 
 > [!div class=mx-imgBorder]
 > ![Trial notification on the Portal Details tab](../media/admin-center-convert-notif.png "Trial notification on the Portal Details tab")

@@ -25,7 +25,7 @@ You can reset a completely configured portal, or a portal for which provisioning
 
 To reset a configured portal:
 
-1.    Open [Power Apps Portals admin center](admin-overview.md).
+1.    Open [Power Apps portals admin center](admin-overview.md).
 
 2.    Go to **Portal Actions** > **Reset Portal**.
 
@@ -36,8 +36,8 @@ To reset a configured portal:
 
 > [!NOTE]
 > - If you don't have appropriate permissions on an associated Azure Active Directory application, an error is displayed. You must contact the global administrator for the appropriate permissions.
-> - If you have provisioned a portal using the older portal add-on and the portal is reset successfully, the portal name and its status on the **Applications** tab on the **Dynamics 365 Administration Center** page does not change. For example, if your portal name and status were Portal 1 and Configured respectively, then after resetting the portal, these values do not change. If you want to change the portal name, you can change it on the **Portal Details** tab in the Power Apps Portals admin center. However, the status value cannot be reverted to Not Configured.
-> - It is important to note that the portal's status on the **Applications** tab does not represent its provisioning status and does not affect the functioning of your portal. It just shows whether you have ever accessed the Power Apps Portals admin center for that corresponding portal or not.
+> - If you have provisioned a portal using the older portal add-on and the portal is reset successfully, the portal name and its status on the **Applications** tab on the **Dynamics 365 Administration Center** page does not change. For example, if your portal name and status were Portal 1 and Configured respectively, then after resetting the portal, these values do not change. If you want to change the portal name, you can change it on the **Portal Details** tab in the Power Apps portals admin center. However, the status value cannot be reverted to Not Configured.
+> - It is important to note that the portal's status on the **Applications** tab does not represent its provisioning status and does not affect the functioning of your portal. It just shows whether you have ever accessed the Power Apps portals admin center for that corresponding portal or not.
 > - If you have provisioned a portal using the older portal add-on, you can reset the portal to **not configured** state and [create a new portal](../provision-portal-add-on.md).
 > - If you reset a portal and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, read [Set up Power BI integration](set-up-power-bi-integration.md#create-security-group-and-add-to-power-bi-account).
  
@@ -56,7 +56,7 @@ This section provides information about troubleshooting issues while resetting a
 
 ### Reset request could not be submitted
 
-If a portal reset request could not be submitted, an error is displayed as shown in the following image. In this case, you must close and reopen the Power Apps Portals admin center, and try to reset the portal again. If the issue persists, contact Microsoft support.
+If a portal reset request could not be submitted, an error is displayed as shown in the following image. In this case, you must close and reopen the Power Apps portals admin center, and try to reset the portal again. If the issue persists, contact Microsoft support.
 
 > [!div class=mx-imgBorder]
 > ![Couldn't submit error while resetting a portal](../media/reset-portal-request-error.png "Couldn't submit error while resetting a portal")
