@@ -107,19 +107,44 @@ Legend:
 
 ![Number 3](media/three.png) Shows rest of the matched table types, ordered by number of records that matches the search.
 
- 
 
+Each of the tabs lets you drill into a specific table and view more information on rows in the results. 
 
-Each of the tabs lets you drill into a specific table and view more information on rows in the results. At the top of the page, you can view the number of results that are shown and the list of columns that was searched on within the table.
+![Show the results page](media/view-results.png)
 
-<Picture from Slide 3>
+Legend:
 
-Each table tab displays more information than Top results tab along two different dimensions:
+1. Shows number of results for each table. 
+2. Shows the list of columns that was searched for the table.
+
+Each table tab displays more information than **Top results** tab along two different dimensions:
 
 - If the quick find view for the table has more than 6 **View Columns**, then all columns are displayed in the table tab, compared to up to 6 columns shown in **Top results** tab.
 - All matching rows for the table are accessiable in the table specific tab as an infinitely scrollable list.
 
 
+## Filter results with facets
+
+On the search results page, you can refine and explore your search results using facets and filters. Facets are available on the **Filter** pane which you can expand or collapse. 
+
+The **Top results** tab, shows search results accross different row types such as a contact vs. a phone call. Thus, the **Top results** tab only shows three global facets which apply all row types.
+
+Global facets: 
+-	Owner
+-	Modified On
+-	Created On
+
+On the other tabs the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
+
+
+|**Top results tab shows global filters only**  |**Other tabs shows facets that is specific for the row type** |
+|---------|---------|
+| ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpain-2.png)  |
+
+
+When you click on a table tab, you can see the facets for that table appear at the top of the Filter pane. In the Set Personal Options dialog box, you can personalize the facets you would like to see for a table. For more information, see [Configure facets and filters](facets-and-filters.md).
+
+<Picture from slide 4>
 
 
 
@@ -146,59 +171,6 @@ Each table tab displays more information than Top results tab along two differen
 
 
 
-
-### No search required to see recent rows
-
-Immediately see the rows that you accessed recently when you click inside the search box.
-
-![Suggested search results on first click](media/relevance-search-first-click.gif) 
-
-### See recent rows and searches
-
-Before you even start typing in the search box, you will see any recent searches and recently accessed rows in combined view to help with your search. Recently accessed rows are also grouped by table type, allowing you to quickly scan and understand the list of results.
-
-> [!div class="mx-imgBorder"]
-> ![Legend for new search experience](media/legend-for-new-exp.png) 
-
-Legend
-
-1. **Recent searches**: Shows your recent searches.
-2. **Recently accessed rows**:  Shows recently accessed rows that are grouped by table type.
-
-
-### View quick suggestions
-
-View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary column of an table row, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/relevance-search#suggestions).
-
-![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
-
-### Search results page
-
-Search results are ranked and grouped by table, with more columns that are displayed to help distinguish rows and filter to take further action.
-
-The full result set is grouped by table, with the table type displayed as a horizontal list of tabs along the top of the screen.
-
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Tables that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched table types in descending ordered by number of matched rows.
-
-Each of the tabs lets you drill into a specific table type, with the filter panel updating to show the set of facets and filters configured for that table.
-
-
-   > [!div class="mx-imgBorder"]
-   > ![Legend the search results page](media/legend-for-new-exp-2.png) 
-
-Legend
-
-1. **Top results**: Show rows that best matches the search query.
-2. **Row type**: To narrow your search results to a specific table, select the table tab.
-3. **Name**: Shows the name of the row.
-4. **Created on**: Shows when the row was created.
-5. **Show more**: Select to show more results.
-6. **Filters**: Refine the search results by using filters. Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search you can filter by row type, owner, created on, and modified on.
-7. **Clear all**: Select to clear all the filters. 
-8. **Owner**: Select your user name to find rows that you are the owner of.
-9. **Clear**: Only clears the **Owner** filter. Note, you only see this filter when the **Owner** filter is selected.
-10. **Modified on**: Filter the search results by when the row was last modified.
-11. **Created on**: Select a time range to find rows created in the selected time range.
 
 
 ### Feedback link
