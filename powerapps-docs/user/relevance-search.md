@@ -24,7 +24,7 @@ search.app:
 
 Relevance search is easy to use, fast, and more accurate in helping you find information that you're looking for. The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
 
-For more information on what is Relevance Serach and it's benefits, see [What is Relevance Search](relevance-search-benefits.md).
+For more information on what is Relevance Search and it's benefits, see [What is Relevance Search](relevance-search-benefits.md).
 
 
 > [!div class="mx-imgBorder"]
@@ -123,14 +123,14 @@ Legend:
 Each table tab displays more information than **Top results** tab along two different dimensions:
 
 - If the quick find view for the table has more than 6 **View Columns**, then all columns are displayed in the table tab, compared to up to 6 columns shown in **Top results** tab.
-- All matching rows for the table are accessiable in the table specific tab as an infinitely scrollable list.
+- All matching rows for the table are accessible in the table specific tab as an infinitely scrollable list.
 
 
 ## Filter results with facets
 
 On the search results page, you can refine and explore your search results using facets and filters. Facets are available on the **Filter** pane which you can expand or collapse. 
 
-The **Top results** tab, shows search results accross different row types such as a contact vs. a phone call. Thus, the **Top results** tab only shows three global facets which apply all row types.
+The **Top results** tab, shows search results across different row types such as a contact vs. a phone call. Thus, the **Top results** tab only shows three global facets which apply all row types.
 
 Global facets: 
 -	Owner
