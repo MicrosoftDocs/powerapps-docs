@@ -20,7 +20,7 @@ search.app:
 
 # What is relevance search 
 
-Relevance Search in model-driven Power Apps quickly finds what you're for to help complete a task. Relevance Search delivers fast and comprehensive results across multiple tables in a single list that's sorted by relevance. 
+Relevance Search for model-driven apps helps you quickly finds what you're looking. It delivers fast and comprehensive results across multiple tables in a single list that's sorted by relevance. 
   
 Relevance Search brings the following enhancements and benefits:  
 
