@@ -245,15 +245,15 @@ However, searching for **evaluation + -agreed** will match all records containin
 
 ### Wildcards
 
-You can use wildcards for operators like begins-with and ends-with. Using an asterisk (*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on *winery will show results for all records associated with a keyword that ends with winery.
+You can use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on ***winery** will show results for all records associated with a keyword that ends with **winery**.
 
-<Picture from Slide 9>
+![Search results for wildcards](media/wild-card.png)  
 
 ### Exact matches
 
-You can use double quotes around a keyword to perform an exact match. Since search ignores some of the commonly used words like the, an, a to improve matching, using double quotes is a way to override that behavior and force an exact match. For example, searching on “Call back for resolution (sample)” will match that keyword literally.
+You can use double quotes around a keyword to perform an exact match. Since search ignores some of the commonly used words such as **the**, **an**, and **a** to improve matching, using double quotes is a way to override this behavior and force an exact match. For example, searching on **“Call back for resolution (sample)”** will match the exact keywords. 
 
-<Picture from Slide 10>
+![Search results for exact matched terms](media/exact-match.png)  
  
  
  
