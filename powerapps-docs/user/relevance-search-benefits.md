@@ -32,7 +32,7 @@ Benefits of Relevance Search:
 
 - **Smart search**: Finds matches that include inflectional words such as stream, streaming, or streamed. 
 
-- **Search across documents in Microsoft Dataverse**: Includes search results for text in a document that's stored in Microsoft Dataverse such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and, JSON file formats. It also includes text in notes and attachments. 
+- **Search across documents in Microsoft Dataverse**: Includes search results for text in a document that's stored in Microsoft Dataverse such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and, JSON file formats. It also searches text in notes and attachments. 
 
 - **Understanding of underlying data**: Relevance Search understands datatypes like choices and lookups to interpret a search query with multiple terms effectively. 
 
