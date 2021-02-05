@@ -23,7 +23,7 @@ Configuration of properties that aid alternative ways of interacting with contro
 ### AccessibleLabel
 Label for screen readers.
 
-An empty value for Image, Icon and Shape controls will hide the controls from screen reader users.
+An empty value for Image, Icon, and Shape controls will hide the controls from screen reader users.
 
 ### Live
 How screen readers should announce changes to content. Available only in the **[Label](control-text-box.md)** control.
@@ -37,7 +37,7 @@ Learn how to [announce dynamic changes with live regions](../accessible-apps-liv
 ### Role
 Intended purpose of a control. Available only in the **[Label](control-text-box.md)** control.
 
-This lets screen reader users know whether a **Label** is a heading and allows them to navigate quickly to different parts of the app. There should be exactly one **Heading1** in each screen that serves as the main heading. Use **Heading2** for sub-headings. **Heading3** and **Heading4** can be used for finer hierarchies of headings.
+This lets screen reader users know whether a **Label** is a heading and allows them to navigate quickly to different parts of the app. There should be exactly one **Heading1** in each screen that serves as the main heading. Use **Heading2** for subheadings. **Heading3** and **Heading4** can be used for finer hierarchies of headings.
 
 Use **Default** for normal text.
 
@@ -62,7 +62,7 @@ When **TabIndex** of all controls are set to either -1 or 0, navigation order go
 
 Use the [**Container**](control-container) control to bundle controls that should be navigated together or to create columns in a "reverse-N" pattern. Controls in **[Form Cards](control-card.md)** and [**Galleries**](control-gallery.md) are automatically grouped. Tabbing through these containers will navigate through all elements inside the container before proceeding to the next control outside of the container.  
 
-Controls which have a **Visible** property value of *false* or a **DisplayMode** property value of **Disabled** are not included in keyboard navigation.
+Controls that have a **Visible** property value of *false* or a **DisplayMode** property value of **Disabled** are not included in keyboard navigation.
 
 > [!IMPORTANT]
 > **TabIndex** only affects keyboard navigation. A [logical control order](../accessible-apps-structure.md) is still necessary for screen reader users to understand app structure.

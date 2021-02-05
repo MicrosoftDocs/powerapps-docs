@@ -70,9 +70,9 @@ Replacing the **Rectangles** of the previous example with **Containers**, the co
 
 ![Example of good practice: controls organized in a hierarchical structure using Containers.](media/accessible-apps-structure/control-order-with-containers.png)
 
-All controls in a **[Form Card](controls/control-card.md)** and **[Gallery](controls/control-gallery.md)** are automatically grouped, so you don't have to use a **Container**. However, if there are sub-groups, you should still use **Containers** for them.
+All controls in a **[Form Card](controls/control-card.md)** and **[Gallery](controls/control-gallery.md)** are automatically grouped, so you don't have to use a **Container**. However, if there are subgroups, you should still use **Containers** for them.
 
-In this example, a **Gallery** row has a thumbnail and two pieces of text on the left. On the right are two buttons. Visually and logically, the two set of controls should be grouped. This ensures that screen reader users will encounter the left group first before the right.
+In this example, a **Gallery** row has a thumbnail and two pieces of text on the left. On the right are two buttons. Visually and logically, the two sets of controls should be grouped. This ensures that screen reader users will encounter the left group first before the right.
 
 ![Example of good practice: related controls in a gallery are grouped inside Containers.](media/accessible-apps-structure/control-order-gallery.png)
 

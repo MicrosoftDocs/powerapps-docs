@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Create accessible canvas apps in Power Apps
-An accessible canvas app will allow users with vision, hearing and other impairments to successfully use the app.  In addition to being a requirement for many governments and organizations, following the below guidelines increases usability for all users, regardless of their abilities.
+An accessible canvas app will allow users with vision, hearing, and other impairments to successfully use the app.  In addition to being a requirement for many governments and organizations, following the below guidelines increases usability for all users, regardless of their abilities.
 
 Use the **[Accessibility Checker](accessibility-checker.md)** to help review potential accessibility issues in your app. 
 
@@ -24,13 +24,13 @@ Common sense and uncomplicated design helps apps be more accessible to all users
 - Ensure all elements are clearly visible and text is of sufficient size.  All content must be easily read and understood by the naked eye.
 - Avoid using the visibility property of items to bring an element into view.  If you need to show something conditionally, create the content in a new screen and navigate to it and back.
 - Ensure input elements are labeled on the screen. **[AccessibleLabel](controls/properties-accessibility.md)** property defines what the screen reader will announce.
-- If customizing colors, ensure the contrast of text:background is 4.5:1 or greater.  Software tools that assist this process are readily available.
+- If customizing colors, ensure the contrast ratio of text to background is 4.5:1 or greater.  Software tools that assist this process are readily available.
 - Ensure layout follows a logical flow when read top-bottom, left to right.
 
 ## Keyboard support
-When testing your app's accessibility, ensure the app can be used with the keyboard only, the accessibility modes on iOS and Android, as well as navigated successfully with the screen reader enabled.
+When testing your app's accessibility, ensure the app can be used with the keyboard only, the accessibility modes on iOS and Android, and keyboard-based screen readers.
 
-For keyboard navigation (with or without the screen reader) ensure that a logical order is followed when using the TAB key to navigate to input fields by setting each control's **[TabIndex](controls/properties-accessibility.md)** property:
+For keyboard navigation (with or without the screen reader), ensure that a logical order is followed when using the TAB key to navigate to input fields by setting each control's **[TabIndex](controls/properties-accessibility.md)** property:
 - Label, Image, Icon, Shape controls - if they represent interactive elements (i.e.buttons) set TabIndex to 0; if they are decorative elements or text, set TabIndex to -1.
 - Avoid setting tab index higher than zero.
 
@@ -60,10 +60,10 @@ Using the right controls and grouping them will help screen reader users underst
 ## Multimedia
 Ensure all videos are captioned and a transcript of all audio recordings is available to the user.  **Video** control supports closed captions  in WebVTT format via the **ClosedCaptionsUrl** property.
 
-Note that with the screen reader enabled, **Timer** does not announce button text, but how much time has passed.  Announcements can't be turned off, even if timer is hidden with low opacity.
+With the screen reader enabled, **Timer** does not announce button text, but how much time has passed.  Announcements can't be turned off, even if timer is hidden with low opacity.
 
 ## Working with signatures
-If you have a signature field that uses the PenInput control you need to enable an alternative method of signature input.  The recommended way is to show a TextInput control where a user can type their name.  Ensure the signing instructions are placed in the **[AccessibleLabel](controls/properties-accessibility.md)** property and the control is placed close to the Pen input - to the right or immediately below.
+If you have a signature field that uses the PenInput control, you need to enable an alternative method of signature input.  The recommended way is to show a TextInput control where a user can type their name.  Ensure the signing instructions are placed in the **[AccessibleLabel](controls/properties-accessibility.md)** property and the control is placed close to the Pen input - to the right or immediately below.
 
 
 

@@ -32,7 +32,7 @@ Consider the following:
 * [Create a code component](../../developer/component-framework/overview.md) that implements an accessible tabbed interface.
 
 ## Custom tables
-The only built-in control that supports 2-dimensional data is the **[Data Table](controls/control-data-table.md)**. Avoid using **[Galleries](controls/control-gallery.md)** to present data in rows and columns. Rows and columns have to be annotated so that screen reader users can understand their structure and navigate cells.
+The only built-in control that supports two-dimensional data is the **[Data Table](controls/control-data-table.md)**. Avoid using **[Galleries](controls/control-gallery.md)** to present data in rows and columns. Rows and columns have to be annotated so that screen reader users can understand their structure and navigate cells.
 
 Consider the following:
 * Use the built-in **[Data Table](controls/control-data-table.md)**.
@@ -47,7 +47,7 @@ Consider the following:
 * [Create a code component](../../developer/component-framework/overview.md) that implements an accessible combo box.
 
 ## Expandable sections
-Expandable sections, also known as disclosures, contain content that are hidden until the user presses a button. There is no built-in support for these but there is a workaround.
+Expandable sections, also known as disclosures, contain content that is hidden until the user presses a button. There is no built-in support for these elements but there is a workaround.
 
 Mention the expanded state in the **[AccessibleLabel](controls/properties-accessibility.md)** of the button. For example, “Show more details. Collapsed.” Update the **AccessibleLabel** when the expanded state changes. Position the expanded content immediately after the button so that screen reader users can logically navigate to it. Push other content down when the section expands.
 
@@ -64,7 +64,7 @@ Consider the following:
 * [Create a code component](../../developer/component-framework/overview.md) that sets WAI-ARIA [roles](https://www.w3.org/TR/wai-aria-1.1/#usage_intro) and [states](https://www.w3.org/TR/wai-aria-1.1/#introstates) as appropriate.
 
 ## Custom keyboard handling
-It is not possible to react to specific key presses. For example, you can't have custom behavior for arrow keys or the Escape key. Hence, it is not possible to compose list-like controls like radio buttons nor dismissable overlays from built-in controls.
+It is not possible to react to specific key presses. For example, you can't have custom behavior for arrow keys or the Escape key. Hence, it is not possible to compose list-like controls like radio buttons from built-in controls. Nor can you create overlays that can be dismissed with the Escape key.
 
 Enter or Space key handling is supported with **[OnSelect](controls/properties-core.md)**. However, this property is also triggered by other input methods like mouse clicks. There is no way to distinguish the source of the event.
 
