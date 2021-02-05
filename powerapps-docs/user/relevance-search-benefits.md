@@ -39,3 +39,9 @@ Relevance search brings the following enhancements and benefits:
 - **Operators for advanced search**: Use's simple Boolean operators in your search term and crafts the query to get the results you want. 
 
 - **Intelligence**: Relevance search leverages artificial intelligence technology to interpret natural language expressions, misspellings, common abbreviations, and synonyms in an effective way to deliver quality results. 
+
+## See also
+
+[Use Relevance search to search for rows](relevance-search.md)<br></br>
+[Configure facets and filters](facets-and-filters.md)<br></br>
+[Frequently asked questions about Relevance Search](relevance-faq.md)
