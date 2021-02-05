@@ -137,16 +137,19 @@ Global facets:
 On the other tabs the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
 
 
-|**Top results tab shows global filters only**  |**Other tabs shows facets that is specific for the row type** |
+|**Top results tab shows global facets only**  |**Other tabs shows facets that is specific for the row type** |
 |---------|---------|
 | ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
 
 
-When you click on a table tab, you can see the facets for that table appear at the top of the Filter pane. In the Set Personal Options dialog box, you can personalize the facets you would like to see for a table. For more information, see [Configure facets and filters](facets-and-filters.md).
-
-<Picture from slide 4>
+You can personalize facets for a table, in the **Set Personal Options** dialog box. For more information, see [Configure facets and filters](facets-and-filters.md).
 
 
+### Text-based facets with discrete values
+
+All lookups and choices types are text-based facets. For example, the text-based facet **Priority** consists of a list of column values and their corresponding counts.
+
+![Shows choices for text based facets](media/text-based-facets-1.png) 
 
 
 
