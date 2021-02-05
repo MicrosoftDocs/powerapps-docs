@@ -1,6 +1,6 @@
 ---
-title: "Quick start for using an existing environment to validate your legacy web client app with the Unified Interface | MicrosoftDocs"
-description: "Learn how to plan and execute your transition from legacy web client to the Unified Interface"
+title: "Quick start for using an existing environment to validate your legacy web client app with Unified Interface | MicrosoftDocs"
+description: "Learn how to plan and execute your transition from legacy web client to Unified Interface"
 ms.custom: ""
 ms.date: 09/11/2019
 ms.reviewer: ""
@@ -23,8 +23,8 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Quick start for using an existing environment to validate your legacy web client app with the Unified Interface
-This quick start topic shows you how to use an existing environment to create a Unified Interface application based upon your current configuration or default solution. This allows you to explore and test the Unified Interface while running your existing legacy web client applications in parallel. A user can then switch between environments for a side-by-side view. 
+# Quick start for using an existing environment to validate your legacy web client app with Unified Interface
+This quick-start topic shows you how to use an existing environment to create a Unified Interface application based upon your current configuration or default solution. This allows you to explore and test Unified Interface while running your existing legacy web client applications in parallel. A user can then switch between environments for a side-by-side view. 
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3JzyI]
 
@@ -38,7 +38,7 @@ For similar instructions that show you how to create a new sandbox environment t
 - Although not required, we recommend using a non-production environment to test your application. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances) 
 
 ## Overview 
-This topic is for existing customers who are currently using legacy web client applications who need to plan and execute their transition to the Unified Interface. To set up a parallel environment, you create a new application based on your default solution as it stands today. This can be done in your current development sandbox environment without impact to your existing work.
+This topic is for existing customers who are currently using legacy web client applications who need to plan and execute their transition to Unified Interface. To set up a parallel environment, you create a new application based on your default solution as it stands today. This can be done in your current development sandbox environment without impact to your existing work.
 
 After completing the steps in this article, users with the appropriate role can see your new app in the app list on both the Dynamics 365 drop-down app list or on the Dynamics 365 Home page (https://home.dynamics.com).
 
@@ -71,7 +71,7 @@ If you’ve recently switched the **Use Unified Interface only** mode to **On** 
 7. The new solution is created in the list of solutions. Select it to open the solution and go to the next section. 
 
 ### Create a new model-driven app in the new solution
-In this step you will create a new app that leverages your existing customizations so that you can experience them in the Unified Interface. You create the app within the container of the new solution, which you created in the previous section.  
+In this step you will create a new app that leverages your existing customizations so that you can experience them in Unified Interface. You create the app within the container of the new solution, which you created in the previous section.  
 
 1. On the menu bar select **New**, point to **App**, and then select **Model-driven app**.
 2. On the **Create a New App** page, enter the following properties: 
@@ -126,7 +126,7 @@ The tasks required to configure the model-driven app properties include:
    > [!div class="mx-imgBorder"] 
    > ![App URL suffix](media/app-url-suffix.png "App URL suffix")
 
-   This becomes the friendly URL to use and share so that users can directly launch into the experience of the Unified Interface. Users can bookmark this link for their convenience. 
+   This becomes the friendly URL to use and share so that users can directly launch into the experience of Unified Interface. Users can bookmark this link for their convenience. 
 
 6. Select **Save**. 
 
@@ -146,7 +146,7 @@ Now you are ready to launch the app. You can compare the new Unified Interface a
 > If you continue to make customizations in your default site map, such as changes in the navigation or deeper ribbon customizations for buttons and actions, you will need to repeat the process by creating another model-driven app or perform the same customizations in the new site map related to your model-driven app.  
 
 ## Validate your new app  
-With your application showcasing the Unified Interface, you can start validating your app, processes, and customizations to identify how the transition will look. We recommend that you test all use cases, but you can start with the most critical ones or group into logical patterns of design. Since the Unified Interface is based on responsive design, we recommend that you always perform tests with different devices that have different screen resolutions. As you test the application you will be able to verify that your customizations are compatible with the Unified Interface and whether there are any features that require a redesign or have missing functionality.  
+With your application showcasing Unified Interface, you can start validating your app, processes, and customizations to identify how the transition will look. We recommend that you test all use cases, but you can start with the most critical ones or group into logical patterns of design. Since Unified Interface is based on responsive design, we recommend that you always perform tests with different devices that have different screen resolutions. As you test the application you will be able to verify that your customizations are compatible with Unified Interface and whether any features require a redesign or have missing functionality.  
 
 > [!IMPORTANT]
 > The current version of Microsoft Dataverse and customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation) still include several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
@@ -155,9 +155,10 @@ With your application showcasing the Unified Interface, you can start validating
 > The Power Apps Checker tool assists in quality checking of your solution's components.  More information: [Use solution checker to validate your model-driven apps in Power Apps](../data-platform/use-powerapps-checker.md)
 
 ## Next steps
-Based on your findings, your implementation team or partner can estimate the amount of effort needed to transition your application into the Unified Interface and also identify potential usability improvements. With multiple new features and capabilities available in Unified Interface there is opportunity to increase value for your application users. 
+Based on your findings, your implementation team or partner can estimate the amount of effort needed to transition your application into Unified Interface and also identify potential usability improvements. With multiple new features and capabilities available in Unified Interface there is opportunity to increase value for your application users. 
 
-Transitioning to the Unified Interface is a great opportunity for you to make a modern user interface and revisit your existing processes to verify that they're still valid or need improvement. This is also a good time to consider whether your application reflects your business requirements and whether the existing application could be spread across multiple apps for various teams and roles.
+Transitioning to Unified Interface is a great opportunity for you to make a modern user interface and revisit your existing processes to verify that they're still valid or need improvement. This is also a good time to consider whether your application reflects your business requirements and whether the existing application could be spread across multiple apps for various teams and roles.
+
 More information: [Design model-driven apps by using the app designer](design-custom-business-apps-using-app-designer.md) 
 
 ### See also
