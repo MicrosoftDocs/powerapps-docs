@@ -292,7 +292,9 @@ Quick actions is small set of commands specific to a table. You can see quick ac
 
 On the results page, hovering over a result row will display the quick actions for that row in context of the grid row.
 
-![This diagram shows how hovering over a result row will display the quick actions menu](media/.gif)
+![This diagram shows how hovering over a result row will display the quick actions menu](media/quick-actions-diagram.gif)
+
+![This diagram shows how hovering over a result row will display the quick actions menu](media/quick-actions-diagram-1.gif)
  
 
 ## Use the old Relevance Search experience 
