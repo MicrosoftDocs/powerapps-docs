@@ -24,7 +24,8 @@ search.app:
 
 The scope of content that is searched on is specified by the administrator who can configure the tables and specific columns in the table to be searched on. The specific columns that are searched on for a table are indicated on the results page under each tab. 
 
-search-faq-1.png
+![Example of search results](media/search-faq-1.png)  
+
 
 ## Why are results that appear in suggestions sometimes not seen in the results page? 
 
