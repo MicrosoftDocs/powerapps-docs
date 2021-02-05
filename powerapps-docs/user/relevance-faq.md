@@ -31,7 +31,7 @@ The scope of content that is searched is defined by your administrator. An admin
 
 Suggestions are quick results based on a search performed on the primary column of a table, that is both enabled for Relevance Search and included in the model-driven app. For more information, see [Inline suggestions](https://docs.microsoft.com/powerapps/user/relevance-search#inline-suggestions).
 
-When you navigate to the results page, the search terms is treated as the complete search query and a lot more types of matching are performed to display a more comprehensive set of results. 
+When you navigate to the results page, the search terms are treated as the complete search query and a lot more types of matching are performed to display a more comprehensive set of results. 
 
 ## Can I see search results from SharePoint files and documents through Relevance Search? 
 
