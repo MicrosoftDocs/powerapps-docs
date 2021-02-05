@@ -47,3 +47,10 @@ In the Set **Personal Option**s dialog box, you can personalize the facets for a
    > [!NOTE]
    > - If a system customizer deletes a column or makes it no longer searchable, and you've saved a facet for that column, it will no longer show up as a facet.  
    >   -   You'll only see the columns that exist in the default solution and that are configured as searchable by your system customizer.  
+   
+   
+   ## See also
+
+[What is relevance search](relevance-search-benefits.md)<br/>
+[Use Relevance search to search for rows](relevance-search.md)<br/>
+[Frequently asked questions about Relevance Search](relevance-faq.md)
