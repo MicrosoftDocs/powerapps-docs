@@ -24,7 +24,7 @@ search.app:
 
 Relevance search is easy to use, fast, and more accurate in helping you find information that you're looking for. The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
 
-For more information on what is Relevance Search and it's benefits, see [What is Relevance Search](relevance-search-benefits.md).
+For more information about Relevance Search, see [What is Relevance Search](relevance-search-benefits.md).
 
 
 > [!div class="mx-imgBorder"]
@@ -140,7 +140,7 @@ Global facets:
 On the other tabs the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
 
 
-|**Top results tab shows global facets only**  |**Other tabs shows facets that is specific for the row type** |
+|**Top results tab show global facets only**  |**Other tabs show facets that are specific to the row type** |
 |---------|---------|
 | ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
 
@@ -155,7 +155,7 @@ All lookups and choices types are text-based facets. For example, the text-based
 ![Shows choices for text based facets](media/text-based-facets.png) 
 
 
-Filters in these facets are sorted in descending order by count. The top 4 facet values are displayed by default. When there is more than 4 facet values, you can select the **Show more** link to expand the list and see up to 15 values. 
+Filters in these facets are sorted in descending order by count. The top 4 facet values are displayed by default. When there are more than 4 facet values, select the **Show more** link to expand the list and see up to 15 results. 
 
 Select each value to filter the search results to show only rows where the column has the value that you selected.
 
@@ -255,7 +255,7 @@ You can use wildcards for operators such as **begins-with** and **ends-with**. U
 
 ### Exact matches
 
-You can use double quotes around a keyword to perform an exact match. Since search ignores some of the commonly used words such as **the**, **an**, and **a** to improve matching, using double quotes is a way to override this behavior and force an exact match. For example, searching on **“Call back for resolution (sample)”** will match the exact keywords. 
+You can use double quotes around a keyword to perform an exact match. Search ignores common used words such as **the**, **an**, and, **a**. To improve matching, use double quotes and force an exact match for your search. For example, searching on **“Call back for resolution (sample)”** will match the exact keywords. 
 
 ![Search results for exact matched terms](media/exact-match.png)  
  
@@ -264,7 +264,7 @@ You can use double quotes around a keyword to perform an exact match. Since sear
  
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
  
-This sections lists features that can for early access by opting in to early acess. For  more information, see [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+This section lists new features that can be used by opting in to early access. For  more information, see [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
 The new Relevance Search experience brings some of the most used actions closer to search results to help you complete your task without requiring navigating to the record page in model-driven Power Apps.
  
