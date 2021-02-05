@@ -235,7 +235,7 @@ You can view or set these privileges on the **Customization** tab of a security 
 |---------------|-----------------------|  
 |New apps| Unified Interface |  
 |Site map for the Dynamics 365 - custom app | Legacy web app and Dynamics 365 for Outlook |  
-|MOdel-driven apps (Sales, Sales Hub, Customer Service, Customer Service Hub, Field Service, Project Service Automation)| Legacy web app and Unified Interface|  
+|Model-driven apps (Sales, Sales Hub, Customer Service, Customer Service Hub, Field Service, Project Service Automation)| Legacy web app and Unified Interface|  
  
   
 ### Next steps  

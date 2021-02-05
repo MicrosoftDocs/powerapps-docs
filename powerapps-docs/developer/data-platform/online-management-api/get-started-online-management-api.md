@@ -39,7 +39,9 @@ For example, you can pass in the following URL with a **GET** request to retriev
 
 `https://admin.services.crm.dynamics.com/api/v1.2/instances`
 
+For a list service URLs, see [Service URL](/powershell/powerapps/overview?view=pa-ps-latest#service-url).
 
+<!--
 The following table lists the service URLs of Online Management API for worldwide Microsoft 365 data centers.
 
 |Location | Service URL |
@@ -55,6 +57,7 @@ The following table lists the service URLs of Online Management API for worldwid
 |Canada | https://admin.services.crm3.dynamics.com |
 |United Kingdom (UK) | https://admin.services.crm11.dynamics.com |
 |France | https://admin.services.crm12.dynamics.com |
+-->
 
 ## Standard headers
 
