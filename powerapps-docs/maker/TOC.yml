@@ -899,6 +899,8 @@
     items:
     - name: Share an app
       href: ./canvas-apps/share-app.md
+    - name: Share an app with guests
+      href: ./canvas-apps/share-app-guests.md
     - name: Share Excel data
       href: ./canvas-apps/share-app-data.md
     - name: Share app resources
