@@ -62,7 +62,7 @@ Suggestions are shown when three or more characters are entered in the search bo
 
 - **Fuzzy search**: Suggestions incorporate fuzzy search where terms that are misspelled by one character are matched. For example, entering **winry** will show the Account Coho **Winery**, among other suggestions. 
 
-With suggestions you can access your information quickly with minimal keystrokes even when the search term is misspelled by up to one character. Text that's highlighted in bold in the suggestions shows the term that is matched.
+With suggestions, you can access your information quickly with minimal keystrokes even when the search term is misspelled by up to one character. Text that's highlighted in bold in the suggestions shows the term that is matched.
 
 
 ![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif)
@@ -122,7 +122,7 @@ Legend:
 
 Each table tab displays more information than **Top results** tab along two different dimensions:
 
-- If the quick find view for the table has more than six **View Columns**, then all columns are displayed in the table tab, compared to up to 6 columns shown in **Top results** tab.
+- If the quick find view for the table has more than six **View Columns**, then all columns are displayed in the table tab, compared to up to six columns shown in **Top results** tab.
 - All matching rows for the table are accessible in the table specific tab as an infinitely scrollable list.
 
 
@@ -137,7 +137,7 @@ Global facets:
 -	Modified On
 -	Created On
 
-On the other tabs the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
+On the other tabs, the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
 
 
 |**Top results tab shows global facets only**  |**Other tabs shows facets that are specific to the row type** |
@@ -213,7 +213,7 @@ Search terms with abbreviations like **active accts** are interpreted semantical
 
 ### Power of common knowledge
 
-Search can understand popular locations, date, time, holidays and numbers.
+Search can understand popular locations, date, time, holidays, and numbers.
 
 You can search for **account in WA** and see results for accounts located in Washington state.
 
@@ -304,7 +304,7 @@ On the results page, hover over the results to see quick actions available for t
 
 ## Use the old Relevance Search experience 
 
-If your organization has Relevance Search enabled but your administrator has not turned on the [New Relevance Search experience](https://docs.microsoft.com/powerapps/user/relevance-search##turn-on-relevance-search) then you will see the old search experience.
+When your organization has Relevance Search enabled but your administrator has not turned on the [New Relevance Search experience](https://docs.microsoft.com/powerapps/user/relevance-search##turn-on-relevance-search) than you will see the old search experience.
 
 ### Switch between the old Relevance Search experience and Categorized Search
 
