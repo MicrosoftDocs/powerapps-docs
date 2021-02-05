@@ -54,7 +54,7 @@ Legend
 
 ## Inline suggestions
 
-As you start typing, you will see suggested results which minimize keystrokes and simplify page navigation. Suggested results are quick results based on a search performed on the primary column of a table that is both enabled for Relevance Search and included in the model-driven app.
+As you start typing, you will see suggested results that minimize keystrokes and simplify page navigation. Suggested results are quick results based on a search performed on the primary column of a table that is both enabled for Relevance Search and included in the model-driven app.
 
 Suggestions are shown when three or more characters are entered in the search box, and it based on two types of matching.
 
@@ -104,9 +104,9 @@ The tables of the rows in the top 20 results are shown in the first few tabs fro
 
 Legend:
 
-![Number 1](media/one.png) Shows top 20 results that match (let's say 3 tables).
+![Number 1](media/one.png) Shows top 20 results that match (let's say three tables).
 
-![Number 2](media/two.png) Shows the 3 tables that are part of the top results, ordered by relevance.
+![Number 2](media/two.png) Shows the three tables that are part of the top results, ordered by relevance.
 
 ![Number 3](media/three.png) Shows rest of the matched table types, ordered by number of records that matches the search.
 
@@ -122,15 +122,15 @@ Legend:
 
 Each table tab displays more information than **Top results** tab along two different dimensions:
 
-- If the quick find view for the table has more than 6 **View Columns**, then all columns are displayed in the table tab, compared to up to 6 columns shown in **Top results** tab.
+- If the quick find view for the table has more than six **View Columns**, then all columns are displayed in the table tab, compared to up to 6 columns shown in **Top results** tab.
 - All matching rows for the table are accessible in the table specific tab as an infinitely scrollable list.
 
 
 ## Filter results with facets
 
-On the search results page, you can refine and explore your search results using facets and filters. Facets are available on the **Filter** pane which you can expand or collapse. 
+On the search results page, you can refine and explore your search results using facets and filters. Facets are available on the **Filter** pane that you can expand or collapse. 
 
-The **Top results** tab, shows search results across different row types such as a contact vs. a phone call. Thus, the **Top results** tab only shows three global facets which apply all row types.
+The **Top results** tab, shows search results across different row types such as a contact vs. a phone call. Thus, the **Top results** tab only shows three global facets that apply all row types.
 
 Global facets: 
 -	Owner
@@ -268,7 +268,7 @@ This section lists new features that can be used by opting in to early access. F
 
 The new Relevance Search experience brings some of the most used actions closer to search results to help you complete your task without requiring navigating to the record page in model-driven Power Apps.
  
-Quick actions is small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven Power Apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
+Quick actions are small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven Power Apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
 
 
 |**Table**  |**Quick actions** |
@@ -304,7 +304,7 @@ On the results page, hover over the results to see quick actions available for t
 
 ## Use the old Relevance Search experience 
 
-If you're organization has Relevance Search enabled but your administrator has not turned on the [New Relevance Search experience](https://docs.microsoft.com/powerapps/user/relevance-search##turn-on-relevance-search) then you will see the old search experience.
+If your organization has Relevance Search enabled but your administrator has not turned on the [New Relevance Search experience](https://docs.microsoft.com/powerapps/user/relevance-search##turn-on-relevance-search) then you will see the old search experience.
 
 ### Switch between the old Relevance Search experience and Categorized Search
 
