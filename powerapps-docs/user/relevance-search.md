@@ -24,6 +24,7 @@ search.app:
 
 Relevance search is easy to use, fast, and more accurate in helping you find information that you're looking for. The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
 
+
 > [!div class="mx-imgBorder"]
 > ![Search box on header](media/new-search-exp.png)
 
@@ -169,7 +170,8 @@ On the search results page, the **Did you find what you were looking for? Yes No
 
 Currently there isn't an option to disable the feedback question prompt.
 
-![Feedback link](media/feedbacklink.png "Feedback link")  
+> [!div class="mx-imgBorder"]
+> ![Feedback link](media/feedbacklink.png "Feedback link")  
    
 
 ## Understand the search results 
@@ -322,5 +324,7 @@ If your organization has turned on both search options (relevance search and cat
 
     > [!div class="mx-imgBorder"]
     > ![Relevance Search Box](media/relevance-search-box.png "Relevance search box")   
+
+## See also
 
 
