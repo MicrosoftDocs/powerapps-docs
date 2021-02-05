@@ -33,7 +33,7 @@ For more information about Relevance Search, see [What is Relevance Search](rele
   
 ## Turn on Relevance Search
 
-The new experience needs to be enabled by the administrator for your organization. When Relevance Search is enabled for your environment, you see the search bar in the header. Search can be accessed in a familiar and recognizable way in all model-driven Power Apps in that environment. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+To use the new Relevance Search experience, it needs to be turned on for your organization by an administrator. When Relevance Search is enabled for an organization, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all your model-driven Power Apps in your the organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
 
 ## See recent rows and searches
@@ -140,7 +140,7 @@ Global facets:
 On the other tabs the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
 
 
-|**Top results tab show global facets only**  |**Other tabs show facets that are specific to the row type** |
+|**Top results tab shows global facets only**  |**Other tabs shows facets that are specific to the row type** |
 |---------|---------|
 | ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
 
@@ -155,7 +155,7 @@ All lookups and choices types are text-based facets. For example, the text-based
 ![Shows choices for text based facets](media/text-based-facets.png) 
 
 
-Filters in these facets are sorted in descending order by count. The top 4 facet values are displayed by default. When there are more than 4 facet values, select the **Show more** link to expand the list and see up to 15 results. 
+Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, select the **Show more** link to expand the list and see up to 15 results. 
 
 Select each value to filter the search results to show only rows where the column has the value that you selected.
 
