@@ -33,7 +33,7 @@ For more information about Relevance Search, see [What is Relevance Search](rele
   
 ## Turn on Relevance Search
 
-To use the new Relevance Search experience, it needs to be turned on for your organization by an administrator. When Relevance Search is enabled for an organization, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all your model-driven Power Apps in your the organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+To use the new Relevance Search experience, it needs to be turned on for your organization by an administrator. When Relevance Search is enabled for an organization, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all model-driven Power Apps in your the organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
 
 ## See recent rows and searches
