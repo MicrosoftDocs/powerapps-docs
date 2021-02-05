@@ -22,7 +22,7 @@ To work with the document management capabilities of [!INCLUDE[pn-sharepoint-sho
 
 1.	[Enable document management functionality for your environment](#step-1-enable-document-management-functionality-in-model-driven-apps)
 
-2.	[Set up SharePoint integration from Power Apps Portals admin center](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center)
+2.	[Set up SharePoint integration from Power Apps portals admin center](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center)
 
 3.	[Enable document management for entities](#step-3-enable-document-management-for-entities)
 
@@ -34,14 +34,14 @@ To work with the document management capabilities of [!INCLUDE[pn-sharepoint-sho
 
 You must enable the document management functionality in model-driven apps by using server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration. Server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration allows model-driven apps and [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] to perform a server-to-server connection. The default [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] site record is used by the portal. For information on how to enable document management functionality in model-driven apps, see [Set up model-driven apps to use SharePoint Online](https://docs.microsoft.com/power-platform/admin/set-up-dynamics-365-online-to-use-sharepoint-online).
 
-## Step 2: Set up SharePoint integration from Power Apps Portals admin center
+## Step 2: Set up SharePoint integration from Power Apps portals admin center
 
-To use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)], you must enable [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration from the Power Apps Portals admin center.
+To use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)], you must enable [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration from the Power Apps portals admin center.
 
 > [!NOTE]
 > You must be a global administrator to perform this action.
 
-1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps portals admin center](admin/admin-overview.md).
 
 2.	Go to **Set up [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration** > **Enable [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration**.
 
