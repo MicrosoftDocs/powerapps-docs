@@ -17,59 +17,11 @@ search.app:
   - PowerApps
 ---
 
-# Filter rows with facets
+# Configure facets and filters
 
 With Dataverse, you can refine your search results by using facets and filters. Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms.
 
-Facets are available in the leftmost pane. Immediately after you perform a search, the following global facets are available for four common columns:  
-  
--   Row Type  
-  
--   Owner  
-  
--   Created On  
-  
--   Modified On  
-  
-### Row Type facets
-
-To narrow your search results to a specific table, select the table under the **Row Type** section.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Row Type facet to narrow the search results](media/relevance-search-record-type-facet.png "Row Type facet used to narrow search results")  
-  
-When you filter on a specific row type, you can include activities and notes that are related to the selected row in your search results. To do that, select the **Related Notes & Activities** check box. The activities and notes will appear in top-level results.
- 
-  > [!div class="mx-imgBorder"]
-  > ![Include notes and activities related to a row type in the search results](media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a row type in the search results")  
-  
-Search results that are found in email attachments or appointment tables are shown in the search results under their parent row, either Email or Appointment.  
-  
-When you refine by row type, the facet scope switches to the selected table, and up to four facets that are specific to the table are shown. For example, if you select the Account table, you'll see the **Primary Contact** facet in addition to the global facets.  
-  
-In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
-  
-#### Text-based facets
-
-All lookups, choices, and row types are text-based facets. For example, the text-based facet Owner consists of a list of column values and their corresponding counts.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in relevance search")  
-  
-Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only rows where the column has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all rows where the owner is Jim Glynn. When you select a lookup or option set facet value, search results are filtered to only include rows with the value that you specified.  
-  
-#### Date and Time facets
-
-Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Date and time facets for Relevance Search](media/relevance-search-date-time-facets.png "Date and time facets for relevance search")  
-
-<a name="BKMK_ConfigureFacets"></a>
-
-## Configure facets and filters
-  
-Configure your own facets and filters.  
+In the Set **Personal Option**s dialog box, you can personalize the facets for a table. 
 
 > [!NOTE]
 > Your admin can use the Quick Find view to define which fields appear as default facets when you use Relevance Search. The first four view columns with data types other than single line of text and multiple lines of text are displayed as default facets in the result. You can override this setting in your [Personalization Settings](https://docs.microsoft.com/powerapps/user/set-personal-options#to-set-personal-options). At any time up to four fields can be selected as facets.
