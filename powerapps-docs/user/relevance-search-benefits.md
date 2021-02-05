@@ -22,7 +22,7 @@ search.app:
 
 Relevance Search for model-driven apps helps you quickly find what you're looking. It delivers fast and comprehensive results across multiple tables in a single list that's sorted by relevance. 
   
-Relevance Search brings the following enhancements and benefits:  
+Relevance Search has these benefits:  
 
 - **Fast search**: Accurate and quickest search experience in Power Apps and better performance than [Categorized search](https://docs.microsoft.com/powerapps/user/quick-find#multiple-table-quick-find-categorized-search). 
 
