@@ -1,6 +1,6 @@
 ---
-title: "What is relevance search and it's benefits| MicrosoftDocs"
-description: What is relevance search and it's benefits.
+title: "What is relevance search and its benefits| MicrosoftDocs"
+description: What is relevance search and its benefits.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -24,21 +24,21 @@ Relevance Search helps you find what you need to complete your task in model-dri
   
 Relevance Search brings the following enhancements and benefits:  
 
-- **Fast search**: Fastest and most accurate search in Power Apps and a better performance compared to [Categorized search](https://docs.microsoft.com/powerapps/user/quick-find#multiple-table-quick-find-categorized-search). 
+- **Fast search**: Accurate and quickest search experience in Power Apps and better performance than [Categorized search](https://docs.microsoft.com/powerapps/user/quick-find#multiple-table-quick-find-categorized-search). 
 
-- **Suggested results as you type**: See top results as you type and find what you are looking for with minimal keystrokes. 
+- **Suggested results as you type**: Find what you are looking and see top results as you type.
 
-- **Better matching**: Finds matches to any word in the search term in any column in the table, compared to [quick find](https://docs.microsoft.com/powerapps/user/quick-find) search where all words from the search term must be found in one column. 
+- **Better matching**: Finds matches to any word in the search term for columns in a table. This is a better user experience compared to [quick find](https://docs.microsoft.com/powerapps/user/quick-find) search, where all words in the search term must be found in one column. 
 
 - **Smart search**: Finds matches that include inflectional words such as stream, streaming, or streamed. 
 
-- **Search across documents in Microsoft Dataverse**: Includes search results for text in a document that's stored in Microsoft Dataverse such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON file formats are searched. This also includes text in notes and attachments. 
+- **Search across documents in Microsoft Dataverse**: Includes search results for text in a document that's stored in Microsoft Dataverse such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and, JSON file formats are searched. It also includes text in notes and attachments. 
 
 - **Understanding of underlying data**: Relevance Search understands datatypes like choices and lookups to interpret a search query with multiple terms effectively. 
 
 - **Operators for advanced search**: Use's simple Boolean operators in your search term and crafts the query to get the results you want. 
 
-- **Intelligence**: Relevance Search leverages artificial intelligence technology to interpret natural language expressions, misspellings, common abbreviations, and synonyms in an effective way to deliver quality results. 
+- **Intelligence**: Relevance Search applies artificial intelligence technology to interpret natural language expressions such as misspellings, common abbreviations, and synonyms to deliver quality results. 
 
 ## See also
 
