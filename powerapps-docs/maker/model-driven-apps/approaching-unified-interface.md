@@ -1,6 +1,6 @@
 ---
 title: "Approaching a user experience and Unified Interface transition | MicrosoftDocs"
-description: "Learn how to plan and execute your transition from the legacy web client to the Unified Interface"
+description: "Learn how to plan and execute your transition from the legacy web client to Unified Interface"
 ms.custom: ""
 ms.date: 07/24/2019
 ms.reviewer: ""
@@ -25,10 +25,10 @@ search.app:
 ---
 # Approaching a user experience and Unified Interface transition
 
-This business-oriented white paper outlines the planning, governance, and management principles to consider when approaching a user experience change within a model-driven application on the Power Apps platform. This white paper focuses specifically on Dynamics 365 applications such as Dynamics 365 Sales and Dynamics 365 Customer Service, and adopting the Unified Interface, but many topics are applicable to any user experience update.
+This business-oriented white paper outlines the planning, governance, and management principles to consider when approaching a user experience change within a model-driven application on the Power Apps platform. This white paper focuses specifically on Dynamics 365 applications such as Dynamics 365 Sales and Dynamics 365 Customer Service, and adopting Unified Interface, but many topics are applicable to any user experience update.
 
 In summary, this guide will help you:
-- Position the Unified Interface.
+- Position Unified Interface.
 - Design approach best practice.
 - Governance and guidelines.
 - UX usage recommendations.
