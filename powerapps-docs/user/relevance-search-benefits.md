@@ -20,9 +20,9 @@ search.app:
 
 # What is relevance search 
 
-Relevance search helps you find what you need to complete your task in model-driven Power Apps. It delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance. 
+Relevance Search helps you find what you need to complete your task in model-driven Power Apps. It delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance. 
   
-Relevance search brings the following enhancements and benefits:  
+Relevance Search brings the following enhancements and benefits:  
 
 - **Fast search**: Fastest and most accurate search in Power Apps and a better performance compared to [Categorized search](https://docs.microsoft.com/powerapps/user/quick-find#multiple-table-quick-find-categorized-search). 
 
@@ -34,14 +34,14 @@ Relevance search brings the following enhancements and benefits:
 
 - **Search across documents in Microsoft Dataverse**: Includes search results for text in a document that's stored in Microsoft Dataverse such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON file formats are searched. This also includes text in notes and attachments. 
 
-- **Understanding of underlying data**: Relevance search understands datatypes like choices and lookups to interpret a search query with multiple terms effectively. 
+- **Understanding of underlying data**: Relevance Search understands datatypes like choices and lookups to interpret a search query with multiple terms effectively. 
 
 - **Operators for advanced search**: Use's simple Boolean operators in your search term and crafts the query to get the results you want. 
 
-- **Intelligence**: Relevance search leverages artificial intelligence technology to interpret natural language expressions, misspellings, common abbreviations, and synonyms in an effective way to deliver quality results. 
+- **Intelligence**: Relevance Search leverages artificial intelligence technology to interpret natural language expressions, misspellings, common abbreviations, and synonyms in an effective way to deliver quality results. 
 
 ## See also
 
-[Use Relevance search to search for rows](relevance-search.md)<br/>
+[Use Relevance Search to search for rows](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)<br/>
 [Frequently asked questions about Relevance Search](relevance-faq.md)
