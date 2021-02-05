@@ -334,7 +334,7 @@ If your organization has turned on both search options (relevance search and cat
 
 ## See also
 
-[What is relevance search](relevance-search-benefits.md)<br></br>
-[Configure facets and filters](facets-and-filters.md)<br></br>
+[What is relevance search](relevance-search-benefits.md)<br/>
+[Configure facets and filters](facets-and-filters.md)<br/>
 [Frequently asked questions about Relevance Search](relevance-faq.md)
 
