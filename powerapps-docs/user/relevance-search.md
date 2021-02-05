@@ -18,7 +18,7 @@ search.app:
   - D365CE
 ---
 
-# Use Relevance search to search for rows
+# Use Relevance Search to search for rows
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
