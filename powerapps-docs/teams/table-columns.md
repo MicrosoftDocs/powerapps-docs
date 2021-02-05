@@ -18,11 +18,11 @@ Notice that the currency feature will always use the default currency for the co
 
 For more information about the columns available, see these Dataverse articles:
 
-- [Fields overview](../maker/data-platform/fields-overview.md)
+- [Columns overview](../maker/data-platform/fields-overview.md)
 - [Create and edit global option sets overview](../maker/data-platform/create-edit-global-option-sets.md)
-- [Autonumber fields](../maker/data-platform/autonumber-fields.md)
-- [Set managed properties for fields](../maker/data-platform/set-managed-properties-for-field.md)
-- [Behavior and format of the Date and Time field](../maker/data-platform/behavior-format-date-time-field.md)
+- [Autonumber columns](../maker/data-platform/autonumber-fields.md)
+- [Set managed properties for columns](../maker/data-platform/set-managed-properties-for-field.md)
+- [Behavior and format of the Date and Time column](../maker/data-platform/behavior-format-date-time-field.md)
 
 ## Create a column
 
