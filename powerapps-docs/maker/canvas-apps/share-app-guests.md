@@ -15,7 +15,7 @@ search.app:
 ---
 # Share a canvas app with guest users
  
-Power Apps canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps.
+Canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps.
 
 ## Prerequisites
 
