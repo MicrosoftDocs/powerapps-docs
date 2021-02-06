@@ -1320,8 +1320,14 @@
       href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
-    - name: Portal lifecycle
-      href: ./portals/admin/portal-lifecycle.md
+    - name: Understand portals architecture
+      items:
+         - name: Understand portals lifecycle
+           href: ./portals/admin/portal-lifecycle.md
+         - name: Understand how portals connects to Microsoft Dataverse
+           href: ./portals/admin/connectivity.md
+         - name: Understand and clear server-side cache in portals
+           href: ./portals/admin/clear-server-side-cache.md
     - name: Create and manage portals
       items:
         - name: Available portal templates
@@ -1340,10 +1346,6 @@
           href: ./portals/control-portal-creation.md
         - name: Manage existing portals
           href: ./portals/manage-existing-portals.md
-    - name: Understand how portals connects to Microsoft Dataverse
-      href: ./portals/admin/connectivity.md
-    - name: Understand and clear server-side cache in portals
-      href: ./portals/admin/clear-server-side-cache.md
     - name: Build using portals Studio
       items:
         - name: Portals Studio overview
@@ -1386,12 +1388,6 @@
               href: ./portals/edit-css.md
         - name: Supported browsers for portals Studio
           href: ./portals/supported-browser.md
-    - name: Edit portal using portal content editor
-      items:
-        - name: Get started with the portal content editor
-          href: ./portals/portal-content-editor.md
-        - name: Edit page content using portal content editor
-          href: ./portals/use-content-editor.md
     - name: Configure portal using Portal Management app
       items:
         - name: Portal Management app overview
@@ -1434,7 +1430,7 @@
           items:
             - name: Enable multiple-language support
               href: ./portals/configure/enable-multiple-language-support.md
-            - name: Localize data types in portals
+            - name: Behavior and format of the Duration, Date and Time fields
               href: ./portals/configure/behavior-format-date-time-field.md
         - name: Create and show portal content
           href: ./portals/configure/create-show-portal-content.md
@@ -1470,6 +1466,12 @@
           href: ./portals/configure/website-bindings.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
+        - name: Edit portal using portal content editor
+          items:
+             - name: Get started with the portal content editor
+               href: ./portals/portal-content-editor.md
+             - name: Edit page content using portal content editor
+               href: ./portals/use-content-editor.md
     - name: Administer portal from Power Platform admin center
       items:
         - name: Portals admin center overview
