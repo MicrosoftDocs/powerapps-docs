@@ -91,7 +91,7 @@ When a Dataverse environment is restored from a backup, various changes are done
 
 - If the organization ID is the same after the restore operation, and portal solutions are also available:
 
-    1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+    1. Open [Power Apps portals admin center](admin/admin-overview.md).
     2. Go to the **Portal Details** tab.
     3. In the **Portal State** drop-down list, choose **Off**.
     4. Select **Update**. 
@@ -107,7 +107,7 @@ When a Dataverse environment is restored from a backup, various changes are done
 
 When you change the URL of your Dataverse environment, your portal will stop working because it can't identify the Dataverse environment URL anymore. To fix this issue:
 
-1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+1. Open [Power Apps portals admin center](admin/admin-overview.md).
 2. Go to **Portal Actions** > **Update Dynamics 365 URL**.
 3. Follow the instructions in the wizard.
 

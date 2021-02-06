@@ -135,10 +135,10 @@
       items:
       - name: Import data
         href: ../user/import-data.md
-      - name: Export data to Excel Online
-        href: ../user/export-to-excel-online.md
       - name: Export data to Excel
         href: ../user/export-data-excel.md
+      - name: Export data to Excel Online
+        href: ../user/export-to-excel-online.md      
       - name: Export to a dynamic worksheet
         href: ../user/export-excel-dynamic-worksheet.md
       - name: Export to a static worksheet
@@ -227,7 +227,7 @@
     items:
       - name: Connect to data
         items:
-        - name: Connections Overview
+        - name: Connections overview
           href: ./canvas-apps/connections-list.md
         - name: Popular connectors
           items:
@@ -899,6 +899,8 @@
     items:
     - name: Share an app
       href: ./canvas-apps/share-app.md
+    - name: Share an app with guests
+      href: ./canvas-apps/share-app-guests.md
     - name: Share Excel data
       href: ./canvas-apps/share-app-data.md
     - name: Share app resources
@@ -1003,7 +1005,7 @@
       href: ./canvas-apps/embedding-sdk.md
   - name: Performance and optimization
     items:
-    - name: Understand canvas apps execution phases and data flow
+    - name: Understand canvas app execution phases and data flow
       href: ./canvas-apps/execution-phases-data-flow.md
     - name: Common sources of slow performance
       href: ./canvas-apps/slow-performance-sources.md
@@ -2088,32 +2090,6 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
-  - name: Return to the Workplace
-    items:
-    - name: Overview
-      href: ../sample-apps/return-to-workplace/overview.md
-    - name: What's new?
-      href: ../sample-apps/return-to-workplace/whats-new.md
-    - name: Deploy the solution
-      href: ../sample-apps/return-to-workplace/deploy.md
-    - name: Upgrade the solution
-      href: ../sample-apps/return-to-workplace/upgrade.md
-    - name: Configure the solution
-      href: ../sample-apps/return-to-workplace/configure.md
-    - name: Location Readiness dashboard
-      href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
-    - name: Workplace Care Management dashboard
-      href: ../sample-apps/return-to-workplace/dashboard-case-management.md
-    - name: Facility Safety Management app
-      href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
-    - name: Workplace Care Management app
-      href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
-    - name: Employee Return to the Workplace app
-      href: ../sample-apps/return-to-workplace/app-for-employee.md
-    - name: Return to the Workplace Portal
-      href: ../sample-apps/return-to-workplace/portal-extension.md
-    - name: Extend the solutions
-      href: ../sample-apps/return-to-workplace/extend.md
 - name: Resources
   items:
   - name: Blog

@@ -45,7 +45,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
   
 -   Navigation bar shelf color
 
--   Main command bar color on the Unified Interface
+-   Main command bar color on Unified Interface
   
 -   Header color  
   

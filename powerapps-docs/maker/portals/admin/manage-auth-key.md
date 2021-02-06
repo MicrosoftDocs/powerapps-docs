@@ -19,16 +19,16 @@ Power Apps portals connectivity architecture explained how a portal connects to 
 > [!TIP]
 > To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
-The details of an authentication key are displayed on Power Apps Portals admin center and portal.
+The details of an authentication key are displayed on Power Apps portals admin center and portal.
 
-**Power Apps Portals admin center**
+**Power Apps portals admin center**
 
-1. Open [Power Apps Portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
    > [!div class=mx-imgBorder]
-   > ![Authentication key details in Power Apps Portals admin center](../media/manage-auth-key.png "Authentication key details in Power Apps Portals admin center")
+   > ![Authentication key details in Power Apps portals admin center](../media/manage-auth-key.png "Authentication key details in Power Apps portals admin center")
 
 **Portal**
 
@@ -44,7 +44,7 @@ The details of an authentication key are displayed on Power Apps Portals admin c
 
 ## Check authentication key expiration notification
 
-Before the authentication key expires, you'll be notified by emails, Power Apps Portals admin center, and portal.
+Before the authentication key expires, you'll be notified by emails, Power Apps portals admin center, and portal.
 
 **Email**
 
@@ -72,12 +72,12 @@ You'll also be notified after the key expires every day until 1 week after key e
 > - Intervals are calculated in UTC from the key expiration date.
 > - Email is not guaranteed to be exactly at the intervals as listed above. Email notification can be delayed or missed. Be sure to check for the key expiration date online as well.
 
-### Power Apps Portals admin center
+**Power Apps portals admin center**
 
 A message about key expiration is displayed at the top of the page.
 
 > [!div class=mx-imgBorder]
-> ![Authentication key notification in Power Apps Portals admin center](../media/portal-admin-center-auth-notif.png "Authentication key notification in Power Apps Portals admin center")
+> ![Authentication key notification in Power Apps portals admin center](../media/portal-admin-center-auth-notif.png "Authentication key notification in Power Apps portals admin center")
 
 ### Portal
 
@@ -96,7 +96,7 @@ Use the following steps if the authentication key for your portal is near expira
 > [!NOTE]
 > To renew the key, you must have permissions to manage your portal.
 
-1. Open [Power Apps Portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
 2. Select **Manage portal authentication key**. The authentication key is displayed along with its expiration date and thumbprint.
 
