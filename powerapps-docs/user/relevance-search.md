@@ -33,14 +33,14 @@ For more information about Relevance Search, see [What is Relevance Search](rele
   
 ## Turn on Relevance Search
 
-To use the new Relevance Search experience, it needs to be turned on for your organization by an administrator. When Relevance Search is enabled for an organization, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all model-drivena apps in your organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+Your administrator has to turn on the new Relevance Search experience for your organization. When Relevance Search is turned on, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all model-drivena apps in your organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
 
 ## See recent rows and searches
 
-See your recent searches and recently accessed rows when you select the search box. Before you even start typing in the search box, you will see information to help you complete the search quickly. 
+See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you will see information pop-up that helps you complete your search. 
 
-Up to three recent search terms appear at the top. This is based on your last recent three queries that you have viwed the results for. The recent search terms is personalized for you and based on your device and browser.
+Up to three recent search terms appear at the top. This is based on your last most recent three queries for which  you have viwed the results for. The recent search terms are personalized for you and based on your device and browser.
 
 The next information in the flyout is recently accessed rows. You can see up to seven recently accessed rows. If you frequently access a small set of rows then you can quickly get to them from here. Recently accessed rows are independent of tables which are indexed for Relevance Search since no search has been performed. The rows are also grouped by table type which lets you to quickly scan the list.
 
