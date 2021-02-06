@@ -54,7 +54,7 @@ Legend
 
 ## Inline suggestions
 
-As you start typing, you will see suggested results that minimize keystrokes and simplify page navigation. Suggested results are quick results based on a search performed on the primary column of a table that is both enabled for Relevance Search and included in the model-driven app.
+As you start typing, you will see suggested results which help minimize keystrokes and simplify page navigation. Suggested results are quick results that are based on a search performed on the primary column of a table which is enabled for Relevance Search and included in your model-driven app.
 
 Suggestions are shown when three or more characters are entered in the search box, and it based on two types of matching.
 
@@ -76,7 +76,7 @@ Search results are ranked based on relevance and grouped by tables. The list of 
 
 ### Top results tab
 
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Each group has results for that table in a grid with up to six columns. These columns are the first six columns of the table’s quick find view's **View Columns set**.
+The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Each group shows results for a table in a grid that has up to six columns. The columns are the first six columns of the table’s quick find view's called **View Columns set**.
 
 > [!NOTE]
 > - The primary column of a table is always used as the first column for a table in the **Top results** tab.
@@ -89,16 +89,16 @@ The **Top results** tab displays the top 20 results for the search term, with ro
 
 Legend:
 
- 1. **Top results**:  Shows the top 20 results for the search term.
+ 1. **Top results**:  Shows the top 20 results for your search term.
  2. **Rows grouped by table type**: To narrow your search results to a specific table, select the table tab.
- 3. **Show more**: When you select **Show more** at the bottom of a group switches to the table tab.
+ 3. **Show more**: When you select **Show more** at the bottom of a group, it switches to a table tab.
 
 
 ### Table specific tab
 
 Specific table tabs are displayed as a horizontal list of tabs along the top of the screen. The exact order of the list of tables from left to right in an LTR environment is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
 
-The tables of the rows in the top 20 results are shown in the first few tabs from left to right, based on relevance. The tables corresponding to result rows outside of the top 20 are displayed in descending order of matched rows.
+The tables of the rows in the top 20 results are shown in the first few tabs from left to right which is based on relevance. The tables corresponding to the result rows outside of the top 20 is displayed in descending order for matched rows.
 
 ![Diagram explaning top resutls page](media/diagram-top-results.png)
 
