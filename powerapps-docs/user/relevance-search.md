@@ -42,7 +42,7 @@ See your recent searches and recently accessed rows when you select the search b
 
 Up to three recent search terms appear at the top. This is based on your recent last three search queries that you have viwed the results for. The recent search terms are personalized and based on your device and browser.
 
-The next information in the flyout is recently accessed rows. You can see up to seven recently accessed rows. If you frequently access a small set of rows then you can quickly get to them from here. Recently accessed rows are independent of tables which are indexed for Relevance Search since no search has been performed. The rows are also grouped by table type which lets you to quickly scan the list.
+The next set of information in the flyout is recently accessed rows. You can view up to seven recently accessed rows. If you frequently access a small set of rows then you can quickly get to them from here. Recently accessed rows are independent of tables which are indexed for Relevance Search since no search has been performed. The rows are also grouped by table type which lets you to quickly scan the list.
 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
@@ -65,12 +65,12 @@ Suggestions are shown when three or more characters are entered in the search bo
 With suggestions, you can access your information quickly with minimal keystrokes even when the search term is misspelled by up to one character. Text that's highlighted in bold in the suggestions shows the term that is matched.
 
 
-![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif)
-
-
 ## Search results page
 
-You can view the full results for a search by pressing Enter or select **Show results for (search term)** at the bottom of the suggested results flyout.
+View the full results for a search by pressing Enter on your keyboard or select **Show more results**.
+
+![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif)
+
 
 Search results are ranked based on relevance and grouped by tables. The list of tables with rows matching the search term are displayed as a horizontal list of tabs along the top of the screen.
 
@@ -128,7 +128,7 @@ Each table tab displays more information than **Top results** tab along two diff
 
 ## Filter results with facets
 
-On the search results page, you can refine and explore your search results using facets and filters. Facets are available on the **Filter** pane that you can expand or collapse. 
+On the search results page, use facets and filters. to refine and explore your search results. Facets are available on the **Filter** pane that you can expand or collapse. 
 
 The **Top results** tab, shows search results across different row types such as a contact vs. a phone call. Thus, the **Top results** tab only shows three global facets that apply all row types.
 
@@ -145,7 +145,7 @@ On the other tabs, the three global facets are pushed down and facets that apply
 | ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
 
 
-You can personalize facets for a table, in the **Set Personal Options** dialog box. For more information, see [Configure facets and filters](facets-and-filters.md).
+You can personalize facets for a table, from the **Set Personal Options** dialog box. For more information, see [Configure facets and filters](facets-and-filters.md).
 
 
 ### Text-based facets with discrete values
@@ -187,7 +187,7 @@ Relevance search has a powerful set of capabilities to help you put Dataverse at
    
 ### Boosted search results
 
-You can use important attributes as keywords to search for information. Entering table type to boost search results is an easy way to indicated preference of results.  
+Use important attributes as keywords to search for information. Enter a table type to boost search results is an easy way to indicated preference of results.  
 
 Searching for **Susan Adatum** indicates the preference of contact record **Susan** related to account **Adatum**.
 
@@ -215,7 +215,7 @@ Search terms with abbreviations like **active accts** are interpreted semantical
 
 Search can understand popular locations, date, time, holidays, and numbers.
 
-You can search for **account in WA** and see results for accounts located in Washington state.
+Search for **account in WA** and see results for accounts located in Washington state.
 
 > [!NOTE]
 > - All the above capabilities are part of intelligent search, that are only available for public cloud environments with English as the base language.
@@ -228,7 +228,7 @@ Operators help you craft precise search queries that can tailor your results acc
 
 ### Boolean operators
 
-You can search on a combination of terms using the **+** operator, which performs an **AND** search and shows results containing all the individual terms separated by **+**.
+Search on a combination of terms using the **+** operator, which performs an **AND** search and shows results containing all the individual terms separated by **+**.
 For example, **alpine + paul** returns the contact record **Paul Cannon** related to account record **Alpine Ski House**.
 
 ![Blooean operators example](media/bollean.png)  
@@ -237,7 +237,7 @@ Similarly, the **OR** operator can be indicated by separating terms with a **|**
 
 ![Example with the or operator](media/bollean-1.png)  
 
-You can use the **NOT** operator with a minus sign (**-**) before a keyword to indicate exclusion. 
+Use the **NOT** operator with a minus sign (**-**) before a keyword to indicate exclusion. 
 
 For example, when you search for **evaluation** it shows all rows matching the term, **evaluation**.
 
@@ -249,13 +249,13 @@ However, searching for **evaluation + -agreed** will match all records containin
 
 ### Wildcards
 
-You can use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on ***winery** will show results for all records associated with a keyword that ends with **winery**.
+Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on ***winery** will show results for all records associated with a keyword that ends with **winery**.
 
 ![Search results for wildcards](media/wild-card.png)  
 
 ### Exact matches
 
-You can use double quotes around a keyword to perform an exact match. Search ignores common used words such as **the**, **an**, and, **a**. To improve matching, use double quotes and force an exact match for your search. For example, searching on **“Call back for resolution (sample)”** will match the exact keywords. 
+Use double quotes around a keyword to perform an exact match. Search ignores common used words such as **the**, **an**, and, **a**. To improve matching, use double quotes and force an exact match for your search. For example, searching on **“Call back for resolution (sample)”** will match the exact keywords. 
 
 ![Search results for exact matched terms](media/exact-match.png)  
  
