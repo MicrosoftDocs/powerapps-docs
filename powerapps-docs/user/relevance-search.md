@@ -50,7 +50,7 @@ The next information in the flyout is recently accessed rows. You can see up to 
 Legend
 
 1. **Recent searches**: Shows your recent searches.
-2. **Recently accessed rows**:  Shows recently accessed rows that are grouped by table type.
+2. **Recently accessed rows**: Shows recently accessed rows that are grouped by table type.
 
 ## Inline suggestions
 
