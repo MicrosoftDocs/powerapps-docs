@@ -34,7 +34,7 @@ Benefits of Relevance Search:
 
 - **Search across documents in Microsoft Dataverse**: Includes search results for text in a document that's stored in Microsoft Dataverse such as PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and, JSON file formats. It also searches text in notes and attachments. 
 
-- **Understanding of underlying data**: Relevance Search understands data types like choices and lookups to interpret a search query with multiple terms effectively. 
+- **Understanding of underlying data**: Relevance Search understands data types like choices and lookups to interpret a search query with multiple search terms effectively. 
 
 - **Operators for advanced search**: Use's simple Boolean operators in your search term and crafts the query to get the results you want. 
 
