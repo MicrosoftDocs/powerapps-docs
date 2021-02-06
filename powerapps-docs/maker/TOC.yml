@@ -1326,8 +1326,6 @@
            href: ./portals/admin/portal-lifecycle.md
          - name: Understand how portals connects to Microsoft Dataverse
            href: ./portals/admin/connectivity.md
-         - name: Understand and clear server-side cache in portals
-           href: ./portals/admin/clear-server-side-cache.md
     - name: Create and manage portals
       items:
         - name: Available portal templates
@@ -1388,6 +1386,8 @@
               href: ./portals/edit-css.md
         - name: Supported browsers for portals Studio
           href: ./portals/supported-browser.md
+    - name: Understand and clear server-side cache in portals
+      href: ./portals/admin/clear-server-side-cache.md
     - name: Configure portal using Portal Management app
       items:
         - name: Portal Management app overview
