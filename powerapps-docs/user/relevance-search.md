@@ -104,7 +104,7 @@ The tables of the rows in the top 20 results are shown in the first few tabs fro
 
 Legend:
 
-![Number 1](media/one.png) Shows top 20 results that match (let's say three tables).
+![Number 1](media/one.png) Shows top 20 results that contain results from three different tables.
 
 ![Number 2](media/two.png) Shows the three tables that are part of the top results, ordered by relevance.
 
