@@ -33,7 +33,7 @@ For more information about Relevance Search, see [What is Relevance Search](rele
   
 ## Turn on Relevance Search
 
-To use the new Relevance Search experience, it needs to be turned on for your organization by an administrator. When Relevance Search is enabled for an organization, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all model-driven Power Apps in your the organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+To use the new Relevance Search experience, it needs to be turned on for your organization by an administrator. When Relevance Search is enabled for an organization, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all model-drivena apps in your organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
 
 ## See recent rows and searches
@@ -140,7 +140,7 @@ Global facets:
 On the other tabs, the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
 
 
-|**Top results tab shows global facets only**  |**Other tabs shows facets that are specific to the row type** |
+|**Top results tab that shows only global facets**  |**Other tabs that shows facets which are specific to the row type** |
 |---------|---------|
 | ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
 
@@ -304,7 +304,7 @@ On the results page, hover over the results to see quick actions available for t
 
 ## Use the old Relevance Search experience 
 
-When your organization has Relevance Search enabled but your administrator has not turned on the [New Relevance Search experience](https://docs.microsoft.com/powerapps/user/relevance-search##turn-on-relevance-search) than you will see the old search experience.
+When your organization has Relevance Search enabled but your administrator has not turned on the [New Relevance Search experience](https://docs.microsoft.com/powerapps/user/relevance-search##turn-on-relevance-search) then you will see the old search experience.
 
 ### Switch between the old Relevance Search experience and Categorized Search
 
