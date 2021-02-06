@@ -40,7 +40,7 @@ Your administrator has to turn on the new Relevance Search experience for your o
 
 See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you will see information pop-up that helps you complete your search. 
 
-Up to three recent search terms appear at the top. This is based on your last most recent three queries for which  you have viwed the results for. The recent search terms are personalized for you and based on your device and browser.
+Up to three recent search terms appear at the top. This is based on your recent last three search queries that you have viwed the results for. The recent search terms are personalized and based on your device and browser.
 
 The next information in the flyout is recently accessed rows. You can see up to seven recently accessed rows. If you frequently access a small set of rows then you can quickly get to them from here. Recently accessed rows are independent of tables which are indexed for Relevance Search since no search has been performed. The rows are also grouped by table type which lets you to quickly scan the list.
 
