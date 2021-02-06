@@ -1,12 +1,12 @@
 ---
 title: "What is relevance search and its benefits| MicrosoftDocs"
-description: What is relevance search and its benefits.
+description: What is relevance search and its benefits?
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/3/2021
+ms.date: 2/5/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -28,7 +28,7 @@ Benefits of Relevance Search:
 
 - **Suggested results as you type**: Find what you are looking and see top results as you type.
 
-- **Better matching**: Finds matches to any word in the search term for columns in a table. This is a better user experience compared to [quick find](https://docs.microsoft.com/powerapps/user/quick-find) search, where all words in the search term must be found in one column. 
+- **Better matching**: Finds matches to any word in the search term for columns in a table. Provides a better user experience compared to [quick find](https://docs.microsoft.com/powerapps/user/quick-find) search, where all words in the search term must be found in one column. 
 
 - **Smart search**: Finds matches that include inflectional words such as stream, streaming, or streamed. 
 
@@ -38,7 +38,7 @@ Benefits of Relevance Search:
 
 - **Operators for advanced search**: Use's simple Boolean operators in your search term and crafts the query to get the results you want. 
 
-- **Intelligence**: Relevance Search applies artificial intelligence technology to interpret natural language expressions such as misspellings, common abbreviations, and synonyms and delivers quality results. 
+- **Intelligence**: Relevance Search applies artificial intelligence technology to interpret natural language such as misspellings, common abbreviations, and synonyms to delivers quality results. 
 
 ## See also
 
