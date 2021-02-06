@@ -26,7 +26,7 @@ Benefits of Relevance Search:
 
 - **Fast search**: Precise and quick search experience for model-driven apps and superior performance than [Categorized search](https://docs.microsoft.com/powerapps/user/quick-find#multiple-table-quick-find-categorized-search). 
 
-- **Suggested results as you type**: Find what you are looking and see top results as you type.
+- **Suggested results as you type**: Find what you're looking for and see the top results, as you type.
 
 - **Better matching**: Finds matches to any word in the search term for columns in a table. Provides a better user experience compared to [quick find](https://docs.microsoft.com/powerapps/user/quick-find) search, where all words in the search term must be found in one column. 
 
