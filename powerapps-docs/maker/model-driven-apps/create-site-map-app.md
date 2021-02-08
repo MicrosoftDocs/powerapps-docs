@@ -48,15 +48,15 @@ You can view or set these privileges on the **Customization** tab of a security 
   
 ## Create a site map for an app  
   
-1. On the app designer canvas, in the **Site Map** area, select **Open the Site Map Designer** ![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button").  
+1. On the app designer canvas, in the **Site Map** area, select the pencil icon ![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button") next to **Site Map** to **Open the Site Map Designer** .  
+
+   ![Open the site map designer](media/app-designer-sitemap-location.png "Open the site map designer")
   
-     The site map designer opens a canvas that is prepopulated with one area, one group, and one subarea. Select the area, group, or subarea tile to change its properties.  
-  
+    The site map designer opens a canvas that is prepopulated with one area, one group, and one subarea. Select the area, group, or subarea tile to change its properties.
+ 
     > [!NOTE]
     >  Selecting **Open the Site Map Designer** ![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button") from the app designer canvas automatically creates a new site map (if there's no existing site map), and gives the new site map the same name as the app name and the same unique name as the app unique name. 
 
-   ![Select site map](media/app-designer-sitemap-location.png "Select a site map") 
-  
 2.  [Add an area to the site map](create-site-map-app.md#bkmk_AddArea).  
   
 3.  [Add a group to the site map](create-site-map-app.md#bkmk_AddGroup).  
