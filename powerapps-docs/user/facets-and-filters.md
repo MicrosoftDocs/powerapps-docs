@@ -52,5 +52,5 @@ In the Set **Personal Option**s dialog box, you can personalize the facets for a
    ## See also
 
 [What is Relevance Search](relevance-search-benefits.md)<br/>
-[Use Relevance search to search for rows](relevance-search.md)<br/>
+[Search for tables and rows using Relevance Search](relevance-search.md)<br/>
 [Frequently asked questions about Relevance Search](relevance-faq.md)
