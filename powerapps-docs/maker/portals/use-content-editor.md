@@ -18,6 +18,9 @@ You can use the portal content editor to edit text, create links, and display im
 
 To modify the content, point to the content to be modified, and then select the edit button that appears.
 
+> [!IMPORTANT]
+> We recommend that you use [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal.
+
 ## Content editor commands and controls
 
 The editor toolbar has a number of buttons to help with content editing. Move the mouse cursor over a button to see a tool tip for the buttons function. The table below also has more detail about the available buttons, listed in the order they appear in the toolbar.

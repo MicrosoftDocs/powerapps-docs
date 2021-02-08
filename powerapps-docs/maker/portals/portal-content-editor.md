@@ -18,6 +18,9 @@ Users with suitable permissions can add, modify, or delete webpages and their co
 
 This document assumes that you have permission to perform these tasks. If you do not, ask your portal administrator to arrange this for you. The permissions can be assigned to individual pages, so be sure to specify which pages you will need to edit.
 
+> [!IMPORTANT]
+> We recommend that you use [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal.
+
 ## Use the portal content editor toolbar
 
 Sign in first. This will enable content editing for users with this permission. A toolbar on the right hand side allows you to edit the page properties. The edit button will appear when the mouse moves over any content that can be managed by the user.
