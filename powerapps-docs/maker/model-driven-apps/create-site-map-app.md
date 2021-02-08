@@ -48,7 +48,7 @@ You can view or set these privileges on the **Customization** tab of a security 
   
 ## Create a site map for an app  
   
-1. On the app designer canvas, in the **Site Map** area, select the pencil icon ![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button") next to **Site Map** to **Open the Site Map Designer** .  
+1. On the app designer canvas, in the **Site Map** area, select the pencil icon![Open Site Map Designer button](media/dynamics365-open-designer.PNG "Open Site Map Designer button")next to **Site Map** to **Open the Site Map Designer** .  
 
    ![Open the site map designer](media/app-designer-sitemap-location.png "Open the site map designer")
   
