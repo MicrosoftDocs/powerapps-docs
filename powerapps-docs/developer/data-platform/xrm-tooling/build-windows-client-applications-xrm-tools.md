@@ -57,5 +57,5 @@ The following applications in the current version of Dataverse use the common WP
 ### See also
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Blog: PowerShell module for performing data operations and manipulating user and system settings in Dataverse](https://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)
+<!--[Blog: PowerShell module for performing data operations and manipulating user and system settings in Dataverse](https://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)-->
 
