@@ -5,12 +5,13 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/30/2020
+ms.date: 02/08/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
 # Enable multiple-language portal support
+
 Business is not confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
 
 ![Multi-language dropdown](../media/multi-language-dropdown.png "Multiple-language drop-down list")  
