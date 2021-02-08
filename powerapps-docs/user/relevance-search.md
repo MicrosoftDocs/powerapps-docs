@@ -18,11 +18,11 @@ search.app:
   - D365CE
 ---
 
-# Run a Relevance Search to search for rows
+# Search for tables and rows using Relevance Search
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Relevance search is easy to use, fast, and accurate. The search bar is always available at on the top of every page in your app. You can start a new search and quickly find the information that you're looking for.
+Relevance Search is easy to use, fast, and accurate. The search bar is always available at on the top of every page in your app. You can start a new search and quickly find the information that you're looking for.
 
 For more information about Relevance Search, see [What is Relevance Search](relevance-search-benefits.md).
 
