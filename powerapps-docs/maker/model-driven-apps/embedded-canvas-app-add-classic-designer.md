@@ -32,8 +32,7 @@ Display data from a variety of sources right next to data from Microsoft Dataver
 Imagine that you want to embed a canvas app on a model-driven app main form, such as the main form for the Accounts table. To do this, follow these steps:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. [Create or edit the main form](create-and-edit-forms.md) of a table, Accounts table in our example. 
-After you have added an embedded canvas app to your model-driven form, share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
+1. [Create or edit the main form](create-and-edit-forms.md) of a table. 
 1. In the form designer, select the section on the form where you want the embedded canvas app to appear.
 1. Add a required form field to the section, such as Account Name.
 
@@ -57,6 +56,8 @@ After you have added an embedded canvas app to your model-driven form, share you
        - **Static value**: Enter the app ID for an existing canvas app. The canvas App ID can be found on Power Apps, go to **Apps**, select the canvas app, and then select **Details** on the command bar.
     - **Show components area**. Specifies the client type to display the embedded canvas app. Choose from **Web**, **Mobile**, and **Tablet**.
 1. Select **Save**. Then, to publish your app to make it available to users select **Publish**.
+
+After you have published an embedded canvas app to your model-driven form, share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
 When users open a model-driven app that includes the form you have modified, they see the embedded canvas app on the form. Changing the row displayed on the main form changes the data context that is passed to the form, and the embedded app refreshes to show the relevant data.
 
@@ -115,12 +116,8 @@ This article showed you how to get started with embedding a canvas app in a mode
     - 	If you already have a canvas app embedded on this form, a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app, you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
 26.	On the **Home** tab, select **Save**, and then select **Publish**.
 
-## See also
-[Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
+### See also
 [Edit a canvas app embedded on a model-driven form](embedded-canvas-app-edit-classic-designer.md) <br />
-[Customize the screen size and orientation of a canvas app embedded on a model-driven form](embedded-canvas-app-customize-screen.md) <br />
 [Perform predefined actions on the host form from within an embedded canvas app](embedded-canvas-app-actions.md) <br />
 [ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
-[Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
-[Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
