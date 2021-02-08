@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/5/2020
+ms.date: 2/8/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -40,6 +40,14 @@ Currently, Relevance Search searches on your data in Microsoft Dataverse only. S
 ## Why am I unable to view information for party list fields like To, From, CC and in full results? 
 
 Party list fields are special fields that are not searchable and viewable in the results page. 
+
+## Can the quick actions commanands be configured to show or hide certain commands?
+
+The [quick actions commands](https://docs.microsoft.com/powerapps/user/relevance-search#quick-actions-preview) are currently a subset of the table’s grid level command set. They cannot be configured. However, we are working to enabled this functionality in a future release. 
+
+Thank you,
+
+
 
 ## See also
 
