@@ -43,7 +43,7 @@ Party list fields are special fields that are not searchable and viewable in the
 
 ## Can I configure quick actions to show or hide certain commands?
 
-The [quick actions](https://docs.microsoft.com/powerapps/user/relevance-search#quick-actions-preview) are currently a subset of the table’s grid level command set. They cannot be configured. However, we are working to enabled this functionality in a future release. 
+The [quick actions](https://docs.microsoft.com/powerapps/user/relevance-search#quick-actions-preview) are currently a subset of a table's grid level command set. They cannot be configured. However, we are working to enabled this functionality in a future release. 
 
 Thank you,
 
