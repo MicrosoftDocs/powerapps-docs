@@ -25,7 +25,7 @@ search.app:
 ---
 
 # Add an embedded canvas app on a model-driven form
-Display data from a variety of sources right next to data from the Microsoft Dataverse. This article explains how to embed a new canvas app on a model-driven form.
+Display data from a variety of sources right next to data from Microsoft Dataverse. This article explains how to embed a new canvas app on a model-driven form.
 
 :::image type="content" source="media/embedded-canvas-app.png" alt-text="Example of an embedded canvas app on a model-driven app main form":::
 
@@ -75,7 +75,7 @@ This article showed you how to get started with embedding a canvas app in a mode
 8.	On the **Controls** tab, select **Add Control**.
 9.	On the **Add Control** dialog box, in the list of available controls, select **Canvas app** and then select **Add**.
 10.	On the **Column Properties** dialog box, in the list of controls select **Canvas app**, and then select the **Web** option.
-11.	In the section below the controls list, the list of properties available to the canvas app control are displayed.
+11.	In the section below the controls list, the lists of properties available to the canvas app control are displayed.
      - The **Table name** property specifies the table that will provide the data to your embedded canvas app. It will be set to the table that contains the column you added in an earlier step.
          - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
      - The **App Name** property specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control will use the App ID to load the canvas app. Enter the App Name for an existing canvas app.
@@ -112,7 +112,7 @@ This article showed you how to get started with embedding a canvas app in a mode
      <img src="media/embed-canvas-field-properties.png" alt="App name and App Id properties" height="600" width="400">
 24.	On the **Column Properties** dialog box, select the **Display** tab.
 25.	Clear **Display label** on the form and then select **OK**.
-    - 	If you already have a canvas app embedded on this form, a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
+    - 	If you already have a canvas app embedded on this form, a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app, you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
 26.	On the **Home** tab, select **Save**, and then select **Publish**.
 
 ## See also
