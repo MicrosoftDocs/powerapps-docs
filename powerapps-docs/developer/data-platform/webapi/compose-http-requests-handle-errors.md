@@ -2,7 +2,7 @@
 title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 09/08/2020
+ms.date: 02/07/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -114,6 +114,10 @@ You can use additional headers to enable specific capabilities.
 -   To control whether an upsert operation should actually create or update an entity, you can also use the `If-Match` and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers. More information:[Upsert an entity](update-delete-entities-using-web-api.md#bkmk_upsert).  
   
 -   When you execute batch operations, you must apply a number of different headers in the request and with each part sent in the body. More information:[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).  
+
+- When you create a solution component and want to associate it with a solution, use the `MSCRM.SolutionUniqueName` request header and set the value to the  unique name of the solution.
+
+- When you want to enable duplicate detection when creating a new entity record, set the `MSCRM.SuppressDuplicateDetection` request header value to false. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records)
   
 <a name="bkmk_statusCodes"></a>
 
