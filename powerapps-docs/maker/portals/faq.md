@@ -23,10 +23,6 @@ We've compiled a list of frequently asked questions and provided brief answers t
 
 ## General
 
-### When I edit a page using the content editor, I don't see the expected content.
-
-This can happen when you have the portal URL that exceeds **500 characters**. <br> For example, if you have a webpage with more than 500 characters in length, and you edit the page using the [content editor](https://docs.microsoft.com/dynamics365/portals/get-started-portal-content-editor), the *Language content* tab in the editor may appear blank. If you review the browser for script errors, you may notice an HTTP response with `400 Bad Request` error. When this happens, ensure you truncate the URL so that you don't exceed 500 characters maximum length.
-
 ### Does Power Apps portals support TLS 1.2?
 
 Power Apps portals version 8.3 and later supports [TLS 1.2](https://support.microsoft.com/help/4041984/portal-capabilities-for-microsoft-dynamics-365-version-8-3-2-85-releas).

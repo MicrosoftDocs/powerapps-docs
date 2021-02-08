@@ -63,7 +63,8 @@ The editor toolbar has a number of buttons to help with content editing. Move th
 |                                                          |                                                                                                                                                                                                                                               |
 
 > [!NOTE]
-> When in full screen mode, the **Save** button will not be available. To save the changes, select **Minimize** to return to the regular mode where the buttons are available.
+> - When in full screen mode, the **Save** button will not be available. To save the changes, select **Minimize** to return to the regular mode where the buttons are available.
+> - If you have a webpage with more than 500 characters in length, and you edit the page using the content editor, the *Language content* tab in the editor may appear blank. If you review the browser for script errors, you may notice an HTTP response with `400 Bad Request` error. When this happens, ensure you truncate the URL so that you don't exceed 500 characters maximum length.
 
 ## Create a link
 
