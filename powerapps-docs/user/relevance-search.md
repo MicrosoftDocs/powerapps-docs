@@ -85,7 +85,7 @@ The **Top results** tab displays the top 20 results for the search term, with ro
 > - For notes and attachment tables, you can see two additional columns to indicate information on the related row for that note or attachment row.
 > - Party list columns on activity tables like To, CC, attendees cannot be searched on or shown and will be blank
 
-For example, this diagram displays search results that show results in the **Top results** tab from only three tables.
+The diagram displays search results that show results in the **Top results** tab from only three tables.
 
 ![Shows top results for the search](media/rel-search-top-results.png)
 
