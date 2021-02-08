@@ -52,6 +52,6 @@ Thank you,
 ## See also
 
 [What is Relevance Search](relevance-search-benefits.md)<br/>
-[Use Relevance Search to search for rows](relevance-search.md)<br/>
+[Search for tables and rows using Relevance Search](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)
 
