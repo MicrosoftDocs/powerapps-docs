@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/5/2021
+ms.date: 2/8/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -18,7 +18,7 @@ search.app:
   - D365CE
 ---
 
-# Use Relevance Search to search for rows
+# Run a Relevance Search to search for rows
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
