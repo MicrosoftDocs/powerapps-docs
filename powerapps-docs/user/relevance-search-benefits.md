@@ -42,6 +42,6 @@ Benefits of Relevance Search:
 
 ## See also
 
-[Use Relevance Search to search for rows](relevance-search.md)<br/>
+[Search for tables and rows using Relevance Search](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)<br/>
 [Frequently asked questions about Relevance Search](relevance-faq.md)
