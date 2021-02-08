@@ -33,7 +33,10 @@ For more information about Relevance Search, see [What is Relevance Search](rele
   
 ## Turn on Relevance Search
 
-Your administrator has to turn on the new Relevance Search experience for your organization. When Relevance Search is turned on, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all model-drivena apps in your organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+Your administrator has to turn on the new Relevance Search experience for your organization. When Relevance Search is turned on, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all model-driven apps in your organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+
+> [!NOTE]
+> - If you opt in to early access for 2021 Release Wave 1 updates, then the new Relevance Search experience is turn on by defaulted for all users. Users won't have the option to use Categorized Search anymore. For  more information, see [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
 
 ## See recent rows and searches
@@ -42,7 +45,7 @@ See your recent searches and recently accessed rows when you select the search b
 
 Up to three recent search terms appear at the top. This is based on your recent last three search queries that you have viwed the results for. The recent search terms are personalized and based on your device and browser.
 
-The next set of information in the flyout is recently accessed rows. You can view up to seven recently accessed rows. If you frequently access a small set of rows then you can quickly get to them from here. Recently accessed rows are independent of tables which are indexed for Relevance Search since no search has been performed. The rows are also grouped by table type which lets you to quickly scan the list.
+The next set of information in the flyout is recently accessed rows. You can view up to seven recently accessed rows. If you frequently access a small set of rows then you can quickly get to them from here. Recently accessed rows are independent of tables which are indexed for Relevance Search since no search has been performed yet. The rows are also grouped by table type which lets you to quickly scan the list.
 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
@@ -58,6 +61,8 @@ As you start typing, you will see suggested results which help minimize keystrok
 
 Suggestions are shown when three or more characters are entered in the search box, and it based on two types of matching.
 
+![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif)
+
 -	**Word completion**: Rows where the primary field contains a word that begins with the search term. For example, entering **work** will show the Account Adventure **Work**s, contact John **Work**er, among other results.
 
 - **Fuzzy search**: Suggestions incorporate fuzzy search where terms that are misspelled by one character are matched. For example, entering **winry** will show the Account Coho **Winery**, among other suggestions. 
@@ -69,20 +74,18 @@ With suggestions, you can access your information quickly with minimal keystroke
 
 View the full results for a search by pressing Enter on your keyboard or select **Show more results**.
 
-![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif)
-
-
 Search results are ranked based on relevance and grouped by tables. The list of tables with rows matching the search term are displayed as a horizontal list of tabs along the top of the screen.
 
 ### Top results tab
 
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Each group shows results for a table in a grid that has up to six columns. The columns are the first six columns of the table’s quick find view's called **View Columns set**.
+The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Each group shows results for a table in a grid that has up to six columns. The columns are the first six columns of the table’s quick find view's **View Columns set**.
 
 > [!NOTE]
 > - The primary column of a table is always used as the first column for a table in the **Top results** tab.
 > - For notes and attachment tables, you can see two additional columns to indicate information on the related row for that note or attachment row.
 > - Party list columns on activity tables like To, CC, attendees cannot be searched on or shown and will be blank
 
+For example, this diagram displays search results that show results in the **Top results** tab from only three tables.
 
 ![Shows top results for the search](media/rel-search-top-results.png)
 
@@ -128,7 +131,7 @@ Each table tab displays more information than **Top results** tab along two diff
 
 ## Filter results with facets
 
-On the search results page, use facets and filters. to refine and explore your search results. Facets are available on the **Filter** pane that you can expand or collapse. 
+On the search results page, use facets and filters to refine and explore your search results. Facets are available on the **Filter** pane that you can expand or collapse. 
 
 The **Top results** tab, shows search results across different row types such as a contact vs. a phone call. Thus, the **Top results** tab only shows three global facets that apply all row types.
 
@@ -168,7 +171,7 @@ The date and time facets let you filter and see search results for a specific pe
 
 ## Feedback link
 
-On the search results page, the **Did you find what you were looking for? Yes No** is collected in our product telemetry as a binary feedback. Search parameters like the query text that you entered in the search box is not collected, irrespective of the response to the question. We only **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. 
+On the search results page, the **Did you find what you were looking for? Yes No** is collected in our product telemetry as a binary feedback. Search parameters like the query text that you entered in the search box is not collected, irrespective of the response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. 
 
 Currently there isn't an option to disable the feedback question prompt.
 
@@ -176,7 +179,7 @@ Currently there isn't an option to disable the feedback question prompt.
 > ![Feedback link](media/feedbacklink.png "Feedback link")  
    
 
-## Understand the search results 
+## Understand search results 
 
 Relevance search has a powerful set of capabilities to help you put Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
       
@@ -197,7 +200,7 @@ Search has a better understanding of terms that are used to indicated intent.
 
 Searching for **open phone calls** will show phone call activity records with status open.
 
-Searching for **contact missing email** will show contacts with an empty email address field rather than treating missing as a keyword.
+Searching for **contact missing email** will show contacts with an empty email address field rather than treating **missing** as a keyword.
 
 ### Spelling correction
 
