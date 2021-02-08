@@ -70,9 +70,11 @@ A notification is displayed when the environment variables do not have any value
 > We recommend partners build their own interfaces requiring the customers to provide the values. Notifications help prevent failures if this step is skipped. 
 
 ## Security
-Both the environmentvariabledefinition and environmentvariablevalue tables are [user or team owned](https://docs.microsoft.com/powerapps/maker/data-platform/types-of-tables). When creating an application that uses environment variables, be sure to assign users the appropriate level of permission. More information: [Security in Dataverse](https://docs.microsoft.com/power-platform/admin/wp-security). 
+
+The environmentvariabledefinition table is [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-tables). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the environmentvariablevalue table is inherited from the parent environmentvariabledefinition table and therefore does not require separate privileges. More information: [Security in Dataverse](/power-platform/admin/wp-security).
 
 ## Current limitations
+
 - Caching. Plugins will need to run a query to fetch the values. 
 - Canvas apps and flows can consume environment variables just like table row data. <!-- In the future we plan to build additional actions into canvas app and flow designers. This will simplify authoring and provide better visibility into environment variables being used by a specific app or flow. -->
 - Azure Key Vault integration for secret management. Currently environment variables should'nt be used to store secure data such as passwords and keys.

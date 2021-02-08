@@ -71,7 +71,7 @@ As the location changes, dependencies on the location will continuously recalcul
 
 | Property | Description |
 | --- | --- |
-| **Location.Altitude** |Returns a number that indicates the altitude, measured in feet, above sea level. |
+| **Location.Altitude** |Returns a number that indicates the altitude, measured in meters, above sea level. |
 | **Location.Latitude** |Returns a number, from –90 to 90, that indicates the latitude, as measured in degrees from the equator. A positive number indicates a location that's north of the equator. |
 | **Location.Longitude** |Returns a number, from –180 to 180, that indicates the longitude, as measured in degrees from Greenwich, England.  A positive number indicates a location that's east of Greenwhich. |
 

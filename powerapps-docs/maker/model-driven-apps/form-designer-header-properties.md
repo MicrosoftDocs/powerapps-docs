@@ -2,16 +2,12 @@
 title: "Configure header properties in the form designer | MicrosoftDocs"
 description: Learn how to configure form header properties for a model-driven app
 ms.custom: ""
-ms.date: 06/26/2020
+ms.date: 01/25/2021
 ms.reviewer: ""
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "PowerApps"
 author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
@@ -49,14 +45,16 @@ However, often this comes at the cost of key information being truncated or not 
 
 ### Configuring header density
 
+Use the new form designer to configure the header density; the classic form designer does not provide the ability to configure the header density.
+
 To configure the header density of a model-driven form, follow these steps:
 1.	Open the form designer to [create or edit a form](create-and-edit-forms.md).
 2.	Select the form header by selecting the header in the form preview or by using the [tree view](using-tree-view-on-form.md).
-3.	In the property pane, select **High density** to use high-density form header or clear it to use low-density form header.
+3.	In the property pane, select **High density** to use high-density form header or clear it to use low-density form header. Select **Show header flyout** to display a header flyout when users select the chevron in the form header. See the next section, **Header flyout** for more information.
+    > [!div class="mx-imgBorder"] 
+    > ![Configure header density](media/configure-header-density.png "Configure header density")
 4.	In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users.
 
-> [!NOTE]
-> Use the new form designer. The classic form designer does not provide the ability to configure the header density.
 
 ## Header flyout
 The header flyout is displayed when users select the chevron in the form header. It enables users to edit column values and also displays visualizations such as custom components or web resources that are a part of the form header.

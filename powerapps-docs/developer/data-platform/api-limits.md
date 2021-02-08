@@ -2,7 +2,7 @@
 title: "Service Protection API Limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 04/20/2020
+ms.date: 01/08/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -52,6 +52,12 @@ Portal applications typically send requests from anonymous users through a singl
 Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits are not applied to plug-ins and custom workflow activities. Plug-ins and custom workflow activities are uploaded and run within the isolated sandbox service. Dataverse operations invoked on the sandbox service do not use the public API endpoints.
 
 If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits. More information: [How Service Protection API Limits are enforced](#how-service-protection-api-limits-are-enforced)
+
+## Impact on relevance search
+
+When using the relevance search API, there is a throttling limit of one request per second for each user.
+
+More information: [Search across entity data using relevance search](webapi/relevance-search.md)
 
 ## Retry operations
 
@@ -148,7 +154,7 @@ This limit can be encountered when strategies using batch operations and concurr
 
 ### Concurrent requests
 
-This limit tracks the total number of concurrent requests during the preceding 300 second period.
+This limit tracks the number of concurrent requests during the preceding 300 second period.
 
 | Error code | Hex code | Message |
 |------------|------------|-------------------------------------|

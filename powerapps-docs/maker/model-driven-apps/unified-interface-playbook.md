@@ -1,6 +1,6 @@
 ---
 title: "Unified Interface Playbook | MicrosoftDocs"
-description: "Download and read these documents that can help plan and execute your transition from the legacy web client to the Unified Interface"
+description: "Download and read these documents that can help plan and execute your transition from the legacy web client to Unified Interface"
 ms.custom: ""
 ms.date: 05/20/2020
 ms.reviewer: ""
@@ -21,10 +21,10 @@ search.app:
 ---
 # Unified Interface Playbook
 
-This playbook is intended to help customers, partners and Microsoft column roles plan and execute transitions from the legacy web client to the Unified Interface.
+This playbook is intended to help customers, partners, and Microsoft column roles plan and execute transitions from the legacy web client to Unified Interface.
 
 In summary, the Unified Interface Playbook documents will help you:
-- Understand the Unified Interface. 
+- Understand Unified Interface. 
 - Understand the transitioning process.
 - Develop a strategy for discussions and the transition.
 - Ensure a smooth transition.
