@@ -25,7 +25,9 @@ search.app:
 ---
 
 # Add an embedded canvas app on a model-driven form
-This article explains how to embed a new canvas app on a model-driven form. 
+Display data from a variety of sources right next to data from the Microsoft Dataverse. This article explains how to embed a new canvas app on a model-driven form.
+
+:::image type="content" source="media/embedded-canvas-app.png" alt-text="Example of an embedded canvas app on a model-driven app main form":::
 
 Imagine that you want to embed a canvas app on a model-driven app main form, such as the main form for the Accounts table. To do this, follow these steps:
 
@@ -43,11 +45,13 @@ After you have added an embedded canvas app to your model-driven form, share you
     :::image type="content" source="media/add-canvas-app-control.png" alt-text="Add the canvas app control to a table column":::
 1. On the **Add canvas app** pane, enter the following properties, and then select **Done**: 
     - The **Entity name** area specifies the table that will provide the data to your embedded canvas app.
-       - **Bind to table column**:  
+       - **Bind to table column**:
        - **Static value**: Use this to add a name for you to refer to the canvas app. Notice that this value has no effect on the embedded canvas app. It is meant only to serve as a reference for you.
-    -	The **App Name** area specifies the name of the canvas app.
+
+    -	The **App Name** area specifies the name of the canvas app.  
        - **Bind to table column**:  
        - **Static value**: Specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control will use the App ID to load the canvas app. Enter the App Name for an existing canvas app.
+
     - The App ID area specifies the app ID for the canvas app. 
        - **Bind to table column**:  <need description>
        - **Static value**: Enter the app ID for an existing canvas app. The canvas App ID can be found on Power Apps, go to **Apps**, select the canvas app, and then select **Details** on the command bar.
