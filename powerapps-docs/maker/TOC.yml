@@ -129,7 +129,7 @@
         items:
         - name: What is Relevance Search
           href: ../user/relevance-search-benefits.md
-        - name: Run a search using Relevance Search
+        - name: Search for tables and rows using Relevance Search
           href: ../user/relevance-search.md
         - name: Configure facets and filters
           href: ../user/facets-and-filters.md
