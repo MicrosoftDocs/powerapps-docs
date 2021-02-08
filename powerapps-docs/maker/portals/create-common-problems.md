@@ -21,7 +21,7 @@ If you don't have sufficient privileges to create a portal in an environment, yo
 > [!div class=mx-imgBorder]
 > ![Create portal error](media/portal-create-error.png "You don't have appropriate permissions to create a portal in this environment. Try selecting another environment or create new environment.")
 
-More information: [Create a portal](create-portal.md), [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md)
+For permissions and role memberships required to create portals, see [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md)
 
 ## Your data isn't quite ready
 
