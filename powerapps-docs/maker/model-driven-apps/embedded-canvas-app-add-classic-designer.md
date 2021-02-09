@@ -25,7 +25,7 @@ search.app:
 ---
 
 # Add an embedded canvas app on a model-driven form
-Display data from a variety of sources right next to data from Microsoft Dataverse. This article explains how to embed a new canvas app on a model-driven form.
+Display data from a variety of sources right next to data from Microsoft Dataverse. This article explains how to embed a canvas app on a model-driven form.
 
 :::image type="content" source="media/embedded-canvas-app.png" alt-text="Example of an embedded canvas app on a model-driven app main form":::
 
