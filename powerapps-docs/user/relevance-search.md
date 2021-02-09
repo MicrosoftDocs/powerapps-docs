@@ -45,7 +45,7 @@ See your recent searches and recently accessed rows when you select the search b
 
 Up to three recent search terms appear at the top. This is based on the last three search queries which you viewed the results for. The recent search terms are personalized and based on your device and browser.
 
-The next set of information in the flyout is recently accessed rows. You can view up to seven recently accessed rows. If you frequently access a small set of rows then you can quickly get to them from here. Recently accessed rows are independent of tables which are indexed for Relevance Search since no search has been performed yet. The rows are also grouped by table type which lets you quickly scan the list.
+The next set of information in the flyout is recently accessed rows. You can view up to seven recently accessed rows. If you frequently access a small set of rows, then you can quickly get to them from here. Recently accessed rows are independent of tables that are indexed for Relevance Search since no search has been performed yet. The rows are also grouped by table type which lets you quickly scan the list.
 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
