@@ -1,6 +1,6 @@
 ---
-title: "Update Dynamics 365 Instance for your portal | MicrosoftDocs"
-description: "Information about how to update Dynamics 365 Instance for your portal."
+title: "Update the Dynamics 365 instance for your portal | MicrosoftDocs"
+description: "Information about how to update the Dynamics 365 instance for your portal."
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Update Dynamics 365 Instance for your portal
+# Update the Dynamics 365 instance for your portal
 
-You can use the Power Platform admin center to update your portal's Dynamics 365 Instance.
+You can use the Power Platform admin center to update the Dynamics 365 instance for your portal.
 
 > [!IMPORTANT]
-> When changing Dynamics 365 Instance for your portal, ensure the new instance is from the same [region](/power-platform/admin/regions-overview) as the current instance. Changing the Dynamics 365 Instance for Power Apps portals across regions isn't supported.
+> When changing the Dynamics 365 instance for your portal, ensure that the new instance is from the same [region](/power-platform/admin/regions-overview) as the current instance. Changing the Dynamics 365 instance for Power Apps portals across regions isn't supported.
 
-1. Select **Manage** to manage your portal by using one of the methods explained earlier in this article.
+1. Using one of the methods described in the [Manage portals from the Power Platform admin center](power-platform-admin-center.md) article, select **Manage** to manage your portal.
 
-1. In the left pane, select **Manage Dynamics 365 Instance**.
+1. On the left pane, select **Manage Dynamics 365 Instance**.
 
 1. Select **Update Dynamics 365 Instance**.
 
@@ -27,7 +27,7 @@ You can use the Power Platform admin center to update your portal's Dynamics 365
 
 1. Select your existing instance and portal.
 
-    ![Select Dynamics 365 Instance](media/power-platform-admin-center/select-dynamics365-instance.png "Select Dynamics 365 Instance")
+    ![Select your Dynamics 365 instance](media/power-platform-admin-center/select-dynamics365-instance.png "Select your Dynamics 365 instance")
 
 1. Select **OK**.
 
@@ -39,7 +39,7 @@ You can use the Power Platform admin center to update your portal's Dynamics 365
 
     ![Update request submitted](media/power-platform-admin-center/update-request-submitted.png "Update request submitted")
 
-The update may take a while after you select **Submit**. More information: [Upgrade a portal](upgrade-portal.md)
+The update might take a while after you select **Submit**. More information: [Upgrade a portal](upgrade-portal.md)
 
 ## Next steps
 
@@ -48,5 +48,5 @@ The update may take a while after you select **Submit**. More information: [Upgr
 ### See also
 
 [Upgrade a portal](upgrade-portal.md) <br>
-[Administer Power Platform](/power-platform/admin/admin-documentation) <br>
+[Administer Microsoft Power Platform](/power-platform/admin/admin-documentation) <br>
 [Manage Dynamics 365 apps](/power-platform/admin/manage-apps)

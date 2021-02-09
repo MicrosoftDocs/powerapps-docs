@@ -81,7 +81,7 @@
       items:
       - name: Add activities to the timeline
         href: ../user/add-activities.md
-      - name: FAQ about activities
+      - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md
       - name: Known issues for activities
         href: ../user/activities-known-issues.md     
@@ -126,7 +126,15 @@
       - name: Compare search options
         href: ../user/search.md
       - name: Relevance Search
-        href: ../user/relevance-search.md
+        items:
+        - name: What is Relevance Search
+          href: ../user/relevance-search-benefits.md
+        - name: Search for tables and rows using Relevance Search
+          href: ../user/relevance-search.md
+        - name: Configure facets and filters
+          href: ../user/facets-and-filters.md
+        - name: FAQs about Relevance Search 
+          href: ../user/relevance-faq.md
       - name: Quick Find
         href: ../user/quick-find.md
       - name: Advanced Find
