@@ -69,7 +69,7 @@ Using the Power Platform admin center to manage portals as described in this art
 | - | - | - |
 | ![Old method to manage an add-on portal](media/power-platform-admin-center/old.png "Old method to manage an add-on portal") | ![New method to manage an add-on portal for a tenant](media/power-platform-admin-center/tenant.png "New method to manage an add-on portal for a tenant") | ![New method to manage an add-on portal for an environment](media/power-platform-admin-center/environment.png "New method to manage an add-on portal for an environment") |
 
-## Portal types in admin center
+## Portal types in the admin center
 
 The following table describes the different types of portals that are listed in the Power Platform admin center.
 
@@ -80,7 +80,7 @@ The following table describes the different types of portals that are listed in 
 | Production (add-on) | A production portal based on an add-on license.     |
 | Trial (add-on)      | A trial portal based on an add-on license.          |
 
-## Portal status in admin center
+## Portal status in the admin center
 
 A portal can have the following status: *Configured*, *Suspended*, or *Not configured*. The following table describes each state.
 
