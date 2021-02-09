@@ -36,7 +36,7 @@ Benefits of Relevance Search:
 
 - **Understanding of underlying data**: Relevance Search understands data types like choices and lookups to interpret a search query with multiple search terms effectively. 
 
-- **Operators for advanced search**: Use simple Boolean operators in your search term and crafts the query to get the results you want. 
+- **Operators for advanced search**: Use simple Boolean operators in your search term and craft the query to get the results you want. 
 
 - **Intelligence**: Relevance Search applies artificial intelligence technology to interpret natural language such as misspellings, common abbreviations, and synonyms to delivers quality results. 
 
