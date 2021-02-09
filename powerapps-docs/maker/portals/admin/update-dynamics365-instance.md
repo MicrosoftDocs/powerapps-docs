@@ -17,7 +17,7 @@ You can use the Power Platform admin center to update the Dynamics 365 instance 
 > [!IMPORTANT]
 > When changing the Dynamics 365 instance for your portal, ensure that the new instance is from the same [region](/power-platform/admin/regions-overview) as the current instance. Changing the Dynamics 365 instance for Power Apps portals across regions isn't supported.
 
-1. Using one of the methods described in [Manage portals from the Power Platform admin center](power-platform-admin-center.md), select **Manage** to manage your portal.
+1. Using one of the methods described in the [Manage portals from the Power Platform admin center](power-platform-admin-center.md) article, select **Manage** to manage your portal.
 
 1. On the left pane, select **Manage Dynamics 365 Instance**.
 

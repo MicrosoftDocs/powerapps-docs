@@ -29,7 +29,7 @@ You might see the following error message if you don't have the required permiss
 
 To view the portals package details:
 
-1. Select the portal for your environment, as described in [Manage portals from the Power Platform admin center](power-platform-admin-center.md).
+1. Select the portal for your environment, as described in the [Manage portals from the Power Platform admin center](power-platform-admin-center.md) article.
 
 1. Select **Portal Package(s) details**.
 
@@ -48,13 +48,13 @@ You can use the Power Platform admin center to update portal packages, either by
 
 ### Method 1: Update portals packages by using the selected environment
 
-1. Select a portal for your environment, as described in [Manage portals from the Power Platform admin center](power-platform-admin-center.md).
+1. Select a portal for your environment, as described in the [Manage portals from the Power Platform admin center](power-platform-admin-center.md) article.
 
 1. Select **Upgrade now** from the notification at the top of the page that indicates that an update is available. You can also check for the notification from the package details page, as described [earlier in this article](#view-portals-package-details).
 
 ### Method 2: Update portals packages by using the portals list for a tenant
 
-1. Select a portal from the list of all portals in a tenant, as described in [Manage portals from the Power Platform admin center](power-platform-admin-center.md).
+1. Select a portal from the list of all portals in a tenant, as described in the [Manage portals from the Power Platform admin center](power-platform-admin-center.md) article.
 
 1. Select **Check portal package(s) for upgrade**.
 
