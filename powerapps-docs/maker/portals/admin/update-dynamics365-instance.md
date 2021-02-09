@@ -39,7 +39,7 @@ You can use the Power Platform admin center to update the Dynamics 365 instance 
 
     ![Update request submitted](media/power-platform-admin-center/update-request-submitted.png "Update request submitted")
 
-The update might a while after you select **Submit**. More information: [Upgrade a portal](upgrade-portal.md)
+The update might take a while after you select **Submit**. More information: [Upgrade a portal](upgrade-portal.md)
 
 ## Next steps
 
