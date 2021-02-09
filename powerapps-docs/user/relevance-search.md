@@ -43,9 +43,9 @@ Your administrator has to turn on the new Relevance Search experience for your o
 
 See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you will see information pop-up that helps you complete your search. 
 
-Up to three recent search terms appear at the top. This is based on your recent last three search queries that you have viwed the results for. The recent search terms are personalized and based on your device and browser.
+Up to three recent search terms appear at the top. This is based on your recent last three search queries that you have viewed the results for. The recent search terms are personalized and based on your device and browser.
 
-The next set of information in the flyout is recently accessed rows. You can view up to seven recently accessed rows. If you frequently access a small set of rows then you can quickly get to them from here. Recently accessed rows are independent of tables which are indexed for Relevance Search since no search has been performed yet. The rows are also grouped by table type which lets you to quickly scan the list.
+The next set of information in the flyout is recently accessed rows. You can view up to seven recently accessed rows. If you frequently access a small set of rows then you can quickly get to them from here. Recently accessed rows are independent of tables which are indexed for Relevance Search since no search has been performed yet. The rows are also grouped by table type which lets you quickly scan the list.
 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
@@ -143,7 +143,7 @@ Global facets:
 On the other tabs, the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
 
 
-|**Top results tab that shows only global facets**  |**Other tabs that shows facets which are specific to the row type** |
+|**Top results tab that shows only global facets**  |**Other tabs that show facets which are specific to the row type** |
 |---------|---------|
 | ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
 
