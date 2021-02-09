@@ -44,7 +44,7 @@ To view the portals package details:
 You can use the Power Platform admin center to update portal packages, either by choosing to update based on the selected environment or by selecting from the list of portals for a tenant.
 
 > [!NOTE]
-> In addition to the methods listed below, you'll also see a notification when you edit the portal by using Power Apps portals Studio if an update package is available.
+> In addition to the methods listed below, you'll also see a notification when you edit the portal by using Power Apps portals Studio if any package updates are available.
 
 ### Method 1: Update portals packages by using the selected environment
 
