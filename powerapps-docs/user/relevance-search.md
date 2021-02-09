@@ -85,12 +85,13 @@ The **Top results** tab displays the top 20 results for the search term, with ro
 > - For notes and attachment tables, you can see two additional columns to indicate information on the related row for that note or attachment row.
 > - Party list columns on activity tables like To, CC, attendees cannot be searched on or shown and will be blank
 
-The diagram displays search results that show results in the **Top results** tab from only three tables.
 
 ![Shows top results for the search](media/rel-search-top-results.png)
 
 
 Legend:
+
+The diagram displays search results that show results in the **Top results** tab from only three tables.
 
  1. **Top results**:  Shows the top 20 results for your search term.
  2. **Rows grouped by table type**: To narrow your search results to a specific table, select the table tab.
@@ -204,7 +205,7 @@ Searching for **contact missing email** will show contacts with an empty email a
 
 ### Spelling correction
 
-Search is smarter and forgiving of spelling mistakes to still be accurate. For example, searching for **william conatc** will show the contact record with name **William**, even though **contact** is misspelled.
+Search is smart and forgives common spelling mistakes. For example, when you search for **william conatc** the search will show the contact record with name **William**, even though the word **contact** is misspelled.
 
 ### Synonyms, acronyms, and abbreviations
 
