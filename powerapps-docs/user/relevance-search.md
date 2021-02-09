@@ -144,7 +144,7 @@ Global facets:
 On the other tabs, the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
 
 
-|**Top results tab that shows only global facets**  |**Other tabs that show facets which are specific to the row type** |
+|**Top results tab shows only global facets**  |**Other tabs show facets which are specific to the row type** |
 |---------|---------|
 | ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
 
