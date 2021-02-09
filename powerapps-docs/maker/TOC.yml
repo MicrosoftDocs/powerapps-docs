@@ -1396,7 +1396,7 @@
               href: ./portals/edit-css.md
         - name: Supported browsers for portals Studio
           href: ./portals/supported-browser.md
-    - name: Configure portal using Portal Management app
+    - name: Configure portals using Portal Management app
       items:
         - name: Portal Management app overview
           href: ./portals/configure/configure-portal.md
@@ -1480,7 +1480,7 @@
                href: ./portals/portal-content-editor.md
              - name: Edit page content using portal content editor
                href: ./portals/use-content-editor.md
-    - name: Administer portal from Power Platform admin center
+    - name: Administer portals from Power Platform admin center
       items:
         - name: Portals admin center overview
           href: ./portals/admin/admin-overview.md
@@ -1522,7 +1522,7 @@
           href: ./portals/configure/view-all-activities-in-portal-timeline.md
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
-    - name: Configure portal security
+    - name: Configure security in portals
       items:
         - name: Portal authentication
           items:
@@ -1602,7 +1602,7 @@
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
               href: ./portals/configure/website-access-permission.md
-    - name: Configure portal search
+    - name: Configure search in portals
       items:
         - name: Portal search overview
           href: ./portals/configure/search.md
