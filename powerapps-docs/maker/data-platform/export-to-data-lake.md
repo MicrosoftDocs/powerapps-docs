@@ -157,7 +157,7 @@ The table below describes how rows are handled in the lake against CrUD events f
 > [!NOTE]
 > For Dataverse tables where **Append only** is enabled, deleting a row in the source will not delete or remove the row in the lake. Instead, the deleted row is appended as a as a new row in the lake and the `isDeleted` column is set to True.
 
-Here are some additional details on when to use each of the options:
+Here are some additional details on when to use either of the options:
 	
 - In-place update: This is the default setting and recommended only if you want to connect directly to the data in lake and need the current state (not history or incremental changes). The file contains the full data set and can be utilized via Power BI or by copying the entire dataset for ETL (Extract, Transfer, Load) pipelines.
 - Append only: Select this option if you aren't directly connecting to data in the lake and want to incrementally copy data to another target using ETL pipelines. This option provides a history of changes to enable AI and ML scenarios.
@@ -175,19 +175,6 @@ Based on the Dataverse table volume and data distribution, you can choose a more
 Additional details with examples of how data is handled in the lake with yearly or monthly partition strategy:
 
 :::image type="content" source="media/export-data-lake-partition-strategy.png" alt-text="Data partition strategy options":::
-
-## Frequently asked questions while exporting Dataverse table data to the Azure data lake
-
-Following are some best practices when you use export to data lake to export Dataverse table data to Azure data lake storage:
-
-### When should I use a yearly or monthly partition strategy?
-
-For Dataverse tables where data volume is high within a year,we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
-
-### When to use Append only mode for a historical view of changes?
-Append only mode is the recommended option while writing Dataverse table data to the lake, especially when the data volumes are high within a partition with frequently changing data. Again, this is a commonly used and highly recommended option for our Enterprise customers. Additionally, you can choose to use this mode for scenarios where the intent is to incrementally review changes from Dataverse and process the changes for ETL, AI/ML scenarios 
-Append only mode provides a history of changes (vs. the latest change or in place update) and enables several time series based AI scenarios such as prediction or forecasting analytics based on historical values. 
-
 
 ## Transporting an Export to Data Lake configuration across environments
 
@@ -228,9 +215,12 @@ After successfully using the Export to Data Lake service, discover how you can a
 
 
 ### See also
-
-[Blog: Exporting CDS data to Azure Data Lake](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/)
-
 [Analyze exported data with Power BI](https://docs.microsoft.com/powerapps/maker/data-platform/export-to-data-lake-data-powerbi)
 
 [Ingest exported data with Azure Data Factory](https://docs.microsoft.com/powerapps/maker/data-platform/export-to-data-lake-data-adf)
+
+[Export to data lake FAQ](export-data-lake-faq.yml)
+
+[Blog: Exporting CDS data to Azure Data Lake](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/)
+
+
