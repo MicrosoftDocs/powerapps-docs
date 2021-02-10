@@ -33,7 +33,7 @@ If you already have the Microsoft Authenticator app installed and you're having 
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall Power Apps mobile.
 4. Reinstall the Microsoft Authenticator app and add your back up account.
-5. Reinstall the [Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#install-power-apps-mobile-app).
+5. Reinstall [Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#install-power-apps-mobile-app).
 6. Open Power Apps mobile and then sign in.
 
 
