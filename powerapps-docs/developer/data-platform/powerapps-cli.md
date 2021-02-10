@@ -5,7 +5,7 @@ keywords: Power Apps CLI, code components, component framework, CLI
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 01/28/2020
+ms.date: 02/10/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -93,7 +93,7 @@ Command to work with solution packages. It has the following parameters:
 
 ### PCF
 
-Commands to work with [Power Apps Component Framework](/powerapps/developer/component-framework/overview). It has the following parameters:
+Commands to work with [Power Apps component framework](/powerapps/developer/component-framework/overview). It has the following parameters:
 
 #### Parameters
 
@@ -115,9 +115,9 @@ Commands for working with [Dataverse solution projects](/powerapps/maker/data-pl
 |init|Initializes the solution project.  It has the following parameters:<br/>  - *publisher-name*: Publisher name of the organization. <br/>  - *publisher-prefix*: Publisher prefix of the organization.|`pac solution init --publisher-name developer --publisher-prefix dev`  |
 |add-reference|Sets the reference path to the component project folder by passing the `path` parameter.|`pac solution add-reference --path c:\Users\Downloads\SampleComponent`|
 |clone|Creates a solution project based up on the existing solution project. It has the following parameters:<br/> -*name*: The name of the solution to be exported.<br/> -*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported. <br/> It has the following values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales|`pac solution clone -–name  sampleSolution --version 1.0.0.2 --include general`|
-|import|Imports a Dataverse solution to an environment. It requires that you are connected to an environment (see Auth commands) and has the following parameters:<br/>  -*activate-plugins*:          Activates plug-ins and workflows in the environment after the import (alias: -ap) <br/>  -*async*:                     Imports solution asynchronously (alias: -a) <br/>  -*force-overwrite*:           Forces an overwrite of unmanaged customizations (alias: -f) <br/>  -*import-as-holding*:         Imports the solution as a holding solution (alias: -h) <br/>  -*max-async-wait-time*:       Max asynchronous wait time in minutes. Default value is 60 mintues (alias: -wt) <br/>  -*path*:                      Path to solution zip file. If not specified, assumes the current folder. (alias: -p) <br/>  -*publish-changes*:           Publishes changes after successful import (alias: -pc) <br/>  -*skip-dependency-check*:     Skip dependency check against dependencies flagged as product update (alias: -s) |`pac solution import --path c:\Users\Documents\Solution.zip `|
-|export|Exports a Dataverse solution from an environment. It requires that you are connected to an environment (see Auth commands) and has the following parameters:<br/> -*path*: Complete file name where the exported solution zip file will be saved.<br/> - *name*: Name of the solution that needs to be exported.<br/> - *managed*: Defines whether the solution should be exported as a managed solution or not.<br/>-*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported.|`pac solution export --path c:\Users\Documents\Solution.zip -- name SampleComponentSolution --managed true --targetversion 10.0.03 --include general`|
-|list|List all Solutions from a Dataverse environment. It requires that you are connected to an environment (see Auth commands). This command has no parameters:|`pac solution list`  |
+|import|Imports a Dataverse solution to an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/>  -*activate-plugins*: Activates plug-ins and workflows in the environment after the import (alias: -ap). <br/>  -*async*: Imports the solution asynchronously (alias: -a). <br/>  -*force-overwrite*: Forces an overwrite of unmanaged customizations (alias: -f). <br/>  -*import-as-holding*: Imports the solution as a holding solution (alias: -h). <br/>  -*max-async-wait-time*: Maximum asynchronous wait time in minutes. Default value is 60 mintues (alias: -wt). <br/>  -*path*: Path to solution zip file. If not specified, assumes the current folder (alias: -p). <br/>  -*publish-changes*: Publishes changes after successful import (alias: -pc). <br/>  -*skip-dependency-check*: Skips dependency check against dependencies flagged as product update (alias: -s). |`pac solution import --path c:\Users\Documents\Solution.zip `|
+|export|Exports a Dataverse solution from an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/> -*path*: Complete file name where the exported solution zip file will be saved.<br/> - *name*: Name of the solution that needs to be exported.<br/> - *managed*: Defines whether the solution should be exported as a managed solution or not.<br/>-*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported.|`pac solution export --path c:\Users\Documents\Solution.zip -- name SampleComponentSolution --managed true --targetversion 10.0.03 --include general`|
+|list|List all Solutions from a Dataverse environment. It requires that you are connected to an environment [Auth commands](#auth). This command has no parameters:|`pac solution list`  |
 
 
 ### Auth
