@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/17/2020
+ms.date: 2/8/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -18,79 +18,34 @@ search.app:
   - D365CE
 ---
 
-# Using relevance search to search for rows
+# Search for tables and rows using Relevance Search
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Relevance search delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance. 
-  
-Relevance search brings the following enhancements and benefits:  
+Relevance Search is easy to use, fast, and accurate. The search bar is always available at on the top of every page in your app. You can start a new search and quickly find the information that you're looking for.
 
-- Improved performance compared to Categorized search.  
-  
-- Finds matches to any word in the search term in any column in the table, compared to quick find where all words from the search term must be found in one column. 
+For more information about Relevance Search, see [What is Relevance Search](relevance-search-benefits.md).
 
-- Finds matches that include inflectional words like **stream**, **streaming**, or **streamed**.  
-  
-- Returns results from all searchable tables in a single list sorted by relevance, so the better the match, the higher the result appears in the list. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than finding the same words in a long article, far apart from each other.
-  
-- Highlights matches in the results list. When a search term matches a term in a row, the term appears as bold and italicized text in your search results. 
-
-    > [!NOTE]
-    > - Certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify rows. Because they're ignored during search, these words are also not highlighted in results.
-    > - Highlighted terms are often returned as a portion of the full value in a column because only the matched terms are highlighted.
-    > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a column has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results where part of the matched column is truncated.
-    
-- Includes search results for text in a document that's stored in Microsoft Dataverse, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON. Note, that File data type is not supported
-  
-- Enables you to search for rows that are shared with you and rows that you own.  
-  
-  > [!NOTE]
-  >  Hierarchical security models aren't supported. Even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see the result in relevance search.  
-  
-- Lets you also search for choices and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry column, which is a searchable option set.
-
-  > [!NOTE]
-  > - Relevance search is text-based, and can search only on columns of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in columns of Numeric, Date, or File data type.
-  
-- Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Search across table data using relevance search](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/relevance-search).
-  
-  > [!NOTE]
-  > Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.
-
-## Turn on Relevance Search
-
-Relevance Search needs to be enabled on by the administrator for your organization, thus allowing all users in the organization to use it. After Relevance Search is enabled, you might have to wait up to an hour or more, depending on the size of your organization before it is available in your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
-
-### Turn on the new Relevance Search experience 
-
-The new Relevance Search experience combines the strength of Relevance Search as a service, with a user interface that is intuitive, familiar, and easy to use. The new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)
-
- > [!div class="mx-imgBorder"]
- > ![Turn on new search experience](media/admin-enable-search.jpg) 
-
-
-## Use the new Relevance Search experience 
-
-The new search experience compliments the performance and intelligence of Relevance Search service and is intuitive and easy to use. 
-
-### Prominent search bar
-
-The search bar in the top is easy to find from any page in your app. It is always available to start a new search and quickly find the information that you're looking for.
 
 > [!div class="mx-imgBorder"]
 > ![Search box on header](media/new-search-exp.png)
 
+  
+## Turn on Relevance Search
 
-### No search required to see recent rows
+Your administrator has to turn on the new Relevance Search experience for your organization. When Relevance Search is turned on, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all model-driven apps in your organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
-Immediately see the rows that you accessed recently when you click inside the search box.
+> [!NOTE]
+> - If you opt in to early access for 2021 Release Wave 1 updates and Relevance Search is enabled then the new Relevance Search experience is turned on for all users. Users won't have the option to use categorized search anymore. For  more information, see [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
-![Suggested search results on first click](media/relevance-search-first-click.gif) 
 
-### See recent rows and searches
+## See recent rows and searches
 
-Before you even start typing in the search box, you will see any recent searches and recently accessed rows in combined view to help with your search. Recently accessed rows are also grouped by table type, allowing you to quickly scan and understand the list of results.
+See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you will see information pop-up that helps you complete your search. 
+
+Up to three recent search terms appear at the top. This is based on the last three search queries which you viewed the results for. The recent search terms are personalized and based on your device and browser.
+
+The next set of information in the flyout is recently accessed rows. You can view up to seven recently accessed rows. If you frequently access a small set of rows, then you can quickly get to them from here. Recently accessed rows are independent of tables that are indexed for Relevance Search since no search has been performed yet. The rows are also grouped by table type which lets you quickly scan the list.
 
 > [!div class="mx-imgBorder"]
 > ![Legend for new search experience](media/legend-for-new-exp.png) 
@@ -98,75 +53,262 @@ Before you even start typing in the search box, you will see any recent searches
 Legend
 
 1. **Recent searches**: Shows your recent searches.
-2. **Recently accessed rows**:  Shows recently accessed rows that are grouped by table type.
+2. **Recently accessed rows**: Shows recently accessed rows that are grouped by table type.
+
+## Inline suggestions
+
+As you start typing, you will see suggested results which help minimize keystrokes and simplify page navigation. Suggested results are quick results that are based on a search performed on the primary column of a table which is enabled for Relevance Search and included in your model-driven app.
+
+Suggestions are shown when three or more characters are entered in the search box, and it based on two types of matching.
+
+![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif)
+
+-	**Word completion**: Rows where the primary field contains a word that begins with the search term. For example, entering **work** will show the Account Adventure **Work**s, contact John **Work**er, among other results.
+
+- **Fuzzy search**: Suggestions incorporate fuzzy search where terms that are misspelled by one character are matched. For example, entering **winry** will show the Account Coho **Winery**, among other suggestions. 
+
+With suggestions, you can access your information quickly with minimal keystrokes even when the search term is misspelled by up to one character. Text that's highlighted in bold in the suggestions shows the term that is matched.
 
 
-### View quick suggestions
+## Search results page
 
-View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. The suggested results are based on the primary column of an table row, and support misspellings off by one character. For more information, see [Search across entity data using relevance search](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/relevance-search#suggestions).
+View the full results for a search by pressing Enter on your keyboard or select **Show more results**.
 
-![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif) 
+Search results are ranked based on relevance and grouped by tables. The list of tables with rows matching the search term are displayed as a horizontal list of tabs along the top of the screen.
 
-### Search results page
+### Top results tab
 
-Search results are ranked and grouped by table, with more columns that are displayed to help distinguish rows and filter to take further action.
+The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Each group shows results for a table in a grid that has up to six columns. The columns are the first six columns of the table’s quick find view's **View Columns set**.
 
-The full result set is grouped by table, with the table type displayed as a horizontal list of tabs along the top of the screen.
-
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Tables that contain the top 20 results are shown on the first few tabs from left to right based on relevance. The next few tabs have the matched table types in descending ordered by number of matched rows.
-
-Each of the tabs lets you drill into a specific table type, with the filter panel updating to show the set of facets and filters configured for that table.
-
-
-   > [!div class="mx-imgBorder"]
-   > ![Legend the search results page](media/legend-for-new-exp-2.png) 
-
-Legend
-
-1. **Top results**: Show rows that best matches the search query.
-2. **Row type**: To narrow your search results to a specific table, select the table tab.
-3. **Name**: Shows the name of the row.
-4. **Created on**: Shows when the row was created.
-5. **Show more**: Select to show more results.
-6. **Filters**: Refine the search results by using filters. Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search you can filter by row type, owner, created on, and modified on.
-7. **Clear all**: Select to clear all the filters. 
-8. **Owner**: Select your user name to find rows that you are the owner of.
-9. **Clear**: Only clears the **Owner** filter. Note, you only see this filter when the **Owner** filter is selected.
-10. **Modified on**: Filter the search results by when the row was last modified.
-11. **Created on**: Select a time range to find rows created in the selected time range.
+> [!NOTE]
+> - The primary column of a table is always used as the first column for a table in the **Top results** tab.
+> - For notes and attachment tables, you can see two additional columns to indicate information on the related row for that note or attachment row.
+> - Party list columns on activity tables like To, CC, attendees cannot be searched on or shown and will be blank
 
 
-### Feedback link
-
-On the search results page, the **Did you find what you were looking for? Yes No** feedback is collected in our product telemetry. Search parameters like the query text that user enters into the search box is not collected irrespective of the response to the question. We only **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. Currently there isn't an option to disable the feedback question prompt.
-
-   > [!div class="mx-imgBorder"]
-   > ![Feedback link](media/feedbacklink.png "Feedback link")  
+![Shows top results for the search](media/rel-search-top-results.png)
 
 
-## Set default search experience
+Legend:
 
-If your organization has turned on both Relevance Search and categorized search, you can select a default search experience in your personal settings.
+The diagram displays search results that show results in the **Top results** tab from only three tables.
 
-1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
-  
-   > [!div class="mx-imgBorder"]
-   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")  
-
-2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
+ 1. **Top results**:  Shows the top 20 results for your search term.
+ 2. **Rows grouped by table type**: To narrow your search results to a specific table, select the table tab.
+ 3. **Show more**: When you select **Show more** at the bottom of a group, it switches to a table tab.
 
 
-> [!IMPORTANT]
-> If you have the new Relevance Search experience available but you set your default search experience to Categorized Search, then the old Relevance Searchh experience and categorized is available. To use the new Relevance Search experience, you must set your default search experience to, Relevance Search. 
+### Table specific tab
 
+Specific table tabs are displayed as a horizontal list of tabs along the top of the screen. The exact order of the list of tables from left to right in an LTR environment is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
+
+The tables of the rows in the top 20 results are shown in the first few tabs from left to right which is based on relevance. The tables corresponding to the result rows outside of the top 20 is displayed in descending order for matched rows.
+
+![Diagram explaning top resutls page](media/diagram-top-results.png)
+
+Legend:
+
+![Number 1](media/one.png) Shows top 20 results that contain results from three different tables.
+
+![Number 2](media/two.png) Shows the three tables that are part of the top results, ordered by relevance.
+
+![Number 3](media/three.png) Shows rest of the matched table types, ordered by number of records that matches the search.
+
+
+Each of the tabs lets you drill into a specific table and view more information on rows in the results. 
+
+![Show the results page](media/view-results.png)
+
+Legend:
+
+1. Shows number of results for each table. 
+2. Shows the list of columns that was searched for the table.
+
+Each table tab displays more information than **Top results** tab along two different dimensions:
+
+- If the quick find view for the table has more than six **View Columns**, then all columns are displayed in the table tab, compared to up to six columns shown in **Top results** tab.
+- All matching rows for the table are accessible in the table specific tab as an infinitely scrollable list.
+
+
+## Filter results with facets
+
+On the search results page, use facets and filters to refine and explore your search results. Facets are available on the **Filter** pane that you can expand or collapse. 
+
+The **Top results** tab, shows search results across different row types such as a contact vs. a phone call. Thus, the **Top results** tab only shows three global facets that apply all row types.
+
+Global facets: 
+-	Owner
+-	Modified On
+-	Created On
+
+On the other tabs, the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
+
+
+|**Top results tab shows only global facets**  |**Other tabs show facets which are specific to the row type** |
+|---------|---------|
+| ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
+
+
+You can personalize facets for a table, from the **Set Personal Options** dialog box. For more information, see [Configure facets and filters](facets-and-filters.md).
+
+
+### Text-based facets with discrete values
+
+All lookups and choices types are text-based facets. For example, the text-based facet **Priority** consists of a list of column values and their corresponding counts.
+
+![Shows choices for text based facets](media/text-based-facets.png) 
+
+
+Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, select the **Show more** link to expand the list and see up to 15 results. 
+
+Select each value to filter the search results to show only rows where the column has the value that you selected.
+
+### Date and Time facets
+
+The date and time facets let you filter and see search results for a specific period. Use the **From** and **To** drop-down list to specify a custom period.
+
+![Shows date facets](media/date-facets.png) 
+
+
+## Feedback link
+
+On the search results page, the **Did you find what you were looking for? Yes No** is collected in our product telemetry as a binary feedback. Search parameters like the query text that you entered in the search box is not collected, irrespective of the response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. 
+
+Currently there isn't an option to disable the feedback question prompt.
+
+> [!div class="mx-imgBorder"]
+> ![Feedback link](media/feedbacklink.png "Feedback link")  
+   
+
+## Understand search results 
+
+Relevance search has a powerful set of capabilities to help you put Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
+      
+> [!NOTE]
+> - Relevance Search is text-based and can search only on columns of type single line of text, multiple lines of text, choice, and lookups. Columns of type numeric, date, and file are not searched on.
+> - Relevance Search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means, even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Relevance Search.
+
+   
+### Boosted search results
+
+Use important attributes as keywords to search for information. Enter a table type to boost search results is an easy way to indicated preference of results.  
+
+Searching for **Susan Adatum** indicates the preference of contact record **Susan** related to account **Adatum**.
+
+### Natural language understanding
+
+Search has a better understanding of terms that are used to indicated intent. 
+
+Searching for **open phone calls** will show phone call activity records with status open.
+
+Searching for **contact missing email** will show contacts with an empty email address field rather than treating **missing** as a keyword.
+
+### Spelling correction
+
+Search is smart and forgives common spelling mistakes. For example, when you search for **william conatc** the search will show the contact record with name **William**, even though the word **contact** is misspelled.
+
+### Synonyms, acronyms, and abbreviations
+
+With support for common abbreviations and synonyms, you can search for your information the way you remember them, not the way it is stored.
+
+Common name variations like **Bob/Robert** are matched with either search term.
+
+Search terms with abbreviations like **active accts** are interpreted semantically as active accounts.
+
+### Power of common knowledge
+
+Search can understand popular locations, date, time, holidays, and numbers.
+
+Search for **account in WA** and see results for accounts located in Washington state.
+
+> [!NOTE]
+> - All the above capabilities are part of intelligent search, that are only available for public cloud environments with English as the base language.
+> - The examples above assume that a specific set of fields per table are indexed to be able to see the results described.
+
+
+## Working with operators
+
+Operators help you craft precise search queries that can tailor your results according to specific conditions. Here are some of the supported operators.
+
+### Boolean operators
+
+Search on a combination of terms using the **+** operator, which performs an **AND** search and shows results containing all the individual terms separated by **+**.
+For example, **alpine + paul** returns the contact record **Paul Cannon** related to account record **Alpine Ski House**.
+
+![Blooean operators example](media/bollean.png)  
+
+Similarly, the **OR** operator can be indicated by separating terms with a **|**. For example, searching for **alpine | paul** returns records with reference to either term.
+
+![Example with the or operator](media/bollean-1.png)  
+
+Use the **NOT** operator with a minus sign (**-**) before a keyword to indicate exclusion. 
+
+For example, when you search for **evaluation** it shows all rows matching the term, **evaluation**.
+
+![Search results for the term evaluation](media/eval-1.png)  
+
+However, searching for **evaluation + -agreed** will match all records containing the term **evaluation** but not the term **agreed**.
+
+![Search results for evaluation + -agreed](media/eval-2.png)  
+
+### Wildcards
+
+Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on ***winery** will show results for all records associated with a keyword that ends with **winery**.
+
+![Search results for wildcards](media/wild-card.png)  
+
+### Exact matches
+
+Use double quotes around a keyword to perform an exact match. Search ignores common used words such as **the**, **an**, and, **a**. To improve matching, use double quotes and force an exact match for your search. For example, searching on **“Call back for resolution (sample)”** will match the exact keywords. 
+
+![Search results for exact matched terms](media/exact-match.png)  
+ 
+ 
+ ## Quick actions (Preview)
+ 
+ [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+ 
+This section lists new features that can be used by opting in to early access. For  more information, see [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+
+The new Relevance Search experience brings some of the most used actions closer to search results to help you complete your task without requiring navigating to the record page in model-driven Power Apps.
+ 
+Quick actions are small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven Power Apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
+
+
+|**Table**  |**Quick actions** |
+|---------|---------|
+| Account     |     Assign, Share, Email a link  |
+| Contact     |     Assign, Share, Email a link  |
+| Appointment     |     Mark complete, Cancel, Set Regarding, Assign, Email a link  |
+| Task     |     Mark complete, Cancel, Set Regarding, Assign, Email a link  |
+| Phone Call     |     Mark complete, Cancel, Set Regarding, Assign, Email a link |
+| Email     |     Cancel, Set Regarding, Email a link  |
+| Any custom table     |     Assign, Share, Email a link  |
+ 
+ 
+ ### Quick actions and suggested results
+ 
+ As you interact with search, you will find quick actions next to most recently accessed records and the suggested results that appear as you type.
+ 
+|**Quick actions for recently accessed rows**  |**Quick actions for suggested results as you type** |
+|---------|---------|
+| ![Quick actions for recently accessed rows](media/recent-accessed-1.png)     |     ![Quick actions for suggested results as you type](media/suggested-results.png)  |
+ 
+### Quick actions in results page
+
+As you type, quick actions will show for suggested results.
+
+![This diagram shows the quick actions menu when you hover of teh results](media/quick-actions-diagram.gif)
+
+
+On the results page, hover over the results to see quick actions available for the row.
+
+![This diagram shows how hovering over a result row will display the quick actions menu](media/quick-actions-diagram-1.gif)
+ 
 
 ## Use the old Relevance Search experience 
 
-If you're organization has Relevance Search enabled but your administrator has not turned on the [new relevance search experience](https://docs.microsoft.com/powerapps/user/relevance-search#use-the-new-relevance-search-experience) then you will see the old search experience.
-
+When your organization has Relevance Search enabled but your administrator has not turned on the [New Relevance Search experience](https://docs.microsoft.com/powerapps/user/relevance-search##turn-on-relevance-search) then you will see the old search experience.
 
 ### Switch between the old Relevance Search experience and Categorized Search
 
@@ -194,84 +336,9 @@ If your organization has turned on both search options (relevance search and cat
     > [!div class="mx-imgBorder"]
     > ![Relevance Search Box](media/relevance-search-box.png "Relevance search box")   
 
-## Filter rows with facets
+## See also
 
-With Dataverse, you can now refine your search results by using facets and filters. Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms.
-
-Facets are available in the leftmost pane. Immediately after you perform a search, the following global facets are available for four common columns:  
-  
--   Row Type  
-  
--   Owner  
-  
--   Created On  
-  
--   Modified On  
-  
-### Row Type facets
-
-To narrow your search results to a specific table, select the table under the **Row Type** section.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Row Type facet to narrow the search results](media/relevance-search-record-type-facet.png "Row Type facet used to narrow search results")  
-  
-When you filter on a specific row type, you can include activities and notes that are related to the selected row in your search results. To do that, select the **Related Notes & Activities** check box. The activities and notes will appear in top-level results.
- 
-  > [!div class="mx-imgBorder"]
-  > ![Include notes and activities related to a row type in the search results](media/relevance-search-record-type-facet-related-notes-activities.png "Include notes and activities related to a row type in the search results")  
-  
-Search results that are found in email attachments or appointment tables are shown in the search results under their parent row, either Email or Appointment.  
-  
-When you refine by row type, the facet scope switches to the selected table, and up to four facets that are specific to the table are shown. For example, if you select the Account table, you'll see the **Primary Contact** facet in addition to the global facets.  
-  
-In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
-  
-#### Text-based facets
-
-All lookups, choices, and row types are text-based facets. For example, the text-based facet Owner consists of a list of column values and their corresponding counts.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in relevance search")  
-  
-Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only rows where the column has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all rows where the owner is Jim Glynn. When you select a lookup or option set facet value, search results are filtered to only include rows with the value that you specified.  
-  
-#### Date and Time facets
-
-Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
- 
-  > [!div class="mx-imgBorder"]
-  > ![Date and time facets for Relevance Search](media/relevance-search-date-time-facets.png "Date and time facets for relevance search")  
-
-<a name="BKMK_ConfigureFacets"></a>
-
-## Configure facets and filters
-  
-Configure your own facets and filters.  
-
-> [!NOTE]
-> Your admin can use the Quick Find view to define which fields appear as default facets when you use Relevance Search. The first four view columns with data types other than single line of text and multiple lines of text are displayed as default facets in the result. You can override this setting in your [Personalization Settings](https://docs.microsoft.com/powerapps/user/set-personal-options#to-set-personal-options). At any time up to four fields can be selected as facets.
-  
-1. In the upper-right corner, select **Settings**, and then select **Personalization Settings**.  
-  
-   > [!div class="mx-imgBorder"]
-   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")
-  
-2. On the **General** tab, in the **Select the default search experience** section, for the **Facets and Filters** column, select **Configure**.  
-
-   > [!div class="mx-imgBorder"]
-   > ![Configure Facets and Filters](media/configure-facets-filters.png "Configure Facets and Filters")  
-  
-3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for a table. 
-  
-   - In the **Select Table** drop-down list, select a table you want to configure facets for. This drop-down list contains only the tables that are enabled for relevance search.  
-  
-   - For the selected table, select up to four facet columns. By default, the first four "facet-able" columns in the **Quick Find** view for the selected table are selected in the list. At any time, you can only have four columns selected as facets.  
-  
-   You can update multiple tables at one time. When you select **OK**, the changes for all tables that you've configured are saved. To revert to the default behavior for a table that you previously configured, select **Default**.  
-  
-   > [!NOTE]
-   > - If a system customizer deletes a column or makes it no longer searchable, and you've saved a facet for that column, it will no longer show up as a facet.  
-   >   -   You'll only see the columns that exist in the default solution and that are configured as searchable by your system customizer.  
-
-
+[What is Relevance Search](relevance-search-benefits.md)<br/>
+[Configure facets and filters](facets-and-filters.md)<br/>
+[Frequently asked questions about Relevance Search](relevance-faq.md)
 
