@@ -50,7 +50,7 @@ Microsoft authentication apps are Authenticator and Company Portal. Your company
  > [!NOTE]
  > Power Apps requires a valid license to sign in. For more information, see [Licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
 
-Sometimes, updating and manually opening the authentication app on your device before signing in to Power Apps mobile can fix the problem. If this doesn't fix the issue, then follow the next steps depending on your device and manufacturer. 
+Sometimes, updating and manually opening the authentication app on your device before signing in to Power Apps mobile can fix the problem. If this doesn't fix the issue, then follow the next steps depending on your device manufacturer and authentication app. 
 
 #### Huawei or Honor device
 
