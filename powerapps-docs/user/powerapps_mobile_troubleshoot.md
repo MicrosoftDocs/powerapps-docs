@@ -27,7 +27,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 If you don’t have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to Power Apps mobile again.
 
-If you already have the Microsoft Authenticator app installed and you're having issues signing in, then try these steps:
+If you already have the Microsoft Authenticator app installed and you're having sign in issues, then try these steps:
 
 1. Backup your Microsoft Authenticator account. For more information, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
 2. Uninstall the Microsoft Authenticator app.
