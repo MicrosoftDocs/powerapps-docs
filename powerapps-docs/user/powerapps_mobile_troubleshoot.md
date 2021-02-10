@@ -51,7 +51,7 @@ Microsoft authentication apps are Authenticator and Company Portal. Your company
 
 Sometimes, updating and manually opening the authentication app on your device before signing in to the Power Apps mobile app can fix the problem. If this don't fix the issue, then follow the next steps depending on your device and manufacturer. 
 
-#### For Huawei or Honor device
+#### Huawei or Honor device
 
 1. Go to **Settings** > **Battery** > **App launch**. 
 
@@ -64,7 +64,7 @@ Sometimes, updating and manually opening the authentication app on your device b
 2. Under **Manage automatically**, on the authenticator app set the toggle switch to **OFF**.
 3. On the **Manage manually** screen ensure that **Secondary launch / Can be launched by other apps** is enabled. To allow the Power Apps mobile app to launch the app.
 
-#### For Vivo device
+#### Vivo device
 
 1. Go to **Settings** > **More Settings** > **Applications** > **Autostart**.
 2. Set the toggle switch to **ON** for the authenticator app.
@@ -82,9 +82,9 @@ If you still can't sign in, then email us at **pamobsup@microsoft.com** and incl
 
 ## Pin to Home does not work on iOS 14
 
-**For iOS device running iOS 14**: The Safari browser no longer supports the **Pin to Home** functionality for Power Apps mobile app. You need to use the Siri Shortcuts app to pin an app to the Home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-siri-shortcuts-to-pin-home-ios-14-or-later).
+**iOS device running iOS 14**: The Safari browser no longer supports the **Pin to Home** functionality for Power Apps mobile app. You need to use the Siri Shortcuts app to pin an app to the Home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-siri-shortcuts-to-pin-home-ios-14-or-later).
 
-**For iOS 13**: You can still use the Safari browser to pin an app to the Home screen. For more information, see [Pin an app to the home screen](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-safari-to-pin-to-home-ios-13-or-earlier)
+**iOS 13**: You can still use the Safari browser to pin an app to the Home screen. For more information, see [Pin an app to the home screen](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-safari-to-pin-to-home-ios-13-or-earlier)
 
 ## App list appears blank on the Power Apps mobile app
 
