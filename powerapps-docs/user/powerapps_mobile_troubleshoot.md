@@ -27,33 +27,33 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 If you don’t have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to Power Apps mobile again.
 
-If you already have the Microsoft Authenticator app installed and you're are having issues signing in, then try this:
+If you already have the Microsoft Authenticator app installed and you're having issues signing in, then try these steps:
 
-1. Back up your Microsoft Authenticator account. For more information, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
+1. Backup your Microsoft Authenticator account. For more information, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall the Power Apps mobile app.
-4. Reinstall the Microsoft Authenticator app and add your back up accounts.
+4. Reinstall the Microsoft Authenticator app and add your backup account.
 5. Reinstall the [Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#install-power-apps-mobile-app).
 6. Open Power Apps mobile and then sign in.
 
 
 ### Other sign in errors 
 
-- **Your device configuration is preventing sign-in**
+- **Your device configuration is preventing sign in**
 - **There was a problem signing you in**
 
 **Resolution**
 
-If you receive one of these messages it means that your IT administrator is using Microsoft Intune or requires you to sign-in securely using an authenticator app, but your device configuration is blocking the Power Apps mobile app from launching the authenticator app installed on your device. Microsoft authenticator apps are Authenticator and Company Portal. Your company may also use a third-party authenticator app. If you are unsure, ask your IT administrator which authenticator app you should be using and then follow the instructions below.
+If you receive one of these messages it means that your IT administrator is using Microsoft Intune or requires you to sign in securely using an authenticator app, but your device configuration is blocking the Power Apps mobile app from launching the authenticator app installed on your device. Microsoft authenticator apps are Authenticator and Company Portal. Your company may also use a third-party authenticator app. If you are unsure, ask your IT administrator which authenticator app you should be using and then follow the instructions below.
 
  > [!NOTE]
- > Power Apps requires a valid license to sign-in. For more information, see [Licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
+ > Power Apps requires a valid license to sign in. For more information, see [Licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
 
-Sometimes, updating and manually opening your authenticator app on your device before retrying to sign-in from the Power Apps mobile app is enough to fix the issue.
+Sometimes, updating and manually opening your authenticator app on your device before retrying to sign in from the Power Apps mobile app is enough to fix the issue.
  
 If the suggestion above did not work, the steps to resolve the issue are device manufacturer-specific and depend which authenticator app you have installed.
 
-For **Huawei** and **Honor** device, do the following:
+**Huawei or Honor device**
 
 1. Go to **Settings** > **Battery** > **App launch**. 
 
@@ -63,24 +63,24 @@ For **Huawei** and **Honor** device, do the following:
     > - **Applications** 
     > - **Background applications**
 
-2. Under **Manage automatically** for the authenticator app set the toggle switch to **OFF**.
-3. On the **Manage manually** screen ensure that **Secondary launch / Can be launched by other apps** is enabled. This will allow the Power Apps mobile app to launch the app.
+2. Under **Manage automatically**, on the authenticator app set the toggle switch to **OFF**.
+3. On the **Manage manually** screen ensure that **Secondary launch / Can be launched by other apps** is enabled. To allow the Power Apps mobile app to launch the app.
 
-For **Vivo** device, do the following:
+**Vivo device**
 
 1. Go to **Settings** > **More Settings** > **Applications** > **Autostart**.
 2. Set the toggle switch to **ON** for the authenticator app.
 
-If the above does not resolve the issue, try this:
+If the above does not resolve the issue, try these steps:
 
 1. Back up your Microsoft Authenticator accounts. For more info, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall the Power Apps mobile app.
 4. Install Microsoft Authenticator again and add your back up accounts again.
 5. Install the Power Apps mobile app.
-6. Open the Power Apps mobile app and sign-in.
+6. Open the Power Apps mobile app and sign in.
 
-If you still can't sign-in please email us at pamobsup@microsoft.com and include your device make and model, session ID and quote the error message that you got on your screen.
+If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message on your screen.
 
 ## Pin to Home does not work on iOS 14
 
@@ -98,7 +98,7 @@ When you disconnected or lose your internet connection during one of the followi
 
 In all of those scenarios, the download is interrupted when your internet connect is lost and your app will not fully download and appear blank.
 
-To workaround this issue, don’t disconnect from internet and let the app list fully download before disconnecting from the internet.
+To work around this issue, don’t disconnect from internet and let the app list fully download before disconnecting from the internet.
 
 
 
