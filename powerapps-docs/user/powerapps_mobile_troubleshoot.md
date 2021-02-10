@@ -98,7 +98,7 @@ Common scenarios the list of apps on the Power Apps mobile app appears blank whe
 
 In all of these scenarios, the download is interrupted when internet connection is lost and the apps don't fully download. This is why the list of apps appear blank.
 
-To work around this issue, don’t disconnect from internet and let the app list fully download before disconnecting from the internet.
+To work around this issue, don’t disconnect from the internet and let the app list fully download before disconnecting from the internet.
 
 
 
