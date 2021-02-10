@@ -1954,6 +1954,8 @@
       href: ./data-platform/export-to-data-lake-data-adf.md
     - name: Analyze exported data with Power BI
       href: ./data-platform/export-to-data-lake-data-powerbi.md
+    - name: Export to data lake FAQ
+      href: ./data-platform/export-data-lake-faq.yml
   - name: Security in Dataverse
     href: /power-platform/admin/wp-security
   - name: Privileges for customization
