@@ -2,7 +2,7 @@
 title: "Export to data lake | MicrosoftDocs"
 description: "Learn how to export table data to an Azure data lake in Power Apps"
 ms.custom: ""
-ms.date: 08/27/2020
+ms.date: 02/10/2021
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -132,6 +132,62 @@ Changes in Dataverse are continuously pushed to the corresponding CSV files by u
 Here's an example of the model.json file, which always points to the latest time-stamped account snapshot file. 
 
 ![Sample snapshot model.json file](media/sample-snapshot-json.png "Sample snapshot model.json file") 
+
+## How Dataverse table data is written to Azure data lake
+
+While using Export to data lake, all CrUD (create, update, delete) changes in data or metadata in Dataverse tables are incrementally pushed to Azure data lake. Depending on your use case, a user can select from one of many options to customize how data is written to the lake. Additionally, a user can also choose a different data partition strategy for each of their tables. While these settings help you control how Dataverse data is written to Azure data lake, it is especially useful in situations when you are trying to decide how you want to consume the data from Azure data lake.
+
+## Writing to data lake
+
+While writing Dataverse table data to the Azure data lake, based on the `createdOn` value (date and time when the record was created) there are two different settings to choose from 1) In place update and 2) Append only.
+
+The default setting (for tables where `createdOn` is available) is to do an in place update or upsert (update or insert) of the incremental data in the destination. If the change is new (corresponding row does not exist in the lake), in the case of a Create, the destination files are scanned, and the changes are inserted into the corresponding file partition in the lake. If the change is an Update (row exists in the lake), the corresponding file in the lake is updated (rather than inserted) with the incremental data. In other words, the default setting for all CrUD changes in Dataverse tables (where createdOn is available) is to do an in place update in the destination, in Azure data lake.
+
+You can switch the default behavior of an in-place update by using an optional setting called **Append only**. Rather than an in-place update, in **Append only** mode, incremental data from Dataverse tables will be appended to the corresponding file partition in the lake. This is a per table setting and available as a checkbox under **Advanced\Show advanced configuration settings**. For Dataverse tables with **Append only** turned on, all the CrUD changes are incrementally appended to the corresponding destination files in the lake. When you choose this option, the partition strategy defaults to **Year** and when data is written to the data lake, it is partitioned by yearly basis. **Append only** is also the default setting for Dataverse tables that do not have createdOn value.
+
+The table below describes how rows are handled in the lake against CrUD events for each of the data write options.
+
+
+|Event  |In-place update  |Append only  |
+|---------|---------|---------|
+|Create     |  The row is inserted in the partition file and is based on the createdOn value on the row.       | The row is added to the end of the partition file and is based on the createdOn value of the record.    |
+|Update     | If the row exists in the partition file, then it is replaced or updated with updated data. If it doesn't exist, it's inserted in the file.    |  The row, along with the updated version, is added to the end of the partition file.   |
+|Delete     |  If the row exists in the partition file, it's removed from the file.    | The row is added to the end of the partition file with `isDeleted column = True`.    |
+
+> [!NOTE]
+> For Dataverse tables where **Append only** is enabled, deleting a row in the source will not delete or remove the row in the lake. Instead, the deleted row is appended as a as a new row in the lake and the `isDeleted` column is set to True.
+
+Here are some additional details on when to use each of the options:
+	
+- In-place update: This is the default setting and recommended only if you want to connect directly to the data in lake and need the current state (not history or incremental changes). The file contains the full data set and can be utilized via Power BI or by copying the entire dataset for ETL (Extract, Transfer, Load) pipelines.
+- Append only: Select this option if you aren't directly connecting to data in the lake and want to incrementally copy data to another target using ETL pipelines. This option provides a history of changes to enable AI and ML scenarios.
+
+You can toggle the **Show advanced configuration settings** under **Advanced** in export to data lake to customize your data partition strategy and select options to write to the Azure data lake.
+
+:::image type="content" source="media/export-data-lake-show-advanced-config.png" alt-text="Show advanced configuration settings":::
+
+## Data partition strategy
+
+When you export table data from Dataverse to Azure data lake storage using export to data lake, the tables are partitioned (instead of a single file) in the lake based on the `createdOn` value on each row in the source. The default partition strategy is by year and data is partitioned in Azure data lake by yearly basis.
+
+Based on the Dataverse table volume and data distribution, you can choose a more granular partition strategy to partition your data by month. With this option, when Dataverse table data is written to the Azure data lake, it will be partitioned by monthly basis based on the `createdOn` value on each row in the source. This is a per table setting and is available as a checkbox under **Advanced\Show advanced configuration settings**.
+
+Additional details with examples of how data is handled in the lake with yearly or monthly partition strategy:
+
+:::image type="content" source="media/export-data-lake-partition-strategy.png" alt-text="Data partition strategy options":::
+
+## Frequently asked questions while exporting Dataverse table data to the Azure data lake
+
+Following are some best practices when you use export to data lake to export Dataverse table data to Azure data lake storage:
+
+### When should I use a yearly or monthly partition strategy?
+
+For Dataverse tables where data volume is high within a year,we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
+
+### When to use Append only mode for a historical view of changes?
+Append only mode is the recommended option while writing Dataverse table data to the lake, especially when the data volumes are high within a partition with frequently changing data. Again, this is a commonly used and highly recommended option for our Enterprise customers. Additionally, you can choose to use this mode for scenarios where the intent is to incrementally review changes from Dataverse and process the changes for ETL, AI/ML scenarios 
+Append only mode provides a history of changes (vs. the latest change or in place update) and enables several time series based AI scenarios such as prediction or forecasting analytics based on historical values. 
+
 
 ## Transporting an Export to Data Lake configuration across environments
 

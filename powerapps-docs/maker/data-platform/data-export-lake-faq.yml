@@ -1,0 +1,27 @@
+### YamlMime:FAQ
+metadata:
+  title: Frequently asked questions about exporting Dataverse table data to Azure data lake
+  description: Get answers to frequently asked questions about Power Apps export to data lake.
+  author: sabinn-msft
+  ms.service: powerapps
+  ms.search.keywords: 
+  ms.date: 02/10/2021
+  ms.author: sabinn
+  ms.reviewer: matp
+title: Power Apps component framework FAQs
+summary: This article provides information on frequently asked questions about exporting Dataverse table data to the Azure data lake.
+sections:
+- name: General
+  questions:
+   - question: When should I use a yearly or monthly partition strategy?
+     answer: |
+        For Dataverse tables where data volume is high within a year,we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
+   - question: When do I use Append only mode for a historical view of changes?
+     answer: |
+         Append only mode is the recommended option for writing Dataverse table data to the lake, especially when the data volumes are high within a partition with frequently changing data. Again, this is a commonly used and highly recommended option for enterprise customers. Additionally, you can choose to use this mode for scenarios where the intent is to incrementally review changes from Dataverse and process the changes for ETL, AI, and ML scenarios. Append only mode provides a history of changes, instead of the latest change or in place update, and enables several time series from AI scenarios, such as prediction or forecasting analytics based on historical values. 
+
+additionalContent: |
+
+  ## See also
+
+  [Export table data to Azure Data Lake Storage Gen2](export-to-data-lake.md)
