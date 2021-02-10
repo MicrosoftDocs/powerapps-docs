@@ -517,4 +517,5 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)  
 [Compare search options in Microsoft Dataverse](/powerapps/user/search)  
 [Retrieve related entity records with a query](retrieve-related-entities-query.md)  
-[Query Data using the Web API](query-data-web-api.md)
+[Query Data using the Web API](query-data-web-api.md)  
+[Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)

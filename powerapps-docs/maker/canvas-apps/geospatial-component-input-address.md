@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas, ce06122020
 ms.reviewer: tapanm
-ms.date: 7/7/2020
+ms.date: 1/19/2021
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -15,9 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Address input component (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Address input component 
 
 Entering addresses can be frustrating and error-prone, particularly in mobile scenarios. 
 
@@ -25,7 +23,7 @@ The address input component lets you see dynamic address suggestions as you type
 
 The component returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
 
-To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment) in addition to [enabling geospatial features for each app](geospatial-overview.md#enable-the-geospatial-features-for-each-app) that you want to use it in.
+To use the component, you need to [enable geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment).
 
 Make sure you also [review the prerequisites for using geospatial components](geospatial-overview.md#prerequisites).
 
@@ -40,10 +38,6 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 2. Expand **Input**.
 
 3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag it to position it anywhere on the screen.
-
-4. (Optional) Select **Allow** in the window that asks to know your location. This enables the component to bias results by the user's current location.
-
-    ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
 You can modify the component by using a number of [properties](#input-properties).
 
