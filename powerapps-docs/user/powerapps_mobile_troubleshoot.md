@@ -76,10 +76,10 @@ If the issue is still not fixed, then try these steps:
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall Power Apps mobile.
 4. Install Microsoft Authenticator again and add your back up accounts again.
-5. Install Power Apps mobile.
+5. Install [Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#install-power-apps-mobile-app).
 6. Open Power Apps mobile and sign in.
 
-If you still can't sign in, then email us at **pamobsup@microsoft.com** and include your device make and model, session ID, and provide the exact error message that you get.
+If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
 ## Pin to Home does not work on iOS 14
 
