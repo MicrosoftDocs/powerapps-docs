@@ -39,8 +39,8 @@ If you already have the Microsoft Authenticator app installed and you're having 
 
 ### Sign in errors 
  
-- **Error: Your device configuration is preventing sign in**
-- **Error: There was a problem signing you in**
+**Error: Your device configuration is preventing sign in**
+**Error: There was a problem signing you in**
 
 If you get one of these error messages, it means your company's IT department requires Microsoft Intune or an authentication app to sign in securely. However, your device setup is blocking Power Apps mobile from launching the authentication app that's instealled on your device.
 
