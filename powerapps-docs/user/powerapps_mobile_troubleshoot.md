@@ -89,7 +89,7 @@ If you still can't sign in, then email us at pamobsup@microsoft.com and include 
 
 ## App list appears blank on the Power Apps mobile app
 
-Common scenarios the list of apps on Power Apps mobile appears blank when internet connection is lost or disconnected. 
+Common scenarios the list of apps in Power Apps mobile appears blank when internet connection is lost or disconnected. 
 
 -	It's the first time you're signing in to the mobile app and the list of apps is still loading and internet connection is lost. 
 -	You’re signed in and see the app list then swipe down to refresh the app list and internet connection is lost. 
