@@ -92,9 +92,9 @@ If you're still on iOS 13, you can continue to use the Safari browser to pin an 
 
 Common scenarios the list of apps on the Power Apps mobile app appear blank when internet connection is lost or disconnected. 
 
--	Internet connect is lost during first time sign in process to the Power Apps mobile app while the list of apps is still loading.
--	You’re signed in and see your apps and swipe down on the list of apps to refresh the app list and you lose internet connection. 
--	You’re coming back online from working in offline mode and internet connection is lost while you coming back online.
+-	Internet connect is lost during your the first time you sign in to Power Apps mobile app and the list of apps is still loading.
+-	You’re signed in and see the app list and swipe down to refresh the app list and internet connection is lost. 
+-	You’re coming back online from working in offline mode and internet connection is lost while you're coming back online.
 
 In all of these scenarios, the download is interrupted when internet connection is lost and the apps don't fully download. This is why the list of apps appear blank.
 
