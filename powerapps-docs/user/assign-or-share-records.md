@@ -153,5 +153,14 @@ Use advanced find to search for rows and then reassign them to someone else. For
      > [!div class="mx-imgBorder"]
      > ![Select the type of permissions](media/share-6.png "Select the type of permissions")
  
+ 
+ ## Remove someone from a shared row
+ 
+ If you are the owner of the record you can remove someone from the shared row. 
+ 1. From a list of rows (that you owned), select the row that you want to remove someone from the shared row.
+ 2. On the command bar, select **Share**.
+ 3. On the share dialog box, select the user/team who you want to remove sharing.
+ 4. Select the **Remove Selected items**.
+ 5. Click the **Share** button.
 
  
