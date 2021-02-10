@@ -29,10 +29,10 @@ If you don’t have the Microsoft Authenticator app, download the app from the A
 
 If you already have the Microsoft Authenticator app installed and you're having sign in issues, then try these steps:
 
-1. Backup your Microsoft Authenticator account. For more information, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
+1. Back up your Microsoft Authenticator account. For more information, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall the Power Apps mobile app.
-4. Reinstall the Microsoft Authenticator app and add your backup account.
+4. Reinstall the Microsoft Authenticator app and add your back up account.
 5. Reinstall the [Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#install-power-apps-mobile-app).
 6. Open Power Apps mobile and then sign in.
 
@@ -73,10 +73,10 @@ If the suggestion above did not work, the steps to resolve the issue are device 
 
 If the above does not resolve the issue, try these steps:
 
-1. Backup your Microsoft Authenticator accounts. For more info, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
+1. Back up your Microsoft Authenticator accounts. For more info, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall the Power Apps mobile app.
-4. Install Microsoft Authenticator again and add your backup accounts again.
+4. Install Microsoft Authenticator again and add your back up accounts again.
 5. Install the Power Apps mobile app.
 6. Open the Power Apps mobile app and sign in.
 
