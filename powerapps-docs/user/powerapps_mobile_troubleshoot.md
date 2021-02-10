@@ -17,7 +17,7 @@ search.app:
   - PowerApps
 ---
 
-# Troubleshoot issues for the Power Apps mobile app
+# Troubleshoot issues for Power Apps mobile app
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](run-canvas-and-model-apps-on-mobile.md).
 
@@ -25,13 +25,13 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 ### Unable to sign in due to issues with the Microsoft Authenticator app 
 
-If you don’t have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to the Power Apps mobile again.
+If you don’t have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to Power Apps mobile again.
 
 If you already have the Microsoft Authenticator app installed and you're having sign in issues, then try these steps:
 
 1. Back up your Microsoft Authenticator account. For more information, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
 2. Uninstall the Microsoft Authenticator app.
-3. Uninstall the Power Apps mobile app.
+3. Uninstall Power Apps mobile.
 4. Reinstall the Microsoft Authenticator app and add your back up account.
 5. Reinstall the [Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#install-power-apps-mobile-app).
 6. Open Power Apps mobile and then sign in.
@@ -49,7 +49,7 @@ Microsoft authentication apps are Authenticator and Company Portal. Your company
  > [!NOTE]
  > Power Apps requires a valid license to sign in. For more information, see [Licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
 
-Sometimes, updating and manually opening the authentication app on your device before signing in to the Power Apps mobile app can fix the problem. If this don't fix the issue, then follow the next steps depending on your device and manufacturer. 
+Sometimes, updating and manually opening the authentication app on your device before signing in to the Power Apps mobile can fix the problem. If this don't fix the issue, then follow the next steps depending on your device and manufacturer. 
 
 #### Huawei or Honor device
 
@@ -73,22 +73,22 @@ If the issue is still not fixed, then try this:
 
 1. Back up your Microsoft Authenticator accounts. For more info, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery) 
 2. Uninstall the Microsoft Authenticator app.
-3. Uninstall the Power Apps mobile app.
+3. Uninstall Power Apps mobile.
 4. Install Microsoft Authenticator again and add your back up accounts again.
-5. Install the Power Apps mobile app.
-6. Open the Power Apps mobile app and sign in.
+5. Install Power Apps mobile.
+6. Open Power Apps mobile and sign in.
 
 If you still can't sign in, then email us at **pamobsup@microsoft.com** and include your device make and model, session ID, and provide the exact error message that you get.
 
 ## Pin to Home does not work on iOS 14
 
-**iOS device running iOS 14**: The Safari browser no longer supports the **Pin to Home** functionality for Power Apps mobile app. You need to use the Siri Shortcuts app to pin an app to the Home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-siri-shortcuts-to-pin-home-ios-14-or-later).
+**iOS device running iOS 14**: The Safari browser no longer supports the **Pin to Home** functionality for Power Apps mobile. You need to use the Siri Shortcuts app to pin an app to the Home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-siri-shortcuts-to-pin-home-ios-14-or-later).
 
 **iOS 13**: You can still use the Safari browser to pin an app to the Home screen. For more information, see [Pin an app to the home screen](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-safari-to-pin-to-home-ios-13-or-earlier)
 
 ## App list appears blank on the Power Apps mobile app
 
-Common scenarios the list of apps on the Power Apps mobile app appear blank when internet connection is lost or disconnected. 
+Common scenarios the list of apps on Power Apps mobile appear blank when internet connection is lost or disconnected. 
 
 -	It's the first time you sign in to the mobile app and the list of apps is still loading and internet connection is lost. 
 -	You’re signed in and see the app list then swipe down to refresh the app list and internet connection is lost. 
