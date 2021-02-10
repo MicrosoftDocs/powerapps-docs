@@ -70,7 +70,7 @@ Sometimes, updating and manually opening the authentication app on your device b
 1. Go to **Settings** > **More Settings** > **Applications** > **Autostart**.
 2. Set the toggle switch to **ON** for the authenticator app.
 
-If the issue is still not fixed, then try this:
+If the issue is still not fixed, then try these steps:
 
 1. Back up your Microsoft Authenticator accounts. For more info, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery) 
 2. Uninstall the Microsoft Authenticator app.
