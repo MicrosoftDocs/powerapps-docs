@@ -43,14 +43,14 @@ If you already have the Microsoft Authenticator app installed and you're having 
 
 **Error: There was a problem signing you in**
 
-If you get one of these error messages, it means your company's IT department requires Microsoft Intune or an authentication app to sign in securely. However, your device setup is blocking Power Apps mobile from launching the authentication app that's instealled on your device.
+If you get one of these error messages, it means your company's IT department requires Microsoft Intune or an authentication app to sign in securely. However, your device setup is blocking Power Apps mobile from launching the authentication app that's installed on your device.
 
-Microsoft authentication apps are Authenticator and Company Portal. Your company may use a third-party authentication app. If you're not sure, ask your IT department or help desk which authentication app to use. Once you have the corrent authentication app, then follow the instructions below.
+Microsoft authentication apps are Authenticator and Company Portal. Your company may use a third-party authentication app. If you're not sure, ask your IT department or help desk which authentication app to use. Once you have the correct authentication app, then follow the steps below.
 
  > [!NOTE]
  > Power Apps requires a valid license to sign in. For more information, see [Licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
 
-Sometimes, updating and manually opening the authentication app on your device before signing in to the Power Apps mobile can fix the problem. If this don't fix the issue, then follow the next steps depending on your device and manufacturer. 
+Sometimes, updating and manually opening the authentication app on your device before signing in to the Power Apps mobile can fix the problem. If this doesn't fix the issue, then follow the next steps depending on your device and manufacturer. 
 
 #### Huawei or Honor device
 
@@ -89,13 +89,13 @@ If you still can't sign in, then email us at **pamobsup@microsoft.com** and incl
 
 ## App list appears blank on the Power Apps mobile app
 
-Common scenarios the list of apps on Power Apps mobile appear blank when internet connection is lost or disconnected. 
+Common scenarios the list of apps on Power Apps mobile appears blank when internet connection is lost or disconnected. 
 
 -	It's the first time you sign in to the mobile app and the list of apps is still loading and internet connection is lost. 
 -	You’re signed in and see the app list then swipe down to refresh the app list and internet connection is lost. 
 -	You’re coming back online from working in offline mode and internet connection is lost while you're coming back online.
 
-In all of these scenarios, the download is interrupted when internet connection is lost so the apps don't fully download. This is why the list of apps appear blank.
+In all of these scenarios, the download is interrupted when internet connection is lost so the apps don't fully download. This is why the list of apps appears blank.
 
 To work around this issue, don’t disconnect from the internet and let the app list fully download before disconnecting from the internet.
 
