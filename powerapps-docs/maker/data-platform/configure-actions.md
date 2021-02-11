@@ -99,7 +99,7 @@ When editing an action, you have the following options:
   
   > [!NOTE]
   > - You can’t enable rollback if a custom action is invoked directly from within a workflow. You can enable rollback if an action is triggered by a Power Apps web services message.  
-  > - If the operation defined does not change data, but only retrieves data, there are certain situations where performance can be improved by disabling Enable rollback.
+  > - If the action defined does not change data, but only retrieves data, there are certain situations where performance can be improved by disabling Enable rollback.
   
 - **Activate As**  
 
