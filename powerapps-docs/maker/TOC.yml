@@ -1318,7 +1318,7 @@
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for the Power Apps mobile app
-    href: ../user/powerapps_mobile_troubleshoot.md
+    href: ../user/powerapps-mobile-troubleshoot.md
     
 - name: Portals
   items:
