@@ -93,13 +93,13 @@ When editing an action, you have the following options:
   
 - **Enable rollback**  
 
-Generally, processes that support transactions will “undo” (or roll back) the entire operation if any part of them fails. There are exceptions to this. Actions executed in code by a developer initiated by the action might not support transactions. An example would be when the code perform actions in other systems that are beyond the scope of the transaction. Those can’t be rolled back by the action running in an app. Some messages in the platform don’t support transactions. But everything you can do just with the user interface of the action will support transactions. All the actions that are part of a real-time workflow are considered in transaction, but with actions you have the option to opt out of this.  
+  Generally, processes that support transactions will “undo” (or roll back) the entire operation if any part of them fails. There are exceptions to this. Actions executed in code by a developer initiated by the action might not support transactions. An example would be when the code perform actions in other systems that are beyond the scope of the transaction. Those can’t be rolled back by the action running in an app. Some messages in the platform don’t support transactions. But everything you can do just with the user interface of the action will support transactions. All the actions that are part of a real-time workflow are considered in transaction, but with actions you have the option to opt out of this.  
   
-You should consult with the developer who will use this message to determine whether it must be in transaction or not. Generally, an action should be in transaction if the actions performed by the business process don’t make sense unless all of them are completed successfully. The classic example is transferring funds between two bank accounts. If you withdraw funds from one account you must deposit them in the other. If either fails, both must fail.  
+  You should consult with the developer who will use this message to determine whether it must be in transaction or not. Generally, an action should be in transaction if the actions performed by the business process don’t make sense unless all of them are completed successfully. The classic example is transferring funds between two bank accounts. If you withdraw funds from one account you must deposit them in the other. If either fails, both must fail.  
   
-> [!NOTE]
-> - You can’t enable rollback if a custom action is invoked directly from within a workflow. You can enable rollback if an action is triggered by a Power Apps web services message.  
-> - If the operation defined does not change data, but only retrieves data, there are certain situations where performance can be improved by disabling Enable rollback.
+  > [!NOTE]
+  > - You can’t enable rollback if a custom action is invoked directly from within a workflow. You can enable rollback if an action is triggered by a Power Apps web services message.  
+  > - If the operation defined does not change data, but only retrieves data, there are certain situations where performance can be improved by disabling Enable rollback.
   
 - **Activate As**  
 
@@ -110,11 +110,6 @@ You should consult with the developer who will use this message to determine whe
   In this area, you’ll specify any data that the action expects to start and what data will be passed out of the action. More information: [Define process arguments](configure-actions.md#BKMK_DefineProcessArgs)  
   
 - **Add Stages, Conditions and Actions**  
-
-
-
-<!-- from editor: The following link opens a section titled "Add stages and steps". Do you want to change this to match? -->
-
 
   Like other processes, you specify what actions to perform and when to perform them. More information: [Add stages, conditions and actions](configure-actions.md#BKMK_AddStagesConditionsAndActions)
 
