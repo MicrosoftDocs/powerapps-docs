@@ -33,9 +33,9 @@ To delete the blog, select **Delete**, and then select **Yes** in the confirmati
 
 ### Security
 
-**Read** access to a blog is inherited from read permissions on the blog's Parent Page. If a user can read the parent webpage, they can read the blog and all of its published posts. See [Control webpage access for portals](webpage-access-control.md).  
+**Read** access to a blog is inherited from read permissions on the blog's Parent Page. If a user can read the parent webpage, they can read the blog and all of its published posts. See [Control webpage access for portals](../configure/webpage-access-control.md).  
 
-**Change/Write** access to a blog is controlled through the Author Roles relationship. This relationship specifies the web roles that grant authorship permission on the blog. Any portal users associated with any of these roles will be granted the permission to create new posts, edit and delete their own posts, and edit the attributes and settings of the blog itself. See [Create web roles for portals](create-web-roles.md).  
+**Change/Write** access to a blog is controlled through the Author Roles relationship. This relationship specifies the web roles that grant authorship permission on the blog. Any portal users associated with any of these roles will be granted the permission to create new posts, edit and delete their own posts, and edit the attributes and settings of the blog itself. See [Create web roles for portals](../configure/create-web-roles.md).  
 
 > [!Note]
 > Only the specific author of a blog post can edit or delete that post, through the front-side portal editing interface. The author of a post can also see their own unpublished posts, but not those of other authors.
@@ -121,7 +121,7 @@ It is important to note that the way in which many of the content/display-orient
 
 ## Manage blog post comments on a portal
 
-For portal users with blog author permissions, blog comments can be managed using the portal inline editing interface. See [Use the front-side editing engine to publish content](publish-content-editing-engine.md). If your user account has the necessary permissions, the inline editing interface will appear automatically when you sign in to the portal and go to a blog post.  
+For portal users with blog author permissions, blog comments can be managed using the portal inline editing interface. If your user account has the necessary permissions, the inline editing interface will appear automatically when you sign in to the portal and go to a blog post.  
 
 The exact appearance of the user interface used to edit or delete a blog post comment is determined by the page template being used to render the post, but it will generally involve links or buttons positioned inline, alongside each comment. Selecting **Edit** will launch the comment editor, which allows comment moderators to edit comment content or toggle its approval status.
 
@@ -146,6 +146,5 @@ It is important to note that the way in which many of the content/display-orient
 
 ### See also
 
-[Get started with the portal content editor](get-started-portal-content-editor.md)  
-[Add dynamic content and create custom templates](custom-templates-dynamic-content.md)  
+[Get started with the portal content editor](../portal-content-editor.md) 
 

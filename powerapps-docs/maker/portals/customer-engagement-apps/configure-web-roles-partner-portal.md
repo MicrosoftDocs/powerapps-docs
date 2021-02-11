@@ -63,8 +63,6 @@ Website Access Permissions is a permission set, associated with a web role, that
 To add website access permission to a web role, just create a new Website Access entity, give it the permission set you want, name it, associate with the website in question, save, and then associate it with the web role(s) you desire.
 
 ### See also
-[Control webpage access for portals](webpage-access-control.md)  
-[Add record-based security using entity permissions for portals](assign-entity-permissions.md)  
-[Create a partner account on a partner relationship management (PRM) portal](configure-web-roles-partner-portal.md#create-a-partner-account-on-a-prm-portal)  
-[Create web roles for portals](create-web-roles.md)  
-[Configure web roles for a PRM portal](configure-web-roles-partner-portal.md)
+[Control webpage access for portals](../configure/webpage-access-control.md)  
+[Add record-based security using entity permissions for portals](../configure/assign-entity-permissions.md)  
+[Create web roles for portals](../configure/create-web-roles.md)  

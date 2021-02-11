@@ -104,5 +104,4 @@ The following example shows a [web template](https://docs.microsoft.com/powerapp
 ![Web template](media/web-template.png)
 
 ### See also
-[Get started with the portal content editor](get-started-portal-content-editor.md)  
-[Add dynamic content and create custom templates](custom-templates-dynamic-content.md)  
+[Get started with the portal content editor](../portal-content-editor.md) 

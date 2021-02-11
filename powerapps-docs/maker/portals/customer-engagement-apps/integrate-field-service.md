@@ -12,7 +12,7 @@ ms.reviewer:
 
 # Integrate Field Service 
 
-The Partner [!include[](../includes/pn-field-service.md)] solution can now be installed on a Partner Portal ([!include[](../includes/pn-field-service.md)] and Partner Portal solutions must be installed first). With this solution installed, customers and partners can view various parts of the [!include[](../includes/pn-field-service.md)] section on the partner portal. Some of the available entities that can be viewed are assets, work orders, and invoices.
+The Partner [!include[](../../../includes/pn-field-service.md)] solution can now be installed on a Partner Portal ([!include[](../../../includes/pn-field-service.md)] and Partner Portal solutions must be installed first). With this solution installed, customers and partners can view various parts of the [!include[](../../../includes/pn-field-service.md)] section on the partner portal. Some of the available entities that can be viewed are assets, work orders, and invoices.
 
 ## View agreements on the partner portal
 
