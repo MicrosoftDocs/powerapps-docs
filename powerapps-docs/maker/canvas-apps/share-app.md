@@ -140,6 +140,7 @@ If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-Azur
 
 After a while<!--note from editor: Is it possible to be more specific here? "After a few hours," "after these changes are propagated,"...?-->, you can discover this group in the Power Apps sharing panel and share apps with this group.
 <a name="manage-entity-permissions"></a>
+<a name="dataverse"></a>
 
 ## Manage entity permissions for the current version of Dataverse
 <!--note from editor: The structure got a bit confusing in here. The only reason I can see to keep these two headings in a row is if you're eventually going to add other headings besides "Dataverse." But if not, I think either we need another H2 for the old version of Dataverse (as shown below), or just turn that section about previous versions into a note.-->
