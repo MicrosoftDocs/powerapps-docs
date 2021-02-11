@@ -73,7 +73,7 @@ Choose the download link for your device:
 - For Android, go to [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps). 
 
 
-## Open Power Apps, and sign in
+## Sign in
 
 Open Power Apps on your mobile device, and sign in by using your Azure Active Directory credentials.
 
