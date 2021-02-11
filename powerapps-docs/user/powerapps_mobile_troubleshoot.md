@@ -87,17 +87,15 @@ If you still can't sign in, then email us at pamobsup@microsoft.com and include 
 
 **iOS 13**: You can still use the Safari browser to pin an app to the Home screen. For more information, see [Pin an app to the home screen](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-safari-to-pin-to-home-ios-13-or-earlier)
 
-## App list appears blank on the Power Apps mobile app
+## App list is empty
 
-Common scenarios the list of apps in Power Apps mobile appears blank when internet connection is lost or disconnected. 
+The app list in the Power Apps mobile app may appear empty when you lose internet connection before the app list has completely downloaded. This can happend when:
 
--	It's the first time you're signing in to the mobile app and the list of apps is still loading and internet connection is lost. 
--	You’re signed in and see the app list then swipe down to refresh the app list and internet connection is lost. 
--	You’re coming back online from working in offline mode and internet connection is lost while you're coming back online.
+-	It's the first time you're signing in to the mobile app.
+-	When you pull down to refresh the app list.
+-	When you come back online after a period of being offline. The app list is automatically refreshed.
 
-In all of these scenarios, the download is interrupted when internet connection is lost so the apps don't fully download. This is why the list of apps appears blank.
-
-To work around this issue, don’t disconnect from the internet and let the app list fully download before disconnecting from the internet.
+To resolve connection related issues, ensure you remain connected to the internet while the app list is fully downloaded.
 
 
 
