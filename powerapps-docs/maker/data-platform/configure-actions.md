@@ -62,7 +62,7 @@ Like real-time workflow processes, actions have the following properties in the 
 
   This property establishes that this is an action process. You can’t change this after you save the process.  
   
-- **table**  
+- **Entity**  
 
   With action processes, you can select a table to provide context for the real-time workflow just like other types of processes, but you also have the option to choose **None (global)**. Use this if your action doesn’t require the context of a specific table. You can’t change this after you save the process.  
   
@@ -99,7 +99,7 @@ When editing an action, you have the following options:
   
   > [!NOTE]
   > - You can’t enable rollback if a custom action is invoked directly from within a workflow. You can enable rollback if an action is triggered by a Power Apps web services message.  
-  > - If the action defined does not change data, but only retrieves data, there are certain situations where performance can be improved by disabling Enable rollback.
+  > - If the action defined does not change data, but only retrieves data, there are certain situations where performance can be improved by disabling **Enable rollback.**
   
 - **Activate As**  
 
