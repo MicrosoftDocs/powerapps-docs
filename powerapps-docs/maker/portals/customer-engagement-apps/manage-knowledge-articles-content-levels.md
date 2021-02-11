@@ -18,7 +18,7 @@ By default, three content access levels are available: Default, Registered Users
 
 When you create a new knowledge article, the Default content access level is applied to it by default. When you translate or version your knowledge articles, the associated products and content access levels are copied to the new version or translation, thereby simplifying the authoring experience. You can validate the content access levels and products associated with an article before publishing it.
 
-Portal navigation and search results consider the content access level(s) associated to the logged-in user. If the user does not have the necessary content access level permission to view a knowledge article, or if the user attempts to open an article under [faceted search conditions](improve-portal-search-faceted-search.md), the Article Unavailable message is displayed.
+Portal navigation and search results consider the content access level(s) associated to the logged-in user. If the user does not have the necessary content access level permission to view a knowledge article, or if the user attempts to open an article under [faceted search conditions](../configure/improve-portal-search-faceted-search.md), the Article Unavailable message is displayed.
 
 To enable content access level based filtering of knowledge articles on your portal, set the value of the **KnowledgeManagement/ContentAccessLevel/Enabled** site setting to true. By default, the value of the site setting is set to false.
 

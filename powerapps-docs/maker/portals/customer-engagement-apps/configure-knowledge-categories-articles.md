@@ -41,7 +41,7 @@ This section helps you understand how to create a new category for knowledge art
    ![Associate a category to a knowledge article](media/kb-associate-category.png "Associate a category to a knowledge article")
 
 > [!NOTE]
-> You can also add related articles, related products, and keywords to a knowledge article. For more information on managing knowledge articles, see [manage knowledge articles](../customer-service/customer-service-hub-user-guide-knowledge-article.md).
+> You can also add related articles, related products, and keywords to a knowledge article. For more information on managing knowledge articles, see [Create and manage knowledge articles](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article).
 
 ## Remove a category from an article
 

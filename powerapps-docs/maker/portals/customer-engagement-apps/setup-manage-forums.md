@@ -32,7 +32,7 @@ Forums can be created, edited and deleted within Dynamics 365 Portals.
 
 ## Manage forums from the portal content editor
 
-For portal users with content management permissions, a limited set of properties of forums can be managed by using the [front-side editing engine to publish content](publish-content-editing-engine.md). If your user account has been assigned the necessary permission set, the inline editing interface will appear automatically when you sign in to the portal.  
+For portal users with content management permissions, a limited set of properties of forums can be managed by using the [content editor](../use-content-editor.md). If your user account has been assigned the necessary permission set, the inline editing interface will appear automatically when you sign in to the portal.  
 
 1. Navigate to the forums parent page within the portal.
 

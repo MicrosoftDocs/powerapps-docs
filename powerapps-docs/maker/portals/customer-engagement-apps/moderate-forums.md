@@ -15,7 +15,7 @@ The moderators are users of the forum who are granted access to the forum's thre
 
 ## Assign moderators to forums
 
-To specify moderators for a forum, the contact record of the portal user must be assigned to a web role that is associated with a Forum Access Permission record that has the Right set to Grant Change. For more information, see [Create web roles for portals](create-web-roles.md).  
+To specify moderators for a forum, the contact record of the portal user must be assigned to a web role that is associated with a Forum Access Permission record that has the Right set to Grant Change. For more information, see [Create web roles for portals](../configure/create-web-roles.md).  
 
 ## Forum moderation within the portal
 

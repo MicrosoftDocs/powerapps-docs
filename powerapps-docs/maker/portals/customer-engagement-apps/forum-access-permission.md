@@ -31,7 +31,7 @@ Forum Access Permission is a security rule that can be assigned to a particular 
     ![Edit forum access permission](media/edit-forum-access-permission.png "Edit forum access permission")  
 
 > [!NOTE]
-> A web role must be assigned for the rule to apply for users associated with the given role. See [Create web roles for portals](create-web-roles.md).
+> A web role must be assigned for the rule to apply for users associated with the given role. See [Create web roles for portals](../configure/create-web-roles.md).
 
 The table below explains many of the Forum Access Permission attributes used by portals.
 
