@@ -52,7 +52,7 @@ Microsoft authentication apps are Authenticator and Company Portal. Your company
 
 Sometimes, updating and manually opening the authentication app on your device before signing in to Power Apps mobile can fix the problem. If this doesn't fix the issue, then follow the next steps depending on your device manufacturer and authentication app. 
 
-#### Huawei or Honor device
+**Huawei or Honor device**
 
 1. Go to **Settings** > **Battery** > **App launch**. 
 
@@ -65,7 +65,7 @@ Sometimes, updating and manually opening the authentication app on your device b
 2. Under **Manage automatically**, on the authenticator app set the toggle switch to **OFF**.
 3. On the **Manage manually** screen ensure that **Secondary launch / Can be launched by other apps** is enabled. To allow the Power Apps mobile app to launch the app.
 
-#### Vivo device
+**Vivo device**
 
 1. Go to **Settings** > **More Settings** > **Applications** > **Autostart**.
 2. Set the toggle switch to **ON** for the authenticator app.
