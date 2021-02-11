@@ -28,8 +28,8 @@ If you're on a Windows device, you can only run canvas apps; model-driven apps a
 
 | **App type** | **iOS** |**Android** |**Windows** |
 | --- | --- |--- |--- |
-| **Model-driven apps** |X |X| |
-| **Canvas apps** |X |X|X|
+| **[Model-driven](https://docs.microsoft.com/powerapps/maker/#model-driven-apps)** |X |X| |
+| **[Canvas](https://docs.microsoft.com/powerapps/maker/#canvas-apps)** |X |X|X|
 
 
 
