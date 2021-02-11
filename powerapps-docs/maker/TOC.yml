@@ -1746,12 +1746,12 @@
                   href: ./portals/customer-engagement-apps/enable-idea-content-moderation.md
             - name: Manage cases in portals
               href: ./portals/customer-engagement-apps/case-management.md
-            - name: Configure web roles for a partner portal
-              href: ./portals/customer-engagement-apps/configure-web-roles-partner-portal.md
-            - name: Integrate Project Service Automation
-              href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
-            - name: Integrate Field Service
-              href: ./portals/customer-engagement-apps/integrate-field-service.md
+        - name: Configure web roles for a partner portal
+          href: ./portals/customer-engagement-apps/configure-web-roles-partner-portal.md
+        - name: Integrate Project Service Automation
+          href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
+        - name: Integrate Field Service
+          href: ./portals/customer-engagement-apps/integrate-field-service.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
