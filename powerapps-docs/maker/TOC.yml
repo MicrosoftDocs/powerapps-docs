@@ -1738,10 +1738,12 @@
                   href: ./portals/customer-engagement-apps/subscribe-alerts.md
             - name: Manage blogs
               href: ./portals/customer-engagement-apps/manage-blogs.md
-            - name: Manage ideas
-              href: ./portals/customer-engagement-apps/crowdsource-ideas.md
-            - name: Enable content moderation on ideas
-              href: ./portals/customer-engagement-apps/enable-idea-content-moderation.md
+            - name: Ideas
+              items:
+                - name: Manage ideas
+                  href: ./portals/customer-engagement-apps/crowdsource-ideas.md
+                - name: Enable content moderation on ideas
+                  href: ./portals/customer-engagement-apps/enable-idea-content-moderation.md
             - name: Manage cases in portals
               href: ./portals/customer-engagement-apps/case-management.md
             - name: Configure web roles for a partner portal
