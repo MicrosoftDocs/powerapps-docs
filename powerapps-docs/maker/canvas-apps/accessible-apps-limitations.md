@@ -52,7 +52,7 @@ Expandable sections, also known as disclosures, contain content that is hidden u
 Mention the expanded state in the **[AccessibleLabel](controls/properties-accessibility.md)** of the button. For example, “Show more details. Collapsed.” Update the **AccessibleLabel** when the expanded state changes. Position the expanded content immediately after the button so that screen reader users can logically navigate to it. Push other content down when the section expands.
 
 ## Landmarks
-You can create heading landmarks with **[Label](controls/control-text-box.md)** controls. Navigation, banner, and other landmarks are not supported. Power Apps automatically sets the main landmark to the app screen.
+You can create headings with **[Label](controls/control-text-box.md)** controls. Navigation, banner, and other landmarks are not supported. Power Apps automatically sets the main landmark to the app screen.
 
 For other landmarks, use a heading as a workaround.
 
