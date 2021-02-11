@@ -167,7 +167,7 @@ version, and other session details. You can also turn the **Auto save** option *
 | Auto save | Set **Auto save** *On* or *Off*. When *On*, saves your changes at the interval of 2 minutes. |
 | Power Apps version | Shows the version of Power Apps. |
 | About Power Apps | Additional information and help. |
-| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md?branch=teams-preview#about-tab)
+| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md#about)
 
 > [!NOTE]
 > We recommend that you keep the **Auto save** setting turned **On** and
