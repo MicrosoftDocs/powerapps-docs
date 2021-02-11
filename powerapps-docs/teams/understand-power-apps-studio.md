@@ -5,7 +5,7 @@ author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 02/11/2021
 ms.author: emcoope
 ms.reviewer: tapanm
 ---
@@ -308,6 +308,16 @@ select the control, or select **(...)** and then select **Add to canvas**.
 
 For more information about the controls that you can insert, and their properties
 and definitions, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
+
+#### Classic controls
+
+Dataverse for Teams uses [Fluent UI controls](use-the-fluent-ui-controls.md) by default. If required, you can enable classic controls by using the experimental feature setting. To do this, go to **Settings** -> **Advanced settings** -> toggle **Classic controls** to **On** under experimental features.
+
+After you enable classic controls, you'll be able to see and add them from the **Classic** category.
+
+![Classic controls](media/classic-control.png "Classic controls")
+
+For example, you may need to enable classic controls when using [dependent drop-down lists](../maker/canvas-apps/dependent-drop-down-lists.md) when using Dataverse for Teams.
 
 ### Data
 
