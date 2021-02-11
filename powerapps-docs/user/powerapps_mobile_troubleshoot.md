@@ -89,7 +89,7 @@ If you still can't sign in, then email us at pamobsup@microsoft.com and include 
 
 ## App list is empty
 
-The app list in the Power Apps mobile app may appear empty when you lose internet connection before the app list has completely downloaded. This can happen is one of the following scenarios:
+The app list in the Power Apps mobile app may appear empty when you lose internet connection before the app list has completely downloaded. This can happen in any of the following scenarios:
 
 -	It's the first time you're signing in to the mobile app.
 -	When you pull down to refresh the app list.
