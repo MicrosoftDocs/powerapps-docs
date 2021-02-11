@@ -35,7 +35,7 @@ Export to Data Lake provides these features:
 - Continuous replication of tables to Data Lake Storage Gen2.
 - Initial write, followed by incremental writes for data and metadata. 
 - Replication of both standard and custom tables. 
-- Replication of create, update, and delete (CrUD) transactions. 
+- Replication of create, update, and delete (CUD) transactions. 
 - Continuous snapshot updates for large analytics scenarios. 
 - Facilitated metadata discovery and interoperability between data producers and consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning.
 
@@ -135,17 +135,17 @@ Here's an example of the model.json file, which always points to the latest time
 
 ## How Dataverse table data is written to Azure data lake
 
-While using Export to data lake, all CrUD (create, update, delete) changes in data or metadata in Dataverse tables are incrementally pushed to Azure data lake. Depending on your use case, a user can select from one of many options to customize how data is written to the lake. Additionally, a user can also choose a different data partition strategy for each of their tables. While these settings help you control how Dataverse data is written to Azure data lake, it is especially useful in situations when you are trying to decide how you want to consume the data from Azure data lake.
+While using Export to data lake, all CUD (create, update, delete) changes in data or metadata in Dataverse tables are incrementally pushed to Azure data lake. Depending on your use case, a user can select from one of many options to customize how data is written to the lake. Additionally, a user can also choose a different data partition strategy for each of their tables. While these settings help you control how Dataverse data is written to Azure data lake, it is especially useful in situations when you are trying to decide how you want to consume the data from Azure data lake.
 
 ## Writing to data lake
 
 While writing Dataverse table data to the Azure data lake, based on the `createdOn` value, which is the date and time when the record was created, there are two different settings to choose from. They are, **In place update** and **Append only**.
 
-The default setting (for tables where `createdOn` is available) is to do an in place update or upsert (update or insert) of the incremental data in the destination. If the change is new and a corresponding row does not exist in the lake, in the case of a create, the destination files are scanned, and the changes are inserted into the corresponding file partition in the lake. If the change is an update and a row exists in the lake, the corresponding file in the lake is updated, rather than inserted, with the incremental data. In other words, the default setting for all CrUD changes in Dataverse tables, where createdOn is available, is to do an in place update in the destination, in Azure data lake.
+The default setting (for tables where `createdOn` is available) is to do an in place update or upsert (update or insert) of the incremental data in the destination. If the change is new and a corresponding row does not exist in the lake, in the case of a create, the destination files are scanned, and the changes are inserted into the corresponding file partition in the lake. If the change is an update and a row exists in the lake, the corresponding file in the lake is updated, rather than inserted, with the incremental data. In other words, the default setting for all CUD changes in Dataverse tables, where createdOn is available, is to do an in place update in the destination, in Azure data lake.
 
-You can switch the default behavior of an in place update by using an optional setting called **Append only**. Rather than an **In place update**, in **Append only** mode, incremental data from Dataverse tables are appended to the corresponding file partition in the lake. This is a per table setting and available as a checkbox under **Advanced\Show advanced configuration settings**. For Dataverse tables with **Append only** turned on, all the CrUD changes are incrementally appended to the corresponding destination files in the lake. When you choose this option, the partition strategy defaults to **Year** and when data is written to the data lake, it is partitioned by yearly basis. **Append only** is also the default setting for Dataverse tables that do not have createdOn value.
+You can switch the default behavior of an in place update by using an optional setting called **Append only**. Rather than an **In place update**, in **Append only** mode, incremental data from Dataverse tables are appended to the corresponding file partition in the lake. This is a per table setting and available as a checkbox under **Advanced\Show advanced configuration settings**. For Dataverse tables with **Append only** turned on, all the CUD changes are incrementally appended to the corresponding destination files in the lake. When you choose this option, the partition strategy defaults to **Year** and when data is written to the data lake, it is partitioned by yearly basis. **Append only** is also the default setting for Dataverse tables that do not have createdOn value.
 
-The table below describes how rows are handled in the lake against CrUD events for each of the data write options.
+The table below describes how rows are handled in the lake against CUD events for each of the data write options.
 
 |Event  |In place update  |Append only  |
 |---------|---------|---------|
