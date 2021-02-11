@@ -1711,45 +1711,45 @@
         - name: Knowledge article
           items:
             - name: Configure knowledge categories and articles
-              href: ./portals/customer-engagament-apps/configure-knowledge-categories-articles.md
+              href: ./portals/customer-engagement-apps/configure-knowledge-categories-articles.md
             - name: Manage knowledge articles by using content access level
-              href: ./portals/customer-engagament-apps/manage-knowledge-articles-content-levels.md
+              href: ./portals/customer-engagement-apps/manage-knowledge-articles-content-levels.md
             - name: Display file attachments with knowledge articles
-              href: ./portals/customer-engagament-apps/display-file-attachments-knowledge-article.md
+              href: ./portals/customer-engagement-apps/display-file-attachments-knowledge-article.md
         - name: Create an opportunity
-          href: ./portals/customer-engagament-apps/create-edit-and-distribute-opportunities-in-dynamics-365.md
+          href: ./portals/customer-engagement-apps/create-edit-and-distribute-opportunities-in-dynamics-365.md
         - name: Work with communitites
           items:
             - name: Engage with communities
-              href: ./portals/customer-engagament-apps/engage-with-communities.md
+              href: ./portals/customer-engagement-apps/engage-with-communities.md
             - name: Forums
               items:
                 - name: Set up and manage forums
-                  href: ./portals/customer-engagament-apps/setup-manage-forums.md
+                  href: ./portals/customer-engagement-apps/setup-manage-forums.md
                 - name: Manage forum threads
-                  href: ./portals/customer-engagament-apps/manage-forum-threads.md
+                  href: ./portals/customer-engagement-apps/manage-forum-threads.md
                 - name: Create forum posts
-                  href: ./portals/customer-engagament-apps/create-forum-posts.md
+                  href: ./portals/customer-engagement-apps/create-forum-posts.md
                 - name: Moderate forums
-                  href: ./portals/customer-engagament-apps/moderate-forums.md
+                  href: ./portals/customer-engagement-apps/moderate-forums.md
                 - name: Manage forum access permissions
-                  href: ./portals/customer-engagament-apps/forum-access-permission.md
+                  href: ./portals/customer-engagement-apps/forum-access-permission.md
                 - name: Subscribe to alerts
-                  href: ./portals/customer-engagament-apps/subscribe-alerts.md
+                  href: ./portals/customer-engagement-apps/subscribe-alerts.md
             - name: Manage blogs
-              href: ./portals/customer-engagament-apps/manage-blogs.md
+              href: ./portals/customer-engagement-apps/manage-blogs.md
             - name: Manage ideas
-              href: ./portals/customer-engagament-apps/crowdsource-ideas.md
+              href: ./portals/customer-engagement-apps/crowdsource-ideas.md
             - name: Enable content moderation on ideas
-              href: ./portals/customer-engagament-apps/enable-idea-content-moderation.md
+              href: ./portals/customer-engagement-apps/enable-idea-content-moderation.md
             - name: Manage cases in portals
-              href: ./portals/customer-engagament-apps/case-management.md
+              href: ./portals/customer-engagement-apps/case-management.md
             - name: Configure web roles for a partner portal
-              href: ./portals/customer-engagament-apps/configure-web-roles-partner-portal.md
+              href: ./portals/customer-engagement-apps/configure-web-roles-partner-portal.md
             - name: Integrate Project Service Automation
-              href: ./portals/customer-engagament-apps/integrate-project-service-automation.md
+              href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
             - name: Integrate Field Service
-              href: ./portals/customer-engagament-apps/integrate-field-service.md
+              href: ./portals/customer-engagement-apps/integrate-field-service.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
