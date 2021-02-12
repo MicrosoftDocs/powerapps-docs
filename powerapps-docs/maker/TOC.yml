@@ -29,8 +29,6 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: On a mobile device
-    href: ../user/run-canvas-and-model-apps-on-mobile.md
   - name: On a SharePoint Online page (canvas apps)
     href: ../user/powerapps-web-part.md
   - name: In Microsoft Teams (canvas apps)
@@ -1320,7 +1318,7 @@
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
   - name: Troubleshoot issues for the Power Apps mobile app
-    href: ../user/powerapps_mobile_troubleshoot.md
+    href: ../user/powerapps-mobile-troubleshoot.md
     
 - name: Portals
   items:
