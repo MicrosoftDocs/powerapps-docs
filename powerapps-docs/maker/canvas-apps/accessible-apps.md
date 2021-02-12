@@ -70,11 +70,13 @@ If you have a signature field that uses the PenInput control, you need to enable
 
 ## Next steps
 
-[Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+[Accessible app structure](accessible-apps-structure.md)
 
 ### See also
 
-- [Accessibility properties](controls/properties-accessibility.md)
-- [Use the Accessibility checker](accessibility-checker.md)
-- [Accessible app structure](accessible-apps-structure.md)
 - [Accessible colors in Power Apps](accessible-apps-color.md)
+- [Show or hide content from assistive technologies for canvas apps](accessible-apps-content-visibility.md)
+- [Announce dynamic changes with live regions for canvas apps](accessible-apps-live-regions.md)
+- [Use the Accessibility checker](accessibility-checker.md)
+- [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+- [Accessibility properties](controls/properties-accessibility.md)

@@ -40,4 +40,13 @@ Use any of these techniques:
 
 ## Next steps
 
-Learn about [accessibility properties](controls/properties-accessibility.md) of controls in canvas apps.
+[Announce dynamic changes with live regions for canvas apps](accessible-apps-live-regions.md)
+
+### See also
+
+- [Create accessible apps](accessible-apps.md)
+- [Accessible app structure](accessible-apps-structure.md)
+- [Accessible colors in Power Apps](accessible-apps-color.md)
+- [Use the Accessibility checker](accessibility-checker.md)
+- [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+- [Accessibility properties](controls/properties-accessibility.md)

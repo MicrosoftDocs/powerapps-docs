@@ -99,5 +99,13 @@ For rare scenarios where the keyboard navigation order should be different from 
 
 ## Next steps
 
-[Accessibility properties for canvas apps](controls/properties-accessibility.md) <br>
-[Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+[Accessible colors in Power Apps](accessible-apps-color.md)
+
+### See also
+
+- [Create accessible apps](accessible-apps.md)
+- [Show or hide content from assistive technologies for canvas apps](accessible-apps-content-visibility.md)
+- [Announce dynamic changes with live regions for canvas apps](accessible-apps-live-regions.md)
+- [Use the Accessibility checker](accessibility-checker.md)
+- [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+- [Accessibility properties](controls/properties-accessibility.md)

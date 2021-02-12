@@ -887,8 +887,6 @@
         items:
           - name: Create an accessible app
             href: ./canvas-apps/accessible-apps.md
-          - name: Find accessibility issues
-            href: ./canvas-apps/accessibility-checker.md
           - name: Create a logical app structure
             href: ./canvas-apps/accessible-apps-structure.md
           - name: Use color for accessibility
@@ -897,6 +895,8 @@
             href: ./canvas-apps/accessible-apps-content-visibility.md
           - name: Announce dynamic changes with live regions
             href: ./canvas-apps/accessible-apps-live-regions.md
+          - name: Find accessibility issues using Accessibility checker
+            href: ./canvas-apps/accessibility-checker.md
           - name: Accessibility limitations
             href: ./canvas-apps/accessible-apps-limitations.md
       - name: Send notifications from an app

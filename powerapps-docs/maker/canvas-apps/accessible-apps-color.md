@@ -59,4 +59,14 @@ Ensure that the app does not convey information with just color. For example, us
 Additional cues like an **[Icon](controls/control-shapes-icons.md)** or text styles like **[Italic](controls/properties-text.md)** and **[Underline](controls/properties-text.md)** can help convey meaning.
 
 ## Next steps
-Learn about [accessibility properties](controls/properties-accessibility.md) in Power Apps controls and try [using the Accessibility checker](accessibility-checker.md).
+
+[Show or hide content from assistive technologies for canvas apps](accessible-apps-content-visibility.md)
+
+### See also
+
+- [Create accessible apps](accessible-apps.md)
+- [Accessible app structure](accessible-apps-structure.md)
+- [Announce dynamic changes with live regions for canvas apps](accessible-apps-live-regions.md)
+- [Use the Accessibility checker](accessibility-checker.md)
+- [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+- [Accessibility properties](controls/properties-accessibility.md)

@@ -103,10 +103,13 @@ There is no [aria-hidden](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden) equiv
 
 ## Next steps
 
-[Use the Accessibility checker](accessibility-checker.md) to scan your app for basic accessibility errors.
+[Accessibility properties](controls/properties-accessibility.md)
 
 ### See also
 
-[Create accessible canvas apps in Power Apps](accessible-apps.md) <br> 
-[Accessibility properties for canvas apps](controls/properties-accessibility.md)
-
+- [Create accessible apps](accessible-apps.md)
+- [Accessible app structure](accessible-apps-structure.md)
+- [Accessible colors in Power Apps](accessible-apps-color.md)
+- [Show or hide content from assistive technologies for canvas apps](accessible-apps-content-visibility.md)
+- [Announce dynamic changes with live regions for canvas apps](accessible-apps-live-regions.md)
+- [Use the Accessibility checker](accessibility-checker.md)

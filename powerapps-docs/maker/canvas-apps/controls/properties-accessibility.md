@@ -76,4 +76,10 @@ Controls that have a **Visible** property value of *false* or a **DisplayMode** 
 
 ### See also
 
-[Accessibility limitations in canvas apps](../accessible-apps-limitations.md)
+- [Create accessible apps](../accessible-apps.md)
+- [Accessible app structure](../accessible-apps-structure.md)
+- [Accessible colors in Power Apps](../accessible-apps-color.md)
+- [Show or hide content from assistive technologies for canvas apps](../accessible-apps-content-visibility.md)
+- [Announce dynamic changes with live regions for canvas apps](../accessible-apps-live-regions.md)
+- [Use the Accessibility checker](../accessibility-checker.md)
+- [Accessibility limitations in canvas apps](../accessible-apps-limitations.md)
