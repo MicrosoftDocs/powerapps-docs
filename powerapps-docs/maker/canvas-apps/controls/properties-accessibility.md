@@ -2,17 +2,20 @@
 title: Accessibility properties for canvas apps | Microsoft Docs
 description: Reference information about properties such as TabIndex and Tooltip
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/26/2017
+ms.date: 02/12/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - chmoncay
+  - tahoon-ms
+  - tapanm-msft
 ---
 # Accessibility properties for canvas apps
 
@@ -68,9 +71,9 @@ Controls that have a **Visible** property value of *false* or a **DisplayMode** 
 > **TabIndex** only affects keyboard navigation. A [logical control order](../accessible-apps-structure.md) is still necessary for screen reader users to understand app structure.
 
 > [!WARNING]
-> For rare scenarios where neither visual order nor logical structure should be followed, you can customize the keyboard navigation order by setting **TabIndex** to be greater than zero. However, accessibility tools will warn about this. It can be very difficult to get the order right and can make for a confusing screen reader experience.
-> 
-> When there are controls with **TabIndex** greater than 0, users will first navigate to controls with increasing positive **TabIndex** values (1, then 2, etc). When users have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0. When there are multiple controls with the same **TabIndex**, their **X** and **Y** value and the **Containers** they are in will determine their relative order. Inside a **Gallery** or **Form**, **TabIndex** is scoped so that the contained controls will be navigated first before the ones outside.
+> - For rare scenarios where you may not want to follow visual order or logical structure, you can customize the keyboard navigation order by setting **TabIndex** to be greater than zero. If you do this, the accessibility tools will give you a warning about this change. Use caution since it can be difficult to get the order correct and accurate with this manual change that can result in a confusing screen reader experience.
+> - When there are controls with **TabIndex** greater than 0, users will first navigate to controls with increasing positive **TabIndex** values (such as, 1, then 2). When users have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0. When there are multiple controls with the same **TabIndex**, their **X** and **Y** value and the **Containers** they are in will determine their relative order. Inside a **Gallery** or **Form**, **TabIndex** is scoped so that the contained controls will be navigated first before the ones outside.
 
+### See also
 
-
+[Accessibility limitations in canvas apps](../accessible-apps-limitations.md)

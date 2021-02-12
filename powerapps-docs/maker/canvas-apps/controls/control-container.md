@@ -1,18 +1,21 @@
 ---
 title: 'Container control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Container control
-author: emcoope-msft
-manager: kvivek
+author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.component: canvas
-ms.date: 05/01/2020
-ms.author: emcoope
+ms.date: 02/12/2021
+ms.author: chmoncay
 ms.reviewer: tapanm-msft
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - chmoncay
+  - tahoon-ms
+  - tapanm-msft
 ---
 # Container control in Power Apps (preview)
 Provides the ability to create hierarchy.

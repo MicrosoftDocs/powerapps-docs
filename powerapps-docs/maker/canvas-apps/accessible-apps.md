@@ -1,18 +1,21 @@
 ---
 title: Create accessible canvas apps | Microsoft Docs
 description: How to make canvas apps accessible for people with disabilities
-author: fikaradz
-manager: kvivek
+author: chmoncay
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/01/2020
+ms.date: 02/12/2021
 ms.author: fikaradz
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - chmoncay
+  - tahoon-ms
+  - tapanm-msft
 ---
 # Create accessible canvas apps in Power Apps
 An accessible canvas app will allow users with vision, hearing, and other impairments to successfully use the app.  In addition to being a requirement for many governments and organizations, following the below guidelines increases usability for all users, regardless of their abilities.
@@ -65,9 +68,12 @@ With the screen reader enabled, **Timer** does not announce button text, but how
 ## Working with signatures
 If you have a signature field that uses the PenInput control, you need to enable an alternative method of signature input.  The recommended way is to show a TextInput control where a user can type their name.  Ensure the signing instructions are placed in the **[AccessibleLabel](controls/properties-accessibility.md)** property and the control is placed close to the Pen input - to the right or immediately below.
 
+## Next steps
 
+[Accessibility limitations in canvas apps](accessible-apps-limitations.md)
 
-Related:
+### See also
+
 - [Accessibility properties](controls/properties-accessibility.md)
 - [Use the Accessibility checker](accessibility-checker.md)
 - [Accessible app structure](accessible-apps-structure.md)
