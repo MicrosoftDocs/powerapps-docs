@@ -5,12 +5,12 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Clear the server-side cache for a portal
+# Server-side cache in portals
 
 As a portal administrator, you can clear the server-side cache for the entire portal so that updated data from Microsoft Dataverse is immediately reflected on the portal. Updates from Dataverse  are communicated to the portal in asynchronous mode, so there might be a lag between the time data is updated in Dataverse and the time that updated data appears on the portal. To eliminate this delay&mdash;for example, when it interferes with portal configuration&mdash;you can force the portal to refresh its cache immediately.
 
@@ -40,7 +40,7 @@ The server-side cache is deleted, and data is reloaded from Dataverse.
 
 ![Clear portal cache with capacity-based license](media/clear-server-side-cache/clear-config-capacity-license.png)
 
-To learn more about the differences between Power Apps portals and portal add-ons, read [Power Apps portal FAQ](../faq.md#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals).
+To learn more about the differences between Power Apps portals and portal add-ons, read [Power Apps portals, Dynamics 365 portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals).
 
 Portal metadata is stored in entities called *configuration entities*. If you change configuration entities using the *Unified Interface application*, you **must** select **Clear config** to clear the configuration cache for changes to reflect in your Portal.  
 
@@ -48,30 +48,172 @@ Portal metadata is stored in entities called *configuration entities*. If you ch
 
 Clearing the server-side configuration cache for a portal includes refreshing the data from the following *configuration entities*:
 
-| Configuration entities:| | |
-|-------------------------------------------|---------------------------|--------------------------------------|
-| adx_contentaccesslevel                    | adx_redirect              | adx_webpage_tag                      |
-| adx_contentsnippet                        | adx_setting               | adx_webpageaccesscontrolrule         |
-| adx_entityform                            | adx_shortcut              | adx_webpageaccesscontrolrule_webrole |
-| adx_entityformmetadata                    | adx_sitemarker            | adx_webpagehistory                   |
-| adx_entitylist                            | adx_sitesetting           | adx_webpagelog                       |
-| adx_entitypermission_webrole              | adx_webfile               | adx_webrole_systemuser               |
-| adx_externalidentity                      | adx_webfilelog            | adx_website                          |
-| adx_pagealert                             | adx_webform               | adx_website_list                     |
-| adx_pagenotification                      | adx_webformmetadata       | adx_website_sponsor                  |
-| adx_pagetag                               | adx_webformsession        | adx_websiteaccess                    |
-| adx_pagetag_webpage                       | adx_webformstep           | adx_websiteaccess_webrole            |
-| adx_pagetemplate                          | adx_weblink               | adx_websitebinding                   |
-| adx_portallanguage                        | adx_weblinkset            | adx_websitelanguage                  |
-| adx_publishingstate                       | adx_webnotificationentity | adx_webtemplate                      |
-| adx_publishingstatetransitionrule         | adx_webnotificationurl    | adx_urlhistory                       |
-| adx_publishingstatetransitionrule_webrole | adx_webpage               | adx_entitypermission                 |
+:::row:::
+:::column:::
+	adx_contentaccesslevel
+:::column-end:::
+:::column:::
+	adx_contentsnippet
+:::column-end:::
+:::column:::
+	adx_entityform
+:::row-end:::
+:::row:::
+:::column:::
+	adx_entityformmetadata
+:::column-end:::
+:::column:::
+	adx_entitylist
+:::column-end:::
+:::column:::
+	adx_entitypermission
+:::row-end:::
+:::row:::
+:::column:::
+	adx_entitypermission_webrole
+:::column-end:::
+:::column:::
+	adx_externalidentity
+:::column-end:::
+:::column:::
+	adx_pagealert
+:::row-end:::
+:::row:::
+:::column:::
+	adx_pagenotification
+:::column-end:::
+:::column:::
+	adx_pagetag
+:::column-end:::
+:::column:::
+	adx_pagetag_webpage
+:::row-end:::
+:::row:::
+:::column:::
+	adx_pagetemplate
+:::column-end:::
+:::column:::
+	adx_portallanguage
+:::column-end:::
+:::column:::
+	adx_publishingstate
+:::row-end:::
+:::row:::
+:::column:::
+	adx_publishingstatetransitionrule
+:::column-end:::
+:::column:::
+	adx_publishingstatetransitionrule_webrole
+:::column-end:::
+:::column:::
+	adx_redirect
+:::row-end:::
+:::row:::
+:::column:::
+	adx_setting
+:::column-end:::
+:::column:::
+	adx_shortcut
+:::column-end:::
+:::column:::
+	adx_sitemarker
+:::row-end:::
+:::row:::
+:::column:::
+	adx_sitesetting
+:::column-end:::
+:::column:::
+	adx_urlhistory
+:::column-end:::
+:::column:::
+	adx_webfile
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webfilelog
+:::column-end:::
+:::column:::
+	adx_webform
+:::column-end:::
+:::column:::
+	adx_webformmetadata
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webformsession
+:::column-end:::
+:::column:::
+	adx_webformstep
+:::column-end:::
+:::column:::
+	adx_weblink
+:::row-end:::
+:::row:::
+:::column:::
+	adx_weblinkset
+:::column-end:::
+:::column:::
+	adx_webnotificationentity
+:::column-end:::
+:::column:::
+	adx_webnotificationurl
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webpage
+:::column-end:::
+:::column:::
+	adx_webpage_tag
+:::column-end:::
+:::column:::
+	adx_webpageaccesscontrolrule
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webpageaccesscontrolrule_webrole
+:::column-end:::
+:::column:::
+	adx_webpagehistory
+:::column-end:::
+:::column:::
+	adx_webpagelog
+:::row-end:::
+:::row:::
+:::column:::
+	adx_webrole_systemuser
+:::column-end:::
+:::column:::
+	adx_website
+:::column-end:::
+:::column:::
+	adx_website_list
+:::row-end:::
+:::row:::
+:::column:::
+	adx_website_sponsor
+:::column-end:::
+:::column:::
+	adx_websiteaccess
+:::column-end:::
+:::column:::
+	adx_websiteaccess_webrole
+:::row-end:::
+:::row:::
+:::column:::
+	adx_websitebinding
+:::column-end:::
+:::column:::
+	adx_websitelanguage
+:::column-end:::
+:::column:::
+	adx_webtemplate
+:::row-end:::
 
 ## Caching changes for portals with version 9.2.6.x or later
 
 Power Apps portals with version 9.2.6.x or later benefit from improved caching functionality to increase consistency and reliability as follows.
 
-- [Capacity-based portals and add-on portals](../faq.md#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals) will use the same caching functionality.
+- [Capacity-based portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals) will use the same caching functionality.
 - Capacity-based portals don't have to manually [clear the configuration entity cache](#configuration-entity-caching-portals-with-capacity-based-licenses).
 - Add-on portals with high load will have improved performance and a reliable data cache refresh.
 
@@ -93,3 +235,11 @@ No.
 
 **4. How long does it take for changes to reflect from portals to Dataverse?** <br>
 Immediately, as long as the update changes a primary record and isn't based on indirect changes to data using plugins or workflows.
+
+## Next steps
+
+[Understand how portals connects to Microsoft Dataverse environment](connectivity.md)
+
+## See also
+
+[Build a portal using portals Studio](../portal-designer-anatomy.md)

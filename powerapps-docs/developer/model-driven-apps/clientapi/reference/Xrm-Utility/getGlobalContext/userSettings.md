@@ -108,7 +108,7 @@ Returns the language ID for the current user.
 
 ## roles 
 
-Returns a collection of lookup objects containing the GUID and display name of each of the security role assigned to the user and any security roles assigned to a team that the user is associated with. This method is supported only on the Unified Interface.
+Returns a collection of lookup objects containing the GUID and display name of each of the security role assigned to the user and any security roles assigned to a team that the user is associated with. This method is supported only on Unified Interface.
 
 ### Syntax
 
@@ -154,7 +154,7 @@ Deprecated; use [userSettings.roles](#roles) instead to view the display names o
 
 ## transactionCurrency 
 
-Returns a lookup object containing the ID, display name, and entity type of the transaction currency for the current user. This method is supported only on the Unified Interface.
+Returns a lookup object containing the ID, display name, and entity type of the transaction currency for the current user. This method is supported only on Unified Interface.
 
 ### Syntax
 

@@ -67,4 +67,4 @@ When you receive a solution zip file which contains the app that you want to imp
 4. Select **Import**.
 
 ## See also
-[Change the solution publisher prefix](../data-platform/change-solution-publisher-prefix.md)
+[Change the solution publisher prefix](../data-platform/create-solution.md#solution-publisher)
