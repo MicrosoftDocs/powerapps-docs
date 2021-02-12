@@ -2,12 +2,11 @@
 title: Create a dependent drop-down list in a canvas app | Microsoft Docs
 description: In Power Apps, create a drop-down list that filters another drop-down list in a canvas app.
 author: emcoope-msft
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/04/2019
+ms.date: 02/11/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -22,7 +21,8 @@ As a best practice, create a data source for the values in the "parent" and "chi
 
 For the scenario in this topic, store employees submit issues to an **Incidents** list through a form. Employees specify not only the location of the store at which the incident occurred but also the department within that location. Not all locations have the same departments, so a **Locations** list ensures that employees can't specify a department for a location that doesn't have that department.
 
-This topic uses Microsoft SharePoint lists as data sources, but all tabular data sources work the same way.
+> [!NOTE]
+> This article uses Microsoft SharePoint lists as data sources, but all tabular data sources work the same way. Within [Dataverse for Teams](../../teams/create-apps-overview.md), you'll need to enable [classic controls](../../teams/understand-power-apps-studio.md#classic-controls) to get the classic drop-down to work for this scenario.
 
 ## Create data sources
 
