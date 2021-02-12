@@ -18,13 +18,13 @@ search.app:
 A control that allows users to make selections from provided choices.  Supports search and multiple selections.
 
 ## Description
-A **Combo box** control allows you to search for items you will select.  The search is performed server-side on the SearchField property so performance is not affected by very large data sources.  
+A **Combo box** control allows you to search for items you will select.  The search is performed server-side on the SearchField property so performance is not affected by large data sources.  
 
 Single or multi-select mode is configured via the SelectMultiple property.
 
 When searching for items to select, for each item you can choose to show a single data value, two values, or a picture and two values (Person) by modifying the Layout settings in the Data pane.
 
-When viewing on small screens, the items list flyout will become a full screen control for better usablility.
+When viewing on small screens, the items list flyout will become a full screen control for better usability.
 
 > [!NOTE]
 > If you want to search for items with *numbers*, convert numbers to text with [Text()](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-text) function. For example, *Text(12345)*.
@@ -70,13 +70,13 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**InputTextPlaceholder** – Instructional text shown to end-users when no items are selected.
+**InputTextPlaceholder** – Instructional text shown to end users when no items are selected.
 
 **OnChange** – How the app responds when the user changes a selection.
 
-**OnNavigate** – How the app responds when the user clicks on an item.
+**OnNavigate** – How the app responds when the user selects an item.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user taps or selects a control.
 
 **[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
