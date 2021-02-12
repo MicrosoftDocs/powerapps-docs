@@ -54,7 +54,7 @@ There is no enforcement of user-created required table fields. Rows that have em
 
 ### Classic controls
 
-Enabling classic controls requires a refresh of Power Apps Studio.  
+Enabling [classic controls](understand-power-apps-studio.md#classic-controls) requires a refresh of Power Apps Studio.  
 
 ### Canvas components
 

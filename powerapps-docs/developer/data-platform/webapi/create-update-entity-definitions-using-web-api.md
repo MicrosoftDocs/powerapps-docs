@@ -2,7 +2,7 @@
 title: "Create and update entity definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating entity definitions using the Web API."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 02/07/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,13 +23,14 @@ search.app:
 ---
 # Create and update entity definitions using the Web API
 
-
-
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 You can perform all the same operations on model entities that you can with the organization service. This topic focuses on working with metadata entities using the Web API. To find details about the entity metadata properties, see [Customize entity metadata](../customize-entity-metadata.md) and <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" />.  
 
 <a name="bkmk_createEntities"></a>
+
+> [!TIP]
+> Entities, attributes, and global option sets (also known as tables, columns, and choices) are all solution components. When you create them you can associate them with a solution by using the `MSCRM.SolutionUniqueName` request header and setting the value to the  unique name of the solution it should be part of.
 
 ## Create entities
 

@@ -71,5 +71,5 @@ The `Retrieve` and `RetrieveMultiple` messages are two of the most frequently pr
 
 ### See also
 
-[Performance Optimizations for Microsoft Dynamics CRM Online](https://mbs.microsoft.com/customersource/northamerica/CRM/learning/documentation/user-guides/PerformanceOptimizationsCRMOnlineSuccess)<br />
+[Performance Optimizations for Microsoft Dynamics CRM Online](https://docs.microsoft.com/dynamics/s-e/)<br />
 [Create and edit virtual entities that contain data from an external data source](/powerapps/maker/data-platform/create-edit-virtual-entities)<br />

@@ -113,6 +113,8 @@
         href: clientapi/reference/events/onstagechange.md
       - name: OnStageSelected event
         href: clientapi/reference/events/onstageselected.md
+      - name: PostSave event
+        href: clientapi/reference/events/postsave.md
       - name: PostSearch event
         href: clientapi/reference/events/postsearch.md
       - name: PreSearch event
@@ -150,8 +152,14 @@
     - name: Save event arguments
       href: clientapi/reference/save-event-arguments.md
       items:
+      - name: getEntityReference
+        href: clientapi/reference/save-event-arguments/getEntityReference.md
+      - name: getIsSaveSuccess
+        href: clientapi/reference/save-event-arguments/getIsSaveSuccess.md
       - name: getSaveMode
         href: clientapi/reference/save-event-arguments/getSaveMode.md
+      - name: getSaveErrorInfo
+        href: clientapi/reference/save-event-arguments/getSaveErrorInfo.md
       - name: isDefaultPrevented
         href: clientapi/reference/save-event-arguments/isDefaultPrevented.md
       - name: preventDefault
