@@ -1,5 +1,5 @@
 ---
-title: Share a canvas app with guest users | Microsoft Docs
+title: Share canvas apps with guests | Microsoft Docs
 description: Share your canvas app with guest users 
 author: alaug
 ms.service: powerapps
@@ -14,146 +14,145 @@ search.app:
   - PowerApps
 ---
 # Share a canvas app with guest users
- 
-Canvas apps can be shared with guest users of an Azure Active Directory tenant. This enables inviting external business partners, contractors, and third parties to run your company’s canvas apps.
+
+Canvas apps can be shared with guest users of an Azure Active Directory (Azure AD) tenant. This enables inviting external business partners, contractors, and third parties to run your company's canvas apps.
 
 ## Prerequisites
 
-- In Azure Active Directory (Azure AD), enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
+- In Azure AD, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)<!--note from editor: I changed the following into a Note because you want to have either >=2 bullets, or none.-->
 
-    - Enable B2B external collaboration is on by default. However, the settings can be changed by a tenant admin.  For more information about Azure AD B2B, see [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)  
+  > [!NOTE]
+  > B2B external collaboration is enabled by default; however, you need to verify that the settings weren't changed by a tenant admin.<!--note from editor: Edit okay? I wanted to explain the significance of the fact that a tenant admin can change these settings.--> For more information about Azure AD B2B, go to [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b).
 
 - Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
 - The guest user must have a license with Power Apps use rights that matches the capability of the app assigned through one of the following tenants:
 
-    - The tenant hosting the app being shared.
-    - The home tenant of the guest user.
+  - The tenant hosting the app being shared
+  - The home tenant of the guest user
 
 ## Steps to grant guest access
 
-1. Select **New guest user** to add guest users in Azure AD. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal).
+1. In Azure AD, select **New guest user**. More information: [Quickstart: Add a new guest user in Azure AD](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
 
-    ![Add guest in Azure AD](media/share-app/guest_access_doc_1.png "Add guest in Azure AD")
+    ![Add a guest in Azure AD](media/share-app/guest_access_doc_1.png "Add a guest in Azure AD")
 
 2. If the guest user doesn't already have a license in their home tenant, assign a license to the guest user.
 
-   - To assign guest users from admin.microsoft.com, see [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+   - To assign guest users from admin.microsoft.com, go to [Assign licenses to one user](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
 
-   - To assign guest users from portal.azure.com, see [Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups).
+   - To assign guest users from portal.azure.com, go to [Assign or remove licenses](/azure/active-directory/fundamentals/license-users-groups).
  
    > [!IMPORTANT]
-   > You may need to disable the Microsoft 365 admin center preview to assign a license to a guest. 
+   > You might need to disable the Microsoft 365 admin center preview to assign a license to a guest.
 
-3. Share the canvas app. 
+3. Share the canvas app by doing the following:
 
     1. Sign in to [Power Apps](https://make.powerapps.com).
 
-    1. Select **Apps** from the left pane.
+    1. On the left pane, select **Apps**.
 
     1. Select a canvas app.
 
-    1. Select **Share** from the command bar.
+    1. On the command bar, select **Share**.
 
     1. Enter an email address for a guest user from an Azure AD tenant. More information: [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b)
 
-        ![Share with guest](media/share-app/guest_access_doc_2.png "Share with guest")
+       ![Share with guest](media/share-app/guest_access_doc_2.png "Share with guest")
 
-After you share an app for guest access, guests can discover and access apps shared with them from the email sent to them as part of sharing. You can also share the app URL directly with the guest instead. To find the URL, go to [Power Apps](https://make.powerapps.com), select **Apps** from left pane, select an app, and then select the **Details** tab. The app URL is displayed under **Web link**.
+After you share an app for guest access, guests can discover and access apps shared with them from the email sent to them as part of sharing. You can also share the app URL directly with the guest instead. To find the URL, go to [Power Apps](https://make.powerapps.com), select **Apps** on left pane, select the app, and then select the **Details** tab. The app URL is displayed under **Web link**.
 
 ![Guests receive app share email](media/share-app/guest_access_doc_4.png "Guests receive app share email")
 
 ## Considerations and limitations for guest access
 
-- Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
-- Power Apps guest access leverages Azure B2B.
-- Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) the guest uses a web browser.
-- Power Apps recognizes guests outlined by states 1, 3, and 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) when the guest uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads). More information: [Open Power Apps Mobile, and sign in](../../mobile/run-powerapps-on-mobile.md#open-power-apps-and-sign-in)
-- Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [Email one-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode).
-- Power Apps [Per App Plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants. 
-- Power Apps [included with Office](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [Per User Plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) in:
-    - Azure public cloud: Are recognized across tenants in guest scenarios as they're are not bound to a specific environment.
-    - Azure national/sovereign clouds: Are not recognized across tenants in guest scenarios.
-    <br> More information: [National clouds](https://docs.microsoft.com/azure/active-directory/develop/authentication-national-cloud), [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies/#geographies)
+- Guests can only be assigned the User role, and not the Co-owner role, for apps shared with them.
+- Power Apps guest access uses Azure B2B.
+- Power Apps recognizes guests in states 1 through 4&mdash;as outlined in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties)&mdash;when the guest uses a web browser.
+- Power Apps recognizes guests in states 1, 3, and 4&mdash;as outlined in the Azure B2B documentation&mdash;when the guest uses [Power Apps Mobile](https://powerapps.microsoft.com/downloads). More information: [Open Power Apps Mobile, and sign in](../../mobile/run-powerapps-on-mobile.md#open-power-apps-and-sign-in)
+- Power Apps can't recognize guests that authenticate by using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [email one-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode).
+- Power Apps [per app plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) are scoped to apps in a specific environment, so they can't be recognized across tenants.
+- Power Apps [included with Office](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#power-appspower-automate-for-microsoft-365) and Power Apps [per user plans](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#how-is-microsoft-power-apps-and-power-automate-licensed) have the following characteristics:
+  - In the Azure public cloud, they're recognized across tenants in guest scenarios because they aren't bound to a specific environment.
+  - In Azure national or sovereign clouds, they aren't recognized across tenants in guest scenarios. More information: [National clouds](https://docs.microsoft.com/azure/active-directory/develop/authentication-national-cloud), [Azure geographies](https://azure.microsoft.com/global-infrastructure/geographies/#geographies)
 
-## Frequently Asked Questions
+## Frequently asked questions
 
-### What’s the difference between canvas app guest access and Power Apps portals?
+### What's the difference between canvas app guest access and Power Apps portals?
 
-Canvas apps enable building an app, tailored to digitizing business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that may be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for Power Apps](/powerapps/maker/canvas-apps/connections-list).
+With canvas apps, you can build an app that's tailored to digitizing business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that might be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for Power Apps](/powerapps/maker/canvas-apps/connections-list)
 
-[Power Apps portals](/powerapps/maker/portals/overview) provide the ability to build low-code, responsive websites that allow external users to interact with the data stored in Dataverse. It allows organizations to create websites that can be shared with users external to their organization either anonymously or through the login provider of their choice, such as LinkedIn, Microsoft Account, or other commercial login providers. 
+[Power Apps portals](/powerapps/maker/portals/overview) provide you the ability to build low-code, responsive websites that allow external users to interact with the data stored in Dataverse. With Power Apps portals, organizations can create websites that can be shared with users external to their organization either anonymously or through the sign-in provider of their choice, such as LinkedIn, Microsoft account<!--note from editor: Lowercase "account" via Writing Style Guide.-->, or other commercial sign-in provider.
 
-The following table outlines a few core capability differences between Power Apps portals and canvas apps.  
+The following table outlines a few core capability differences between Power Apps portals and canvas apps.<!--note from editor: Edit okay in the first column heading? I assume the table is talking about guest access, since that's what this section is about. -->  
 
-| Portals or canvas apps| Interface | Authentication | Accessible data sources |
+| Guest access in | Interface | Authentication | Accessible data sources |
 |------|--------|----------|-------------------|
-| Power Apps portals | Browser only experience | Allows anonymous and authenticated access | Dataverse |
-| Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any ~150 out-of-box connectors and any custom connector  |
-|
+| Power Apps portals | Browser-only experience | Allows anonymous and authenticated access | Dataverse |
+| Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any of approximately 150 out-of-the-box connectors and any custom connector  |
 
 ### Can guests access customized forms in SharePoint?
 
-Yes. Any user that can access a SharePoint list with a customized form can create and edit items in the list, using the form. As long as the custom form only uses standard connectors, the guest isn't required to have any Power Apps license.
+Yes. Any user who can access a SharePoint list with a customized form can create and edit items in the list by using the form. As long as the custom form only uses standard connectors, the guest isn't required to have any Power Apps license.
 
-### Why is a guest accessing a customized form in SharePoint prompted for a trial?
+### Why is a guest who accesses a customized form in SharePoint prompted for a trial?
 
-If the custom form uses a premium connector, a guest must have a Power Apps license to access the custom form. If the custom form only uses standard connectors, your tenant must allow Power Platform internal consent plans to be assigned to users. For more details about Power Platform internal consent plans, read [block trial license commands](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#block-trial-licenses-commands).  
+If the custom form uses a premium connector, a guest must have a Power Apps license to access the custom form. If the custom form only uses standard connectors, your tenant must allow Microsoft Power Platform internal consent plans to be assigned to users. For more details about Power Platform internal consent plans, read [block trial license commands](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#block-trial-licenses-commands).  
 
 ### Can guests access apps embedded in SharePoint?
 
-Yes. Though, access to canvas standalone apps require a license with Power Apps user rights that matches the capability of the app; including embedded apps. When embedding a canvas app in SharePoint using the Microsoft Power Apps embed control, enter the app id. To do this, enter the app ID in the **App web link or ID** box.
+Yes. However, access to canvas standalone apps requires that the user have a license with Power Apps user rights that matches the capability of the app; this includes embedded apps. When embedding a canvas app in SharePoint by using the Power Apps embed control, enter the app ID. To do this, enter the app ID in the **App web link or ID** box.
 
-![Embed canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG "Embed canvas app in SharePoint for guests")
+![Embed a canvas app in SharePoint for guests](media/share-app/guest_access_doc_5.PNG "Embed a canvas app in SharePoint for guests")
 
-When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app using the full web URL. To find the URL, sign in to [Power Apps](https://make.powerapps.com), select an app, select the **Details** tab, and the URL is displayed under **Web link**.
+When embedding a canvas app in SharePoint via the iFrame HTML tag, reference the app by using the full web URL. To find the URL, sign in to [Power Apps](https://make.powerapps.com), select an app, and then select the **Details** tab. The URL is displayed under **Web link**.
 
 ![Canvas app details](media/share-app/guest_access_doc_6.PNG "Canvas app details")
 
-### How come guests can launch the app shared with them but connections fail to be created?
+### How is it that guests can open the app shared with them, but no data connections are created?
 
-As with non-guests, the underlying data source(s) accessed by the app must also be made accessible to the guest.
+As is the case with non-guests, the underlying data sources accessed by the app must also be made accessible to the guest.
 
 ### What license must be assigned to my guest so they can run an app shared with them?
 
-The same license that’s required for non-guests to run an app. For instance, if the app uses premium connectors, then a Power Apps Per App Plan or a Power Apps Per User Plan must be assigned to the guest.  
+You must assign your guest the same license that's required for non-guests to run the app. For instance, if the app uses premium connectors, a Power Apps per app plan or a Power Apps per user plan must be assigned to the guest.  
 
-|    Plan                             | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
+|    Plan                             | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model-driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
-| SharePoint user (no PA license) | x                          |                                                    |                                                |                  |
-| Power Apps Included w/ Office    | x                          | x                                                  |                                                |                  |
-| Power Apps Per App Plan          | x                          | x                                                  | x                                              | x                |
-| Power Apps Per User Plan         | x                          | x                                                  | x                                              | x                |
+| SharePoint user (no Power Apps<!--note from editor: Edit okay? --> license) | x                          |                                                    |                                                |                  |
+| Power Apps included with Office    | x                          | x                                                  |                                                |                  |
+| Power Apps per app plan          | x                          | x                                                  | x                                              | x                |
+| Power Apps per user plan         | x                          | x                                                  | x                                              | x                |
 
-More details around pricing and capabilities of various plans can be found in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+For more information about pricing and the capabilities of various plans, go to [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 ### In Power Apps Mobile, how does a guest see apps for their home tenant?
 
-Any user that has accessed a canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign out of Power Apps and sign back in to Power Apps Mobile.  
+Any user who has used their mobile device to access a canvas app that was published in an Azure AD tenant that isn't their home tenant, must sign out of Power Apps and sign back in to Power Apps Mobile.  
 
 ### In Power Apps Mobile, how does a guest see apps in the guest tenant?
 
-As the guest user, open the email received when an app in the guest tenant was shared, and select the **Open the app** button. This applies to both Azure Active Directory and Microsoft Account users.   
+The guest user opens the email they received when an app in the guest tenant was shared, and selects **Open the app**. This applies to both Azure AD and Microsoft account users.
 
-### Must a guest accept the Azure AD guest invitation before sharing an app with the guest?
+### Must a guest accept the Azure AD guest invitation before an app can be shared with them?
 
-No. If a guest launches an app shared with them before accepting a guest invitation, the guest will be prompted to accept the invitation as part of the sign-in experience while launching the app.  
+No. If a guest opens an app that was shared with them before they accepted a guest invitation, the guest will be prompted to accept the invitation as part of the sign-in experience while opening the app.  
 
-### What Azure AD tenant are connections for a guest user created in?
+### In which Azure AD tenant are connections created for a guest user?
 
-Connections for an app are always made in the context of the Azure AD tenant the app is associated. For example, if an app is created in the Contoso tenant, the connections made for Contoso internal and guest users are in the context of the Contoso tenant.
+Connections for an app are always made in the context of the Azure AD tenant the app is associated with. For example, if an app is created in the Contoso tenant, the connections made for Contoso internal and guest users are made in the context of the Contoso tenant.
 
-### Can guests use Microsoft Graph via Microsoft Security Graph connector or a custom connector using Microsoft Graph APIs?
+### Can guests use Microsoft Graph via the Microsoft Security Graph connector or a custom connector by using Microsoft Graph APIs?
 
-No, Azure AD guests can't query Microsoft Graph to retrieve information for a tenant in which they’re a guest.
+No, Azure AD guests can't query Microsoft Graph to retrieve information for a tenant in which they're a guest.
 
-### What Intune policies apply to guests using my Power Apps?
+### Which Intune policies apply to guests who are using my apps?
 
-Intune only applies policies of a user’s home tenant. For instance, if Lesa@Contoso.com shares an app with Wanda@Fabrikam.com, Intune continues to apply Fabrikam.com policies on Wanda’s device regardless of the apps Wanda runs.
+Intune only applies the policies of a user's home tenant. For instance, if Lesa@Contoso.com shares an app with Wanda@Fabrikam.com, Intune continues to apply Fabrikam.com policies on Wanda's device, regardless of the apps Wanda runs.
 
-### What connectors support guest access?
+### Which connectors support guest access?
 
-All connectors that don't use Azure AD authentication of any type supports guest access. The following table enumerates all connectors that use Azure AD authentication and which connectors currently support guest access. More information: [List of all Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors)
+Connectors that don't use any type of Azure AD authentication will support guest access.<!--note from editor: Suggested. I found this a bit hard to parse.--> The following table enumerates all connectors that do use Azure AD authentication, and identifies which connectors currently support guest access. More information: [List of all Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors)
 
 | **Connector**                                     | **Supports guest access**                                              |
 |---------------------------------------------------|------------------------------------------------------------------------|
@@ -232,7 +231,7 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | OneDrive for Business                             | No                                                                     |
 | OneNote (Business)                                | No                                                                     |
 | Outlook Tasks                                     | Yes                                                                    |
-| Outlook.com                                       | No                                                                     |
+| Outlook&period;com                                       | No                                                                     |
 | Paylocity                                         | No                                                                     |
 | Planner                                           | No                                                                     |
 | Plumsail Forms                                    | No                                                                     |
@@ -258,11 +257,11 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | Windows Defender Advanced Threat Protection (ATP) | No                                                                     |
 | Word Online (Business)                            | No                                                                     |
 
-\* When using the Common Data Service connector, ensure the guest user is licensed from the same tenant where you have Dataverse located.
+\* When using the Common Data Service connector, ensure that the guest user is licensed from the same tenant where you have Dataverse located.
 
 ### See also
 
-- [Edit an app](edit-app.md)
-- [Restore an app to a previous version](restore-an-app.md)
-- [Export and import an app](export-import-app.md)
-- [Delete an app](delete-app.md)
+[Edit an app](edit-app.md)  
+[Restore an app to a previous version](restore-an-app.md)  
+[Export and import an app](export-import-app.md)  
+[Delete an app](delete-app.md)  
