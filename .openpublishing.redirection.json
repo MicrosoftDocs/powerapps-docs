@@ -6,6 +6,16 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerapps-docs/user/run-canvas-and-model-apps-on-mobile.md",
+      "redirect_url": "../mobile/run-powerapps-on-mobile",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/powerapps_mobile_troubleshoot.md",
+      "redirect_url": "powerapps-mobile-troubleshoot",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/monitor.md",
       "redirect_url": "../monitor-canvasapps",
       "redirect_document_id": "false"
