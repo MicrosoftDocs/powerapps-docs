@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 12/14/2020
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -58,9 +58,11 @@ When you install sample apps, the tables are pre-populated with sample data. The
 
 | Sample app | Tables |
 | - | - |
-| Inspection |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
-| Employee ideas | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
-| Issue Reporting | Issue Reports <br> Issue Report Questions <br> Issue Report Templates <br> Issue Report Categories |
+| [Bulletins (Preview)](bulletins.md) | Bulletins <br> Bulletin Bookmarks <br> Bulletin Categories <br> Bulletin Contacts <br> Bulletin FAQs <br> Bulletin FAQ Categories <br> Bulletin Links <br> Bulletin Link Categories <br> Bulletin Read Receipts
+| [Employee ideas](employee-ideas.md) | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
+| [Inspection](inspection.md) |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
+| [Issue reporting](issue-reporting.md) | Issue Reports <br> Issue Report Questions <br> Issue Report Templates <br> Issue Report Categories |
+| [Milestones (Preview)](milestones.md) | Projects <br> Project Activities <br> Project Milestones <br> Project Team Members <br> Project User Settings <br> Project Work items <br> Project Work Item Categories <br> Project Work Item Priorities <br> Project Work Item Statuses
 
 To remove data from the sample apps:
 
@@ -366,6 +368,10 @@ More information: [Publish and add an app to Teams](publish-and-share-apps.md)
 
 ### See also
 
-[Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
-[Inspection sample apps](inspection.md)  
-[Issue Reporting sample apps](issue-reporting.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Bulletins (Preview) sample apps](bulletins.md)
+- [Employee ideas sample app](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue reporting sample apps](issue-reporting.md)
+- [Milestones (Preview) sample app](milestones.md)
+- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)

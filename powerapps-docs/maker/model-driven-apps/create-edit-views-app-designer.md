@@ -61,7 +61,7 @@ As an app maker, you can create and edit public views by using Power Apps.
     
 5. In the view designer, select **+ View column** to add additional columns you want to display in the view. 
 
-   ![Add column](../common-data-service/media/add-column-to-view.png)
+   ![Add column](../data-platform/media/add-column-to-view.png)
 
    > [!TIP]
    > The **Default** view in the **Add column** pane displays the commonly used columns. If the column you want isn’t listed, select **All** to display additional columns.
@@ -139,7 +139,7 @@ You can filter data based on the attributes of related tables in addition to the
 
 2. Repeat steps 2 through 5 from the previous procedure.
 
-More information: [Create and edit relationships between tables](../common-data-service/create-edit-entity-relationships.md)
+More information: [Create and edit relationships between tables](../data-platform/create-edit-entity-relationships.md)
 
 #### Group multiple filters in app designer
 You can add multiple filters to your view if you want to filter rows by using more than one column. 
@@ -187,10 +187,10 @@ When you edit a public or system  view, you must save and publish your changes b
 ## Community tools
 **View Layout Replicator** and **View Designer** are tools that XrmToolbox community developed for Power Apps.
 
-More information: [Developer tools](/powerapps/developer/common-data-service/developer-tools).
+More information: [Developer tools](/powerapps/developer/data-platform/developer-tools).
 
 > [!NOTE]
 > These tools are provided by XrmToolBox and are not supported by Microsoft. If you have questions pertaining to the tool, please contact the publisher. More information: [XrmToolBox](https://www.xrmtoolbox.com/). 
 
 ### Next steps
-[Create 1:N (one-to-many) or N:1 (many-to-one) relationships](../common-data-service/create-edit-1n-relationships.md)
+[Create 1:N (one-to-many) or N:1 (many-to-one) relationships](../data-platform/create-edit-1n-relationships.md)

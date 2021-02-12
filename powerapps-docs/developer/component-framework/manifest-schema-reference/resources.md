@@ -34,8 +34,9 @@ Model-driven apps and canvas apps (public preview)
 |[code](code.md)|[!INCLUDE [code-description](includes/code-description.md)]|1|
 |[css](css.md)|[!INCLUDE [css-description](includes/css-description.md)]|0 or more|
 |[img](img.md)|[!INCLUDE [img-description](includes/img-description.md)]|0 or more|
-|[html](html.md)|[!INCLUDE [html-description](includes/html-description.md)]|0 or more|
 |[resx](resx.md)|[!INCLUDE [resx-description](includes/resx-description.md)]|0 or more|
+<!--|[html](html.md)|[!INCLUDE [html-description](includes/html-description.md)]|0 or more|-->
+
 
 ## Example
 

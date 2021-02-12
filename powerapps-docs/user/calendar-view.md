@@ -1,7 +1,7 @@
 ---
 title: "Work with rows in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
-ms.date: 11/10/2020
+ms.date: 01/13/2021
 author: mduelae
 ms.author: mkaur
 ms.service: powerapps
@@ -30,6 +30,8 @@ When the **Calendar Control V2** control is added to a table and then the defaul
 > [!div class="mx-imgBorder"]
 > ![Default calendar view](media/cal-view.png "Default calendar view") 
 
+> [!NOTE]
+> The **Calendar Control V2** control is not supported in mobile offline. For more information about mobile offline, see [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode).
 
 ## Switch between calendar view and grid view
 
@@ -55,7 +57,7 @@ When the calendar view is turned on, it is the default view for the table. Howev
 You can choose from these calendar views:
 
 - **Day**: View the current day.
-- **Week**: View the week from Sunday through Saturday, by default. You can change the first day of the week in system settings.
+- **Week**: View the week from Sunday through Saturday, by default. You can change the first day of the week in system settings.<br/>To view the week numbers, ask your admin to enable displaying the week numbers in the calendar view for your environment. Follow the steps in [Customize regional options](/power-platform/admin/customize-regional-options-admins) and select **Show week numbers on Calendar views**.
 - **Month**: View the entire month.
 
 To change the calendar format, on the calendar select the drop-down menu and then select **Day**, **Week**, or **Month**.

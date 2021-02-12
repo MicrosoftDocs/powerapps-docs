@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
-ms.date: 10/11/2020
+ms.date: 01/14/2021
 ms.author: dileeps
 ms.reviewer:
 ---
@@ -16,7 +16,7 @@ If you want to build skills and learn more about Power Apps, Power Automate, and
 * Learn to build business apps and workflows with the full functionality of Power Apps and Power Automate.
 * Connect to any data source by using our 100+ [out of the box connectors](./canvas-apps/connections-list.md) or by creating your own [custom connectors](./canvas-apps/register-custom-api.md).
 * Explore how you can use [the Dataverse](https://docs.microsoft.com/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
-* Export the solutions you create in your individual environment, and [publish them on Microsoft AppSource](../developer/common-data-service/publish-app-appsource.md) so your customers can test-drive them.
+* Export the solutions you create in your individual environment, and [publish them on Microsoft AppSource](../developer/data-platform/publish-app-appsource.md) so your customers can test-drive them.
 
 ## Who can sign up for the Power Apps Community Plan?
 Anyone with a [work or school account](signup-for-powerapps.md#faq) can sign up for the Power Apps Community Plan. But we especially recommend this plan if you:
@@ -43,14 +43,14 @@ With the individual environment, you get the following functionality:
 | --- | --- |
 | **Key features** | |
 | Create and run apps |Yes. You can create unlimited apps |
-| Share apps\* |No |
+| Share apps |No<sup>(1)</sup> |
 | Use the Dataverse |Yes |
 | Model your data using the Dataverse |Yes|
 | Enterprise-grade administration of the environment and user policies |Yes |
 | **Connectivity** | |
 | Connect to Office 365, Dynamics 365, and other connectors |Yes |
 | Connect to cloud-based services like Azure SQL, Dropbox, Twitter, and many more |Yes |
-| Use premium connectors like Salesforce, DB2 and many more |Yes |
+| Use premium connectors like Salesforce, DB2 and many more |Yes<sup>(2)</sup> |
 | Access on‐premises data using an on-premises gateway |Yes |
 | Create custom connectors to connect to your own systems |Yes. You can create unlimited custom connectors |
 | **Common Data Service** | |
@@ -58,17 +58,21 @@ With the individual environment, you get the following functionality:
 | Model your data in the Dataverse |Yes |
 | Create a database in the Dataverse |Yes |
 | Create and use dataflows |No |
-| **Management** | |
+| **Management**<sup>(3)</sup> | |
 | Add co-workers as environment makers and admins |No |
 | Add co-workers to the database roles |No |
 | Supports data policies established by the Office 365 administrator |Yes |
 | Establish data policies for the individual environment |Yes |
 
-*You can't share apps, flows, connections, etc. with any other users of your tenant. You also can't add any other user as an environment admin or maker, or to the database roles from the admin center.
+<sup>(1)</sup>You can't share resources such as apps, flows, or connections with any other users from your tenant.
+<br> 
+<sup>(2)</sup>Using [premium connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-premium-connectors) to connect to the data sources outside Power Apps will require you to have [standalone plans](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#power-apps-and-power-automate-standalone-plans).
+<br> 
+<sup>(3)</sup>You can't add any other user as an environment admin or a maker, or to the database roles from the admin center.
 
 ## What are the capacity limits for the individual environment?
 
-| **Capacity** |  |
+| **Capacity** | **Limits** |
 | --- | --- |
 | Flow runs/month |750 |
 | Database size |200 MB |
@@ -80,7 +84,7 @@ You cannot apply add-ons to the quantities that we include. If you hit capacity 
 > The capacity of the individual environment, whether or not it's used, doesn't contribute to your company's overall quota.
 
 ## Publishing to Microsoft AppSource
-Do you have an app you would like to share with customers? We now support Power Apps solutions on [Microsoft AppSource](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Publish your app on AppSource](../developer/common-data-service/publish-app-appsource.md).
+Do you have an app you would like to share with customers? We now support Power Apps solutions on [Microsoft AppSource](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Publish your app on AppSource](../developer/data-platform/publish-app-appsource.md).
 
 ## Frequently Asked Questions
 
@@ -88,7 +92,7 @@ Do you have an app you would like to share with customers? We now support Power 
 
 There is a limited capacity provided because this environment is meant for individual use, not for a team or production use. The capacity provided is:
 
-| **Capacity** |  |
+| **Capacity** | **Limits** |
 | --- | --- |
 | Flow runs/month |750 |
 | Database size |200 MB |
@@ -98,7 +102,7 @@ If you reach one or more capacity limits, we recommend you purchase a plan that 
 
 ### Can I transfer the apps, flows, and other resources created in the individual environment, to another environment?
 
-Yes, you should be able to export the resources from this environment to other environments. For more information, see [Environment and tenant app migration](../administrator/environment-and-tenant-migration.md).
+Yes, you should be able to export the resources from this environment to other environments. For more information, see [Solutions](data-platform/solutions-overview.md).
 
 ### Will my Power Apps Community Plan subscription ever expire?
 

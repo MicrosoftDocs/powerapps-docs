@@ -12,7 +12,7 @@
       items:
       # Adding Create app for each type of app
       - name: Create apps
-        tocHref: /powerapps/maker/common-data-service/
+        tocHref: /powerapps/maker/data-platform/
         topicHref: /powerapps/maker/index
       - name: Create apps
         tocHref: /powerapps/maker/model-driven-apps/
@@ -22,23 +22,23 @@
         topicHref: /powerapps/maker/index       
       #  Make sure Create apps appears for topics in developer folder 
       - name: Create apps
-        tocHref: /powerapps/developer/common-data-service/
+        tocHref: /powerapps/developer/data-platform/
         topicHref: /powerapps/maker/index
         items: 
         - name: Microsoft Dataverse
-          tocHref: /powerapps/developer/common-data-service/
-          topicHref: /powerapps/maker/common-data-service/index          
+          tocHref: /powerapps/developer/data-platform/
+          topicHref: /powerapps/maker/data-platform/index          
           items:
           - name: Developer
-            tocHref: /powerapps/developer/common-data-service/
-            topicHref: /powerapps/developer/common-data-service/index
+            tocHref: /powerapps/developer/data-platform/
+            topicHref: /powerapps/developer/data-platform/index
             items:
             - name: Organization Service
-              tocHref: /powerapps/developer/common-data-service/org-service/
-              topicHref: /powerapps/developer/common-data-service/org-service/index
+              tocHref: /powerapps/developer/data-platform/org-service/
+              topicHref: /powerapps/developer/data-platform/org-service/index
             - name: Web API
-              tocHref: /powerapps/developer/common-data-service/webapi/
-              topicHref: /powerapps/developer/common-data-service/webapi/index
+              tocHref: /powerapps/developer/data-platform/webapi/
+              topicHref: /powerapps/developer/data-platform/webapi/index
       - name: Create apps
         tocHref: /powerapps/developer/model-driven-apps/
         topicHref: /powerapps/maker/index

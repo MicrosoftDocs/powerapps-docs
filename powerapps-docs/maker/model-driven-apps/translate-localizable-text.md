@@ -97,7 +97,7 @@ The **Display Strings** tab contains text that is displayed for other UI element
 If you change the display name for any standard table or table column which is included in any special message, you can update information in the **Display Strings** tab to use the customized name.
 
 > [!TIP]
-> Although the UI exposed to edit system table messages includes many references to table names, it doesn't include all of them. Using this technique may find more. More information: [Edit system table messages](../common-data-service/edit-system-entity-messages.md)
+> Although the UI exposed to edit system table messages includes many references to table names, it doesn't include all of them. Using this technique may find more. More information: [Edit system table messages](../data-platform/edit-system-entity-messages.md)
 
 For example, if you change the display name for the Account table to *Company*, search through the base language column in the  **Display Strings** for the following matches: `account`, `accounts`, `Account`, and `Accounts` then make appropriate replacements to `company`, `companies`, `Company`, and `Companies` respectively.
 
@@ -136,4 +136,4 @@ After the translated text is imported, you should publish all customizations to 
 
 ## Next steps
 [Regional and language options for your organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages)<br />
-[Edit system table messages](../common-data-service/edit-system-entity-messages.md)
+[Edit system table messages](../data-platform/edit-system-entity-messages.md)

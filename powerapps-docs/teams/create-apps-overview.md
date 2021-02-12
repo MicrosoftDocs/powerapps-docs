@@ -5,7 +5,7 @@ author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/19/2020
+ms.date: 12/18/2020
 ms.author: kvivek
 ms.reviewer: 
 ---
@@ -13,7 +13,7 @@ ms.reviewer:
 
 With the significant number of enterprise employees working remotely, and millions of them meeting and collaborating through Microsoft Teams, there's significant interest in building low-code and no-code applications that can make remote work easier and more productive.
 
-Introducing [Microsoft Dataverse for Teams](overview-data-platform.md) (formerly called Project Oakdale), a built-in, low-code data platform for Teams that empowers you to build custom apps and workflows in Teams by using Power Apps and Power Automate. Dataverse for Teams, built on [Microsoft Dataverse](/powerapps/maker/common-data-service/data-platform-intro) (formerly called Common Data Service), provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment to the Teams app store.  
+Introducing [Microsoft Dataverse for Teams](overview-data-platform.md) (formerly called Project Oakdale), a built-in, low-code data platform for Teams that empowers you to build custom apps and workflows in Teams by using Power Apps and Power Automate. Dataverse for Teams, built on [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro) (formerly called Common Data Service), provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment to the Teams app store.  
 
 The new Power Apps app in Teams provides an integrated experience for app makers to create and edit apps and workflows within Teams, and quickly publish and share them for anyone on the team to use, without having to switch between multiple apps and services. With Power Apps Studio embedded in the Power Apps app in Teams and the new built-in data platform providing an easy-to-use, editable data table, you can quickly build apps based on custom data tables that are Teams-specific and scenario-specific.
 
@@ -36,6 +36,10 @@ There are two ways to use the apps created by using Power Apps in Teams:
 - You can install the apps created using Power Apps directly from the Microsoft Teams store. More information: [Use sample apps from Teams store](use-sample-apps-from-teams-store.md).
 
 When you create an app in Teams with the Power Apps app for the first time, or install an app created with Power Apps from the app catalog for the first time, a new Dataverse for Teams environment is created for the selected team. The Dataverse for Teams environment is used to store, manage, and share team-specific data, apps, flows, and chatbots. Each team can have one Dataverse for Teams environment, and all data, apps, and flows created with the Power Apps app inside a team are available from that environment. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
+
+When you create an app in Teams with the Power Apps app for the first time, or install an app created with Power Apps from the app catalog for the first time, you get to choose which team is responsible for customizing, maintaining, and sharing the app.
+
+After selecting a team, we will create a new Dataverse for Teams environment if one doesn’t already exist. This will provide the necessary workspace for your team to collaborate on all your data, apps, flows, and bots. More information: [About the Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
 
 ## Get started with creating flows and chatbots in Teams
 

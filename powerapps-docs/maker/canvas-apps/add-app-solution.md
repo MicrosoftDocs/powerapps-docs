@@ -18,7 +18,7 @@ search.app:
 
 Create an app from within a solution if, for example, you want to deploy the app to a different environment. Solutions can contain not only apps but also customized entities, option sets, and other components. You can quickly customize an environment in a variety of ways by creating apps and other components from within a solution, exporting the solution, and then importing it into another environment.
 
-For more information about solutions, see [Solutions overview](../common-data-service/solutions-overview.md).
+For more information about solutions, see [Solutions overview](../data-platform/solutions-overview.md).
 
 ## Prerequisite
 
@@ -115,9 +115,9 @@ If you want to link an app to a solution, both must be in the same environment, 
 
 ## Known limitations
 
-For information about known limitations, see [Solutions overview](/powerapps/maker/common-data-service/solutions-overview#known-limitations). 
+For information about known limitations, see [Solutions overview](/powerapps/maker/data-platform/solutions-overview#known-limitations). 
 
 ## Next steps
 
-- Create or link more apps and [other components](../common-data-service/use-solution-explorer.md), such as entities, flows, and dashboards, to your solution.
-- [Export your solution](../common-data-service/import-update-export-solutions.md) so that you can deploy it to another environment, on AppSource, and so forth.
+- Create or link more apps and [other components](../data-platform/use-solution-explorer.md), such as entities, flows, and dashboards, to your solution.
+- [Export your solution](../data-platform/import-update-export-solutions.md) so that you can deploy it to another environment, on AppSource, and so forth.

@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/16/2020
+ms.date: 01/07/2021
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
@@ -24,6 +24,10 @@ The following components aren't supported:
 ## Component library
 
 [Component library](../maker/canvas-apps/component-library.md) isn't supported.
+
+## Controls
+
+To learn about the limitations of controls in Dataverse for Teams environments, go to [Limitations of controls in Power Apps](../maker/canvas-apps/control-limitations.md).
 
 ## Government Community Cloud (GCC)
 
@@ -46,12 +50,6 @@ Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't suppo
 
 There is no enforcement of user-created required table fields. Rows that have empty values in those fields can be saved successfully. System required fields are enforced and cannot be saved without a value.
 
-## Sharing
-
-You can't share apps or data outside of a team currently.
-
-![Share with your colleagus](media/share-with-colleagues.png "Share with your colleagues")
-
 ## Studio
 
 ### Classic controls
@@ -63,17 +61,6 @@ Enabling classic controls requires a refresh of Power Apps Studio.
 You may see red errors while using the modern controls in canvas components. These errors won't functionally impact your app, and you can ignore them.
 
 ![Canvas components](media/canvas-components.png "Canvas components")
-
-### Controls
-
-The following controls aren't supported:
-
-- [Address Input](../maker/canvas-apps/geospatial-component-input-address.md)
-- [Camera](../maker/canvas-apps/controls/control-camera.md) (in Teams Mobile)
-- [Map](../maker/canvas-apps/geospatial-component-map.md)
-- [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md) (View in MR, View shape in MR, Measure in MR)
-
-The [Image control](../maker/canvas-apps/controls/control-image.md) only supports external media URLs using HTTPS.
 
 ### New connections
 

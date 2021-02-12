@@ -47,7 +47,7 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Dataverse](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+5. Manually [import the solution into Dataverse](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 ## Connecting to your environment
 
@@ -158,7 +158,7 @@ If you want to remove a code component from a solution file:
    <ItemGroup>
        <Projectreference Include="..\pcf_component\pcf_component.pcfproj">
          <Project>0481bd83-ffb0-4b70-b526-e0b3dd63e7ef</Project>
-         <Name>pcf_component </Name>
+         <Name>pcf_component</Name>
          <Targets>Build</Targets>
          <referenceOutputAssembly>false</referenceOutputAssembly>
          <OutputItemType>Content</OutputItemType>

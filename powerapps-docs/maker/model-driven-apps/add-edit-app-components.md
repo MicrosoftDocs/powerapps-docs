@@ -58,6 +58,10 @@ The app designer refers to existing metadata in the default solution. You can us
 
 2. Select an existing model-driven app or select **Model-driven app from blank**. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md#create-an-app).
 
+## Add or edit a site map
+
+Before you can add app components (artifacts) to a newly created app, a site map must be defined. More information: [Create a model-driven app site map using the site map designer](create-site-map-app.md)
+
 ## Add an artifact (table, dashboard, or business process flow)  
  When you add a dashboard or business process flow to an app, the tables they use are automatically added to the app. When you add a table, the tiles for its assets are automatically added. There are two ways you can add artifacts to the designer canvas: by using the **Add** button  ![Add button on the designer](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the command bar or by using the tiles on the **Components** tab.  
   
@@ -96,7 +100,7 @@ The app designer refers to existing metadata in the default solution. You can us
      The dashboard designer opens. More information: [Create and edit dashboards](create-edit-dashboards.md)  
   
     > [!NOTE]
-    > - When you're adding a business process flow or table, the **Create New** option opens the corresponding designer. To learn more about creating business process flows or tables, see [Create a business process flow](/flow/create-business-process-flow) and  [Create a custom table](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-create-entity).  
+    > - When you're adding a business process flow or table, the **Create New** option opens the corresponding designer. To learn more about creating business process flows or tables, see [Create a business process flow](/flow/create-business-process-flow) and  [Create a custom table](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-create-entity).  
       
   
 5.  When you're done adding artifacts, on the command bar, select **Save**.  

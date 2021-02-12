@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/24/2020
+ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -15,7 +15,7 @@ ms.reviewer: tapanm
 If you select an environment that contains customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), you can create the portals mentioned in [Portal templates](portal-templates.md).
 
 > [!NOTE]
-> - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-portal.md#create-additional-portals-in-an-environment).
+> - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - To learn about the roles required to create a portal, read [Admin roles required for portal administrative tasks](admin/portal-admin-roles.md).
 
 To create a portal in an environment containing customer engagement apps:
@@ -36,9 +36,15 @@ To create a portal in an environment containing customer engagement apps:
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).
 > - Provisioning portals from [make.powerapps.com](https://make.powerapps.com) does not consume the older portal add-ons. Also, these portals are not listed under the **Applications** tab on the **Dynamics 365 Administration Center** page.
 > - A Dataverse starter portal cannot be created from the **Dynamics 365 Administration Center** page.
-> - To disable portal creation in a tenant, see [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant).
+> - To disable portal creation in a tenant, see [Control portal creation in a tenant](control-portal-creation.md).
 > - When you create a portal, a few solutions are installed and sample data is imported.
+
+## Next steps
+
+[Manage a portal](manage-existing-portals.md)
 
 ### See also
 
+[Common problems and resolutions while creating a portal](create-common-problems.md) <br>
+[Control portal creation in a tenant](control-portal-creation.md) <br>
 [Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)
