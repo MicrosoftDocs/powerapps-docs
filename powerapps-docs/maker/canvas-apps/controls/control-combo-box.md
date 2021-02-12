@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/06/2020
+ms.date: 11/02/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -44,7 +44,7 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **IsSearchable** – Whether the user can search for items before selecting.
 
 > [!NOTE]
-> Can only be enabled on a datasource that can contains at least one text field.  The items expression must be delegable for queries to be delegated with searching. I.e. If statements within the Items expression are not supported.
+> **IsSearchable** can be enabled only on a data source that contains at least one text field. The **Items** expression must be delegable for queries to be delegated with searching. That is, **If** statements within the **Items** expression are not supported.
 
 **SearchFields** - The data fields of the data source searched when user is entering text.  
 
