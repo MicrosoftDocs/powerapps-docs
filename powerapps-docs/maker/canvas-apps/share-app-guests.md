@@ -19,10 +19,10 @@ Canvas apps can be shared with guest users of an Azure Active Directory (Azure A
 
 ## Prerequisites
 
-- In Azure AD, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)<!--note from editor: I changed the following into a Note because you want to have either >=2 bullets, or none.-->
+- In Azure AD, enable B2B external collaboration for the tenant. More information: [Enable B2B external collaboration and manage who can invite guests](/azure/active-directory/b2b/delegate-invitations)
 
   > [!NOTE]
-  > B2B external collaboration is enabled by default; however, you need to verify that the settings weren't changed by a tenant admin.<!--note from editor: Edit okay? I wanted to explain the significance of the fact that a tenant admin can change these settings.--> For more information about Azure AD B2B, go to [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b).
+  > B2B external collaboration is enabled by default; however, you need to verify that the settings weren't changed by a tenant admin. For more information about Azure AD B2B, go to [What is guest user access in Azure AD B2B?](/azure/active-directory/b2b/what-is-b2b).
 
 - Access to an account that can add guest users to an Azure AD tenant. Admins and users with the Guest Inviter role can add guests to a tenant.
 
@@ -82,9 +82,9 @@ After you share an app for guest access, guests can discover and access apps sha
 
 With canvas apps, you can build an app that's tailored to digitizing business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that might be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for Power Apps](/powerapps/maker/canvas-apps/connections-list)
 
-[Power Apps portals](/powerapps/maker/portals/overview) provide you the ability to build low-code, responsive websites that allow external users to interact with the data stored in Dataverse. With Power Apps portals, organizations can create websites that can be shared with users external to their organization either anonymously or through the sign-in provider of their choice, such as LinkedIn, Microsoft account<!--note from editor: Lowercase "account" via Writing Style Guide.-->, or other commercial sign-in provider.
+[Power Apps portals](/powerapps/maker/portals/overview) provide you the ability to build low-code, responsive websites that allow external users to interact with the data stored in Dataverse. With Power Apps portals, organizations can create websites that can be shared with users external to their organization either anonymously or through the sign-in provider of their choice, such as LinkedIn, Microsoft account, or other commercial sign-in provider.
 
-The following table outlines a few core capability differences between Power Apps portals and canvas apps.<!--note from editor: Edit okay in the first column heading? I assume the table is talking about guest access, since that's what this section is about. -->  
+The following table outlines a few core capability differences between Power Apps portals and canvas apps. 
 
 | Guest access in | Interface | Authentication | Accessible data sources |
 |------|--------|----------|-------------------|
@@ -119,7 +119,7 @@ You must assign your guest the same license that's required for non-guests to ru
 
 |    Plan                             | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model-driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
-| SharePoint user (no Power Apps<!--note from editor: Edit okay? --> license) | x                          |                                                    |                                                |                  |
+| SharePoint user (no Power Apps license) | x                          |                                                    |                                                |                  |
 | Power Apps included with Office    | x                          | x                                                  |                                                |                  |
 | Power Apps per app plan          | x                          | x                                                  | x                                              | x                |
 | Power Apps per user plan         | x                          | x                                                  | x                                              | x                |
@@ -152,7 +152,7 @@ Intune only applies the policies of a user's home tenant. For instance, if Lesa@
 
 ### Which connectors support guest access?
 
-Connectors that don't use any type of Azure AD authentication will support guest access.<!--note from editor: Suggested. I found this a bit hard to parse.--> The following table enumerates all connectors that do use Azure AD authentication, and identifies which connectors currently support guest access. More information: [List of all Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors)
+Connectors that don't use any type of Azure AD authentication will support guest access. The following table enumerates all connectors that do use Azure AD authentication, and identifies which connectors currently support guest access. More information: [List of all Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors)
 
 | **Connector**                                     | **Supports guest access**                                              |
 |---------------------------------------------------|------------------------------------------------------------------------|

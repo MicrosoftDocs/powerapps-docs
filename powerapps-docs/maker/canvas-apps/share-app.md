@@ -1,6 +1,6 @@
 ---
-title: Share a canvas app | Microsoft Docs
-description: Share your canvas app by giving other users permission to run or modify it
+title: Share a canvas app with your organization | Microsoft Docs
+description: Share your canvas app by giving other users in your organization the permissions to run or modify it.
 author: alaug
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,8 +14,8 @@ search.app:
   - PowerApps
 ---
 # Share a canvas app with your organization
-<!--note from editor: Edit to the title is suggested. This would make a nice parallelism to the title of the guest-sharing article, and also remove the need to have that odd little H2 "Share with guests" at the end of the article. If you don't want to change the title, how about just adding a link at the end of this first paragraph (see below)?-->
-After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even reshare it. Specify each user by name, or specify a security group in Azure Active Directory (Azure AD). If everyone would benefit from your app, specify that your entire organization can run it.<!--note from editor: Maybe this would be a good place to add "To learn about sharing apps outside of your organization, go to [Share a canvas app with guest users](share-app-guests.md]."-->
+
+After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Azure Active Directory (Azure AD). If everyone would benefit from your app, specify that your entire organization can run it. To learn about sharing apps outside of your organization, go to [Share a canvas app with guest users](share-app-guests.md].
 
 > [!IMPORTANT]
 > For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
@@ -40,7 +40,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
     ![Select an app](./media/share-app/select-app.png "Select an app")
 
-1. On the command bar<!--note from editor: To match share-app-guests.md.-->, select **Share**.  
+1. On the command bar, select **Share**.  
    or  
    Select **More Commands** (**...**), and then select **Share** from the drop-down menu.
 
@@ -57,7 +57,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
         ![Share with an individual user](./media/share-app/individual-user.png "Share with an individual user")
 
     > [!NOTE]
-    > You can't share an app with a distribution group in your organization or with a group outside your organization.<!--note from editor: Maybe this might be a good place for a link, something like "To share an app with individual users outside your organization, go to [Share canvas apps with guest users](share-app-guests.md)."?-->
+    > You can't share an app with a distribution group in your organization or with a group outside your organization.
 
 1. If you want to allow users to edit and share the app, select the **Co-owner** check box.
 
@@ -68,9 +68,9 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
     > [!NOTE]
     > Regardless of permissions, no two people can edit an app at the same time. If one person opens the app for editing, other people can run it but not edit it.
 
-1. If your app connects to data for which users need access permissions, specify them.<!--note from editor: Can you specify what "them" refers to? I assume it's "specify the permissions"?-->
+1. If your app connects to data for which users need access permissions, specify security roles as appropriate.
 
-    For example, your app might connect to an entity in a Dataverse database. When you share such an app, the sharing panel prompts you to manage security for that entity.<!--note from editor: Here and throughout, is it okay to use "entity", or should we use the updated term "table"? Also, should the image show "Dataverse" instead of "Common Data Service"?-->
+    For example, your app might connect to an entity in a Dataverse database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
     ![Assign a security role](media/share-app/data-permissions-common-data-servicel.png "Assign a security role")
 
@@ -104,7 +104,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 ## Security group considerations
 
-- All existing members of the security group inherit the app permissions. New users joining the security group will inherit the security group permissions on the app. Users leaving the group will no longer have access through that group, but those users can continue to have access either by having permissions assigned to them directly or through membership in another security group.s<!--note from editor: Edit okay? I wanted to tie those last two thoughts together.-->
+- All existing members of the security group inherit the app permissions. New users joining the security group will inherit the security group permissions on the app. Users leaving the group will no longer have access through that group, but those users can continue to have access either by having permissions assigned to them directly or through membership in another security group.
 
 - Every member of a security group has the same permissions for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A permission to run an app. And then, you can also give User B, who belongs to that group, Co-owner permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A Co-owner permission and User B permission to run the app, that user can still edit the app.
 
@@ -122,7 +122,7 @@ You can share an app with [Microsoft 365 groups](https://docs.microsoft.com/micr
 
     ![Connect-AzureAD](media/share-app/azure_cmdlet_connect.png "Connect-AzureAD")
 
-1. Get the [group details](https://docs.microsoft.com/powershell/module/AzureAD/Get-AzureADGroup) by using `Get-AzureADGroup -ObjectId <ObjectID\> | select *`. <br> In the output, ensure that the property **SecurityEnabled** is set to **True**.<!--note from editor: Via Docs Contributor Guide, don't use three backticks for inline code, just one.-->
+1. Get the [group details](https://docs.microsoft.com/powershell/module/AzureAD/Get-AzureADGroup) by using `Get-AzureADGroup -ObjectId <ObjectID\> | select *`. <br> In the output, ensure that the property **SecurityEnabled** is set to **True**.
 
     ![Check the SecurityEnabled property](media/share-app/azure_cmdlet_get_azuread_group_details.png "Check the SecurityEnabled property")
 
@@ -138,17 +138,17 @@ If the group isn't security-enabled, you can use the PowerShell cmdlet [Set-Azur
 > You must be the owner of the Microsoft 365 group to enable security.
 > Setting the **SecurityEnabled** property to **True** doesn't affect how Power Apps and Microsoft 365 features work. This command is required because the **SecurityEnabled** property is set to **False** by default when Microsoft 365 groups are created outside of Azure AD.
 
-After a while<!--note from editor: Is it possible to be more specific here? "After a few hours," "after these changes are propagated,"...?-->, you can discover this group in the Power Apps sharing panel and share apps with this group.
+After a few minutes, you can discover this group in the Power Apps sharing panel and share apps with this group.
 <a name="manage-entity-permissions"></a>
 <a name="dataverse"></a>
 
-## Manage entity permissions for the current version of Dataverse
-<!--note from editor: The structure got a bit confusing in here. The only reason I can see to keep these two headings in a row is if you're eventually going to add other headings besides "Dataverse." But if not, I think either we need another H2 for the old version of Dataverse (as shown below), or just turn that section about previous versions into a note.-->
+## Manage entity permissions for Dataverse
+
 If you create an app based on Dataverse, you must also ensure that the users you share the app with have the appropriate permissions for the entity or entities used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign the role to each user as appropriate.
 
 > [!NOTE]
-> - You can assign security roles to individual users and security groups in Azure AD, but not to Office<!--note from editor: Should this be "Microsoft 365"? --> groups.
-> - <!--note from editor: Suggest deleting this sentence, since it's contradicted by the sentence that follows: The user must also be in the Dataverse root business unit.-->If a user isn't in the Dataverse root business unit, you can share the app without providing a security role, and then set the security role directly.
+> - You can assign security roles to individual users and security groups in Azure AD, but not to Microsoft 365 groups.
+> - If a user isn't in the Dataverse root business unit, you can share the app without providing a security role, and then set the security role directly.
 
 ### Prerequisite
 
@@ -162,20 +162,15 @@ To assign a role, you must have **System administrator** permissions for a Datav
 
      ![Security role list](media/share-app/cds-assign-security-role-list.png "Security role list")
 
-<!--note from editor: As noted above, maybe this section should just be a note.-->
-## Manage entity permissions in previous versions of Dataverse
+> [!NOTE]
+> When you share an app that's based on an older version of Dataverse, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
 
-When you share an app that's based on an older version of Dataverse, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
+## Next steps
 
-<!--note from editor: If you accept the edit to the title of this article, you won't need this odd little stump of a heading.
-## Share an app with guests
-
-Go to [Share a canvas app with guest users](share-app-guests.md).
--->
+[Share a canvas app with guest users](share-app-guests.md)  
 
 ### See also
 
-[Share a canvas app with guest users](share-app-guests.md)  
 [Edit an app](edit-app.md)  
 [Restore an app to a previous version](restore-an-app.md)  
 [Export and import an app](export-import-app.md)  
