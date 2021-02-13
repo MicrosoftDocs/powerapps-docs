@@ -2,7 +2,7 @@
 title: "Quickstart: Organization service sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This quickstart will show you how to connect to the organization service of the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/25/2019
+ms.date: 02/13/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -31,7 +31,7 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 
 ## Prerequisites
 
- - Visual Studio (2017 recommended)
+ - Visual Studio (2019 recommended)
  - Internet connection
  - Valid user account for a Dataverse instance
     - Your username
@@ -82,9 +82,12 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 
         string conn = $@"
         Url = {url};
-        AuthType = Office365;
+        AuthType = OAuth;
         UserName = {userName};
         Password = {password};
+        AppId = 51f81489-12ee-4a9e-aaae-a2591f45987d;
+        RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97;
+        LoginPrompt=Auto;
         RequireNewInstance = True";
 
         using (var svc = new CrmServiceClient(conn))
