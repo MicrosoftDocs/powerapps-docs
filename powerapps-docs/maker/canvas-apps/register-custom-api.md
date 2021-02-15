@@ -34,3 +34,6 @@ Sometimes though, you might want to call APIs, services, and systems that aren't
 * [Submit your connectors for Microsoft certification](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
 
 * [Custom connector FAQ](https://docs.microsoft.com/connectors/custom-connectors/faq)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

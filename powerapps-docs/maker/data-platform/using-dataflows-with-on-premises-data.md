@@ -139,3 +139,6 @@ gateway service for your network, see [Understand on-premises data gateways](../
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

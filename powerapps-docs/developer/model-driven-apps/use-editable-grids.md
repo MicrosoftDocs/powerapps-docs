@@ -300,3 +300,6 @@ namespace Microsoft.Crm.Sdk.Samples
 ### See also  
  [Grids and subgrids in model-driven apps (Client API reference)](clientapi/reference/grids.md)   
  [Make model-driven apps grids (lists) editable using the editable grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

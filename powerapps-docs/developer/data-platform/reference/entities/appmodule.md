@@ -1001,3 +1001,5 @@ See serviceplan Entity [serviceplan_appmodule](serviceplan.md#BKMK_serviceplan_a
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appmodule?text=appmodule EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

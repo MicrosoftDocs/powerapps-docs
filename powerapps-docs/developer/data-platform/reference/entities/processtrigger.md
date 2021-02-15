@@ -757,3 +757,5 @@ See systemuser Entity [lk_processtriggerbase_modifiedby](systemuser.md#BKMK_lk_p
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.processtrigger?text=processtrigger EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

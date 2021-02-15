@@ -1007,3 +1007,6 @@ For more information, see [Package and Distribute Extensions with Solutions](htt
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Ribbon Types Schema](ribbon-types-schema.md)   
  [Customization XML Reference](customization-xml-reference.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

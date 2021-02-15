@@ -138,3 +138,6 @@ report app.
 
 > [!div class="nextstepaction"]
 > [Next step: Measuring success](measuring-success.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

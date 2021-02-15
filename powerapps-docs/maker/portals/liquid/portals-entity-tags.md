@@ -712,3 +712,6 @@ The name of the Web Form you wish to load.
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
 [Template tags](template-tags.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

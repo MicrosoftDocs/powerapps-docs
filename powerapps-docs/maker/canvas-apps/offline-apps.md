@@ -222,3 +222,6 @@ This formula determines whether the device is online. If it is, the app tweets a
     Within five minutes, the app posts the tweet, which appears in the gallery.
 
 We hope this article gives you an idea of the capabilities that Power Apps has for building offline apps. As always, please provide feedback in our [forum](https://powerusers.microsoft.com/t5/PowerApps-Forum/bd-p/PowerAppsForum1) and share your examples of offline apps in the [Power Apps community blog](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/bg-p/PowerAppsBlog).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

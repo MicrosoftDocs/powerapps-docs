@@ -42,3 +42,6 @@ search.app:
 [htmlAttributeEncode](htmlAttributeEncode.md)
 
 [htmlDecode](htmlDecode.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

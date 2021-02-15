@@ -243,3 +243,6 @@ Immediately, as long as the update changes a primary record and isn't based on i
 ## See also
 
 [Build a portal using portals Studio](../portal-designer-anatomy.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

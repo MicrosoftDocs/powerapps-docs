@@ -50,3 +50,6 @@ The update might take a while after you select **Submit**. More information: [Up
 [Upgrade a portal](upgrade-portal.md) <br>
 [Administer Microsoft Power Platform](/power-platform/admin/admin-documentation) <br>
 [Manage Dynamics 365 apps](/power-platform/admin/manage-apps)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

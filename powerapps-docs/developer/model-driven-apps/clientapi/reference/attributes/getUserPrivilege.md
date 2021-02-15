@@ -37,3 +37,6 @@ All
 - canUpdate
 - canCreate
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

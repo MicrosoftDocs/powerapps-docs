@@ -333,3 +333,6 @@ Many-to-many relationships are symmetric. You can extend the example to add prod
 With this new screen, users can add a contact to a product and then flip to a view of contacts and see the associated product. The relationships are symmetric and shared between the two screens.
 
 ![Demonstrate many-to-many relationship from either side](media/function-relate-unrelate/contacts-reverse.gif)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

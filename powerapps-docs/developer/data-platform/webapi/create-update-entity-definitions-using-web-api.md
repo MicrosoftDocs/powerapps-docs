@@ -809,3 +809,6 @@ As mentioned in [Update entities](create-update-entity-definitions-using-web-api
 
 [Work with metadata using the Organization service](../org-service/work-with-metadata.md)<br />
 [Attribute metadata](../entity-attribute-metadata.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

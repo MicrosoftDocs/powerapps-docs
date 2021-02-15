@@ -26,3 +26,5 @@ Use this method to know the error details on why an entity save failed.
 ## Related articles
 
 [PostSave](../events/postsave.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -136,3 +136,6 @@ This sample shows how authorize endpoint returns the ID token as a fragment in t
 ### Token Endpoint sample
 
 This sample shows how you can use the getAuthenticationToken function to fetch an ID token using the Token endpoint in Power Apps portals. The sample can be found here: [Token Endpoint sample](https://github.com/microsoft/PowerApps-Samples/blob/master/portals/TokenEndpoint.js).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

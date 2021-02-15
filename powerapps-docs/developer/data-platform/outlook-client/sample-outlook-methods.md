@@ -91,3 +91,6 @@ if (outlookService.IsCrmClientLoaded)
 <xref:Microsoft.Crm.Outlook.Sdk.CrmOutlookService><br />
 <xref:Microsoft.Crm.Outlook.Sdk.CrmOutlookService.GoOnline><br />
 <xref:Microsoft.Crm.Outlook.Sdk.CrmOutlookService.GoOffline>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

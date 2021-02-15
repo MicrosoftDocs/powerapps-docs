@@ -164,3 +164,6 @@ Indicates whether the Skype protocol is used for the current organization.
 [User settings](userSettings.md)
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

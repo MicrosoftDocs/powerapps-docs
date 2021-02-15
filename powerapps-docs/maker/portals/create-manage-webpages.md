@@ -103,3 +103,6 @@ If you are working with a portal created in an environment containing customer e
 
 [Work with templates](work-with-templates.md) <br>
 [Work with themes](theme-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

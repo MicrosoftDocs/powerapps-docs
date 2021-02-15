@@ -44,3 +44,6 @@ project, and make the app.
 
 > [!div class="nextstepaction"]
 > [Next step: Listing project tasks and owners](project-tasks-owners.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

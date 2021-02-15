@@ -48,3 +48,6 @@ You can also provide the [SystemUser.SystemUserId](reference/entities/systemuser
 
 [Plug-ins](plug-ins.md)  
 [Write a plug-in](write-plug-in.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -504,3 +504,5 @@ See organization Entity [lk_documenttemplatebase_organization](organization.md#B
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.documenttemplate?text=documenttemplate EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

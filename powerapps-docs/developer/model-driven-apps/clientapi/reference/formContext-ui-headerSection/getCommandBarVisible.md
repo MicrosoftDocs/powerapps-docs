@@ -35,3 +35,5 @@ search.app:
 ## Related topics
 
 [setCommandBarVisible](setCommandBarVisible.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

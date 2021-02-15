@@ -251,3 +251,6 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 
 [Xrm.Navigation](../xrm-navigation.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

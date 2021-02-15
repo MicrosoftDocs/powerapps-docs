@@ -63,3 +63,6 @@ You should use the Power Apps portal to create and edit Many-to-many (N:N) table
 [Create N:N (many-to-many) table relationships in Dataverse using solution explorer](create-edit-nn-relationships-solution-explorer.md)<br />
 [Developer documentation: Customize table relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
 [Developer documentation: table relationship eligibility](https://docs.microsoft.com/dynamics365/customer-engagement/developer/table-relationship-eligibility)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

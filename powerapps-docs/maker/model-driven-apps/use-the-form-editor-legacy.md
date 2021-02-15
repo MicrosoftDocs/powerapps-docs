@@ -70,3 +70,6 @@ search.app:
 ## Next steps
 
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -332,3 +332,6 @@ But if you need to automate creation of this kind of attribute you can use C# co
 [Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)<br />
 [Sample: Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/sample-work-attribute-metadata)<br />
 [Late-bound and early-bound programming using the Organization Service](org-service/early-bound-programming.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

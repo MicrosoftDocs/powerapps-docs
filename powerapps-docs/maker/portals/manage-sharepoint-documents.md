@@ -233,3 +233,6 @@ The below example demonstrates configuration using the Case entity which needs t
 ### See also
 
 [Microsoft Learn: Document management with SharePoint](https://docs.microsoft.com/learn/modules/portals-integration/2-sharepoint)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

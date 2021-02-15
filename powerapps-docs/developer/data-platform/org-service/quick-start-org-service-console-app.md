@@ -137,3 +137,6 @@ These articles will explain how to work with Dataverse entities:
 [Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
 [Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
 [Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -121,3 +121,6 @@ For information about known limitations, see [Solutions overview](/powerapps/mak
 
 - Create or link more apps and [other components](../data-platform/use-solution-explorer.md), such as entities, flows, and dashboards, to your solution.
 - [Export your solution](../data-platform/import-update-export-solutions.md) so that you can deploy it to another environment, on AppSource, and so forth.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -140,3 +140,6 @@ For information on best practices for creating:
 
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

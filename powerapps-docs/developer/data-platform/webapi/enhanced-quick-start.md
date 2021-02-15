@@ -443,3 +443,6 @@ Use the following resources to learn more:
 > [Try Web API Data operations Samples (C#)](web-api-samples-csharp.md)<br /><br />
 > [Review Web API samples (C#) on GitHub](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

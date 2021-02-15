@@ -101,3 +101,6 @@ As a system customizer you can customize the views through controls by making gr
 ## Next steps
 
 [Create or edit views](create-and-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -33,3 +33,6 @@ After you've created the app on the Azure portal, configure the site settings fo
 ## (Optional) Step 3. Additional settings
 
 To configure **Additional settings** for the Microsoft provider, see [Configure additional settings for OAuth 2.0 providers](configure-oauth2-settings.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

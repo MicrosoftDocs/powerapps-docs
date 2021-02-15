@@ -235,3 +235,6 @@ Because of parental relationships there are some limitations you should keep in 
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships in Power Apps portal](create-edit-1n-relationships-portal.md)<br />
 [Create N:N (many-to-many) relationships](create-edit-nn-relationships.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

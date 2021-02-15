@@ -175,3 +175,6 @@ To assign a role, you must have **System administrator** permissions for a Datav
 [Restore an app to a previous version](restore-an-app.md)  
 [Export and import an app](export-import-app.md)  
 [Delete an app](delete-app.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -49,3 +49,6 @@ The `newSavedQuery` method creates a query for retrieving all organization-owned
 ### Clean up
 
 This sample creates no records. No cleanup is required.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

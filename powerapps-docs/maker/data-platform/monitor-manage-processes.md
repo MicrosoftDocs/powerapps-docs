@@ -94,3 +94,6 @@ The synchronous bulk delete will only delete AsyncOperation rows in the complete
 ## Next steps   
 [Best practices for real-time workflow processes](best-practices-workflow-processes.md) <br />
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

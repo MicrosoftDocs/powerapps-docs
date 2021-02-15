@@ -209,3 +209,6 @@ The following table lists the output properties available.
 ## Other geospatial components
 
 To visualize and interpret location data, use the **[Interactive map](geospatial-component-map.md)** component.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

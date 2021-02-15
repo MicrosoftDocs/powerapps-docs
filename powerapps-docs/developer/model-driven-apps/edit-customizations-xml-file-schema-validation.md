@@ -83,3 +83,6 @@ The XSD schema files that are used to validate the customization.xml file in a s
 [Form XML schema](form-xml-schema.md)     
 [ISV configuration file schema](/dynamics365/customer-engagement/developer/customize-dev/isv-configuration-file-schema)<br/>   <!-- TODO need to fix link relevant to the topic in powerapps repo-->
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

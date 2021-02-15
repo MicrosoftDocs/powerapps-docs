@@ -46,3 +46,6 @@ This section contains reference documentation for creating code components using
 |[UserSettings](usersettings.md)|[!INCLUDE [usersettings-description](includes/usersettings-description.md)]|Model-driven apps|
 |[Utility](utility.md)|[!INCLUDE [utility-description](includes/utility-description.md)]|Model-driven apps|
 |[WebApi](webapi.md)|[!INCLUDE [webapi-description](includes/webapi-description.md)]|Model-driven apps|
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

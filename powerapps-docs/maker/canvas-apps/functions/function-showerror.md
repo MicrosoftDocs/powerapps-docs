@@ -101,3 +101,6 @@ Note: This function was previously named **ShowError** when it could only displa
 	Now each time the button is clicked, the message **Hello, World** is displayed to the user as success.  With a **0** timeout, the notification will only be dismissed by the user or by pressing the button again.
 
 	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a green banner message for the user](media/function-showerror/hello-world-success.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

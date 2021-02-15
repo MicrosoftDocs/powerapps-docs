@@ -968,3 +968,5 @@ See msdyn_analysisresult Entity [msdyn_msdyn_analysisresult_msdyn_analysisresult
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_analysisresultdetail?text=msdyn_analysisresultdetail EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -159,3 +159,6 @@ If you're a tenant administrator, you can go one step forward and pin the apps f
 
 [Use sample apps from Teams store](use-sample-apps-from-teams-store.md)  
 [Manage your apps](manage-your-apps.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

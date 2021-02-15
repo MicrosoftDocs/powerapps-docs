@@ -52,3 +52,6 @@ Websites are created when you create a new portal. However, advanced website man
 ### See also
 
 [Website bindings](website-bindings.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

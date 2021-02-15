@@ -168,3 +168,6 @@ While creating canvas aps using Power Apps from the Teams interface, you need to
 
 [Understand Power Apps Studio](understand-power-apps-studio.md)  
 [Create your first app](create-first-app.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

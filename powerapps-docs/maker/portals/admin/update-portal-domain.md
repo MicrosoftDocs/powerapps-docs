@@ -33,3 +33,6 @@ If you are already using the Power Apps portals domain and would like to revert 
 
 > [!div class=mx-imgBorder]
 > ![Revert to old domain](../media/revert-portal-domain.png "Revert to old domain ")
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
