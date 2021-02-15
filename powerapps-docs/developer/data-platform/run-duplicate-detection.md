@@ -198,3 +198,6 @@ To detect duplicate data while creating and updating records, see:
   
 ### See also  
  [Duplicate Detection Messages](duplicate-detection-messages.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

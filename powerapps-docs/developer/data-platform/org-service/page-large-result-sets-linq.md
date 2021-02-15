@@ -45,3 +45,6 @@ foreach (var a in accountsByPage.Skip(2 * pageSize).Take(pageSize))
 ### See also  
  [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
  [LINQ query examples](linq-query-examples.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

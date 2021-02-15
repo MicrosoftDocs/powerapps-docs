@@ -92,3 +92,6 @@ To delete a global choice , while viewing the list select the ![Delete command](
 [Create a choice ](custom-picklists.md)<br />
 [Create and edit columns](create-edit-fields.md)<br />
 [Developer documentation: Customize global choices](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -59,3 +59,6 @@ Now you can download the validation report for your app and include it with your
 [Tenant page](isv-app-management-tenantpage.md)<br/>
 [Connector certification](isv-app-management-certification.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

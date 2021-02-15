@@ -145,3 +145,6 @@ Photos | The photos captured during the mixed reality session.<br/>You can [uplo
 - View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
 - View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

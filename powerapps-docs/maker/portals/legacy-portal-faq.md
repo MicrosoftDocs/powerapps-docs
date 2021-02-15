@@ -15,3 +15,6 @@ ms.reviewer: tapanm
 We have compiled a list of frequently asked questions about changes coming for legacy Adxstudio Portals v7.
 
 Click [here](https://aka.ms/gk1u9t) to download the FAQ.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

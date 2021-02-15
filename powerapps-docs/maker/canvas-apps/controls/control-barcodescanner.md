@@ -91,3 +91,6 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
     > [!NOTE]
   > Screen readers will announce when a new barcode has been found. The value won't be announced. As long as the barcode is in view, screen readers will remind the user every five seconds that the same barcode is still being identified.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -752,3 +752,5 @@ See systemuser Entity [lk_importlog_modifiedonbehalfby](systemuser.md#BKMK_lk_im
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.importlog?text=importlog EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

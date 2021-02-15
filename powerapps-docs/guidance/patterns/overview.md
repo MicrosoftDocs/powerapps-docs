@@ -269,3 +269,6 @@ We'll continue to add patterns over time.
       - Book vehicles
     :::column-end:::
 :::row-end:::
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

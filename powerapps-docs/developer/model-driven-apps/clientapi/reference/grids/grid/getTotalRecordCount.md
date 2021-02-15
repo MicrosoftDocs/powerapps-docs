@@ -43,3 +43,6 @@ To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gri
 
 See [Collections (Client API reference)](../../collections.md) for information on the methods available to access data in a collection.
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

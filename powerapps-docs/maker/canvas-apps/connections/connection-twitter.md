@@ -395,3 +395,6 @@ When a new tweet appears: Triggers a workflow when a new tweet is posted which m
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

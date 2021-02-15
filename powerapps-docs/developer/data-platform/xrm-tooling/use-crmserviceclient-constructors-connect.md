@@ -32,3 +32,6 @@ The [connection string](https://docs.microsoft.com/dotnet/api/microsoft.xrm.tool
 ## See also
 
 [Use XRM Tooling Windows PowerShell Cmdlets to connect to Dataverse](use-powershell-cmdlets-xrm-tooling-connect.md) 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

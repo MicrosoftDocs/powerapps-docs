@@ -198,3 +198,6 @@ If you are a **Private Preview** participant and have an older version of CLI, f
 ## See also
 
 [Power Apps component framework](../component-framework/overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

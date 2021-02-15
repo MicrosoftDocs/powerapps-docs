@@ -91,3 +91,6 @@ For each many-to-many relationship the following properties are included:
 |`Entity2AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the second entity data can be accessed in the UI from the first entity.|
 |`IsCustomizable`|Whether the properties of the relationship can be changed.|
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

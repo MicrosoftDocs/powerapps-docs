@@ -36,3 +36,6 @@ To know about executing user query and saved query using Web API, see [Retrieve 
 ## Use Organization service to execute saved queries
 
 You can use the <xref:Microsoft.Crm.Sdk.Messages.ExecuteByIdUserQueryRequest> and <xref:Microsoft.Crm.Sdk.Messages.ExecuteByIdSavedQueryRequest> messages to execute user query and saved query respectively.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

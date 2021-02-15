@@ -31,3 +31,6 @@ To learn about the roles required to perform this task, read [Admin roles requir
 
    > [!div class="mx-imgBorder"]
    > ![Change Dynamics 365 instance](../media/change-dynamics-365-instance.png "Change Dynamics 365 instance")  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

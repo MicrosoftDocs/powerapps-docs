@@ -237,3 +237,6 @@ svc.Execute(addProperty);
 [Create and use Custom APIs](custom-api.md)<br/>
 [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br/>
 [Create a Custom API with solution files](create-custom-api-solution.md)<br/>
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -176,3 +176,6 @@ The following table lists tables that contain complex server-side logic out-of-t
 * Work Order Sub-Status
 * Work template
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

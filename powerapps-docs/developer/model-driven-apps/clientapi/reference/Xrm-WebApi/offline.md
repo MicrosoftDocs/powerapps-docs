@@ -47,3 +47,6 @@ The **offlineWebApi** object provides the following methods. When in the offline
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -200,3 +200,6 @@ If you compare the output of this app to the Text Analytics API page at the begi
 
 We hope you now understand a little more about the Text Analytics API, and you've enjoyed seeing how to incorporate it into an app. Let us know if there are other Cognitive Services (or other services in general) that you would like us to focus on in our articles. As always, please leave feedback and any questions in the comments.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -166,3 +166,6 @@ The message informs the maker that when editing a form that is using high-densit
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit columns](../data-platform/create-edit-field-portal.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

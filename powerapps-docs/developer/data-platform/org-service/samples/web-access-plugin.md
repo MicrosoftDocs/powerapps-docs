@@ -111,3 +111,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 [Access external web resources](../../access-web-services.md)<br/>
 [Register a plug-in](../../register-plug-in.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

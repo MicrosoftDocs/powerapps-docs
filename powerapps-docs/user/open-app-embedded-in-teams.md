@@ -27,3 +27,6 @@ For detailed information about how to add the Product Showcase sample app to a T
 ![App embedded in Microsoft Teams](./media/open-app-embedded-in-teams/embedded-app.png)
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

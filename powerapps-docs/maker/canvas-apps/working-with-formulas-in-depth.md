@@ -43,3 +43,6 @@ UpdateContext( { x: 1 } ); Back()
 
 Actions are performed in the order in which they appear in the formula.  The next function won't start until the current function has completed. If an error occurs, subsequent functions might not start.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

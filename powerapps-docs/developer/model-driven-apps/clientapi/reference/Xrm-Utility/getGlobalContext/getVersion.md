@@ -37,3 +37,6 @@ globalContext.getVersion();
 ### Related topics
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

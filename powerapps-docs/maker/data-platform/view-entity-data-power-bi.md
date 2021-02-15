@@ -67,3 +67,6 @@ For more information about Power BI Desktop, see [Get started with Power BI Desk
 
 ### See also
 [Use SQL to query data](../../developer/data-platform/dataverse-sql-query.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

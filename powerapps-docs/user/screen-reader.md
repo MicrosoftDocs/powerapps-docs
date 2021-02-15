@@ -86,3 +86,6 @@ When a dialog box opens, Narrator announces the title. For dialog boxes with inp
 You can navigate through the controls by using the **Tab** key. The cursor will loop through each element in the dialog box, and you can press **Esc** to close it.
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

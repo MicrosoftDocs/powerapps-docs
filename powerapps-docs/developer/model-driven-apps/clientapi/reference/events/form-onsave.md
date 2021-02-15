@@ -39,3 +39,6 @@ You can cancel the save action by using the preventDefault method within the eve
 
 ### Related topic
 [Grid OnSave Event](grid-onsave.md)  
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

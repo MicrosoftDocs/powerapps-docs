@@ -36,3 +36,5 @@ search.app:
 [forEach](forEach.md)
 
 [get](get.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

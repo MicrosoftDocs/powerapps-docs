@@ -247,3 +247,6 @@ To delete a relationship using the Web API, use the HTTP DELETE method with the 
 [Query Metadata using the Web API](query-metadata-web-api.md)<br />
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
 [Model entites and attributes using the Web API](create-update-entity-definitions-using-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

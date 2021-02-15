@@ -201,3 +201,6 @@ If your issue isn't listed in this article, you can [search for more support res
 [Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
 [Tips and best practices to improve canvas apps performance](performance-tips.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

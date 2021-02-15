@@ -86,3 +86,6 @@ See [Authenticate to use the Online Management API](authentication.md) to know a
 [Operations supported by Online Management API](operations-supported.md)
 
 [Online Management API Reference](/rest/api/admin.services.crm.dynamics.com)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

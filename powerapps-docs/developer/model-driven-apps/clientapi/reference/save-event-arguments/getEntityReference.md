@@ -26,3 +26,5 @@ Use this method to know information about an entity being saved/updated. It retu
 ## Related articles
 
 [PostSave](../events/postsave.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

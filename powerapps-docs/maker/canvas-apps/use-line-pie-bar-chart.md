@@ -117,3 +117,6 @@ Now, let's use this ProductRevenue collection in a bar chart:
 [10]: ./media/use-line-pie-bar-chart/middlepiechart.png
 [11]: ./media/use-line-pie-bar-chart/import.png
 [12]: ./media/use-line-pie-bar-chart/itemscolumnchart.png
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -69,3 +69,6 @@ To save a record the user must click the **Save** icon at the bottom of the form
 
 [preventDefault](preventDefault.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

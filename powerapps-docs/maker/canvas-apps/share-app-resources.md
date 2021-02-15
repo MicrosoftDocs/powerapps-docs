@@ -73,3 +73,6 @@ If a shared app uses data to which not all users have access (such as an Excel w
 ## Flows
 If you share an app that includes a flow, users who run the app will be prompted to confirm or update any connections on which the flow relies. In addition, only the person who created the flow can customize its parameters. For example, you can create a flow that sends mail to an address that you specify, but other users can’t change that address.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

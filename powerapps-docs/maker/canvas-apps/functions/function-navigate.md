@@ -121,3 +121,6 @@ When the **Back** function runs, the inverse transition is used by default. For 
 ### See also
 
 [Using context variables](../working-with-variables.md#use-a-context-variable)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

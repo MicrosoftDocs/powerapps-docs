@@ -153,3 +153,6 @@ The table below has more detail about the available buttons, listed in the order
 
 [Get started with the portal content editor](portal-content-editor.md)  <br>
 [Create and customize portal using Power Apps portals Studio](portal-designer-anatomy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

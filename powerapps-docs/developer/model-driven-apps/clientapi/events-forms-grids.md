@@ -77,3 +77,6 @@ Use the [setSharedVariable](reference/executioncontext/setSharedVariable.md) and
 [Client API execution context](clientapi-execution-context.md)<br/>
 [Events (Client API reference)](reference/events.md)<br/>
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

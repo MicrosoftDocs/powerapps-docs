@@ -125,3 +125,6 @@ public class DropboxRetrieveMultiplePlugin : IPlugin
 [Get started with virtual entities](get-started-ve.md)<br />
 [API considerations of virtual entities](api-considerations-ve.md)<br />
 [Custom virtual entity data providers](custom-ve-data-providers.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

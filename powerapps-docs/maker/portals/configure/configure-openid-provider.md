@@ -107,3 +107,6 @@ To edit a configured OpenID Connect provider, see [Edit a provider](use-simplifi
 
 [Configure an OpenID Connect provider for portals with Azure AD](configure-openid-settings.md)  
 [FAQ for using OpenID Connect in portals](configure-openid-faqs.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

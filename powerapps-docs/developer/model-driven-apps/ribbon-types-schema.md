@@ -864,3 +864,6 @@ For more information, see [Package and Distribute Extensions with Solutions](htt
  [Ribbon Core Schema](ribbon-core-schema.md)   
  [Ribbon WSS Schema](ribbon-wss-schema.md)   
  [Customization XML Reference](customization-xml-reference.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

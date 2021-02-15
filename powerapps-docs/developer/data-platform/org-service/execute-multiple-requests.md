@@ -154,3 +154,6 @@ catch (FaultException<OrganizationServiceFault> fault)
 [Use messages with the Organization service](use-messages.md)<br />
 [Use ExecuteAsync](use-executeAsync.md)<br />
 [Use ExecuteTransaction](use-executetransaction.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

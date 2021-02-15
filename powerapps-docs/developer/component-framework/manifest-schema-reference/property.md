@@ -59,3 +59,6 @@ description-key="myFirstProperty_Desc_Key" of-type="SingleLine.Text" usage="boun
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

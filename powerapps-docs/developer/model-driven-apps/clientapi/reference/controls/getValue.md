@@ -32,3 +32,6 @@ The getValue method is different from the attribute [getValue](../attributes/get
 
 **Description**:  The latest data value for a control.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

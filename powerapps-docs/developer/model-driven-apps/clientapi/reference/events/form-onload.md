@@ -31,3 +31,6 @@ You should be careful when using asynchronous code in an `OnLoad` event handler 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

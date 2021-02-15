@@ -71,3 +71,6 @@ If you are not a global administrator and you try to manage a portal that has al
 
 - [Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)
 - [Microsoft Learn: Power Apps portals architecture](https://docs.microsoft.com/learn/modules/portals-architecture)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

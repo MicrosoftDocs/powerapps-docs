@@ -356,3 +356,6 @@ The `XrmNavigation` operation in [Monitor](https://docs.microsoft.com/powerapps/
 
 > [!div class="mx-imgBorder"]
 > ![XrmNavigation operation in Monitor](media/form-checker-navigation.png "XrmNavigation operation in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker)")
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

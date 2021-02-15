@@ -144,3 +144,6 @@ portal](https://www.microsoft.com/itshowcase/blog/how-microsoft-used-power-autom
 
 - [Streamlining Microsoft's payment processes with Microsoft Power
 Automate](https://www.microsoft.com/itshowcase/blog/streamlining-microsofts-payment-processes-with-microsoft-power-automate/)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

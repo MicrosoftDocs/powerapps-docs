@@ -204,3 +204,6 @@ Alternatively, you can select the forms, views, charts, or dashboards tile, and 
 ## Next steps  
  [Create a site map for an app](create-site-map-app.md) </br>  
  [Validate and publish an app](validate-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -54,3 +54,6 @@ We hope you enjoy exploring Meeting Capture, and we look forward to hearing how 
 - [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
 - [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

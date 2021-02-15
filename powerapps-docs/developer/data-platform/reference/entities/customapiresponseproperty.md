@@ -1062,3 +1062,5 @@ See customapi Entity [customapi_customapiresponseproperty](customapi.md#BKMK_cus
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.customapiresponseproperty?text=customapiresponseproperty EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

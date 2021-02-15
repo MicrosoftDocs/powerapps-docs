@@ -894,3 +894,5 @@ See msdyn_aiconfiguration Entity [msdyn_msdyn_aiconfiguration_msdyn_aifptraining
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aifptrainingdocument?text=msdyn_aifptrainingdocument EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
