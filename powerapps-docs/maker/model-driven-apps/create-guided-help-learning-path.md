@@ -556,3 +556,6 @@ The following table lists the [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-s
 
 ### See also  
  [On-off switch for Learning Path (guided help)](/dynamics365/customer-engagement/admin/on-off-switch-for-learning-path-guided-help)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

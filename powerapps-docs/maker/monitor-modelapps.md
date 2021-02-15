@@ -94,3 +94,6 @@ For every page load, the data platform sends all KPI for the loading sequence as
 
 ### See also
 [Use Monitor to troubleshoot model-driven app form behavior](model-driven-apps/monitor-form-checker.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

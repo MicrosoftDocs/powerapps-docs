@@ -115,3 +115,6 @@ The following table outlines a list of accessibility shortcuts available when us
 
 [Set up enhanced email](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Insert an email template](insert-email-template.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

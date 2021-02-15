@@ -378,3 +378,6 @@ An ordinary intersect entity has only the four basic properties required to main
 [Authenticate to Dataverse with the Web API](authenticate-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br/>
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

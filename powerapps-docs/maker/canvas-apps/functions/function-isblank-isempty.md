@@ -162,3 +162,6 @@ You can also use **IsEmpty** to test whether a calculated table is empty, as the
 | **IsEmpty( [&nbsp;] )** |The single-column table contains no records and is empty. |**true** |
 | **IsEmpty( Filter( [&nbsp;1,&nbsp;2,&nbsp;3&nbsp;], Value > 5 ) )** |The single-column table contains no values that are greater than 5.  The result from the filter doesn't contain any records and is empty. |**true** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

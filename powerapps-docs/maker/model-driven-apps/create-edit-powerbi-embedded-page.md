@@ -104,3 +104,6 @@ When a solution with a Power BI embedded component will be moved to other enviro
 [Use Power BI](use-power-bi.md) <br />
 [Use Power BI with Microsoft Dataverse](../data-platform/use-powerbi-dataverse.md) <br />
 [Create a Power BI report using the Common Data Service connector](../data-platform/data-platform-powerbi-connector.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

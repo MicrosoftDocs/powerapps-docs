@@ -127,3 +127,6 @@ If your extension is a Plug-in, it will receive a parameter that implements the 
 If your extension is an a Web hook or an Azure Service bus endpoint, the data that will be posted to the registered endpoint will be in form of a <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> which implements both <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> and <xref:Microsoft.Xrm.Sdk.IExecutionContext>
 
 For more information about the execution context, read [Understand the execution context](understand-the-data-context.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -68,3 +68,6 @@ Web applications which access Dataverse data should HTML encode any error messag
 
 [Cancelling an operation](../../handle-exceptions.md#cancelling-an-operation)<br/>
 [Debug Workflow Activities](../../workflow/workflow-extensions.md#debug-workflow-activities)<br/>
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

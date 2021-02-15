@@ -768,3 +768,6 @@ distinct=\"false\" page=\"3\" count=\"4\"> \
 [Web API Basic Operations Sample (Client-side JavaScript)](basic-operations-client-side-javascript.md)<br />
 [Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)<br />
 [Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

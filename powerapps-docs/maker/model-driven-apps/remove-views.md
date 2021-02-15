@@ -67,3 +67,6 @@ You can delete any custom public view. Use the steps in [Access view definitions
 
 ## Next steps
 [Create or edit a view](create-and-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

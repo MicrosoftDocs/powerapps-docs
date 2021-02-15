@@ -77,3 +77,6 @@ A [ServiceEndpoint Entity](reference/entities/serviceendpoint.md) contains confi
 
 [Azure Integration](azure-integration.md)<br />
 [Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

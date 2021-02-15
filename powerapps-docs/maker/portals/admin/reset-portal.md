@@ -90,3 +90,6 @@ If a reset portal job fails, an error message is displayed along with the **Rese
 > ![Failure error while resetting a portal](../media/reset-portal-error.png "Failure error while resetting a portal")
 
 Typically, these are transient errors and you must select **Reset Portal** to restart the job. If the issue persists, contact Microsoft support.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -73,3 +73,6 @@ If you find a problem with a canvas app in Power Apps, you can help Microsoft tr
     The app ID appears at the bottom of the **Details** pane for that app.
 
     ![Copy app ID from details](./media/get-sessionid/app-id.png "Copy app ID from details")
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

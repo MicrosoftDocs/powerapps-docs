@@ -76,3 +76,6 @@ Page comments provides users with the ability to view and post comments on a web
    - **None**: User submissions are disabled. No submissions can be made or viewed.
 
 5. Save the changes.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

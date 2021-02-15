@@ -57,3 +57,6 @@ You can check the related system job in the Dataverse web application and look f
 ### See also 
 
  [Azure integration with Dataverse](azure-integration.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -198,3 +198,6 @@ You can manually initiate a dataflow by selecting **(...)** in the dataflows lis
 - Many-to-many relationship data imports are not supported.
 
 - Parent dataflows must be manually configured to run before child dataflows.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -238,3 +238,6 @@ You can see the activities in the following views:
 
 [FAQs about Activities and the Timeline Wall](faq-for-timeline-and-activity.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

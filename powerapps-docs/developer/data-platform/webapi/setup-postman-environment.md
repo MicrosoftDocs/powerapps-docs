@@ -106,3 +106,6 @@ Create a new Web API request to test the connection with your Dataverse instance
 
 [Use Postman to perform operations](use-postman-perform-operations.md)<br>
 [Walkthrough: Register a Dataverse app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

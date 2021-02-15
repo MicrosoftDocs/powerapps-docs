@@ -35,3 +35,5 @@ search.app:
 ## Related topics
 
 [setBodyVisible](setBodyVisible.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

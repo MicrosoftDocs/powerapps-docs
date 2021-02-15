@@ -1320,3 +1320,5 @@ See msdyn_analysisjob Entity [msdyn_analysisjob_msdyn_analysisresult](msdyn_anal
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_analysisresult?text=msdyn_analysisresult EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

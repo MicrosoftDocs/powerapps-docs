@@ -68,3 +68,6 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 - [Sign up for a free license](../signup-for-powerapps.md)
 - [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 - [Open a sample app](open-and-run-a-sample-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

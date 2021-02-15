@@ -139,3 +139,6 @@ The final step is to add all the components that you created earlier into a sing
 
 > [!div class="nextstepaction"]
 > [Step 4: Store your AppSource Package on Azure Storage](store-appsource-package-azure-storage.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

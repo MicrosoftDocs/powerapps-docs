@@ -48,3 +48,6 @@ Model-driven apps
     <uses-feature name="WebAPI" required="true" />
  </feature-usage>
 ```
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

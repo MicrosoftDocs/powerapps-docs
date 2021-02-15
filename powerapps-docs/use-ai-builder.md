@@ -19,3 +19,6 @@ You can build AI models by using the new **AI Builder** option in the left navig
 ![AI Builder in Power Apps](media/ai-builder.png "AI Builder in Power Apps")
 
 You can use AI models created using AI Builder in canvas and model-driven apps to add intelligence to your apps. More information: [Use AI Builder in Power Apps](/ai-builder/use-in-powerapps-overview)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

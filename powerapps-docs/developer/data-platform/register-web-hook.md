@@ -199,3 +199,6 @@ You can use this FetchXML to get the same information in one query where *&lt;se
 [Test webhook registration with request logging site](test-webhook-registration.md)<br />
 [Use webhooks to create external handlers for server events](use-webhooks.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

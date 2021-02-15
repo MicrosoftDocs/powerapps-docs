@@ -42,3 +42,6 @@ kbSearchControl.addOnResultOpened(myFunction);
 [OnResultOpened event](../events/onresultopened.md)
 
 [removeOnResultOpened](removeOnResultOpened.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

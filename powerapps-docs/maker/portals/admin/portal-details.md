@@ -18,3 +18,5 @@ If you need to see more details about the provisioned portal such as, portal typ
 
 > [!div class=mx-imgBorder]
 > ![Portal details](../media/portal-details-admin.png "Portal details")
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

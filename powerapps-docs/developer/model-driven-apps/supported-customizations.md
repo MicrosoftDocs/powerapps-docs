@@ -87,3 +87,6 @@ The following is a list of unsupported action types that are frequently asked ab
 [Apply business logic using client scripting in Model-driven apps using JavaScript](client-scripting.md)<br/>
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
 [Web resources in model-driven apps](web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

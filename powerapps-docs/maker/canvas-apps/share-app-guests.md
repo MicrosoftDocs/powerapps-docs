@@ -265,3 +265,6 @@ Connectors that don't use any type of Azure AD authentication will support guest
 [Restore an app to a previous version](restore-an-app.md)  
 [Export and import an app](export-import-app.md)  
 [Delete an app](delete-app.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

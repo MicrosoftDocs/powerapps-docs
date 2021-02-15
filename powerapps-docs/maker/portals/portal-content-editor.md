@@ -100,3 +100,6 @@ Navigate to the page to be deleted, and select **Delete** in the toolbar. Select
 ### See also
 
 [Create and customize portal using Power Apps portals Studio](portal-designer-anatomy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -54,3 +54,6 @@ The anatomy of Power Apps portals Studio is as follows:
 ### See also
 
 [Customize webpages](compose-page.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

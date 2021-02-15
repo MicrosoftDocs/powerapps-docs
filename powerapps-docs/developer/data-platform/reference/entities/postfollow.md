@@ -599,3 +599,5 @@ See knowledgearticle Entity [knowledgearticle_PostFollows](knowledgearticle.md#B
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.postfollow?text=postfollow EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

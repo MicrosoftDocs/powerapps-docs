@@ -203,3 +203,6 @@ Response for unhandled errors with HTTP status code 500 will return the error "A
 
 [Web API overview](web-api-overview.md)  
 [Perform Web API operations](web-api-perform-operations.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

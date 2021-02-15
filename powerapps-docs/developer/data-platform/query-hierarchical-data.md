@@ -66,3 +66,6 @@ You can take advantage of new query condition operators to query entities with e
 ### See Also
 
 [Work with Quick Find’s search item limit](quick-find-limit.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

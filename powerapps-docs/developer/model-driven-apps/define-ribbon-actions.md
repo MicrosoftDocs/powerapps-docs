@@ -59,3 +59,6 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
  [Pass data from a page as a parameter to Ribbon actions](pass-data-page-parameter-ribbon-actions.md)  
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

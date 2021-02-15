@@ -89,3 +89,6 @@ During migration, the processes may get deactivated. Migration may cause attachm
 ## CORS protocol support
 
 To learn about CORS protocol support in portals, go to [Configure CORS protocol support](configure/cors-support.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

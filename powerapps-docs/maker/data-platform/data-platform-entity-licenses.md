@@ -102,3 +102,6 @@ Now, let's see what happens when Isaac adds a real-time workflow to the custom t
 For more information about licensing, see [Licensing overview](/power-platform/admin/pricing-billing-skus).
 
 For the latest information on licensing requirements for tables, see the [Power Apps licensing guide](https://go.microsoft.com/fwlink/p/?linkid=2085130).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

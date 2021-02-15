@@ -65,3 +65,6 @@ For information about the specific errors that can be returned and how developer
 [Administer Power Platform / Licensing and license management / Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)<br />
 [Developer / Work with data using code / Service Protection API Limits](../../developer/data-platform/api-limits.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

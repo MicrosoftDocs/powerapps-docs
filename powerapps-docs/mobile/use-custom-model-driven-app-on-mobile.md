@@ -150,3 +150,6 @@ The **Pinned** and **Recent** lists provide quick access to rows that you've rec
 ## Sign out
 
 From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon"), select the profile icon ![Profile icon](media/profile_icon.png "Site map icon"), and then select **Sign out**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -39,3 +39,6 @@ Lookup
 
 [setDefaultView](setDefaultView.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

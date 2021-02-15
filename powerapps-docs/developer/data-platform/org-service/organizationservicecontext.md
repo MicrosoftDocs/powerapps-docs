@@ -201,3 +201,6 @@ To delete an entity record, the organization service context must be tracking th
 [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)<br />
 <xref:Microsoft.Xrm.Sdk.IOrganizationService><br />
 <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

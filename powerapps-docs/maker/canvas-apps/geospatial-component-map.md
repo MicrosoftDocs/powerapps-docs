@@ -237,3 +237,6 @@ The following table lists the output properties available.
 ## Other geospatial components
 
 To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** component.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

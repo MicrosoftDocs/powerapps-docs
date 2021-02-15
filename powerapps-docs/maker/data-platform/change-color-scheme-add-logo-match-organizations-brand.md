@@ -151,3 +151,6 @@ The following screenshot shows a portion of the default theme setup.
  [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568)
  [Query and edit an organization theme](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

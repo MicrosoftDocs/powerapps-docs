@@ -180,3 +180,6 @@ Here's a summary of each column in the report.
 [Best practices and guidance for the Dataverse](../../developer/data-platform/best-practices/index.md)<br />
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)<br />
 [Common issues and resolutions for Solution Checker](common-issues-resolutions-solution-checker.md)<br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
