@@ -55,3 +55,6 @@ In this topic, you add a column on to a form.
 ## Next steps  
  
  [Create and design forms](create-design-forms.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

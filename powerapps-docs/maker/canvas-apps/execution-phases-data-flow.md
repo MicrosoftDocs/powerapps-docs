@@ -84,3 +84,6 @@ With the understanding of this high-level concept of how data calls travel, you 
 [Tips and best practices to improve canvas app performance](performance-tips.md) <br>
 [Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

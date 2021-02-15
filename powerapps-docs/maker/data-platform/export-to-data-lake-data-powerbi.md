@@ -88,3 +88,6 @@ This section describes the prerequisites necessary to consume Dataverse data wit
 
 [Export table data to Azure Data Lake Storage Gen2](export-to-data-lake.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

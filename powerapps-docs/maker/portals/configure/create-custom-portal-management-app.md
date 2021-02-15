@@ -102,3 +102,6 @@ To create a custom **Portal Management** app:
 
 [Delete a portal](../manage-existing-portals.md#delete)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -51,3 +51,6 @@ You can unpin Power Apps app anytime with a **right click** on the Power Apps ap
 
 [Create your first app in Teams](create-first-app.md)<br/>
 [Overview of the Power Apps app](overview-of-the-power-apps-app.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -165,3 +165,6 @@ To delete the configuration, select **Delete** for the **Azure Active Directory 
 ### See also
 
 [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -185,3 +185,6 @@ More information: [Use Web API actions](use-web-api-actions.md).
 
 [Use Postman with the Web API](use-postman-web-api.md)<br>
 [Perform operations using the Web API](perform-operations-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

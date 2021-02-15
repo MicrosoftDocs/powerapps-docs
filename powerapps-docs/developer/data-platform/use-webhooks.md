@@ -370,3 +370,6 @@ If your web hook is registered to run asynchronously, you can examine the system
 [AsynchronousOperations Entity](reference/entities/asyncoperation.md)<br />
 <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext><br />
 <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService><br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

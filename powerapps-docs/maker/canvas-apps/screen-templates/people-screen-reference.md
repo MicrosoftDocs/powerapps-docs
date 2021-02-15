@@ -139,3 +139,6 @@ Looks up the record in the **MyPeople** collection, where **UserPrincipalName** 
 * [Learn more about this screen](./people-screen-overview.md).
 * [Learn more about the Office 365 Outlook connector](../connections/connection-office365-outlook.md).
 * [Learn more about the Office 365 Users connector](../connections/connection-office365-users.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

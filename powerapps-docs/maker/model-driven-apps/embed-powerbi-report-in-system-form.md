@@ -169,3 +169,6 @@ Additionally, when you export the solution as managed, add the **solutionaction=
 [Use Power BI with Dynamics 365 apps](/power-platform/admin/use-power-bi)
 
 [Import, update, and export solutions](../data-platform/import-update-export-solutions.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -70,3 +70,6 @@ In this example, we've seen how we can combine Liquid, Web Templates, Power Apps
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

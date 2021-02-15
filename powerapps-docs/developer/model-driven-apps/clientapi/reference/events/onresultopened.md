@@ -22,3 +22,6 @@ This event occurs when a knowledge base article is opened in the knowledge base 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

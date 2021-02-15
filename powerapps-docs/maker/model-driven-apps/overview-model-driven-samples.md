@@ -65,3 +65,6 @@ To remove sample data, follow the steps in this topic: [Add or remove sample dat
 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

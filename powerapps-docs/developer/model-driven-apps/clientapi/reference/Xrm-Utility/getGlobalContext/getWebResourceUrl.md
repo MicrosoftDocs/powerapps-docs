@@ -58,3 +58,6 @@ This will return the web resource URL with the caching token:
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

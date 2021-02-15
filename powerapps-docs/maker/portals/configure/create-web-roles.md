@@ -50,3 +50,6 @@ Now that the Web Role has been created, you will be able to configure it to meet
 [Configure a portal](configure-portal.md) <br>
 [Control webpage access for portals](webpage-access-control.md)  
 [Add record-based security by using entity permissions for portals](assign-entity-permissions.md) <br>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -28,3 +28,6 @@ If you want to connect to Dynamics 365 Business Central, Dynamics 365 Customer I
 
 [Connecting to Your Business Central Data to Build a Business App Using Power Apps](/dynamics365/business-central/across-how-use-financials-data-source-powerapps)  
 [Microsoft Power Platform integration with Finance and Operations](/dynamics365/fin-ops-core/dev-itpro/power-platform/overview)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -108,3 +108,6 @@ The table below explains many of the standard Web Link properties used by portal
 - [Manage a web page and navigation menu](../create-manage-webpages.md#manage-webpage)
 - [Add a custom menu to a page](../add-custom-menu.md)
 - [Customize content by using content snippets](customize-content-snippets.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -213,3 +213,6 @@ _dashboardId = service.Create(dashboard);
  [Sample dashboards](sample-dashboards.md)   
  [Sample: Create, Retrieve, Update and Delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboardd)   
  [Customize entity forms](customize-entity-forms.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

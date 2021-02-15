@@ -82,3 +82,6 @@ Feature deprecation also goes through stages.  Features are unique and not every
 | **Removed** for&nbsp;new&nbsp;apps | All new apps have this feature turned off and it cannot be enabled.  For existing apps where the feature is turned on, the feature will continue to show as a Deprecated feature until it is turned off.  If turned off and the feature switch becomes unavailable, you can [restore the app to a previous version](restore-an-app.md) to return to a state before the feature was disabled. | No.  The feature is about to be permanently removed. The feature is no longer available for new apps. |
 | **Removed** for&nbsp;all&nbsp;apps | The feature is unavailable for all apps. | No. |  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

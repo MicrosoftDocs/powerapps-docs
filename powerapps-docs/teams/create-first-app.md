@@ -394,3 +394,6 @@ detail.
 [Understand Power Apps Studio](understand-power-apps-studio.md)<br/>
 [Use the Fluent UI controls](use-the-fluent-ui-controls.md)<br/>
 [Create additional apps](create-additional-apps.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

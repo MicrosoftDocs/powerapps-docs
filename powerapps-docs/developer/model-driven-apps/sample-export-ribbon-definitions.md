@@ -53,3 +53,6 @@ No clean up is required for this sample
  [Ribbon WSS schema](ribbon-wss-schema.md)
  <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest>   
  <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

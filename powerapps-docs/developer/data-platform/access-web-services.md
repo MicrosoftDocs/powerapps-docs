@@ -56,3 +56,6 @@ You should make sure to set an appropriate `Timeout` period for your external ca
 [Azure integration](azure-integration.md)<br />
 [Use Web Hooks](use-webhooks.md)<br />
 [Sample: Web Access from a Sandboxed Plug-in](org-service/samples/web-access-plugin.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -55,3 +55,6 @@ Thank you,
 [Search for tables and rows using Relevance Search](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

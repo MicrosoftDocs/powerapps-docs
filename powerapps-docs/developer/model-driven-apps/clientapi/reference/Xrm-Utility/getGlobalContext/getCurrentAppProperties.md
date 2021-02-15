@@ -46,3 +46,6 @@ If this method is called in the context of a business app, returns the propertie
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

@@ -102,3 +102,6 @@ If an [error message about permissions](troubleshoot-power-query-issues.md) appe
 
 > [!WARNING]
 > There is a limit of 500,000 rows per run and per project that can be loaded using this feature.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

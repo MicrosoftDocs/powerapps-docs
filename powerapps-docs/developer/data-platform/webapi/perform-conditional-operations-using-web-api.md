@@ -257,3 +257,6 @@ OData-Version: 4.0
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

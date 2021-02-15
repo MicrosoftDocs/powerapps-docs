@@ -52,3 +52,6 @@ App properties define important details about the app, like its title or URL. Yo
   
 ## Next steps  
  [Create or edit an app](create-edit-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

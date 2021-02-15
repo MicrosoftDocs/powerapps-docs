@@ -38,3 +38,6 @@ iframe, webresource
 
 [getSrc](getSrc.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

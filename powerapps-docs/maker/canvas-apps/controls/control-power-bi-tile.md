@@ -114,3 +114,6 @@ You can use computed fields in the Power BI report to convert other value types 
 The **Power BI tile** is simply a container for Power BI content. Learn how to create accessible content with these [Power BI accessibility tips](https://docs.microsoft.com/power-bi/desktop-accessibility).
 
 If the Power BI content doesn't have a title, consider adding a heading using a **[Label](control-text-box.md)** control to support screen readers. You can position the label immediately before the Power BI tile.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

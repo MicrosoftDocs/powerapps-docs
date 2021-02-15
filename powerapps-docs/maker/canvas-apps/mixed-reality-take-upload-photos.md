@@ -194,3 +194,6 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 - View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

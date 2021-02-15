@@ -137,3 +137,6 @@ In this article, you'll learn about configuring a WS-Federation provider for por
 
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
 [Configure a WS-Federation provider for portals with AD FS](configure-ws-federation-settings.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -154,3 +154,6 @@ Virtual tables have these restrictions.
 [OData v4 Data Provider requirements and best practices](virtual-entity-odata-provider-requirements.md)</br> 
 [Create and edit tables](create-edit-entities.md)</br>
 [Create and edit columns](create-edit-fields.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

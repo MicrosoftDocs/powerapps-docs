@@ -244,3 +244,6 @@ This sample opens a new window and loads the microsoft.com home page on clicking
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

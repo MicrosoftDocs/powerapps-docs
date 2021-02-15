@@ -241,3 +241,6 @@ As an alternative to using the process described in [Localized values](custom-ap
 [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create your own messages](custom-actions.md)<br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

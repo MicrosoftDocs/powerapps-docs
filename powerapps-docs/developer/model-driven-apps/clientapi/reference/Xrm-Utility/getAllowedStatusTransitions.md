@@ -43,3 +43,6 @@ Returns an object with `.then()` function. The parameter to the delegate is an a
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

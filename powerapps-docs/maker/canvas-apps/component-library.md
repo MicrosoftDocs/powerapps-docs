@@ -140,3 +140,6 @@ Learn [behavior formulas](component-behavior.md) for canvas apps.
 ### See also
 
 Canvas app [components overview](create-component.md) and working with components in an app.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

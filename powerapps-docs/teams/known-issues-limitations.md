@@ -94,3 +94,6 @@ Power Apps Studio and apps currently don't support **Dark theme**.
 -	It may take up to 2 hours for deleting, renaming, or restoring a team to reflect correctly within the Power Apps and Power Virtual Agents apps.
 
 -	It may take up to 15 minutes for new team users to be able to see the team within the Power Apps and Power Virtual Agents apps.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

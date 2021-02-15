@@ -234,3 +234,6 @@ Configure the **ValidateAccountName** plugin using these settings:
 Use the Plug-in registration tool to **Unregister** (delete) any assembly, plug-in or step. Deleting an assembly will delete all plug-ins and steps for that assembly.
 
 ![unregister an assembly](media/tutorial-update-plug-in-unregister.png)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

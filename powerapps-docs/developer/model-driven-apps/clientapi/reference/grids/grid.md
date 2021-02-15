@@ -35,3 +35,6 @@ Grid is returned by the **gridContext**.[getGrid](gridcontrol/getGrid.md) method
 [GridRow](gridrow.md)
 
 [Grids and subgrids in model-driven apps](../grids.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

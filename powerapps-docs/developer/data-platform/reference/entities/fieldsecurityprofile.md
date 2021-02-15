@@ -596,3 +596,5 @@ See applicationuser Entity [applicationuserprofile](applicationuser.md#BKMK_appl
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.fieldsecurityprofile?text=fieldsecurityprofile EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

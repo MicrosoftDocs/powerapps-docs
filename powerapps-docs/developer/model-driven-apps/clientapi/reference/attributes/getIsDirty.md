@@ -33,3 +33,5 @@ All
 **Type**: Boolean. 
 
 **Description**: True if there are unsaved changes, otherwise false.
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
