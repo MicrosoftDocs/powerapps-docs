@@ -137,3 +137,6 @@ In this example, you specify the first item in the **Hardwood** category of the 
 
 ## Next steps
 Learn how to work with [forms](working-with-forms.md) and [formulas](working-with-formulas.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

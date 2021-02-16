@@ -85,7 +85,7 @@ You create a virtual table just like any other table in Dataverse with the addit
 
 ### Open solution explorer
 
-Part of the name of any virtual table you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this virtual table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
+Part of the name of any virtual table you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this virtual table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
@@ -154,3 +154,6 @@ Virtual tables have these restrictions.
 [OData v4 Data Provider requirements and best practices](virtual-entity-odata-provider-requirements.md)</br> 
 [Create and edit tables](create-edit-entities.md)</br>
 [Create and edit columns](create-edit-fields.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

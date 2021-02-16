@@ -153,3 +153,5 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 - [Customize sample apps](customize-sample-apps.md)
 - [Sample apps FAQs](sample-apps-faqs.md)
  
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

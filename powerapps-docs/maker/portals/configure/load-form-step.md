@@ -115,3 +115,6 @@ This provides a way to associate the current record being created or updated by 
 [Conditional step type](add-conditional-step.md)  
 [Add custom JavaScript](add-custom-javascript.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

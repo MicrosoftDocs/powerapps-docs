@@ -55,3 +55,6 @@ Display an option to delete the sample data that is created in [Setup](#setup). 
 [Run data import](../../run-data-import.md)<br />
 [Data import entities](../../data-import-entities.md)<br />
 [Sample: Import data using complex data map](import-data-complex-data-map.md)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

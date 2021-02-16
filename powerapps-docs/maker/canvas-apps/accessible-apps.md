@@ -65,3 +65,6 @@ Related:
 - [Accessibility properties](controls/properties-accessibility.md)
 - [Use the Accessibility checker](accessibility-checker.md)
 - [Accessible colors in Power Apps](accessible-apps-color.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -46,3 +46,6 @@ GridEntity also supports the **attributes** collection that provides methods of 
 [Attributes](../attributes.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

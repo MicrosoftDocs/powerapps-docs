@@ -45,3 +45,6 @@ var gridRow = myRows.get(arg);
 [Grids and subgrids in model-driven apps](../grids.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

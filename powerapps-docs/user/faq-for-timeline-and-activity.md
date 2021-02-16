@@ -63,3 +63,6 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 [Dynamics 365 Sales: Frequently asked questions](https://docs.microsoft.com/dynamics365/sales-enterprise/faqs-sales#entity-activity)
 
     
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

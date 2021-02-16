@@ -337,3 +337,6 @@ An object returned with the following properties in addition to the <i>base</i> 
 
 [Xrm.Utility](../xrm-utility.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -114,3 +114,6 @@ The following is the schema definition for the <xref:Microsoft.Crm.Sdk.Messages.
  <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest>   
  [Publish Customizations](publish-customizations.md)   
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

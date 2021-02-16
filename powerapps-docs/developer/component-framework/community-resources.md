@@ -75,3 +75,6 @@ The following is the list of blogs created by Power Apps community.
 ## Tools
 
 The [Code component builder](https://www.xrmtoolbox.com/plugins/Maverick.PCF.Builder/) is a tool from XrmToolBox that lets you create code components in visual manner using the Power Apps CLI.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

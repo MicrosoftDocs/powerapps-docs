@@ -32,7 +32,7 @@ All
 
 **Type**: String
 
-|Return Value |Decsription|
+|Return Value |Description|
 |--|--|
 |standard|A standard control|
 |iframe|An IFRAME control|
@@ -56,3 +56,6 @@ All
 [getControl](getcontrol.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

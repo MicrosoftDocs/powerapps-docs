@@ -92,3 +92,6 @@ By default, Choices are created as Global Choices which allows them to be reused
 
 > [!IMPORTANT]
 > Once a choice  is created as local or global, this cannot be changed.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -117,3 +117,6 @@ For more information about ways to export and view table row data, see these art
 * [Generate an app by using Microsoft Dataverse](../canvas-apps/data-platform-create-app.md)
 * [Create an app from scratch using Dataverse](../canvas-apps/data-platform-create-app-scratch.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -107,3 +107,6 @@ Returns information whether the server is online or offline.
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

@@ -214,3 +214,5 @@ The [Xrm.WebApi.online.execute](online/execute.md) API can be used to associate 
 ### Related topics
 
 [Xrm.WebApi](../xrm-webapi.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

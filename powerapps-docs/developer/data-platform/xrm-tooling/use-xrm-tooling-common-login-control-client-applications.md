@@ -169,3 +169,6 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
 [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

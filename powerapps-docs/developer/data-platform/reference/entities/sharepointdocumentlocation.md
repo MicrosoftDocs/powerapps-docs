@@ -1054,3 +1054,5 @@ See msdyn_knowledgearticletemplate Entity [msdyn_knowledgearticletemplate_ShareP
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sharepointdocumentlocation?text=sharepointdocumentlocation EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

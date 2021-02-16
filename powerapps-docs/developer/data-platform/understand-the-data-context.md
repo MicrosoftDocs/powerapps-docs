@@ -216,3 +216,6 @@ More information:
 
 [Event Framework](event-framework.md)  
 [Write a plug-in](write-plug-in.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -108,3 +108,6 @@ There are three different ways that command data can be displayed.
  [Ribbons available](https://docs.microsoft.com/powerapps/developer/model-driven-apps/ribbons-available)   
  [Export Ribbon definitions](export-ribbon-definitions.md)   
  [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

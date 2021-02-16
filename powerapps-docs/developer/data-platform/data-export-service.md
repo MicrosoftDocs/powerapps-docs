@@ -7,7 +7,7 @@ ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "sabinn-msft" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: "sabinn" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -165,3 +165,6 @@ Entity: account, RecordId: b2a19cdd-88df-e311-b8e5-6c3be5a8b200, NotificationTim
 ### See also  
  [Manage your data in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)   
  [Import data](import-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

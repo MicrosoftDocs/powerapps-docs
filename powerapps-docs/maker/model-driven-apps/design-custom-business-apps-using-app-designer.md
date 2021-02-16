@@ -55,3 +55,6 @@ With Power Apps, model-driven apps are comprised of components such as tables, d
 
  [Build your first model-driven app from scratch](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

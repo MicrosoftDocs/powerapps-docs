@@ -60,3 +60,6 @@ Additional cues like an **[Icon](controls/control-shapes-icons.md)** or text sty
 
 ## Next steps
 Learn about [accessibility properties](controls/properties-accessibility.md) in Power Apps controls and try [using the Accessibility checker](accessibility-checker.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

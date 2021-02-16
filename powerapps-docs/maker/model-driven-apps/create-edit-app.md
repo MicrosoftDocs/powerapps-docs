@@ -88,3 +88,6 @@ Verify the following prerequisites before you start creating an app:
  [Add or edit app components](add-edit-app-components.md)   
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

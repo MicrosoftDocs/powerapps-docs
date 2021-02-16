@@ -219,3 +219,5 @@ Select **RunTestAutomation** to drill into the details about the failed test cas
 - [Test Studio overview](test-studio.md)
 - [Working with Test Studio](working-with-test-studio.md)
 - [Automate tests with Azure Pipelines using classic editor](test-studio-classic-pipeline-editor.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

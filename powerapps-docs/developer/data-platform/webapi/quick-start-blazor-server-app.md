@@ -280,3 +280,6 @@ Learn how to structure your code for a better design.
 ### See Also
 
 [Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Dataverse](../walkthrough-blazor-webassembly-single-tenant.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

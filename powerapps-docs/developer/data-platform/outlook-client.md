@@ -26,3 +26,6 @@ All outlook client topics ought to be in powerapps-docs/developer/data-platform/
 
 A replacement for 
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook -->
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

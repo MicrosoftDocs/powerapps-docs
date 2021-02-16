@@ -36,3 +36,6 @@ Data visualization and analytics in model-driven apps enable you to graphically 
 [Visualization Data Description Schema](visualization-data-description-schema.md)  
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

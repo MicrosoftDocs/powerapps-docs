@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -48,7 +48,7 @@ Let's say you have created a few webpages for your portal. The page hierarchy lo
 > [!div class=mx-imgBorder]
 > ![pages pane](media/pages-pane.png "Pages pane")  
 
-The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](compose-page.md#add-a-custom-menu)
+The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](add-custom-menu.md)
 
 > [!div class=mx-imgBorder]
 > ![website navigation](media/website-navigation.png "Website navigation")
@@ -95,3 +95,14 @@ If you are working with a portal created in an environment containing customer e
         > [!div class=mx-imgBorder]
         > ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
 
+## Next steps
+
+[Customize webpages](compose-page.md)
+
+### See also
+
+[Work with templates](work-with-templates.md) <br>
+[Work with themes](theme-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

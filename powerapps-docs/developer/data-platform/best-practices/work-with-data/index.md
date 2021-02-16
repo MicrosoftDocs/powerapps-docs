@@ -34,3 +34,6 @@ This list below contains all of the best practices and guidance around integrati
 
 ### See Also
 [Work with data using code in Dataverse (Power Apps)](../../work-with-data.md)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

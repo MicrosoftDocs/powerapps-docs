@@ -64,3 +64,6 @@ You can also test the size of [Liquid types](liquid-types.md), [Liquid types](li
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

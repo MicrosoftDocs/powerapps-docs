@@ -63,3 +63,6 @@ The **New** command or **Quick create** makes it fast and easy to enter almost a
  
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

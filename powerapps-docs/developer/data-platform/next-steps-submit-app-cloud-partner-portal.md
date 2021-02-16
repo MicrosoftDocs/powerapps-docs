@@ -32,3 +32,6 @@ All apps that are submitted to be listed on AppSource go through a certification
 [Publish your app on AppSource](publish-app-appsource.md)
 
 [Microsoft AppSource](https://appsource.microsoft.com)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

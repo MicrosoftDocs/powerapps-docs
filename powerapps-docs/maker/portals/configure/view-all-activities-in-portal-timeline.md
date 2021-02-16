@@ -35,3 +35,6 @@ To view all activities in a portal Timeline:
 
 > [!NOTE]
 > Portal timeline doesn't show inline images in the timeline control. For example, images embedded within emails don't appear on the portal timeline.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

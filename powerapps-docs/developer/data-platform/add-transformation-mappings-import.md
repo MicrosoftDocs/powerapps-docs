@@ -202,3 +202,6 @@ Use transformation mapping to modify data before importing it. For example, spli
 [Data import entities](data-import-entities.md)<br />
 [Sample: Export and import a data map](org-service/samples/export-import-data-map.md)<br />
 [Sample: Import data using complex data map](org-service/samples/import-data-complex-data-map.md)<br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

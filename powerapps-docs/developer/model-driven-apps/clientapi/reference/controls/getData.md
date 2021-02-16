@@ -38,3 +38,6 @@ Web resource
 ### Related topics
 
 [setData](setData.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -180,3 +180,6 @@ Custom icons replace the default system-generated icon when the view is configur
 ### See also
 
 [Understand model-driven app views](../model-driven-apps/create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

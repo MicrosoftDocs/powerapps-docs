@@ -32,3 +32,5 @@ Provides methods to encode and decode strings.
 ### Related topics
 
 [Client API Xrm object](../clientapi-xrm.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

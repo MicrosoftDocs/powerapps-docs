@@ -55,3 +55,6 @@ To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gri
 [Customize entity relationship metadata](../../../../customize-entity-relationship-metadata.md) -->
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

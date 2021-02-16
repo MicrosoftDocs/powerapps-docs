@@ -95,3 +95,6 @@ It is worth being aware of and understanding the platform constraints that do ex
 To understand how the platform constraints are applied it is necessary to understand database transactions. More information: [Scalable Customization Design: Database transactions](database-transactions.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
