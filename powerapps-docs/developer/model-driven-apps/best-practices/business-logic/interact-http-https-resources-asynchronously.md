@@ -131,3 +131,6 @@ The approach in this example still processes on the main browser UI thread, lock
 [XMLHttpRequest specification (with synchronous deprecation statement)](https://xhr.spec.whatwg.org/#the-open()-method)<br />
 [Fetch API specification](https://fetch.spec.whatwg.org/#fetch-api)<br />
 [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

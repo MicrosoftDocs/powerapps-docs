@@ -31,3 +31,6 @@ Tables are used to model and manage business data. When you develop an app, you 
 [Create a custom table](data-platform-create-entity.md)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

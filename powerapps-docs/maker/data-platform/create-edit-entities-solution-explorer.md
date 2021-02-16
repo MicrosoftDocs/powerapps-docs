@@ -200,3 +200,6 @@ More information: [Create and edit virtual tables that contain data from an exte
 [Create and edit tables in Dataverse](create-edit-entities.md)<br />
 [Tutorial: Create a custom table that has components in Power Apps](/powerapps/maker/data-platform/create-custom-entity)<br />
 [Create a solution](create-solution.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

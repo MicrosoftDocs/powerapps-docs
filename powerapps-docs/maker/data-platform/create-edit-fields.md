@@ -86,3 +86,6 @@ You should use the Power Apps portal to create and edit columns for Dataverse un
 [Types of columns and column data types](types-of-fields.md)<br />
 [Developer Documentation: Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

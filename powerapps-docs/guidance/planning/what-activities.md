@@ -55,3 +55,6 @@ When we spoke to Lee, Shawna, and Rebecca, they told us the steps were:
 
 > [!div class="nextstepaction"]
 > [Next step: What data is needed?](what-data-needed.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

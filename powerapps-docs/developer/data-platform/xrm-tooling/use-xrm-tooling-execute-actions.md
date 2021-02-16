@@ -39,3 +39,6 @@ After you are connected to Dataverse, you can use the <xref:Microsoft.Xrm.Toolin
 
 [Use XRM Tooling API to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

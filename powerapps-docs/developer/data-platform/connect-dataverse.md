@@ -41,3 +41,6 @@ More information: [Discovery Services](discovery-service.md)
 When you know which environment to connect the user to, you the must authenticate them with that environment.
 
 More information: [Authentication with Dataverse web services](authentication.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

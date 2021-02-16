@@ -158,3 +158,5 @@ Retrieving unpublished metadata not only will add overhead to processing the req
 [Work with metadata using the Organization service](../../org-service/work-with-metadata.md)<br />
 [Use the Web API with metadata](../../webapi/use-web-api-metadata.md)<br />
 [Publish customizations](/powerapps/developer/model-driven-apps/publish-customizations#retrieving-unpublished-metadata)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

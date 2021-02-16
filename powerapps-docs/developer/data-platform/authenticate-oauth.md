@@ -408,3 +408,6 @@ using (CrmServiceClient svc = new CrmServiceClient(ConnectionStr))
 
 [Authentication with Dataverse web services](authentication.md)<br />
 [Authentication with .NET Framework applications](authenticate-dot-net-framework.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

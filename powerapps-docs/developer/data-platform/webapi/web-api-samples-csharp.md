@@ -181,3 +181,6 @@ Most of the samples have the same general architectural pattern, with the follow
 [Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

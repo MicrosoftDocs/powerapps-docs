@@ -599,3 +599,5 @@ See activitypointer Entity [activity_pointer_activity_mime_attachment](activityp
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.activitymimeattachment?text=activitymimeattachment EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

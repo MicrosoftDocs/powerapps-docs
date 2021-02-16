@@ -44,3 +44,6 @@ S2S authentication means you don’t need to use a paid Power Apps user license 
   
 [Use Multi-Tenant server-to-server authentication](use-multi-tenant-server-server-authentication.md)<br/> 
 [Use Single-Tenant server-to-server authentication](use-single-tenant-server-server-authentication.md)   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

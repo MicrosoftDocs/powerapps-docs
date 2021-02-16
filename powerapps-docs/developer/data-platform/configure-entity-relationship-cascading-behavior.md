@@ -111,3 +111,6 @@ For more information about plug-ins see [Use plug-ins to extend business process
 
 [Entity relationship metadata](entity-relationship-metadata.md)  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

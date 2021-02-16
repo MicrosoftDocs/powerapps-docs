@@ -714,3 +714,6 @@ foreach (var c in byyrqtr2_result.Entities)
 <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*><br />
 <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest><br />
 <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

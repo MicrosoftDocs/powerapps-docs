@@ -34,3 +34,6 @@ In summary, this guide will help you:
 - UX usage recommendations.
 
 [Download the white paper](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/approaching-unified-interface-transition.pdf) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

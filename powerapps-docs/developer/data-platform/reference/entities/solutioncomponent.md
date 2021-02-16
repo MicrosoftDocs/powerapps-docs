@@ -516,3 +516,5 @@ See solution Entity [solution_solutioncomponent](solution.md#BKMK_solution_solut
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.solutioncomponent?text=solutioncomponent EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

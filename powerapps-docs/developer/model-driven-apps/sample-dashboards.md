@@ -209,3 +209,6 @@ This topic contains sample dashboards along with the respective FormXML strings.
  [Dashboards](analyze-data-with-dashboards.md)   
  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

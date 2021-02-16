@@ -78,3 +78,6 @@ You can also manage the connection role types that you want associate to the con
     > ![Manage Row Type](media/connection6.png "Manage Row Type") 
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

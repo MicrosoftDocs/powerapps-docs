@@ -35,3 +35,6 @@ Dataverse is part of the Microsoft 365 collaboration and productivity tools. The
   
  [Connect to the Dataverse Web Services](/dynamics365/customer-engagement/developer/authenticate-office-365-users-customer-engagement-web-services)  
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

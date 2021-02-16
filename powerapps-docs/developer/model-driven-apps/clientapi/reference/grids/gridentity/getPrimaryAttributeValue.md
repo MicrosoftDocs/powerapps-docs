@@ -38,3 +38,6 @@ Read-only grid
 
 To get the `gridEntity` object, see [GridEntity](../gridentity.md). 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

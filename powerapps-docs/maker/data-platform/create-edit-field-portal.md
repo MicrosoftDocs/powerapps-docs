@@ -250,3 +250,6 @@ IME mode does not restrict the characters that users can enter. For example, whe
 [Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
 [Define rollup columns that aggregate values](define-rollup-fields.md)<br />
 [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -299,3 +299,6 @@ The `PostPoneUntil` attribute contains a datetime value when the system job will
 [Write a plug-in](write-plug-in.md)<br />
 [Write plug-ins to extend business processes](plug-ins.md) <br />
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -147,3 +147,6 @@ IFrame.setSrc(newTarget);
  [Client scripting using JavaScript](client-scripting.md)   
  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

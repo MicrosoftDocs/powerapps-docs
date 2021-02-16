@@ -357,3 +357,6 @@ For detailed information presented in the Power BI dashboard, see [Get insights]
 
 - For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

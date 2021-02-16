@@ -139,3 +139,6 @@ After these permissions are in place, users in the Lead Manager role can access 
 
 [Create web roles for portals](create-web-roles.md)  
 [Control webpage access for portals](webpage-access-control.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

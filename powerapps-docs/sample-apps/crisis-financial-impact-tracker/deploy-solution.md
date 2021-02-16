@@ -174,3 +174,6 @@ For admin users to use the admin app (the model-driven app), it must be shared w
 - To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
 - For feedback about Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-feedback>.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -38,3 +38,6 @@ Assertion messages, for both passed and failed assertions, are also contained in
 
 [Test Studio Overview](../test-studio.md) <br>
 [Working with Test Studio](../working-with-test-studio.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

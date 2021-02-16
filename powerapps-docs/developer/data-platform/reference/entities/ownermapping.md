@@ -650,3 +650,5 @@ See importmap Entity [OwnerMapping_ImportMap](importmap.md#BKMK_OwnerMapping_Imp
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.ownermapping?text=ownermapping EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

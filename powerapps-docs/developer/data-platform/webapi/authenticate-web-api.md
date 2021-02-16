@@ -43,3 +43,6 @@ If you’re creating a single page application (SPA) using JavaScript you can us
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Use OAuth with Dataverse](../authenticate-oauth.md)<br />
 [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -825,3 +825,5 @@ See businessunit Entity [business_unit_msdynce_botcontent](businessunit.md#BKMK_
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdynce_botcontent?text=msdynce_botcontent EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

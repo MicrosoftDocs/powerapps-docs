@@ -9062,3 +9062,5 @@ See template Entity [Template_Organization](template.md#BKMK_Template_Organizati
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.organization?text=organization EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

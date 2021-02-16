@@ -69,3 +69,6 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 
 > [!TIP]
 > Use **Alt+0** while the editor is focused to learn about other keyboard shortcuts.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

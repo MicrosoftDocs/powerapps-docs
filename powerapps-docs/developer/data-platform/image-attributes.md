@@ -275,3 +275,6 @@ In the above request, the next block of data is being uploaded. After all image 
 [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities)   
 [Introduction to entity attributes in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entity-attributes)   
 [Sample: Set and retrieve entity images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

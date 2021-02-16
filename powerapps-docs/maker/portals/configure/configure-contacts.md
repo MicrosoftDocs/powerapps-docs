@@ -54,3 +54,5 @@ Complete the change password workflow, and the necessary fields will be automati
 ### See also
 [Invite contacts to your portals](invite-contacts.md)  
 [Set authentication identity for a portal](set-authentication-identity.md)  
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

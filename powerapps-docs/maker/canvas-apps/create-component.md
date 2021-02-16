@@ -248,3 +248,6 @@ Once you save the app, you can reuse the components of this app using the same m
 ## Next steps
 
 Learn to use a [component library](component-library.md) to create a repository of reusable components.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

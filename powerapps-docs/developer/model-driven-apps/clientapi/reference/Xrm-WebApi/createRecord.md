@@ -209,3 +209,6 @@ Xrm.WebApi.offline.createRecord("account", data).then(
 [Create an entity using the Web API](../../../../data-platform/webapi/create-entity-web-api.md) 
 
 [Xrm.WebApi](../xrm-webapi.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

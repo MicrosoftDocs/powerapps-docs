@@ -168,3 +168,6 @@ A business rule may also not execute because a column referenced in the business
  [Create custom business logic through processes](guide-staff-through-common-tasks-processes.md)   
  [Create a business process flow](/flow/create-business-process-flow)   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

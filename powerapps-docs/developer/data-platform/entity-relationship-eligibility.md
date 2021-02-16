@@ -38,3 +38,6 @@ Before you create an entity relationship you should confirm whether the entity i
  [Entity Relationship Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)   
  [Create a 1:N Entity Relationship](/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships#BKMK_Create1NEntityRelationship)   
  [Create an N:N Entity Relationship](/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships#BKMK_CreateNNEntityRelationship)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

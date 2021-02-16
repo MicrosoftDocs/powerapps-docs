@@ -74,3 +74,5 @@ Type: [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Glob
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

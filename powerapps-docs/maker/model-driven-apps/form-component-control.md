@@ -108,3 +108,6 @@ Note the following limitations when you add the form component control to a tabl
 ### See also
 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
