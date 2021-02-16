@@ -158,7 +158,7 @@ If you want to remove a code component from a solution file:
    <ItemGroup>
        <Projectreference Include="..\pcf_component\pcf_component.pcfproj">
          <Project>0481bd83-ffb0-4b70-b526-e0b3dd63e7ef</Project>
-         <Name>pcf_component </Name>
+         <Name>pcf_component</Name>
          <Targets>Build</Targets>
          <referenceOutputAssembly>false</referenceOutputAssembly>
          <OutputItemType>Content</OutputItemType>
@@ -179,3 +179,6 @@ If you want to remove a code component from a solution file:
 [Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

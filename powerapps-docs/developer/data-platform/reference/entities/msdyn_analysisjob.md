@@ -1127,3 +1127,5 @@ See businessunit Entity [business_unit_msdyn_analysisjob](businessunit.md#BKMK_b
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_analysisjob?text=msdyn_analysisjob EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

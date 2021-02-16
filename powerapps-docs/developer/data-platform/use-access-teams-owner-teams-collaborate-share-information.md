@@ -125,3 +125,6 @@ With *owner* teams or *access* teams, you can easily share business objects and 
  [Use record-based security to control access to records](/dynamics365/customer-engagement/developer/security-dev/use-record-based-security-control-access-records)   
  [How Role-Based Security Can Be Used to Control Access to Entities In Dynamics 365](/dynamics365/customer-engagement/developer/security-dev/how-role-based-security-control-access-entities)   
  [Cascading Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior#BKMK_CascadingBehavior)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

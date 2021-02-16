@@ -37,3 +37,6 @@ The SOAP endpoint for the organization service was introduced in 2011 and we hav
 ## Using the organization service without assemblies
 
 It is possible for developers to use the SOAP endpoint of the organization service without using the .NET SDK assemblies, for example by creating a web service proxy using the WSDL exposed by the service,  but the RESTful nature of the Web API makes it a superior alternative.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

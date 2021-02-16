@@ -53,3 +53,6 @@ Returns a reference to the object that the event occurred on.
 ### Related topics
 
 [Execution context](../execution-context.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

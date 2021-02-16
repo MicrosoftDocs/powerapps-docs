@@ -70,3 +70,6 @@ Please send an email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft
 
 [Introduction to solutions](introduction-solutions.md)  
 [Publish your app on AppSource](publish-app-appsource.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -29,3 +29,6 @@ Provides a method to display a web page in the side pane of model-driven apps fo
 ### Related topics
 
 [Client API Xrm object](../clientapi-xrm.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

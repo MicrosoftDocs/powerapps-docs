@@ -65,3 +65,6 @@ The Dataverse Web API provides complete parity with the capabilities of the orga
 [Authenticate to Dataverse with the Web API](authenticate-web-api.md)<br />
 [Web API types and operations](web-api-types-operations.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

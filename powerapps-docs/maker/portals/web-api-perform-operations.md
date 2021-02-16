@@ -869,3 +869,6 @@ Now that you've created a webpage with a sample in this example to view, edit, c
 ### See also
 
 [Web API overview](web-api-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

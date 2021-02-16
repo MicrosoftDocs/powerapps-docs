@@ -28,7 +28,7 @@ search.app:
 
 **Type**: String.
 
-**Description**: Returns "expanded" or "collapsed" on the web client; returns "expanded", "collapsed", or "floating" on Unified Interface.
+**Description**: Returns "expanded" or "collapsed" on the legacy web client; returns "expanded", "collapsed", or "floating" on Unified Interface.
 
 ### Related topics
 
@@ -38,3 +38,6 @@ search.app:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

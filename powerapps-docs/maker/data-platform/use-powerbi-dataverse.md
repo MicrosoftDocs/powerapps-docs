@@ -41,3 +41,6 @@ Power BI is a comprehensive collection of services and  tools that you use to vi
 
 ### See also  
 [Use Power BI](../model-driven-apps/use-power-bi.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

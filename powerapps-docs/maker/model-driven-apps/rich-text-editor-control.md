@@ -789,3 +789,6 @@ A. Large content size can cause latency. For more information, see [Best practic
 ### See also
 
 [Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

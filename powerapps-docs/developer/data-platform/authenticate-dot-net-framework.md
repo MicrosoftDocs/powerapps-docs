@@ -68,3 +68,6 @@ If you prefer to not have a dependency on any SDK assemblies, you can also use t
 [Authentication with Dataverse web services](authentication.md)<br />
 [Use OAuth with Dataverse](authenticate-oauth.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,14 +1,13 @@
 ---
 title: Develop offline-capable canvas apps | Microsoft Docs
 description: Develop offline-capable canvas apps so that your users are productive whether they are online or offline.
-author: gregli-msft
-manager: kvivek
+author: mustlaz
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 02/29/2020
-ms.author: gregli
+ms.reviewer: tapanm
+ms.date: 01/28/2021
+ms.author: mustlaz
 search.audienceType: 
   - maker
 search.app: 
@@ -22,6 +21,9 @@ Mobile users often need to be productive even when they have limited or no conne
 - Open Power Apps Mobile and run apps when offline.
 - Determine when an app is offline, online, or in a metered connection by using the [Connection](functions/signals.md#connection) signal object.
 - Use [collections](create-update-collection.md) and leverage the [**LoadData** and **SaveData**](functions/function-savedata-loaddata.md) functions for basic data storage when offline.
+
+> [!NOTE]
+> Offline capability for canvas apps is only available while running the apps using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/). Canvas apps running in web browsers can't run offline, even when using a web browser on a mobile device.
 
 This article includes an example using Twitter data.  An even simpler example that doesn't require a connection is included in the [**LoadData** and **SaveData** function reference](functions/function-savedata-loaddata.md).
 
@@ -203,7 +205,7 @@ This formula determines whether the device is online. If it is, the app tweets a
 
 ## Test the app
 
-1. Open the app on a mobile device that's connected to the Internet.
+1. Open the app using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/) on a mobile device that's connected to the Internet.
 
     Existing tweets appear in the gallery, and the status shows **Connected**.
 
@@ -220,3 +222,6 @@ This formula determines whether the device is online. If it is, the app tweets a
     Within five minutes, the app posts the tweet, which appears in the gallery.
 
 We hope this article gives you an idea of the capabilities that Power Apps has for building offline apps. As always, please provide feedback in our [forum](https://powerusers.microsoft.com/t5/PowerApps-Forum/bd-p/PowerAppsForum1) and share your examples of offline apps in the [Power Apps community blog](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/bg-p/PowerAppsBlog).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

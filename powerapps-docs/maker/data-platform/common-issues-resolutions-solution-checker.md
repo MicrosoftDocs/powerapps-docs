@@ -276,3 +276,6 @@ The solution checker will list the number of the errors found in the app, *inclu
 [Best practices and guidance for the Dataverse](../../developer/data-platform/best-practices/index.md)
 
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

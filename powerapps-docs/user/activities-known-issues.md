@@ -51,3 +51,6 @@ If you attempt to save the new phone call activity row, you will get this error,
 
 **Resolution**: Microsoft Dataverse does not support the option to create a phone call activity from within another phone call activity row.
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

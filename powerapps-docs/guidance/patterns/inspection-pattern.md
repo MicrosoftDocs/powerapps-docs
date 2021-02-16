@@ -163,3 +163,5 @@ Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [document
 ### Microsoft Power Apps Community
 
 - [App sample gallery: Audit](https://powerusers.microsoft.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&filter=location&location=forum-board:AppFeedbackGallery&q=audit)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

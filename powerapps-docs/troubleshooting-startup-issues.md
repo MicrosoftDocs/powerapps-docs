@@ -239,3 +239,6 @@ To resolve Azure AD errors, you might need assistance from your IT department.
 
 - [Common issues and resolutions](maker/canvas-apps/common-issues-and-resolutions.md)
 - [Power Apps Support](https://powerapps.microsoft.com/support/)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

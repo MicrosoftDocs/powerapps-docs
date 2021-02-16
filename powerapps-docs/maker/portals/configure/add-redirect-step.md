@@ -34,3 +34,6 @@ The Redirect Step Type allow for a redirect of the User's browser session to ano
 [Conditional step type](add-conditional-step.md)  
 [Add custom JavaScript](add-custom-javascript.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

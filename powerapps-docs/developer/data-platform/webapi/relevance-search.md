@@ -180,6 +180,8 @@ The Lucene query syntax supports the following functionality:
 | Proximity search                  | Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
 
+In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
+
 ### Example: basic search
 
 Below is an example of a basic search request and response.
@@ -517,4 +519,8 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)  
 [Compare search options in Microsoft Dataverse](/powerapps/user/search)  
 [Retrieve related entity records with a query](retrieve-related-entities-query.md)  
-[Query Data using the Web API](query-data-web-api.md)
+[Query Data using the Web API](query-data-web-api.md)  
+[Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

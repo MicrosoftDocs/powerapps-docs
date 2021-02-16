@@ -299,3 +299,5 @@ Same as principalobjectattributeaccess entity [provisionlanguageforuser_Principa
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.provisionlanguageforuser?text=provisionlanguageforuser EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

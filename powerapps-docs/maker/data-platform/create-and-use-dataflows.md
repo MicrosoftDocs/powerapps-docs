@@ -226,3 +226,6 @@ For more information about the Common Data Model:
 -   [Common Data Model - overview](/powerapps/common-data-model/overview)
 
 -   [Learn more about the Common Data Model schema and tables on GitHub](https://github.com/Microsoft/CDM)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

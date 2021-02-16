@@ -51,3 +51,6 @@ This sample shows how to write a custom workflow activity that can create an acc
 [Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
 [Sample: Calculate a credit score with a custom workflow activity](sample-calculate-credit-score-custom-workflow-activity.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

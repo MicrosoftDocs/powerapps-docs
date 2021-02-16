@@ -63,3 +63,6 @@ Main forms are the primary user interface where people view and interact with th
  [Create and edit quick create forms](create-edit-quick-create-forms.md)   
 
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

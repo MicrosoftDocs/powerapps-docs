@@ -71,3 +71,6 @@ For more information about how these limitations are reflected in the Dataverse 
 [API considerations of virtual entities](api-considerations-ve.md)<br />
 [Custom virtual entity data providers](custom-ve-data-providers.md)<br />
 [Sample: Generic virtual entity data provider plug-in](sample-generic-ve-plugin.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

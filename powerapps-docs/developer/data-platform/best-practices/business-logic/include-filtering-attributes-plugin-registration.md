@@ -55,3 +55,5 @@ Filtering attributes are a list of entity attributes that, when changed, cause t
 
 [Register a plug-in](../../register-plug-in.md)
 [Disable auto-save in a model-driven app](/powerapps/maker/model-driven-apps/manage-auto-save)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

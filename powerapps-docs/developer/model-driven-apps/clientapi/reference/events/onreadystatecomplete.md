@@ -22,3 +22,6 @@ The `OnReadyStateComplete` event indicates that the content of the IFRAME has lo
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

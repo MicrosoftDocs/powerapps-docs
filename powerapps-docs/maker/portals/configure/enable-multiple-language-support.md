@@ -5,12 +5,13 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/30/2020
+ms.date: 02/08/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
 # Enable multiple-language portal support
+
 Business is not confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
 
 ![Multi-language dropdown](../media/multi-language-dropdown.png "Multiple-language drop-down list")  
@@ -99,3 +100,6 @@ Knowledge articles will only be displayed if they have been translated into the 
 Web link sets are the navigation links at the top of the portal. By navigating to **Portals** > **Content** > **Web Link Sets** you can control how this content is translated. When a language is active for the portal, a new set of links are created for the newly activated language.
 
 ![Active web link for new language](../media/active-weblink-new-language.png "Active web link for new language")
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

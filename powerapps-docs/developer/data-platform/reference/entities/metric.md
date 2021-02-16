@@ -665,3 +665,5 @@ See organization Entity [organization_metric](organization.md#BKMK_organization_
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.metric?text=metric EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

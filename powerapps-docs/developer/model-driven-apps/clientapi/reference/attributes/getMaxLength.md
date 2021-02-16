@@ -36,3 +36,5 @@ string, memo
 
 > [!NOTE]
 > The email form description attribute is a memo attribute, but it does not have a `getMaxLength` method.
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

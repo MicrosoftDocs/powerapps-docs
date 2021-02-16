@@ -164,3 +164,6 @@ In addition to the [standard color contrast requirements](../accessible-apps-col
 
 * Set the **[TabIndex](properties-accessibility.md)** property to zero or greater so that keyboard users can navigate to it.
 * Set the **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** properties so that focus indicators are clearly visible.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

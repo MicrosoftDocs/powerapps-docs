@@ -74,3 +74,6 @@ Choice columns provide a set of options that will be displayed in a drop-down co
 
 [Create or edit tables (row types)](create-edit-entities.md)<br />
 [Create and edit relationships between tables](create-edit-entity-relationships.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

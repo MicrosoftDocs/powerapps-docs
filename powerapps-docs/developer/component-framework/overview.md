@@ -69,3 +69,6 @@ With the general availability of the framework, code component developers will b
 [Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)<br/>
 [Power Apps for developers](https://docs.microsoft.com/powerapps/#pivot=home&panel=developer)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

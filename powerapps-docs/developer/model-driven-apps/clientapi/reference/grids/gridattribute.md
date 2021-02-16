@@ -51,3 +51,6 @@ GridAttribute supports the following methods for attributes of a selected grid r
 [Controls collection](../attributes/controls-collection.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

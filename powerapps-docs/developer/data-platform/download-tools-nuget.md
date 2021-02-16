@@ -109,3 +109,6 @@ To get the latest version of these tools, repeat these steps.
 [Browse the metadata for your organization](browse-your-metadata.md)<br />
 [Deploy packages using Dynamics 365 Package Deployer and Windows PowerShell](/dynamics365/customer-engagement/admin/deploy-packages-using-package-deployer-windows-powershell)<br />
 [Register a plug-in](register-plug-in.md)<br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

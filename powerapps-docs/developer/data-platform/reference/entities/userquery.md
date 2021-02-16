@@ -786,3 +786,5 @@ See systemuser Entity [lk_userquery_createdonbehalfby](systemuser.md#BKMK_lk_use
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

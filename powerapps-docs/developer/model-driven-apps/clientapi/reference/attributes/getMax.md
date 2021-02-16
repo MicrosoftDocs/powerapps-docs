@@ -34,3 +34,6 @@ decimal, integer, double, money
 
 **Description**: The maximum allowed value for the attribute.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

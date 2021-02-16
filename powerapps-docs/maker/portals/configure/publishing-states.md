@@ -109,3 +109,6 @@ To do this, you would create a rule with the grant change permission and apply i
 
 You would then associate this rule with the appropriate web role, for example, Content publishing. Assuming this web role isn't associated with a more permissive rule (a rule that grants change no matter which publishing state) then users in the content publishing web role can modify pages in the draft state but can't modify pages in the published state.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

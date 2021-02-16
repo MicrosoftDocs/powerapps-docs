@@ -94,3 +94,6 @@ If you don't extend the trial or purchase a plan but you still have another kind
 ### More questions?
 
 Try the Power Apps [community](https://community.powerapps.com).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

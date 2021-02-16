@@ -147,3 +147,6 @@ Something else we can do with a grouped table is to aggregate the results.  In t
    
     Note that we didn't need to ungroup this table.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

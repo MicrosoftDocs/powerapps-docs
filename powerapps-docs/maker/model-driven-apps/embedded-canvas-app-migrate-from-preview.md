@@ -78,3 +78,6 @@ To migrate an embedded canvas app on a model-driven form that uses a list of row
 [ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -44,3 +44,6 @@ The following table lists the form properties:
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

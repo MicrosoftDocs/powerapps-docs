@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/data-platform/change-solution-publisher-prefix.md",
+      "redirect_url": "create-solution#solution-publisher",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/run-canvas-and-model-apps-on-mobile.md",
+      "redirect_url": "../mobile/run-powerapps-on-mobile",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/powerapps_mobile_troubleshoot.md",
+      "redirect_url": "powerapps-mobile-troubleshoot",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/monitor.md",
       "redirect_url": "../monitor-canvasapps",
       "redirect_document_id": "false"
@@ -1874,7 +1889,7 @@
       "source_path": "powerapps-docs/maker/maker/canvas-apps/webinars-listing.md",
       "redirect_url": "https://powerusers.microsoft.com/t5/Samples-Learning-and-Videos/ct-p/PA_Comm_Galleries",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/index.md",
       "redirect_url": "/powerapps/developer/common-data-service/org-service/overview",
@@ -6099,7 +6114,7 @@
       "source_path": "powerapps-docs/developer/data-platform/webapi/index.md",
       "redirect_url": "/powerapps/developer/data-platform/webapi/overview",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/developer/data-platform/org-service/index.md",
       "redirect_url": "/powerapps/developer/data-platform/org-service/overview",
@@ -6133,6 +6148,66 @@
     {
       "source_path": "powerapps-docs/developer/data-platform/understand-managed-solutions-merged.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/how-managed-solutions-merged",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/overview.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/whats-new.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/whats-new",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/upgrade.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/upgrade",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/portal-extension.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/portal-extension",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/extend.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/extend",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/deploy.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/deploy",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/dashboard-for-executive-leadership.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/dashboard-for-executive-leadership",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/dashboard-case-management.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/dashboard-case-management",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/configure.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/configure",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/app-for-health-and-safety-lead.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/app-for-health-and-safety-lead",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/app-for-facility-manager.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/app-for-facility-manager",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/sample-apps/return-to-workplace/app-for-employee.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/industry/return-to-workplace/app-for-employee",
       "redirect_document_id": "false"
     }
   ]

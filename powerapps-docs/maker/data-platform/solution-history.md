@@ -60,3 +60,6 @@ Below the **Details** area is the **More details** area that has additional info
 [Solutions overview](solutions-overview.md) 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

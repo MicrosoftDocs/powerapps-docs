@@ -289,3 +289,6 @@ The following describes settings for modifying default authentication cookie beh
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
 [Microsoft Learn: Power Apps portals authentication settings](https://docs.microsoft.com/learn/modules/authentication-user-management/2-authentication-settings)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

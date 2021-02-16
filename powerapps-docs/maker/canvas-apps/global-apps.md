@@ -148,3 +148,6 @@ The **[Calendar](functions/function-clock-calendar.md)** and **[Clock](functions
 Among other things, use these functions to provide a **Dropdown** control with a list of choices.  
 
 For more information, see the documentation for the **[Calendar](functions/function-clock-calendar.md)** and **[Clock](functions/function-clock-calendar.md)**  functions.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

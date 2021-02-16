@@ -132,3 +132,6 @@ Use the **Relate** function to link two rows through a one-to-many or many-to-ma
 * [Generate an app by using a Dataverse database](../canvas-apps/data-platform-create-app.md)
 * [Create an app from scratch using a Dataverse database](../canvas-apps/data-platform-create-app-scratch.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -40,3 +40,6 @@ On success, returns a promise with array of objects as specified earlier for the
 ### Related topics
 [Xrm.Device](../xrm-device.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

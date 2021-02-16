@@ -197,3 +197,6 @@ For the current list of datacenter regions, see [Datacenter regions](/power-plat
 ### See also
 
 [Work with any data](work-with-any-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

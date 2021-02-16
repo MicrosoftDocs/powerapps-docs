@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 12/15/2020
+ms.reviewer: tapanm
+ms.date: 02/12/2021
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -92,10 +92,6 @@ This article lists some common issues that you might encounter while using Power
 
     When you use a **Combo box** control inside a gallery, its selections are not maintained when the user scrolls the gallery. This is not an issue if you use a **Combo box** control inside a gallery that doesn't scroll. A workaround is not currently available.
 
-1. **Using a custom image as an app icon** (April 11, 2018)
-
-    In Power Apps Studio for Windows version 3.18043, you cannot upload a custom image to use as an app icon. To work around this issue, use [Power Apps Studio for web](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to upload a custom image. Alternatively, you can use one of the icons included with Power Apps Studio for Windows and customize the background color.
-
 1. **Copying and pasting screens across apps** (April 4, 2018)
 
     Copying and pasting screens across apps is not currently supported. To work around this, add a new screen to your target app, copy the controls from the screen in your source app, and then paste them into the screen of your target app.
@@ -108,21 +104,13 @@ This article lists some common issues that you might encounter while using Power
 
     If you copy and paste a **Data Table** control for which the **Items** property is set to a formula that contains a **Filter** function, the formula for the **Items** property on the new **Data Table** control ends up with field names that contain a **_1** suffix. This makes the field names invalid and results in no data showing up in the data table. To work around this issue, before you copy the control, confirm that the **Filter** function doesn't reference any field in the data source that has the same name as a column in the **Data Table** control. If it does, rename the column in the **Data Table** control. Alternatively, remove the **_1** suffix from the invalid field names so they match the names in the entity.
 
-1. **Camera controls in Power Apps Studio for Windows**
+1. **Camera controls in Power Apps for Windows app**
 
-    Power Apps Studio for Windows may crash if you add a camera control or open an app that uses a camera control. To avoid this problem, use [Power Apps Studio for web](create-app-browser.md) when adding or using a camera control.
-
-1. **Release 2.0.700 on Android devices**
-
-    If you install release 2.0.700 on an Android device and then can't open apps (or an app stops responding), uninstall Power Apps, restart the device, and then reinstall Power Apps.
+   Power Apps for Windows app may crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform.
 
 1. **"Empty" gallery when opening an app**
 
     If you generate an app automatically from data, save the app, and then reopen it, the browse gallery might not immediately show any data. To resolve this issue, type at least one character in the search box, and then delete the text that you typed. The gallery will then show data as expected.
-
-1. **Upgrading Power Apps on Windows 8.1**
-
-    If you install Power Apps on a computer that’s running Windows 8 or Windows 8.1, keep the Windows Store app open and active, use the Settings charm to check for updates, and then install them.
 
 1. **Custom connectors and Microsoft Dataverse**
 
@@ -140,27 +128,13 @@ This article lists some common issues that you might encounter while using Power
 
     If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, re-add the flow, and reshare the app. Otherwise, users who trigger the flow will get an authentication failure.
 
-1. **Using a localized version**.
-
-    If you're running release 2.0.531 on Windows 8.1, you can't type in a **Text input** control if the device is set to a language that requires an IME window.
-
 1. **Camera control on a Windows Phone**
 
     An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4)).
 
-1. **Opening an app from a template**.
-
-    If you're running release 2.0.500 or older, an error message appears when you try to create an app from a template. You must upgrade to be able to use this feature.
-
-    If you're running release 2.0.510 or later, an warning might appear when you try to create an app from a template. However, you can close the message and create the app.
-
 1. **Scanning a barcode**
 
     For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](scan-barcode.md).
-
-1. **Creating and modifying apps in a browser**
-
-    You can do many, but not all, of the same things in Power Apps Studio for web as you can in Power Apps Studio for Windows. For more information, see [Create an app in a browser](create-app-browser.md).
 
 1. **Changing a Title field in an entity**
 
@@ -202,10 +176,6 @@ This article lists some common issues that you might encounter while using Power
     * Unlock the card, as described in [Understanding data cards](working-with-cards.md#unlock-a-card).
     * Remove or rearrange controls within the card as you see fit, just as you would with the custom card.
 
-1. **An app that's running on Android 5.0, Nexus 6 with Webview versions v48 or v49 may crash**.
-
-     Users can fix this problem by updating to a lower version of Webview (3x) or update to Android 6.0.
-
 1. **Camera usage may be temporarily disabled if memory is low**.
 
      If your mobile device is low on memory, the camera is temporarily disabled to avoid crashing the device.
@@ -231,3 +201,6 @@ If your issue isn't listed in this article, you can [search for more support res
 [Common canvas app performance issues and resolutions](common-performance-issue-resolutions.md) <br>
 [Tips and best practices to improve canvas apps performance](performance-tips.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

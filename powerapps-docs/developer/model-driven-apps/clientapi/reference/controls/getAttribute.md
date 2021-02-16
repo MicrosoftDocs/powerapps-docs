@@ -55,3 +55,6 @@ if (quickViewMobilePhoneControl.getAttribute().getValue() == null) {
 [Attributes](../attributes.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

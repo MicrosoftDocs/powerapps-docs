@@ -88,3 +88,6 @@ When opening up other records from within model driven apps, the navigation bar 
 ### See also
 
 [Open forms, views, dialogs, and reports with a URL](../../open-forms-views-dialogs-reports-url.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

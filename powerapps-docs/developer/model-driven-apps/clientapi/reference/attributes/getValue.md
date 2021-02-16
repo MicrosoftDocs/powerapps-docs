@@ -28,7 +28,7 @@ All
 
 ## Return Value
 
-**Type**: Depends on the type of attaribute. 
+**Type**: Depends on the type of attribute. 
 
 | Attribute Type | Return Type| 
 |----|-----|
@@ -47,3 +47,6 @@ All
 
 ### Related topic
 [setValue (Client API reference)](setValue.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

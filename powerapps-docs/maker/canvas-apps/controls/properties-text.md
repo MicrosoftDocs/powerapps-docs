@@ -55,3 +55,6 @@ Configure the text that appears on a control, as a hint when the user types data
 
 * Applies to **[Add picture](control-add-picture.md)**, **[Button](control-button.md)**, **[Check box](control-check-box.md)**, **[Export](control-export-import.md)**, **[Import](control-export-import.md)**, and **[Label](control-text-box.md)** controls.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

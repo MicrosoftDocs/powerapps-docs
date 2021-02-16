@@ -256,3 +256,6 @@ To create a file column, on the left pane in Power Apps select **Solutions**, op
 > ![File data type](media/file-data-type.png)
 
 More information for developers working with file data: [File attributes](/powerapps/developer/data-platform/file-attributes)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

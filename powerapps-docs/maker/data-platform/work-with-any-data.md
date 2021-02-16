@@ -148,3 +148,6 @@ Data is stored in the Common Data Model format, which provides semantic consiste
 ### See also
 
 [Importing and exporting data](import-export-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

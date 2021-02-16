@@ -22,3 +22,6 @@ The `OnRecordSelect` event occurs when a single row (record) is selected in the 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

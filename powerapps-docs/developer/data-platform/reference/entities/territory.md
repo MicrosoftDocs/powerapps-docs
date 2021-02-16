@@ -909,3 +909,5 @@ See territory Entity [territory_parent_territory](territory.md#BKMK_territory_pa
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.territory?text=territory EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

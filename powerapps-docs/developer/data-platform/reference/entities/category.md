@@ -697,3 +697,5 @@ See knowledgearticle Entity [knowledgearticle_category](knowledgearticle.md#BKMK
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.category?text=category EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

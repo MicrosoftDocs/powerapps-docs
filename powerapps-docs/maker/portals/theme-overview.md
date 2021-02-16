@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/11/2020
+ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -153,6 +153,15 @@ Sass variables work from top to bottom. You can set the *Header* color to ```lig
 - Changing the CSS for preset themes isn't supported.
 - The recommended theme foreground and background color contrast ratio is 4.5:1, for accessibility.
 
-### Next steps
+## Next steps
 
 [Edit theme CSS](edit-css.md)
+
+### See also
+
+[Power Apps portals Studio](portal-designer-anatomy.md) <br>
+[Create and manage webpages](create-manage-webpages.md) <br>
+[WYSIWYG editor](compose-page.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

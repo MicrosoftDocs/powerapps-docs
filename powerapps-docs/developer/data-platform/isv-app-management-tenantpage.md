@@ -94,3 +94,6 @@ ISVs can filter the tenant page using the filters available. For example, an ISV
 [App page](isv-app-management-apppage.md)<br/> 
 [AppSource checker](isv-app-management-appsource-checker.md)<br/> 
 [Connector Certification](isv-app-management-certification.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
