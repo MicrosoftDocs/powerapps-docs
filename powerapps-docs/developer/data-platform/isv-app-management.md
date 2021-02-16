@@ -55,7 +55,7 @@ To access the public preview of ISV Studio, navigate your browser to [https://ak
 
 To be an admin in ISV Studio,  your Azure Active Directory account must be configured as an app owner in Partner Center for their publisher account. Once you get the admin access, you'll be able to give more users access to ISV Studio from the studio directly.  
 
-### Read only user access
+### Grant read access to users
 
 If you want more users within your tenant/organization to get,  read-only access to ISV Studio, you must have [admin access](#admin-access-to-isv-studio). Once you are an admin for your publisher account, follow these steps below to give more users read-only access: 
 
@@ -64,12 +64,17 @@ If you want more users within your tenant/organization to get,  read-only access
    > [!div class="mx-imgBorder"]
    > ![Settings panel](media/isv-settings-panel.png "Settings panel")
 
-1. Search for a user in the organization.
+1. Search for a **Publisher account** in the organization. Select a user within your organization to give access. Select **Save**.
+
+   > [!div class="mx-imgBorder"]
+   > ![User Management](media/isv-user-management-dashboard.png "User Management")
 
    > [!NOTE]
    > You can only search and add users within your tenant/organization.
 
-1. After giving access to the user, the user gets an email with confirmation of their new access to ISV Studio.  
+1. After giving access to the user, a confirmation email is sent to the user with access details.  
+
+### Remove read access to users
 
 You can follow the same steps to remove read-only access from a user to ISV Studio in the same window.
 
