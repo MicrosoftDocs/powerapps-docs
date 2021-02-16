@@ -35,7 +35,7 @@ Search first displays only items from your environment, which are apps and templ
 
 ## Manage search providers
 
-The [Microsoft.PowerApps.Administration.PowerShell](/powershell/module/microsoft.powerapps.administration.powershell/) module includes the cmdlets that members of either the Global admins, Azure Active Directory Global admins, or Dynamics 365 admin security groups can use to modify the search providers.
+The Microsoft.PowerApps.Administration.PowerShell module includes the cmdlets that members of either the Global admins, Azure Active Directory Global admins, or Dynamics 365 admin security groups can use to modify the search providers. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
 
 To return the current settings including which search providers are enabled or disabled, run this cmdlet:
 `Get-TenantSettings`
@@ -47,3 +47,6 @@ $requestBody = @{disableDocsSearch = $true}
 Set-TenantSettings -RequestBody $requestBody
 ```
 
+### See also
+
+[Overview of creating apps in Power Apps](index.md)
