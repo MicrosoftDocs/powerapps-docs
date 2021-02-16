@@ -1052,3 +1052,5 @@ See plugintype Entity [plugintypeid_sdkmessageprocessingstep](plugintype.md#BKMK
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sdkmessageprocessingstep?text=sdkmessageprocessingstep EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

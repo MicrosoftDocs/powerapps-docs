@@ -58,3 +58,6 @@ For information about using Organization service to apply optimistic concurrency
   
   You can check the [Code](https://msdn.microsoft.com/library/system.servicemodel.faultexception.code\(v=vs.110\).aspx) property of the returned fault to determine if the fault is related to optimistic concurrency. The codes for the error conditions that were shown previously were obtained from the ErrorCodes.cs helper code.  
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

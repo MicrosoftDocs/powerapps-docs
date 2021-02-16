@@ -94,3 +94,6 @@ Console.WriteLine();
 [Offline and Outlook Filters and Templates](offline-outlook-filters-templates.md)<br />
 [SavedQuery Entity Reference](../reference/entities/savedquery.md) 
 <xref:Microsoft.Xrm.Sdk.IOrganizationService>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

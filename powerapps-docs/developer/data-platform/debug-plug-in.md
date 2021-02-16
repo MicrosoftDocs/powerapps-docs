@@ -117,3 +117,6 @@ This will download an open an XML file with the profile information. The `Contex
 ### More information
 
 [Testing tools for server-side development](testing-tools-server.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

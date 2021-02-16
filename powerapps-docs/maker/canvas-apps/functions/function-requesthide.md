@@ -41,3 +41,6 @@ This function is not required for the **SharePointIntegration** control's **OnCa
 | Formula | Description |
 | --- | --- |
 | **RequestHide()** | Hides the form. |
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

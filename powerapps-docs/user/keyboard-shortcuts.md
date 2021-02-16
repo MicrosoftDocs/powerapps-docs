@@ -202,3 +202,6 @@ If you’re in a row—for example, a lead—this section shows you the keyboard
 - **Keyboard shortcuts in Windows**: If you are using the Windows operating system, select the following link and choose the version number from the drop-down list. You can view all the shortcuts that are applicable to a Windows environment. See [Windows keyboard shortcuts](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts). 
 - **Keyboard shortcuts in Mac**: If you are using a Mac operating system, select the following link to view all the shortcuts that are applicable to a Mac environment. See [Mac keyboard shortcuts](https://support.apple.com/HT201236).
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -50,3 +50,6 @@ Provides properties and methods to retrieve information specific to the record d
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

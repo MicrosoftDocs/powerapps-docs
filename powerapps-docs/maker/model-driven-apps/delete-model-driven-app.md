@@ -54,3 +54,5 @@ All the components of a managed solution are deleted by deleting the solution.
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.	On the left navigation, select **Solutions**.
 3.	In the **Solutions** list, select the managed solution you want to delete and then on the toolbar select **Delete**.
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

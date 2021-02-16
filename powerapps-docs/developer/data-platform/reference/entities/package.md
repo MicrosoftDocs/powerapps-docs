@@ -885,3 +885,5 @@ IntersectEntityName: package_solution<br />
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.package?text=package EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

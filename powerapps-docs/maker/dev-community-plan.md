@@ -136,3 +136,6 @@ Remove-AdminPowerAppEnvironment -EnvironmentName <environmentGuid>
 
 Resetting a developer environment is not currently supported; however, it can be deleted. The next time the Community Plan licensed user signs into the Power Apps Maker portal a new developer environment will be created. The user can then provision a Common Database Service database in the environment. At present, the only way to remove the Community Plan from a user is for a tenant-level admin to block all "internal" consent plans in the tenant using PowerShell. See [Block trial licenses commands](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#block-trial-licenses-commands)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

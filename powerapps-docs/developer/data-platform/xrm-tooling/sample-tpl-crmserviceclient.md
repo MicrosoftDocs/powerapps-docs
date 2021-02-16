@@ -277,3 +277,6 @@ private static void DeleteEntities(CrmServiceClient svc, List<EntityReference> e
 ### More information
 
 [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -223,3 +223,6 @@ function getReportURL(action,fileName,id) {
  [Web Resources](web-resources.md)<br/> 
  [Change Application Navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

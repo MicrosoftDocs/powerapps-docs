@@ -29,3 +29,6 @@ Metadata refers to the structure of entities used to manage data in Microsoft Da
 [Use the Web API with metadata](../webapi/use-web-api-metadata.md)
 
 [Work with metadata using code](../metadata-services.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

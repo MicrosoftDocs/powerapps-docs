@@ -37,3 +37,6 @@ Represents the time when the object is acquired and is represented ad DOMTimeSta
 ## Remarks
 
 See more details on [Position](https://developer.mozilla.org/docs/Web/API/Position)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

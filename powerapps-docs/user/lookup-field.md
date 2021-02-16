@@ -116,3 +116,6 @@ When lookup has more rows in a column than can fit in the available display area
 **Non-collapsed:**
 
 ![Non-collapsed multi-lookup display area](media/non-collapsed-multi-lookup-display-area.png "Non-collapsed multi-lookup display area")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

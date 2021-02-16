@@ -1195,3 +1195,5 @@ See businessunit Entity [business_unit_connector](businessunit.md#BKMK_business_
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.connector?text=connector EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

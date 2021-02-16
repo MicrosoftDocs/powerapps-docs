@@ -88,3 +88,6 @@ WHERE ab.RegardingObjectId is null
  [Sample: Use Aggregation in FetchXML](org-service/samples/use-aggregation-fetchxml.md)   
  [Use FetchXML to Construct a Query](use-fetchxml-construct-query.md)   
  [Sample: Validate and Execute a Saved Query](org-service/samples/validate-execute-saved-query.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

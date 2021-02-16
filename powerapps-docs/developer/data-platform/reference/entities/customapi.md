@@ -1235,3 +1235,5 @@ See plugintype Entity [plugintype_customapi](plugintype.md#BKMK_plugintype_custo
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.customapi?text=customapi EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

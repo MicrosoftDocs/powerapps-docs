@@ -80,3 +80,6 @@ To work around this issue, create and save an app in the environment. When an it
 ### See also
 
 [Export solutions](../maker/data-platform/export-solutions.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

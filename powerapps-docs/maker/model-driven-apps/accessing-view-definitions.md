@@ -94,3 +94,6 @@ On any list view for a table in a legacy web app, on the command bar you will fi
 [Understand views](create-edit-views.md)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

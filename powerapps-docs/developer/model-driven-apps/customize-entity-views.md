@@ -329,3 +329,6 @@ function displayIconTooltip(rowData, userLCID) {
 ## Set as default  
  Only one active public view can be set as the default view. To make a view the default view, set the `IsDefault` property to true.  
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

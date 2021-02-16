@@ -37,3 +37,5 @@ All
 ### Related topics
 
 [getLabel](getLabel.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

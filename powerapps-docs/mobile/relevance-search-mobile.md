@@ -78,3 +78,6 @@ Filters let you drill into and explore the results of your current search withou
   1. **Back**: Go back to the search results screen.
   2. **Filter**: Select a filter type to filter the search results.
   3. **Clear all**: Clears all filter and takes you back to the search results screen.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -62,3 +62,6 @@ See [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform
 [Portals connectivity to a Microsoft Dataverse environment](admin/connectivity.md) <br>
 [Server-side cache in portals](admin/clear-server-side-cache.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

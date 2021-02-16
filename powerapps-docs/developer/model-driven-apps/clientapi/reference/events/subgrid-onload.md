@@ -24,3 +24,6 @@ Use the GridControl.addOnLoad and GridControl.removeOnLoad methods to manage eve
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

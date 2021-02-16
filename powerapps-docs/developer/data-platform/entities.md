@@ -92,3 +92,6 @@ Dataverse contains some entities which are not intended for 3rd party developers
 [Dataverse Developer Overview](overview.md)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -110,3 +110,6 @@ On success, returns a promise containing an array of objects with the attributes
 
 [Xrm.WebApi](../../xrm-webapi.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

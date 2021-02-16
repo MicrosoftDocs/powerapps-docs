@@ -539,3 +539,5 @@ See systemuser Entity [lk_SiteMap_modifiedonbehalfby](systemuser.md#BKMK_lk_Site
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sitemap?text=sitemap EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

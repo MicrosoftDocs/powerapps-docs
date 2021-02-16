@@ -74,3 +74,6 @@ The following table describes the columns in the downloaded report.
 [Microsoft Power Platform add-on capacity management](https://docs.microsoft.com/power-platform/admin/capacity-add-on)  
 [Licensing FAQ for Power Apps](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals)  
 [Download the Power Apps Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

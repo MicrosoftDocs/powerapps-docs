@@ -203,3 +203,6 @@ releases—be it the physical, digital, or video side of things.
 information across the whole product life cycle," says Karen Reali, Senior Manager at
 Universal Music Group. "It even helps them facilitate
 and streamline cross-label projects."
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

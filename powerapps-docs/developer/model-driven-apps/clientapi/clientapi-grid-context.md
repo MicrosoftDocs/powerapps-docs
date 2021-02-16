@@ -42,3 +42,6 @@ function doSomething(executionContext) {
 [Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Grids and subgrids](reference/grids.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

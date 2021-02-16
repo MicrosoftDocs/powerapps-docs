@@ -214,3 +214,6 @@ Finally, it’s worth mentioning that the Entity Form record has an assortment o
 
 [About entity forms](entity-forms.md) <br>
 [Define web form steps](web-form-steps.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

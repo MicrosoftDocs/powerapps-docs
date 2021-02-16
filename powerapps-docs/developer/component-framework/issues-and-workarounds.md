@@ -143,3 +143,6 @@ Power Apps component framework dataset component currently does not properly sho
 
 No workaround as of now. We are working on pushing a fix to our deployment trains.-->
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

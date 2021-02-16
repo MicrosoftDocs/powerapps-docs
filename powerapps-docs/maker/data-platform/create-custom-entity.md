@@ -163,3 +163,6 @@ Now your table is ready to be used to build either a canvas or model-driven app.
 In this topic, you learned how to create a table that can be used to create a useful app. 
 - To learn how to create a model-driven app, see [Build your first model-driven app](../model-driven-apps/build-first-model-driven-app.md).
 - To learn how to create a canvas app, see [Create an app from scratch](../canvas-apps/get-started-create-from-blank.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

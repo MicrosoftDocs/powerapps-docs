@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/10/2020
+ms.date: 02/16/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -79,12 +79,15 @@ Select **Next** to continue.
 Select this option to create a new Azure AD B2C tenant.
 
 > [!NOTE]
-> Ensure that the account you use to sign in to Power Apps has been assigned at least the [Contributor role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) for the subscription or for a resource group within the subscription.
+> - Ensure that the account you use to sign in to Power Apps has been assigned at least the [Contributor role](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles) for the subscription or for a resource group within the subscription.
+> - Ensure the Azure subscription has the **Microsoft.AzureActiveDirectory** resource provider registered. Otherwise, creating the new Azure AD B2C tenant will fail with this error:
+> <br> `Error occurred while creating Azure AD B2C tenant. The subscription is not registered to use namespace 'Microsoft.AzureActiveDirectory'. See https://aka.ms/rps-not-found for how to register subscriptions.` More information: [Resolve errors for resource provider registration in Azure](https://docs.microsoft.com/azure/azure-resource-manager/templates/error-register-resource-provider)
 
 ![Create a new Azure AD B2C tenant](media/authentication/new-b2c-tenant.png "Create a new Azure AD B2C tenant")
 <!--markdownlint-disable MD036-->
 **To create a new Azure AD B2C tenant**
 <!--markdownlint-enable MD036-->
+
 1. Select the Azure AD tenant or directory.
 
 1. Select a subscription for the tenant, or&mdash;if you want to create a new subscription from the Azure portal&mdash;select **Add subscription**.
@@ -165,3 +168,6 @@ To delete the configuration, select **Delete** for the **Azure Active Directory 
 ### See also
 
 [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

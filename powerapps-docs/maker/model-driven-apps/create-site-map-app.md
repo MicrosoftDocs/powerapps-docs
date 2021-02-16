@@ -241,3 +241,6 @@ You can view or set these privileges on the **Customization** tab of a security 
 ### Next steps  
  [Create or edit an app](create-edit-app.md)   
  [Add or edit app components](add-edit-app-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

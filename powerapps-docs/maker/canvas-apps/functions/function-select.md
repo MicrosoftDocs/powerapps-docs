@@ -119,3 +119,6 @@ The select function can also be used with a gallery. For example, it can be used
    
      A **Image Selected** notification appears across the top of your app. The button click simulated selecting the image in row 2 of the gallery.  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

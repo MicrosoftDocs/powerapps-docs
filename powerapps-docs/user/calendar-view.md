@@ -123,3 +123,6 @@ You can use the search box to search for data in the view you're in. For example
 ### See also
 
 [Add the calendar control to tables](../maker/model-driven-apps/add-calendar-control.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -72,3 +72,6 @@ For information about how to create a custom report, see [Reporting and Analytic
 [Edit report filter](edit-report-filter.md)
 
 [Troubleshoot problems with data not displaying in a report](troubleshoot-reports.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

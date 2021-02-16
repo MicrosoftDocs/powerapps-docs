@@ -165,3 +165,6 @@ But it worked, didn't it? Well, kind of. And that is why this is a warning and n
 
 [Impact of using non-delegable functions and inappropriate data row limits on performance](common-performance-issue-resolutions.md#use-of-non-delegable-functions-and-inappropriate-data-row-limits-for-non-delegable-queries) <br>
 [Performance tips and best practice to use delegation](performance-tips.md#use-delegation)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

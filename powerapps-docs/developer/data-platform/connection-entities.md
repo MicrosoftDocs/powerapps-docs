@@ -76,3 +76,6 @@ The *connections* provide a flexible way to connect and describe the relationshi
  [Business Management Entities](/dynamics365/customer-engagement/developer/business-management-entities)   
  [View and Analyze Data with Visualizations and Dashboards in Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-visualizations-dashboards)   
  [Fiscal Calendar and Territory Entities](/dynamics365/customer-engagement/developer/fiscal-calendar-and-territory-entities)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

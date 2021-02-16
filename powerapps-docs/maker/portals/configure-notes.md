@@ -229,3 +229,6 @@ Web form notes are configured in the same way as [entity form notes](#notes-conf
 
 > [!NOTE]
 > Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) in order to display on the portal.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -49,3 +49,6 @@ Checks for the current version of the org.
 ### Clean up
 
 No clean up is required.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

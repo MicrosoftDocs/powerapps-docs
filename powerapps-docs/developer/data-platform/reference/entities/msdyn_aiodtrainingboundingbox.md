@@ -964,3 +964,5 @@ See msdyn_aiodtrainingimage Entity [msdyn_aiodtrainingimage_msdyn_aiodtrainingbo
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aiodtrainingboundingbox?text=msdyn_aiodtrainingboundingbox EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

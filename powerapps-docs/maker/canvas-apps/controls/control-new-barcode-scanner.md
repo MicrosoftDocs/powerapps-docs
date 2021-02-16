@@ -101,3 +101,6 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 ### See also
 
 [Limitations of controls in Power Apps](../control-limitations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

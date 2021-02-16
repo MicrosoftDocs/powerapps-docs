@@ -42,3 +42,6 @@ If you are new to the Dataverse applications, the topics in this section provide
 ### See also
 
 [Power Apps for developers](/powerapps/#pivot=home&panel=developer)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

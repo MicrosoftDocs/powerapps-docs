@@ -33,3 +33,6 @@ Most commonly, you will use JavaScript web resources to add event handler functi
 More information:
 - [Client scripting with Model-driven apps](client-scripting.md)
 - [Web resources](web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

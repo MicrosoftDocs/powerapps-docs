@@ -74,3 +74,6 @@ Connector-specific limits are available in [Power Apps connectors documentation]
 [Tips and best practices to improve canvas app performance](performance-tips.md) <br>
 [Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

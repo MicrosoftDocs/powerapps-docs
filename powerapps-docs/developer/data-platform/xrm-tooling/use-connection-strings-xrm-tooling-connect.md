@@ -177,3 +177,6 @@ Create a new connection to Dataverse using a Application or Client Id and a Clie
 [Use CrmServiceClient constructors to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)<br />
 <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

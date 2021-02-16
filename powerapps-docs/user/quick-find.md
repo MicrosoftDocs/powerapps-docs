@@ -65,3 +65,6 @@ With categorized search, you can search for rows that begin with a specific word
 
   
 -   To search all row types, choose **None** from the **Filter with** list.  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -54,3 +54,6 @@ Microsoft Dataverse implements a partial expansion model to create recurring app
  [Create a Recurring Appointment Series, Instance or Exception](create-recurring-appointment-series-instance-exception.md)   
  [Delete or End a Recurring Appointment Series or Instance](/dynamics365/customer-engagement/developer/delete-or-end-a-recurring-appointment-series-or-instance)   
  [Update a Recurring Appointment](update-recurring-appointment.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

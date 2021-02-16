@@ -113,3 +113,6 @@ The user can now interact with the app, and Monitor will show events for this in
 [Troubleshoot form issues in model-driven apps](https://docs.microsoft.com/powerapps/developer/model-driven-apps/troubleshoot-forms)  
 [Debugging canvas apps with Monitor](monitor-canvasapps.md)  
 [Debugging model-driven apps with Monitor](monitor-modelapps.md)  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

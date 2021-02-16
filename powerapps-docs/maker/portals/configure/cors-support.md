@@ -30,3 +30,6 @@ The following site settings are used to configure CORS:
 | HTTP/X-Content-Type-Options | X-Content-Type-Options | Disables MIME sniffing and forces browser to use the type given in *Content-Type*.
 
 For more information about how to configure site settings in portal, go to [Manage portal site settings](configure-site-settings.md#manage-portal-site-settings).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

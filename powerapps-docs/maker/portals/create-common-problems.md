@@ -46,3 +46,6 @@ To create and register applications in Azure Active Directory, you must contact 
 - [Create a Dataverse starter portal](create-portal.md)
 - [Create a portal in an environment containing customer engagement apps](create-dynamics-portal.md)
 - [Provision a portal using the older portal add-on](provision-portal-add-on.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

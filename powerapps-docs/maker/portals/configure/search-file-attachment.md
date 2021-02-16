@@ -118,3 +118,6 @@ To configure the facets to group annotations associated with knowledge base arti
 To allow attachments associated with knowledge articles to appear in the portal and search results, edit the **KnowledgeManagement/DisplayNotes** site setting and set its value to **True**. The site setting **KnowledgeManagement/NotesFilter** contains a prefix value that must be prefixed to the note text field on notes; only notes with the specified prefix value will appear on the portal. By default, the value is \*WEB\*, but you can change it through the site setting.
 
 To enable the indexing of file attachments associated with notes, create the **Search/IndexNotesAttachments** site setting and set its value to **True**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

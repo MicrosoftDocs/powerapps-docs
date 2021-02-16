@@ -2490,3 +2490,6 @@ For more information, see [Solutions overview](../../maker/data-platform/solutio
 </xs:schema>
 ```  
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
