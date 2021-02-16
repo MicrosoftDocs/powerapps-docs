@@ -80,7 +80,7 @@ In this section, you'll design the app controls, and the formulas required to wo
 > [!TIP]
 > To learn about how to add controls and formulas to the controls in detail, see [Add and configure controls](add-configure-controls.md).
 
-1. Select ![Insert](./media/cognitive-services-api/insert-icon.png) from the left pane.
+1. Select ![Insert](./media/cognitive-services-api/insert-icon.png "Insert") from the left pane.
 
 1. Select **Text label**.
 
@@ -92,6 +92,236 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Size | 36 |
     | Color | RGBA(255, 255, 255, 1) |
     | Fill | RGBA(56, 96, 178, 1)|
+    | Align | Align.Center |
+    | X | 0 |
+    | Y | 0 |
+
+    > [!NOTE]
+    > Values for component properties such as alignment, size, color, position (X, Y) in this tutorial as suggested. Actual values may vary depending on the app layout you select. You can also change these suggested values to design the app as per your requirements.
+
+1. Insert **Text label**.
+
+1. Change the label properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Text | "Enter your text, select your options, then select 'Analyze text'" |
+    | Size | 16 |
+    | Align | Align.Center |
+    | X | 24 |
+    | Y | 135 |
+
+1. Insert **Text input**.
+
+1. Change the text input properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | tiTextToAnalyze |
+    | Text | "Enter text" |
+    | Size | 14 |
+    | Height | 428 |
+    | Mode | MultiLine |
+    | Width | 557 |
+    | X | 36 |
+    | Y | 220 |
+
+1. Insert **Checkbox**.
+
+1. Change the checkbox properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | chkLanguage |
+    | Text | "Language" |
+    | Size | 16 |
+    | X | 637 |
+    | Y | 135 |
+
+1. Insert **Checkbox**.
+
+1. Change the checkbox properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | chkPhrases |
+    | Text | "Key Phrases" |
+    | Size | 16 |
+    | X | 637 |
+    | Y | 193 |
+
+1. Insert **Checkbox**.
+
+1. Change the checkbox properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | chkSentiment |
+    | Text | "Sentiment" |
+    | Size | 16 |
+    | X | 835 |
+    | Y | 135 |
+
+1. Insert **Checkbox**.
+
+1. Change the checkbox properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | chkNER |
+    | Text | "Named Entity Recognition" |
+    | Size | 16 |
+    | X | 835 |
+    | Y | 193 |
+
+1. Insert **Checkbox**.
+
+1. Change the checkbox properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | chkEL |
+    | Text | "Entity Linking" |
+    | Size | 16 |
+    | X | 1059 |
+    | Y | 135 |
+
+1. Insert **Text label**.
+
+1. Change the label properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Text | "Detected language:" |
+    | Size | 16 |
+    | X | 633 |
+    | Y | 237 |
+    | Width | 656 |
+    | Height | 48 |
+
+1. Insert **Text label**.
+
+1. Change the label properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Text | "Sentiment Score:" |
+    | Size | 16 |
+    | X | 633 |
+    | Y | 331 |
+    | Width | 656 |
+    | Height | 48 |
+
+1. Insert **Text label**.
+
+1. Change the label properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Text | "Linked entities:" |
+    | Size | 16 |
+    | X | 542 |
+    | Y | 402 |
+    | Width | 201 |
+    | Height | 51 |
+
+1. Select **Insert** -> **Gallery** -> **Blank vertical**.
+
+1. Change the gallery properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | galleryNER |
+    | Layout | Title and subtitle |
+    | X | 642 |
+    | Y | 466 |
+    | Width | 696 |
+    | Height | 87 |
+
+1. Select the arrow icon inside the gallery and delete it.
+
+1. Insert **Text label**.
+
+1. Change the label properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Text | "Key Phrases:" |
+    | Size | 16 |
+    | X | 637 |
+    | Y | 573 |
+    | Width | 150 |
+    | Height | 40 |
+
+1. Select **Insert** -> **Gallery** -> **Blank vertical**.
+
+1. Change the gallery properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | galleryKP |
+    | Layout | Title and subtitle |
+    | X | 642 |
+    | Y | 633 |
+    | Width | 696 |
+    | Height | 102 |
+
+1. Select the arrow icon inside the gallery and delete it.
+
+1. Insert **Button**.
+
+1. Change the button properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Text | "Analyze Text" |
+    | X | 180 |
+    | Y | 693 |
+    | Width | 196 |
+    | Height | 53 |
+
+1. Copy and paste the following formula as the **OnSelect** property value for the button.
+
+    ```powerapps-dot
+    ClearCollect( languageInfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", countryHint: "US", text: tiTextToAnalyze.Text } );
+    TextAnalytics.LanguagesV3(languageInfo);
+    If( chkLanguage.Value=true,
+        ClearCollect( languageCollect,
+            TextAnalytics.LanguagesV3(languageInfo).documents.detectedLanguage
+        )
+    );
+    ClearCollect( phrasesInfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", language: "en", text: tiTextToAnalyze.Text } );
+    If( chkPhrases.Value = true,
+        ClearCollect( phrasesCollect,
+            TextAnalytics.KeyPhraseV3(phrasesInfo).documents.keyPhrases
+        )
+    );
+    ClearCollect( sentimentInfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", language: "en", text: tiTextToAnalyze.Text } );
+    If( chkSentiment.Value = true,
+        ClearCollect( sentimentCollect,
+            TextAnalytics.SentimentV3(sentimentInfo).documents.confidenceScores
+        )
+    );      
+    ClearCollect( nerinfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", language: "en", text: tiTextToAnalyze.Text } );
+    If( chkNER.Value = true,
+        ClearCollect( nerCollect,
+            TextAnalytics.EntitiesRecognitionGeneralV3(nerinfo).documents.entities
+        )
+    );
+    ClearCollect( elinfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", language: "en", text: tiTextToAnalyze.Text } );
+    If( chkEL.Value = true,
+        ClearCollect( elCollect,
+            TextAnalytics.EntitiesLinkingV3(elinfo).documents.entities
+        )
+    ); 
+    ```
+1. Copy and paste the following formula as the value of the **Text** property for the label with the text "Detected language:". 
+
+    ```powerapps-dot
+    "Detected language: " & First(languageCollect.detectedLanguage).detectedLanguage.name
+    ```
+
+1. Select the first item inside the **galleryNER** gallery, and copy and paste 
 
 1. Resize the label as below.
 
