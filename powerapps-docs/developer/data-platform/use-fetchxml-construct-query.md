@@ -144,3 +144,6 @@ foreach (var c in result.Entities)
  method, the return value is an <xref:Microsoft.Xrm.Sdk.EntityCollection> that contains the results of the query. You can then iterate through the entity collection. The previous example uses the `foreach` loop to iterate through the result collection of the FetchXML query.  
   
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

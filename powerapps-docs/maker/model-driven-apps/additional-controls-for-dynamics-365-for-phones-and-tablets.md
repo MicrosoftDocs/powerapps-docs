@@ -243,3 +243,6 @@ To use these controls in the form editor:
 ## Next steps
 [Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)</br>
 [Work with rows in the new calendar view](../../user/calendar-view.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

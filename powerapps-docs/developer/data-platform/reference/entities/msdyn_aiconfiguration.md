@@ -1449,3 +1449,5 @@ See msdyn_aiodlabel Entity [msdyn_aiodlabel_msdyn_aiconfiguration](msdyn_aiodlab
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aiconfiguration?text=msdyn_aiconfiguration EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

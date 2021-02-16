@@ -31,3 +31,5 @@ Returns whether the control is disabled.
 ### Related topics
 
 [setDisabled](setDisabled.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

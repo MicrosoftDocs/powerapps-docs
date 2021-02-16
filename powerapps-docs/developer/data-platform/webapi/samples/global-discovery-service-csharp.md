@@ -101,3 +101,6 @@ static List<Instance> GetInstances(string username, string password)
 ```
 
                                                                                                                     '''
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

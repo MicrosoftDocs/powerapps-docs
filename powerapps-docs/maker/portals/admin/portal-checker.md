@@ -59,3 +59,6 @@ To run Portal Checker:
 ## Next steps
 
 [Analyze and resolve Portal Checker diagnostics results](portal-checker-analysis.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -279,3 +279,6 @@ Please see the [Developer tools](developer-tools.md) topic for community develop
 ### See Also
 [Metadata and data models in Dynamics 365](/dynamics365/customer-engagement/developer/metadata-data-models)  
 [Customize entity metadata](customize-entity-metadata.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

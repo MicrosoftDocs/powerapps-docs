@@ -85,3 +85,6 @@ To view the entity metadata for your organization, install the Metadata Browser 
  [Record state and status](/dynamics365/customer-engagement/developer/introduction-entities#bkmk_RecordStateandStatus)   
  [Retrieve and Detect Changes to Metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata)   
  [Define status reason transitions](https://go.microsoft.com/fwlink/p/?LinkId=393657)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

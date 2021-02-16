@@ -43,3 +43,6 @@ In Power Apps, server-side synchronization provides an interface between Microso
   
 ### Related topics  
  [Configure folder level tracking rules](configure-exchange-folder-level-tracking-rules.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

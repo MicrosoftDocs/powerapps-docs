@@ -173,3 +173,6 @@ On the left navigation pane of the **Entity: Ticket** page, select **Columns**. 
 
 [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)<br />
 [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -384,3 +384,6 @@ The next step in this tutorial series is to [publish the Power BI project report
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

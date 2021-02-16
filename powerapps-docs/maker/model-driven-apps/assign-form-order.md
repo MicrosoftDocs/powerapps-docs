@@ -50,3 +50,6 @@ search.app:
 ## Next steps
 
 [Change navigation within a form](use-the-form-editor-legacy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

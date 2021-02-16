@@ -115,3 +115,6 @@ For more information, go to [Power BI Accessibility Documentation]( https://docs
 
 * Go through a simple [step-by-step tutorial](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-powerapp).
 * Check out our [video](https://aka.ms/powerappscustomvisualvideo).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

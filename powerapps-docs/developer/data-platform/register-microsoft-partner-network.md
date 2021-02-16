@@ -30,3 +30,6 @@ You must be a member of Partner Center to publish apps on AppSource.
 
 [Publish your apps on AppSource](publish-app-appsource.md)
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

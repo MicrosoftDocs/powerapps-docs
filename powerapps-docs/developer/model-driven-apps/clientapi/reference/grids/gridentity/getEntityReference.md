@@ -41,3 +41,6 @@ Read-only and editable grids
 
 To get the `gridEntity` object, see [GridEntity](../gridentity.md). 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

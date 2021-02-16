@@ -34,3 +34,6 @@ Power Apps portals also use cookies to store information for various purposes. T
 ### See also
 
 [Cookie authentication site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity#cookie-authentication-site-settings)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

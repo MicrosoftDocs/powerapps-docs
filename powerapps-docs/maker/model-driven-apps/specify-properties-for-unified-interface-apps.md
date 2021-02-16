@@ -97,3 +97,6 @@ You can display a custom icon instead of a value in a list and establish the log
 
 ## Next steps
 [Create or edit a view](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

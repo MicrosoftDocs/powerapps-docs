@@ -511,3 +511,6 @@ authoring a canvas app has no impact on the aspect ratio configured for the app 
 
 [Use the Fluent UI controls](use-the-fluent-ui-controls.md)  
 [Overview of the Power Apps app](overview-of-the-power-apps-app.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

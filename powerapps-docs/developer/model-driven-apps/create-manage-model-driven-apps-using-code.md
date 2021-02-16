@@ -271,3 +271,6 @@ You can use the following client APIs to work with model-driven apps:
 ### See also  
 [Design model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

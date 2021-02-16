@@ -339,3 +339,6 @@ The Sliverlight web resource has these additional methods:
 ### Related topics
 
 [Attributes](attributes.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

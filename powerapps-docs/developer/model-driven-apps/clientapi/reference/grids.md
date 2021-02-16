@@ -67,3 +67,6 @@ Grid context is the grid or subgrid instance on a form against which you want to
 
 [Model-driven apps Developer Overview](../../overview.md)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

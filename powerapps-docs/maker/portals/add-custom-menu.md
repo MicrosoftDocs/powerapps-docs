@@ -29,3 +29,6 @@ After you create the web link set:
 - [Power Apps portals Studio](portal-designer-anatomy.md)
 - [Create and manage webpages](create-manage-webpages.md)
 - [WYSIWYG editor](compose-page.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

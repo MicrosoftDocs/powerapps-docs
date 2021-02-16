@@ -34,3 +34,6 @@ timelinewall, timer
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

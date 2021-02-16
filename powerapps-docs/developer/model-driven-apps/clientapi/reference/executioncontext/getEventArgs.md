@@ -56,3 +56,6 @@ Returns an object with methods to manage the events.
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

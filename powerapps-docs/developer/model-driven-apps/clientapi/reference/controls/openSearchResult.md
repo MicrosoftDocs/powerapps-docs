@@ -43,3 +43,5 @@ var openResultStatus = kbSearchControl.openSearchResult(resultNumber, mode);
 **Type**: Boolean
 
 **Description**:  Status of opening the specified search result. Returns 1 if successful; 0 if unsuccessful. The method will return -1 if the specified resultNumber value is not present, or if the specified mode value is invalid.
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

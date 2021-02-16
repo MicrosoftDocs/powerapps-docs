@@ -56,3 +56,6 @@ When Microsoft model-driven apps for tablets is not connected to the server, **s
 
 ### Related topic
 [getValue (Client API reference)](getValue.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -186,3 +186,6 @@ The next step in this tutorial series is to [generate an app to handle project r
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

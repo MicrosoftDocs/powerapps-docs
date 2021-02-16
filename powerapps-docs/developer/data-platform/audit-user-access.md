@@ -46,3 +46,6 @@ Microsoft Dataverse support the ability to audit user access. The information th
  [Configure entities and attributes for auditing](/powerapps/developer/data-platform/configure-entities-attributes-auditing)     
  [Sample: Audit entity data changes](/powerapps/developer/data-platform/org-service/samples/audit-entity-data-changes)   
  [Sample: Audit user access](/powerapps/developer/data-platform/org-service/samples/audit-user-access)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

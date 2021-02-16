@@ -345,3 +345,6 @@ Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", 
 ### See also
 
 [What is Dataverse?](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

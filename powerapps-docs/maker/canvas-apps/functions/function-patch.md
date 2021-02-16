@@ -249,3 +249,5 @@ To learn more about the usage of **As** operator and **ThisRecord** see **[Opera
 
 
   
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

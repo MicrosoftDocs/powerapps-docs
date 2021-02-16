@@ -70,3 +70,6 @@ When you create extensions that apply business logic on the server you will not 
 - [Authentication](authentication.md)
 - [Build web applications using Server-to-Server (S2S) authentication](/powerapps/developer/data-platform/build-web-applications-server-server-s2s-authentication)
 - [Build Windows client applications using XRM tools](/powerapps/developer/data-platform/xrm-tooling/build-windows-client-applications-xrm-tools)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

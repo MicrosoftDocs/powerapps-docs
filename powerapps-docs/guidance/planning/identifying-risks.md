@@ -55,3 +55,6 @@ We created a table like this for our expense report project:
 
 > [!div class="nextstepaction"]
 > [Next step: Get support from management](gaining-support.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -92,3 +92,6 @@ Autonumber columns have a default seed value of 1000, but you may set a custom s
 
 ## See also
  [Create and edit columns for Microsoft Dataverse using Power Apps portal](create-edit-field-portal.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

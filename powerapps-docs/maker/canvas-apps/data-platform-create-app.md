@@ -64,3 +64,6 @@ In this quickstart, you created an app to manage sample data about accounts in D
 
 > [!div class="nextstepaction"]
 > [Customize a gallery](customize-layout-sharepoint.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

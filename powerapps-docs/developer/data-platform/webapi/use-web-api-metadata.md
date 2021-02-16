@@ -60,3 +60,6 @@ You can check whether entities are eligible to participate in a relationship wit
 
 [Browse the metadata for your environment](../browse-your-metadata.md)<br />
 [Use the Microsoft Dataverse Web API](overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

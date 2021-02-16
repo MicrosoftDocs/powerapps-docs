@@ -59,3 +59,6 @@ Before this feature you would need to manually add the attribute to the form and
 [WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br />
 [Sample: Pass multiple values to a  web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
 [Sample: Import files as web resources](sample-import-files-web-resources.md)<br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

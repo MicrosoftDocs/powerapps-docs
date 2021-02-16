@@ -67,3 +67,6 @@ When using a browser, navigating from the last control of the screen will move t
 
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

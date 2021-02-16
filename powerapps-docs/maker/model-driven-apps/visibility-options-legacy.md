@@ -50,3 +50,6 @@ For information about how to change the form element show or hide status for the
 ## Next steps
 
 [Overview of the form editor interface](form-editor-user-interface-legacy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

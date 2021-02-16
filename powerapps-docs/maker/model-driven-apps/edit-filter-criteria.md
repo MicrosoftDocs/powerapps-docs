@@ -102,3 +102,6 @@ For more information about constructing filter clauses, see [Create, edit, or sa
  
 ## Next steps
 [Understand views](create-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

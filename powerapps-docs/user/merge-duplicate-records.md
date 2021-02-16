@@ -70,3 +70,6 @@ There are a few situations when duplicates may be found:
 >   - The column is `parentaccountid` on the Account table; this is a system setting and cannot be changed. 
 >   - The column is `parentcustomerid` on the  Contact Table; this is a system setting and cannot be changed
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

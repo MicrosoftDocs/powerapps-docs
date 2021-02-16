@@ -837,3 +837,6 @@ namespace PowerApps.Samples
 [Query Data using the Web API](../query-data-web-api.md)  
 [Web API Query Data Sample](../web-api-query-data-sample.md)  
 [Use the Dataverse Web API](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

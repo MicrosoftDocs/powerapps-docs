@@ -57,3 +57,6 @@ function myFunction(executionContext) {
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

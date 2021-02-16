@@ -222,3 +222,6 @@ To disable request validation, follow these steps:
 - [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
 - [Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
 - [Microsoft Learn: Interact with Dataverse data using entity forms](https://docs.microsoft.com/learn/modules/portals-access-data-platform/3-entity-forms)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

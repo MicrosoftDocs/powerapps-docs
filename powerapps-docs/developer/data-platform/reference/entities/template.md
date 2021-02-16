@@ -1172,3 +1172,5 @@ See systemuser Entity [lk_templatebase_createdonbehalfby](systemuser.md#BKMK_lk_
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.template?text=template EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

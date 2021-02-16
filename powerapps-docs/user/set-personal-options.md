@@ -131,3 +131,6 @@ Change your display settings in an app to suit your preferences. For example, yo
 |                                                   Help Language                                                    | Select the language for Help. To add an additional language other than the base language, your admin must install the required language packs and enable them.  Talk to your administrator.|
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

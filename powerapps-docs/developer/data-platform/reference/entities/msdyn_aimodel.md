@@ -1156,3 +1156,5 @@ See msdyn_aitemplate Entity [msdyn_aitemplate_msdyn_aimodel](msdyn_aitemplate.md
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aimodel?text=msdyn_aimodel EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

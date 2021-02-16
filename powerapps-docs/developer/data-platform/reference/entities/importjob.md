@@ -524,3 +524,5 @@ See organization Entity [organization_importjob](organization.md#BKMK_organizati
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.importjob?text=importjob EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

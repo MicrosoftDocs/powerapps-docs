@@ -1042,3 +1042,5 @@ See workflow Entity [regardingobjectid_process](workflow.md#BKMK_regardingobject
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.flowsession?text=flowsession EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

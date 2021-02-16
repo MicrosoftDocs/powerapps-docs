@@ -111,3 +111,6 @@ Dashboards are one of the different types of forms in model-driven apps. You can
  [Dashboards](analyze-data-with-dashboards.md)   
  [Actions on Dashboards](actions-dashboards.md)   
  [Create a Dashboard](create-dashboard.md)   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

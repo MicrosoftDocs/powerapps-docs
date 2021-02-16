@@ -194,3 +194,6 @@ More information: [Developer tools](/powerapps/developer/data-platform/developer
 
 ### Next steps
 [Create 1:N (one-to-many) or N:1 (many-to-one) relationships](../data-platform/create-edit-1n-relationships.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -80,3 +80,6 @@ When a report is a SQL Server Reporting Services report, is enabled for prefilte
 
 [Troubleshoot problems with data not displaying in a report](troubleshoot-reports.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

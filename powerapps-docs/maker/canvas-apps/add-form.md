@@ -97,3 +97,6 @@ In a canvas app, add and configure a **[Display](controls/control-form-detail.md
 
 ## Next steps
 Learn more about working with [forms](working-with-forms.md) and [formulas](working-with-formulas.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

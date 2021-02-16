@@ -49,3 +49,6 @@ Throughout the process of planning a Power Apps project, we'll refer back to thi
 
 > [!div class="nextstepaction"]
 > [Next step: Understanding the current business process](understanding-current-business-process.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -90,3 +90,6 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 
 [Entity relationship metadata](entity-relationship-metadata.md)  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

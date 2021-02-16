@@ -252,3 +252,6 @@ More information
 ### See also
 
 [Dataverse entities](entities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

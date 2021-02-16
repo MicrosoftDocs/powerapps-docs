@@ -1112,3 +1112,5 @@ See systemuser Entity [lk_sharepointsitebase_modifiedby](systemuser.md#BKMK_lk_s
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sharepointsite?text=sharepointsite EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
