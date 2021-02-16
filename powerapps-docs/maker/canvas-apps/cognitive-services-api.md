@@ -22,7 +22,7 @@ This article shows you how to build a basic canvas app that uses the [Azure Cogn
 
 ## Introduction to Azure Cognitive Services
 
-Azure Cognitive Services are a set of APIs, SDKs, and services available to make your applications more intelligent, engaging, and discoverable. These services enable you to easily add intelligent features – such as emotion and video detection; facial, speech and vision recognition; and speech and language understanding – into your applications.
+[Azure Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/) are a set of APIs, SDKs, and services available to make your applications more intelligent, engaging, and discoverable. These services enable you to easily add intelligent features – such as emotion and video detection; facial, speech and vision recognition; and speech and language understanding – into your applications.
 
 We'll focus on "language understanding" for this article, working with the Text Analytics API. This API enables you to detect sentiment, key phrases, topics, and language from your text. Let's get started by trying out a demo of the API, then signing up for a preview version.
 
@@ -30,14 +30,10 @@ We'll focus on "language understanding" for this article, working with the Text 
 
 Before you begin building a canvas app using the Text Analytics API, you must prepare the Text Analytics resource. For more details, go to [Text Analytics API prerequisites](https://docs.microsoft.com/azure/cognitive-services/text-analytics/quickstarts/client-libraries-rest-api#prerequisites).
 
-## Build the app
-
-Now that you have the Text Analytics API up and running, you connect to it from Power Apps, and build an app that calls the API. This is a single screen app that demonstrates the Text Analytics API in action with a canvas app. Let's get started on building this!
+## Step 1. Create the app and add a connection
 
 > [!TIP]
 > In this tutorial, you'll learn about creating a demo app with a few properties and values from the output using the Text Analytics API operations. You can use similar method to create your own app to show more or all such properties and values for the Text Analytics API operations.
-
-## Step 1. Create the app and add a connection
 
 Create a blank phone app and add a connection with the **Text Analytics** connector.
 
@@ -49,7 +45,7 @@ Create a blank phone app and add a connection with the **Text Analytics** connec
 
 1. Enter app name.
 
-1. Choose a layout for the app. For this demo, we'll use **Tablet** layout.
+1. Choose a layout for the app, and select **Create**. For this demo, we'll use **Tablet** layout.
 
     ![Name the app, choose the layout, and select Create](./media/cognitive-services-api/app-name-create.png "Name the app, choose the layout, and select Create")
 
@@ -96,6 +92,8 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Align | Align.Center |
     | X | 0 |
     | Y | 0 |
+    | Width | 1366 |
+    | Height | 98 |
 
 1. Insert **Text label**.
 
@@ -105,9 +103,11 @@ In this section, you'll design the app controls, and the formulas required to wo
     | - | - |
     | Text | "Enter your text, select your options, then select 'Analyze text'" |
     | Size | 16 |
-    | Align | Align.Center |
+    | Align | Align.Left |
     | X | 24 |
     | Y | 135 |
+    | Width | 601 |
+    | Height | 60 |
 
 1. Insert **Checkbox**.
 
@@ -144,6 +144,8 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Size | 16 |
     | X | 403 |
     | Y | 228 |
+    | Width | 200 |
+    | Height | 50 |
 
 1. Insert **Checkbox**.
 
@@ -156,6 +158,8 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Size | 16 |
     | X | 24 |
     | Y | 286 |
+    | Width | 193 |
+    | Height | 50 |
 
 1. Insert **Checkbox**.
 
@@ -168,6 +172,8 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Size | 16 |
     | X | 230 |
     | Y | 286 |
+    | Width | 318 |
+    | Height | 50 |
 
 1. Insert **Text input**.
 
@@ -177,9 +183,9 @@ In this section, you'll design the app controls, and the formulas required to wo
     | - | - |
     | Name | tiTextToAnalyze |
     | Text | "Enter text" |
+    | Mode | MultiLine |
     | Size | 14 |
     | Height | 256 |
-    | Mode | MultiLine |
     | Width | 557 |
     | X | 24 |
     | Y | 390 |
@@ -196,6 +202,7 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Y | 684 |
     | Width | 196 |
     | Height | 53 |
+    | Size | 16 |
 
 1. Insert **Text label**.
 
