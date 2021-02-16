@@ -37,7 +37,7 @@ Now that you have the Text Analytics API up and running, you connect to it from 
 > [!TIP]
 > In this tutorial, you'll learn about creating a demo app with a few properties and values from the output using the Text Analytics API operations. You can use similar method to create your own app to show more or all such properties and values for the Text Analytics API operations.
 
-### Create the app and add a connection
+## Step 1. Create the app and add a connection
 
 Create a blank phone app and add a connection with the **Text Analytics** connector.
 
@@ -71,14 +71,15 @@ Create a blank phone app and add a connection with the **Text Analytics** connec
 
 Your app is now connected to the Cognitive Services resource of Text Analytics API type in Azure.
 
-### Design the app
+## Step 2. Design the app
 
 In this section, you'll design the app controls, and the formulas required to work with the Text Analytics API. After you've completed the app design, this is how it'll look:
 
 ![Finished app](./media/cognitive-services-api/finished-app-no-data.png)
 
-> [!TIP]
-> To learn about how to add controls and formulas to the controls in detail, see [Add and configure controls](add-configure-controls.md).
+> [!NOTE]
+> - Values for component properties such as alignment, size, color, position (X, Y) in this tutorial as suggested. Actual values may vary depending on the app layout you select. You can also change these suggested values to design the app as per your requirements.
+> - To learn more about how to add controls and formulas to the controls in detail, see [Add and configure controls](add-configure-controls.md).
 
 1. Select ![Insert](./media/cognitive-services-api/insert-icon.png "Insert") from the left pane.
 
@@ -96,9 +97,6 @@ In this section, you'll design the app controls, and the formulas required to wo
     | X | 0 |
     | Y | 0 |
 
-    > [!NOTE]
-    > Values for component properties such as alignment, size, color, position (X, Y) in this tutorial as suggested. Actual values may vary depending on the app layout you select. You can also change these suggested values to design the app as per your requirements.
-
 1. Insert **Text label**.
 
 1. Change the label properties with the following configuration.
@@ -111,21 +109,6 @@ In this section, you'll design the app controls, and the formulas required to wo
     | X | 24 |
     | Y | 135 |
 
-1. Insert **Text input**.
-
-1. Change the text input properties with the following configuration.
-
-    | Property Name | Value |
-    | - | - |
-    | Name | tiTextToAnalyze |
-    | Text | "Enter text" |
-    | Size | 14 |
-    | Height | 428 |
-    | Mode | MultiLine |
-    | Width | 557 |
-    | X | 36 |
-    | Y | 220 |
-
 1. Insert **Checkbox**.
 
 1. Change the checkbox properties with the following configuration.
@@ -135,20 +118,8 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Name | chkLanguage |
     | Text | "Language" |
     | Size | 16 |
-    | X | 637 |
-    | Y | 135 |
-
-1. Insert **Checkbox**.
-
-1. Change the checkbox properties with the following configuration.
-
-    | Property Name | Value |
-    | - | - |
-    | Name | chkPhrases |
-    | Text | "Key Phrases" |
-    | Size | 16 |
-    | X | 637 |
-    | Y | 193 |
+    | X | 24 |
+    | Y | 228 |
 
 1. Insert **Checkbox**.
 
@@ -159,20 +130,8 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Name | chkSentiment |
     | Text | "Sentiment" |
     | Size | 16 |
-    | X | 835 |
-    | Y | 135 |
-
-1. Insert **Checkbox**.
-
-1. Change the checkbox properties with the following configuration.
-
-    | Property Name | Value |
-    | - | - |
-    | Name | chkNER |
-    | Text | "Named Entity Recognition" |
-    | Size | 16 |
-    | X | 835 |
-    | Y | 193 |
+    | X | 230 |
+    | Y | 228 |
 
 1. Insert **Checkbox**.
 
@@ -183,8 +142,60 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Name | chkEL |
     | Text | "Entity Linking" |
     | Size | 16 |
-    | X | 1059 |
-    | Y | 135 |
+    | X | 403 |
+    | Y | 228 |
+
+1. Insert **Checkbox**.
+
+1. Change the checkbox properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | chkPhrases |
+    | Text | "Key Phrases" |
+    | Size | 16 |
+    | X | 24 |
+    | Y | 286 |
+
+1. Insert **Checkbox**.
+
+1. Change the checkbox properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | chkNER |
+    | Text | "Named Entity Recognition" |
+    | Size | 16 |
+    | X | 230 |
+    | Y | 286 |
+
+1. Insert **Text input**.
+
+1. Change the text input properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | tiTextToAnalyze |
+    | Text | "Enter text" |
+    | Size | 14 |
+    | Height | 256 |
+    | Mode | MultiLine |
+    | Width | 557 |
+    | X | 24 |
+    | Y | 390 |
+
+1. Insert **Button**.
+
+1. Change the button properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | analyzeText |
+    | Text | "Analyze Text" |
+    | X | 189 |
+    | Y | 684 |
+    | Width | 196 |
+    | Height | 53 |
 
 1. Insert **Text label**.
 
@@ -192,11 +203,12 @@ In this section, you'll design the app controls, and the formulas required to wo
 
     | Property Name | Value |
     | - | - |
+    | Name | dLanguage |
     | Text | "Detected language:" |
     | Size | 16 |
     | X | 633 |
-    | Y | 237 |
-    | Width | 656 |
+    | Y | 135 |
+    | Width | 665 |
     | Height | 48 |
 
 1. Insert **Text label**.
@@ -205,10 +217,11 @@ In this section, you'll design the app controls, and the formulas required to wo
 
     | Property Name | Value |
     | - | - |
-    | Text | "Sentiment Score:" |
+    | Name | sScore |
+    | Text | "Sentiment score:" |
     | Size | 16 |
     | X | 633 |
-    | Y | 331 |
+    | Y | 196 |
     | Width | 656 |
     | Height | 48 |
 
@@ -220,10 +233,10 @@ In this section, you'll design the app controls, and the formulas required to wo
     | - | - |
     | Text | "Linked entities:" |
     | Size | 16 |
-    | X | 542 |
-    | Y | 402 |
-    | Width | 201 |
-    | Height | 51 |
+    | X | 633 |
+    | Y | 258 |
+    | Width | 206 |
+    | Height | 48 |
 
 1. Select **Insert** -> **Gallery** -> **Blank vertical**.
 
@@ -231,10 +244,10 @@ In this section, you'll design the app controls, and the formulas required to wo
 
     | Property Name | Value |
     | - | - |
-    | Name | galleryNER |
+    | Name | galleryLE |
     | Layout | Title and subtitle |
-    | X | 642 |
-    | Y | 466 |
+    | X | 633 |
+    | Y | 318 |
     | Width | 696 |
     | Height | 87 |
 
@@ -248,10 +261,10 @@ In this section, you'll design the app controls, and the formulas required to wo
     | - | - |
     | Text | "Key Phrases:" |
     | Size | 16 |
-    | X | 637 |
-    | Y | 573 |
+    | X | 633 |
+    | Y | 429 |
     | Width | 150 |
-    | Height | 40 |
+    | Height | 48 |
 
 1. Select **Insert** -> **Gallery** -> **Blank vertical**.
 
@@ -260,68 +273,136 @@ In this section, you'll design the app controls, and the formulas required to wo
     | Property Name | Value |
     | - | - |
     | Name | galleryKP |
-    | Layout | Title and subtitle |
-    | X | 642 |
-    | Y | 633 |
+    | Layout | Title |
+    | X | 633 |
+    | Y | 489 |
     | Width | 696 |
-    | Height | 102 |
+    | Height | 87 |
 
 1. Select the arrow icon inside the gallery and delete it.
 
-1. Insert **Button**.
-
-1. Change the button properties with the following configuration.
+1. Change the following properties for the first row inside the gallery.
 
     | Property Name | Value |
     | - | - |
-    | Text | "Analyze Text" |
-    | X | 180 |
-    | Y | 693 |
-    | Width | 196 |
-    | Height | 53 |
+    | X | 16 |
+    | Height | 87 |
 
-1. Copy and paste the following formula as the **OnSelect** property value for the button.
+1. Insert **Text label**.
+
+1. Change the label properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Text | "Named entities:" |
+    | Size | 16 |
+    | X | 633 |
+    | Y | 589 |
+    | Width | 193 |
+    | Height | 48 |
+
+1. Select **Insert** -> **Gallery** -> **Blank vertical**.
+
+1. Change the gallery properties with the following configuration.
+
+    | Property Name | Value |
+    | - | - |
+    | Name | galleryNER |
+    | Layout | Title |
+    | X | 633 |
+    | Y | 670 |
+    | Width | 696 |
+    | Height | 87 |
+
+1. Select the arrow icon inside the gallery and delete it.
+
+1. Change the following properties for the first row inside the gallery.
+
+    | Property Name | Value |
+    | - | - |
+    | X | 16 |
+    | Height | 87 |
+
+Here's how the app should look like after following the above steps.
+
+![App design](./media/cognitive-services-api/app-design.png "App design")
+
+## Step 3. Add logic
+
+1. Copy and paste the following formula as the **OnSelect** property value for the button **analyzeText**.
 
     ```powerapps-dot
-    ClearCollect( languageInfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", countryHint: "US", text: tiTextToAnalyze.Text } );
+    ClearCollect( languageInfo, { id: "E393CEB2-56A8-4668-A5EB-A1254E9758F0", countryHint: "US", text: tiTextToAnalyze.Text } );
     TextAnalytics.LanguagesV3(languageInfo);
     If( chkLanguage.Value=true,
         ClearCollect( languageCollect,
             TextAnalytics.LanguagesV3(languageInfo).documents.detectedLanguage
         )
     );
-    ClearCollect( phrasesInfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", language: "en", text: tiTextToAnalyze.Text } );
+    ClearCollect( phrasesInfo, { id: "E393CEB2-56A8-4668-A5EB-A1254E9758F0", language: "en", text: tiTextToAnalyze.Text } );
     If( chkPhrases.Value = true,
         ClearCollect( phrasesCollect,
             TextAnalytics.KeyPhraseV3(phrasesInfo).documents.keyPhrases
         )
     );
-    ClearCollect( sentimentInfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", language: "en", text: tiTextToAnalyze.Text } );
+    ClearCollect( sentimentInfo, { id: "E393CEB2-56A8-4668-A5EB-A1254E9758F0", language: "en", text: tiTextToAnalyze.Text } );
     If( chkSentiment.Value = true,
         ClearCollect( sentimentCollect,
             TextAnalytics.SentimentV3(sentimentInfo).documents.confidenceScores
         )
     );      
-    ClearCollect( nerinfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", language: "en", text: tiTextToAnalyze.Text } );
+    ClearCollect( nerinfo, { id: "E393CEB2-56A8-4668-A5EB-A1254E9758F0", language: "en", text: tiTextToAnalyze.Text } );
     If( chkNER.Value = true,
         ClearCollect( nerCollect,
             TextAnalytics.EntitiesRecognitionGeneralV3(nerinfo).documents.entities
         )
     );
-    ClearCollect( elinfo, { id: "1d4a90ba-936f-4629-8e21-7b14283dc017", language: "en", text: tiTextToAnalyze.Text } );
+    ClearCollect( elinfo, { id: "E393CEB2-56A8-4668-A5EB-A1254E9758F0", language: "en", text: tiTextToAnalyze.Text } );
     If( chkEL.Value = true,
         ClearCollect( elCollect,
             TextAnalytics.EntitiesLinkingV3(elinfo).documents.entities
         )
     ); 
     ```
-1. Copy and paste the following formula as the value of the **Text** property for the label with the text "Detected language:". 
+1. Copy and paste the following formula as the value of the **Text** property for the **dLanguage** label.
 
     ```powerapps-dot
     "Detected language: " & First(languageCollect.detectedLanguage).detectedLanguage.name
     ```
 
-1. Select the first item inside the **galleryNER** gallery, and copy and paste 
+1. Select the first row inside the **galleryKP** gallery. And then, copy and paste following formula for the **Text** property.
+
+    ```powerapps-dot
+    Concat(ThisItem.keyPhrases.Value, Value, ",")
+    ```
+
+1. Copy and paste the following formula as the value of the **Text** property for the **sScore** label. 
+
+    ```powerapps-dot
+    "Positive: " & ThisItem.confidenceScores.positive &" Neutral: " & ThisItem.confidenceScores.neutral & " Negative: " & ThisItem.confidenceScores.negative
+    ```
+
+1. Select the first row inside the **galleryNER** gallery. And then, copy and paste following formula for the **Text** property.
+
+    ```powerapps-dot
+    Concat(ThisItem.entities.text,text,",")
+    ```
+
+1. Select the first row inside the **galleryLE** gallery. And then, copy and paste following formula for the **Text** property.
+
+    ```powerapps-dot
+    Concat(ThisItem.entities.name,name,",")
+    ```
+
+1. Select the second row inside the **galleryLE** gallery. And then, copy and paste following formula for the **Text** property.
+
+    ```powerapps-dot
+    Concat(ThisItem.entities.url,url,",")
+    ```
+
+1. [Save and publish](save-publish-app.md) the app.
+
+<!--
 
 1. Resize the label as below.
 
