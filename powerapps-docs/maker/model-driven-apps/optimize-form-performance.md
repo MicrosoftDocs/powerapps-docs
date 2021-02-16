@@ -29,18 +29,21 @@ Forms that load slowly can reduce productivity and user adoption. Follow these r
 ## Form design  
  Think about the interaction the user will have with the form and the amount of data that must be displayed within it.  
   
- **Keep the number of columns to a minimum**  
- The more columns you have in a form, the more data that needs to be transferred over the Internet or intranet to view each row.
+ **Keep the number of table columns to a minimum**  
+ The more table columns (formerly referred to as fields) you have in a form, the more data that needs to be downloaded to view each record.
  
  **Design for performance**  
  When designing forms and pages, put what is most important at the top to make it most easily accessible for your users. Move infrequently used components to other tabs on a form, use role-based forms instead of showing and hiding components, and make sure that different workflows have dedicated dashboards and views. Feel free to use sections to organize your controls – this won’t make your forms slower.
  
 <a name="BKMK_FormScripts"></a>   
 ## Form scripts  
- When you have customizations using form scripts make sure that the developer understands these strategies to improve performance.  
+ When you have customizations using form scripts make sure that the developer understands these strategies to improve performance. 
+ 
+**Minimize the number of network requests and the amount of data requested in the OnLoad event**  
+The higher the number of network requests made during a form load, and the more amount of data downloaded from those requests, the more time it will take for a form to load. Only request the minimum amount of data needed. Also, consider caching the data when possible to avoid requesting data unnecessarily on future page loads.
   
-**Avoid using synchronous requests**  
-Synchronous requests can cause slow page loads and unresponsive forms. [Use asynchronous requests instead](https://docs.microsoft.com/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously). See [this blog post](https://powerapps.microsoft.com/en-us/blog/turbocharge-your-model-driven-apps-by-transitioning-away-from-synchronous-requests/) for more examples.
+**Avoid using synchronous network requests**  
+Synchronous network requests can cause slow page loads and unresponsive forms. [Use asynchronous requests instead](https://docs.microsoft.com/powerapps/developer/model-driven-apps/best-practices/business-logic/interact-http-https-resources-asynchronously). See [this blog post](https://powerapps.microsoft.com/en-us/blog/turbocharge-your-model-driven-apps-by-transitioning-away-from-synchronous-requests/) for more examples.
   
 **Avoid including unnecessary JavaScript web resource libraries**  
 The more scripts you add to the form, the more time it will take to download them. Usually scripts are cached in your browser after they are loaded the first time, but the performance the first time a form is viewed often creates a significant impression.  
@@ -68,3 +71,6 @@ Avoid using form scripts in the `OnLoad` event that hide form elements. Instead 
  [Create and design forms](create-design-forms.md)    
     
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

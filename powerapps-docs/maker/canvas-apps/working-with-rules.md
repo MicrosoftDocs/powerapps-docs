@@ -100,3 +100,6 @@ By default, the **Rules** tab shows only the rules for the selected control and 
 As of this writing:
 
 * You can't specify the **ThisItem** property of a form or a gallery as part of a condition.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

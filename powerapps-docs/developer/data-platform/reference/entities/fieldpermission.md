@@ -372,3 +372,5 @@ See solution Entity [solution_fieldpermission](solution.md#BKMK_solution_fieldpe
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.fieldpermission?text=fieldpermission EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

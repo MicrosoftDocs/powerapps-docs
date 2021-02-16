@@ -102,3 +102,6 @@ There must be adequate color contrast between:
 
 ### Screen reader support
 * **DisplayName** must be present.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

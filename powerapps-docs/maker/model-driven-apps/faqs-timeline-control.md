@@ -83,7 +83,7 @@ To work around the issue, you must reduce the number of tables to 10 or fewer. T
 11.    Select **Publish** to publish the customizations.
 
 
-## Why I can't assign or delete an activity from the timeline?
+## Why can't I assign or delete an activity from the timeline?
 
 If you use the **HideCustomActions** rule to hide buttons, such as **Assign** and **Delete** in the ribbon command bar definition, then those buttons that are present in the Timeline control will not work. The buttons in the command bar are same as the buttons in the Timeline control; therefore, when a user selects the **Assign** or **Delete** button in the Timeline control, an error message is displayed.
 
@@ -92,12 +92,12 @@ If you use the **HideCustomActions** rule to hide buttons, such as **Assign** an
 To mitigate the issue, unhide the buttons in the command bar definitions.
 
 
-## Why my users see different activities and records in their My activities stream in the dashboard?
+## Why do my users see different activities and records in their My activities stream in the dashboard?
 
 **My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
 
 
-## Why my agents see the filter pane even when the Expand filter pane by default check box is cleared?
+## Why do my agents see the filter pane even when the Expand filter pane by default check box is cleared?
 
 When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. Even though you've cleared **Expand filter pane by default** check box in the Timeline configurations, the filter pane will always be displayed to your agents.
 
@@ -108,3 +108,6 @@ When the timeline is displayed on more than one column, the filter pane is displ
 [Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
 
 [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -251,3 +251,6 @@ Some key things to remember include the following:
 ### Design for transaction use
 
 - If implementations are designed with transaction behavior in mind, this can lead to much greater scalability and improved user performance
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

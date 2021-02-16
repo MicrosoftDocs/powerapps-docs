@@ -125,3 +125,6 @@ can quickly review issues and see recommended fixes. More information: [Use solu
 
 > [!div class="nextstepaction"]
 > [Next step: Publish and share the app](discoverability.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

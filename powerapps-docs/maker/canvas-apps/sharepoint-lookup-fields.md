@@ -148,3 +148,6 @@ Now you can run the app and see how the view details screen looks for the lookup
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

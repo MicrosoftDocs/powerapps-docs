@@ -3497,3 +3497,5 @@ See calendar Entity [BusinessUnit_Calendar](calendar.md#BKMK_BusinessUnit_Calend
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.businessunit?text=businessunit EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

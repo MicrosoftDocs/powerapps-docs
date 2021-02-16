@@ -302,3 +302,6 @@ namespace PowerApps.Samples
 [Use Web API actions](../use-web-api-actions.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

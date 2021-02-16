@@ -35,3 +35,5 @@ For a constituent control in a quick view control, the method returns the actual
 ### Related topics
 
 [formContext.ui.quickForms](../formContext-ui-quickForms.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

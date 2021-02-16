@@ -165,3 +165,6 @@ A FetchXML query in Microsoft Dataverse can use special fiscal date values and *
  [Create Queries to Retrieve Data](/dynamics365/customer-engagement/developer/org-service/retrieve-data-queries-sdk-assemblies)   
  [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml)   
  [Use a left outer join in FetchXML to query for records "not in"](/dynamics365/customer-engagement/developer/use-left-outer-join-fetchxml-query-records-not-in)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

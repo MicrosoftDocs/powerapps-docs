@@ -135,3 +135,5 @@ These properties are in effect when the user selects an item in a control.
 **SelectionFill** – The background color of a selected item or items in a list or a selected area of a pen control.
 
 - Applies to **[Drop down](control-drop-down.md)** and **[List Box](control-list-box.md)** controls.
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

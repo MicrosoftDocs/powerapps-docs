@@ -58,3 +58,6 @@ Model-driven apps provides you a rich set of **client APIs** to interact with fo
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

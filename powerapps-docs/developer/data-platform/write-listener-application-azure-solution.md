@@ -138,3 +138,6 @@ else if (receivedMessage.ContentType = "application/xml")
 [Work with Dataverse data in your Azure solution](work-data-azure-solution.md)<br />
 [Work with Dataverse event data in your Azure Event Hub solution](work-event-data-azure-event-hub-solution.md)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

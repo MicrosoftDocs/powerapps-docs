@@ -150,3 +150,6 @@ In addition to the steps that can be used for real-time workflows, actions also 
 
  
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

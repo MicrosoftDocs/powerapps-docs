@@ -26,3 +26,6 @@ Use the Power Apps mobile app in offline mode when you don't have internet acces
 > The [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode) topic covers how to work in offline for both Power Apps mobile and the Dynamics 365 phones and tablet app. The process is the same for both apps. 
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

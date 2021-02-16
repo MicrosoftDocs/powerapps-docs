@@ -36,3 +36,6 @@ Each entity has one string attribute that is designated as the <xref:Microsoft.X
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

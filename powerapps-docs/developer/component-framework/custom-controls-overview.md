@@ -101,3 +101,6 @@ Each code component should have a resource file to construct its visualization. 
 ### Related topics
 
 [Create and build a code component](create-custom-controls-using-pcf.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

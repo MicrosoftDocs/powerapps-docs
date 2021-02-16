@@ -40,3 +40,6 @@ All except **kbsearch** control type
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

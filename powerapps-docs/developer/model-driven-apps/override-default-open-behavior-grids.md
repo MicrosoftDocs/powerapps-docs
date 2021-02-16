@@ -177,3 +177,6 @@ When you download the log file, you'll find an XML file that you can open with E
 
 [Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx)<br/>
 [Customize the ribbon](customize-commands-ribbon.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

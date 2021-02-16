@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/25/2020
+ms.date: 02/08/2021
 ms.author: tapanm
 ms.reviewer: sandhan
 ---
@@ -100,4 +100,8 @@ To create a custom **Portal Management** app:
 
 ### See also
 
-[FAQ - How to delete a portal?](https://docs.microsoft.com/powerapps/maker/portals/faq#how-do-i-delete-a-portal-completely-after-it-is-provisioned)
+[Delete a portal](../manage-existing-portals.md#delete)
+
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

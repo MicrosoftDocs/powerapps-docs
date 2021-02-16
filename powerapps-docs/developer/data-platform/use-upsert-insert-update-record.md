@@ -129,3 +129,6 @@ public void ProcessUpsert(String Filename)
  [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)   
  [Define alternate keys for an entity](define-alternate-keys-entity.md)   
  [Using alternate keys](use-alternate-key-create-record.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

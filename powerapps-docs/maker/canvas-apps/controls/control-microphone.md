@@ -202,3 +202,6 @@ Consider adding an alternative form of input for users with speech disabilities 
 ### See also
 
 [Limitations of controls in Power Apps](../control-limitations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

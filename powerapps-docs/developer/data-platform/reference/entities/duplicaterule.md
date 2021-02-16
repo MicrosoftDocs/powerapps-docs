@@ -1603,3 +1603,5 @@ See businessunit Entity [BusinessUnit_DuplicateRules](businessunit.md#BKMK_Busin
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.duplicaterule?text=duplicaterule EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

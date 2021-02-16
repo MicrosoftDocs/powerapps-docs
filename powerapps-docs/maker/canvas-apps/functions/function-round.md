@@ -32,3 +32,6 @@ If you pass a single number, the return value is the rounded version of that num
 * *Number* - Required. The number to round.
 * *DecimalPlaces* - Required.  The number of places to the right of the decimal point to round to.  Use 0 to round to a whole number.  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

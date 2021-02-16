@@ -51,3 +51,6 @@ Dynamics 365 for Outlook lets users interact with data while they’re offline a
 [SavedQuery Entity](../reference/entities/savedquery.md)<br />
   
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

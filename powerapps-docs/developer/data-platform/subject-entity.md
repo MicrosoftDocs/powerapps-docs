@@ -34,3 +34,6 @@ The content organization of the knowledge base is displayed in the subject tree.
 ### See also  
  [Subject Entity](reference/entities/subject.md) 
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

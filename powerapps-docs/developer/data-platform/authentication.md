@@ -55,3 +55,6 @@ If you are using anything other than .NET Framework, you must authenticate using
 web services (Web API and OData Global Discovery Service).
 
 More information:  [Use OAuth with Dataverse](authenticate-oauth.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

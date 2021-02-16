@@ -30,3 +30,6 @@ search.app:
 ### Related topics
 
 [getVisible](getVisible.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

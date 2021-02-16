@@ -69,3 +69,6 @@ For more information, see [Share Google Drive files and folders](https://support
 ### Known limitations
 For information about how to share Excel data within your organization, [review these limitations](connections/cloud-storage-blob-connections.md#known-limitations).
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

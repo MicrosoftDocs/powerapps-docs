@@ -50,3 +50,6 @@ function setDefaultViewSample(executionContext) {
 [getDefaultView](getDefaultView.md) 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -50,3 +50,6 @@ This article shows you how to restore a canvas app to a previous version that wa
 [Share an app](share-app.md)  
 [Change app name and tile](set-name-tile.md)  
 [Delete an app](delete-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

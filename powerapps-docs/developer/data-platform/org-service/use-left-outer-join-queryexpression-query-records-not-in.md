@@ -62,3 +62,6 @@ WHERE ab.RegardingObjectId is null
  [Test for a Null Value](/dynamics365/customer-engagement/developer/test-null-value)   
  [Using the QueryExpression Class](use-queryexpression-class.md)   
  [Using the QueryByAttribute Class](use-querybyattribute-class.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

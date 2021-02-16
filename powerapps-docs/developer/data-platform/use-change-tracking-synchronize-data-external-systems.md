@@ -46,7 +46,7 @@ This example shows how to retrieve changes made in accounts data using the Web A
 
 Request
 ```http
-GET [Organization URI]/org1/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax HTTP/1.1
+GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax HTTP/1.1
 Prefer: odata.track-changes
 Cache-Control: no-cache
 OData-Version: 4.0
@@ -173,3 +173,6 @@ while (true)
  [Define alternate keys for an entity](define-alternate-keys-entity.md)   
  [Using alternate keys](use-alternate-key-create-record.md)   
  [Update Dynamics 365 with external data using Upsert](use-upsert-insert-update-record.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -118,3 +118,6 @@ With editable grids, users can do rich in-line editing directly from views and s
   
 ## Next steps  
 [Create and edit columns](../data-platform/create-edit-fields.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

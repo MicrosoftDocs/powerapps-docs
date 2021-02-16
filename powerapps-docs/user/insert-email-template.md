@@ -57,3 +57,6 @@ If you try to insert an email template on a device with smaller screen size, you
 
 [Set up enhanced email](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Compose and send email using the enhanced email experience](enhanced-email.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

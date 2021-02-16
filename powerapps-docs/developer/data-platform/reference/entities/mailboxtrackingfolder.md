@@ -1050,3 +1050,5 @@ See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_MailboxTrack
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.mailboxtrackingfolder?text=mailboxtrackingfolder EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

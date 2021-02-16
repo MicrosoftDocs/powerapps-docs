@@ -45,3 +45,6 @@ Attributes that do not get updated after the initial save of the record, such as
 ### Related topic
 [getSubmitMode (Client API reference)](getSubmitMode.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

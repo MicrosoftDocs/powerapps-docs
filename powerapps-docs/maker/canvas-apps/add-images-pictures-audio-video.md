@@ -240,3 +240,5 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 - [Control reference](reference-properties.md)
 - [Working with formulas](working-with-formulas.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

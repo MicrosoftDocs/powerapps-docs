@@ -62,3 +62,6 @@ foreach (var c in retrieved.Entities)
 ### See also  
  [Build Queries with QueryExpression](build-queries-with-queryexpression.md)   
  <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

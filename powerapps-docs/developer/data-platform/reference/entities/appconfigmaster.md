@@ -506,3 +506,5 @@ See organization Entity [organization_appconfigmaster](organization.md#BKMK_orga
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appconfigmaster?text=appconfigmaster EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

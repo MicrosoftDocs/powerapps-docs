@@ -235,3 +235,6 @@ namespace PowerApps.Samples
 
 [Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)<br />
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
