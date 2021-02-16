@@ -43,3 +43,6 @@ There are several possible reasons why data that you expect to be in a report do
 
 [Edit report filter](edit-report-filter.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

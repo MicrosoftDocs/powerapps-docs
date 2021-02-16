@@ -46,3 +46,6 @@ Embedded canvas apps are also solution aware. By default embedded canvas apps ar
 [ModelDrivenFormIntegration control's properties and actions](embedded-canvas-app-properties-actions.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
 [Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

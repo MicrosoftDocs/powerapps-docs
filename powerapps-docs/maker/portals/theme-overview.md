@@ -162,3 +162,6 @@ Sass variables work from top to bottom. You can set the *Header* color to ```lig
 [Power Apps portals Studio](portal-designer-anatomy.md) <br>
 [Create and manage webpages](create-manage-webpages.md) <br>
 [WYSIWYG editor](compose-page.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

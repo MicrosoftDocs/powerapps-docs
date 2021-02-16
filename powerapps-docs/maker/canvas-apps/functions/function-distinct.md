@@ -80,3 +80,6 @@ The **Distinct** function evaluates a formula across each record of a table and 
     > ![Output from Distinct function showing the first country by name](media/function-distinct/citypopulations-first.png)
 
      
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

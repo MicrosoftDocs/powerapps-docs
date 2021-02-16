@@ -59,3 +59,6 @@ If you receive an email that has email addresses that aren't associated with a t
 ### See also
 
 [Allow unresolved email recipients](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

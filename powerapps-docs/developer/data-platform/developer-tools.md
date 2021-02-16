@@ -115,3 +115,6 @@ More information: [Extend Dynamics 365 for Outlook](/dynamics365/customer-engage
 |---------|---------|
 |Microsoft.Crm.Outlook.Sdk.dll|[Microsoft.Crm.Outlook.Sdk](/dotnet/api/microsoft.crm.outlook.sdk)|
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

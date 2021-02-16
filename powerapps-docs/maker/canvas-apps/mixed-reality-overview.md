@@ -93,3 +93,6 @@ Start installing the components in your apps:
 - View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

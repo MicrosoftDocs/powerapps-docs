@@ -90,3 +90,6 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 - [Understand lifecycle of a portal](portal-lifecycle.md) <br>
 - [Microsoft Learn: Portal application lifecycle management](https://docs.microsoft.com/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
 - [Power Apps portals FAQ](../faq.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

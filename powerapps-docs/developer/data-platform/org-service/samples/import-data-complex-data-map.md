@@ -61,3 +61,6 @@ Display an option to delete the records created in the [Setup](#setup). The dele
 [Run data import](../../run-data-import.md)<br />
 [Data import entities](../../data-import-entities.md)<br />
 [Sample: Export and import a data map](export-import-data-map.md)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

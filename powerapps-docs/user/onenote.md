@@ -60,3 +60,6 @@ Before you can use OneNote, it must be enabled by your system administrator. Mor
  
     > [!div class="mx-imgBorder"]
     > ![Open an existing OneNote notebook](media/existing_onenote.png "Open an existing OneNote notebook")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

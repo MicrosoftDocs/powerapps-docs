@@ -66,3 +66,6 @@ releases so that we could deliver value incrementally:
 
 > [!div class="nextstepaction"]
 > [Next step: Defining the project scope](defining-project-scope.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

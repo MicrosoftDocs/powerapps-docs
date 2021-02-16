@@ -56,3 +56,6 @@ Checks for the current version of the org.
 ### Clean up
 
 There is no clean up required, since all the sample records that are created are deleted in the demonstrate section.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

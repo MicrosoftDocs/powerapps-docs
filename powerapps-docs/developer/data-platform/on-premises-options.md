@@ -30,3 +30,6 @@ TODO: This page and any links to it will not be published until an on-premises v
 ## Debug a plug-in
 
 This section would include information about debugging a plug-in in an on-premises deployment. It should always have a link back to the relevant section. More information: [Write plug-ins to extend business processes](plug-ins.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

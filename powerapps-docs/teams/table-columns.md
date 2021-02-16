@@ -46,3 +46,6 @@ The calculated columns and rollup columns that are available in Dataverse for Te
 ### See also
 
 [Create a table](create-table.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

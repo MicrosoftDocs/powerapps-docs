@@ -652,3 +652,6 @@ The items of this gallery are populated by search results from the [Office365.Se
 * [Learn more about this screen](./meeting-screen-overview.md)
 * [Learn more about the Office 365 Outlook connector in Power Apps](../connections/connection-office365-outlook.md)
 * [Learn more about the Office 365 Users connector in Power Apps](../connections/connection-office365-users.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

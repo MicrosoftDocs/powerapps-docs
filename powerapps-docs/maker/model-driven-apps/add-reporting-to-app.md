@@ -87,3 +87,6 @@ You can add, import, or export snapshots of reports as part of a solution. In mo
 [Add a report from outside Power Apps](/powerapps/user/add-existing-report)<br/>
 [Edit the default filter of a report](/powerapps/user/edit-report-filter)<br/>
 [Troubleshoot reports](/powerapps/user/troubleshoot-reports)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

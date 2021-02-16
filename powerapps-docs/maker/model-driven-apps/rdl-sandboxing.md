@@ -269,3 +269,6 @@ In Microsoft Dataverse, reports run in the sandbox mode. This is done by enablin
 |MemberwiseClone|  
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

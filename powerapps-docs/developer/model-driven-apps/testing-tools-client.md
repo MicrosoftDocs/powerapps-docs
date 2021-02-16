@@ -35,3 +35,6 @@ When a solution is developed with unit testing, developers report greater produc
 [Video:  Creating and running UI test](https://youtu.be/ryWgK34Akt0)<br />
 [Blog post: Easy Repro: what is it?](https://www.itaintboring.com/dynamics-crm/easy-repro-what-is-it/)<br />
 [Video: Introduction to DevOps](https://youtu.be/AorM792M8nY)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

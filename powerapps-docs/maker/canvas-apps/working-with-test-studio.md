@@ -390,3 +390,6 @@ In addition to the [functions](formula-reference.md) available in Power Apps, th
 ## Next steps
 
 - [Automate tests with Azure Pipelines using classic editor](test-studio-classic-pipeline-editor.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

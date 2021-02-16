@@ -257,3 +257,6 @@ The [SavedQuery](../reference/entities/savedquery.md) entity stores system views
 More information: [Sample: Convert queries between Fetch and QueryExpression](samples/convert-queries-fetch-queryexpression.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

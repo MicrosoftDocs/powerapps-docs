@@ -338,3 +338,6 @@ The following C# samples use this class:
 - [Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)
 - [Conditional Operations sample (C#)](cdswebapiservice-conditional-operations.md)
 - [Query Data sample (C#)](cdswebapiservice-query-data.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

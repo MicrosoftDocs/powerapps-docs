@@ -155,3 +155,6 @@ visually illustrate fractions and fraction multiplication.
 ### Additional examples
 
 [Higher Education Crisis Financial Impact Tracker solution template](https://powerapps.microsoft.com/blog/tracking-financial-impact-for-higher-education-a-power-platform-template/)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -86,3 +86,6 @@ catch (FaultException<OrganizationServiceFault> ex)
 ### See also
 [Detect duplicate data using the Web API](../webapi/manage-duplicate-detection-create-update.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

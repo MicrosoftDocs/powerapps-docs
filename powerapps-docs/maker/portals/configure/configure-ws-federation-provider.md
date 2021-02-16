@@ -73,3 +73,6 @@ See [Edit a provider](use-simplified-authentication-configuration.md#edit-a-prov
 
 [Configure a WS-Federation provider for portals with Azure AD](configure-ws-federation-settings-azure-ad.md)  
 [Configure a WS-Federation provider for portals with AD FS](configure-ws-federation-settings.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

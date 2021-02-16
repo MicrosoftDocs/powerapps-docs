@@ -654,3 +654,6 @@ After downloading the data as CSV files from the **Download Data for CDC** app, 
 ## Next step
 
 [Use the Hospital Emergency Response mobile app](use.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

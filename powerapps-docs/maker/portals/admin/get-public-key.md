@@ -30,3 +30,6 @@ Alternately, you can also get the public key by going to the URL: `<portal_base_
 
 > [!NOTE]
 > If the portal is currently being provisioned or the package install is not finished in the organization, an error is displayed if you try to download the public key. You must wait until portal provisioning is complete and the portal is up and running.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

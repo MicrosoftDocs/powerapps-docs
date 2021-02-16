@@ -108,3 +108,6 @@ The SMART goals we decided on are:
 
 > [!div class="nextstepaction"]
 > [Next step: Creating a project plan](defining-app-project-objective.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -66,3 +66,6 @@ If you're an administrator, you can check the access another user has to a recor
    > ![Access checker showing your access level for an admin.](media/check_access_page_admin-1.png "Access checker showing your access level for an admin")
   
 3.   The **Check Access** dialog box will appear and display the user's access information.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

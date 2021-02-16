@@ -1755,3 +1755,5 @@ See contact Entity [Contact_SocialActivities](contact.md#BKMK_Contact_SocialActi
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.socialactivity?text=socialactivity EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

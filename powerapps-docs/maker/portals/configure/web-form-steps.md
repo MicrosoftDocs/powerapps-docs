@@ -40,3 +40,6 @@ Each Web Form will be presented on the portal has one or more steps. These steps
 [Conditional step type](add-conditional-step.md)  
 [Add custom JavaScript](add-custom-javascript.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

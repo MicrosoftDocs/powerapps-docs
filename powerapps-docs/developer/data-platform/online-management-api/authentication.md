@@ -97,3 +97,6 @@ You are all set to execute messages against the Online Management API. For a sam
 [Get started with Online Management API](get-started-online-management-api.md)
 
 [Online Management API Reference](/rest/api/admin.services.crm.dynamics.com)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

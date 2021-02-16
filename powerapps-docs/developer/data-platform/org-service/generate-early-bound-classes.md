@@ -179,3 +179,6 @@ For more information on supported tracing options see [Configure tracing for XRM
 [Download tools from NuGet](../download-tools-NuGet.md)
 
 [Create early bound entity classes with the code generation tool (CrmSvcUtil.exe)](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool) \[Dynamics 365 Customer Engagement (on-premises)\]
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

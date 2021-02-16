@@ -20,3 +20,6 @@ After you have tested your code components and want it to distribute to others t
 
 For detailed information on how to publish your code components on AppSource, see [Publish your app on AppSource](/powerapps/developer/data-platform/publish-app-appsource).
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

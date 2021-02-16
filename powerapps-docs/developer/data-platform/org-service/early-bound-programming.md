@@ -196,3 +196,6 @@ new EntityCollection(new Entity[] { relatedEntity.ToEntity<Entity>() });
 [Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
 [IOrganizationService Interface](iorganizationservice-interface.md)<br />
 [Using OrganizationServiceContext](organizationservicecontext.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

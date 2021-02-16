@@ -113,3 +113,6 @@ Learn how to create accessible PDF documents with the [WCAG 2.0](https://www.w3.
 
 ### Screen reader support
 * Consider adding a heading using a **[Label](control-text-box.md)**, if the PDF document does not have a title. The heading can be positioned immediately before the **PDF viewer**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

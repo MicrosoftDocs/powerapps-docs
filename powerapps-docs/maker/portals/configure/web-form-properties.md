@@ -102,3 +102,6 @@ The form's map control requires additional configuration to tell it what the IDs
 [Web Forms metadata for portals](configure-web-form-metadata.md)  
 [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
 [Notes configuration for Web Forms for portals](../configure-notes.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -47,3 +47,6 @@ However, if the user table is included in the app but the team table is not, onl
 
 3. Select **Save**, and then select **Publish** to make your change available to app users.   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

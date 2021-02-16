@@ -173,3 +173,6 @@ For situations where you want to have a gallery of 3D models, you should put the
 - View 3D content and images in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

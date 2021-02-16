@@ -51,3 +51,5 @@ To repeat a message, clear text contents by setting the value of the **[Text](co
 ## Next steps
 
 Learn how to [show content only to screen readers](accessible-apps-content-visibility.md) if the live region should be hidden from sighted users.
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -144,3 +144,6 @@ Claims authentication is used for secure access to the service bus. The claim us
 ## Manage run-time errors  
 
 If an error occurred after a post was attempted to the service bus, check the status of the related system job in the web application for more information on the error. If the service bus is down or a listener/endpoint isn’t available, the current message being processed in Dataverse will not be posted to the bus. The asynchronous service will continue to try to post the message in an exponential pattern where it will try to post frequently at first and then at longer and longer intervals. For an internal Dataverse error, message posts are not attempted. For an external service bus or network error, the related system job will be in a “Wait” state.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -309,3 +309,6 @@ Your ALM process may be better served by creating Custom APIs by editing solutio
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />
 [Create your own messages](custom-actions.md)<br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

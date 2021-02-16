@@ -171,3 +171,6 @@ More information: [Handling events](https://github.com/Microsoft/PowerBI-JavaScr
 - [Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md)
 - [Set up Power BI integration](set-up-power-bi-integration.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

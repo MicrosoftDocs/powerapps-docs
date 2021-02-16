@@ -74,3 +74,6 @@ In this quickstart, you created a sample that uses fictitious data. For more hel
 
 > [!div class="nextstepaction"]
 > [Generate an app](data-platform-create-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

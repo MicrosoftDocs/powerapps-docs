@@ -63,3 +63,5 @@ When the code in your plug-in running in the sandbox attempts to connect to an e
 [Write a plug-in](../../write-plug-in.md) <br /> 
 [Set KeepAlive to false when interacting with external hosts in a plug-in](set-keepalive-false-interacting-external-hosts-plugin.md)<br /> 
 [Set Timeout when making external calls in a plug-in](set-timeout-for-external-calls-from-plug-ins.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

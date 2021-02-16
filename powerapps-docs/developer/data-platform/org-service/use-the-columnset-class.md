@@ -41,3 +41,6 @@ QueryExpression contactquery = new QueryExpression
 [Use the ConditionExpression Class](use-conditionexpression-class.md)<br /> 
 <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class <br />
 <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> class <br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -102,3 +102,6 @@ Be aware of the following regarding OneDrive for Business in Dataverse:
 - OneDrive storage folders are created in the user's current Dataverse language. If the language changes, new folders will be created in the new language. Old folders will remain in the previous language.  
 
 - There might be a delay between when the documents are shared in OneDrive and when they're available to other users. 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

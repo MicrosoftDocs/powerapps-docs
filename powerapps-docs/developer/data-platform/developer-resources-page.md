@@ -27,3 +27,6 @@ search.app:
 - "https://disco.crm{0}.dynamics.com/XRMServices/2011/Discovery.svc" where {0} is the value to use 
 - 
 - -->
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

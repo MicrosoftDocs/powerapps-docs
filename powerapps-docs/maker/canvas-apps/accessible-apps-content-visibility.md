@@ -41,3 +41,6 @@ Use any of these techniques:
 ## Next steps
 
 Learn about [accessibility properties](controls/properties-accessibility.md) of controls in canvas apps.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

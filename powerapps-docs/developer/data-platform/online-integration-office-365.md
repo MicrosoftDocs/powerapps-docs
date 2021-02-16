@@ -25,3 +25,6 @@ Do we even need this topic?
 It exists to contrast using Microsoft Account via Microsoft Online Service which (According to Paul Liew : 'We can remove all references of Microsoft account as we completed the migration of all LiveID to AAD a few years ago.')
 
 -->
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
