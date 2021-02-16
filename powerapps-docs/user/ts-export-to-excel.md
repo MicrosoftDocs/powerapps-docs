@@ -52,11 +52,14 @@ This issue occurs when the data that you're accessing is password-protected and 
     > [!div class="mx-imgBorder"]
     > ![Select edit query](media/ts-e2e-select-edit-query.png "Select edit query")
 
-4. Select **Go**.
+4. When prompted, enter username and password.   
+
+5. If the following error message appears, close the **Edit Web Query** window.   
 
     > [!div class="mx-imgBorder"]
-    > ![Error message](media/ts-e2e-error-message.png "Error message")
+    > ![Error message](media/ts-e2e-error-message.png "Error message")    
 
-5. In the error message that appears, select **OK**, and then select **Import**.
+6. Refresh the data in Excel.
 
-6. Close the **Edit Web Query** window, and refresh the data.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -27,7 +27,7 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 |`description-key`|Defines the description of the property.|`string`|Optional|Model-driven apps and canvas apps (public preview)|
 |`display-name-key`|Defines the name of the property.|`string`|Yes|Model-driven apps and canvas apps (public preview)|
 |`name`|Name of the grid|`string`|Yes|Model-driven apps and canvas apps (public preview)|
-|`cds-data-set-options`|Displays the Commandbar, ViewSelector, QuickFindSearch if set to true |`boolean`|Yes|Model-driven apps|
+|`cds-data-set-options`|Displays the Commandbar, ViewSelector, QuickFind if set to true |`string`|Yes|Model-driven apps|
 
 ## Parent Elements
 
@@ -38,7 +38,7 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 ## Example
 
 ```xml
- <data-set name="dataSetGrid" display-name-key="DataSetGridProperty" cds-data-set-options="displayCommandBar:true;displayViewSelector:true;displayQuickFindSearch:true">
+ <data-set name="dataSetGrid" display-name-key="DataSetGridProperty" cds-data-set-options="displayCommandBar:true;displayViewSelector:true;displayQuickFind:true">
  </data-set>
 ```
 
@@ -47,3 +47,6 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

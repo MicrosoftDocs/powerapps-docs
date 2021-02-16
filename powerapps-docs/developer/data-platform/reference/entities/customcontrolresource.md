@@ -600,3 +600,5 @@ See systemuser Entity [lk_customcontrolresource_modifiedby](systemuser.md#BKMK_l
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.customcontrolresource?text=customcontrolresource EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

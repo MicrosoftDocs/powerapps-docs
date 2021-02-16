@@ -75,7 +75,7 @@ The function DateDiff only returns a whole number of the units being subtracted,
 | --- | --- | --- |
 | **DateDiff( TimeValue("09:45:00"), TimeValue("10:15:36"), Hours )** | The minutes/seconds are ignored, the difference is based on the time up to the hour. | 1 |
 | **DateDiff( TimeValue("09:45:00"), TimeValue("10:15:36"), Minutes )/60** | The minutes are used in the difference, and the result is divided by 60 to have the difference in hours. | 0.5 |
-| **DateDiff( TimeValue("09:15:00"), TimeValue("10:15:36"), Seconds )/3600** | The minutes and seconds are used in the difference; the result is divided by 3600 to have the difference in hours. | 0.51 |
+| **DateDiff( TimeValue("09:45:00"), TimeValue("10:15:36"), Seconds )/3600** | The minutes and seconds are used in the difference; the result is divided by 3600 to have the difference in hours. | 0.51 |
 
 ### Converting to UTC
 To convert to UTC (Coordinated Universal Time), add the **TimeZoneOffset** for the given time.  
@@ -99,3 +99,6 @@ Note the negative sign before **TimeZoneOffset** to subtract the offset rather t
 
 To see the result, use the **Text** function with the format *dd-mm-yyyy hh:mm*, which will result in **15-07-2013 13:02** if you're in Pacific Daylight Time.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

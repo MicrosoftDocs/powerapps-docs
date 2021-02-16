@@ -75,3 +75,6 @@ You should use the Power Apps portal to create and edit 1:N (one-to-many) or N:1
 [Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

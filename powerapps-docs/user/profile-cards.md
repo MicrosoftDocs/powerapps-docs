@@ -58,3 +58,6 @@ The **Start chat** and the **Send Email** options on the profile card will open 
 
 
   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

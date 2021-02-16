@@ -28,3 +28,6 @@ Use this event with other Lookup control methods to change the results displayed
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

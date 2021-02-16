@@ -65,3 +65,5 @@ The following sample code shows how to get the main form descriptor for a specif
 ## Related topics
 
 [Xrm.Utility](../xrm-utility.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

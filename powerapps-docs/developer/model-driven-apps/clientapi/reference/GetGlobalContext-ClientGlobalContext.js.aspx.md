@@ -68,3 +68,6 @@ The **ClientGlobalContext.js.aspx** page will include some global event handlers
 
 [Web resources for model-driven apps](../../web-resources.md)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

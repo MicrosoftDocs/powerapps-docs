@@ -21,6 +21,9 @@ Power BI is a suite of business analytics tools to analyze data and share insigh
 
 This topic shows you how to use the Power BI connection in an app, and lists the available functions.
 
+> [!NOTE]
+> The Power BI connection is not [delegable](../delegation-overview.md).
+
 ## Prerequisites
 * [Sign up](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 * Add the Power BI [connection](https://powerapps.microsoft.com/tutorials/add-manage-connections/)
@@ -95,3 +98,6 @@ Check the status of an alert.
 See all the [available connections](../connections-list.md).  
 Learn how to [add connections](../add-manage-connections.md) to your apps.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

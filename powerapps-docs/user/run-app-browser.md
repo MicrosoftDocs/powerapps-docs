@@ -67,3 +67,6 @@ In this topic, you learned how to run a canvas or model-driven app in a web brow
 - run a model-driven apps or canvas apps on a mobile device, see [Run model-driven apps and canvas apps on Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile)
 - use a model-driven app, see [Use model-driven apps](use-model-driven-apps.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

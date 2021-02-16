@@ -186,3 +186,6 @@ serial numbers and crew payroll numbers. On some days volunteers were handing
 out as many as 250 iPads per day.
 
 ![Screenshot of Crew iPad Asset Management app](media/virgin-atlantic-crew-ipad-app.png "Screenshot of Crew iPad Asset Management app")
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

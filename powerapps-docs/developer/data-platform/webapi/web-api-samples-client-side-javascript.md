@@ -153,3 +153,6 @@ This topic provides common understanding about Web API samples using client-side
 [Web API Samples](web-api-samples.md)<br />
 [Web API Samples (C#)](web-api-samples-csharp.md)   
  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

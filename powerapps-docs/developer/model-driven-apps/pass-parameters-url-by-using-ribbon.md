@@ -78,3 +78,6 @@ https://myserver/mypage.aspx?orgname=AdventureWorksCycle&userlcid=1033&orglcid=1
  [Sample: Export Ribbon definitions](sample-export-ribbon-definitions.md)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

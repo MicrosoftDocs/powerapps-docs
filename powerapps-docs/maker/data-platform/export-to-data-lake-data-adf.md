@@ -193,3 +193,6 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 ### See also
 
 [Analyze Dataverse data in Azure Data Lake Storage Gen2 with Power BI](export-to-data-lake-data-powerbi.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

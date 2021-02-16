@@ -154,3 +154,6 @@ You should now be able to step through your code and debug your workflow activit
 
 [Debug Plug-ins](../debug-plug-in.md)<br />
 [Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

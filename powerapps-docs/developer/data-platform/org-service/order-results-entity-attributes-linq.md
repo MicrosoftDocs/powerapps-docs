@@ -73,3 +73,6 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ### See also  
  [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
  [Page large result sets with LINQ](page-large-result-sets-linq.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

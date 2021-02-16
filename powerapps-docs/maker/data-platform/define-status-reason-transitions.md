@@ -87,3 +87,6 @@ The screenshot below provides an example that meets the following requirements:
 [Table metadata > Table states](/powerapps/developer/data-platform/table-metadata#table-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

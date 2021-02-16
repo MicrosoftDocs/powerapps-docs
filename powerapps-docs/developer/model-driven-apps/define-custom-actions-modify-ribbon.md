@@ -80,3 +80,6 @@ The `HideCustomAction` element cannot be removed, once added, except by creating
 [Pass data from a page as a parameter to Ribbon actions](/dynamics365/customerengagement/on-premises/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions
 )<br/> 
 [Define scaling for Ribbon elements](define-scaling-ribbon-elements.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

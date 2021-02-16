@@ -107,3 +107,6 @@ The Organization Service API message GetUserIdByExternalId is not supported in t
 [Discovery Services](/powerapps/developer/data-platform/discovery-service)
 
 [Use the Dataverse Web API](/powerapps/developer/data-platform/webapi/discover-url-organization-web-api)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

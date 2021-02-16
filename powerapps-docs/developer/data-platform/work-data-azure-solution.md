@@ -31,3 +31,6 @@ An internal plug-in named `ServiceBusPlugin` is provided with Dataverse. The plu
 [Writing a Plug-in](write-plug-in.md)<br/>
 [Event execution pipeline](event-framework.md#event-execution-pipeline)<br/> 
 [ServiceEndPoint Entity](reference/entities/serviceendpoint.md)<br/>
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -589,3 +589,6 @@ This topic contains sample charts along with the respective data description and
  [View data with visualizations (charts)](view-data-with-visualizations-charts.md)   
  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

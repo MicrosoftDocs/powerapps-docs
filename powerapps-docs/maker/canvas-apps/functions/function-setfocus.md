@@ -149,3 +149,6 @@ To create this example:
 1. Add a [**Button** control](../controls/control-button.md).
 1. Set the **OnSelect** property of this control to the formula `Navigate( Screen1 )`.
 1. Preview the app from this screen.  Press the button.  The **OnVisible** formula will be evaluated and the **Name** field will automatically be in focus.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -96,3 +96,5 @@ An array of strings with values that have changed since the last time it was pas
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

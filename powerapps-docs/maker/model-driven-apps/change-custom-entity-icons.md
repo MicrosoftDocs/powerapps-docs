@@ -78,3 +78,6 @@ You must use solution explorer to set table icons.
 ## Next steps  
 [Create a table](../data-platform/create-edit-entities.md)<br />
 [Edit a table](../data-platform/edit-entities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

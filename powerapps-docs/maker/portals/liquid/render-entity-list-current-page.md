@@ -242,3 +242,6 @@ Render the Entity List associated with the current page as a paginated sortable 
 [Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

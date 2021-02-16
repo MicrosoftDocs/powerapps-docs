@@ -33,3 +33,6 @@ Postman offers many other capabilities beyond those covered in this content. Mor
 
 [Set up a Postman environment](setup-postman-environment.md)<br>
 [Use Postman to perform operations with the Web API](use-postman-perform-operations.md)<br>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

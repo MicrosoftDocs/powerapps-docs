@@ -97,7 +97,7 @@ This example shows an inner join between EntityMap and AttributeMap where the En
 > [!IMPORTANT]
 > A FetchXML query has a limit of a maximum of 10 allowed link entities.
 >
-> The In operator of a FetchXML query is limited to 2000 values.
+> The `in` operator of a FetchXML query is limited to 2000 values.
 
 ## Execute the FetchXML query
 
@@ -144,3 +144,6 @@ foreach (var c in result.Entities)
  method, the return value is an <xref:Microsoft.Xrm.Sdk.EntityCollection> that contains the results of the query. You can then iterate through the entity collection. The previous example uses the `foreach` loop to iterate through the result collection of the FetchXML query.  
   
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

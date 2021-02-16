@@ -248,3 +248,6 @@ Do not use Web API (OData) requests within a plug-in to the same organization as
 In addition to database transactions, it is important to appreciate the impact of multiple concurrent data operations can have on the system. More information: [Scalable Customization Design: Concurrency issues](concurrency-issues.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

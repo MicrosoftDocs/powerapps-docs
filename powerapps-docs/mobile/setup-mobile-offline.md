@@ -26,3 +26,6 @@ To enable users to use Power Apps mobile in offline mode, you need to configure 
 > [!IMPORTANT]
 > - The [Configure mobile offline synchronization](https://docs.microsoft.com/dynamics365/mobile-app/preview-setup-mobile-offline) topic covers how to set up mobile offline synchronization for both the Power Apps mobile app and the Dynamics 365 phones and tablet app. The set up process is the same for both apps. 
 > - For more information on how to set up mobile offline for canvas apps, see [Develop offline-capable canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/offline-apps).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

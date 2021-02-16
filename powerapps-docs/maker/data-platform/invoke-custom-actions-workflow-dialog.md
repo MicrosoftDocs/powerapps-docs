@@ -74,3 +74,6 @@ You can set the action’s input properties by choosing **Set Properties**. We a
 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

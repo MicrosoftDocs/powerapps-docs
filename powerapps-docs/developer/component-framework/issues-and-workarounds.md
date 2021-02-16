@@ -135,11 +135,14 @@ Use the dataset column name (component can get the dataset column name by search
    lat = dataSet.records[currentRecordId].getValue("Address_x0020_1_x003a__x0020_Latitude")//based on the dataset column name
    ```
 
-## Power Apps component framework Datasets SharePoint issue
+<!--## Power Apps component framework Datasets SharePoint issue
 
 Power Apps component framework dataset component currently does not properly show the records from SharePoint. While the network request will succeed with the correct data records returned, the deserialization fails and an empty dataset is returned.
 
 **Workaround**
 
-No workaround as of now. We are working on pushing a fix to our deployment trains.
+No workaround as of now. We are working on pushing a fix to our deployment trains.-->
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

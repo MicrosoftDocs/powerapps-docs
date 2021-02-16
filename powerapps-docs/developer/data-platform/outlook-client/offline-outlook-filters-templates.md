@@ -61,3 +61,6 @@ You can reset the filters for a user to the default by using the <xref:Microsoft
 [Sample: Retrieve Outlook Filters](sample-create-retrieve-outlook-filters.md)<br /> 
 <xref:Microsoft.Crm.Sdk.Messages.InstantiateFiltersRequest><br />
 <xref:Microsoft.Crm.Sdk.Messages.ResetUserFiltersRequest>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -127,7 +127,7 @@ To add an email activity to a row, you must first save the row you are adding th
 To add an appointment activity to a row, you must first save the row you are adding the appointment activity to.  
 
 > [!NOTE]
-> Recurring appointments are not supported on the Dynamics 365 App for Outlook, Dynamics 365 for phones app, and when you run the model-driven apps web client on your mobile phone web browser.
+> Recurring appointments are not supported on the [Dynamics 365 App for Outlook](https://docs.microsoft.com/dynamics365/outlook-app/overview), [Dynamics 365 for phones app](https://docs.microsoft.com/dynamics365/mobile-app/user-guide-mobile-app), and when you run the model-driven apps web client on your mobile phone web browser.
   
 1. Open the row that you want to add the activity to. 
   
@@ -238,3 +238,6 @@ You can see the activities in the following views:
 
 [FAQs about Activities and the Timeline Wall](faq-for-timeline-and-activity.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

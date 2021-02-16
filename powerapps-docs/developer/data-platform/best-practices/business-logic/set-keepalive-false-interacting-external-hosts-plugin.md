@@ -295,3 +295,6 @@ This behavior is transparent to end users and traditional logging as the executi
 [Load Balancing (WCF)](https://msdn.microsoft.com/library/ms730128.aspx)<br />
 [HttpTransportBindingElement.KeepAliveEnabled Property](https://msdn.microsoft.com/library/system.servicemodel.channels.httptransportbindingelement.keepaliveenabled.aspx)<br />
 [HttpWebRequest.KeepAlive Property](https://msdn.microsoft.com/library/system.net.httpwebrequest.keepalive.aspx)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

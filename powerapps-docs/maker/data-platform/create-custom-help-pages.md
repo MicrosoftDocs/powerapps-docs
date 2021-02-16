@@ -71,7 +71,7 @@ To author custom help panes, you need the following:
 ## Context-sensitive custom help
 Each help pane is unique for these contexts: 
 - Application 
-- table
+- Table
 - Form 
 - Language   
 
@@ -363,3 +363,6 @@ A balloon is an interactive element that can be used to help the user perform an
 - `details`: Specifies the content to show inside the balloon.
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

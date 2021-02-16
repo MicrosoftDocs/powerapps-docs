@@ -53,3 +53,6 @@ Depending on how you want to calculate the rating for the table, you can create 
   
 ### See also  
  [Submit feedback or ratings for Dynamics 365 rows](/dynamics365/customer-engagement/basics/submit-feedback-ratings)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

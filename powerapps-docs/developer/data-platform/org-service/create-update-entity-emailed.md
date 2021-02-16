@@ -113,3 +113,6 @@ Console.WriteLine("A second email attribute has been added to the emailable enti
 
 [Create entities using the Organization Service](entity-operations-create.md)  
 [Update and Delete entities using the Organization Service](entity-operations-update-delete.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

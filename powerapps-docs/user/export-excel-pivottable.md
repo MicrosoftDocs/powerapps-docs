@@ -69,3 +69,6 @@ The option to export data to an Excel PivotTable isn’t available in all row ty
 - If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite columns (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these columns in Excel, but when you import the data back into the app, these columns won’t be updated. If you want to update these columns, such as a contact’s name, it’s recommended that you use that view to export your data, update it in Excel, and import it back to the app for changes.  
   
  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

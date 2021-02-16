@@ -225,3 +225,6 @@ The following table explains how the behavior of standard [AttributeMetadata pro
 [Custom virtual entity data providers](custom-ve-data-providers.md)<br />
 [Sample: Generic virtual entity data provider plug-in](sample-generic-ve-plugin.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

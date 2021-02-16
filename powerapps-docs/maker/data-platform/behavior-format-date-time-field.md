@@ -117,3 +117,6 @@ The following date and time related query operators are invalid for the **Date O
 [Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-data-platform/)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -255,3 +255,6 @@ Sample collection is created that you can use in the following example.
     ![Deleted record](media/function-remove-removeif/deleted-record.png)
 
 1. Close the app preview.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

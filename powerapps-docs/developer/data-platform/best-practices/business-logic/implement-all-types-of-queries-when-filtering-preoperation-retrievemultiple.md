@@ -88,3 +88,5 @@ The legacy web client for model-driven apps is being replaced by Unified Interfa
 [Build queries with QueryExpression](../../org-service/build-queries-with-queryexpression.md)<br />
 [Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages](limit-registration-plugins-retrieve-retrievemultiple.md)<br />
 [Unified Interface Community](https://community.dynamics.com/365/unified-interface/)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -32,3 +32,6 @@ The Power BI cloud service works with Microsoft Dataverse apps to provide a self
 
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -82,7 +82,7 @@ Leave the other columns as-is, and select **SAVE & CLOSE**.
 
 ## Open solution explorer
 
-Part of the name of any custom table you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
+Part of the name of any custom table you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
@@ -173,3 +173,6 @@ On the left navigation pane of the **Entity: Ticket** page, select **Columns**. 
 
 [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)<br />
 [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -127,3 +127,6 @@ For some tables, such as account and user, the visualizations are provided out-o
 ## See also  
  [Video: Hierarchical Security Modelling](https://www.youtube.com/watch?v=kx5So32DrCo&index=10&list=PLC3591A8FE4ADBE07)   
  [Video: Hierarchy Visualization](https://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

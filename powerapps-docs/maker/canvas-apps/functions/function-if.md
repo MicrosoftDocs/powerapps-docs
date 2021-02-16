@@ -86,3 +86,6 @@ In these examples, a **[Text input](../controls/control-text-input.md)** control
    
     The **Label** control shows the value that you typed because it's more than 40.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
