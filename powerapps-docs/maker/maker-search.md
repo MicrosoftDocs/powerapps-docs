@@ -28,8 +28,22 @@ Type in the **Search** box and to see suggestion for apps, templates, and docume
 
 :::image type="content" source="media/maker-search-demo.gif" alt-text="Unified search on make.powerapps.com":::
 
-## Using search
+## Use search
 
 Search first displays only items from your environment, which are apps and templates, and articles and learning on docs.microsoft.com. Selecting **Show more results** expands your search to additional web content that includes community subject matter, videos, and blog posts.
 
+
+## Manage search providers
+
+The [Microsoft.PowerApps.Administration.PowerShell](/powershell/module/microsoft.powerapps.administration.powershell/) module includes the cmdlets that members of either the Global admins, Azure Active Directory Global admins, or Dynamics 365 admin security groups can use to modify the search providers.
+
+To return the current settings including which search providers are enabled or disabled, run this cmdlet:
+`Get-TenantSettings`
+
+To disable all search providers, run this cmdlet:
+
+```powershell
+$requestBody = @{disableDocsSearch = $true}
+Set-TenantSettings -RequestBody $requestBody
+```
 
