@@ -50,7 +50,7 @@ To return the current settings including which search providers are enabled or d
 
 ### Disable a search provider
 
-You can disable a search provider by specifying the search provider name when you run the Set-TenantSettings cmdlet.
+You can disable or enable a search provider by specifying the search provider name when you run the Set-TenantSettings cmdlet.
 
 For example, to disable the Microsoft Learn and Documentation search provider, run this cmdlet:
 
