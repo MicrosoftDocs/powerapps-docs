@@ -70,13 +70,13 @@ Your app is now connected to the Cognitive Services resource of Text Analytics A
 
 ## Design the app
 
-In this section, you'll design the app controls, and the formulas required to work with the Text Analytics API. After you've completed the app design, this is how it'll look:
+In this section, you'll design the demo app with controls required to work with the Text Analytics API. After you've completed the app design, this is how it'll look:
 
 ![Demo app](./media/cognitive-services-api/demo-app.png "Demo app")
 
 > [!NOTE]
+> - The app in this tutorial demonstrates how to get started using the Text Analytics API with Power Apps. If you want to design the app from scratch, or to meet specific business requirements, you can customize this demo app, or directly add, configure [controls](add-configure-controls.md) and use the [Text Analytics API actions](/connectors/cognitiveservicestextanalytics/#actions) instead.
 > - Values for component properties such as alignment, size, color, position (X, Y) in this tutorial as suggested. Actual values may vary depending on the app layout you select. You can also change these suggested values to design the app as per your requirements.
-> - To learn more about how to add controls and formulas to the controls in detail, see [Add and configure controls](add-configure-controls.md).
 
 1. Select ![Insert](./media/cognitive-services-api/insert-icon.png "Insert") from the left pane.
 
