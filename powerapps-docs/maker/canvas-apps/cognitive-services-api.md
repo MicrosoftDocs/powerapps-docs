@@ -31,7 +31,7 @@ We'll focus on "language understanding" for this article, working with the Text 
 
 Before you begin building a canvas app using the Text Analytics API, you must prepare the Text Analytics resource. For more details, go to [Text Analytics API prerequisites](https://docs.microsoft.com/azure/cognitive-services/text-analytics/quickstarts/client-libraries-rest-api#prerequisites).
 
-## Step 1. Create the app and add a connection
+## Create the app and add a connection
 
 > [!TIP]
 > In this tutorial, you'll learn about creating a demo app with a few properties and values from the output using the Text Analytics API operations. You can use similar method to create your own app to show more or all such properties and values for the Text Analytics API operations.
@@ -68,11 +68,11 @@ Create a blank phone app and add a connection with the **Text Analytics** connec
 
 Your app is now connected to the Cognitive Services resource of Text Analytics API type in Azure.
 
-## Step 2. Design the app
+## Design the app
 
 In this section, you'll design the app controls, and the formulas required to work with the Text Analytics API. After you've completed the app design, this is how it'll look:
 
-![Finished app](./media/cognitive-services-api/finished-app-no-data.png)
+![Demo app](./media/cognitive-services-api/demo-app.png "Demo app")
 
 > [!NOTE]
 > - Values for component properties such as alignment, size, color, position (X, Y) in this tutorial as suggested. Actual values may vary depending on the app layout you select. You can also change these suggested values to design the app as per your requirements.
@@ -357,7 +357,9 @@ Here's how the app should look like after following the above steps.
 
 ![App design](./media/cognitive-services-api/app-design.png "App design")
 
-## Step 3. Add logic
+## Add logic to the app
+
+Now that you've created a basic structure of the app with the expected design, let's add logic to the app so we can use the Cognitive Services in Power Apps.
 
 1. Copy and paste the following formula as the **OnSelect** property value for the button **analyzeText**.
 
