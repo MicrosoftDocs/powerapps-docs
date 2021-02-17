@@ -40,10 +40,28 @@ The Microsoft.PowerApps.Administration.PowerShell module includes the cmdlets th
 To return the current settings including which search providers are enabled or disabled, run this cmdlet:
 `Get-TenantSettings`
 
-To disable all search providers, run this cmdlet:
+### Disable a search provider
+
+You can disable a search provider by specifying the search provider name when you run the Set-TenantSettings cmdlet.
+
+|Search provider name |Description  |
+|---------|---------|
+|`disableDocsSearch`  |  When this provider is turned off, users in the organization will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.   |
+|disableCommunitySearch     | When this provider is turned off, users in the organization will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
+| disableBingVideoSearch    | When this provider is turned off, users in the organization will see a message that Videos search categories have been turned off by the administrator in the search results page.   |
+
+
+For example, to disable the Microsoft Docs search provider, run this cmdlet:
 
 ```powershell
 $requestBody = @{disableDocsSearch = $true}
+Set-TenantSettings -RequestBody $requestBody
+```
+
+To enable the Learn and Docs search provider, run this cmdlet:
+
+```powershell
+$requestBody = @{disableDocsSearch = $false}
 Set-TenantSettings -RequestBody $requestBody
 ```
 
