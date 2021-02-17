@@ -27,7 +27,7 @@ This article shows you how to build a basic canvas app that uses the [Azure Cogn
 
 ## Introduction to Azure Cognitive Services
 
-[Azure Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/) are a set of APIs, SDKs, and services available to make your applications more intelligent, engaging, and discoverable. These services enable you to easily add intelligent features – such as emotion and video detection; facial, speech and vision recognition; and speech and language understanding – into your applications.
+[Azure Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/) is a set of APIs, SDKs, and services available to make your applications more intelligent, engaging, and discoverable. These services enable you to easily add intelligent features – such as emotion and video detection; facial, speech, and vision recognition; and speech and language understanding – into your applications.
 
 We'll focus on "language understanding" for this article, working with the Text Analytics API. This API enables you to detect sentiment, key phrases, topics, and language from your text. Let's get started by trying out a demo of the API.
 
@@ -74,7 +74,7 @@ Your app is now connected to the Cognitive Services resource of Text Analytics A
 
 ## Design the app
 
-In this section, you'll design the demo app with controls required to work with the Text Analytics API. After you've completed the app design, this is how it'll look:
+In this section, you'll design the demo app with controls required to work with the Text Analytics API. After you've completed the app design, this is how it will look:
 
 ![Demo app](./media/cognitive-services-api/demo-app.png "Demo app")
 
@@ -415,7 +415,7 @@ Now that you've created a basic structure of the app with the expected design, l
     "Detected language: " & First(languageCollect.detectedLanguage).detectedLanguage.name
     ```
 
-    In this step, the formula uses [First](functions/function-first-last.md) function to return and display the language identified by Text Analytis API.
+    In this step, the formula uses [First](functions/function-first-last.md) function to return and display the language identified by Text Analytics API.
 
 1. Select data source for **gallerySS** as **sentimentCollect**.
 
@@ -435,14 +435,14 @@ Now that you've created a basic structure of the app with the expected design, l
     Concat(ThisItem.entities.url,url,", ")
     ```
 
-    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma separated string with URLs for the listed entities identified by Text Analytics API.
+    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma-separated string with URLs for the listed entities identified by Text Analytics API.
 
 1. Select the first row inside the **galleryLE** gallery. And then, copy and paste following formula for the **Text** property.
 
     ```powerapps-dot
     Concat(ThisItem.entities.name,name,", ")
     ```
-    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma separated string with names of the listed entities identified by Text Analytics API.
+    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma-separated string with names of the listed entities identified by Text Analytics API.
 
 1. Select data source for **galleryKP** as **phrasesCollect**.
 
@@ -452,7 +452,7 @@ Now that you've created a basic structure of the app with the expected design, l
     Concat(ThisItem.keyPhrases.Value, Value, ", ")
     ```
 
-    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma separated string with key phrases identified by Text Analytics API.
+    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma-separated string with key phrases identified by Text Analytics API.
 
 1. Select data source for **galleryNER** as **nerCollect**.
 
@@ -462,7 +462,7 @@ Now that you've created a basic structure of the app with the expected design, l
     Concat(ThisItem.entities.text,text,", ")
     ```
 
-    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma separated string with the entities identified by Text Analytics API.
+    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma-separated string with the entities identified by Text Analytics API.
 
 1. [Save and publish](save-publish-app.md) the app.
 
