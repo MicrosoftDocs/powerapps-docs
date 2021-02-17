@@ -39,7 +39,7 @@ Web roles for the Partner Relationship Management (PRM) portal grant specific ac
 ## Create a partner account on a PRM portal
 You can use partner accounts to keep track of your various partners. We recommend creating a separate account for each partner so that you can manage each partner organization separately. To create a partner account, 
 
-1. Go to **Sales &gt; Accounts** (within Common Data Service platform - Account Form).
+1. Go to **Sales &gt; Accounts** (within Microsoft Dataverse - Account Form).
 2. Choose **New** and fill in your information.
 3. In the **Partner Information** tab, use the **Classification** field and select the Partner.
 4. Select **Save**.

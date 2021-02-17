@@ -16,7 +16,7 @@ Learn how to manage Forum Ideas, Idea Comments, and Idea Votes.
 
 ## Manage idea forums
 
-Users can manage Idea Forum records under the Community tab, provided the portal customizations have been imported into your Common Data Service environment.
+Users can manage Idea Forum records under the Community tab, provided the portal customizations have been imported into your Microsoft Dataverse environment.
 
 > [!NOTE]
 > - The way in which many of the content/display-oriented attributes are rendered is controlled by the views created by the portal developer.
@@ -123,7 +123,7 @@ While creating a new idea, there might be a scenario where a similar idea alread
 
 ## Manage idea comments
 
-For users, provided the portal customizations have been imported into your Common Data Service environment, Idea Comment records can be managed under the Community tab.
+For users, provided the portal customizations have been imported into your Microsoft Dataverse environment, Idea Comment records can be managed under the Community tab.
 
 ## Idea comment attributes and relationships
 
@@ -144,7 +144,7 @@ The table below explains the standard attributes and relationships of the Idea C
 
 ## Manage idea votes
 
-For users, provided the portal customizations have been imported into your Common Data Service environment, Idea Vote records can be managed under the Community tab.
+For users, provided the portal customizations have been imported into your Microsoft Dataverse environment, Idea Vote records can be managed under the Community tab.
 
 ## Idea vote attributes and relationships
 

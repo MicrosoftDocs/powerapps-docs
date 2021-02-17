@@ -16,7 +16,7 @@ Learn how to manage blog comments and blog posts both within Portalsand from the
 
 ## Manage blogs in Dynamics 365 Portals
 
-Users can manage Blog records under the **Portals** tab after your portal customizations have been imported into your Common Data Service environment.
+Users can manage Blog records under the **Portals** tab after your portal customizations have been imported into your Microsoft Dataverse environment.
 
 ## Manage blogs from the portal content editor
 
