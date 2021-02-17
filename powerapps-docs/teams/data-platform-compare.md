@@ -79,8 +79,8 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 |Admin roles     |  System Administrator and System Customizer       |  System Administrator and System Customizer and additional service admin roles. More information: [Use service admin roles to manage your tenant](/power-platform/admin/use-service-admin-role-manage-tenant)      |
 |User roles    | Team owners, members, and guests        |  Several standard security roles and custom roles can also be created. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)       |
 |Activity logging     |  No       |  Yes       |
-|Business units     |   One      |  Unlimited      |
 |Auditing     |  No       |  Yes       |
+|Business units     |   One      |  Unlimited      |
 |Customer-managed environment encryption key     |   No      |  Yes       |
 |Field-level security     |   No      |  Yes       |
 |Hierarchical security     |  No       |  Yes       |
