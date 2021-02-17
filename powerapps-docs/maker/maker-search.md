@@ -30,7 +30,7 @@ Type in the **Search** box and to see suggestion for apps, templates, and docume
 
 ## Use search
 
-Search first displays only items from your environment, which are apps and templates, and articles and learning on docs.microsoft.com. Selecting **Show more results** expands your search to additional web content that includes community subject matter, videos, and blog posts.
+Search first displays only items from your environment, which are apps and templates, and articles and learning on docs.microsoft.com. Selecting **Show more results** expands your search to additional web content that includes community subject matter, blog posts, and videos.
 
 
 ## Manage search providers
