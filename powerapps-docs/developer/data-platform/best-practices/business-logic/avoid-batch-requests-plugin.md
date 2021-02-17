@@ -117,3 +117,6 @@ On the server side, the operations included in a batch request are executed sequ
 [Run-time limitations](../../org-service/execute-multiple-requests.md#run-time-limitations)<br/>
 [Execute multiple requests using the Organization service](../../org-service/execute-multiple-requests.md)<br/>
 [Execute messages in a single database transaction](../../org-service/use-executetransaction.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

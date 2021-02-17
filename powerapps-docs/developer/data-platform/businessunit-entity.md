@@ -33,3 +33,6 @@ An organization in Microsoft Dataverse, such as a holding company or a corporati
 
 [BusinessUnit Entity Reference](reference/entities/businessunit.md)
 [Security entities](security-model.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

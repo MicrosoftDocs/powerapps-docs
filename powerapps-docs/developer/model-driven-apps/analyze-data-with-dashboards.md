@@ -54,3 +54,6 @@ A user-owned dashboard is represented by the `UserForm` entity, can be assigned 
  [Sample: Assign a User-Owned Dashboard to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother)  
  [Visualization data description schema](visualization-data-description-schema.md)     
  [Customize visualizations and dashboards](customize-visualizations-dashboards.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

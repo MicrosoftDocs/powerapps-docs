@@ -55,3 +55,6 @@ In the chart designer, adding a order by on certain calculated columns are not s
 
 ## Next steps  
 [Create or edit dashboards](create-edit-dashboards.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

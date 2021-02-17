@@ -127,3 +127,6 @@ To switch back to the old quick-find search experience that uses a table's quick
 
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

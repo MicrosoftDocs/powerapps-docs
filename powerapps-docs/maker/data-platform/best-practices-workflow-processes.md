@@ -63,3 +63,6 @@ When you edit workflows you should use the Notes tab and type what you did and w
 
 [Configure real-time workflow processes](configure-workflow-steps.md)   
 [Monitor and manage real-time workflow processes](monitor-manage-processes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

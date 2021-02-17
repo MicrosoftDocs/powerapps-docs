@@ -100,3 +100,6 @@ Knowledge articles will only be displayed if they have been translated into the 
 Web link sets are the navigation links at the top of the portal. By navigating to **Portals** > **Content** > **Web Link Sets** you can control how this content is translated. When a language is active for the portal, a new set of links are created for the newly activated language.
 
 ![Active web link for new language](../media/active-weblink-new-language.png "Active web link for new language")
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

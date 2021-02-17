@@ -218,3 +218,6 @@ Azure AD requires the following values to register your application:
  [Use Single-Tenant Server-to-server authentication](use-single-tenant-server-server-authentication.md)   
  [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)   
  [Connect to Dynamics 365](/dynamics365/customer-engagement/developer/connect-customer-engagement)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

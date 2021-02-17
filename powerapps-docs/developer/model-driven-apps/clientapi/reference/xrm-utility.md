@@ -60,3 +60,6 @@ The following table lists the new methods you should use instead of the deprecat
 
 [Deprecated client APIs](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

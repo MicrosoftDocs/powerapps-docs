@@ -145,3 +145,6 @@ You can create new or edit existing SharePoint locations from your app in Datave
 
 *Is there a way to add the Files tab to other tables, or remove it?*
 - Yes. To add or remove the **Files** tab, follow the steps in this article: [Add the SharePoint documents tab to the main form for a table](../maker/model-driven-apps/add-documents-tab-entity-main-form.md)  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

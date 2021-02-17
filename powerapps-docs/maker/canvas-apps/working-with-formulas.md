@@ -151,3 +151,5 @@ Initially, this view shows the most important properties.  To reveal all the pro
 As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in Power Apps.
 
 ![syntax highlighting](./media/working-with-formulas/syntax-highlighting.png)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

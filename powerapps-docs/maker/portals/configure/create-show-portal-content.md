@@ -33,3 +33,6 @@ To create a webpage by using entity forms and entity lists is a complex task. **
 ### See also
 
 [Configure portal using Portal Management app](configure-portal.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -166,3 +166,6 @@ When you build an app from Dataverse, you don't need to create a connection from
 
 - [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
 - [Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1424,3 +1424,5 @@ See systemuser Entity [lk_publisherbase_createdonbehalfby](systemuser.md#BKMK_lk
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.publisher?text=publisher EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

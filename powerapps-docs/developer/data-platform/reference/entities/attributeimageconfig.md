@@ -365,3 +365,5 @@ Same as principalobjectattributeaccess entity [attributeimageconfig_PrincipalObj
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.attributeimageconfig?text=attributeimageconfig EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -76,3 +76,6 @@ A virtual table is a custom table in Dataverse that has columns containing data 
 
 ### See also
 [Create or edit tables](create-edit-entities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -108,3 +108,6 @@ Some additional gallery resources include [Show a list of items](../add-gallery.
 [googledriveicon]: ./media/cloud-storage-blob-connections/googledriveicon.png
 [onedriveicon]: ./media/cloud-storage-blob-connections/onedriveicon.png
 [onedriveforbusinessicon]: ./media/cloud-storage-blob-connections/onedriveforbusinessicon.png
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

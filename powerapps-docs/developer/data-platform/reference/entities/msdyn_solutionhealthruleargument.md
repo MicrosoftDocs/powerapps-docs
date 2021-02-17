@@ -893,3 +893,5 @@ See msdyn_solutionhealthrule Entity [msdyn_msdyn_solutionhealthrule_msdyn_soluti
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_solutionhealthruleargument?text=msdyn_solutionhealthruleargument EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

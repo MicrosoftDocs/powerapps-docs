@@ -973,3 +973,5 @@ See package Entity [package_solution](package.md#BKMK_package_solution) Many-To-
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.solution?text=solution EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

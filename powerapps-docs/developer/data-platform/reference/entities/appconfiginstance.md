@@ -616,3 +616,5 @@ See appconfigmaster Entity [appconfigmaster_appconfiginstance](appconfigmaster.m
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appconfiginstance?text=appconfiginstance EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

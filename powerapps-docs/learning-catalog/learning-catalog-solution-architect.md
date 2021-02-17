@@ -22,3 +22,6 @@ The following catalog is organized from core knowledge to specific domains, and 
 |----------|------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|--------|---------------------------------------|
 | [Microsoft Power Apps + Dynamics 365 Solution Architect](https://docs.microsoft.com/learn/certifications/exams/mb-600)|	This exam measures your ability to accomplish the following technical tasks: perform solution envisioning and requirement analysis; architect a solution; and implement the solution. |	Exam, cost varies by region |
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

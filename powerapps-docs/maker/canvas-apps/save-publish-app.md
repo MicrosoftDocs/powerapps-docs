@@ -62,3 +62,6 @@ To publish the most recent version, highlight the version and select ellipsis (.
 * Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](../../user/run-app-client.md).
 * [Rename an app](set-name-tile.md) from powerapps.com.
 * [Restore an app](restore-an-app.md) if you have multiple versions of an app.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

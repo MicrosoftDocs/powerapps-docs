@@ -236,3 +236,6 @@ Returns the difference in minutes between the local time and Coordinated Univers
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

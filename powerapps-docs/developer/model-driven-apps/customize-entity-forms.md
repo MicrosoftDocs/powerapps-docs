@@ -180,3 +180,6 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
  [SystemForm Entity](../data-platform/reference/entities/systemform.md)  
  [Form XML Schema](form-xml-schema.md)<br/>
  [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -43,3 +43,6 @@ optionset, multiselectoptionset
 
 [getText (Client API reference)](getText.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

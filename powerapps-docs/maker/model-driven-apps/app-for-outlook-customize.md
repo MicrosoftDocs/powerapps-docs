@@ -39,3 +39,6 @@ For detailed information on how to customize the App for Outlook, see [Customizi
 
 ### See also
  [Use Dynamics 365 App for Outlook](../../user/use-outlook-app.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

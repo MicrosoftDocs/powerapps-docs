@@ -47,3 +47,6 @@ globalContext.getClientUrl();
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

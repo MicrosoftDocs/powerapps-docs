@@ -45,3 +45,6 @@ When update requests are processed that include both state/status fields plus ot
 
 [Update and Delete entities using the Organization Service](org-service/entity-operations-update-delete.md)<br />
 [Event Framework](event-framework.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

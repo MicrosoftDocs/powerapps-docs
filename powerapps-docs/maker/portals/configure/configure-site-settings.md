@@ -103,3 +103,6 @@ For site settings related to various portal features, see:
 > Bing Maps integration is not supported in the German Sovereign Cloud. If you try to create the BinMap/Key or Adxstudio/ProductivityPack/BingMap/Key setting in this environment, an error message will be displayed.
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

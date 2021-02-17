@@ -88,3 +88,6 @@ The environmentvariabledefinition table is [user or team owned](https://docs.mic
 [Web API samples](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
 [Create Canvas app from scratch using Dataverse.](https://docs.microsoft.com/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
 [Create a flow with Dataverse](https://docs.microsoft.com/flow/connection-cds)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -111,3 +111,6 @@ Dataverse can also be used with server-side sync to synchronize with Exchange or
 ### See also
 
 [Create a table](create-table.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

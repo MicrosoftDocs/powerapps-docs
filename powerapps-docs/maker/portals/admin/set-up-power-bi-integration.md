@@ -215,3 +215,6 @@ This can happen due to multiple reasons such as:
 - [Add a Power BI report or dashboard to a webpage using liquid tag in portal](add-powerbi-report.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
 - [Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

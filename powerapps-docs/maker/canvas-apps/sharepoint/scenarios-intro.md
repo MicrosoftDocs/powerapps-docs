@@ -54,3 +54,6 @@ Some additional samples and step-by-step guides available for different SharePoi
 
 - [Formula reference](../formula-reference.md) for Power Apps
 - [Control reference](../reference-properties.md) for Power Apps
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

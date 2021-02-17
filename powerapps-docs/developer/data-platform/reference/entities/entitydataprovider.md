@@ -445,3 +445,5 @@ See organization Entity [organization_entitydataprovider](organization.md#BKMK_o
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.entitydataprovider?text=entitydataprovider EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

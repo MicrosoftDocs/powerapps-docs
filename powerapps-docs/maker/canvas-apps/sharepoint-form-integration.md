@@ -112,3 +112,6 @@ Now that you have a better understanding of the default generated form and the *
 - EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions - [form functions in Power Apps](functions/function-form.md)
 - [RequestHide function](functions/function-requesthide.md)
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

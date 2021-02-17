@@ -40,3 +40,6 @@ search.app:
 
 ## Related topics
 [xmlAttributeEncode](xmlAttributeEncode.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

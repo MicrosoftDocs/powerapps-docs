@@ -36,3 +36,5 @@ search.app:
 ## Related topics
 
 [formContext.ui.footerSection](../formContext-ui-footerSection.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

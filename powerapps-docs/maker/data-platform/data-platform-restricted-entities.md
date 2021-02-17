@@ -83,3 +83,6 @@ Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgeneratio
 ## Licensing
 For more information on Power Apps and Dynamics 365 licenses, see [Licensing overview](../../administrator/pricing-billing-skus.md) page.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

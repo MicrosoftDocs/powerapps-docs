@@ -410,3 +410,6 @@ Use the following steps to enable them in a model-driven app.
 ## Next steps
 
 In this tutorial you have created a simple plug-in and registered it. Complete [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md) to learn how to debug this plug-in.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

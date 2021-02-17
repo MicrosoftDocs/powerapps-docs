@@ -430,3 +430,6 @@ If you're using the mobile apps on a browser on your computer, select the defaul
 - To report an issue with the Hospital Emergency Response mobile app, visit <https://aka.ms/emergency-response-issues>.
 
 - For feedback about the Hospital Emergency Response mobile app, visit <https://aka.ms/emergency-response-feedback>.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

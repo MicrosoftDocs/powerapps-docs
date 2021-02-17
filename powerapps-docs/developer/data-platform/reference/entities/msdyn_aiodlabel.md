@@ -935,3 +935,5 @@ IntersectEntityName: msdyn_aiodlabel_msdyn_aiconfiguration<br />
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aiodlabel?text=msdyn_aiodlabel EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

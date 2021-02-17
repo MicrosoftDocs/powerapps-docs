@@ -31,3 +31,6 @@ For a quick start sample on how to authenticate and execute operations using Onl
 [Authenticate to use Online Management API](authentication.md)
 
 [Microsoft.Xrm.OnlineManagementAPI PowerShell Reference](/powershell/module/microsoft.xrm.onlinemanagementapi)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -96,3 +96,5 @@ Description: The `RetrieveMultipleResponse` returns a promise that contains an a
 [Web API](../webapi.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

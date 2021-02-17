@@ -1184,3 +1184,5 @@ See msdyn_solutionhealthruleset Entity [msdyn_msdyn_solutionhealthruleset_msdyn_
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_analysiscomponent?text=msdyn_analysiscomponent EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

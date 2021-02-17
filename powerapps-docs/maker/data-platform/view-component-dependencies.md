@@ -31,3 +31,5 @@ Solution components often depend on other solution components. You can’t delet
 
 ### See also
 [For developers: Detect solution dependencies](/power-platform/alm/solution-api#detect-solution-dependencies)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -61,3 +61,6 @@ Data Service schema and data initially and, thereafter, synchronizes on a contin
 ### See also
 
 [Work with any type of app](work-with-any-type-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

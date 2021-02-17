@@ -93,3 +93,6 @@ You can perform the following actions for a single entity:
  [Developer Tools for Dataverse](developer-tools.md)<br />
  [Customize Entity Metadata](customize-entity-metadata.md)<br />
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

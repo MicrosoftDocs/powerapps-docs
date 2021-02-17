@@ -35,3 +35,6 @@ search.app:
 ### Related topics
 
 [getContentType](getContentType.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

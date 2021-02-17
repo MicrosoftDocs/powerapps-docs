@@ -186,3 +186,6 @@ Learn how to structure your code for a better design.
 
 > [!div class="nextstepaction"]
 > [Enhanced quick start](enhanced-quick-start.md)<br/>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

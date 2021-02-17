@@ -43,3 +43,6 @@ Another way to hide a tab is to hide all the sections within it. If all the sect
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -368,3 +368,6 @@ For a complete list of other CORS settings, see [CORS protocol support](../add-w
 7. Set **Use custom page** to **Yes**.
 8. Set **Custom page URI** to the URL of the [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C Custom Page webpage created in **Step 3. Create a webpage** earlier in this article. For example, `https://mydomain.com/azure-ad-b2c-sign-in`.
 9. Select **OK**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

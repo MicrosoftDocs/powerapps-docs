@@ -60,3 +60,6 @@ In the **Tables** list, select **…** next to the table you want to delete, and
 ### See also
 
 [Work with table relationships](relationships-table.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
