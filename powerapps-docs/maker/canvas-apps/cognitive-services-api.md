@@ -361,6 +361,9 @@ Here's how the app should look like after following the above steps.
 
 Now that you've created a basic structure of the app with the expected design, let's add logic to the app so we can use the Cognitive Services in Power Apps.
 
+> [!NOTE]
+> In this tutorial, the demo app uses example formulas with a combination of different functions depending on the control being used. Different app designs or customizations can use different formulas and functions. You can  redesign the app and formulas for additional customization, or to meet your business requirements.
+
 1. Copy and paste the following formula as the **OnSelect** property value for the button **analyzeText**.
 
     ```powerapps-dot
@@ -397,11 +400,18 @@ Now that you've created a basic structure of the app with the expected design, l
     ); 
     ```
 
+    In this step, the formula uses the following functions.
+
+    - [ClearCollect](functions/function-clear-collect-clearcollect.md) - creates collections for each option (checkboxes) for use with Cognitive Services. There are two collections used. First for collecting the information from the text input (**tiTextToAnalyze**). And then, second collection to store the Text Analytics related API call results.
+    - [Cognitive Services Text Analytics API Actions](/connectors/cognitiveservicestextanalytics#actions) - used in the formula to store the analysis details in the local collections. Actions used: [Detect Language (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#detect-language-(v3.0)-(preview)), [Sentiment (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#sentiment-(v3.0)-(preview)), [Entity Linking (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#entity-linking-(v3.0)-(preview)), [Key Phrases (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#key-phrases-(v3.0)-(preview)), [Named Entity Recognition (V3.0) (Preview)](/connectors/cognitiveservicestextanalytics/#named-entity-recognition-(v3.0)-(preview)) 
+
 1. Copy and paste the following formula as the value of the **Text** property for the **dLanguage** label.
 
     ```powerapps-dot
     "Detected language: " & First(languageCollect.detectedLanguage).detectedLanguage.name
     ```
+
+    In this step, the formula uses [First](functions/function-first-last.md) function to return and display the language identified by Text Analytis API.
 
 1. Select data source for **gallerySS** as **sentimentCollect**.
 
@@ -411,6 +421,8 @@ Now that you've created a basic structure of the app with the expected design, l
     "Positive: " & ThisItem.confidenceScores.positive &" Neutral: " & ThisItem.confidenceScores.neutral & " Negative: " & ThisItem.confidenceScores.negative
     ```
 
+    In this step, the formula uses confidence scores analyzed by Text Analytics API to be displayed in the gallery.
+
 1. Select data source for **galleryLE** as **elCollect**.
 
 1. Select the second row inside the **galleryLE** gallery. And then, copy and paste following formula for the **Text** property.
@@ -419,11 +431,14 @@ Now that you've created a basic structure of the app with the expected design, l
     Concat(ThisItem.entities.url,url,", ")
     ```
 
+    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma separated string with URLs for the listed entities identified by Text Analytics API.
+
 1. Select the first row inside the **galleryLE** gallery. And then, copy and paste following formula for the **Text** property.
 
     ```powerapps-dot
     Concat(ThisItem.entities.name,name,", ")
     ```
+    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma separated string with names of the listed entities identified by Text Analytics API.
 
 1. Select data source for **galleryKP** as **phrasesCollect**.
 
@@ -433,6 +448,8 @@ Now that you've created a basic structure of the app with the expected design, l
     Concat(ThisItem.keyPhrases.Value, Value, ", ")
     ```
 
+    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma separated string with key phrases identified by Text Analytics API.
+
 1. Select data source for **galleryNER** as **nerCollect**.
 
 1. Select the first row inside the **galleryNER** gallery. And then, copy and paste following formula for the **Text** property.
@@ -440,6 +457,8 @@ Now that you've created a basic structure of the app with the expected design, l
     ```powerapps-dot
     Concat(ThisItem.entities.text,text,", ")
     ```
+
+    In this step, the [Concat](functions/function-concatenate.md) function is used to return a single comma separated string with the entities identified by Text Analytics API.
 
 1. [Save and publish](save-publish-app.md) the app.
 
@@ -467,4 +486,7 @@ Now that you've used Azure Cognitive Services in Power Apps by creating a demo a
 
 ### See also
 
-[Controls and properties in Power Apps](reference-properties.md)
+[Controls and properties in Power Apps](reference-properties.md) <br>
+[Text Analytics API documentation](/azure/cognitive-services/text-analytics/) <br>
+[Quickstart: Use the Text Analytics client library and REST API](/azure/cognitive-services/text-analytics/quickstarts/client-libraries-rest-api) <br>
+[Connector reference - Text Analytics](/connectors/cognitiveservicestextanalytics/)
