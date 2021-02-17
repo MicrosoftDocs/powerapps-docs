@@ -157,3 +157,6 @@ When you browse the page with this content snippet, the entity information is di
 ## See also
 
 [Work with liquid templates](../liquid/liquid-overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

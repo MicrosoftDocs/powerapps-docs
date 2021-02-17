@@ -569,3 +569,5 @@ See systemuser Entity [lk_personaldocumenttemplatebase_modifiedonbehalfby](syste
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.personaldocumenttemplate?text=personaldocumenttemplate EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

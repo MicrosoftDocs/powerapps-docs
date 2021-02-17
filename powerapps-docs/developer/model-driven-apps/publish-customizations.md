@@ -80,3 +80,6 @@ Publishing customizations makes the Web application aware of changes to the data
  [Customize entity views](customize-entity-views.md)<br/>
  [Change application navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

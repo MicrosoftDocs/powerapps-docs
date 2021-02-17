@@ -31,3 +31,6 @@ The user information page displays useful information about you and your organiz
    > [!div class="mx-imgBorder"] 
    > ![User profile page](media/user-profile-info.png "User profile page")
   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

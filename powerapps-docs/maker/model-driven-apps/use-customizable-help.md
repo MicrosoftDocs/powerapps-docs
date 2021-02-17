@@ -64,3 +64,6 @@ Examples of the parameters that can be appended to the URL:
 - Entry Point: hierarchy chart or form
 - Form Id: formid
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

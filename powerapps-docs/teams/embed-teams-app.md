@@ -134,3 +134,6 @@ You can optionally preload your app within Teams to increase performance.
 ### See also
 
 [Welcome to Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/teams-overview)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

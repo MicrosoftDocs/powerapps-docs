@@ -264,3 +264,6 @@ You can also specify fewer breakpoints. For example, your app might need only th
 The authoring canvas doesn't respond to the sizing formulas created. To test responsive behavior, save and publish your app, and then open it on devices or in browser windows of various sizes and orientations.
 
 If you write expressions or formulas in the **X**, **Y**, **Width**, and **Height** properties of a control, you'll overwrite those expressions or formulas if you later drag the control to a different location or resize the control by dragging its border.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -30,3 +30,6 @@ Scenario|Description
 [Create your first app in Teams](create-first-app.md)<br/>
 [Use flows in Microsoft Teams](/power-automate/teams/overview)<br/>
 [Power Virtual Agents in Teams](https://aka.ms/pva-teams-docs)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

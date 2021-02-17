@@ -42,3 +42,6 @@ var gridRowData = myRow.getData();
 |[getEntity](gridrowdata/getEntity.md)|[!INCLUDE[gridrowdata/includes/getEntity-description.md](gridrowdata/includes/getEntity-description.md)]|Read-only and editable grids|
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

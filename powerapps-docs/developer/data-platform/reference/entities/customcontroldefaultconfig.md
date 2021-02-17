@@ -580,3 +580,5 @@ See systemuser Entity [lk_customcontroldefaultconfig_createdby](systemuser.md#BK
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.customcontroldefaultconfig?text=customcontroldefaultconfig EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

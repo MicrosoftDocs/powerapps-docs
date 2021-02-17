@@ -70,3 +70,6 @@ Hello, DAVE BOWMAN.
 [Iteration tags](iteration-tags.md)<br>
 [Template tags](template-tags.md)<br>
 [Dataverse entity tags](portals-entity-tags.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

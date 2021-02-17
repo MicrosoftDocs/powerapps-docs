@@ -37,3 +37,6 @@ search.app:
 ## Next steps
 
 [Create and edit relationships between tables](create-edit-entity-relationships.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

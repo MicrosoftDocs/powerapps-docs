@@ -34,3 +34,6 @@ Lookup
 
 **Description**: True if the lookup attribute is a partylist, otherwise false.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

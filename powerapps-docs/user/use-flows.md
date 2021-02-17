@@ -47,3 +47,6 @@ Connect with Power Automate from your app to manage your flows.
  
     
   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

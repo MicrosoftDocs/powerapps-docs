@@ -909,3 +909,5 @@ See msdyn_kmfederatedsearchconfig Entity [IK_msdyn_kmfederatedsearchconfig_msdyn
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_federatedarticle?text=msdyn_federatedarticle EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

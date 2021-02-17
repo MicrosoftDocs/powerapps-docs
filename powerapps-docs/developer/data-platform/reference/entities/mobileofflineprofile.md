@@ -711,3 +711,5 @@ See systemuser Entity [lk_MobileOfflineProfile_modifiedonbehalfby](systemuser.md
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.mobileofflineprofile?text=mobileofflineprofile EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

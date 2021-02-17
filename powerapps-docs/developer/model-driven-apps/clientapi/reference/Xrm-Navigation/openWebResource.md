@@ -62,3 +62,6 @@ An HTML web resource can accept the parameter values described in [Pass paramete
 
 [Xrm.Navigation](../xrm-navigation.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -59,3 +59,6 @@ App users can personalize the system and even share some of their customizations
 ## Next steps  
 [Understand model-driven app components](model-driven-app-components.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

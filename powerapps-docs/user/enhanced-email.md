@@ -63,3 +63,6 @@ Compose an email using the enhanced experience:
 
 [Set up enhanced email](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Insert an email template](insert-email-template.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

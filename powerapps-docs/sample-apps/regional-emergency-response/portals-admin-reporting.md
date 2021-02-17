@@ -566,3 +566,6 @@ The dashboard shows data update ranking, data update in percentage and daily sta
 - To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
 
 - For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

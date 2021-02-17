@@ -55,3 +55,6 @@ If you are new to Power Apps, and want to learn about how to convert your ideas 
 
 [Understand model-driven app components](model-driven-app-components.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

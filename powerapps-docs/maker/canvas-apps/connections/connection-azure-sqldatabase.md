@@ -229,3 +229,6 @@ Result of the stored procedure execution.
 |ResultSets|object|No | Result sets|
 
 -->
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

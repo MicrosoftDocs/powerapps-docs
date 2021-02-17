@@ -39,3 +39,6 @@ All
 
 ### Related topic
 [setRequiredLevel (Client API reference)](setRequiredLevel.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

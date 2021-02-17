@@ -60,3 +60,6 @@ You can perform actions such as create, retrieve, update, or delete, on organiza
  [Sample Dashboards](sample-dashboards.md)     
  [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard)  
  [Sample: Assign a User-Owned Dashboard to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -46,3 +46,6 @@ On failure, returns an object with error details.
 [Xrm.Utility](../xrm-utility.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -139,3 +139,6 @@ If( TimeValue( FinishedAt.Text ) < TimeValue( "5:00:00.000 PM" ),
 
 - If you type **4:59:59.999 PM** in the **FinishedAt** control, the label shows "*You made it!*"
 - If you type **5:00:00.000 PM** in the **FinishedAt** control, the label shows "*Too late!*"
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

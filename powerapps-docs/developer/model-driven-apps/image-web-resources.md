@@ -112,3 +112,6 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
  [Using Script (JScript) web resources](script-jscript-web-resources.md)   
  [Using Data (XML) web resources](data-xml-web-resources.md)     
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

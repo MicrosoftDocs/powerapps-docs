@@ -146,3 +146,6 @@ There must be adequate color contrast between:
 
     > [!NOTE]
   > When keyboard users navigate to the chart, they can cycle through buttons that select data in the chart.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

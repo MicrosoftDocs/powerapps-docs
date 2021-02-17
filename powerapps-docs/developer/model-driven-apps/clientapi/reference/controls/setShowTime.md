@@ -42,3 +42,6 @@ This method will show or hide the time component of a date control where the att
 
 [getShowTime](getShowTime.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

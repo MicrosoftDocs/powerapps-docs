@@ -318,3 +318,6 @@ To change the data source, select **Transform data** to open Query Editor. In th
 - For feedback about Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-feedback>.
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

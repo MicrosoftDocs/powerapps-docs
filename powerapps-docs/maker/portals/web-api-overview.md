@@ -110,3 +110,6 @@ With the current release, Web API operations aren't blocked on configuration ent
 ### See also
 
 [Compose HTTP requests and handle errors](web-api-http-requests-handle-errors.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

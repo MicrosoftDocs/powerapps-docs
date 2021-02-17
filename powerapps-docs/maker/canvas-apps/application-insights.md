@@ -317,3 +317,6 @@ A set of default dimensions is also added to the *customDimensions* property on 
 | ms-appName      | The Application name of the app that sent the event.   |
 | ms-appSessionId | The application session ID.                           |
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

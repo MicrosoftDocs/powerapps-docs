@@ -1026,3 +1026,5 @@ See msdyn_aiodimage Entity [msdyn_aiodimage_Annotations](msdyn_aiodimage.md#BKMK
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.annotation?text=annotation EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

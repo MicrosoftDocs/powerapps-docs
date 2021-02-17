@@ -90,3 +90,6 @@ Now, let's add another card with another control.
 [11]: ./media/add-scrolling-screen/new-card.png
 [12]: ./media/add-scrolling-screen/add-line-chart.png
 [13]: ./media/add-scrolling-screen/line-chart-preview.png
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

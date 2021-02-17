@@ -40,3 +40,6 @@ to access key data.
 
 - If you're designing an automation using Power Automate, see [Design the automation](/power-automate/guidance/planning/process-design) in Power Automate guidance docs.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

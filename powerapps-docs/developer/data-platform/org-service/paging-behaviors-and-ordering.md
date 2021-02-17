@@ -179,3 +179,6 @@ missing data.
 ### See Also
 
 [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

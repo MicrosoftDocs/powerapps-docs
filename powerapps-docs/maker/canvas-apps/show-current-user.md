@@ -65,3 +65,6 @@ Basically, you can use this anywhere users would benefit from a form or labels t
 [7]: ./media/show-current-user/secondlabel.png
 [8]: ./media/show-current-user/email.png
 [9]: ./media/show-current-user/preview.png
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -41,3 +41,6 @@ While each form type has specific needs, when working with forms you use the For
 ## Next steps
 
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1805,3 +1805,5 @@ See calendar Entity [slabase_businesshoursid](calendar.md#BKMK_slabase_businessh
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sla?text=sla EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -57,3 +57,6 @@ After setting up the AD FS relying party trust, you can follow the steps in [Con
 ### See also
 
 [Configure a WS-Federation provider for portals with Azure AD](configure-ws-federation-settings-azure-ad.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

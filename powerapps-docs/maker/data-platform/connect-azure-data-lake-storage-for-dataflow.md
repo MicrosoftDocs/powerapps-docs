@@ -139,3 +139,6 @@ For more information about the Common Data Model, see these articles:
 - [CDM model file definition](https://go.microsoft.com/fwlink/?linkid=2045521)
 
 You can ask questions in the [Power Apps Community](https://go.microsoft.com/fwlink/?linkid=2099971).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

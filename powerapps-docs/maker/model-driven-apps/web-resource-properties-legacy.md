@@ -119,3 +119,6 @@ More information: [Developer Documentation: Pass contextual information about th
 
 [Create or edit web resources to extend an app](create-edit-web-resources.md)<br />
 [Use the main form and its components](use-main-form-and-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

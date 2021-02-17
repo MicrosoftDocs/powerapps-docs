@@ -318,3 +318,6 @@ This list stores the Help Desk tickets.
 - [Customize a SharePoint list form](customize-list-form.md)
 - [Add and configure a control](add-configure-controls.md)
 - [Edit and manage permissions for a SharePoint list or library](https://support.office.com/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

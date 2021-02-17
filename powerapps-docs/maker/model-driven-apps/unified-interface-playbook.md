@@ -43,3 +43,6 @@ In summary, the Unified Interface Playbook documents will help you:
 [Dynamics 365 Project Service Automation Upgrade playbook](https://aka.ms/PSAUCIUpgrade)<br/>
 [Dynamics 365 Service Scheduling Migration playbook](https://aka.ms/ServiceSchedulePlaybook)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1885,3 +1885,5 @@ See businessunit Entity [business_unit_emailserverprofile](businessunit.md#BKMK_
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.emailserverprofile?text=emailserverprofile EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

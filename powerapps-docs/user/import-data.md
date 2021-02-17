@@ -177,3 +177,6 @@ If you are importing data that includes double-byte characters for east asian la
 
 You can now pick UTF-8 BOM encoding for that file.
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

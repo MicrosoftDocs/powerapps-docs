@@ -1579,3 +1579,5 @@ See systemuser Entity [lk_fax_modifiedonbehalfby](systemuser.md#BKMK_lk_fax_modi
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.fax?text=fax EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
