@@ -12,6 +12,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - lancedMicrosoft
+  - tapanm-msft
+  - parasharshah
 ---
 
 # Use Cognitive Services in Power Apps
