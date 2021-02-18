@@ -197,7 +197,7 @@ Quickly filter activities, notes or posts in the timeline wall by row type or ac
 
  > [!Note]
  > When you zoom out in the browser, the filter pane and the timeline rows are displayed in two columns. 
- > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline rows. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md#why-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
+ > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline rows. To learn more, see [Filter pane appears in two column mode](https://docs.microsoft.com/powerapps/maker/model-driven-apps/faqs-timeline-control#why-do-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
 
   > [!div class="mx-imgBorder"]
   > ![Filter pane in the timeline ](media/timeline-filter2.png "Filter pane in the timeline") ![Filter pane on the timeline ](media/timeline-filter5.png "The filter pane on the timeline")
