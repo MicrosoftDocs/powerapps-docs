@@ -1596,6 +1596,8 @@
               href: ./portals/configure/create-web-roles.md
             - name: Assign entity permissions
               href: ./portals/configure/assign-entity-permissions.md
+            - name: Configure entity permissions using portals Studio
+              href: ./portals/configure/entity-permissions-studio.md
             - name: Manage page permissions
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
