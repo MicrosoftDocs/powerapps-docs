@@ -64,9 +64,7 @@ Below is a sample JavaScript to update the report settings, or to handle events.
 ```javascript
 $(window).load(function(){
     var embedContainer = $(".powerbi")[0];
-    alert("first")
     var report = powerbi.get(embedContainer);
-    alert("two")
     report.on("loaded", function(){
         report.updateSettings({
             panes: {
