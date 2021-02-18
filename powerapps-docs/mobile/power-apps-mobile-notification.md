@@ -161,3 +161,6 @@ You can set your app to open, for example, the **Case details** page as soon as 
 For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

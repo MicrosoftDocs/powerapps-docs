@@ -153,3 +153,6 @@ You can enable your portal to use a custom domain name in place of the standard 
 ### See also
 
 [Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

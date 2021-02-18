@@ -102,3 +102,6 @@ A portal can have the following status: *Configured*, *Suspended*, or *Not confi
 - [Administer Microsoft Power Platform](/power-platform/admin/admin-documentation)
 - [Manage Dynamics 365 apps](/power-platform/admin/manage-apps)  
 - [Upgrade a portal](upgrade-portal.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

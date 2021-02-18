@@ -218,3 +218,6 @@ The following walkthrough explains each step in detail with a sample database an
 ### See also
 
 [Search related site settings](search.md#related-site-settings)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

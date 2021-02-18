@@ -34,3 +34,6 @@ All
 
 **Description**: true if the attribute value is valid; false otherwise.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

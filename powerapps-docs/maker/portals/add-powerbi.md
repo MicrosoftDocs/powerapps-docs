@@ -128,3 +128,6 @@ Embedding multiple Power BI workspaces may need additional considerations. Refer
 [Power Apps portals Studio](portal-designer-anatomy.md) <br>
 [Create and manage webpages](create-manage-webpages.md) <br>
 [WYSIWYG editor](compose-page.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

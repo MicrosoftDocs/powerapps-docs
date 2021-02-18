@@ -67,3 +67,6 @@ using (CrmServiceClient svc = new CrmServiceClient(conn))
            }
 }
 ```
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -24,3 +24,6 @@ Use the [addOnPostSearch](../controls/addOnPostSearch.md) and [removeOnPostSearc
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

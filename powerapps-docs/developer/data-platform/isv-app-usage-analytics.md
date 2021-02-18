@@ -79,3 +79,6 @@ You can filter the usage dashboard by using the available filters. To see the me
 [Tenant page](isv-app-management-tenantpage.md)<br/>
 [AppSource checker](isv-app-management-appsource-checker.md)<br/>
 [Connector certification](isv-app-management-certification.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -54,3 +54,6 @@ You can either update the whole series or update an instance of a recurring appo
  [Delete or end a recurring appointment series or instance](/dynamics365/customer-engagement/developer/delete-or-end-a-recurring-appointment-series-or-instance)   
  [Sample: Create, Retrieve, Update, and Delete (CRUD) a Recurring Appointment](org-service/samples/create-retrieve-update-delete-recurring-appointment.md)   
  [Sample: Reschedule and Cancel Recurring Appointment](org-service/samples/reschedule-cancel-recurring-appointment.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

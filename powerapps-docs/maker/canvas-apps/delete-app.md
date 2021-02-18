@@ -63,3 +63,6 @@ To set a user as the owner of an app, use the [Power Apps cmdlets for administra
 - [Change app name and tile](set-name-tile.md)  
 - [Restore an app to a previous version](restore-an-app.md)
 - [Export and import an app](export-import-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -216,3 +216,6 @@ If you are experiencing an issue with a ribbon command bar button, use this [tro
  [Customize the Ribbon](customize-commands-ribbon.md)   
  [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)   
  [Export, prepare to edit, and import the Ribbon](export-prepare-edit-import-ribbon.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

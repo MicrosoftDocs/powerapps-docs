@@ -72,3 +72,6 @@ In Model-driven apps, there is a Quick Find feature. If a user provides search c
 ### See also
 
 [Sample: Convert queries between Fetch and QueryExpression](/dynamics365/customer-engagement/developer/org-service/sample-convert-queries-fetch-queryexpression)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

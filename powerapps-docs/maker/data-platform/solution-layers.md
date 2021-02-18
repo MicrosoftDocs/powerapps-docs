@@ -88,3 +88,6 @@ Unmanaged customizations reside at the top layer for a component and subsequentl
 ### See also
 [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md) <br />
 [Solutions overview](solutions-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

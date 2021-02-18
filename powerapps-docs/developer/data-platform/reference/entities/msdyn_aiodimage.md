@@ -979,3 +979,5 @@ See businessunit Entity [business_unit_msdyn_aiodimage](businessunit.md#BKMK_bus
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aiodimage?text=msdyn_aiodimage EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

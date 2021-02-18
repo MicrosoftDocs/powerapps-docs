@@ -506,3 +506,6 @@ In Visual Studio, press F5 to launch the app with the code changes.
 [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)<br />
 [Use OAuth with Dataverse](authenticate-oauth.md)<br />
 [Use the Dataverse Web API](webapi/overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

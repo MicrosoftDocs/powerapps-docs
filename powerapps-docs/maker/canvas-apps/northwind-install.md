@@ -158,3 +158,6 @@ This [overview of the app](northwind-orders-canvas-overview.md) explains the use
 
 > [!div class="nextstepaction"]
 > [Start by reading the overview](northwind-orders-canvas-overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

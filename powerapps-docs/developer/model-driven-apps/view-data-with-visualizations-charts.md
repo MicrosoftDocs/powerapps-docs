@@ -136,3 +136,6 @@ UoMSchedule
  [Download: Chart Controls for .NET Framework Documentation](https://go.microsoft.com/fwlink/p/?LinkId=128301)   
  [Samples Environment for Microsoft Chart Controls](https://code.msdn.microsoft.com/mschart)   
  [Chart Controls Forum](https://go.microsoft.com/fwlink/p/?LinkId=128713)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

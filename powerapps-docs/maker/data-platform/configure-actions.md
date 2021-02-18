@@ -157,3 +157,6 @@ In addition to the steps that can be used for real-time workflows, actions also 
 [Monitoring real-time workflows and actions](monitor-manage-processes.md#BKMK_MonitorSyncWorkflows)
  
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

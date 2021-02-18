@@ -116,3 +116,6 @@ else
 [Use XRM Tooling to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)<br />
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

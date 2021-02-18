@@ -23,7 +23,7 @@ search.app:
 Add **Activities** in the **Timeline** wall to keep track of all your communications with a customer or contact. For example, you can take notes, add posts, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer. 
 
 - Activities that you add from within a row appear in the **Timeline** wall of the row. 
-- If the **Regarding** column of an activity is set, the activity appears in the row it is associated with. 
+- If the **Regarding** column of an activity is set, the activity appears in the row it is associated with. Note, activities must be enabled for a table to use the Regarding lookup. For more information: [Enable activities for a table](../maker/data-platform/types-of-entities.md#enable-activities-for-a-table)
 - You can also choose the filter pane to filter the activities by row type and date. 
 - When a new activity is created, you will get a **What you missed** notification in the **Timeline** wall.
 - An email with an attached image will be shown inline with the body of the email.
@@ -197,7 +197,7 @@ Quickly filter activities, notes or posts in the timeline wall by row type or ac
 
  > [!Note]
  > When you zoom out in the browser, the filter pane and the timeline rows are displayed in two columns. 
- > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline rows. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md#why-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
+ > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline rows. To learn more, see [Filter pane appears in two column mode](https://docs.microsoft.com/powerapps/maker/model-driven-apps/faqs-timeline-control#why-do-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
 
   > [!div class="mx-imgBorder"]
   > ![Filter pane in the timeline ](media/timeline-filter2.png "Filter pane in the timeline") ![Filter pane on the timeline ](media/timeline-filter5.png "The filter pane on the timeline")
@@ -238,3 +238,6 @@ You can see the activities in the following views:
 
 [FAQs about Activities and the Timeline Wall](faq-for-timeline-and-activity.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

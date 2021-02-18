@@ -43,3 +43,6 @@ Lookup
 ## Remarks
 
 This method doesn’t work with **Owner** lookups. Owner lookups are used to assign user-owned records.
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

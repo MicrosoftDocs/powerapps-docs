@@ -93,3 +93,6 @@ In extreme cases where a business organization query regularly returns more than
 ### See Also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

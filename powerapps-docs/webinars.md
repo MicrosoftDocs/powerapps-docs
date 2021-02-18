@@ -76,3 +76,6 @@ by Brian Dang and April Dunnam
 
 [Webinars and videos by Power Apps community](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery)<br/>
 [Power Automate webinars](/power-automate/webinars)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

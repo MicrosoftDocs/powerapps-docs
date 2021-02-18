@@ -54,3 +54,6 @@ In the Set **Personal Option**s dialog box, you can personalize the facets for a
 [What is Relevance Search](relevance-search-benefits.md)<br/>
 [Search for tables and rows using Relevance Search](relevance-search.md)<br/>
 [Frequently asked questions about Relevance Search](relevance-faq.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

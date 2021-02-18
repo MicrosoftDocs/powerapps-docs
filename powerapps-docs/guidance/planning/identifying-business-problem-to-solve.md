@@ -121,3 +121,6 @@ it.
 
 > [!div class="nextstepaction"]
 > [Next step: The expense reporting example](example-expense-reporting.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

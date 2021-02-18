@@ -30,3 +30,6 @@ For a portal to connect to Dataverse using an Azure Active Directory application
 ### See also
 
 [Manage portals authentication key](manage-auth-key.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

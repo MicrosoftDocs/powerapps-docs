@@ -1189,3 +1189,5 @@ See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_DuplicateBas
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.duplicaterecord?text=duplicaterecord EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

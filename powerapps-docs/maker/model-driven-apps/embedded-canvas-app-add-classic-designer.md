@@ -96,3 +96,6 @@ This article showed you how to get started with embedding a canvas app in a mode
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
 [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md) <br />
 [Migrating embedded canvas apps on model-driven forms created using the public preview release to latest](embedded-canvas-app-migrate-from-preview.md) <br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

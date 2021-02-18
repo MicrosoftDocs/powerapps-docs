@@ -105,3 +105,6 @@ To do this, you must first register the application user (Service Principal) in 
 
 We will be monitoring the Power Apps ALM and ProDev community [forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/bd-p/pa_component_framework). Please take a look there to get help on how to solve various issues or post a
 question.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

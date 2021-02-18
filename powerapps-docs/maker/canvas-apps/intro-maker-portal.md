@@ -117,3 +117,6 @@ Extend the functionality of your apps by performing these tasks:
 - Manage entities, option sets, and data integration in [Dataverse](../data-platform/data-platform-intro.md).
 - Configure business logic in [Power Automate](https://docs.microsoft.com/flow/getting-started).
 - Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

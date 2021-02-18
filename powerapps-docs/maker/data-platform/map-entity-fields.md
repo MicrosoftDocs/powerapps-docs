@@ -121,3 +121,6 @@ Because column mappings are not metadata, you must publish them before changes t
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Developer Documentation: Customize table and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)<br />
 [Developer Documentation: Web API Create a new table from another table](/dynamics365/customer-engagement/developer/webapi/create-entity-web-api#create-a-new-table-from-another-table)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

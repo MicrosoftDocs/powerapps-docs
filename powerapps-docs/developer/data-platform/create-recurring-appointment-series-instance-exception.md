@@ -70,3 +70,6 @@ When you create a recurring appointment master (series), Microsoft Dataverse cre
  [Update a recurring appointment](update-recurring-appointment.md)   
  [Sample: Create a Recurring Appointment](/dynamics365/customer-engagement/developer/sample-create-retrieve-update-delete-recurring-appointment)   
  [Sample: Convert an Appointment to a Recurring Appointment](/dynamics365/customer-engagement/developer/sample-convert-appointment-recurring-appointment)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -83,3 +83,6 @@ The table below summarizes the features associated with each portal template:
 
 [Microsoft Learn: Explore Power Apps portals](https://docs.microsoft.com/learn/modules/explore-portals) <br>
 [Create a portal with an environment containing customer engagement apps](create-portal.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

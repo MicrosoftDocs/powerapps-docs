@@ -33,3 +33,6 @@ The Discovery Service is accessed through two different APIs:
 
 [Use the Microsoft Dataverse Web API](webapi/overview.md)<br />
 [Modify your code to use global Discovery Service](webapi/discovery-orgsdk-to-webapi.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

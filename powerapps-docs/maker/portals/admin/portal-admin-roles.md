@@ -110,3 +110,6 @@ To assign a user the Power Platform administrator role, go to [Assign a service 
 [Portal admin center](admin-overview.md)  
 [Portal Management app](../configure/configure-portal.md)  
 [Portal site settings](../configure/configure-site-settings.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

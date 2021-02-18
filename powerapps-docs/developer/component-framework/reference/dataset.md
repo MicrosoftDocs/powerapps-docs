@@ -117,3 +117,5 @@ To learn more about how to implement the dataset methods, see [DataSet Grid comp
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

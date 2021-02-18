@@ -179,3 +179,6 @@ If you want to remove a code component from a solution file:
 [Add components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

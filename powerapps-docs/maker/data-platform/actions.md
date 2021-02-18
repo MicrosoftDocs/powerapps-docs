@@ -44,3 +44,6 @@ Unlike Microsoft Dataverse workflows or [plug-ins](/powerapps/developer/data-pla
 [Create a custom action](create-actions.md)  
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

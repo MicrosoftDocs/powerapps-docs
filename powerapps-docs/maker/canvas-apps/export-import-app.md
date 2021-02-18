@@ -176,3 +176,6 @@ If you're updating an existing app or resource, be sure to [publish](save-publis
 - [Edit an app](edit-app.md)
 - [Delete an app](delete-app.md)
 - [Share an app](share-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

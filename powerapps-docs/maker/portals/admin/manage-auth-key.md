@@ -125,3 +125,6 @@ If the key update fails, an error message is displayed along with the following 
 ### See also
 
 [Portals connectivity to a Microsoft Dataverse environment](connectivity.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

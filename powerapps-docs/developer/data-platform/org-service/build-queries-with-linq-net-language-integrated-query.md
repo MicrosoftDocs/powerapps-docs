@@ -32,3 +32,6 @@ You can use .NET Language-Integrated Query (LINQ) to write queries in Microsoft 
  [Use Entity Lookup Attributes with LINQ](order-results-entity-attributes-linq.md)  
 
  [LINQ query examples](linq-query-examples.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

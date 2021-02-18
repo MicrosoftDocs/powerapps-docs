@@ -44,3 +44,6 @@ All
 [getRequiredLevel (Client API reference)](getRequiredLevel.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

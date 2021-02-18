@@ -974,3 +974,5 @@ See systemuser Entity [lk_kbarticlebase_createdby](systemuser.md#BKMK_lk_kbartic
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.kbarticle?text=kbarticle EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

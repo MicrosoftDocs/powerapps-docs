@@ -5,12 +5,16 @@ author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 10/22/2018
+ms.date: 02/18/2021
 ms.author: tahoon
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tahoon-ms
+  - tapanm-msft
+  - chmoncay
 ---
 
 # Show or hide content from assistive technologies for canvas apps

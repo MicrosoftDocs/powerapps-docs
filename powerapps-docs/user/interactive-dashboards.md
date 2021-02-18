@@ -70,3 +70,6 @@ The single-stream dashboards display real-time data over one stream based on a t
 
    > [!div class="mx-imgBorder"]
    > ![Clear filters.](media/clear_filter.png "Clear filters")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

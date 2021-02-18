@@ -37,3 +37,5 @@ This list below contains all of the Best practices and guidance of client side s
 ### See Also
 [Apply business logic using client scripting](../../client-scripting.md) <br />
  
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

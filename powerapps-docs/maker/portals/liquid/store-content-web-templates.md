@@ -73,3 +73,6 @@ There is a set of premade Liquid templates available within Power Apps portals. 
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

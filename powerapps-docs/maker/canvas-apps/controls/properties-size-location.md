@@ -82,3 +82,6 @@ Configure how big a control (or an element of a control) is and where it is in r
 
 * Applies to **[Button](control-button.md)**, **[Export](control-export-import.md)**, **[Image](control-image.md)**, **[Import](control-export-import.md)**, and **[Text input](control-text-input.md)** controls.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

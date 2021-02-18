@@ -84,3 +84,6 @@ In the desktop app for Microsoft Teams:
 ## Clean up resources
 
 To remove the app from the channel, choose the **Product Showcase** tab > **Remove**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

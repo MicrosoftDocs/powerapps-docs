@@ -50,3 +50,6 @@ Dataverse is not available for on-premise deployments at this time. Content in t
 
 [Power Apps for developers](/powerapps/#pivot=home&panel=developer)<br/>
 [Model-driven apps Developer Guide](../model-driven-apps/overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

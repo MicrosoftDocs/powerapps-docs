@@ -342,3 +342,6 @@ If your organization has turned on both search options (relevance search and cat
 [Configure facets and filters](facets-and-filters.md)<br/>
 [Frequently asked questions about Relevance Search](relevance-faq.md)
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

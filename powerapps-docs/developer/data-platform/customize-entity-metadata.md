@@ -114,3 +114,6 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
 [Use the Web API with metadata](webapi/use-web-api-metadata.md)
 
 [Work with metadata using the Organization service](org-service/work-with-metadata.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

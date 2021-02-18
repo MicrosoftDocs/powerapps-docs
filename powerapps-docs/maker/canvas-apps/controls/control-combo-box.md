@@ -128,3 +128,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 
     > [!NOTE]
   > The tab key navigates to or away from the combo box. Arrow keys navigate the contents of the combo box. The escape key closes the drop down when opened.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

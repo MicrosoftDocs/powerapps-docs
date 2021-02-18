@@ -4,7 +4,7 @@ description: Identify ways to make a canvas app more accessible to users who hav
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: article
-ms.date: 07/05/2018
+ms.date: 02/18/2021
 ms.author: emcoope
 search.audienceType: 
   - maker

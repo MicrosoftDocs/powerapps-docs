@@ -98,3 +98,6 @@ You can also add a **Reload** button on the form, so that the user can efficient
 * To revert the change which the user selects the button, set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
     **ReloadButton.OnSelect = Revert( IceCream, EditRecord )**
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

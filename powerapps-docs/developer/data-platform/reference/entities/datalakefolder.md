@@ -1130,3 +1130,5 @@ See businessunit Entity [business_unit_datalakefolder](businessunit.md#BKMK_busi
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.datalakefolder?text=datalakefolder EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

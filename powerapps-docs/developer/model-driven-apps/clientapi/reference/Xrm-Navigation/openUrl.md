@@ -39,3 +39,6 @@ This method is especially helpful for mobile clients to open a URL in a browser 
 
 [Xrm.Navigation](../xrm-navigation.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

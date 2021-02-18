@@ -67,3 +67,6 @@ Some of the telemetry you can gain from setting this up includes:
 
 You can also set up custom telemetry by using the [trace
 function](../../maker/canvas-apps/functions/function-trace.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

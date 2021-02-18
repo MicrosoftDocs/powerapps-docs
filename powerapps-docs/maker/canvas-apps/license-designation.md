@@ -73,3 +73,6 @@ plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp#st
 
 - [Edit an app](edit-app.md)
 - [Delete an app](delete-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

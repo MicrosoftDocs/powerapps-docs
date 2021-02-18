@@ -157,3 +157,6 @@ This means the port has been blocked at the client.
 
 [Use FetchXML to construct a query](dataverse-sql-query.md)  
 [Service Protection API Limits](api-limits.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
