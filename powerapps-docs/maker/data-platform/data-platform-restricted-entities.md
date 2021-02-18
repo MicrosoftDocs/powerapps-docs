@@ -21,7 +21,7 @@ App makers, who are building custom apps, can use all of the Microsoft Dataverse
 
 However, a smaller set of tables tied to Dynamics 365 apps (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) require canvas and model-driven app users to have a license for the corresponding Dynamics 365 app if they need to create, update, or delete rows within the tables. These are referred to as restricted tables.
 
-tables may be restricted to a Dynamics 365 app license for the following reasons:
+Tables may be restricted to a Dynamics 365 app license for the following reasons:
 * The table is used to store and maintain product-specific configuration data that should typically be not used outside of the application.
 * The table is accompanied by advanced logic that creates and maintains data in a specific way when used within a Dynamics 365 product.
 
