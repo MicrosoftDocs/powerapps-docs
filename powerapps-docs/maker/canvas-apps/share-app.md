@@ -48,7 +48,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. Specify by name or alias the users or security groups in Azure AD with whom you want to share the app.
 
-    - To allow your entire organization to run the app (but not modify or share it), enter **Everyone** in the sharing panel.
+    - To allow your entire organization to run the app (but not modify or share it), enter **Everyone** in the sharing panel. Users will be able to find this app by setting the apps list filter to 'Org apps'.
 
         ![Share with everyone](./media/share-app/everyone.png "Share with everyone")
 
