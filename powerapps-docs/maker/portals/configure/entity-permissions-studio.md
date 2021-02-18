@@ -14,3 +14,16 @@ ms.reviewer: tapanm
 
 In the previous article, you learned about how to configure the record-based security in portals by using Entity Permissions configuration from the Portal Management app. In this article, you'll learn about configuring the entity permissions using Power Apps portals Studio.
 
+## Terminology changes
+
+Scopes -> Access types
+
+## Configure entity permissions using Studio
+
+UI walkthrough of the entity permission configuration 
+
+## Scenario walkthrough
+
+Contoso LTD scenario with maker tasks in Figma
+
+UI walkthrough for example
