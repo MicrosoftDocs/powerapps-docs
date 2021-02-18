@@ -72,6 +72,8 @@ To create a custom activity table, open the **More settings** section in the **N
 
 ### Enable activities for a table
 
+Enable activities to add activities to a table and use the Regarding lookup for the table.
+
 1. To enable activities, Sign in to [Power Apps](https://make.powerapps.com).
 
   
