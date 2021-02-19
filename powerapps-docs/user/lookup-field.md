@@ -41,7 +41,8 @@ Lookups are classified into the following:
 
 - **PartyList-type columns:** Use to select multiple rows from multiple tables in a lookup. Use partylist-type columns to select multiple rows. This allows you to add each row by performing a new search, multiple times. Every time you select a row, you will be able to perform a new search for another row.
   
-- **Regarding-type columns:** Use to select a single row from multiple tables in a lookup. 
+- **Regarding-type columns:** Use to select a single row from multiple tables in a lookup. Activities must be enabled for a table to use the Regarding lookup. For more information: [Enable activities for a table](../maker/data-platform/types-of-entities.md#enable-activities-for-a-table)
+
 
 ## Search in a lookup column 
 To search a lookup, select the textbox and type your search criteria. If recent rows are enabled for your lookup, your recent rows will be displayed when you select the textbox.
