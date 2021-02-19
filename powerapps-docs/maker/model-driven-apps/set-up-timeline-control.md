@@ -275,3 +275,6 @@ For instructions about using the timeline control in a model-driven app, see [Ad
 ### See also
 
 [FAQs for timeline control](faqs-timeline-control.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

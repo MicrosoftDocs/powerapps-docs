@@ -93,3 +93,6 @@ With the scalability implications in mind, if there is other complex processing 
 The tradeoff here would be the need to perform an additional update to account, while reducing the overall length of time blocking waiting for the auto numbering record.
 
 ![move the auto number generation to a post create process](media/autonumber-approach-3-b.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

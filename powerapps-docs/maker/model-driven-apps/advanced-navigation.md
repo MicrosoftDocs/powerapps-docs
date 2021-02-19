@@ -68,3 +68,6 @@ Use the settings area to configure environment settings, activate or deactivate 
 
 ## See also
 [Create or edit a model-driven app by using the app designer](create-edit-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

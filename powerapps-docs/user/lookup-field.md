@@ -70,7 +70,7 @@ The most recently used list of rows shows an image to help distinguish between r
   > ![Lookup columns shows image](media/Lookup_03-MRU_Entity_Images_56[1].png "Lookup columns shows image")  
   
 ## Row type selection list  
-When results span multiple row types, you can see how many types of rows there are and select them from the list. The **Lookup Row** option is not available in the Unified Interface. Instead use the following to search:
+When results span multiple row types, you can see how many types of rows there are and select them from the list. The **Lookup Row** option is not available in Unified Interface. Instead, use the following to search:
 
 - To look for rows, enter text in the search box. 
 - To search by table type select **types of rows**. 
@@ -116,3 +116,6 @@ When lookup has more rows in a column than can fit in the available display area
 **Non-collapsed:**
 
 ![Non-collapsed multi-lookup display area](media/non-collapsed-multi-lookup-display-area.png "Non-collapsed multi-lookup display area")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

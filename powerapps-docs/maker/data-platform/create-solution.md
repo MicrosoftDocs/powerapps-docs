@@ -201,3 +201,6 @@ Start by opening an unmanaged solution you created. Choose the **table** compone
 ### See also
  [Use solutions](use-solution-explorer.md) <br />
 [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

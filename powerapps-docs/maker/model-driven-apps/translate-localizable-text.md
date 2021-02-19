@@ -137,3 +137,6 @@ After the translated text is imported, you should publish all customizations to 
 ## Next steps
 [Regional and language options for your organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages)<br />
 [Edit system table messages](../data-platform/edit-system-entity-messages.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

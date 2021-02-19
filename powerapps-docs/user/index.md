@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: overview
-ms.date: 8/21/2019
+ms.date: 2/1/2021
 ms.author: mkaur
 manager: "kvivek"
 ms.custom: ""
@@ -32,8 +32,15 @@ This section provides information about how to find and run canvas and model-dri
 
 
 ## What's required to run apps?
-- Ensure that you're using a [supported device platform and browser](../maker/canvas-apps/limits-and-config.md).
-- To run canvas apps, download and install Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps).
-- To run model-driven apps:
-    - on a phone, download and install Dynamics 365 for phones from the [App Store](https://itunes.apple.com/app/dynamics-crm-for-phones/id1003997947?ls=1&mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone). 
-    - on a tablet, download Dynamics 365 for tablets from the [App Store](https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460?mt=8), [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmtablet), or [Microsoft Store](https://www.microsoft.com/store/p/microsoft-dynamics-365/9nblggh4rfqp).
+
+Ensure that you're using a supported web browser and operating system.
+
+- For canvas apps, see: [System requirements, limits, and configuration values](../maker/canvas-apps/limits-and-config.md)
+- For model-driven apps, see: [Requirements/supported configurations](https://docs.microsoft.com/power-platform/admin/online-requirements)
+- To run model-driven apps or canvas apps on the Power Apps mobile app, see [Run model-driven apps and canvas apps on Power Apps mobile](https://docs.microsoft.com/en-us/powerapps/mobile/run-powerapps-on-mobile)
+
+
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

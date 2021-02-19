@@ -1398,3 +1398,6 @@ The following table lists the attributes for this tag that can be used replacing
 [Liquid types](liquid-types.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

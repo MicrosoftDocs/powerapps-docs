@@ -77,3 +77,6 @@ Yes. Portals supports any OpenID Connect provider that supports the standard [Op
 ### See also
 
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

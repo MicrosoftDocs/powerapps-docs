@@ -41,3 +41,6 @@ More information: [Use the Dataverse Organization Service](org-service/overview.
 
 > [!NOTE]
 > Use the Xrm.Tooling assemblies if you are creating a Windows client application. More information: [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

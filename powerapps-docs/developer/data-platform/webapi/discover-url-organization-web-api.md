@@ -100,3 +100,6 @@ The Discovery Service supports the CORS standard for cross-origin access. For mo
 
 [Discovery Service sample (C#)](samples/global-discovery-service-csharp.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

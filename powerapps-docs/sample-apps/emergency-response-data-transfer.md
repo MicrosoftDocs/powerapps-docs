@@ -257,3 +257,6 @@ The scheduled flow publishes data at a certain time, but what if you want to man
 
 - For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

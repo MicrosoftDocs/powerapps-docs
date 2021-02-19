@@ -1,11 +1,11 @@
 ---
 title: Install Power Apps CLI | Microsoft Docs
-description: "Get the Microsoft Power Apps CLI to create, debug, and deploy code components using Power Apps component framework."
+description: "Install Microsoft Power Apps CLI to create, debug, and deploy code components using Power Apps component framework."
 keywords: Power Apps CLI, code components, component framework, CLI
 ms.author: nabuthuk
 author: Nkrb
 manager: kvivek
-ms.date: 01/28/2020
+ms.date: 02/10/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -50,14 +50,47 @@ This table lists some of the common commands used in the CLI:
 
 |Command|Description|
 |-------|-----------|
-|[pcf](#pcf)|Commands to work with [Power Apps component framework](/powerapps/developer/component-framework/overview).|
-|[solution](#solution)|Commands for working with [Microsoft Dataverse solution projects](/powerapps/maker/data-platform/solutions-overview).|
+|[admin](#admin)|Commands for environment lifecycle features.|
 |[auth](#auth)|Commands to [authenticate to Dataverse](/powerapps/developer/component-framework/import-custom-controls#connecting-to-your-environment).|
+|[org](#org)|Commands for working with Dataverse environment.|
+|[package](#package)|Commands for working with [Solution Packages](https://docs.microsoft.com/power-platform/alm/package-deployer-tool).|
+|[pcf](#pcf)|Commands to work with [Power Apps component framework](/powerapps/developer/component-framework/overview).|
+|[plugin](#plugin)|Command to create a [plug-in](/powerapps/developer/data-platform/plug-ins) project.|
+|[solution](#solution)|Commands for working with [Microsoft Dataverse solution projects](/powerapps/maker/data-platform/solutions-overview).|
 |[telemetry](#telemetry)|Manages the telemetry settings.|
-|[plugin](#plugin)|Manages to create a [plug-in](/powerapps/developer/data-platform/plug-ins) project.|
-|[org](#org)|Command to work with Dataverse environment.|
 
-### Pcf
+
+### Admin
+
+Commands to work with environment lifecycle features. It has the following parameters:
+
+#### Parameters
+
+|Property Name|Description|
+|-------------|-----------|
+|list|Lists all environments from the tenant. It has the following parameters <br/> - *environment-id*: List all environments that contain a given string in their ID (alias: -id). <br/> - *url*: List all environments that contain a given string in their url (alias -u). Name of the code component. <br/> - *type*: Lists all environments of the given type (alias: -t). <br/>  -  *name*: List all environments that contain a given string in their name (alias: -n). <br/> -  *organization-id*: List all environments that contain a given string in their organization ID (alias: -oi). |
+|create|Creates a new environment. It has the following parameters: <br/> - *name*: Sets the name of the environment (alias: -n).<br/> - *region*: Sets the environment's region name. Defaults to `unitedstates` if not specified (alias -r). <br/> - *type*: Sets the type of the environment. Available values are Trial, Sandbox, Production, SubscriptionBasedTrial (alias: -t).<br/> - *currency*: Sets the default currency used in the environment. Defaults to USD if not specific (alias: -c).<br/> - *language*: Sets the default language of the environment. Defaults to english if not specified (alias: -l).<br/> - *templates*: Sets the Dynamics 365 apps that should be deployed to the environment. Pass as comma-separated values (alias: -t).<br/> - *domain*: Sets the domain name that is part of the environment URL. If domain name is already in use, a numeric value will be appended to the domain name. For example, if `contoso` is already in use, then the environment URL will become `https://contoso0.crm.dynamics.com` (alias -d). <br/> - *input-file*: Arguments can be passed in a `.json` input file instead of through the command line. For example, {"name" : "contoso"}. The arguments passed through command-line will take precedence over arguments from the `.json` input file (alias: -if). |
+|backup|Takes the backup of an environment. It has the following parameters: <br/> - *url*: Url of the environment to be backed up. (alias: -u).<br/> - *label*: Sets the backup label as provided (alias: -l). <br/> - *environment-id*: ID of the environment to be backed up (alias: -id).<br/> - *notes*: Additional notes provided for the backup (alias: -n). |
+|delete|Deletes an environment. It has the following parameters: <br/> - *url*: Url of the environment to be deleted (alias: -u). <br/> - *environment-id*: ID of the environment to be deleted (alias: -id).|
+|reset|Resets an environment. It has the following parameters: <br/> - *url*: Url of the environment to reset (alias: -u) <br/> - *name*: Sets the name of the environment (alias: -n).<br/> - *currency*: Sets the default currency used in the environment. Defaults to USD if not specific (alias: -c)<br/>- *purpose*: Sets the description used to associate the environment with a specific intent (alias: -p) <br/> - *language*: Sets the default language of the environment. Defaults to english if not specified (alias: -l).<br/> - *templates*: Sets the Dynamics 365 apps that should be deployed to the environment. Pass as comma-separated values (alias: -t).<br/> - *domain*: Sets the domain name that is part of the environment URL. If domain name is already in use, a numeric value will be appended to the domain name. For example, if `contoso` is already use, then the environment URL will become `https://contoso0.crm.dynamics.com` (alias -d). <br/> - *input-file*: Arguments can be passed in a `.json` input file instead of through the command line. For example, {"name" : "contoso"}. The arguments passed through command-line will take precedence over arguments from the `.json` input file (alias: -if).|
+|list-backups|Lists all available backups. environment. It has the following parameters: <br/> - *url*: Url of the environment for which you want to list backups (alias: -u). <br/> - *environment-id*: ID of the environment for which you want to list backups (alias: -id).|
+|restore|Restores an environment from a given backup. It has the following parameters: <br/> - *source-url*: Url of the source environment to be restored from (alias: -s). <br/> - *target-url*: Url of the target environment to be restored to (alias: -t). <br/> - *selected-backup*: DateTime of the backup in `mm/dd/yyyy hh:mm` format or latest (alias: -sb). <br/> - *name*: Optional name of the restored environment (alias: -n).|
+|copy|Copies a source environment to a destination environment. It has the following parameters: <br/> - *source-url*: Url of the source environment to be copied from (alias: -su). <br/> - *target-url*: Url of the target environment to be copied to (alias: -tu). <br/> - *source-environment-id*: ID of the source environment to be copied from (alias: -si). <br/> - *target-environment-id*: Id of the target environment to be copied to (alias: -ti). <br/> - *name*: Name to be used for the target environment. (alias: -n).  <br/> - *type*: Type of copy. Available values are: None, MinimalCopy, Fullcopy  (alias: -t).|
+
+### Package
+
+Command to work with solution packages. It has the following parameters:
+
+#### Parameters
+
+|Property Name|Description|Example|
+|-------------|-----------|-------|
+|init|Initializes a new package project. It has the following parameter: <br/> - *outputdirectory*: Output directly where the package is created.| `pac package init --outputdirectory c:/samplepackage`|
+|add-reference|Sets the reference path to the solution project folder by passing the `path` parameter.|`pac package add-reference --path c:\Users\Downloads\SampleSolution`|
+
+
+
+### PCF
 
 Commands to work with [Power Apps component framework](/powerapps/developer/component-framework/overview). It has the following parameters:
 
@@ -81,7 +114,10 @@ Commands for working with [Dataverse solution projects](/powerapps/maker/data-pl
 |init|Initializes the solution project.  It has the following parameters:<br/>  - *publisher-name*: Publisher name of the organization. <br/>  - *publisher-prefix*: Publisher prefix of the organization.|`pac solution init --publisher-name developer --publisher-prefix dev`  |
 |add-reference|Sets the reference path to the component project folder by passing the `path` parameter.|`pac solution add-reference --path c:\Users\Downloads\SampleComponent`|
 |clone|Creates a solution project based up on the existing solution project. It has the following parameters:<br/> -*name*: The name of the solution to be exported.<br/> -*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported. <br/> It has the following values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales|`pac solution clone -–name  sampleSolution --version 1.0.0.2 --include general`|
-|export|Exports a Dataverse solution project from the current organization. It has the following parameters:<br/> -*path*: Complete file name where the exported solution zip file will be saved.<br/> - *name*: Name of the solution that needs to be exported.<br/> - *managed*: Defines whether the solution should be exported as a managed solution or not.<br/>-*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported.|`pac solution export --path c:\Users\Documents\Solution.zip -- name SampleComponentSolution --managed true --targetversion 10.0.03 --include general`|
+|import|Imports a Dataverse solution to an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/>  -*activate-plugins*: Activates plug-ins and workflows in the environment after the import (alias: -ap). <br/>  -*async*: Imports the solution asynchronously (alias: -a). <br/>  -*force-overwrite*: Forces an overwrite of unmanaged customizations (alias: -f). <br/>  -*import-as-holding*: Imports the solution as a holding solution (alias: -h). <br/>  -*max-async-wait-time*: Maximum asynchronous wait time in minutes. Default value is 60 mintues (alias: -wt). <br/>  -*path*: Path to solution zip file. If not specified, assumes the current folder (alias: -p). <br/>  -*publish-changes*: Publishes changes after successful import (alias: -pc). <br/>  -*skip-dependency-check*: Skips dependency check against dependencies flagged as product update (alias: -s). |`pac solution import --path c:\Users\Documents\Solution.zip `|
+|export|Exports a Dataverse solution from an environment. It requires that you are connected to an environment [Auth commands](#auth) and has the following parameters:<br/> -*path*: Complete file name where the exported solution zip file will be saved.<br/> - *name*: Name of the solution that needs to be exported.<br/> - *managed*: Defines whether the solution should be exported as a managed solution or not.<br/>-*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported.|`pac solution export --path c:\Users\Documents\Solution.zip -- name SampleComponentSolution --managed true --targetversion 10.0.03 --include general`|
+|list|List all Solutions from a Dataverse environment. It requires that you are connected to an environment [Auth commands](#auth). This command has no parameters:|`pac solution list`  |
+
 
 ### Auth
 
@@ -162,3 +198,6 @@ If you are a **Private Preview** participant and have an older version of CLI, f
 ## See also
 
 [Power Apps component framework](../component-framework/overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

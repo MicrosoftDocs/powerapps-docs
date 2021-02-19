@@ -583,3 +583,6 @@ In model-driven apps, views are required for dataset components to get the colum
 [How to use the sample components](../use-sample-components.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

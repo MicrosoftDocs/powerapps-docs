@@ -85,3 +85,6 @@ Xrm.App.addGlobalNotification(notification).then(
 ### See also
 
 [addGlobalNotification](addGlobalnotification.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -46,3 +46,6 @@ Using the Web API, set the `HasNotes` property of the <xref:Microsoft.Dynamics.C
  [Annotation Entity](reference/entities/annotation.md)   
  [Model Your Business Data](/dynamics365/customer-engagement/developer/model-business-data)   
  [UserQuery (Saved View) Entity](/dynamics365/customer-engagement/developer/userquery-saved-view-entity)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

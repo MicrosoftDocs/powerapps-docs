@@ -250,3 +250,5 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.ribbonmetadatatoprocess?text=ribbonmetadatatoprocess EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

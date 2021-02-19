@@ -47,3 +47,6 @@ Sets the value of a variable to be used by a handler after the current handler c
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

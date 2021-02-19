@@ -94,3 +94,6 @@ As you can see, SharePoint permissions for lists and lookup lists directly cause
 
 - [Formula reference](../formula-reference.md) for Power Apps
 - [Control reference](../reference-properties.md) for Power Apps
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

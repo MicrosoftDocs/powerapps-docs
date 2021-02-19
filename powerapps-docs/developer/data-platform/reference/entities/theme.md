@@ -1005,3 +1005,5 @@ See webresource Entity [lk_theme_logoid](webresource.md#BKMK_lk_theme_logoid) On
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.theme?text=theme EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -561,3 +561,5 @@ See systemuser Entity [createdby_plugintracelog](systemuser.md#BKMK_createdby_pl
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.plugintracelog?text=plugintracelog EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

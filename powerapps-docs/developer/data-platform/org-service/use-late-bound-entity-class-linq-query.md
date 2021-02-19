@@ -162,3 +162,6 @@ using (OrganizationServiceContext orgSvcContext = new OrganizationServiceContext
  [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
  [Order Results Using Entity Attributes with LINQ](order-results-entity-attributes-linq.md)   
  <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.CreateQuery``1>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

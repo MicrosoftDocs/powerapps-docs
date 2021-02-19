@@ -176,3 +176,5 @@ To build a responsive screen:
 ## See also
 
 [Create responsive layouts](create-responsive-layout.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

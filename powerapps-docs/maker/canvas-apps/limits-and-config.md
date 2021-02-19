@@ -137,3 +137,6 @@ You can find information about size limits on text, hyperlinks, images, and medi
 ## Power Apps per app plan
 
 The information is now available in [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

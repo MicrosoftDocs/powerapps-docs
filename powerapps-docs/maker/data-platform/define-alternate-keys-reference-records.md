@@ -121,3 +121,6 @@ If the system job fails, locate the system job to view any errors. The system jo
 [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)<br />
 [Developer Documentation: Define alternate keys for a table](/dynamics365/customer-engagement/developer/define-alternate-keys-table)<br />
 [Developer Documentation: Use an alternate key to create a row](/dynamics365/customer-engagement/developer/use-alternate-key-create-row)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

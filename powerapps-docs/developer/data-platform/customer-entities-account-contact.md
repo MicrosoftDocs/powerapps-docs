@@ -84,3 +84,6 @@ This entity contains address and shipping information. It is used to store addit
  [Model Your Business Data With Dynamics 365](/dynamics365/customer-engagement/developer/model-business-data)  
   
  [Business Management Entities](/dynamics365/customer-engagement/developer/business-management-entities)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

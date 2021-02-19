@@ -231,3 +231,6 @@ You should be aware of certain conditions and limitations when working with calc
 [Create and edit columns](create-edit-fields.md)<br />
 [Define rollup columns that aggregate values](define-rollup-fields.md)<br />
 [Video: Rollup and calculated columns](https://go.microsoft.com/fwlink/p/?LinkId=517727)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

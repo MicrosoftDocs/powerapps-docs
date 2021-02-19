@@ -54,3 +54,6 @@ You can download tools used in development from NuGet using the  powershell scri
 ### See also  
  [NuGet Documentation](/nuget/)   
  [Installing NuGet](https://docs.nuget.org/docs/start-here/installing-nuget)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

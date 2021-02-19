@@ -148,3 +148,6 @@ In this tutorial, you've customized the gallery and made other changes to the de
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -57,3 +57,6 @@ Improve your products and services by enabling users to provide feedback and rat
   
 - Entity record that the feedback is associated with  
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

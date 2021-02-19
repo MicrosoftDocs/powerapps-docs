@@ -160,3 +160,5 @@ Follow the steps outlined in the "Show event attendees" section of [Calendar scr
 * [View the reference documentation for this screen](./email-screen-reference.md).
 * [Learn more about the Office 365 Users connector in Power Apps](../connections/connection-office365-users.md).
 * [See all available connections in Power Apps](../connections-list.md).
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

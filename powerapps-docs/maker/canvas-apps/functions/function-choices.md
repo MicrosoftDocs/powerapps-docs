@@ -97,3 +97,6 @@ At this time, you can use lookup columns only with SharePoint and Microsoft Data
 1. In the middle of the **Data table** control, select the link that starts **Choose the fields...**, and then select the check boxes for the field or fields that you want to show (for example, **firstname** and **lastname**).
 
      ![A canvas screen with a data table control. The Items property is set to the formula Choices( Accounts.'Primary Contact' ), and the table shows the firstname and lastname columns for the first set of records from the Contacts entity](media/function-choices/full-accounts-pc.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

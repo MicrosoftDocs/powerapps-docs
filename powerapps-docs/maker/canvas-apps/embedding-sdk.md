@@ -32,3 +32,6 @@ For information on how to download and use the Canvas apps embedding SDK, downlo
 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

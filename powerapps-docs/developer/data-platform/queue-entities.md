@@ -166,3 +166,6 @@ The following information pertains to queues:
 [QueueItem Entity](reference/entities/queueitem.md)   
 <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>   
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

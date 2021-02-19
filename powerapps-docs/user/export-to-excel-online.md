@@ -58,3 +58,6 @@ To open a list of rows in an app, on the command bar select the **Export to Exce
   
 
  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

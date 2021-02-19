@@ -50,3 +50,6 @@ Checks for the current version of the org.
 ### Clean up
 
 This sample creates no records. No cleanup is required.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

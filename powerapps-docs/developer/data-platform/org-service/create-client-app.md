@@ -29,3 +29,6 @@ For .NET this could just direct people to Xrm.Tooling
 But what if someone is creating a client using Java? 
 
  -->
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

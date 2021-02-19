@@ -36,9 +36,6 @@ You can have access rights to a perform an action on a record through ownership,
 
 For more information on how privileges and access checks work, go to [How access to a record is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
 
-## Early access feature
-
-Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
 
 ## Check your access to a record
 
@@ -69,3 +66,6 @@ If you're an administrator, you can check the access another user has to a recor
    > ![Access checker showing your access level for an admin.](media/check_access_page_admin-1.png "Access checker showing your access level for an admin")
   
 3.   The **Check Access** dialog box will appear and display the user's access information.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

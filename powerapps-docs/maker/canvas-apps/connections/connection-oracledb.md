@@ -107,3 +107,6 @@ Power Apps creates an app that has three screens and shows data from the table t
     This error appears if you're connecting to a table that doesn't have a primary key, which the Oracle Database connection requires.
 
 4. Stored procedures, tables with composite keys, and nested object types in tables aren't directly supported in Power Apps. However, stored procedures using Power Automate are supported.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

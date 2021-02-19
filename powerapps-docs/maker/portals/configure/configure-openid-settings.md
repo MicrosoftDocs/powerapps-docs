@@ -159,3 +159,6 @@ This site setting is a wildcard-based filter that matches on all issuers across 
 ### See also
 
 [FAQ for using OpenID Connect in portals](configure-openid-faqs.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

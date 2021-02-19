@@ -56,3 +56,6 @@ After you submit your connector for review, you'll receive an email from Microso
 [Home page](isv-app-management-homepage.md)<br/>
 [App page](isv-app-management-apppage.md)<br/>
 [Tenant page](isv-app-management-tenantpage.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -2,11 +2,10 @@
 title: 'Button control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Button control
 author: chmoncay
-manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2016
+ms.date: 01/28/2021
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -122,7 +121,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
    **UpdateContext({Total:Total + Value(Source.Text)})**
    
     Want more information about the **[UpdateContext](../functions/function-updatecontext.md)** function or [other functions](../formula-reference.md)?
-3. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property to **Total**, and then press **F5**.
+3. Add a **[Label](control-text-box.md)** control, set its **[Text](properties-core.md)** property in the formula bar to **Value(Total)**, and then press **F5**.
 4. Clear the default text from **Source**, type a number in it, and then click or tap **Add**.
    
     The **[Label](control-text-box.md)** control shows the number that you typed.
@@ -191,3 +190,6 @@ You can also specify the color of a **Button** control by setting its **[HoverFi
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -61,3 +61,6 @@ After you create customized table and column text in your unmanaged solution, yo
 
 ## Next steps  
  [Import translated table and column text](import-translated-entity-field-text.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

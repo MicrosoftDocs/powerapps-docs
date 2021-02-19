@@ -59,3 +59,6 @@ Power Automate has several different flows you can use to create automated workf
 ### See also
 
 [Apply business logic in model-driven apps](../model-driven-apps/guide-staff-through-common-tasks-processes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

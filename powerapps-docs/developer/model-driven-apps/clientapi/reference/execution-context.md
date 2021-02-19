@@ -40,3 +40,6 @@ The execution context object provides the following methods.
 
 [Understand Client API object model](../understand-clientapi-object-model.md) 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
