@@ -1,5 +1,5 @@
 ---
-title: "Relevance Search| MicrosoftDocs"
+title: "Relevance search| MicrosoftDocs"
 description: How to use relevance search
 author: mduelae
 manager: kvivek
@@ -18,264 +18,258 @@ search.app:
   - D365CE
 ---
 
-# Search for tables and rows using Relevance Search
+# Search for tables and rows by using relevance search
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Relevance Search is easy to use, fast, and accurate. The search bar is always available at on the top of every page in your app. You can start a new search and quickly find the information that you're looking for.
-
-For more information about Relevance Search, see [What is Relevance Search](relevance-search-benefits.md).
-
+With relevance search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. <!--note from editor: I suggest deleting the "More information" link because relevance-search-benefits.md doesn't actually have more information than this one. This is the meat of the content, there's no need to link to the frosting. Also, I suggest deleting the extra marketese in this article; relevance-search-benefits.md already has enough.-->
 
 > [!div class="mx-imgBorder"]
-> ![Search box on header](media/new-search-exp.png)
+> ![Search box in the header for an app](media/new-search-exp.png "Search box in the header for an app")
 
-  
-## Turn on Relevance Search
+## Turn on relevance search
 
-Your administrator has to turn on the new Relevance Search experience for your organization. When Relevance Search is turned on, you will see a search bar on the header. The new search experience is familiar and easy to recognize. Once enabled it’s available across all model-driven apps in your organization. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
+Your administrator must turn on the new relevance search experience for your organization. When relevance search is turned on, you'll see a search box in the header that resembles the search experience you're familiar with.<!--note from editor: Suggested.--> After it's enabled, it will be available across all model-driven apps in your organization. More information: [Configure relevance search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)
 
 > [!NOTE]
-> - If you opt in to early access for 2021 Release Wave 1 updates and Relevance Search is enabled then the new Relevance Search experience is turned on for all users. Users won't have the option to use categorized search anymore. For  more information, see [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
-
+> If you opt in to early access for 2021 release wave 1 updates and relevance search is enabled, the new relevance search experience will be turned on for all users. Users won't have the option to use categorized search anymore. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
 
 ## See recent rows and searches
 
-See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you will see information pop-up that helps you complete your search. 
+See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you'll see information in a flyout window that helps you complete your search.<!--note from editor: Edit okay? From what I can see, the behavior is more of a flyout than a pop-up.-->
 
-Up to three recent search terms appear at the top. This is based on the last three search queries which you viewed the results for. The recent search terms are personalized and based on your device and browser.
+Up to three recent search terms appear at the top, based on the last three search queries that you viewed the results for. These recent search terms are personalized and based on your device and browser.
 
-The next set of information in the flyout is recently accessed rows. You can view up to seven recently accessed rows. If you frequently access a small set of rows, then you can quickly get to them from here. Recently accessed rows are independent of tables that are indexed for Relevance Search since no search has been performed yet. The rows are also grouped by table type which lets you quickly scan the list.
+The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a small number of rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for relevance search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.<!--note from editor: In the following image, are the names Ammar Peterson and Anthony Glaze from sample data?-->
 
 > [!div class="mx-imgBorder"]
-> ![Legend for new search experience](media/legend-for-new-exp.png) 
+> ![Screenshot of the relevance search flyout window](media/legend-for-new-exp.png "Screenshot of the relevance search flyout window]") 
 
 Legend
 
 1. **Recent searches**: Shows your recent searches.
-2. **Recently accessed rows**: Shows recently accessed rows that are grouped by table type.
+2. **Recently accessed rows**: Shows rows that you recently accessed, grouped by table type.
 
 ## Inline suggestions
 
-As you start typing, you will see suggested results which help minimize keystrokes and simplify page navigation. Suggested results are quick results that are based on a search performed on the primary column of a table which is enabled for Relevance Search and included in your model-driven app.
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app.
 
-Suggestions are shown when three or more characters are entered in the search box, and it based on two types of matching.
+Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
-![Suggested search results when you enter search queary](media/relevance-search-suggested-results.gif)
+- **Word completion**: Rows where the primary field contains a word that begins with the search term. For example, entering **work** will show the account **AdventureWorks** and the contact **John Worker**, among other results.
 
--	**Word completion**: Rows where the primary field contains a word that begins with the search term. For example, entering **work** will show the Account Adventure **Work**s, contact John **Work**er, among other results.
+- **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
 
-- **Fuzzy search**: Suggestions incorporate fuzzy search where terms that are misspelled by one character are matched. For example, entering **winry** will show the Account Coho **Winery**, among other suggestions. 
+![Suggested results that appear when you enter a search query](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
 
-With suggestions, you can access your information quickly with minimal keystrokes even when the search term is misspelled by up to one character. Text that's highlighted in bold in the suggestions shows the term that is matched.
-
+With suggestions, you can access your information quickly by using minimal keystrokes even when the search term is misspelled by a character. Text that's highlighted in bold in the suggestions shows the term that was matched.
 
 ## Search results page
 
-View the full results for a search by pressing Enter on your keyboard or select **Show more results**.
+View the full results for a search by pressing **Enter** on your keyboard or selecting **Show more results**.
 
-Search results are ranked based on relevance and grouped by tables. The list of tables with rows matching the search term are displayed as a horizontal list of tabs along the top of the screen.
+Search results are ranked based on relevance and grouped by tables. The list of tables that include rows that match the search term are displayed horizontally as tabs along the top of the screen.
 
 ### Top results tab
 
-The **Top results** tab displays the top 20 results for the search term, with rows grouped by table type. Each group shows results for a table in a grid that has up to six columns. The columns are the first six columns of the table’s quick find view's **View Columns set**.
+The **Top results** tab displays the top 20 results for the search term, with results grouped by table type. Each group shows results for a table in a grid that has up to six columns. The columns are the first six columns of the table's **View columns** quick find view.<!--note from editor: Edit okay?-->
 
 > [!NOTE]
-> - The primary column of a table is always used as the first column for a table in the **Top results** tab.
-> - For notes and attachment tables, you can see two additional columns to indicate information on the related row for that note or attachment row.
-> - Party list columns on activity tables like To, CC, attendees cannot be searched on or shown and will be blank
+> - The primary column of a table is always used as the first column in the results<!--note from editor: Suggested.--> on the **Top results** tab.
+> - For notes and attachment tables, two additional columns show information about the related row for that note or attachment.
+> - Party list columns on activity tables&mdash;such as **To**, **CC**, and attendees&mdash;can't be searched on or shown, and will be blank.<!--note from editor: Edit okay? I didn't know where "attendees" fit with the other columns.-->
 
+In the following image, the top search results from three tables are displayed.<!--note from editor: Suggest moving this introduction here, to provide a break between the note above and the legend below. I don't think it belonged in the legend.-->
 
-![Shows top results for the search](media/rel-search-top-results.png)
-
-
-Legend:
-
-The diagram displays search results that show results in the **Top results** tab from only three tables.
-
- 1. **Top results**:  Shows the top 20 results for your search term.
- 2. **Rows grouped by table type**: To narrow your search results to a specific table, select the table tab.
- 3. **Show more**: When you select **Show more** at the bottom of a group, it switches to a table tab.
-
-
-### Table specific tab
-
-Specific table tabs are displayed as a horizontal list of tabs along the top of the screen. The exact order of the list of tables from left to right in an LTR environment is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
-
-The tables of the rows in the top 20 results are shown in the first few tabs from left to right which is based on relevance. The tables corresponding to the result rows outside of the top 20 is displayed in descending order for matched rows.
-
-![Diagram explaning top resutls page](media/diagram-top-results.png)
+![Example of top search results from three different tables](media/rel-search-top-results.png "Example of top search results from three different tables")
 
 Legend:
 
-![Number 1](media/one.png) Shows top 20 results that contain results from three different tables.
+ 1. **Top results**:  This tab shows the top 20 results for your search term.
+ 2. **Tables that include the rows in the list of results**:<!--note from editor: Edit okay? These aren't rows.--> To narrow your search results to a specific table, select the table-specific tab.
+ 3. **Show more**: When you select **Show more** at the bottom of a group, you switch to the table-specific tab.
 
-![Number 2](media/two.png) Shows the three tables that are part of the top results, ordered by relevance.
+### Table-specific tabs
 
-![Number 3](media/three.png) Shows rest of the matched table types, ordered by number of records that matches the search.
+Tabs for the specific tables that contain search results are displayed horizontally. The exact order of the tables from left to right (in a left-to-right environment)<!--note from editor: Since this feature is only enabled for English, maybe it's a bit misleading to include this disclaimer? It implies that the tabs go right-to-left in other environments.--> is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
 
+The tables that include the rows in the top 20 results<!--note from editor: Suggested.--> are shown in the first three tabs from left to right, from most to least relevant. The tables that include the results outside of the top 20 are displayed in descending order.
 
-Each of the tabs lets you drill into a specific table and view more information on rows in the results. 
+![Tabs on the search results page, numbered left to right](media/diagram-top-results.png "Tabs on the search results page, numbered left to right")
 
-![Show the results page](media/view-results.png)
+Legend:<!--note from editor: These graphical numbers are attractive, but it's confusing to use them here when you've used regular numbers everywhere else. I suggest keeping with plain numbers, to be consistent.-->
+
+1. <!--![Number 1](media/one.png)--> Shows the top 20 results from three different tables.
+
+2. <!--![Number 2](media/two.png)--> Shows the three tables that are part of the top results, ordered by relevance.
+
+3. <!--![Number 3](media/three.png)--> Shows the rest of the matched table types, ordered by the number of records that match the search.
+
+Select a tab to drill down into a specific table and view more information about the rows in the results.
+
+![Number 1 points to a tab labeled Contacts(13), number 2 is a list of fields the results were based on](media/view-results.png "Number 1 points to a tab labeled Contacts(13), number 2 is a list of fields the results were based on")
 
 Legend:
 
-1. Shows number of results for each table. 
-2. Shows the list of columns that was searched for the table.
+1. Shows the number of results for this specific table.
+2. Shows the columns that were searched for the table.
 
-Each table tab displays more information than **Top results** tab along two different dimensions:
+Each table-specific tab displays more information than the **Top results** tab along two different dimensions:
 
-- If the quick find view for the table has more than six **View Columns**, then all columns are displayed in the table tab, compared to up to six columns shown in **Top results** tab.
-- All matching rows for the table are accessible in the table specific tab as an infinitely scrollable list.
+- If the quick find view for the table has more than six columns,<!--note from editor: Edit okay? I didn't know how a **View Column** was different from a column.--> all columns are displayed on the table-specific tab, compared to the maximum of six columns shown on the **Top results** tab.
+- All matching rows for the table are accessible in the table-specific tab as an infinitely scrollable list.
 
+## Filter results by using facets
 
-## Filter results with facets
+On the search results page, you can use facets and filters to refine and explore your search results. Facets are available on the **Filter** panel, which you can expand or collapse.<!--note from editor: A panel can be expanded or collapsed, but a pane remains fixed.-->
 
-On the search results page, use facets and filters to refine and explore your search results. Facets are available on the **Filter** pane that you can expand or collapse. 
+The **Top results** tab shows search results across different table types, such as a contact versus a phone call. Thus, the **Top results** tab only shows the three global facets that apply to all table types:<!--note from editor: Edit okay? I'm not sure what a "row type" is here.-->
 
-The **Top results** tab, shows search results across different row types such as a contact vs. a phone call. Thus, the **Top results** tab only shows three global facets that apply all row types.
+- Owner
+- Modified On
+- Created On
 
-Global facets: 
--	Owner
--	Modified On
--	Created On
+On a table-specific tab, facets that apply to that table type are displayed above the three global facets.
 
-On the other tabs, the three global facets are pushed down and facets that apply to that specific row type are available for you to filter on.
-
-
-|**Top results tab shows only global facets**  |**Other tabs show facets which are specific to the row type** |
+| The Top results tab shows only global facets  | Other tabs show facets that are specific to that table type |
 |---------|---------|
-| ![Shows global filters](media/filterpane-1.png)     |     ![Shows facets for the row type ](media/filterpane-2.png)  |
+| ![Global facets](media/filterpane-1.png "Global facets")     |     ![Activity Status, Priority, and Due facets for the Phone Calls table](media/filterpane-2.png "Activity Status, Priority, and Due facets for the Phone Calls table")  |
 
-
-You can personalize facets for a table, from the **Set Personal Options** dialog box. For more information, see [Configure facets and filters](facets-and-filters.md).
-
+You can personalize facets for a table by using the **Set Personal Options** dialog box. More information: [Configure facets and filters](facets-and-filters.md)
 
 ### Text-based facets with discrete values
 
-All lookups and choices types are text-based facets. For example, the text-based facet **Priority** consists of a list of column values and their corresponding counts.
+All **Lookup** and **Choice** data types are text-based facets. For example, the text-based facet **Priority** consists of a list of column values (choices) and their corresponding counts.
 
-![Shows choices for text based facets](media/text-based-facets.png) 
+![The Priority facet has values of High, Normal, and Low](media/text-based-facets.png "The Priority facet has values of High, Normal, and Low") 
 
+Filters in these facets are sorted in descending order by count. By default, the top four facet values are displayed. When there are more than four facet values, you can select **Show more** to expand the list and see up to 15 results. 
 
-Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, select the **Show more** link to expand the list and see up to 15 results. 
+When you select a facet value, you filter search results to show only rows where the column includes the value that you selected.<!--note from editor: Suggested.-->
 
-Select each value to filter the search results to show only rows where the column has the value that you selected.
+### Date and time facets
 
-### Date and Time facets
+The date and time facets let you filter and see search results for a specific period. Use the **From** and **To** drop-down lists to specify a time period.
 
-The date and time facets let you filter and see search results for a specific period. Use the **From** and **To** drop-down list to specify a custom period.
-
-![Shows date facets](media/date-facets.png) 
-
+![Due and Modified On facets have the values From and To](media/date-facets.png "Due and Modified On facets have the values From and To") 
 
 ## Feedback link
 
-On the search results page, the **Did you find what you were looking for? Yes No** is collected in our product telemetry as a binary feedback. Search parameters like the query text that you entered in the search box is not collected, irrespective of the response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. 
+On the search results page, the answer to **Did you find what you were looking for?** is collected in our product telemetry as a binary feedback. Search parameters&mdash;like the query text that you entered in the search box&mdash;isn't collected, irrespective of your response to the question. We only use **Yes** or **No** response statistics to help us understand the usefulness of the new search experience. 
 
-Currently there isn't an option to disable the feedback question prompt.
+Currently there is no option to disable the feedback question prompt.
 
 > [!div class="mx-imgBorder"]
 > ![Feedback link](media/feedbacklink.png "Feedback link")  
-   
 
-## Understand search results 
+## Understand search results
+<!--note from editor: I suggest rearranging this section so the H3s are simply bullets. Because the note at the end of the "Power of common knowledge" section is tucked under that H3, structurally it only applies to that H3, but I'm sure that's not what you meant. I tried moving that note up here, but then it clashed with the note that's already in this introduction because this note talks about relevance search, but the note at the end of this section talks about "intelligent search." Actually, I don't know what the difference is - should it be made clear?-->
+Relevance search has a powerful set of capabilities to help you put Microsoft Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
 
-Relevance search has a powerful set of capabilities to help you put Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
-      
 > [!NOTE]
-> - Relevance Search is text-based and can search only on columns of type single line of text, multiple lines of text, choice, and lookups. Columns of type numeric, date, and file are not searched on.
-> - Relevance Search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means, even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by Relevance Search.
+> - Relevance search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
+> - Relevance search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by relevance search unless you own it or it was shared with you.<!--note from editor: Suggested.-->
 
-   
+- **Boosted search results**  
+  Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
+
+- **Natural language understanding**   
+  Search<!--note from editor: Should this be "relevance search" or "intelligent search"?--> has a better understanding of terms that are used to indicated intent. Some examples include:
+  - Searching for **open phone calls** will show phone call activity records that have the status **open**.
+  - Searching for **contact missing email** will show contacts who have an empty email address field, rather than treating **missing** as a keyword.
+
+- **Spelling correction**  
+   Search forgives common spelling mistakes. For example, when you search for **william conatc**, search results will include the contact record with the name **William**, even though the word **contact** was misspelled.
+
+- **Synonyms, acronyms, and abbreviations**  
+  With support for common abbreviations and synonyms, you can search for your information the way you remember it, not necessarily the way it's stored. Some examples include:
+  - Common name variations like **Bob/Robert** are matched with either search term.
+  - A search term that uses an abbreviation like **active accts** will be interpreted semantically as "active accounts."
+
+- **The power of common knowledge**  
+  Search can understand popular locations, date, time, holidays, and numbers. For example, a search for **account in WA** will generate results for accounts located in Washington state.
+
+<!--
 ### Boosted search results
 
-Use important attributes as keywords to search for information. Enter a table type to boost search results is an easy way to indicated preference of results.  
-
-Searching for **Susan Adatum** indicates the preference of contact record **Susan** related to account **Adatum**.
+Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
 
 ### Natural language understanding
 
-Search has a better understanding of terms that are used to indicated intent. 
+Search has a better understanding of terms that are used to indicated intent. Some examples include:
 
-Searching for **open phone calls** will show phone call activity records with status open.
+- Searching for **open phone calls** will show phone call activity records that have the status **open**.
 
-Searching for **contact missing email** will show contacts with an empty email address field rather than treating **missing** as a keyword.
+- Searching for **contact missing email** will show contacts who have an empty email address field, rather than treating **missing** as a keyword.
 
 ### Spelling correction
 
-Search is smart and forgives common spelling mistakes. For example, when you search for **william conatc** the search will show the contact record with name **William**, even though the word **contact** is misspelled.
+Search forgives common spelling mistakes. For example, when you search for **william conatc**, search results will include the contact record with the name **William**, even though the word **contact** was misspelled.
 
 ### Synonyms, acronyms, and abbreviations
 
-With support for common abbreviations and synonyms, you can search for your information the way you remember them, not the way it is stored.
+With support for common abbreviations and synonyms, you can search for your information the way you remember it, not necessarily the way it's stored. Some examples include:
 
-Common name variations like **Bob/Robert** are matched with either search term.
+- Common name variations like **Bob/Robert** are matched with either search term.
 
-Search terms with abbreviations like **active accts** are interpreted semantically as active accounts.
+- A search term that uses an abbreviation like **active accts** will be interpreted semantically as "active accounts."
 
-### Power of common knowledge
+### The power of common knowledge
 
-Search can understand popular locations, date, time, holidays, and numbers.
-
-Search for **account in WA** and see results for accounts located in Washington state.
-
+Search can understand popular locations, date, time, holidays, and numbers. For example, a search for **account in WA** will generate results for accounts located in Washington state.
+-->
 > [!NOTE]
-> - All the above capabilities are part of intelligent search, that are only available for public cloud environments with English as the base language.
-> - The examples above assume that a specific set of fields per table are indexed to be able to see the results described.
-
+> - All the preceding capabilities are part of intelligent search and are<!--note from editor: Or should this be "All the preceding capabilities are part of intelligent search, which is only available..."?--> only available for public cloud environments that have English as the base language.
+> - To get these results, the preceding examples assume that specific fields for each table were indexed.
 
 ## Working with operators
 
-Operators help you craft precise search queries that can tailor your results according to specific conditions. Here are some of the supported operators.
+Operators help you craft precise search queries that can tailor your results according to specific conditions. This section describes some of the supported operators.
 
 ### Boolean operators
 
 Search on a combination of terms using the **+** operator, which performs an **AND** search and shows results containing all the individual terms separated by **+**.
-For example, **alpine + paul** returns the contact record **Paul Cannon** related to account record **Alpine Ski House**.
+For example, **alpine + paul** returns the contact record **Paul Cannon** related to the account record **Alpine Ski House**.
 
-![Blooean operators example](media/bollean.png)  
+![Example with the AND operator](media/bollean.png "Example with the AND operator")  
 
-Similarly, the **OR** operator can be indicated by separating terms with a **|**. For example, searching for **alpine | paul** returns records with reference to either term.
+Similarly, the **OR** operator can be indicated by separating terms with a vertical bar (**|**). For example, searching for **alpine | paul** returns records with reference to either term.
 
-![Example with the or operator](media/bollean-1.png)  
+![Example with the OR operator](media/bollean-1.png "Example with the OR operator")  
 
-Use the **NOT** operator with a minus sign (**-**) before a keyword to indicate exclusion. 
+Use the **NOT** operator with a hyphen (**-**) before a keyword to indicate that it should be excluded from results.<!--note from editor: I suggest using this term, otherwise, people might try to find a hyphen on the keyboard.-->
 
-For example, when you search for **evaluation** it shows all rows matching the term, **evaluation**.
+For example, when you search for **evaluation**, all rows matching the term **evaluation** will appear in results.
 
-![Search results for the term evaluation](media/eval-1.png)  
+![Example of searching for the term "evaluation"](media/eval-1.png "Example of searching for the term 'evaluation'")  
 
-However, searching for **evaluation + -agreed** will match all records containing the term **evaluation** but not the term **agreed**.
+However, searching for **evaluation + -agreed** will match all rows that contain the term **evaluation** but not the term **agreed**.
 
-![Search results for evaluation + -agreed](media/eval-2.png)  
+![Example of searching for the term "evaluation" but excluding the term "agreed"](media/eval-2.png "Example of searching for the term 'evaluation' but excluding the term 'agreed'")  
 
 ### Wildcards
 
-Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on ***winery** will show results for all records associated with a keyword that ends with **winery**.
+Use wildcards for operators such as **begins-with** and **ends-with**. Using an asterisk (\*) at the beginning or end of a keyword makes the asterisk a placeholder for zero or more characters. For example, searching on **\*winery** will show results for all records associated with a keyword that ends with **winery**.
 
-![Search results for wildcards](media/wild-card.png)  
+![Example of results for a search that uses a wildcard](media/wild-card.png "Example of results for a search that uses a wildcard")  
 
 ### Exact matches
 
-Use double quotes around a keyword to perform an exact match. Search ignores common used words such as **the**, **an**, and, **a**. To improve matching, use double quotes and force an exact match for your search. For example, searching on **“Call back for resolution (sample)”** will match the exact keywords. 
+Use double quotation marks around a keyword to perform an exact match. Search ignores common used words such as **the**, **an**, and **a**. To improve matching, use double quotation marks and force an exact match for your search. For example, searching on **"Call back for resolution (sample)"** will match the exact keywords. 
 
-![Search results for exact matched terms](media/exact-match.png)  
- 
- 
- ## Quick actions (Preview)
- 
+![Example of results for a search that uses an exact match](media/exact-match.png "Example of results for a search that uses an exact match")  
+
+## Quick actions (Preview)
+
  [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
- 
-This section lists new features that can be used by opting in to early access. For  more information, see [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
 
-The new Relevance Search experience brings some of the most used actions closer to search results to help you complete your task without requiring navigating to the record page in model-driven Power Apps.
- 
-Quick actions are small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven Power Apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
+This section lists new features that can be used by opting in to early access. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
 
+The new relevance search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
 
-|**Table**  |**Quick actions** |
+Quick actions are icons representing a limited set of commands that are specific to a table.<!--note from editor: Is this what you mean by "small set of commands"?--> You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
+
+| Table  | Quick actions |
 |---------|---------|
 | Account     |     Assign, Share, Email a link  |
 | Contact     |     Assign, Share, Email a link  |
@@ -284,61 +278,57 @@ Quick actions are small set of commands specific to a table. You can see quick a
 | Phone Call     |     Mark complete, Cancel, Set Regarding, Assign, Email a link |
 | Email     |     Cancel, Set Regarding, Email a link  |
 | Any custom table     |     Assign, Share, Email a link  |
- 
- 
- ### Quick actions and suggested results
- 
- As you interact with search, you will find quick actions next to most recently accessed records and the suggested results that appear as you type.
- 
-|**Quick actions for recently accessed rows**  |**Quick actions for suggested results as you type** |
+
+### Quick actions and suggested results
+
+As you interact with search, you'll find quick actions next to the most recently accessed records and the suggested results that appear as you type.
+
+| Quick actions for recently accessed rows  | Quick actions for suggested results as you type |
 |---------|---------|
 | ![Quick actions for recently accessed rows](media/recent-accessed-1.png)     |     ![Quick actions for suggested results as you type](media/suggested-results.png)  |
- 
-### Quick actions in results page
 
-As you type, quick actions will show for suggested results.
+### Quick actions in results pages
 
-![This diagram shows the quick actions menu when you hover of teh results](media/quick-actions-diagram.gif)
+As you type, quick actions will appear for suggested results.
 
+![This diagram shows the quick actions menu that appears when you hover over a suggested result](media/quick-actions-diagram.gif "This diagram shows the quick actions menu that appears when you hover over a suggested result")
 
 On the results page, hover over the results to see quick actions available for the row.
 
-![This diagram shows how hovering over a result row will display the quick actions menu](media/quick-actions-diagram-1.gif)
- 
+![This diagram shows how hovering over a row on the results page displays the quick actions menu](media/quick-actions-diagram-1.gif "This diagram shows how hovering over a row on the results page displays the quick actions menu")
 
-## Use the old Relevance Search experience 
+## Use the previous relevance search experience
 
-When your organization has Relevance Search enabled but your administrator has not turned on the [New Relevance Search experience](https://docs.microsoft.com/powerapps/user/relevance-search##turn-on-relevance-search) then you will see the old search experience.
+When your organization has relevance search enabled but your administrator hasn't turned on the new relevance search experience, you'll see the previous search experience.<!--note from editor: The link didn't seem necessary anymore. Also, it had two hashtags and didn't work.-->
 
-### Switch between the old Relevance Search experience and Categorized Search
+### Switch between the previous relevance search experience and categorized search
 
 If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
 
-1. To switch between search types, on the navigation bar, select **Search**.
+1. On the navigation bar, select **Search**.
 
    > [!div class="mx-imgBorder"]
-   > ![Search button on the commmandbar](media/commandbar-search-button.png) 
+   > ![Search command on the navigation bar](media/commandbar-search-button.png "Search command on the navigation bar") 
 
-2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
+2. On the drop-down menu to the left of the search box<!--note from editor: Edit okay? The style guide wants more info than just "left" or "right."-->, select **Relevance Search** or **Categorized Search**.
 
    > [!div class="mx-imgBorder"]
-   > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
-   
-### Start a search using the old Relevance Search experience
- 
-1.  From the top nav bar, select **Search**.  
+   > ![Switch between relevance search and categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
+
+### Start a search by using the previous relevance search experience
+
+1. On the navigation bar, select **Search**.  
 
     > [!div class="mx-imgBorder"]
-    > ![Global Search Button](media/commandbar-search-button.png "Global search") 
+    > ![Global search](media/commandbar-search-button.png "Global search") 
   
-2.  Enter your search words in the search box, and then select **Search**.
+2. Enter your search words in the search box, and then select **Search**.
 
     > [!div class="mx-imgBorder"]
-    > ![Relevance Search Box](media/relevance-search-box.png "Relevance search box")   
+    > ![Relevance search box](media/relevance-search-box.png "Relevance search box")
 
-## See also
+### See also
 
-[What is Relevance Search](relevance-search-benefits.md)<br/>
+[What is relevance search?](relevance-search-benefits.md)<br/>
 [Configure facets and filters](facets-and-filters.md)<br/>
-[Frequently asked questions about Relevance Search](relevance-faq.md)
-
+[Frequently asked questions about relevance search](relevance-faq.md)
