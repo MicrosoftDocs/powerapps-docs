@@ -26,7 +26,8 @@ Power Apps unified search helps you quickly discover apps, templates, and conten
 
 Type in the **Search** box and to see suggestion for apps, templates, and documentation appear in the drop down below the search box. Choose any suggestion to go directly to that app, template, or web page.
 
-:::image type="content" source="media/maker-search-demo.gif" alt-text="Unified search on make.powerapps.com":::
+<!-- Update image week of Feb 22
+:::image type="content" source="media/maker-search-demo.gif" alt-text="Unified search on make.powerapps.com":::  -->
 
 ## Use search
 
