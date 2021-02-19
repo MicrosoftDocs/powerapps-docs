@@ -1,14 +1,13 @@
 ---
 title: Analyze app telemetry using Application Insights | Microsoft Docs
 description: How to analyze app telemetry using Application Insights
-author: aengusheaney
-manager: kvivek
+author: hasharaf
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 02/19/2021
-ms.author: aheaney
+ms.author: hasharaf
 search.audienceType: 
   - maker
 search.app: 
