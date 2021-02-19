@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 02/18/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 searchScope:
@@ -25,7 +25,7 @@ Power Apps makers can now create a powerful new type of experience: external-fac
 
 These capabilities feature a revamped end-to-end experience for makers to quickly create a website and customize it with pages, layout, and content. Makers can reuse page designs through templates, add forms and views to display key data from Dataverse, and publish to users.
 
-### Power Apps portals, Dynamics 365 portals and add-on portals
+## Power Apps portals, Dynamics 365 portals and add-on portals
 
 After the launch of Power Apps portals on October 1, 2019, Dynamics 365 portals are called as Power Apps portals. In other words, all portals are referred to as **Power Apps portals**.
 
@@ -49,6 +49,21 @@ You can create Power Apps portal with capacity-based license using steps describ
 To create Power Apps portal with add-on based license, see [provisioning a portal using portal add-on](provision-portal-add-on.md).
 
 See [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#what-is-the-difference-between-power-apps-portals-and-dynamics-365-portals-in-terms-of-licensing) for licensing differences between add-on based licenses and capacity-based licenses.
+
+## Terminology updates
+
+Effective November 2020, Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog). Some terminology in Microsoft Dataverse has also been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+
+Based on the terminology changes in Dataverse, customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. The terminology updates are listed below, and we're in the process of rolling them out across Microsoft Power Platform.
+
+| Legacy term | Current term |
+| - | - |
+| Entity form | Basic form |
+| Web form | Advanced form |
+| Entity list | List |
+| Entity permission | Table permission |
+
+Terminology updates also apply to references of legacy terms. For example, if the legacy term used in the user interface is "Enable search on entity list", the term is updated to "Enable search on list" as "entity list" is the legacy term, and "list" is the current term.
 
 ## Next steps
 
