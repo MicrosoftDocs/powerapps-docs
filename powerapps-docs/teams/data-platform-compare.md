@@ -5,7 +5,7 @@ author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 02/17/2021
 ms.author: mmercuri
 ms.reviewer: matp
 ---
@@ -66,8 +66,6 @@ Whereas Dataverse for Teams focuses on one environment per team for up to 500 te
 
 Because collaboration in Teams happens with people inside and outside your organization, the security model needed to support this is easy to use. In Dataverse for Teams, access is preconfigured with a security role based on membership type such as owners, members, or guests.
 
-Both Dataverse for Teams and Dataverse include support for activity logging. For example, activity logging identifies who created a record. However, Dataverse provides additional capabilities for auditing.
-
 Because Dataverse isn't specific to the Teams environment, it delivers more options for admin and user roles. It also includes a number of additional security capabilities such as customer-managed keys, field-level security, hierarchical security, sharing, and support for legacy authentication.
 
 > [!NOTE]
@@ -78,9 +76,9 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 |---------|---------|---------|
 |Admin roles     |  System Administrator and System Customizer       |  System Administrator and System Customizer and additional service admin roles. More information: [Use service admin roles to manage your tenant](/power-platform/admin/use-service-admin-role-manage-tenant)      |
 |User roles    | Team owners, members, and guests        |  Several standard security roles and custom roles can also be created. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)       |
-|Activity logging     |  Yes       |  Yes       |
-|Business units     |   One      |  Unlimited      |
+|Activity logging     |  No       |  Yes       |
 |Auditing     |  No       |  Yes       |
+|Business units     |   One      |  Unlimited      |
 |Customer-managed environment encryption key     |   No      |  Yes       |
 |Field-level security     |   No      |  Yes       |
 |Hierarchical security     |  No       |  Yes       |

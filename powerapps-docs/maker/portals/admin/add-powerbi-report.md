@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 02/17/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -62,7 +62,7 @@ You can use [powerbi-client JavaScript library](https://github.com/microsoft/Pow
 Below is a sample JavaScript to update the report settings, or to handle events. This sample disables filters pane, disables page navigation, and enables *dataSelected* event.
 
 ```javascript
-$(function(){
+$(window).load(function(){
     var embedContainer = $(".powerbi")[0];
     var report = powerbi.get(embedContainer);
     report.on("loaded", function(){
