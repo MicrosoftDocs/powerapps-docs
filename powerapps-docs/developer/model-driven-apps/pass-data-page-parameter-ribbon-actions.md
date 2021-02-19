@@ -119,3 +119,6 @@ function mySampleFunction(primaryControl) {
  [Client API form context](clientapi/clientapi-form-context.md)<br>
  [Client API grid context](clientapi/clientapi-grid-context.md)<br>
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

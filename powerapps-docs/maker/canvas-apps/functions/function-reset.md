@@ -41,3 +41,6 @@ Input controls are also reset when their **Default** property changes.
 5. Select the button.  This can be done even when authoring by selecting toward the ends of the control.
 6. The contents of the text box will return to the value of the **Default** property.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -27,3 +27,6 @@ Categorizing entity records in Microsoft Dataverse helps you tag the records so 
   
  You can associate `Category` records with system and custom entity records by using relationships and connections. A category record can be associated with different entity records. For example, you can programmatically associate a `Category` record with an `Account`, `Contact` and `Incident` records.   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

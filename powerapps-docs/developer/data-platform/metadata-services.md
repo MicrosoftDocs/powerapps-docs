@@ -39,3 +39,6 @@ Developing a good working understanding of the metadata in the system can help y
 For more information about programmatically working with metadata using:
 - **Web API**: [Use Web API with Dataverse metadata](webapi/use-web-api-metadata.md)
 - **Organization service**: [Use Organization service with Dataverse metadata](org-service/work-with-metadata.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

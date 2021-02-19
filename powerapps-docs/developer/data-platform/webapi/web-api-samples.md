@@ -73,3 +73,6 @@ The following table lists the topics that cover the common language- or library-
 [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)<br />
 [Web API Functions and Actions Sample](web-api-functions-actions-sample.md)<br />
 [Web API Samples (C#)](web-api-samples-csharp.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

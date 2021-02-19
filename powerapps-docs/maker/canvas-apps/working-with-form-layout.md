@@ -267,3 +267,6 @@ Let's make the error message a little longer, and again the control and the card
 
 ![With a longer error message, the control and card grow even more, and note that the cards on the same row all grow together](./media/working-with-form-layout/autoheight-3.png)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

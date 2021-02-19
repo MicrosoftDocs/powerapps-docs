@@ -581,3 +581,6 @@ foreach (AttributeMetadata anAttribute in addedAttributes)
     _serviceProxy.Execute(deleteAttribute);
 }
 ```
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

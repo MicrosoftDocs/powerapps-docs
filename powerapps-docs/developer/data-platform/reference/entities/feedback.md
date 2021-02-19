@@ -1059,3 +1059,5 @@ See systemuser Entity [lk_feedback_createdby](systemuser.md#BKMK_lk_feedback_cre
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.feedback?text=feedback EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

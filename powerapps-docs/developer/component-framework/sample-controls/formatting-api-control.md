@@ -288,3 +288,6 @@ export class FormattingAPI
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

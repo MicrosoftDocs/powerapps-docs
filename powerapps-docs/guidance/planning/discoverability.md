@@ -134,3 +134,6 @@ search results.
 
 > [!div class="nextstepaction"]
 > [Next step: Collect feedback and telemetry](feedback-telemetry.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

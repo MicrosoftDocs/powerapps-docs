@@ -100,3 +100,6 @@ However, semantic HTML can only go so far. Modern web applications typically inc
 
 [Web Page (HTML) web resources](webpage-html-web-resources.md)   
 [Web resources](web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

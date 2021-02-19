@@ -27,3 +27,6 @@ The return value is a Boolean **true** or **false**.
 
 * *Value* – Required. Value to test.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

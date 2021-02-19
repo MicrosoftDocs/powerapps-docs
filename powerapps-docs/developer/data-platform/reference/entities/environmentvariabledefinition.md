@@ -1181,3 +1181,5 @@ See businessunit Entity [business_unit_environmentvariabledefinition](businessun
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.environmentvariabledefinition?text=environmentvariabledefinition EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -42,3 +42,6 @@ kbSearchControl.removeOnSelection(myFunction);
 [addOnSelection](addOnSelection.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

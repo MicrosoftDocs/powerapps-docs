@@ -908,3 +908,5 @@ See msdyn_aibdatasetscontainer Entity [msdyn_AIBDataset_msdyn_AIBDatasetsContain
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aibdataset?text=msdyn_aibdataset EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

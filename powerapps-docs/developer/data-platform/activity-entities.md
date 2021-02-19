@@ -55,3 +55,6 @@ In Microsoft Dataverse, activities are tasks that you or your teams perform when
  [Server-side Synchronization Entities](server-side-synchronization-entities.md)  
   
  [Customize Entity Metadata](customize-entity-metadata.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

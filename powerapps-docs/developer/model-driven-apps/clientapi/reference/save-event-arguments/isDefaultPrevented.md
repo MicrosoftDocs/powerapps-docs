@@ -37,3 +37,6 @@ search.app:
 
 [preventDefault](preventDefault.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

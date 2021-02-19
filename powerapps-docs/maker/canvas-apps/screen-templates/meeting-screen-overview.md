@@ -66,3 +66,6 @@ A few helpful notes:
 * [View the reference documentation for this screen](./meeting-screen-reference.md).
 * [Learn more about the Office 365 Outlook connector](../connections/connection-office365-outlook.md).
 * [Learn more about the Office 365 Users connector](../connections/connection-office365-users.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

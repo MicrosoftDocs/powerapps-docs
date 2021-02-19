@@ -416,3 +416,6 @@ Structurexml.xml
   
 ### See also  
  [Use the SolutionPackager Tool to Compress and Extract a Solution File](compress-extract-solution-file-solutionpackager.md)   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

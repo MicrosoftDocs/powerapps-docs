@@ -47,3 +47,6 @@ Retrieves a variable set using the [setSharedVariable](setSharedVariable.md) met
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

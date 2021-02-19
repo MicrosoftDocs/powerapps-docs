@@ -56,3 +56,6 @@ The table below explains many of the standard web file attributes used by portal
 
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

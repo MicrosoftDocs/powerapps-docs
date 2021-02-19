@@ -37,3 +37,6 @@ You can combine the **Defaults** function with the **[Patch](function-patch.md)*
 | --- | --- | --- |
 | **Defaults(&nbsp;Scores&nbsp;)** |Returns the default values for the **Scores** data source. |**{ Score: 0 }** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -126,3 +126,6 @@ These extra requests intermittently cause errors because the Dataverse platform 
 
 [Advanced monitoring](monitor-advanced.md)  
 [Debugging model-driven apps with Monitor](monitor-modelapps.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

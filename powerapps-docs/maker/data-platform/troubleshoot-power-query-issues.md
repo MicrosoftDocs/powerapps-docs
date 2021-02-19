@@ -85,3 +85,6 @@ System-generated logs about user actions on the user interface (UI) can be acces
 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

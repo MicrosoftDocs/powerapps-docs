@@ -49,3 +49,6 @@ Party list fields are special fields that aren't searchable or viewable in the r
 [What is relevance search?](relevance-search-benefits.md)<br/>
 [Search for tables and rows using relevance search](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

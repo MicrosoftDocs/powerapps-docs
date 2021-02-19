@@ -274,3 +274,6 @@ Enabling a **Disassociate action** allows a user to remove the link between the 
 [Web Forms metadata for portals](configure-web-form-metadata.md)  
 [Notes configuration for Web Forms for portals](../configure-notes.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

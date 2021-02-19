@@ -49,6 +49,10 @@ You can update multiple tables at a time. When you select **OK**, the changes fo
 
 ### See also
 
+
 [What is relevance search?](relevance-search-benefits.md)<br/>
 [Search for tables and rows by using relevance search](relevance-search.md)<br/>
 [Frequently asked questions about relevance search](relevance-faq.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

@@ -74,3 +74,6 @@ In addition to the table designer experience previously found in Dataverse, Data
 [How are Dataverse for Teams and Dataverse different?](data-platform-compare.md) <br />
 [Create tables](create-table.md)<br/>
 [Work with table relationships](relationships-table.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

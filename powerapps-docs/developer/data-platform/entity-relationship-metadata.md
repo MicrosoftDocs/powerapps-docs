@@ -57,3 +57,6 @@ More information: [Microsoft Dataverse Developer Guide : Query and visualize hie
 ### See also
 
 [Dataverse entities](entities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

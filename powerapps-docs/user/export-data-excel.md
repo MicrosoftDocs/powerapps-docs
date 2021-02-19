@@ -80,3 +80,6 @@ The error message occurs due to a setting in Excel. To fix the issue, do this:
 ### See also
 
 [Troubleshoot export to excel](ts-export-to-excel.md)  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

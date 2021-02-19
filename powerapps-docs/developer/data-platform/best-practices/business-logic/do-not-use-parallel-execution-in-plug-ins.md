@@ -71,3 +71,5 @@ Using and updating shared pipeline context objects could cause these objects to 
 ### See also
 
 [Parallel Processing, Concurrency, and Async Programming in .NET](/dotnet/standard/parallel-processing-and-concurrency)<br />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

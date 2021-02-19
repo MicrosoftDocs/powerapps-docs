@@ -43,3 +43,5 @@ Relevance search for model-driven apps helps you quickly find what you're lookin
 [Search for tables and rows by using relevance search](relevance-search.md)<br/>
 [Configure facets and filters](facets-and-filters.md)<br/>
 [Frequently asked questions about relevance search](relevance-faq.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

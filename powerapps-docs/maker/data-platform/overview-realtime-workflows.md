@@ -44,3 +44,6 @@ See other topics here in the Power Apps documentation to learn more about real-t
 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

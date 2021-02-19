@@ -366,3 +366,6 @@ These limits are not related to entitlement limits. More information: [Entitleme
 [Dataverse API limits overview](../../maker/data-platform/api-limits-overview.md)<br />
 [Use Dataverse Web API](webapi/overview.md)<br />
 [Use Dataverse Organization Service](org-service/overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

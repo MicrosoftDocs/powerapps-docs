@@ -157,3 +157,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 
 ### Screen reader support
 * **NoDataText** must be present.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

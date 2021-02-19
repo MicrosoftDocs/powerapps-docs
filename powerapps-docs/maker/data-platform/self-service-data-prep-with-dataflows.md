@@ -184,3 +184,6 @@ article:
 
 -   [Common Data Model - overview](/powerapps/common-data-model/overview)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

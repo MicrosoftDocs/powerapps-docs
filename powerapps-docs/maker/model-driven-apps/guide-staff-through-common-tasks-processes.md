@@ -64,3 +64,6 @@ Power Automate includes several types of processes, each designed for a differen
 ### See also
 
 [Apply business logic with Dataverse](../data-platform/processes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

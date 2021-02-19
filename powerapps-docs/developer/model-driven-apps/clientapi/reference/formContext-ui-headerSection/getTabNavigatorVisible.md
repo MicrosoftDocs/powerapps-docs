@@ -35,3 +35,5 @@ search.app:
 ## Related topics
 
 [setTabNavigatorVisible](setTabNavigatorVisible.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

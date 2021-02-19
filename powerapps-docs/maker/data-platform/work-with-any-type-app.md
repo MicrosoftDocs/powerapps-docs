@@ -151,3 +151,6 @@ Functions are triggered by a call from an external system, service, or code. For
 
 More information:
 [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -29,3 +29,6 @@ Configure graphical elements in your app, including images, photos, and elements
 
 * Applies to **[Audio](control-audio-video.md)**, **[Image](control-image.md)**, **[Microphone](control-microphone.md)**, **[Screen](control-screen.md)**, and **[Video](control-audio-video.md)** controls.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -270,3 +270,6 @@ For more information about these and other functions, see the [formula reference
 - [Share the app](share-app.md) so that other people can run it.
 - Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.
 - [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

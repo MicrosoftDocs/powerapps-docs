@@ -429,3 +429,6 @@ namespace PowerApps.Samples
 [Web API Query Data Sample (C#)](cdswebapiservice-query-data.md)<br />
 [Web API Conditional Operations Sample (C#)](cdswebapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](functions-actions-csharp.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

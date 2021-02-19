@@ -37,3 +37,6 @@ search.app:
 This method is supported only for the web client.
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

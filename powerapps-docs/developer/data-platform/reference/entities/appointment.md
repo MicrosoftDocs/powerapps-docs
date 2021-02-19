@@ -1813,3 +1813,5 @@ See activitypointer Entity [activity_pointer_appointment](activitypointer.md#BKM
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appointment?text=appointment EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

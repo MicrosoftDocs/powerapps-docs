@@ -30,3 +30,6 @@ Through the [Plug-in](/power-platform/admin/analytics-common-data-service#plug-i
 [Use plug-ins to extend business processes](plug-ins.md)  
 [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)  
 [Debug Plug-ins](debug-plug-in.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

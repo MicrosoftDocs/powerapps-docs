@@ -43,3 +43,6 @@ This method is supported only for the mobile clients.
 ### Related topics
 [Xrm.Device](../xrm-device.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

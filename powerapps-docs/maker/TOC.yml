@@ -1704,6 +1704,52 @@
           href: ./portals/admin/portal-cookies.md
         - name: Accessibility in portals
           href: ./portals/admin/accessibility.md
+    - name: Portals for customer engagement apps
+      items:
+        - name: Knowledge article
+          items:
+            - name: Configure knowledge categories and articles
+              href: ./portals/customer-engagement-apps/configure-knowledge-categories-articles.md
+            - name: Manage knowledge articles by using content access level
+              href: ./portals/customer-engagement-apps/manage-knowledge-articles-content-levels.md
+            - name: Display file attachments with knowledge articles
+              href: ./portals/customer-engagement-apps/display-file-attachments-knowledge-article.md
+        - name: Create an opportunity
+          href: ./portals/customer-engagement-apps/create-edit-and-distribute-opportunities-in-dynamics-365.md
+        - name: Work with communitites
+          items:
+            - name: Engage with communities
+              href: ./portals/customer-engagement-apps/engage-with-communities.md
+            - name: Forums
+              items:
+                - name: Set up and manage forums
+                  href: ./portals/customer-engagement-apps/setup-manage-forums.md
+                - name: Manage forum threads
+                  href: ./portals/customer-engagement-apps/manage-forum-threads.md
+                - name: Create forum posts
+                  href: ./portals/customer-engagement-apps/create-forum-posts.md
+                - name: Moderate forums
+                  href: ./portals/customer-engagement-apps/moderate-forums.md
+                - name: Manage forum access permissions
+                  href: ./portals/customer-engagement-apps/forum-access-permission.md
+                - name: Subscribe to alerts
+                  href: ./portals/customer-engagement-apps/subscribe-alerts.md
+            - name: Manage blogs
+              href: ./portals/customer-engagement-apps/manage-blogs.md
+            - name: Ideas
+              items:
+                - name: Manage ideas
+                  href: ./portals/customer-engagement-apps/crowdsource-ideas.md
+                - name: Enable content moderation on ideas
+                  href: ./portals/customer-engagement-apps/enable-idea-content-moderation.md
+            - name: Manage cases in portals
+              href: ./portals/customer-engagement-apps/case-management.md
+        - name: Configure web roles for a partner portal
+          href: ./portals/customer-engagement-apps/configure-web-roles-partner-portal.md
+        - name: Integrate Project Service Automation
+          href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
+        - name: Integrate Field Service
+          href: ./portals/customer-engagement-apps/integrate-field-service.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs

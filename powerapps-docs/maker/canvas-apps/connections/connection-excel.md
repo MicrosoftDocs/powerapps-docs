@@ -34,3 +34,6 @@ For information about how to connect to other types of data, see the [list of co
 ### Known limitations
 For information about how to share Excel data within your organization, [review these limitations](cloud-storage-blob-connections.md#sharing-excel-tables).
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

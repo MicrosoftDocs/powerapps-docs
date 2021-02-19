@@ -56,3 +56,6 @@ You can create:
 
 ### Related topics
 [Administer Dataverse for Teams environment](/power-platform/admin/about-teams-environment)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

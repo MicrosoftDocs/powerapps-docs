@@ -44,3 +44,6 @@ If all of the preceding steps were performed correctly, a message containing the
 [Work with Dataverse data in your Azure solution](work-data-azure-solution.md)<br />
 [Write a listener application for a Azure solution](write-listener-application-azure-solution.md)<br />
 [What is Azure Service Bus?](/azure/service-bus-messaging/service-bus-messaging-overview)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -36,3 +36,6 @@ For Microsoft Dynamics 365 for tablets, this method mimics the behavior of the b
 
 [formContext](../../clientapi-form-context.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

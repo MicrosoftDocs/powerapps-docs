@@ -33,3 +33,6 @@ Provides methods to use native device capabilities of mobile devices.
 
 [Client API Xrm object](../clientapi-xrm.md)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

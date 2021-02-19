@@ -162,3 +162,6 @@ app's key capabilities and benefits include:
     signature be automatically populated.
 
 ![Some screenshots of the Hexion Broadcast app](media/hexion-broadcaster-app.png "Some screenshots of the Hexion Broadcast app")
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
