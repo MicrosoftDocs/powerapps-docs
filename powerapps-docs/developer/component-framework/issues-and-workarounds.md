@@ -5,7 +5,7 @@ keywords:
 author: Nkrb
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 11/25/2019
+ms.date: 02/19/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -115,7 +115,7 @@ msbuild/property:configuration:Release
 npm run build -- --buildMode production
 ```
 
-## Power Apps component framework Datasets getValue by property alias doesn't work
+<!--## Power Apps component framework Datasets getValue by property alias doesn't work
 
 Power Apps component framework dataset API's getValue function only searches record by the dataset column name and not the property alias set in the manifest. Attempting to get value by property alias will return an empty value.
 
@@ -135,7 +135,7 @@ Use the dataset column name (component can get the dataset column name by search
    lat = dataSet.records[currentRecordId].getValue("Address_x0020_1_x003a__x0020_Latitude")//based on the dataset column name
    ```
 
-<!--## Power Apps component framework Datasets SharePoint issue
+## Power Apps component framework Datasets SharePoint issue
 
 Power Apps component framework dataset component currently does not properly show the records from SharePoint. While the network request will succeed with the correct data records returned, the deserialization fails and an empty dataset is returned.
 
