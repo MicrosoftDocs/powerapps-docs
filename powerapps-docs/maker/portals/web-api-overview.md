@@ -21,7 +21,7 @@ The portals Web API enables building a richer user experience inside Power Apps 
 > - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration.
 > - Portals Web API operations are limited to entities related to data&mdash;for example, accounts, contacts, or your custom entities. Configuring entity metadata or portal configuration entity data&mdash;for example, configuring portals entities such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [unsupported configuration entities](#unsupported-configuration-entities), later in this topic.
 > - The portals Web API benefits from [server-side caching](admin/clear-server-side-cache.md) and, hence, subsequent calls to the Web API are faster than the initial calls. Note that clearing the portal server-side cache causes temporary performance degradation.
-> - Portals Web API operations require Power Apps portals licenses. For more information about portals licensing, user types and model, see [Power Apps portals licensing FAQs](power-platform/admin/powerapps-flow-licensing-faq.md#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing).
+> - Portals Web API operations require Power Apps portals license. For more information about portals licensing, user types and model, see [Power Apps portals licensing FAQs](power-platform/admin/powerapps-flow-licensing-faq.md#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing).
 
 ## Web API operations
 
