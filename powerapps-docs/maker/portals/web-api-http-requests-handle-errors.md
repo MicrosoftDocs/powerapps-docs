@@ -10,15 +10,12 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Compose HTTP requests and handle errors for the portals Web API (Preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Compose HTTP requests and handle errors for the portals Web API
 
 Interacting with the Web API includes composing HTTP requests with required headers and handling HTTP responses, including any errors.
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.2.6.41 or later for this feature to work.**
-> - This feature is in preview. More information: [Understand experimental, preview, and deprecated features in Power Apps](../canvas-apps/working-with-experimental-preview.md)
 
 ## Web API URL and versioning
 
