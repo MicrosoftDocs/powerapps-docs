@@ -19,8 +19,8 @@ search.app:
 ---
 
 # What is relevance search?
-<!--note from editor: I think this article is missing a chance to be a good roadmap to the rest of the content. As it is now, the first two links go to information about what relevance search is NOT, rather than what it is. The rest of the doc set is referred to in an offhand way in the "See also" block, but those articles should be front and center in an article that's the gateway to information about this feature. I recommend incorporating the "see also" links into a more descriptive list of links to more information, and perhaps removing those links to the quick find article, or at least setting them off so it's clear that they're contrasting with what relevance search is.-->
-Relevance search for model-driven apps helps you quickly find what you're looking for. It delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. In addition, relevance search delivers the following benefits:<!--note from editor: Suggested. Also, edits to the following list are suggested to make the list items parallel.-->
+
+Relevance search for model-driven apps helps you quickly find what you're looking for. It delivers fast and comprehensive results across multiple tables in a single list, sorted by relevance. In addition, relevance search delivers the following benefits:
 
 - **Fast and accurate search**: Provides a precise and quick search experience for model-driven apps, and performance that's superior to [categorized search](quick-find.md#multiple-table-quick-find-categorized-search). 
 
