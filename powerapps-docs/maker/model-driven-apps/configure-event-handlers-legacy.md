@@ -44,26 +44,29 @@ Form event handlers for Power Apps forms can be configured for the following are
 1. On the right properties pane, select the **Events** tab, and then select **Add library**. 
 1. If the library containing the function you want to set as the event handler is already in the list, select it and then select **Add**. Otherwise, create the new library: 
    1. Select **New**.
+   :::image type="content" source="media/add-library-formevent-handler.png" alt-text="Add the form event to the library":::
    1. In the new browser tab, complete the properties to create the JScript web resource, and then select **Save**, and the select **Publish**. More information: [Create a JavaScript web resource](#create-a-javascript-web-resource)
    1. Close the browser tab and go back to the **Add JavaScript Library** list.
    1. Select the JavaScript web resource from the list, and then select **Add**.
    > [!NOTE]
    > You might have to select **Cancel**, and then select **Add library** to refresh the list. 
 
-### Configure the event
-1. On the **Events** tab, select **Event Handler** to configure the form event, and the select **Done**: 
+1. On the **Events** tab, select **Event Handler** and complete the following information to configure the form event, and then select **Done**: 
 
-- **Event Type**:
+   - **Event Type**:
 
-   - **On Save**: When a record is saved after a form field change.
-   - **On Load**: When the form opens.
+      - **On Save**: When a record is saved after a form field change.
+      - **On Load**: When the form opens.
 
-- **Library**: The JavaScript web resource.
-- **Function**: The name of the function within the JavaScript web resource that should be executed for the event.
-- **Enabled**: By default, the event handler is enabled. Clear the Enabled checkbox if you don’t want to enable this event.
-- **Pass execution context as the first parameter**: Some functions require an execution context to be passed to the function. Select **Pass execution context as the first parameter** if it is required.
-- **Comma separated list of parameters that will be passed to the function**: Some functions can accept a set of parameters to control the behavior of a function. If these are required, enter them in the **Comma separated list of parameters that will be passed to the function**.
-**Table column dependencies**: For **On Save** events, select the columns where you want the event to be triggered after a record save.
+   - **Library**: The JavaScript web resource.
+   - **Function**: The name of the function within the JavaScript web resource that should be executed for the event.
+   - **Enabled**: By default, the event handler is enabled. Clear the Enabled checkbox if you don’t want to enable this event.
+   - **Pass execution context as the first parameter**: Some functions require an execution context to be passed to the function. Select **Pass execution context as the first parameter** if it is required.
+   - **Comma separated list of parameters that will be passed to the function**: Some functions can accept a set of parameters to control the behavior of a function. If these are required, enter them in the **Comma separated list of parameters that will be passed to the function**.
+   - **Table column dependencies**: For **On Save** events, select the columns where you want the event to be triggered after a record save.
+
+      :::image type="content" source="media/configure-form-event.png" alt-text="Configure the event for the form":::
+1. **Save**, and then **Publish** the form.
 
 ## Configure an event handler using the classic experience
   
