@@ -1,5 +1,5 @@
 ---
-title: Use relevance search on Power Apps mobile| Microsoft Docs
+title: Use relevance search on Power Apps Mobile| Microsoft Docs
 description: How to use relevance search for model-driven apps using your mobile app.
 author: mduelae
 ms.service: powerapps
@@ -19,65 +19,63 @@ searchScope:
   - "Power Apps"
 ---
 
-# Use relevance search for model-driven apps using the Power Apps mobile app (preview)
+# Use relevance search for model-driven apps using Power Apps Mobile (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-Quickly find the information that you are looking for using Relevance search. The Relevance search experience delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance.
+You can quickly find the information that you're looking for by using relevance search. The relevance search experience delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance.
 
-Relevance Search is already available when you're using a model-driven app in a web browser. The functionality is the same but it works a little differently when you're using it with the mobile app. For more information, see [Using relevance search to search for rows](https://docs.microsoft.com/powerapps/user/relevance-search).
+Relevance search is already available when you're using a model-driven app in a web browser. The functionality is the same in Power Apps Mobile, but it works a little differently. More information: [Search for tables and rows by using relevance search](https://docs.microsoft.com/powerapps/user/relevance-search)
 
-Before you begin using Relevance Search, the new experience needs to be enabled by the administrator for your organization. For more information, see [Enable the new Relevance Search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience).
+Before you begin using relevance search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable the new relevance search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)<!--note from editor: Edit to alt text suggested. This isn't really a "diagram," which is a line drawing such as a conceptual illustration.-->
 
   > [!div class="mx-imgBorder"]
-  > ![This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile](media/powerapps-mobile-rel-search.gif "This diagram demonstrates how relevance search works in a model-driven app running on Power Apps mobile")
+  > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")
 
-## Run a search 
+## Run a search
 
-View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation. 
+View suggested search results inline as you type, minimizing keystrokes and simplifying page navigation.
 
-1. To run a search, select the search button. 
+1. Select the search button. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select the search button](media/search-on-mobile-1.png) 
+   > ![Select the search button](media/search-on-mobile-1.png "Select the search button") 
   
-2. Enter your search words in the search box.  
+2. Enter the words you want to search for in the search box.  
 
    > [!div class="mx-imgBorder"]
-   > ![Enter search text](media/search-on-mobile-2.png) 
+   > ![Enter search text](media/search-on-mobile-2.png "Enter search text") 
   
-3. As you enter search text, rows that match start showing.
+3. As you enter search text, rows that match your text begin to appear.
 
    > [!div class="mx-imgBorder"]
-   > ![See suggested results as you type](media/suggested-results.png) 
-     
+   > ![See suggested results as you type](media/suggested-results.png "See suggested results as you type")
+
 ## View search results
 
-Search results are ranked and grouped by table. 
+Search results are ranked and grouped by the tables they came from.<!--note from editor: Suggested.-->
 
-![Search results page](media/search-results-page.png) 
-  
+![Search results page](media/search-results-page.png "Search results page") 
   
   Legend
   
-  1. **Search box**: This is where you enter the search text.
-  2. **Top results**: Show rows that best match the search query. 
-  3. **Row type**: To narrow your search results to a specific table, select the table tab.
-  4. **Filter**: Refine the search results by using filters. When you select filters, the number of tables that have been filtered on show up next to the filter option.
-  5. **See all**: Up to three rows will show, if there is more than select **See all** to view the rest.
+  1. **Search box**: Enter the words you want to seach for.
+  2. **Top results**: This tab shows the rows that best match the search query. 
+  3. **Table-specific tab**: To narrow your search results to a specific table, select the table tab.<!--note from editor: Edit okay? I don't know what "row type" means here.--> 
+  4. **Filter**: Refine the search results by using filters. When you select filters, the number of tables that have been filtered on appears next to the filter option.
+  5. **See all**: Up to three rows will appear; if there are more, select **See all**.
   
 ## Filter search results
   
-Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search you can filter by  owner, created on, and modified on.
+Use filters to drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search, you can filter by **Owner**, **Created On**, or **Modified On**.
 
-![Filter results page](media/filter-results-page.png) 
-  
+![Filter results page](media/filter-results-page.png "Filter results page") 
   
   Legend
   
   1. **Back**: Go back to the search results screen.
   2. **Filter**: Select a filter type to filter the search results.
-  3. **Clear all**: Clears all filter and takes you back to the search results screen.
+  3. **Clear all**: Clear all filters and return to the search results screen.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
