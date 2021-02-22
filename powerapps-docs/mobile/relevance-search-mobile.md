@@ -59,7 +59,7 @@ Search results are ranked and grouped by table.
   
   Legend
   
-  1. **Search box**: Enter the words you want to seach for.
+  1. **Search box**: Enter the words you want to search for.
   2. **Top results**: This tab shows the rows that best match the search query. 
   3. **Table-specific tab**: To narrow your search results to a specific table, select the table tab.
   4. **Filter**: Refine the search results by using filters. When you select filters, the number of tables that have been filtered on appears next to the filter option.
