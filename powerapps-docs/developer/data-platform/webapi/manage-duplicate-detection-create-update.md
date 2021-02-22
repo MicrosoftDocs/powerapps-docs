@@ -2,7 +2,7 @@
 title: "Detect duplicate data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Microsoft Dataverse Web API"
 ms.custom: ""
-ms.date: 04/06/2020
+ms.date: 02/16/2021
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -60,6 +60,7 @@ Content-Type: application/json
 Accept: application/json
 MSCRM.SuppressDuplicateDetection: false
 
+
 {
     "firstname":"Monte",
     "lastname":"Orton",
@@ -102,6 +103,7 @@ OData-MaxVersion: 4.0
 Content-Type: application/json
 Accept: application/json
 MSCRM.SuppressDuplicateDetection: false
+If-Match: * 
 
 {
     "firstname":"Monte",
