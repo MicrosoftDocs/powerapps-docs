@@ -39,9 +39,11 @@ Form event handlers for Power Apps forms can be configured for the following are
   
 ## Configure an event handler
 
+The following procedure describes how to configure an event handler for a form. Use similar steps to configure an event handler for a tab, column, or IFrame.
+
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), open the entity that you want, and then open the form in the form designer where you want to configure an event handler.
 1. In the left navigation pane, select **Form libraries**.
-1. On the right properties pane, select the **Events** tab, and then select **Add library**. 
+1. On the right properties pane, select the **Events** tab, and then select **Add library**.
 1. If the library containing the function you want to set as the event handler is already in the list, select it and then select **Add**. Otherwise, create the new library: 
    1. Select **New**.
    :::image type="content" source="media/add-library-formevent-handler.png" alt-text="Add the form event to the library":::
