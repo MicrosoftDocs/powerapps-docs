@@ -108,3 +108,6 @@ while (true)
  [Sample: Retrieve with one-to-many relationship](/dynamics365/customer-engagement/developer/retrieve-with-one-to-many-relationship)   
  [Using the QueryExpression Class](use-queryexpression-class.md)   
  [Page Large Result Sets with FetchXML](page-large-result-sets-with-fetchxml.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

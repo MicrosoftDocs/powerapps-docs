@@ -118,3 +118,6 @@ In a browser, the confirmation dialog box might appear with a generic message fr
 
     > [!div class="mx-imgBorder"]
     > ![Form-specific confirmation dialog box](media/object-app/confirm-native-custom.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

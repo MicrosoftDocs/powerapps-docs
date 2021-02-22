@@ -38,3 +38,6 @@ Read-only and editable grids
 
 To get the `gridRowData` object, see [GridRowData](../gridrowdata.md). 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

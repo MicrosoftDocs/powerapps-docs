@@ -59,3 +59,6 @@ Provides properties and methods to retrieve information about the user interface
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

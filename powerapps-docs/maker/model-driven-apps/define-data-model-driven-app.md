@@ -35,3 +35,6 @@ For detailed information about working with these components in Dataverse to def
 ## Next step
 
 [Use app designer to build an app](design-custom-business-apps-using-app-designer.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

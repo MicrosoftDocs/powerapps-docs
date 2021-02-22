@@ -135,3 +135,6 @@ When your customizations are complete, publish them:
 [Create and design forms](create-design-forms.md) <br />
 [Understand model-driven app components](model-driven-app-components.md) <br /> 
 [Developer Documentation: Web resources in model-driven apps](/powerapps/developer/model-driven-apps/web-resources)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

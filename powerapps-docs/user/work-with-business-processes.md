@@ -45,3 +45,6 @@ The system comes with business processes for common tasks. However, most organiz
 
 
 For more information on to how to apply custom business logic with business rules and flows, see [Apply custom business logic with business rules and flows in model-driven app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/guide-staff-through-common-tasks-processes).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

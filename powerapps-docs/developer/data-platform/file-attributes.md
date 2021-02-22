@@ -291,3 +291,6 @@ DELETE /api/data/v9.1/\<entity-type(id)\>/\<attribute-name\> | <xref:Microsoft.C
 
 ### See Also
 [Image attributes](image-attributes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

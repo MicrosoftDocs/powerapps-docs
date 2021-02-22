@@ -73,3 +73,6 @@ The Accessibility checker classifies each issue as an error, a warning, or a tip
 - [Create accessible apps](accessible-apps.md)
 - [Accessible colors](accessible-apps-color.md)
 - [Accessibility properties](controls/properties-accessibility.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

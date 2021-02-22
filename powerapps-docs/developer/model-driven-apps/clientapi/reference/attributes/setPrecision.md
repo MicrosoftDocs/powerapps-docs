@@ -38,3 +38,6 @@ Money, decimal, double, and integer
 
 [getPrecision](getPrecision.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -308,3 +308,6 @@ Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map 
 [Troubleshoot issues for the Power Apps mobile app](https://docs.microsoft.com/powerapps/user/powerapps_mobile_troubleshoot)
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

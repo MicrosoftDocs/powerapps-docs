@@ -35,3 +35,6 @@ search.app:
 
 [Form data OnLoad event](../events/form-data-onload.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

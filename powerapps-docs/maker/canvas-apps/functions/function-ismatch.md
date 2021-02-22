@@ -228,3 +228,6 @@ To see the results of **MatchAll** in a gallery:
     The gallery is filled with each word in our example text.  Resize the gallery's template and the label control in order to see all the words on one screen.
 
 	![](media/function-ismatch/pangram-gallery2.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

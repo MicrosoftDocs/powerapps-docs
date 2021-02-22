@@ -71,3 +71,6 @@ _serviceProxy.Execute(request);
  [Customize entity metadata](../customize-entity-metadata.md)   
  [Create and update an entity than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
  [Create a Custom Entity](create-custom-entity.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

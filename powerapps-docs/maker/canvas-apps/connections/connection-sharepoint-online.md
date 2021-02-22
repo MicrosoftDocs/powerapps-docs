@@ -223,3 +223,6 @@ As a solution for such scenarios, store images on a CORS-enabled source such as 
 ### See also
 
 - [SharePoint integration scenarios](../sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

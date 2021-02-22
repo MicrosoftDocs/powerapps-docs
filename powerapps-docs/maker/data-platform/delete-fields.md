@@ -43,3 +43,6 @@ If you delete a lookup column, the 1:N table relationship for it will automatica
 ### See also
 
  [Delete a custom table](data-platform-delete-entity.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -47,3 +47,6 @@ Microsoft accessibility features help various agencies address accessibility req
 ### See also
 
 [Accessibility in Dynamics 365](https://docs.microsoft.com/dynamics365/get-started/accessibility/)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

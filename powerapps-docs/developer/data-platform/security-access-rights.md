@@ -60,3 +60,5 @@ access right **append** on opportunities.
 ### See Also
 
 [How access to a record is determined](/power-platform/admin/how-record-access-determined)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

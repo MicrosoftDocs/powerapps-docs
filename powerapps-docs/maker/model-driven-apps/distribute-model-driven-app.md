@@ -68,3 +68,6 @@ When you receive a solution zip file which contains the app that you want to imp
 
 ## See also
 [Change the solution publisher prefix](../data-platform/create-solution.md#solution-publisher)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -33,3 +33,6 @@ You can use the Web API or Organization service to detect duplicate data. Topics
 [Duplicate detection messages](duplicate-detection-messages.md)<br/>
 [Duplicate Rule entities](duplicaterule-entities.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -87,3 +87,6 @@ Data import runs directly on the Microsoft Dataverse server. To run data import,
 [Sample: Export and import a data map](org-service/samples/export-import-data-map.md)<br />
 [Sample: Import data using complex data map](org-service/samples/import-data-complex-data-map.md)<br />
 [Blog Post: How to Import attachments programmatically](https://blogs.msdn.com/b/crm/archive/2012/08/06/how-to-import-attachments-programmatically.aspx) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -101,3 +101,6 @@ In this topic, you created an app to manage data in a SharePoint list. As a next
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

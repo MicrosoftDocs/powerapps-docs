@@ -113,3 +113,6 @@ ObjectId = new EntityReference(Template.EntityLogicalName, _templateId), ObjectT
  [Sample code for activity entities](/dynamics365/customer-engagement/developer/sample-code-activity-entities)   
  [Email Entity](/reference/entities/email.md)   
  [ActivityMimeAttachment Entity](/reference/entities/activitymimeattachment.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

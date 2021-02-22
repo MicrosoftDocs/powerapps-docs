@@ -75,3 +75,6 @@ The following controls aren't supported by apps embedded in Teams:
 ## Next steps
 
 [Controls and properties reference](reference-properties.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

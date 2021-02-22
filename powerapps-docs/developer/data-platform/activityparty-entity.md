@@ -71,3 +71,6 @@ An activity party represents a person or group associated with an activity. An a
  [Sample: Roll Up Goal Data for a Fiscal Period Against the Stretch Target Count](/dynamics365/customer-engagement/developer/sample-rollup-goal-data-fiscal-period-stretch-target-count)   
  [Sample: Send an E-mail Using a Template](/dynamics365/customer-engagement/developer/sample-send-email-template)   
  [Sample: Validate an Appointment](/dynamics365/customer-engagement/developer/sample-validate-appointment)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

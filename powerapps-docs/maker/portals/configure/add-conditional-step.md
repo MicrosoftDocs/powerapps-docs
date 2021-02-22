@@ -68,3 +68,6 @@ new\_categorycode = 750101 & gendercode = 2
 [Redirect step type](add-redirect-step.md)  
 [Add custom JavaScript](add-custom-javascript.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

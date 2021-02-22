@@ -37,3 +37,6 @@ You can activate a deactivated app by selecting the app and then selecting **Act
 ### See also
 
 [Privileges required to view and access apps](app-visibility-privileges.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

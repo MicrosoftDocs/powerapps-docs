@@ -62,3 +62,6 @@ To do so, check **Raise OnReset when value changes** of the default input prope
 
 - [Canvas app components overview](create-component.md)
 - [Canvas app components library](component-library.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

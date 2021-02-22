@@ -618,3 +618,5 @@ See systemuser Entity [lk_importentitymapping_modifiedby](systemuser.md#BKMK_lk_
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.importentitymapping?text=importentitymapping EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

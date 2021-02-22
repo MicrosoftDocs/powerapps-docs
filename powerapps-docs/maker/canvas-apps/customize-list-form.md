@@ -221,3 +221,6 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
     If the app type is SharePoint Form, the app is a customized form.
 
     ![List of customized forms](./media/customize-list-form/customized-forms.png)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

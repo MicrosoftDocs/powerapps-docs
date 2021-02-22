@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/9/2021
+ms.date: 02/09/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -100,3 +100,6 @@ To resolve connection related issues, ensure you remain connected to the interne
 
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

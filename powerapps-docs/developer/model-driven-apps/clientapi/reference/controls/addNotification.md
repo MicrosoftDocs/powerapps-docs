@@ -117,3 +117,6 @@ This how the notification appears in model-driven apps:
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -103,3 +103,6 @@ To work around this behavior, select each component individually, such as the ne
 [Export solutions](export-solutions.md) <br />
 [Publish changes](create-solution.md#publish-changes) <br />
 [For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

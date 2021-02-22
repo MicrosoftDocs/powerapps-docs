@@ -86,3 +86,6 @@ Console.WriteLine("---------------------------------------");
  [Use a left outer join in QueryExpression to query for records "not in"](use-left-outer-join-queryexpression-query-records-not-in.md)   
  [Using the ConditionExpression Class](use-conditionexpression-class.md)   
  <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

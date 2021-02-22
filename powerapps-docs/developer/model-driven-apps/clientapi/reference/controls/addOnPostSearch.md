@@ -42,3 +42,5 @@ kbSearchControl.addOnPostSearch(myFunction);
 [PostSearch event](../events/postsearch.md)
 
 [removeOnPostSearch](removeOnPostSearch.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

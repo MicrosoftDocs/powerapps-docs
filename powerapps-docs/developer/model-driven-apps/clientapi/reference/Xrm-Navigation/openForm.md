@@ -221,3 +221,6 @@ Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
 ### Related topics
 
 [Xrm.Navigation](../xrm-navigation.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
