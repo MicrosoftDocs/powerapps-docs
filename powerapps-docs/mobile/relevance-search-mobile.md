@@ -53,7 +53,7 @@ View suggested search results inline as you type, minimizing keystrokes and simp
 
 ## View search results
 
-Search results are ranked and grouped by the tables they came from.<!--note from editor: Suggested.-->
+Search results are ranked and grouped by table.
 
 ![Search results page](media/search-results-page.png "Search results page") 
   
@@ -61,7 +61,7 @@ Search results are ranked and grouped by the tables they came from.<!--note from
   
   1. **Search box**: Enter the words you want to seach for.
   2. **Top results**: This tab shows the rows that best match the search query. 
-  3. **Table-specific tab**: To narrow your search results to a specific table, select the table tab.<!--note from editor: Edit okay? I don't know what "row type" means here.--> 
+  3. **Table-specific tab**: To narrow your search results to a specific table, select the table tab.
   4. **Filter**: Refine the search results by using filters. When you select filters, the number of tables that have been filtered on appears next to the filter option.
   5. **See all**: Up to three rows will appear; if there are more, select **See all**.
   
