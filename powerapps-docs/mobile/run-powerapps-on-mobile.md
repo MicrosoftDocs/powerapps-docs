@@ -116,7 +116,7 @@ The apps that you used recently will show on the default screen when you sign in
 
 ## Filter apps 
 
-If you don't have any apps then when you sign in, the app will take you to the **All apps** screen. The list of apps is organized in alphabetical order. Type in an app name in the search bar to find an app.
+If you don't have any apps, then when you sign in, you will land on the **All apps** screen. The list of apps is organized in alphabetical order. Type in an app name in the search bar to find an app.
 
 |Current  |Early access  |
 |---------|---------|
