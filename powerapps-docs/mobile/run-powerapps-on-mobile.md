@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/27/2021
+ms.date: 02/23/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -102,11 +102,11 @@ If you have the Microsoft Authenticator app installed on your mobile device, ent
 
 ## Find the app
 
-The apps that you used recently wil show on the default screen when you sign in to Power Apps mobile.
+The apps that you used recently will show on the default screen when you sign in to Power Apps mobile.
 
 | **Current** | **Early access** |
 | --- | --- |
-|  When you sign in to the app, the **My apps** filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") |  The **Home** is the default sceen when you sign in. It shows the apps that you used recently and the apps that have marked as favorites. <div></div> ![Default Home screen](media/default-home-screen.png "Default Home screen")|
+|  When you sign in to the app, the **My apps** filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") |  The **Home** is the default screen when you sign in. It shows the apps that you used recently and the apps that have marked as favorites. <div></div> ![Default Home screen](media/default-home-screen.png "Default Home screen")|
 
 
 
@@ -116,7 +116,7 @@ If you don't have any apps then when you sign in, the app will take you to the t
 
 |Current  |Early access  |
 |---------|---------|
-|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Diispalys canvas apps that you have pinned to favorite.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li> **Settings**: Access app settings and sign out. </li> <li> **Search**: Use the search to search for apps. When you run a search it will only search for apps that are on the screen you're on. </li> <li>**Favorites** (canvas apps only): Dispalys canvas apps that you have pinned to favorites. </li> <li>**Recent apps**: Displays both model-driven and canvas apps that you have recently used. </li> <li>**Home**: Displays favorite apps and recently accessed apps sorted by open date.</li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More** (canvas apps only): Displays featured and sample apps. </li> <li>**Details**: View information about the app including run the app, add a shortcut for the app, and add the app to favorites. </li> <li>**Sort apps**: You can short by the app name or modified date. </li> 
+|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorite.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li> **Settings**: Access app settings and sign out. </li> <li> **Search**: Use the search to search for apps. When you run a search it will only search for apps that are on the screen you're on. </li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites. </li> <li>**Recent apps**: Displays both model-driven and canvas apps that you have recently used. </li> <li>**Home**: Displays favorite apps and recently accessed apps sorted by open date.</li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More** (canvas apps only): Displays featured and sample apps. </li> <li>**Details**: View information about the app including run the app, add a shortcut for the app, and add the app to favorites. </li> <li>**Sort apps**: You can short by the app name or modified date. </li> 
   
 ## Add to favorites
 
@@ -164,7 +164,7 @@ You can add a shortcut for both canvas apps and model-driven apps to the home sc
 
 ### Use Safari to add a shortcut (iOS 13 or earlier)
 
-1. Do one of the following depending on if you're on the current release or eary acccess:
+1. Do one of the following depending on if you're on the current release or early access:
 
   - **Current**: Select the ellipsis (...) on the app tile, select **Pin to Home**.
 
@@ -202,9 +202,9 @@ The Power Apps mobile app is now integrated with Siri shortcuts, which gives you
 Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen. The new experience works for both model-driven and canvas apps. When you add a Siri shortcut, the app is added to the iOS **Shortcuts** app and from there you can add the app to your home screen.
 
 
-1. Do one of the following depending on if you're on the current release or eary acccess:
+1. Do one of the following depending on if you're on the current release or early access:
 
- - **Current**: To adda shortcut to the home screen for an app, select the ellipsis (...) on the app tile and then select **Add shortcut to Siri**.
+ - **Current**: To add shortcut to the home screen for an app, select the ellipsis (...) on the app tile and then select **Add shortcut to Siri**.
 
     > [!div class="mx-imgBorder"]
     > ![Add shortcut to Siri.](media/add-shortcut.png "Add shortcut to Siri")
