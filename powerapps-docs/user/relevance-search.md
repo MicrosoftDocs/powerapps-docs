@@ -22,25 +22,25 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-With relevance search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. <!--note from editor: I suggest deleting the "More information" link because relevance-search-benefits.md doesn't actually have more information than this one. This is the meat of the content, there's no need to link to the frosting. Also, I suggest deleting the extra marketese in this article; relevance-search-benefits.md already has enough.-->
+With relevance search, the search box is always available at the top of every page in your app. You can start a new search and quickly find the information that you're looking for. 
 
 > [!div class="mx-imgBorder"]
 > ![Search box in the header for an app](media/new-search-exp.png "Search box in the header for an app")
 
 ## Turn on relevance search
 
-Your administrator must turn on the new relevance search experience for your organization. When relevance search is turned on, you'll see a search box in the header that resembles the search experience you're familiar with.<!--note from editor: Suggested.--> After it's enabled, it will be available across all model-driven apps in your organization. More information: [Configure relevance search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)
+Your administrator must turn on the new relevance search experience for your organization. When relevance search is turned on, you'll see a search box in the header that resembles the search experience you're familiar with. After it's enabled, it will be available across all model-driven apps in your organization. More information: [Configure relevance search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)
 
 > [!NOTE]
 > If you opt in to early access for 2021 release wave 1 updates and relevance search is enabled, the new relevance search experience will be turned on for all users. Users won't have the option to use categorized search anymore. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
 
 ## See recent rows and searches
 
-See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you'll see information in a flyout window that helps you complete your search.<!--note from editor: Edit okay? From what I can see, the behavior is more of a flyout than a pop-up.-->
+See your recent searches and recently accessed rows when you select the search box. Before you start typing in the search box, you'll see information pop-up that helps you complete your search.
 
 Up to three recent search terms appear at the top, based on the last three search queries that you viewed the results for. These recent search terms are personalized and based on your device and browser.
 
-The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a small number of rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for relevance search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.<!--note from editor: In the following image, are the names Ammar Peterson and Anthony Glaze from sample data?-->
+The recent search terms are followed by up to seven of the rows you recently accessed. If you frequently access a small number of rows, you can quickly get to them from here. Recently accessed rows are independent of tables that have been indexed for relevance search, because no search has been performed yet. The rows are also grouped by table type, which lets you quickly scan the list.
 
 > [!div class="mx-imgBorder"]
 > ![Screenshot of the relevance search flyout window](media/legend-for-new-exp.png "Screenshot of the relevance search flyout window]") 
@@ -72,33 +72,32 @@ Search results are ranked based on relevance and grouped by tables. The list of 
 
 ### Top results tab
 
-The **Top results** tab displays the top 20 results for the search term, with results grouped by table type. Each group shows results for a table in a grid that has up to six columns. The columns are the first six columns of the table's **View columns** quick find view.<!--note from editor: Edit okay?-->
+The **Top results** tab displays the top 20 results for the search term, with results grouped by table type. Each group shows results for a table in a grid that has up to six columns. The columns are the first six columns of the table's **View columns** quick find view.
 
 > [!NOTE]
-> - The primary column of a table is always used as the first column in the results<!--note from editor: Suggested.--> on the **Top results** tab.
+> - The primary column of a table is always used as the first column in the results on the **Top results** tab.
 > - For notes and attachment tables, two additional columns show information about the related row for that note or attachment.
-> - Party list columns on activity tables&mdash;such as **To**, **CC**, and attendees&mdash;can't be searched on or shown, and will be blank.<!--note from editor: Edit okay? I didn't know where "attendees" fit with the other columns.-->
+> - Party list columns on activity tables&mdash;such as **To**, **CC**, and attendees&mdash;can't be searched on or shown, and will be blank.
 
-In the following image, the top search results from three tables are displayed.<!--note from editor: Suggest moving this introduction here, to provide a break between the note above and the legend below. I don't think it belonged in the legend.-->
+In the following image, the top search results from three tables are displayed.
 
 ![Example of top search results from three different tables](media/rel-search-top-results.png "Example of top search results from three different tables")
 
 Legend:
 
  1. **Top results**:  This tab shows the top 20 results for your search term.
- 2. **Tables that include the rows in the list of results**:<!--note from editor: Edit okay? These aren't rows.--> To narrow your search results to a specific table, select the table-specific tab.
+ 2. **Rows grouped by table type**: To narrow your search results to a specific table, select the table-specific tab.
  3. **Show more**: When you select **Show more** at the bottom of a group, you switch to the table-specific tab.
 
 ### Table-specific tabs
 
-Tabs for the specific tables that contain search results are displayed horizontally. The exact order of the tables from left to right (in a left-to-right environment)<!--note from editor: Since this feature is only enabled for English, maybe it's a bit misleading to include this disclaimer? It implies that the tabs go right-to-left in other environments.--> is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
+Tabs for the specific tables that contain search results are displayed horizontally. The exact order of the tables from left to right (in a left-to-right environment) is based on the relevance of the results. You can collapse the filter panel or hover over the list of tabs to scroll horizontally.
 
-The tables that include the rows in the top 20 results<!--note from editor: Suggested.--> are shown in the first three tabs from left to right, from most to least relevant. The tables that include the results outside of the top 20 are displayed in descending order.
+The tables that include the rows in the top 20 results are shown in the first three tabs from left to right, from most to least relevant. The tables that include the results outside of the top 20 are displayed in descending order.
 
 ![Tabs on the search results page, numbered left to right](media/diagram-top-results.png "Tabs on the search results page, numbered left to right")
 
-Legend:<!--note from editor: These graphical numbers are attractive, but it's confusing to use them here when you've used regular numbers everywhere else. I suggest keeping with plain numbers, to be consistent.-->
-
+Legend:<
 1. <!--![Number 1](media/one.png)--> Shows the top 20 results from three different tables.
 
 2. <!--![Number 2](media/two.png)--> Shows the three tables that are part of the top results, ordered by relevance.
@@ -116,14 +115,14 @@ Legend:
 
 Each table-specific tab displays more information than the **Top results** tab along two different dimensions:
 
-- If the quick find view for the table has more than six columns,<!--note from editor: Edit okay? I didn't know how a **View Column** was different from a column.--> all columns are displayed on the table-specific tab, compared to the maximum of six columns shown on the **Top results** tab.
+- If the quick find view for the table has more than six **View Column**, then all columns are displayed on the table-specific tab, compared to the maximum of six columns shown on the **Top results** tab.
 - All matching rows for the table are accessible in the table-specific tab as an infinitely scrollable list.
 
 ## Filter results by using facets
 
-On the search results page, you can use facets and filters to refine and explore your search results. Facets are available on the **Filter** panel, which you can expand or collapse.<!--note from editor: A panel can be expanded or collapsed, but a pane remains fixed.-->
+On the search results page, you can use facets and filters to refine and explore your search results. Facets are available on the **Filter** panel, which you can expand or collapse.
 
-The **Top results** tab shows search results across different table types, such as a contact versus a phone call. Thus, the **Top results** tab only shows the three global facets that apply to all table types:<!--note from editor: Edit okay? I'm not sure what a "row type" is here.-->
+The **Top results** tab shows search results across different row types, such as a contact versus a phone call. Thus, the **Top results** tab only shows the three global facets that apply to all row types:
 
 - Owner
 - Modified On
@@ -145,7 +144,7 @@ All **Lookup** and **Choice** data types are text-based facets. For example, the
 
 Filters in these facets are sorted in descending order by count. By default, the top four facet values are displayed. When there are more than four facet values, you can select **Show more** to expand the list and see up to 15 results. 
 
-When you select a facet value, you filter search results to show only rows where the column includes the value that you selected.<!--note from editor: Suggested.-->
+When you select a facet value, you filter search results to show only rows where the column includes the value that you selected.
 
 ### Date and time facets
 
@@ -163,12 +162,12 @@ Currently there is no option to disable the feedback question prompt.
 > ![Feedback link](media/feedbacklink.png "Feedback link")  
 
 ## Understand search results
-<!--note from editor: I suggest rearranging this section so the H3s are simply bullets. Because the note at the end of the "Power of common knowledge" section is tucked under that H3, structurally it only applies to that H3, but I'm sure that's not what you meant. I tried moving that note up here, but then it clashed with the note that's already in this introduction because this note talks about relevance search, but the note at the end of this section talks about "intelligent search." Actually, I don't know what the difference is - should it be made clear?-->
+
 Relevance search has a powerful set of capabilities to help you put Microsoft Dataverse at your fingertips. Here are some pointers to help you understand what results you can expect in different scenarios.
 
 > [!NOTE]
 > - Relevance search is text-based, and can search only on columns of type **Single line of text**, **Multiple lines of text**, **Choice**, or **Lookup**. Columns of type **Numeric**, **Date**, and **File** aren't searched on.
-> - Relevance search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by relevance search unless you own it or it was shared with you.<!--note from editor: Suggested.-->
+> - Relevance search enables you to search for rows that are shared with you and rows that you own. Hierarchical security models aren't supported. This means that even if you see a row in Dataverse because you have access to it through hierarchical security, you won't see that row matched by relevance search unless you own it or it was shared with you.
 
 - **Boosted search results**  
   Use important attributes as keywords to "boost" your search for information. Entering a table type to boost search results is an easy way to indicate which results you prefer. For example, searching for **Susan Adatum** indicates that you're looking for a contact **Susan** related to the account **Adatum**.
@@ -219,7 +218,7 @@ With support for common abbreviations and synonyms, you can search for your info
 Search can understand popular locations, date, time, holidays, and numbers. For example, a search for **account in WA** will generate results for accounts located in Washington state.
 -->
 > [!NOTE]
-> - All the preceding capabilities are part of intelligent search and are<!--note from editor: Or should this be "All the preceding capabilities are part of intelligent search, which is only available..."?--> only available for public cloud environments that have English as the base language.
+> - All the preceding capabilities are part of intelligent search, which is only available for public cloud environments that have English as the base language.
 > - To get these results, the preceding examples assume that specific fields for each table were indexed.
 
 ## Working with operators
@@ -267,7 +266,7 @@ This section lists new features that can be used by opting in to early access. M
 
 The new relevance search experience brings some of the most frequently used actions closer to search results, to help you complete your task without having to navigate to the record page in model-driven apps.
 
-Quick actions are icons representing a limited set of commands that are specific to a table.<!--note from editor: Is this what you mean by "small set of commands"?--> You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
+Quick actions are small set of commands specific to a table. You can see quick actions when you're interacting with search in model-driven apps running on a web browser. Some of the commonly used tables are configured to show a set of commands to help you complete your task without losing context.
 
 | Table  | Quick actions |
 |---------|---------|
@@ -297,20 +296,20 @@ On the results page, hover over the results to see quick actions available for t
 
 ![This diagram shows how hovering over a row on the results page displays the quick actions menu](media/quick-actions-diagram-1.gif "This diagram shows how hovering over a row on the results page displays the quick actions menu")
 
-## Use the previous relevance search experience
+## Use the old relevance search experience
 
-When your organization has relevance search enabled but your administrator hasn't turned on the new relevance search experience, you'll see the previous search experience.<!--note from editor: The link didn't seem necessary anymore. Also, it had two hashtags and didn't work.-->
+When your organization has relevance search enabled but your administrator hasn't turned on the new relevance search experience, you'll see the old relevance search experience.
 
 ### Switch between the previous relevance search experience and categorized search
 
-If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
+If your organization has turned on both search options (old relevance search and categorized search), you can switch between the two.
 
 1. On the navigation bar, select **Search**.
 
    > [!div class="mx-imgBorder"]
    > ![Search command on the navigation bar](media/commandbar-search-button.png "Search command on the navigation bar") 
 
-2. On the drop-down menu to the left of the search box<!--note from editor: Edit okay? The style guide wants more info than just "left" or "right."-->, select **Relevance Search** or **Categorized Search**.
+2. On the drop-down menu to the left of the search box, select **Relevance Search** or **Categorized Search**.
 
    > [!div class="mx-imgBorder"]
    > ![Switch between relevance search and categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
