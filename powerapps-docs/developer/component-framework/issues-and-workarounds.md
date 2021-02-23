@@ -80,15 +80,15 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 
 **Workaround**
 
-- Build  the `.pcfproj` as release configuration which sets the webpack to production mode using the command 
+- Build  the `.pcfproj` as release configuration, which sets the web pack to production mode using the command 
   ```CLI
   msbuild /property:configuration=Release
   ```
-- Run the msbuild command with an additional property as shown below: 
+- Run the msbuild command with an extra property as shown below: 
   ```CLI
   msbuild /p:PcfBuildMode=production
   ```
-- Edit the `.pcfproj` to always build the webpack in production mode by setting the property `PcfBuildMode` to production:
+- Edit the `.pcfproj` to always build the web pack in production mode by setting the property `PcfBuildMode` to production:
   ```XML
   <PropertyGroup>
     <Name>TS_ReactStandardControl</Name>
@@ -101,7 +101,8 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 ## When running Power Apps checker with the solution built using CLI tooling in default configuration
 
 **Error: Do not use the eval function or its functional equivalents**
-This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs webpack (used to bundle the code component) to package in development mode, which emits `eval()`. 
+
+This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs web pack (used to bundle the code component) to package in development mode, which emits `eval()`. 
 
 **Workaround**
 
