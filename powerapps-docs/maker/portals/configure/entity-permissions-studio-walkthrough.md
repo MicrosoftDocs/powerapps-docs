@@ -14,9 +14,11 @@ ms.reviewer: tapanm
 
 In the previous article, you learned about how to configure the record-based security in portals by using table permissions configuration from Power Apps portals Studio. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio with a sample scenario and step-by-step walkthrough.
 
+The goal of using this scenario is to show how to use portals Studio to configure table permissions with real-world case study. The scenario showcases using each [access type available in portals Studio](entity-permissions-studio.md#available-access-types-in-studio) to match the real-world scenario with a business requirement with the relevant Microsoft Dataverse tables, and table relationships.
+
 ## Prerequisites
 
-Before you begin with this scenario, understand how to use Power Apps portals Studio to configure table permissions. You'll also need a portal, and access to the Microsoft Dataverse environment.
+Before you begin with this scenario, understand how to use Power Apps portals Studio to configure table permissions. You'll also need a portal, and access to the Dataverse environment.
 
 > [!NOTE]
 > This walkthrough does not include configuration of web pages, basic or advanced forms, or Dataverse tables. The focus of this walkthrough is configuration of table permissions using Studio. To create pages and customize them, see [Build portals using portals Studio](../portal-designer-anatomy.md). To create and configure tables in Dataverse, see [Tables in Dataverse](../../data-platform/entity-overview.md).
@@ -216,6 +218,8 @@ Now that you have all the table permissions configured, this is how the permissi
 - **Cars associated to sales role** - This table permission allows each sales staff to view the car listings created by themselves using **Contact access** access type.
 - **Car dealerships owned by company** - This table permission allows sales staff to view all dealerships across the company using **Account access** access type.
 - **Cars in dealerships** - This child permission with is associated to the **Car dealerships owned by company** table permission. And allows sales staff to view car listings associated to their assigned dealership using **Associated access** access type (through child permission).
+
+As this scenario explains how to configure table permissions under various real-world scenarios to achieve business goals, you can now use the learnings from this tutorial to configure table permissions for your portal to meet your business requirements.
 
 ### See also
 
