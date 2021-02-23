@@ -73,7 +73,9 @@ For privileges required to run model-driven apps on Power Apps Mobile app, see [
 
 These are the supported devices for running model-driven apps and canvas apps on the Power Apps mobile app.
 
-
+| **Minimum required** | **Recommended** |
+| --- | --- |
+| iOS 12 or later |iOS 12 or later|
 | Android 7 or later |Android 7 or later |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
