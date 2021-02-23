@@ -32,7 +32,7 @@ Portals Studio shows four different **Access types**. Depending on the access ty
 1. **Self access** - Applies the selected table permission and privileges to the users from the selected role *for only their own contact record*.
 
 > [!NOTE]
-> **Parent scope** is only available in the Portal Management app. Instead of creating a table permission with the access type as **Parent** when using portals Studio, directly add or associate child permission to existing table permissions.
+> **Parent scope** is only available in the Portal Management app. Instead of creating a table permission with the access type as **Parent**, directly add or associate child permission to existing table permissions when using portals Studio.
 
 ## Configure table permissions using portals Studio
 
