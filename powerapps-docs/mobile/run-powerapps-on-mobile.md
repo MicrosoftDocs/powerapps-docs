@@ -53,7 +53,7 @@ Legend:
 
 ### Use the early access design
 
-To use the early access you will need to enable the **New design (preview)**. 
+To use early access, you need to enable the **New design (preview)**. 
 
 Follow the one of the steps below to enable the new design:
 
