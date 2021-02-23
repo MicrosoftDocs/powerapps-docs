@@ -38,7 +38,7 @@ The control with focus may be visually different based on the [**FocusedBorderCo
 
 You cannot set the focus to controls that are within a [**Gallery**](../controls/control-gallery.md) control, [**Edit form**](../controls/control-form-detail.md) control, or [Component](../create-component.md).  **SetFocus** can be used with a control in a scrollbale screen.
 
-You also cannot set the focus to controls that are within a [**Container**](../controls/control-container.md) control.
+You cannot set the focus to controls that are within a [**Container**](../controls/control-container.md) control.
 
 You can only set the focus to controls on the same screen as the formula containing the **SetFocus** call.
 
