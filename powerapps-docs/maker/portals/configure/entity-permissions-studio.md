@@ -1,6 +1,6 @@
 ---
-title: "Add record-based security by using Table Permissions for a portal using Power Apps portals Studio | MicrosoftDocs"
-description: "Instructions to add record-based security by using Table Permissions for a portal using Power Apps portals Studio."
+title: "Add record-based security by using table permissions for a portal using Power Apps portals Studio | MicrosoftDocs"
+description: "Instructions to add record-based security by using table permissions for a portal using Power Apps portals Studio."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,9 +10,9 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Table Permissions using portals Studio
+# Table permissions using portals Studio
 
-In the previous article, you learned about how to configure the record-based security in portals by using Table Permissions configuration from the Portal Management app. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio.
+In the previous article, you learned about how to configure the record-based security in portals by using table permissions configuration from the Portal Management app. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio.
 
 ## Portals Studio changes
 
@@ -71,6 +71,9 @@ To create a table permission using portals Studio:
 1. Select privileges that you want to grant.
 
 1. Select **Add roles** to add the roles that this table permission will apply to.
+
+    > [!TIP]
+    > If you have not created a web role yet, you can also create it using portals Studio. To create a role, select **New role** from the roles flyout. Enter role **Name**, **Description** (optional), and add **Contacts** (optional). If you don't add any contacts while creating a new role, ensure to add them later for the table permission to take effect.
 
 1. Select **Save**.
 
@@ -180,8 +183,10 @@ To add a child permission to an existing table permission using portals Studio:
 
 To view, edit, deactivate/activate or delete child permissions using portals Studio, follow the steps explained in the earlier section to [configure table permissions using portals Studio](#configure-table-permissions-using-portals-studio).
 
-## Scenario walkthrough
+## Next steps
 
-Contoso LTD scenario with maker tasks in Figma
+[Walkthrough: Configure table permissions using portals Studio](entity-permissions-studio-walkthrough.md)
 
-UI walkthrough for example
+### See also
+
+[Assign table permissions](assign-entity-permissions.md)

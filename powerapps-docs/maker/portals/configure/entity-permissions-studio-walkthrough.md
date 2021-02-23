@@ -1,0 +1,223 @@
+---
+title: "Walkthrough: configure record-based security by using table permissions for a portal using Power Apps portals Studio | MicrosoftDocs"
+description: "This article walks through a scenario with step-by-step example about how to configure record-based security by using table permissions for a portal using Power Apps portals Studio."
+author: sandhangitmsft
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 02/22/2021
+ms.author: sandhan
+ms.reviewer: tapanm
+---
+
+# Walkthrough: Configure table permissions using portals Studio
+
+In the previous article, you learned about how to configure the record-based security in portals by using table permissions configuration from Power Apps portals Studio. In this article, you'll learn about configuring the table permissions using Power Apps portals Studio with a sample scenario and step-by-step walkthrough.
+
+## Prerequisites
+
+Before you begin with this scenario, understand how to use Power Apps portals Studio to configure table permissions. You'll also need a portal, and access to the Microsoft Dataverse environment.
+
+> [!NOTE]
+> This walkthrough does not include configuration of web pages, basic or advanced forms, or Dataverse tables. The focus of this walkthrough is configuration of table permissions using Studio. To create pages and customize them, see [Build portals using portals Studio](../portal-designer-anatomy.md). To create and configure tables in Dataverse, see [Tables in Dataverse](../../data-platform/entity-overview.md).
+
+## Scenario
+
+For this walkthrough scenario, consider an example of Contoso Limited that deals with buying and selling used cars. Contoso has a B2B (business-to-business) portal to manage the inventory posted by sales staff at the car dealerships across the country.
+
+![Contoso Limited - car business example](media/entity-permissions-studio-walkthrough/contoso-ltd.png "Contoso Limited - car business example")
+
+### Roles
+
+Contoso has the following web roles available.
+
+- Authenticated users - default role for all authenticated users.
+- Anonymous users - default role for all anonymous users.
+- Admin - IT Administrators for Contoso.
+- Sales - Sales staff to manage car sales across dealerships.
+- Managers - Managers of the sales and dealership staff.
+
+### Tables
+
+Contoso uses the following Dataverse tables for this configuration.
+
+- Car listings - contains listings of all cars in Contoso inventory across all dealerships.
+- Dealerships - contains details about all car dealerships along with the address and inventory summary.
+
+## View all car listings
+
+Contoso has a web page with a basic form that shows all current car listings in the inventory to all authenticated users.
+
+![Contoso Limited - global access to all authenticated users](media/entity-permissions-studio-walkthrough/contoso-ltd.png "Contoso Limited - global access to all authenticated users")
+
+To configure table permissions for global access to all authenticated users:
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. Select **Apps** on the left-pane.
+
+1. Select your portal.
+
+1. Select **Edit** to open portals Studio.
+
+1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+
+1. Select **Table permissions**.
+
+1. Select **New permission**.
+
+1. Enter table permission name as "All available cars".
+
+1. Select **Car listings** table.
+
+1. Select **Global access** for access type.
+
+1. Select **Read** privilege.
+
+1. Select **Add roles**.
+
+1. From the list of available roles, select **Authenticated users**.
+
+    ![Contoso Limited - global access](media/entity-permissions-studio-walkthrough/contoso-ltd-global-access.png "Contoso Limited - global access")
+
+1. Select **Save**.
+
+## View, update and delete owned car listings
+
+Contoso has a web page with a basic form that allows sales staff to view, update, and delete car listings that they have created.
+
+![Contoso Limited - contact access to owner sales staff](media/entity-permissions-studio-walkthrough/contact-access.png "Contoso Limited - contact access to owner sales staff")
+
+To configure table permissions for contact access to owning sales staff:
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. Select **Apps** on the left-pane.
+
+1. Select your portal.
+
+1. Select **Edit** to open portals Studio.
+
+1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+
+1. Select **Table permissions**.
+
+1. Select **New permission**.
+
+1. Enter table permission name as "Cars associated to sales role".
+
+1. Select **Car listings** table.
+
+1. Select **Contact access** as the access type.
+
+1. Select **Created (schema_name)** for the relationship between the contact, and the Car listings table.
+
+1. Select **Read**, **Write**, **Create**, and **Delete** privileges.
+
+1. Select **Add roles**.
+
+1. From the list of available roles, select **Sales**.
+
+    ![Contoso Limited - contact access](media/entity-permissions-studio-walkthrough/contoso-ltd-contact-access.png "Contoso Limited - contact access")
+
+1. Select **Save**.
+
+## View all car dealerships
+
+Contoso has a web page with a basic form that allows sales staff to view all the car dealerships owned by their company.
+
+![Contoso Limited - account access to view all car dealerships](media/entity-permissions-studio-walkthrough/account-access.png "Contoso Limited - account access to view all car dealerships")
+
+To configure table permissions for account access to sales staff for dealerships:
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. Select **Apps** on the left-pane.
+
+1. Select your portal.
+
+1. Select **Edit** to open portals Studio.
+
+1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+
+1. Select **Table permissions**.
+
+1. Select **New permission**.
+
+1. Enter table permission name as "Cars dealerships owned by company".
+
+1. Select **Dealerships** table.
+
+1. Select **Account access** as the access type.
+
+1. Select **Owning company (schema_name)** for the relationship between the account, and the Dealerships table.
+
+1. Select **Read** privilege.
+
+1. Select **Add roles**.
+
+1. From the list of available roles, select **Sales**.
+
+    ![Contoso Limited - account access](media/entity-permissions-studio-walkthrough/contoso-ltd-account-access.png "Contoso Limited - account access")
+
+1. Select **Save**.
+
+## View car listings for associated dealership
+
+Contoso has a web page with a basic form that allows sales staff to view car listings from the dealerships that the sales staff is associated to.
+
+![Contoso Limited - sales access to view car listings for associated dealership](media/entity-permissions-studio-walkthrough/child-table-permission.png "Contoso Limited - sales access to view car listings for associated dealership")
+
+To configure table permissions for sales staff to view associated dealership's car listings:
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. Select **Apps** on the left-pane.
+
+1. Select your portal.
+
+1. Select **Edit** to open portals Studio.
+
+1. Select ![Settings](media/entity-permissions-studio/settings.png "Settings") on the left pane inside portals Studio.
+
+1. Select **Table permissions**.
+
+1. Select **Car dealerships owned by company** table permission created earlier.
+
+1. Select **Add child permission**.
+
+    ![Contoso Ltd. - add table permission](media/entity-permissions-studio-walkthrough/contoso-ltd-add-table-permission.png "Contoso Ltd. - add table permission")
+
+1. Enter table permission name as "Cars in dealerships".
+
+1. Select **Car listings** table.
+
+1. Select **Account access** as the access type.
+
+1. Select **Owning unit (schema_name)** for the relationship between the dealerships, and the Car listings table.
+
+1. Select **Read** privilege.
+
+1. **Sales** role is inherited from the parent table permission.
+
+1. From the list of available roles, select **Sales**.
+
+    ![Contoso Limited - child table permission](media/entity-permissions-studio-walkthrough/contoso-ltd-child-table-permission.png "Contoso Limited - child table permission")
+
+1. Select **Save**.
+
+## Summary
+
+Now that you have all the table permissions configured, this is how the permissions look like inside portals Studio.
+
+![Contoso Limited - summary of configured table permissions](media/entity-permissions-studio-walkthrough/configured-contoso-ltd-table-permissions-studio.png "Contoso Limited - summary of configured table permissions")
+
+- **All available cars** - This table permission allows all authenticated users to view all car listsings across all dealerships using **Global access** access type.
+- **Cars associated to sales role** - This table permission allows each sales staff to view the car listings created by themselves using **Contact access** access type.
+- **Car dealerships owned by company** - This table permission allows sales staff to view all dealerships across the company using **Account access** access type.
+- **Cars in dealerships** - This child permission with is associated to the **Car dealerships owned by company** table permission. And allows sales staff to view car listings associated to their assigned dealership using **Associated access** access type (through child permission).
+
+### See also
+
+[Assign table permissions](assign-entity-permissions.md) <br>
+[Table permissions using portals Studio](entity-permissions-studio.md)
