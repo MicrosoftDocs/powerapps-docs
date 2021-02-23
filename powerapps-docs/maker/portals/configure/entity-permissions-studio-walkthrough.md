@@ -212,7 +212,7 @@ Now that you have all the table permissions configured, this is how the permissi
 
 ![Contoso Limited - summary of configured table permissions](media/entity-permissions-studio-walkthrough/configured-contoso-ltd-table-permissions-studio.png "Contoso Limited - summary of configured table permissions")
 
-- **All available cars** - This table permission allows all authenticated users to view all car listsings across all dealerships using **Global access** access type.
+- **All available cars** - This table permission allows all authenticated users to view all car listings across all dealerships using **Global access** access type.
 - **Cars associated to sales role** - This table permission allows each sales staff to view the car listings created by themselves using **Contact access** access type.
 - **Car dealerships owned by company** - This table permission allows sales staff to view all dealerships across the company using **Account access** access type.
 - **Cars in dealerships** - This child permission with is associated to the **Car dealerships owned by company** table permission. And allows sales staff to view car listings associated to their assigned dealership using **Associated access** access type (through child permission).
