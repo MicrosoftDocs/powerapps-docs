@@ -1,12 +1,12 @@
 ---
 title: "Walkthrough: configure record-based security by using table permissions for a portal using Power Apps portals Studio | MicrosoftDocs"
 description: "This article walks through a scenario with step-by-step example about how to configure record-based security by using table permissions for a portal using Power Apps portals Studio."
-author: sandhangitmsft
+author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/22/2021
-ms.author: sandhan
+ms.author: ckwan
 ms.reviewer: tapanm
 ---
 
