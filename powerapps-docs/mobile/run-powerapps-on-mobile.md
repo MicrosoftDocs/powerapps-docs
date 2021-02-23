@@ -39,7 +39,7 @@ In this topic, you'll learn how to get started and run a canvas app and a model-
 
 ## Early access feature
 
-If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
+If you have enabled early access, then you will have a different navigation experience. This topic calls out both experiences.
 
 |**Current**  |**Early access** |
 |---------|---------|
@@ -53,7 +53,9 @@ Legend:
 
 ### Use the early access design
 
-To use the early access you will need to enable the **New design (preview)**. There is two ways to do this:
+To use the early access you will need to enable the **New design (preview)**. 
+
+Follow the one of the steps below to enable the new design:
 
 - When you're on the latest version of the app, you'll get a notification to use the new design. Select **Try now** to start using the new design.
 
@@ -112,11 +114,11 @@ The apps that you used recently will show on the default screen when you sign in
 
 ## Filter apps 
 
-If you don't have any apps then when you sign in, the app will take you to the the **All apps** screen. The list of apps are organized in alphabetical order. Type in an app name in the search bar to find an app.
+If you don't have any apps then when you sign in, the app will take you to the **All apps** screen. The list of apps is organized in alphabetical order. Type in an app name in the search bar to find an app.
 
 |Current  |Early access  |
 |---------|---------|
-|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorite.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li> **Settings**: Access app settings and sign out. </li> <li> **Search**: Use the search to search for apps. When you run a search it will only search for apps that are on the screen you're on. </li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites. </li> <li>**Recent apps**: Displays both model-driven and canvas apps that you have recently used. </li> <li>**Home**: Displays favorite apps and recently accessed apps sorted by open date.</li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More** (canvas apps only): Displays featured and sample apps. </li> <li>**Details**: View information about the app including run the app, add a shortcut for the app, and add the app to favorites. </li> <li>**Sort apps**: You can short by the app name or modified date. </li> 
+|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li> **Settings**: Access app settings and sign out. </li> <li> **Search**: Use the search to search for apps. When you run a search, it will only search for apps that are on the screen you're on. </li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites. </li> <li>**Recent apps**: Displays both model-driven and canvas apps that you have recently used. </li> <li>**Home**: Displays favorite apps and recently accessed apps sorted by open date.</li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More** (canvas apps only): Displays featured and sample apps. </li> <li>**Details**: View information about the app including run the app, add a shortcut for the app, and add the app to favorites. </li> <li>**Sort apps**: You can short by the app name or modified date. </li> 
   
 ## Add to favorites
 
@@ -135,22 +137,22 @@ You can sort both canvas apps and model-driven apps.
 
 | **Current** | **Early access** |
 | --- | --- |
-|  After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps. You can sort both canvas apps and model-driven apps.  <div></div> ![Sort menu.](media/sort_apps.png "Sort menu") | You can short apps alphabetically by name or by modified date. The short option is available on **Home**, **All apps**, **Featured apps** and **Sample apps** screen. <div></div> ![Sort menu.](media/sort-apps-iphone.png "Sort menu")|
+|  After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps. You can sort both canvas apps and model-driven apps.  <div></div> ![Sort menu.](media/sort_apps.png "Sort menu") | You can short apps alphabetically by name or by modified date. The short option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen. <div></div> ![Sort menu.](media/sort-apps-iphone.png "Sort menu")|
 
 
 
 ## Search apps
 
-If you know the name of the app that you want to run, then then use search to quickly find the app. You can search for both canvas apps and model-driven apps.
+If you know the name of the app that you want to run, then use search to quickly find the app. You can search for both canvas apps and model-driven apps.
  
 | **Current** | **Early access** |
 | --- | --- |
-|  To find an app, select the search icon at the top, and then type part of its name in the search box. If you filtered your apps, the filtered list will be searched.  <div></div> ![Search for apps.](media/search_apps.png "Search for apps") | To find an app enter the app name in the search field. The app will only search for apps that are on the screen you're on. <div></div> ![Search for your app.](media/search_apps-1.png "Search for your app")|
+|  To find an app, select the search icon at the top, and then type part of its name in the search box. If you filtered your apps, the filtered list will be searched.  <div></div> ![Search for apps.](media/search_apps.png "Search for apps") | To find an app, enter the app name in the search field. The app will only search for apps that are on the screen you're on. <div></div> ![Search for your app.](media/search_apps-1.png "Search for your app")|
 
 
 ## Refresh the list of apps
 
-- **Current**: Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
+- **Current**: Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the app list of both the canvas apps and model-driven apps. 
 
 - **Early access**: On the **Home**, **All apps** or any other screen with a list of apps, swipe down to refresh the app list.
 
