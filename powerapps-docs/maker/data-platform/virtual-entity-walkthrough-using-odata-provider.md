@@ -109,14 +109,17 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 > External names are case sensitive. Refer to your web service metadata to make sure you use the correct name.
 > A Nullable value of false indicates that the attribute is required. Notice that primary key columns are always system required.
 
-1. Open the **new_personid** column, and change the following attribute with the value indicated here:
+1. Open the **new_personid** column, and change the following property with the value indicated here:
+
     **External Name**: Id
-    ![TicketID column](media/ticketid-field.png)
+
+    ![Create id column](media/ticketid-field.png)
 1. Select **Save and Close**.
 1. Open the **new_name** column, and change the following properties to have the values indicated here:
     - **Display Name**: Last Name
     - **External Name**: LastName
-    ![Title column](media/title-field.png)
+ 
+   ![Create last name column](media/title-field.png)
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Person** page enter the following information:
 
@@ -128,7 +131,7 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
     |**Field Requirement**|Business Required|
     |**Data Type**|Single Line of Text|
 
-  ![Severity column](media/severity-field.png)
+  ![Create age column](media/severity-field.png)
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Person** page enter the following information:
    |Field |	Value |
@@ -139,28 +142,42 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
    |Field Requirement |	Business Required |
    |Data Type	| Whole Number |
 
-:::image type="content" source="media/age-field.png" alt-text="Create age column":::
+   :::image type="content" source="media/age-field.png" alt-text="Create age column":::
 1. Select **Save and Close**.
-## Add the columns to the Main form
 
-1. On the Ticket table window, select **Forms**.
-1. Open the main form, drag and drop the **Severity** column from the right pane onto the form in the **General** section under the **Title** column. 
-    ![Severity column added to main form](media/drop-severity-field.png)
-1. On the Ticket table window select **Save and Close**.
+1. Select **New**, and on the **Field: New of Person** page enter the following information:
+   | Field	| Value |
+   |--|--|
+   |Display Name	|Last Modified On |
+   |Name	| new_lastmodifiedon   |
+   |External Name |	LastModifiedOn |
+   | Field Requirement	| Business Required |
+   |Data Type	|Date and Time|
+
+   :::image type="content" source="media/lastmodifiedon-field.png" alt-text="Create last modified on column":::
+
+## Add the columns to the main form
+
+1. On the **Person** table window, select **Forms**.
+1. Open the main form, drag and drop the **First Name**, **Age**, and **Last Modified On**  columns from the right pane onto the form in the **General** section.
+    ![First name, age, and last modified on columns added to main form](media/drop-severity-field.png)
+1. On the **Person** table window select **Save and Close**.
 
 ## Configure the default view
 
-1. On the left pane of the solution explorer, under the **Ticket entity**, select **Views**.
-1. Open the **All Tickets** view.
+1. On the left pane of the solution explorer, under the **Person entity**, select **Views**.
+1. Open the **All People** view.
 1. In the **Common Tasks** pane select **Add Columns**.
     ![Add columns for view](media/addcolumns.png)
-1. Select **Severity**, and then select **OK**.
-1. On the **View: All Tickets** window select **Save and Close**.
+1. Select the **First Name**, **Age** and **Last Modified On** columns, and then select **OK**.
+1. On the **View: All People** window arrange the column order by selecting the move left and move right arrows, and then select **Save and Close**.
 1. On the Solution Explorer window select **Publish All Customizations**.
-    ![Publish all customizations](media/publishall.png)
 1. After all customizations are published, close the Solution Explorer window.
 
-## View the virtual table in action with Dynamics 365
+## Access the virtual table
+
+Perform read, create, update and delete operations on virtual table.
+<-- Update this to use a model-driven app-->
 
 1. Go to **Service** > **Extensions** > **Tickets**.
     
