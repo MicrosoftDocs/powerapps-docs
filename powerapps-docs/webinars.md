@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/06/2021
+ms.date: 02/19/2021
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -71,6 +71,14 @@ by Foyin Olajide-Bello
 **Easily build your own low-code apps with Microsoft Power Apps**  
 by Brian Dang and April Dunnam  
 [Register and watch now](https://info.microsoft.com/ww-Landing-EasilyBuildBusinessApps.html?LCID=EN-US)
+
+**Extend SAP solutions using Microsoft Power Platform**  
+by Holger Bruchelt and Ronald Chang  
+[Register and watch now](https://info.microsoft.com/ww-Landing-Extend-SAP-solutions-using-Microsoft-Power-Platform.html?LCID=EN-US)
+
+**A Deep Dive into Serverless Applications on Power Apps and Azure**  
+by Simona Cotin  
+[Register and watch now](https://info.microsoft.com/ww-Landing-ADeepDiveintoServerlessApplications.html?LCID=EN-US)
 
 ### See also
 
