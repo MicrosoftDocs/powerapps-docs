@@ -21,7 +21,7 @@ searchScope:
 
 # Run model-driven apps and canvas apps on Power Apps mobile
 
-When you create an app, or someone shares an app with you&mdash;either a [canvas app](https://docs.microsoft.com/powerapps/maker/#canvas-apps) or [model-driven](https://docs.microsoft.com/powerapps/maker/#model-driven-apps) app&mdash;you can run that app on iOS and Android devices by using the Power Apps mobile app. 
+When you create an app, or someone shares an app with you&mdash;either a [canvas app](https://docs.microsoft.com/powerapps/maker/#canvas-apps) or [model-driven](https://docs.microsoft.com/powerapps/maker/#model-driven-apps) app&mdash;you can run that app on iOS and Android devices by using Power Apps mobile. 
 
 If you're on a Windows device, you can only run canvas apps; model-driven apps aren't supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3?activetab=pivot:overviewtab). Also, Power Apps for Windows isn't supported if you have the [Power Apps per app plan](/power-platform/admin/about-powerapps-perapp).
 
@@ -33,7 +33,7 @@ If you're on a Windows device, you can only run canvas apps; model-driven apps a
 
 
 > [!NOTE]
-> Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/user-guide-mobile-app).
+> Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/user-guide-mobile-app).
 
 In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device 
 
@@ -71,7 +71,7 @@ For privileges required to run model-driven apps on Power Apps Mobile app, see [
 
 ## Supported devices 
 
-These are the supported devices for running model-driven apps and canvas apps on the Power Apps mobile app.
+These are the supported devices for running model-driven apps and canvas apps on Power Apps mobile.
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
@@ -81,7 +81,7 @@ These are the supported devices for running model-driven apps and canvas apps on
 
 > [!NOTE]
 > - On October 16, 2020 we will no longer support iOS 12. After October 16, 2020 iOS 13 or later will be supported. 
-> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
+> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to Power Apps mobile for Windows platform will be announced in future.
 
 ## Install Power Apps mobile app
 
@@ -269,7 +269,7 @@ To run an app on a mobile device, select the app tile. If someone else created a
 
 ### Run a canvas app
 
-If this is the first time you're running a canvas app by using the Power Apps mobile app, a screen shows the swipe gestures.
+If this is the first time you're running a canvas app by using Power Apps mobile, a screen shows the swipe gestures.
 
 #### Close a canvas app
 
@@ -289,7 +289,7 @@ If an app requires a connection to a data source or permission to use the device
 
 ### Use a model-driven app 
 
-The following image shows an example of a model-driven app screen after you've signed in. To learn how to use model-driven apps running on the Power Apps mobile app, go to [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md). 
+The following image shows an example of a model-driven app screen after you've signed in. To learn how to use model-driven apps running on Power Apps mobile, go to [User Guide for model-driven apps running on Power Apps mobile](use-custom-model-driven-app-on-mobile.md). 
 
 ![Model-driven app home page.](media/model-driven-app-opened.png "Model-driven app home page")
 
@@ -308,8 +308,8 @@ Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map 
 
 ## See also
 
-[User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md) <br/>
-[Troubleshoot issues for the Power Apps mobile app](https://docs.microsoft.com/powerapps/user/powerapps_mobile_troubleshoot)
+[User Guide for model-driven apps running on Power Apps mobile](use-custom-model-driven-app-on-mobile.md) <br/>
+[Troubleshoot issues for Power Apps mobile](https://docs.microsoft.com/powerapps/user/powerapps_mobile_troubleshoot)
 
 
 
