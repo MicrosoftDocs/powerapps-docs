@@ -52,7 +52,7 @@ The OData metadata of the external data source person table:
 :::image type="content" source="media/odata-external-source-table1.png" alt-text="Odata external source XML part 1":::
 :::image type="content" source="media/odata-external-source-table2.png" alt-text="Odata external data source XML part 2":::
 
-## Create the Data Source
+## Create the data source
 
 Create the data source for the OData v4 data provider that uses the OASIS Open Data Protocol (OData) sample web service.
 
@@ -103,7 +103,7 @@ Part of the name of any custom table you create is the customization prefix. Thi
 
 ## Create the columns for the virtual table
 
-On the left navigation pane of the **Entity: Person** page, select **Fields**. As part of this walkthrough you will edit two existing columns and add three more columns that are available in the external data source.
+On the left navigation pane of the **Entity: Person** page, select **Fields**. As part of this walkthrough, you will edit two existing columns and add three more columns that are available in the external data source.
 
 > [!IMPORTANT]
 > External names are case sensitive. Refer to your web service metadata to make sure you use the correct name.
@@ -161,22 +161,22 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 1. On the **Person** table window, select **Forms**.
 1. Open the main form, drag and drop the **First Name**, **Age**, and **Last Modified On**  columns from the right pane onto the form in the **General** section.
     ![First name, age, and last modified on columns added to main form](media/drop-severity-field.png)
-1. On the **Person** table window select **Save and Close**.
+1. On the **Person** table window, select **Save and Close**.
 
 ## Configure the default view
 
 1. On the left pane of the solution explorer, under the **Person entity**, select **Views**.
 1. Open the **All People** view.
-1. In the **Common Tasks** pane select **Add Columns**.
+1. In the **Common Tasks** pane, select **Add Columns**.
     ![Add columns for view](media/addcolumns.png)
-1. Select the **First Name**, **Age** and **Last Modified On** columns, and then select **OK**.
-1. On the **View: All People** window arrange the column order by selecting the move left and move right arrows, and then select **Save and Close**.
-1. On the Solution Explorer window select **Publish All Customizations**.
+1. Select the **First Name**, **Age**, and **Last Modified On** columns, and then select **OK**.
+1. On the **View: All People** window, arrange the column order by selecting the move left and move right arrows, and then select **Save and Close**.
+1. On the Solution Explorer window, select **Publish All Customizations**.
 1. After all customizations are published, close the Solution Explorer window.
 
 ## Access the virtual table
 
-Perform read, create, update and delete operations on virtual table.
+Perform read, create, update, and delete operations on virtual table.
 <-- Update this to use a model-driven app-->
 
 1. Go to **Service** > **Extensions** > **Tickets**.
