@@ -37,7 +37,7 @@ Ensure that you're using a supported web browser and operating system.
 
 - For canvas apps, see: [System requirements, limits, and configuration values](../maker/canvas-apps/limits-and-config.md)
 - For model-driven apps, see: [Requirements/supported configurations](https://docs.microsoft.com/power-platform/admin/online-requirements)
-- To run model-driven apps or canvas apps on the Power Apps mobile app, see [Run model-driven apps and canvas apps on Power Apps mobile](https://docs.microsoft.com/en-us/powerapps/mobile/run-powerapps-on-mobile)
+- To run model-driven apps or canvas apps on your mobile device, see [Run model-driven apps and canvas apps on Power Apps mobile](https://docs.microsoft.com/en-us/powerapps/mobile/run-powerapps-on-mobile)
 
 
 
