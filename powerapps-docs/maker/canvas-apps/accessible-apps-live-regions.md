@@ -5,12 +5,16 @@ author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.date: 10/22/2018
+ms.date: 02/18/2021
 ms.author: tahoon
 search.audienceType:
   - maker
 search.app:
   - PowerApps
+contributors:
+  - tahoon-ms
+  - chmoncay
+  - tapanm-msft
 ---
 
 # Announce dynamic changes with live regions for canvas apps
@@ -50,6 +54,13 @@ To repeat a message, clear text contents by setting the value of the **[Text](co
 
 ## Next steps
 
-Learn how to [show content only to screen readers](accessible-apps-content-visibility.md) if the live region should be hidden from sighted users.
+[Use the Accessibility checker](accessibility-checker.md)
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+### See also
+
+- [Create accessible apps](accessible-apps.md)
+- [Accessible app structure](accessible-apps-structure.md)
+- [Accessible colors in Power Apps](accessible-apps-color.md)
+- [Show or hide content from assistive technologies for canvas apps](accessible-apps-content-visibility.md)
+- [Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+- [Accessibility properties](controls/properties-accessibility.md)
