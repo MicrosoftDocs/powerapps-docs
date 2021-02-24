@@ -15,23 +15,28 @@ search.app:
 ---
 # Find the apps, templates, and information you need
 
-Power Apps unified search helps you quickly discover apps, templates, and content. From a single entry point you can find:
+Power Apps unified search helps you quickly discover apps, templates, and external web content. From a single entry point you can find:
 
-- Apps that have been built and published in your current environment.
-- Templates in your current environment.
-- Documentation and learning content.
-- Community content.
-- Blog posts.
-- Video tutorials from the web.
-
-Type in the **Search** box and to see suggestion for apps, templates, and documentation appear in the drop down below the search box. Choose any suggestion to go directly to that app, template, or web page.
-
-<!-- Update image week of Feb 22
-:::image type="content" source="media/maker-search-demo.gif" alt-text="Unified search on make.powerapps.com":::  -->
+|Item  |Content type  |
+|---------|---------|
+|Apps that have been built and published   | Environment        |
+|Templates    | Environment  |
+|Documentation and learn content    |  External web     |
+|Community content     |  External web       |
+|Blog posts     | External web        |
+| Video tutorials  | External web  |
 
 ## Use search
 
-Search first displays only items from your environment, which are apps and templates, as well as external content that are articles and learning on docs.microsoft.com. Selecting **Show more results** expands your search to additional external web content that includes community subject matter, blog posts, and videos.
+Type in the **Search** box to see suggestions for apps and templates appear in the drop down below the search box.
+
+Choose any suggestion to go directly to that item.
+
+> [!NOTE]
+> By default, search first displays only items from your environment, which are apps and templates. Users can select **See web results** to expand their search to external web content.
+> :::image type="content" source="data-platform/media/search-see-web-results.png" alt-text="See web results ":::
+>
+> To prevent users from using this feature to perform external web content searches for an environment, see [Manage search providers](#manage-search-providers).
 
 > [!WARNING]
 > Do not send personal data or confidential/proprietary information as part of your search when you choose this option.
