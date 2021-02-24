@@ -50,7 +50,7 @@ Contoso uses the following Dataverse tables for this configuration.
 
 Contoso has a web page with a basic form that shows all current car listings in the inventory to all authenticated users.
 
-![Contoso Limited - global access to all authenticated users](media/entity-permissions-studio-walkthrough/contoso-ltd.png "Contoso Limited - global access to all authenticated users")
+![Contoso Limited - global access to all authenticated users](media/entity-permissions-studio-walkthrough/global-access.png "Contoso Limited - global access to all authenticated users")
 
 To configure table permissions for global access to all authenticated users:
 
