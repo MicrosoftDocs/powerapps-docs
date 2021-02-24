@@ -40,7 +40,7 @@ Terminology updates apply to references of legacy terms. For example, if the leg
 
 The following table includes terminology changes inside Portal Management app.
 
-| Component | Legacy term | Current term |
+| Feature area | Legacy term | Current term |
 | - | - | - |
 | View name for Entity List  | Active Entity Lists | Active Lists |
 | View name for Entity List | Entity List Advanced Find View | List Advanced Find View |
@@ -78,8 +78,23 @@ The following table includes terminology changes inside Portal Management app.
 | View name for Entity Form Metadata | Inactive Entity Form Metadata | Inactive Basic Form Metadata |
 | View name for Entity Form Metadata | Quick Find Active Entity Form Metadata | Quick Find Active Basic Form Metadata |
 | Name for option to set entity reference on save | Set Entity Reference On Save | Set Table Reference On Save |
+| Section for Entity Reference Source | Entity Reference Source | Table Reference Source |
+| Type of referenced entity | Reference Entity Source Type | Source Type |
+| Additional setting for Entity or Web form | Target Entity Portal User Lookup Attribute | Portal User Lookup Column |
+| Entity List OData Feed option for set name | Entity Set Name | OData Entity Set Name |
+| Entity List OData Feed option for type name | Entity Type Name | OData Entity Type Name |
 
-Stop at #20 PMA
+## Terminology changes inside portals Studio
+
+Terminology updates apply to references of legacy terms. For example, if portals Studio referred to an "Entity", the term is updated to "Table".
+
+The following table includes terminology changes inside portals Studio.
+
+| Feature area | Legacy term | Current term |
+| - | - | - |
+| Drop down option for Entity | Entity | Table |
+| Search setting checkbox label for Entity Lists | Enable search on entity list | Enable search on list |
+| Checkbox label to enable entity permissions | Enable entity permissions | Enable table permissions |
 
 ## Next steps
 
