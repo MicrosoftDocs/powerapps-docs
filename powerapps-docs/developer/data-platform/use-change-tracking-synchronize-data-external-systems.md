@@ -110,7 +110,7 @@ GET [Organization URI]/api/data/v9.0/accounts/$count?$deltatoken=919042%2108%2f2
 
 <a name="bkmk_unsupported"></a>
 ## Query options not supported in Change Tracking Web API request
-System query options `$filter`, `$orderby` and `$top` are not supported when using `odata.track-changes` as header in Web API request. An error message saying "The `$filter`/ `$orderby`/ `$top` query parameter isn't supported when Change Tracking is enabled." gets returned when using these query options in the Web API request.
+System query options `$filter`, `$orderby`, `$expand` and `$top` are not supported when using `odata.track-changes` as header in Web API request. An error message saying "The `$filter`/ `$orderby`/ `$expand` / `$top` query parameter isn't supported when Change Tracking is enabled." gets returned when using these query options in the Web API request.
 
 <a name="BKMK_retrieve"></a>   
 ## Retrieve changes for an entity using the Organization Service
