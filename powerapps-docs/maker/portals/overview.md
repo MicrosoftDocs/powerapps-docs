@@ -50,27 +50,13 @@ To create Power Apps portal with add-on based license, see [provisioning a porta
 
 See [Power Apps portals licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#what-is-the-difference-between-power-apps-portals-and-dynamics-365-portals-in-terms-of-licensing) for licensing differences between add-on based licenses and capacity-based licenses.
 
-## Terminology updates
-
-Effective November 2020, Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog). Some terminology in Microsoft Dataverse has also been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
-
-Based on the terminology changes in Dataverse, customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. The terminology updates are listed below, and we're in the process of rolling them out across Microsoft Power Platform.
-
-| Legacy term | Current term |
-| - | - |
-| Entity form | Basic form |
-| Web form | Advanced form |
-| Entity list | List |
-| Entity permission | Table permission |
-
-Terminology updates also apply to references of legacy terms. For example, if the legacy term used in the user interface is "Enable search on entity list", the term is updated to "Enable search on list" as "entity list" is the legacy term, and "list" is the current term.
-
 ## Next steps
 
 [Creating a starter portal](create-portal.md)
 
 ### See also
 
+[Terminology changes in Power Apps portals](terminology-changes.md) <br>
 [Microsoft Learn: Get started with Power Apps portals](https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/) <br>
 [Power Apps portals lifecycle](admin/portal-lifecycle.md) <br>
 [Available portal templates](portal-templates.md) <br>
