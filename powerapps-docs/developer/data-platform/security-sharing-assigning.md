@@ -83,7 +83,7 @@ record, depending on his or her privileges. The Organization entity's
 
 ## Revoking access
 
-As the owner of a record, you can revoke (remove) user access to a record that you had shared using `GrantAccess`. To do so, use the `RevokeAccess` message (<xref:Microsoft.Dynamics.CRM.RevokeAccess> action, <xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest> class).
+As the owner of a record, you can revoke (remove) user access to your shared record. To do so, use the `RevokeAccess` message (<xref:Microsoft.Dynamics.CRM.RevokeAccess> action, <xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest> class).
 
 More information: [Shared access](/power-platform/admin/how-record-access-determined#shared-access.md)
 
