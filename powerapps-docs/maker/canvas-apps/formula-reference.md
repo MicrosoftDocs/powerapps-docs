@@ -49,7 +49,7 @@ Other elements include:
 
 **[As](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Names the current record in gallery, form, and record scope functions such as **ForAll**, **With**, and **Sum**.
 
-**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
+**[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific table type.
 
 **[Atan](functions/function-trig.md)** – Returns the arctangent of a number, in radians.
 
@@ -191,7 +191,7 @@ Other elements include:
 
 **[IsToday](functions/function-now-today-istoday.md)** – Checks whether a date/time value is sometime today.
 
-**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific entity type.
+**[IsType](functions/function-astype-istype.md)** – Checks whether a record reference  refers to a specific table type.
 
 ## J
 **[JSON](functions/function-json.md)** - Generates a JSON text string for a table, a record, or a value.
@@ -272,7 +272,7 @@ Other elements include:
 
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
-**[Relate](functions/function-relate-unrelate.md)** – Relates records of two entities through a one-to-many or many-to-many relationship.
+**[Relate](functions/function-relate-unrelate.md)** – Relates records of two tables through a one-to-many or many-to-many relationship.
 
 **[Remove](functions/function-remove-removeif.md)** – Removes one or more specific records from a data source.
 
@@ -373,7 +373,7 @@ Other elements include:
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
 
-**[Unrelate](functions/function-relate-unrelate.md)** – Unrelates records of two entities from a one-to-many or many-to-many relationship.
+**[Unrelate](functions/function-relate-unrelate.md)** – Unrelates records of two tables from a one-to-many or many-to-many relationship.
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 

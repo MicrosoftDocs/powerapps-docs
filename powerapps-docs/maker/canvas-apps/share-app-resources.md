@@ -18,9 +18,9 @@ search.app:
 
 Before you [share a canvas app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
-* Entities in Microsoft Dataverse.
+* Tables in Microsoft Dataverse.
 
-    For information about giving users access to this data, see [Manage entity permissions](share-app.md#manage-entity-permissions).
+    For information about giving users access to this data, see [Manage table permissions](share-app.md#manage-table-permissions).
     
 * A connection to a data source.
 * An on-premises data gateway.

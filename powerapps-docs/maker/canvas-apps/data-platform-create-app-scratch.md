@@ -18,9 +18,9 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Build a canvas app to manage data that's stored in Dataverse, using standard entities (which are built in), custom entities (which your organization creates), or both.
+Build a canvas app to manage data that's stored in Dataverse, using standard tables (which are built in), custom tables (which your organization creates), or both.
 
-When you build an app from Dataverse, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the app.
+When you build an app from Dataverse, you don't need to create a connection from Power Apps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the tables that you want to show or manage in the app.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
     You can build an app from scratch for tablets, but this topic shows building an app for phones.
 
-## Specify an entity
+## Specify a table
 
 1. In the middle of the screen, select **connect to data**.
 
@@ -60,7 +60,7 @@ When you build an app from Dataverse, you don't need to create a connection from
 
     This formula specifies that:
 
-   - The gallery should show data from the **Accounts** entity.
+   - The gallery should show data from the **Accounts** table.
    - The data should be sorted in ascending order until a user selects the sort button to toggle the sort order.
    - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list will show only those accounts for which the **name** field contains the characters that the user specified.
 

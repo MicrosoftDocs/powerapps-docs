@@ -84,7 +84,7 @@ Containers are building blocks of all the responsive design. A container can be 
 
 Below are some tips for building your app’s UI with containers:
 
-- Always create UI elements that form a UI entity inside a container.
+- Always create UI elements that form a UI table inside a container.
 
 - Allows the container to have its own responsive properties and settings to specify how it is positioned or resized on different screen sizes.
 

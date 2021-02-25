@@ -30,7 +30,7 @@ By default,	when an app user adds an image to display to a form in a canvas app,
     > [!div class="mx-imgBorder"] 
     > ![Image data card](../canvas-apps/media/display-full-sized-image/image-data-card.png)
 
-4. Under the **Advanced** tab set the **Data** field to the entity that contains the image you want to display.
+4. Under the **Advanced** tab set the **Data** field to the table that contains the image you want to display.
 5.	Add **.Full** after the value for the image **Default** setting. 
 
     > [!div class="mx-imgBorder"] 

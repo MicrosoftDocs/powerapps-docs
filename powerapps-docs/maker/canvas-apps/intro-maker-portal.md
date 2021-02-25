@@ -36,7 +36,7 @@ For best results, start by ensuring that the home page is set to the right envir
 
 ## Choose an environment
 
-Whether you're creating an app, a flow, a data connection, or an entity in Microsoft Dataverse, much of what you do in Power Apps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
+Whether you're creating an app, a flow, a data connection, or a table in Microsoft Dataverse, much of what you do in Power Apps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
 
 To verify which environment you're in, find the environment switcher near the right side of the header.
 
@@ -114,7 +114,7 @@ By selecting options in the header and left navigation bar, you can do more than
 
 Extend the functionality of your apps by performing these tasks:
 
-- Manage entities, option sets, and data integration in [Dataverse](../data-platform/data-platform-intro.md).
+- Manage tables, option sets, and data integration in [Dataverse](../data-platform/data-platform-intro.md).
 - Configure business logic in [Power Automate](https://docs.microsoft.com/flow/getting-started).
 - Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md).
 

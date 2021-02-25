@@ -262,7 +262,7 @@ In this example, you don't need the time portions of the date fields because tha
 
 ## Use a many-to-one relationship
 
-The **Orders** entity has a many-to-one relationship with the **Employees** entity: each employee can create many orders, but each order can be assigned to only one employee. When the user selects an employee in the [**Combo box**](controls/control-combo-box.md) control, its **Selected** property provides that employee's entire record from the **Employees** entity. As a result, you can configure an [**Image**](controls/control-image.md) control to show the picture of whatever employee the user selects in the combo box.
+The **Orders** table has a many-to-one relationship with the **Employees** table: each employee can create many orders, but each order can be assigned to only one employee. When the user selects an employee in the [**Combo box**](controls/control-combo-box.md) control, its **Selected** property provides that employee's entire record from the **Employees** table. As a result, you can configure an [**Image**](controls/control-image.md) control to show the picture of whatever employee the user selects in the combo box.
 
 1. Select the **Employee** data card:
 
@@ -532,7 +532,7 @@ The **Orders** entity has a many-to-one relationship with the **Employees** enti
 
 To recap, you added a form in which the user can show and edit a summary of each order, and you used these elements:
 
-- A form that shows data from the **Orders** entity: **Form1.DataSource =** `Orders`
+- A form that shows data from the **Orders** table: **Form1.DataSource =** `Orders`
 - A connection between the form and the order gallery: **Form1.Item =** `Gallery1.Selected`
 - An alternate control for the **Order number** field: **View text**
 - A many-to-one relationship to show the employee's picture in the **Employee** data card: `DataCardValue1.Selected.Picture`

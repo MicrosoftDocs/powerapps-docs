@@ -18,7 +18,7 @@ search.app:
 
 # Interactive map component 
 
-Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of entities from a data source, or by inputting new physical locations.
+Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of tables from a data source, or by inputting new physical locations.
 
 Pan, tilt, zoom, and drag to center your map view. As you zoom out, the markers will optionally cluster to represent dense groups of data. 
 
