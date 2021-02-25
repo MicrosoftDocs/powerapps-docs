@@ -85,10 +85,10 @@ The table below shows all the languages currently available out of the box. This
 
 ## Create content in multiple languages
 
-1. Sign in to Dynamics 365 Portals.
+1. Open the [Portal Management app](../configure/configure-portal.md).
 2. Go to **Portals** > **Content** > **Web Pages** to see a list of content. For each webpage, there will be a parent version of the page and a child version of the page for each language activated for the portal.
 3. To add a new localization of the page, go to a base page and scroll down to **Localized Content**.
-4. Select the **+** button on the rightmost side to create a lookup for the localized version.
+4. Select **+ New Web Page** on to create a lookup for the localized version.
 
     ![Add new localized content](../media/add-new-localized-content.png "Add new localized content")  
 
