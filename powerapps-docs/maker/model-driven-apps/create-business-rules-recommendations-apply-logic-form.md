@@ -169,7 +169,7 @@ A business rule may also not execute because a column referenced in the business
 Recommendations show a lightbulb next to the column label.
 - ![Business rule collapsed](media/Reccommendation-View1.png "Recommendation lightbulb collapsed")  
 
-Clicking on the bulb will expand the view and show the recommendation.
+Select the lightbulb to expand the view and show the recommendation.
 - ![Business rule expanded](media/Reccommendation-View2.png "Recommendation lightbulb expanded")  
 
 ## See also  
