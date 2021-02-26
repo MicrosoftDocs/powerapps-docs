@@ -35,7 +35,7 @@ The following table lists key terminology changes in portals.
 | Entity permission | Table permission |
 | Entity Name | Table Name |
 
-All references to the key terminology changes are going to be updated including Power Apps portals inteface, Portal Management app, portals Studio, and [Power Apps](https://make.powerapps.com).
+All references to the key terminology changes are going to be updated including Power Apps portals interface, Portal Management app, portals Studio, and [Power Apps](https://make.powerapps.com).
 
 ## Terminology changes inside Portal Management app
 
