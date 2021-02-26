@@ -74,11 +74,11 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     
     *Possible errors and suggestions*:
     
-    It’s possible that some of the newly shown display names may conflict with the display names for other entities, fields, or controls. For example, you may have a control and a field with the same name. You can change the name of the control with a unique value to fix.
+    It’s possible that some of the newly shown display names may conflict with the display names for other tables, fields, or controls. For example, you may have a control and a field with the same name. You can change the name of the control with a unique value to fix.
     
-    For any field and entity display name conflict, you may see a formula that expects an entity but resolves to a locally scoped field name.
+    For any field and table display name conflict, you may see a formula that expects an table but resolves to a locally scoped field name.
 
-    Use the square bracket with an **@** symbol to indicate a global scope so it resolves to the entity; for example, **[@entityName]**.
+    Use the square bracket with an **@** symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
     
     
 - **Step 2**: Turn **Relational data, option sets and other new features for Common Data Service** and **Use GUID data types instead of strings** features **On**:
@@ -96,7 +96,7 @@ Check *Deprecated features* section under *Advanced settings*.  If set to *Off*,
     - *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
     More information: [Detailed Examples](#detailed-examples).
     - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
-    - *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
+    - *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the table) instead.
 
 ### *Improve data source experience and Common Data Service views* is Off:
 
@@ -119,7 +119,7 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 3. Add the connections to your data sources to the Dataverse using the new data source selection experience. 
 
     > [!NOTE] 
-    > - If you have connections to other environments (other than current), select the *Entity* category and then the *More* (...) option to change the environment. You can then select an entity from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
+    > - If you have connections to other environments (other than current), select the *Table* category and then the *More* (...) option to change the environment. You can then select an table from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
     > - You need to meet one of the following requirements to be able to see an environment that you want to add the connection to:
     >   - You're the **Owner** of the app, or the app is [shared](share-app.md) with you as a **Co-owner**.
     >   - You're a member of at least one of these security roles: **Environment Admin**, **Environment Maker**, or **System Administrator**. For more information about the security roles in an environment, go to [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
@@ -131,11 +131,11 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 It’s possible to have errors as you convert if: you aren't using Display Names, if you're using GUID strings, or if you're using an option set field.
 
 - If control name conflicts, change the name of the control to be different and unique. 
-- For field and entity display name conflicts, you may see a formula that is expecting an entity but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the entity; for example, **[@entityName]**.
+- For field and table display name conflicts, you may see a formula that is expecting an table but is resolving to a more locally scoped field name. Use the square bracket with an *@* symbol to indicate a global scope so it resolves to the table; for example, **[@tableName]**.
 - *Option Set values*: If you're using an option set field with a text identifier for the option set value, use the dot notation instead to reference the option set value. For example, change `Patch(Accounts, OptionSet1 = “12345”)` to `Patch(Accounts, OptionSet.Item1)` where `Item1` corresponds to the `12345` value. <br>
 More information: [Detailed Examples](#detailed-examples).
 - *GUIDs*: If you're using a static GUID string such as `015e45e1044e49f388115be07f2ee116`, convert it to a function that returns a GUID object; for example `GUID(“015e45e1044e49f388115be07f2ee116”)`. 
-- *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the entity) instead.
+- *Lookups*: If you're using Lookup functions to get first-level lookup values such as `Lookup(Contacts, ‘contactID’ = ThisItem.ContactID”)`, consider using `ThisItem.PrimaryContacts` (where PrimaryContacts is the name of the table) instead.
 - For any Polymorphic references, refer to the Detailed Examples section below. 
 
 ## Detailed Examples
@@ -148,7 +148,7 @@ Separate `_myfield` and `_myfield_label` fields were used for an Option set earl
 
 #### Removing and adding Option set Data cards
 
-It's recommended to remove existing data cards and add them back to work with your Option set. For example, if you're working with the Account entity and the Category Option set, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
+It's recommended to remove existing data cards and add them back to work with your Option set. For example, if you're working with the Account table and the Category Option set, you'll see that the *DataField* property of the data card was set to `_accountcategorycode_label`. In the field list you can see that the data card has a type of *String*:
 
 ![OptionSet with old style name](./media/use-native-cds-connector/OptionSet-with-old-style-name.png)
 
@@ -170,7 +170,7 @@ You'll need to edit this formula. Option set text identifer is no longer used fo
 Filter(Account, Category= ‘Category (Accounts)’.’Preferred Customer’)
 ```
 
-'Category(Accounts)' is the name of enum used in the Category field of the Accounts entity. This is a local option set.  You can read more about local and global option sets here: [Global option sets.](https://docs.microsoft.com/powerapps/maker/data-platform/create-edit-global-option-sets)
+'Category(Accounts)' is the name of enum used in the Category field of the Accounts table. This is a local option set.  You can read more about local and global option sets here: [Global option sets.](https://docs.microsoft.com/powerapps/maker/data-platform/create-edit-global-option-sets)
 
 #### Editing Option Set Patch statements to use new syntax
 
@@ -225,11 +225,11 @@ Using the [Patch](./functions/function-patch.md) function with Two option should
 
 ### Polymorphic lookups
 
-Following guidelines help to upgrade your application if it referenced [polymorphic](working-with-references.md) fields. Polymorphic lookups, from the same field, support references to a restricted set of multiple entities.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific entity. A record reference carries the entity information allowing it to point to a record in several different other entities, which differs from a normal lookup that can only point to records in one entity.  
+Following guidelines help to upgrade your application if it referenced [polymorphic](working-with-references.md) fields. Polymorphic lookups, from the same field, support references to a restricted set of multiple tables.  Similar to references in other languages, a record reference is a pointer to a specific record in a specific table. A record reference carries the table information allowing it to point to a record in several different other table, which differs from a normal lookup that can only point to records in one table.  
 
 #### Access, Set, and Filter on the Owner field of a record
 
-For instance, the Owner field in an entity can refer to a record in the Users entity or the Teams entity. The same lookup field in different records could refer to records in different entities.
+For instance, the Owner field in an table can refer to a record in the Users table or the Teams table. The same lookup field in different records could refer to records in different tables.
  
 ![Polymorphic Owner field](./media/use-native-cds-connector/Polymorphic1.png)
  
@@ -244,19 +244,19 @@ Patch( Accounts, First( Accounts ), { Owner: First( Users ) })
 
 ##### Polymorphic with a Gallery displaying Owner name
 
-Since a reference can point to different entities, you must be specific. You can't use **ThisItem.Owner.Name**, as the name field in the **Team** entity is **Team Name**, and the name field in the **User** entity is **Full Name**. Power Apps won’t know which type of lookup you're referring to, until you run the app.
+Since a reference can point to different tables, you must be specific. You can't use **ThisItem.Owner.Name**, as the name field in the **Team** table is **Team Name**, and the name field in the **User** table is **Full Name**. Power Apps won’t know which type of lookup you're referring to, until you run the app.
 
 To fix this issue: 
 
-1. Add the data sources for the entity types that Owner could be; in current example, Users and Teams).
+1. Add the data sources for the table types that Owner could be; in current example, Users and Teams).
 2. Use additional functions to make your intent clear.
 
 There are two new functions you can make use of:
 
-- IsType – Checks if a record reference is of a particular entity type.
-- AsType – Casts a record reference to a particular entity type.
+- IsType – Checks if a record reference is of a particular table type.
+- AsType – Casts a record reference to a particular table type.
 
-With these functions, you can write a formula that displays the name of the Owner taken from two differently named fields, based on the entity type of the Owner:
+With these functions, you can write a formula that displays the name of the Owner taken from two differently named fields, based on the table type of the Owner:
 
 ```powerapps-dot
 If( IsType( ThisItem.Owner,  [@Teams]), 
@@ -266,15 +266,15 @@ If( IsType( ThisItem.Owner,  [@Teams]),
 
 ![Gallery with As Type](./media/use-native-cds-connector/Polymorphic-And-AsType-in-Gallery.png)
 
-Global disambiguation operator for `[@Teams]` and `[@Users]` is used to ensure that you reference the global entity type. Though in this case it's not necessary, it's a recommended to always be clear. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
+Global disambiguation operator for `[@Teams]` and `[@Users]` is used to ensure that you reference the global table type. Though in this case it's not necessary, it's a recommended to always be clear. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
  
-#### Access and set the Company Name field (a Customer data type) of the Contacts entity
+#### Access and set the Company Name field (a Customer data type) of the Contacts table
 
-Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per entity. But an entity can include zero, one, or more Customer lookup fields. The Contacts system entity includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#show-the-fields-of-a-customer) for more details.
+Customer lookup field is another polymorphic lookup that's similar to Owner. You can only have one Owner field per table. But an table can include zero, one, or more Customer lookup fields. The Contacts system table includes the Company Name field, which is a Customer lookup field. Read [show the fields of a customer](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#show-the-fields-of-a-customer) for more details.
  
-#### Access and set the Regarding field of activity entities such as Faxes, Phone Calls, Email Messages
+#### Access and set the Regarding field of activity tables such as Faxes, Phone Calls, Email Messages
 
-Polymorphic lookups aren't limited to Accounts and Contacts. The list of entities is extensible with custom entities. For example, the Faxes entity has a polymorphic Regarding lookup field, which can refer to Accounts, Contacts, and other entities. If you have a gallery with data source set to Faxes, you can use the following formula to display the name associated with the Regarding lookup field. 
+Polymorphic lookups aren't limited to Accounts and Contacts. The list of tables is extensible with custom tables. For example, the Faxes table has a polymorphic Regarding lookup field, which can refer to Accounts, Contacts, and other tables. If you have a gallery with data source set to Faxes, you can use the following formula to display the name associated with the Regarding lookup field. 
  
  ```powerapps-dot
 If( IsBlank( ThisItem.Regarding ), "",
@@ -291,17 +291,17 @@ Read [Regarding lookup fields](https://docs.microsoft.com/powerapps/maker/canvas
 
 #### Access the list of all Activities for a record
 
-In Dataverse, entities such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/data-platform/activity-entities). You can also create your own [custom activity entities](https://docs.microsoft.com/powerapps/developer/data-platform/custom-activities).
+In Dataverse, tables such as Faxes, Tasks, Emails, Notes, Phone Calls, Letters, and Chats are designated as [activities](https://docs.microsoft.com/powerapps/developer/data-platform/activity-entities). You can also create your own [custom activity tables](https://docs.microsoft.com/powerapps/developer/data-platform/custom-activities).
 
-You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with an entity such as account. Add the Activities entity and other individual entities whose data you plan to display in the canvas app.
+You can show activities of a specific type (such as Faxes or Taxes), or all activities associated with an table such as account. Add the Activities table and other individual tables whose data you plan to display in the canvas app.
 
-Each time you add a record to (for example the Tasks entity), a record in the Activity entity with the fields common across all activity entities is created. Read [activity entity](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#activity-entity) for more details.
+Each time you add a record to (for example the Tasks table), a record in the Activity table with the fields common across all activity tables is created. Read [activity table](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#activity-entity) for more details.
 
 The following example shows that as you select an Account, all the Activities associated with that account will be displayed:
  
 ![Polymorphic Activities](./media/use-native-cds-connector/Polymorphic-Activities.png) 
  
-The records are being displayed from the Activity entity. But you can still use the [IsType](./functions/function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with an entity type, you must add the necessary data source.
+The records are being displayed from the Activity table. But you can still use the [IsType](./functions/function-astype-istype.md) function to identify which kind of activity they are. Again, before you use IsType with an table type, you must add the necessary data source.
  
 By using this formula, you can show the record type in a label control within the gallery:
 
@@ -317,13 +317,13 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 
 #### Access the list of Notes for a record
 
-When you create an entity, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes entity, as this graphic shows for the Accounts entity:
+When you create an table, you can enable attachments. If you select the check box for enabling attachments, you'll create a Regarding relationship with the Notes table, as this graphic shows for the Accounts table:
 
 ![Notes field](./media/use-native-cds-connector/Notes-Field.png)
 
 ##### Filtering
 
-You can't read or filter based on the Regarding field. However, the reverse Notes one-to-many relationship is available. To list all the Notes associated to an Account entity, you can use the following formula:
+You can't read or filter based on the Regarding field. However, the reverse Notes one-to-many relationship is available. To list all the Notes associated to an Account table, you can use the following formula:
 
 ```powerapps-dot
 First( Accounts ).Notes
@@ -331,7 +331,7 @@ First( Accounts ).Notes
 
 ##### Patch
 
-You can't set the Notes field on an entity by using Patch. To add a record to an entity's Notes table, you can use the Relate function. Create the note first, as in this example:
+You can't set the Notes field on an table by using Patch. To add a record to an table's Notes table, you can use the Relate function. Create the note first, as in this example:
 
 ```powerapps-dot
 Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note", isdocument:'Is Document (Notes)'.No } ) )
