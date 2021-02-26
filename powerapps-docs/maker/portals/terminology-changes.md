@@ -43,7 +43,7 @@ Terminology updates apply to references of legacy terms. For example, if the leg
 
 The following table includes terminology changes inside Portal Management app.
 
-| Feature area or location of the term used | Legacy term | Current term |
+| Feature area or location of the term | Legacy term | Current term |
 | - | - | - |
 | View name for Entity List  | Active Entity Lists | Active Lists |
 | View name for Entity List | Entity List Advanced Find View | List Advanced Find View |
@@ -98,7 +98,7 @@ Terminology updates apply to references of legacy terms. For example, if portals
 
 The following table includes terminology changes inside portals Studio.
 
-| Feature area | Legacy term | Current term |
+| Feature area or location of the term | Legacy term | Current term |
 | - | - | - |
 | Drop down option for Entity | Entity | Table |
 | Search setting checkbox label for Entity Lists | Enable search on entity list | Enable search on list |
