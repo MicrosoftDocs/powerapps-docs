@@ -13,11 +13,8 @@ ms.reviewer: tapanm
 # Power Apps portals admin center
 
 > [!NOTE]
-> Effective November 2020:
-> - Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog)
-> - Some terminology in Microsoft Dataverse has been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
->
-> Power Apps portals articles will be updated soon to reflect the latest terminology.
+> Based on the [terminology changes in Dataverse](https://go.microsoft.com/fwlink/?linkid=2147247), customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. More information: [Terminology changes in Power Apps portals](../terminology-changes.md) <br> <br>
+> We're in the process of rolling them out across Microsoft Power Platform. Power Apps portals articles will be updated soon to reflect the latest terminology.
 
 The Power Apps portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 

@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/18/2021
+ms.date: 02/26/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 searchScope:
@@ -16,9 +16,12 @@ searchScope:
 
 ## Overview
 
-Effective November 2020, Common Data Service has been renamed to Microsoft Dataverse. [Learn more](https://aka.ms/PAuAppBlog). Some terminology in Microsoft Dataverse has also been updated. For example, *entity* is now *table* and *field* is now *column*. [Learn more](https://go.microsoft.com/fwlink/?linkid=2147247)
+Effective November 2020, Common Data Service has been renamed to Microsoft Dataverse. More information: [Common Data Service is now Microsoft Dataverse](https://aka.ms/PAuAppBlog). Some terminology in Microsoft Dataverse has also been updated. For example, *entity* is now *table* and *field* is now *column*. More information: [Terminology updates in Dataverse](https://go.microsoft.com/fwlink/?linkid=2147247)
 
 Based on the terminology changes in Dataverse, customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. The terminology updates are listed below, and we're in the process of rolling them out across Microsoft Power Platform.
+
+> [!IMPORTANT]
+> We're in the process of rolling out the terminology changes for Power Apps portals interface, Power Apps portals Studio, Portal Management app, and [Power Apps](https://make.powerapps.com). During this process, your environment may show legacy or current terminology depending on the rollout stage. Power Apps portals articles will be updated soon to reflect the latest terminology.
 
 ## Key terminology changes for portals
 
@@ -32,7 +35,7 @@ The following table lists key terminology changes in portals.
 | Entity permission | Table permission |
 | Entity Name | Table Name |
 
-All references to the key terminology changes will be updated including Portal Management app, portals Studio, and [Power Apps](https://make.powerapps.com).
+All references to the key terminology changes are going to be updated including Power Apps portals inteface, Portal Management app, portals Studio, and [Power Apps](https://make.powerapps.com).
 
 ## Terminology changes inside Portal Management app
 
@@ -40,7 +43,7 @@ Terminology updates apply to references of legacy terms. For example, if the leg
 
 The following table includes terminology changes inside Portal Management app.
 
-| Feature area | Legacy term | Current term |
+| Feature area or location of the term used | Legacy term | Current term |
 | - | - | - |
 | View name for Entity List  | Active Entity Lists | Active Lists |
 | View name for Entity List | Entity List Advanced Find View | List Advanced Find View |
@@ -83,6 +86,11 @@ The following table includes terminology changes inside Portal Management app.
 | Additional setting for Entity or Web form | Target Entity Portal User Lookup Attribute | Portal User Lookup Column |
 | Entity List OData Feed option for set name | Entity Set Name | OData Entity Set Name |
 | Entity List OData Feed option for type name | Entity Type Name | OData Entity Type Name |
+| Option to choose entity form for create | Entity Form for Create | Basic Form for Create |
+| Display name of entity form field | Reference Entity Primary Key Logical Name | Reference Table Primary Key Logical Name |
+| Display name of entity form field | Record Source Entity Logical Name | Record Source Table Logical Name |
+| Label for query string parameter name for On success action of Redirect on entity form | Record ID Query String Parameter Name | Record ID Parameter Name |
+
 
 ## Terminology changes inside portals Studio
 
