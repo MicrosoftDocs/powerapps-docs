@@ -14,7 +14,7 @@ ms.reviewer: tapanm
 
 > [!NOTE]
 > Based on the [terminology changes in Dataverse](https://go.microsoft.com/fwlink/?linkid=2147247), customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. More information: [Terminology changes in Power Apps portals](../terminology-changes.md) <br> <br>
-> We're in the process of rolling them out across Microsoft Power Platform. Power Apps portals articles will be updated soon to reflect the latest terminology.
+> We're in the process of rolling out the terminology changes in Power Apps portals. Documentation for portals will be updated soon to reflect the latest terminology.
 
 The Portal Management app lets you do advanced configuration actions on your portal. The app is available after the database on Microsoft Dataverse is created successfully.
 
