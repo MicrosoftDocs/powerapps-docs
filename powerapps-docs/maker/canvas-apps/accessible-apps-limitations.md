@@ -62,6 +62,14 @@ Consider the following:
 - Use the built-in **[Combo box](controls/control-combo-box.md)** or **[Drop down](controls/control-drop-down.md)**.
 - [Create a code component](../../developer/component-framework/overview.md) that implements an accessible combo box.
 
+## Scrollable content 
+
+Keyboard users can't scroll **[Forms](controls/control-form-detail.md)**, **[Scrollable screens](add-scrolling-screen.md)**, and **[Containers](controls/control-container.md)** if there are no interactive controls inside them.
+
+For **[Galleries](controls/control-gallery.md)** with no interactive content, you can set **[TabIndex](controls/properties-accessibility.md)** on the **Gallery** itself so that keyboard users can focus on it and use arrow keys to scroll it.
+
+For **[Labels](controls/control-text-box.md)**, setting **TabIndex** will make them focusable for keyboard scrolling. However, it will also [turn them into buttons](controls/control-text-box.md#accessibility-guidelines). If they are not meant to be buttons, you should avoid making them scrollable. Ensure the **Label** is large enough to fit text. The **AutoHeight** property can be used to automatically adjust the control's size when it is inside a **Form**, **Scrollable screen**, or **Gallery**.
+
 ## Expandable sections
 
 Expandable sections, also known as disclosures, contain content that is hidden until the user presses a button. There is no built-in support for these elements but there is a workaround.
