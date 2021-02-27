@@ -157,6 +157,7 @@ You can set your app to open, for example, the **Case details** page as soon as 
 * Currently, notifications aren't displayed on Power Apps Mobile for Windows Phone.
 * Currently, we don't provide push notifications for users who run apps only in a web browser.
 * Notifications show the generic Power Apps icon instead of a specific app icon.
+* Notifications are not supported in China.
 
 For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
 
