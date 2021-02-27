@@ -68,7 +68,7 @@ Keyboard users can't scroll **[Forms](controls/control-form-detail.md)**, **[Scr
 
 For **[Galleries](controls/control-gallery.md)** with no interactive content, you can set **[TabIndex](controls/properties-accessibility.md)** on the **Gallery** itself so that keyboard users can focus on it and use arrow keys to scroll it.
 
-For **[Labels](controls/control-text-box.md)**, setting **TabIndex** will make them focusable for keyboard scrolling. However, it will also [turn them into buttons](controls/control-text-box.md#accessibility-guidelines). Avoid making labels scrollable if they're not meant to be buttons. Ensure the **Label** is large enough to fit text. The **AutoHeight** property can be used to automatically adjust the control's size when it is inside a **Form**, **Scrollable screen**, or **Gallery**.
+For **[Labels](controls/control-text-box.md)**, setting **TabIndex** will make them focusable for keyboard scrolling. However, it will also [turn them into buttons](controls/control-text-box.md#accessibility-guidelines). Don't making labels scrollable if they're not meant to be buttons. Ensure the **Label** is large enough to fit text. The **AutoHeight** property can be used to automatically adjust the control's size when it is inside a **Form**, **Scrollable screen**, or **Gallery**.
 
 ## Expandable sections
 
