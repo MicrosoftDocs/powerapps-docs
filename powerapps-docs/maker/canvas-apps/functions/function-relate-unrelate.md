@@ -16,17 +16,17 @@ search.app:
 ---
 # Relate and Unrelate functions in Power Apps
 
-Relate and unrelate records of two entities through a one-to-many or many-to-many relationship.
+Relate and unrelate records of two tables through a one-to-many or many-to-many relationship.
 
 ## Description
 
 The **Relate** function links two records through a one-to-many or many-to-many relationship in Microsoft Dataverse. The **Unrelate** function reverses the process and removes the link.
 
-For one-to-many relationships, the Many entity has a foreign-key field that points to a record of the One entity. **Relate** sets this field to point to a specific record of the One entity, while **Unrelate** sets this field to *blank*. If the field is already set when **Relate** is called, the existing link is lost in favor of the new link. You can also set this field by using the [**Patch**](function-patch.md) function or an **[Edit form](../controls/control-form-detail.md)** control; you need not use the **Relate** function.
+For one-to-many relationships, the Many table has a foreign-key field that points to a record of the One table. **Relate** sets this field to point to a specific record of the One table, while **Unrelate** sets this field to *blank*. If the field is already set when **Relate** is called, the existing link is lost in favor of the new link. You can also set this field by using the [**Patch**](function-patch.md) function or an **[Edit form](../controls/control-form-detail.md)** control; you need not use the **Relate** function.
 
-For many-to-many relationships, the system that links the records maintains a hidden join table. You can't access this join table directly; it can be read only through a one-to-many projection and set through the **Relate** and **Unrelate** functions. Neither related entity has a foreign key.
+For many-to-many relationships, the system that links the records maintains a hidden join table. You can't access this join table directly; it can be read only through a one-to-many projection and set through the **Relate** and **Unrelate** functions. Neither related table has a foreign key.
 
-The data for the entity that you specify in the first argument will be refreshed to reflect the change, but the data for the entity that you specify in the second argument won't. That data must be manually refreshed with the **[Refresh](function-refresh.md)** function to show the result of the operation.
+The data for the table that you specify in the first argument will be refreshed to reflect the change, but the data for the table that you specify in the second argument won't. That data must be manually refreshed with the **[Refresh](function-refresh.md)** function to show the result of the operation.
 
 These functions never create or delete a record. They only relate or unrelate two records that already exist.
 
@@ -37,26 +37,26 @@ You can use these functions only in [behavior formulas](../working-with-formulas
 
 ## Syntax
 
-**Relate**( *Entity1RelatedTable*, *Entity2Record* )
+**Relate**( *Table1RelatedTable*, *Table2Record* )
 
-* *Entity1RelatedTable* - Required. For a record of *Entity1*, the table of *Entity2* records related through a one-to-many or many-to-many relationship.
-* *Entity2Record* - Required. The *Entity2* record to add to the relationship.
+* *Table1RelatedTable* - Required. For a record of *Table1*, the table of *Table2* records related through a one-to-many or many-to-many relationship.
+* *Table2Record* - Required. The *Table2* record to add to the relationship.
 
-**Unrelate**( *Entity1RelatedTable*, *Entity2Record* )
+**Unrelate**( *Table1RelatedTable*, *Table2Record* )
 
-* *Entity1RelatedTable* - Required. For a record of *Entity1*, the table of *Entity2* records related through a one-to-many or many-to-many relationship.
-* *Entity2Record* - Required. The *Entity2* record to remove from the relationship.
+* *Table1RelatedTable* - Required. For a record of *Table1*, the table of *Table2* records related through a one-to-many or many-to-many relationship.
+* *Table2Record* - Required. The *Table2* record to remove from the relationship.
 
 ## Examples
 
-Consider a **Products** entity with the following relationships as seen in the [Power Apps portal's entity viewer](../../data-platform/create-edit-entities-portal.md):
+Consider a **Products** table with the following relationships as seen in the [Power Apps portal's table viewer](../../data-platform/create-edit-entities-portal.md):
 
-| Relationship display name | Related entity | Relationship type |
+| Relationship display name | Related table | Relationship type |
 | --- | --- |
 | Product Reservation | Reservation | One-to-many |
 | Product &harr; Contact | Contact | Many-to-many |
 
-**Products** and **Reservations** are related through a One-to-Many relationship.  To relate the first record of the **Reservations** entity with the first record of the **Products** entity:
+**Products** and **Reservations** are related through a One-to-Many relationship.  To relate the first record of the **Reservations** table with the first record of the **Products** table:
 
 `Relate( First( Products ).Reservations, First( Reservations ) )`
 
@@ -66,7 +66,7 @@ To remove the relationship between these records:
 
 At no time did we create or remove or a record, only the relationship between records was modified.
 
-**Products** and **Contacts** are related through a Many-to-Many relationship.  To relate the first record of the **Contacts** entity with the first record of the **Products** entity:
+**Products** and **Contacts** are related through a Many-to-Many relationship.  To relate the first record of the **Contacts** table with the first record of the **Products** table:
 
 `Relate( First( Products ).Contacts, First( Contacts ) )`
 
@@ -82,7 +82,7 @@ or:
 
 `Unrelate( First( Contacts ).Products, First( Products ) )`
 
-The walk through that follows does exactly these operations on these entities using an app with **Gallery** and **Combo box** controls for selecting the records involved.
+The walk through that follows does exactly these operations on these tables using an app with **Gallery** and **Combo box** controls for selecting the records involved.
 
 These examples depend on the sample data being installed in your environment. Either [create a trial environment including sample data](../../model-driven-apps/overview-model-driven-samples.md#get-sample-apps) or [add sample data to an existing environment](../../model-driven-apps/overview-model-driven-samples.md#install-or-uninstall-sample-data).
 
@@ -98,9 +98,9 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Products** > **Connect**.  
 
-    The Products entity is part of the sample data loaded above.
+    The Products table is part of the sample data loaded above.
 
-     ![Add the Products entity as a data source](media/function-relate-unrelate/products-connect.png)
+     ![Add the Products table as a data source](media/function-relate-unrelate/products-connect.png)
 
 1. On the **Insert** tab, add a blank vertical **[Gallery](../controls/control-gallery.md)** control.
 
@@ -203,33 +203,33 @@ With these changes, users can clear the selection in **ComboBox1** for a contact
 
 #### Create a many-to-many relationship
 
-The sample data doesn't include a many-to-many relationship, but you'll create one between the Products entity and the Contacts entity. Users can relate each product to more than one contact and each contact to more than one product.
+The sample data doesn't include a many-to-many relationship, but you'll create one between the Products table and the Contacts table. Users can relate each product to more than one contact and each contact to more than one product.
 
-1. From [this page](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** in the left navigation bar, and then select **Entities**.
+1. From [this page](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** in the left navigation bar, and then select **Tables**.
 
-    ![Open list of entities](media/function-relate-unrelate/entity-list.png)
+    ![Open list of table](media/function-relate-unrelate/entity-list.png)
 
-1. Change the entity filter to include all entities.
+1. Change the table filter to include all tables.
 
-    By default, sample entities don't appear.
+    By default, sample tables don't appear.
 
-    ![Remove entity filter](media/function-relate-unrelate/entity-all.png)
+    ![Remove table filter](media/function-relate-unrelate/entity-all.png)
 
-1. Scroll down, open the **Product** entity, and select **Relationships**.
+1. Scroll down, open the **Product** table, and select **Relationships**.
 
-    ![Relationships tab for the Product entity](media/function-relate-unrelate/entity-relationships.png)
+    ![Relationships tab for the Product table](media/function-relate-unrelate/entity-relationships.png)
 
 1. Select **Add relationship** > **Many-to-many**.
 
     ![Add many-to-many relationship](media/function-relate-unrelate/entity-manytomany.png)
 
-1. Select the **Contact** entity for the relationship.
+1. Select the **Contact** table for the relationship.
 
-    ![Select the Contact entity](media/function-relate-unrelate/entity-contact.png)
+    ![Select the Contact table](media/function-relate-unrelate/entity-contact.png)
 
-1. Select **Done** > **Save entity**.
+1. Select **Done** > **Save table**.
 
-    ![List of relationships for Products entity](media/function-relate-unrelate/entity-done.png)
+    ![List of relationships for Products table](media/function-relate-unrelate/entity-done.png)
 
 #### Relate and unrelate contacts with one or more products
 
@@ -300,7 +300,7 @@ Many-to-many relationships are symmetric. You can extend the example to add prod
 
 1. Set the **OnVisible** property of **Screen1** to **Refresh( Products )**.
 
-    When you update a one-to-many or many-to-many relationship, only the data of the first argument entity of the **Relate** or **Unrelate** call is refreshed. The second must be refreshed manually if you want to flip between the screens of this app.
+    When you update a one-to-many or many-to-many relationship, only the data of the first argument table of the **Relate** or **Unrelate** call is refreshed. The second must be refreshed manually if you want to flip between the screens of this app.
 
     ![Set OnVisible property to Refresh function](media/function-relate-unrelate/contacts-refresh.png)
 

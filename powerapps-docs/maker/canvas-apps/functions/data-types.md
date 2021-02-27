@@ -34,7 +34,7 @@ This article provides details for the data types that canvas apps support. When 
 | **Number** | A floating-point number. | **123**<br>**-4.567**<br>**8.903e121** |
 | **Option set** | A choice from a set of options, backed by a number. This data type combines a localizable text label with a numeric value. The label appears in the app, and the numeric value is stored and used for comparisons. | **ThisItem.OrderStatus** |
 | **Record** | A record of data values. This compound data type contains instances of other data types that are listed in this topic. More information: [Working with tables](../working-with-tables.md). | **{ Company: "Northwind Traders",<br>Staff: 35, <br>NonProfit: false }** |
-| **Record reference** | A reference to a record in an entity. Such references are often used with polymorphic lookups. More information: [Working with references](../working-with-references.md).| **First(Accounts).Owner** |
+| **Record reference** | A reference to a record in an table. Such references are often used with polymorphic lookups. More information: [Working with references](../working-with-references.md).| **First(Accounts).Owner** |
 | **Table** | A table of records.  All of the records must have the same names for their fields with the same data types, and omitted fields are treated as *blank*. This compound data type contains instances of other data types that are listed in this topic. More information: [Working with tables](../working-with-tables.md). | **Table( { FirstName: "Sidney",<br>LastName: "Higa" }, <br>{ FirstName: "Nancy",<br>LastName: "Anderson" } )**
 | **Text** | A Unicode text string. | **"Hello, World"** |
 | **Time** | A time without a date, in the time zone of the app's user. | **Time( 11, 23, 45 )** |
@@ -100,7 +100,7 @@ That URI displays a scaled-up version of two purple diamonds:
 
 You can show the most recent image captured in a [**Camera**](../controls/control-camera.md) control if you set the **Image** property of an image control to the **Photo** property of the camera control. The app holds the image in memory, and the **Photo** property of the camera control returns a URI reference to the image. For example, you might take a picture, and the camera's **Photo** property could return **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"**.
 
-You use a URI to reference an image or another media file stored in a database. That way, the app doesn't retrieve the actual data until it's actually needed. For example, an attachment in a Microsoft Dataverse entity might return **"appres://datasources/Contacts/table/..."** As in the camera example, you can display this image by setting the **Image** property of an image control to this reference, which retrieves the binary data.
+You use a URI to reference an image or another media file stored in a database. That way, the app doesn't retrieve the actual data until it's actually needed. For example, an attachment in a Microsoft Dataverse table might return **"appres://datasources/Contacts/table/..."** As in the camera example, you can display this image by setting the **Image** property of an image control to this reference, which retrieves the binary data.
 
 When you save a media data type, such as an image, to a database, the app sends the actual image or media data, not the URI reference.
 
@@ -216,7 +216,7 @@ But you can use this formula:
 
 `If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
-For global option sets (which entities share), the name of the option-set enumeration matches the name of the global option set. For local option sets (which are scoped to an entity), the name might contain the name of the entity. This behavior avoids conflicts if multiple entities have option sets that have the same name. For example, the **Accounts** entity might have an **OrderStatus** option set, and its name might be **OrderStatus (Accounts)**. That name contains one or more spaces and parentheses, so you must surround it with single quotation marks if you reference it in a formula.
+For global option sets (which tables share), the name of the option-set enumeration matches the name of the global option set. For local option sets (which are scoped to an table), the name might contain the name of the table. This behavior avoids conflicts if multiple tables have option sets that have the same name. For example, the **Accounts** table might have an **OrderStatus** option set, and its name might be **OrderStatus (Accounts)**. That name contains one or more spaces and parentheses, so you must surround it with single quotation marks if you reference it in a formula.
 
 In addition, two-option values can also behave as boolean values. For example, a two-option value named **TaxStatus** might have the labels **Taxable** and **Non-Taxable**, which correspond to *true* and *false* respectively. To demonstrate, you can use this formula:
 

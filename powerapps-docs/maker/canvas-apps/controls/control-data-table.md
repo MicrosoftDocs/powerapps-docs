@@ -37,7 +37,7 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
 * Add a **Data table** control in a form control.
 * Change the height of all rows.
 * Show images in a **Data table** control.
-* Show fields from related entities.
+* Show fields from related tables.
 * Use built-in functionality to filter and sort data by column heading.
 * Add a **Data table** control in a **Gallery** control.
 * Edit data in the **Data table** control.
@@ -100,9 +100,9 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
 5. In the list of connections, click or tap the connection for your Dataverse database.
    
     ![Select the connection for your data source](./media/control-data-table/choose-cds-data-table.png)
-6. In the list of entities, click or tap **Sales order**, and then click or tap **Connect**.
+6. In the list of tables, click or tap **Sales order**, and then click or tap **Connect**.
    
-    ![Select the Sales order entity](./media/control-data-table/choose-so-data-table.png)
+    ![Select the Sales order table](./media/control-data-table/choose-so-data-table.png)
    
     The **Data table** control is now attached to the **Sales order** data source. Several initial fields appear in the **Data table** control, because we're using a connector that supports that capability.
    
