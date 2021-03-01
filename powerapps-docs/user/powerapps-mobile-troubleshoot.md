@@ -21,7 +21,7 @@ search.app:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](run-canvas-and-model-apps-on-mobile.md).
 
-If you don't find the answer in this topic, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
+If you don't find the answer to your issue, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
 ## Error: There was a problem signing you in
 
