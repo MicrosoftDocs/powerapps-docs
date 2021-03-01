@@ -101,7 +101,7 @@ To resolve connection related issues, ensure you remain connected to the interne
 
 ### See also
 
-[Power Apps portals known issues](https://docs.microsoft.com/powerapps/maker/portals/known-issues)
+[Power Apps portals known issues](https://docs.microsoft.com/powerapps/maker/portals/known-issues) <br/>
 [Power Automate known issues](https://docs.microsoft.com/power-automate/process-advisor-issues)
 
 
