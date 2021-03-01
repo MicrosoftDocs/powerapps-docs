@@ -21,16 +21,6 @@ This article lists some common issues that you might encounter while using Power
 > [!NOTE]
 > For help with performance problems in canvas apps, read the topics under canvas apps [performance and optimization](execution-phases-data-flow.md) section.
 
-1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
-<br> A pop-up dialog will show the following message in this situation: <br>
-  `Upgrade browser to use Dropbox`
-<br> When this happens, consider using web player on Windows platform.
-
-1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
-   When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, please use your browser.
-
-1. **Connection.Connected returns the wrong value during OnStart in Power Apps for Windows** (July 21, 2020)
-   While offline, **Connection.Connected** may wrongly return **true** immediately after starting an app in the Windows app. As a workaround, delay when the logic depending on it is executed by using a **Timer** control. 
    
 1. **Black box covering part of embedded canvas app** (June 11, 2020)
    When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users many see a black box when scrolling covering part of the app. This issue happens with chromium based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium with version 85.**
@@ -65,9 +55,6 @@ This article lists some common issues that you might encounter while using Power
 
     If you run into a limitation when you scroll with your finger, lift it and start to scroll again.
 
-1. **Drawing with mouse or touch input is not smooth in Power Apps for Windows** (Sep. 24, 2018)
-
-    The pen control only has partial support for drawing using mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
 
 1. **Multiple media controls in Power Apps Mobile** (Aug. 2, 2018)
 
@@ -104,9 +91,6 @@ This article lists some common issues that you might encounter while using Power
 
     If you copy and paste a **Data Table** control for which the **Items** property is set to a formula that contains a **Filter** function, the formula for the **Items** property on the new **Data Table** control ends up with field names that contain a **_1** suffix. This makes the field names invalid and results in no data showing up in the data table. To work around this issue, before you copy the control, confirm that the **Filter** function doesn't reference any field in the data source that has the same name as a column in the **Data Table** control. If it does, rename the column in the **Data Table** control. Alternatively, remove the **_1** suffix from the invalid field names so they match the names in the entity.
 
-1. **Camera controls in Power Apps for Windows app**
-
-   Power Apps for Windows app may crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform.
 
 1. **"Empty" gallery when opening an app**
 
@@ -189,10 +173,33 @@ This article lists some common issues that you might encounter while using Power
  1.   **Power Apps per app plans does not support Power Apps for Windows app**
  
         Power Apps for Windows app is not supported if you're on the [Power Apps per app plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp). 
+        
+## Power Apps mobile for Windows
+
+1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
+<br> A pop-up dialog will show the following message in this situation: <br>
+  `Upgrade browser to use Dropbox`
+<br> When this happens, consider using web player on Windows platform.
+
+1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
+   When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, please use your browser.
+
+1. **Connection.Connected returns the wrong value during OnStart in Power Apps for Windows** (July 21, 2020)
+   While offline, **Connection.Connected** may wrongly return **true** immediately after starting an app in the Windows app. As a workaround, delay when the logic depending on it is executed by using a **Timer** control. 
+   
+1. **Drawing with mouse or touch input is not smooth in Power Apps for Windows** (Sep. 24, 2018)
+
+    The pen control only has partial support for drawing using mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
+    
+ 1. **Camera controls in Power Apps for Windows app**
+
+   Power Apps for Windows app may crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform.
 
 ## Next steps
 
 If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). More information: [Get Help + Support](https://docs.microsoft.com/power-platform/admin/get-help-support)
+
+
 
 ### See also
 
