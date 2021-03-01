@@ -167,10 +167,10 @@ A business rule may also not execute because a column referenced in the business
 *What do recommendations look like within a form?*
 
 Recommendations show a lightbulb next to the column label.
-- ![Business rule collapsed](media/Reccommendation-View1.png "Recommendation lightbulb collapsed")  
+- ![Business rule collapsed](media/recommendation-view1.png "Recommendation lightbulb collapsed")  
 
 Select the lightbulb to expand the view and show the recommendation.
-- ![Business rule expanded](media/Reccommendation-View2.png "Recommendation lightbulb expanded")  
+- ![Business rule expanded](media/recommendation-view2.png "Recommendation lightbulb expanded")  
 
 ## See also  
  [Create custom business logic through processes](guide-staff-through-common-tasks-processes.md)   
