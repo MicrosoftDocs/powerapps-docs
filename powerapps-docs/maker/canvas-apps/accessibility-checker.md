@@ -4,7 +4,7 @@ description: Identify ways to make a canvas app more accessible to users who hav
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: article
-ms.date: 07/05/2018
+ms.date: 02/18/2021
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -70,9 +70,13 @@ The Accessibility checker classifies each issue as an error, a warning, or a tip
 
 ## Next steps
 
+[Accessibility limitations in canvas apps](accessible-apps-limitations.md)
+
+### See also
+
 - [Create accessible apps](accessible-apps.md)
-- [Accessible colors](accessible-apps-color.md)
+- [Accessible app structure](accessible-apps-structure.md)
+- [Accessible colors in Power Apps](accessible-apps-color.md)
+- [Show or hide content from assistive technologies for canvas apps](accessible-apps-content-visibility.md)
+- [Announce dynamic changes with live regions for canvas apps](accessible-apps-live-regions.md)
 - [Accessibility properties](controls/properties-accessibility.md)
-
-
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
