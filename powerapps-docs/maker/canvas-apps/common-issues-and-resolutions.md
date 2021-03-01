@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/12/2021
+ms.date: 03/01/2021
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -43,25 +43,11 @@ This article lists some common issues that you might encounter while using Power
 
     When using the Add Picture control on iOS, images imported by using the camera or gallery do not contain meta-data.  
 
-1. **Sign-in issue on certain Android mobile devices when using authenticator** (August 21, 2019)
-
-    In certain devices and scenarios, you may experience sign-in failures when using authenticator. This is due to the OEM limiting this functionality. For more details on the error and possible mitigations, see [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).    
-
-1. **Camera issue on Android mobile devices** (Jan. 1, 2019)
-
-    If the camera control stops working on an Android device, republish your app, and reopen it on the device. The camera control was updated in response to a change in the Android operating system, and your app will benefit from the update when you republish.
 
 1. **Scrolling in flexible-height galleries** (Nov. 27, 2018)
 
     If you run into a limitation when you scroll with your finger, lift it and start to scroll again.
 
-
-1. **Multiple media controls in Power Apps Mobile** (Aug. 2, 2018)
-
-    Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
-
-    - You can play videos in multiple **Video** controls at the same time on all platforms except for iPhone devices.
-    - You can record audio with multiple **Microphone** controls at the same time on all platforms except for the web player.
 
 1. **Republishing apps** (Aug. 2, 2018)
 
@@ -100,10 +86,6 @@ This article lists some common issues that you might encounter while using Power
 
     If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see the [overview of environments](../../administrator/environments-overview.md).
 
-1. **Running an app on Windows 8.1**
-
-    If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in Power Apps Studio on that operating system. However, you can still run apps that you open in [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or using Power Apps Mobile.
-
 1. **Column names with spaces**
 
     If you're using a SharePoint list or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
@@ -111,10 +93,6 @@ This article lists some common issues that you might encounter while using Power
 1. **Changing a flow in a shared app**
 
     If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, re-add the flow, and reshare the app. Otherwise, users who trigger the flow will get an authentication failure.
-
-1. **Camera control on a Windows Phone**
-
-    An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4)).
 
 1. **Scanning a barcode**
 
@@ -169,12 +147,28 @@ This article lists some common issues that you might encounter while using Power
 1. **Card gallery is deprecated**.
 
      Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.
-     
- 1.   **Power Apps per app plans does not support Power Apps for Windows app**
- 
-        Power Apps for Windows app is not supported if you're on the [Power Apps per app plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp). 
-        
+  
+1. **Sign-in issue on certain Android mobile devices when using authenticator** (August 21, 2019)
+
+    In certain devices and scenarios, you may experience sign-in failures when using authenticator. This is due to the OEM limiting this functionality. For more details on the error and possible mitigations, see [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).  
+
+
+1. **Camera issue on Android mobile devices** (Jan. 1, 2019)
+
+    If the camera control stops working on an Android device, republish your app, and reopen it on the device. The camera control was updated in response to a change in the Android operating system, and your app will benefit from the update when you republish.
+
+1. **Multiple media controls in Power Apps Mobile** (Aug. 2, 2018)
+
+    Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
+
+    - You can play videos in multiple **Video** controls at the same time on all platforms except for iPhone devices.
+    - You can record audio with multiple **Microphone** controls at the same time on all platforms except for the web player.
+  
 ## Power Apps mobile for Windows
+
+1.  **Power Apps per app plans does not support Power Apps for Windows app**
+ 
+       Power Apps for Windows app is not supported if you're on the [Power Apps per app plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp). 
 
 1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
 <br> A pop-up dialog will show the following message in this situation: <br>
@@ -194,6 +188,16 @@ This article lists some common issues that you might encounter while using Power
  1. **Camera controls in Power Apps for Windows app**
 
    Power Apps for Windows app may crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform.
+   
+   
+ 1. **Running an app on Windows 8.1**
+
+    If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in Power Apps Studio on that operating system. However, you can still run apps that you open in [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or using Power Apps Mobile.
+    
+   
+ 1. **Camera control on a Windows Phone**
+
+    An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4)).
 
 ## Next steps
 
