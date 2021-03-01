@@ -163,8 +163,18 @@ This article lists some common issues that you might encounter while using Power
 
     - You can play videos in multiple **Video** controls at the same time on all platforms except for iPhone devices.
     - You can record audio with multiple **Microphone** controls at the same time on all platforms except for the web player.
+
+ 1. **Running an app on Windows 8.1**
+
+    If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in Power Apps Studio on that operating system. However, you can still run apps that you open in [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or using Power Apps Mobile.
+    
+   
+ 1. **Camera control on a Windows Phone**
+
+    An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4)).
+
   
-## Power Apps mobile for Windows
+## Power Apps for Windows
 
 1.  **Power Apps per app plans does not support Power Apps for Windows app**
  
@@ -185,19 +195,11 @@ This article lists some common issues that you might encounter while using Power
 
     The pen control only has partial support for drawing using mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
     
- 1. **Camera controls in Power Apps for Windows app**
+1. **Camera controls in Power Apps for Windows app**
 
    Power Apps for Windows app may crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform.
    
    
- 1. **Running an app on Windows 8.1**
-
-    If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in Power Apps Studio on that operating system. However, you can still run apps that you open in [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or using Power Apps Mobile.
-    
-   
- 1. **Camera control on a Windows Phone**
-
-    An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4)).
 
 ## Next steps
 
