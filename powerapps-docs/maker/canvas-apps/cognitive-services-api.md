@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/17/2021
+ms.date: 03/01/2021
 ms.author: lanced
 search.audienceType: 
   - maker
