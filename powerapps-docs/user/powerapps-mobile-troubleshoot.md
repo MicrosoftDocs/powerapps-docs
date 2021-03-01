@@ -21,10 +21,14 @@ search.app:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](run-canvas-and-model-apps-on-mobile.md).
 
+If you don't find the answer in this topic, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
+
 
 ## Sign in issues
 
-### Unable to sign in due to issues with the Microsoft Authenticator app 
+## Error: There was a problem signing you in
+
+You are unable to sign in due to issues with the Microsoft Authenticator app. 
 
 If you don’t have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to Power Apps mobile again.
 
@@ -38,11 +42,7 @@ If you already have the Microsoft Authenticator app installed and you're having 
 6. Open Power Apps mobile and then sign in.
 
 
-### Sign in errors 
- 
-**Error: Your device configuration is preventing sign in** <br/>
-
-**Error: There was a problem signing you in**
+## Error: Your device configuration is preventing sign in
 
 If you get one of these error messages, it means your company's IT department requires Microsoft Intune or an authentication app to sign in securely. However, your device setup is blocking Power Apps mobile from launching the authentication app that's installed on your device.
 
@@ -82,7 +82,6 @@ If the issue is still not fixed, then try these steps:
 
 If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
-<a href="mailto:pamobsup@microsoft.com?subject=whatever">
 
 ## Pin to Home does not work on iOS 14
 
