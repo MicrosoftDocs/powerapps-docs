@@ -182,7 +182,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
 <br> A pop-up dialog will show the following message in this situation: <br>
-  `Upgrade browser to use Dropbox`
+  `We can’t connect to the service you need right now. Check your network connection or try again later`
 <br> When this happens, consider using web player on Windows platform.
 
 1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
