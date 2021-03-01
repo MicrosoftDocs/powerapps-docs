@@ -21,6 +21,7 @@ search.app:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](run-canvas-and-model-apps-on-mobile.md).
 
+
 ## Sign in issues
 
 ### Unable to sign in due to issues with the Microsoft Authenticator app 
@@ -98,8 +99,10 @@ The app list in the Power Apps mobile app may appear empty when you lose interne
 To resolve connection related issues, ensure you remain connected to the internet while the app list is fully downloaded.
 
 
+### See also
 
-
+[Power Apps portals known issues](https://docs.microsoft.com/powerapps/maker/portals/known-issues)
+[Power Automate known issues](https://docs.microsoft.com/power-automate/process-advisor-issues)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
