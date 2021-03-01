@@ -97,7 +97,7 @@ The app list in the Power Apps mobile app may appear empty when you lose interne
 To resolve connection related issues, ensure you remain connected to the internet while the app list is fully downloaded.
 
 
-### See also
+### See also  
 
 [Power Apps portals known issues](https://docs.microsoft.com/powerapps/maker/portals/known-issues) <br/>
 [Power Automate known issues](https://docs.microsoft.com/power-automate/process-advisor-issues)
