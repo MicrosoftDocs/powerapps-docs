@@ -23,9 +23,6 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 If you don't find the answer in this topic, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
-
-## Sign in issues
-
 ## Error: There was a problem signing you in
 
 You are unable to sign in due to issues with the Microsoft Authenticator app. 
