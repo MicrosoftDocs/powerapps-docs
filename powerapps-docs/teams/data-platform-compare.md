@@ -66,8 +66,6 @@ Whereas Dataverse for Teams focuses on one environment per team for up to 500 te
 
 Because collaboration in Teams happens with people inside and outside your organization, the security model needed to support this is easy to use. In Dataverse for Teams, access is preconfigured with a security role based on membership type such as owners, members, or guests.
 
-Both Dataverse for Teams and Dataverse include support for activity logging. For example, activity logging identifies who created a record. However, Dataverse provides additional capabilities for auditing.
-
 Because Dataverse isn't specific to the Teams environment, it delivers more options for admin and user roles. It also includes a number of additional security capabilities such as customer-managed keys, field-level security, hierarchical security, sharing, and support for legacy authentication.
 
 > [!NOTE]

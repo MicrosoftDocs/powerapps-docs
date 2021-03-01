@@ -70,6 +70,37 @@ You can create new custom activity tables. For example you might create a custom
 
 To create a custom activity table, open the **More settings** section in the **New table** panel, select **Activity table** option from the **Choose table type** drop-down list. After you select this, you’ll see that **Display in Activity Menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn’t selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the table, you can’t change these settings.  
 
+### Enable activities for a table
+
+Enable activities to add activities to a table and use the Regarding lookup for the table.
+
+1. To enable activities, Sign in to [Power Apps](https://make.powerapps.com).
+
+  
+2. On the left nav, select **Data** to expand it and then select **Tables**.  
+
+   > [!div class="mx-imgBorder"]
+   >![Go to Tables in maker portal](media/maker-data-tables.png "Go to Tables in maker portal")
+   
+  
+3. Select a table.
+
+4. On the command bar, select **Settings**. 
+
+   > [!div class="mx-imgBorder"]
+   >![Select settings](media/maker-row-settings.png "Select setting")
+
+5. Expand **Collaboration**, and select **Enable for activities** and then choose **Done**. 
+
+   > [!div class="mx-imgBorder"]
+   >![Communication and collaboration activity enabled](media/enable-activity-for-table.png "Communication and collaboration activity enabled")
+   
+   > [!IMPORTANT]
+   > Once enabled this setting can't be disabled. If prompted, select **Okay** to confirm.
+   
+6.  Select **Save Table** and then publish the table.
+
+
 ## Virtual tables
 
 A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
