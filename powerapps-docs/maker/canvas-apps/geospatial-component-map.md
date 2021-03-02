@@ -47,119 +47,17 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 	3. Under the property **Current location longitude**, insert **Location.Longitde**. 
 	4. The current location pin should now appear on the map.
 	
-### Use the map component with data from Excel
+## Interactive map features
 
-You can load a table that contains existing data from an Excel workbook into the map component. The component will then plot each row in your table as a map pin.
+- [Use data from Excel to insert pins](geospatial-map-excel.md)
+- [Add info cards to pins](geospatial-map-infocards.md)
+- [Draw and insert shapes onto maps](geospatial-map-draw-shapes.md)
 
-Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
+## Properties
 
-Column description | Maps to property | Required
--- | -- | --
-Label for the pin | ItemsLabels | Required
-Longitude of the pin | ItemsLongitudes | Required
-Latitude of the pin | ItemsLatitudes | Required
-Color of the pin | ItemsColors | Optional
-Icon for the pin | ItemsIcons | Optional
-
-
-
-The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/functions/function-colors).
-
-You can use the icons described in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) topic as your icon.
-
-
-The following Excel table shows the required columns:
-
-
-:::image type="content" source="media/geospatial/sample-excel.png" alt-text="Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns":::
-
-You can copy the following sample data to test this functionality:
-
-Name | Longitude | Latitude | Color | Icon
--- | -- | -- | -- | --
-Fourth Coffee (sample) | -98.29277 | 26.2774 | Blue | marker-flat
-Litware, Inc. (sample) | -96.85572 | 32.55253 | #ffefcd| hexagon-thick
-Adventure Works (sample) | -96.99952 | 32.72058 | | car
-Fabrikam, Inc. (sample) | -118.30746 | 34.86543 | |
-Blue Yonder Airlines (sample) | -118.66184 | 34.17553 | |
-City Power & Light (sample) | -113.46184 | 37.15363 | |
-Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918 | |
-Alpine Ski House (sample) | -102.63908 | 35.20919 | |
-A Datum Corporation (sample) | -89.39433 | 40.71025 | |
-Coho Winery (sample) | -116.97751 | 32.87466 | |
-
-
-
-
-1. Copy and paste the table into a new Excel workbook.
-
-1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
-
-    ![Screenshot highlighting the format as table option in Excel](./media/geospatial/convert-table.png)
-
-1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**, for example *TestData*.
-
-    ![Screenshot highlighting the table name in Excel](./media/geospatial/table-name.png)
-
-1. Save the workbook.
-
-1. Open or create a new app in Power Apps, and insert the map component.
-
-1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
-
-    :::image type="content" source="media/geospatial/select-excel.png" alt-text="Screenshot of the Import from Excel option.":::
-
-
-1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
-
-    ![Screenshot of the table selection panel](./media/geospatial/select-table.png)
-
-1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
-
-1. Set the following properties:
-
-    - **ItemsLabels** as *TestData.Name*
-    - **ItemLatitudes** as *TestData.Latitude*
-    - **ItemsLongitudes** as *TestData.Longitude*
-    - (Optional) **ItemsColors** as *TestData.Colors*
-    - (Optional) **ItemsIcons** as *TestData.Icons*
-
-1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the component will use the default icon and color.
-
-    ![A screenshot of the map component with custom icons and different colors.](./media/geospatial/pins-map.png)
-
-
-
-
-
-### Add informational cards to pins
-
-You can add informational cards to each pin on the map. 
-
-When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the component, as described in the section [Use the map component with data from Excel](#use-the-map-component-with-data-from-excel).
-
-Any column you add to the table in the data source (for example, the Excel table) will be available as a field to show on the card.
-
-**To add informational cards to pins:**
-
-1. First, insert the map component and bind a dataset to it as described in [Use the map component with data from Excel](#use-the-map-component-with-data-from-excel).
-
-2. In the **Properties** pane, select **Show info cards** and choose whether they should appear when a user hovers over the pin, or if the user has to select the pin.
-
-    :::image type="content" source="media/geospatial/map-info-card-type.png" alt-text="Screenshot of the properties pane showing the drop-down selection menu to show the cards on hover or on click.":::
-
-3. In the **Properties** pane, next to **Fields**, select **Edit**.
-
-4. Select **Add field**, and then select each of the fields you want to show in the card. Select **Add**.
-
-    :::image type="content" source="media/geospatial/map-choose-fields.png" alt-text="Screenshot showing the field selection options.":::
-
-5. Each pin will now show the fields associated with that pin in an informational card.
-
-    :::image type="content" source="media/geospatial/map-info-card-example.png" alt-text="Screenshot of the map component with an info card on top of a pin, showing information such as Name, Occupancy, and Phone.":::
+There are multiple properties that can be defined for the map component.
 
 ### Input properties
-
 
 The following properties can be defined and configured in the component's **Properties** pane.
 
@@ -233,6 +131,9 @@ The following table lists the output properties available.
 **[X](./controls/properties-size-location.md)** - The distance between the leftmost edge of a control and the leftmost edge of its parent container (or screen, if it has no parent container).
 
 **[Y](./controls/properties-size-location.md)** - The distance between the top edge of a control and the top edge of its parent container (or screen, if it has no parent container).
+
+
+
 
 ## Other geospatial components
 

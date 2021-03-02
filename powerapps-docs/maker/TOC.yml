@@ -359,8 +359,16 @@
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
-            - name: Insert interactive maps
-              href: ./canvas-apps/geospatial-component-map.md
+            - name: Use interactive maps
+              items: 
+              - name: Insert interactive maps
+                href: ./canvas-apps/geospatial-component-map.md
+              - name: Use data from Excel to insert pins
+                href: ./canvas-apps/geospatial-map-excel.md
+              - name: Add info cards to pins
+                href: ./canvas-apps/geospatial-map-infocards.md
+              - name: Draw and insert shapes onto maps
+                href: ./canvas-apps/geospatial-map-draw-shapes.md
             - name: Use address lookup
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
