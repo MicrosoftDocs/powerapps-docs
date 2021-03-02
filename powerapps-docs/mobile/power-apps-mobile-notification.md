@@ -83,7 +83,7 @@ When you trigger a push notification from a flow, you can send the notification 
     > [!div class="mx-imgBorder"] 
     > ![Choose the tigger condition](media/create-notification-step6.png)
  
-7. In the **Choose an action** search box, enter **send push notification**. In the list of **Actions** choose **Send push notification V2 (preview)**.
+7. In the **Choose an action** search box, enter **send push notification**. In the list of **Actions** choose **Send push notification V2**.
  
     > [!div class="mx-imgBorder"] 
     > ![Find Send push notification](media/create-notification-step7.png)
