@@ -166,7 +166,6 @@ The Blob Storage connector does not auto refresh when data in it is updated. To 
 
         Set the **Items** property to **TopLevelList**
 
- 
 
 You can now try out the interaction with blob storage by playing the app, uploading a file, providing a file name (with extension) in the Text Input field and click on the upload button.
 Do not forget to change the popup window filter to **All Files** (button right) if you are trying this out from a browser.
@@ -200,7 +199,6 @@ Try using these based on the example:
 
         If("video/" in Gallery2.Selected.MediaType \|\| "image/" in Gallery2.Selected.MediaType \|\| "audio/" in Gallery2.Selected.MediaType \|\| ".pdf" in Gallery2.Selected.Path,false,true)
 
- 
 
 ## **Security for Azure Blob Storage files**
 
@@ -210,11 +208,9 @@ Securing files uploaded to blob storage is our next topic. Each container in Blo
 
 The first setting (no public access) will restrict access from viewing/downloading the file even if the user has the URL to that file. If you want to lock down your files online, this is the setting you need to select. If you select the first option and click Apply, you will notice the app may not display any images.
 
- 
 
 In your canvas app, if you are using GetFileContent like we did above for PDF files AzureBlobStorage.GetFileContent(Gallery2.Selected.Id), the files will continue to display. Instead, if you have hardcoded the storage account name in the URL, you will need to set up a **Shared Access Signature** in order to secure the files and allow your app to show the files to users. This will assign a key to all the files in your container and will not allow them to be shown unless a special key is appended to the URL. Follow the below steps to set up **Shared Access Signature**
 
- 
 
 - In Microsoft Azure Storage Explorer(Azure Portal), navigate to the blob storage container and select **Shared Access Signature** from settings
 
@@ -257,7 +253,6 @@ With the above steps, you can create or update apps to include Azure Blob Storag
 
 After creating the app, the next step is to share it with the team. With Azure Blob Storage connector, when an app is shared, the app users can use the connector automatically without having to bring their own key to access the blob storage.  
 
- 
 
 ## **Excel data source not supported on Azure Blob Storage Connector**
 
@@ -271,9 +266,6 @@ With the Azure Blob Storage connector you cannot add Excel as a data source. Ins
 
 -   Google Drive
 
- 
-
- 
 
 ## **Additional Resources**
 
@@ -284,5 +276,3 @@ might be helpful:
 
 -   Azure Functions with blog
     storage: <https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-blob>
-
- 
