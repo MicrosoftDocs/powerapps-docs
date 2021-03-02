@@ -17,7 +17,7 @@ search.app:
 # Formula reference for Power Apps
 
 > [!NOTE]
-> Have you checked out new Power Fx? See what is [Power Fx](https://docs.microsoft.com/power-platform/power-fx/overview.md)
+> Have you checked out new Microsoft Power Fx? See what is [Microsoft Power Fx](https://docs.microsoft.com/power-platform/power-fx/overview)
 
 Formulas combine many elements.  Listed below are:
 
