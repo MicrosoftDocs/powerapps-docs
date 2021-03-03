@@ -88,7 +88,23 @@ Some properties are only available on the **Advanced** tab in the **Properties**
 | ItemsColors | Color of the pins | [Any CSS color string](/functions/function-colors) | Advanced |
 | ItemsIcons | Icon of the pins | [Icons defined in Azure image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) | Advanced |
 | Items | Name of the table in your data source that contains all the records that you want to plot in the map by using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced |
-| OnMapClick | The last clicked location on the map. |
+| OnMapClick | How the map responds when any location is clicked. | Event | Advanced
+| OnSelect | How the app responds when a map pin is selected. | Event | Advanced |
+| OnLoad | How the app responds when the map finishes loading. | Event | Advanced |
+| OnItemsChange | How the app responds when the map pins change. | Event | Advanced |
+| Show info cards | Whether informational cards appear on the pins of the map. | Enum | Properties |
+| Show shapes | Whether the shapes in **Shapes_Items** appear on the map. | Boolean | Properties |
+| Show shape labels | Whether the labels appear on the shapes of the map. | Boolean | Properties |
+| Enable shape drawing | Whether the drawing tools component appears on the map. | Boolean | Properties |
+| Enable shape deleting and label editing | Whether shapes can be deleted and their labels can be edited on the map. | Boolean | Properties |
+| Shapes_Items | Name of the table in your data source that contains all the records with GeoJSON objects that you want to show in the map as shapes. | TableName | Advanced |
+| ShapeGeoJSONObjects | Name of the column in the table in your data source with strings that represent the GeoJSON objects of the shapes. | TableName.ColumnName | Advanced |
+| ShapeLabels | A column in Shapes_Items with the strings you want to use as labels for the shapes. | TableName.ColumnName | Advanced |
+| ShapeColors | Color of the shapes. | TableName.ColumnName | Advanced |
+| OnShapeSelected | How the app responds when a shape on the map is selected. | Event | Advanced |
+| OnShapeCreated | How the app responds when a shape on the map is created. | Event | Advanced |
+| OnShapeEdited | How the app responds when a shape on the map is edited. | Event | Advanced |
+| OnShapeDeleted | How the app responds when a shape on the map is deleted. | Event | Advanced |
 
 ### Output properties
 
@@ -97,9 +113,18 @@ The component outputs various properties when a user interacts with it inside an
 The following table lists the output properties available.
 
 
-| Property | Description |
+| Property | Description | Type
 | -- | -- |
-| CenterLocation | Center location of the map as either `.Latitude` or `.Longitude`. The output will be an integer. For example, calling `Map1.CenterLocation.Latitude` will output a single integer such as `47.60357`. |
+| CenterLocation | Center location of the map as either `.Latitude` or `.Longitude`. The output will be an integer. For example, calling `Map1.CenterLocation.Latitude` will output a single integer such as `47.60357`. | Integer
+| Selected | The selected pin on the map. | Record 
+| SelectedItems | The selected pin or pins of the selected cluster on the map. | Table 
+| GeocodedItems | The geocoded locations of the pins on the map. | Table 
+| ClickedLocation | The last clicked location on the map as either `.Latitude` or `.Longitude`. | Record 
+| Shapes_Selected | The record of the selected shape from **Shapes_Items**. | Record |
+| Shapes_SelectedItems | The records of the selected overlapping shapes from **Shapes_Items**. | Table |
+| SelectedShape | The selected shape on the map with `.Perimeter` and `.Area`. | Record |
+| DeletedShape | The last deleted shape on the map with `.Perimeter and `.Area`. | Record |
+| GeoJSON | The list of shapes on the map in Feature Collection GeoJSON format. | String |
 
 
 ### Additional (common) properties
