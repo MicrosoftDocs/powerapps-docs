@@ -26,6 +26,8 @@ You can also create and label shapes on maps you insert into your Power Apps app
 
 This can be useful for pre-defining special regions or areas of interest to your map users, for example a sales district or shipping zone.
 
+    :::image type="content" source="media/geospatial/custom-geojson-shape-example.png" alt-text="Screenshot of map with example shapes drawn and labeled.":::
+
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
 
