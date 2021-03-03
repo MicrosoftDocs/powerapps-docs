@@ -38,8 +38,6 @@ ms.reviewer: tapanm
 
 - Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want, you can [disable the rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) for the Microsoft Dataverse model-driven app.
 
-- Because of the ongoing compatibility issues between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with Yahoo identity provider.
-
 - The **Modified Date** for the app might be incorrect because these apps are pre-provisioned apps and could have been provisioned earlier.
 
 - When you create an environment along with the starter portal, the owner of the portal isn't displayed correctly. It's displayed as System.
