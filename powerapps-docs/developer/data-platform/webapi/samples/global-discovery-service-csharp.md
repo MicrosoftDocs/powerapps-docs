@@ -23,7 +23,7 @@ This sample shows how to access the global Discovery Service using the Web API.
 
 ## How to run this sample
 
-The sample source code is available on Github at [PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples)/cds/webapi/C%23/GlobalDiscovery.
+The sample source code is available on Github at [PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples)/cds/webapi/C#/GlobalDiscovery.
 
 To run the sample:
 1. Download or clone the sample so that you have a local copy.
