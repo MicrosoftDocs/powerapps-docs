@@ -174,20 +174,18 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 1. On the Solution Explorer window, select **Publish All Customizations**.
 1. After all customizations are published, close the Solution Explorer window.
 
-## Access the virtual table
+## Use the virtual table in a model-driven app
 
-Perform read, create, update, and delete operations on virtual table.
-<-- Update this to use a model-driven app-->
+Users perform read, create, update, and delete operations on a virtual table just like any other table in Microsoft Dataverse.
 
-1. Go to **Service** > **Extensions** > **Tickets**.
+1. Create a model-driven app and add the **Person** table to the site map. Then, select the **Person** main form and the **Person Advance Find** view. Publish the app. More information: [Build your first model-driven app from scratch](../model-driven-apps/build-first-model-driven-app.md)
     
-    ![Ticket area](media/ticket-area.png)
-
-    The **All Tickets** view displays. Notice that you may need to refresh your browser to view the table from the **Service** area.
-
-    ![All Tickets view](media/all-tickets-view.png)
-1. Open a **Ticket** row to view the form that includes the **Title** and **Severity** columns for the given row.
-    ![Ticket row](media/ticket-record.png)
+1. Run the model-driven app. Select **New**, complete the required columns, and then save the record.
+1. Select **New** again to create another record and save it.
+1. You should now have two records similar to the following in the **All Persons** view.
+:::image type="content" source="media/vt-all-persons-view.png" alt-text="View All Persons":::
+1. To delete a record, select a person record and then select **Delete**. Confirm to delete the record in the confirmation page.
+:::image type="content" source="media/vt-delete-person.png" alt-text="Delete person record":::
 
 ### See also
 
