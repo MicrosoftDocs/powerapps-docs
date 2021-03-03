@@ -154,9 +154,9 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
     ```
     To get the `url` value for your environment, follow these steps:
 
-    - From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button](media/settings-icon.png) and choose **Advanced Customizations**. Your browser will be redirected to the Dynamics 365 page.
-    - On the Dynamics 365 page, select **Settings > Customizations > Developer Resources**.
-    - On the **Developer Resources** page, look below **Instance Web API** and copy the Service Root URL value. 
+    1. From the [https://make.powerapps.com](https://make.powerapps.com) site with the appropriate environment selected, select **Settings** ![Settings button](media/settings-icon.png) and choose **Advanced Customizations**. Your browser will be redirected to the Dynamics 365 page.
+    1. On the Dynamics 365 page, select **Settings > Customizations > Developer Resources**.
+    1. On the **Developer Resources** page, look below **Instance Web API** and copy the Service Root URL value. 
 
         It should look something like `https://yourorgname.api.crm.dynamics.com/api/data/v9.2/`. But for this sample, you must trim off the final part (`/api/data/v9.2/`) so that it is just `https://yourorgname.api.crm.dynamics.com`
 
