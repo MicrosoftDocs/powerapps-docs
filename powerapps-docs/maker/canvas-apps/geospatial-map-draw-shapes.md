@@ -24,7 +24,7 @@ You can add a drawing panel to your interactive maps that lets your users draw a
 
 You can also create and label shapes on maps you insert into your Power Apps app with the interactive map component.
 
-This can be useful for pre-defining special regions or areas of interest to your map users, for example a sales district or shipping zone.
+Inserting pre-defined shapes can be useful for highlighting special regions or areas of interest to your map users, for example a sales district or shipping zone.
 
     :::image type="content" source="media/geospatial/custom-geojson-shape-example.png" alt-text="Screenshot of map with example shapes drawn and labeled.":::
 
@@ -34,11 +34,11 @@ This can be useful for pre-defining special regions or areas of interest to your
 2. In your app, [insert a map](geospatial-component-map.md#use-the-component). 
 
 ## Draw and label shapes on interactive maps
-To draw and label shapes on maps you first need to enable the following settings:
+To draw and label shapes on maps, you first need to enable the following settings:
 
 1. Open the **Properties** pane with a map selected.
 
-2. Switch the toggles to **On** for the following:
+2. Switch the toggles to **On** for the following settings:
     -  **(Preview) Enable Shape Drawing**
     - **(Preview) Enable Shape Deleting and Label Editing**
  
