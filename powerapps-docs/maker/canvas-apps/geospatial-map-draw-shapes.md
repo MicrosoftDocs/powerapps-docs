@@ -52,7 +52,7 @@ You will now see the drawing panel on the top left corner of the map component. 
 - A circle drawing tool that lest you draw circles and ovals, indicated by a circle icon.
 - 
 >[!NOTE]
->When you’ve finished drawing a freeform custom shape, double-click to indicate the last point in the shape.
+>When you've finished drawing a freeform custom shape, double-click to indicate the last point in the shape.
  
 :::image type="content" source="media/geospatial/drawing-panel.png" alt-text="Screenshot of the map component, with the drawing panel highlighted.":::
 
@@ -73,13 +73,13 @@ In the map componenent, you connect your dataset and then refer to the appropria
 :::image type="content" source="media/geospatial/custom-geojson-shape.png" alt-text="Screenshot of the advanced properties pane showing dataset fields filled in and the resulting custom shapes on the map.":::
 
 
-In your dataset, you’ll need three columns, as defined in the following table:
+In your dataset, you'll need three columns, as defined in the following table:
 
 Column description | Maps to property | Required
 --|--
-Column with the shape’s GeoJSON coordinates in [the correct format](https://en.wikipedia.org/wiki/GeoJSON) | **ShapeGeoJSONObjects** | Required
-Column with the shape’s label | **ShapeLabels** | Optional
-Column with the shape’s color | **ShapeColors** | Optional
+Column with the shape's GeoJSON coordinates in [the correct format](https://en.wikipedia.org/wiki/GeoJSON) | **ShapeGeoJSONObjects** | Required
+Column with the shape's label | **ShapeLabels** | Optional
+Column with the shape's color | **ShapeColors** | Optional
 
 You will also need the name of the dataset. If you're using an Excel workbook as the dataset source, this is the name of the table that contains the data.
 
