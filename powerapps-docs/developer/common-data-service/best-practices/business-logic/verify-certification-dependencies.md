@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/08/2020
+ms.date: 03/03/2021
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -50,6 +50,8 @@ You should verify that the site you want to connect with has a valid chain of ce
 You may encounter this when connecting to a new endpoint for the first time or when something about the certificate has changed.
 
 When the code in your plug-in running in the sandbox attempts to connect to an external endpoint using https, the CDS Sandbox will start SSL/TLS negotiation. The endpoint presents a certificate to use for encryption. If the certificate has one or more intermediate certificates it must present the entire chain to successfully complete SSL/TLS negotiation. If the complete chain is not presented SSL/TLS communication cannot be established. 
+
+See [Server cipher suites and TLS requirements](/power-platform/admin/server-cipher-tls-requirements) for more information on requirements.
 
 
 
