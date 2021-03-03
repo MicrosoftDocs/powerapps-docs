@@ -122,16 +122,15 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
    ![Create last name column](media/title-field.png)
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Person** page enter the following information:
+   |Field|Value|
+   |--|--|
+   |**Display Name**|First Name|
+   |**Name**|new_firstname|
+   |**External Name**|FirstName|
+   |**Field Requirement**|Business Required|
+   |**Data Type**|Single Line of Text|
 
-    |Field|Value|
-    |--|--|
-    |**Display Name**|First Name|
-    |**Name**|new_firstname|
-    |**External Name**|FirstName|
-    |**Field Requirement**|Business Required|
-    |**Data Type**|Single Line of Text|
-
-  ![Create age column](media/severity-field.png)
+   ![Create age column](media/severity-field.png)
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Person** page enter the following information:
    |Field |	Value |
@@ -160,7 +159,9 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 
 1. On the **Person** table window, select **Forms**.
 1. Open the main form, drag and drop the **First Name**, **Age**, and **Last Modified On**  columns from the right pane onto the form in the **General** section.
+
     ![First name, age, and last modified on columns added to main form](media/drop-severity-field.png)
+
 1. On the **Person** table window, select **Save and Close**.
 
 ## Configure the default view
@@ -175,17 +176,17 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 1. After all customizations are published, close the Solution Explorer window.
 
 ## Use the virtual table in a model-driven app
+Create a model-driven app and add the **Person** table to the site map. Then, select the **Person** main form and the **Person Advance Find** view. Publish the app. More information: [Build your first model-driven app from scratch](../model-driven-apps/build-first-model-driven-app.md)
 
-Users perform read, create, update, and delete operations on a virtual table just like any other table in Microsoft Dataverse.
+Then, users can perform read, create, update, and delete operations using the virtual table just like any other table in Microsoft Dataverse.
 
-1. Create a model-driven app and add the **Person** table to the site map. Then, select the **Person** main form and the **Person Advance Find** view. Publish the app. More information: [Build your first model-driven app from scratch](../model-driven-apps/build-first-model-driven-app.md)
+### Create, view, and delete records using the virtual table
     
 1. Run the model-driven app. Select **New**, complete the required columns, and then save the record.
 1. Select **New** again to create another record and save it.
 1. You should now have two records similar to the following in the **All Persons** view.
 :::image type="content" source="media/vt-all-persons-view.png" alt-text="View All Persons":::
 1. To delete a record, select a person record and then select **Delete**. Confirm to delete the record in the confirmation page.
-:::image type="content" source="media/vt-delete-person.png" alt-text="Delete person record":::
 
 ### See also
 
