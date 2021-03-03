@@ -249,12 +249,12 @@ To try out the **CreateShareLinkByPath** function do the following:
 With the above steps, you can create or update apps to include Azure Blob Storage files. You can lock down the files if required and display supported files to end users in Power Apps.
  
 
-## **Sharing an app with Azure Blob Storage connector**
+## **Sharing a canvas app which uses Azure Blob Storage connector**
 
 After creating the app, the next step is to share it with the team. With Azure Blob Storage connector, when an app is shared, the app users can use the connector automatically without having to bring their own key to access the blob storage.  
 
 
-## **Excel data source not supported on Azure Blob Storage Connector**
+## **Data sources supported with Azure Blob Storage Connector**
 
 With the Azure Blob Storage connector you cannot add Excel as a data source. Instead, you can use the following connectors that support Excel as a connection:
 
