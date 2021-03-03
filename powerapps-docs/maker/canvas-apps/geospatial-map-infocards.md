@@ -24,7 +24,7 @@ search.app:
 
 You can add informational cards to each pin on the map. 
 
-When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the component, as described in the topic [Use data from Excel to insert pins](geospatial-map-excel.md#use-the-map-component-with-data-from-excel).
+When a user selects the pin (either by hovering over it or selecting it directly), a small card will pop-up with information taken from the dataset you bound to the component, as described in the topic [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook).
 
 Any column you add to the table in the data source (for example, the Excel table) will be available as a field to show on the card.
 
@@ -35,7 +35,7 @@ Any column you add to the table in the data source (for example, the Excel table
 
 **To add informational cards to pins:**
 
-1. First, bind the map to a dataset as described in [Use data from Excel to insert pins](geospatial-map-excel.md#use-the-map-component-with-data-from-excel).
+1. First, bind the map to a dataset as described in [Use data from Excel to insert pins](geospatial-map-excel.md#add-pin-data-from-an-excel-workbook).
 
 2. In the **Properties** pane, select **Show info cards** and choose whether they should appear when a user hovers over the pin, or if the user has to select the pin.
 

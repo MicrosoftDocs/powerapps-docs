@@ -26,7 +26,7 @@ You can also create and label shapes on maps you insert into your Power Apps app
 
 Inserting pre-defined shapes can be useful for highlighting special regions or areas of interest to your map users, for example a sales district or shipping zone.
 
-    :::image type="content" source="media/geospatial/custom-geojson-shape-example.png" alt-text="Screenshot of map with example shapes drawn and labeled.":::
+:::image type="content" source="media/geospatial/custom-geojson-shape-example.png" alt-text="Screenshot of map with example shapes drawn and labeled.":::
 
 ## Prerequisites
 1. Create a Canvas app and make sure it meets the [Geospatial prerequisites](geospatial-overview.md#prerequisites). 
@@ -43,7 +43,7 @@ To draw and label shapes on maps, you first need to enable the following setting
     - **(Preview) Enable Shape Deleting and Label Editing**
  
  
-:::image type="content" source="media/geospatial/enable-feature.png" alt-text="Screenshot of the properties pane the features turned to On.":::
+    :::image type="content" source="media/geospatial/enable-feature.png" alt-text="Screenshot of the properties pane the features turned to On.":::
 
 You will now see the drawing panel on the top left corner of the map component. The panel consists of three tools:
 

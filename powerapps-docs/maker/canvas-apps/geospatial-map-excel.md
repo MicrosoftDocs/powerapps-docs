@@ -27,7 +27,7 @@ You can load a table that contains existing data from an Excel workbook into the
 
 ## Add pin data from an Excel workbook
 
-Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
+Your Excel workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
 
 Column description | Maps to property | Required
 -- | -- | --
