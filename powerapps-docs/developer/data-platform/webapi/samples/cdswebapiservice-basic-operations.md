@@ -37,7 +37,7 @@ The following is required to build and run the CDSWebApiService C# samples :
 
 1. Go to the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) GitHub repository, clone or download the samples repository, and extract its contents into a local folder.
 
-1. Navigate to the repository folder cds/webapi/C#, and then open the BasicOperations.sln file in Visual Studio.
+1. Navigate to the repository folder cds/webapi/C#/BasicOperations, and then open the BasicOperations.sln file in Visual Studio.
 
 1. In **Solution Explorer**, under the **BasicOperations** project, open the App.config file. This is a shared application configuration file used by all the Web API C# samples. Once you edit this file, you do not have to edit it again unless you're changing the environment or logon used to run the samples.
 
