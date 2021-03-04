@@ -21,35 +21,74 @@ Build a multi-language canvas app by leveraging canvas app components and transl
 
 ## Create the Translation Component
 
-In your app create a new **Canvas Component** using the canvas editor. Give the component a name such as “Translation Component”, and then create 2 custom properties as follow:
+In your app create a new **Canvas Component** using the canvas editor. Give the component a name such as “Translation Component”
+
+![image-20210304104915205](.attachments/multi-language-apps/image-20210304104915205.png)
+
+Create 2 custom properties as follow:
 
 1. **Language**: An input property of Data type Text that will receive the current LCID (Locale ID) of the logged in user. 
+   
    - Select the option “Raise OnReset when value changes”, since this will call the formula on the OnReset event of the component that we will write later.
 
-   ![Image for post](https://miro.medium.com/max/3039/1*OVh8M1QG2sUdiiZr6NITWQ.png)
-
-   Microsoft Power Apps Canvas App Editor: Custom Language Property
+   ![Microsoft Power Apps Canvas App Editor: Custom Language Property](.attachments/multi-language-apps/image-20210304105245593.png)
 
 1. **Labels**: An output property of type Table that will expose the translated labels based on the input LCID property.
 
-   ![Microsoft Power Apps Canvas App Editor: Custom Labels Property](https://miro.medium.com/max/3039/1*-X60KnL24PSgADD2KtHrNg.png)
+   ![Microsoft Power Apps Canvas App Editor: Custom Labels Property](.attachments/multi-language-apps/image-20210304105449314.png)
 
 
 Once 2 properties are created, create a Table that will be the dictionary of all translations. To do this, declare a Table variable on the **OnReset** event of the component as follows
 
-![Microsoft Power Apps Canvas App Editor: OnReset Formula](https://miro.medium.com/max/3621/1*QUsetsimMAby7ZZRWOSY9A.png)
+![image-20210304131142608](.attachments/multi-language-apps/image-20210304131142608.png)
 
-The Table should have an entry for each language that your app supports and each entry will have a Labels property of type **Object** that will contain the translated content of all possible buttons, inputs and labels in your app.
+`Set(
+    varTranslations,
+    Table(
+        {
+            Language: "en-us",
+            Labels: {
+                Title: "UI Tips for Building Canvas Apps",
+                JobTitle: "Power Platform Specialist",
+                Close: "Close",
+                Open: "Open",
+                Cancel: "Cancel"
+            }
+        },
+        {
+            Language: "pt-br",
+            Labels: {
+                Title: "Dicas de UI para construir Canvas Apps",
+                JobTitle: "Especialista de Power Platform",
+                Close: "Fechar",
+                Open: "Abrir",
+                Cancel: "Cancelar"
+            }
+        }
+    )
+)`
+
+The table should have an entry for each language that your app supports and each entry will have a **Labels** property that will contain the translated content of all possible buttons, inputs and labels in your app.
 
 Now change the formula of the output property **Labels** as follows:
 
-![Microsoft Power Apps Canvas App Editor: Output Property Labels Formula](https://miro.medium.com/max/3039/1*X1-xDeqoRhhYJc7zNy2hsw.png)
+![image-20210304132515675](.attachments/multi-language-apps/image-20210304132515675.png)
 
-> [!NOTE] The formula above will find the right translation entry based on the input **Language** and in case the language was not set, the formula will use the current logged in user's language as the filter, hence the usage of [Coalesce](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-isblank-isempty) function.
+> [!NOTE] The formula above will find the right translation entry based on the input **Language**. In the case where the language was not set, the formula will use the current logged in user's language as the filter, hence the usage of [Coalesce](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-isblank-isempty) function.
+
+`LookUp(
+    varTranslations,
+    Language = Lower(
+        Coalesce(
+            Self.Language,
+            Language()
+        )
+    )
+).Labels`
 
 ## Use the Translation Component in a Canvas App
 
-To use the “Translation Component” in our app, add the component to the app, make it invisible, and pass the value of the “Language” to the input property of the “Translation Component”. Then, on every control in your app that needs to be translated according to the current user language, instead of using a static text as the label, use the following formula:
+To use the Translation Component in your app, add the component to the app, make it invisible, and pass the value of the **Language** to the input property of the **Translation Component**. Then, on every control in your app that needs to be translated according to the current user's language, instead of using a static text as the label, use the formula **TranslationComponent.Labels.[ControlName]** where [ControlName] is the name of the control defined in the dictionary.
 
 ![Microsoft Power Apps Canvas App Editor: Translated Label Formula](https://miro.medium.com/max/3045/1*MCbFnIgY1CTJ9awMENkYcQ.png)
 
