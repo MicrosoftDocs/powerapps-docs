@@ -74,13 +74,13 @@ The following procedure describes how to configure an event handler for a form. 
   
 1.  In the classic form editor, select the element with the event you want to configure a handler for.  
   
-2.  On the [Home tab](form-editor-user-interface-legacy.md#home-tab), in the **Edit** group, select **Change Properties** or simply double-click the element.  
+2. On the [Home tab](form-editor-user-interface-legacy.md#home-tab), in the **Edit** group, select **Change Properties** or simply double-click the element.  
   
-3.  In the element properties dialog, select the **Events** tab.  
+3. In the element properties dialog, select the **Events** tab.  
   
-4.  Expand the **Form Libraries** area. If the library containing the function you want to set as the event handler is not already listed, add the library.  
+4. Expand the **Form Libraries** area. If the library containing the function you want to set as the event handler is not already listed, add the library.  
   
-5.  To add a form library to an event handler:  
+5. To add a form library to an event handler:  
     1.  In the **Form Libraries** section of the **Event List**, select **Add**.  
   
     2.  Locate the JavaScript web resource in the list of available web resources. Select it and then select **Add**.  
