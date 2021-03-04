@@ -44,6 +44,7 @@ Value |Client |
 |Web |Unified Interface|
 |Outlook |Dynamics 365 for Outlook client (COM add-in)|
 |Mobile |Mobile app |
+|||
 
 ## getClientState
 
@@ -63,6 +64,7 @@ Value |Client |
 |---|---|
 |Online |Web application, Dynamics 365 for Outlook client (COM add-in), Mobile app, Unified Interface|
 |Offline |Outlook, Mobile app|
+|||
 
 ## getFormFactor
 
