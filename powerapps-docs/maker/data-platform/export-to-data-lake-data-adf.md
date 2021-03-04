@@ -93,7 +93,7 @@ After setting the exported Dataverse data in the Data Lake Storage Gen2 storage 
 
 Follow these instructions to create a rank for the each row by the *revenue* of the account.
 
-1. Select **+** in the lower-right corner, and then search for and select **Rank**.
+1. Select **+** in the lower-right corner of the previous transformation, and then search for and select **Rank**.
 
 2. On the **Rank settings** tab, do the following:
      - **Output stream name**: Enter the name you want, such as *Rank1*.
@@ -104,12 +104,12 @@ Follow these instructions to create a rank for the each row by the *revenue* of 
 
        ![Configure the Rank settings tab](media/configure-rank.png "Configure the Rank settings tab")
 
-3. You may view your data in the **data preview** tabe where you will find the new *revenueRank* column at the right-most position.
+3. You may view your data in the **data preview** tab where you will find the new *revenueRank* column at the right-most position.
 
 ## Set the Data Lake Storage Gen2 storage account as a sink
 Ultimately, you must set a sink for your dataflow. Follow these instructions to place your transformed data as a Delimited Text file in the Data Lake.
 
-1.  Select **+** in the lower-right corner, and then search for and select **Sink**.
+1.  Select **+** in the lower-right corner of the previous transformation, and then search for and select **Sink**.
 
 2.  On the **Sink** tab, do the following:
 
@@ -122,12 +122,16 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 3. On the **Settings** tab, do the following:
 
-    - **Folder path**: In the first box (**File system**), enter **/** .
+    - **Folder path**: Enter the container name in the first box (**File system**) or **Browse** for the container name and select **OK**.
     - **File name option**: Select **output to single file**.
     - **Output to single file**: Enter a file name, such as *ADFOutput*
     - Leave all other default settings.
 
       ![Configure the sink Settings tab, part two](media/configure-settings-two.png "Configure the sink Settings tab, part two")
+      
+3. On the **Optimize** tab, set the **Partition option** to **Single partition**.
+
+4. You may view your data in the **data preview** tab. 
 
 ## Run your dataflow
 
