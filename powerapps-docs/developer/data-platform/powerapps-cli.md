@@ -1,5 +1,5 @@
 ---
-title: Install Power Apps CLI | Microsoft Docs
+title: Power Apps CLI | Microsoft Docs
 description: "Install Microsoft Power Apps CLI to create, debug, and deploy code components using Power Apps component framework."
 keywords: Power Apps CLI, code components, component framework, CLI
 ms.author: nabuthuk
