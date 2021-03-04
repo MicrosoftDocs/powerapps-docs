@@ -1,6 +1,6 @@
 ---
 title: "getGlobalContext.client (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 08/27/2019
+ms.date: 03/04/2021
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -98,6 +98,20 @@ Returns information whether the server is online or offline.
 **Type**: Boolean
 
 **Description**: **true** if the server is offline; **false** otherwise.
+
+## isNetworkAvailable
+
+Returns information whether the network is available or not.
+
+### Syntax
+
+`ClientContext.isNetworkAvailable()`
+
+### Return Value
+
+**Type**: Boolean
+
+**Description**: **true** if the network is available; **false** otherwise.
 
 ## Related topics
 
