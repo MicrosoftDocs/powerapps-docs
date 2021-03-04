@@ -30,9 +30,11 @@ This article shows you how to perform the following tasks:
 
 1.  Set the Data Lake Storage Gen2 storage account with the Dataverse data as a *source* in a Data Factory dataflow.
 
-2.  Set the Data Lake Storage Gen2 storage account with the Dataverse data as a *sink* in a Data Factory dataflow.
+2.  Transform the Dataverse data in Data Factory with a dataflow.
 
-3.  Run your dataflow by creating a pipeline.
+3.  Set the Data Lake Storage Gen2 storage account with the Dataverse data as a *sink* in a Data Factory dataflow.
+
+4.  Run your dataflow by creating a pipeline.
 
 ## Prerequisites
 
@@ -81,36 +83,49 @@ This guide assumes that you have already created a data factory under the same s
     - **Entity**: Enter the table name or **Browse** for the table.
 
   ![Source options](media/source-options.png "Source options")
+  
+6.  Check the **Projection** tab to ensure that your schema has been imported sucessfully. If you od not see any columns, select **Schema options** and check the **Infer drifted column types** option. Configure the formatting options to match your data set then select **Apply**.
 
-## Set the Data Lake Storage Gen2 storage account 
+7. You may view your data in the **Data preview** tab to ensure the Source creation was complete and accurate.
 
+## Transform your Dataverse data
 After setting the exported Dataverse data in the Data Lake Storage Gen2 storage account as a source in the Data Factory dataflow, there are many possibilities for transforming your data. More information: [Azure Data Factory](/azure/data-factory/introduction)
 
-Ultimately, you must set a sink for your dataflow. Follow these instructions to set the Data Lake Storage Gen2 storage account with the data exported by the Export to Data Lake service as your sink.
+Follow these instructions to create a rank for the each row by the *revenue* of the account.
+
+1. Select **+** in the lower-right corner, and then search for and select **Rank**.
+
+2. On the **Rank settings** tab, do the following:
+     - **Output stream name**: Enter the name you want, such as *Rank1*.
+     - **Incoming Stream**: Select the source name you want. In this case, the source name from the previous step.
+     - **Options**: Leave the options unchecked.
+     - **Rank column**: Enter the name of the rank column generated.
+     - **Sort conditions**: Select the *revenue* column and sorty by *Descending* order.
+
+       ![Configure the Rank settings tab](media/configure-rank.png "Configure the Rank settings tab")
+
+3. You may view your data in the **data preview** tabe where you will find the new *revenueRank* column at the right-most position.
+
+## Set the Data Lake Storage Gen2 storage account as a sink
+Ultimately, you must set a sink for your dataflow. Follow these instructions to place your transformed data as a Delimited Text file in the Data Lake.
 
 1.  Select **+** in the lower-right corner, and then search for and select **Sink**.
 
 2.  On the **Sink** tab, do the following:
 
     - **Output stream name**: Enter the name you want, such as *Sink1*.
-    - **Incoming stream**: Select the source name you want. 
-    - **Sink type**: Select **Common Data Model**. 
+    - **Incoming stream**: Select the source name you want. In this case, the source name from the previous step.
+    - **Sink type**: Select **DelimitedText**. 
     - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Export to Data Lake service.
 
       ![Configure the Sink tab](media/configure-sink.png "Configure the Sink tab")
 
 3. On the **Settings** tab, do the following:
 
-    - **Schema linked service**: Select the final destination storage container. 
-    - **Container**: Enter the container name. 
-    - **Corpus folder**: Enter **/** 
-    - **table**: Enter text in the format **/*table*Res.cdm.json/*table***, replacing *table* with the table name you want, such as account.
-
-      ![Configure the sink Settings tab, part one](media/configure-settings.png "Configure the sink Settings tab, part one")
-
-    - **Root Location**: In the first box (**Container**), enter the container name. In the second box (**Folder path**), enter **/**. 
-    - **Manifest file**: Leave the first box (**table path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json / test*.
-    - **Format type**: Select your file format preference.
+    - **Folder path**: In the first box (**File system**), enter **/** .
+    - **File name option**: Select **output to single file**.
+    - **Output to single file**: Enter a file name, such as *ADFOutput*
+    - Leave all other default settings.
 
       ![Configure the sink Settings tab, part two](media/configure-settings-two.png "Configure the sink Settings tab, part two")
 
@@ -127,7 +142,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 4.  Select **Debug** from the command bar.
 
-5.  Let the dataflow run until the bottom view shows that is has been completed. This might take a few minutes.
+5.  Let the dataflow run until the bottom view shows that is has been completed. This may take a few minutes.
 
 6.  Go to the final destination storage container, and find the transformed table data file.
 
