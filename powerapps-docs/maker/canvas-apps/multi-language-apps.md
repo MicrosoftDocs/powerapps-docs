@@ -98,8 +98,8 @@ Pass the value of the **Language** to the input property of the **Translation Co
 
 On every control in your app that needs to be translated according to the current user's language, instead of using a static text as the label, use the formula `TranslationComponent.Labels.[ControlName]` where [ControlName] is the name of the control defined in the dictionary.
 
-![Microsoft Power Apps Canvas App Editor: Translated Label Formula](.attachments/multi-language-apps/1_MCbFnIgY1CTJ9awMENkYcQ.png)
+![image-20210304170138224](.attachments/multi-language-apps/image-20210304170138224.png)
 
 With this approach, whenever the user changes the language, the app will automatically change the text of all buttons, inputs, labels etc. as shown below
 
-![Microsoft Power Apps: Sample App — Translated](.attachments/multi-language-apps/1_n0bVGmNGNZsl3TLfeCokpg.gif)
+![Power Apps: Multi-Language Support](.attachments/multi-language-apps/Untitled Project.gif)
