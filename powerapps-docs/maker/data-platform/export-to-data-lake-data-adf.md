@@ -127,7 +127,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Output to single file**: Enter a file name, such as *ADFOutput*
     - Leave all other default settings.
 
-      ![Configure the sink Settings tab, part two](media/configure-settings-two.png "Configure the sink Settings tab, part two")
+      ![Configure the sink Settings tab](media/configure-settings.png "Configure the sink Settings tab")
       
 3. On the **Optimize** tab, set the **Partition option** to **Single partition**.
 
