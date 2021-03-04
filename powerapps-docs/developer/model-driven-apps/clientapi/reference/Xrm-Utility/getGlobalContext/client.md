@@ -107,7 +107,7 @@ Returns information whether the network is available or not.
 
 ### Syntax
 
-`ClientContext.isNetworkAvailable()`
+`clientContext.isNetworkAvailable()`
 
 ### Return Value
 
