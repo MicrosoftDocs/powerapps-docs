@@ -119,13 +119,13 @@ The following procedure describes how to configure an event handler for a form. 
 
 1. In the web resource form set the following properties:  
   
-            |Property|Value|  
-            |--------------|-----------|  
-            |Name|**Required**. Type the name of the web resource.|  
-            |Display Name|**Required**. Type the name to be displayed in the list of web resources.|  
-            |Description|Optional. Type a description of the web resource.|  
-            |Type|**Required**. Select **Script (JScript)**.|  
-            |Language|Optional. Choose one of the languages available for your organization.|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |Name|**Required**. Type the name of the web resource.|  
+    |Display Name|**Required**. Type the name to be displayed in the list of web resources.|  
+    |Description|Optional. Type a description of the web resource.|  
+    |Type|**Required**. Select **Script (JScript)**.|  
+    |Language|Optional. Choose one of the languages available for your organization.|  
   
 1. If you have been provided with a script, we highly recommend that you use the **Browse** button to locate the file and upload it.  
   
