@@ -127,14 +127,14 @@ The following procedure describes how to configure an event handler for a form. 
     |Type|**Required**. Select **Script (JScript)**.|  
     |Language|Optional. Choose one of the languages available for your organization.|  
   
-1. If you have been provided with a script, we highly recommend that you use the **Browse** button to locate the file and upload it.  
+2. If you have been provided with a script, we highly recommend that you use the **Browse** button to locate the file and upload it.  
   
   Alternatively, you can select the **Text Editor** button and paste or type the contents of the script in the **Edit Content** dialog.  
   
   > [!NOTE]
   >  Because this simple text editor does not provide any features to check the correctness of the script, generally you should always try to use a separate application like Visual Studio to edit scripts and then upload them.  
   
-1. Select **Save** and close the web resource page.  
+3. Select **Save** and close the web resource page.  
 
 ### Next steps
 
