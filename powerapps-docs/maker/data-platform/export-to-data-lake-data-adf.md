@@ -84,7 +84,7 @@ This guide assumes that you have already created a data factory under the same s
 
   ![Source options](media/source-options.png "Source options")
   
-6.  Check the **Projection** tab to ensure that your schema has been imported sucessfully. If you od not see any columns, select **Schema options** and check the **Infer drifted column types** option. Configure the formatting options to match your data set then select **Apply**.
+6.  Check the **Projection** tab to ensure that your schema has been imported sucessfully. If you do not see any columns, select **Schema options** and check the **Infer drifted column types** option. Configure the formatting options to match your data set then select **Apply**.
 
 7. You may view your data in the **Data preview** tab to ensure the Source creation was complete and accurate.
 
