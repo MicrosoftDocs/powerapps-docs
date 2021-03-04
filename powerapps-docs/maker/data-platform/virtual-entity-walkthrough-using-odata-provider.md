@@ -49,7 +49,6 @@ For this walkthrough, a single virtual table that contains the following columns
 
 The OData metadata of the external data source person table:
 
-:::image type="content" source="media/odata-external-source-table1.png" alt-text="Odata external source XML part 1":::
 :::image type="content" source="media/odata-external-source-table2.png" alt-text="Odata external data source XML part 2":::
 
 ## Create the data source
