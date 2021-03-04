@@ -122,6 +122,7 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
    ![Create last name column](media/title-field.png)
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Person** page enter the following information:
+
    |Field|Value|
    |--|--|
    |**Display Name**|First Name|
@@ -131,8 +132,10 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
    |**Data Type**|Single Line of Text|
 
    ![Create age column](media/severity-field.png)
+
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Person** page enter the following information:
+
    |Field |	Value |
    |--|--|
    |Display Name |	Age |
@@ -142,6 +145,7 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
    |Data Type	| Whole Number |
 
    :::image type="content" source="media/age-field.png" alt-text="Create age column":::
+
 1. Select **Save and Close**.
 
 1. Select **New**, and on the **Field: New of Person** page enter the following information:
@@ -178,7 +182,7 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 ## Use the virtual table in a model-driven app
 Create a model-driven app and add the **Person** table to the site map. Then, select the **Person** main form and the **Person Advance Find** view. Publish the app. More information: [Build your first model-driven app from scratch](../model-driven-apps/build-first-model-driven-app.md)
 
-Then, users can perform read, create, update, and delete operations using the virtual table just like any other table in Microsoft Dataverse.
+Then, app users can perform read, create, update, and delete operations using the virtual table just like any other table in Microsoft Dataverse.
 
 ### Create, view, and delete records using the virtual table
     
@@ -186,7 +190,7 @@ Then, users can perform read, create, update, and delete operations using the vi
 1. Select **New** again to create another record and save it.
 1. You should now have two records similar to the following in the **All Persons** view.
 :::image type="content" source="media/vt-all-persons-view.png" alt-text="View All Persons":::
-1. To delete a record, select a person record and then select **Delete**. Confirm to delete the record in the confirmation page.
+1. To delete a record, select a person record and then select **Delete**. Confirm to delete the record on the confirmation page.
 
 ### See also
 
