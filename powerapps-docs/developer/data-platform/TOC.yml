@@ -219,10 +219,10 @@
       href: register-web-hook.md
     - name: Test webhook registration
       href: test-webhook-registration.md
-- name: Work with Dataverse entities
+- name: Work with tables using code
   href: entities.md
   items:
-  - name: Customer entities
+  - name: Customer tables
     href: customer-entities-account-contact.md
   - name: Activity entities
     href: activity-entities.md
@@ -233,9 +233,9 @@
       href: email-activity-entities.md
     - name: Task, fax, phone call, and letter activity entities
       href: task-fax-phone-call-letter-activity-entities.md
-    - name: ActivityParty entity
+    - name: ActivityParty table
       href: activityparty-entity.md
-    - name: ActivityPointer (activity) entity
+    - name: ActivityPointer (activity) table
       href: activitypointer-activity-entity.md
     - name: Recurring Appointments
       items:
@@ -247,7 +247,7 @@
         href: update-recurring-appointment.md
       - name: Link custom attributes of the recurring appointment master and appointment entities
         href: link-custom-attributes-recurring-master-appointment-entities.md
-  - name: Annotation (note) entity
+  - name: Annotation (note) table
     href: annotation-note-entity.md
   - name: Calendar entities
     href: calendar-entities.md
@@ -256,15 +256,15 @@
       href: types-calendars.md
   - name: Queue entities
     href: queue-entities.md
-  - name: Subject entity
+  - name: Subject table
     href: subject-entity.md
   - name: Apply Service Level Agreements (SLAs)
     href: apply-slas-entities.md
-  - name: Transaction Currency (currency) entity
+  - name: Transaction Currency (currency) table
     href: transaction-currency-currency-entity.md
-  - name: Category entity
+  - name: Category table
     href: use-category-entity.md
-  - name: Feedback entity
+  - name: Feedback table
     href: use-feedback-entity-manage-feedback-ratings-records.md
   - name: User and team entities
     href: user-team-entities.md
@@ -273,7 +273,7 @@
       href: specify-time-zone-settings-user.md
     - name: Time zone entities
       href: time-zone-entities.md
-    - name: BusinessUnit entity
+    - name: BusinessUnit table
       href: businessunit-entity.md
     - name: Field security entities
       href: field-security-entities.md
@@ -429,7 +429,7 @@
     href: testing-tools-server.md
 - name: Reference
   items:
-  - name: Entity reference
+  - name: Table/entity reference
     href: reference/entities/toc.yml
   - name: Web API Reference
     href: /dynamics365/customer-engagement/web-api/about

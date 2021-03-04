@@ -42,17 +42,20 @@ Data management capabilities in Dataverse not only lets you work with data withi
 - [Webhooks](/powerapps/developer/data-platform/use-webhooks
 )
 
-## Dataverse entities
+## Dataverse tables
 
-Entities store the business data you will work with. An understanding what they are and how to work with them is essential.
+Tables store the business data you will work with. An understanding what they are and how to work with them is essential.
+
 More information:
 
-- [Dataverse entities](entities.md)
-- [About the Entity Reference](reference/about-entity-reference.md)
+- [Dataverse tables](entities.md)
+- [About table/entity Reference](reference/about-entity-reference.md)
+
+[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 ## Work with metadata
 
-Developing a good working understanding of the metadata in the system can help you understand how Dataverse platform works. Generally you will use designers to add, update, or delete entity schema that defines metadata, but both the Web API and the Organization service web services provide capabilities to perform CRUD operations on the entity schema. More information: [Work with metadata using code](metadata-services.md) 
+Developing a good working understanding of the metadata in the system can help you understand how Dataverse platform works. Generally you will use designers to add, update, or delete schema that defines metadata, but both the Web API and the Organization service web services provide capabilities to perform CRUD operations on the schema. More information: [Work with metadata using code](metadata-services.md) 
 
 ## Use solutions to package and distribute extensions
 

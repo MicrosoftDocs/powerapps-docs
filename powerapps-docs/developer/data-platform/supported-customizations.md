@@ -56,7 +56,7 @@ The documentation on this site for developers, technical articles, and sample co
 
 ### Dataverse web services
 
-Use of the web services are fully supported. This includes: Web API, Organization Service, Discovery Service, and the Organization Data Service. We strive to keep the APIs backward compatible but reserve the right to change APIs for additional features. Entity attributes may also change in future versions.
+Use of the web services are fully supported. This includes: Web API, Organization Service, Discovery Service, and the Organization Data Service. We strive to keep the APIs backward compatible but reserve the right to change APIs for additional features. Table columns may also change in future versions.
 
 ### Solution file
 
