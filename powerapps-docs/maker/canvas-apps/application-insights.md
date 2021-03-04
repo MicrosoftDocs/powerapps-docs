@@ -1,14 +1,13 @@
 ---
 title: Analyze app telemetry using Application Insights | Microsoft Docs
 description: How to analyze app telemetry using Application Insights
-author: aengusheaney
-manager: kvivek
+author: hasharaf
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/24/2020
-ms.author: aheaney
+ms.date: 02/19/2021
+ms.author: hasharaf
 search.audienceType: 
   - maker
 search.app: 
@@ -317,6 +316,12 @@ A set of default dimensions is also added to the *customDimensions* property on 
 | ms-appName      | The Application name of the app that sent the event.   |
 | ms-appSessionId | The application session ID.                           |
 
+## Unsupported scenarios
 
+App Insights doesn't support the following scenarios.
+
+- Offline and mobile apps/player events (both Android and iOS) are not captured.
+- Network requests and errors are not captured.  
+- GCC and non-public clouds are not supported.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

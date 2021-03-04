@@ -123,15 +123,15 @@
       items:
       - name: Compare search options
         href: ../user/search.md
-      - name: Relevance Search
+      - name: Relevance search
         items:
-        - name: What is Relevance Search
+        - name: What is relevance search?
           href: ../user/relevance-search-benefits.md
-        - name: Search for tables and rows using Relevance Search
+        - name: Search for tables and rows by using relevance search
           href: ../user/relevance-search.md
         - name: Configure facets and filters
           href: ../user/facets-and-filters.md
-        - name: FAQs about Relevance Search 
+        - name: FAQs about relevance search 
           href: ../user/relevance-faq.md
       - name: Quick Find
         href: ../user/quick-find.md
@@ -397,7 +397,7 @@
               href: ./canvas-apps/controls/control-column.md
             - name: Combo box
               href: ./canvas-apps/controls/control-combo-box.md
-            - name: Container (experimental)
+            - name: Container (preview)
               href: ./canvas-apps/controls/control-container.md
             - name: Data table
               href: ./canvas-apps/controls/control-data-table.md
@@ -889,14 +889,18 @@
         items:
           - name: Create an accessible app
             href: ./canvas-apps/accessible-apps.md
-          - name: Find accessibility issues
-            href: ./canvas-apps/accessibility-checker.md
+          - name: Create a logical app structure
+            href: ./canvas-apps/accessible-apps-structure.md
           - name: Use color for accessibility
             href: ./canvas-apps/accessible-apps-color.md
           - name: Show or hide content from assistive technologies
             href: ./canvas-apps/accessible-apps-content-visibility.md
           - name: Announce dynamic changes with live regions
             href: ./canvas-apps/accessible-apps-live-regions.md
+          - name: Find accessibility issues using Accessibility checker
+            href: ./canvas-apps/accessibility-checker.md
+          - name: Accessibility limitations
+            href: ./canvas-apps/accessible-apps-limitations.md
       - name: Send notifications from an app
         href: ./canvas-apps/add-notifications.md
       - name: Experimental and preview features
@@ -1279,8 +1283,6 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-    - name: Create guided help
-      href: ./model-driven-apps/create-guided-help-learning-path.md
   - name: Transition to Unified Interface
     items:
     - name: Transition quick start
@@ -1305,21 +1307,21 @@
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 
-- name: Power Apps mobile  
+- name: Power Apps Mobile  
   items:
-  - name: Run apps on Power Apps mobile
+  - name: Run apps on Power Apps Mobile
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Configure mobile offline synchronization 
     href: ../mobile/setup-mobile-offline.md 
-  - name: Use relevance search on Power Apps mobile (preview) 
+  - name: Use relevance search on Power Apps Mobile (preview) 
     href: ../mobile/relevance-search-mobile.md 
   - name: Work offline on your mobile device 
     href: ../mobile/work-in-offline-mode.md  
-  - name: Create push notifications for Power Apps mobile
+  - name: Create push notifications for Power Apps Mobile
     href: ../mobile/power-apps-mobile-notification.md
-  - name: Troubleshoot issues for the Power Apps mobile app
+  - name: Troubleshoot issues for Power Apps Mobile
     href: ../user/powerapps-mobile-troubleshoot.md
     
 - name: Portals
