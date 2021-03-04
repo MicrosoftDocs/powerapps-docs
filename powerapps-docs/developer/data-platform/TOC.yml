@@ -7,6 +7,8 @@
   items:
   - name: Supported customizations
     href: supported-customizations.md
+- name: Understand terminology
+  href: understand-terminology.md
 - name: Security and data access
   href: security-model.md
   items:
