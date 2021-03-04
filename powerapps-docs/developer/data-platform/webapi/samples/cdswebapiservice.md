@@ -28,7 +28,7 @@ This class library demonstrates how to:
 - Manage Service Protection Limit API [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors that a client application should expect.
     - More information: [Service Protection API Limits](../../api-limits.md)
 
-Using the provided Visual Studio project, you can build a class library and include this functionality in your own application code.
+Using the provided Visual Studio project, you can build a class library and include this functionality in your own application code. You can find the CDSWebApiService class library source code and Visual Studio solution at [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples)/cds/webapi/C#/CDSWebApiService.
 
 ## Example
 
