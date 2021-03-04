@@ -10,7 +10,9 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Portals Web API
+# Portals Web API (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 ## Overview
 
