@@ -138,24 +138,25 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
 
    |Field |	Value |
    |--|--|
-   |Display Name |	Age |
-   |Name	| new_age  |
-   |External Name	| Age |
-   |Field Requirement |	Business Required |
-   |Data Type	| Whole Number |
+   |**Display Name** |	Age |
+   |**Name**	| new_age  |
+   |**External Name**	| Age |
+   |**Field Requirement** |	Business Required |
+   |**Data Type**	| Whole Number |
 
    :::image type="content" source="media/age-field.png" alt-text="Create age column":::
 
 1. Select **Save and Close**.
 
 1. Select **New**, and on the **Field: New of Person** page enter the following information:
+
    | Field	| Value |
    |--|--|
-   |Display Name	|Last Modified On |
-   |Name	| new_lastmodifiedon   |
-   |External Name |	LastModifiedOn |
-   | Field Requirement	| Business Required |
-   |Data Type	|Date and Time|
+   |**Display Name**	|Last Modified On |
+   |**Name**	| new_lastmodifiedon   |
+   |**External Name** |	LastModifiedOn |
+   | **Field Requirement**	| Business Required |
+   |**Data Type**	|Date and Time|
 
    :::image type="content" source="media/lastmodifiedon-field.png" alt-text="Create last modified on column":::
 
