@@ -92,7 +92,7 @@ To use the Translation Component in your app, add the component to the app and s
 
 ![Microsoft Power Apps Canvas App Editor: Set Translation Component Visible to False](.attachments/multi-language-apps/image-20210304135035793.png)
 
-Pass the value of the **Language** to the input property of the **Translation Component**. 
+Pass the value of the **Language** to the input property of the **Translation Component**. In this case we have a toggle control that sets a variable called `varLanguage` to the language selected by the user.
 
 ![Microsoft Power Apps Canvas App Editor: Set Translation Component Language input parameter to the language of your app](.attachments/multi-language-apps/image-20210304135729817.png)
 
