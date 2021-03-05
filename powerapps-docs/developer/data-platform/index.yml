@@ -24,10 +24,10 @@ landingContent:
     linkLists:
        - linkListType: overview
          links:
-          - text: Developer overview
-            url: overview.md
           - text: "Developers: Get started"
             url: get-started-developers.md
+          - text: "Developer: Understand terminology"
+            url: understand-terminology.md
        - linkListType: learn
          links:
           - text: Introduction to Dataverse for developers
