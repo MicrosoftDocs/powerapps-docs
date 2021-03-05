@@ -17,9 +17,9 @@ search.app:
 # Connect to cloud-storage from Power Apps
 Power Apps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
 
-| [Azure Blob](https://docs.microsoft.com/connectors/azureblob/) | [Box](https://docs.microsoft.com/connectors/box/) | [Dropbox](https://docs.microsoft.com/connectors/dropbox/) | [Google Drive](https://docs.microsoft.com/connectors/googledrive/) | [OneDrive](https://docs.microsoft.com/connectors/onedrive/) | [OneDrive for Business](https://docs.microsoft.com/connectors/onedriveforbusiness/) |
-| --- | --- | --- | --- | --- | --- |
-| ![Azure Blob](media/cloud-storage-blob-connections/blobicon.png "Azure Blob") | ![Box](media/cloud-storage-blob-connections/boxicon.png "Box") |![Dropbox](media/cloud-storage-blob-connections/dropboxicon.png "Dropbox") |![Google Drive](media/cloud-storage-blob-connections/googledriveicon.png "Google Drive") |![OneDrive](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive")  |![OneDrive for Business](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive for Business") |
+[Box](https://docs.microsoft.com/connectors/box/) | [Dropbox](https://docs.microsoft.com/connectors/dropbox/) | [Google Drive](https://docs.microsoft.com/connectors/googledrive/) | [OneDrive](https://docs.microsoft.com/connectors/onedrive/) | [OneDrive for Business](https://docs.microsoft.com/connectors/onedriveforbusiness/) |
+| --- | --- | --- | --- | --- |
+| ![Box](media/cloud-storage-blob-connections/boxicon.png "Box") |![Dropbox](media/cloud-storage-blob-connections/dropboxicon.png "Dropbox") |![Google Drive](media/cloud-storage-blob-connections/googledriveicon.png "Google Drive") |![OneDrive](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive")  |![OneDrive for Business](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive for Business") |
 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
