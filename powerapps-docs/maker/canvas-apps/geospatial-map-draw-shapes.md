@@ -16,7 +16,7 @@ search.app:
 ---
 
 
-# Draw and insert shapes onto maps (Preview)
+# Draw and insert shapes in the map component (Preview)
 
 [!INCLUDE[Preview disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -24,7 +24,7 @@ You can add a drawing panel to your interactive maps that lets your users draw a
 
 You can also create and label shapes on maps you insert into your Power Apps app with the interactive map component.
 
-Inserting pre-defined shapes can be useful for highlighting special regions or areas of interest to your map users, for example a sales district or shipping zone.
+Inserting pre-defined shapes is useful to highlight specific regions or areas of interest, such as a sales district or shipping zone.
 
 :::image type="content" source="media/geospatial/custom-geojson-shape-example.png" alt-text="Screenshot of map with example shapes drawn and labeled.":::
 
@@ -50,11 +50,11 @@ You will now see the drawing panel on the top left corner of the map component. 
 - A polygon drawing tool that allows you to create freeform custom shapes, indicated by a square icon with a broken top.
 - A square drawing tool that lets you draw squares and rectangles, indicated by a square icon.
 - A circle drawing tool that lest you draw circles and ovals, indicated by a circle icon.
-- 
+
+:::image type="content" source="media/geospatial/drawing-panel.png" alt-text="Screenshot of the map component, with the drawing panel highlighted.":::
+
 >[!NOTE]
 >When you've finished drawing a freeform custom shape, double-click to indicate the last point in the shape.
- 
-:::image type="content" source="media/geospatial/drawing-panel.png" alt-text="Screenshot of the map component, with the drawing panel highlighted.":::
 
 Drawn shapes are automatically labeled. To change the labels, enter the new name for the label in label editing bar on the top right corner of the map. 
 
@@ -68,7 +68,7 @@ If you already have shapes defined in GeoJSON format, you can import them direct
 
 The GeoJSON string for each shape in the dataset needs to be in [the correct format](https://en.wikipedia.org/wiki/GeoJSON), within a single cell.
 
-In the map componenent, you connect your dataset and then refer to the appropriate columns in your dataset, as in the following screenshot example:
+To import shapes, you first connect your dataset in the map component, and then refer to the appropriate dataset columns, as in the following screenshot example:
 
 :::image type="content" source="media/geospatial/custom-geojson-shape.png" alt-text="Screenshot of the advanced properties pane showing dataset fields filled in and the resulting custom shapes on the map.":::
 
