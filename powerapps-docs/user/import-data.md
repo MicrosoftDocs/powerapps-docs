@@ -75,12 +75,16 @@ To find an app, search your phone’s online store.
 
 ## Step 2: Import the file 
   
-1. Open an app an d from the left nav select a table.
+1. Open an app and rom the left nav select a table.
  
    > [!div class="mx-imgBorder"]
    > ![From the site map select a table](media/left-nav-select-table.png "From the site pay select a table")
 
-3. On the command bar, select **Import from Excel**,  **[Import from CSV](#import-from-xml-or-csv-file)**, or **[Import from XML](#import-from-xml-or-csv-file)**.
+3. On the command bar, select the file type that you want to import from:
+
+   - **Import from Excel**
+   - **[Import from CSV](#import-from-xml-or-csv-file)**
+   - **[Import from XML](#import-from-xml-or-csv-file)**.
 
    > [!div class="mx-imgBorder"]
    > ![Shows the three import options in Power Apps](media/import-files.gif "Shows the three import options in Power Apps")
