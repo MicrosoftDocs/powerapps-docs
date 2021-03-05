@@ -224,7 +224,7 @@ So far you've added the ability to view containers, files from the selected cont
     This operation creates a SAS link for a blob using the path. More information: [Create SAS URI by path](https://docs.microsoft.com/connectors/azureblob/#create-blob)
 
     > [!IMPORTANT]
-    > SAS URI created using **CreateShareLinkByPath** has a [default expiry](https://docs.microsoft.com/connectors/azureblob/#create-sas-uri-by-path) of 24 hours. If you have a business requirement to expire the URI in a shorter or different time, consider updates to this formula. For example, the below sample expires the URI in 1 hour using [Now()](functions/function-datevalue-timevalue.md) and [DateAdd()](functions/function-dateadd-datediff.md) functions.
+    > SAS URI created using **CreateShareLinkByPath** has a [default expiry](/connectors/azureblob/#create-sas-uri-by-path) of 24 hours. If you have a business requirement to expire the URI in a shorter or different time, consider updates to this formula. For example, the below sample expires the URI in 1 hour using [Now()](../functions/function-datevalue-timevalue.md) and [DateAdd()](../functions/function-dateadd-datediff.md) functions.
     
     ```powerapps-dot
     Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path,{ExpiryTime:DateAdd( Now(),1)}).WebUrl)
@@ -237,7 +237,7 @@ The app now has the ability to allow you to download the files.
 
 ## Save, publish and share the app
 
-Ensure you [save and publish](save-publish-app.md) the app before you close Power Apps Studio. And then, you can share the app with others [within your organization](share-app.md), or [guests outside your organization](share-app-guests.md).
+Ensure you [save and publish](../save-publish-app.md) the app before you close Power Apps Studio. And then, you can share the app with others [within your organization](../share-app.md), or [guests outside your organization](../share-app-guests.md).
 
 ## Optional customizations
 
@@ -245,7 +245,7 @@ In this section, you'll learn about optional and additional customizations that 
 
 ### Media type
 
-You can use **Media type**, or **Path** fields for the gallery to optionally display the image content in the respective controls. For example, [PDF viewer](controls/control-pdf-viewer.md) for PDF files, [Image](controls/control-image.md) for images, or [Audio/video](controls/control-audio-video.md) for audio/video files.
+You can use **Media type**, or **Path** fields for the gallery to optionally display the image content in the respective controls. For example, [PDF viewer](../controls/control-pdf-viewer.md) for PDF files, [Image](../controls/control-image.md) for images, or [Audio/video](../controls/control-audio-video.md) for audio/video files.
 
 For example, to filter the files with the file extension type of **.pdf**, use the following sample formula.
 
@@ -259,7 +259,7 @@ Similarly, you can use different file extension types, or media types to additio
 
 The Azure Blob Storage connector doesn't refresh automatically when data is updated. If you have more than one container, you can select the other container and then, select the previously selected container back to refresh the connected gallery to display the changes.
 
-Another method that can be considered is to use collection for the first gallery, and then, use the function [ClearCollect](functions/function-clear-collect-clearcollect.md) to refresh the collection.
+Another method that can be considered is to use collection for the first gallery, and then, use the function [ClearCollect](../functions/function-clear-collect-clearcollect.md) to refresh the collection.
 
 For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when upload button is selected, or when the screen appears (OnVisible).
 
@@ -283,7 +283,7 @@ You can't use Microsoft Excel as the data source when the file is stored in Azur
 
 ## Next steps
 
-[Design the app interface](add-configure-controls.md)
+[Design the app interface](../add-configure-controls.md)
 
 ### See also
 
