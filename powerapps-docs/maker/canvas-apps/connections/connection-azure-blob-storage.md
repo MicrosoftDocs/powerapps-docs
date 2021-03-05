@@ -24,10 +24,10 @@ Power Apps can connect to [Azure Blob Storage](/azure/storage/blobs/storage-blob
 
 When you design a canvas app that connects to Azure Blob Storage, the app uses the blob storage account name and key to connect. After you share the app with others, users can use the connection configured inside the app to upload files to Azure Blob Storage without the need to share blob storage name and keys with the app users.
 
-In this article, you'll learn how to create a canvas app that connects to Azure Blob Storage, and add controls to the app that allow you to upload different types of files to the connected blob storage.
+In this article, you'll learn how to create a sample canvas app that connects to Azure Blob Storage, and add controls to the app that allow you to upload different types of files to the connected blob storage.
 
 > [!NOTE]
-> To learn more about other types of cloud storage options with Power Apps (such as OneDrive, OneDrive for Business, Google Drive, Dropbox, Box), go to [Connect to cloud storage from Power Apps](cloud-storage-blob-connections.md).
+> To learn more about other types of cloud storage options with Power Apps (such as OneDrive, OneDrive for Business, Google Drive, Dropbox, or Box), go to [Connect to cloud storage from Power Apps](cloud-storage-blob-connections.md).
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ Before you begin, create and configure a [BlockBlobStorage account](/azure/stora
 
 ## Create Azure Blob Storage connection
 
-Power Apps requires a connection to Azure Blob Storage to be created for the app to connect to the storage. 
+Power Apps requires a connection to Azure Blob Storage to be created for the app to connect to the storage.
 
 To create the Azure Blob Storage connection:
 
@@ -151,7 +151,7 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
 
 1. Set the label's  **Text** property as "Select a container".
 
-1. Use the properties pane on the right-side of the screen to the label text and label text background color.
+1. Use the properties pane on the right-side of the screen and choose the label text color, size, and label text background color of your choice.
 
 1. Select **Insert** -> **Text label**.
 
@@ -235,9 +235,9 @@ So far you've added the ability to view containers, files from the selected cont
 
 The app now has the ability to allow you to download the files.
 
-## Save, publish and share the app
+## Test, save, publish and share the app
 
-Ensure you [save and publish](../save-publish-app.md) the app before you close Power Apps Studio. And then, you can share the app with others [within your organization](../share-app.md), or [guests outside your organization](../share-app-guests.md).
+Play the app to test, and verify the app works as expected. After the testing, ensure you [save and publish](../save-publish-app.md) the app before you close Power Apps Studio. And then, you can share the app with others [within your organization](../share-app.md), or [guests outside your organization](../share-app-guests.md).
 
 ## Optional customizations
 
@@ -257,11 +257,11 @@ Similarly, you can use different file extension types, or media types to additio
 
 ### Refresh galleries connected to Azure Blob Storage
 
-The Azure Blob Storage connector doesn't refresh automatically when data is updated. If you have more than one container, you can select the other container and then, select the previously selected container back to refresh the connected gallery to display the changes.
+The Azure Blob Storage connection doesn't refresh data inside the galleries automatically when the data is updated. If you have more than one container, you can select the other container and then, select the previously selected container back to refresh the connected gallery to display the changes.
 
 Another method that can be considered is to use collection for the first gallery, and then, use the function [ClearCollect](../functions/function-clear-collect-clearcollect.md) to refresh the collection.
 
-For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when upload button is selected, or when the screen appears (OnVisible).
+For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when upload button is selected, or when the screen appears (OnVisible screen property).
 
 1. Set the **Items** property of the first gallery for the list of containers to "TopLevelList".
 
@@ -279,7 +279,7 @@ For example, the following formulas allow you to update the collection for the t
 
 ## Limitations
 
-You can't use Microsoft Excel as the data source when the file is stored in Azure Blob Storage. To use Excel as the data source, use the other cloud storage connectors (such as OneDrive, OneDrive for Business, Google Drive, Dropbox, Box). More information: [Connect to cloud storage from Power Apps](cloud-storage-blob-connections.md)
+You can't use Microsoft Excel as the data source when the file is stored in Azure Blob Storage. To use Excel as the data source, use the other cloud storage connectors (such as OneDrive, OneDrive for Business, Google Drive, Dropbox, or Box). More information: [Connect to cloud storage from Power Apps](cloud-storage-blob-connections.md)
 
 ## Next steps
 
