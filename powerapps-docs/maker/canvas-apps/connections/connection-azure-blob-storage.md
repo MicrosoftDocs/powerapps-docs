@@ -5,7 +5,7 @@ author: vasavib
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/22/2021
+ms.date: 03/05/2021
 ms.author: vabhavir
 ms.reviewer: tapanm
 search.audienceType: 
@@ -69,7 +69,6 @@ Now that you have the connection with Azure Blob Storage created, let's create a
 > In this section, you'll create a sample app with sample controls, functionality and layout design. Depending on your business requirement, you can create the app with a different structure, or customize differently.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-
 1. On the left-pane, select **Create**.
 
 1. Select **Canvas app from blank**.
@@ -189,10 +188,13 @@ Let's configure the app with controls and logic to allow upload of files to the 
 1. Set the **OnSelect** property of the button to:
 
     ```powerapps-dot
-    AzureBlobStorage.CreateFile("fileToUpload",TextInput1.Text, UploadedImage1.Image)
+    AzureBlobStorage.CreateFile(Gallery1.Selected.Name,TextInput1.Text, UploadedImage1.Image)
     ```
 
     This operation uploads a blob to Azure Blob Storage. More information: [Create blob](https://docs.microsoft.com/connectors/azureblob/#create-blob)
+
+    > [!NOTE]
+    > *Gallery1* in this formula is the reference to the gallery added earlier that lists all containers in the storage account. The file will be uploaded to the selected container in gallery 1. *TextInput1* and *uploadImage1* reference the text input and upload image controls. Update the formula with the control names if different.
 
     The app controls look like this in the sample app now.
 
@@ -221,223 +223,68 @@ So far you've added the ability to view containers, files from the selected cont
 
     This operation creates a SAS link for a blob using the path. More information: [Create SAS URI by path](https://docs.microsoft.com/connectors/azureblob/#create-blob)
 
+    > [!IMPORTANT]
+    > SAS URI created using **CreateShareLinkByPath** has a [default expiry](https://docs.microsoft.com/connectors/azureblob/#create-sas-uri-by-path) of 24 hours. If you have a business requirement to expire the URI in a shorter or different time, consider updates to this formula. For example, the below sample expires the URI in 1 hour using [Now()](functions/function-datevalue-timevalue.md) and [DateAdd()](functions/function-dateadd-datediff.md) functions.
+    
+    ```powerapps-dot
+    Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path,{ExpiryTime:DateAdd( Now(),1)}).WebUrl)
+    ```
+
+    > [!TIP]
+    > For more information about configuring Azure Blob Storage for public anonymous access, and different public access levels, go to [Configure anonymous public read access for containers and blobs](https://docs.microsoft.com/azure/storage/blobs/anonymous-read-access-configure?tabs=portal).
+
 The app now has the ability to allow you to download the files.
 
-## Considerations for file download
+## Save, publish and share the app
 
+Ensure you [save and publish](save-publish-app.md) the app before you close Power Apps Studio. And then, you can share the app with others [within your organization](share-app.md), or [guests outside your organization](share-app-guests.md).
 
+## Optional customizations
 
-## **Canvas app setup for Azure Blob Storage**
+In this section, you'll learn about optional and additional customizations that you can consider for your app.
 
-In this section, let's build a canvas app that you can use to display and upload images from/to your Blob storage. We will use two galleries - the first one to browse a container, and the second one to display the files in the selected
-container. Additionally, we will use a few controls to show files in the blob storage to end users.
+### Media type
 
-Follow these steps to use the Azure Blob Storage connector in your app:
+You can use **Media type**, or **Path** fields for the gallery to optionally display the image content in the respective controls. For example, [PDF viewer](controls/control-pdf-viewer.md) for PDF files, [Image](controls/control-image.md) for images, or [Audio/video](controls/control-audio-video.md) for audio/video files.
 
--   Create a new Canvas app
+For example, to filter the files with the file extension type of **.pdf**, use the following sample formula.
 
--   Add the Azure Blob Storage connector to your app by going
-    to **View** \> **Data Sources**.
+```powerapps-dot
+If(".pdf" in Gallery2.Selected.Path, AzureBlobStorage.GetFileContent(Gallery2.Selected.Id))
+```
 
--   Search and select **Azure Blob Storage** connector and fill in with the details you created from previous step.
+Similarly, you can use different file extension types, or media types to additionally customize added controls.
 
-    ![Azure Storage Account Details](./media/connection-azure-blob-storage/azure-storage-account-details.png "Azure Storage Account Details")
+### Refresh galleries connected to Azure Blob Storage
 
--   Add a new blank vertical gallery by going
-    to **Insert** \> **Gallery** \> **Blank vertical**
+The Azure Blob Storage connector doesn't refresh automatically when data is updated. If you have more than one container, you can select the other container and then, select the previously selected container back to refresh the connected gallery to display the changes.
 
-    -   Change the layout to **Title** gallery, by clicking on the gallery and then going to the right **Properties** panel and clicking on **Layout** to change it.
-    ![Layout Title](./media/connection-azure-blob-storage/layout-title.png "Layout Details")
+Another method that can be considered is to use collection for the first gallery, and then, use the function [ClearCollect](functions/function-clear-collect-clearcollect.md) to refresh the collection.
 
-    -   Set the Items property of the gallery to:
+For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when upload button is selected, or when the screen appears (OnVisible).
 
-            AzureBlobStorage.ListRootFolderV2().value
+1. Set the **Items** property of the first gallery for the list of containers to "TopLevelList".
 
-        This will show you the highest-level containers that are available to store / retrieve your files
+1. Append to the upload button **OnSelect** property:
 
-    -   If you do not have any items to show, you can download the Microsoft Azure Storage Explorer
-        (<https://azure.microsoft.com/en-us/features/storage-explorer>) which
-        will allow you to log in and add containers
+    ```powerapps-dot
+    ClearCollect(TopLevelList, AzureBlobStorage.ListRootFolderV2().value)
+    ```
 
--   Add another new blank vertical gallery by going
-    to **Insert** \> **Gallery** \> **Blank vertical**
+3. Add to the screen **OnVisible** property:
 
-    -   Set the **Layout** to Image, title, subtitle and body
+    ```powerapps-dot
+    ClearCollect(TopLevelList, AzureBlobStorage.ListRootFolderV2().value)
+    ```
 
-    -   Set the Items property to:
-        
-            AzureBlobStorage.ListFolderV2(Gallery1.Selected.Id).value
+## Limitations
 
-    -   Change the following items in the data panel
+You can't use Microsoft Excel as the data source when the file is stored in Azure Blob Storage. To use Excel as the data source, use the other cloud storage connectors (such as OneDrive, OneDrive for Business, Google Drive, Dropbox, Box). More information: [Connect to cloud storage from Power Apps](cloud-storage-blob-connections.md)
 
-        -   Body to **Path**
+## Next steps
 
-        -   Subtitle to **MediaType**
+[Design the app interface](add-configure-controls.md)
 
-        -   Title to **DisplayName**
+### See also
 
-        ![Layout Details](./media/connection-azure-blob-storage/layout-image-title-subtitle-body.png "Layout Details")
-
-    -   Click on the first image in the gallery and set it to
-    – AzureBlobStorage.GetFileContent(ThisItem.Id) or 
-    "*https://YourStorageAccountName.blob.core.windows.net*" & ThisItem.Path
-
-    -   You can use the MediaType to pass the path and URL to any type of supported control in Power Apps such as:
-
-        -   PDF Viewer
-
-        -   Image
-
-        -   Audio
-
-        -   Video
-
-    Update **YourStorageAccountName** with your actual storage account name
-            if you used that option. This option is only available if you set your blob storage to public access.  If your blob storage container is locked down (which is the default and recommended) then you can use the **GetFileContent** method.
-
-## **Upload Files to Blob Storage**
-
-Your app can now display files from blob storage on a gallery. Now let’s add a way for users to upload new files to blob storage.
-
--   Add an upload control to send a file to your blob storage by going
-    to **Insert** \> **Media** \> **Add Picture**
-
--   Add a Text Input control to name the file by going to **Insert** \> **Text** \> **Text Input**
-
--   Add a button for the user to click on it to upload the file by going to **Insert** \> **Button**
-
-    -   On the **OnSelect** property of the button, add:
-        
-            AzureBlobStorage.CreateFile("myfiles",TextInput1.Text, UploadedImage1.Image)
-
-        Update '**myfiles**'with the directory you want your files to be uploaded to
-
- 
-        ![Upload Image](./media/connection-azure-blob-storage/upload-image.png "Upload Image")
- 
-### **Refreshing Galleries connected to Azure Blob Storage**
-
-The Blob Storage connector does not auto refresh when data in it is updated. To solve this, add the following:
-
--   To the button **OnSelect** property:
-
-        ClearCollect(TopLevelList, AzureBlobStorage.ListRootFolderV2().value)
-
--   To the screen **OnVisible** property:
-
-        ClearCollect(TopLevelList, AzureBlobStorage.ListRootFolderV2().value)
-
--   Update the first gallery you created that contains the high-level folders
-
-        Set the **Items** property to **TopLevelList**
-
-
-You can now try out the interaction with blob storage by playing the app, uploading a file, providing a file name (with extension) in the Text Input field and click on the upload button.
-Do not forget to change the popup window filter to **All Files** (button right) if you are trying this out from a browser.
-
-![Show All Files](./media/connection-azure-blob-storage/show-all-files.png "Show All Files")
-
- 
-## **Using your files in an app**
-
-In this section, let's explore how to display the uploaded files back to end users. You can check the Media type or file extension to show or hide several types of controls on your canvas apps.
-
-Try using these based on the example:
-
-- **PDF Document Property**:
-
-        If(".pdf" in Gallery2.Selected.Path, AzureBlobStorage.GetFileContent(Gallery2.Selected.Id))
-
-- **Image Property**:
-
-        If("image/" in Gallery2.Selected.MediaType,AzureBlobStorage.GetFileContent(Gallery2.Selected.Id))
-
-- **Video Media Property**:
-
-        If("video/" in Gallery2.Selected.MediaType,AzureBlobStorage.GetFileContent(Gallery2.Selected.Id))
-
-- **Audio Media Property**:
-
-        If("audio/" in Gallery2.Selected.MediaType,AzureBlobStorage.GetFileContent(Gallery2.Selected.Id))
-
--  In case you don't have a control to display a certain type of document, you can display a custom message such as "Document not available in Power Apps". Add a Label control and set the Text property to “Document not available in Power Apps” and use this on the Visible property:
-
-        If("video/" in Gallery2.Selected.MediaType \|\| "image/" in Gallery2.Selected.MediaType \|\| "audio/" in Gallery2.Selected.MediaType \|\| ".pdf" in Gallery2.Selected.Path,false,true)
-
-
-## **Security for Azure Blob Storage files**
-
-Securing files uploaded to blob storage is our next topic. Each container in Blob Storage can have a different Public Access Level assigned to it. In Microsoft Azure Storage Explorer, you can click on a blob storage container to go to the actions tab on the bottom left of the screen and view your access settings.
-
-![Blob Access Settings](./media/connection-azure-blob-storage/blob-access-settings.png "Blob Access Settings")
-
-The first setting (no public access) will restrict access from viewing/downloading the file even if the user has the URL to that file. If you want to lock down your files online, this is the setting you need to select. If you select the first option and click Apply, you will notice the app may not display any images.
-
-
-In your canvas app, if you are using GetFileContent like we did above for PDF files AzureBlobStorage.GetFileContent(Gallery2.Selected.Id), the files will continue to display. Instead, if you have hardcoded the storage account name in the URL, you will need to set up a **Shared Access Signature** in order to secure the files and allow your app to show the files to users. This will assign a key to all the files in your container and will not allow them to be shown unless a special key is appended to the URL. Follow the below steps to set up **Shared Access Signature**
-
-
-- In Microsoft Azure Storage Explorer(Azure Portal), navigate to the blob storage container and select **Shared Access Signature** from settings
-
-- Set the **expiry time** to a date in future and click on **Generate SAS token and URL**. The key will not work beyond the selected date.
-
-- Copy the **Blob SAS token** to use it in your app. In the canvas app, append the **Blob SAS token** to any blob storage document URL that you would like to display. Even though you can do append the URL directly in the app, this is not a recommended approach. Instead, store the key in a different data source and use that data source to insert into the key.
-
-    ![Shared Access Signature](./media/connection-azure-blob-storage/shared-access-signature.png "Shared Access Signature")
-
-    For example, in the gallery that is showing images to your users, you will need to change the Image property of that image:
-
-    From: 
-
-        “https://**YourStorageAccountName**.blob.core.windows.net" & ThisItem.Path
-
-    To: 
-
-        “https://**YourStorageAccountName**.blob.core.windows.net" & ThisItem.Path & “**?token**”
-
-If you need to lock down your files and have a URL you can send to an outside customer, you can use the **CreateShareLinkByPath** function. This will lock down the file to a period you can define and generates a URL that can be accessed by users outside of your app.
-
-To try out the **CreateShareLinkByPath** function do the following:
-
--   Click on the first record in the gallery showing all your files
-
--   Add a button to the gallery (if you have added it correctly, you will see one button per record)
-
--   Add the following to the **OnSelect** of the button:
-
-        Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path).WebUrl)
-
-    You can provide optional parameters such as the **ExpiryTime** to set a timeout for the file. An example would look like:
-
-        Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path,{ExpiryTime:DateValue("1/1/2050")}).WebUrl)
-
-With the above steps, you can create or update apps to include Azure Blob Storage files. You can lock down the files if required and display supported files to end users in Power Apps.
- 
-
-## **Sharing a canvas app which uses Azure Blob Storage connector**
-
-After creating the app, the next step is to share it with the team. With Azure Blob Storage connector, when an app is shared, the app users can use the connector automatically without having to bring their own key to access the blob storage.  
-
-
-## **Data sources supported with Azure Blob Storage Connector**
-
-With the Azure Blob Storage connector you cannot add Excel as a data source. Instead, you can use the following connectors that support Excel as a connection:
-
--   One Drive
-
--   Box
-
--   DropBox
-
--   Google Drive
-
-
-## **Additional Resources**
-
-As you add Azure Blob Storage connector to your apps, you can leverage all the power of the Azure Platform. For our developer friends, here are a few examples of additional resources that
-might be helpful:
-
--   Auto generate thumbnails: <https://github.com/Azure-Samples/function-image-upload-resize>
-
--   Azure Functions with blog
-    storage: <https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-blob>
+[Connect to cloud storage from Power Apps](cloud-storage-blob-connections.md)
