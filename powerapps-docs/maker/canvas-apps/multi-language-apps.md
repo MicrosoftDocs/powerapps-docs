@@ -43,7 +43,8 @@ In this article we'll describe an approach to creating multi-language apps that 
 
    ![Microsoft Power Apps Canvas App Editor: Create Table OnReset](media/multi-language-apps/image-20210304131142608.png)
 
-   ```Set(
+   ```
+   Set(
     varTranslations,
     Table(
         {
@@ -67,7 +68,8 @@ In this article we'll describe an approach to creating multi-language apps that 
             }
         }
     )
-   )```
+   )
+   ```
 
    The table should have an entry for each language that your app supports. Each entry will have a **Labels** property that will contain the translated content of all possible buttons, inputs and labels in your app.
 
@@ -77,15 +79,16 @@ In this article we'll describe an approach to creating multi-language apps that 
 
    > [!NOTE] The formula will find the right translation entry based on the input **Language**. In the case where the language was not set, the formula will use the current user's language as the filter, hence the usage of the [Coalesce](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-isblank-isempty) function.
 
-   ```LookUp(
+   ```
+   LookUp(
     varTranslations,
     Language = Lower(
         Coalesce(
             Self.Language,
             Language()
         )
-    )
-).Labels```
+    )).Labels
+    ```
 
 ## Use the Translation Component in a Canvas App
 
