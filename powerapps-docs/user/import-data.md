@@ -19,11 +19,9 @@ search.app:
 ---
 # How to import data
 
-Whether your data is stored in a spreadsheet, on your phone, or in an email program, here’s how to import the data to your app. For example, you might want to import your customer contact list from an Excel spreadsheet into the app so you can keep track of all your customer information in one place.
-  
-## Step 1: Get your file ready for import
+Every table has required columns that must exist in your input file. We recommend that you create a template. The easiest way to do go to your app export data from a table. Use the same file (modified with your data) to import data into the table. This template saves time and effort. You won't have to account for the required columns for each table.
 
-The first step is to make sure your data is in an Excel file. These file formats are supported:
+If you're an advanced user and know the required columns for a given table for Dataverse tables, define your own Excel or CSV source file and then follow the step in this article on how to import data into your app. These file formats are supported:
 
  - Excel workbook (.xlsx)
  - Comma-separated values (.csv)
@@ -31,51 +29,10 @@ The first step is to make sure your data is in an Excel file. These file formats
   
 The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.  
   
-### Export data from an email program  
-  
-1.  Export your data into a comma-separated values file (.csv).  
-  
-     To find specific steps to export contacts from your email program, open the program’s Help, and search for “export.” Look for topics that include “exporting contacts” or “exporting your address book” or “export wizard” in the title.  
-  
-2.  Save the file in a location where you can easily find it later.  
-  
-### Export data from a spreadsheet  
-  
-1.  Open the spreadsheet.  
-  
-2.  If necessary, edit any column name in the spreadsheet to exactly match the corresponding name shown here.  
-  
-    > [!WARNING]
-    > If the spreadsheet doesn’t include all the column names listed, that’s OK. However, if a column name does exist, it must match exactly with the corresponding name in the list or the import won’t work. Spaces are required. Note that the word “Email” doesn’t contain a hyphen.  
 
-    |**Column Name in Spreadsheet (spelling must match exactly)**|
-    |---------|
-    |First Name|  
-    |Middle Name|  
-    |Last Name|  
-    |Business Phone|  
-    |Mobile Phone|  
-    |Job Title|  
-    |Business Street|  
-    |Business City|  
-    |Business State|  
-    |Business Postal Code|  
-    |Business Country/Region|  
-    |Email Address|  
+## Import the file 
   
-3.  Save the file.  
-  
-### Export data from your phone  
-
-Use a USB cable or an app to export your data such as contacts from your phone to your computer.
-  
-To find specific steps to export contacts for your brand of phone, search for “export contacts from my phone” in your favorite search engine (like Bing).  
-  
-To find an app, search your phone’s online store.  
-
-## Step 2: Import the file 
-  
-1. Open an app and rom the left nav select a table.
+1. Open an app and from the left nav select a table.
  
    > [!div class="mx-imgBorder"]
    > ![From the site map select a table](media/left-nav-select-table.png "From the site pay select a table")
@@ -84,15 +41,15 @@ To find an app, search your phone’s online store.
 
    - **Import from Excel**
    - **[Import from CSV](#import-from-xml-or-csv-file)**
-   - **[Import from XML](#import-from-xml-or-csv-file)**.
+   - **[Import from XML](#import-from-xml-or-csv-file)**
 
    > [!div class="mx-imgBorder"]
    > ![Shows the three import options in Power Apps](media/import-files.gif "Shows the three import options in Power Apps")
   
-2. Browse to the folder where you saved the file that contains the export of your contacts. Select the file, select **Open**, and then select **Next**.  
+2. Select **Choose File** and browse to the folder where you saved the file that contains the export file. Select the file, select **Open**, and then select **Next**.  
   
    > [!TIP]
-   > You can import only one file at a time. To bring in more files, run the wizard again later.
+   > You can import only one file at a time. To bring in more files, run the wizard again.
    
 3. Review the file name and verify that the column and data delimiters are correct using the **Review Mapping** option. If everything looks good, select **Finish Import**.  
 
@@ -110,7 +67,7 @@ To find an app, search your phone’s online store.
 
 3. (Optional) If you have to update the existing rows in your app through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the table.
 
-    The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference Dynamics 365 rows](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn949335(v=crm.8)?redirectedfrom=MSDN).
+    The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
 
    > [!div class="mx-imgBorder"]
    > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
