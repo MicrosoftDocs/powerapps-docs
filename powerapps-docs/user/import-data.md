@@ -19,9 +19,9 @@ search.app:
 ---
 # How to import data
 
-Every table has required columns that must exist in your input file. We recommend that you create a template. The easiest way to do go to your app export data from a table. Use the same file (modified with your data) to import data into the table. This template saves time and effort. You won't have to account for the required columns for each table.
+Every table has required columns that must exist in your input file. We recommend that you create a template. The easiest way to do this is to go to your app and export data from a existing table. Use the same file (modified with your data) to import data into the table. This template saves time and effort. You won't have to account for the required columns for each table. For information on how to export data, see [Export data to Excel](https://docs.microsoft.com/powerapps/user/export-data-excel).
 
-If you're an advanced user and know the required columns for a given table for Dataverse tables, define your own Excel or CSV source file and then follow the step in this article on how to import data into your app. These file formats are supported:
+If you're an advanced user and know the required columns for a given table for Dataverse tables, define your own Excel, CSV, or XML source file and then follow the step in this article on how to import data into your app. These file formats are supported:
 
  - Excel workbook (.xlsx)
  - Comma-separated values (.csv)
@@ -29,7 +29,6 @@ If you're an advanced user and know the required columns for a given table for D
   
 The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.  
   
-
 ## Import the file 
   
 1. Open an app and from the left nav select a table.
