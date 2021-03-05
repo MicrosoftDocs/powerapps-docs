@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/30/2020
+ms.date: 3/4/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -22,7 +22,7 @@ search.app:
 
 The user information page displays useful information about you and your organization. On the page you can view your contact information, your security role, and information about your organization. Depending on your security role, you might be able to make changes to your user profile.  
   
-1. In the upper-right corner of the screen, select **Settings** ![user profile settings button](media/user-profile-settings-button.png) > **Personalization Settings**.  
+1. Open an app and in the upper-right corner of the screen, select **Settings** ![user profile settings button](media/user-profile-settings-button.png) > **Personalization Settings**.  
 
    > [!div class="mx-imgBorder"] 
    > ![Personalization settings](media/setting-personal-options.png "Personalization settings")
