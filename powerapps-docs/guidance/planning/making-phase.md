@@ -95,3 +95,6 @@ environments designated for multiple app makers. More information: [Solutions ov
 
 > [!div class="nextstepaction"]
 > [Next step: Test the app](testing-phase.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

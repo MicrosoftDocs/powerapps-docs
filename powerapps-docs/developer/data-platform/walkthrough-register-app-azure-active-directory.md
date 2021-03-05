@@ -89,3 +89,6 @@ If your application will support server-to-server connections, see [Use Multi-Te
 ### See also  
  [Application registration in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)    
  [Authenticate Users with Dataverse Web Services](authentication.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

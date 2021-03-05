@@ -1451,3 +1451,5 @@ IntersectEntityName: queuemembership<br />
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.queue?text=queue EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

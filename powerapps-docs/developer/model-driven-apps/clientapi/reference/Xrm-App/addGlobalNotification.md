@@ -166,3 +166,6 @@ This is how the information notification will appear in the app:
 ### See also
 
 [clearGlobalNotification](clearGlobalnotification.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

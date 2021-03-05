@@ -107,3 +107,6 @@ Customize the default browse screen to better suit your needs. For example, you 
 
 > [!div class="nextstepaction"]
 > [Customize a default browse screen](customize-layout-sharepoint.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -38,3 +38,6 @@ Read-only and editable grids
 
 To get the `gridRow` object, see [GridRow](../gridrow.md). 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

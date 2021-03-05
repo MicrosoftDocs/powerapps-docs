@@ -136,9 +136,10 @@ The following limitations apply to the use of canvas apps, flows, and custom con
   - The app and flow will not currently be connected in the target environment after deployment. First associate valid connections with the flow and activate the flow. Then edit the app and re-associate the flow to the button.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
 - Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
-- Instant flows are not available in solutions.
+- You can’t add an instant flow into a solution when the following are true:
+   - The flow was created outside of a solution.
+   - The flow trigger is set to manual.
 - Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
-- Flows that connect to SharePoint are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
 - Custom connectors created outside solutions cannot be added to solutions at this time.
 
@@ -155,3 +156,5 @@ For details about customizing the individual components in a solution, see the f
  
 ### Next steps  
 [Create a solution](create-solution.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

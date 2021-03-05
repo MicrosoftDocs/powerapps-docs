@@ -266,3 +266,5 @@ If this occurs aa user must either:
 - Reduce the number of conditions in their query. 
 - Use the In clause, which allows GUIDs and strings up to 850 characters with no limit on integers.
 
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

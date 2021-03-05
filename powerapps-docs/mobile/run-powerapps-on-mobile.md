@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/15/2020
+ms.date: 02/23/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -21,23 +21,57 @@ searchScope:
 
 # Run model-driven apps and canvas apps on Power Apps mobile
 
-When you create an app, or someone shares an app with you&mdash;either a canvas app or model-driven app&mdash;you can run that app on iOS and Android devices by using the Power Apps mobile app. If you're on a Windows device, you can only run canvas apps; model-driven apps aren't supported on the Power Apps mobile app for Windows devices. In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device. 
+When you create an app, or someone shares an app with you&mdash;either a [canvas app](https://docs.microsoft.com/powerapps/maker/#canvas-apps) or [model-driven](https://docs.microsoft.com/powerapps/maker/#model-driven-apps) app&mdash;you can run that app on iOS and Android devices by using Power Apps mobile. 
 
-To learn how to use model-driven apps running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md).
+If you're on a Windows device, you can only run canvas apps; model-driven apps aren't supported on [Power Apps for Windows](https://www.microsoft.com/p/power-apps/9nblggh5z8f3?activetab=pivot:overviewtab). Also, Power Apps for Windows isn't supported if you have the [Power Apps per app plan](/power-platform/admin/about-powerapps-perapp).
 
-> [!IMPORTANT]
-> Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide)
 
-![Power Apps mobile user interface.](media/powerappsmobile.png "Power Apps mobile user interface")
+| **App type**  | **iOS** |**Android** |**Windows** |
+| --- | --- |--- |--- |
+| **[Model-driven](https://docs.microsoft.com/powerapps/maker/#model-driven-apps)** |X |X| |
+| **[Canvas](https://docs.microsoft.com/powerapps/maker/#canvas-apps)** |X |X|X|
+
+
+> [!NOTE]
+> Customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service) don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets apps. More information: [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/user-guide-mobile-app).
+
+In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device 
+
+## Early access feature
+
+If you have enabled early access, then you will have a different navigation experience. This topic calls out both experiences.
+
+|**Current**  |**Early access** |
+|---------|---------|
+| ![Power Apps mobile user interface.](media/powerappsmobile.png "Power Apps mobile user interface")     |     ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")  |
 
 Legend:
 
 1. **Model-driven apps**
 2. **Canvas apps**
 
+
+### Use the early access design
+
+To use early access, you need to enable the **New design (preview)**. 
+
+Follow the one of the steps below to enable the new design:
+
+- When you're on the latest version of the app, you'll get a notification to use the new design. Select **Try now** to start using the new design.
+
+  > [!div class="mx-imgBorder"]
+  >![Notiication to use the new design](media/newdesign.png "Notification to use the new design") 
+
+- Or, go to **Settings** menu ![Settings button](media/settings_icon-1.png) and turn on the toggle for **New design (preview)**.
+
+
+## Required privileges
+
+For privileges required to run model-driven apps on Power Apps Mobile app, see [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges).
+
 ## Supported devices 
 
-These are the supported devices for running model-driven apps and canvas apps on the Power Apps mobile app.
+These are the supported devices for running model-driven apps and canvas apps on Power Apps mobile.
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
@@ -47,7 +81,7 @@ These are the supported devices for running model-driven apps and canvas apps on
 
 > [!NOTE]
 > - On October 16, 2020 we will no longer support iOS 12. After October 16, 2020 iOS 13 or later will be supported. 
-> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
+> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Microsoft Dataverse option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to Power Apps mobile for Windows platform will be announced in future.
 
 ## Install Power Apps mobile app
 
@@ -60,65 +94,91 @@ Choose the download link for your device:
 - For Android, go to [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps). 
 
 
-## Open Power Apps, and sign in
+## Sign in
 
 Open Power Apps on your mobile device, and sign in by using your Azure Active Directory credentials.
 
+If you have the Microsoft Authenticator app installed on your mobile device, enter your username when prompted, and then approve the notification sent to your device. If you run into issues signing in, see [Troubleshoot sign in issues](https://docs.microsoft.com/en-us/powerapps/user/powerapps_mobile_troubleshoot#sign-in-issues).
+
 ![Sign in to Power Apps.](media/powerapps_mobile_app_signin_screen.png "Sign in to Power Apps")
 
-If you have the Microsoft Authenticator app installed on your mobile device, enter your username when prompted, and then approve the notification sent to your device.
 
 
 ## Find the app
 
-When you sign in to the app, the **My apps** filter is set by default. If you don't find the app you're looking for, you can open the **Power Apps** menu, and then select a different filter. 
+The apps that you used recently will show on the default screen when you sign in to Power Apps mobile.
+
+| **Current** | **Early access** |
+| --- | --- |
+|  When you sign in to the app, the **My apps** filter is set by default. If you can't find the app you're looking for, open the **Power Apps** menu, and then select a different filter.  <div></div> ![App filters.](media/filter-menu.png "App filters") |  The **Home** is the default screen when you sign in. It shows the apps that you used recently and the apps that have marked as favorites. <div></div> ![Default Home screen](media/default-home-screen.png "Default Home screen")|
 
 
-![App filters.](media/filter-menu.png "App filters")
 
-The following filters are available:
+## Filter apps 
 
-- **All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
+If you don't have any apps, then when you sign in, you will land on the **All apps** screen. The list of apps is organized in alphabetical order. Type in an app name in the search bar to find an app.
 
-- **My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. 
+|Current  |Early access  |
+|---------|---------|
+|![App filters](media/app-list-1.png "App filters") <div></div>  <div></div>  <ol><li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. </li> <li>**Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.</li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites.</li> <li>**Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.</li>|     ![Filter and find apps](media/app-list-2.png "Filter and find apps")  <div></div> <div></div>  <ol><li> **Settings**: Access app settings and sign out. </li> <li> **Search**: Use the search to search for apps. When you run a search, it will only search for apps that are on the screen you're on. </li> <li>**Favorites** (canvas apps only): Displays canvas apps that you have pinned to favorites. </li> <li>**Recent apps**: Displays both model-driven and canvas apps that you have recently used. </li> <li>**Home**: Displays favorite apps and recently accessed apps sorted by open date.</li> <li>**All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.</li> <li>**More** (canvas apps only): Displays featured and sample apps. </li> <li>**Details**: View information about the app including run the app, add a shortcut for the app, and add the app to favorites. </li> <li>**Sort apps**: You can short by the app name or modified date. </li> 
+  
+## Add to favorites
 
-- **Sample apps** (canvas apps only): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
-
-- **Favorites** (canvas apps only): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then selecting **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.
-
-    ![Mark as Favorite.](media/add_favorite_app.png "Mark as Favorite")
-
-- **Featured apps** (canvas apps only): Displays canvas apps that your admin has marked as featured apps.
-
-### Sort apps
-
-After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps. You can sort both canvas apps and model-driven apps.
-
-![Sort menu.](media/sort_apps.png "Sort menu")
-
-### Search apps
-
-If you know the name of the app you want to run, you can select the search icon at the top, and then type part of its name in the search box. You can search for both canvas apps and model-driven apps.
-
-![Search for apps.](media/search_apps.png "Search for apps")
-
-If you filtered your apps, the filtered list will be searched.
-
-### Refresh the list of apps
-
-Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
+You can only add canvas apps to your list of favorite apps.
 
 
-## Pin to home
+|**Current**  |**Early access**  |
+|---------|---------|
+| <ul><li> Select the ellipsis (...) on the app tile, and then select **Favorite**. </li><li> To remove an app from this list, select the ellipsis (...) on the app tile, and then select **Unfavorite**.   <div></div> <div></div> ![Mark as Favorite.](media/add_favorite_app.png "Mark as Favorite") | <ul><li> Swipe left and then select **Favorite**. A yellow star will appear next to app name when it's added to favorites. You can also select **Details** ![Details button](media/detailsbutton.png) and then add the app to favorites. </li><li> To remove the app from the list, swipe left again and then select **Unfavorite**.</li>   <div></div> <div></div> ![Add to list of favorites.](media/add-to-favs-1.png "Add to list of favorites")     |
 
-You can pin both canvas apps and model-driven apps to the home screen of your device for quick access.
 
-### Use Safari to pin to home (iOS 13 or earlier)
+## Sort apps
 
-1. Select the ellipsis (...) on the app tile, select **Pin to Home**;
+You can sort both canvas apps and model-driven apps.
+
+
+| **Current** | **Early access** |
+| --- | --- |
+|  After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps. You can sort both canvas apps and model-driven apps.  <div></div> ![Sort menu.](media/sort_apps.png "Sort menu") | You can short apps alphabetically by name or by modified date. The short option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen. <div></div> ![Sort menu.](media/sort-apps-iphone.png "Sort menu")|
+
+
+
+## Search apps
+
+If you know the name of the app that you want to run, then use search to quickly find the app. You can search for both canvas apps and model-driven apps.
+ 
+| **Current** | **Early access** |
+| --- | --- |
+|  To find an app, select the search icon at the top, and then type part of its name in the search box. If you filtered your apps, the filtered list will be searched.  <div></div> ![Search for apps.](media/search_apps.png "Search for apps") | To find an app, enter the app name in the search field. The app will only search for apps that are on the screen you're on. <div></div> ![Search for your app.](media/search_apps-1.png "Search for your app")|
+
+
+## Refresh the list of apps
+
+- **Current**: Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the app list of both the canvas apps and model-driven apps. 
+
+- **Early access**: On the **Home**, **All apps** or any other screen with a list of apps, swipe down to refresh the app list.
 
    > [!div class="mx-imgBorder"]
-   > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
+   >![Refresh the app list](media/refesh-apps-iphone.png)
+
+
+## Add shortcuts
+
+You can add a shortcut for both canvas apps and model-driven apps to the home screen of your device for quick access.
+
+### Use Safari to add a shortcut (iOS 13 or earlier)
+
+1. Do one of the following depending on if you're on the current release or early access:
+
+  - **Current**: Select the ellipsis (...) on the app tile, select **Pin to Home**.
+
+     > [!div class="mx-imgBorder"]
+     > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
+   
+  - **Early access**: On the app that you want to create a shortcut for, swipe to the right and select **Shortcut**.
+
+     > [!div class="mx-imgBorder"]
+     > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
 
 2. Select ![Pin an app on iPhone button.](media/add-to-home-button.png "Pin an app on iPhone button").
  
@@ -139,18 +199,24 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 > For iOS devices that have multiple browsers installed, use Safari when pinning an app to home. 
 
 
-### Use Siri shortcuts to pin to home (iOS 14 or later) 
+### Use Siri shortcuts to add a shortcut to the Home screen (iOS 14 or later) 
 
-The Power Apps mobile app is now integrated with Siri shortcuts, which gives you the ability to pin to home, launch apps with Siri, and create new workflows. For more information on how shortcuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios). This feature requires Power Apps mobile version 3.20092.x or later.
+The Power Apps mobile app is now integrated with Siri shortcuts, which gives you the ability to add a shortcut to the Home screen, launch apps with Siri, and create new workflows. For more information on how shortcuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios). This feature requires Power Apps mobile version 3.20092.x or later.
 
 Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen. The new experience works for both model-driven and canvas apps. When you add a Siri shortcut, the app is added to the iOS **Shortcuts** app and from there you can add the app to your home screen.
 
 
-1. To pin an app to the home screen, select the ellipsis (...) on the app tile.
-2. Select **Add shortcut to Siri**.
+1. Do one of the following depending on if you're on the current release or early access:
 
-   > [!div class="mx-imgBorder"]
-   > ![Add shortcut to Siri.](media/add-shortcut.png "Add shortcut to Siri")
+ - **Current**: To add shortcut to the home screen for an app, select the ellipsis (...) on the app tile and then select **Add shortcut to Siri**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Add shortcut to Siri.](media/add-shortcut.png "Add shortcut to Siri")
+    
+ - **Early access**: On the app that you want add a shortcut for, swipe to the right and select **Shortcut**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select shortcut.](media/add-shortcut-iphone.png "Select shortcut") 
    
 3. Add a custom phrase to open the app using voice commands and then select **Add to Siri**.
 
@@ -193,7 +259,7 @@ Select the ellipsis (...) on the app tile, select **Pin to Home**, and then foll
 
 By default, only production model-driven apps are shown in the list of apps.
 
-To see model-driven apps from non-production environments, select the **Settings** menu ![Settings icon](media/settings_icon.png), and then turn on **Show non-production apps**. Follow the instructions that appear.
+To see model-driven apps from non-production environments, select the **Settings** menu (**Current**: ![Settings icon](media/settings_icon.png)    **Early access**: ![Settings button](media/settings_icon-1.png)), and then turn on **Show non-production apps**. Follow the instructions that appear.
 
 ![Non-production apps toggle.](media/non_prod_toggle.png "Non-production apps toggle")
 
@@ -203,7 +269,7 @@ To run an app on a mobile device, select the app tile. If someone else created a
 
 ### Run a canvas app
 
-If this is the first time you're running a canvas app by using the Power Apps mobile app, a screen shows the swipe gestures.
+If this is the first time you're running a canvas app by using Power Apps mobile, a screen shows the swipe gestures.
 
 #### Close a canvas app
 
@@ -221,9 +287,9 @@ If an app requires a connection to a data source or permission to use the device
 
 ![Give consent to a canvas app.](media/give_consent_canvas.jpg "Give consent to canvas app")
 
-### Run a model-driven app 
+### Use a model-driven app 
 
-The following image shows an example of a model-driven app screen after you've signed in. To learn how to use model-driven apps running on the Power Apps mobile app, go to [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md). 
+The following image shows an example of a model-driven app screen after you've signed in. To learn how to use model-driven apps running on Power Apps mobile, go to [User Guide for model-driven apps running on Power Apps mobile](use-custom-model-driven-app-on-mobile.md). 
 
 ![Model-driven app home page.](media/model-driven-app-opened.png "Model-driven app home page")
 
@@ -242,6 +308,10 @@ Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map 
 
 ## See also
 
-[Troubleshoot issues for the Power Apps mobile app](https://docs.microsoft.com/powerapps/user/powerapps_mobile_troubleshoot)
+[User Guide for model-driven apps running on Power Apps mobile](use-custom-model-driven-app-on-mobile.md) <br/>
+[Troubleshoot issues for Power Apps mobile](https://docs.microsoft.com/powerapps/user/powerapps_mobile_troubleshoot)
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

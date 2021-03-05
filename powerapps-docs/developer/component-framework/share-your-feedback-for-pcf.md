@@ -20,3 +20,5 @@ Read and post in the [Power Apps component framework forum](https://powerusers.m
 ## See also
 
 [Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

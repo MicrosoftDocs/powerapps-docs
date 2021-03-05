@@ -20,7 +20,7 @@ ms.reviewer: tapanm
 > [!NOTE]
 > See [Configure AD FS by using PowerShell](#configure-ad-fs-by-using-powershell), for information about how to perform these steps in a PowerShell script.
 
-1. Using the [AD FS Management tool, go to **Service** > **Claim Descriptions**.
+1. Using the AD FS Management tool, go to **Service** > **Claim Descriptions**.
 
     1.  Select **Add Claim Description**.
     2.  Specify the claim:
@@ -263,3 +263,6 @@ After setting up the AD FS relying party trust, you can follow the steps in [Con
 [Configure a SAML 2.0 provider for portals with Azure AD](configure-saml2-settings-azure-ad.md)  
 [FAQ for using SAML 2.0 in portals](configure-saml2-faqs.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

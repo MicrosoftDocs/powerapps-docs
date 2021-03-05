@@ -1,7 +1,7 @@
 ---
 title: "Work with rows in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
-ms.date: 12/17/2020
+ms.date: 01/13/2021
 author: mduelae
 ms.author: mkaur
 ms.service: powerapps
@@ -29,6 +29,9 @@ When the **Calendar Control V2** control is added to a table and then the defaul
 
 > [!div class="mx-imgBorder"]
 > ![Default calendar view](media/cal-view.png "Default calendar view") 
+
+> [!NOTE]
+> The **Calendar Control V2** control is not supported in mobile offline. For more information about mobile offline, see [Work offline on your mobile device](https://docs.microsoft.com/dynamics365/mobile-app/work-in-offline-mode).
 
 ## Switch between calendar view and grid view
 
@@ -120,3 +123,6 @@ You can use the search box to search for data in the view you're in. For example
 ### See also
 
 [Add the calendar control to tables](../maker/model-driven-apps/add-calendar-control.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

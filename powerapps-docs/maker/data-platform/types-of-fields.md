@@ -38,7 +38,7 @@ The names used for types depend on the designer used. [Power Apps portal](https:
 |**Image**|**Image**|`ImageType`|
 |**Language**|**Whole Number**<br />*Language* Format|`IntegerType`|
 |**Lookup**|**Lookup**|`LookupType`|
-|**Multi Select Choice**|**MultiSelect Field**|`MultiSelectPicklistType`|
+|**Choices**|**MultiSelect Field**|`MultiSelectPicklistType`|
 |**Multiline Text**|**Multiple Lines of Text**|`MemoType`|
 |**Choice**|**Option Set**|`PicklistType`|
 |**Owner**|**Owner**|`OwnerType`|
@@ -74,13 +74,13 @@ There are some columns used by the system that you cannot add using the designer
 |**Unique Identifier**|A system column stores a globally unique identifier (GUID) value for each row.|
 
   
-## MultiSelect Choice
+## Choices
 
-You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns. When you add a Multi-Select Choice column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
+You can customize forms (main, quick create, and quick view) and email templates by adding multi-select columns that are called **Choices**. When you add a choices column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.
 
 For example, if an organization operates in multiple areas or countries, you can include multiple locations or countries in an ‘Area of operation’ column. A user can then select one or more locations from the list of available values.
 
-Multi-select choices can be used with read-only grids, editable grids, and most forms. Multi-select choices can't be used with: 
+Choices can be used with read-only grids, editable grids, and most forms. Multi-select choices can't be used with: 
 - Workflows, business process flows, actions, dialogs, business rules, charts, rollup columns, or calculated columns.
 - Reports, SLA<sup>1</sup>, and routing rules<sup>1</sup>.
 
@@ -151,7 +151,8 @@ However, you should be aware that not every lookup behaves this way. There are s
 
 <a name="BKMK_ImageFields"></a>
 
-## Image columns  
+## Image columns
+
 Use image columns to display a single image per row in the application. Each table can have one image column. You can add an image column to custom tables but not to standard tables. Some standard tables have image columns defined.
   
 Even though a table has an image column, displaying that image in a model-driven app requires that you enable two settings. 
@@ -255,3 +256,6 @@ To create a file column, on the left pane in Power Apps select **Solutions**, op
 > ![File data type](media/file-data-type.png)
 
 More information for developers working with file data: [File attributes](/powerapps/developer/data-platform/file-attributes)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

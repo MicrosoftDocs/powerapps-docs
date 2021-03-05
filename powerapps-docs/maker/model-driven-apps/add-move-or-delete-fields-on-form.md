@@ -74,8 +74,8 @@ These are the properties available to configure a column when you create or edit
 |**Display options** | **Hide on phone** | The column can be hidden to render a condensed version of the form on phone screens. |
 |**Formatting** | **Column width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
 
-[!NOTE] 
-> In the Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
+> [!NOTE]
+> In Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
 
 ## Move columns on a form
 You can move a column on a form using drag and drop or cut and paste actions. 
@@ -141,3 +141,6 @@ You can move a column on a form using drag and drop or cut and paste actions.
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit columns](../data-platform/create-edit-field-portal.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

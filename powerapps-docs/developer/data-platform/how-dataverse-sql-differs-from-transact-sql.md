@@ -422,3 +422,5 @@ Hints are not supported.
 ### See also
 
 [Use SQL to query data](dataverse-sql-query.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

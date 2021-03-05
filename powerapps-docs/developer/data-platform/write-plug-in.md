@@ -215,3 +215,6 @@ This data is also available for you to browse using the [Power Platform Admin Ce
 [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)<br />
 [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)<br />
 [Tutorial: Update a plug-in](tutorial-update-plug-in.md)<br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

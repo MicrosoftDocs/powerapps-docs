@@ -1631,3 +1631,6 @@ Renders a string as Liquid code. This code will have access to the current Liqui
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

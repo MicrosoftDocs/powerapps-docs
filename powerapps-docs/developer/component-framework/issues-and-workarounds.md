@@ -5,7 +5,7 @@ keywords:
 author: Nkrb
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 11/25/2019
+ms.date: 02/19/2021
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -80,15 +80,15 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 
 **Workaround**
 
-- Build  the `.pcfproj` as release configuration which sets the webpack to production mode using the command 
+- Build  the `.pcfproj` as release configuration, which sets the web pack to production mode using the command 
   ```CLI
   msbuild /property:configuration=Release
   ```
-- Run the msbuild command with an additional property as shown below: 
+- Run the msbuild command with an extra property as shown below: 
   ```CLI
   msbuild /p:PcfBuildMode=production
   ```
-- Edit the `.pcfproj` to always build the webpack in production mode by setting the property `PcfBuildMode` to production:
+- Edit the `.pcfproj` to always build the web pack in production mode by setting the property `PcfBuildMode` to production:
   ```XML
   <PropertyGroup>
     <Name>TS_ReactStandardControl</Name>
@@ -101,7 +101,8 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 ## When running Power Apps checker with the solution built using CLI tooling in default configuration
 
 **Error: Do not use the eval function or its functional equivalents**
-This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs webpack (used to bundle the code component) to package in development mode, which emits `eval()`. 
+
+This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs web pack (used to bundle the code component) to package in development mode, which emits `eval()`. 
 
 **Workaround**
 
@@ -115,7 +116,7 @@ msbuild/property:configuration:Release
 npm run build -- --buildMode production
 ```
 
-## Power Apps component framework Datasets getValue by property alias doesn't work
+<!--## Power Apps component framework Datasets getValue by property alias doesn't work
 
 Power Apps component framework dataset API's getValue function only searches record by the dataset column name and not the property alias set in the manifest. Attempting to get value by property alias will return an empty value.
 
@@ -141,5 +142,8 @@ Power Apps component framework dataset component currently does not properly sho
 
 **Workaround**
 
-No workaround as of now. We are working on pushing a fix to our deployment trains.
+No workaround as of now. We are working on pushing a fix to our deployment trains.-->
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

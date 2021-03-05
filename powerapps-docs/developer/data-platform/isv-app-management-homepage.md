@@ -79,3 +79,6 @@ The App names and icons are from AppSource.
 [Tenant page](isv-app-management-tenantpage.md)<br/> 
 [AppSource checker](isv-app-management-appsource-checker.md)<br/> 
 [Connector Certification](isv-app-management-certification.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

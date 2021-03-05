@@ -143,3 +143,6 @@ The following table lists the charts that are currently not supported in portals
 ### See also
 
 [Microsoft Learn: Model-driven charts in portals](https://docs.microsoft.com/learn/modules/portals-integration/4-model-driven-charts)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

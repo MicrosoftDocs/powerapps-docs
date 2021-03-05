@@ -97,3 +97,6 @@ You use field security entities to apply field-level security, which restricts f
  [Sample: Retrieve Field Permissions](/dynamics365/customer-engagement/developer/sample-retrieve-field-permissions)   
  [Sample: Enable Field Security For An Entity](org-service/samples/enable-field-security-entity.md)   
  [Sample: Retrieve Field Sharing Records](/dynamics365/customer-engagement/developer/sample-retrieve-field-sharing-records)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

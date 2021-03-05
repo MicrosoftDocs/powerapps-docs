@@ -17,9 +17,7 @@ search.app:
 This event occurs **Before** the stage of a business process flow control changes. This event occurs after the user selects the **Next Stage**, **Move to previous stage** or **Set Active Stage** buttons in the user interface or when a developer uses the `formContext.data.process.moveNext`, `formContext.data.process.movePrevious`, or `formContext.data.process.setActiveStage` methods.
 
 > [!NOTE]
-> The OnPreStageChange event is supported only:
->    - On the Unified Interface.
->    - For single-entity business process flows; it isn't supported for cross-entity processes.
+> The OnPreStageChange event is supported only on Unified Interface.
 
 From within a web resource script registered to the onPreStageChange event, a developer can invoke the following on the executionContext object passed into the web resource script: 
 
@@ -34,7 +32,7 @@ When you invoke `preventDefault`:
 
 An execution context object is passed to event handlers for this event. You can use the [getEventArgs](../executioncontext/getEventArgs.md) method to retrieve an object that has the following methods:
 - **getDirection**: Returns a string that is either “next” or “previous” to show the direction of the stage change.
-- **getStage**: Returns a stage object. Except when the navigation moves to a new entity, the stage returned represents the destination stage object,that is, the next active stage. When the navigation moves to a new entity, the stage is the stage being navigated from, that is, the previous active stage object. More information: [Stage methods](../formContext-data-process.md#stage-methods).
+- **getStage**: Returns a stage object. Except when the navigation moves to a new entity, the stage returned represents the destination stage object—that is, the next active stage. When the navigation moves to a new entity, the stage is the stage being navigated from—that is, the previous active stage object. More information: [Stage methods](../formContext-data-process.md#stage-methods).
 
 
 
@@ -44,3 +42,6 @@ An execution context object is passed to event handlers for this event. You can 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -90,3 +90,6 @@ For more information about the Teams client SDK, go to [Context interface](/java
 
 [Manage your apps](manage-your-apps.md)  
 [Understand Power Apps Studio](understand-power-apps-studio.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

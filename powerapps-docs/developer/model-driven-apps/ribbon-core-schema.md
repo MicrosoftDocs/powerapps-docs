@@ -142,3 +142,6 @@ For more information, see [Package and Distribute Extensions with Solutions](htt
  [Ribbon types schema](ribbon-types-schema.md)<br/>
  [Ribbon WSS schema](ribbon-wss-schema.md)<br/>
  [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -33,3 +33,6 @@ The following catalog is organized from core knowledge to specific domains, and 
 | Content  | Description     | Format     | Length    | 
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------|----------------------------------------------------------|
 | [Microsoft Power Apps + Dynamics 365 Developer](https://docs.microsoft.com/learn/certifications/exams/mb-400)	|This exam measures your ability to accomplish the following technical tasks: create a technical design; configure Dataverse (CDS); create and configure Power Apps; configure business process automation; extend the user experience; extend the platform; and develop integrations. |	Exam, cost varies by region |
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

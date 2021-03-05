@@ -33,3 +33,6 @@ Read-only and editable grids
 To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext). 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

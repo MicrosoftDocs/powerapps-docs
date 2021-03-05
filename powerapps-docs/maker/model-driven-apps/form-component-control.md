@@ -23,7 +23,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using the main form. 
+There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using a [main form in a dialog.](https://docs.microsoft.com/powerapps/developer/model-driven-apps/customize-entity-forms#open-main-form-in-a-dialog-using-client-api)
 
 Another way you can work with related table records is by adding a form component control to another table's main form. The form component control lets users edit information of a related table record directly from another table’s form.
 
@@ -93,9 +93,13 @@ Note the following limitations when you add the form component control to a tabl
 
 - The form component control only supports rendering main forms. Similarly, support for adding a form component control is only supported with main forms. Other form types, such as quick create, quick view, and card aren't supported.
 
-- Forms with a business process flow aren’t supported.  If you have a form with a business process flow, you may encounter unexpected behavior.  We recommend that you do not use a form component with a form that uses a business process flow.
+- Forms with a business process flow aren’t currently supported in either the main table form or the related table form. If you have a form with a business process flow, you may encounter unexpected behavior.  We recommend that you do not use a form component with a form that uses a business process flow.
 
-- You can add a form component control on a form's tab. Adding additional form component controls on additional tabs on the same form isn't supported. Notice that the form component rendered will only display on the first tab if multiple tabs are included on the form.  
+- The form component control doesn't support embedded form component controls, such as adding a form component control to a form that is used by a form component control. 
+
+- The form component control will only display the first tab of the form it uses if multiple tabs are included in that form.  
+
+- Using the same form for different form component controls isn't supported.
 
 - The form that you use with a form component must be included in your app. More information: [Add components to your app](build-first-model-driven-app.md#add-components-to-your-app).
 
@@ -104,3 +108,6 @@ Note the following limitations when you add the form component control to a tabl
 ### See also
 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

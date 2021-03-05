@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[./includes/moveNext-description.md](./includes/moveNext-description.md)]
 
-You can also move to a next stage in a different entity. 
+Moving to next stage is not supported for different entity.
 
 ## Syntax
 
@@ -89,3 +89,6 @@ This methods will cause the [OnStageChange](../../events/onstagechange.md) event
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

@@ -138,3 +138,6 @@ In this article, you'll learn about configuring a SAML 2.0 provider for portals 
 [Configure a SAML 2.0 provider for portals with AD FS](configure-saml2-settings.md)  
 [FAQ for using SAML 2.0 in portals](configure-saml2-faqs.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

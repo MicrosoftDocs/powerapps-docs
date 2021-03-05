@@ -43,5 +43,8 @@ Once your app is ready for submission, you use the [Partner Center](https://part
 - [App certification](appendix-app-certification-checklist.md): Provides information about the checks done during the app certification process after you submit your app for publishing on AppSource. 
   
 ### See also  
-[Video: Microsoft AppSource: find the right app for your business](https://youtu.be/hpq_Y9LuIB8)
+[Video: Microsoft AppSource: find the right app for your business](https://youtu.be/sKtLK3gqd4c)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

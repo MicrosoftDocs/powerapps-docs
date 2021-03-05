@@ -1880,3 +1880,6 @@ The following is the schema definition for form customizations for model-driven 
  [Create, install, and update a managed solution](../data-platform/create-install-update-managed-solution.md)<br/>
  [Create, export, or import an Unmanaged solution](../data-platform/create-export-import-unmanaged-solution.md)<br/>
  [Form XML schema](form-xml-schema.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

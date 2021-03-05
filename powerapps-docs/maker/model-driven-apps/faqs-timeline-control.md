@@ -18,7 +18,7 @@ search.app:
 
 [!INCLUDE [cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-## Why do I receive the message "Rows could not be loaded because of unexpected error"?
+## Why do I receive the message "Records could not be loaded because of unexpected error"?
 
 The **Timeline** section retrieves data about and displays in the form cards. By default, the timeline retrieves data for the 10 standard activity tables, which are:
 
@@ -38,10 +38,10 @@ When you perform the following procedures as an administrator, users will see an
 -    Enable custom activities for mobile
 -    Select a **Card Form** for all the custom activities 
 
-**Error:** Rows could not be loaded because of an unexpected error.
+**Error:** Records could not be loaded because of an unexpected error.
 
    > [!div class="mx-imgBorder"] 
-   > ![Rows could not be loaded because of an unexpected error.](media/timeline-error1.png "Rows could not be loaded because of an unexpected error.")
+   > ![Records could not be loaded because of an unexpected error.](media/timeline-error1.png "Records could not be loaded because of an unexpected error.")
 
 This error is caused because the number of activity tables for the data retrieval has exceeded the maximum limit of 10.
 
@@ -62,7 +62,7 @@ To work around the issue, you must reduce the number of tables to 10 or fewer. T
 
 5.   Select a table and select **Forms**. For example, select the **Account** table.
 
-6.   Select the **Account for Interactive experience** row that is a **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
+6.   Select the **Account for Interactive experience** record that is a **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
 
       > [!div class="mx-imgBorder"] 
       > ![Select the table form with interactive experience in the name](media/account-interactive-experience.png "Select the table form with interactive experience in the name")
@@ -83,7 +83,7 @@ To work around the issue, you must reduce the number of tables to 10 or fewer. T
 11.    Select **Publish** to publish the customizations.
 
 
-## Why I can't assign or delete an activity from the timeline?
+## Why can't I assign or delete an activity from the timeline?
 
 If you use the **HideCustomActions** rule to hide buttons, such as **Assign** and **Delete** in the ribbon command bar definition, then those buttons that are present in the Timeline control will not work. The buttons in the command bar are same as the buttons in the Timeline control; therefore, when a user selects the **Assign** or **Delete** button in the Timeline control, an error message is displayed.
 
@@ -92,14 +92,14 @@ If you use the **HideCustomActions** rule to hide buttons, such as **Assign** an
 To mitigate the issue, unhide the buttons in the command bar definitions.
 
 
-## Why my users see different activities and rows in their My activities stream in the dashboard?
+## Why do my users see different activities and records in their My activities stream in the dashboard?
 
-**My activities** stream in the dashboard shows the rows and activities that are owned by a particular user. For example, user **A** see rows and activities that are owned by **A**, and user **B** see rows and activities that are owned by **B**.
+**My activities** stream in the dashboard shows the records and activities that are owned by a particular user. For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
 
 
-## Why my agents see the filter pane even when the Expand filter pane by default check box is cleared?
+## Why do my agents see the filter pane even when the Expand filter pane by default check box is cleared?
 
-When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline rows. Even though you've cleared **Expand filter pane by default** check box in the Timeline configurations, the filter pane will always be displayed to your agents.
+When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. Even though you've cleared **Expand filter pane by default** check box in the Timeline configurations, the filter pane will always be displayed to your agents.
 
 ## See also
 
@@ -108,3 +108,6 @@ When the timeline is displayed on more than one column, the filter pane is displ
 [Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
 
 [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

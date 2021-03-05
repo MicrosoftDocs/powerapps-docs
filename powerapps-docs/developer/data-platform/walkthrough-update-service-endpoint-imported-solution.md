@@ -46,3 +46,6 @@ Follow these steps to set the SAS Key for each service endpoint after solution i
 [Azure Integration](azure-integration.md)<br />
 [Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization)<br />
 [Service Bus access control with Shared Access Signatures](/azure/service-bus-messaging/service-bus-sas)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -23,7 +23,7 @@ As a portal administrator, you can configure your portal to display a proper mes
 
 You can enable maintenance mode on your portal to provide a consistent message, instead of dealing with unpredictable behavior when your website is under scheduled maintenance. This capability will provide a better experience for your portal users.
 
-1. Open [Power Apps Portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
 3. Go to **Portal Actions** > **Enable maintenance mode**.
 
@@ -62,7 +62,7 @@ After enabling maintenance mode for your portal, you can update the maintenance 
 
 You can also choose to disable maintenance mode on your portal when the scheduled maintenance of your website is complete. Your portal users can now browse and access all web pages as usual.
 
-1. Open [Power Apps Portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Configure or disable maintenance mode**.
 
@@ -79,3 +79,6 @@ You can also choose to disable maintenance mode on your portal when the schedule
 ### See also
 
 [Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -42,3 +42,6 @@ kbSearchControl.setSearchQuery(searchString);
 [getSearchQuery](getSearchQuery.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

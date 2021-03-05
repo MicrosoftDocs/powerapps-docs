@@ -758,3 +758,5 @@ See organization Entity [organization_navigationsetting](organization.md#BKMK_or
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.navigationsetting?text=navigationsetting EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

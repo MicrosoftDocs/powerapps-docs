@@ -419,7 +419,7 @@
     items:
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
-    - name: Install Power Apps CLI
+    - name: Power Apps CLI
       href: powerapps-cli.md
   - name: Community Tools
     href: community-tools.md

@@ -307,3 +307,6 @@ Some functions create [record scopes](../working-with-tables.md#record-scope) fo
 
 For more information and examples, see [record scopes](../working-with-tables.md#record-scope).
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

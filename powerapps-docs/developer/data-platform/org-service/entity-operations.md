@@ -210,3 +210,6 @@ These topics will explain more about working with Dataverse entities.
 [Update and Delete entities](entity-operations-update-delete.md)<br />
 [Associate and disassociate entities](entity-operations-associate-disassociate.md)<br />
 [Generate classes for early-bound programming](generate-early-bound-classes.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

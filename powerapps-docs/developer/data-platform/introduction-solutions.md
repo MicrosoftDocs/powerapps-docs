@@ -42,3 +42,6 @@ If you intend to transport customizations or extensions between different Datave
 [Managed properties](/power-platform/alm/managed-properties-alm)  
 [Create packages for the Package Deployer tool](/power-platform/alm/package-deployer-tool)  
 [Team development using shared source control](/power-platform/alm/basics-alm#team-development-using-shared-source-control)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

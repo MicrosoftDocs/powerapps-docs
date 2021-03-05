@@ -98,3 +98,6 @@ For example, to create a *Sample Visualization* that displays an existing Web re
  [Sample Charts](sample-charts.md)   
  [Data Visualization and Analytics](customize-visualizations-dashboards.md)   
  [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

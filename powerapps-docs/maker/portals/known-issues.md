@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/26/2020
+ms.date: 02/12/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -23,9 +23,9 @@ ms.reviewer: tapanm
 
 - You receive the following error message when configuring or using entity fields:
 
-    ***Field Name**: You have exceeded the maximum number of 100000 characters in this field.*
+    ***Field Name**: You have exceeded the maximum number of X characters in this field.*
 
-    This can happen if the referenced field for the entity exceeds 100000 characters limit. To increase this limit, go to your Dynamics 365 instance > **Settings** > **Customization** > **Customize this system** > **Components** > **Entities**. Select applicable entity and then select the field. Increase the **Maximum Length** field value for the field to a higher value. Allowed values: 1 through 1,048,576.
+    This can happen if the referenced field for the entity exceeds characters limit mentioned in the error. To increase this limit, go to your Dynamics 365 instance > **Settings** > **Customization** > **Customize this system** > **Components** > **Entities**. Select applicable entity and then select the field. Increase the **Maximum Length** field value for the field to a higher value. Allowed values: 1 through 1,048,576.
 
     Fields where limit may need to be increased:
 
@@ -34,10 +34,9 @@ ms.reviewer: tapanm
     | Entity Form | Settings (adx_settings) |
     | Enity List | View (adx_views) |
     | Enity Form Metadata | Subgrid Setting (adx_subgrid_settings) |
+    | Web Page | Copy (adx_copy) |
 
 - Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want, you can [disable the rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) for the Microsoft Dataverse model-driven app.
-
-- Because of the ongoing compatibility issues between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with Yahoo identity provider.
 
 - The **Modified Date** for the app might be incorrect because these apps are pre-provisioned apps and could have been provisioned earlier.
 
@@ -47,9 +46,9 @@ ms.reviewer: tapanm
 
 - When switching an environment in Power Apps, the portals within an environment may not show up immediately in **Apps** or **Recent Apps** list. This experience happens particularly on environments that are created in a different region than their tenant. The workaround is to use browser refresh or wait for some time for portal to show up in the apps list.
 
-- If you keep the portal settings pane open in Power Apps home page while resetting the portal from Power Apps Portals admin center, a user will see the "Something went wrong" error message in the portal settings pane, as portal isn't available.
+- If you keep the portal settings pane open in Power Apps home page while resetting the portal from Power Apps portals admin center, a user will see the "Something went wrong" error message in the portal settings pane, as portal isn't available.
 
-- In certain cases, when you create a portal, the styles aren't applied properly to the portal, and the website is displayed without the styles when opened through **Browse website**. This behavior rarely happens and styles can be recovered by restarting the portal from Power Apps Portals admin center.
+- In certain cases, when you create a portal, the styles aren't applied properly to the portal, and the website is displayed without the styles when opened through **Browse website**. This behavior rarely happens and styles can be recovered by restarting the portal from Power Apps portals admin center.
 
 ## Power Apps portals Studio issues
 
@@ -108,3 +107,6 @@ ms.reviewer: tapanm
 ### See also
 
 [Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

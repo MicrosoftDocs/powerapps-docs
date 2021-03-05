@@ -54,3 +54,6 @@ Use the following properties of global context to return information about the c
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

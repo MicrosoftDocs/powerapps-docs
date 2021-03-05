@@ -73,3 +73,6 @@ report. There's no need to check the information again.
 
 > [!div class="nextstepaction"]
 > [Next step: What data is created?](create-edit-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

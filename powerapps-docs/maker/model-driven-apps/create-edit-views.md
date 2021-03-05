@@ -65,7 +65,7 @@ As a system administrator or system customizer, you can edit system views. Syste
 
 These views are not shown in the view selector and you can't use them in sublists in a form or as a list in a dashboard. You cannot delete or deactivate these views. More information: [Remove views](remove-views.md)
 
-System views are owned by the organization so that everyone can see them. For example, everyone has organization-level access to read rows for the View (savedquery) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table.
+System views are owned by the organization so that everyone can see them. For example, everyone has organization-level access to read rows for the View (savedquery) table. These views are associated with specific tables and are visible within the solution explorer. You can include these views in solutions because they are associated with the table. Unified Interface optimizes for performance by caching system views and does not support running plugins on the savedquery table.
 
 ### Public views
 
@@ -74,12 +74,12 @@ Public views are general purpose views that you can customize as you see fit. Th
 
 |Name  |Type  |
 |---------|---------|
-|Active *entity plural name*     |  Public       |
-|Inactive *entity plural name*    |  Public       |
-|Quick Find Active *entity plural name*     | Quick Find        |
-|*entity name* Advanced Find View     | Advanced Find        |
-|*entity name* Associated View     |  Associated       |
-|*entity name* Lookup View     | Lookup        |
+|Active *table plural name*     |  Public       |
+|Inactive *table plural name*    |  Public       |
+|Quick Find Active *table plural name*     | Quick Find        |
+|*table name* Advanced Find View     | Advanced Find        |
+|*table name* Associated View     |  Associated       |
+|*table name* Lookup View     | Lookup        |
 
 You can create custom public views. You can delete any custom public views you create in an unmanaged solution. You cannot delete any system-defined public views. Custom public views added by importing a managed solution may have managed properties set that can prevent them from being deleted, except by uninstalling the managed solution.
 
@@ -96,6 +96,11 @@ As a system customizer you can customize the views through controls by making gr
 - Editable Grid: Allows users to do rich in-line editing directly from grids and sub-grids whether they're using a web app, tablet, or phone. More information: [Make grids editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md)
 - Read Only Grid: Provides users an optimal viewing and interaction experience for any screen size or orientation such as mobiles and tablets by using responsive design principles. More information: [Specify properties for Unified Interface apps](specify-properties-for-unified-interface-apps.md)
 
+
+
 ## Next steps
 
 [Create or edit views](create-and-edit-views.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -62,8 +62,6 @@ These claims are processed at in the following order of priority to set as the *
 
 When in use, "emailclaimsmapping" is also used to search for an existing contact (Primary Email Address field in Dataverse).
 
-## Can I get access to tokens (ID or Access) using JavaScript?
-
 ## Can I get access to tokens (ID or access) by using JavaScript?
 
 No. The ID token provided by the identity provider isn't made available through any standard technique on the client side, and is only used for the purpose of authentication. However, if you're using the Implicit Grant flow, you can use the methods provided by your identity provider to get access to ID or access tokens.
@@ -77,3 +75,6 @@ Yes. Portals supports any OpenID Connect provider that supports the standard [Op
 ### See also
 
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

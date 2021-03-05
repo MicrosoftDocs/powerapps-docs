@@ -131,3 +131,6 @@ The above example displays the following in your console; you might see other va
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

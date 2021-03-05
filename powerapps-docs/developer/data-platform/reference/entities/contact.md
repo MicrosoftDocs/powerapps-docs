@@ -4678,3 +4678,5 @@ See businessunit Entity [business_unit_contacts](businessunit.md#BKMK_business_u
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

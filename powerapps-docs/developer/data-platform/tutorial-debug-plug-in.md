@@ -64,7 +64,7 @@ Because the plug-in executes on a remote server, you cannot attach a debugger to
     ![foo](media/tutorial-debug-plug-in-profiler-settings.png)
 
 
-Form more information about running the profiler see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
+For more information about running the profiler see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
 
 ## Capture a profile
 
@@ -138,3 +138,6 @@ If you will not continue to the next tutorial you should unregister the BasicPlu
 1. Open a Command Prompt window and set the working directory to the folder where you downloaded the Plug-in Registration tool `PluginRegistration.exe`.
 2. Type this command to see the available run-time parameters: `PluginProfiler.Debugger.exe /?`.  
 3. Review the supported parameter list and re-run the PluginProfiler.Debugger.exe program with the appropriate parameters. 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -135,3 +135,6 @@ More information: [Security in Dataverse](https://docs.microsoft.com/power-platf
 
 > [!div class="nextstepaction"]
 > [Next step: Make the app](making-phase.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -31,7 +31,7 @@ This feature requires exporting a solution, modifying it to add the xml snippet,
 You can use your Power BI reports and tiles by simply embedding them, and get the exact same report. This does not involve contextualizing them to the current model-driven form, and hence you get the same report or tile on all rows of the table. For example, the following report shows the geographic location of all accounts at once, and is useful to show summary information.
 
 > [!div class="mx-imgBorder"] 
-> ![Embeded  Power BI report without contextual filtering](media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png "Embeded  Power BI report without contextual filtering")
+> ![Embedded  Power BI report without contextual filtering](media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png "Embedded  Power BI report without contextual filtering")
 
 You can embed a section that hosts Power BI reports and tiles in your system forms by adding the following code snippet inside the `<sections>` block of the form XML. Then, import the solution in the target environment. 
 
@@ -74,7 +74,7 @@ You can embed a section that hosts Power BI reports and tiles in your system for
 You can make the Power BI reports and tiles more meaningful by applying contextual filters to the current model-driven form, so that the report or tile is filtered based on attributes of the current row. For example, the following report shows the geographic location of an account, by filtering the Power BI report using the account name. This allows a single report to show contextualized information for all rows of the table.
 
 > [!div class="mx-imgBorder"] 
-> ![Embeded Power BI report with contextual filtering](media/embed-powerbi/embed-powerbi-report-in-system-form-filtered.png "Embeded Power BI report with contextual filtering")
+> ![Embedded Power BI report with contextual filtering](media/embed-powerbi/embed-powerbi-report-in-system-form-filtered.png "Embedded Power BI report with contextual filtering")
 
 The filtering is done by adding a `<PowerBIFilter>` element in the `<parameter>` block as shown here. You can use any attribute of the form's table to construct the filter expression. More information: [Constructing Filters](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Filters#contructingfilters) to understand how to create your own filters.
 	
@@ -169,3 +169,6 @@ Additionally, when you export the solution as managed, add the **solutionaction=
 [Use Power BI with Dynamics 365 apps](/power-platform/admin/use-power-bi)
 
 [Import, update, and export solutions](../data-platform/import-update-export-solutions.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
