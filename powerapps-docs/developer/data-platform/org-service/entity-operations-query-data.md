@@ -264,5 +264,5 @@ Dataverse has a limit of 500 total conditions allowed in a query. Any joins incl
 If this occurs aa user must either: 
 
 - Reduce the number of conditions in their query. 
-- Use the In clause, which allows GUIDs and Strings up to 850 characters, and no limit on Integers 
+- Use the In clause, which allows GUIDs and strings up to 850 characters with no limit on integers.
 
