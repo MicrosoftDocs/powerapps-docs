@@ -61,7 +61,7 @@ To create the Azure Blob Storage connection:
 
 Your connection to the Azure Blob Storage is now configured and ready to use with canvas apps.
 
-## Create canvas app with Azure Blob Storage
+## Create canvas app with Azure Blob Storage connection
 
 Now that you have the connection with Azure Blob Storage created, let's create a canvas app that connects to this storage.
 
@@ -87,6 +87,10 @@ Now that you have the connection with Azure Blob Storage created, let's create a
 1. From the list of connectors, select **Azure Blob Storage**.
 
     ![Select Azure Blob Storage connection](./media/connection-azure-blob-storage/select-connector.png "Select Azure Blob Storage connection")
+
+## View containers and files
+
+Now that you have the app connected to Azure Blob Storage, let's add galleries to see containers and files within the containers from the connected storage.
 
 1. Select **Insert** -> **Gallery** -> **Blank vertical**.
 
@@ -138,13 +142,90 @@ Now that you have the connection with Azure Blob Storage created, let's create a
 
     ![Select fields](./media/connection-azure-blob-storage/set-fields.png "Select fields")
 
-The gallery now shows the list of files from the container selected using the gallery on the top.
+    The gallery now shows the list of files from the container selected using the gallery on the top.
 
-![List of files from a container](./media/connection-azure-blob-storage/files-list.png "List of files from a container")
+    ![List of files from a container](./media/connection-azure-blob-storage/files-list.png "List of files from a container")
 
-If you have more than one container, you can choose a different container to show a list of files from the other container.
+1. Select **Insert** -> **Text label**.
 
-![List of files from another container](./media/connection-azure-blob-storage/files-list-second-container.png "List of files from another container")
+1. Place the label on top of the app screen.
+
+1. Set the label's  **Text** property as "Select a container".
+
+1. Use the properties pane on the right-side of the screen to the label text and label text background color.
+
+1. Select **Insert** -> **Text label**.
+
+1. Place the label above the gallery with the list of files.
+
+1. Set the label's  **Text** property as "Files list".
+
+    ![List of files with labels added](./media/connection-azure-blob-storage/files-list-with-labels.png "List of files with labels added")
+
+## Upload files to Azure Blob Storage
+
+With the app design so far, you're able to select a container and then list the files from the container.
+
+Let's configure the app with controls and logic to allow upload of files to the connected Azure Blob Storage.
+
+1. Select **Insert** -> **Media** -> **Add picture** to add the ability to select files to upload.
+
+1. Resize the **Add picture** control and place it on the bottom-left of the app screen.
+
+1. Set the **Text** property of the control to "Select a file to upload".
+
+1. Select **Insert** -> **Button**.
+
+1. Place the button on bottom-right side of the app screen.
+
+1. Set the **Text** property of the button to "Upload".
+
+1. Select **Insert** -> **Text input**.
+
+1. Place the text input control above the **Upload** button.
+
+1. Set the **Default** property of the button to "Enter File Name".
+
+1. Set the **OnSelect** property of the button to:
+
+    ```powerapps-dot
+    AzureBlobStorage.CreateFile("fileToUpload",TextInput1.Text, UploadedImage1.Image)
+    ```
+
+    This operation uploads a blob to Azure Blob Storage. More information: [Create blob](https://docs.microsoft.com/connectors/azureblob/#create-blob)
+
+    The app controls look like this in the sample app now.
+
+    ![Upload file to the connected storage](./media/connection-azure-blob-storage/upload-functionality-added.png "Upload file to the connected storage")
+
+## Download files from Azure Blob Storage
+
+So far you've added the ability to view containers, files from the selected container, and the option to upload file to the storage. Now, let's understand how to work with the download capability with the connected storage.
+
+1. Select the first row in the gallery with the list of files from a container.
+
+    ![Select first row in the file list gallery](./media/connection-azure-blob-storage/select-first-row.png "Select first row in the file list gallery")
+
+1. Select **Insert** -> **Icons** -> **Download**.
+    This adds the download icon for all rows in the gallery.
+
+1. Move the first download icon towards the right side inside the gallery on the app screen. This also moves rest of the icons for next rows in gallery.
+
+    ![Move first row in the file list gallery](./media/connection-azure-blob-storage/move-download-icon.png "Move first row in the file list gallery")
+
+1. Set the **OnSelect** property of the download icon to:
+
+    ```powerapps-dot
+    Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path).WebUrl)
+    ```
+
+    This operation creates a SAS link for a blob using the path. More information: [Create SAS URI by path](https://docs.microsoft.com/connectors/azureblob/#create-blob)
+
+The app now has the ability to allow you to download the files.
+
+## Considerations for file download
+
+
 
 ## **Canvas app setup for Azure Blob Storage**
 
