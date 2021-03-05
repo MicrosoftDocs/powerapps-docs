@@ -15,7 +15,8 @@ search.app:
 ---
 
 # Build a multi-language app
-> [!IMPORTANT] This approach uses a feature of canvas apps that is still in public preview. For more information, see [Create a component for canvas apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/create-component)
+> [!IMPORTANT] 
+> This approach uses a feature of canvas apps that is still in public preview. For more information, see [Create a component for canvas apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/create-component)
 
 In this article we'll describe an approach to creating multi-language apps that makers can use to provide their users with a localized experience. The approach uses canvas app components to make translations available across the entire app using a uniform formula syntax. 
 
@@ -77,7 +78,8 @@ In this article we'll describe an approach to creating multi-language apps that 
 
    ![Microsoft Power Apps Canvas App Editor: Set Custom Output Labels Formula](media/multi-language-apps/image-20210304132515675.png)
 
-   > [!NOTE] The formula will find the right translation entry based on the input **Language**. In the case where the language was not set, the formula will use the current user's language as the filter, hence the usage of the [Coalesce](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-isblank-isempty) function.
+   > [!NOTE] 
+   > The formula will find the right translation entry based on the input **Language**. In the case where the language was not set, the formula will use the current user's language as the filter, hence the usage of the [Coalesce](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-isblank-isempty) function.
 
    ```
    LookUp(
@@ -107,7 +109,7 @@ To use the translation component in your app
 
 1. On every control in your app that needs to be translated, instead of using static text as the label, use the formula `Translation.Labels.[ControlName]` where [ControlName] is the name of the control defined in the dictionary.
 
-   ![image-20210304170138224](media/multi-language-apps/image-20210304170138224.png)
+   ![Microsoft Power Apps Canvas App Editor: Update Controls to use Translation Component](media/multi-language-apps/image-20210304170138224.png)
 
 With this approach, whenever the user changes their language, the app will automatically change the text of all buttons, inputs, labels etc. as shown below
 
