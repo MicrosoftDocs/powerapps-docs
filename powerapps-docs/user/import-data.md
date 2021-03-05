@@ -21,8 +21,10 @@ search.app:
 
 Whether your data is stored in a spreadsheet, on your phone, or in an email program, here’s how to import the data to your app. For example, you might want to import your customer contact list from an Excel spreadsheet into the app so you can keep track of all your customer information in one place.
   
-## Step 1: Get your import file ready  
-First, export your data into an Excel file. These file formats are supported:
+## Step 1: Get your file ready for import
+
+The first step is to make sure your data is in an Excel file. These file formats are supported:
+
  - Excel workbook (.xlsx)
  - Comma-separated values (.csv)
  - XML Spreadsheet 2003 (.xml)
@@ -73,10 +75,15 @@ To find an app, search your phone’s online store.
 
 ## Step 2: Import the file 
   
-1. On the command bar, select **Import from Excel**,  **[Import from CSV](#import-from-xml-or-csv-file)**, or **[Import from XML](#import-from-xml-or-csv-file)**.
+1. Open an app an d from the left nav select a table.
+ 
+   > [!div class="mx-imgBorder"]
+   > ![From the site map select a table](media/left-nav-select-table.png "From the site pay select a table")
+
+3. On the command bar, select **Import from Excel**,  **[Import from CSV](#import-from-xml-or-csv-file)**, or **[Import from XML](#import-from-xml-or-csv-file)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Main menu in Power Apps](media/import.png "Main menu in Power Apps")
+   > ![Shows the three import options in Power Apps](media/import-files.gif "Shows the three import options in Power Apps")
   
 2. Browse to the folder where you saved the file that contains the export of your contacts. Select the file, select **Open**, and then select **Next**.  
   
