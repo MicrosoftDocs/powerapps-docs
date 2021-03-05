@@ -17,32 +17,33 @@ search.app:
 # Build a multi-language app
 > [!IMPORTANT] This approach uses a feature of canvas apps that is still in public preview. For more information, see [Create a component for canvas apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/create-component)
 
-Build a multi-language canvas app by leveraging canvas app components and translations based on a language selected by the user or based on the user's localized language. In this article we'll describe an approach to creating multi-language apps that makers can use to provide their users with a localized experience. The approach uses canvas app components to make translations available across the entire app using a uniform formula syntax. 
+In this article we'll describe an approach to creating multi-language apps that makers can use to provide their users with a localized experience. The approach uses canvas app components to make translations available across the entire app using a uniform formula syntax. 
 
 ## Create the Translation Component
 
-In your app create a new **Canvas Component** using the canvas editor. Give the component a name such as “Translation Component”
+1. In your app create a new **Canvas Component** using the canvas editor. Give the component a name such as “Translation Component”
 
-![Microsoft Power Apps Canvas App Editor: Create a new Power Apps component](.attachments/multi-language-apps/image-20210304104915205.png)
+   ![Microsoft Power Apps Canvas App Editor: Create a new Power Apps component](.attachments/multi-language-apps/image-20210304104915205.png)
 
-Create an Input and Output parameter for your component. 
+1. Create the Input and Output parameters for your component, as follows: 
 
-1. **Language**: An input property of Data type Text that will receive the current LCID (Locale ID) of the logged in user. 
+   - **Language**: An input property that will receive the current LCID (Locale ID) of the logged-in user. 
    
-   - Select the option “Raise OnReset when value changes”, since this will call the formula on the OnReset event of the component that we will write later.
+      - Select the Data type "Text"
 
-   ![Microsoft Power Apps Canvas App Editor: Custom Language Property](.attachments/multi-language-apps/image-20210304105245593.png)
+      - Select the option “Raise OnReset when value changes”, since this will call the formula on the OnReset event of the component that we will write later.
 
-1. **Labels**: An output property of type Table that will expose the translated labels based on the input LCID property.
+      ![Microsoft Power Apps Canvas App Editor: Custom Language Property](.attachments/multi-language-apps/image-20210304105245593.png)
+   
+   - **Labels**: An output property of type Table that will expose the translated labels based on the input LCID property.
 
-   ![Microsoft Power Apps Canvas App Editor: Custom Labels Property](.attachments/multi-language-apps/image-20210304105449314.png)
+      ![Microsoft Power Apps Canvas App Editor: Custom Labels Property](.attachments/multi-language-apps/image-20210304105449314.png)
 
+1. Next, create a table that will be the dictionary of all translations. To do this, declare a Table variable on the **OnReset** event of the component as follows:
 
-Once the properties are created, create a Table that will be the dictionary of all translations. To do this, declare a Table variable on the **OnReset** event of the component as follows
+   ![Microsoft Power Apps Canvas App Editor: Create Table OnReset](.attachments/multi-language-apps/image-20210304131142608.png)
 
-![Microsoft Power Apps Canvas App Editor: Create Table OnReset](.attachments/multi-language-apps/image-20210304131142608.png)
-
-`Set(
+   `Set(
     varTranslations,
     Table(
         {
@@ -66,17 +67,17 @@ Once the properties are created, create a Table that will be the dictionary of a
             }
         }
     )
-)`
+   )`
 
-The table should have an entry for each language that your app supports and each entry will have a **Labels** property that will contain the translated content of all possible buttons, inputs and labels in your app.
+   The table should have an entry for each language that your app supports. Each entry will have a **Labels** property that will contain the translated content of all possible buttons, inputs and labels in your app.
 
-Now change the formula of the output property **Labels** as follows:
+1. Now change the formula of the output property **Labels** as follows:
 
-![Microsoft Power Apps Canvas App Editor: Set Custom Output Labels Formula](.attachments/multi-language-apps/image-20210304132515675.png)
+   ![Microsoft Power Apps Canvas App Editor: Set Custom Output Labels Formula](.attachments/multi-language-apps/image-20210304132515675.png)
 
-> [!NOTE] The formula above will find the right translation entry based on the input **Language**. In the case where the language was not set, the formula will use the current logged in user's language as the filter, hence the usage of [Coalesce](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-isblank-isempty) function.
+   > [!NOTE] The formula will find the right translation entry based on the input **Language**. In the case where the language was not set, the formula will use the current user's language as the filter, hence the usage of the [Coalesce](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-isblank-isempty) function.
 
-`LookUp(
+   `LookUp(
     varTranslations,
     Language = Lower(
         Coalesce(
@@ -88,18 +89,20 @@ Now change the formula of the output property **Labels** as follows:
 
 ## Use the Translation Component in a Canvas App
 
-To use the Translation Component in your app, add the component to the app and set **Visible** to **false**.
+To use the Translation Component in your app
 
-![Microsoft Power Apps Canvas App Editor: Set Translation Component Visible to False](.attachments/multi-language-apps/image-20210304135035793.png)
+1. Add the component to the app and set **Visible** to **false**.
 
-Pass the value of the **Language** to the input property of the **Translation Component**. In this case we have a toggle control that sets a variable called `varLanguage` to the language selected by the user.
+   ![Microsoft Power Apps Canvas App Editor: Set Translation Component Visible to False](.attachments/multi-language-apps/image-20210304135035793.png)
 
-![Microsoft Power Apps Canvas App Editor: Set Translation Component Language input parameter to the language of your app](.attachments/multi-language-apps/image-20210304135729817.png)
+1. Pass the value of the **Language** to the input property of the **Translation Component**. In this case we have a toggle control that sets a variable called `varLanguage` to the language selected by the user.
 
-On every control in your app that needs to be translated according to the current user's language, instead of using a static text as the label, use the formula `TranslationComponent.Labels.[ControlName]` where [ControlName] is the name of the control defined in the dictionary.
+   ![Microsoft Power Apps Canvas App Editor: Set Translation Component Language input parameter to the language of your app](.attachments/multi-language-apps/image-20210304135729817.png)
 
-![image-20210304170138224](.attachments/multi-language-apps/image-20210304170138224.png)
+1. On every control in your app that needs to be translated, instead of using static text as the label, use the formula `TranslationComponent.Labels.[ControlName]` where [ControlName] is the name of the control defined in the dictionary.
 
-With this approach, whenever the user changes the language, the app will automatically change the text of all buttons, inputs, labels etc. as shown below
+   ![image-20210304170138224](.attachments/multi-language-apps/image-20210304170138224.png)
+
+With this approach, whenever the user changes their language, the app will automatically change the text of all buttons, inputs, labels etc. as shown below
 
 ![Power Apps: Multi-Language Support](.attachments/multi-language-apps/Untitled Project.gif)
