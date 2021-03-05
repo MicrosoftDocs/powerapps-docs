@@ -20,7 +20,7 @@ contributors:
 
 # Connect to Azure Blob Storage from Power Apps
 
-Power Apps can connect to [Azure Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction). You can upload files such as Word, Excel, or multimedia images, audio or video using the [Azure Blob Storage connector for Power Apps](https://docs.microsoft.com/connectors/azureblob/).
+Power Apps can connect to [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction). You can upload files such as Word, Excel, or multimedia images, audio or video using the [Azure Blob Storage connector for Power Apps](/connectors/azureblob/).
 
 When you design a canvas app that connects to Azure Blob Storage, the app uses the blob storage account name and key to connect. After you share the app with others, users can use the connection configured inside the app to upload files to Azure Blob Storage without the need to share blob storage name and keys with the app users.
 
@@ -31,7 +31,7 @@ In this article, you'll learn how to create a canvas app that connects to Azure 
 
 ## Prerequisites
 
-Before you begin, create and configure a [BlockBlobStorage account](https://docs.microsoft.com/azure/storage/blobs/storage-blob-create-account-block-blob?tabs=azure-portal). You can also use legacy BlobStorage account, though not recommended. More information: [Types of storage accounts in Azure Blob Storage](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
+Before you begin, create and configure a [BlockBlobStorage account](/azure/storage/blobs/storage-blob-create-account-block-blob?tabs=azure-portal). You can also use legacy BlobStorage account, though not recommended. More information: [Types of storage accounts in Azure Blob Storage](/azure/storage/common/storage-account-overview)
 
 ## Create Azure Blob Storage connection
 
@@ -55,7 +55,7 @@ To create the Azure Blob Storage connection:
 
     ![Enter storage account name and access keys](./media/connection-azure-blob-storage/storage-access-keys.png "Enter storage account name and access keys")
 
-    For more information about how to copy account name and access key, go to [View account access keys in Azure](https://docs.microsoft.com/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
+    For more information about how to copy account name and access key, go to [View account access keys in Azure](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
 1. Select **Create**.
 
@@ -113,7 +113,7 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
 
     ![List of containers](./media/connection-azure-blob-storage/containers-list.png "List of containers")
 
-    This operation lists blobs in the Azure Blob Storage root folder. More information: [List blobs in root folder](https://docs.microsoft.com/connectors/azureblob/#list-blobs-in-root-folder)
+    This operation lists blobs in the Azure Blob Storage root folder. More information: [List blobs in root folder](/connectors/azureblob#list-blobs-in-root-folder)
 
 1. Select **Insert** -> **Gallery** -> **Blank vertical** to add another blank vertical gallery.
 
@@ -130,7 +130,7 @@ Now that you have the app connected to Azure Blob Storage, let's add galleries t
     ```powerapps-dot
     AzureBlobStorage.ListFolderV2(Gallery1.Selected.Id).value
     ```
-    This operation lists blobs in a container. More information: [List blobs](https://docs.microsoft.com/connectors/azureblob/#list-blobs) <br>
+    This operation lists blobs in a container. More information: [List blobs](/connectors/azureblob#list-blobs) <br>
     
     > [!NOTE]
     > *Gallery1* in this formula is the reference to the gallery added earlier that lists all containers in the storage account. Update the formula with the gallery name if different.
@@ -191,7 +191,7 @@ Let's configure the app with controls and logic to allow upload of files to the 
     AzureBlobStorage.CreateFile(Gallery1.Selected.Name,TextInput1.Text, UploadedImage1.Image)
     ```
 
-    This operation uploads a blob to Azure Blob Storage. More information: [Create blob](https://docs.microsoft.com/connectors/azureblob/#create-blob)
+    This operation uploads a blob to Azure Blob Storage. More information: [Create blob](/connectors/azureblob#create-blob)
 
     > [!NOTE]
     > *Gallery1* in this formula is the reference to the gallery added earlier that lists all containers in the storage account. The file will be uploaded to the selected container in gallery 1. *TextInput1* and *uploadImage1* reference the text input and upload image controls. Update the formula with the control names if different.
@@ -221,17 +221,17 @@ So far you've added the ability to view containers, files from the selected cont
     Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path).WebUrl)
     ```
 
-    This operation creates a SAS link for a blob using the path. More information: [Create SAS URI by path](https://docs.microsoft.com/connectors/azureblob/#create-blob)
+    This operation creates a SAS link for a blob using the path. More information: [Create SAS URI by path](/connectors/azureblob#create-blob)
 
     > [!IMPORTANT]
-    > SAS URI created using **CreateShareLinkByPath** has a [default expiry](/connectors/azureblob/#create-sas-uri-by-path) of 24 hours. If you have a business requirement to expire the URI in a shorter or different time, consider updates to this formula. For example, the below sample expires the URI in 1 hour using [Now()](../functions/function-datevalue-timevalue.md) and [DateAdd()](../functions/function-dateadd-datediff.md) functions.
+    > SAS URI created using **CreateShareLinkByPath** has a [default expiry](/connectors/azureblob#create-sas-uri-by-path) of 24 hours. If you have a business requirement to expire the URI in a shorter or different time, consider updates to this formula. For example, the below sample expires the URI in 1 hour using [Now()](../functions/function-datevalue-timevalue.md) and [DateAdd()](../functions/function-dateadd-datediff.md) functions.
     
     ```powerapps-dot
     Launch(AzureBlobStorage.CreateShareLinkByPath(ThisItem.Path,{ExpiryTime:DateAdd( Now(),1)}).WebUrl)
     ```
 
     > [!TIP]
-    > For more information about configuring Azure Blob Storage for public anonymous access, and different public access levels, go to [Configure anonymous public read access for containers and blobs](https://docs.microsoft.com/azure/storage/blobs/anonymous-read-access-configure?tabs=portal).
+    > For more information about configuring Azure Blob Storage for public anonymous access, and different public access levels, go to [Configure anonymous public read access for containers and blobs](/azure/storage/blobs/anonymous-read-access-configure?tabs=portal).
 
 The app now has the ability to allow you to download the files.
 
