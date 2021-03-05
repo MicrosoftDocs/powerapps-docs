@@ -76,7 +76,7 @@ Now that you have the connection with Azure Blob Storage created, let's create a
 
 1. Enter app name, such as "Sample app for Azure Blob Storage".
 
-1. Select a layout for the app. For this tutorial, we'll choose **Phone**.
+1. Select **Phone** layout.
 
 1. Select **Create**.
 
@@ -90,7 +90,7 @@ Now that you have the connection with Azure Blob Storage created, let's create a
 
 1. Select **Insert** -> **Gallery** -> **Blank vertical**.
 
-1. From the right-side of the screen, on the property pane, select the layout drop-down and choose a layout. For this tutorial, we'll choose **Title**.
+1. From the right-side of the screen, on the property pane, select the layout drop-down and choose **Title**.
 
     ![Select gallery layout for containers](./media/connection-azure-blob-storage/select-layout-1.png "Select gallery layout for containers")
 
@@ -116,7 +116,35 @@ Now that you have the connection with Azure Blob Storage created, let's create a
 
 1. Move the gallery below the gallery you added earlier that shows the list of containers.
 
+1. From the right-side of the screen, on the property pane, select the layout drop-down and choose **Title, subtitle, and body**.
 
+1. Select first ![Arrow icon](./media/connection-azure-blob-storage/arrow-icon.png "Arrow icon") inside the gallery, and delete it.
+
+1. From the right-side of the screen, on the property pane, select the drop-down for data source, and choose **Azure Blob Storage**.
+
+1. Set the **Items** property of the gallery to:
+
+    ```powerapps-dot
+    AzureBlobStorage.ListFolderV2(Gallery1.Selected.Id).value
+    ```
+    This operation lists blobs in a container. More information: [List blobs](https://docs.microsoft.com/connectors/azureblob/#list-blobs) <br>
+    
+    > [!NOTE]
+    > *Gallery1* in this formula is the reference to the gallery added earlier that lists all containers in the storage account. Update the formula with the gallery name if different.
+
+1. From the right-side of the screen, on the property pane, select **Edit** for **Fields**.
+
+1. Change the selected fields for the gallery title as **DisplayName**, subtitle as **LastModified**, and body as **Path**.
+
+    ![Select fields](./media/connection-azure-blob-storage/set-fields.png "Select fields")
+
+The gallery now shows the list of files from the container selected using the gallery on the top.
+
+![List of files from a container](./media/connection-azure-blob-storage/files-list.png "List of files from a container")
+
+If you have more than one container, you can choose a different container to show a list of files from the other container.
+
+![List of files from another container](./media/connection-azure-blob-storage/files-list-second-container.png "List of files from another container")
 
 ## **Canvas app setup for Azure Blob Storage**
 
