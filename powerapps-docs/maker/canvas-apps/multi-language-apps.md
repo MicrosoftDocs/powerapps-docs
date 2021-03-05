@@ -108,4 +108,4 @@ To use the translation component in your app
 
 With this approach, whenever the user changes their language, the app will automatically change the text of all buttons, inputs, labels etc. as shown below
 
-![Power Apps: Multi-Language Support](.attachments/multi-language-apps/Untitled Project.gif)
+![Power Apps: Multi-Language Support](.attachments/multi-language-apps/multi-langugage.gif)
