@@ -12,55 +12,111 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
+contributors:
+  - vasavib
+  - tapanm-msft
+  - lancedMicrosoft
 ---
 
 # Connect to Azure Blob Storage from Power Apps
 
-One of the common requests from customers is to
-use Power Apps with Azure Blob storage to store their media files. Previously, customers had to create
-workarounds using a custom API
-(<https://powerapps.microsoft.com/en-us/blog/custom-api-for-image-upload/> ) when this feature was not available out of the box.
-In this document, we have provided steps to load and/or save images and other media using the Azure Blog Storage connector from Power Apps. Not only that, you can share the app with users who can use the app without having the Blob storage account keys.
+Power Apps can connect to [Azure Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction). You can upload files such as Word, Excel, or multimedia images, audio or video using the [Azure Blob Storage connector for Power Apps](https://docs.microsoft.com/connectors/azureblob/).
 
-## **Azure Blob Storage Setup**
+When you design a canvas app that connects to Azure Blob Storage, the app uses the blob storage account name and key to connect. After you share the app with others, users can use the connection configured inside the app to upload files to Azure Blob Storage without the need to share blob storage name and keys with the app users.
 
-To add Azure Blob Storage connector to an app, you will need the following
-information:
+In this article, you'll learn how to create a canvas app that connects to Azure Blob Storage, and add controls to the app that allow you to upload different types of files to the connected blob storage.
 
--   Azure Storage Account Name
+> [!NOTE]
+> To learn more about other types of cloud storage options with Power Apps (such as OneDrive, OneDrive for Business, Google Drive, Dropbox, Box), go to [Connect to cloud storage from Power Apps](cloud-storage-blob-connections.md).
 
--   Azure Storage Account Access Key
+## Prerequisites
 
-If your organization has not signed up for Azure Blob Storage, you can follow
-these steps to sign up:
+Before you begin, create and configure a [BlockBlobStorage account](https://docs.microsoft.com/azure/storage/blobs/storage-blob-create-account-block-blob?tabs=azure-portal). You can also use legacy BlobStorage account, though not recommended. More information: [Types of storage accounts in Azure Blob Storage](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
 
--   Go to [https://Portal.Azure.com](https://portal.azure.com/)
+## Create Azure Blob Storage connection
 
--   Log in with your organization email and password
+Power Apps requires a connection to Azure Blob Storage to be created for the app to connect to the storage. 
 
--   Select **Create a Resource** on the top left
+To create the Azure Blob Storage connection:
 
-    ![Create Resource](./media/connection-azure-blob-storage/create-resource.png "Create Resource")
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
--   Search for **Storage Account**
+1. On the left-pane, expand **Data**.
 
--   Select **Storage account**
+1. Select **Connections**.
 
-    ![Create Storage Account](./media/connection-azure-blob-storage/create-storage-account.png "Create Storage Account")
+1. Select **New connection**.
 
--   Select the **Create** button
+1. Select **Azure Blob Storage**.
 
--   Fill in the required details:
-    -   Provide a name for your Storage account.
-    -   Choose the Account kind as **BlobStorage**.
-    -   Select **Create** to create the blob storage
+    ![New Azure Bob Storage connection](./media/connection-azure-blob-storage/azure-blob-storage-connection.png "New Azure Bob Storage connection")
 
-    The name you provided will be used as the **Azure
-        Storage Account Name** when you set up your connection
+1. Copy and paste the account name, and access key.
 
--   Once blob storage is created, you will see a property called **Access keys**. Click on **Access Keys** and copy one of the two keys that have been created for you
+    ![Enter storage account name and access keys](./media/connection-azure-blob-storage/storage-access-keys.png "Enter storage account name and access keys")
 
-    ![Access Keys](./media/connection-azure-blob-storage/access-keys.png "Access Keys")
+    For more information about how to copy account name and access key, go to [View account access keys in Azure](https://docs.microsoft.com/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
+
+1. Select **Create**.
+
+Your connection to the Azure Blob Storage is now configured and ready to use with canvas apps.
+
+## Create canvas app with Azure Blob Storage
+
+Now that you have the connection with Azure Blob Storage created, let's create a canvas app that connects to this storage.
+
+> [!NOTE]
+> In this section, you'll create a sample app with sample controls, functionality and layout design. Depending on your business requirement, you can create the app with a different structure, or customize differently.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. On the left-pane, select **Create**.
+
+1. Select **Canvas app from blank**.
+
+1. Enter app name, such as "Sample app for Azure Blob Storage".
+
+1. Select a layout for the app. For this tutorial, we'll choose **Phone**.
+
+1. Select **Create**.
+
+1. Inside the Power Apps Studio, on the left-pane, select ![Data](./media/connection-azure-blob-storage/select-data.png "Data").
+
+1. Select **Add data**.
+
+1. From the list of connectors, select **Azure Blob Storage**.
+
+    ![Select Azure Blob Storage connection](./media/connection-azure-blob-storage/select-connector.png "Select Azure Blob Storage connection")
+
+1. Select **Insert** -> **Gallery** -> **Blank vertical**.
+
+1. From the right-side of the screen, on the property pane, select the layout drop-down and choose a layout. For this tutorial, we'll choose **Title**.
+
+    ![Select gallery layout for containers](./media/connection-azure-blob-storage/select-layout-1.png "Select gallery layout for containers")
+
+1. Select first ![Arrow icon](./media/connection-azure-blob-storage/arrow-icon.png "Arrow icon") inside the gallery, and delete it.
+
+    ![Delete arrow icon](./media/connection-azure-blob-storage/delete-arrow-icon.png "Delete arrow icon")
+
+1. From the right-side of the screen, on the property pane, select the drop-down for data source, and choose **Azure Blob Storage**.
+
+    ![Data source for the gallery of containers](./media/connection-azure-blob-storage/select-data-source-for-gallery.png "Data source for the gallery of containers")
+
+1. Set the **Items** property of the gallery to:
+
+    ```powerapps-dot
+    AzureBlobStorage.ListRootFolderV2().value
+    ```
+
+    ![List of containers](./media/connection-azure-blob-storage/containers-list.png "List of containers")
+
+    This operation lists blobs in the Azure Blob Storage root folder. More information: [List blobs in root folder](https://docs.microsoft.com/connectors/azureblob/#list-blobs-in-root-folder)
+
+1. Select **Insert** -> **Gallery** -> **Blank vertical** to add another blank vertical gallery.
+
+1. Move the gallery below the gallery you added earlier that shows the list of containers.
+
+
 
 ## **Canvas app setup for Azure Blob Storage**
 
