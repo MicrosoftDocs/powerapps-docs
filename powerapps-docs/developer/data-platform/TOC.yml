@@ -155,8 +155,8 @@
     href: best-practices/business-logic/index.md
 - name: Integrate data using code
   items:
-  - name: Import Data
-    href: import-data.md #Topics are for both Web API and Organization service
+  - name: Import data
+    href: import-data.md 
     items:
     - name: Prepare source files for import
       href: prepare-source-files-import.md
@@ -224,14 +224,14 @@
   items:
   - name: Customer tables
     href: customer-entities-account-contact.md
-  - name: Activity entities
+  - name: Activity tables
     href: activity-entities.md
     items:
     - name: Custom activities
       href: custom-activities.md
-    - name: Email activity entities
+    - name: Email activity tables
       href: email-activity-entities.md
-    - name: Task, fax, phone call, and letter activity entities
+    - name: Task, fax, phone call, and letter activity tables
       href: task-fax-phone-call-letter-activity-entities.md
     - name: ActivityParty table
       href: activityparty-entity.md
@@ -249,12 +249,12 @@
         href: link-custom-attributes-recurring-master-appointment-entities.md
   - name: Annotation (note) table
     href: annotation-note-entity.md
-  - name: Calendar entities
+  - name: Calendar tables
     href: calendar-entities.md
     items:
     - name: Types of calendars
       href: types-calendars.md
-  - name: Queue entities
+  - name: Queue tables
     href: queue-entities.md
   - name: Subject table
     href: subject-entity.md
@@ -266,20 +266,20 @@
     href: use-category-entity.md
   - name: Feedback table
     href: use-feedback-entity-manage-feedback-ratings-records.md
-  - name: User and team entities
+  - name: User and team tables
     href: user-team-entities.md
     items:
     - name: Specify time zone settings for a user
       href: specify-time-zone-settings-user.md
-    - name: Time zone entities
+    - name: Time zone tables
       href: time-zone-entities.md
     - name: BusinessUnit table
       href: businessunit-entity.md
-    - name: Field security entities
+    - name: Field security tables
       href: field-security-entities.md
     - name: Use access teams and owner teams to collaborate and share information
       href: use-access-teams-owner-teams-collaborate-share-information.md
-  - name: Template entities
+  - name: Template tables
     href: upload-manage-document-templates.md
 - name: Work with metadata using code
   href: metadata-services.md
