@@ -54,75 +54,60 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 
    > [!div class="mx-imgBorder"]
    > ![Import selected Excel file and checking mapping](media/mapping-excel-file.png "Importselected Excel file and checking mapping")
+   
+## Review mapping
 
-### Import from XML or CSV file
+When you import a file one of the main steps is to review how your column headings are mapped to the columns in your model-driven app.
 
->[!NOTE]
->In the below process, we are importing an XML file. Similarly, you can follow the process to import CSV file.
+The **Primary Fields** section of the **Review Mapping** page shows all the required columns for the table that must be mapped for the data to be imported successfully. If the column headings of your source file match the column display names, these columns will be automatically mapped. All the mapped columns will be shown with a green check mark.
 
-1. On the **Import from XML** pane, select **Choose file** and browse to the folder where you saved the file that contains the export of your data. Select the file and then select **Open**.
+If the column headings don't match, the unmapped columns will be shown with a red exclamation point. Select a column to map to the unmapped column heading of your file. 
+
+The **Optional Columns** section of the **Review Mapping** page, shows the column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists. You can also choose **Ignore** from the drop-down list for one or more optional columns. Data from ignored columns won't be imported into your app.
+
+> [!div class="mx-imgBorder"]
+> ![Ignore optional columns](media/import-csv-ignore.png "Ignore optional columns")
+     
+If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" or "No," or "Hot," "Warm," or "Cold." To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column. The **Choice mapping** section opens:
 
    > [!div class="mx-imgBorder"]
-   > ![Import selected XML file](media/import-xml.png "Import selected XML file")
+   > ![The option-set value mapping menu](media/import-option-set-values.png "The option-set value mapping menu")
 
-2. Select **Next**.
+For each **Source Option Values** item, select an item from the **Dynamics 365 Option Values** list to map it, and then select **OK**. The option values drop-down list combines the values available in the incoming file with those already in Dataverse. For example:
 
-3. (Optional) If you have to update the existing rows in your app through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the table.
+- **Values in import file**: Low, High
+- **Values already in Dynamics 365**: Cold, Warm, Hot
+- **Resulting target values**: Cold, Warm, Hot, Low, High
+ 
+After import, the import wizard will add all mapped values in your app, but will drop unmapped values from the import file that aren't yet in your app. For example, you could map the "Low" source value to the "Cold" target value, but map the "High" source value to the (new) "High" target value. Based on these mappings, the import wizard creates "High" as a target value in your app. It does not create "Low" as a target value in your app because you didn't map any source to this target value.
 
-    The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
+>[!NOTE]
+>You can also map a column in your source file to a column of type "Two Options" and "Multiselect Option Set" (where a column can have multiple values). You must map each **Source Option Values** to the items in the **Dynamics 365 Option Values** list. When mapping to a column of type "Multiselect Option Set," if your source file includes values that aren't available in your app, new values won't be created in your app.
+
+If some data in your source file references other existing rows in your app, you must map the column in the source file to a lookup column in your app.
+
+For example, you might want to import a file named Leads.csv, which contains customer rows. The **Customer** column in Leads.csv contains the associated account or contact data. To map this, select the **Lookup Reference** button next to the lookup column. The **Lookup Reference** section opens and lists the tables related to the current table.
+
+> [!div class="mx-imgBorder"]
+> ![The Lookup Reference section](media/import-lookup-reference-section.png "The Lookup Reference section")
+
+For each table, select the columns to search during import to retain the relationships between the rows, and then select **OK**.
+
+To save your mapping settings for next time, enter a name in the **Name your data map** box. This way, the next time you need to import a similar set of data, you'll be able to use this mapping again.
+
+> [!div class="mx-imgBorder"]
+> ![Name your data map here](media/import-save-settings.png "Name your data map here")
+
+### Import from XML (for advanced users)
+
+(Optional) If you have to update the existing rows in your app through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the table.
+
+   The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
 
    > [!div class="mx-imgBorder"]
    > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
 
-4. Select **Review Mapping** option and then on the **Review Mapping** page, review how your column headings are mapped to the columns in your app.
-
-   > [!div class="mx-imgBorder"]
-   > ![Map XML columns with your app](media/import-xml-mapping.png "Map XML columns with your app")
-
-    - On the left side, by default the **Primary Columns** section of the **Review Mapping** page shows all the required columns for the table that must be mapped for the data to be imported successfully.
-    - If you've selected an alternate key, all the columns of the alternate key also become required columns and must be mapped.
-    - If the column headings of your source file match the column display names, these columns will be automatically mapped. All the mapped columns will be shown with a green check mark.
-    - If the column headings don't match, the unmapped columns will be shown with a red exclamation point. Select a column to map to the unmapped column heading of your file.
-    - To quickly filter on only the unmapped columns, select **Unmapped** from the **Map Columns** drop-down list.
-
-5.  In the **Optional Columns** section of the **Review Mapping** page, the left side shows the column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists.
-
-    - If the column headings don't match, the unmapped columns will be shown with a red exclamation point.
-    - Select a column to map to the unmapped column heading of your file.
-    - You can also choose **Ignore** from the drop-down list for one or more optional columns. Data from ignored columns won't be imported into your app.
-    - A column set to be ignored during import.
-
-    > [!div class="mx-imgBorder"]
-    > ![Ignore optional columns](media/import-csv-ignore.png "Ignore optional columns")
-
-6. If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" or "No," or "Hot," "Warm," or "Cold." To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column. The **Choice mapping** section opens:
-
-    > [!div class="mx-imgBorder"]
-    > ![The option-set value mapping menu](media/import-option-set-values.png "The option-set value mapping menu")
-
-    - For each **Source Option Values** item, select an item from the **Dynamics 365 Option Values** list to map it, and then select **OK**.
-    - The Dynamics 365 Option Values drop-down list combines the values available in the incoming file with those already in the Dynamics 365 database. For example:
-        - **Values in import file**: Low, High
-        - **Values already in Dynamics 365**: Cold, Warm, Hot
-        - **Resulting target values**: Cold, Warm, Hot, Low, High
-    - After import, the import wizard will add all mapped values to Dynamics 365, but will drop unmapped values from the import file that aren't yet in Dynamics 365. For example, you could map the "Low" source value to the "Cold" target value, but map the "High" source value to the (new) "High" target value. Based on these mappings, the import wizard creates "High" as a Dynamics 365 target value. It does not create "Low" as a Dynamics 365 target value because you didn't map any source to this target value.
-
-    >[!NOTE]
-    >You can also map a column in your source file to a column of type "Two Options" and "Multiselect Option Set" (where a column can have multiple values). You must map each **Source Option Values** to the items in the **Dynamics 365 Option Values** list. When mapping to a column of type "Multiselect Option Set," if your source file includes values that aren't available in Dynamics 365 Sales, new values won't be created in Dynamics 365 Sales.
-
-7. If some data in your source file references other existing rows in Dynamics 365 Sales, you must map the column in the source file to a lookup column of Dynamics 365 Sales.
-
-    For example, you might want to import a file named Leads.csv, which contains customer rows. The **Customer** column in Leads.csv contains the associated account or contact data. To map this, select the **Lookup Reference** button next to the lookup column. The **Lookup Reference** section opens and lists the tables related to the current table.
-
-    > [!div class="mx-imgBorder"]
-    > ![The Lookup Reference section](media/import-lookup-reference-section.png "The Lookup Reference section")
-
-    For each table, select the columns to search during import to retain the relationships between the rows, and then select **OK**.
-
-8. To save your mapping settings for next time, enter a name in the **Name your data map** box. This way, the next time you need to import a similar set of data, you'll be able to use this mapping again.
-
-    > [!div class="mx-imgBorder"]
-    > ![Name your data map here](media/import-save-settings.png "Name your data map here")
+4
 
 9. When you're ready to continue, select **Finish Import** to import that data by using your mappings.
 
