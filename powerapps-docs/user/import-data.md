@@ -80,8 +80,6 @@ Legend:
 
 5. **Ignore**: You can also choose **Ignore** from the drop-down list for one or more **Optional Fields**. Data from ignored columns won't be imported into your app.
 
-> [!div class="mx-imgBorder"]
-> ![Ignore optional columns](media/import-csv-ignore.png "Ignore optional columns")
      
 If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" or "No" To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column. The **Choice mapping** section opens:
 
