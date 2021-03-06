@@ -39,8 +39,8 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 3. On the command bar, select the file type that you want to import from:
 
    - **Import from Excel**
-   - **[Import from CSV](#import-from-xml-or-csv-file)**
-   - **[Import from XML](#import-from-xml-or-csv-file)**
+   - **Import from CSV**
+   - **Import from XML**
 
    > [!div class="mx-imgBorder"]
    > ![Shows the three import options in Power Apps](media/import-files.gif "Shows the three import options in Power Apps")
