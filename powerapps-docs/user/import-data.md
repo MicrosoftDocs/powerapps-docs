@@ -73,10 +73,10 @@ The **Optional Columns** section of the **Review Mapping** page, shows the colum
 > [!div class="mx-imgBorder"]
 > ![Ignore optional columns](media/import-csv-ignore.png "Ignore optional columns")
      
-If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" or "No," or "Hot," "Warm," or "Cold." To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column. The **Choice mapping** section opens:
+If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" or "No" To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column. The **Choice mapping** section opens:
 
    > [!div class="mx-imgBorder"]
-   > ![The option-set value mapping menu](media/import-option-set-values.png "The option-set value mapping menu")
+   > ![The option-set value mapping menu](media/import-files-option-set.gif "The option-set value mapping menu")
 
 For each **Source Option Values** item, select an item from the **Dynamics 365 Option Values** list to map it, and then select **OK**. The option values drop-down list combines the values available in the incoming file with those already in Dataverse. For example:
 
