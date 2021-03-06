@@ -74,7 +74,7 @@ Legend:
 
 2. **Mapped columns**: All the mapped columns will be shown with a green check mark.
 
-3 **Optional Fields**: Shows the column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists
+3. **Optional Fields**: Shows the column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists
 
 4. **Unmatched columns**: If the column headings don't match, the unmapped columns will be shown with a red exclamation point. To map the column correctly, select a column to map to the unmapped column heading of your file. 
 
