@@ -64,11 +64,21 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 
 When you import a file one of the main steps is to review how your column headings are mapped to the columns in your model-driven app.
 
-The **Primary Fields** section of the **Review Mapping** page shows all the required columns for the table that must be mapped for the data to be imported successfully. If the column headings of your source file match the column display names, these columns will be automatically mapped. All the mapped columns will be shown with a green check mark.
+> [!div class="mx-imgBorder"]
+> ![Review mapping](media/review-mapping-legend.png "Review mapping")
 
-If the column headings don't match, the unmapped columns will be shown with a red exclamation point. Select a column to map to the unmapped column heading of your file. 
 
-The **Optional Columns** section of the **Review Mapping** page, shows the column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists. You can also choose **Ignore** from the drop-down list for one or more optional columns. Data from ignored columns won't be imported into your app.
+Legend:
+
+1. **Primary Fields**: Shows all the required columns for the table that must be mapped for the data to be imported successfully. If the column headings of your source file match the column display names, these columns will be automatically mapped. 
+
+2. **Mapped columns**: All the mapped columns will be shown with a green check mark.
+
+3 **Optional Fields**: Shows the column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists
+
+4. **Unmatched columns**: If the column headings don't match, the unmapped columns will be shown with a red exclamation point. To map the column correctly, select a column to map to the unmapped column heading of your file. 
+
+5. **Ignore**: You can also choose **Ignore** from the drop-down list for one or more **Optional Fields**. Data from ignored columns won't be imported into your app.
 
 > [!div class="mx-imgBorder"]
 > ![Ignore optional columns](media/import-csv-ignore.png "Ignore optional columns")
@@ -103,39 +113,16 @@ To save your mapping settings for next time, enter a name in the **Name your dat
 > [!div class="mx-imgBorder"]
 > ![Name your data map here](media/import-save-settings.png "Name your data map here")
 
-### Import from XML (for advanced users)
+## Alternate Key (for advanced users)
 
-(Optional) If you have to update the existing rows in your app through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the table.
+This option is available only when an alternate key is defined for the table in an XML or CSV file format. When you're uplaoding select the **Alternate Key** drop-down list. 
 
-   The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
+The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
 
    > [!div class="mx-imgBorder"]
    > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
 
-4
 
-9. When you're ready to continue, select **Finish Import** to import that data by using your mappings.
-
-## Step 3: Check that the import is successful
-
-After the wizard finishes, check your data (for example, list of contacts) to make sure they imported correctly.  
-  
-1. From the main menu, go to **Contacts**.
-  
-2. Scroll through the contact list. Check that each person is listed and verify the contents of the columns for accuracy.
-
->[!NOTE]
->To verify the status of the imported rows, view import logs. To view the import logs, go to **Settings** > **System** > **Data management** > **Imports**.
-
-## Import double-byte characters 
-
-If you are importing data that includes double-byte characters for east asian languages, make sure the file is encoded as UTF-8 BOM. Plain UTF-8 may not be enough.
-
-1. Open the CSV file using Visual Studio Code.
-2. In the bottom bar, click the label **UTF-8** (pop-up opens). 
-3. Select **Save with encoding**. 
-
-You can now pick UTF-8 BOM encoding for that file.
 
 
 
