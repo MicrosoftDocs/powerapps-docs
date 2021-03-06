@@ -58,7 +58,7 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 4. Select **Track Progress** see the procgress of the import.
 
    > [!div class="mx-imgBorder"]
-   > !Track the progress of the file that you're importing](media/track-progress.png "Track import file progress")
+   > ![Track the progress of the file that you're importing](media/track-progress.png "Track import file progress")
    
 ## Review mapping
 
