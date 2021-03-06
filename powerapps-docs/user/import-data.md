@@ -50,6 +50,15 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
    > [!TIP]
    > You can import only one file at a time. To bring in more files, run the wizard again.
    
+3. For XML or CSV files: 
+
+   - If you have an alternate key defined, select it from the Alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
+
+    > [!div class="mx-imgBorder"]
+    > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
+    
+   - For CSV file, select the drop-down list and select the data delimiterthat you’ve used your CSV file.
+   
 3. Review the file name and verify that the column and data delimiters are correct using the **[Review Mapping](import-data.md#review-mapping)** option. If everything looks good, select **Finish Import**.  
 
    > [!div class="mx-imgBorder"]
@@ -80,16 +89,20 @@ Legend:
 
 5. **Ignore**: You can also choose **Ignore** from the drop-down list for one or more **Optional Fields**. Data from ignored columns won't be imported into your app.
 
-     
-If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" or "No" To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column. The **Choice mapping** section opens:
+### Option set
+
+If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" or "No". 
+
+To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column then select **OK**. 
+
 
    > [!div class="mx-imgBorder"]
    > ![The option-set value mapping menu](media/import-files-option-set.gif "The option-set value mapping menu")
 
-For each **Source Option Values** item, select an item from the **Dynamics 365 Option Values** list to map it, and then select **OK**. The option values drop-down list combines the values available in the incoming file with those already in Dataverse. For example:
+The option values drop-down list combines the values available in the incoming file with those already in your app. For example:
 
 - **Values in import file**: Low, High
-- **Values already in Dynamics 365**: Cold, Warm, Hot
+- **Values already in your app**: Cold, Warm, Hot
 - **Resulting target values**: Cold, Warm, Hot, Low, High
  
 After import, the import wizard will add all mapped values in your app, but will drop unmapped values from the import file that aren't yet in your app. For example, you could map the "Low" source value to the "Cold" target value, but map the "High" source value to the (new) "High" target value. Based on these mappings, the import wizard creates "High" as a target value in your app. It does not create "Low" as a target value in your app because you didn't map any source to this target value.
@@ -106,19 +119,13 @@ For example, you might want to import a file named Leads.csv, which contains cus
 
 For each table, select the columns to search during import to retain the relationships between the rows, and then select **OK**.
 
+### Save mapping settings
+
 To save your mapping settings for next time, enter a name in the **Name your data map** box. This way, the next time you need to import a similar set of data, you'll be able to use this mapping again.
 
 > [!div class="mx-imgBorder"]
 > ![Name your data map here](media/import-save-settings.png "Name your data map here")
 
-## Alternate Key (for advanced users)
-
-This option is available only when an alternate key is defined for the table in an XML or CSV file format. When you're uplaoding select the **Alternate Key** drop-down list. 
-
-The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
-
-   > [!div class="mx-imgBorder"]
-   > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
 
 
 
