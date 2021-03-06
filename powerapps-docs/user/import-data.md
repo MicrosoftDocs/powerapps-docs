@@ -50,7 +50,7 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
    > [!TIP]
    > You can import only one file at a time. To bring in more files, run the wizard again.
    
-3. Review the file name and verify that the column and data delimiters are correct using the **Review Mapping** option. If everything looks good, select **Finish Import**.  
+3. Review the file name and verify that the column and data delimiters are correct using the **[Review Mapping](import-data.md#review-mapping)** option. If everything looks good, select **Finish Import**.  
 
    > [!div class="mx-imgBorder"]
    > ![Import selected Excel file and checking mapping](media/mapping-excel-file.png "Import selected Excel file and checking mapping")
