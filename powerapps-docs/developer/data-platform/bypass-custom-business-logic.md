@@ -19,13 +19,17 @@ search.app:
 
 There are times when you want to be able to perform data operations without having custom business logic applied. For example, if you are going to import a lot of records which you know already conform to the data consistency logic for your business. You want this operation to be done as quickly as possible, so the additional time spent processing custom logic for each request is something you want to avoid.  
 
+One option is to locate and disable the custom plug-ins that contain the business logic. But this means that the logic will be disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you are done.
+
+The option described here allows you to disable custom plug-ins for specific requests sent by an application configured to use this option.
+
 For these kinds of situations, you have the option to disable custom business logic which would normally be applied. There are two requirements:
 
 - You must send the requests using the `BypassCustomPluginExecution` option.
 - The user sending the requests must have the `prvBypassCustomPlugins` privilege. By default, only users with the system administrator security role have this privilege.
 
 > [!NOTE]
-> The `prvBypassCustomPlugins` is not available to be assigned in the UI at this time. You can add a privilege to a security role using the API.
+> The `prvBypassCustomPlugins` is not available to be assigned in the UI at this time. You can add a privilege to a security role using the API. More information: [Adding the prvBypassCustomPlugins privilege to another role](#adding-the-prvbypasscustomplugins-privilege-to-another-role)
 
 ## What does this do?
 
@@ -72,9 +76,6 @@ There are two ways to use this with the Organization Service.
 
 #### You can set CrmServiceClient.BypassPluginExecution Property to true
 
-> [!NOTE]
-> There is a problem using this method at the time of this writing. It should be fixed soon.
-
 The following example sets the [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) when creating a new account record:
 
 ```csharp
@@ -118,6 +119,61 @@ svc.Execute(createRequest);
 This optional parameter must be applied to each request individually. You cannot use this with the 7 other IOrganizationService Methods, such as Create, Update, Delete. You can only use the [Execute method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.execute) using one of the classes that are derived from the [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
 
 You can use this method for data operations you initiate in your plug-ins.
+
+## Adding the prvBypassCustomPlugins privilege to another role
+
+Because the `prvBypassCustomPlugins` is not available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
+
+The `prvBypassCustomPlugins` privilege has the id `148a9eaf-d0c4-4196-9852-c3a38e35f6a1` in every organization.
+
+### Using Web API
+
+Associate the `prvBypassCustomPlugins` privilege to the security role using the `roleprivileges_association` collection-valued navigation property.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.1/roles(<id of role>)/roleprivileges_association/$ref HTTP/1.1
+Content-Type: application/json   
+Accept: application/json   
+OData-MaxVersion: 4.0   
+OData-Version: 4.0 
+
+{  
+"@odata.id":"[Organization URI]/api/data/v9.1/privileges(148a9eaf-d0c4-4196-9852-c3a38e35f6a1)"
+} 
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content  
+OData-Version: 4.0  
+```
+
+More information: [Add a reference to a collection-valued navigation property](webapi/associate-disassociate-entities-using-web-api.md#add-a-reference-to-a-collection-valued-navigation-property).
+
+### Using the Organization Service
+
+Associate the `prvBypassCustomPlugins` privilege to the security role using the `roleprivileges_association` relationship.
+
+
+```csharp
+var roleId = new Guid(<id of role>);
+service.Associate(
+    "role",
+    roleId,
+    new Relationship("roleprivileges_association"),
+    new EntityReferenceCollection {
+        {
+            new EntityReference("privilege", new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"))
+        }
+    }
+);
+```
+
+More information: [Associate and disassociate entities using the Organization Service](org-service/entity-operations-associate-disassociate.md).
+
 
 ## Frequently asked questions (FAQ)
 
