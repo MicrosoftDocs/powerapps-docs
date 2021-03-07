@@ -65,3 +65,6 @@ function setView(executionContext) {
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

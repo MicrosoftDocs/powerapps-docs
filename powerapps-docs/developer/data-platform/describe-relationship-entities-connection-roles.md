@@ -62,3 +62,6 @@ You can describe the relationship between records through the roles that you ass
  [Sample Code for Connection Entities](/dynamics365/customer-engagement/developer/sample-code-connection-entities)   
  [Sample: Create Reciprocal Connection Role (Early Bound)](/dynamics365/customer-engagement/developer/sample-create-reciprocal-connection-role-early-bound)   
  [Connection Entity](/reference/entities/connection.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -370,3 +370,6 @@ On a tablet, you can browse, display, and edit/create on two or even one screen.
 If the user is working on the same screen, you need to be careful that the user can't change the selection in the **[Gallery](controls/control-gallery.md)** and potentially lose edits in the **[Edit form](controls/control-form-detail.md)** control.  To keep the user from selecting a different record when changes to another record haven't been saved yet, set the **[Disabled](controls/properties-core.md)** property of the gallery to this formula:<br>
 **EditForm.Unsaved**
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

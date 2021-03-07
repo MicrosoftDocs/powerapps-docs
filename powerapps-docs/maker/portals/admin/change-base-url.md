@@ -43,3 +43,6 @@ If changing the base URL of a portal fails, an error is displayed as shown in th
 > ![Error while changing the base URL of the portal](../media/change-base-url-error.png "Error while changing the base URL of the portal")
 
 Typically, these are transient errors and you must select **Change base URL** to retry changing the base URL. If the issue persists, contact Microsoft support.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -99,3 +99,6 @@ if (window.jQuery) {
 - [Conditional step type](add-conditional-step.md)
 - [Microsoft Learn: Extend Power Apps portals with scripts](https://docs.microsoft.com/learn/modules/extend-power-app-portals/3-portal-javascript)
 - [Microsoft Learn: Advanced client-side development](https://docs.microsoft.com/learn/modules/extend-power-app-portals/5-advanced-portal-development)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

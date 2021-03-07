@@ -263,3 +263,6 @@ After setting up the AD FS relying party trust, you can follow the steps in [Con
 [Configure a SAML 2.0 provider for portals with Azure AD](configure-saml2-settings-azure-ad.md)  
 [FAQ for using SAML 2.0 in portals](configure-saml2-faqs.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

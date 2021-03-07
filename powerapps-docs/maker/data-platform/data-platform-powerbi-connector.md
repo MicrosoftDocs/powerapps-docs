@@ -116,3 +116,5 @@ Remove the https:// and ending forward slash so that the URL is in the form *org
 [Use composite models in Power BI Desktop](/power-bi/transform-model/desktop-composite-models)
 
 [View Dataverse for Teams table data in Power BI Desktop](../../teams/view-table-data-power-bi.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

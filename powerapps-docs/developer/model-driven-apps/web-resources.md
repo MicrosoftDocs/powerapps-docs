@@ -162,3 +162,6 @@ A web resource control configured to use a certain number of rows will have diff
  [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
  [Sample: Importing Files as Web Resources](sample-import-files-web-resources.md)<br />
  [Streamline web resource development using Fiddler AutoResponder](streamline-javascript-development-fiddler-autoresponder.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

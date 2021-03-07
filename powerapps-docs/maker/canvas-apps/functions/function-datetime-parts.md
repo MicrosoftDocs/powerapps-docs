@@ -72,3 +72,6 @@ For the following example, the current time is **3:59:37 PM** on **Thursday, Apr
 | **Weekday(&nbsp;Now(),&nbsp;14&nbsp;)** |Returns the weekday component of the current time and date, using an Excel code to specify the start of the week as Thursday. |1 |
 | **Weekday(&nbsp;Now(),&nbsp;StartOfWeek.Wednesday&nbsp;)** |Returns the weekday component of the current time and date, using a **StartOfWeek** enumeration to specify the start of the week as Wednesday. |2 |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

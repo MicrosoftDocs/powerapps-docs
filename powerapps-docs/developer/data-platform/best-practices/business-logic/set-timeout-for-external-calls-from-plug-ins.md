@@ -110,3 +110,6 @@ using (CustomWebClient client = new CustomWebClient())
 
 [Sample: Web access from a sandboxed plug-in](../../org-service/samples/web-access-plugin.md)<br />
 [Set KeepAlive to false when interacting with external hosts in a plug-in](set-keepalive-false-interacting-external-hosts-plugin.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

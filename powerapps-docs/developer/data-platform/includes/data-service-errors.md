@@ -1669,7 +1669,7 @@
 |0x80092004<br />-2146885628|Name: **InvalidCrossEntityOperation**<br />Message: Invalid cross-entity stage transition. Target entity must be specified.|
 |0x80092005<br />-2146885627|Name: **InvalidCrossEntityTargetOperation**<br />Message: Invalid cross-entity stage transition. Specified target must match {0}.|
 |0x80048cfc<br />-2147185412|Name: **InvalidCurrency**<br />Message: The currency is invalid.|
-|0x8004F125<br />-2147159771|Name: **InvalidCustomActivityType**<br />Message: A custom entity defined as an activity must be of communicaton activity type.|
+|0x8004F125<br />-2147159771|Name: **InvalidCustomActivityType**<br />Message: A custom entity defined as an activity must be of communication activity type.|
 |0x80090115<br />-2146893547|Name: **InvalidCustomAttributeValue**<br />Message: The attribute '{0}' of entity '{1}' has invalid value for custom attribute.|
 |0x80060996<br />-2147087978|Name: **InvalidCustomDataDownloadFilters**<br />Message: You can’t set custom download filters because Record Distribution Criteria isn’t set to Other Data Filters.|
 |0x8004022d<br />-2147220947|Name: **InvalidCustomer**<br />Message: The customer is invalid.|

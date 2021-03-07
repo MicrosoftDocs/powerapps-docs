@@ -149,3 +149,6 @@ If you are experiencing an issue with a ribbon command bar button, use this [tro
  [Customize the Ribbon](customize-commands-ribbon.md)   
  [Export Ribbon Definitions](export-ribbon-definitions.md)   
  [Use Localized Labels with Ribbons](use-localized-labels-ribbons.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/10/2020
+ms.date: 03/02/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -37,8 +37,10 @@ The following table lists common identity providers for portals, the protocol th
 | Twitter | OAuth 2.0 | [Twitter](configure-oauth2-twitter.md) |
 | Local authentication <br>(not recommended) | Not applicable | [Local authentication](set-authentication-identity.md) |
 
-> [!TIP]
-> If you're already using an existing identity provider and want to migrate your portal to use another identity provider, read [Migrate identity providers](migrate-identity-providers.md). The example shows how you can migrate an existing identity provider to Azure AD B2C, though you can use the provider of your choice to migrate to.
+> [!NOTE]
+> Because of the ongoing compatibility problem between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with Yahoo identity provider. Hence, Yahoo is not available as the authentication provider in the list of OAuth 2.0 based providers for portals.
+
+If you're already using an existing identity provider and want to migrate your portal to use another identity provider, read [Migrate identity providers](migrate-identity-providers.md). The example shows how you can migrate an existing identity provider to Azure AD B2C, though you can use the provider of your choice to migrate to.
 
 ## Open registration
 
@@ -60,3 +62,6 @@ With open registration enabled, users aren't required to provide an invitation c
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
 [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

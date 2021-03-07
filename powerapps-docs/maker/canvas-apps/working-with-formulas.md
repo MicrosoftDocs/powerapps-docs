@@ -16,6 +16,9 @@ search.app:
 ---
 # Get started with canvas-app formulas in Power Apps
 
+> [!NOTE]
+> Have you checked out new [Microsoft Power Fx](https://docs.microsoft.com/power-platform/power-fx/overview)? 
+
 Configure your canvas app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
 * In Excel, you build formulas that, for example, populate cells and create tables and charts.
@@ -151,3 +154,5 @@ Initially, this view shows the most important properties.  To reveal all the pro
 As you type a formula in the formula bar, different syntax elements appear in different colors to improve readability and help you understand long formulas. Here is the color code list in Power Apps.
 
 ![syntax highlighting](./media/working-with-formulas/syntax-highlighting.png)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

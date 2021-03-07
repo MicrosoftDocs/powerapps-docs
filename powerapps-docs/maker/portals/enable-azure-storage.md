@@ -80,3 +80,6 @@ With additional settings on portals [entity form](configure-notes.md#enable-file
 [Add web resource](add-web-resource.md)
 
 [Configure notes](configure-notes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

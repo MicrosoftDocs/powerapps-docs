@@ -162,3 +162,6 @@ Messages can be seen using the following channels:
 
 We don't anticipate any downtime when making this transition. However, we will only make a transition in alignment with our [maintenance timeline](/power-platform/admin/policies-communications#maintenance-timeline). We will send a communication about the transition (success or failure) the following Monday starting at 9:00 AM Pacific Time.
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

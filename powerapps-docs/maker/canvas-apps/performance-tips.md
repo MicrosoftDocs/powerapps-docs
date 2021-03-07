@@ -146,3 +146,6 @@ Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maxi
 [Common sources of slow performance for a canvas app](slow-performance-sources.md) <br>
 [Common issues and resolutions for Power Apps](common-issues-and-resolutions.md) <br>
 [Troubleshooting startup issues for Power Apps](../../troubleshooting-startup-issues.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

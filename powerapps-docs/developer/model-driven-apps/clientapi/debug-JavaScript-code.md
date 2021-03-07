@@ -53,3 +53,6 @@ function writeToConsole(message)
 ```
 
 Unlike using the alert method, if you forget to remove any code that uses this function, people using the application will not see your messages.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

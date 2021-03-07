@@ -41,3 +41,6 @@ The following is a selected list of community tools distributed via the XrmToolB
 Here is another tool, [Chromium Metadata Browser](https://community.dynamicslabs.io/feed/metadata-browser), that lets you browse metadata such as entities, attributes, relationships, option sets of Dataverse environements. It works with Microsoft Edge and Google Chrome browsers. 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

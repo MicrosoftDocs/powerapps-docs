@@ -646,3 +646,6 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97
 [Use Web API actions](use-web-api-actions.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

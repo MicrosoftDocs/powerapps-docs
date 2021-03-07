@@ -54,3 +54,6 @@ While connection references are in preview, one connection reference can only be
 ### See also
 
 [Connectors](/connectors/connectors)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -36,3 +36,6 @@ This list below contains all of the guidance and best practices regarding intera
 
 ### See Also
 [Work with metadata using code](../../metadata-services.md)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

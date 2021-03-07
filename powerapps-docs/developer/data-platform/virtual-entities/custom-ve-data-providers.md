@@ -116,3 +116,6 @@ A custom virtual entity provider is a type of plug-in. Use the information in th
 [Sample: Generic virtual entity data provider plug-in](sample-generic-ve-plugin.md)
 
  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

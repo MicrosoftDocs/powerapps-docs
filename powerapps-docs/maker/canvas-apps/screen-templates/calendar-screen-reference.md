@@ -336,3 +336,6 @@ Unique color properties for calendar drop-down control:
 - [Learn more about this screen](./calendar-screen-overview.md)
 - [Learn more about the Office 365 Outlook connector in Power Apps](../connections/connection-office365-outlook.md)
 - [Learn more about the Office 365 Users connector in Power Apps](../connections/connection-office365-users.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

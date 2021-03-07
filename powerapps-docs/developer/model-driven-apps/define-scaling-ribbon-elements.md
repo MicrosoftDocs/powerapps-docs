@@ -72,3 +72,6 @@ For application ribbons and updated entity form ribbons there is no scaling. Sca
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Define custom actions to modify the Ribbon](define-custom-actions-modify-ribbon.md)   
  [Define Ribbon tab display rules](define-ribbon-tab-display-rules.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

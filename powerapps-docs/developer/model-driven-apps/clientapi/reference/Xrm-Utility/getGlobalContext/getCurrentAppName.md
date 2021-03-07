@@ -45,3 +45,6 @@ If this method is called in the context of a business app, returns the name of t
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

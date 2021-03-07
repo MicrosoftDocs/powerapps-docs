@@ -92,3 +92,6 @@ Model-driven apps have a number of capabilities that allow customers to surface 
  [Dynamics 365 for Customer Engagement OData Feeds and Power Query: What’s the &#91;Record&#93;?](https://community.dynamics.com/crm/b/survivingcrm/archive/2014/02/16/dynamics-crm-odata-feeds-and-power-query-what-s-the-record.aspx)   <br />
  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

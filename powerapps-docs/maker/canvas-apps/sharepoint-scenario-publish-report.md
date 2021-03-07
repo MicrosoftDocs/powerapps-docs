@@ -96,3 +96,6 @@ The next step in this tutorial series is to [set up data alerts for the Power BI
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

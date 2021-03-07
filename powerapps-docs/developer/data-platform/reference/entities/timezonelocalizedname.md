@@ -385,3 +385,5 @@ See timezonedefinition Entity [lk_timezonelocalizedname_timezonedefinitionid](ti
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.timezonelocalizedname?text=timezonelocalizedname EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

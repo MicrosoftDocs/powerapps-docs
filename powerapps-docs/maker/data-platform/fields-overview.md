@@ -32,3 +32,6 @@ Columns define the individual data items that can be used to store information i
 
 ## See also
 [Types of columns](types-of-fields.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

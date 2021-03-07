@@ -838,3 +838,5 @@ See businessunit Entity [business_unit_goalrollupquery](businessunit.md#BKMK_bus
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.goalrollupquery?text=goalrollupquery EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

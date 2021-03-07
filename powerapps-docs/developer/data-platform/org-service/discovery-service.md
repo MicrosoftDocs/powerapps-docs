@@ -167,3 +167,6 @@ Endpoints:
 
 [Discovery Services](../discovery-service.md)<br />
 [Discover the URL for your organization](../webapi/discover-url-organization-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

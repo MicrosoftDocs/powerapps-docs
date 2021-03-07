@@ -170,3 +170,6 @@ An event handler consists of a reference to a JavaScript web resource and a func
  [Create and design forms](create-design-forms.md)   
  [Create and edit quick create forms](create-edit-quick-view-forms.md)   
  [Create and edit quick view forms](create-edit-quick-view-forms.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

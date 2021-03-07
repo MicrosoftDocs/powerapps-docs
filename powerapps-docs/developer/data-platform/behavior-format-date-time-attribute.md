@@ -274,3 +274,6 @@ To resolve this, a user can either:
  <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest>      
  <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> 
  [Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-data-platform/)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

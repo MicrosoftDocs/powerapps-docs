@@ -50,3 +50,5 @@ You can add a chart to a form or change an existing list to a chart. For example
 
 ### See also
 [Create a model-driven app system chart](create-edit-system-chart.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

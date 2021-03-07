@@ -98,3 +98,6 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
  [Ribbon WSS schema](ribbon-wss-schema.md)   
  [Form XML schema](form-xml-schema.md)   
  [Schema Support for the Customization File](edit-customizations-xml-file-schema-validation.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

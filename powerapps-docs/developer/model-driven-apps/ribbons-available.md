@@ -187,3 +187,6 @@ It is not possible to use a `<PageRule>` to enable or display custom ribbon comp
 
  [Customize the Ribbon](customize-commands-ribbon.md)   
  [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -534,3 +534,6 @@ You must enable the following flows that help in collating the data from various
 ## Next step
 
 [Configure the data and view reporting](configure-data-reporting.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

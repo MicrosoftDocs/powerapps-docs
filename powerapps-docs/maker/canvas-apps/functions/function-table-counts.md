@@ -80,3 +80,6 @@ You need to enable the **Enhanced delegation for Common Data Service** option in
    
     The label shows **5** because the collection contains five rows.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

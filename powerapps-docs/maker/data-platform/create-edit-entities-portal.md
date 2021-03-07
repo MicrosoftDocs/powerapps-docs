@@ -165,3 +165,6 @@ If the table has dependencies that prevent it from being deleted you will see an
 
 [Create and edit tables in Dataverse](create-edit-entities.md)<br />
 [Create and edit tables using solution explorer](create-edit-entities-solution-explorer.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

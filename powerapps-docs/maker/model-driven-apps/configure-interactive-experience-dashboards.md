@@ -282,3 +282,6 @@ Similarly, if you go to the **Priority** column to modify the colors of the case
 [Create or edit dashboards](create-edit-dashboards.md)
  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

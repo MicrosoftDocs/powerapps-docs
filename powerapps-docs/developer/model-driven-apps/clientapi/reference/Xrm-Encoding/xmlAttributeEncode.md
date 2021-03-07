@@ -40,3 +40,5 @@ search.app:
 
 ## Related topics
 [xmlEncode](xmlEncode.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

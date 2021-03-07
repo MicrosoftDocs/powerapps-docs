@@ -61,3 +61,6 @@ The `DisplayString` table doesn’t contain the default display strings. The two
 ## See also
 [Edit a table](edit-entities.md)<br />
 [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

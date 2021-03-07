@@ -97,3 +97,6 @@ There must be adequate color contrast between:
 
 ### Keyboard support
 * **HtmlText** should not contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in Power Apps does not consider elements inside **HtmlText**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

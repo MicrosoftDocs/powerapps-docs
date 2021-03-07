@@ -58,3 +58,6 @@ If you have customized table or column text, such as column labels or drop-down 
 
 ## Next steps  
  [Export customized table and column text for translation](export-customized-entity-field-text-translation.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

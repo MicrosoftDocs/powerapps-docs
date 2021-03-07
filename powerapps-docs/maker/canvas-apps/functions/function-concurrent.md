@@ -144,3 +144,6 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 	In some cases, the French translation is faster than the German translation, and vice versa. Both start at the same time, but one returns before the other for a variety of reasons, including network latency and server-side processing.
 
 	A [race condition](https://en.wikipedia.org/wiki/Race_condition) would occur if the app depended on one translation ending first. Fortunately, Power Apps flags most timing dependencies that it can detect.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

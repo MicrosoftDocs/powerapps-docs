@@ -53,3 +53,6 @@ If later you need to reactivate a deactivated account, it's easy to do so.
 
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

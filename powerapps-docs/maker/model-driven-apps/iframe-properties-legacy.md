@@ -76,3 +76,6 @@ To view IFrame properties, follow these steps.
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

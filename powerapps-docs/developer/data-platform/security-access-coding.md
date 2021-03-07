@@ -179,3 +179,5 @@ Use these messages to retrieve privileges by privilege ID or name. They include 
 ### See Also
 
 [Plug-ins](plug-ins.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

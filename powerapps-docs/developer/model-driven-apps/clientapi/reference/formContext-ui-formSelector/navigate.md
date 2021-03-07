@@ -32,3 +32,6 @@ When you use the navigate method while unsaved changes exist, the user is prompt
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
