@@ -33,7 +33,6 @@ Export data from your model-driven app to Excel. You can export up to 100,000 ro
 
 You can export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in the app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from the app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
   
-## Cell format when data is exported from model-driven apps
   
 | Data format in model-driven apps |                                            Cell format in Excel                                             |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -46,6 +45,8 @@ You can export data to a standard Excel file that you can use on any device such
 |                               Secured columns                               | Editable in Excel but can’t be imported back to Power Apps |
   
 ## See which type of export works best for you  
+
+You have serverl different options on how you can export data from your app. The table below summerizes the different options, pick the one that works best for you.
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
