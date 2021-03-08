@@ -22,7 +22,7 @@ Custom Process Actions, also known as simply *Custom Actions*, are one of two wa
 
 Both of these capabilities allow for creating new messages that can be called from web services. Custom Process Actions will continue to provide a no-code way to declaratively define synchronous business logic. Custom actions have always been synchronous 'real-time' workflows and therefore not suitable to be converted to use Power Automate.
 
-For a comparison of the capabilities of Custom Process Actions and Custom APIs, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-workflow-custom-action-and-custom-api).
+For a comparison of the capabilities of Custom Process Actions and Custom APIs, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api).
   
 The business logic of an custom process action is implemented using a workflow. When you create an custom process action, the associated real-time workflow is automatically registered to execute in the main operation stage of the message execution pipeline.
 
