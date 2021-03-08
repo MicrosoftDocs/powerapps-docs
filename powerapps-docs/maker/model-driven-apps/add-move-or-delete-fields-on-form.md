@@ -73,7 +73,7 @@ These are the properties available to configure a column when you create or edit
 |**Display options** | **Lock** |  Lock this column so it can't be removed. |
 |**Display options** | **Read-only** | When selected, the column value is not editable. |
 |**Formatting** | **Column width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
-|**Components**  | Component  | Add a control to the column, such as the rich text editor or canvas app control.  |
+|**Components**  | **Component**  | Add a control to the column, such as the rich text editor or canvas app control.  |
 
 > [!NOTE]
 > In Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
