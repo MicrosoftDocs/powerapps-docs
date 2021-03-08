@@ -100,7 +100,7 @@ Legend:
 
 If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" or "No". 
 
-To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column then select **OK**. 
+To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column, select the values, and then select **OK**. 
 
 
    > [!div class="mx-imgBorder"]
