@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 07/09/2020
+ms.date: 03/08/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -26,7 +26,7 @@ searchScope:
 ---
 # Export data to Excel
 
-Do you need to analyze your data from and convert that data into actionable items that help you drive more sales? Now you can do this when you export your data to Excel or Excel Online. Also, analyzing large datasets is not a problem because you can export up to 100,000 rows of data.
+Export data from your model-driven app to Excel. You can export up to 100,000 rows of data at a time. 
 
 > [!div class="mx-imgBorder"] 
 > ![Export to excel](media/export_to_excel.png "Select export to Excel")
