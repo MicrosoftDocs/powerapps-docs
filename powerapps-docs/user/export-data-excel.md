@@ -57,23 +57,19 @@ You can export data to a standard Excel file that you can use on any device such
 
 ## Tips
 
-1. When you export data in Excel (.xlsx format) and then add or modify columns, you can’t import the data back into your app. This is not supported for the .xlsx file format.  
+- When you export data in Excel (.xlsx format) and then add or modify columns, you can’t import the data back into your app. This is not supported for the .xlsx file format.  
   
-2. If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: 
+- If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: 
  
   `The file is corrupt and cannot be opened.`  
   
-The error message occurs due to a setting in Excel. To fix the issue, do this:  
+  The error message occurs due to a setting in Excel. To fix the issue, do this:  
   
-1. Open Excel 2010.  
+  1. Open Excel 2010 and go to **File** > **Options** > **Trust Center** > **Trust Center settings**.  
   
-2. Go to **File** > **Options**.  
+  2. Select **Protected view** and then clear the check boxes for the first two options.  
   
-3. Go to **Trust Center** > **Trust Center settings**.  
-  
-4. Select **Protected view** and then clear the check boxes for the first two options.  
-  
-5. Select **OK** and then close the **Options** dialog box.  
+  35. Select **OK** and then close the **Options** dialog box.  
 
 
 ### See also
