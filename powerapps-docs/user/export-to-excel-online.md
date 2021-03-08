@@ -39,7 +39,7 @@ The option to open data in Excel Online isn’t available in for tables. If you 
 1. To open a list of rows in an app, on the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to Excel Online](media/export-excel-onlinel.png "Select export to Excel Online")
+   > ![Export to Excel Online](media/export-excel-online.png "Select export to Excel Online")
 
   
 ## Save your data and import it back to the app  
