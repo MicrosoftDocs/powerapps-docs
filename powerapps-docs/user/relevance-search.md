@@ -97,12 +97,13 @@ The tables that include the rows in the top 20 results are shown in the first th
 
 ![Tabs on the search results page, numbered left to right](media/diagram-top-results.png "Tabs on the search results page, numbered left to right")
 
-Legend:<
-1. <!--![Number 1](media/one.png)--> Shows the top 20 results from three different tables.
+Legend:
 
-2. <!--![Number 2](media/two.png)--> Shows the three tables that are part of the top results, ordered by relevance.
+![Number 1](media/one.png) Shows the top 20 results from three different tables. 
 
-3. <!--![Number 3](media/three.png)--> Shows the rest of the matched table types, ordered by the number of records that match the search.
+![Number 2](media/two.png) Shows the three tables that are part of the top results, ordered by relevance.
+
+![Number 3](media/three.png) Shows the rest of the matched table types, ordered by the number of records that match the search.
 
 Select a tab to drill down into a specific table and view more information about the rows in the results.
 

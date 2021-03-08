@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/11/2020
+ms.date: 02/25/2021
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -26,7 +26,7 @@ Take advantage of your existing data analysis and reporting by displaying your *
 
   > [!NOTE]
   > - Power BI tile control only supports tile visualizations pinned to a dashboard. To embed a report page, pin the page to the dashboard first. Then, you can embed that tile visualization.
-  > - *Querystring parameter filtering* is only supported within pinned visualization tiles.
+  > - *Querystring parameter filtering* is only supported within pinned visualization tiles. It's not supported for pinned reports.
 
 ## Sharing and security
 
@@ -57,7 +57,7 @@ The parameter will filter a value in the dataset of the report where the tile or
 - Only one filter can be applied.
 - Only the `eq` operator is supported.
 - Field type must be string.
-- Filtering is only available on pinned visualization tiles.
+- Filtering is only available on pinned visualization tiles. It's not supported for pinned reports.
 
 You can use computed fields in the Power BI report to convert other value types to string or combines multiple fields into one.
 
