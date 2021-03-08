@@ -26,12 +26,12 @@ searchScope:
 ---
 # Export data to Excel
 
-Export data from your model-driven app to Excel. You can export up to 100,000 rows of data at a time. 
+Export data from your model-driven app to Excel. You can export up to 100,000 rows of data at a time.
 
 > [!div class="mx-imgBorder"] 
 > ![Export to excel](media/export_to_excel.png "Select export to Excel")
 
-You can export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in the app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from your app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
+The data is exported in the same format that you see in your app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from your app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
   
   
 | Data format in model-driven apps |                                            Cell format in Excel                                             |
