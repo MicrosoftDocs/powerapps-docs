@@ -19,7 +19,7 @@ search.app:
 ---
 # How to import data
 
-Import data that's stored somewhere else into your app quickly using the import feature. You can mport data using different file types such as, Excel workbook (.xlsx), Comma-separated values (.csv), and XML Spreadsheet 2003 (.xml).
+Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. You can import data using different file types such as, Excel workbook (.xlsx), Comma-separated values (.csv), and XML Spreadsheet 2003 (.xml).
 
 Every table has required columns that must exist in your input file. When you create you're own file, make sure the column headings match the table names in your app. During the import process the system will try to map table names from your input file to table names in the app. If they don't match then you need to manually map these fields.
 
