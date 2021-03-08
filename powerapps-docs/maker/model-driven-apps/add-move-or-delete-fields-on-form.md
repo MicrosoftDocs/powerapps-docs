@@ -59,9 +59,11 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ## Configure columns on a form
-These are the properties available to configure a column when you create or edite a form using the form designer.
+These are the properties and events available to configure a column when you create or edit a form using the form designer.
 
 ## Column properties
+
+The **Properties** tab displays the following properties. 
 
 |Area  |Name  |Description  |
 |---------|---------|---------|
@@ -80,7 +82,7 @@ These are the properties available to configure a column when you create or edit
 
 ## Column events
 
-Event handlers for model-driven app forms can be configured for a column. An event handler consists of a reference to a JavaScript web resource and a function defined within that web resource that will execute when the event occurs, such as when the value for the column changes. More information: [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
+The **Events** tab is where event handlers for model-driven app forms can be configured for a column. An event handler consists of a reference to a JavaScript web resource and a function defined within that web resource that will execute when the event occurs, such as when the value for the column changes. More information: [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
 
 ## Move columns on a form
 You can move a column on a form using drag and drop or cut and paste actions. 
