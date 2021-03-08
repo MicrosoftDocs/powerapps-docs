@@ -44,9 +44,9 @@ The data is exported in the same format that you see in your app. Text will rema
 |                       Calculated and Roll-up columns                        | Editable in Excel but can’t be imported back to Power Apps |
 |                               Secured columns                               | Editable in Excel but can’t be imported back to Power Apps |
   
-## See which type of export works best for you  
+## Export options
 
-You have serveral different export options.
+You have serveral other export options such as Excel Oline, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
 
 > [!div class="mx-imgBorder"] 
 > ![Export to excel options](media/export_to_excel_options.png "Select export to Excel options")
