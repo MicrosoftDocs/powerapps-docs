@@ -54,16 +54,19 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
    > [!TIP]
    > You can import only one file at a time. To bring in more files, run the wizard again.
    
-3. For XML or CSV files: 
+3. Select whether you want to **Allow Duplicates** or not. More information, see [Set up duplicate detection rules to keep your data clean](https://docs.microsoft.com/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
-   - If you have an alternate key defined, select it from the Alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
+4. For CSV and XML files: 
+
+   - For CSV file: Select the drop-down list and select the data delimiter and field delimiter that you’ve used your CSV file.
+   
+   - If you have an alternate key defined, select it from the alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
 
     > [!div class="mx-imgBorder"]
     > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
     
-   - For CSV file, select the drop-down list and select the data delimiterthat you’ve used your CSV file.
    
-3. Review the file name and verify that the column and data delimiters are correct using the **[Review Mapping](import-data.md#review-mapping)** option. If everything looks good, select **Finish Import**.  
+5. Review the file name and verify that the column and data delimiters are correct using the **[Review Mapping](import-data.md#review-mapping)** option. If everything looks good, select **Finish Import**.  
 
    > [!div class="mx-imgBorder"]
    > ![Import selected Excel file and checking mapping](media/mapping-excel-file.png "Import selected Excel file and checking mapping")
