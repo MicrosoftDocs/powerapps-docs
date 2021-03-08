@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/23/2020
+ms.date: 3/8/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -100,7 +100,7 @@ When you trigger a push notification from a flow, you can send the notification 
  
       - **Recipient Items-1**: Select how the flow is triggered.
       - **Message**: Enter the notification message.
-      - **Open app**: Select whether to open the app or not when the user selects the notification.
+      - **Open app**: Select whether to open the model-driven app or not when the user selects the notification.
       - **Table**: Select which table the notification is for.
       - **Form or view**: Select if the notification is for a form or view.
       - **Row ID**: If the notification is for a form, then enter the row ID.
@@ -111,7 +111,7 @@ When you trigger a push notification from a flow, you can send the notification 
     
      - **Recipient Items-1**: Select how the flow is triggered.
      - **Message**: Enter the notification message.
-     - **Open app**: Select whether to open the app or not when the user selects the notification.
+     - **Open app**: Select whether to open the canvas app or not when the user selects the notification.
      - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Perform an action when a user taps the notification](power-apps-mobile-notification.md#perform-an-action-when-a-user-taps-the-notification).
 	 
      ![Enter the notification information](media/canvasapp-info.png)
