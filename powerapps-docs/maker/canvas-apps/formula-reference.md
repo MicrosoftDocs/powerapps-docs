@@ -15,6 +15,10 @@ search.app:
   - PowerApps
 ---
 # Formula reference for Power Apps
+
+> [!NOTE]
+> Have you checked out new [Microsoft Power Fx](https://docs.microsoft.com/power-platform/power-fx/overview)?
+
 Formulas combine many elements.  Listed below are:
 
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
