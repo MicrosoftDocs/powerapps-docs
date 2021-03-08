@@ -21,7 +21,7 @@ search.app:
 
 You can quickly do an ad-hoc analysis of your data that is in your app by exporting the data from the app to Excel Online.
   
-When you make changes to your data in Excel Online, you can save the updated information in the app. Remember to keep the existing format of the Excel cells to prevent problems during import. Any information added to the spreadsheet, such as graphs, charts, or colors, will not be saved.  
+When you make changes to your data in Excel Online, you can save the updated information in your app. Remember to keep the existing format of the Excel cells to prevent problems during import. Any information added to the spreadsheet, such as graphs, charts, or colors, will not be saved.  
   
 ## Prerequisites  
   
@@ -31,15 +31,15 @@ When you make changes to your data in Excel Online, you can save the updated inf
   
 ## Open app data in Excel Online  
 
-The option to open data in Excel Online isn’t available in all row types. If you don’t see the option, it’s not available for that row.  
+The option to open data in Excel Online isn’t available in for tables. If you don’t see the option for a table then it’s not available for that table.
   
 > [!NOTE]
-> Updated data in an app won’t immediately be reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that time frame, any updated data should show in Excel Online.
+> Updated data in an app isn't immediately be reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that time frame, any updated data should show in Excel Online.
   
-To open a list of rows in an app, on the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
+1. To open a list of rows in an app, on the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to excel](media/export_to_excel.png "Select export to Excel")
+   > ![Export to Excel Online](media/export-excel-onlinel.png "Select export to Excel Online")
 
   
 ## Save your data and import it back to the app  
