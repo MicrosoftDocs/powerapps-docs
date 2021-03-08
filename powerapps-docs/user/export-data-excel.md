@@ -30,9 +30,7 @@ Export data from your model-driven app to Excel. You can export up to 100,000 ro
 
 > [!div class="mx-imgBorder"] 
 > ![Export to excel](media/export_to_excel.png "Select export to Excel")
-  
-You can choose to export static worksheets or dynamic worksheets, which you can import back in to the app. If you need more advanced functions, you can export a dynamic PivotTable, which makes it very easy to organize and summarize data.  
-  
+
 You can export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in the app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from the app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
   
 ## Cell format when data is exported from model-driven apps
@@ -57,24 +55,25 @@ You can export data to a standard Excel file that you can use on any device such
 |                                                                      View app data in a pivot table.                                                                      |                 [Export to an Excel PivotTable](export-excel-pivottable.md)                 |
 
 
+## Tips
 
-When you export data in Excel (.xlsx format) and then add or modify columns, you can’t import the data back into Dynamics 365. This is not supported for the .xlsx file format.  
+- When you export data in Excel (.xlsx format) and then add or modify columns, you can’t import the data back into Dynamics 365. This is not supported for the .xlsx file format.  
   
-If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: 
+- If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: 
  
-`The file is corrupt and cannot be opened.`  
+  `The file is corrupt and cannot be opened.`  
   
-The error message occurs due to a setting in Excel. To fix the issue, do this:  
+  The error message occurs due to a setting in Excel. To fix the issue, do this:  
   
-1. Open Excel 2010.  
+  1. Open Excel 2010.  
   
-2. Go to **File** > **Options**.  
+  2. Go to **File** > **Options**.  
   
-3. Go to **Trust Center** > **Trust Center settings**.  
+  3. Go to **Trust Center** > **Trust Center settings**.  
   
-4. Select **Protected view** and then clear the check boxes for the first two options.  
+  4. Select **Protected view** and then clear the check boxes for the first two options.  
   
-5. Select **OK** and then close the **Options** dialog box.  
+  5. Select **OK** and then close the **Options** dialog box.  
 
 
 ### See also
