@@ -59,6 +59,7 @@ Following are the limitations in virtual entities that must be considered.
     - An attribute on a virtual entity cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
     - Although you can add virtual entity columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual entity lookup column.
 - Auditing and change tracking is not supported.
+- Charts and dashboards are not supported for virtual entites.
 - Virtual entities cannot be enabled for queues.
 - Offline caching of values is not supported for virtual entities.
 - A virtual entity cannot represent an activity and do not support business process flows.
