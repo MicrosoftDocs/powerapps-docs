@@ -2,7 +2,7 @@
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 01/19/2021
+ms.date: 03/08/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -17,11 +17,9 @@ search.app:
 ---
 # Create and use Custom APIs 
 
-[This topic is pre-release documentation and is subject to change.] 
+Custom APIs offer a code-first way to define messages that you can add to Dataverse web services. Conceptually, Custom APIs are an alternative to Custom Process Actions that have provided a no-code way to include custom messages.
 
-Custom APIs offer a new code-first way to define messages that you can add to Dataverse web services. Conceptually, Custom APIs are an extension to Custom Actions that have provided a no-code way to include custom messages. To differentiate between the two different kinds of Custom Action, we will use *Workflow Custom Action* to refer to the no-code capabilities that depend on workflow. *Custom API* will refer to the type of custom action that depends on a developer to write a plug-in.
-
-Custom APIs provide a capabilities specifically for developers to define their logic in code. For a full comparison of Workflow Custom Action and Custom API, see [Compare Workflow Custom Action and Custom API](custom-actions.md#compare-workflow-custom-action-and-custom-api).
+Custom APIs provide a capabilities specifically for developers to define their logic in code. For a full comparison of Custom Process Action and Custom API, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-workflow-custom-action-and-custom-api).
 
 ## Create a custom API
 
@@ -39,13 +37,13 @@ There are several different ways to create a custom API:
 - By editing solution files. More information: [Create a Custom API with solution files](create-custom-api-solution.md).
 
 > [!NOTE]
-> Although Custom API data is stored in entities, we do not support creating a model-driven app for these entities. A designer is planned for a future release.
+> Although Custom API data is stored in tables, we do not support creating a model-driven app for these tables. A designer is planned for a future release.
 
-Regardless of the process you use, the following information describes selected attributes for the three entities that contain the data for a Custom API. You should review this as you plan the behavior for your Custom API.
+Regardless of the process you use, the following information describes selected columns for the three tables that contain the data for a Custom API. You should review this as you plan the behavior for your Custom API.
 
 ### CustomAPI entity attributes
 
-This table includes attributes of the Custom API entity that you can set.
+This table includes attributes of a Custom API entity instance that you can set.
 
 
 |Display Name<br />Schema Name  |Type  |Description |
@@ -73,7 +71,6 @@ If you do not set the **Plugin Type** (`PluginTypeId`)  to specify main operatio
 
 **Known Issues**:
 
-- [The Is Private field is not included in the Custom API form](#the-is-private-field-is-not-included-in-the-custom-api-form)
 - [Custom API functions cannot use Entity or EntityCollection Request Parameters](#custom-api-functions-cannot-use-entity-or-entitycollection-request-parameters)
 
 ### CustomAPIRequestParameter entity attributes
@@ -83,7 +80,8 @@ A custom API isn’t required to have any parameters. There is no specified orde
 A parameter is related to a single Custom API. You cannot define multiple Custom APIs to use the same parameter definition. You can define multiple request parameter with the same `UniqueName` value if they are used by different Custom APIs.
 
 > [!NOTE]
-> If you define a bound entity or entity collection for your Custom API, the parameter will be generated for you. You don’t need to create a parameter for bound entities.
+> If you define a bound entity for your Custom API, the parameter will be generated for you. You don’t need to create an input parameter for the entity when the Custom API is bound to an entity.
+> If you bind your Custom API to an entity collection, there will not be a parameter generated for you. Binding a Custom API to an entity collection sets the expectation that the operation will be performed on more than one entity of that type or that it will return a collection of that type.
 
 This table includes attributes of the Custom API Request Parameter entity that you can set.
 
@@ -105,7 +103,7 @@ This table includes attributes of the Custom API Request Parameter entity that y
 
 ### CustomAPIResponseProperty entity attributes
 
-The object returned for your Custom API message will include any response properties you define. It is not required for a Custom API to return any value, but if the custom API is defined as a function it is required.
+The object returned for your Custom API message will include any response properties you define. It is not required for a Custom API Action to return any value, but it must return a value if defined as a Function.
 
 > [!IMPORTANT]
 > A Custom API that represents a function with no response properties is not valid and will not appear in the Web API $metadata service document. If you try to use it, you will get a `404 Not Found` error similar to this: 
@@ -139,7 +137,7 @@ A Custom API creates a new message which can be invoked via the SDK or Web API.
 
 ### Invoking Custom APIs from SDK based applications or plug-ins
 
-You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
+You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](/powerapps/developer/data-platform/org-service/generate-early-bound-classes) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
 
 For late-bound code, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
 
@@ -158,6 +156,8 @@ var resp = svc.Execute(req);
 
 var newOwner = (EntityReference) resp["AssignedTo"];
 ```
+
+More information: [Use messages with the Organization service](org-service/use-messages.md).
 
 ### Invoking Custom APIs from the Web API
 
@@ -187,6 +187,10 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 Content-Type: application/json; charset=utf-8
 ```
+
+More information:
+ - [Use Web API actions](webapi/use-web-api-actions.md)
+ - [Use Web API functions](webapi/use-web-api-functions.md)
 
 ## Retrieve data about Custom APIs
 
@@ -456,31 +460,31 @@ More information: [Private Messages](org-service/use-messages.md#private-message
 
 ## Known issues with Custom APIs
 
-Custom APIs are a preview feature and subject to change. Following are some known issues we expect to change.
+Custom API is now generally available, but there are still some related capabilities that we expect to change.
 
 ### Not able to use profiler for debugging
 
-To debug using the Plug-in Registration tool and the Plug-in profiler solution, you need to be able to select a specific plug-in step. The main stage implementation for the plug-in is not available in the Plug-in Registration tool. 
+To debug using the Plug-in Registration tool and the Plug-in profiler solution, you need to be able to select a specific plug-in step. The main stage implementation for the plug-in is not currently available in the Plug-in Registration tool. 
 
 **Workaround**: Register the plug-in type on the PostOperation stage of the message created for the Custom API.
 
 ### A custom API cannot be called from a workflow
 
-A Workflow Custom Action can be called from another workflow. Currently, Custom APIs cannot.
+A Custom Process Action can be called from another workflow. Currently, Custom APIs cannot.
 
 ### A custom API created is not added to the current solution
 
-When you create a Custom API you should do so in the context of a solution. Normally, when you create a new solution component in the context of a solution, it is included in that solution. Currently, even when you create a Custom API in the context of a solution, you must still manually add each part to the solution by selecting the **Add Existing** button.
+When you create a Custom API in the maker portal ([https://make.powerapps.com/](https://make.powerapps.com/)), you should do so in the context of a solution. However, due to the current dependency on the legacy web application designer, the Custom API or any of the Custom API Request Parameters or Custom API Response Properties do not get added to the solution automatically. You must still manually add each part to the solution by selecting the **Add Existing** button.
 
-### The Is Private field is not included in the Custom API form
-
-The **Is Private** field is not available in the form when you create a Custom API in the UI. You cannot add this field to the form. You must set this field programmatically or by editing the solution XML files.
+This will be fixed when a modern designer is provided in the maker portal.
 
 ### Custom API entities can be related to other entities
 
 It is currently possible for entities to create relationships with the three Custom API entities. Other than to create 1:N relationships with `CustomAPIRequestParameter` and `CustomAPIResponseProperty` as the primary entity, this ability may be removed in a future release. Entities related to `CustomAPIRequestParameter` and `CustomAPIResponseProperty` allow for definition of  entities that may provide further metadata about the respective parameters and response properties.
 
 ### The Name field value is displayed in the solution components view where the Display Name value should be shown
+
+<!-- Bug 2057888 -->
 
 When viewing the Custom API entities in a solution, the **Display Name** column shows the **Name** value rather than the **Display Name** value.
 

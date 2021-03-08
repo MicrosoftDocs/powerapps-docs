@@ -2,7 +2,7 @@
 title: "Generate early-bound classes for the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "CrmSvcUtil.exe is a command-line code generation tool for use with Microsoft Dataverse. This tool generates early-bound .NET Framework  classes that represent the entity data model used by Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/02/2020
+ms.date: 03/08/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -177,8 +177,6 @@ For more information on supported tracing options see [Configure tracing for XRM
 [Create extensions for the Code Generation Tool](extend-code-generation-tool.md)  
 [Developer tools and resources](../developer-tools.md)  
 [Download tools from NuGet](../download-tools-NuGet.md)
-
-[Create early bound entity classes with the code generation tool (CrmSvcUtil.exe)](/dynamics365/customerengagement/on-premises/developer/org-service/create-early-bound-entity-classes-code-generation-tool) \[Dynamics 365 Customer Engagement (on-premises)\]
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
