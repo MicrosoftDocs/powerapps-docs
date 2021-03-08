@@ -31,7 +31,7 @@ Export data from your model-driven app to Excel. You can export up to 100,000 ro
 > [!div class="mx-imgBorder"] 
 > ![Export to excel](media/export_to_excel.png "Select export to Excel")
 
-You can export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in the app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from the app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
+You can export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in the app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from your app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
   
   
 | Data format in model-driven apps |                                            Cell format in Excel                                             |
@@ -51,9 +51,9 @@ You have serveral different export options. The table below summerizes the diffe
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 |   Do an *ad-hoc* or *what if* analysis without modifying app data. Or, quick bulk edit to multiple rows.   | [Export to Excel Online](export-to-excel-online.md) |
-|                                                                   Get a snapshot of the data at the current data and time or you want to share it with others.                                                                    |           [Export to an Excel static worksheet](export-excel-static-worksheet.md)           |
-| Get the most up-to-date information and be able to refresh it in Excel and match what you see in the app at any time. |          [Export to an Excel dynamic worksheet](export-excel-dynamic-worksheet.md)          |
-|                                                                      View app data in a pivot table.                                                                      |                 [Export to an Excel PivotTable](export-excel-pivottable.md)                 |
+|                                                                   Get a snapshot of the data at the current date and time or if you want to share the data with others.                                                                    |           [Export to an Excel static worksheet](export-excel-static-worksheet.md)           |
+| Get the most up-to-date information and be able to refresh it in Excel and match what you see in your app at any time. |          [Export to an Excel dynamic worksheet](export-excel-dynamic-worksheet.md)          |
+|                                                                      View your app data in a pivot table.                                                                      |                 [Export to an Excel PivotTable](export-excel-pivottable.md)                 |
 
 
 ## Tips
