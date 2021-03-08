@@ -1606,3 +1606,5 @@ See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_SyncErrors](
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.syncerror?text=syncerror EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

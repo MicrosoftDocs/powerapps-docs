@@ -476,3 +476,5 @@ See kbarticle Entity [kbarticle_comments](kbarticle.md#BKMK_kbarticle_comments) 
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.kbarticlecomment?text=kbarticlecomment EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -138,3 +138,6 @@ The following properties are displayed when the Type selected equals 'Tab'
 [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
 [Notes configuration for Web Forms for portals](../configure-notes.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

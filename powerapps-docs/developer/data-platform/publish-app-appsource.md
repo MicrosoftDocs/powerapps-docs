@@ -45,3 +45,6 @@ Once your app is ready for submission, you use the [Partner Center](https://part
 ### See also  
 [Video: Microsoft AppSource: find the right app for your business](https://youtu.be/sKtLK3gqd4c)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

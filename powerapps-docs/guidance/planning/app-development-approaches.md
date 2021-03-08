@@ -56,3 +56,6 @@ development process, and if new requirements arise, new features can be added to
 the next version.
 
 ![Power Apps development: Low code plus WYSIWYG allows for an MVP to be developed right away](media/power-apps-development.png "Power Apps development: Low code plus WYSIWYG allows for an MVP to be developed right away")
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

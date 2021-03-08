@@ -56,3 +56,6 @@ The appropriate string value will be determined by the individual user’s langu
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

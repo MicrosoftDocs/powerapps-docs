@@ -170,3 +170,6 @@ A business rule may not execute because the field referenced in the business rul
 ### See also
 
 [Apply business logic in Microsoft Dataverse](processes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

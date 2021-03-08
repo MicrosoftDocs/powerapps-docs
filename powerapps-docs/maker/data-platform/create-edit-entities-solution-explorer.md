@@ -29,7 +29,7 @@ You can easily create a table using Power Apps ([make.powerapps.com](https://mak
 
 ## Open solution explorer
 
-The customization prefix is part of the name of any table you create. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
+The customization prefix is part of the name of any table you create. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
@@ -200,3 +200,6 @@ More information: [Create and edit virtual tables that contain data from an exte
 [Create and edit tables in Dataverse](create-edit-entities.md)<br />
 [Tutorial: Create a custom table that has components in Power Apps](/powerapps/maker/data-platform/create-custom-entity)<br />
 [Create a solution](create-solution.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

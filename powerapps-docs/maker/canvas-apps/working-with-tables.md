@@ -397,3 +397,6 @@ For example, `[ 1, 2, 3, 4 ]` is equivalent to `Table( { Value: 1 }, { Value: 2 
 
 ![](media/working-with-tables/inline-table.png)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

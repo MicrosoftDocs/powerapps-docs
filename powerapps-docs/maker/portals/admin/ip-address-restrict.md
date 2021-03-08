@@ -68,3 +68,6 @@ To remove access to a portal from a previously allowed IP address, you can remov
 
 4.	Select **Remove** in the confirmation message.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -72,3 +72,6 @@ Duplicate plug-in step registration could cause SQL deadlocking when the events 
 
 [Register a plug-in](../../register-plug-in.md)
 [Deadlocking](https://technet.microsoft.com/library/ms177433.aspx)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

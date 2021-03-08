@@ -71,3 +71,6 @@ Avoid using form scripts in the `OnLoad` event that hide form elements. Instead 
  [Create and design forms](create-design-forms.md)    
     
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

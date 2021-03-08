@@ -402,3 +402,6 @@ To add the code components to a canvas app, follow the steps in the article [Add
 [Microsoft Power Platform Build Tools](https://docs.microsoft.com/powerapps/developer/data-platform/build-tools-overview)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

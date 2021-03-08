@@ -36,3 +36,6 @@ All
 
 ### Related topics
 [setSubmitMode (Client API reference)](setSubmitMode.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

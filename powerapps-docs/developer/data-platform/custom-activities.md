@@ -87,3 +87,6 @@ _serviceProxy.Execute(request);
  [ActivityPointer (activity) entity](activitypointer-activity-entity.md)   
  [Sample: Create a Custom Activity](/dynamics365/customer-engagement/developer/sample-create-custom-activity)   
  [Sample: Create and Update Entity Metadata](/dynamics365/customer-engagement/developer/org-service/sample-create-update-entity-metadata)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

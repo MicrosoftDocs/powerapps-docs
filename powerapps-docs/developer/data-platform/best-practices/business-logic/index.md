@@ -48,3 +48,6 @@ This list below contains all of the guidance and best practices regarding the pl
 [Apply business logic using code](../../apply-business-logic-with-code.md)<br />
 [Use plug-ins to extend business processes](../../plug-ins.md)<br />
 [Workflow extensions](../../workflow/workflow-extensions.md)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -41,3 +41,6 @@ Notice that the different entities are preceded by the word **Forums:**. This is
 Faceted search enables portals to have search filters on the leftmost side allowing you to choose between items like forums, blogs, and knowledge articles. More filters are added for specific search types. For example, knowledge articles can be filtered by Record Type, Modified Date, Rating, and Products to help customers find the content they need. The rightmost side also has a drop-down box that sorts results based on the customer’s choice of Relevance or View Count (specific to knowledge articles). Below is a screen capture with an example of some of the available filters.
 
 ![Use filters to improve search results](../media/faceted-search-filter.png "Use filters to improve search results")
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

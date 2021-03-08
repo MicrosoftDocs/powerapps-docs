@@ -52,3 +52,6 @@ The SDK describes the process of editing the ribbon by editing the customization
  [Ribbon WSS Schema](ribbon-wss-schema.md)<br/> 
  [Sample: Export Ribbon Definitions](sample-export-ribbon-definitions.md)<br/> 
  [Apply business logic using client scripting in model-driven apps](client-scripting.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

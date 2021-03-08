@@ -1081,3 +1081,5 @@ See slaitem Entity [msdyn_slaitem_slakpiinstance](slaitem.md#BKMK_msdyn_slaitem_
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.slakpiinstance?text=slakpiinstance EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

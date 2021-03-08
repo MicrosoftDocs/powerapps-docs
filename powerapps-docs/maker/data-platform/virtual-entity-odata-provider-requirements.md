@@ -89,3 +89,6 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
 ### See also  
 
 [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -101,3 +101,6 @@ performance while still allowing integration with on-premises data.
 
 > [!div class="nextstepaction"]
 > [Next step: Data modeling](data-modeling.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

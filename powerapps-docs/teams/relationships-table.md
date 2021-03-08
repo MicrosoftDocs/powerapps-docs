@@ -65,3 +65,6 @@ While viewing table relationships, select the table relationship you want to del
 ### See also
 
 [Work with table columns](table-columns.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

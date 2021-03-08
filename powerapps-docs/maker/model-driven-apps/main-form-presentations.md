@@ -191,3 +191,6 @@ The main form is used by all model-driven app clients. This form provides a cons
  [Create and design forms](create-design-forms.md)   
 
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -493,3 +493,6 @@ This group of samples demonstrate how to perform operations that are conditional
 [Use the Dataverse Web API](overview.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 [Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)   
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -152,3 +152,6 @@ This section uses the same controls as [Delete a message](connection-office365-o
 - For a list of all functions and their parameters, see the [Office 365 Outlook reference](https://docs.microsoft.com/connectors/office365connector/).
 - See all the [available connections](../connections-list.md).  
 - Learn how to [manage your connections](../add-manage-connections.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

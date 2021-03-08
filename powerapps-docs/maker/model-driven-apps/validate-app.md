@@ -80,3 +80,6 @@ Publish an app to make it available to users.
 [Share a model-driven app with Power Apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app) <br/>
  [Run a model-driven app on a mobile device](https://docs.microsoft.com/powerapps/user/run-app-client-model-driven)   
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

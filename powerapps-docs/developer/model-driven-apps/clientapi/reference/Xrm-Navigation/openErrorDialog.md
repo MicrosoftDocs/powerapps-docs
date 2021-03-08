@@ -54,3 +54,6 @@ This displays an error dialog with the default message:
 
 [Xrm.Navigation](../xrm-navigation.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

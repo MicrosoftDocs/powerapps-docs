@@ -50,3 +50,5 @@ You can retrieve a quick view control in the **quickForms** collection by using 
 ### Related topics
 
 [formContext.ui](formContext-ui.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

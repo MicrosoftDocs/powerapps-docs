@@ -17903,3 +17903,5 @@ See queue Entity [queuemembership_association](queue.md#BKMK_queuemembership_ass
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.systemuser?text=systemuser EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

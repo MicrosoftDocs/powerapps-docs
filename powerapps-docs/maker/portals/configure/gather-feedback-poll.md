@@ -125,3 +125,6 @@ The details of the poll voting results are stored in Dataverse as Poll Submissio
 [Rate or vote on a webpage on a portal](rate-webpage.md)  
 [Redirect to a new URL on a portal](add-redirect-url.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

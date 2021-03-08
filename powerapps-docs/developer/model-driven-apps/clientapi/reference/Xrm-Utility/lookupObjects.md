@@ -69,3 +69,6 @@ function(error){console.log(error);});
 ### Related topics
 
 [Xrm.Utility](../xrm-utility.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

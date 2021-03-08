@@ -102,3 +102,6 @@ All reports that are created using the Report Wizard are Fetch-based reports. No
 [ Troubleshoot problems with data not displaying in a report ](troubleshoot-reports.md)
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

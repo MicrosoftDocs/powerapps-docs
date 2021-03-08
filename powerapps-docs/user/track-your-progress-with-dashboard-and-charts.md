@@ -209,3 +209,6 @@ In the chart designer, adding an order on certain calculated columns is not supp
 
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

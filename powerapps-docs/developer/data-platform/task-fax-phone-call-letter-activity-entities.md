@@ -31,3 +31,6 @@ This section contains information about the entities that enable you to manage c
   
 ### See also  
  [Activity Entities](activity-entities.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

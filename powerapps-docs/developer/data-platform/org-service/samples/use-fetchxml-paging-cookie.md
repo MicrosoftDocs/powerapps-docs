@@ -49,3 +49,6 @@ The `fetchXml` creates the FetchXML string for retrieving all child accounts to 
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

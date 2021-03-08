@@ -43,3 +43,6 @@ The following table lists the messages that are related to time zones, but donâ€
  [timezonelocalizedname EntityType](reference/entities/timezonelocalizedname.md)   
  [timezonerule EntityType](reference/entities/timezonerule.md)   
  [Transaction Currency (Currency) Entity](transaction-currency-currency-entity.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -152,3 +152,6 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 
     > [!NOTE]
   > Controls outside the gallery are not considered in the keyboard navigation order within the gallery. [TabIndex](properties-accessibility.md) controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

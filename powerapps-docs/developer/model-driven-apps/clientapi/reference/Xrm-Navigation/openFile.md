@@ -31,3 +31,6 @@ search.app:
 ### Related topics
 
 [Xrm.Navigation](../xrm-navigation.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

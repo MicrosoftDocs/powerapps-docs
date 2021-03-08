@@ -114,3 +114,6 @@ More information: [Design model-driven apps by using the app designer](design-cu
 [Power Apps component framework overview](/powerapps/developer/component-framework/overview) <br />
 [Unified Interface for everybody](/power-platform-release-plan/2019wave2/microsoft-powerapps/unified-interface-app-everybody)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

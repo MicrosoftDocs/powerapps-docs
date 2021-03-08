@@ -158,3 +158,6 @@ Administrators can use their organization’s Azure Active Directory (Azure AD) 
 [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

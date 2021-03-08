@@ -58,3 +58,6 @@ The following table describes some of the different capabilities.
 
 [Use Workflow Custom Actions with code](workflow-custom-actions.md)<br />
 [Create and use Custom APIs](custom-api.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

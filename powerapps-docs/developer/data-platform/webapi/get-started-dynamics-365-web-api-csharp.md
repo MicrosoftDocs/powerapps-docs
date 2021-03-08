@@ -39,3 +39,6 @@ After completing this guide, you will have learned enough to explore the many ot
   
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Web API Samples (C#)](web-api-samples-csharp.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

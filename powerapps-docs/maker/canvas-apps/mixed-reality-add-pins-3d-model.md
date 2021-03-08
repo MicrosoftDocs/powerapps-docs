@@ -223,3 +223,6 @@ As users add pins with the **Add pin** button, they will display in the table be
 - View 3D content in mixed reality with the **[View in MR](mixed-reality-component-view-mr.md)** component.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

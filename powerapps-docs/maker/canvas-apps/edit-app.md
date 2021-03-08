@@ -68,3 +68,5 @@ Learn more about how to add a [screen](add-screen-context-variables.md), a [cont
 
 - [Restore an app to a previous version](restore-an-app.md)
 - [Export and import an app](export-import-app.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -52,3 +52,6 @@ Access Team grant access to rows via sharing rows. Access Team members have priv
   > ![Remove user from Access Team](media/AccessTeam4.png "Remove user from Access Team")  
   
   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
