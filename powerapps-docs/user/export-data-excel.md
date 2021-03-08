@@ -46,7 +46,7 @@ You can export data to a standard Excel file that you can use on any device such
   
 ## See which type of export works best for you  
 
-You have serverl different options on how you can export data from your app. The table below summerizes the different options, pick the one that works best for you.
+You have serveral different export options. The table below summerizes the different options, pick the one that works best for you.
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
