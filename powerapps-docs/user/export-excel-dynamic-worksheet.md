@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 8/27/2020
+ms.date: 3/8/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -17,18 +17,18 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Export to an Excel dynamic worksheet
+# Export data to an Excel dynamic worksheet
 
-Export your app data to an Office Excel worksheet so users can have the latest information. Imagine the CEO of your company getting the critical information they need without having to navigate in an app, but instead merely opening the Excel link on their desktop. You can export up to 100,000 rows at a time.    
-  
-## Export data to an Excel dynamic worksheet  
+Export your app data to an Office Excel worksheet so users can have the latest information. Imagine the CEO of your company getting the critical information they need without having to navigate in an app, but instead merely opening the Excel link on their desktop. 
 
-You can’t export data to a dynamic worksheet in Excel for all row types. If you don’t see the option, it’s not available for that row.  
+You can export up to 100,000 rows at a time. You can’t export data to a dynamic worksheet in Excel for all table. If you don’t see the option, it’s not available for that table. 
   
-1. Open a list of rows in the app and select the arrow to the right of **Export to Excel**. 
+1. On the left nav, select a table.
+
+2. On the command bar select the **Export to Excel** menu and then select **Open in Dynamic Worksheet**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to excel](media/export_to_excel.png "Select export to Excel")
+   > ![Export to Excel dynamic worksheet](media/open-dynamic-worksheet.png "Select export to Excel dynamic worksheet")
   
 2. Select **Dynamic Worksheet**.  
   
