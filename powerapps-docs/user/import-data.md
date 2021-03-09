@@ -23,7 +23,7 @@ Import data that's stored somewhere else into your model-drvien app using the im
 
 Every table has required columns that must exist in your input file. When you create you're own file, make sure the column headings match the table names in your app. During the import process the system will try to map table names from your input file to table names in the app. If they don't match then you need to manually map these fields.
 
-To avoid mapping issue, we recommend that you create a template. The easiest way to do this is to go to your app and export data from a existing table. Use the same file (modified with your data) to import data into the table. This template saves time and effort. You won't have to account for the required columns for each table. For information on how to export data, see [Export data to Excel](https://docs.microsoft.com/powerapps/user/export-data-excel).
+To avoid mapping issue, we recommend that you create a template. The easiest way to do this is to go to your app and export data from an existing table. Use the same file (modified with your data) to import data into the table. This template saves time and effort. You won't have to account for the required columns for each table. For information on how to export data, see [Export data to Excel](https://docs.microsoft.com/powerapps/user/export-data-excel).
 
 If you're an advanced user and know the required columns for a given table for Dataverse tables, define your own Excel, CSV, or XML source file and then follow the step in this article on how to import data into your app. These file formats are supported:
 
@@ -59,7 +59,7 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 
    - For CSV file: Select the drop-down list and select the data delimiter and field delimiter that you’ve used your CSV file.
    
-   - If you have an alternate key defined, select it from the alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to referencerows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
+   - If you have an alternate key defined, select it from the alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference rows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
 
     > [!div class="mx-imgBorder"]
     > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
@@ -70,7 +70,7 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
    > [!div class="mx-imgBorder"]
    > ![Import selected Excel file and checking mapping](media/mapping-excel-file.png "Import selected Excel file and checking mapping")
 
-4. Select **Track Progress** see the procgress of the import.
+4. Select **Track Progress** see the progress of the import.
 
    > [!div class="mx-imgBorder"]
    > ![Track the progress of the file that you're importing](media/track-progress.png "Track import file progress")
