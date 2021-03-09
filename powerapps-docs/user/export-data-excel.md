@@ -28,7 +28,7 @@ searchScope:
 
 Export data from your model-driven app to Excel. You can export up to 100,000 rows of data at a time.
 
-1. From the left nav, selet a table that you want to export data from.
+1. From the left nav, select a table that you want to export data from.
 2. On the command bar, select **Export to Excel**.
 
    > [!div class="mx-imgBorder"] 
@@ -49,7 +49,7 @@ The data is exported in the same format that you see in your app. Text will rema
   
 ## Export options
 
-You have serveral other export options such as Excel Oline, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
+You have several other export options such as Excel Online, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
 
 > [!div class="mx-imgBorder"] 
 > ![Export to excel options](media/export_to_excel_options.png "Select export to Excel options")
@@ -59,7 +59,7 @@ The table below summerizes the different options, pick the one that works best f
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-|   Do an *ad-hoc* or *what if* analysis without modifying app data. Or, quick bulk edit to multiple rows.   | [Open app data in Excel Online](export-to-excel-online.md) |
+|   Do an *ad-hoc* or *what if* analysis without modifying app data. Or, quick bulk edits to multiple rows.   | [Open app data in Excel Online](export-to-excel-online.md) |
 |                                                                   Get a snapshot of the data at the current date and time or if you want to share the data with others.                                                                    |           [Export to an Excel static worksheet](export-excel-static-worksheet.md)           |
 | Get the most up-to-date information and be able to refresh it in Excel and match what you see in your app at any time. |          [Export to an Excel dynamic worksheet](export-excel-dynamic-worksheet.md)          |
 |                                                                      View your app data in a pivot table.                                                                      |                 [Export to an Excel PivotTable](export-excel-pivottable.md)                 |
