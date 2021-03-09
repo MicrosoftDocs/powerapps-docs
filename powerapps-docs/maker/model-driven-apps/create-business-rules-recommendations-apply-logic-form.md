@@ -74,7 +74,7 @@ This topic shows you how to create business rules and recommendations to apply f
     |||  
     |-|-|  
     |**If you select this item...**|**The scope is set to...**|  
-    |**Table**|All forms and server|  
+    |**Entity**|All forms and server|  
     |**All Forms**|All forms|  
     |Specific form (**Account** form, for example)|Just that form|  
   
