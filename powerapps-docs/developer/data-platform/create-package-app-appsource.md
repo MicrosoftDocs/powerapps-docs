@@ -58,6 +58,8 @@ A package lets you bundle and deploy multiple files related to your app at once.
       <Default Extension="html" ContentType="application/octet-stream" />
       <Default Extension="db" ContentType="application/octet-stream" />
       <Default Extension="css" ContentType="application/octet-stream" />
+      <Default Extension="json" ContentType="application/octet-stream" />
+      <Default Extension="msapp" ContentType="application/octet-stream" />
     </Types>
     ```
 
