@@ -31,7 +31,7 @@ If you're an advanced user and know the required columns for a given table for D
   
 The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.  
 
-## Download a tempalte
+## Download an Excel template
 
 To avoid mapping issue, we recommend that you use an Excel template that you can download from your app. 
 
@@ -39,7 +39,7 @@ To avoid mapping issue, we recommend that you use an Excel template that you can
 
 2. On the command bar, select **Excel Templates** > **Downlad Template**.
 
-3. Choose a template or select **Edit Columns** and choose the rows that you want to include in the template.
+3. Select a table and view to downlaod or select **Edit Columns** and choose the rows that you want to include in the template.
 
 5. Select **Downalod**. 
  
