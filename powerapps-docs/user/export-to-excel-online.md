@@ -1,6 +1,6 @@
 ---
-title: "Update your model-driven app data in Excel Online | MicrosoftDocs"
-description: How to open your data to Excel Online in model-driven app and make bulk edits.
+title: "Open your model-driven app data in Excel Online | MicrosoftDocs"
+description: How to open your data to Excel Online in model-driven app and make  edits.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Update your app data using Excel Online 
+# Open your app data using Excel Online 
 
 Open your app data in Excel Online to make quick edits or do a ad-hoc analysis of your app data. You can make changes to the app data in Excel Online and then save the updated information to your app. 
 
