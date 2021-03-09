@@ -28,7 +28,7 @@ The option to open data in Excel Online isn’t available for all tables. If you
  > [!NOTE]
    > - This feature requires that you have an Office 365 subscription or a subscription to an online service such as SharePoint Online or Exchange Online and a Microsoft account.    
 
-1. From the left nav, select a table.
+1. On the left nav, select a table.
 
 3. On the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
 
