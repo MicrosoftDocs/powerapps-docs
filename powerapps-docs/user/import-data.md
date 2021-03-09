@@ -21,9 +21,9 @@ search.app:
 
 Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. You can import data using different file types such as, Excel workbook (.xlsx), Comma-separated values (.csv), and XML Spreadsheet 2003 (.xml).
 
-Every table has required columns that must exist in your input file. When you create you're own import file, make sure the column headings match the table names in your app. During the import process, the system will try to map table names from your input file to table names in your app. If they don't match, then you need to manually map these fields or you may run into issues during the import.
+Every table has required columns that must exist in your input file. When you create you're own import file, make sure the column headings match the table names in your app. During the import process, the system will try to map the table names from your input file to the table names in your app. If they don't match, then you'll need to manually map these fields or you may run into issues during the import.
 
-If you're an advanced user and know the required columns for a given table for Dataverse tables, define your own Excel, CSV, or XML source file and then follow the step in this article on how to import data into your app. These file formats are supported:
+If you're an advanced user and know the required columns for a given Dataverse tables, define your own Excel, CSV, or XML source file and then follow the step in this article on how to import data into your app. These file formats are supported:
 
  - Excel workbook (.xlsx)
  - Comma-separated values (.csv)
@@ -35,7 +35,7 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 
 To avoid mapping issue, we recommend that you use an Excel template that you can download from your app. 
 
-1. Open an app and from the left nav select a table.
+1. Open your app and from the left nav select a table.
 
 2. On the command bar, select **Excel Templates** > **Downlad Template**.
 
@@ -48,9 +48,9 @@ To avoid mapping issue, we recommend that you use an Excel template that you can
 
 ## Import your data
 
-Use the template that you download in the previous step (modified with your data) to import data back to your app. The template saves time and effort. You won't have to account for the required columns for each table.
+Use the template that you download in the previous step (modified with your data) to import data back to your app. The template saves time and effort. 
   
-1. Open an app and from the left nav select a table.
+1. Open your app and from the left nav select a table.
  
    > [!div class="mx-imgBorder"]
    > ![From the site map select a table](media/left-nav-select-table.png "From the site pay select a table")
