@@ -28,9 +28,9 @@ After exporting data from Dataverse to Azure Data Lake Storage Gen2 with the Exp
 
 This article shows you how to perform the following tasks: 
 
-1.  Generate a manifest.json from the existing model.json in the Data Lake Storage Gen2 storage account that holds the exported data.
+1.  Set the Data Lake Storage Gen2 storage account with the Dataverse data as a *source* in a Data Factory dataflow.
 
-2.  Set the Data Lake Storage Gen2 storage account with the Dataverse data as a *source* in a Data Factory dataflow.
+2.  Transform the Dataverse data in Data Factory with a dataflow.
 
 3.  Set the Data Lake Storage Gen2 storage account with the Dataverse data as a *sink* in a Data Factory dataflow.
 
@@ -39,7 +39,7 @@ This article shows you how to perform the following tasks:
 ## Prerequisites
 
 This section describes the prerequisites necessary to ingest exported Dataverse data with Data Factory.
- 
+
 ### Azure roles
 
 The user account that's used to sign in to Azure must be a member of the
@@ -48,69 +48,19 @@ To view the permissions that you have in the subscription, go to the [Azure por
 
 ### Export to data lake
 
-This article assumes that you've already exported Dataverse data by using the [Export to Data Lake service](export-to-data-lake.md).
+This guide assumes that you have already exported Dataverse data by using the [Export to Data Lake service](export-to-data-lake.md).
 
 In this example, account table data is exported to the data lake.
 
-## Generate the manifest.json from the model.json
+### Azure Data Factory
 
-1.  Go to [this GitHub repository](https://github.com/t-sazaki/ConvertModelJsonToManifestOriginal) and download it to your computer.
-
-2.  Go to ConvertModelJsonToManifest-master/ConvertModelJsonToManifest-master/ConvertModelJsonToManifest.sln.
-
-3.  Right-click to select the file, and then open it in Visual Studio. If you don't have Visual Studio, you can follow this article to install it: [Install Visual Studio](/visualstudio/install/install-visual-studio?view=vs-2019).
-
-4.  Go to **Project** > **Manage NuGet Packages**, and ensure that the
-    following NuGet packages are installed:
-
-    -   Microsoft.CommonDataModel.ObjectModel
-
-    -   Microsoft.CommonDataModel.ObjectModel.Adapter.Adls
-
-    -   Microsoft.IdtableModel.Clients.ActiveDirectory
-
-    -   Newtonsoft.Json
-
-    -   NLog
-
-5. If you're missing the Common Data Model packages or they're unavailable, you can add them by following these steps:
-
-    1. Select the gear icon to access package settings.
-       ![Package settings gear icon](media/package-settings-gear.png "Package settings gear icon")
-
-    2. Select **+** in the pop-up window to add a new package source. 
-       ![Add a new package](media/add-new-package.png "Add a new package")
-
-    3.  Configure the new package source, and then select **OK**:
-
-        1.  For **Name**, enter **CDM**.
-
-        2.  For **Source**, enter **https[]()://commondatamodel.pkgs.visualstudio.com/_packaging/CDM/nuget/v3/index.json**.
-
-    4.  Make sure that the package source is set to **All**.
-
-8.  In Program.cs, fill in the storage container information on line 26, as indicated here:
-
-    1. Replace **your-storage-account** by substituting the name of your storage account.
-       ![Your storage account substitution](media/your-storage-account.png "Your storage account substitution")
-
-    1. Replace **your-folder-name** with the folder containing the model.json file. Go to your storage account **Overview** > **Storage Explorer** > **Containers**, and then select the correct folder name. 
-      ![Replace your folder name](media/replace-your-folder-name.png "Replace your folder name")
-
-    1.  Replace the access key with the access key for this storage account. Go to your storage account, and on the left panel under **Settings**, select **Access Keys**. Select **Copy** to copy the access key and replace it in the code.
-
-9.  Optionally, you can change the name of the manifest file as indicated in the code comments.
-
-10.  Run the code, and refresh your storage container to find the new manifest, table, resolved table, and config files.
-
-> [!NOTE]
-> If there are changes made to the metadata of the table, you must delete the generated files from the Data Lake and regenerate an updated manifest file by running the code again. It is recommended that you maintain the same name of the manifest file, so there is no need to update any Azure Data Factory dataflows or pipelines.
+This guide assumes that you have already created a data factory under the same subscription and resource group as the storage account containing the exported Dataverse data.
 
 ## Set the Data Lake Storage Gen2 storage account as a source
 
-1.  Open [Azure Data Factory](https://ms-adf.azure.com/home?factory=%2Fsubscriptions%2Fd410b7d3-02af-45c8-895e-dc27c5b35342%2FresourceGroups%2Fsama%2Fproviders%2FMicrosoft.DataFactory%2Ffactories%2Fadfathena), and then select **Create data flow**. 
+1.  Open [Azure Data Factory](https://ms-adf.azure.com/en-us/datafactories) and select the data facotry that is on the same subscription and resource group as the storage account containing your exported Dataverse data. Then select **Create data flow** from the home page. 
 
-2.  Turn on **Data flow debug** mode. This might take up to 10 minutes, but you
+2.  Turn on **Data flow debug** mode and select your preferred time to live. This may take up to 10 minutes, but you
     can proceed with the following steps.
 
     ![Dataflow debug mode](media/data-flow-debug.png "Dataflow debug mode")
@@ -128,50 +78,60 @@ In this example, account table data is exported to the data lake.
 
 5.  Under **Source options**, do the following:
 
-    - **Metadata format**: Select **Manifest**. 
-    - **Root location**: In the first box (**Container**), enter the container name. In the second box (**Folder path**), enter **/**. 
-    - **Manifest file**: Leave the first box (**table path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json* **/** *test*).
+    - **Metadata format**: Select **Model.json**. 
+    - **Root location**: Enter the container name in the first box (**Container**) or **Browse** for the container name and select **OK**.
+    - **Entity**: Enter the table name or **Browse** for the table.
 
-       ![Source options, part one](media/source-options.png "Source options, part one")
+  ![Source options](media/source-options.png "Source options")
+  
+6.  Check the **Projection** tab to ensure that your schema has been imported sucessfully. If you do not see any columns, select **Schema options** and check the **Infer drifted column types** option. Configure the formatting options to match your data set then select **Apply**.
 
-    - **Schema linked service**: Select the same storage container as the source settings.
-    - **Container**: Enter the container name.
-    - **Corpus folder**: Leave blank.
-    - **table**: Enter text in the format **/*table*Res.cdm.json/*table***, replacing *table* with the table name you want, such as account.
+7. You may view your data in the **Data preview** tab to ensure the Source creation was complete and accurate.
 
-       ![Source options, part two](media/source-options-two.png "Source options, part two")
-
-## Set the Data Lake Storage Gen2 storage account 
-
+## Transform your Dataverse data
 After setting the exported Dataverse data in the Data Lake Storage Gen2 storage account as a source in the Data Factory dataflow, there are many possibilities for transforming your data. More information: [Azure Data Factory](/azure/data-factory/introduction)
 
-Ultimately, you must set a sink for your dataflow. Follow these instructions to set the Data Lake Storage Gen2 storage account with the data exported by the Export to Data Lake service as your sink.
+Follow these instructions to create a rank for the each row by the *revenue* of the account.
 
-1.  Select **+** in the lower-right corner, and then search for and select **Sink**.
+1. Select **+** in the lower-right corner of the previous transformation, and then search for and select **Rank**.
+
+2. On the **Rank settings** tab, do the following:
+     - **Output stream name**: Enter the name you want, such as *Rank1*.
+     - **Incoming Stream**: Select the source name you want. In this case, the source name from the previous step.
+     - **Options**: Leave the options unchecked.
+     - **Rank column**: Enter the name of the rank column generated.
+     - **Sort conditions**: Select the *revenue* column and sorty by *Descending* order.
+
+       ![Configure the Rank settings tab](media/configure-rank.png "Configure the Rank settings tab")
+
+3. You may view your data in the **data preview** tab where you will find the new *revenueRank* column at the right-most position.
+
+## Set the Data Lake Storage Gen2 storage account as a sink
+Ultimately, you must set a sink for your dataflow. Follow these instructions to place your transformed data as a Delimited Text file in the Data Lake.
+
+1.  Select **+** in the lower-right corner of the previous transformation, and then search for and select **Sink**.
 
 2.  On the **Sink** tab, do the following:
 
     - **Output stream name**: Enter the name you want, such as *Sink1*.
-    - **Incoming stream**: Select the source name you want. 
-    - **Sink type**: Select **Common Data Model**. 
+    - **Incoming stream**: Select the source name you want. In this case, the source name from the previous step.
+    - **Sink type**: Select **DelimitedText**. 
     - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Export to Data Lake service.
 
       ![Configure the Sink tab](media/configure-sink.png "Configure the Sink tab")
 
 3. On the **Settings** tab, do the following:
 
-    - **Schema linked service**: Select the final destination storage container. 
-    - **Container**: Enter the container name. 
-    - **Corpus folder**: Enter **/** 
-    - **table**: Enter text in the format **/*table*Res.cdm.json/*table***, replacing *table* with the table name you want, such as account.
+    - **Folder path**: Enter the container name in the first box (**File system**) or **Browse** for the container name and select **OK**.
+    - **File name option**: Select **output to single file**.
+    - **Output to single file**: Enter a file name, such as *ADFOutput*
+    - Leave all other default settings.
 
-      ![Configure the sink Settings tab, part one](media/configure-settings.png "Configure the sink Settings tab, part one")
+      ![Configure the sink Settings tab](media/configure-settings.png "Configure the sink Settings tab")
+      
+3. On the **Optimize** tab, set the **Partition option** to **Single partition**.
 
-    - **Root Location**: In the first box (**Container**), enter the container name. In the second box (**Folder path**), enter **/**. 
-    - **Manifest file**: Leave the first box (**table path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json / test*.
-    - **Format type**: Select your file format preference.
-
-      ![Configure the sink Settings tab, part two](media/configure-settings-two.png "Configure the sink Settings tab, part two")
+4. You may view your data in the **data preview** tab. 
 
 ## Run your dataflow
 
@@ -186,7 +146,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 4.  Select **Debug** from the command bar.
 
-5.  Let the dataflow run until the bottom view shows that is has been completed. This might take a few minutes.
+5.  Let the dataflow run until the bottom view shows that is has been completed. This may take a few minutes.
 
 6.  Go to the final destination storage container, and find the transformed table data file.
 
