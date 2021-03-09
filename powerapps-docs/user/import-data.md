@@ -21,7 +21,7 @@ search.app:
 
 Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. You can import data using different file types such as, Excel workbook (.xlsx), Comma-separated values (.csv), and XML Spreadsheet 2003 (.xml).
 
-Every table has required columns that must exist in your input file. When you create you're own file, make sure the column headings match the table names in your app. During the import process the system will try to map table names from your input file to table names in the app. If they don't match then you need to manually map these fields.
+Every table has required columns that must exist in your input file. When you create you're own file, make sure the column headings match the table names in your app. During the import process, the system will try to map table names from your input file to table names in the app. If they don't match, then you need to manually map these fields.
 
 To avoid mapping issue, we recommend that you create a template. The easiest way to do this is to go to your app and export data from an existing table. Use the same file (modified with your data) to import data into the table. This template saves time and effort. You won't have to account for the required columns for each table. For information on how to export data, see [Export data to Excel](https://docs.microsoft.com/powerapps/user/export-data-excel).
 
@@ -42,7 +42,6 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 3. On the command bar, select the file type that you want to import from:
 
    - **Import from Excel**
-   - **Import from CSV**
    - **Import from XML**
 
    > [!div class="mx-imgBorder"]
