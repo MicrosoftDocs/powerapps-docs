@@ -35,7 +35,7 @@ The option to open data in Excel Online isn’t available for all tables. If you
    > [!div class="mx-imgBorder"] 
    > ![Export to Excel Online](media/export-excel-online.png "Select export to Excel Online")
 
-3. Make you changes and when you're done select **Save**.  
+3. In Excel Online make you changes and when you're done select **Save**.
 
    > [!div class="mx-imgBorder"] 
    > ![Select Save on the Excel Online file](media/export-excel-online-1.png "Select Save on the Excel Online file")
