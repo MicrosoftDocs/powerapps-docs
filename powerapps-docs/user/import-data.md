@@ -33,7 +33,6 @@ If you're an advanced user and know the required columns for a given table for D
   
 The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.  
   
-## Import the file 
   
 1. Open an app and from the left nav select a table.
  
