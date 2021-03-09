@@ -45,8 +45,9 @@ To avoid mapping issue, we recommend that you use an Excel template that you can
 3. Choose a template or select **Edit Columns** and choose the rows that you want to include in the template.
 
 5. Select **Downalod**. 
-
-![How to down load an Excel template from your app](media/download-excel-template.gif "How to down load an Excel template from your ap")
+ 
+   > [!div class="mx-imgBorder"]
+   > ![How to down load an Excel template from your app](media/download-excel-template.gif "How to down load an Excel template from your ap")
 
 ## Import your data
 
