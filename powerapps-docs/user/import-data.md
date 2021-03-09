@@ -36,9 +36,6 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 To avoid mapping issue, we recommend that you use an Excel template that you can download from your app. 
 
 1. Open an app and from the left nav select a table.
- 
-   > [!div class="mx-imgBorder"]
-   > ![From the site map select a table](media/left-nav-select-table.png "From the site pay select a table")
 
 2. On the command bar, select **Excel Templates** > **Downlad Template**.
 
