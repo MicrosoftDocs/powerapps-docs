@@ -37,11 +37,11 @@ To avoid mapping issue, we recommend that you use an Excel template that you can
 
 1. Open your app and from the left nav select a table.
 
-2. On the command bar, select **Excel Templates** > **Downlad Template**.
+2. On the command bar, select **Excel Templates** > **Download Template**.
 
 3. Select a table and view to downlaod or select **Edit Columns** and choose the rows that you want to include in the template.
 
-5. Select **Downalod**. 
+5. Select **Download**. 
  
    > [!div class="mx-imgBorder"]
    > ![How to down load an Excel template from your app](media/download-excel-template.gif "How to down load an Excel template from your ap")
