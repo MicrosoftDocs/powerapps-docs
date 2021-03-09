@@ -57,7 +57,8 @@ Use the template that you download in the previous step (modified with your data
 
 3. On the command bar, select the file type that you want to import from:
 
-   - **Import from Excel**
+   - **Import from Excel**: If you're using the Excel template that you modifed with your data then choose **Import from Excel**.
+   - **Import from CSV**
    - **Import from XML**
 
    > [!div class="mx-imgBorder"]
@@ -70,17 +71,16 @@ Use the template that you download in the previous step (modified with your data
    
 3. Select whether you want to **Allow Duplicates** or not. More information, see [Set up duplicate detection rules to keep your data clean](https://docs.microsoft.com/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
-4. For CSV and XML files: 
+4. For CSV and XML files (skip this step if you're importing an Excel (.xlsx) file): 
 
-   - For CSV file: Select the drop-down list and select the data delimiter and field delimiter that you’ve used your CSV file.
+   - For a CSV file: Select the drop-down list and select the data delimiter and field delimiter that you’ve used your CSV file.
    
-   - If you have an alternate key defined, select it from the alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference rows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
+   - For CSV or XML file: If you have an alternate key defined, select it from the alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference rows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
 
-    > [!div class="mx-imgBorder"]
-    > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
-    
+     > [!div class="mx-imgBorder"]
+     > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key") 
    
-5. Review the file name and verify that the column and data delimiters are correct using the **[Review Mapping](import-data.md#review-mapping)** option. If everything looks good, select **Finish Import**.  
+5. Review the file name and select **[Review Mapping](import-data.md#review-mapping)** to verify that the columns (fields) are mapped correctly. If everything looks good, select **Finish Import**.  
 
    > [!div class="mx-imgBorder"]
    > ![Import selected Excel file and checking mapping](media/mapping-excel-file.png "Import selected Excel file and checking mapping")
@@ -92,7 +92,7 @@ Use the template that you download in the previous step (modified with your data
    
 ## Review mapping
 
-When you import a file one of the main steps is to review how your column headings are mapped to the columns in your model-driven app.
+When you import a file one of the main steps is to review how your column headings are mapped to the columns (fields) in your model-driven app.
 
 > [!div class="mx-imgBorder"]
 > ![Review mapping](media/review-mapping-legend.png "Review mapping")
