@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 03/03/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -76,8 +76,6 @@ If you are working with a portal created in an environment containing customer e
     - **Show in default menu**: Show the page in the sitemap through default menu.
 
     - **Add a child page**: Add a child page to the selected page. The child page inherits the page template of its parent page.
-
-    - **Set as home page**: Set the page as the home page. The URL of the new home page is set to the root of the website and URL of the old page is updated accordingly.
 
     - **Move up**: Move the page up in hierarchy.
 
