@@ -23,7 +23,7 @@ The quickiest way to make edits to your app data is to use the open in Excel Onl
 
 Updated data in an app isn't immediately be reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that time frame, any updated data should show in Excel Online.
 
-The option to open data in Excel Online isn’t available for all tables. If you don’t see the option for a table then it means it’s not available for that table.
+The option to open data in Excel Online isn’t available for all tables. If you don’t see the option for a table then it’s not available for that table.
   
  > [!NOTE]
    > - This feature requires that you have an Office 365 subscription or a subscription to an online service such as SharePoint Online or Exchange Online and a Microsoft account.    
