@@ -19,7 +19,7 @@ search.app:
 ---
 # Update your app data using Excel Online 
 
-The quickiest way to make edits to your app data is to use the open in Excel Online feature. You can make changes to your data in Excel Online and then save the updated information to your app. Remember to keep the existing format of the Excel cells to prevent problems during import. Any information added to the spreadsheet, such as graphs, charts, or colors, will not be saved.  
+Open your app data in Excel Online to make quick edits or do a ad-hoc analysis of your app data. You can make changes to the app data in Excel Online and then save the updated information to your app. Remember to keep the existing format of the Excel cells to prevent problems during import. Any information added to the spreadsheet, such as graphs, charts, or colors, will not be saved.  
 
 Updated data in an app isn't immediately be reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that time frame, any updated data should show in Excel Online.
 
