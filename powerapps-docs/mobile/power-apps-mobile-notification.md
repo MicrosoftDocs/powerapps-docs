@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/23/2020
+ms.date: 3/8/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -16,12 +16,12 @@ search.app:
   - PowerApps
 ---
 
-# Create push notifications for the Power Apps mobile app
+# Create push notifications for Power Apps mobile
 
 
 Push notifications are used in Power Apps mobile to engage app users and help them prioritize key tasks. In Power Apps, you can create notifications for Power Apps mobile by using the Power Apps Notification connector. You can send notifications to any app that you create in Power Apps. 
  
-![Example of what a push notification looks like](media/pic1-notification-screenshot.png)
+![Example of what a push notification looks like](media/sample-notification.gif)
 
 Add a push notification to your app if:
 
@@ -83,7 +83,7 @@ When you trigger a push notification from a flow, you can send the notification 
     > [!div class="mx-imgBorder"] 
     > ![Choose the tigger condition](media/create-notification-step6.png)
  
-7. In the **Choose an action** search box, enter **send push notification**. In the list of **Actions** choose **Send push notification V2 (preview)**.
+7. In the **Choose an action** search box, enter **send push notification**. In the list of **Actions** choose **Send push notification V2**.
  
     > [!div class="mx-imgBorder"] 
     > ![Find Send push notification](media/create-notification-step7.png)
@@ -100,7 +100,7 @@ When you trigger a push notification from a flow, you can send the notification 
  
       - **Recipient Items-1**: Select how the flow is triggered.
       - **Message**: Enter the notification message.
-      - **Open app**: Select whether to open the app or not when the user selects the notification.
+      - **Open app**: Select whether to open the model-driven app or not when the user selects the notification.
       - **Table**: Select which table the notification is for.
       - **Form or view**: Select if the notification is for a form or view.
       - **Row ID**: If the notification is for a form, then enter the row ID.
@@ -111,7 +111,7 @@ When you trigger a push notification from a flow, you can send the notification 
     
      - **Recipient Items-1**: Select how the flow is triggered.
      - **Message**: Enter the notification message.
-     - **Open app**: Select whether to open the app or not when the user selects the notification.
+     - **Open app**: Select whether to open the canvas app or not when the user selects the notification.
      - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Perform an action when a user taps the notification](power-apps-mobile-notification.md#perform-an-action-when-a-user-taps-the-notification).
 	 
      ![Enter the notification information](media/canvasapp-info.png)
@@ -157,6 +157,7 @@ You can set your app to open, for example, the **Case details** page as soon as 
 * Currently, notifications aren't displayed on Power Apps Mobile for Windows Phone.
 * Currently, we don't provide push notifications for users who run apps only in a web browser.
 * Notifications show the generic Power Apps icon instead of a specific app icon.
+* Notifications are not supported in China.
 
 For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
 
