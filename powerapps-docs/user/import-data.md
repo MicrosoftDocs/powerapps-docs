@@ -39,12 +39,12 @@ To avoid mapping issue, we recommend that you use an Excel template that you can
 
 2. On the command bar, select **Excel Templates** > **Download Template**.
 
-3. Select a table and view to downlaod or select **Edit Columns** and choose the rows that you want to include in the template.
+3. Select a table and view to download or select **Edit Columns** and choose the rows that you want to include in the template.
 
 5. Select **Download**. 
  
    > [!div class="mx-imgBorder"]
-   > ![How to down load an Excel template from your app](media/download-excel-template.gif "How to down load an Excel template from your ap")
+   > ![How to download an Excel template from your app](media/download-excel-template.gif "How to download an Excel template from your ap")
 
 ## Import your data
 
@@ -57,7 +57,7 @@ Use the template that you download in the previous step (modified with your data
 
 3. On the command bar, select the file type that you want to import from:
 
-   - **Import from Excel**: If you're using the Excel template that you modifed with your data then choose **Import from Excel**.
+   - **Import from Excel**: If you're using the Excel template that you modified with your data then choose **Import from Excel**.
    - **Import from CSV**
    - **Import from XML**
 
