@@ -143,7 +143,7 @@
         href: ../user/import-data.md
       - name: Export data to Excel
         href: ../user/export-data-excel.md
-      - name: Export data to Excel Online
+      - name: Open app data in Excel Online
         href: ../user/export-to-excel-online.md      
       - name: Export to a dynamic worksheet
         href: ../user/export-excel-dynamic-worksheet.md
