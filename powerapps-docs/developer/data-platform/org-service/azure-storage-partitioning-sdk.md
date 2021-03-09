@@ -17,9 +17,6 @@ search.app:
 ---
 # Improve performance when accessing documents using storage partitions
 
-> [!div style="text-align: center"; background-color: blue]
-> Unsure about entity verses table? Learn Microsoft dataverse [terminology](/powerapps/developer/data-platform/terminology.md)
-
 An optional partition key can be specified to create a logical partition for non-relational documents stored in NoSql tables of Azure heterogenous storage. Having a partition key improves application performance for large sets of data (millions of documents) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
 
 When no partition key is specified, the table is the logical boundary and retrieving a single item or a set of logically related items from a large data set will not be as performant as when using a partition key.
