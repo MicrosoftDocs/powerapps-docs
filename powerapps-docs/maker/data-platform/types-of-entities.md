@@ -33,12 +33,10 @@ Before creating or editing tables in Microsoft Dataverse, you should understand 
 
 ## Standard tables 
 
-There are four different types of standard table ownership. When you create a custom standard table the only options are **User or team** owned or **Organization** owned, but you should be aware that other tables have different ownership types.  
+There are two types of standard table ownership. When you create a custom standard table the only options are **User or team** owned or **Organization** owned, but you should be aware that other tables have different ownership types.  
   
 |Ownership|Description|  
-|---------------|-----------------|  
-|**Business-owned**|Data in these tables belongs to the Business unit. Access to the data can be controlled at the business unit level.|  
-|**None**|Data not owned by another table.|  
+|---------------|-----------------|    
 |**Organization**|Data belongs to the organization. Access to the data is controlled at the organization level.|  
 |**User or team**|Data belongs to a user or a team. Actions that can be performed on these rows can be controlled on a user level.|  
   
