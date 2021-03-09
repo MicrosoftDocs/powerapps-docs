@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# Introduction to ISV Studio for the Power Platform
+# Introduction to the Power Platform ISV Studio
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
