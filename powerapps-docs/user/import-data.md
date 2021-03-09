@@ -148,7 +148,8 @@ To save your mapping settings for next time, enter a name in the **Name your dat
 > ![Name your data map here](media/import-save-settings.png "Name your data map here")
 
 
-
+### See also
+[Download a template for data import](https://docs.microsoft.com/power-platform/admin/download-template-data-import)
 
 
 
