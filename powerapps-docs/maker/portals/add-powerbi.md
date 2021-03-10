@@ -84,7 +84,7 @@ To add a Power BI component to a web page:
 
 ### Power BI access type considerations
 
-The following list explains Power BI access types in brief. And lists access type considerations for Power Apps portals. For more information about Power BI access types, go to [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
+The following list explains Power BI access types in brief and lists access type considerations for Power Apps portals. For more information about Power BI access types, go to [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
 
 - **Embed for your customers**:
     - Shows the list of workspaces shared to user currently logged in and enabled for [Power BI Embedded service](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service).
