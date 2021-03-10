@@ -53,7 +53,7 @@ Multiple-table quick find searches up to 10 tables and returns the search result
      > [!div class="mx-imgBorder"]
      > ![Global Search Button](media/global-search-button.png "Global search")
   
-2.  Type your search words in the search box, and then select **Search**. The search returns results grouped by table. 
+2.  Type your search words in the search box, and then select **Search**. The search returns results grouped by table such as Products, Reservations, and Reviews.
 
      > [!div class="mx-imgBorder"]
      > ![Categorized Search Results](media/categorized-search-results.png "Categorized search results page") 
