@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 1/28/2020
+ms.date: 3/10/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -26,7 +26,7 @@ searchScope:
 
 # Using quick find to search for rows
 
-## Single-table quick find
+Use the quick find to quickly 
 
 Single-table quick find is used to find rows of only one type. This search option is available from within a view. 
 
