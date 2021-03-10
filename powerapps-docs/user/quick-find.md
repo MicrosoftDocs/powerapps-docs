@@ -38,6 +38,8 @@ There are two ways to use quick find.
 - Multiple-table quick find: Searches up to 10 tables, grouped by a table and returns the search results grouped by categories, such as accounts or contacts.
 
 
+## Start a search 
+
 1.  To start a categorized search, from the top nav bar, select **Search**.  
 
      > [!div class="mx-imgBorder"]
