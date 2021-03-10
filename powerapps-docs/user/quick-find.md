@@ -39,7 +39,7 @@ With categorized search, you can search for rows that begin with a specific word
 
 ## Single table quick find 
 
-Single-table quick find searches for the rows within a view.
+Use single-table quick to find row in a view.
 
    > [!div class="mx-imgBorder"]
    > ![Single-table Quick Find](media/quick-find-view-only.gif "Single-table quick find search box") 
@@ -48,28 +48,23 @@ Single-table quick find searches for the rows within a view.
 
 Multiple-table quick find searches up to 10 tables and returns the search results grouped by table.
 
-
 1.  To start a categorized search, from the top nav bar, select **Search**.  
 
      > [!div class="mx-imgBorder"]
      > ![Global Search Button](media/global-search-button.png "Global search")
   
-2.  Type your search words in the search box, and then select **Search**. Categorized search returns results grouped by table types, such as accounts or contacts.
+2.  Type your search words in the search box, and then select **Search**. The search returns results grouped by table. 
 
      > [!div class="mx-imgBorder"]
      > ![Categorized Search Results](media/categorized-search-results.png "Categorized search results page") 
 
-
-  
-## Filter categorized search results 
-  
--   To filter results by a row type, choose a row type from the **Filter with** list. 
+ 3. Filter results by a row type, choose a row type from the **Filter with** list. To search all row types, choose **None** from the **Filter with** list.  
 
     > [!div class="mx-imgBorder"]
     > ![Filtering Categorized Search Results](media/filter-categorized-search-results.png "Filtering categorized search results")  
 
   
--   To search all row types, choose **None** from the **Filter with** list.  
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
