@@ -37,7 +37,7 @@ The option to export data to an Excel PivotTable isn’t available in all row ty
   
    By default, the **PivotTable Column List** includes only columns that are displayed in the **Select Columns for Pivot Excel** list.  
   
-3. Select **Save** and then save the .xlsx file. Make note of the location where you saved the file.  
+4. Select **Save** and then save the .xlsx file. Make note of the location where you saved the file.  
   
    > [!NOTE]
    > If you’re going to edit the data file later, it’s recommended that you save the file before you open it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
@@ -51,19 +51,19 @@ The option to export data to an Excel PivotTable isn’t available in all row ty
    > 
    > We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
   
-4. Open Excel and then open the .xlsx file you saved in the previous step.  
+5. Open Excel and then open the .xlsx file you saved in the previous step.  
   
-5. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
+6. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
 
    > [!div class="mx-imgBorder"] 
    > ![Enable content](media/enable-content.png "Enable content")
  
   
-7. Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Excel Help](https://support.microsoft.com/excel).  
+Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Overview of PivotTables and PivotCharts](https://support.microsoft.com/office/overview-of-pivottables-and-pivotcharts-527c8fa3-02c0-445a-a2db-7794676bce96).  
   
 ## Tips  
   
-- In Power Apps, currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
+- Currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
   
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   
