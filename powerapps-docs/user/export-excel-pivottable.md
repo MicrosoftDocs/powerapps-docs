@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 8/27/2020
+ms.date: 3/9/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -19,19 +19,21 @@ search.app:
 ---
 # Export to an Excel PivotTable
 
-
 You can export app data to an Office Excel PivotTable to see patterns and trends in data. An Excel PivotTable is a great way to summarize, analyze, explore, and present your app data. You can export up to 100,000 rows at a time.  
   
-
-## Export data to an Excel PivotTable  
 The option to export data to an Excel PivotTable isn’t available in all row types. If you don’t see the option, it’s not available for that row.  
   
-1. Open a list of rows in your app, select the arrow to the right of **Export to Excel**, and then select **Dynamic PivotTable**.  
+1. On the left nav, select a table.
+2. On the command bar select the **Export to Excel** menu, and then select **Dynamic PivotTable**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to excel](media/export_to_excel.png "Select export to Excel")
+   > ![Export to excel](media/export-excel-pivottable.png "Select export to Excel")
   
-2. In the **Select Columns for Pivot Excel** dialog box, select the column settings and then select **Export**.  
+3. In the **Select Columns for Pivot Excel** dialog box, select the column settings and then select **Export**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Select Columns and then select export](media/export-excel-pivottable-1.png "Select Columns and then select export")
+
   
    By default, the **PivotTable Column List** includes only columns that are displayed in the **Select Columns for Pivot Excel** list.  
   
@@ -52,11 +54,10 @@ The option to export data to an Excel PivotTable isn’t available in all row ty
 4. Open Excel and then open the .xlsx file you saved in the previous step.  
   
 5. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
-  
-6. To refresh data in the file, on the **Data** tab, select **Refresh All**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Refresh all data](media/refresh_data.png "Refresh all data")
+   > ![Enable content](media/enable-content.png "Enable content")
+ 
   
 7. Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Excel Help](https://support.microsoft.com/excel).  
   
