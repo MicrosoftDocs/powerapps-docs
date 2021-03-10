@@ -32,7 +32,7 @@ Use the Microsoft Power Apps Excel Add-in to download you app data and make edit
    > [!div class="mx-imgBorder"] 
    > ![Export to Excel dynamic worksheet](media/open-dynamic-worksheet.png "Select export to Excel dynamic worksheet")
   
-3. Select the column to export and then select **Export**.  
+3. Select the columns to export and then select **Export**.  
 
    > [!div class="mx-imgBorder"] 
    > ![Select columns to export](media/open-dynamic-worksheet-1.png "*Select columns to export**")
