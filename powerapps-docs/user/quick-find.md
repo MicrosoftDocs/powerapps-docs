@@ -26,7 +26,7 @@ searchScope:
 
 # Using quick find to search for rows
 
-Quickly search across multiple tables at the same time and find the information that you're looking for. When you enter a search term the system finds matches to all words in the search term in one column in a table. The words can be matched in any order in the column.
+Quickly search across multiple tables at the same time and find the information that you're looking for. When you enter a search term the system finds matches to all words in the search term in one column within a table. The words can be matched in any order in the column.
 
 With categorized search, you can search for rows that begin with a specific word or use a wildcard character.
   
