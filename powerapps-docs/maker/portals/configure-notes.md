@@ -88,7 +88,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | **Basic settings**                 |                                                                                                                                             |
 | Display Privacy Options Field      | Enables a check box in the Add Note dialog box that allows the user to mark a note as Private.                                                   |
 | Privacy Option Field Default Value | Specifies the default value for the Display Privacy Options Field check box. The default value of this field is False.                     |
-| Display Attach File                | Enables a file upload field in the Add Note dialog box, allowing a user to attach a file to a note.                                             |
+| Display Attach File                | Enables a file upload field in the Add Note dialog box, allowing a user to attach a file to a note.  <br> **Note**: Only one file can be attached using this option.                                            |
 | Attach File Accept                 | The MIME type accepted by the file upload input.                                                                                            |
 | **Advanced settings**              |                                                                                                                                             |
 | Note Field Label                   | Overrides the label for the Note field in the Add Note dialog box.                                                                              |
@@ -116,7 +116,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | **Basic settings**                 |                                                                                                                                               |
 | Display Privacy Options Field      | Enables a check box in the Edit Note dialog box that allows the user to mark a note as Private.  |
 | Privacy Option Field Default Value | Specifies the default value for the Display Privacy Options Field check box. The default value of this field is False.   |
-| Display Attach File                | Enables a file upload field in the Edit Note dialog box, allowing a user to attach a file to a note.                      |
+| Display Attach File                | Enables a file upload field in the Edit Note dialog box, allowing a user to attach a file to a note. <br> **Note**: Only one file can be attached using this option.                     |
 | Attach File Accept                 | The MIME type accepted by the file upload input. |
 | **Advanced settings**              |                                                                                              |
 | Note Field Label                   | Overrides the label for the Note field in the Edit Note dialog box.|
