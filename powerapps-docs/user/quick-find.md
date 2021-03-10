@@ -26,16 +26,17 @@ searchScope:
 
 # Using quick find to search for rows
 
-Use the quick find to quickly 
+Quickly search across multiple tables at the same time and find the information that you're looking for. When you enter a search term it finds matches to all words in the search term in one column in a table; however, the words can be matched in any order in the column. The results of the search are shown in groups, sorted by table.
 
-Single-table quick find is used to find rows of only one type. This search option is available from within a view. 
+There are two ways to use quick find.
+
+- Single-table quick: Searches for the rows within a view.
 
    > [!div class="mx-imgBorder"]
-   > ![Single-table Quick Find](media/single-quick-find-search-box.png "Single-table quick find search box") 
+   > ![Single-table Quick Find](media/quick-find-view-only.gif "Single-table quick find search box") 
 
-## Multiple-table quick find (categorized search)
+- Multiple-table quick find: Searches up to 10 tables, grouped by a table and returns the search results grouped by categories, such as accounts or contacts.
 
-Multiple-table quick find is also known as categorized search. 
 
 1.  To start a categorized search, from the top nav bar, select **Search**.  
 
