@@ -37,29 +37,27 @@ The option to export data to an Excel PivotTable isn’t available in all row ty
   
    By default, the **PivotTable Column List** includes only columns that are displayed in the **Select Columns for Pivot Excel** list.  
   
-4. Select **Save** and then save the .xlsx file. Make note of the location where you saved the file.  
+4. When the download is complete, navigate to the location of the downloaded file.
   
    > [!NOTE]
-   > If you’re going to edit the data file later, it’s recommended that you save the file before you open it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
+   > When you download a worksheet it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message:**Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
    > 
    > To fix the issue:  
    > 
-   > 1. Open Excel and go to **File** > **Options** > **Trust Center**.  
-   > 2. Select **Trust Center Settings** and then select **Protected View**.  
-   > 3. Under **Protected View**, clear the check boxes for all three items.  
-   > 4. Select **OK** > **OK**.  
-   > 
-   > We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
+   >    1. Open Excel and go to **File** > **Options** > **Trust Center** **Settings Center Settings** > **Protected View**.  
+   >    2. In **Protected View**, clear all three items.  
+   >    3. Select **OK** > **OK**.  
+   >     
+   >    We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
   
-5. Open Excel and then open the .xlsx file you saved in the previous step.  
+5. Open the saved Excel file.
   
 6. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Enable content](media/enable-content.png "Enable content")
- 
+   > ![Enable content](media/enable-content.png "Enable content") 
   
-Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Overview of PivotTables and PivotCharts](https://support.microsoft.com/office/overview-of-pivottables-and-pivotcharts-527c8fa3-02c0-445a-a2db-7794676bce96).  
+7. Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Overview of PivotTables and PivotCharts](https://support.microsoft.com/office/overview-of-pivottables-and-pivotcharts-527c8fa3-02c0-445a-a2db-7794676bce96).  
   
 ## Tips  
   
