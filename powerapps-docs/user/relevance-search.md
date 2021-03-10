@@ -60,7 +60,7 @@ Suggestions are shown when three or more characters are entered in the search bo
 
 - **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
 
-- With [early access for 2021 release wave 1](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates), suggested records show a secondary field in addition to the primary field. This helps you differentiate records that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is always the first non-primary field on the table’s quick find view that contains data for that record.
+- With [early access for 2021 release wave 1](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates), suggested records show a secondary field in addition to the primary field. This helps you differentiate records between that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is always the first non-primary field on the table’s quick find view that contains data for that record.
 
 
 ![Suggested results that appear when you enter a search query](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
