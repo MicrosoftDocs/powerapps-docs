@@ -4,7 +4,7 @@ description: "Microsoft Dataverse real-time workflows"
 ms.custom: ""
 ms.date: 07/27/2020
 ms.reviewer: "matp"
-ms.service: flow
+ms.service: powerapps
 ms.topic: "article"
 ms.assetid: 1f3c9780-26ad-49ec-a3fb-fc226def19c5
 author: msftman
