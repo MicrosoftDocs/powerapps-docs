@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/13/2021
+ms.date: 03/10/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -168,15 +168,9 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
     ![Enable entity permissions on an entity form](media/configure-notes/enable-entity-permissions-form.png "Enable entity permissions on an entity form")
 
-1. Create an entity permission with the required privileges as explained in the table below for the entity that has the Notes control enabled on it. The scope should be appropriately set depending on the level of access required to end users.
+1. Create an entity permission with the required privileges for the entity that has the Notes control enabled on it. The scope should be appropriately set depending on the level of access required to end users.
 
-    | Note action | Required permissions |
-    | - | - |
-    | **Add** | Read, Write, Create, Append, Append To |
-    | **Edit** | Read, Write |
-    | **Delete** | Read, Write, Create, Append, Append To |
-
-    For example, Lead entity that show the notes on the entity form.
+    For example, Lead entity that shows the notes on the entity form.
 
     ![Create new entity permissions](media/configure-notes/new-entity-permission.png "Create new entity permissions")
 
@@ -186,17 +180,41 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
 
     ![Add web roles to an entity permission](media/configure-notes/add-webrole-entity-permissions.png "Add web roles to an entity permission")
 
-1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with the required privileges as explained in the table below. The **Parent Entity Permission** for the Parent Scope on this entity permission mut be set to the entity permission created in step 1.
+1. Create an entity permission on the **Annotation** entity with the [Parental scope](configure/assign-entity-permissions.md#parental-scope) with the required privileges as explained in the table below. The **Parent Entity Permission** for the Parent Scope on this entity permission mut be set to the entity permission created in step 2.
 
     | Note action | Required permissions |
     | - | - |
-    | **Add** | Read, Write, Create, Append, Append To |
-    | **Edit** | Read, Write |
-    | **Delete** | Read, Write, Create, Append, Append To |
+    | **Read** | Read |
+    | **Add** | Create, Append (Append To required on parent entity permission) |
+    | **Edit** | Write |
+    | **Delete** | Delete |
 
     For example, create an entity permission for the Annotation entity having the entity permission created in step 1 as the parent entity.
     
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
+
+## Notes created with rich-text editor
+
+You can view the notes created using the [rich-text editor in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
+
+For example, the note shows rich-text format in the model-driven app.
+
+![Dynamics 365 form](media/configure-notes/dynamics-365-form.png)
+
+Portal web page shows the note in rich-text format.
+
+![Portals form](media/configure-notes/portals-form.png)
+
+However, when editing the note from portal web page, you'll see the note in HTML markup format.
+
+![Portals form in HTML when editing](media/configure-notes/portals-form-edit.png)
+
+> [!IMPORTANT]
+> If you try to save a note with HTML markup using the portal, you'll see this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save the notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation applies to the entire web site. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
+
+## Notes configuration for web forms
+
+Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). Create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
 
 ## Enable file attachment on form
 
@@ -233,26 +251,3 @@ To enable attachment on an entity form:
 After you configure the notes and enable notes attachments, you can see the **Attach File** option on the form:
 
 ![Attach file option](media/configure-notes/attach-file-option.png)
-
-## Notes created with rich-text editor
-
-You can view the notes created using the [rich-text editor in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
-
-For example, the note shows rich-text format in the model-driven app.
-
-![Dynamics 365 form](media/configure-notes/dynamics-365-form.png)
-
-Portal web page shows the note in rich-text format.
-
-![Portals form](media/configure-notes/portals-form.png)
-
-However, when editing the note from portal web page, you'll see the note in HTML markup format.
-
-![Portals form in HTML when editing](media/configure-notes/portals-form-edit.png)
-
-> [!IMPORTANT]
-> If you try to save a note with HTML markup using the portal, you'll see this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save the notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation applies to the entire web site. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
-
-## Notes configuration for web forms
-
-Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). Create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
