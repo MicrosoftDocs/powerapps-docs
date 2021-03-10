@@ -23,7 +23,7 @@ Import data that's stored somewhere else into your model-drvien app using the im
 
 Every table has required columns that must exist in your input file. When you create you're own import file, make sure the column headings match the table names in your app. During the import process, the system will try to map the table names from your input file to the table names in your app. If they don't match, then you'll need to manually map these fields or you may run into issues during the import.
 
-If you're an advanced user and know the required columns for a given Dataverse tables, define your own Excel, CSV, or XML source file and then follow the step in this article on how to import data into your app. These file formats are supported:
+If you're an advanced user and know the required columns for a given Dataverse tables, define your own Excel, CSV, or XML source file and then follow the steps in this article on how to import data into your app. These file formats are supported:
 
  - Excel workbook (.xlsx)
  - Comma-separated values (.csv)
