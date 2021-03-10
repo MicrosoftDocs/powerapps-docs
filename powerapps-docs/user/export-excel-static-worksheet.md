@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 8/27/2020
+ms.date: 3/9/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -19,17 +19,22 @@ search.app:
 ---
 # Export to an Excel static worksheet
 
-When you want to present information about the data in your app to an individual who doesn’t have access to the app, or you have data that doesn’t change often, consider exporting the app data to an Office Excel static worksheet.
+When you want to present information about the data in your app to an individual who doesn’t have access to the app, or you have data that doesn’t change often, consider exporting the app data to an Excel static worksheet.
 
-You can export up to 100,000 rows at a time. By default, a model-driven app lists up to 50 rows per page. Choose the **Page** arrows at the bottom of the list to view any additional pages.  
+You can export up to 100,000 rows at a time. By default, a model-driven app lists up to 50 rows per page. 
+
+There is two types of static worksheets that you can export. 
+
+- **Static worksheet**: Exports all the pages in the current view.
+- **Static worksheet (Page only)**: Exports the data from the current page only.
   
-## Export data to an Excel static worksheet  
-You may have the option to export data to an Excel static worksheet in all row types. However, in some cases the format might be legacy, or the data might not be filtered by what you see in the app.  
+You may have the option to export data to an Excel static worksheet in all row types. However, in some cases the format might be old, or the data might not be filtered by what you see in the app.  
   
-1. Open a list of rows in the app, select the arrow to the right of **Export to Excel**, and then choose **Static worksheet (Page only)**.  
+1. To export data, on the left nav, select a table.
+2. On the command bar select the **Export to Excel**, and then choose **Static worksheet** or **Static worksheet (Page only)**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to excel](media/export_to_excel.png "Select export to Excel")
+   > ![Export to Excel static worksheet](media/export-excel-staticl.png "Export to Excel static workshee")
   
 2. By default, an exported worksheet includes the columns that are displayed in the list, using the same column order, sorting, and column widths. To make changes to the columns in an Advanced Find View, choose **Edit Columns**. 
   
