@@ -45,12 +45,12 @@ By default, an exported worksheet includes the columns that are displayed in the
 ## Tips  
 
 - In most If you’re going to edit the data file later, make sure you save it bfore you open it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
- To fix the issue do this:  
- 1. Open Excel and go to **File** > **Options** > **Trust Center** > **Settings Center Settings** > **Protected View**.  
- 2.  In **Protected View**, clear all three items.  
- 3.  Select **OK** > **OK**.  
+  To fix the issue do this:  
+  1. Open Excel and go to **File** > **Options** > **Trust Center** > **Settings Center Settings** > **Protected View**.  
+  2.  In **Protected View**, clear all three items.  
+  3.  Select **OK** > **OK**.  
  
-We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
+  We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
   
 - You can email a static exported worksheet to anyone or store it in a shared file. Anyone who opens the file will see all the data in the file.
   
