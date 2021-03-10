@@ -58,8 +58,8 @@ Multiple-table quick find searches up to 10 tables and returns the search result
      > [!div class="mx-imgBorder"]
      > ![Categorized Search Results](media/categorized-search-results.png "Categorized search results page") 
 
- 3. Filter results by a row type, choose a row type from the **Filter with** list. To search all row types, choose **None** from the **Filter with** list.  
-
+ 3. Select a table from the **Filter with** list to filter results by table type. To search across all tables, select **None**.
+ 
     > [!div class="mx-imgBorder"]
     > ![Filtering Categorized Search Results](media/filter-categorized-search-results.png "Filtering categorized search results")  
 
