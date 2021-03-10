@@ -18,7 +18,7 @@ Similar to subgrids, adding notes to your managed forms on the portal is easy&md
 > - Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For the detailed steps, go to [assign entity permissions](#assign-entity-permissions).
 > - The description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) for the note to appear on the portal page.
 
-## Notes configuration for Entity Forms
+## Notes configuration for entity forms
 
 1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
 
@@ -54,7 +54,7 @@ Similar to subgrids, adding notes to your managed forms on the portal is easy&md
 
 After adding the configuration, the Note control will be rendered by using the appropriate options enabled on the portal.
 
-## Attributes
+### Attributes
 
 
 | Name                  | Description                                                                                                                                                  |
@@ -81,7 +81,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following options: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders") <br>  To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
 
-### Create Dialog Options
+#### Create Dialog Options
 
 | Name                               | Description                                                                                                                                 |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -109,7 +109,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Close Button CSS Class             | Specify a CSS class or classes that will be applied to the dialog box's Close (Cancel) button.                                                |
 |||
 
-### Edit Dialog Options
+#### Edit Dialog Options
 
 | Name                               | Description                                                                                                                                   |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -137,7 +137,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Close Button CSS Class             | Specify a CSS class or classes that will be applied to the dialog box's Close (Cancel) button.                                                 |
 |||
 
-### Delete Dialog Options
+#### Delete Dialog Options
 
 | Name                     | Description                                                                                                                                       |
 |--------------------------|------------------------------|
@@ -155,7 +155,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Close Button CSS Class   | Specify a CSS class or classes that will be applied to the dialog box's Close (Cancel) button.                                                      |
 |||
 
-## Assign entity permissions
+### Assign entity permissions
 
 Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the entity or web form unless you create and assign the appropriate entity permissions to the records as follows:
 
@@ -193,7 +193,7 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
     
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
-## Notes created with rich-text editor
+### Notes created with rich-text editor
 
 You can view the notes created using the [rich-text editor in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
 
