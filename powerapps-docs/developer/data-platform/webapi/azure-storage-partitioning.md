@@ -1,6 +1,6 @@
 ---
-title: "Access documents faster using storage partitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to improve access performance for non-relational documents." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Access entity data faster using storage partitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to improve access performance for non-relational entity data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/27/2021
 ms.reviewer: "pehecke"
@@ -15,9 +15,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Access documents faster using storage partitions
+# Access entity data faster using storage partitions
 
-An optional partition key can be specified to create a logical partition for non-relational documents stored in NoSql tables of Azure heterogenous storage. Having a partition key improves application performance for large sets of data (millions of documents) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
+An optional partition key can be specified to create a logical partition for non-relational custom entity data stored in NoSql tables of Azure heterogenous storage ([Cosmo DB](azure/cosmos-db/introduction)). Having a partition key improves application performance for large sets of data (millions of records) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
 
 When no partition key is specified, the table is the logical boundary and retrieving a single item or a set of logically related items from a large data set will not be as performant as when using a partition key.
 
@@ -79,4 +79,5 @@ Here are a few more details about the partition key and partition management.
 
 [Create an entity record using the Web API](create-entity-web-api.md)  
 [Retrieve an entity record using the Web API](retrieve-entity-using-web-api.md)  
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)
+[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)  
+[Partitioning and horizontal scaling in Azure Cosmos DB](/azure/cosmos-db/partitioning-overview)

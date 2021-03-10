@@ -109,9 +109,9 @@ Any time you need to uniquely identify an entity to retrieve, update, or delete,
 
 ## Retrieve documents in storage partitions
 
-If you are retrieving entities containing documents that are stored in partitions be sure to specify the partition key when retrieving those documents.
+If you are retrieving entity data stored in partitions be sure to specify the partition key when retrieving that data.
 
-More information: [Access documents faster using storage partitions](azure-storage-partitioning.md)
+More information: [Access entity data faster using storage partitions](azure-storage-partitioning.md)
 
 ## Retrieve a single property value
 

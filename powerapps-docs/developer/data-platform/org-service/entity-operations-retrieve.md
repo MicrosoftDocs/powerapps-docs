@@ -169,7 +169,7 @@ Console.WriteLine(entity["name"]);
 
 ## Retrieve documents in storage partitions
 
-If you are retrieving entities containing documents that are stored in partitions be sure to specify the partition key when retrieving those documents. More information: [Improve performance when accessing documents using storage partitions](azure-storage-partitioning-sdk.md)
+If you are retrieving entity data stored in partitions be sure to specify the partition key when retrieving that entity data. More information: [Improve performance when accessing entity data using storage partitions](azure-storage-partitioning-sdk.md)
 
 ## Access Formatted values
 

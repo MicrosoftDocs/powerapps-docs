@@ -53,7 +53,7 @@
     href: entity-operations-update-delete.md
   - name: Associate and disassociate entities
     href: entity-operations-associate-disassociate.md
-  - name: Access documents faster using partitions
+  - name: Access entity data faster using partitions
     href: azure-storage-partitioning-sdk.md
 - name: Use messages
   href: use-messages.md

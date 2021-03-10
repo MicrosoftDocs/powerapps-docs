@@ -1,6 +1,6 @@
 ---
-title: "Improve performance when accessing documents using storage partitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to improve performance when accessing non-relational documents." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Improve performance using storage partitions when accessing entity data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to improve performance when accessing non-relational entity date." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/25/2021
 ms.reviewer: "pehecke"
@@ -15,15 +15,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Improve performance when accessing documents using storage partitions
+# Improve performance using storage partitions when accessing entity data
 
-An optional partition key can be specified to create a logical partition for non-relational documents stored in NoSql tables of Azure heterogenous storage. Having a partition key improves application performance for large sets of data (millions of documents) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
+An optional partition key can be specified to create a logical partition for non-relational custom entity data stored in NoSql tables of Azure heterogenous storage ([Cosmo DB](azure/cosmos-db/introduction)). Having a partition key improves application performance for large sets of data (millions of records) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
 
 When no partition key is specified, the table is the logical boundary and retrieving a single item or a set of logically related items from a large data set will not be as performant as when using a partition key.
 
 ## Creating and accessing a partition
 
-A unique new partition key value must be used to create a new logical partition. The same value must be used to create additional items in the same logical partition and to retrieve, update, or delete items belonging to the logical partition.
+A unique new partition key value must be used to create a new logical partition. The same value must be used to create additional items in the same logical partition and to retrieve, update, or delete items belonging to that logical partition.
 
 ```csharp
 public void Run(CrmServiceClient client)
@@ -88,14 +88,14 @@ Here are a few more details about the partition key and partition management.
 - The key value must be unique in the environment.
 - A partition is limited to 20 GB of data, and there is no method available to check the partition's current size.
 - There is no defined limit to the number of partitions you can allocate in an environment.
-- Partition allocation is automatic. Specifying a unique partition key during a Create operation creates a partition. When all data has been deleted from the partition, the partition is deleted.
+- Partition allocation is automatic. Specifying a unique partition key during a Create operation creates a partition. When all data has been deleted from the partition, the partition is automatically deleted.
 - There is no method available to rename a key.
 - Presently, only the Create, Update, Retrieve, and Delete entity operations support storage partitioning.
-
 
 ### See Also
 
 [Passing optional parameters with a request](use-messages.md#passing-optional-parameters-with-a-request)  
 [Create entities using the Organization Service](entity-operations-create.md)  
 [Retrieve an entity using the Organization Service](entity-operations-retrieve.md)  
-[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)
+[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)  
+[Partitioning and horizontal scaling in Azure Cosmos DB](/azure/cosmos-db/partitioning-overview)

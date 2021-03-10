@@ -217,9 +217,9 @@ See [Detect duplicates during Update operation using the Web API](manage-duplica
 
 ## Update and delete documents in storage partitions
 
-If you are updating or deleting entities containing documents that are stored in partitions be sure to specify the partition key when accessing those documents.
+If you are updating or deleting entity data stored in partitions be sure to specify the partition key when accessing that data.
 
-More information: [Access documents faster using storage partitions](azure-storage-partitioning.md)
+More information: [Access entity data faster using storage partitions](azure-storage-partitioning.md)
 
 ### See also
 
