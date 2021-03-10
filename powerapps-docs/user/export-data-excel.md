@@ -36,7 +36,7 @@ Export data from your model-driven app to Excel. You can export up to 100,000 ro
 3. When the download is complete, navigate to the location of the downloaded file.
   
    > [!NOTE]
-   > When you download a worksheet it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message:**Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
+   > When you download a worksheet it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
    > 
    > To fix the issue:  
    > 
