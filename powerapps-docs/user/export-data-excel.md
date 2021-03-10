@@ -33,6 +33,25 @@ Export data from your model-driven app to Excel. You can export up to 100,000 ro
 
    > [!div class="mx-imgBorder"] 
    > ![Export to excel](media/export_to_excel.png "Select export to Excel")
+3. When the download is complete, navigate to the location of the downloaded file.
+  
+   > [!NOTE]
+   > When you download a worksheet it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message:**Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
+   > 
+   > To fix the issue:  
+   > 
+   >    1. Open Excel and go to **File** > **Options** > **Trust Center** **Settings Center Settings** > **Protected View**.  
+   >    2. In **Protected View**, clear all three items.  
+   >    3. Select **OK** > **OK**.  
+   >     
+   >    We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
+  
+4. Open the saved Excel file.
+  
+5. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
+
+   > [!div class="mx-imgBorder"] 
+   > ![Enable content](media/enable-content.png "Enable content") 
 
 The data is exported in the same format that you see in your app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from your app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
   
