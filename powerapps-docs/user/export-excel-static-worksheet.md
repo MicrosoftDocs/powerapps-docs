@@ -34,14 +34,14 @@ You may have the option to export data to an Excel static worksheet in all row t
 2. On the command bar select the **Export to Excel**, and then choose **Static worksheet** or **Static worksheet (Page only)**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to Excel static worksheet](media/export-excel-staticl.png "Export to Excel static workshee")
+   > ![Export to Excel static worksheet](media/export-excel-static.png "Export to Excel static workshee"
   
-2. By default, an exported worksheet includes the columns that are displayed in the list, using the same column order, sorting, and column widths. To make changes to the columns in an Advanced Find View, choose **Edit Columns**. 
-  
-3. Choose **Save** and then save the .xlsx file. Make note of the location where you saved the file.  
+3. When the download is complete, navigate to the location of the download file.
+
+By default, an exported worksheet includes the columns that are displayed in the list, using the same column order, sorting, and column widths.  
   
    > [!NOTE]
-   > If you’re going to edit the data file later, it’s recommended that you save the file before you open it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
+   > If you’re going to edit the data file later, make sure you save it  fore you open it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
    > 
    > To fix the issue do this:  
    > 
@@ -51,18 +51,14 @@ You may have the option to export data to an Excel static worksheet in all row t
    > 
    > We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
 
-
-4. Open Excel and then open the .xlsx file you saved in the previous step.  
-  
-   By default, an exported worksheet includes the columns that are displayed in the list, using the same column order, sorting, and column widths.  
   
 ## Tips  
   
 - You can email a static exported worksheet to anyone or store it in a shared file. Anyone who opens the file will see all the data in the file.
   
-- You can’t change the columns for a system view, such as **All Active Accounts**. You must either customize the view, which requires the System Administrator or System Customizer security role, or use Advanced Find to create your own view based on the current view.  
+- You can’t change the columns for a system view. You must either customize the view, which requires the System Administrator or System Customizer security role, or use Advanced Find to create your own view based on the current view.  
     
-- In model-driven apps, currency values are exported to Excel as numbers. After you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4?ui=en-US&rs=en-US&ad=US).
+- Currency values are exported to Excel as numbers. After you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4?ui=en-US&rs=en-US&ad=US).
   
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   
