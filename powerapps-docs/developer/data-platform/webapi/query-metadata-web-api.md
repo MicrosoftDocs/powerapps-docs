@@ -351,3 +351,6 @@ You can use the `GlobalOptionSetDefinitions` entity set path to retrieve informa
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
 [Metadata entites and attributes using the Web API](create-update-entity-definitions-using-web-api.md)<br />
 [Metadata entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

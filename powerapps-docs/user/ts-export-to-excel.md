@@ -60,3 +60,6 @@ This issue occurs when the data that you're accessing is password-protected and 
     > ![Error message](media/ts-e2e-error-message.png "Error message")    
 
 6. Refresh the data in Excel.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

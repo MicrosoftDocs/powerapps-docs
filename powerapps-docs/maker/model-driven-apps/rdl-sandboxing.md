@@ -4,7 +4,7 @@ description: Learn about RDL sandboxing that may affect SSRS reports in Power Ap
 ms.custom: 
 ms.date: 09/30/2017
 ms.reviewer: 
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -269,3 +269,6 @@ In Microsoft Dataverse, reports run in the sandbox mode. This is done by enablin
 |MemberwiseClone|  
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

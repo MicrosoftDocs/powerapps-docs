@@ -157,3 +157,6 @@ Queries submitted to retrieve data from Dynamics 365 should not select all colum
 <xref href="Microsoft.Xrm.Sdk.Query.ColumnSet?text=ColumnSet Class" /><br />
 [Use of the ColumnSet Class](../../org-service/use-the-columnset-class.md)<br />
 [Build queries with QueryExpression](../../org-service/build-queries-with-queryexpression.md)<br />
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

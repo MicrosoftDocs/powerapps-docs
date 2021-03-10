@@ -949,3 +949,5 @@ See bot Entity [bot_conversationtranscript](bot.md#BKMK_bot_conversationtranscri
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.conversationtranscript?text=conversationtranscript EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

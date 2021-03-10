@@ -89,3 +89,6 @@ These topics provide additional information about writing or debugging a plug-in
 - [Tracing and logging](logging-tracing.md)
 - [Analyze performance](analyze-performance.md)
 - [Access external web resources](access-web-services.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

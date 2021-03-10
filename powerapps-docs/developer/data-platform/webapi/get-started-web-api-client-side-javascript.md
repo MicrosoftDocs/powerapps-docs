@@ -29,3 +29,6 @@ In HTML web resources, form scripts, or ribbon commands in model-driven apps, yo
 [Customize commands and ribbon](/powerapps/developer/model-driven-apps/customize-commands-ribbon)<br/>
 [Web resources](/powerapps/developer/model-driven-apps/web-resources)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

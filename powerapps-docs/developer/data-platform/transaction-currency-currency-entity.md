@@ -117,3 +117,6 @@ The following are the entities for which the transaction currency can be defined
  [TransactionCurrency Entity](reference/entities/transactioncurrency.md)   
  [Sample: Retrieve Currency Exchange Rate](org-service/samples/retrieve-currency-exchange-rate.md)   
  [Business Management Entities](/dynamics365/customer-engagement/developer/business-management-entities)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

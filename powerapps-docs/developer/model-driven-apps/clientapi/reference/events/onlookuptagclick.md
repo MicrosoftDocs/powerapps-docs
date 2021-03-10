@@ -31,3 +31,6 @@ The **getTagValue** method returns an object with the following properties:
 - [addOnLookupTagClick](../controls/addOnLookupTagClick.md) method to add event handlers for this event.
 - [removeOnLookupTagClick](../controls/removeOnLookupTagClick.md) method to remove event handlers for this event. 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

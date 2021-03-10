@@ -160,3 +160,6 @@ foreach (var webResource in webResources)
 ### See also  
  [WebResource Entity Reference](../data-platform/reference/entities/webresource.md)<br/>
  [Web Resources](web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

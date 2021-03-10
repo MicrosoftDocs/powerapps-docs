@@ -35,3 +35,6 @@ The following table lists the messages that you can use to create, retrieve, upd
 
  [Entity Relationship Eligibility](entity-relationship-eligibility.md)   
  [Configure entity relationship cascading behavior](configure-entity-relationship-cascading-behavior.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

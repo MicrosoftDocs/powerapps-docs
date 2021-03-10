@@ -4,7 +4,7 @@ description: "Learn how to invoke a custom action from a workflow"
 ms.custom: ""
 ms.date: 11/22/2018
 ms.reviewer: ""
-ms.service: flow
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -74,3 +74,6 @@ You can set the action’s input properties by choosing **Set Properties**. We a
 
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

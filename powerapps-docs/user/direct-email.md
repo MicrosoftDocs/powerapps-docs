@@ -83,3 +83,6 @@ You can check the status of bulk email action on the **System Jobs** page. You c
 ### See also
 
 [System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

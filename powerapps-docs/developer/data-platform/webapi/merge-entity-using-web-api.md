@@ -93,3 +93,6 @@ OData-Version: 4.0
 
 [Merge duplicate records](../../../user/merge-duplicate-records.md)<br />
 <xref:Microsoft.Crm.Sdk.Messages.MergeRequest>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

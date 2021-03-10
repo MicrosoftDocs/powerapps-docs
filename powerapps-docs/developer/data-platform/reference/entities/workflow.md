@@ -1929,3 +1929,5 @@ See botcomponent Entity [botcomponent_workflow](botcomponent.md#BKMK_botcomponen
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.workflow?text=workflow EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

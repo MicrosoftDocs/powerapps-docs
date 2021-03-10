@@ -39,3 +39,5 @@ search.app:
 
 ## Related topics
 [htmEncode](htmlEncode.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

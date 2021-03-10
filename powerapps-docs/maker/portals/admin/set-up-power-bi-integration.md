@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/13/2021
+ms.date: 02/08/2021
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -161,7 +161,7 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 3. In the **Manage Power BI Embedded service integration** window, remove, or move the Power BI workspaces from which dashboards and reports need to be displayed in your portal to the **Selected Workspaces** list.
 
     > [!div class=mx-imgBorder]
-    > ![Select Power BI workspaces - Manage Power BI Embedded service integration](../media/manage-powerbi-embedded-window.png "Select Power BI workspaces - Manage Power BI Embedded service integration")
+    > ![Manage Power BI Embedded service integration](../media/manage-powerbi-embedded-window.png "Manage Power BI Embedded service integration")
     
     > [!NOTE]
     > After removing the workspaces from the **Selected Workspaces** list, it can take up to 1 hour to reflect the changes. Until then, the databases and reports are rendered on the portal without any issues.
@@ -192,13 +192,29 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 - Power Apps portals doesn't support guest users for Power BI dashboards and reports. The following message is displayed when a guest user tries to sign-in to Power BI on the portal page: <br> `Selected user account does not exist in tenant '[Tenant Name]' and cannot access the application '[App ID]' in that tenant. The account needs to be added as an external user in the tenant first. Please use a different account.`
 - For more information about Power BI Embedded service limitations, see [Considerations and limitations](https://docs.microsoft.com/power-bi/developer/embed-service-principal#considerations-and-limitations).
 
+### Rendering Power BI report on my portal page fails with the following error:
+
+*A configuration error occurred while rendering your report.*
+
+This can happen due to multiple reasons such as:
+
+- Your [Power BI Embedded configuration](#enable-power-bi-embedded-service) is incorrect.
+- [Row-level security](https://docs.microsoft.com/power-bi/admin/service-admin-rls) in Power BI is enabled but you didn't pass roles in [Power BI component configuration](../add-powerbi.md) (Advanced settings), or *roles* parameter in the [powerbi liquid tag](../liquid/portals-entity-tags.md#powerbi).
+- **Embed content in apps** in Power BI [Developer Settings](https://docs.microsoft.com/power-bi/admin/service-admin-portal#developer-settings) is not enabled.
+
 ## Privacy notice  
 
 [!INCLUDE[cc_privacy_powerbi_tiles_dashboards](../../../includes/cc-privacy-powerbi-tiles-dashboards.md)]
 
+## Next steps
+
+[Add a Power BI component to a webpage using the portals Studio](../add-powerbi.md)
+
 ### See also
 
-- [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi)
 - [Add a Power BI report or dashboard to a webpage using liquid tag in portal](add-powerbi-report.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
 - [Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -168,3 +168,6 @@ For a detailed example, see the article on [simple offline capabilities](../offl
 
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

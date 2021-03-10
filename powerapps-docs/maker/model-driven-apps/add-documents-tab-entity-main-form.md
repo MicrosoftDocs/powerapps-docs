@@ -4,7 +4,7 @@ description: "Learn how to add the Documents tab to the main form for a table"
 s.custom: 
 ms.date: 01/06/2020
 ms.reviewer: 
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -97,3 +97,5 @@ Adding a tab on a table main form to display SharePoint documents helps users di
 
 ### See also
 [Manage your documents using SharePoint](/dynamics365/customer-engagement/admin/manage-documents-using-sharepoint)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

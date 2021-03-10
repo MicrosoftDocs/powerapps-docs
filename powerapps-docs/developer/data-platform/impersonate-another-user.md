@@ -73,3 +73,6 @@ More information: [Impersonate a user](impersonate-a-user.md).
 [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md)<br />
 [Write a plug-in](write-plug-in.md)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

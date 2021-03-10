@@ -96,3 +96,6 @@ In the scenarios mentioned, `window.top` refers to the window owned by an applic
 ### See also
 [Apply business logic using client scripting in model-driven apps using JavaScript](/powerapps/developer/model-driven-apps/client-scripting)<br/>
 [Events in forms and grids in model-driven apps](/powerapps/developer/model-driven-apps/clientapi/events-forms-grids)<br/>
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

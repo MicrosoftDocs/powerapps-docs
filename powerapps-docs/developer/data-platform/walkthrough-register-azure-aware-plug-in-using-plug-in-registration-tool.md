@@ -92,3 +92,6 @@ You can now unregister the endpoint, if so desired, by selecting it in the tool'
 [Azure integration for Dataverse](azure-integration.md)<br />
 [Introduction to Microsoft Azure Integration with Dataverse](azure-integration.md)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

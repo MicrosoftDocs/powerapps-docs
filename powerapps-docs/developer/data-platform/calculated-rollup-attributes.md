@@ -184,3 +184,6 @@ search.app:
  [Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes)   
  [Define calculated fields](https://docs.microsoft.com/powerapps/maker/data-platform/define-calculated-fields)   
  [Define rollup fields](https://docs.microsoft.com/powerapps/maker/data-platform/define-rollup-fields)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

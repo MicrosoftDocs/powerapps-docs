@@ -945,3 +945,6 @@ you might want to pin the crisis management admin app or the Power BI report to 
 
 - [Formula reference](formula-reference.md)
 - [Controls reference](reference-properties.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

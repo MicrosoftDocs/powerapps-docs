@@ -4,7 +4,7 @@ description: "Learn how to configure real-time workflow steps"
 ms.custom: ""
 ms.date: 07/30/2020
 ms.reviewer: ""
-ms.service: flow
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -131,3 +131,6 @@ When you apply a **Stop Workflow** action in a real-time workflow, you have the 
 [Workflow processes overview](workflow-processes.md)    -->
 [Monitor and manage real-time workflow processes](monitor-manage-processes.md)   
 [Best practices for real-time workflow processes](best-practices-workflow-processes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

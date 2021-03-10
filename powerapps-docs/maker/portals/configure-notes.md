@@ -256,4 +256,3 @@ However, when editing the note from portal web page, you'll see the note in HTML
 ## Notes configuration for web forms
 
 Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). Create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
-

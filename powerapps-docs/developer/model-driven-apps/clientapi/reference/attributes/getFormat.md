@@ -64,3 +64,6 @@ The following table lists the format string values to expect for each type of at
 | Single Line of Text        | Phone             | string             | phone            |
 | Whole Number               | Time Zone         | optionset          | timezone         |
 | Single Line of Text        | Url               | string             | url 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

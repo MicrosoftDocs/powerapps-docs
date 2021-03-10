@@ -4,7 +4,7 @@ description: "With actions, you can perform operations, such as Create, Update, 
 ms.custom: ""
 ms.date: 08/07/2018
 ms.reviewer: ""
-ms.service: flow
+ms.service: powerapps
 author: MSFTMAN
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -44,3 +44,6 @@ Unlike Microsoft Dataverse workflows or [plug-ins](/powerapps/developer/data-pla
 [Create a custom action](create-actions.md)  
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

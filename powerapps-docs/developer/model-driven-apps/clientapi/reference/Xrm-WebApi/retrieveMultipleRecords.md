@@ -322,3 +322,6 @@ For more examples of retrieving multiple records using Web API, see [Query Data 
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -76,3 +76,6 @@ The existing <xref:Microsoft.Xrm.Sdk.IExecutionContext.Depth> platform checks en
  [Use actions](../../maker/data-platform/actions.md)<br />
  [Classic Dataverse workflows](/flow/workflow-processes)<br />
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

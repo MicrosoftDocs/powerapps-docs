@@ -75,3 +75,6 @@ In order to provide greater capabilities within custom workflow activities witho
 ### See also
 
 [Workflow extensions](../../workflow/workflow-extensions.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

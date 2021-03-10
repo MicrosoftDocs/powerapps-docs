@@ -48,3 +48,6 @@ The calendar entity stores data for customer service calendars and holiday sched
  [Service Entity](/dynamics365/customer-engagement/developer/service-entity)  
   
  [Sample Code for Schedule and Appointment Entities](/dynamics365/customer-engagement/developer/sample-code-schedule-appointment-entities)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

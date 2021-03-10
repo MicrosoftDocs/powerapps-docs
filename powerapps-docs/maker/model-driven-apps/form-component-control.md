@@ -23,7 +23,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using the main form. 
+There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using a [main form in a dialog.](https://docs.microsoft.com/powerapps/developer/model-driven-apps/customize-entity-forms#open-main-form-in-a-dialog-using-client-api)
 
 Another way you can work with related table records is by adding a form component control to another table's main form. The form component control lets users edit information of a related table record directly from another table’s form.
 
@@ -105,6 +105,11 @@ Note the following limitations when you add the form component control to a tabl
 
 - You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.  
 
+- For subgrids, the **See all records** and **See associated records** command buttons will not be available if they are rendered inside a form component.
+
 ### See also
 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

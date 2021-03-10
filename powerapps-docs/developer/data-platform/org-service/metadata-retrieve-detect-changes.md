@@ -465,3 +465,6 @@ protected String updateOptionLabelList(EntityQueryExpression entityQueryExpressi
  [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
  [Customize Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
  [Query Metadata Using JavaScript](https://msdn.microsoft.com/library/jj919080.aspx)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

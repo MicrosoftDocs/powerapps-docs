@@ -50,3 +50,6 @@ On the **File** menu, click or tap **Save** to republish your app with the new s
 * [Share an app](share-app.md)
 * [Delete an app](delete-app.md)
 * [Restore an app to a previous version](restore-an-app.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -147,3 +147,6 @@ Because of the capability for the HTML in web resources to be changed by using t
  [Using Data (XML) web resources](data-xml-web-resources.md)   
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -54,3 +54,6 @@ Xrm.Navigation.openAlertDialog(alertStrings, alertOptions).then(
 
 [Xrm.navigation](../xrm-navigation.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

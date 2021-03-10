@@ -35,7 +35,7 @@ The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium
   
 ## Open solution explorer
 
-Part of the name of any custom relationship you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
+Part of the name of any custom relationship you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
@@ -111,3 +111,6 @@ Deleting the relationship will delete the relationship table created. All data c
 [Create Many-to-many (N:N) table relationships](create-edit-nn-relationships.md)<br />
 [Create Many-to-many table relationships in Dataverse using Power Apps portal](create-edit-nn-relationships-portal.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships](create-edit-1n-relationships.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

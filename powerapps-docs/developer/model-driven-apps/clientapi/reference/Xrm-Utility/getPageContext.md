@@ -56,3 +56,6 @@ The method returns an object with the `input` property. The `input` property is 
 
 [Xrm.Utility](../xrm-utility.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

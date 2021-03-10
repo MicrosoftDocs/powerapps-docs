@@ -2,7 +2,7 @@
 title: "Service Protection API Limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 01/08/2021
+ms.date: 02/07/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -45,19 +45,13 @@ Applications designed to load data into Dataverse or perform bulk updates must a
 
 ### Portal applications
 
-Portal applications typically send requests from anonymous users through a single service principal account. Because the service protection API limits are based on a per user basis, portal applications can hit service protection API limits based on the amount of traffic the portal experiences. Like interactive client applications, it isn't expected that the service protection API limits errors should be displayed to the portal end user. It is expected that the UI should disable further requests and display a message that the server is busy. The message may include the time when the application can begin accepting new requests.
+Portal applications typically send requests from anonymous users through a service principal account. Because the service protection API limits are based on a per user basis, portal applications can hit service protection API limits based on the amount of traffic the portal experiences. Like interactive client applications, it isn't expected that the service protection API limits errors should be displayed to the portal end user. It is expected that the UI should disable further requests and display a message that the server is busy. The message may include the time when the application can begin accepting new requests.
 
 ## Impact on plug-ins and custom workflow activities
 
 Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits are not applied to plug-ins and custom workflow activities. Plug-ins and custom workflow activities are uploaded and run within the isolated sandbox service. Dataverse operations invoked on the sandbox service do not use the public API endpoints.
 
 If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits. More information: [How Service Protection API Limits are enforced](#how-service-protection-api-limits-are-enforced)
-
-## Impact on relevance search
-
-When using the relevance search API, there is a throttling limit of one request per second for each user.
-
-More information: [Search across entity data using relevance search](webapi/relevance-search.md)
 
 ## Retry operations
 
@@ -74,11 +68,9 @@ If the client is an interactive application, you should display a message that t
 
 If the client is not interactive, the common practice is to simply wait for the duration to pass before sending the request again. This is commonly done by pausing the execution of the current thread using [Thread.Sleep](/dotnet/api/system.threading.thread.sleep) or equivalent methods.
 
-
-
 ## How Service Protection API Limits are enforced
 
-The service protection API limits are evaluated within a 5 minute (300 second) sliding window. If any of the limits are exceeded within the preceding 300 seconds, a service protection API Limit error will be returned on subsequent requests to protect the service until the Retry-After duration has ended.
+Two of the service protection API limits are evaluated within a 5 minute (300 second) sliding window. If either limits are exceeded within the preceding 300 seconds, a service protection API Limit error will be returned on subsequent requests to protect the service until the Retry-After duration has ended.
 
 The service protection API limits are evaluated per user. Each authenticated user is limited independently. Only those users accounts which are making extraordinary demands will be limited. Other users will not be impacted.
 
@@ -92,17 +84,17 @@ If the only limit was on the number of requests sent by a user, it would be poss
 
 - You could send fewer requests by bundling them in batch operations.
   - The combined execution time limit will counter this.
-- Rather than sending requests individually in succession, you could send a large number of concurrent requests within the 5 minute sliding window before service protection API limits are enforced.
+- Rather than sending requests individually in succession, you could send a large number of concurrent requests before service protection API limits are enforced.
   - The concurrent request limit will counter this.
 
 Each web server available to your environment will enforce these limits independently. Most environments will have more than one web server. Trial environments are allocated only a single web server. The actual number of web servers that are available to your environment depends on multiple factors that are part of the managed service we provide. One of the factors is how many user licenses you have purchased.
 
-The following table describes the default service protection API limits enforced *per web server* within the 5 minute sliding window.
+The following table describes the default service protection API limits enforced *per web server*:
 
 |Measure|Description|Limit per web server|
 |--|--|--|
-|Number of requests|The cumulative number of requests made by the user.|6000|
-|Execution time|The combined execution time of all requests made by the user.| 20 minutes (1200 seconds)|
+|Number of requests|The cumulative number of requests made by the user.|6000 within the 5 minute sliding window|
+|Execution time|The combined execution time of all requests made by the user.| 20 minutes (1200 seconds) within the 5 minute sliding window|
 |Number of concurrent requests|The number of concurrent requests made by the user|52|
 
 > [!IMPORTANT]
@@ -154,7 +146,7 @@ This limit can be encountered when strategies using batch operations and concurr
 
 ### Concurrent requests
 
-This limit tracks the number of concurrent requests during the preceding 300 second period.
+This limit tracks the number of concurrent requests.
 
 | Error code | Hex code | Message |
 |------------|------------|-------------------------------------|
@@ -358,9 +350,22 @@ This section includes frequently asked questions. If you have questions that are
 
 Work with the ETL application vendor to learn which settings to apply. Make sure you are using a version of the product that supports the Retry-After behavior.
 
+### Do these limits apply to Relevance Search?
+
+No. Relevance search is a different API (`api/search` rather than `api/data`) and has different rules. When using the relevance search API, there is a throttling limit of one request per second for each user.
+
+More information: [Search across entity data using relevance search](webapi/relevance-search.md)
+
+### How do these limits apply to how many requests a user is entitled to each day?
+
+These limits are not related to entitlement limits. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
+
 ### See also
 
 [Administer Power Platform / Licensing and license management / Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)<br />
 [Dataverse API limits overview](../../maker/data-platform/api-limits-overview.md)<br />
 [Use Dataverse Web API](webapi/overview.md)<br />
 [Use Dataverse Organization Service](org-service/overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -29,7 +29,7 @@ search.app:
 Ensure you have a [security role](https://docs.microsoft.com/power-platform/admin/security-roles-privileges) with equal or greater permissions than the role you're assigning to the app and to other users. 
 
 ## Create a security role for your app
-Generally model-driven apps contain custom tables and other custom configuration. It's important to first [create a security role](#create-a-security-role-for-your-app) with permission for all the components used in your app.  
+Generally model-driven apps contain custom tables and other custom configuration. It's important to first create a security role with permission for all the components used in your app. More information: [Create a custom security role](#create-a-custom-security-role)
 > [!NOTE]
 > This step can be skipped if existing roles grant access to the data in your app. 
 
@@ -53,7 +53,6 @@ To get the direct link to an app:
 1. Edit the app and click the **Properties** tab
 2. Copy the **Unified Interface URL.**
 3. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
-
 
 ## Create or configure a security role
 The [!INCLUDE [powerapps](../../includes/powerapps.md)] environment includes [predefined security roles](#about-predefined-security-roles) that reflect common user tasks with access levels defined to match the security best-practice goal of providing access to the minimum amount of business data required to use the app. For example, if your app is based on a custom table, the table privileges must be explicitly specified before users may work in it. To do this, you can choose to do one of the following.
@@ -158,3 +157,6 @@ Administrators can use their organization’s Azure Active Directory (Azure AD) 
 [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

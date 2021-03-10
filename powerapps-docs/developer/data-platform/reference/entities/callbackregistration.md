@@ -614,3 +614,5 @@ See businessunit Entity [businessunit_callbackregistration](businessunit.md#BKMK
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.callbackregistration?text=callbackregistration EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

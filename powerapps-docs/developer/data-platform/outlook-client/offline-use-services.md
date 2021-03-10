@@ -34,3 +34,6 @@ Dynamics 365 for Outlook with Offline Access enables you to continue your work 
  [Organization Service Methods](/dynamics365/customer-engagement/developer/org-service/organization-service-methods)   
  <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>   
  <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -4,7 +4,7 @@ description: "This sample shows you how to connect to the Microsoft Dataverse we
 ms.custom: 
 ms.date: 03/27/2019
 author: Nkrb
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: samples
@@ -235,3 +235,6 @@ namespace PowerApps.Samples
 
 [Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)<br />
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

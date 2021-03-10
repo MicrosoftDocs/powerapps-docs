@@ -37,3 +37,6 @@ webresource
 ## Related topics
 
 [getData](getData.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

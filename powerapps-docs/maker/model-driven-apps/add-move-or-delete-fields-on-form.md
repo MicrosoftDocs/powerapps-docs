@@ -59,23 +59,30 @@ To add columns to a form, use the **Columns** pane. The **Columns** pane lets yo
 7. In the command bar, select **Save** to save the form, or select **Publish** if you want to save and make your changes visible to users. 
 
 ## Configure columns on a form
-These are the properties available to configure a column when you create or edite a form using the form designer.
+These are the properties and events available to configure a column when you create or edit a form using the form designer.
 
 ## Column properties
 
+The **Properties** tab displays the following properties. 
+
 |Area  |Name  |Description  |
 |---------|---------|---------|
-|**Display options** | **Column label** | By default the label will match the display name of the column. You can override that name for the form by entering a different label here. <br /><br />This property is required. |
-|**Display options** |  **Column name** | The name of the column. This comes from the column properties on the table and is read-only. |
+|**Display options** | **Table column** | The name of the column. This comes from the column properties on the table and is read-only.  |
+|**Display options** |  **Label** | By default the label will match the display name of the column. You can override that name for the form by entering a different label here. <br /><br />This property is required. |
 |**Display options** | **Hide label** | When selected, the column label is hidden. |
-|**Display options** | **Read-only column** | When selected, the column value is not editable. |
-|**Display options** | **Lock column** |  Lock this column so it can't be removed. |
-|**Display options** | **Hide column** | When selected, the column is hidden by default and can be shown using code. |
 |**Display options** | **Hide on phone** | The column can be hidden to render a condensed version of the form on phone screens. |
+|**Display options** | **Hide** | When selected, the column is hidden by default and can be shown using code. |
+|**Display options** | **Lock** |  Lock this column so it can't be removed. |
+|**Display options** | **Read-only** | When selected, the column value is not editable. |
 |**Formatting** | **Column width** |  When the section containing the columns has more than one column you can set the column to occupy up to the number of columns that the section has. |
+|**Components**  | **Component**  | Add a control to the column, such as the rich text editor or canvas app control.  |
 
 > [!NOTE]
 > In Unified Interface, the label size setting is ignored because the form adjusts width for all columns to ensure proper rendering for screen sizes from very small to extra-large.
+
+## Column events
+
+The **Events** tab is where event handlers for model-driven app forms can be configured for a column. An event handler consists of a reference to a JavaScript web resource and a function defined within that web resource that will execute when the event occurs, such as when the value for the column changes. More information: [Configure model-driven app form event handlers](configure-event-handlers-legacy.md)
 
 ## Move columns on a form
 You can move a column on a form using drag and drop or cut and paste actions. 
@@ -141,3 +148,6 @@ You can move a column on a form using drag and drop or cut and paste actions.
 [Configure a lookup component on a form](form-designer-add-configure-lookup.md)  
 [Using the tree view in the form designer](using-tree-view-on-form.md)  
 [Create and edit columns](../data-platform/create-edit-field-portal.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -308,3 +308,6 @@ If you do not specify the type of entity in this situation, you can get the foll
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

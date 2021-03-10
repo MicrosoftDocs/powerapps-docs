@@ -48,3 +48,6 @@ For information on using Dynamics 365 App for Outlook, see [Dynamics 365 App for
 [Customize Dynamics 365 App for Outlook](../maker/model-driven-apps/app-for-outlook-customize.md)  
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -92,3 +92,6 @@ If the alternate key is deleted while an index creation job is still pending or 
  [Use Upsert to insert or update a record](use-upsert-insert-update-record.md)
  [Define alternate keys to reference records](../../maker/data-platform/define-alternate-keys-reference-records.md)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

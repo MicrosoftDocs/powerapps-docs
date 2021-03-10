@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/06/2020
+ms.date: 02/08/2021
 ms.author: dileeps
 ms.reviewer: tapanm
 ---
@@ -18,8 +18,9 @@ This topic provides resources where you can learn about the new features that ha
 
 For information about new features releasing over the next few months that you can use for planning, see:
 
-- [2020 release wave 1 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave1/microsoft-powerapps/planned-features#power-apps-portals-improvements)
+- [2021 release wave 1 plan](https://docs.microsoft.com/power-platform-release-plan/2021wave1/power-apps-portals/)
 - [2020 release wave 2 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave2/power-apps/planned-features#power-apps-portals-improvements)
+- [2020 release wave 1 plan](https://docs.microsoft.com/power-platform-release-plan/2020wave1/microsoft-powerapps/planned-features#power-apps-portals-improvements)
 
 ## Previous portal updates
 
@@ -147,3 +148,6 @@ The December 2016 update has brought many new features to Dynamics 365 Portals. 
 [!INCLUDE[cc-privacy-crm-portals-data-exposed](../../includes/cc-privacy-crm-portals-data-exposed.md)]
 
 For more information about additional [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] service offerings, see the [[!INCLUDE[cc_privacy_note_azure_trust_center](../../includes/cc_privacy_note_azure_trust_center.md)]](https://azure.microsoft.com/support/trust-center/).  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

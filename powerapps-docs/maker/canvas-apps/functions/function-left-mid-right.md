@@ -71,3 +71,6 @@ Each example in this section extracts strings from the **Address** [column](../w
    
     The label shows the last three characters of each product name.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

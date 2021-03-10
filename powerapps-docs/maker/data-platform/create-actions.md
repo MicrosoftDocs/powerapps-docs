@@ -4,7 +4,7 @@ description: "Use custom actions when you want to automate a series of commands 
 ms.custom: ""
 ms.date: 08/06/2018
 ms.reviewer: "matp"
-ms.service: flow
+ms.service: powerapps
 ms.topic: "article"
 author: "msftman"
 ms.assetid: 6dbc0f10-7ac5-4685-ab74-22d24bf7102d
@@ -150,3 +150,6 @@ In addition to the steps that can be used for real-time workflows, actions also 
 
  
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

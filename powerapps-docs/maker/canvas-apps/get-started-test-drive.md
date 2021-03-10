@@ -70,3 +70,6 @@ An app from a template opens in the default workspace, where you'll spend most o
 
 > [!IMPORTANT]
 > Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

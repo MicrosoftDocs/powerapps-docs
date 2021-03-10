@@ -63,3 +63,6 @@ The Microsoft Dataverse data import entities are used to create data maps, confi
  [Run data import](run-data-import.md)<br />
  [Sample: Export and import a data map](/dynamics365/customer-engagement/developer/org-service/samples/export-import-data-map)<br />
  [Sample: Import data using complex data map](/dynamics365/customer-engagement/developer/org-service/samples/import-data-complex-data-map)<br />
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -30,3 +30,6 @@ To configure the additional settings for any OAuth 2.0 identity provider, select
 ### See also
 
 [Configure an OAuth 2.0 provider for portals](configure-oauth2-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

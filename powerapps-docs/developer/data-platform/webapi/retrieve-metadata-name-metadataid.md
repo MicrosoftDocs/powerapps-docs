@@ -300,3 +300,6 @@ OData-Version: 4.0
 [Query metadata using the Web API](query-metadata-web-api.md)<br />
 [Create and update entity definitions using the Web API](create-update-entity-definitions-using-web-api.md)<br /> 
 [Create and update entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

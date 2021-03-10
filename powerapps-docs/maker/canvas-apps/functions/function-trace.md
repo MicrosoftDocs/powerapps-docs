@@ -33,3 +33,6 @@ Trace messages can also be defined in your app. These can be viewed in the Power
 
 [Test Studio Overview](../test-studio.md) <br>
 [Working with Test Studio](../working-with-test-studio.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -52,7 +52,7 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 - **Follow Up By**: Follow up on an activity by a specified number of days based on priority  
   
 > [!IMPORTANT]
->  To create a calculated column you must have the Write privilege on the [Column Security Profile table](/powerapps/developer/data-platform/reference/tables/columnsecurityprofile). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Column level security to control access](/dynamics365/customer-engagement/admin/column-level-security).  
+>  To create a calculated column you must have the Write privilege on the [Field Security Profile table](/powerapps/developer/data-platform/reference/entities/fieldsecurityprofile). If the calculated column uses the secured columns in a calculation, you should consider securing the calculated column as well, to prevent users from accessing data for which they don’t have sufficient permissions. The calculated column editor gives you a warning if you are creating a calculated column that uses secured columns in a calculation, suggesting you secure the calculated column. More information:  [Column level security to control access](/dynamics365/customer-engagement/admin/column-level-security).  
 
 ## Create a calculated column
 
@@ -231,3 +231,6 @@ You should be aware of certain conditions and limitations when working with calc
 [Create and edit columns](create-edit-fields.md)<br />
 [Define rollup columns that aggregate values](define-rollup-fields.md)<br />
 [Video: Rollup and calculated columns](https://go.microsoft.com/fwlink/p/?LinkId=517727)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

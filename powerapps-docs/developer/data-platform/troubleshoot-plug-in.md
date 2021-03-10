@@ -158,3 +158,5 @@ Error Code: `-2147220989`<br />
 Error Message: `You cannot start a transaction with a different isolation level than is already set on the current transaction`
 
 Plug-ins are intended to support business logic. Modifying any part of the data schema within synchronous plug-in is not supported. These operations frequently take longer and may cause cached metadata used by applications to become out of sync. However, these operations can be performed in a plug-in step registered to run asynchronously.
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
