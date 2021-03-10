@@ -24,7 +24,7 @@ searchScope:
   - Power Apps
 ---
 
-# Using quick find to search for rows
+# Use quick find search 
 
 Quickly search across multiple tables at the same time and find the information that you're looking for. When you enter a search term the system finds matches to all words in the search term in one column within a table. The words can be matched in any order in the column.
 
@@ -39,7 +39,7 @@ With categorized search, you can search for rows that begin with a specific word
 
 ## Single table quick find 
 
-Use single-table quick to find row in a view.
+Use single-table quick find to only search for rows in a view. 
 
    > [!div class="mx-imgBorder"]
    > ![Single-table Quick Find](media/quick-find-view-only.gif "Single-table quick find search box") 
@@ -53,7 +53,7 @@ Multiple-table quick find searches up to 10 tables and returns the search result
      > [!div class="mx-imgBorder"]
      > ![Global Search Button](media/global-search-button.png "Global search")
   
-2.  Type your search words in the search box, and then select **Search**. The search returns results grouped by table such as Products, Reservations, and Reviews.
+2.  Type your search words in the search box, and then select **Search**. The search results are grouped by table such as Products, Reservations, and Reviews.
 
      > [!div class="mx-imgBorder"]
      > ![Categorized Search Results](media/categorized-search-results.png "Categorized search results page") 
@@ -64,7 +64,6 @@ Multiple-table quick find searches up to 10 tables and returns the search result
     > ![Filtering Categorized Search Results](media/filter-categorized-search-results.png "Filtering categorized search results")  
 
   
-
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
