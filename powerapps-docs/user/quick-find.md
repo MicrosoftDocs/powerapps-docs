@@ -48,7 +48,7 @@ Use single-table quick find to only search for rows in a view.
 
 Multiple-table quick find searches up to 10 tables and returns the search results grouped by table.
 
-1.  To start a categorized search, from the top nav bar, select **Search**.  
+1.  To start a categorized search, on the command bar, select **Search**.  
 
      > [!div class="mx-imgBorder"]
      > ![Global Search Button](media/global-search-button.png "Global search")
