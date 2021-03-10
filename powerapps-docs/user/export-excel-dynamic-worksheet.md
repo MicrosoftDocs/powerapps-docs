@@ -27,7 +27,7 @@ Use the Microsoft Power Apps Excel Add-in to download, edit, and then save the d
   
 1. On the left nav, select a table.
 
-2. On the command bar select the **Export to Excel** menu and then select **Open in Dynamic Worksheet**.
+2. On the command bar select the **Export to Excel** menu and then select **Dynamic Worksheet**.
 
    > [!div class="mx-imgBorder"] 
    > ![Export to Excel dynamic worksheet](media/open-dynamic-worksheet.png "Select export to Excel dynamic worksheet")
@@ -37,10 +37,10 @@ Use the Microsoft Power Apps Excel Add-in to download, edit, and then save the d
    > [!div class="mx-imgBorder"] 
    > ![Select columns to export](media/open-dynamic-worksheet-1.png "*Select columns to export**")
   
-4. In most cases, the .xlsx file is automatically saved to the downloads folder on your computer or you may need to save the file.
+4. When the download is complete, navigate to the location of the downloaded file.
   
    > [!NOTE]
-   > If you open the file without saving, you will get this error: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
+   > When you download a worksheet it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message:**Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
    > 
    > To fix the issue:  
    > 
@@ -53,7 +53,9 @@ Use the Microsoft Power Apps Excel Add-in to download, edit, and then save the d
 5. Open the saved Excel file.
   
 6. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
-  
+
+   > [!div class="mx-imgBorder"] 
+   > ![Enable content](media/enable-content.png "Enable content") 
 
   
 ## Tips  
