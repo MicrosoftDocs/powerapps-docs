@@ -34,7 +34,7 @@ You may have the option to export data to an Excel static worksheet in all row t
 2. On the command bar select the **Export to Excel**, and then choose **Static worksheet** or **Static worksheet (Page only)**.  
 
    > [!div class="mx-imgBorder"] 
-   > ![Export to Excel static worksheet](media/export-excel-static.png "Export to Excel static workshee"
+   > ![Export to Excel static worksheet](media/export-excel-static.png "Export to Excel static worksheet")
   
 3. When the download is complete, navigate to the location of the download file.
 
