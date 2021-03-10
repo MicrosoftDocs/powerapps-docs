@@ -44,7 +44,7 @@ By default, an exported worksheet includes the columns that are displayed in the
   
 ## Tips  
 
-- When you save an Excel static worksheet it should automatcially save to your computer. However, if it doesn't save then make sure you save it bfore you open and edit it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.** To fix the issue do this:  
+- When you download an Excel static worksheet it should automatcially save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.** To fix the issue do this:  
 
   1. Open Excel and go to **File** > **Options** > **Trust Center** > **Settings Center Settings** > **Protected View**.  
   2.  In **Protected View**, clear all three items.  
