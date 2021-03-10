@@ -23,7 +23,7 @@ Export your app data to an Office Excel worksheet so users can have the latest i
 
 You can export up to 100,000 rows at a time. You can’t export data to a dynamic worksheet in Excel for all table. If you don’t see the option, it’s not available for that table.
 
-Use the Microsoft Power Apps Excel Add-in to download, edit, and then save the data back to your app. For more information, see [Open table data in Excel](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-excel-addin).
+Use the Microsoft Power Apps Excel Add-in to download you app data and make edit and then save the data back to your app. For more information, see [Open table data in Excel](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-excel-addin).
   
 1. On the left nav, select a table.
 
