@@ -26,19 +26,28 @@ searchScope:
 
 # Using quick find to search for rows
 
-Quickly search across multiple tables at the same time and find the information that you're looking for. When you enter a search term it finds matches to all words in the search term in one column in a table; however, the words can be matched in any order in the column. The results of the search are shown in groups, sorted by table.
+Quickly search across multiple tables at the same time and find the information that you're looking for. When you enter a search term the system finds matches to all words in the search term in one column in a table. The words can be matched in any order in the column.
 
-There are two ways to use quick find.
+With categorized search, you can search for rows that begin with a specific word or use a wildcard character.
+  
+- **Begins with**: Results include rows that begin with a specific word. For example, if you want to search for "Alpine Ski House," type **alp** in the search box; if you type **ski**, the row won't show up.  
+  
+- **Wildcard**: For example, *ski or *ski\*. 
 
-- Single-table quick: Searches for the rows within a view.
+  > [!NOTE]
+  >  Using a wildcard at the beginning of your quick find (single or multiple-table) search query might result in slower performance.
+
+## Single table quick find 
+
+Single-table quick find searches for the rows within a view.
 
    > [!div class="mx-imgBorder"]
    > ![Single-table Quick Find](media/quick-find-view-only.gif "Single-table quick find search box") 
 
-- Multiple-table quick find: Searches up to 10 tables, grouped by a table and returns the search results grouped by categories, such as accounts or contacts.
+## Multiple-table quick find (categorized search)
 
+Multiple-table quick find searches up to 10 tables and returns the search results grouped by table.
 
-## Start a search 
 
 1.  To start a categorized search, from the top nav bar, select **Search**.  
 
@@ -50,14 +59,7 @@ There are two ways to use quick find.
      > [!div class="mx-imgBorder"]
      > ![Categorized Search Results](media/categorized-search-results.png "Categorized search results page") 
 
-With categorized search, you can search for rows that begin with a specific word or use a wildcard character.
-  
-- **Begins with**: Results include rows that begin with a specific word. For example, if you want to search for "Alpine Ski House," type **alp** in the search box; if you type **ski**, the row won't show up.  
-  
-- **Wildcard**: For example, *ski or *ski\*. 
 
-  > [!NOTE]
-  >  Using a wildcard at the beginning of your quick find (single or multiple-table) search query might result in slower performance.
   
 ## Filter categorized search results 
   
