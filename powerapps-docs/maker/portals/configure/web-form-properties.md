@@ -81,7 +81,9 @@ Example:
 ![Save changes warning](../media/save-changes-warning.png "Save changes warning")  
 
 >[!Note]
-> Firefox does not provide the ability to specify a custom message.
+> Only Microsoft Internet Explorer 11* supports the ability to specify a custom message using "Save changes" warning. However, most of the browsers warn by default when a user tries to move away from the page, or close the page that has unsaved changes.
+
+*Microsoft Internet Explorer 11 support for Power Apps is deprecated. We recommend that you use Microsoft Edge. More information: [Deprecation announcement](https://docs.microsoft.com/power-platform/important-changes-coming#internet-explorer-11-support-for-dynamics-365-and-microsoft-power-platform-is-deprecated)
 
 ## Geolocation configuration for web form
 
