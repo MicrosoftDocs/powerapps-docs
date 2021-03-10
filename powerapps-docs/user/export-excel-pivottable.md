@@ -40,7 +40,7 @@ The option to export data to an Excel PivotTable isn’t available in all row ty
 4. When the download is complete, navigate to the location of the downloaded file.
   
    > [!NOTE]
-   > When you download a worksheet it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message:**Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
+   > When you download a worksheet it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
    > 
    > To fix the issue:  
    > 
