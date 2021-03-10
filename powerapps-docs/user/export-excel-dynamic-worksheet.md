@@ -64,7 +64,7 @@ Use the Microsoft Power Apps Excel Add-in to download, edit, and then save the d
   
 - Some system views can be exported only to a static Excel worksheet.  
   
-- In Power Apps, currency values are exported to Excel as numbers. To format the data as currency after you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4).
+- Currency values are exported to Excel as numbers. To format the data as currency after you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4).
 
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   
