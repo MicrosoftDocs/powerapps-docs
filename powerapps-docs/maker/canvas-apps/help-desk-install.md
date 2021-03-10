@@ -14,6 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
+
 # Install and configure the Help Desk sample in Power Apps
 
 Step-by-step instructions for, in Power Apps, installing and configuring the Help Desk sample for canvas apps.
