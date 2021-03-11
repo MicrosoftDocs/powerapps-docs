@@ -155,6 +155,6 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 
 ### See also
 
-[Use DelayItemLoading and Loading spinner to improve performance in Gallery](../performance-tips.md#use-delayitemLoading-and-loading-spinner-to-improve-performance-in-gallery)
+[Use DelayItemLoading and Loading spinner to improve performance in Gallery](../performance-tips.md##use-delayitemloading-and-loading-spinner-to-improve-performance-in-gallery)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
