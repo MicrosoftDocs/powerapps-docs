@@ -135,6 +135,11 @@ If you have multiple formulas or rules that reference the value of a **Text inpu
 
 If you reference a user-input value in a rule or a formula by using a `Form.Updates` variable, it iterates over all the form's data cards and creates a record each time. To make your app more efficient, reference the value directly from the data card or the control value.
 
+## Use DelayItemLoading and Loading spinner to improve performance in Gallery
+
+Depending on the configuration, Gallery can take longer to render the visible rows. Simplifying the template could make a big difference.
+You should also ensure the Gallery instance has **DelayItemLoading** set to **true**, and **LoadingSpinner** set to **LoadingSpinner.Controls**, which should improve the perceived experience when render time is longer. This also has the added benefit of allowing the screen to render faster when first navigated to since both gallery and screen are not competing for resources.
+
 ## Next steps
 
 Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
