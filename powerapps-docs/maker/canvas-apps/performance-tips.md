@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/22/2020
+ms.date: 03/11/2020
 ms.author: yingchin
 search.audienceType: 
   - maker
@@ -15,6 +15,8 @@ search.app:
   - PowerApps
 contributors:
   - yingchin
+  - tapanm-msft
+  - chmoncay
 ---
 # Tips and best practices to improve canvas app performance
 
@@ -134,6 +136,12 @@ If you have multiple formulas or rules that reference the value of a **Text inpu
 ## Avoid using Form.Updates in rules and formulas
 
 If you reference a user-input value in a rule or a formula by using a `Form.Updates` variable, it iterates over all the form's data cards and creates a record each time. To make your app more efficient, reference the value directly from the data card or the control value.
+
+## Use DelayItemLoading and Loading spinner to improve performance in Gallery
+
+Depending on the configuration, Gallery control can take longer to render the visible rows. Consider simplifying the template in such situation.
+
+In addition, ensure the Gallery instance has **DelayItemLoading** set to **true**, and **LoadingSpinner** set to **LoadingSpinner.Controls**. These changes help improve the perceived experience when render time is longer. This also has the added benefit of allowing the screen to render faster when first navigated to since both gallery and screen are not competing for resources.
 
 ## Next steps
 

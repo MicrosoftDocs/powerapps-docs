@@ -1,5 +1,5 @@
 ---
-title: Introduction to the Power Platform ISV Studio | Microsoft Docs
+title: Microsoft Power Platform ISV Studio | Microsoft Docs
 description: Learn how apps are managed and supported through the ISV Studio portal.
 services: ''
 suite: powerapps
@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# Introduction to the Power Platform ISV Studio
+# Microsoft Power Platform ISV Studio
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
