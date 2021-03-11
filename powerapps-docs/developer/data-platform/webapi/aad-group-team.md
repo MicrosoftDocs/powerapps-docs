@@ -27,6 +27,7 @@ search.app:
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
 <!-- TODO: Describe what the AAD group team is, and what it is used for -->
+You can use Azure Active Directory (AAD) group teams in ... for ...
 
 ## Creating an AAD group team
 
@@ -129,5 +130,6 @@ Accept: application/json
 
 ### See also
 
+[Manage app and resource access using Azure Active Directory groups](/azure/active-directory/fundamentals/active-directory-manage-groups)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

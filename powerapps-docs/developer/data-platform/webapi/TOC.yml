@@ -20,7 +20,7 @@
   items:
   - name: Web service authentication
     href: authenticate-web-api.md
-  - name: Azure Active Directory group teams
+  - name: Active Directory group teams
     href: aad-group-team.md
 - name: Types and operations
   href: web-api-types-operations.md
