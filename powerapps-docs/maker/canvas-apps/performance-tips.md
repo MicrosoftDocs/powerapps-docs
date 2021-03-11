@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/22/2020
+ms.date: 03/11/2020
 ms.author: yingchin
 search.audienceType: 
   - maker
@@ -15,6 +15,8 @@ search.app:
   - PowerApps
 contributors:
   - yingchin
+  - tapanm-msft
+  - chmoncay
 ---
 # Tips and best practices to improve canvas app performance
 
@@ -137,8 +139,9 @@ If you reference a user-input value in a rule or a formula by using a `Form.Upda
 
 ## Use DelayItemLoading and Loading spinner to improve performance in Gallery
 
-Depending on the configuration, Gallery can take longer to render the visible rows. Simplifying the template could make a big difference.
-You should also ensure the Gallery instance has **DelayItemLoading** set to **true**, and **LoadingSpinner** set to **LoadingSpinner.Controls**, which should improve the perceived experience when render time is longer. This also has the added benefit of allowing the screen to render faster when first navigated to since both gallery and screen are not competing for resources.
+Depending on the configuration, Gallery control can take longer to render the visible rows. Consider simplifying the template in such situation.
+
+In addition, ensure the Gallery instance has **DelayItemLoading** set to **true**, and **LoadingSpinner** set to **LoadingSpinner.Controls**. These changes help improve the perceived experience when render time is longer. This also has the added benefit of allowing the screen to render faster when first navigated to since both gallery and screen are not competing for resources.
 
 ## Next steps
 
