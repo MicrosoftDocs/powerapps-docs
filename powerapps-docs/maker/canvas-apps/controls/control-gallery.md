@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/16/2020
+ms.date: 03/11/2021
 ms.author: chmoncay
 search.audienceType:
   - maker
@@ -153,5 +153,8 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
     > [!NOTE]
   > Controls outside the gallery are not considered in the keyboard navigation order within the gallery. [TabIndex](properties-accessibility.md) controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.
 
+### See also
+
+[Use DelayItemLoading and Loading spinner to improve performance in Gallery](../performance-tips.md#use-delayitemLoading-and-loading-spinner-to-improve-performance-in-gallery)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
