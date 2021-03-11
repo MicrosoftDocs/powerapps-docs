@@ -1,5 +1,5 @@
 ---
-title: "Work with an Azure Active Directory group team (Dataverse)| Microsoft Docs"
+title: "Work with Azure Active Directory group teams (Dataverse)| Microsoft Docs"
 description: "Learn about working with an Azure Active Directory group team using the Web API."
 ms.custom: ""
 ms.date: 03/10/2021
@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# Work with an Azure Active Directory group team
+# Work with Azure Active Directory group teams
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
@@ -30,26 +30,33 @@ search.app:
 
 ## Creating an AAD group team
 
-Citizen developers wanting to programatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following HTTP command.
+Citizen developers wanting to programatically create a Microsoft Dataverse AAD group team can do so by providing the object ID of an existing AAD group as shown in the following command.
+
+**Request**
 
 ```http
-POST https://<service-root>/api/data/v9.2/teams
+POST [Organization URI]/api/data/v9.2/teams
+Accept: application/json
 
-Body:
 {
-  "azureactivedirectoryobjectid":"<object ID>",
+  "azureactivedirectoryobjectid":"<group object ID>",
   "membershiptype":0
 }
 ```
 
 ## Security roles and privileges
 
-Members of an AAD group can query all the security roles that are directly and indirectly assigned to them using the following HTTP command.
+Members of an AAD group can query all the security roles that are directly and indirectly assigned to them using the following command.
+
+**Request**
 
 ```http
-GET https://<service-root>/api/data/v9.2/RetrieveAadUserRoles(DirectoryObjectId=<object ID)?$select=_parentrootroleid_value,name
+GET [Organization URI]/api/data/v9.2/RetrieveAadUserRoles(DirectoryObjectId=<group object ID)?$select=_parentrootroleid_value,name
+```
 
-RESPONSE
+**Response**
+
+```json
 {
   "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.2/$metadata#roles",
   "value": [
@@ -67,12 +74,17 @@ RESPONSE
 }
 ```
 
-Members of an AAD group can check their security privileges without being a user of Dataverse using the following HTTp command.
+Members of an AAD group can check their security privileges without being a user of Dataverse using the following command.
+
+**Request**
 
 ```http
-GET https://<service-root>/api/data/v9.2/RetrieveAadUserPrivileges(DirectoryObjectId=<object ID>)
+GET [Organization URI]/api/data/v9.2/RetrieveAadUserPrivileges(DirectoryObjectId=<group object ID>)
+```
 
-RESPONSE
+**Response**
+
+```json
 {
   "@odata.context": "https://contoso.crm2.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrieveAadUserPrivilegesResponse",
   "RolePrivileges": [
@@ -89,25 +101,29 @@ RESPONSE
 
 ## Assigning and sharing
 
-An administrator can assign (share) a record for an AAD group member without the user being in Dataverse using the following HTTp command.
+An administrator can assign (share) a record for an AAD group member without the user being in Dataverse using the following command.
+
+**Request**
 
 ```http
-PATCH https://<service-root>/api/data/v9.2/accounts(<account ID>)
+PATCH [Organization URI]/api/data/v9.2/accounts(<account ID>)
+Accept: application/json
 
-Body
 { 
-  "ownerid@odata.bind": "https://<service-root>/api/data/v9.2/systemusers(azureactivedirectoryobjectid=<AAD object ID>)"
+  "ownerid@odata.bind": "[Organization URI]/api/data/v9.2/systemusers(azureactivedirectoryobjectid=<member object ID>)"
 }
 ```
 
-An administrator can assign a security role to an AAD user or AAD group without the user or group being in Dataverse.
+An administrator can assign a security role to an AAD user or group without the user or group being in Dataverse.
+
+**Request**
 
 ```http
-POST https://<service-root>/api/data/v9.2/teams(azureactivedirectoryobjectid=<user or group object ID>,membershiptype=0)/teamroles_association/$ref
+POST [Organization URI]/api/data/v9.2/teams(azureactivedirectoryobjectid=<user or group object ID>,membershiptype=0)/teamroles_association/$ref
+Accept: application/json
 
-Body
 { 
-  "@odata.id":"https://<service-root>/api/data/v9.2/roles(<role ID>)"
+  "@odata.id":"[Organization URI]/api/data/v9.2/roles(<role ID>)"
 }
 ```
 
