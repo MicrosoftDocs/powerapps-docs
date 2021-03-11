@@ -140,6 +140,7 @@ Virtual tables have these restrictions.
 - By default, virtual tables contain only a Name and Id column.  No other system managed columns, such as Status or Created On/Modified On are supported.
 - Virtual tables don't support custom columns with the Currency, Image, or Customer data types.
 - Virtual tables don't support auditing.  
+- Charts and dashboards are not supported for virtual entities.
 - Virtual table columns can't be used in rollups or calculated columns.
 - A virtual table can't be an activity type of table.  
 - Many features that affect table table rows cannot be enabled with virtual tables.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, column security, Relevance Search, Portals for Dynamics 365 web portal solutions, and N:N relationships between virtual tables.  

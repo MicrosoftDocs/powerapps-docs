@@ -105,6 +105,8 @@ Note the following limitations when you add the form component control to a tabl
 
 - You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.  
 
+- For subgrids, the **See all records** and **See associated records** command buttons will not be available if they are rendered inside a form component.
+
 ### See also
 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)

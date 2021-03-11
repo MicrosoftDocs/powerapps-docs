@@ -4,7 +4,7 @@ description: "Learn how to configure actions for workflows in Power Apps."
 ms.custom: ""
 ms.date: 07/30/2020
 ms.reviewer: ""
-ms.service: flow
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
