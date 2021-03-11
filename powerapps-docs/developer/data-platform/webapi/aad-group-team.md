@@ -26,8 +26,9 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-<!-- TODO: Describe what the AAD group team is, and what it is used for -->
-You can use Azure Active Directory (AAD) group teams in ... for ...
+An Azure Active Directory (AAD) group team, similar to an owner team, can own records and can have security roles assigned to the team. To read more about AAD group teams see [Manage group teams](/power-platform/admin/manage-group-teams).
+
+The following sections describe how to work with AAD group teams using the Web API.
 
 ## Creating an AAD group team
 
