@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/11/2021
+ms.date: 3/12/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -70,30 +70,30 @@ If you're a app makeer, you can use the Microsoft Power Apps Excel Add-in to dow
    > ![Refresh your app data in Excel](media/refresh-data.png "Refresh your app data in Excel") 
   
 
-## Known issue
-
 ## Refresh All doesn't work
 
-In the Excel dynamics worksheet, when you select **Data** > **Refresh All** the worksheet is blank and the data disappears and you get this error: 
+After I use the **Export to Excel** command to export a file to my local computer, I open the file and select **Data** . **Refresh All under Data**. The data disappears and workbook appears blank.
 
-**This web query returned no data. To change the query, click OK, click the arrow on the name box in the formula bar, click the name of the external data range for the Web query, right-click the selection, and then click Edit Query.**
+This issue occurs when the data that you're accessing is password-protected and the Excel file can't submit passwords to external data sources. To resolve this issue, you must edit and save the web query.
 
-To fix the issue:
+Here's how to resolve it:
 
-1. Select the **Data** tab > **Queries and Connections**.
+1. In the Excel file, select the **Data** tab > **Queries and Connections**.
 
    > [!div class="mx-imgBorder"] 
    > ![Go to Queries and Connections](media/excel-dynamic-ts-1.png "Go to Queries and Connections") 
    
-3. Select **connections** and then right-click and select **Properties**.
+3. The **Queries & Connections** pane opens on the right of the window. On the **Connections** tab, right-click to select the **Query_from_Microsoft_CRM query** and then select **Properties**.
 
    > [!div class="mx-imgBorder"] 
    > ![Go connections properties](media/excel-dynamic-ts-2.png "Go connections properties")
    
-5. On the **Connection Properties** dialog box, select the **Definition** tab, and then **Edit Query**
+5. The **Connection Properties** window opens. On **Definition** tab, and then **Edit Query**
 
    > [!div class="mx-imgBorder"] 
    > ![Go connections properties](media/excel-dynamic-ts-3.png "Go connections properties")
+
+6. When prompted, enter username and password. Enter the same user and password that you use to sign in to your app.
 
 7. Select **GO**.
 
