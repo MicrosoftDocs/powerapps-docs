@@ -52,13 +52,16 @@ Legend
 
 ## Inline suggestions
 
-As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app.
+As you start entering text, you'll see suggested results that help minimize keystrokes and simplify page navigation. Suggested results are based on a search performed on the primary column of a table, which is enabled for relevance search and included in your model-driven app. For more information, see [Add or edit model-driven app components in the Power Apps app designer](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-edit-app-components#add-an-artifact-table-dashboard-or-business-process-flow).
 
 Suggestions are shown when three or more characters are entered in the search box, and are based on two types of matching:
 
 - **Word completion**: Rows where the primary field contains a word that begins with the search term. For example, entering **work** will show the account **AdventureWorks** and the contact **John Worker**, among other results.
 
 - **Fuzzy search**: Terms that are misspelled by one character are matched. For example, entering **winry** will show the account **Coho Winery**, among other results. 
+
+With [early access for 2021 release wave 1](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates), suggested rows show a secondary field in addition to the primary field. This helps you differentiate between rows that have the same primary field value. The secondary field is chosen based on the table’s quick find view. It is always the first non-primary field on the table’s quick find view that contains data for the row.
+
 
 ![Suggested results that appear when you enter a search query](media/relevance-search-suggested-results.gif "Suggested results that appear when you enter a search query")
 

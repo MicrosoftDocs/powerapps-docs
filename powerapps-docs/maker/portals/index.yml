@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: kumarvivek
   ms.author: kvivek
-  ms.date: 09/03/2019 
+  ms.date: 03/12/2021 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -28,6 +28,10 @@ landingContent:
             url: overview.md
           - text: Portals lifecycle
             url: admin/portal-lifecycle.md
+       - linkListType: whats-new
+         links:
+          - text: Terminology changes in portals
+            url: terminology-changes.md
        - linkListType: learn
          links:
           - text: Get started with Power Apps portals
