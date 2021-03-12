@@ -69,6 +69,47 @@ If you're a app makeer, you can use the Microsoft Power Apps Excel Add-in to dow
    > [!div class="mx-imgBorder"] 
    > ![Refresh your app data in Excel](media/refresh-data.png "Refresh your app data in Excel") 
   
+
+## Known issue
+
+In the Excel dynamics worksheet, when you select **Data** > **Refresh All** the worksheet is blank and the data disappears you get this error: 
+
+**This web query returned no data. To change the query, click OK, click the arrow on the name box in the formula bar, click the name of the external data range for the Web query, right-click the selection, and then click Edit Query.**
+
+To fix the issue:
+
+1. Select the **Data** tab > **Queries and Connections**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Go to Queries and Connections](media/excel-dynamic-ts-1.png "Go to Queries and Connections") 
+   
+3. Select **connections** and then right-click and select **Properties**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Go connections properties](media/excel-dynamic-ts-2.png "Go connections properties")
+   
+5. On the **Connection Properties** dialog box, select the **Definition** tab, and then **Edit Query**
+
+   > [!div class="mx-imgBorder"] 
+   > ![Go connections properties](media/excel-dynamic-ts-3.png "Go connections properties")
+
+7. Select **GO**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Select Go](media/excel-dynamic-ts-4.png "Select GO")
+
+8. Close the window.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Close the window](media/excel-dynamic-ts-5.png "Close the window")
+
+9. Refresh the data in the worksheet again by going to, **Data** > **Refresh All**.
+
+
+
+
+
+
 ## Tips  
   
 - You can email a dynamic Excel file or store it as a shared file if the recipients are in the same domain as you. When recipients open the dynamic file, only see the data that they have permission to view. 
