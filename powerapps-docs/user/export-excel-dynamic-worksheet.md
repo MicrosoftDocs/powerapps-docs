@@ -63,6 +63,11 @@ If you're a app makeer, you can use the Microsoft Power Apps Excel Add-in to dow
    > [!div class="mx-imgBorder"] 
    > ![Enable content](media/enable-content.png "Enable content") 
 
+7. Go back to your app and update you app data.
+8. To see your updates in the Excel dynamics worksheet, in Excel go to **Data** > **Refresh All**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Refresh your app data in Excel](media/refresh-data.png "Refresh your app data in Excel") 
   
 ## Tips  
   
