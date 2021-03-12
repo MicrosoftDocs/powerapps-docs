@@ -72,7 +72,9 @@ If you're a app makeer, you can use the Microsoft Power Apps Excel Add-in to dow
 
 ## Known issue
 
-In the Excel dynamics worksheet, when you select **Data** > **Refresh All** the worksheet is blank and the data disappears you get this error: 
+## Refresh All doesn't work
+
+In the Excel dynamics worksheet, when you select **Data** > **Refresh All** the worksheet is blank and the data disappears and you get this error: 
 
 **This web query returned no data. To change the query, click OK, click the arrow on the name box in the formula bar, click the name of the external data range for the Web query, right-click the selection, and then click Edit Query.**
 
@@ -98,15 +100,15 @@ To fix the issue:
    > [!div class="mx-imgBorder"] 
    > ![Select Go](media/excel-dynamic-ts-4.png "Select GO")
 
-8. Close the window.
+8. Close the **X** to close window.
 
    > [!div class="mx-imgBorder"] 
    > ![Close the window](media/excel-dynamic-ts-5.png "Close the window")
 
-9. Refresh the data in the worksheet again by going to, **Data** > **Refresh All**.
+9. This should fix the issue. Refresh the data in the worksheet again by going to, **Data** > **Refresh All**. 
 
-
-
+   > [!div class="mx-imgBorder"] 
+   > ![Refresh your app data in Excel](media/refresh-data.png "Refresh your app data in Excel") 
 
 
 
