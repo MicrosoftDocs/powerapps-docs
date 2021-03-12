@@ -139,9 +139,10 @@ If you reference a user-input value in a rule or a formula by using a `Form.Upda
 
 ## Use DelayItemLoading and Loading spinner to improve performance in Gallery
 
-Depending on the configuration, Gallery control can take longer to render the visible rows. Consider simplifying the template in such situation.
+Depending on the configuration, Gallery can take longer to render the visible rows. There are a couple of ways to improve performance.
 
-In addition, ensure the Gallery instance has **DelayItemLoading** set to **true**, and **LoadingSpinner** set to **LoadingSpinner.Controls**. These changes help improve the perceived experience when render time is longer. This also has the added benefit of allowing the screen to render faster when first navigated to since both gallery and screen are not competing for resources.
+- Simplify the template. For example, consider reducing the number of controls, references to lookups.
+- Galleries with complex templates can benefit from having **DelayItemLoading** set to **true**, and **LoadingSpinner** set to **LoadingSpinner.Controls**. This change will improve the perceived experience when render time is longer. **DelayItemLoading** will also defer the rendering of templates which will allow the rest of the screen to render faster as both screen and gallery are not competing for resources.
 
 ## Next steps
 
