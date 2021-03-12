@@ -94,7 +94,7 @@ Use the template that you downloaded in the previous step (modified with your da
    
 ## Review mapping
 
-When you import a file, it's important to review the column headings and verify they match the columns (fields) in your app.
+When you import a file, it's important to review the column headings and verify that they match the columns (fields) in your app.
 
 > [!div class="mx-imgBorder"]
 > ![Review mapping](media/review-mapping-legend.png "Review mapping")
