@@ -74,7 +74,7 @@ There is other export options such as Excel Online, Static Worksheet, Dynamics W
 > ![Export to excel options](media/export_to_excel_options.png "Select export to Excel options")
 
 
-The table below summerizes the different options, pick the one that works best for you.
+The table below summerizes the different options. Pick the one that works best for you.
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
