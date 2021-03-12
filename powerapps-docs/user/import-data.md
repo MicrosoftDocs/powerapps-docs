@@ -41,7 +41,7 @@ To avoid mapping issue, it's recommend that you use an Excel template that you c
 
 2. On the command bar, select **Excel Templates** > **Download Template**.
 
-3. Select a table type and view that you want to download or select **Edit Columns** and choose the rows that you want to include in the template.
+3. Select the table type and view that to download or select **Edit Columns** and choose the rows to include in the template.
 
 5. Select **Download**. 
  
@@ -50,39 +50,39 @@ To avoid mapping issue, it's recommend that you use an Excel template that you c
 
 ## Import your data
 
-Use the template that you downloaded in the previous step (modified with your data) to import the file to your app. 
+Use the template that you downloaded in the previous step (modified with your data) and import the file to your app. 
 
-1. Open your app and from the left nav select a table.
+1. Open an app and from the left nav select a table.
  
    > [!div class="mx-imgBorder"]
    > ![From the site map select a table](media/left-nav-select-table.png "From the site pay select a table")
 
-3. On the command bar, select the file type that you want to import from:
+3. On the command bar, select the file type to import from:
 
-   - **Import from Excel**: If you're using the Excel template that you modified with your data then choose **Import from Excel**.
+   - **Import from Excel**: Select **Import from Excel** if you're using an Excel template.
    - **Import from CSV**
    - **Import from XML**
 
    > [!div class="mx-imgBorder"]
    > ![Shows the three import options in Power Apps](media/import-files.gif "Shows the three import options in Power Apps")
   
-2. Select **Choose File** and browse to the folder where you saved the file that contains the export file. Select the file, select **Open**, and then select **Next**.  
+2. Select **Choose File** and browse to the folder where the file is saved. Select the file, select **Open**, and then select **Next**.  
   
    > [!TIP]
-   > You can import only one file at a time. To bring in more files, run the wizard again.
+   > You can only import one file at a time. To bring in more files, run the wizard again.
    
-3. Select whether you want to **Allow Duplicates** or not. More information, see [Set up duplicate detection rules to keep your data clean](https://docs.microsoft.com/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
+3. Select whether to **Allow Duplicates** or not. More information, see [Set up duplicate detection rules to keep your data clean](https://docs.microsoft.com/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 4. For CSV and XML files (skip this step if you're importing an Excel file): 
 
-   - For a CSV file: Select the drop-down list and select the data delimiter and field delimiter that you’ve used your CSV file.
+   - For a CSV file: Select the drop-down list and select the data delimiter and field delimiter that's used the CSV file.
    
    - For CSV or XML file: If you have an alternate key defined, select it from the alternate Key drop-down list. The alternate key is used to uniquely identify and update rows during import. More information: [Define alternate keys to reference rows](https://docs.microsoft.com/powerapps/maker/data-platform/define-alternate-keys-reference-records).
 
      > [!div class="mx-imgBorder"]
      > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key") 
    
-5. Review the file name and select **[Review Mapping](import-data.md#review-mapping)** to verify that the columns (fields) are mapped correctly. If everything looks good, select **Finish Import**.  
+5. Select **[Review Mapping](import-data.md#review-mapping)** and verify the columns (fields) are mapped correctly. If everything looks good, select **Finish Import**.  
 
    > [!div class="mx-imgBorder"]
    > ![Import selected Excel file and checking mapping](media/mapping-excel-file.png "Import selected Excel file and checking mapping")
@@ -94,7 +94,7 @@ Use the template that you downloaded in the previous step (modified with your da
    
 ## Review mapping
 
-When you import a file it's important to review the column headings and make sure they map to the columns (fields) in your app.
+When you import a file, it's important to review the column headings and verify they match the columns (fields) in your app.
 
 > [!div class="mx-imgBorder"]
 > ![Review mapping](media/review-mapping-legend.png "Review mapping")
