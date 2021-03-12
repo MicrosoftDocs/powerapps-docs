@@ -1,11 +1,11 @@
 ---
 title: "Developers: Get started with Microsoft Dataverse | Microsoft Docs"
-description: Learn how developers can add value using Microsoft Dataverse in Power Apps.
+description: Learn about some available methods that developers can use to access business data, customize business logic, write applications, and access external systems.
 suite: powerapps
 author: JimDaly
 manager: ryjones
 ms.service: powerapps
-ms.date: 08/05/2019
+ms.date: 03/11/2021
 ms.author: jdaly
 ms.reviewer: "pehecke"
 search.audienceType: 
@@ -17,13 +17,11 @@ search.app:
 
 # Developers: Get started with Microsoft Dataverse
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
 Where to start depends on what problem you are trying to solve. This guide includes information about a wide range of capabilities and it is unlikely you will ever use all of them. The following sections include several of the key areas to begin.
 
-## Work with data using Web services
+## Work with data using web services
 
-There are two different web services that you can use to work with data: **Web API** and **Organization service**. 
+There are two different access points, each using a different protocol, for the business data web service: a RESTful (OData) data access point, and (SOAP) Organization service endpoint. Your code can access the OData access point using the Web API, or the Organization service endpoint using the SDK API.
 
 Which one you should use depends on the type of project you are working on. More information: [Work with data using code](work-with-data.md)
 
@@ -37,7 +35,7 @@ Data management capabilities in Dataverse not only lets you work with data withi
 
 - [Import data](/powerapps/developer/data-platform/import-data)
 - [Synchronize data](/powerapps/developer/data-platform/data-synchronization)
-- [Virtual entities](/powerapps/developer/data-platform/virtual-entities/get-started-ve)
+- [Virtual tables](/powerapps/developer/data-platform/virtual-entities/get-started-ve)
 - [Azure Integration](/powerapps/developer/data-platform/azure-integration)
 - [Webhooks](/powerapps/developer/data-platform/use-webhooks
 )
@@ -53,9 +51,9 @@ More information:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-## Work with metadata
+## Work with table definitions
 
-Developing a good working understanding of the metadata in the system can help you understand how Dataverse platform works. Generally you will use designers to add, update, or delete schema that defines metadata, but both the Web API and the Organization service web services provide capabilities to perform CRUD operations on the schema. More information: [Work with metadata using code](metadata-services.md) 
+Developing a good working understanding of the *metadata* (the columns in the table definition) in the system can help you understand how the Dataverse platform works. Generally you will use designers to add, update, or delete columns that define metadata, but both the (OData) data access point and the Organization service endpoint provide capabilities to perform common operations on the table definition. More information: [Work with metadata using code](metadata-services.md) 
 
 ## Use solutions to package and distribute extensions
 
