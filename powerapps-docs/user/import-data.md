@@ -35,7 +35,7 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 
 ## Download an Excel template
 
-To avoid mapping issue, it's recommend that you use an Excel template that you can download from your app. After you download the template you can add your data and then import the file back to your app. Remember don't add or modify columns otherwise when you import the data to your app the import will fail.
+To avoid mapping issue, it's recommend that you use an Excel template that you can download from your app. Once the template is downloaded add your data and then import the file back to your app. Remember don't add or modify columns otherwise when you import the data to your app the import will fail.
 
 1. Open your app and from the left nav select a table.
 
