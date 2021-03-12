@@ -1338,6 +1338,8 @@
       href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
+    - name: Terminology changes in Power Apps portals
+      href: ./portals/terminology-changes.md
     - name: Understand portals architecture
       items:
          - name: Understand portals lifecycle
