@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/9/2021
+ms.date: 03/12/2021
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -104,17 +104,17 @@ Legend:
 
 1. **Primary Fields**: Shows all the required columns for the table that must be mapped for the data to be imported successfully. If the column headings of your source file match the column display names, these columns will be automatically mapped. 
 
-2. **Mapped columns**: All the mapped columns will be shown with a green check mark.
+2. **Mapped columns**: Correctly mapped columns will be shown with a green check mark.
 
-3. **Optional Fields**: Shows the column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists
+3. **Optional Fields**: These are optional column headings in your source file. If the column headings match the column display names, the columns will be automatically selected in the corresponding drop-down lists. 
 
 4. **Unmatched columns**: If the column headings don't match, the unmapped columns will be shown with a red exclamation point. To map the column correctly, select a column to map to the unmapped column heading of your file. 
 
-5. **Ignore**: You can also choose **Ignore** from the drop-down list for one or more **Optional Fields**. Data from ignored columns won't be imported into your app.
+5. **Ignore** (For **Optional Fields** only): Choose **Ignore** from the drop-down list. Data from ignored columns won't be imported into your app.
 
 ### Option set
 
-If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" or "No". 
+If any column in your source file includes a fixed set of values, you must map the column to a column of type **Option Set**. A column of this type has values such as "Yes" and "No" or  "Low** and ""High"".
 
 To do this, select the ![The Option Set button](media/import-option-set-button.png "The Option Set button") button next to the option set column, select the values, and then select **OK**. 
 
@@ -144,7 +144,7 @@ For each table, select the columns to search during import to retain the relatio
 
 ### Save mapping settings
 
-To save your mapping settings for next time, enter a name in the **Name your data map** box. This way, the next time you need to import a similar set of data, you'll be able to use this mapping again.
+To save the mapping settings for next time, enter a name in the **Name your data map** box. This way, the next time you import a similar set of data, you'll be able to use the same mapping.
 
 > [!div class="mx-imgBorder"]
 > ![Name your data map here](media/import-save-settings.png "Name your data map here")
