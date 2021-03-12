@@ -93,9 +93,9 @@ Here's how to resolve it:
    > [!div class="mx-imgBorder"] 
    > ![Go connections properties](media/excel-dynamic-ts-3.png "Go connections properties")
 
-6. If prompted, enter username and password. Enter the same user and password that you use to sign in to your app.
+ 6. If prompted, enter username and password. Enter the same user and password that you use to sign in to your app.
 
-7. On the **Edit Web Query** window, select **GO**.
+7. On the **Edit Web Query** window, select **GO**. An error message will show: **Can't complete this action** 
 
    > [!div class="mx-imgBorder"] 
    > ![Select Go](media/excel-dynamic-ts-4.png "Select GO")
