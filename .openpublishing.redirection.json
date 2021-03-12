@@ -2,7 +2,7 @@
   "redirections": [
     {
       "source_path": "powerapps-docs/user/ts-export-to-excel.md",
-      "redirect_url": "export-excel-dynamic-worksheet.md#refresh-all-doesnt-work",
+      "redirect_url": "export-excel-dynamic-worksheet#refresh-all-doesnt-work",
       "redirect_document_id": "false"
     },
     {
