@@ -69,7 +69,7 @@ A few things to note:
    > [!div class="mx-imgBorder"] 
    > ![Enable content](media/enable-content.png "Enable content") 
 
-7. Go back to your app and update you app data.
+7. Go back to your app and update your app data.
 8. To see your updates in the Excel dynamics worksheet, in Excel go to **Data** > **Refresh All**. If this doesn't work, see [Refresh All doesn't work](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work).
 
    > [!div class="mx-imgBorder"] 
@@ -78,7 +78,7 @@ A few things to note:
 
 ## Refresh All doesn't work
 
-After you use the **Export to Excel** command to export a file to your local computer and open the file by selecting **Data** > **Refresh All under Data**. The data disappears and workbook appears blank.
+After you use the **Export to Excel** command to export a file to your local computer and open the file by selecting **Data** > **Refresh All**. The data disappears and workbook appears blank.
 
 This issue occurs when the data that you're accessing is password-protected and the Excel file can't submit passwords to external data sources. To resolve this issue, you must edit and save the web query.
 
