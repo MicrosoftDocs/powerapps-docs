@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/08/2021
+ms.date: 03/12/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -68,7 +68,7 @@ The data is exported in the same format that you see in your app. Text will rema
   
 ## Export options
 
-You have several different export options such as Excel Online, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
+There is other export options such as Excel Online, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
 
 > [!div class="mx-imgBorder"] 
 > ![Export to excel options](media/export_to_excel_options.png "Select export to Excel options")
