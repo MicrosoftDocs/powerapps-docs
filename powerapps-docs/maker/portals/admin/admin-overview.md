@@ -13,8 +13,8 @@ ms.reviewer: tapanm
 # Power Apps portals admin center
 
 > [!NOTE]
-> Based on the [terminology changes in Dataverse](https://go.microsoft.com/fwlink/?linkid=2147247), customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. More information: [Terminology changes in Power Apps portals](../terminology-changes.md) <br> <br>
-> We're in the process of rolling out the terminology changes in Power Apps portals. Documentation for portals will be updated soon to reflect the latest terminology.
+> - Based on the [terminology changes in Dataverse](https://go.microsoft.com/fwlink/?linkid=2147247), customer feedback, and data from user research, effective March 2021, we're updating some terminology in Power Apps portals to be more intuitive and make its usage more productive. More information: [Terminology changes in Power Apps portals](../terminology-changes.md)
+> - We're in the process of rolling out the terminology changes in Power Apps portals. Documentation for portals will be updated soon to reflect the latest terminology.
 
 The Power Apps portals admin center allows you perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 
