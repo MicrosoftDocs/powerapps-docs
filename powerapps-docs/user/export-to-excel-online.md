@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/8/2021
+ms.date: 3/12/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -21,12 +21,22 @@ search.app:
 
 Open your app data in Excel Online and make quick edits or do a ad-hoc analysis. You can make changes to your app data in Excel Online and then save the updated information back your app. 
 
-Remember to keep the existing format of the Excel cells to prevent problems during import. Any information added to the spreadsheet, such as graphs, charts, or colors, will not be saved. Updated data in an app isn't immediately reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that time frame, any updated data should show in Excel Online.
+This feature requires that you have an Office 365 subscription or a subscription to an online service such as SharePoint Online or Exchange Online and a Microsoft account. 
 
-The option to open data in Excel Online isn’t available for all tables. If you don’t see the option for a table then it’s not available for that table.
+A few things to note:
+
+- The data for *ad-hoc* analysis with Excel Online is stored temporarily. Any additions, such as charts, graphs, calculations, columns, and colors won’t be saved back to the app from the ad-hoc analysis in Excel Online.  
+
+- Remember to keep the existing format of the Excel cells to prevent problems when you save the file and the system syncs the date back to your app. 
+
+- The file import might fail if you make a lot of changes. 
+
+- Updated data in an app isn't immediately reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that time frame, any updated data should show in Excel Online.
+
+-The option to open data in Excel Online isn’t available for all tables. If you don’t see the option for a table then it’s not available for that table.
   
- > [!NOTE]
-   > - This feature requires that you have an Office 365 subscription or a subscription to an online service such as SharePoint Online or Exchange Online and a Microsoft account.    
+   
+## Export to Excel Online   
 
 1. On the left nav, select a table.
 
@@ -45,11 +55,8 @@ The option to open data in Excel Online isn’t available for all tables. If you
    > [!div class="mx-imgBorder"] 
    > ![Track the import progress](media/export-excel-online-2.png "Track the import progress")
 
-### Tips
-
-- The data for *ad-hoc* analysis with Excel Online is stored temporarily. Any additions, such as charts, calculations, and columns, won’t be saved back to the app from the ad-hoc analysis in Excel Online.  
-- The file import might fail if you make a lot of changes. If you need to make a lot of changes to your data and import it back to the app, it’s recommended that you export the worksheet in Excel instead.  
-- By design, you can’t do a **File** > **Save As** in Excel Online. If you do, you’ll get a **Can’t Save Workbook** error message.
+ > [!NOTE]
+ > By design, you can’t do a File > **Save As** in Excel Online. If you do, you’ll get a **Can’t Save Workbook** error message.
    
 
 
