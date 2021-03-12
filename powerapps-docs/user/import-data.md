@@ -19,7 +19,7 @@ search.app:
 ---
 # How to import data
 
-Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.   
+Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. 
 
 Every table has required columns that must exist in your input file. It's recommended that you download an Excel template, add your data, and then import the file to your app. Don't add or modify columns in the template to avoid issues during the import.
 
@@ -31,6 +31,7 @@ If you're an advanced user and know the required columns for a given Dataverse t
  - Comma-separated values (.csv)
  - XML Spreadsheet 2003 (.xml)
  
+The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.   
 
 ## Download an Excel template
 
