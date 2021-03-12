@@ -88,17 +88,15 @@ The table below summerizes the different options. Pick the one that works best f
 
 1. You can export your app data to Excel (.xlsx format) and use the file as a template to add more data and import back into your app. However, if you add or modify columns in the Excel file and then import the file back into your app, the import will fail. This happens because columns were added or modified and those columns don’t map to tables in your app. When you import an Excel file into your app make sure that columns and tables are mapped correctly otherwise the import will fail. For more information on mapping, see [Review mapping](import-data.md#review-mapping).
   
-2. If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: 
- 
-  `The file is corrupt and cannot be opened.`  
+2. If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: `The file is corrupt and cannot be opened.`  
   
-  The error message occurs due to a setting in Excel. To fix the issue, do this:  
+   The error message occurs due to a setting in Excel. To fix the issue, do this:  
   
-  1. Open Excel 2010 and go to **File** > **Options** > **Trust Center** > **Trust Center settings**.  
+    1. Open Excel 2010 and go to **File** > **Options** > **Trust Center** > **Trust Center settings**.  
   
-  2. Select **Protected view** and then clear the check boxes for the first two options.  
+    2. Select **Protected view** and then clear the check boxes for the first two options.  
   
-  35. Select **OK** and then close the **Options** dialog box.  
+    3. Select **OK** and then close the **Options** dialog box.  
 
 
 ### See also
