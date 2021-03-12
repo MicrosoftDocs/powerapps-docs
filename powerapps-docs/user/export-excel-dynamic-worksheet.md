@@ -83,11 +83,9 @@ A few things to note:
 
 ## Refresh All doesn't work
 
-After I use the **Export to Excel** command to export a file to my local computer, I open the file and select **Data** . **Refresh All under Data**. The data disappears and workbook appears blank.
+After you use the **Export to Excel** command to export a file to your local computer and open the file by selecting **Data** > **Refresh All under Data**. The data disappears and workbook appears blank.
 
 This issue occurs when the data that you're accessing is password-protected and the Excel file can't submit passwords to external data sources. To resolve this issue, you must edit and save the web query.
-
-Here's how to resolve it:
 
 1. In the Excel file, select the **Data** tab > **Queries and Connections**.
 
