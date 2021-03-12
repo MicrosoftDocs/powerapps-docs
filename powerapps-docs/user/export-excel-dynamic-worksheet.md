@@ -75,7 +75,7 @@ A few things to note:
    > ![Enable content](media/enable-content.png "Enable content") 
 
 7. Go back to your app and update you app data.
-8. To see your updates in the Excel dynamics worksheet, in Excel go to **Data** > **Refresh All**.
+8. To see your updates in the Excel dynamics worksheet, in Excel go to **Data** > **Refresh All**. If this doesn't work, see [Refresh All doesn't work](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work).
 
    > [!div class="mx-imgBorder"] 
    > ![Refresh your app data in Excel](media/refresh-data.png "Refresh your app data in Excel") 
