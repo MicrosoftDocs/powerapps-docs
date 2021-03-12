@@ -29,15 +29,10 @@ In the example below, we downloaded an Excel dynamic worksheet then went back to
 A few things to note:
 
 - You can export up to 100,000 rows at a time. You can’t export data to a dynamic worksheet in Excel for all table. If you don’t see the option for a table, then it’s not available for that table.
-
-- You can email a dynamic Excel file or store it as a shared file if the recipients are in the same domain as you. When recipients open the dynamic file, only see the data that they have permission to view. 
-  
-- Some system views can be exported only to a static Excel worksheet.  
-  
+- You can email a dynamic Excel file or store it as a shared file if the recipients are in the same domain as you. When recipients open the dynamic file, only see the data that they have permission to view.   
+- Some system views can be exported only to a static Excel worksheet.    
 - Currency values are exported to Excel as numbers. To format the data as currency after you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4).
-
-- The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
-  
+- The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.    
 - If you're a app maker, you can use the Microsoft Power Apps Excel Add-in to download your app data and make edit in Excel and then save the data back to your app. For more information, see [Open table data in Excel](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-excel-addin).
 
 ## Export a dynamic worksheet
