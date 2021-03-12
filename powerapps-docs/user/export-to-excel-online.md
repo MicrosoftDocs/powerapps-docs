@@ -29,7 +29,7 @@ A few things to note:
 
 - Updated data in an app isn't immediately reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that time frame, any updated data should show in Excel Online.
 
--The option to open data in Excel Online isn’t available for all tables. If you don’t see the option for a table then it’s not available for that table.
+- The option to open data in Excel Online isn’t available for all tables. If you don’t see the option for a table then it’s not available for that table.
   
    
 ## Export to Excel Online   
