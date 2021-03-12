@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/9/2021
+ms.date: 3/12/2021
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -20,8 +20,16 @@ search.app:
 # Export to an Excel PivotTable
 
 You can export app data to an Office Excel PivotTable to see patterns and trends in data. An Excel PivotTable is a great way to summarize, analyze, explore, and present your app data. You can export up to 100,000 rows at a time.  
+
+A few things to note: 
   
-The option to export data to an Excel PivotTable isn’t available in all row types. If you don’t see the option, it’s not available for that row.  
+- The option to export data to an Excel PivotTable isn’t available in all row types. If you don’t see the option, it’s not available for that row.  
+- 
+- Currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
+  
+- The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
+
+## Export a pivot table
   
 1. On the left nav, select a table.
 2. On the command bar select the **Export to Excel** menu, and then select **Dynamic PivotTable**.  
@@ -59,14 +67,8 @@ The option to export data to an Excel PivotTable isn’t available in all row ty
   
 7. Drag the columns from the PivotTable Column List to the PivotTable. For more information, see [Overview of PivotTables and PivotCharts](https://support.microsoft.com/office/overview-of-pivottables-and-pivotcharts-527c8fa3-02c0-445a-a2db-7794676bce96).  
   
-## Tips  
-  
-- Currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
-  
-- The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
-  
-- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite columns (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these columns in Excel, but when you import the data back into the app, these columns will not be updated. If you want to update these columns, such as a contact’s name, then it’s recommended that you use that view to export your data, update it in Excel, and import it back to the app for changes. For more information, see [Open table data in Excel](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-excel-addin).  
-  
+
+
  
 
 
