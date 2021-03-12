@@ -21,7 +21,7 @@ search.app:
 
 Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. 
 
-Every table has required columns that must exist in your input file. It's recommended that you download an Excel template, add your data, and then import the file to your app. Don't add or modify columns in the template to avoid issues during the import.
+Every table has required columns that must exist in your input file. It's recommended that you download an Excel template, add your data, and then import the file to your app. The template saves time and effort. Don't add or modify columns in the template to avoid issues during the import.
 
 Before you import a file make sure the column headings match the table names in your app. During the import process, the system will try to map the table names from your input file to the table names in the app. If they don't match, then you'll need to manually map these fields or you may run into issues during the import process.
 
@@ -35,13 +35,13 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 
 ## Download an Excel template
 
-To avoid mapping issue, it's recommend that you use an Excel template that you can download from your app. Once the template is downloaded add your data and then import the file back to your app. Remember don't add or modify columns otherwise when you import the data to your app the import will fail.
+To avoid mapping issue, it's recommend that you use an Excel template that you can download from your app. Once the template is downloaded add your data and then import the file back to your app. Remember don't add or modify columns in the template to avoid issues when you the import the file.
 
 1. Open your app and from the left nav select a table.
 
 2. On the command bar, select **Excel Templates** > **Download Template**.
 
-3. Select a table and view to download or select **Edit Columns** and choose the rows that you want to include in the template.
+3. Select a table view to download or select **Edit Columns** and choose the rows that you want to include in the template.
 
 5. Select **Download**. 
  
@@ -50,8 +50,7 @@ To avoid mapping issue, it's recommend that you use an Excel template that you c
 
 ## Import your data
 
-Use the template that you download in the previous step (modified with your data) to import data back to your app. The template saves time and effort. 
-  
+Use the template that you downloaded in the previous step (modified with your data) to import data back to your app. 
 1. Open your app and from the left nav select a table.
  
    > [!div class="mx-imgBorder"]
@@ -73,7 +72,7 @@ Use the template that you download in the previous step (modified with your data
    
 3. Select whether you want to **Allow Duplicates** or not. More information, see [Set up duplicate detection rules to keep your data clean](https://docs.microsoft.com/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
-4. For CSV and XML files (skip this step if you're importing an Excel (.xlsx) file): 
+4. For CSV and XML files (skip this step if you're importing an Excel file): 
 
    - For a CSV file: Select the drop-down list and select the data delimiter and field delimiter that you’ve used your CSV file.
    
@@ -94,7 +93,7 @@ Use the template that you download in the previous step (modified with your data
    
 ## Review mapping
 
-When you import a file one of the main steps is to review how your column headings are mapped to the columns (fields) in your model-driven app.
+When you import a file it's important to review the column headings and make sure they map to the columns (fields) in your app.
 
 > [!div class="mx-imgBorder"]
 > ![Review mapping](media/review-mapping-legend.png "Review mapping")
