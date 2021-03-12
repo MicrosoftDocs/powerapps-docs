@@ -41,7 +41,7 @@ To avoid mapping issue, it's recommend that you use an Excel template that you c
 
 2. On the command bar, select **Excel Templates** > **Download Template**.
 
-3. Select a table view to download or select **Edit Columns** and choose the rows that you want to include in the template.
+3. Select a table type and view that you want to download or select **Edit Columns** and choose the rows that you want to include in the template.
 
 5. Select **Download**. 
  
