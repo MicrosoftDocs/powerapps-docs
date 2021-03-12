@@ -68,7 +68,7 @@ The data is exported in the same format that you see in your app. Text will rema
   
 ## Export options
 
-There is other export options such as Excel Online, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
+There are other export options such as Excel Online, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
 
 > [!div class="mx-imgBorder"] 
 > ![Export to excel options](media/export_to_excel_options.png "Select export to Excel options")
