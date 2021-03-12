@@ -124,7 +124,7 @@ Embedding multiple Power BI workspaces may need additional considerations. Refer
 ### See also
 
 [Set up Power BI integration](admin/set-up-power-bi-integration.md) <br>
-[Add a Power BI report or dashboard to a web page in portal](admin/add-powerbi-report.md)
+[Add a Power BI report or dashboard to a web page in portal](admin/add-powerbi-report.md) <br>
 [Power Apps portals Studio](portal-designer-anatomy.md) <br>
 [Create and manage webpages](create-manage-webpages.md) <br>
 [WYSIWYG editor](compose-page.md)
