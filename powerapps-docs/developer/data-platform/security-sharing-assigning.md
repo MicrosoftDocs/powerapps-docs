@@ -81,5 +81,15 @@ the previous owner does not share the record and may not have access to the
 record, depending on his or her privileges. The Organization entity's
 [ShareToPreviousOwnerOnAssign](reference/entities/organization.md#sharetopreviousowneronassign-options) attribute controls this setting.
 
+## Revoking access
+
+As the owner of a record, you can revoke (remove) user access to your shared record. To do so, use the `RevokeAccess` message (<xref:Microsoft.Dynamics.CRM.RevokeAccess> action, <xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest> class).
+
+More information: [Shared access](/power-platform/admin/how-record-access-determined#shared-access.md)
+
+### See also
+
+[Sample: Share records using GrantAccess, ModifyAccess and RevokeAccess messages](org-service/samples/share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
+

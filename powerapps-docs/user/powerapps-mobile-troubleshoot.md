@@ -21,9 +21,11 @@ search.app:
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](run-canvas-and-model-apps-on-mobile.md).
 
-## Sign in issues
+If you don't find the answer to your issue, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
-### Unable to sign in due to issues with the Microsoft Authenticator app 
+## Error: There was a problem signing you in
+
+You are unable to sign in due to issues with the Microsoft Authenticator app. 
 
 If you don’t have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to Power Apps mobile again.
 
@@ -37,13 +39,9 @@ If you already have the Microsoft Authenticator app installed and you're having 
 6. Open Power Apps mobile and then sign in.
 
 
-### Sign in errors 
- 
-**Error: Your device configuration is preventing sign in** <br/>
+## Error: Your device configuration is preventing sign in
 
-**Error: There was a problem signing you in**
-
-If you get one of these error messages, it means your company's IT department requires Microsoft Intune or an authentication app to sign in securely. However, your device setup is blocking Power Apps mobile from launching the authentication app that's installed on your device.
+If you get this error messages, it means your company's IT department requires Microsoft Intune or an authentication app to sign in securely. However, your device setup is blocking Power Apps mobile from launching the authentication app that's installed on your device.
 
 Microsoft authentication apps are Authenticator and Company Portal. Your company may use a third-party authentication app. If you're not sure, ask your IT department or help desk which authentication app to use. Once you have the correct authentication app, then follow the steps below.
 
@@ -81,6 +79,7 @@ If the issue is still not fixed, then try these steps:
 
 If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
+
 ## Pin to Home does not work on iOS 14
 
 **iOS device running iOS 14**: The Safari browser no longer supports the **Pin to Home** functionality for Power Apps mobile. You need to use the Siri Shortcuts app to pin an app to the Home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-siri-shortcuts-to-pin-home-ios-14-or-later).
@@ -98,8 +97,10 @@ The app list in the Power Apps mobile app may appear empty when you lose interne
 To resolve connection related issues, ensure you remain connected to the internet while the app list is fully downloaded.
 
 
+### See also  
 
-
+[Power Apps portals known issues](https://docs.microsoft.com/powerapps/maker/portals/known-issues) <br/>
+[Power Automate known issues](https://docs.microsoft.com/power-automate/process-advisor-issues)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

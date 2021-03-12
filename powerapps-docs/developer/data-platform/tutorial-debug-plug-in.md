@@ -64,7 +64,7 @@ Because the plug-in executes on a remote server, you cannot attach a debugger to
     ![foo](media/tutorial-debug-plug-in-profiler-settings.png)
 
 
-Form more information about running the profiler see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
+For more information about running the profiler see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
 
 ## Capture a profile
 

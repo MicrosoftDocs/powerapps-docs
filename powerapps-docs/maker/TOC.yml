@@ -359,8 +359,16 @@
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
-            - name: Insert interactive maps
-              href: ./canvas-apps/geospatial-component-map.md
+            - name: Use interactive maps
+              items: 
+              - name: Insert interactive maps
+                href: ./canvas-apps/geospatial-component-map.md
+              - name: Use data from Excel to insert pins
+                href: ./canvas-apps/geospatial-map-excel.md
+              - name: Add info cards to pins
+                href: ./canvas-apps/geospatial-map-infocards.md
+              - name: Draw and insert shapes onto maps
+                href: ./canvas-apps/geospatial-map-draw-shapes.md
             - name: Use address lookup
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
@@ -395,7 +403,7 @@
               href: ./canvas-apps/controls/control-column.md
             - name: Combo box
               href: ./canvas-apps/controls/control-combo-box.md
-            - name: Container (experimental)
+            - name: Container (preview)
               href: ./canvas-apps/controls/control-container.md
             - name: Data table
               href: ./canvas-apps/controls/control-data-table.md
@@ -887,14 +895,18 @@
         items:
           - name: Create an accessible app
             href: ./canvas-apps/accessible-apps.md
-          - name: Find accessibility issues
-            href: ./canvas-apps/accessibility-checker.md
+          - name: Create a logical app structure
+            href: ./canvas-apps/accessible-apps-structure.md
           - name: Use color for accessibility
             href: ./canvas-apps/accessible-apps-color.md
           - name: Show or hide content from assistive technologies
             href: ./canvas-apps/accessible-apps-content-visibility.md
           - name: Announce dynamic changes with live regions
             href: ./canvas-apps/accessible-apps-live-regions.md
+          - name: Find accessibility issues using Accessibility checker
+            href: ./canvas-apps/accessibility-checker.md
+          - name: Accessibility limitations
+            href: ./canvas-apps/accessible-apps-limitations.md
       - name: Send notifications from an app
         href: ./canvas-apps/add-notifications.md
       - name: Experimental and preview features
@@ -1277,8 +1289,6 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-    - name: Create guided help
-      href: ./model-driven-apps/create-guided-help-learning-path.md
   - name: Transition to Unified Interface
     items:
     - name: Transition quick start
