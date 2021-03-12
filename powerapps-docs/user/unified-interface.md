@@ -25,12 +25,6 @@ Unified Interface for model-driven apps provides a consistent and accessible use
 
 For an overview of Unified Interface in model-driven apps, watch this video: [Introduction to Unified Interface](https://www.youtube.com/watch?v=_VPOi_Iq6ko)
 
-> [!NOTE]
-> The legacy web client will be deprecated and customers must transition to Unified Interface before December 4, 2020. To learn more on how to transition, see [Quick start for transitioning](/powerapps/maker/model-driven-apps/transition-web-app) and [FAQs: Transition to Unified Interface](/powerapps/maker/model-driven-apps/faqs-transition-unified-interface).
-
-
-
-
 ## Reflow 
 
 Unified Interface is designed for a modern reflow experience. 
