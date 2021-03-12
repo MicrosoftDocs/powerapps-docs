@@ -87,7 +87,7 @@ This issue occurs when the data that you're accessing is password-protected and 
    > [!div class="mx-imgBorder"] 
    > ![Go to Queries and Connections](media/excel-dynamic-ts-1.png "Go to Queries and Connections") 
    
-3. The **Queries & Connections** pane opens on the right of the window. On the **Connections** tab, right-click to select the **Query_from_Microsoft_CRM query** and then select **Properties**.
+3. The **Queries & Connections** pane opens on the right of the window. On the **Connections** tab, right-click to select the query and then select **Properties**.
 
    > [!div class="mx-imgBorder"] 
    > ![Go connections properties](media/excel-dynamic-ts-2.png "Go connections properties")
@@ -95,9 +95,9 @@ This issue occurs when the data that you're accessing is password-protected and 
 5. The **Connection Properties** window opens. On **Definition** tab, and then **Edit Query**
 
    > [!div class="mx-imgBorder"] 
-   > ![Go connections properties](media/excel-dynamic-ts-3.png "Go connections properties")
+   > ![Edit query](media/excel-dynamic-ts-3.png "Edit Query")
 
- 6. If prompted, enter username and password. Enter the same user and password that you use to sign in to your app.
+6. If prompted, enter username and password. Enter the same user and password that you use to sign in to your app.
 
 7. On the **Edit Web Query** window, select **GO**. An error message will show: **Can't complete this action** 
 
