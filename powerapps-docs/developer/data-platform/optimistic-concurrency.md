@@ -1,6 +1,6 @@
 ---
-title: "Optimistic concurrency (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Optimistic concurrency provides the ability for your applications to detect whether a table record has changed on the server in the time between when your application retrieved the record and when it tries to update or delete that record" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Optimistic concurrency (Microsoft Dataverse) | Microsoft Docs" 
+description: "Optimistic concurrency provides the ability for your applications to detect whether a table record has changed on the server in the time between when your application retrieved the record and when it tries to update or delete that record"
 ms.custom: ""
 ms.date: 03/12/2021
 ms.reviewer: "pehecke"
