@@ -50,7 +50,8 @@ To avoid mapping issue, it's recommend that you use an Excel template that you c
 
 ## Import your data
 
-Use the template that you downloaded in the previous step (modified with your data) to import data back to your app. 
+Use the template that you downloaded in the previous step (modified with your data) to import the file to your app. 
+
 1. Open your app and from the left nav select a table.
  
    > [!div class="mx-imgBorder"]
