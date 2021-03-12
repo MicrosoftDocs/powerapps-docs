@@ -25,7 +25,7 @@ Take the following steps to export your customizations from Dataverse for Teams:
    - It's recommended to keep the option **Export all dependencies**  under **Advanced settings** selected. By including all dependencies you are optimizing your success when importing your customizations into another environment.
    - If you prefer to manually select the dependencies of your items, you can change the value to **Export selected dependencies** under **Advanced settings**. Note that importing customizations that do not include all dependencies will fail if those dependencies are not already in the destination environment.
 
-![Review selections](media/export-customizations.png)
+    ![Review selections](media/export-customizations.png)
 1. Select **Export as zip**. The selected items will be exported as a compressed solution file (.zip). The solution file will automatically be offered for download when the export completes.
    - Files you download from Microsoft Teams will show up in your device's Downloads folder. In Microsoft Teams desktop, you can navigate to the Downloads section by clicking the Files button on the left side of the Teams client.
 
