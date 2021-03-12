@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/26/2021
+ms.date: 03/12/2021
 ms.author: gisingh
 ms.reviewer: tapanm
 searchScope:
@@ -43,7 +43,7 @@ Terminology updates apply to references of legacy terms. For example, if the leg
 
 The following table includes terminology changes inside Portal Management app.
 
-| Feature area or location of the term | Legacy term | Current term |
+| Feature area or location of the term |  Legacy term | Current term |
 | - | - | - |
 | View name for Entity List  | Active Entity Lists | Active Lists |
 | View name for Entity List | Entity List Advanced Find View | List Advanced Find View |
