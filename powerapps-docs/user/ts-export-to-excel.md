@@ -38,7 +38,7 @@ This issue occurs when the data that you're accessing is password-protected and 
     The **Queries & Connections** pane opens on the right of the window.
 
     > [!div class="mx-imgBorder"]
-    > ![Queries and Connections pane](media/ts-e2e-queries-connections-pane.png "Queries and Connections pane")
+    > ![Queries and Connections window](media/ts-e2e-queries-connections-pane.png "Queries and Connections window")
 
 2. On the **Connections** tab, right-click to select the **Query_from_Microsoft_CRM** query, and then select **Properties**.
 
