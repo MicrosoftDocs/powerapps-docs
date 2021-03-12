@@ -74,7 +74,7 @@ If you have requirements to create your own experience on Unified Interface, you
 
 ## Unified Interface Community
 
-Go to the [Unified Interface Community site](https://community.dynamics.com/365/unified-interface/) to get help with planning and executing a smooth transition to Unified Interface and engage with experts and peers on blogs, webinars, videos, events, and more.
+Go to the [Unified Interface Community site](https://community.dynamics.com/365/unified-interface/) to engage with experts and peers on blogs, webinars, videos, events, and more.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
