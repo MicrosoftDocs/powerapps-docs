@@ -19,15 +19,14 @@ search.app:
 ---
 # Export data to an Excel dynamic worksheet
 
-Export your app data to an Office Excel worksheet to get the most up-to-date data from your app. When you export your data to an Excel dynamic worksheet and then make changes to your data in the app, you can use the refresh feature in Excel to get the lastest information from your app.
+Export your app data to an Excel dynamic worksheet to get the most up-to-date information from your app. When you export your data to an Excel dynamic worksheet and then make changes to your data in the app, you can use the refresh feature in Excel to get the lastest information from the app.
 
-In the example below, we downloaded an Excel dynamic worksheet then went back to the app and changed the **Reserve for days** column from **5** days to **10**. Then opened the Excel worksheet and refreshed the data to get lastest information from the app.
+In the example below, we downloaded an Excel dynamic worksheet then went back to the app and changed the **Reserve for days** column from **5** days to **10**. Then opened the Excel worksheet and refreshed the data to get the lastest information from the app.
 
 ![Demo of how the Excel to dynamic workseeting feature](media/export-excel-dynamicsworksheet-demo.gif "Demo of how the Excel to dynamic workseeting feature")
 
 
 You can export up to 100,000 rows at a time. You can’t export data to a dynamic worksheet in Excel for all table. If you don’t see the option for a table, then it’s not available for that table.
-
 
 
 If you're a app makeer, you can use the Microsoft Power Apps Excel Add-in to download your app data and make edit in Excel and then save the data back to your app. For more information, see [Open table data in Excel](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-excel-addin).
