@@ -107,7 +107,7 @@ var accessRights = GetAccessRights(svc, me, exampleAccount.ToEntityReference());
 var canAppendTo = accessRights.HasFlag(AccessRights.AppendToAccess);
 ```
 
-With access to a table instance, you can use this method to test any
+With access to a table record, you can use this method to test any
 operations that apply to that record. But this doesn’t include capabilities that
 apply to other operations, such as creating a new record or any other privilege
 that isn’t bound to a specific table.
