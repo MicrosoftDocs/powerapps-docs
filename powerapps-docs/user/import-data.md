@@ -25,7 +25,7 @@ Every table has required columns that must exist in your input file. It's recomm
 
 Before you import a file make sure the column headings match the table names in your app. During the import process, the system will try to map the table names from your input file to the table names in the app. If they don't match, then you'll have to manually map the fields or you may run into issues during the import process.
 
-If you're an advanced user and know the required columns for a given Dataverse tables, define your own Excel, CSV, or XML source file and then follow the steps in this article on how to [import data](import-data.md#import-your-data) to your app. These file formats are supported:
+If you're an advanced user and know the required columns for a given Dataverse table, define your own Excel, CSV, or XML source file and then follow the steps in this article on how to [import data](import-data.md#import-your-data) to your app. These file formats are supported:
 
  - Excel workbook (.xlsx)
  - Comma-separated values (.csv)
@@ -35,7 +35,7 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
 
 ## Download an Excel template
 
-To avoid mapping issue, it's recommend that you use an Excel template that you can download from your app. Once the template is downloaded add your data and then import the file back to your app. Remember don't add or modify columns in the template to avoid issues during the import process.
+To avoid mapping issue, it's recommended that you use an Excel template that you can download from your app. Once the template is downloaded add your data and then import the file back to your app. Remember don't add or modify columns in the template to avoid issues during the import process.
 
 1. Open your app and from the left nav select a table.
 
