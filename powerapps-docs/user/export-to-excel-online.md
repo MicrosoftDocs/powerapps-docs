@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Open your app data using Excel Online 
+# Open your app data in Excel Online 
 
 Open your app data in Excel Online and make quick edits or do a ad-hoc analysis. You can make changes to your app data in Excel Online and then save the updated information back your app. 
 
