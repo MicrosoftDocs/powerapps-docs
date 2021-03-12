@@ -29,7 +29,8 @@ landingContent:
           - text: Portals lifecycle
             url: admin/portal-lifecycle.md
        - linkListType: whats-new
-            text: Terminology changes in portals
+         links:
+          - text: Terminology changes in portals
             url: terminology-changes.md
        - linkListType: learn
          links:
