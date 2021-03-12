@@ -21,14 +21,26 @@ search.app:
 
 When you want to present information about the data in your app to an individual who doesn’t have access to the app, or you have data that doesn’t change often, consider exporting the app data to an Excel static worksheet.
 
-You can export up to 100,000 rows at a time. By default, a model-driven app lists up to 50 rows per page. 
-
 There is two types of static worksheets that you can export. 
 
 - **Static worksheet**: Exports all the pages in the current view.
 - **Static worksheet (Page only)**: Exports the data from the current page only.
+
+A few things to note: 
+
+- You may have the option to export data to an Excel static worksheet in all row types. However, in some cases the format might be old, or the data might not be filtered by what you see in the app.  
+
+- You can export up to 100,000 rows at a time. By default, a model-driven app lists up to 50 rows per page. 
+
+- You can email a static exported worksheet to anyone or store it in a shared file. Anyone who opens the file will see all the data in the file.
   
-You may have the option to export data to an Excel static worksheet in all row types. However, in some cases the format might be old, or the data might not be filtered by what you see in the app.  
+- You can’t change the columns for a system view. You must either customize the view, which requires the System Administrator or System Customizer security role, or use Advanced Find to create your own view based on the current view.  
+    
+- Currency values are exported to Excel as numbers. After you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4?ui=en-US&rs=en-US&ad=US).
+  
+- The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time. 
+  
+## Export a static worksheet
   
 1. To export data, on the left nav, select a table.
 2. On the command bar select the **Export to Excel**, and then choose **Static worksheet** or **Static worksheet (Page only)**.  
@@ -58,19 +70,7 @@ You may have the option to export data to an Excel static worksheet in all row t
 
 By default, an exported worksheet includes the columns that are displayed in the list, using the same column order, sorting, and column widths.  
   
-  
-## Tips  
-  
-- You can email a static exported worksheet to anyone or store it in a shared file. Anyone who opens the file will see all the data in the file.
-  
-- You can’t change the columns for a system view. You must either customize the view, which requires the System Administrator or System Customizer security role, or use Advanced Find to create your own view based on the current view.  
-    
-- Currency values are exported to Excel as numbers. After you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4?ui=en-US&rs=en-US&ad=US).
-  
-- The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
-  
-- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite columns (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these columns in Excel, but when you import the data back into the app, these columns will not be updated. If you want to update these columns, such as a contact’s name, then it’s recommended that you use that view to export your data, update it in Excel, and import it back to the app for changes. For more information, see [Open table data in Excel](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-excel-addin).
-  
+ 
 
 
 
