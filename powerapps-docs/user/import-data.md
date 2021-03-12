@@ -19,21 +19,22 @@ search.app:
 ---
 # How to import data
 
-Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. You can import data using different file types such as, Excel workbook (.xlsx), Comma-separated values (.csv), and XML Spreadsheet 2003 (.xml).
+Import data that's stored somewhere else into your model-drvien app using the import feature in Power Apps. The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.   
 
-Every table has required columns that must exist in your input file. When you create you're own import file, make sure the column headings match the table names in your app. During the import process, the system will try to map the table names from your input file to the table names in your app. If they don't match, then you'll need to manually map these fields or you may run into issues during the import.
+Every table has required columns that must exist in your input file. It's recommended that you download an Excel template, add your data, and then import the file to your app. Don't add or modify columns in the template to avoid issues during the import.
 
-If you're an advanced user and know the required columns for a given Dataverse tables, define your own Excel, CSV, or XML source file and then follow the steps in this article on how to import data into your app. These file formats are supported:
+Before you start the import make sure the column headings match the table names in your app. During the import process, the system will try to map the table names from your input file to the table names in the app. If they don't match, then you'll need to manually map these fields or you may run into issues during the import process.
+
+If you're an advanced user and know the required columns for a given Dataverse tables, define your own Excel, CSV, or XML source file and then follow the steps in this article on how to [import data](import-data.md#import-your-data) to your app. These file formats are supported:
 
  - Excel workbook (.xlsx)
  - Comma-separated values (.csv)
  - XML Spreadsheet 2003 (.xml)
-  
-The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.  
+ 
 
 ## Download an Excel template
 
-To avoid mapping issue, we recommend that you use an Excel template that you can download from your app. After you download the template you can add your data and then import the file back into your app. Remember don't add or modify columns otherwise when you import the data to your app the import will fail.
+To avoid mapping issue, we recommend that you use an Excel template that you can download from your app. After you download the template you can add your data and then import the file back to your app. Remember don't add or modify columns otherwise when you import the data to your app the import will fail.
 
 1. Open your app and from the left nav select a table.
 
