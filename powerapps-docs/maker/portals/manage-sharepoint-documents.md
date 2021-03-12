@@ -1,12 +1,12 @@
 ---
 title: "Manage SharePoint documents on a portal | MicrosoftDocs"
 description: "Instructions to manage SharePoint document on a portal."
-author: gitanjalisingh33msft
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 01/27/2021
-ms.author: gisingh
+ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
