@@ -32,7 +32,7 @@ This list below contains all of the guidance and best practices regarding intera
 |Best Practice  |Description  |
 |---------|---------|
 |[Retrieve published metadata](retrieve-published-metadata.md)     |Retrieving unpublished metadata not only will add overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor does not expect.         |
-|[Retrieve specific columns for an entity via query APIs](retrieve-specific-columns-entity-via-query-apis.md)     |Queries submitted to retrieve data should include specific columns in the ColumnSet instance associated to the query rather than All Columns.         |
+|[Retrieve specific columns for a= table via query APIs](retrieve-specific-columns-entity-via-query-apis.md)     |Queries submitted to retrieve data should include specific columns in the ColumnSet instance associated to the query rather than All Columns.         |
 
 ### See Also
 [Work with metadata using code](../../metadata-services.md)<br />

@@ -1,8 +1,8 @@
 ---
 title: "Browse the metadata for your organization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can use the Entity Metadata Browser to view entities and their properties in Microsoft Dataverse. The Entity Metadata Browser is a managed solution you can download and install on your organization." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "You can use the Metadata Browser to view tables and their properties in Microsoft Dataverse. The Metadata Browser is a managed solution you can download and install on your organization." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 01/14/2021
+ms.date: 03/12/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -19,7 +19,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use the Entity Metadata Browser to view entities and their properties in Microsoft Dataverse. The Entity Metadata Browser is a managed solution you can download using the links below.
+You can use the Metadata Browser to view tables and their properties in Microsoft Dataverse. The Metadata Browser is a managed solution you can download using the links below.
 
 
 |                                                                                               Version                                                                                                |                                                                                     Download                                                                                      |
@@ -29,53 +29,53 @@ You can use the Entity Metadata Browser to view entities and their properties in
 After you download the solution, you must install it. For information about how to install a managed solution, see [Import solutions](import-update-export-solutions)  
 
 ## Open as an app
-Dataverse is configured as an app. After you install the **Entity Metadata Browser** solution, locate the **Metadata Tools** app and open it. **Entities** is the default view. From the **Tools** navigation area you can select **Entity Metadata** to inspect individual entities.
+Dataverse is configured as an app. After you install the **Entity Metadata Browser** solution, locate the **Metadata Tools** app and open it. **Entities** is the default view. From the **Tools** navigation area you can select **Entity Metadata** to inspect individual tables.
 
 ## Open from the solution configuration page
 For earlier versions you must use the following steps, but these also work for the latest verison.  
 
-After you install the **Entity Metadata Browser** solution, open the managed solution by double-clicking the row in the solutions list and view the **Configuration** page to view information about the Entity Metadata Browser and buttons to launch two different views.
+After you install the **Entity Metadata Browser** solution, open the managed solution by double-clicking the row in the solutions list and view the **Configuration** page to view information about the Metadata Browser and buttons to launch two different views.
 - **Metadata Browser** is equivalent to the **Entities** view in the app.
 - **Entity Metadata Browser** is equivalent to the **Entity Metadata** view in the app.
 
 ## Entities view
 You can perform the following actions:
 
-- **View Entity Details**: Select an entity to view using the **Entity Metadata** view.
-- **Edit Entity**: Open the selected entity form in the default organization, if the entity supports this.
-- **Text Search**: Perform a text search to filter displayed entities using the following entity properties: <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DisplayName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode>, or <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId>.
-- **Filter Entities**: Set simple criteria to view a sub-set of entities. All criteria are evaluated using AND logic.
-- **Filter Properties**: Filter the properties displayed for any selected entity. There are nearly 100 properties in the list. Use this to select just the ones you are interested in.
+- **View Entity Details**: Select a table to view using the **Entity Metadata** view.
+- **Edit Entity**: Open the selected table form in the default organization, if the table supports this.
+- **Text Search**: Perform a text search to filter displayed tables using the following table properties: <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SchemaName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DisplayName>, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ObjectTypeCode>, or <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId>.
+- **Filter Entities**: Set simple criteria to view a sub-set of tables. All criteria are evaluated using AND logic.
+- **Filter Properties**: Filter the properties displayed for any selected table. There are nearly 100 properties in the list. Use this to select just the ones you are interested in.
 
 ## Entity Metadata view
 
-You can perform the following actions for a single entity:
+You can perform the following actions for a single table:
 
-- **Entity**: Change the entity that you want to view.
-- **Properties**: View all the properties for the entity and filter the properties displayed.
+- **Entity**: Change the table that you want to view.
+- **Properties**: View all the properties for the table and filter the properties displayed.
 
-    - **Edit Entity**: Open the selected entity edit form in the default organization, if the entity supports this.
-    - **Filter Properties**: Filter the properties displayed for any selected entity. There are nearly 100 properties in the list. Use this to select just the ones you are interested in.
+    - **Edit Entity**: Open the selected table edit form in the default organization, if the table supports this.
+    - **Filter Properties**: Filter the properties displayed for any selected table. There are nearly 100 properties in the list. Use this to select just the ones you are interested in.
 
-- **Attributes**: View the entity attributes in a master/detail view. With this view you can:
+- **Attributes**: View the columns in a master/detail view. With this view you can:
 
-    - **Edit Attribute**: Open the selected attribute form in the default organization, if the attribute supports this.
-    - **Text Search**: Perform a text search to filter displayed attributes using the following attribute properties: <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName>, <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>, <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.DisplayName>, or <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId>.
-    - **Filter Attributes**: Filter attributes by any attribute property values.
-    - **Filter Properties**: Filter the properties displayed for the selected attribute.
+    - **Edit Attribute**: Open the selected column form in the default organization, if the column supports this.
+    - **Text Search**: Perform a text search to filter displayed columns using the following column properties: <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName>, <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>, <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.DisplayName>, or <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId>.
+    - **Filter Attributes**: Filter columns by any column property values.
+    - **Filter Properties**: Filter the properties displayed for the selected column.
 
-- **Keys**: If alternate keys are enabled for an entity you can examine how they are configured.
+- **Keys**: If alternate keys are enabled for a table you can examine how they are configured.
 
-- **Relationships**: View the three types of entity relationships: One-To-Many, Many-To-One, and Many-To-Many. With these views you can:  
+- **Relationships**: View the three types of relationships: One-To-Many, Many-To-One, and Many-To-Many. With these views you can:  
     - **Edit Relationship**: Open the selected relationship form in the default organization, if the relationship supports this.  
     - **Text Search**: Perform a text search to filter displayed relationships using values relevant to the type of relationship.  
     - **Filter Properties**: Filter the relationship by any relationship property value.
 
-- **Privileges**: View entity privileges. With this view you can:  
+- **Privileges**: View table privileges. With this view you can:  
     - Filter the displayed privilege using the `PrivilegeId`.
 
 > [!NOTE]
-> When viewing the entity detail properties, you'll see that many complex properties are expandable. The most useful value is displayed with a link that allows toggling to a more detailed view. The detailed view reflects the structure of the data if you were to retrieve it programmatically. The detailed view also reveals other relevant data that can be retrieved in the same area, for example, if any localized labels are present for **Display Name** properties.
+> When viewing the table detail properties, you'll see that many complex properties are expandable. The most useful value is displayed with a link that allows toggling to a more detailed view. The detailed view reflects the structure of the data if you were to retrieve it programmatically. The detailed view also reveals other relevant data that can be retrieved in the same area, for example, if any localized labels are present for **Display Name** properties.
 
 > [!TIP]
 > To copy text from the page, simply select the text and use the Ctrl+C keyboard shortcut or the context menu **Copy** command.
