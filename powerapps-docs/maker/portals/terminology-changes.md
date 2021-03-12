@@ -69,7 +69,8 @@ The following table includes terminology changes inside Portal Management app.
 | View name for Web Form | Web Form Advanced Find View | Advanced Form Advanced Find View |
 | View name for Web Form | Web Form Associated View | Advanced Form Associated View |
 | View name for Web Form | Web Form Lookup View | Advanced Form Lookup View |
-| Checkbox for Entity Permission | Enable Entity Permission | Enable Table Permission | Lookup label for Parent Entity Permission | Parent Entity Permission | Parent Table Permission |
+| Checkbox for Entity Permission | Enable Entity Permission | Enable Table Permission |
+| Lookup label for Parent Entity Permission | Parent Entity Permission | Parent Table Permission |
 | Tab name for entity reference | Entity Reference | Associated Table Reference |
 | Metadata for Entity Form | Entity Form Metadata | Basic Form Metadata |
 | View name for Entity Form Metadata | Active Entity Form Metadata | Active Basic Form Metadata |
