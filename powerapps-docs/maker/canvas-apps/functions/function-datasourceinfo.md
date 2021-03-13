@@ -52,7 +52,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 | **DataSourceInfo.ReadPermission** |Boolean |Does the current user have permission to read records in this data source? If not set by the data source, returns **true**. |
 
 > [!NOTE]
-> **DataSourceInfo** will return *true* if we cannot determine if the requested permission is available.  Permissions will be checked by the server when the actual operation is carried out and an error displayed if it was not allowed.
+> **DataSourceInfo** will return *true* if we cannot determine if the current user has the requested permission.  Permissions will be checked by the server when the actual operation is carried out and an error displayed if it was not allowed.
 
 ## Syntax
 **DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
