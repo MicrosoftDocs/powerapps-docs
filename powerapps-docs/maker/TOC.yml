@@ -143,7 +143,7 @@
         href: ../user/import-data.md
       - name: Export data to Excel
         href: ../user/export-data-excel.md
-      - name: Export data to Excel Online
+      - name: Open app data in Excel Online
         href: ../user/export-to-excel-online.md      
       - name: Export to a dynamic worksheet
         href: ../user/export-excel-dynamic-worksheet.md
@@ -153,8 +153,6 @@
         href: ../user/export-excel-pivottable.md
       - name: Merge duplicate rows
         href: ../user/merge-duplicate-records.md
-      - name: Troubleshoot export to Excel
-        href: ../user/ts-export-to-excel.md
     - name: Reports
       items:
       - name: Work with reports
