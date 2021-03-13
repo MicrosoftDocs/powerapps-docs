@@ -39,7 +39,7 @@ A few things to note:
 
 1. On the left nav, select a table.
 
-2. On the command bar select the **Export to Excel** menu and then select **Dynamic Worksheet**.
+2. On the command bar, select the **Export to Excel** menu and then select **Dynamic Worksheet**.
 
    > [!div class="mx-imgBorder"] 
    > ![Export to Excel dynamic worksheet](media/open-dynamic-worksheet.png "Select export to Excel dynamic worksheet")
