@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/user/ts-export-to-excel.md",
+      "redirect_url": "export-excel-dynamic-worksheet#refresh-all-doesnt-work",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/create-guided-help-learning-path.md",
       "redirect_url": "../data-platform/create-custom-help-pages",
       "redirect_document_id": "false"
