@@ -2,7 +2,7 @@
 title: "Troubleshoot plug-ins (Microsoft Dataverse for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Contains information on errors that can occur with to plug-ins and how to fix them." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/06/2021
+ms.date: 03/13/2021
 ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
@@ -245,7 +245,7 @@ You shouldn’t use parallel execution patterns in plug-ins. This is called out 
 
 ### Worker process reaches memory limit
 
-Each of the worker processes have a finite amount of memory. There are conditions where multiple concurrent operations which include large amounts of data could exceed the available memory and cause the process worker to crash.
+Each worker process has a finite amount of memory. There are conditions where multiple concurrent operations which include large amounts of data could exceed the available memory and cause the process worker to crash.
 
 #### RetrieveMultiple with File data
 
