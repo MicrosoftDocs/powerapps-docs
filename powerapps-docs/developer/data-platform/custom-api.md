@@ -17,7 +17,9 @@ search.app:
 ---
 # Create and use Custom APIs 
 
-Custom APIs offer a code-first way to define messages that you can add to Dataverse web services. Conceptually, Custom APIs are an alternative to Custom Process Actions that have provided a no-code way to include custom messages.
+Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code.
+
+Operations in Dataverse are defined as *messages*. Custom APIs offer a code-first way to define messages that you can add to Dataverse web services. Custom APIs are an alternative to Custom Process Actions that provide a no-code way to include custom messages.
 
 Custom APIs provide a capabilities specifically for developers to define their logic in code. For a full comparison of Custom Process Action and Custom API, see [Compare Custom Process Action and Custom API](custom-actions.md#compare-custom-process-action-and-custom-api).
 
@@ -41,26 +43,26 @@ There are several different ways to create a custom API:
 
 Regardless of the process you use, the following information describes selected columns for the three tables that contain the data for a Custom API. You should review this as you plan the behavior for your Custom API.
 
-### CustomAPI entity attributes
+### CustomAPI table columns
 
-This table includes attributes of a Custom API entity instance that you can set.
+This table includes columns of a Custom API record that you can set.
 
 
-|Display Name<br />Schema Name  |Type  |Description |
+|Display Name<br />Schema Name<br />Logical Name  |Type  |Description |
 |---------|---------|---------|
-|**Allowed Custom Processing Step Type**<br />`AllowedCustomProcessingStepType`|Picklist|The type of custom processing steps allowed for this Custom API. This allows you to control whether other plug-ins can be registered<ul> <li>**Value**: 0 **Label**: None **Meaning**: No custom processing steps allowed.</li> <li>**Value**: 1 **Label**: Async Only **Meaning**: Only asynchronous custom processing steps allowed</li> <li>**Value**: 2 **Label**: Sync and Async **Meaning**: No restriction. 3rd party plug-ins can add synchronous logic to change the behavior of the message.</li> </ul> **Cannot be changed after it is saved.**|
-|**Binding Type**<br />`BindingType`|Picklist|The binding type of the custom API.<ul><li>**Value**: 0 **Label**: Global</li><li>**Value**: 1 **Label**: Entity</li><li>**Value**: 2 **Label**: EntityCollection</li></ul>**Cannot be changed after it is saved.**|
-|**Bound Entity Logical Name**<br />`BoundEntityLogicalName`|String|The logical name of the entity bound to the custom API if it is not Global.<br />**Cannot be changed after it is saved.**|
-|**Custom API**<br />`CustomAPIId`|Uniqueidentifier|Unique identifier for custom API instances<br />**Cannot be changed after it is saved.**|
-|**Description**<br />`Description`|String|Localized description for this Custom API. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
-|**Display Name**<br />`DisplayName`|String|Localized display name for this Custom API. For use when the message is exposed to be called in an app.|
-|**Execute Privilege Name**<br />`ExecutePrivilegeName`|String|(Optional) Name of the privilege that allows execution of the custom API|
-|**Is Function**<br />`IsFunction`|Boolean|Indicates if the custom API is a function. A function requires the HTTP GET method. Otherwise the Http POST method is required.<ul> <li>**Value**: 0 **Label**: No</li> <li>**Value**: 1 **Label**: Yes</li> </ul>**Important**: A function MUST include at least one Response Property to be valid.<br/>More information: [Use Web API functions](webapi/use-web-api-functions.md)<br />**Cannot be changed after it is saved.**|
-|**Is Private**<br />`IsPrivate`|Boolean|Indicates if the custom API is private (hidden from metadata and documentation) More information: [Private Messages](org-service/use-messages.md#private-messages)<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li> </ul>|
-|**Name**<br />`Name`|String|The primary name of the custom API. This will display in the list of custom apis when viewed in the solution.|
-|**Owner**<br />`OwnerId`|Owner|A reference to the user or team that owns the API. |
-|**Plugin Type**<br />`PluginTypeId`|Lookup|A reference to the plug-in type that provides the main operation for this Custom API|
-|**Unique Name**<br />`UniqueName`|String|Unique name for the custom API. This will be the name of the message created.<br /> This value must include a customization prefix that matches the prefix set for your solution publisher.<br />**Cannot be changed after it is saved.**|
+|**Allowed Custom Processing Step Type**<br />`AllowedCustomProcessingStepType`<br />`allowedcustomprocessingsteptype`|Choice<br />Picklist|The type of custom processing steps allowed for this Custom API. This allows you to control whether other plug-ins can be registered<ul> <li>**Value**: 0 **Label**: None **Meaning**: No custom processing steps allowed.</li> <li>**Value**: 1 **Label**: Async Only **Meaning**: Only asynchronous custom processing steps allowed</li> <li>**Value**: 2 **Label**: Sync and Async **Meaning**: No restriction. 3rd party plug-ins can add synchronous logic to change the behavior of the message.</li> </ul> **Cannot be changed after it is saved.**|
+|**Binding Type**<br />`BindingType`<br />`bindingtype`|Choice<br />Picklist|The binding type of the custom API.<ul><li>**Value**: 0 **Label**: Global</li><li>**Value**: 1 **Label**: Entity</li><li>**Value**: 2 **Label**: EntityCollection</li></ul>**Cannot be changed after it is saved.**|
+|**Bound Entity Logical Name**<br />`BoundEntityLogicalName`<br />`boundentitylogicalname`|Text<br />String|The logical name of the entity bound to the custom API if it is not Global.<br />**Cannot be changed after it is saved.**|
+|**Custom API**<br />`CustomAPIId`<br />`customapiid`|Unique Identifier<br />Guid|Unique Identifier for custom API instances<br />**Cannot be changed after it is saved.**|
+|**Description**<br />`Description`<br />`description`|Text<br />String|Localized description for this Custom API. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
+|**Display Name**<br />`DisplayName`<br />`displayname`|Text<br />String|Localized display name for this Custom API. For use when the message is exposed to be called in an app.|
+|**Execute Privilege Name**<br />`ExecutePrivilegeName`<br />`executeprivilegename`|Text<br />String|(Optional) Name of the privilege that allows execution of the custom API|
+|**Is Function**<br />`IsFunction`<br />`isfunction`|Yes/No<br />Boolean|Indicates if the custom API is a function. A function requires the HTTP GET method. Otherwise the Http POST method is required.<ul> <li>**Value**: 0 **Label**: No</li> <li>**Value**: 1 **Label**: Yes</li> </ul>**Important**: A function MUST include at least one Response Property to be valid.<br/>More information: [Use Web API functions](webapi/use-web-api-functions.md)<br />**Cannot be changed after it is saved.**|
+|**Is Private**<br />`IsPrivate`<br />`isprivate`|Yes/No<br />Boolean|Indicates if the custom API is private (hidden from metadata and documentation) More information: [Private Messages](org-service/use-messages.md#private-messages)<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li> </ul>|
+|**Name**<br />`Name`<br />`name`|Text<br />String|The primary name of the custom API. This will display in the list of custom apis when viewed in the solution.|
+|**Owner**<br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API. |
+|**Plugin Type**<br />`PluginTypeId`<br />`plugintypeid`|Lookup|A reference to the plug-in type that provides the main operation for this Custom API|
+|**Unique Name**<br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API. This will be the name of the message created.<br /> This value must include a customization prefix that matches the prefix set for your solution publisher.<br />**Cannot be changed after it is saved.**|
 
 > [!NOTE]
 > Some values are not valid for update. They cannot be changed after the Custom API is saved. You should have a clear understanding of how your API should work before you begin. If you need to change any values that are not valid for update, you will have to delete the Custom API entity record and start over. Deleting the Custom API record will delete any Custom API Request Parameters or Custom API Response Properties associated with it.
