@@ -86,10 +86,6 @@ If you do not set the **Plugin Type** (`PluginTypeId`)  to specify main operatio
 > 
 > Custom APIs used for this purpose should not have any Custom API Response Properties, only Custom API Request Parameters. With no synchronous logic to process or response properties to return, the operations should not fail and will serve as a trigger for the logic in the asynchronous plug-in.
 
-**Known Issues**:
-
-- [Custom API functions cannot use Entity or EntityCollection Request Parameters](#custom-api-functions-cannot-use-entity-or-entitycollection-request-parameters)
-
 ### CustomAPIRequestParameter table columns
 
 A custom API isn’t required to have any parameters. There is no specified order for the parameters, they are identified by name.
