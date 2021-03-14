@@ -2,7 +2,7 @@
 title: "Create a Custom API in the maker portal (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create a Custom API definition with the maker portal" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/26/2020
+ms.date: 03/13/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -17,18 +17,16 @@ search.app:
 ---
 # Create a Custom API in the maker portal
 
-[This topic is pre-release documentation and is subject to change.] 
-
-In the future we intend that the designer for Custom Actions will provide a single experience that will include both Workflow Custom Actions and Custom APIs. For now, the only way to create Custom APIs with a user interface is to use the steps described here.
+The current experience creating Custom API within the maker portal is temporary. We intend to provide a modern experience in the future.
 
 
 > [!IMPORTANT]
 > Many fields related to creating Custom API cannot be changed after you create them. You should carefully plan the design of the Custom API before you start. If you later decide that you need to change things after you create the Custom API, you may need to delete the existing entity data and re-create the Custom API.
 >
 > Please review the following to understand which field values cannot be changed:
-> - [CustomAPI entity attributes](custom-api.md#customapi-entity-attributes)
-> - [CustomAPIRequestParameter entity attributes](custom-api.md#customapirequestparameter-entity-attributes)
-> - [CustomAPIResponseProperty entity attributes](custom-api.md#customapiresponseproperty-entity-attributes)
+> - [CustomAPI table columns](custom-api.md#customapi-table-columns)
+> - [CustomAPIRequestParameter table columns](custom-api.md#customapirequestparameter-table-columns)
+> - [CustomAPIResponseProperty table columns](custom-api.md#customapiresponseproperty-table-columns)
 
 When creating a Custom API it is expected that you will use a solution. Your solution must be associated with a publisher. The publisher will have a specific customization prefix associated with it. You must use a customization prefix when creating a Custom API and this prefix should be the same used by the publisher of your solution. The instructions below will use the value `sample` as the customization prefix because it is the one set for the following publisher:
 
@@ -48,14 +46,13 @@ When creating a Custom API it is expected that you will use a solution. Your sol
     |**Name**|The primary name of the custom API. This will display in the list of custom apis when viewed in the solution.|
     |**Display Name**|Localized display name for this Custom API. For use when the message is exposed to be called in an app.|
     |**Description**|Localized description for this Custom API. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
-    |**Bound Entity Logical Name**|The logical name of the entity bound to the custom API if it is not Global. If **Binding Type**is Global, this can remain empty|
-    |**Binding Type**|The binding type of the custom API. Options are: **Global**, **Entity**, **EntityCollection**.|
+    |**Bound Entity Logical Name**|The logical name of the entity bound to the custom API if it is not Global. If **Binding Type** is Global, this can remain empty|
+    |**Binding Type**|The binding type of the custom API. Options are: **Global**, **Entity**, **EntityCollection**. Only custom api actions can be bound to an entity or entity collection.|
     |**Is Function**|Indicates if the custom API is a function. A function requires the HTTP GET method. Otherwise the Http POST method is required.|
+    |**Is Private**|Indicates if the custom API is to be a private api.|
     |**Allowed Custom Processing Step Type**|The type of custom processing steps allowed for this Custom API. This allows you to control whether other plug-ins can be registered. Options are **None**, **Async Only**, **Sync and Async**.|
 
     You cannot set values for **Plug-in Type** unless you have already created the plug-in. You can change this later.
-
-    Known Issue: [The Is Private field is not included in the Custom API form](custom-api.md#the-is-private-field-is-not-included-in-the-custom-api-form).
 
 1. Click **Save**. Your form should look something like this:
     :::image type="content" source="media/saved-customapi-form.png" alt-text="Saved Custom API form":::
@@ -78,10 +75,13 @@ Then add your Custom API to your solution.
 
 A Custom API doesn't require parameters. Create as many parameters as you need to pass data needed for your logic.
 
-If the Custom API is bound to an **Entity** or **EntityCollection**, that parameter will be created automatically. You do not need to create request parameters for bound parameters.
+> [!NOTE]
+> If you define a bound entity for your Custom API action, the parameter will be generated for you. You don’t need to create an input parameter for the entity when the Custom API is bound to an entity.
+> 
+> If you bind your Custom API action to an entity collection, there will not be a parameter generated for you. Binding a Custom API action to an entity collection requires that the Custom API be called using the entityset resource path. Binding to an entity collection only sets the expectation that the operation will be performed on more than one entity of that type or that it will return a collection of that type. It does not provide an entity collection input parameter for your plug-in to process.
 
 1. In your solution, click **New** and select **Custom API Request Parameter** from the drop-down.
-1. Edit the fields to set the properties of your Custom API Request Parameter. You must set values for the following fields. For more information see [CustomAPIRequestParameter entity attributes](custom-api.md#customapirequestparameter-entity-attributes)
+1. Edit the fields to set the properties of your Custom API Request Parameter. You must set values for the following fields. For more information see [CustomAPIRequestParameter table columns](custom-api.md#customapirequestparameter-table-columns)
 
     |Field  |Description  |
     |---------|---------|
@@ -216,78 +216,9 @@ You can also generate strongly typed request and response classes for an early-b
 - [Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)
 
 
-## Write a Plug-in for your Custom API
-
-Writing a plug-in to implement the main operation for your Custom API isn't different from writing any other kind of plug-in, except that you do not use the Plug-in Registration tool to set a specific step.
-You need to know the following information:
-
-- The name of the message
-- The names and types of the parameters and properties.
-
-The Request Parameter values will be included in the [InputParameters](understand-the-data-context.md#inputparameters).
-
-You need to set the values for the Response Properties in the [OutputParameters](understand-the-data-context.md#outputparameters).
-
-The following is a simple plug-in that reverses the characters in the `StringParameter` and returns the result as the `StringProperty`.
-
-```csharp
-using System;
-using System.Linq;
-using System.ServiceModel;
-using Microsoft.Xrm.Sdk;
-
-namespace CustomAPIExamples
-{
-    public class Sample_CustomAPIExample : IPlugin
-    {
-        public void Execute(IServiceProvider serviceProvider)
-        {
-            // Obtain the tracing service
-            ITracingService tracingService =
-            (ITracingService)serviceProvider.GetService(typeof(ITracingService));
-
-            // Obtain the execution context from the service provider.  
-            IPluginExecutionContext context = (IPluginExecutionContext)
-                serviceProvider.GetService(typeof(IPluginExecutionContext));
-
-            if (context.MessageName.Equals("sample_CustomAPIExample") && context.Stage.Equals(30)) {
-
-                try
-                {
-                    string input = (string)context.InputParameters["StringParameter"];
-                    
-                    if (!string.IsNullOrEmpty(input)) {
-                        //Simply reversing the characters of the string
-                        context.OutputParameters["StringProperty"] = new string(input.Reverse().ToArray());
-                    }
-                }
-                catch (FaultException<OrganizationServiceFault> ex)
-                {
-                    throw new InvalidPluginExecutionException("An error occurred in Sample_CustomAPIExample.", ex);
-                }
-
-                catch (Exception ex)
-                {
-                    tracingService.Trace("Sample_CustomAPIExample: {0}", ex.ToString());
-                    throw;
-                }
-            }
-            else
-            {
-                tracingService.Trace("Sample_CustomAPIExample plug-in is not associated with the expected message or is not registered for the main operation.");
-            }
-        }
-    }
-}
-
-```
-
-For more information about writing plug-ins, see [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md). You need to register the assembly, but you do not need to register a step.
-
-After you have registered the assembly, make sure to add the assembly and any types to your solution.
-
-
 ## Update the Custom API Type
+
+For information about how to write a plug-in for a custom api, see [Write a Plug-in for your Custom API](custom-api.md#write-a-plug-in-for-your-custom-api).
 
 After you have registered your assembly, you need to set the **Type** value for the Custom API you created. This is a lookup property, so you just need to find the Plug-in Type that represents the type created when you registered the assembly.
 
@@ -299,7 +230,7 @@ With the example custom API defined above, with the plug-in registered and type 
 
 ## Other ways to create Custom APIs
 
-You may have requirements to create a client application which will allow creation of Custom APIs outside of the designer. Because the data for Custom APIs is stored in entities, you can create them using code. More information: [Create a Custom API with code](create-custom-api-with-code.md).
+You may have requirements to create a client application which will allow creation of Custom APIs outside of the designer. Because the data for Custom APIs is stored in tables, you can create them using code. More information: [Create a Custom API with code](create-custom-api-with-code.md).
 
 Your ALM process may be better served by creating Custom APIs by editing solution files. More information: [Create a Custom API with solution files](create-custom-api-solution.md).
 

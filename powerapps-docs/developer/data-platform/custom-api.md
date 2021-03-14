@@ -198,6 +198,78 @@ More information:
  - [Use Web API actions](webapi/use-web-api-actions.md)
  - [Use Web API functions](webapi/use-web-api-functions.md)
 
+
+## Write a Plug-in for your Custom API
+
+Writing a plug-in to implement the main operation for your Custom API isn't different from writing any other kind of plug-in, except that you do not use the Plug-in Registration tool to set a specific step.
+You need to know the following information:
+
+- The name of the message
+- The names and types of the parameters and properties.
+
+The Request Parameter values will be included in the [InputParameters](understand-the-data-context.md#inputparameters).
+
+You need to set the values for the Response Properties in the [OutputParameters](understand-the-data-context.md#outputparameters).
+
+The following is a simple plug-in that reverses the characters in the `StringParameter` and returns the result as the `StringProperty`.
+
+```csharp
+using System;
+using System.Linq;
+using System.ServiceModel;
+using Microsoft.Xrm.Sdk;
+
+namespace CustomAPIExamples
+{
+    public class Sample_CustomAPIExample : IPlugin
+    {
+        public void Execute(IServiceProvider serviceProvider)
+        {
+            // Obtain the tracing service
+            ITracingService tracingService =
+            (ITracingService)serviceProvider.GetService(typeof(ITracingService));
+
+            // Obtain the execution context from the service provider.  
+            IPluginExecutionContext context = (IPluginExecutionContext)
+                serviceProvider.GetService(typeof(IPluginExecutionContext));
+
+            if (context.MessageName.Equals("sample_CustomAPIExample") && context.Stage.Equals(30)) {
+
+                try
+                {
+                    string input = (string)context.InputParameters["StringParameter"];
+                    
+                    if (!string.IsNullOrEmpty(input)) {
+                        //Simply reversing the characters of the string
+                        context.OutputParameters["StringProperty"] = new string(input.Reverse().ToArray());
+                    }
+                }
+                catch (FaultException<OrganizationServiceFault> ex)
+                {
+                    throw new InvalidPluginExecutionException("An error occurred in Sample_CustomAPIExample.", ex);
+                }
+
+                catch (Exception ex)
+                {
+                    tracingService.Trace("Sample_CustomAPIExample: {0}", ex.ToString());
+                    throw;
+                }
+            }
+            else
+            {
+                tracingService.Trace("Sample_CustomAPIExample plug-in is not associated with the expected message or is not registered for the main operation.");
+            }
+        }
+    }
+}
+
+```
+
+For more information about writing plug-ins, see [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md). You need to register the assembly, but you do not need to register a step.
+
+After you have registered the assembly, make sure to add the assembly and any types to your solution.
+
+
 ## Retrieve data about Custom APIs
 
 You can use the following queries to retrieve data about Custom APIs.
