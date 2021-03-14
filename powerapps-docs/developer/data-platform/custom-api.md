@@ -287,6 +287,7 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
     description,
     displayname,
     executeprivilegename,
+    iscustomizable,
     isfunction,
     isprivate
   &$expand=
@@ -297,12 +298,14 @@ GET [Organization URI]/api/data/v9.1/customapis?$select=
     displayname,
     type,
     logicalentityname,
+    iscustomizable,
     isoptional),
   CustomAPIResponseProperties($select=
     uniquename,
     name,
     description,
     displayname,
+    iscustomizable,
     type,
     logicalentityname),
   PluginTypeId($select=
@@ -324,6 +327,7 @@ More information: [Use FetchXML to construct a query](use-fetchxml-construct-que
     <attribute name='description' />
     <attribute name='displayname' />
     <attribute name='executeprivilegename' />
+    <attribute name='iscustomizable' />
     <attribute name='isfunction' />
     <attribute name='allowedcustomprocessingsteptype' />
     <attribute name='boundentitylogicalname' />
@@ -332,6 +336,7 @@ More information: [Use FetchXML to construct a query](use-fetchxml-construct-que
     <link-entity name='customapirequestparameter' from='customapiid' to='customapiid' link-type='outer' alias='req' >
       <attribute name='description' />
       <attribute name='displayname' />
+      <attribute name='iscustomizable' />
       <attribute name='logicalentityname' />
       <attribute name='name' />
       <attribute name='uniquename' />
@@ -341,6 +346,7 @@ More information: [Use FetchXML to construct a query](use-fetchxml-construct-que
     <link-entity name='customapiresponseproperty' from='customapiid' to='customapiid' link-type='outer' >
       <attribute name='description' />
       <attribute name='displayname' />
+      <attribute name='iscustomizable' />
       <attribute name='logicalentityname' />
       <attribute name='name' />
       <attribute name='uniquename' />
@@ -370,6 +376,7 @@ SELECT api.customapiid,
        api.description,
        api.displayname,
        api.executeprivilegename,
+       api.iscustomizable,
        api.isfunction,
        api.isprivate,
        req.customapirequestparameterid,
@@ -379,11 +386,13 @@ SELECT api.customapiid,
        req.displayname,
        req.type,
        req.logicalentityname,
+       req.iscustomizable,
        req.isoptional,
        resp.customapiresponsepropertyid,
        resp.uniquename,
        resp.name,
        resp.description,
+       resp.iscustomizable,
        resp.type,
        resp.logicalentityname,
        type.plugintypeid,
