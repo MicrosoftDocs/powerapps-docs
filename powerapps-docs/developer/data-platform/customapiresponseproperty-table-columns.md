@@ -51,7 +51,7 @@ This table includes columns/attributes of the Custom API Response Property table
 
 ### See also
 
-[CustomAPIResponseProperty entity reference](reference/entities/customapiresponseproperty.md)
+[CustomAPIResponseProperty table/entity reference](reference/entities/customapiresponseproperty.md)<br />
 [Create and use Custom APIs](custom-api.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />

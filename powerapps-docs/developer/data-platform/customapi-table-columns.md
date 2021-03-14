@@ -46,7 +46,7 @@ If you do not set the **Plugin Type** (`PluginTypeId`)  to specify main operatio
 
 ### See also
 
-[CustomAPI entity reference](reference/entities/customapi.md)<br />
+[CustomAPI table/entity reference](reference/entities/customapi.md)<br />
 [Create and use Custom APIs](custom-api.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />

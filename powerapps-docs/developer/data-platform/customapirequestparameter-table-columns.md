@@ -49,7 +49,7 @@ This table includes columns/attributes of the Custom API Request Parameter table
 
 ### See also
 
-[CustomAPIRequestParameter entity reference](reference/entities/customapirequestparameter.md)<br />
+[CustomAPIRequestParameter table/entity reference](reference/entities/customapirequestparameter.md)<br />
 [Create and use Custom APIs](custom-api.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />
