@@ -29,7 +29,7 @@ Benefits of using environment variables:
 - Granular level security managed by [Microsoft Dataverse](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro).
 - Unlimited number of variables (max solution size is 29 MB).
 - Service the definitions and the values independently or together.
-- Supported by [SolutionPackager](/powerapps/developer/data-platform/compress-extract-solution-file-solutionpackager) and [DevOps](/powerapps/developer/data-platform/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
+- Supported by [SolutionPackager](/powerapps/developer/data-platform/compress-extract-solution-file-solutionpackager) and [DevOps](https://docs.microsoft.com/en-us/power-platform/alm/devops-build-tools) tools enable continuous integration and continuous delivery (CI/CD).
 - Support for localization.
 - Can be used to control feature flags and other application settings.
 
@@ -80,14 +80,14 @@ The environmentvariabledefinition table is [user or team owned](https://docs.mic
 - Azure Key Vault integration for secret management. Currently environment variables should'nt be used to store secure data such as passwords and keys.
 - Data types are validated in the modern solution interface only, but not currently on the server during the preview. 
 - Dependencies are not enforced for certain component types.
-- If using Excel to import environment variables, be sure to pre-pend the publisher prefix to the SchemaName.
+- If using Excel to import environment variables, be sure to prepend the publisher prefix to the SchemaName.
 
 ### See also
-[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/)
+[Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/) </BR>
 [Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/data-platform/plug-ins) </BR>
 [Web API samples](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
 [Create Canvas app from scratch using Dataverse.](https://docs.microsoft.com/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
 [Create a flow with Dataverse](https://docs.microsoft.com/flow/connection-cds)
 
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)] 
