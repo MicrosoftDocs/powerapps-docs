@@ -21,7 +21,7 @@ The current experience creating Custom API within the maker portal is temporary.
 
 
 > [!IMPORTANT]
-> Many fields related to creating Custom API cannot be changed after you create them. You should carefully plan the design of the Custom API before you start. If you later decide that you need to change things after you create the Custom API, you may need to delete the existing entity data and re-create the Custom API.
+> Many fields related to creating Custom API cannot be changed after you create them. You should carefully plan the design of the Custom API before you start. If you later decide that you need to change things after you create the Custom API, you may need to delete the existing record and re-create the Custom API.
 >
 > Please review the following to understand which field values cannot be changed:
 > - [CustomAPI Table Columns](customapi-table-columns.md)
