@@ -17,19 +17,18 @@ search.app:
 ---
 # CustomAPIRequestParameter Table Columns
 
-This table includes selected columns/attributes of a Custom API Request Parameter record that you can set. For reference of all columns/attributes see 
-
 A custom API isn’t required to have any parameters. There is no specified order for the parameters, they are identified by name.
 
 A parameter is related to a single Custom API. You cannot define multiple Custom APIs to use the same parameter definition. You can define multiple request parameter with the same `UniqueName` value if they are used by different Custom APIs.
 
 > [!NOTE]
-> If you define a bound entity for your Custom API, the parameter will be generated for you. You don’t need to create an input parameter for the entity when the Custom API is bound to an entity.
+> If you define a bound entity for your Custom API, the request parameter will be generated for you. You don’t need to create an input parameter for the entity when the Custom API is bound to an entity.
 > 
-> If you bind your Custom API to an entity collection, there will not be a parameter generated for you. Binding a Custom API to an entity collection requires that the Custom API be called using the entityset resource path.
-> Binding to an entity collection only sets the expectation that the operation will be performed on more than one entity of that type or that it will return a collection of that type. It does not provide an entity collection input parameter for your plug-in to process.
+> If you bind your Custom API to an entity collection, there will not be a request parameter generated for you. Binding a Custom API to an entity collection requires that the Custom API be called using the entityset resource path.
+>
+> Binding to an entity collection only sets the expectation that the scope of the operation will apply more than one entity of that type, or that it will return a collection of that type. It does not provide an entity collection input parameter for your plug-in to process.
 
-This table includes columns of the Custom API Request Parameter table that you can set.
+This table includes columns/attributes of the Custom API Request Parameter table/entity that you can set.
 
 |Display Name<br />Schema Name<br />Logical Name  |Type  |Description |
 |---------|---------|---------|

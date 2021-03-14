@@ -17,7 +17,7 @@ search.app:
 ---
 # CustomAPI Table Columns
 
-This table includes selected columns/attributes of a Custom API record that you can set.  
+This table includes selected columns/attributes of a Custom API table/entity that you can set.  
 
 
 |Display Name<br />Schema Name<br />Logical Name  |Type  |Description |

@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# CustomAPI Table Columns
+# CustomAPIResponseProperty Table Columns
 
 
 The object returned for your Custom API message will include any response properties you define. It is not required for a Custom API Action to return any value, but it must return a value if defined as a Function.
@@ -27,9 +27,11 @@ The object returned for your Custom API message will include any response proper
 >
 > You must also set the data to be returned in the plug-in for the function. If no data is set to be returned by the plug-in, the operation will return `204 No Content`.
 
-If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
+If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. 
 
-This table includes columns of the Custom API Response Property table that you can set.
+For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
+
+This table includes columns/attributes of the Custom API Response Property table/entity that you can set.
 
 |Display Name<br />Schema Name<br />Logical Name  |Type  |Description |
 |---------|---------|---------|
