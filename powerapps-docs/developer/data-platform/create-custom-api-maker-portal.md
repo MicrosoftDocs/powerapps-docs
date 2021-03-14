@@ -39,6 +39,7 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 
 1. In your solution, click **New** and select **Custom API** from the drop-down.
 1. Edit the fields to set the properties of your Custom API. You must set values for the following fields. For more information see [CustomAPI Table Columns](customapi-table-columns.md)
+    
     You cannot set values for **Plug-in Type** unless you have already created the plug-in. You can change this later.
 
 1. Click **Save**. Your form should look something like this:
@@ -65,7 +66,9 @@ A Custom API doesn't require parameters. Create as many parameters as you need t
 > [!NOTE]
 > If you define a bound entity for your Custom API action, the parameter will be generated for you. You don’t need to create an input parameter for the entity when the Custom API is bound to an entity.
 > 
-> If you bind your Custom API action to an entity collection, there will not be a parameter generated for you. Binding a Custom API action to an entity collection requires that the Custom API be called using the entityset resource path. Binding to an entity collection only sets the expectation that the operation will be performed on more than one entity of that type or that it will return a collection of that type. It does not provide an entity collection input parameter for your plug-in to process.
+> If you bind your Custom API action to an entity collection, there will not be a parameter generated for you. Binding a Custom API action to an entity collection requires that the Custom API be called using the entityset resource path. 
+>
+> Binding to an entity collection only sets the expectation that the operation will be performed on more than one entity of that type or that it will return a collection of that type. It does not provide an entity collection input parameter for your plug-in to process.
 
 1. In your solution, click **New** and select **Custom API Request Parameter** from the drop-down.
 1. Edit the fields to set the properties of your Custom API Request Parameter. For more information see [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
@@ -86,7 +89,9 @@ A Custom API that represents an action doesn't require response properties. If t
 > [!IMPORTANT]
 > A Custom API that represents a function requires at least one response property to be valid.
 
-If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
+If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. 
+
+For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
 
 1. In your solution, click **New** and select **Custom API Response Property** from the drop-down.
 1. Edit the fields to set the properties of your Custom API Response Property. For more information see [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
@@ -121,9 +126,7 @@ If you have set the `IsPrivate` property for your Custom API, you won't find you
 
 ## Test your Custom API
 
-Now that you have created your Custom API you can try it. Even if you haven't set a plug-in type to define the main operation, you can test it now to verify that you can call it correctly. Any response properties will return their default value, such as null.
-
-See [Invoking Custom APIs](custom-api.md#invoking-custom-apis).
+Now that you have created your Custom API you can try it. Even if you haven't set a plug-in type to define the main operation, you can test it now to verify that you can call it correctly. Any response properties will return their default value, such as null. More information: [Invoking Custom APIs](custom-api.md#invoking-custom-apis).
 
 
 ## Update the Custom API Type
