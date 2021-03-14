@@ -60,9 +60,7 @@ Content-Type: application/json
     "name": "sample_CustomAPIExample",
     "description": "A simple example of a Custom API",
     "iscustomizable": {
-                "Value": false,
-                "CanBeChanged": false,
-                "ManagedPropertyLogicalName": "iscustomizableanddeletable"
+                "Value": false
             },
     "CustomAPIRequestParameters": [
         {
@@ -73,6 +71,9 @@ Content-Type: application/json
             "uniquename": "StringParameter",
             "logicalentityname": null,
             "description": "The StringParameter request parameter for Custom API Example",
+            "iscustomizable": {
+                "Value": false
+                }
         }
     ],
     "CustomAPIResponseProperties": [
@@ -82,7 +83,10 @@ Content-Type: application/json
             "logicalentityname": null,
             "displayname": "Custom API Example String Property",
             "uniquename": "StringProperty",
-            "description": "The StringProperty response property for Custom API Example"
+            "description": "The StringProperty response property for Custom API Example",
+            "iscustomizable": {
+                "Value": false
+                }
         }
     ],
     "PluginTypeId@odata.bind": "plugintypes(3926874e-387b-4045-94b2-a5cafe44b06f)"
@@ -139,6 +143,7 @@ var customAPI = new CustomAPI
     Name = "sample_CustomAPIExample",
     PluginTypeId = pluginType,
     UniqueName = "sample_CustomAPIExample",
+    IsCustomizable = new BooleanManagedProperty(false),
     customapi_customapirequestparameter = new List<CustomAPIRequestParameter>()
     {
         new CustomAPIRequestParameter {
@@ -148,7 +153,8 @@ var customAPI = new CustomAPI
             IsOptional = false,
             Name = "sample_CustomAPIExample.StringParameter",
             Type = new OptionSetValue(10), //String
-            UniqueName = "StringParameter"
+            UniqueName = "StringParameter",
+            IsCustomizable = new BooleanManagedProperty(false)
         }
     },
     customapi_customapiresponseproperty = new List<CustomAPIResponseProperty>()
@@ -158,7 +164,8 @@ var customAPI = new CustomAPI
             DisplayName = "Custom API Example String Property",
             Name = "sample_CustomAPIExample.StringProperty",
             Type = new OptionSetValue(10), //String
-            UniqueName = "StringProperty"
+            UniqueName = "StringProperty",
+            IsCustomizable = new BooleanManagedProperty(false)
         }
     }
 };

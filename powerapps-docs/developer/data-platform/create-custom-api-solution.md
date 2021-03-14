@@ -2,7 +2,7 @@
 title: "Create a Custom API with solution files (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write create custom APis by editing solution files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/26/2020
+ms.date: 03/13/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -16,9 +16,6 @@ search.app:
   - D365CE
 ---
 # Create a Custom API with solution files 
-
-
-[This topic is pre-release documentation and is subject to change.]
 
 > [!NOTE]
 > This is an advanced topic that assumes you have already read and understood these topics:
@@ -99,6 +96,7 @@ Within the folder, the data representing the Custom API is found within an XML f
       <displayname default="Custom API Example">
         <label description="Custom API Example" languagecode="1033" />
       </displayname>
+      <iscustomizable>0</iscustomizable>
       <executeprivilegename />
       <isfunction>0</isfunction>
       <isprivate>0</isprivate>
@@ -107,7 +105,7 @@ Within the folder, the data representing the Custom API is found within an XML f
     </customapi>
     ```
 
-  See the information in [CustomAPI entity attributes](custom-api.md#customapi-entity-attributes) to set the values of the elements.
+  See the information in [CustomAPI table columns](custom-api.md#customapi-table-columns) to set the values of the elements.
       
   > [!NOTE]
   > If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the  `<customapi>` element:
@@ -141,6 +139,7 @@ Any definitions of request parameters for the Custom API are included in a folde
     <displayname default="Custom API Example String Parameter">
       <label description="Custom API Example String Parameter" languagecode="1033" />
     </displayname>
+    <iscustomizable>0</iscustomizable>
     <isoptional>0</isoptional>
     <logicalentityname />
     <name>sample_CustomAPIExample.StringParameter</name>
@@ -148,8 +147,7 @@ Any definitions of request parameters for the Custom API are included in a folde
   </customapirequestparameter>
   ```
 
-See the information in [CustomAPIRequestParameter entity attributes](custom-api.md#customapirequestparameter-entity-attributes) to set the values of the elements.
-
+See the information in [CustomAPIRequestParameter table columns](custom-api.md#customapirequestparameter-table-columns) to set the values of the elements.
 
 ## Step 5: Add any Custom API Response Properties
 
@@ -168,13 +166,14 @@ Any definitions of response properties for the Custom API are included in a fold
     <displayname default="Custom API Example String Property">
       <label description="Custom API Example String Property" languagecode="1033" />
     </displayname>
+    <iscustomizable>0</iscustomizable>
     <logicalentityname />
     <name>sample_CustomAPIExample.StringProperty</name>
     <type>10</type>
   </customapiresponseproperty>
   ```
 
-See the information in [CustomAPIResponseProperty entity attributes](custom-api.md#customapiresponseproperty-entity-attributes) to set the values of the elements.
+See the information in [CustomAPIResponseProperty table columns](custom-api.md#customapiresponseproperty-table-columns) to set the values of the elements.
 
 > [!NOTE]
 > While the schema for request parameters and response properties is very similar, note that `isoptional` is not valid for a response property and will cause an error when you try to import the solution.
@@ -230,6 +229,7 @@ As an alternative to using the process described in [Localized values](custom-ap
     <label description="Custom API Example" languagecode="1033" />
     <label description="カスタムAPIの例" languagecode="1041" />
   </displayname>
+  <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
   <name>sample_CustomAPIExample</name>
 </customapi>
