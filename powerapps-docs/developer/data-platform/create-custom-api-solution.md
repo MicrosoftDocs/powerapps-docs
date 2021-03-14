@@ -28,7 +28,7 @@ While you can create Custom APIs through a designer or with code, you can also d
 A solution file is a compressed (zip) file that has been exported from a Microsoft Dataverse instance. The contents of this file can be extracted and the components checked into a source repository. The contents can be edited and then compressed again. The changes applied to the solution will then be part of the solution and will be created when the solution is imported.
 
 > [!NOTE]
-> These processes are typically automated with tools and processes that are beyond the scope of this topic. This topic will focus on the simple scenario of creating a Custom API by manually manipulating the extracted files in a solution to demonstrate how the data in the files can be used to create Custom API.
+> These processes are typically automated with tools and processes that are beyond the scope of this topic. This topic will focus on the simple scenario of creating a Custom API by manually manipulating the extracted files in a solution to demonstrate how the data in the files can be used to create Custom API. More information: [Source control with solution files](/power-platform/alm/use-source-control-solution-files)
 
 ## Step 1: Create an Unmanaged solution
 

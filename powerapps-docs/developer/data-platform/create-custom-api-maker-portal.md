@@ -123,68 +123,7 @@ If you have set the `IsPrivate` property for your Custom API, you won't find you
 
 Now that you have created your Custom API you can try it. Even if you haven't set a plug-in type to define the main operation, you can test it now to verify that you can call it correctly. Any response properties will return their default value, such as null.
 
-### Test using the Web API
-
-You can test your API using PostMan. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that will generate the access token you will need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it is a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
-
-The simple example included in this topic can be called as an action using the following:
-
-**Request**
-
-```http
-POST https://yourorg.crm.dynamics.com/api/data/v9.1/sample_CustomAPIExample HTTP/1.1
-Accept: application/json
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Authorization: Bearer [Redacted]
-
-{
-    
-"StringParameter":"A Test String Parameter Value"
-
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json; odata.metadata=minimal
-REQ_ID: 8b0512c5-aa68-4815-9b3e-27072b6a8fec
-OData-Version: 4.0
-
-{
-    "@odata.context":"https://yourorg.crm.dynamics.com/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.sample_CustomAPIExampleResponse",
-    "StringProperty":null
-}
-```
-
-> [!NOTE]
-> The `StringProperty` value is null because there is no plug-in set for the main operation to set it to anything other than the default value.
-
-### Test using the Organization Service
-
-If you are using the Organization Service, you can call the Custom API using the late-bound programming style using <xref:Microsoft.Xrm.Sdk.OrganizationRequest> with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
-
-```csharp
-ParameterCollection parameters = new ParameterCollection();
-parameters.Add("StringParameter", "A Test String Parameter Value");
-
-OrganizationRequest request = new OrganizationRequest() {
-RequestName = "sample_CustomAPIExample",
-Parameters = parameters
-};
-
-OrganizationResponse response = svc.Execute(request);
-
-var stringProperty = (string)response.Results["StringProperty"];
-```
-
-You can also generate strongly typed request and response classes for an early-bound programming style. For more information:
-
-- [Use messages with the Organization service](org-service/use-messages.md);
-- [Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)
+See [Invoking Custom APIs](custom-api.md#invoking-custom-apis).
 
 
 ## Update the Custom API Type
@@ -196,8 +135,6 @@ After you have registered your assembly, you need to set the **Type** value for 
 :::image type="content" source="media/set-custom-api-type.png" alt-text="Set the Custom API Type Lookup":::
 
 Once you have set the **Type**, you can test your Custom API to verify the correct results are returned.
-
-With the example custom API defined above, with the plug-in registered and type set, the `StringParameter` value of `A Test String Parameter Value` modified and set at the `StringProperty` value of: `eulaV retemaraP gnirtS tseT A`.
 
 ## Other ways to create Custom APIs
 

@@ -101,7 +101,7 @@ More information: [Use messages with the Organization service](org-service/use-m
 
 ### Invoking Custom APIs from the Web API
 
-Custom APIs can be called in the same way as any standard Web API [functions](webapi/use-web-api-functions.md) or [actions](webapi/use-web-api-actions.md). If your custom API has the `IsFunction` field set to `true` then it needs to be invoked as a function using a `GET` request, otherwise it needs to be used as an action using a `POST` request.
+You can invoke your API using PostMan. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that will generate the access token you will need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it is a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
 
 This is an example invoking a Custom API Action named `myapi_CustomUnboundAPI` which has a single string request parameter named `InputParameter`:
 
