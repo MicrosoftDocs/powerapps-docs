@@ -105,7 +105,7 @@ Within the folder, the data representing the Custom API is found within an XML f
     </customapi>
     ```
 
-  See the information in [CustomAPI table columns](custom-api.md#customapi-table-columns) to set the values of the elements.
+  See the information in [CustomAPI Table Columns](customapi-table-columns.md) to set the values of the elements.
       
   > [!NOTE]
   > If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the  `<customapi>` element:
@@ -147,7 +147,7 @@ Any definitions of request parameters for the Custom API are included in a folde
   </customapirequestparameter>
   ```
 
-See the information in [CustomAPIRequestParameter table columns](custom-api.md#customapirequestparameter-table-columns) to set the values of the elements.
+See the information in [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md) to set the values of the elements.
 
 ## Step 5: Add any Custom API Response Properties
 
@@ -173,7 +173,7 @@ Any definitions of response properties for the Custom API are included in a fold
   </customapiresponseproperty>
   ```
 
-See the information in [CustomAPIResponseProperty table columns](custom-api.md#customapiresponseproperty-table-columns) to set the values of the elements.
+See the information in [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md) to set the values of the elements.
 
 > [!NOTE]
 > While the schema for request parameters and response properties is very similar, note that `isoptional` is not valid for a response property and will cause an error when you try to import the solution.

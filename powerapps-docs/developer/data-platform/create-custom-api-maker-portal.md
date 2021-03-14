@@ -24,9 +24,9 @@ The current experience creating Custom API within the maker portal is temporary.
 > Many fields related to creating Custom API cannot be changed after you create them. You should carefully plan the design of the Custom API before you start. If you later decide that you need to change things after you create the Custom API, you may need to delete the existing entity data and re-create the Custom API.
 >
 > Please review the following to understand which field values cannot be changed:
-> - [CustomAPI table columns](custom-api.md#customapi-table-columns)
-> - [CustomAPIRequestParameter table columns](custom-api.md#customapirequestparameter-table-columns)
-> - [CustomAPIResponseProperty table columns](custom-api.md#customapiresponseproperty-table-columns)
+> - [CustomAPI Table Columns](customapi-table-columns.md)
+> - [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
+> - [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
 
 When creating a Custom API it is expected that you will use a solution. Your solution must be associated with a publisher. The publisher will have a specific customization prefix associated with it. You must use a customization prefix when creating a Custom API and this prefix should be the same used by the publisher of your solution. The instructions below will use the value `sample` as the customization prefix because it is the one set for the following publisher:
 
@@ -38,28 +38,16 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 ## Create a Custom API record
 
 1. In your solution, click **New** and select **Custom API** from the drop-down.
-1. Edit the fields to set the properties of your Custom API. You must set values for the following fields. For more information see [CustomAPI table columns](custom-api.md#customapi-table-columns)
-
-    |Field  |Description  |
-    |---------|---------|
-    |**Unique Name**|Unique name for the custom API. This will be the name of the message created. This value must include a customization prefix. It should match the prefix set for your solution publisher.|
-    |**Name**|The primary name of the custom API. This will display in the list of custom apis when viewed in the solution.|
-    |**Display Name**|Localized display name for this Custom API. For use when the message is exposed to be called in an app.|
-    |**Description**|Localized description for this Custom API. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
-    |**Bound Entity Logical Name**|The logical name of the entity bound to the custom API if it is not Global. If **Binding Type** is Global, this can remain empty|
-    |**Binding Type**|The binding type of the custom API. Options are: **Global**, **Entity**, **EntityCollection**. Only custom api actions can be bound to an entity or entity collection.|
-    |**Is Function**|Indicates if the custom API is a function. A function requires the HTTP GET method. Otherwise the Http POST method is required.|
-    |**Is Private**|Indicates if the custom API is to be a private api.|
-    |**Allowed Custom Processing Step Type**|The type of custom processing steps allowed for this Custom API. This allows you to control whether other plug-ins can be registered. Options are **None**, **Async Only**, **Sync and Async**.|
-
+1. Edit the fields to set the properties of your Custom API. You must set values for the following fields. For more information see [CustomAPI Table Columns](customapi-table-columns.md)
     You cannot set values for **Plug-in Type** unless you have already created the plug-in. You can change this later.
 
 1. Click **Save**. Your form should look something like this:
     :::image type="content" source="media/saved-customapi-form.png" alt-text="Saved Custom API form":::
 
-
 > [!NOTE]
 > If you delete the Custom API record, all request parameters and response properties will be deleted with it. Make sure that the Custom API field values are correct before proceeding. Otherwise you may need to repeat all of these steps to re-create your Custom API if you need to delete it.
+>
+> We recommend that you set the **IsCustomizable** managed property to false for all Custom API components. This property is not available in the form. For more information see [Managed properties](/power-platform/alm/managed-properties-alm)
 
 ### Known issue: Add your Custom API to your solution
 
@@ -81,24 +69,16 @@ A Custom API doesn't require parameters. Create as many parameters as you need t
 > If you bind your Custom API action to an entity collection, there will not be a parameter generated for you. Binding a Custom API action to an entity collection requires that the Custom API be called using the entityset resource path. Binding to an entity collection only sets the expectation that the operation will be performed on more than one entity of that type or that it will return a collection of that type. It does not provide an entity collection input parameter for your plug-in to process.
 
 1. In your solution, click **New** and select **Custom API Request Parameter** from the drop-down.
-1. Edit the fields to set the properties of your Custom API Request Parameter. You must set values for the following fields. For more information see [CustomAPIRequestParameter table columns](custom-api.md#customapirequestparameter-table-columns)
+1. Edit the fields to set the properties of your Custom API Request Parameter. For more information see [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
 
-    |Field  |Description  |
-    |---------|---------|
-    |**Custom API**|Set the lookup to the Custom API that this parameter is for.|
-    |**Unique Name**|Unique name for the request parameter. This value does not require a customization prefix. It only needs to be unique within the set of request parameters for this Custom API.|
-    |**Name**|The primary name of the request parameter.  This will display in the list of custom api request parameters when viewed in the solution. Use this to differentiate this parameter from others that share a common Unique Name. This naming convention is recommended: `{Custom API Unique Name}.{Parameter UniqueName}`|
-    |**Display Name**|Localized display name for this request parameter. For use when the message is exposed to be called in an app.|
-    |**Description**|Localized description for this request parameter. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
-    |**Type**|The data type of the request parameter. There are 11 different types to choose from. These are the same types available for Workflow Custom Actions today.|
-    |**Entity Logical Name**|If the Type field is an Entity, an EntityCollection, or EntityReference, this represents the type of entity.|
-    |**Is Optional**|Indicates if the request parameter is optional. If it is not optional, it is required to pass a value for this parameter when using the message.|
 1. Click **Save**. Your form should look something like this:
 
     :::image type="content" source="media/customapi-request-parameter-form.png" alt-text="Example of a Custom API Request Parameter Form":::
 
 > [!NOTE]
 > As noted earlier in [Known issue: Add your Custom API to your solution](#known-issue-add-your-custom-api-to-your-solution) you will have to manually add this request parameter record to your solution.
+>
+> As noted earlier, we recommend that you set the **IsCustomizable** managed property to false for all Custom API components. This property is not available in the form. For more information see [Managed properties](/power-platform/alm/managed-properties-alm)
 
 ## Create any Response Properties
 
@@ -110,17 +90,7 @@ A Custom API that represents an action doesn't require response properties. If t
 If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
 
 1. In your solution, click **New** and select **Custom API Response Property** from the drop-down.
-1. Edit the fields to set the properties of your Custom API Response Property. You must set values for the following fields. For more information see [CustomAPIResponseProperty table columns](custom-api.md#customapiresponseproperty-table-columns)
-
-    |Field  |Description  |
-    |---------|---------|
-    |**Custom API**|Set the lookup to the Custom API that this property is for.|
-    |**Unique Name**|Unique name for the response property. This value does not require a customization prefix. It only needs to be unique within the set of response properties for this Custom API.|
-    |**Name**|The primary name of the custom API response property.  This will display in the list of custom api response properties when viewed in the solution. Use this to differentiate this property from others that share a common Unique Name. This naming convention is recommended: `{Custom API Unique Name}.{Property UniqueName}`|
-    |**Display Name**|Localized display name for this response property. For use when the message is exposed to be called in an app.|
-    |**Description**|Localized description for this response property. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
-    |**Type**|The data type of the custom API response property. There are 11 different types to choose from. These are the same types available for Workflow Custom Actions today.|
-    |**Entity Logical Name**|If the **Type** field is an **Entity**, an **EntityCollection**, or **EntityReference**, this represents the type of entity.|
+1. Edit the fields to set the properties of your Custom API Response Property. For more information see [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
 
 1. Click **Save**. Your form should look something like this:
 
@@ -128,6 +98,8 @@ If there is only a single **Entity** or **EntityCollection** response property d
 
 > [!NOTE]
 > As noted earlier in [Known issue: Add your Custom API to your solution](#known-issue-add-your-custom-api-to-your-solution) you will have to manually add this response property record to your solution.
+>
+> As noted earlier, we recommend that you set the **IsCustomizable** managed property to false for all Custom API components. This property is not available in the form. For more information see [Managed properties](/power-platform/alm/managed-properties-alm)
 
 ## Observe the result in the service document
 

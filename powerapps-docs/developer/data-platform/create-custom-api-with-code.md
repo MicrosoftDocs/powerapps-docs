@@ -30,9 +30,9 @@ Because Custom API data is saved in tables, you can programmatically create new 
 
 The tables in [Create and use Custom APIs](custom-api.md) describe all the properties you can set using code. For the following code examples, please refer to the following tables:
 
-- [CustomAPI table columns](custom-api.md#customapi-table-columns)
-- [CustomAPIRequestParameter table columns](custom-api.md#customapirequestparameter-table-columns)
-- [CustomAPIResponseProperty table columns](custom-api.md#customapiresponseproperty-table-columns)
+- [CustomAPI Table Columns](customapi-table-columns.md)
+- [CustomAPIRequestParameter Table Columns](customapirequestparameter-table-columns.md)
+- [CustomAPIResponseProperty Table Columns](customapiresponseproperty-table-columns.md)
 
 
 ## Create a Custom API using the Web API
