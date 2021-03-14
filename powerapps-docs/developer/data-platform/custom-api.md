@@ -252,7 +252,7 @@ namespace CustomAPIExamples
                 catch (Exception ex)
                 {
                     tracingService.Trace("Sample_CustomAPIExample: {0}", ex.ToString());
-                    throw;
+                    throw new InvalidPluginExecutionException("An error occurred in Sample_CustomAPIExample.", ex);
                 }
             }
             else
