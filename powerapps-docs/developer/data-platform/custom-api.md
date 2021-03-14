@@ -506,9 +506,9 @@ When you create a Custom API in the maker portal ([https://make.powerapps.com/](
 This will be fixed when a modern designer is provided, or you may want to define your Custom APIs by writing code or with solution files. 
 
 
-### Custom API functions cannot use Entity or EntityCollection Request Parameters
+### Custom API functions cannot be bound to Entity or EntityCollection
 
-If you define your Custom API as a function by setting the **Is Function** property to true, you cannot bind the function to an entity or entity collection. You also cannot use any **Entity** or **EntityCollection** request parameters.
+If you define your Custom API as a function by setting the **Is Function** property to true, you cannot bind the function to an entity or entity collection. While the operation to create the custom api function will succeed, it will not be present in the system as a valid message.
 
 If you attempt this with a function bound to the account entity, you can expect a `400 Bad Request` error like this:
 
@@ -522,6 +522,10 @@ If you attempt this with a function bound to the account entity, you can expect 
     }
 }
 ```
+
+### Custom API functions cannot use Entity or EntityCollection Request Parameters
+
+You  cannot use any **Entity** or **EntityCollection** request parameters for Custom API Functions. An error will be thrown if you try to add a request parameter of this type to a custom api function.
 
 ### Private messages cannot be used in plug-ins
 
