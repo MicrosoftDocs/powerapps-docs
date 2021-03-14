@@ -38,7 +38,7 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 ## Create a Custom API record
 
 1. In your solution, click **New** and select **Custom API** from the drop-down.
-1. Edit the fields to set the properties of your Custom API. You must set values for the following fields. For more information see [CustomAPI entity attributes](custom-api.md#customapi-entity-attributes)
+1. Edit the fields to set the properties of your Custom API. You must set values for the following fields. For more information see [CustomAPI table columns](custom-api.md#customapi-table-columns)
 
     |Field  |Description  |
     |---------|---------|
@@ -110,7 +110,7 @@ A Custom API that represents an action doesn't require response properties. If t
 If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
 
 1. In your solution, click **New** and select **Custom API Response Property** from the drop-down.
-1. Edit the fields to set the properties of your Custom API Response Property. You must set values for the following fields. For more information see [CustomAPIResponseProperty entity attributes](custom-api.md#customapiresponseproperty-entity-attributes)
+1. Edit the fields to set the properties of your Custom API Response Property. You must set values for the following fields. For more information see [CustomAPIResponseProperty table columns](custom-api.md#customapiresponseproperty-table-columns)
 
     |Field  |Description  |
     |---------|---------|
