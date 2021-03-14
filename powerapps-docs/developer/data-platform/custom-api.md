@@ -17,7 +17,7 @@ search.app:
 ---
 # Create and use Custom APIs 
 
-Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code.
+Use Custom APIs to create your own APIs in Dataverse. With a Custom API you can consolidate a group of operations into an API that you and other developers can call in their code. The Dataverse connector enables calling Custom APIs actions in Power Automate.
 
 Operations in Dataverse are defined as *messages*. Custom APIs offer a code-first way to define messages that you can add to Dataverse web services. Custom APIs are an alternative to Custom Process Actions that provide a no-code way to include custom messages.
 
@@ -31,6 +31,12 @@ Because a Custom API requires a plug-in to implement any logic to be defined by 
 - Define the Custom API first, then write the plug-in to implement it.
 
 Your Custom API will be completed when the data defining the Custom API is saved and linked to the Plug-in type to define the main operation. In either case, you should understand the data that drives the Custom API.
+
+> [!TIP]
+> You may also use a Custom API without a main operation plug-in to send a notification to Dataverse when immediate processing is not required. You can register a `PostOperation` asynchronous plug-in to the message created by the Custom API. The plug-in can read the payload to initiate some logic in Dataverse to respond to events that occurred in another system. Configure the external system to call this Dataverse API when those events occur.
+> 
+> Custom APIs used for this purpose should not have any Custom API Response Properties, only Custom API Request Parameters. With no synchronous logic to process or response properties to return, the operations should not fail and will serve as a trigger for the logic in the asynchronous plug-in.
+
 
 There are several different ways to create a custom API:
 
@@ -81,10 +87,7 @@ Set the **Execute Privilege Name** property to the name of the privilege to requ
 
 If you do not set the **Plugin Type** (`PluginTypeId`)  to specify main operation logic the API can still be called. You might want to do this as a testing step, but any output parameter values will return the default values for the type because there is no code to set them.
 
-> [!TIP]
-> You may also use a Custom API without a synchronous main operation plug-in to send a notification to Dataverse when immediate processing is not required. You can register an asynchronous plug-in to the message created by the Custom API. The plug-in can read the payload to initiate some logic in Dataverse to respond to events that occurred in another system. Configure the external system to call this Dataverse API when those events occur.
-> 
-> Custom APIs used for this purpose should not have any Custom API Response Properties, only Custom API Request Parameters. With no synchronous logic to process or response properties to return, the operations should not fail and will serve as a trigger for the logic in the asynchronous plug-in.
+
 
 ### CustomAPIRequestParameter table columns
 
