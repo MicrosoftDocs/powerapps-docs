@@ -51,8 +51,7 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 
 ### Known issue: Add your Custom API to your solution
 
-Known issue: [A custom API created is not added to the current solution](custom-api.md#a-custom-api-created-is-not-added-to-the-current-solution)
-
+Known issue: [A custom API created is not added to the current solution in the maker portal](custom-api.md#a-custom-api-created-is-not-added-to-the-current-solution-in-the-maker-portal)
 After you create your Custom API, it will not appear in your solution. In your solution you must select **Add existing** and then select **Custom API** from the drop-down.
 
 Then add your Custom API to your solution.
