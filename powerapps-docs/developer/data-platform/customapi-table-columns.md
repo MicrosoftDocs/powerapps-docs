@@ -17,7 +17,7 @@ search.app:
 ---
 # CustomAPI Table Columns
 
-This table includes columns of a Custom API record that you can set.
+This table includes selected columns/attributes of a Custom API record that you can set.  
 
 
 |Display Name<br />Schema Name<br />Logical Name  |Type  |Description |
@@ -46,6 +46,7 @@ If you do not set the **Plugin Type** (`PluginTypeId`)  to specify main operatio
 
 ### See also
 
+[CustomAPI entity reference](reference/entities/customapi.md)<br />
 [Create and use Custom APIs](custom-api.md)<br />
 [Create a Custom API with code](create-custom-api-with-code.md)<br />
 [Create a Custom API with solution files](create-custom-api-solution.md)<br />

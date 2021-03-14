@@ -41,6 +41,10 @@
         href: create-custom-api-solution.md
       - name: CustomAPI Table Columns
         href: customapi-table-columns.md
+      - name: CustomAPIRequestParameter Table Columns
+        href: customapirequestparameter-table-columns.md
+      - name: CustomAPIResponseProperty Table Columns
+        href: customapiresponseproperty-table-columns.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
