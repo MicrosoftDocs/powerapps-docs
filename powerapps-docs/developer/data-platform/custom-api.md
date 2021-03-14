@@ -193,23 +193,6 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-This is an example of invoking a Custom API Function named `myapi_CustomBoundAPI` that is bound to an entity:
-
-```http
-GET [Organization URI]/api/v9.1/accounts(ed5d4e42-850c-45b7-8b38-2677545107cc)/Microsoft.Dynamics.CRM.myapi_CustomBoundAPI()
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-Content-Type: application/json; charset=utf-8
-```
-
-This is an example of invoking a Custom API Function named `myapi_CustomEntityCollectionBoundAPI` that is bound to to the account entity collection:
-
-```http
-GET [Organization URI]/api/v9.1/accounts/Microsoft.Dynamics.CRM.myapi_CustomEntityCollectionBoundAPI()
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-Content-Type: application/json; charset=utf-8
-```
 
 More information:
  - [Use Web API actions](webapi/use-web-api-actions.md)
