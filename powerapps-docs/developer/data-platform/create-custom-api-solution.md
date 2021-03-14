@@ -215,7 +215,7 @@ At this point, you can test your API using the steps describe in [Test your Cust
 
 ## Providing Localized Labels with the solution
 
-As an alternative to using the process described in [Localized values](custom-api.md#localized-values), if you are editing the solution files for Custom API entities, you can provide translations directly in these files. For example if you want to provide Japanese localized labels for your Custom API, you can provide them for the `description` and `displayname` properties as shown below
+As an alternative to using the process described in [Localized Label values](custom-api.md#localized-label-values), if you are editing the solution files for Custom API entities, you can provide translations directly in these files. For example if you want to provide Japanese localized labels for your Custom API, you can provide them for the `description` and `displayname` properties as shown below
 
 ```xml
 <customapi uniquename="sample_CustomAPIExample">
