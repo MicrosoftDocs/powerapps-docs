@@ -41,7 +41,16 @@ There are several different ways to create a custom API:
 > [!NOTE]
 > Although Custom API data is stored in tables, we do not support creating a model-driven app for these tables. A designer is planned for a future release.
 
-Regardless of the process you use, the following information describes selected columns for the three tables that contain the data for a Custom API. You should review this as you plan the behavior for your Custom API.
+### Custom API Customization
+
+When creating Custom API and related request parameters and response properties, it is important to understand that these API definitions are customizable by default. This is what allows you to iterate and make changes to these items in your unmanaged solution.
+
+> [!IMPORTANT]
+> When you ship or deploy your solution, you should use a managed solution and we recommend that you always set the **Is Customizable** managed property to these components to `false`. This will prevent people using your managed solution from modifying or deleting these components of your solution. Such changes could break code written for the original definition of the Custom API. More information [Managed properties](/power-platform/alm/managed-properties-alm)
+
+Even when you have set the **Is Customizable** managed property to these components to `false`, new request parameters and response properties can be added to your Custom API. However, additional request parameters cannot be made required. If you choose to allow custom processing steps on your custom api, these additional parameters and properties added to the original definition can be used by other plug-ins registered for the message created by your custom api. Because custom request parameters can only be optional, the plug-in you provide for the main operation of the custom api can ignore them and is not responsible for setting any custom response properties.
+
+The following information describes selected columns for the three tables that contain the data for a Custom API. You should review this as you plan the behavior for your Custom API.
 
 ### CustomAPI table columns
 
@@ -57,6 +66,7 @@ This table includes columns of a Custom API record that you can set.
 |**Description**<br />`Description`<br />`description`|Text<br />String|Localized description for this Custom API. For use when the message is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
 |**Display Name**<br />`DisplayName`<br />`displayname`|Text<br />String|Localized display name for this Custom API. For use when the message is exposed to be called in an app.|
 |**Execute Privilege Name**<br />`ExecutePrivilegeName`<br />`executeprivilegename`|Text<br />String|(Optional) Name of the privilege that allows execution of the custom API|
+|**Is Customizable**<br />`IsCustomizable`<br />`iscustomizable`|ManagedProperty|Whether the Custom API can be customized or deleted when part of a managed solution.|
 |**Is Function**<br />`IsFunction`<br />`isfunction`|Yes/No<br />Boolean|Indicates if the custom API is a function. A function requires the HTTP GET method. Otherwise the Http POST method is required.<ul> <li>**Value**: 0 **Label**: No</li> <li>**Value**: 1 **Label**: Yes</li> </ul>**Important**: A function MUST include at least one Response Property to be valid.<br/>More information: [Use Web API functions](webapi/use-web-api-functions.md)<br />**Cannot be changed after it is saved.**|
 |**Is Private**<br />`IsPrivate`<br />`isprivate`|Yes/No<br />Boolean|Indicates if the custom API is private (hidden from metadata and documentation) More information: [Private Messages](org-service/use-messages.md#private-messages)<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li> </ul>|
 |**Name**<br />`Name`<br />`name`|Text<br />String|The primary name of the custom API. This will display in the list of custom apis when viewed in the solution.|
@@ -71,11 +81,16 @@ Set the **Execute Privilege Name** property to the name of the privilege to requ
 
 If you do not set the **Plugin Type** (`PluginTypeId`)  to specify main operation logic the API can still be called. You might want to do this as a testing step, but any output parameter values will return the default values for the type because there is no code to set them.
 
+> [!TIP]
+> You may also use a Custom API without a synchronous main operation plug-in to send a notification to Dataverse when immediate processing is not required. You can register an asynchronous plug-in to the message created by the Custom API. The plug-in can read the payload to initiate some logic in Dataverse to respond to events that occurred in another system. Configure the external system to call this Dataverse API when those events occur.
+> 
+> Custom APIs used for this purpose should not have any Custom API Response Properties, only Custom API Request Parameters. With no synchronous logic to process or response properties to return, the operations should not fail and will serve as a trigger for the logic in the asynchronous plug-in.
+
 **Known Issues**:
 
 - [Custom API functions cannot use Entity or EntityCollection Request Parameters](#custom-api-functions-cannot-use-entity-or-entitycollection-request-parameters)
 
-### CustomAPIRequestParameter entity attributes
+### CustomAPIRequestParameter table columns
 
 A custom API isn’t required to have any parameters. There is no specified order for the parameters, they are identified by name.
 
@@ -83,27 +98,30 @@ A parameter is related to a single Custom API. You cannot define multiple Custom
 
 > [!NOTE]
 > If you define a bound entity for your Custom API, the parameter will be generated for you. You don’t need to create an input parameter for the entity when the Custom API is bound to an entity.
-> If you bind your Custom API to an entity collection, there will not be a parameter generated for you. Binding a Custom API to an entity collection sets the expectation that the operation will be performed on more than one entity of that type or that it will return a collection of that type.
+> 
+> If you bind your Custom API to an entity collection, there will not be a parameter generated for you. Binding a Custom API to an entity collection requires that the Custom API be called using the entityset resource path.
+> Binding to an entity collection only sets the expectation that the operation will be performed on more than one entity of that type or that it will return a collection of that type. It does not provide an entity collection input parameter for your plug-in to process.
 
-This table includes attributes of the Custom API Request Parameter entity that you can set.
+This table includes columns of the Custom API Request Parameter table that you can set.
 
-|Display Name<br />Schema Name  |Type  |Description |
+|Display Name<br />Schema Name<br />Logical Name  |Type  |Description |
 |---------|---------|---------|
-|**Custom API Request Parameter**<br />`CustomAPIRequestParameterId`|Uniqueidentifier|Unique identifier for custom API request parameter instances.<br/>**Cannot be changed after it is saved.**|
-|**Custom API** <br />`CustomAPIId`|Lookup|Unique identifier for the custom API that this custom API request parameter is associated with.<br/>**Cannot be changed after it is saved.**|
-|**Description**<br />`Description`|String|Localized description for custom API request parameter instances. For use when the message parameter is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
-|**Display Name** <br />`DisplayName`|String|Localized display name for custom API request parameter instances. For use when the message parameter is exposed to be called in an app.|
-|**Is Optional**<br />`IsOptional`|Boolean|Indicates if the custom API request parameter is optional. If it is not optional, it is required to pass a value for this parameter when using the message.<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li> </ul>**Cannot be changed after it is saved.**|
-|**Logical Entity Name**<br />`LogicalEntityName`|String|The logical name of the entity bound to the custom API request parameter.<br/>**Cannot be changed after it is saved.**|
-|**Name**<br />`Name`|String|The primary name of the custom API request parameter.  This will display in the list of custom api request parameters when viewed in the solution. Use this to differentiate this parameter from others that share a common Unique Name. <br />This naming convention is recommended: `{Custom API Unique Name}.{Parameter UniqueName}`|
-|**Owner** <br />`OwnerId`|Owner|A reference to the user or team that owns the API.|
-|**Type**<br />`Type`|Picklist|The data type of the custom API request parameter.<ul> <li>**Value**: 0 **Label**: Boolean </li> <li>**Value**: 1 **Label**: DateTime</li> <li>**Value**: 2 **Label**: Decimal </li> <li>**Value**: 3 **Label**: Entity</li> <li>**Value**: 4 **Label**: EntityCollection </li> <li>**Value**: 5 **Label**: EntityReference</li> <li>**Value**: 6 **Label**: Float </li> <li>**Value**: 7 **Label**: Integer</li> <li>**Value**: 8 **Label**: Money </li> <li>**Value**: 9 **Label**: Picklist</li> <li>**Value**: 10 **Label**: String </li> <li>**Value**: 11 **Label**: StringArray </li> <li>**Value**: 12 **Label**: Guid </li> </ul>**Cannot be changed after it is saved.**|
-|**Unique Name** <br />`UniqueName`|String|Unique name for the custom API request parameter. This will be the name of the parameter when you call the Custom API.<br/>**Cannot be changed after it is saved.**|
+|**Custom API Request Parameter**<br />`CustomAPIRequestParameterId`<br />`customapirequestparameterid`|Unique Identifier<br />Guid|Unique identifier for custom API request parameter instances.<br/>**Cannot be changed after it is saved.**|
+|**Custom API** <br />`CustomAPIId`<br />`customapiid`|Lookup|Unique identifier for the custom API that this custom API request parameter is associated with.<br/>**Cannot be changed after it is saved.**|
+|**Description**<br />`Description`<br />`description`|Text<br />String|Localized description for custom API request parameter instances. For use when the message parameter is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
+|**Display Name** <br />`DisplayName`<br />`displayname`|Text<br />String|Localized display name for custom API request parameter instances. For use when the message parameter is exposed to be called in an app.|
+|**Is Customizable**<br />`IsCustomizable`<br />`iscustomizable`|ManagedProperty|Whether the custom api request parameter can be customized or deleted when part of a managed solution.|
+|**Is Optional**<br />`IsOptional`<br />`isoptional`|Yes/No<br />Boolean|Indicates if the custom API request parameter is optional. If it is not optional, it is required to pass a value for this parameter when using the message.<ul> <li>**Value**: 0 **Label**: No </li> <li>**Value**: 1 **Label**: Yes</li> </ul>**Cannot be changed after it is saved.**|
+|**Logical Entity Name**<br />`LogicalEntityName`<br />`logicalentityname`|Text<br />String|The logical name of the entity bound to the custom API request parameter.<br/>**Cannot be changed after it is saved.**|
+|**Name**<br />`Name`<br />`name`|Text<br />String|The primary name of the custom API request parameter.  This will display in the list of custom api request parameters when viewed in the solution. Use this to differentiate this parameter from others that share a common Unique Name. <br />This naming convention is recommended: `{Custom API Unique Name}.{Parameter UniqueName}`|
+|**Owner** <br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API.|
+|**Type**<br />`Type`<br />`type`|Choice<br />Picklist|The data type of the custom API request parameter.<ul> <li>**Value**: 0 **Label**: Boolean </li> <li>**Value**: 1 **Label**: DateTime</li> <li>**Value**: 2 **Label**: Decimal </li> <li>**Value**: 3 **Label**: Entity</li> <li>**Value**: 4 **Label**: EntityCollection </li> <li>**Value**: 5 **Label**: EntityReference</li> <li>**Value**: 6 **Label**: Float </li> <li>**Value**: 7 **Label**: Integer</li> <li>**Value**: 8 **Label**: Money </li> <li>**Value**: 9 **Label**: Picklist</li> <li>**Value**: 10 **Label**: String </li> <li>**Value**: 11 **Label**: StringArray </li> <li>**Value**: 12 **Label**: Guid </li> </ul>**Cannot be changed after it is saved.**|
+|**Unique Name** <br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API request parameter. This will be the name of the parameter when you call the Custom API.<br/>**Cannot be changed after it is saved.**|
 
 > [!NOTE]
 > Some values are not valid for update. They cannot be changed after the Custom API Request Parameter is saved. If you need to change one of these values, you must delete the Custom API Request Parameter and re-create it with the changes you want to make.
 
-### CustomAPIResponseProperty entity attributes
+### CustomAPIResponseProperty table columns
 
 The object returned for your Custom API message will include any response properties you define. It is not required for a Custom API Action to return any value, but it must return a value if defined as a Function.
 
@@ -116,19 +134,20 @@ The object returned for your Custom API message will include any response proper
 
 If there is only a single **Entity** or **EntityCollection** response property defined, the response will be of that type. If there are multiple parameters, or one or more parameter of a simple type, the API will return a complex type where each response property will be a property of that complex type. For example, if your Custom API Unique name is `sample_CustomAPIExample`, it will return a complex type named `sample_CustomAPIExampleResponse` with properties for each response property you define.
 
-This table includes attributes of the Custom API Response Property entity that you can set.
+This table includes columns of the Custom API Response Property table that you can set.
 
-|Display Name<br />Schema Name  |Type  |Description |
+|Display Name<br />Schema Name<br />Logical Name  |Type  |Description |
 |---------|---------|---------|
-|**Custom API Response Property**<br />`CustomAPIResponsePropertyId`|Uniqueidentifier|Unique identifier for custom API response property instances.<br/>**Cannot be changed after it is saved.**|
-|**Custom API** <br />`CustomAPIId`|Lookup|Unique identifier for the custom API that this custom API response property is associated with. <br/>**Cannot be changed after it is saved.**|
-|**Description**<br />`Description`|String|Localized description for custom API response property  instances. For use when the message parameter is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
-|**Display Name** <br />`DisplayName`|String|Localized display name for custom API response property  instances. For use when the message parameter is exposed to be called in an app.|
-|**Logical Entity Name**<br />`LogicalEntityName`|String|The logical name of the entity bound to the custom API response property .<br/>**Cannot be changed after it is saved.**|
-|**Name**<br />`Name`|String|The primary name of the custom API response property .  This will display in the list of custom api request parameters when viewed in the solution. Use this to differentiate this parameter from others that share a common Unique Name. <br />This naming convention is recommended: `{Custom API Unique Name}.{Property UniqueName}`|
-|**Owner** <br />`OwnerId`|Owner|A reference to the user or team that owns the API.|
-|**Type**<br />`Type`|Picklist|The data type of the custom API response property <ul> <li>**Value**: 0 **Label**: Boolean </li> <li>**Value**: 1 **Label**: DateTime</li> <li>**Value**: 2 **Label**: Decimal </li> <li>**Value**: 3 **Label**: Entity</li> <li>**Value**: 4 **Label**: EntityCollection </li> <li>**Value**: 5 **Label**: EntityReference</li> <li>**Value**: 6 **Label**: Float </li> <li>**Value**: 7 **Label**: Integer</li> <li>**Value**: 8 **Label**: Money </li> <li>**Value**: 9 **Label**: Picklist</li> <li>**Value**: 10 **Label**: String </li> <li>**Value**: 11 **Label**: StringArray </li> <li>**Value**: 12 **Label**: Guid </li> </ul>**Cannot be changed after it is saved.**|
-|**Unique Name** <br />`UniqueName`|String|Unique name for the custom API response property . This will be the name of the parameter when you call the Custom API.<br/>**Cannot be changed after it is saved.**|
+|**Custom API Response Property**<br />`CustomAPIResponsePropertyId`<br />`customapiresponsepropertyid`|Unique Identifier<br />Guid|Unique identifier for custom API response property instances.<br/>**Cannot be changed after it is saved.**|
+|**Custom API** <br />`CustomAPIId`<br />`customapiid`|Lookup|Unique identifier for the custom API that this custom API response property is associated with. <br/>**Cannot be changed after it is saved.**|
+|**Description**<br />`Description`<br />`description`|Text<br />String|Localized description for custom API response property  instances. For use when the message parameter is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
+|**Display Name** <br />`DisplayName`<br />`displayname`|Text<br />String|Localized display name for custom API response property  instances. For use when the message parameter is exposed to be called in an app.|
+|**Is Customizable**<br />`IsCustomizable`<br />`iscustomizable`|ManagedProperty|Whether the custom api response property can be customized or deleted when part of a managed solution.|
+|**Logical Entity Name**<br />`LogicalEntityName`<br />`logicalentityname`|Text<br />String|The logical name of the entity bound to the custom API response property .<br/>**Cannot be changed after it is saved.**|
+|**Name**<br />`Name`<br />`name`|String|The primary name of the custom API response property .  This will display in the list of custom api request parameters when viewed in the solution. Use this to differentiate this parameter from others that share a common Unique Name. <br />This naming convention is recommended: `{Custom API Unique Name}.{Property UniqueName}`|
+|**Owner** <br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API.|
+|**Type**<br />`Type`<br />``|Picklist|The data type of the custom API response property <ul> <li>**Value**: 0 **Label**: Boolean </li> <li>**Value**: 1 **Label**: DateTime</li> <li>**Value**: 2 **Label**: Decimal </li> <li>**Value**: 3 **Label**: Entity</li> <li>**Value**: 4 **Label**: EntityCollection </li> <li>**Value**: 5 **Label**: EntityReference</li> <li>**Value**: 6 **Label**: Float </li> <li>**Value**: 7 **Label**: Integer</li> <li>**Value**: 8 **Label**: Money </li> <li>**Value**: 9 **Label**: Picklist</li> <li>**Value**: 10 **Label**: String </li> <li>**Value**: 11 **Label**: StringArray </li> <li>**Value**: 12 **Label**: Guid </li> </ul>**Cannot be changed after it is saved.**|
+|**Unique Name** <br />`UniqueName`<br />`uniquename`|Text<br />String|Unique name for the custom API response property . This will be the name of the parameter when you call the Custom API.<br/>**Cannot be changed after it is saved.**|
 
 > [!NOTE]
 > Some values are not valid for update. They cannot be changed after the Custom API Response Property is saved. If you need to change one of these values, you must delete the Custom API Response Property and re-create it with the changes you want to make.
@@ -141,7 +160,7 @@ A Custom API creates a new message which can be invoked via the SDK or Web API.
 
 You can choose to use either early-bound or late-bound code to invoke your custom API. Use the [CrmSvcUtil](/powerapps/developer/data-platform/org-service/generate-early-bound-classes) tool to generate helper request and response classes to mirror the request and response properties of your custom API.
 
-For late-bound code, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
+For late-bound code, or for a Custom API that you have marked as private, create an `OrganizationRequest` with the unique name of your custom API and add parameters with names matching the unique names of the request properties.
 
 Entity-bound custom APIs have an implicit request property named `Target` that should be set to an `EntityReference` of the record to invoke the API on.
 
@@ -163,7 +182,9 @@ More information: [Use messages with the Organization service](org-service/use-m
 
 ### Invoking Custom APIs from the Web API
 
-Custom APIs can be called in the same way as any standard Web API [functions](webapi/use-web-api-functions.md) or [actions](webapi/use-web-api-actions.md). If your custom API has the `IsFunction` field set to `true` then it needs to be invoked as a function using a `GET` request, otherwise it needs to be used as an action using a `POST` request:
+Custom APIs can be called in the same way as any standard Web API [functions](webapi/use-web-api-functions.md) or [actions](webapi/use-web-api-actions.md). If your custom API has the `IsFunction` field set to `true` then it needs to be invoked as a function using a `GET` request, otherwise it needs to be used as an action using a `POST` request.
+
+This is an example of invoking a Custom API Action named `myapi_CustomUnboundAPI` which has a single string request parameter named `InputParameter`:
 
 ```http
 POST [Organization URI]/api/data/v9.1/myapi_CustomUnboundAPI
@@ -176,12 +197,16 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
+This is an example of invoking a Custom API Function named `myapi_CustomBoundAPI` that is bound to an entity:
+
 ```http
 GET [Organization URI]/api/v9.1/accounts(ed5d4e42-850c-45b7-8b38-2677545107cc)/Microsoft.Dynamics.CRM.myapi_CustomBoundAPI()
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 Content-Type: application/json; charset=utf-8
 ```
+
+This is an example of invoking a Custom API Function named `myapi_CustomEntityCollectionBoundAPI` that is bound to to the account entity collection:
 
 ```http
 GET [Organization URI]/api/v9.1/accounts/Microsoft.Dynamics.CRM.myapi_CustomEntityCollectionBoundAPI()
@@ -327,9 +352,9 @@ FROM   customapi AS api
        ON api.plugintypeid = type.plugintypeid
 ```
 
-## Localized values
+## Localized Label values
 
-You can localize the values using the steps documented here: [Translate localizable text for model-driven apps](../../maker/model-driven-apps/translate-localizable-text.md) and [Translating labels and display strings](/power-platform/alm/create-solutions-support-multiple-languages#translating-labels-and-display-strings).
+You can localize the label values using the steps documented here: [Translate localizable text for model-driven apps](../../maker/model-driven-apps/translate-localizable-text.md) and [Translating labels and display strings](/power-platform/alm/create-solutions-support-multiple-languages#translating-labels-and-display-strings).
 
 This process involves exporting a file that contains the base language values and will include a column for each additional language enabled. You can then edit the values in Excel. After you complete the process to import the translations the labels will be included in your solution.
 
@@ -452,11 +477,11 @@ A: While Custom API has an Execute Privilege Name (`ExecutePrivilegeName`) prope
 
 ### Q: Can I activate or deactivate Custom API records?
 
-A: You cannot. Although these records have the common **Status** and **Status Reason** fields found on most Microsoft Dataverse entities. Setting the values for these fields has no impact on the availability of the Custom API, the request parameters, or the response properties.
+A: You cannot. Although these records have the common **Status** and **Status Reason** columns found on most Microsoft Dataverse tables. Setting the values for these columns has no impact on the availability of the Custom API, the request parameters, or the response properties.
 
 ### Q: How can I use my private messages if they are not included in the Web API $metadata service document?
 
-A: Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `false` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `true`. 
+A: Yes. Your private messages will work regardless of whether they are advertised in the Web API [CSDL $metadata document](webapi/web-api-types-operations.md#csdl-metadata-document) or not. While you develop your solution, you can leave the `IsPrivate` value set to `false`. This way you can refer to the `$metadata` listing and use code generation tools that depend on this data. However, you should set the `CustomAPI.IsPrivate` value to `false` before you ship your solution for others to use. If you later decide that you wish to support other applications to use the message, you can change the `CustomAPI.IsPrivate` value to `true`. 
 
 More information: [Private Messages](org-service/use-messages.md#private-messages) and [Private messages cannot be used in plug-ins](#private-messages-cannot-be-used-in-plug-ins)
 
@@ -466,9 +491,9 @@ Custom API is now generally available, but there are still some related capabili
 
 ### Not able to use profiler for debugging
 
-To debug using the Plug-in Registration tool and the Plug-in profiler solution, you need to be able to select a specific plug-in step. The main stage implementation for the plug-in is not currently available in the Plug-in Registration tool. 
+To debug using the Plug-in Registration tool and the Plug-in profiler solution, you need to be able to select a specific plug-in step. The main stage implementation for the plug-in is not currently available in the Plug-in Registration tool.
 
-**Workaround**: Register the plug-in type on the PostOperation stage of the message created for the Custom API.
+**Workaround**: Register the plug-in type on the `PostOperation` stage of the message created for the Custom API.
 
 ### A custom API cannot be called from a workflow
 
@@ -478,21 +503,8 @@ A Custom Process Action can be called from another workflow. Currently, Custom A
 
 When you create a Custom API in the maker portal ([https://make.powerapps.com/](https://make.powerapps.com/)), you should do so in the context of a solution. However, due to the current dependency on the legacy web application designer, the Custom API or any of the Custom API Request Parameters or Custom API Response Properties do not get added to the solution automatically. You must still manually add each part to the solution by selecting the **Add Existing** button.
 
-This will be fixed when a modern designer is provided in the maker portal.
+This will be fixed when a modern designer is provided, or you may want to define your Custom APIs by writing code or with solution files. 
 
-### Custom API entities can be related to other entities
-
-It is currently possible for entities to create relationships with the three Custom API entities. Other than to create 1:N relationships with `CustomAPIRequestParameter` and `CustomAPIResponseProperty` as the primary entity, this ability may be removed in a future release. Entities related to `CustomAPIRequestParameter` and `CustomAPIResponseProperty` allow for definition of  entities that may provide further metadata about the respective parameters and response properties.
-
-### The Name field value is displayed in the solution components view where the Display Name value should be shown
-
-<!-- Bug 2057888 -->
-
-When viewing the Custom API entities in a solution, the **Display Name** column shows the **Name** value rather than the **Display Name** value.
-
-### Custom API and related records cannot be created using one operation
-
-It is not possible to create the Custom API, Custom API Request Parameter, and Custom API Response Properties in a single operation using 'deep-insert' as described in [Create related entity records in one operation](webapi/create-entity-web-api.md#create-related-entity-records-in-one-operation) and [Create related entities in one operation](org-service/entity-operations-create.md#create-related-entities-in-one-operation). Instead, each record must be created individually and be related to the Custom API record.
 
 ### Custom API functions cannot use Entity or EntityCollection Request Parameters
 
