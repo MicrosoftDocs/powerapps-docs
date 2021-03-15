@@ -5,7 +5,7 @@ author: vasavib
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 03/05/2021
+ms.date: 03/15/2021
 ms.author: vabhavir
 ms.reviewer: tapanm
 search.audienceType: 
@@ -199,6 +199,9 @@ Let's configure the app with controls and logic to allow upload of files to the 
     The app controls look like this in the sample app now.
 
     ![Upload file to the connected storage](./media/connection-azure-blob-storage/upload-functionality-added.png "Upload file to the connected storage")
+
+    > [!TIP]
+    > Ensure you select **All files** when using the upload option to ensure all file types are visible in the file explorer dialog box.
 
 ## Download files from Azure Blob Storage
 
