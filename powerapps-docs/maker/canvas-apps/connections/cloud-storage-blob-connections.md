@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 12/15/2020
+ms.date: 03/15/2021
 ms.author: lanced
 ms.reviewer: tapanm
 search.audienceType: 
@@ -20,6 +20,9 @@ Power Apps offers several cloud-storage connections. Using any of these connecti
 [Box](https://docs.microsoft.com/connectors/box/) | [Dropbox](https://docs.microsoft.com/connectors/dropbox/) | [Google Drive](https://docs.microsoft.com/connectors/googledrive/) | [OneDrive](https://docs.microsoft.com/connectors/onedrive/) | [OneDrive for Business](https://docs.microsoft.com/connectors/onedriveforbusiness/) |
 | --- | --- | --- | --- | --- |
 | ![Box](media/cloud-storage-blob-connections/boxicon.png "Box") |![Dropbox](media/cloud-storage-blob-connections/dropboxicon.png "Dropbox") |![Google Drive](media/cloud-storage-blob-connections/googledriveicon.png "Google Drive") |![OneDrive](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive")  |![OneDrive for Business](media/cloud-storage-blob-connections/onedrive-icon.png "OneDrive for Business") |
+
+> [!NOTE]
+> To learn about using Azure Blob Storage with Power Apps, go to [Connect to Azure Blob Storage from Power Apps](connection-azure-blob-storage.md).
 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
