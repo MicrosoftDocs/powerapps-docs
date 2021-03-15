@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/05/2020
+ms.date: 03/10/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -483,9 +483,10 @@ The FetchXML filter uses only one attribute:
 ## Entity list Map view
 
 With entity lists, it is possible to enable and configure a Map view of the data, powered by [!INCLUDE[pn-bing](../../../includes/pn-bing.md)] maps with search functionality to find locations near an address. By populating your records with latitude and longitude coordinate values and specifying the necessary configuration options listed in this section, your records can be rendered as pushpins on a map. Any record that does not have a latitude or longitude value will be excluded from the search. The initial load of the page will display all records within the initial value of the Distance Values field (in miles or km, depending on the Distance Units specified) from the Default Center Latitude and Default Center Longitude coordinates. The view specified is ignored when Map view is used, and a distance query is applied to the dataset to return the mappable results.
->[!Note] 
->This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
 
+> [!NOTE] 
+> - This option is not supported in the German Sovereign Cloud environment. The Map view section will not be visible in this environment.
+> - Only Bing maps are supported as the **Map type**.
 
 ## Entity List Calendar view
 
