@@ -243,6 +243,8 @@
                 href: canvas-apps/use-native-cds-connector.md
             - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
+            - name: Azure Blob Storage
+              href: canvas-apps/connections/connection-azure-blob-storage.md
             - name: Dynamics 365
               href: canvas-apps/connections/connection-dynamics-crmonline.md
             - name: Dynamics AX
