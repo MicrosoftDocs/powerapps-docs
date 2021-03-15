@@ -154,32 +154,32 @@ search.app:
  public enum SourceTypeMasks  
 {  
     /// <summary>  
-    /// Undefined: 0 - The default value for simple and rollup attributes.  
+    /// Undefined: 0 - The default value for simple and rollup columns.  
     /// </summary>  
     Undefined = 0,  
     /// <summary>  
-    /// Simple: 1 - The calculated attribute refers to an attribute in the same record.  
+    /// Simple: 1 - The calculated column refers to an column in the same record.  
     /// </summary>  
     Simple = 1,  
     /// <summary>  
-    /// Related: 2 - The calculated attribute refers to an attribute in a related record.  
+    /// Related: 2 - The calculated column refers to an column in a related record.  
     /// </summary>  
     Related = 2,  
     /// <summary>  
-    /// Logical: 4 - The calculated attribute refers to a logical attribute.  
+    /// Logical: 4 - The calculated column refers to a logical column.  
     /// </summary>  
     Logical = 4,  
     /// <summary>  
-    /// Calculated: 8 - The calculated attribute refers to another calculated attribute.  
+    /// Calculated: 8 - The calculated column refers to another calculated column.  
     /// </summary>  
     Calculated = 8,  
     /// <summary>  
-    /// Rollup: 16 - The calculated attribute refers a rollup attribute.   
+    /// Rollup: 16 - The calculated column refers a rollup column.   
     /// </summary>  
     Rollup = 16,  
     /// <summary>  
-    /// Invalid: 32 - The calculated or rollup attribute is invalid.  
-    /// Typically this would be where a field refers to an attribute that no longer exists.   
+    /// Invalid: 32 - The calculated or rollup column is invalid.  
+    /// Typically this would be where a field refers to an column that no longer exists.   
     /// </summary>  
     Invalid = 32  
 }  

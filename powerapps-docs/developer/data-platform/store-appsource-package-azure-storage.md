@@ -39,7 +39,7 @@ To upload your package to Azure Blob storage:
     
    ![Create a Storage account](media/appsource-storageaccount-pic1.png)
 
-4. On the **Create storage account** page, specify **Name**, **Resource group**, and **Location** for your storage account. Leave the rest of the fields with the default options. Click **Create**. 
+4. On the **Create storage account** page, specify **Name**, **Resource group**, and **Location** for your storage account. Leave the rest of the columns with the default options. Click **Create**. 
 
    ![Specifying account values](media/appsource-storageaccount-pic2.png)
   
