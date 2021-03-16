@@ -151,12 +151,15 @@ To use these controls in the form editor:
 |Column|Shows the column the control is mapped to.|  
   
 ## Pen control  
- Use the pen control to capture written input such as signatures. The pen control can be added to multiple line text columns for use with web, tablet, and phone clients.
-  
-> [!NOTE]
->  The minimum recommended **Maximum Length** specified for the column this control maps to is 15000.  
+ Use the pen control to capture written input such as signatures. The pen control can be configured for multiline text columns for use with web, tablet, and phone clients.
 
+:::image type="content" source="media/pen-control-runtime.png" alt-text="Pen control in a model-driven app":::
   
+> [!IMPORTANT]
+> The minimum recommended **Maximum Length** specified for the column this control maps to is 15000.  
+>  
+> Currently this control is only available using the classic form designer.
+
 |Property|Description|  
 |--------------|-----------------|  
 |PenMode|Specify **PenMode!Draw**, **PenMode!Erase**, or **PenMode!Select** to determine what happens when a user drags a pointing device in a pen control.|  
