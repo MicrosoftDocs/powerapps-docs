@@ -19,6 +19,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - sama-zaki
 ---
 
 # Analyze Microsoft Dataverse data in Azure Data Lake Storage Gen2 with Power BI
