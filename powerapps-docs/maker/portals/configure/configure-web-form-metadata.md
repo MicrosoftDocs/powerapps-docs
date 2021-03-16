@@ -1,6 +1,6 @@
 ---
-title: "Web form metadata for a portal | MicrosoftDocs"
-description: "Instructions to add and configure web form metadata for a portal."
+title: "Advanced form metadata for a portal | MicrosoftDocs"
+description: "Instructions to add and configure advanced form metadata for a portal."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,26 +10,26 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure web form metadata for portals
+# Configure advanced form metadata for portals
 
-The Web Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
+The Advanced Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
 
 ## Add a new record
 
-1. On the Web Form Step that has fields that you would like to modify, go to **Related** > **Metadata** 
+1. On the Advanced Form Step that has fields that you would like to modify, go to **Related** > **Metadata** 
 
-2. Select **New Web Form Metadata**.
+2. Select **New Advanced Form Metadata**.
 
-## Web form metadata properties
+## Advanced form metadata properties
 
 The following attributes provide additional styling and capabilities for elements on a form.
 
 | Name          | Description                                                                                                                                                                                                                                                                                                                                          |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Web Form Step | The Web Form Step associated with the Web Form Metadata record.                                                                                                                                                                                                                                                                                      |
+| Advanced Form Step | The Advanced Form Step associated with the Advanced Form Metadata record.                                                                                                                                                                                                                                                                                      |
 | Type          | Available options are:<ul><li>Attribute</li><li>Section</li><li>Tab</li></ul>Selecting Attribute as the Type value displays the appropriate options for modifying fields on the current form rendered for the related step. Selecting Section as the Type value displays the options available for modifying a section on the form. Selecting Tab as the Type value displays the options available for modifying a tab on a form.  |
 
-## Web form metadata type = Attribute
+## Advanced form metadata type = Attribute
 
 The following properties are displayed when the Type selected is 'Attribute'.
 
@@ -109,7 +109,7 @@ The following properties specify the location and content of custom description 
 | Use Attribute's Description Property |                                                                                       Select 'Yes' to use the description assigned to the attribute metadata on the entity. Select 'No' to provide a custom description. Default is 'No'.                                                                                       |
 |             Description              | Custom text to be displayed on the form. Used in conjunction when Use Attribute's Description Property is set to 'No'. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
-## Web Form metadata type = Section
+## Advanced Form metadata type = Section
 
 The following properties are displayed when the Type selected equals 'Section'.
 
@@ -119,7 +119,7 @@ The following properties are displayed when the Type selected equals 'Section'.
 | Section Name |                                                                                           The name of the section on the entity's form to be modified.                                                                                            |
 |    Label     | Replaces the default label assigned to the section on the entity with the text specified in this input. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
-## Web Form metadata type = Tab
+## Advanced Form metadata type = Tab
 
 The following properties are displayed when the Type selected equals 'Tab'
 
@@ -133,10 +133,10 @@ The following properties are displayed when the Type selected equals 'Tab'
 
 [Configure a portal](configure-portal.md)  
 [Define basic forms](entity-forms.md)  
-[Web Form properties for portals](web-form-properties.md)  
-[Web Form steps for portals](web-form-steps.md)  
-[Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-[Notes configuration for Web Forms for portals](../configure-notes.md)  
+[Advanced Form properties for portals](web-form-properties.md)  
+[Advanced Form steps for portals](web-form-steps.md)  
+[Advanced Form subgrid configuration for portals](configure-web-form-subgrid.md)  
+[Notes configuration for Advanced Forms for portals](../configure-notes.md)  
 
 
 

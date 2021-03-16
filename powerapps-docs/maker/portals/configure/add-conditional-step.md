@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Add a conditional step type
 
-A Web Form Step can be a 'Condition' type that indicates the step should evaluate an expression. If the expression evaluates to true then the next step is displayed. If the expression evaluates to false and if the 'Next Step If Condition Fails' has been specified, that step will be displayed. The current entity is the target used to evaluate the expression against. Record Source defaults to the Record Source of the previous step.
+A Advanced Form Step can be a 'Condition' type that indicates the step should evaluate an expression. If the expression evaluates to true then the next step is displayed. If the expression evaluates to false and if the 'Next Step If Condition Fails' has been specified, that step will be displayed. The current entity is the target used to evaluate the expression against. Record Source defaults to the Record Source of the previous step.
 
 ## Attributes
 
@@ -63,7 +63,7 @@ new\_categorycode = 750101 & gendercode = 2
 
 [Configure a portal](configure-portal.md)  
 [Define basic forms](entity-forms.md)  
-[Web Form steps for portals](web-form-steps.md)  
+[Advanced Form steps for portals](web-form-steps.md)  
 [Load Form/Load Tab step type](load-form-step.md)  
 [Redirect step type](add-redirect-step.md)  
 [Add custom JavaScript](add-custom-javascript.md)  

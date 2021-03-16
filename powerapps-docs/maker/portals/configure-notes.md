@@ -1,6 +1,6 @@
 ---
-title: "Configure notes as attachments on basic forms and web forms for a portal | MicrosoftDocs"
-description: "Instructions to add and configure notes as attachments on basic forms and web forms in a portal."
+title: "Configure notes as attachments on basic forms and advanced forms for a portal | MicrosoftDocs"
+description: "Instructions to add and configure notes as attachments on basic forms and advanced forms in a portal."
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: gisingh
 ms.reviewer: tapanm
 ---
 
-# Configure notes as attachments for basic forms and web forms on portals
+# Configure notes as attachments for basic forms and advanced forms on portals
 
 Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!NOTE]
-> Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding basic form or web form step for the entity permissions to take effect.
+> Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding basic form or advanced form step for the entity permissions to take effect.
 
 ## Notes configuration for Basic Forms
 
@@ -223,9 +223,9 @@ However, when editing the note from portal web page, you'll see the note in HTML
 > [!IMPORTANT]
 > If you try to save a note with HTML markup using the portal, you'll see this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save the notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation applies to the entire web site. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
 
-## Notes configuration for web forms
+## Notes configuration for advanced forms
 
-Web form notes are configured in the same way as [basic form notes](#notes-configuration-for-entity-forms). You must create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
+Advanced form notes are configured in the same way as [basic form notes](#notes-configuration-for-entity-forms). You must create a metadata record for the Advanced Form Step that has notes first, and then add the notes configuration metadata.
 
 > [!NOTE]
 > Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) in order to display on the portal.

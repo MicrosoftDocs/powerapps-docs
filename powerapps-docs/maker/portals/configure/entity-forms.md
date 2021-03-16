@@ -30,7 +30,7 @@ When creating a new basic form, the first step is to decide the **Entity** and *
 > - An **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
 > - The Connection entity subgrids aren't supported in basic forms. If you add a Connection entity subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection entity.
 > - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in basic forms.
-> - [Image attributes](https://docs.microsoft.com/powerapps/developer/data-platform/image-attributes), [file attributes](https://docs.microsoft.com/powerapps/developer/data-platform/file-attributes) and [entity images](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [web forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
+> - [Image attributes](https://docs.microsoft.com/powerapps/developer/data-platform/image-attributes), [file attributes](https://docs.microsoft.com/powerapps/developer/data-platform/file-attributes) and [entity images](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 > - Business rules and client API can enable locked fields on a read-only form.
 > - If you create an basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
 > - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
@@ -134,8 +134,8 @@ This provides a way to associate the current record being created or updated by 
 |Target Lookup Attribute Logical Name|Logical name of the lookup attribute on the target entity being created or updated.|
 |Populate Lookup Field|    If the lookup regarding the reference entity is on the form, checking this value will populate the field on the form with the value retrieved using the setting below.|
 |Reference Entity Source Type|    One of the following values:<ul><li>Query String <br> Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the **Query String Name** field. If this parameter is the primary key then select Yes for the **Query String Is Primary Key**, otherwise select No and provide the logical name of the attribute on the target entity to query by specified in the **Query Attribute Logical Name** field.</li><li>Current Portal User <br> Selecting Current Portal User will retrieve the contact record for the current authenticated user.</li></ul>|
-|Reference Entity Step|    The Web Form Step record of a previous step to retrieve the entity created or edited in that step to associate it with the record for this current step.|
-|Query String Name|    Parameter name provided in the Query String of the URL to the Web Page containing the Web Form.|
+|Reference Entity Step|    The Advanced Form Step record of a previous step to retrieve the entity created or edited in that step to associate it with the record for this current step.|
+|Query String Name|    Parameter name provided in the Query String of the URL to the Web Page containing the Advanced Form.|
 |Query String Is Primary Key|    Yes indicates the Query String value is the Primary Key value. No indicates the Query String value is an attribute type other than the Primary Key.|
 |Query Attribute Logical Name|    Logical name of the attribute to query the record.|
 |Show ReadOnly Details|    Indicates that a form should be rendered at the top of the page displaying read-only information pertaining to the reference record. Requires a Form Name.|
@@ -216,11 +216,11 @@ To disable request validation, follow these steps:
 ### See also
 
 - [Configure a portal](configure-portal.md)  
-- [Web Form properties for portals](web-form-properties.md)  
-- [Web Form steps for portals](web-form-steps.md)  
-- [Web Forms metadata for portals](configure-web-form-metadata.md)  
-- [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-- [Notes configuration for basic forms and Web Forms for portals](../configure-notes.md)
+- [Advanced Form properties for portals](web-form-properties.md)  
+- [Advanced Form steps for portals](web-form-steps.md)  
+- [Advanced Forms metadata for portals](configure-web-form-metadata.md)  
+- [Advanced Form subgrid configuration for portals](configure-web-form-subgrid.md)  
+- [Notes configuration for basic forms and Advanced Forms for portals](../configure-notes.md)
 - [Microsoft Learn: Interact with Dataverse data using basic forms](https://docs.microsoft.com/learn/modules/portals-access-data-platform/3-entity-forms)
 
 

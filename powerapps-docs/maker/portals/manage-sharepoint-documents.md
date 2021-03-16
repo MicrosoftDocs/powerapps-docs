@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Manage SharePoint documents
 
-Microsoft Dataverse supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dataverse. Power Apps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an basic form or web form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
+Microsoft Dataverse supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dataverse. Power Apps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on an basic form or advanced form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
 
 > [!NOTE]
 > - Document management works only with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)].
@@ -89,7 +89,7 @@ You can specify name and label as per your requirement. Save and publish the for
 
 ### Power Apps portals configuration
 
-Apart from the standard configuration required for basic form or web form, you must set the following properties to enable document management:
+Apart from the standard configuration required for basic form or advanced form, you must set the following properties to enable document management:
 
 - **Entity Name** and **Form Name**: Enter the entity and form names customized in the previous step, respectively.
 
@@ -104,8 +104,8 @@ Apart from the standard configuration required for basic form or web form, you m
 
 Two entity permission records are required to establish the necessary access to view and upload documents.
 
-- Permissions on the entity of the entity or web form: 
-    - Create an **Entity Permission** record specifying the **Entity Name** as the entity of the basic form or web form configured previously. 
+- Permissions on the entity of the entity or advanced form: 
+    - Create an **Entity Permission** record specifying the **Entity Name** as the entity of the basic form or advanced form configured previously. 
     - Select a **Scope** and scope relationship that is appropriate to the behavior of the form that you want.
     - Enable **Read** and **Append To** privileges to allow read access to documents and optionally enable **Write** privilege to allow document uploads. Ignore the **Child Entity Permissions** section for now since it will be populated by the next step.
 - Permissions on the **Document Location** with **Parent scope** referring to the previous permission record: 
@@ -117,7 +117,7 @@ Two entity permission records are required to establish the necessary access to 
         - Include **Delete** to allow deletion of a document.
 
 > [!NOTE]
-> A corresponding child entity permission on the **Document Location** entity needs to be created for each instance of the parent entity permission record that exists on the entity of the entity or web form where documents need to be shown.
+> A corresponding child entity permission on the **Document Location** entity needs to be created for each instance of the parent entity permission record that exists on the entity of the entity or advanced form where documents need to be shown.
 
 ## Configure file upload size
 

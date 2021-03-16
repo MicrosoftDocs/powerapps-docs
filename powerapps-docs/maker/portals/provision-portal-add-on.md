@@ -159,7 +159,7 @@ The table below summarizes the features associated with each portal option:
 | Web Notifications                      |  *                           | *              |  *                           | *                | *             |
 | [!INCLUDE[cc-microsoft](../../includes/cc-microsoft.md)] Identity                     |     *                         |  *              |     *                         |   *               | *             |
 | Identity Workflows                     | *                            |  *             |     *                         |   *               | *             |
-| Web Forms                              |  *                            | *               |    *                          | *                 | *             |
+| Advanced Forms                              |  *                            | *               |    *                          | *                 | *             |
 | Feedback                               |   *                           |  *              |  *                            | *                 | *             |
 ||
 

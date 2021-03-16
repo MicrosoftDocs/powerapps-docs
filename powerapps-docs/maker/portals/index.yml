@@ -88,7 +88,7 @@ landingContent:
             url: configure/entity-forms.md
           - text: Entity lists
             url: configure/entity-lists.md
-          - text: Web forms
+          - text: Advanced forms
             url: configure/web-form-properties.md
 
   # Card

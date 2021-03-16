@@ -1,6 +1,6 @@
 ---
-title: "Web Form subgrid configuration for a portal | MicrosoftDocs"
-description: "Instructions to add and configure web form subgrids for a portal."
+title: "Advanced Form subgrid configuration for a portal | MicrosoftDocs"
+description: "Instructions to add and configure advanced form subgrids for a portal."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,9 +10,9 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure Web form subgrids for portals
+# Configure Advanced form subgrids for portals
 
-Web form subgrids are configured in an identical fashion to basic form subgrids: first, create a metadata record for the Web form step that has a subgrid, and then add configuration metadata.
+Advanced form subgrids are configured in an identical fashion to basic form subgrids: first, create a metadata record for the Advanced form step that has a subgrid, and then add configuration metadata.
 
 Adding subgrids to your managed forms on the portal is easy—just add the subgrid to the form that you are managing by using the out-of-the-box form designer, and you’re done. The grid will use the view that is specified in Microsoft Dataverse form designer, show only related records if that option was chosen, optionally show a search bar, and even respect [entity permissions for portals](assign-entity-permissions.md). It doesn't get any simpler to display a read-only list of records. To enable actions for the grid— Create, Update, Delete, and so on—you must configure those actions by using metadata configuration.
 
@@ -269,10 +269,10 @@ Enabling a **Disassociate action** allows a user to remove the link between the 
 
 [Configure a portal](configure-portal.md)  
 [Define basic forms](entity-forms.md)  
-[Web Form properties for portals](web-form-properties.md)  
-[Web Form steps for portals](web-form-steps.md)  
-[Web Forms metadata for portals](configure-web-form-metadata.md)  
-[Notes configuration for Web Forms for portals](../configure-notes.md)  
+[Advanced Form properties for portals](web-form-properties.md)  
+[Advanced Form steps for portals](web-form-steps.md)  
+[Advanced Forms metadata for portals](configure-web-form-metadata.md)  
+[Notes configuration for Advanced Forms for portals](../configure-notes.md)  
 
 
 

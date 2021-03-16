@@ -289,7 +289,7 @@ If the **EntityList/ShowRecordLevelActions** site setting is set to **false** an
 
 By setting the Web Page for Details View lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or edited, depending on the configuration of the associated form or page.
 
-This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains an basic form or Web form.
+This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains an basic form or Advanced form.
 
 The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named Query String parameter with the ID of the record. The name of the Query String parameter depends on the ID Query String Parameter Name specified on the entity list. The final thing to note is that the targeted details webpage must also be aware of the name of this Query String parameter to get the ID of the record that it needs to query and load its data.
 
@@ -305,17 +305,17 @@ The Record ID Query String Parameter Name on Basic Form must match the ID Query 
 
 The Mode can be either Edit or ReadOnly, depending on your needs.
 
-**Using a Web form to display details**
+**Using avanced form to display details**
 
-The following are the important settings to be aware of for ensuring that the record from the entity list is loaded in the Web form.
+The following are the important settings to be aware of for ensuring that the record from the entity list is loaded in the Advanced form.
 
-The Primary Key Query String Parameter Name on Web Form Step must match the ID Query String Parameter Name on Entity List.
+The Primary Key Query String Parameter Name on Advanced Form Step must match the ID Query String Parameter Name on Entity List.
 
 The Mode can be either Edit or ReadOnly, depending on your needs.
 
 **Using a details page for the Create function**
 
-You can use a custom page, basic form, or Web form in the same fashion for the Create function. This is an alternative to defining a Create action on the form. You cannot define both a Create action *and* a custom page for Create: defining a custom action takes precedence.
+You can use a custom page, basic form, or Advanced form in the same fashion for the Create function. This is an alternative to defining a Create action on the form. You cannot define both a Create action *and* a custom page for Create: defining a custom action takes precedence.
 
 If you assign a webpage to the Create Lookup on the entity list and do not specify a Create action by using Configuration, a Create button will be rendered on the list; this button will link the user to the custom page you have designated for Create.
 

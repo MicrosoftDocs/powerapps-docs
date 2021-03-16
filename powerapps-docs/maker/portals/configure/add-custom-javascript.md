@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Add custom JavaScript
 
-The Web Form Step record contains a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
+The Advanced Form Step record contains a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
 
 The custom block of JavaScript will be added to the bottom of the page just before the closing form tag element.
 
@@ -93,7 +93,7 @@ if (window.jQuery) {
 
 - [Configure a portal](configure-portal.md)  
 - [Define basic forms](entity-forms.md)  
-- [Web Form steps for portals](web-form-steps.md)  
+- [Advanced Form steps for portals](web-form-steps.md)  
 - [Load Form/Load Tab step type](load-form-step.md)  
 - [Redirect step type](add-redirect-step.md)  
 - [Conditional step type](add-conditional-step.md)

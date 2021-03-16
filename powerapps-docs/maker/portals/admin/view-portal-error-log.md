@@ -184,7 +184,7 @@ Following are the screens where custom plugin errors will appear:
 - Basic form 
     - Retrieve 
     - Create/Update and so on 
-- Web forms 
+- Advanced forms 
     - Retrieve 
     - Create/Update and so on
 
