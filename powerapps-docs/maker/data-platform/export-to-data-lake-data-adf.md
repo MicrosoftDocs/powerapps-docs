@@ -18,6 +18,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - sama-zaki
 ---
 
 # Ingest exported Microsoft Dataverse data with Azure Data Factory
