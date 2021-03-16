@@ -74,6 +74,7 @@ When users open a model-driven app that includes the form you have modified, the
 This article showed you how to get started with embedding a canvas app in a model-driven form. You can further customize the embedded canvas app to connect and bring in data from a variety of data sources. Use the Filter, Search, and LookUp functions and the context passed in from the host model-driven form to filter or find specific rows in those data sources. Use the WYSIWYG canvas app editor to easily design the interface to match your requirements.
 
 ## Add an embedded canvas app on a model-driven form using the classic experience
+
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.  [Create or edit the main form](create-and-edit-forms.md) of a table, Accounts table in our example. 
 3.  In the command bar, select **Switch to classic** to open the form in the classic form designer.
