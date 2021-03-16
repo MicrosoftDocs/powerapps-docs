@@ -677,20 +677,20 @@ The size of the result page to be returned. If not provided, a default size of 1
 
 ## entityform
 
-Fully renders a Power Apps-configured entity forms, by name or ID.  
+Fully renders a Power Apps-configured basic forms, by name or ID.  
 
 > [!Note]
 > The entityform tag is only available for use in content rendered inside a <em>[web template](store-content-web-templates.md)–</em>based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.       
 
-`{% entityform name: 'My Entity Form' %}`
+`{% entityform name: 'My Basic Form' %}`
 
 ### Parameters
 
 **name**
 
-The name of the Entity Form you wish to load.
+The name of the Basic Form you wish to load.
 
-`{% entityform name:My Entity Form %}`
+`{% entityform name:My Basic Form %}`
 
 ## webform
 

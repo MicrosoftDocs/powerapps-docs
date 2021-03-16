@@ -28,7 +28,7 @@ The Redirect Step Type allow for a redirect of the User's browser session to ano
 ### See also
 
 [Configure a portal](configure-portal.md)  
-[Define entity forms](entity-forms.md)  
+[Define basic forms](entity-forms.md)  
 [Web Form steps for portals](web-form-steps.md)  
 [Load Form/Load Tab step type](load-form-step.md)  
 [Conditional step type](add-conditional-step.md)  

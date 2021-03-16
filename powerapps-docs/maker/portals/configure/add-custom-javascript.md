@@ -92,7 +92,7 @@ if (window.jQuery) {
 ### See also
 
 - [Configure a portal](configure-portal.md)  
-- [Define entity forms](entity-forms.md)  
+- [Define basic forms](entity-forms.md)  
 - [Web Form steps for portals](web-form-steps.md)  
 - [Load Form/Load Tab step type](load-form-step.md)  
 - [Redirect step type](add-redirect-step.md)  

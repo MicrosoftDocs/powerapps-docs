@@ -181,7 +181,7 @@ To display custom plugin errors, create the site setting `Site/EnableCustomPlugi
 Following are the screens where custom plugin errors will appear: 
 - Entity list 
     - Retrieval of records 
-- Entity form 
+- Basic form 
     - Retrieve 
     - Create/Update and so on 
 - Web forms 

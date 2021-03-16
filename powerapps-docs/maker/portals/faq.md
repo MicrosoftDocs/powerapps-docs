@@ -111,7 +111,7 @@ Your portal will be restarted and start working again.
 
 ## Debugging and fixing problems
 
-### Performance of entity forms: Actions such as create/update/delete on entity forms take a lot of time to complete or timeout.
+### Performance of basic forms: Actions such as create/update/delete on basic forms take a lot of time to complete or timeout.
 
 This can happen because of multiple reasons - such as depending on your data and customizations done on that entity in Dataverse. When troubleshooting such performance related issue on record actions from portals, ensure that there are no synchronous plugins registered on those events that may possibly cause these delays. Wherever possible, try to implement them asynchronously so that they don't hold or delay the transaction.
 

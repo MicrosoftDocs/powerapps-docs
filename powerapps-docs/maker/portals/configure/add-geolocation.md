@@ -24,7 +24,7 @@ If the form or Address Line field is editable and this field is blank, when the 
 To add geolocation functionality to a managed form, the following tasks must be completed.
 
 ### Form customization
-Edit the entity form by using the form designer and make the following modifications:
+Edit the basic form by using the form designer and make the following modifications:
 
 1. Create a new section and provide an appropriate label, for example **Map**. This section will contain the map.
 2. Set the name of the section to **section\_map** or a name that ends with _section\_map_, for example **contoso\_section\_map**. This name is important because the form engine looks for a section with this name to determine when to render a map. 
@@ -56,7 +56,7 @@ Geolocation with map functionality on managed forms requires configuration setti
 ### Field configurations
 The map control requires additional configuration to tell it what the IDs of the various location fields are, so it can assign values to them or retrieve values from them. The configuration depends on the type of managed form.
 
-- For entity forms, see [Geolocation configuration for entity forms](entity-forms.md#geolocation-configuration-for-entity-forms).
+- For basic forms, see [Geolocation configuration for basic forms](entity-forms.md#geolocation-configuration-for-entity-forms).
 
 - For web forms, see [Geolocation configuration for Web forms](web-form-properties.md#geolocation-configuration-for-web-form).
 

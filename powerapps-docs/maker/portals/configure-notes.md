@@ -1,6 +1,6 @@
 ---
-title: "Configure notes as attachments on entity forms and web forms for a portal | MicrosoftDocs"
-description: "Instructions to add and configure notes as attachments on entity forms and web forms in a portal."
+title: "Configure notes as attachments on basic forms and web forms for a portal | MicrosoftDocs"
+description: "Instructions to add and configure notes as attachments on basic forms and web forms in a portal."
 author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,30 +10,30 @@ ms.author: gisingh
 ms.reviewer: tapanm
 ---
 
-# Configure notes as attachments for entity forms and web forms on portals
+# Configure notes as attachments for basic forms and web forms on portals
 
 Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!NOTE]
-> Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding entity form or web form step for the entity permissions to take effect.
+> Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding basic form or web form step for the entity permissions to take effect.
 
-## Notes configuration for Entity Forms
+## Notes configuration for Basic Forms
 
 1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
 
-1. Select **Entity Forms** under **Content** from left pane:
+1. Select **Basic Forms** under **Content** from left pane:
 
-    ![Entity forms](media/configure-notes/entity-forms.png)
+    ![Basic forms](media/configure-notes/entity-forms.png)
 
 1. From the list of forms, select to open a record of the form to which you want to add note configuration.
 
-1. From the available tabs in form settings, select **Entity Form Metadata**:
+1. From the available tabs in form settings, select **Basic Form Metadata**:
 
-    ![Entity form metadata](media/configure-notes/entity-form-metadata.png)
+    ![Basic form metadata](media/configure-notes/entity-form-metadata.png)
 
-1. Select **New Entity Form Metadata**:
+1. Select **New Basic Form Metadata**:
 
-    ![New entity form metadata](media/configure-notes/new-entity-form-metadata.png)
+    ![New basic form metadata](media/configure-notes/new-entity-form-metadata.png)
 
 1. Select **Type** as **Note**:
 
@@ -155,7 +155,7 @@ After adding the configuration, the Note control will be rendered by using the a
 You must create and assign the appropriate entity permission to the records as follows, otherwise the **Add**, **Edit**, and **Delete** buttons for the note will be hidden:
 
 - Read, Write, Create, Append, and Append To privileges for the **Annotation** entity with the scope as **Global**. This entity permission must be associated with a web role for the user.
-- Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled in it. For example, Account, Contact or Lead entities that show notes on their entity forms. The scope should be set to **Global**. This entity permission must be associated with a web role for the user.
+- Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled in it. For example, Account, Contact or Lead entities that show notes on their basic forms. The scope should be set to **Global**. This entity permission must be associated with a web role for the user.
 
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
@@ -170,15 +170,15 @@ If you created a custom form and added the notes section to it, be sure to selec
 
 ### Enable file attachment on form
 
-You must enable **Attach File** option for the **Entity Form** to show the attachment option available with the notes. 
+You must enable **Attach File** option for the **Basic Form** to show the attachment option available with the notes. 
 
-To enable attachment on an entity form:
+To enable attachment on an basic form:
 
 1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
 
-1. Select **Entity Forms** under **Content** from left pane:
+1. Select **Basic Forms** under **Content** from left pane:
 
-    ![Entity forms](media/configure-notes/entity-forms.png)
+    ![Basic forms](media/configure-notes/entity-forms.png)
 
 1. From the list of forms, select to open a record of the form to which you want to add note configuration.
 
@@ -225,7 +225,7 @@ However, when editing the note from portal web page, you'll see the note in HTML
 
 ## Notes configuration for web forms
 
-Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). You must create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
+Web form notes are configured in the same way as [basic form notes](#notes-configuration-for-entity-forms). You must create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
 
 > [!NOTE]
 > Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) in order to display on the portal.

@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Configure web form metadata for portals
 
-The Web Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native entity form editing capabilities.
+The Web Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
 
 ## Add a new record
 
@@ -132,7 +132,7 @@ The following properties are displayed when the Type selected equals 'Tab'
 ### See also
 
 [Configure a portal](configure-portal.md)  
-[Define entity forms](entity-forms.md)  
+[Define basic forms](entity-forms.md)  
 [Web Form properties for portals](web-form-properties.md)  
 [Web Form steps for portals](web-form-steps.md)  
 [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  

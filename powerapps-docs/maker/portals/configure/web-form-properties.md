@@ -97,7 +97,7 @@ The form's map control requires additional configuration to tell it what the IDs
 ### See also
 
 [Configure a portal](configure-portal.md)  
-[Define entity forms](entity-forms.md)  
+[Define basic forms](entity-forms.md)  
 [Web Form steps for portals](web-form-steps.md)  
 [Web Forms metadata for portals](configure-web-form-metadata.md)  
 [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  

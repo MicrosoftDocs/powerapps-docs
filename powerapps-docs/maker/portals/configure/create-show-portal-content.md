@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Create and show portal content using Portal Management app
 
-To create a webpage by using entity forms and entity lists is a complex task. **Create Portal Content** wizard simplifies this process. You can use this wizard to create and expose portal content easily by filling in the minimum required fields.
+To create a webpage by using basic forms and entity lists is a complex task. **Create Portal Content** wizard simplifies this process. You can use this wizard to create and expose portal content easily by filling in the minimum required fields.
 
 1. Open the [Portal Management](configure-portal.md) app.
 
@@ -24,7 +24,7 @@ To create a webpage by using entity forms and entity lists is a complex task. **
     - The **Parent page in the content hierarchy** field is prepopulated with the Home page.
     - The **Partial URL** field is populated based on the page name entered. If required, you can change the value.
     - The **Layout** field is prepopulated with the layout that is marked as default.
-    - If you choose to expose the entity by selecting **Expose organization entities in the portal**, a few additional fields are displayed to gather information required to expose an entity by using entity forms and entity lists. If you need extra help, hover over any field to read the tooltips. You can also select multiple views.
+    - If you choose to expose the entity by selecting **Expose organization entities in the portal**, a few additional fields are displayed to gather information required to expose an entity by using basic forms and entity lists. If you need extra help, hover over any field to read the tooltips. You can also select multiple views.
 
 5. Select **Create**.
 

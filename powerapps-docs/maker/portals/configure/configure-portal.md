@@ -42,7 +42,7 @@ If your web browser has any extensions such as ad-blockers, you may see a script
 
 ![Script error](media/configure-portal/script-error.png "Script error") 
 
-This error occurs for forms such as [Web pages](web-page.md), [Entity Forms](entity-forms.md), [Entity Lists](entity-lists.md), or [Web Form Steps](web-form-steps.md). To resolve this error, disable extensions such as ad-blockers in your browser. You may also use a different browser instead that doesn't have such extensions enabled.
+This error occurs for forms such as [Web pages](web-page.md), [Basic Forms](entity-forms.md), [Entity Lists](entity-lists.md), or [Web Form Steps](web-form-steps.md). To resolve this error, disable extensions such as ad-blockers in your browser. You may also use a different browser instead that doesn't have such extensions enabled.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

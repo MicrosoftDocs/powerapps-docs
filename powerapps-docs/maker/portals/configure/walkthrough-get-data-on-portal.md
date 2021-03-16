@@ -14,16 +14,16 @@ ms.reviewer: tapanm
 
 Power Apps portals has the ability to render&mdash;and allow the manipulation of&mdash; data on an internally facing or externally facing portal website. In this section, we will profile the entities that provide the foundation of this functionality and discuss the steps necessary to achieve it.
 
-## Entity forms
-An entity form record allows an administrator to render a Power Apps form on a portal to edit, display, or capture a customizable set of data from its users. This is a relatively easy and straightforward process, and it eliminates the need for any code customizations that would have otherwise been required to achieve such a result before deploying a portal.
+## Basic forms
+An basic form record allows an administrator to render a Power Apps form on a portal to edit, display, or capture a customizable set of data from its users. This is a relatively easy and straightforward process, and it eliminates the need for any code customizations that would have otherwise been required to achieve such a result before deploying a portal.
 
-This functionality can be taken advantage of for many reasons and use cases, but a common example of how this can be leveraged would be to build a new form under the Lead entity within the **Customize the System** interface, then create an entity form record that can be surfaced on the portal to capture lead data through a contact page or some type of information request page. In fact, this specific example is used for the default **Contact Us** page within portals by default. Other examples include using an entity form for profile management or a single page survey.
+This functionality can be taken advantage of for many reasons and use cases, but a common example of how this can be leveraged would be to build a new form under the Lead entity within the **Customize the System** interface, then create an basic form record that can be surfaced on the portal to capture lead data through a contact page or some type of information request page. In fact, this specific example is used for the default **Contact Us** page within portals by default. Other examples include using an basic form for profile management or a single page survey.
 
 ![Contact Us Web Form on the left, and its rendering in the portal on the right side.](media/contact-us-web-form.png "A Contact Us web form next to its rendering in the portal")
 
-Entity forms contain relationships to webpages and additional properties to control the initialization of the form within the portal. The relationship to a webpage allows dynamic retrieval of the form definition for a given page node within the portal website.
+Basic forms contain relationships to webpages and additional properties to control the initialization of the form within the portal. The relationship to a webpage allows dynamic retrieval of the form definition for a given page node within the portal website.
 
-When you create a new entity form, the first step is to decide which entity and form name that you will be rendering and the mode: Insert, Edit, or Read Only. The mode you select will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
+When you create a new basic form, the first step is to decide which entity and form name that you will be rendering and the mode: Insert, Edit, or Read Only. The mode you select will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
 
 For this demonstration, let’s consider a scenario in which Contoso, Inc. would like to create a custom entity in Power Apps linked to a form rendered on their [Customer Self-Service Portal](../portal-templates.md#environment-with-customer-engagement-apps) that will allow users to submit suggestions for improvement that they would like to see the company introduce. The steps that the administrator at Contoso, Inc. would take to achieve this include the following:
 
@@ -44,9 +44,9 @@ For this demonstration, let’s consider a scenario in which Contoso, Inc. would
 
       ![Creating a custom form to be rendered on a portal.](media/create-custom-suggestion-form.png "Creating a custom form to be rendered on a portal.")
 
-4. Open [Portal Management app](configure-portal.md) > **Entity Forms** and create a new entity form record. Name it **Suggestion**, set its **Entity Name** field to **Suggestion (new_suggestion)**, set its **Form Name** to **Suggestion Form**, set its **Tab Name** to **Suggestion**, set its **Form Type** as **Insert**, and modify any of the other options as needed.
+4. Open [Portal Management app](configure-portal.md) > **Basic Forms** and create a new basic form record. Name it **Suggestion**, set its **Entity Name** field to **Suggestion (new_suggestion)**, set its **Form Name** to **Suggestion Form**, set its **Tab Name** to **Suggestion**, set its **Form Type** as **Insert**, and modify any of the other options as needed.
 
-5. Using [portals Studio](../portal-designer-anatomy.md), create a new child page named **Suggestions**. Set its **Page Template** value to **Web Form**, set its **Entity Form** value to **Suggestion**, and add an introduction to the form. 
+5. Using [portals Studio](../portal-designer-anatomy.md), create a new child page named **Suggestions**. Set its **Page Template** value to **Web Form**, set its **Basic Form** value to **Suggestion**, and add an introduction to the form. 
    > [!Note]
    > The child page can also be created, depending on the user’s preference.
 
@@ -57,24 +57,24 @@ When a user visits the Contoso portal, navigates to this form, and enters the re
 ![Custom suggestion form rendered on a portal.](media/custom-suggestion-form-rendered.png "Custom suggestion form rendered on a portal")
 
 
-### Entity form metadata
-Entity form metadata records contain additional behavior modification logic to augment or override the functionality of form fields that you otherwise could not modify by using the native entity form editing capabilities.
+### Basic form metadata
+Basic form metadata records contain additional behavior modification logic to augment or override the functionality of form fields that you otherwise could not modify by using the native basic form editing capabilities.
 
-These records allow for additional configuration and manipulation of specific elements on the form, including fields, subgrids, or entire sections or tabs. Each element of the form that requires some type of modification requires a separate metadata record, which in turn is associated with the entity form record.
+These records allow for additional configuration and manipulation of specific elements on the form, including fields, subgrids, or entire sections or tabs. Each element of the form that requires some type of modification requires a separate metadata record, which in turn is associated with the basic form record.
 
-To add metadata records to an entity form, you can go to the **Entity Form Metadata Associated View** from the navigation menu, or you can create these records directly from the entity form itself by using the Entity Form Metadata subgrid toward the bottom of the record’s form.
+To add metadata records to an basic form, you can go to the **Basic Form Metadata Associated View** from the navigation menu, or you can create these records directly from the basic form itself by using the Basic Form Metadata subgrid toward the bottom of the record’s form.
 
-Entity form metadata records can be used for a variety of scenarios, including controlling the style of a field, prepopulating a field with a specific value, setting values on the form upon save, validating user-entered values, and more.
+Basic form metadata records can be used for a variety of scenarios, including controlling the style of a field, prepopulating a field with a specific value, setting values on the form upon save, validating user-entered values, and more.
 
 ## Entity lists
 
-While an Entity form record allows a portal administrator to expose a Power Apps form to portal users, entity lists provide administrators with the ability to add a webpage to their portal that will render a list of records without the need for a developer to surface the view on the portal by using custom code.
+While an Basic form record allows a portal administrator to expose a Power Apps form to portal users, entity lists provide administrators with the ability to add a webpage to their portal that will render a list of records without the need for a developer to surface the view on the portal by using custom code.
 
 Entity lists support sorting and filtering and will be paginated if the number of records is larger than the **Page Size** value specified on the Entity List record. If a **Web Page for Details View** has also been specified, each record will contain a link to the page and the ID of the record will be appended to the query string along with the ID Query String Parameter Name.
 
 Entity lists also support multiple views and actions. If more than one view has been specified, a drop-down menu will be rendered to the end user that allows them to toggle between various views. Likewise, if actions such as **Edit** or **Delete** have been added as action buttons, users with the correct permissions will see these options rendered in the view.
 
-Building on the previous example of the administrator of Contoso, Inc. creating an entity form to collect user suggestions, we will now cover the steps that the administrator would take to (very simplistically) expose the submitted records on the portal for other users to review and for easy access for submitting new ones:
+Building on the previous example of the administrator of Contoso, Inc. creating an basic form to collect user suggestions, we will now cover the steps that the administrator would take to (very simplistically) expose the submitted records on the portal for other users to review and for easy access for submitting new ones:
 
 1. [Edit the view](../../model-driven-apps/create-edit-views-app-designer.md) named **Active Suggestions** for the **Suggestions** entity and dd the columns that should be exposed on the portal to this view.
 
@@ -100,11 +100,11 @@ Beyond the simplistic setup that was discussed earlier, Entity Lists support man
 
 ## Web Forms
 
-Web Forms allow users to define entity forms and custom logic to render data entry forms on a portal without the need for custom code. Web forms support single-step and multiple-step navigation, in addition to branching logic. Web forms are commonly used to produce surveys, such as the out-of-the-box “Case Satisfaction Survey” web forms, or to facilitate requests, such as the out-of-the-box “Open New Support Request” web form.
+Web Forms allow users to define basic forms and custom logic to render data entry forms on a portal without the need for custom code. Web forms support single-step and multiple-step navigation, in addition to branching logic. Web forms are commonly used to produce surveys, such as the out-of-the-box “Case Satisfaction Survey” web forms, or to facilitate requests, such as the out-of-the-box “Open New Support Request” web form.
 
-Web forms differ from entity forms in that they provide the ability for an administrator to specify one or more forms that are to be loaded to produce a single form or a wizard-style, multiple-step process with conditional branching logic. Web forms also have additional properties that can be specified to override some of the default behaviors and overcome some entity metadata and form designer limitations.
+Web forms differ from basic forms in that they provide the ability for an administrator to specify one or more forms that are to be loaded to produce a single form or a wizard-style, multiple-step process with conditional branching logic. Web forms also have additional properties that can be specified to override some of the default behaviors and overcome some entity metadata and form designer limitations.
 
-The best way to fully grasp how a web form is used within a portal is to provide an example of a use case scenario, and then go through the process of constructing the form and all its underlying parts. Earlier in this document, we went through the process of creating a custom entity form for users to submit suggestions and a custom entity list to expose these suggestions within a view on the portal. Let’s now assume that Contoso wants to survey its users on which of the submitted suggestions they would prefer to be implemented, and other information about their user base at the same time. The steps that the administrator would take to set up such a survey on the portal would be as follows:
+The best way to fully grasp how a web form is used within a portal is to provide an example of a use case scenario, and then go through the process of constructing the form and all its underlying parts. Earlier in this document, we went through the process of creating a custom basic form for users to submit suggestions and a custom entity list to expose these suggestions within a view on the portal. Let’s now assume that Contoso wants to survey its users on which of the submitted suggestions they would prefer to be implemented, and other information about their user base at the same time. The steps that the administrator would take to set up such a survey on the portal would be as follows:
 
 1. Create a custom entity using [Power Apps](https://make.powerapps.com). More information: [Create a table](../../data-platform/data-platform-create-entity.md) <br>.  For this example, we’ll call the entity **Survey**.  
 
@@ -197,7 +197,7 @@ Each completed survey that is submitted will become a record within the **Portal
 
 ## Form elements rendering
 
-Although most forms can be successfully rendered in a portal, note that some features aren't supported by the EntityFormView control that handles the actual rendering of the entity form.
+Although most forms can be successfully rendered in a portal, note that some features aren't supported by the EntityFormView control that handles the actual rendering of the basic form.
 
 
 |                                 Supported form elements                                 |                                Supported, but with caveats form elements                                 |                         Unsupported form elements                          |
@@ -208,11 +208,11 @@ Although most forms can be successfully rendered in a portal, note that some fea
 |                              Notes (inserted on the form)                               | Lookup fields are supported, but creating a new record through a lookup view on the form isn't supported |                                                                            |
 |                            Sub-Grids (inserted on the form)                             |                                                                                                          |                                                                            |
 
-Finally, it’s worth mentioning that the Entity Form record has an assortment of options that allow for it to be fine-tuned as needed, including a section for **Attach File** options.  If a form requires the attachment of files, select the **Attach File** check box and configure the **Attach File Storage Location** option for either **Note Attachment** or **Azure Blob Storage**. More information: [Configure notes as attachments](../configure-notes.md)
+Finally, it’s worth mentioning that the Basic Form record has an assortment of options that allow for it to be fine-tuned as needed, including a section for **Attach File** options.  If a form requires the attachment of files, select the **Attach File** check box and configure the **Attach File Storage Location** option for either **Note Attachment** or **Azure Blob Storage**. More information: [Configure notes as attachments](../configure-notes.md)
 
 ### See also
 
-[About entity forms](entity-forms.md) <br>
+[About basic forms](entity-forms.md) <br>
 [Define web form steps](web-form-steps.md)
 
 

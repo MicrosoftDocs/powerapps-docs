@@ -31,7 +31,7 @@ ms.reviewer: tapanm
 
     | Entity | Field Display Name |
     | - | - |
-    | Entity Form | Settings (adx_settings) |
+    | Basic Form | Settings (adx_settings) |
     | Enity List | View (adx_views) |
     | Enity Form Metadata | Subgrid Setting (adx_subgrid_settings) |
     | Web Page | Copy (adx_copy) |

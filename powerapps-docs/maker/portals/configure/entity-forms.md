@@ -1,6 +1,6 @@
 ---
-title: "Define entity forms | MicrosoftDocs"
-description: "Instructions to create entity forms in a portal."
+title: "Define basic forms | MicrosoftDocs"
+description: "Instructions to create basic forms in a portal."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,42 +10,42 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# About entity forms
+# About basic forms
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-A data-driven configuration to allow end users to add a form to collect data in the portal without the need for a developer to surface the form in the portal, entity forms are created in Microsoft Dataverse and then placed into webpages in the portal or used in conjunction with subgrids and entity lists to build out complete web applications. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [About entity lists](entity-lists.md) 
+A data-driven configuration to allow end users to add a form to collect data in the portal without the need for a developer to surface the form in the portal, basic forms are created in Microsoft Dataverse and then placed into webpages in the portal or used in conjunction with subgrids and entity lists to build out complete web applications. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [About entity lists](entity-lists.md) 
 
 ![Contact us form](../media/contact-us-form.png "Contact us form")  
 
 ## Add a form to your portal
 
-The entity form contains relationships to webpages and additional properties to control the initialization of the form within the portal. The relationship to webpages allows dynamic retrieval of the form definition for a given page node within the website. 
+The basic form contains relationships to webpages and additional properties to control the initialization of the form within the portal. The relationship to webpages allows dynamic retrieval of the form definition for a given page node within the website. 
 
-To view existing entity forms or to create new entity forms, open the [Portal Management app](configure-portal.md) and go to **Portals** &gt; **Entity Forms**.
+To view existing basic forms or to create new basic forms, open the [Portal Management app](configure-portal.md) and go to **Portals** &gt; **Basic Forms**.
 
-When creating a new entity form, the first step is to decide the **Entity** and **Form Name** that you will be rendering, in addition to the **mode: Insert, Edit, or Read Only**. The mode selected will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
+When creating a new basic form, the first step is to decide the **Entity** and **Form Name** that you will be rendering, in addition to the **mode: Insert, Edit, or Read Only**. The mode selected will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
 
 > [!NOTE]
-> - An **Entity Form** must be associated with a webpage for a given website for the form to be viewable within the site.
-> - The Connection entity subgrids aren't supported in entity forms. If you add a Connection entity subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection entity.
-> - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in entity forms.
-> - [Image attributes](https://docs.microsoft.com/powerapps/developer/data-platform/image-attributes), [file attributes](https://docs.microsoft.com/powerapps/developer/data-platform/file-attributes) and [entity images](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [entity forms](entity-forms.md), [web forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
+> - An **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
+> - The Connection entity subgrids aren't supported in basic forms. If you add a Connection entity subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection entity.
+> - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in basic forms.
+> - [Image attributes](https://docs.microsoft.com/powerapps/developer/data-platform/image-attributes), [file attributes](https://docs.microsoft.com/powerapps/developer/data-platform/file-attributes) and [entity images](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [web forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 > - Business rules and client API can enable locked fields on a read-only form.
-> - If you create an entity form in the Insert mode, you can't change a button's alignment or place an action button above the entity form.
+> - If you create an basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
 > - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
 
-The webpages associated with the entity form can be viewed by selecting the **Web Pages** link listed in the **Related** navigation links in the leftmost menu.
+The webpages associated with the basic form can be viewed by selecting the **Web Pages** link listed in the **Related** navigation links in the leftmost menu.
 
-When creating or editing a webpage, an **Entity Form** can be specified in the lookup field provided on the Web Page form.
+When creating or editing a webpage, an **Basic Form** can be specified in the lookup field provided on the Web Page form.
 
-The various master pages used by the portal contain declarations of the **EntityForm** server control. When rendering the webpage containing either the Page (~/Pages/Page.aspx) page template or Full Page (~/Pages/FullPage.aspx) page template, the controls will determine whether the entity form lookup contains a value, in which case the form will be rendered.
+The various master pages used by the portal contain declarations of the **EntityForm** server control. When rendering the webpage containing either the Page (~/Pages/Page.aspx) page template or Full Page (~/Pages/FullPage.aspx) page template, the controls will determine whether the basic form lookup contains a value, in which case the form will be rendered.
 
 ## Secure your forms
 
-To secure your forms, you must create entity permissions that determine access and ownership of the records according to web roles. If a user lands on an entity form and does not have permissions, they will receive an error message. To enable permissions for an entity form, set **Enable Entity Permissions** to true. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
+To secure your forms, you must create entity permissions that determine access and ownership of the records according to web roles. If a user lands on an basic form and does not have permissions, they will receive an error message. To enable permissions for an basic form, set **Enable Entity Permissions** to true. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
 
-## Entity form attributes and relationships
+## Basic form attributes and relationships
 
 |Name|Description|
 |-----|----------|
@@ -55,7 +55,7 @@ To secure your forms, you must create entity permissions that determine access a
 |Tab Name|    Optional name of a Tab on a Form for a specified entity that is to be rendered.|
 |Mode|One of the following values:<ul><li>Insert</li><li>Edit</li><li>ReadOnly</li></ul>Selecting _Insert_ indicates the form should insert a new record upon submission. Specifying _Edit_ indicates the form should edit an existing record. Selecting _ReadOnly_ indicates the form should display an existing record's non editable form. _Edit_ and _ReadOnly_ requires that a source record exist and parameters specified in the 'Record Source Type' and 'Record ID Query String Parameter Name' fields to select the appropriate record when the form is loaded in the portal.|
 |Record Source Type|One of the following values:<ul><li>Query String</li><li>Current Portal User</li><li>Record Associated to Current Portal User</li></ul>Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the 'Record ID Query String Parameter Name' field.<br>Selecting _Current Portal User_ will retrieve the portal user record for the current authenticated user.<br>Selecting _Record Associated to Current Portal User_ will retrieve the portal user record for the current authenticated user and then retrieve the record for the given relationship as specified by the 'Relationship Name' field.|
-|Record ID Query String Parameter Name|    A parameter name provided in the query string of the URL to the Web Page containing this Entity Form.|
+|Record ID Query String Parameter Name|    A parameter name provided in the query string of the URL to the Web Page containing this Basic Form.|
 |Relationship Name|    Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same entity type specified by the Entity Name field.|
 |Allow Create If Null|    An optional boolean value available when Record Source Type is Record Associated to Current Portal User. Indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist as the form needs a record to data bind to.|
 |Enable Entity Permissions|    Will Cause the form to respect Entity Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form.|
@@ -68,8 +68,8 @@ To secure your forms, you must create entity permissions that determine access a
 |Add Captcha|    Displays captcha.|
 |Show Captcha for Authenticated users|    Displays captcha for authenticated users.|
 |Validation Group|    The group name assigned to input controls for evaluating valid input of named groups.|
-|Auto Generate Steps From Tabs|    Indicates that multiple tabs on an entity form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
-|Render Web Resources Inline|    Eliminates the iframe that encompasses a web resource in an entity form.|
+|Auto Generate Steps From Tabs|    Indicates that multiple tabs on an basic form will be displayed with each tab as a sequential step starting with the first tab and continue until all tabs have been navigated to and upon final submission a record is inserted. By default, it is not selected. The default value indicates that only one tab or form is to be rendered for the current step. If the Tab Name is not specified, then the first tab is displayed.|
+|Render Web Resources Inline|    Eliminates the iframe that encompasses a web resource in an basic form.|
 |ToolTips Enabled|    The tooltip is set using the description of the attribute on the target entity.|
 |Show Unsupported Fields|    All fields are currently supported. This is reserved for potential changes Dataverse may make to field types.|
 |Set Recommended Fields as Required|     Makes all attributes required that have the field requirement level set to 'Business Recommended'.|
@@ -106,8 +106,8 @@ To secure your forms, you must create entity permissions that determine access a
 |Associate Current Portal User|    Indicates the currently logged in user's record should be associated with the target entity record.|
 |Target Entity Portal User Lookup Attribute|    The logical name of the attribute on the target entity that stores the portal user.|
 |Is Activity Party|    Boolean value indicating whether or not the Target Entity Portal User Lookup Attribute is an Activity Party type.|
-|Attach File |  Select to have the form include a file upload control at the bottom of the form to allow a file to be attached to the record. <br> **Note**: Portals with [version 9.2.2.x and later](https://support.microsoft.com/help/4541765/power-apps-portals-version-9-2-2-x-release) do not require enabling **Enable Entity Permissions** on the entity form to attach files. However, if you have it selected, you must ensure that appropriate privileges are provided on the parent entity and the annotation entity to display the **Attach File** button on the form. Annotation entity must have at least **Create** and **Append** privileges and the parent entity must have the corresponding **AppendTo** privilege. Depending on whether you have a create or update form, you may also need **Create**, **Read** and **Write** privileges to complete the scenario of the form. |
-|Attach File Storage Location|    Options: Note Attachment, Azure Blob Storage. If your organization is configured to use Azure Storage, you can choose to storage uploaded files for this Entity Form there. Otherwise, files with be stored as Note Attachments.|
+|Attach File |  Select to have the form include a file upload control at the bottom of the form to allow a file to be attached to the record. <br> **Note**: Portals with [version 9.2.2.x and later](https://support.microsoft.com/help/4541765/power-apps-portals-version-9-2-2-x-release) do not require enabling **Enable Entity Permissions** on the basic form to attach files. However, if you have it selected, you must ensure that appropriate privileges are provided on the parent entity and the annotation entity to display the **Attach File** button on the form. Annotation entity must have at least **Create** and **Append** privileges and the parent entity must have the corresponding **AppendTo** privilege. Depending on whether you have a create or update form, you may also need **Create**, **Read** and **Write** privileges to complete the scenario of the form. |
+|Attach File Storage Location|    Options: Note Attachment, Azure Blob Storage. If your organization is configured to use Azure Storage, you can choose to storage uploaded files for this basic Form there. Otherwise, files with be stored as Note Attachments.|
 |Allow Multiple Files|Boolean value indicating whether or not the user can upload more than one file.|
 |Accept|    The accept attribute specifies the MIME types of files that the server accepts through file upload. To specify more than one value, separate the values with a comma (e.g. audio/*,video/*,image/*).|
 |Label|    The text displayed next to the file upload control. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
@@ -143,11 +143,11 @@ This provides a way to associate the current record being created or updated by 
 |||
 
 
-## Entity form action configuration
+## Basic form action configuration
 
-By default an Entity Form will allow for reading or updating of an existing record, or the insertion of a new record.  However, you can easily enable and configure additional actions for records in an Entity Form  as well (Delete, Activate, Deactivate, etc.). It is also possible to override default labels, sizes, and other attributes that will appear if there are actions enabled.
+By default an Basic Form will allow for reading or updating of an existing record, or the insertion of a new record.  However, you can easily enable and configure additional actions for records in an Basic Form  as well (Delete, Activate, Deactivate, etc.). It is also possible to override default labels, sizes, and other attributes that will appear if there are actions enabled.
 
-These settings are found in the **Additional Settings** section of the entity form. By default, only **Basic Settings** are shown. You can select **Advanced Settings** to show additional settings.
+These settings are found in the **Additional Settings** section of the basic form. By default, only **Basic Settings** are shown. You can select **Advanced Settings** to show additional settings.
 
 You can add action buttons for the actions that are applicable for an individual record and will appear for each row in the grid provided the appropriate privilege has been granted by [entity permissions](assign-entity-permissions.md). The following actions are available:
 
@@ -174,23 +174,23 @@ Clicking on one of these options displays a configuration area for that action. 
 > It is recommend to create a workflow instead of adding an **Activate** or a **Deactivate** button for out of the box entities having defined specific **state** and **status code** values that they require for their business processes. For example, Incident ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/incident#statuscode-options)), Opportunity([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/opportunity#statuscode-options)), Entitlements ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/entitlement#statuscode-options)). 
 
 
-## Geolocation configuration for entity forms
+## Geolocation configuration for basic forms
 
 A managed form can be configured to display a map control to either display an existing location as a pin on a map or to provide the ability for the user to specify a location. See [Add Geolocation](add-geolocation.md).
 
-The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The Entity Form record has a configuration section that defines these field mappings that you must specify. The field names will vary depending on the schema you have created.
+The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The basic form record has a configuration section that defines these field mappings that you must specify. The field names will vary depending on the schema you have created.
 
-![Geolocation data in entity form](../media/geolocation-managed-form.png "Geolocation data in entity form") 
+![Geolocation data in basic form](../media/geolocation-managed-form.png "Geolocation data in basic form") 
 
 > [!Note]
-> - The address field in a read-only entity form is replaced with the map when geolocation is enabled.
+> - The address field in a read-only basic form is replaced with the map when geolocation is enabled.
 > - The Geolocation section is not visible in the German Sovereign Cloud environment. If a user has enabled geolocation by using a different form, it will not be displayed during rendering on portal.
 
 ## Request validation
 
 [Request validation](https://docs.microsoft.com/aspnet/whitepapers/request-validation), a feature of ASP.NET since version 1.1, prevents the server from accepting content containing un-encoded HTML. This feature is designed to help prevent some script-injection attacks whereby client script code or HTML can be unknowingly submitted to a server, stored, and then presented to other users. We still strongly recommend that you validate all input data and HTML encode it when appropriate.
 
-By default, request validation is enabled on portal resulting in following generic error if you enter script code without HTML encoding inside entity form fields:
+By default, request validation is enabled on portal resulting in following generic error if you enter script code without HTML encoding inside basic form fields:
 
 ![Request validation error](../media/request-validation-error.png)
 
@@ -220,8 +220,8 @@ To disable request validation, follow these steps:
 - [Web Form steps for portals](web-form-steps.md)  
 - [Web Forms metadata for portals](configure-web-form-metadata.md)  
 - [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-- [Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
-- [Microsoft Learn: Interact with Dataverse data using entity forms](https://docs.microsoft.com/learn/modules/portals-access-data-platform/3-entity-forms)
+- [Notes configuration for basic forms and Web Forms for portals](../configure-notes.md)
+- [Microsoft Learn: Interact with Dataverse data using basic forms](https://docs.microsoft.com/learn/modules/portals-access-data-platform/3-entity-forms)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

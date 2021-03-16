@@ -96,7 +96,7 @@ However, if you're seeing stale data for a long time in non-portal metadata enti
 
 If you're seeing stale data only for certain entities and not for everything, this can be because the Change Tracking metadata isn't enabled on that specific entity.
 
-If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities that are referenced on portal in entity list or entity forms and web forms and aren't enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
+If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities that are referenced on portal in entity list or basic forms and web forms and aren't enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
 
 If you're experiencing stale data issue in any of these entities, you can enable change tracking by using Power Apps Portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
 
@@ -222,11 +222,11 @@ To avoid this, you can do the following steps:
 2. While loading a JavaScript file on demand on any page, use `<async>` or `<defer>` HTML attribute to load the file asynchronously.
 3. While loading a CSS file on demand, you can use `<preload>` HTML attribute (https://www.w3.org/TR/preload/) or JavaScript based approach since preload isn't supported on all the browsers yet.
 
-## Entity form lookup configuration 
+## Basic form lookup configuration 
 
-Enabling a lookup to render as a drop-down mode in entity forms or web forms can be performance intensive if the number of records shown in the drop-down exceed 200 and are changed frequently. Use this option for only static lookups, such as country list and state list, having a limited number of records.
+Enabling a lookup to render as a drop-down mode in basic forms or web forms can be performance intensive if the number of records shown in the drop-down exceed 200 and are changed frequently. Use this option for only static lookups, such as country list and state list, having a limited number of records.
 
-If this option is enabled for lookups that can have large number of records, it will slow down the load time of the webpage on which entity form is available. If this page is used by a lot of users and is loaded a lot of times, it can slow down the whole website and the website resources would be used to render this page. For these situations, full lookup experience should be used or a custom HTML control that calls an AJAX endpoint (created using web templates) should be built for the wanted look and feel.
+If this option is enabled for lookups that can have large number of records, it will slow down the load time of the webpage on which basic form is available. If this page is used by a lot of users and is loaded a lot of times, it can slow down the whole website and the website resources would be used to render this page. For these situations, full lookup experience should be used or a custom HTML control that calls an AJAX endpoint (created using web templates) should be built for the wanted look and feel.
 
 ## Number of web roles
 

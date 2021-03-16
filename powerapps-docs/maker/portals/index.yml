@@ -84,7 +84,7 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Entity forms
+          - text: Basic forms
             url: configure/entity-forms.md
           - text: Entity lists
             url: configure/entity-lists.md

@@ -148,12 +148,12 @@ Generally, you can configure the corresponding dialog box for each action, which
 
 **Create action settings**
 
-Enabling a **Create Action** renders a button above the entity list that, when selected, opens a dialog box with an entity form that the user can use to create a new record, provided the Create privilege has been granted by Entity Permissions.
+Enabling a **Create Action** renders a button above the entity list that, when selected, opens a dialog box with an basic form that the user can use to create a new record, provided the Create privilege has been granted by Entity Permissions.
 
 | Name               | Description                          |
 |--------------------|--------------------------------------|
 | **Basic Settings**     |                                                                                                                                                                       |
-| Entity Form     | Specifies the entity form that will be used to create the new record. The drop-down list will include all entity forms that are configured for the entity type of the entity list. <br>**Note**: If the entity type of the entity list has no entity forms, the drop-down list will appear empty. If no entity form is supplied for the Create action, it will be ignored and the button will not be rendered on the entity list. |
+| Basic Form     | Specifies the basic form that will be used to create the new record. The drop-down list will include all basic forms that are configured for the entity type of the entity list. <br>**Note**: If the entity type of the entity list has no basic forms, the drop-down list will appear empty. If no basic form is supplied for the Create action, it will be ignored and the button will not be rendered on the entity list. |
 | **Advanced Settings**          |                                                                                                                                                                       |
 | Button Label                                                                                                                                                                                                                 | Overrides the HTML label displayed in the Create action button above the list.                                                                                        |
 | Button Tooltip                                                                                                                                                                                                               | Overrides the tooltip text that appears when the user points to the Create action button.                                                                         |
@@ -183,15 +183,15 @@ Enabling a **Download Action** renders a button above the entity list that, when
 
 **Details action settings**
 
-Enabling a **Details Action** allows a user to view a read-only entity form of a selected row in the entity list.
+Enabling a **Details Action** allows a user to view a read-only basic form of a selected row in the entity list.
 
 
 |                 Name                  |                                                                                                                                                                                                                      Description                                                                                                                                                                                                                      |
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |          **Basic Settings**           |                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|              Entity Form              | Specifies the entity form that will be used to view the details of the selected entity. The drop-down list will include all entity forms that are configured for the entity type of the entity list. <br> **Note**: If the entity type of the entity list has no entity forms, the drop-down list will appear empty. If no entity form is supplied for the Details action, it will be ignored and the button will not be rendered in the entity list. |
+|              Basic Form              | Specifies the basic form that will be used to view the details of the selected entity. The drop-down list will include all basic forms that are configured for the entity type of the entity list. <br> **Note**: If the entity type of the entity list has no basic forms, the drop-down list will appear empty. If no basic form is supplied for the Details action, it will be ignored and the button will not be rendered in the entity list. |
 |         **Advanced Settings**         |                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Record ID Query String Parameter Name |                                                                    Specifies the name of the Query String parameter that will be used to select the entity to view in the selected entity form. This should match the value in that entity form's Record ID Query String Parameter Name. The default value for this field, both here and in entity form configuration, is **id**.                                                                     |
+| Record ID Query String Parameter Name |                                                                    Specifies the name of the Query String parameter that will be used to select the entity to view in the selected basic form. This should match the value in that basic form's Record ID Query String Parameter Name. The default value for this field, both here and in basic form configuration, is **id**.                                                                     |
 |             Button Label              |                                                                                                                                                                                      Overrides the HTML label for this action displayed in the entity list row.                                                                                                                                                                                       |
 |            Button tooltip             |                                                                                                                                                             Overrides the tooltip text that appears when the user points to the button for this action displayed in the entity list row.                                                                                                                                                              |
 
@@ -208,15 +208,15 @@ Enabling a **Details Action** allows a user to view a read-only entity form of a
 
 **Edit action settings**
 
-Enabling an **Edit Action** allows a user to view an editable entity form that is data-bound to the record of the selected row from the entity list, provided the Write privilege has been granted by Entity Permissions.
+Enabling an **Edit Action** allows a user to view an editable basic form that is data-bound to the record of the selected row from the entity list, provided the Write privilege has been granted by Entity Permissions.
 
 
 |                 Name                  |                                                                                                                                                                                                             Description                                                                                                                                                                                                             |
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |          **Basic Settings**           |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|              Entity Form              | Specifies the entity form that will be used to edit the selected entity. The drop-down list will include all entity forms that are configured for the entity type of the entity list. <br> **Note**: If the entity type of the entity list has no entity forms, the drop-down list will appear empty. If no entity form is supplied for the Edit action, it will be ignored and the button will not be rendered in the entity list. |
+|              Basic Form              | Specifies the basic form that will be used to edit the selected entity. The drop-down list will include all basic forms that are configured for the entity type of the entity list. <br> **Note**: If the entity type of the entity list has no basic forms, the drop-down list will appear empty. If no basic form is supplied for the Edit action, it will be ignored and the button will not be rendered in the entity list. |
 |         **Advanced Settings**         |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Record ID Query String Parameter Name |                                                           Specifies the name of the Query String parameter that will be used to select the entity to edit in the selected entity form. This should match the value in that entity form's Record ID Query String Parameter Name. The default value for this field, both here and in entity form configuration, is **id**.                                                            |
+| Record ID Query String Parameter Name |                                                           Specifies the name of the Query String parameter that will be used to select the entity to edit in the selected basic form. This should match the value in that basic form's Record ID Query String Parameter Name. The default value for this field, both here and in basic form configuration, is **id**.                                                            |
 |             Button Label              |                                                                                                                                                                             Overrides the HTML label for this action displayed in the entity list row.                                                                                                                                                                              |
 |            Button Tooltip             |                                                                                                                                                    Overrides the tooltip text that appears when the user points to the button for this action displayed in the entity list row.                                                                                                                                                     |
 
@@ -289,19 +289,19 @@ If the **EntityList/ShowRecordLevelActions** site setting is set to **false** an
 
 By setting the Web Page for Details View lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or edited, depending on the configuration of the associated form or page.
 
-This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains an entity form or Web form.
+This page can be a completely customized page template, perhaps created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains an basic form or Web form.
 
 The important thing to be aware of is that each record listed in the grid will have a hyperlink to the details page, and the link will contain a named Query String parameter with the ID of the record. The name of the Query String parameter depends on the ID Query String Parameter Name specified on the entity list. The final thing to note is that the targeted details webpage must also be aware of the name of this Query String parameter to get the ID of the record that it needs to query and load its data.
 
 ![Add view details page](../media/add-view-details-page.png "Add view details page")  
 
-**Using an entity form to display details**
+**Using an basic form to display details**
 
-To create an entity form please refer the instructions found on the [entity form](entity-forms.md) page.
+To create an basic form please refer the instructions found on the [basic form](entity-forms.md) page.
 
-The following are the important settings to be aware of for ensuring that the record from the entity list is loaded in the entity form.
+The following are the important settings to be aware of for ensuring that the record from the entity list is loaded in the basic form.
 
-The Record ID Query String Parameter Name on Entity Form must match the ID Query String Parameter Name on Entity List.
+The Record ID Query String Parameter Name on Basic Form must match the ID Query String Parameter Name on Entity List.
 
 The Mode can be either Edit or ReadOnly, depending on your needs.
 
@@ -315,7 +315,7 @@ The Mode can be either Edit or ReadOnly, depending on your needs.
 
 **Using a details page for the Create function**
 
-You can use a custom page, entity form, or Web form in the same fashion for the Create function. This is an alternative to defining a Create action on the form. You cannot define both a Create action *and* a custom page for Create: defining a custom action takes precedence.
+You can use a custom page, basic form, or Web form in the same fashion for the Create function. This is an alternative to defining a Create action on the form. You cannot define both a Create action *and* a custom page for Create: defining a custom action takes precedence.
 
 If you assign a webpage to the Create Lookup on the entity list and do not specify a Create action by using Configuration, a Create button will be rendered on the list; this button will link the user to the custom page you have designated for Create.
 
