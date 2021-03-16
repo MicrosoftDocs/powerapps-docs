@@ -28,13 +28,13 @@ After you download the solution, you must import it to be able to use it.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. In the left navigation pane, select **Solutions**, and then select **Import** on the command bar. 
-1. On the **Import a solution** page, select **Browse** to locate the solution your downloaded (.zip).
-1. Select **Next**. Information, about the solution is displayed.
-1. Select **Import**.
+1. On the **Import a solution** page, select **Browse** to locate the solution file (.zip) you downloaded, and select it.
+1. Select **Next**. Information about the solution is displayed.
+1. Select **Import**, and then finish the import process.
   
 
 ## Use the app
-After you import the solution, locate the app by selecting **Apps** in the left navigation pane; the app is listed as **Metadata Tools**
+After you import the solution successfully, locate the app by selecting **Apps** in the left navigation pane; the app is listed as **Metadata Tools**.
 
 ![Metadata Tools app](media/metadata-tools.png)
 
