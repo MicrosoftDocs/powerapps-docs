@@ -1,6 +1,6 @@
 ---
 title: "Additional controls for Dynamics 365 for phones and tablets | MicrosoftDocs"
-description: "A list of controls available for use with Dynamics 365 for phones and tablets"
+description: "A list of controls available for use with Dynamics 365 for web, phones, and tablets"
 ms.custom: ""
 ms.date: 05/18/2020
 ms.reviewer: "matp"
@@ -41,7 +41,7 @@ To use these controls in the form editor:
     > [!NOTE]
     >  Different controls are available depending on the column or list type. For example, slider controls might only be available for numerical or money columns.  
   
-5.  Select the devices you want the control to appear on. Controls aren’t available for phone header columns.  
+5.  Select the devices (web, tablet, and phone) you want the control to appear on. Controls aren’t available for phone header columns.  
   
 6.  Configure the values for each property.  
   
@@ -151,12 +151,11 @@ To use these controls in the form editor:
 |Column|Shows the column the control is mapped to.|  
   
 ## Pen control  
- Use the pen control to capture written input such as signatures.  
+ Use the pen control to capture written input such as signatures. The pen control can be added to multiple line text columns for use with web, tablet, and phone clients.
   
 > [!NOTE]
 >  The minimum recommended **Maximum Length** specified for the column this control maps to is 15000.  
->   
->  Be sure to select the **Hide on web** option for this control.  
+
   
 |Property|Description|  
 |--------------|-----------------|  
