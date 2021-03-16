@@ -1,5 +1,6 @@
 ---
 title: "Ingest Microsoft Dataverse data with Azure Data Factory | MicrosoftDocs"
+description: Learn how to use Azure Data Factory to create dataflows, transform, and run analysis on Dataverse data
 ms.custom: ""
 ms.date: 07/29/2020
 ms.reviewer: "matp"
@@ -59,7 +60,7 @@ In this example, account table data is exported to the data lake.
 
 2.  Go to ConvertModelJsonToManifest-master/ConvertModelJsonToManifest-master/ConvertModelJsonToManifest.sln.
 
-3.  Right-click to select the file, and then open it in Visual Studio. If you don't have Visual Studio, you can follow this article to install it: [Install Visual Studio](/visualstudio/install/install-visual-studio?view=vs-2019).
+3.  Right-click to select the file, and then open it in Visual Studio. If you don't have Visual Studio, you can follow this article to install it: [Install Visual Studio](/visualstudio/install/install-visual-studio?view=vs-2019&preserve-view=true).
 
 4.  Go to **Project** > **Manage NuGet Packages**, and ensure that the
     following NuGet packages are installed:
