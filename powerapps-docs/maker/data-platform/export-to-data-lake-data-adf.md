@@ -21,7 +21,6 @@ search.app:
 contributors:
   - sama-zaki
 ---
-
 # Ingest exported Microsoft Dataverse data with Azure Data Factory
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
