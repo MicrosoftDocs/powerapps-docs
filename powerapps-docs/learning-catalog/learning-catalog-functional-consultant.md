@@ -5,6 +5,7 @@ author: loreleishannonmsft
 ms.topic: article
 ms.date: 02/19/2020
 ms.author: margoc
+ms.service: powerapps
 ---
 
 # Functional Application Consultant Learning Catalog
