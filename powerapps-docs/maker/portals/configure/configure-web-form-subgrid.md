@@ -105,14 +105,14 @@ Enabling a **Download action** renders a button above the subgrid that, when sel
 
 ## Associate action
 
-Enabling an **Associate action** displays a button above the subgrid that, when selected, opens a table of entities that the user can choose to associate to the table record currently being displayed by the [basic form](entity-forms.md), provided the Append and AppendTo privileges have been granted by [Table Permissions](assign-entity-permissions.md) for the applicable table types.  
+Enabling an **Associate action** displays a button above the subgrid that, when selected, opens a list of tables that the user can choose to associate to the table record currently being displayed by the [basic form](entity-forms.md), provided the Append and AppendTo privileges have been granted by [Table Permissions](assign-entity-permissions.md) for the applicable table types.  
 
 ### Associate action settings
 
 | Name                  | Description                                                                                                                                                                                                                |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Basic Settings**    |                                                                                                                                                                                                                            |
-| View                  | Specifies the view (Saved Query) that will be used to find and display the list of eligible entities.<br>**Note**: If the subgrid's table type has no saved queries, the drop-down list will appear empty. If no view is supplied for the Associate action, it will be ignored and the button will not be rendered on the subgrid's basic form.  |
+| View                  | Specifies the view (Saved Query) that will be used to find and display the list of eligible tables.<br>**Note**: If the subgrid's table type has no saved queries, the drop-down list will appear empty. If no view is supplied for the Associate action, it will be ignored and the button will not be rendered on the subgrid's basic form.  |
 | **Advanced Settings** |                                                                                                                                                                                                                            |
 | Button Label          | Overrides the HTML label displayed in the Associate action button above the subgrid.                                                                                                                                       |
 | Button Tooltip        | Overrides the tooltip text that appears when the user points to the Associate action button.                                                                                                                        |
@@ -132,7 +132,7 @@ Enabling an **Associate action** displays a button above the subgrid that, when 
 | Primary Button CSS Class | Specify a CSS class or classes that will be applied to the dialog box's Primary (Add) button.                                                 |
 | Close Button CSS Class   | Specify a CSS class or classes that will be applied to the dialog box's Close (Cancel) button.                                                |
 | Select Records Title     | Overrides the HTML that appears in the title of the Record Selection area.                                                                  |
-| Default Error Message    | Overrides the message that appears when an error occurs while associating the selected table or entities.                                  |
+| Default Error Message    | Overrides the message that appears when an error occurs while associating the selected table or tables.                                  |
 | Grid Options             | Specify settings for the appearance of the table grid. See below for options.                                                              |
 ||
 
@@ -140,10 +140,10 @@ Enabling an **Associate action** displays a button above the subgrid that, when 
 
 | Name                  | Description                                                                                                              |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Loading Message       | Overrides the message that appears while the grid of entities is loading.                                                |
-| Error Message         | Overrides the message that appears when an error occurs while loading the grid of entities.                               |
-| Access Denied Message | Overrides the message that appears when a user does not have sufficient table permissions to view the grid of entities. |
-| Empty Message         | Overrides the message that appears when there are no entities that can be associated with the current basic form.       |
+| Loading Message       | Overrides the message that appears while the grid of tables is loading.                                                |
+| Error Message         | Overrides the message that appears when an error occurs while loading the grid of tables.                               |
+| Access Denied Message | Overrides the message that appears when a user does not have sufficient table permissions to view the grid of tables. |
+| Empty Message         | Overrides the message that appears when there are no tables that can be associated with the current basic form.       |
 | CSS Class             | Specify a CSS class or classes that will be applied to the associate grid area.                                          |
 | Grid CSS Class        | Specify a CSS class or classes that will be applied to the associate grid's &lt;table&gt; element.                       |
 ||

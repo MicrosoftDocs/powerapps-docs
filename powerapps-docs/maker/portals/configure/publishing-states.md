@@ -47,8 +47,8 @@ Publishing states can be created, edited, and deleted within portals.
 |-----|--------|
 |Name|The descriptive name of the state. This field is required.|
 |Website|The website to which the state belongs. This field is required.|
-|Is Default|If checked, sets this state as the default state for the website. This option will determine the default state selected when creating new entities through the portal front-side editing interface.<br>**Note**: Only one Publishing State in a given Website should be marked as the default state.|
-|Is Visible|If checked, sets that entities associated with this state will be considered visible (or published) on the portal.<br>While a table associated with a non-visible state won't be visible on the portal, a table associated with a visible state may also not be visible, because of the security permissions, expiration dates, or other visibility rules.<br>Users with content management permissions may be granted the ability to use Preview Mode, which allows these users to see (preview) unpublished content.|
+|Is Default|If checked, sets this state as the default state for the website. This option will determine the default state selected when creating new tables through the portal front-side editing interface.<br>**Note**: Only one Publishing State in a given Website should be marked as the default state.|
+|Is Visible|If checked, sets that tables associated with this state will be considered visible (or published) on the portal.<br>While a table associated with a non-visible state won't be visible on the portal, a table associated with a visible state may also not be visible, because of the security permissions, expiration dates, or other visibility rules.<br>Users with content management permissions may be granted the ability to use Preview Mode, which allows these users to see (preview) unpublished content.|
 |Display Order|An integer value indicating the order in which the state will be placed, in menus and drop-down lists for selecting a Publishing State – mostly found in the portal front-side editing interfaces.|
 |||
 

@@ -157,7 +157,7 @@ You can add action buttons for the actions that are applicable for an individual
 - Activate
 - Deactivate
 
-Clicking on one of these options displays a configuration area for that action. Furthermore, certain entities have special actions that are available to them on a per-table basis:
+Clicking on one of these options displays a configuration area for that action. Furthermore, certain tables have special actions that are available to them on a per-table basis:
 
 - Calculate Value of Opportunity (opportunity)
 - Cancel Case Action (incident)
@@ -171,7 +171,7 @@ Clicking on one of these options displays a configuration area for that action. 
 - Set Opportunity on Hold (opportunity)
 
 > [!NOTE]
-> It is recommend to create a workflow instead of adding an **Activate** or a **Deactivate** button for out of the box entities having defined specific **state** and **status code** values that they require for their business processes. For example, Incident ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/incident#statuscode-options)), Opportunity([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/opportunity#statuscode-options)), Entitlements ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/entitlement#statuscode-options)). 
+> It is recommend to create a workflow instead of adding an **Activate** or a **Deactivate** button for out of the box tables having defined specific **state** and **status code** values that they require for their business processes. For example, Incident ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/incident#statuscode-options)), Opportunity([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/opportunity#statuscode-options)), Entitlements ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/entitlement#statuscode-options)). 
 
 
 ## Geolocation configuration for basic forms

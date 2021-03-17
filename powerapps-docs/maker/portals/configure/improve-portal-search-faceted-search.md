@@ -28,13 +28,13 @@ To disable a single piece of the faceted view:
 2. Select the view to disable (that is, Knowledge Management – Top Rated Articles)
 3. Select **Deactivate** at the top of the page.
 
-## Group entities as part of a record type for faceted view
+## Group tables as part of a record type for faceted view
 
-The site setting **Search/RecordTypeFacetsEntities** allows you to group similar entities together so users have logical ways of filtering search results. For example, instead of having separate options for forums, forum posts, and forum threads, these entities are grouped under the Forums record type.
+The site setting **Search/RecordTypeFacetsEntities** allows you to group similar tables together so users have logical ways of filtering search results. For example, instead of having separate options for forums, forum posts, and forum threads, these tables are grouped under the Forums record type.
 
 Go to **Portals** &gt; **Websites** &gt; **Site Settings** and open the **Search/RecordTypeFacetsEntities** site setting. 
 
-Notice that the different entities are preceded by the word **Forums:**. This is because the first value is the name with they are grouped as. This word will be translated based on the language that is being used on the portal.
+Notice that the different tables are preceded by the word **Forums:**. This is because the first value is the name with they are grouped as. This word will be translated based on the language that is being used on the portal.
 
 ## Use faceted search to improve knowledge search results
 

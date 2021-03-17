@@ -19,7 +19,7 @@ Website Access Permissions is a permission set, associated with a [web role](cre
 | Manage Content Snippets      | Allows the editing of Snippet controls.                                                          |
 | Manage Site Markers          | Allows the editing of hyperlinks that use Site Markers                                           |
 | Manage Web Link Sets         | Allows the editing of [web link sets](manage-web-links.md), including adding an removing web links from a web link set. |
-| Preview Unpublished Entities | Allows the viewing of portal-exposed entities that have a publishing state of Draft.             |
+| Preview Unpublished Entities | Allows the viewing of portal-exposed tables that have a publishing state of Draft.             |
 |||
 
 To create a website access permission and add it to a web role:

@@ -12,19 +12,19 @@ ms.reviewer: tapanm
 
 # Search
 
-In Power Apps portals, you can search for records across multiple entities by using portal's global search functionality. You can also search within records of lists using list search functionality. 
+In Power Apps portals, you can search for records across multiple tables by using portal's global search functionality. You can also search within records of lists using list search functionality. 
 
 List search functionality in the portal uses FetchXML in the backend to search the columns defined in the list and then display the results. 
 
-Global search uses an external search index that is based on Lucene.Net and is used to search within multiple entities and fields at once.
+Global search uses an external search index that is based on Lucene.Net and is used to search within multiple tables and fields at once.
 
 ## Global search
 
-Global search of portals allows you to search for records across multiple entities. It also allows you to search across multiple columns and configure what columns of a table would be searchable.
+Global search of portals allows you to search for records across multiple tables. It also allows you to search across multiple columns and configure what columns of a table would be searchable.
 
 Among the benefits of global search are its ability to:
 - Find matches to any word in the search term in any field in the table. Matches can include inflectional words like stream, streaming, or streamed.
-- Return results from all searchable entities in a single list sorted by relevance, based on factors such as:
+- Return results from all searchable tables in a single list sorted by relevance, based on factors such as:
     - Number of words matched.
     - Proximity to each other in the text.
 - Highlight matches in the search results.
@@ -36,7 +36,7 @@ The following sections detail how global search works in Power Apps portals and 
 
 ## Entities searchable in portal global search
 
-By default, the following entities can be searched within a portal website provided the appropriate solution packages have been installed and search has been added to a portal. The columns that are indexed will consist of the columns found in the Search view, which can be customized.  Each table in the list has its default set of attributes indexed as listed here:
+By default, the following tables can be searched within a portal website provided the appropriate solution packages have been installed and search has been added to a portal. The columns that are indexed will consist of the columns found in the Search view, which can be customized.  Each table in the list has its default set of attributes indexed as listed here:
 - Knowledge Article
     - Notes and attachment of a knowledge article are searchable as well. More information: [Search within file attachment content](search-file-attachment.md)
     - Articles are searchable only if they are published and their Internal Only field is set to false.
@@ -55,7 +55,7 @@ By default, the following entities can be searched within a portal website provi
 - Incident 
 
 > [!NOTE]
-> You can configure additional entities for search. For more information, read [configuring additional entities for search](search-additional-entities.md).
+> You can configure additional tables for search. For more information, read [configuring additional tables for search](search-additional-entities.md).
 
 ## Fields searchable in global search
 
@@ -75,14 +75,14 @@ The following site settings are related to global search:
 | Name    | Default value     | Description       |
 |-----------------------|--------------------|-------------|
 | Search/Enabled | True  | A Boolean value that indicates whether search is enabled. If you set its value to false, global search in the portal is turned off.<br>If you're using out-of-the-box web templates and you turn off this setting, the search box will not be displayed in the header as well as on the search page. Also, no results are returned even if the direct URL for the search page is hit.  |
-| Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on additional entities on your portal. <br> Requires *Search/Enabled* set to *True* when used.  |
+| Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on additional tables on your portal. <br> Requires *Search/Enabled* set to *True* when used.  |
 | Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment".  |
 | Search/IndexQueryName   | Portal search  | The name of the system view used by the portal search query to define the fields of a table enabled that are indexed and searched.   |
 | Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2 -_logicalname:adx_webfile\~0.9 adx_partialurl:(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:adx_communityforumthread\~0.9   | This setting adds additional weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br>For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
 | Search/Stemmer  | English    | The language used by the portal search's stemming algorithm.   |
 | Search/FacetedView  | True   | This enables facets in the search results. When set to True, facets will be shown along with results on the search page.  |
 | Search/IndexNotesAttachments   | False    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
-| Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | This determines how the entities are grouped in Record Type facet on the Search page. This setting is in the format <br>"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br>Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the entities defined in the configuration.   |
+| Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | This determines how the tables are grouped in Record Type facet on the Search page. This setting is in the format <br>"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br>Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the tables defined in the configuration.   |
 | KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
 |||
 
@@ -187,7 +187,7 @@ You can invoke portal global search from liquid templates by using the *searchin
 
 Search index updates in Power Apps portals happen automatically like the cache invalidation. Keep these important things in mind, though:
 
-- All search-enabled entities must have the Change Notification metadata flag enabled, otherwise the portal will not be notified of the changes and the search index will not be updated.
+- All search-enabled tables must have the Change Notification metadata flag enabled, otherwise the portal will not be notified of the changes and the search index will not be updated.
 
 - Any change can take up to 30 minutes to be reflected in a portal search. However, 95 percent of the changes will be updated within 15 minutes. If attachments are involved, it can take longer depending on the size of the attachment.
 
@@ -212,7 +212,7 @@ You can also rebuild a full search index from a portal.
 
 ## Remove a table from global search
 
-At times, you might be required to completely remove certain entities from portal global search to ensure that your customers get the right results quickly.
+At times, you might be required to completely remove certain tables from portal global search to ensure that your customers get the right results quickly.
 
 In the following example, we will remove the Case table from portal global search.
 
@@ -263,7 +263,7 @@ Once this site setting is changed, the Case table will be removed from filters o
 
 ## Next steps
 
-[Configure global search for additional entities](search-additional-entities.md)
+[Configure global search for additional tables](search-additional-entities.md)
 
 ### See also
 

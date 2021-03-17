@@ -1,6 +1,6 @@
 ---
-title: "Global search for additional entities in Power Apps portal | MicrosoftDocs"
-description: "Learn how global search works for additional entities in a portal."
+title: "Global search for additional tables in Power Apps portal | MicrosoftDocs"
+description: "Learn how global search works for additional tables in a portal."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,17 +10,17 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Walkthrough: Configuring additional entities for global search  
+# Walkthrough: Configuring additional tables for global search  
 
 ## Overview
 
-You can enable additional entities for search functionality. Configuring search for additional entities requires additional actions, which are described in this article. These explicit configuration steps ensure that no records will accidentally be made available using global search.
+You can enable additional tables for search functionality. Configuring search for additional tables requires additional actions, which are described in this article. These explicit configuration steps ensure that no records will accidentally be made available using global search.
 
-## Steps to configure search for additional entities
+## Steps to configure search for additional tables
 
-To configure search for additional entities:
+To configure search for additional tables:
 
-1. [Enable additional entities search](#step-1-add-or-update-search-site-settings) for the first time by adding a new setting [Search/EnableAdditionalEntities](#site-setting-for-additional-entities) and set it to *true*. This is a one-time step that enables search for all additional out-of-the-box and custom entities.
+1. [Enable additional tables search](#step-1-add-or-update-search-site-settings) for the first time by adding a new setting [Search/EnableAdditionalEntities](#site-setting-for-additional-tables) and set it to *true*. This is a one-time step that enables search for all additional out-of-the-box and custom tables.
 
 1. [Create Portal Search view](#step-2-create-or-verify-the-portal-search-view) for each additional table with the required filters and columns that needs to be searchable.
 
@@ -37,14 +37,14 @@ To configure search for additional entities:
 > [!WARNING]
 > If you don't create a record details page, or if you don't bind the record details page with site marker for search, you won't be able to select the additional table records from search results page to view the record details.
 
-### Site setting for additional entities
+### Site setting for additional tables
 
-The site setting **Search/EnableAdditionalEntities** is required when configuring additional entities for search.
+The site setting **Search/EnableAdditionalEntities** is required when configuring additional tables for search.
 
 > [!IMPORTANT]
-> **Search/EnableAdditionalEntities** is explicitly for enabling search for additional entities. The main search site setting **Search/Enabled** must be set to **true** when using search functionality.
+> **Search/EnableAdditionalEntities** is explicitly for enabling search for additional tables. The main search site setting **Search/Enabled** must be set to **true** when using search functionality.
 
-You can also configure other related site settings similar to the search configuration for default entities. For example, you can use the **Search/Filters** setting to configure additional entities and add a drop-down filter option to the global search. More information: [Site setting](search.md#related-site-settings).
+You can also configure other related site settings similar to the search configuration for default tables. For example, you can use the **Search/Filters** setting to configure additional tables and add a drop-down filter option to the global search. More information: [Site setting](search.md#related-site-settings).
 
 ### Site marker for record details page
 
@@ -55,7 +55,7 @@ For example, if your table logical name is *nwind_products*, the site marker wil
 > [!IMPORTANT]
 > Ensure that your record details page has an basic form, or has logic written to show the search result details. For example, [Step 4 - Add record details page](#step-4-add-record-details-webpage) in the following walkthrough.
 
-The following walkthrough explains each step in detail with a sample database and solution to configure search for additional entities.
+The following walkthrough explains each step in detail with a sample database and solution to configure search for additional tables.
 
 > [!NOTE]
 > - This walkthrough explains how to enable search for the **Order Products** table in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
