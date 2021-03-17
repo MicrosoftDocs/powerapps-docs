@@ -35,16 +35,16 @@ Schema files are available for the following portal types:
     - [Partner portal](https://go.microsoft.com/fwlink/p/?linkid=2019803)
     - [Employee Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019802)
 
-The default schema files contain information about portal entities, relationships, and uniqueness definitions for each entity. More information: [Export portal configuration data](#export-portal-configuration-data)
+The default schema files contain information about portal tables, relationships, and uniqueness definitions for each entity. More information: [Export portal configuration data](#export-portal-configuration-data)
 
 After exporting the configuration data, you must import it into the target environment. More information: [Import portal configuration data](#import-portal-configuration-data)
 
 > [!NOTE]
-> The Configuration Migration tool uses schema to export and import configuration data. The tool does not migrate entities or table schema. Migration may fail with missing elements such as entities and fields when configuration data has mismatch with selected schema.
+> The Configuration Migration tool uses schema to export and import configuration data. The tool does not migrate tables or table schema. Migration may fail with missing elements such as tables and fields when configuration data has mismatch with selected schema.
 >
-> During export, ensure the source environment contains portal entities as specified in Configuration Migration tool schema file. You can still alter the schema files to add, remove, and modify entities, attributes, and so on to migrate subset of configuration data.
+> During export, ensure the source environment contains portal tables as specified in Configuration Migration tool schema file. You can still alter the schema files to add, remove, and modify tables, attributes, and so on to migrate subset of configuration data.
 >
-> During import, ensure the destination environment contains the same portal type already installed with any additional customizations such as entities, fields, forms or views imported separately as solutions.
+> During import, ensure the destination environment contains the same portal type already installed with any additional customizations such as tables, fields, forms or views imported separately as solutions.
 
 
 ## Export portal configuration data

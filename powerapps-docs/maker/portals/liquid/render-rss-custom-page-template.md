@@ -15,7 +15,7 @@ In this example, we'll create a custom page template to render an [RSS feed](htt
 
 ## Step 1: Create a new Power Apps view
 
-First, we'll create a new Power Apps view that we'll use to load the data for our feed. In this example, we'll make it a view on Web Pages, and use this entity to store our articles. We can use this view to configure the sorting and filtering of results, and include as columns the entity attributes that we want available in our Liquid template.
+First, we'll create a new Power Apps view that we'll use to load the data for our feed. In this example, we'll make it a view on Web Pages, and use this table to store our articles. We can use this view to configure the sorting and filtering of results, and include as columns the table attributes that we want available in our Liquid template.
 
 ![Edit a page template](../media/edit-page-template.png "Edit a page template")  
 

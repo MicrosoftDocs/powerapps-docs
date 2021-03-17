@@ -24,7 +24,7 @@ To work with the document management capabilities of [!INCLUDE[pn-sharepoint-sho
 
 2.	[Set up SharePoint integration from Power Apps portals admin center](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center)
 
-3.	[Enable document management for entities](#step-3-enable-document-management-for-entities)
+3.	[Enable document management for tables](#step-3-enable-document-management-for-tables)
 
 4.	[Configure the appropriate form in Power Apps documents](#step-4-configure-the-appropriate-form-to-display-documents)
 
@@ -69,8 +69,8 @@ If you don't provide your consent:
 - Your out-of-the-box [!INCLUDE[pn-azure-shortest](../../includes/pn-azure-shortest.md)] AD login on the portal won't work.
 
 
-## Step 3: Enable document management for entities
-You must enable document management for entities to store documents related to table records in [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. For information on how to enable document management for entities, see [Enable SharePoint document management for specific entities](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-sharepoint-document-management-specific-entities).
+## Step 3: Enable document management for tables
+You must enable document management for tables to store documents related to table records in [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. For information on how to enable document management for tables, see [Enable SharePoint document management for specific tables](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-sharepoint-document-management-specific-entities).
 
 ## Step 4: Configure the appropriate form to display documents
 
@@ -85,7 +85,7 @@ Identify the form where you want to use document management capabilities. You mu
 You can specify name and label as per your requirement. Save and publish the form once the subgrid is added and configured.
 
 > [!NOTE]
-> Document management must be enabled for the table for which you edit the form. More information: [Enable document management for entities](#step-3-enable-document-management-for-entities)
+> Document management must be enabled for the table for which you edit the form. More information: [Enable document management for tables](#step-3-enable-document-management-for-tables)
 
 ### Power Apps portals configuration
 
@@ -135,7 +135,7 @@ The below example demonstrates configuration using the Case table which needs th
 
 2.	Follow the instructions in [Step 2](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center) to ensure that the portal has permissions to integrate with [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. 
 
-3.	Follow the instructions in [Step 3](#step-3-enable-document-management-for-entities) to ensure Document Management is enabled for the Case table.
+3.	Follow the instructions in [Step 3](#step-3-enable-document-management-for-tables) to ensure Document Management is enabled for the Case table.
 
 4.	Follow the instructions in [Step 4](#step-4-configure-the-appropriate-form-to-display-documents) with the following configurations:
 

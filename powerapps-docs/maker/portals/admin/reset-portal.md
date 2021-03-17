@@ -54,7 +54,7 @@ A Power Apps portal consists of the following components:
 
 - **Portal configuration**: The portal configuration in the Dataverse environment that defines portal components such as *Websites*, *Pages*, *Content Snippets* and *Web Roles* records.
 
-- **Portal solutions**: Solutions that are installed in the Dataverse environment and contain the metadata entities for any portal.
+- **Portal solutions**: Solutions that are installed in the Dataverse environment and contain the metadata tables for any portal.
 
 **To delete a portal**, you must delete the **portal website host** and the  **portal configuration**.
 

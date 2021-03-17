@@ -42,10 +42,10 @@ HTTP requests can use different kinds of methods. However, the portals Web API o
 
 | Method | Usage |
 | - | - |
-| Post   | Creating entities and calling actions. |
-| Patch  | Use when updating entities or doing upsert operations. |
-| Delete | Use when deleting entities or individual properties of entities. |
-| Put    | Use in limited situations to update individual properties of entities. |
+| Post   | Creating tables and calling actions. |
+| Patch  | Use when updating tables or doing upsert operations. |
+| Delete | Use when deleting tables or individual properties of tables. |
+| Put    | Use in limited situations to update individual properties of tables. |
 
 ## HTTP headers
 
@@ -155,7 +155,7 @@ Each HTTP request response includes a status code. Status codes returned by the 
 | 413 Payload Too Large | Expect this response when the request length is too large. | Client error |
 | 400 BadRequest | Expect this response when an argument is invalid. <br> InvalidAttribute | Client error |
 | 404 Not Found | Expect this response when the resource doesn't exist. <br>The table isn't exposed for the Web API. | Client Error |
-| 405 Method Not Allowed | This error occurs for incorrect method and resource combinations. For example, you can't use DELETE or PATCH on a collection of entities. This situation can happen for the following types of errors:<ul><li>InvalidOperation</li><li>NotSupported</li></ul> | Client error |
+| 405 Method Not Allowed | This error occurs for incorrect method and resource combinations. For example, you can't use DELETE or PATCH on a collection of tables. This situation can happen for the following types of errors:<ul><li>InvalidOperation</li><li>NotSupported</li></ul> | Client error |
 | 501 Not Implemented | Expect this response when some requested operation isn't implemented. | Server error |
 | 503 Service Unavailable | Expect this response when the Web API service isn't available. | Server error |
 

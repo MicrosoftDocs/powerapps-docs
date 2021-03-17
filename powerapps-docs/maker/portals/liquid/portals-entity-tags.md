@@ -10,11 +10,11 @@ ms.author: gisingh
 ms.reviewer: tapanm
 ---
 
-# Dataverse entity tags
+# Dataverse table tags
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Microsoft Dataverse entity tags are used to load and display Dataverse data, or use other Power Apps portals framework services. These tags are Dataverse-specific extensions to the Liquid language.
+Microsoft Dataverse table tags are used to load and display Dataverse data, or use other Power Apps portals framework services. These tags are Dataverse-specific extensions to the Liquid language.
 
 ## chart
 
@@ -34,7 +34,7 @@ Visualization ID of the chart. You can get this by exporting the chart.
 
 **viewid**
 
-ID of the entity when opened in view editor. 
+ID of the table when opened in view editor. 
 
 ## powerbi
 

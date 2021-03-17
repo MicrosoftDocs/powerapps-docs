@@ -16,13 +16,13 @@ With the capability to build a portal in Power Apps, you can create a website fo
 
 Some of the benefits of creating a Power Apps portal:
 
-- Because the data is stored in Dataverse, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
+- Because the data is stored in Dataverse, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), or Salesforce. You need only to specify the tables that you want to show or manage in the portal.
 
 - You can design the portal through the WYSIWYG Power Apps portals Studio by adding and configuring components on the webpages.
 
 You can create a portal either in a new environment or in your existing environment.
 
-If you choose to create your portal in a new environment using the **Create new environment** link, the required portal pre-requisites such as entities, data, and a starter portal template are installed when the environment is created. In this method, the portal is provisioned in a few minutes.
+If you choose to create your portal in a new environment using the **Create new environment** link, the required portal pre-requisites such as tables, data, and a starter portal template are installed when the environment is created. In this method, the portal is provisioned in a few minutes.
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 

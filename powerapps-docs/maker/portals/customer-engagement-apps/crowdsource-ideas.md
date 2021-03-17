@@ -24,7 +24,7 @@ Users can manage Idea Forum records under the Community tab, provided the portal
 
 ## Idea Forum attributes and relationships
 
-The table below explains the standard attributes and relationships of the Idea Forum entity.
+The table below explains the standard attributes and relationships of the Idea Forum table.
 
 | Name                   | Description         |
 |------------------------|----------------------|
@@ -53,7 +53,7 @@ For users, provided the portal customizations have been imported into your organ
 
 ## Idea attributes and relationships
 
-The table below explains the standard attributes and relationships of the Idea entity.
+The table below explains the standard attributes and relationships of the Idea table.
 
 
 
@@ -108,7 +108,7 @@ To get the status reason values:
 
 3.	In the customization dialog, go to **Components** > **Entities** > **Idea** in the left navigation pane. 
 
-4.	Expand the **Idea** entity and select **Fields**.
+4.	Expand the **Idea** table and select **Fields**.
 
 5.	Select the **statuscode** field from the list and open it in field editor.
 
@@ -127,7 +127,7 @@ For users, provided the portal customizations have been imported into your Micro
 
 ## Idea comment attributes and relationships
 
-The table below explains the standard attributes and relationships of the Idea Comment entity.
+The table below explains the standard attributes and relationships of the Idea Comment table.
 
 
 |       Name       |                                Description                                |
@@ -148,7 +148,7 @@ For users, provided the portal customizations have been imported into your Micro
 
 ## Idea vote attributes and relationships
 
-The table below explains the standard attributes and relationships of the Idea Vote entity. 
+The table below explains the standard attributes and relationships of the Idea Vote table. 
 
 | Name         | Description                                                            |
 |--------------|------------------------------------------------------------------------|

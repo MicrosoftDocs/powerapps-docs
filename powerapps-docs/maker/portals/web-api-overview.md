@@ -1,6 +1,6 @@
 ---
 title: Use the Web API for portals | Microsoft Docs
-description: Learn how to use the portals Web API to create, read, update, and delete Microsoft Dataverse entities.
+description: Learn how to use the portals Web API to create, read, update, and delete Microsoft Dataverse tables.
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.reviewer: tapanm
 
 ## Overview
 
-The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, update, and delete operations across all Microsoft Dataverse entities from your portal pages. For example, you can create a new account, update a contact, or change the [table permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
+The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, update, and delete operations across all Microsoft Dataverse tables from your portal pages. For example, you can create a new account, update a contact, or change the [table permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.2.6.41 or later for this feature to work**.
 > - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration.
-> - Portals Web API operations are limited to entities related to data&mdash;for example, accounts, contacts, or your custom entities. Configuring table metadata or portal configuration table data&mdash;for example, configuring portals entities such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [unsupported configuration entities](#unsupported-configuration-entities), later in this topic.
+> - Portals Web API operations are limited to tables related to data&mdash;for example, accounts, contacts, or your custom tables. Configuring table metadata or portal configuration table data&mdash;for example, configuring portals tables such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [unsupported configuration tables](#unsupported-configuration-tables), later in this topic.
 > - The portals Web API benefits from [server-side caching](admin/clear-server-side-cache.md) and, hence, subsequent calls to the Web API are faster than the initial calls. Note that clearing the portal server-side cache causes temporary performance degradation.
 > - Portals Web API operations require Power Apps portals license. For example, Web API calls made by anonymous users are counted towards page view capacity. Web API calls made by authenticated users (internal or external) are not counted towards page views, but require applicable licenses. More information: [Power Apps portals licensing FAQs](power-platform/admin/powerapps-flow-licensing-faq.md#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
 
@@ -32,8 +32,8 @@ The portals Web API offers a subset of capabilities for Dataverse operations tha
 ### Web API operations available in portals
 
 - [Create a table](web-api-perform-operations.md#create-an-entity-record)
-- [Update and delete entities](web-api-perform-operations.md#update-and-delete-entities-by-using-the-web-api) 
-- [Associate and disassociate entities](web-api-perform-operations.md#associate-and-disassociate-entities-by-using-the-web-api)
+- [Update and delete tables](web-api-perform-operations.md#update-and-delete-tables-by-using-the-web-api) 
+- [Associate and disassociate tables](web-api-perform-operations.md#associate-and-disassociate-tables-by-using-the-web-api)
 
 ## Site settings for the Web API
 
@@ -76,9 +76,9 @@ If audit logging is enabled, a user can see all the audit events in the [Office 
 
 More information:<br>[Enable and use Activity Logging](https://docs.microsoft.com/power-platform/admin/enable-use-comprehensive-auditing)<br>[Export, configure, and view audit log records](https://docs.microsoft.com/microsoft-365/compliance/export-view-audit-log-records).
 
-## Unsupported configuration entities
+## Unsupported configuration tables
 
-Portals Web API can't be used for the following configuration entities.
+Portals Web API can't be used for the following configuration tables.
 
 | | | |
 |-------------------------------------------|---------------------------|--------------------------------------|
@@ -101,7 +101,7 @@ Portals Web API can't be used for the following configuration entities.
 
 ## Known issues
 
-With the current release, Web API operations aren't blocked on configuration entities. However, this issue will be fixed in upcoming releases.
+With the current release, Web API operations aren't blocked on configuration tables. However, this issue will be fixed in upcoming releases.
 
 ## Next step
 

@@ -87,7 +87,7 @@ You can automatically distribute opportunities to partners based on a set of cri
 |Capacity     |  A partner's capacity is the maximum number of opportunities that partner can take on at a time. This value can be adjusted on the account details page for each partner. Capacity includes opportunities that are in progress, in addition to those that haven't yet been accepted by a partner. It doesn't include internal opportunities created by that partner.|
 |Estimated revenue     | You can set a minimum and maximum range for estimated revenue on the account details page for each partner. If the estimated revenue for an opportunity falls within this range, the partner will be available for assignment.|
 |Territory     | Territories are geographic regions that are assigned to a partner account. If the address of the customer associated with the opportunity is within a territory covered by a partner, the partner will be available for assignment. |
-|Lead type     | The lead type entity can be used to categorize opportunities. You can assign which lead types each partner is able to work on.       |
+|Lead type     | The lead type table can be used to categorize opportunities. You can assign which lead types each partner is able to work on.       |
 |Associated products| If the products associated with an opportunity are all covered by a partner, they will be available for assignment. If any of the products are not covered by a partner, they won't be available for assignment.|
  |  |               |
 

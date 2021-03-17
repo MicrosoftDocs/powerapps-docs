@@ -23,7 +23,7 @@ Global search uses an external search index that is based on Lucene.Net and is u
 Global search of portals allows you to search for records across multiple entities. It also allows you to search across multiple columns and configure what columns of a table would be searchable.
 
 Among the benefits of global search are its ability to:
-- Find matches to any word in the search term in any field in the entity. Matches can include inflectional words like stream, streaming, or streamed.
+- Find matches to any word in the search term in any field in the table. Matches can include inflectional words like stream, streaming, or streamed.
 - Return results from all searchable entities in a single list sorted by relevance, based on factors such as:
     - Number of words matched.
     - Proximity to each other in the text.
@@ -36,7 +36,7 @@ The following sections detail how global search works in Power Apps portals and 
 
 ## Entities searchable in portal global search
 
-By default, the following entities can be searched within a portal website provided the appropriate solution packages have been installed and search has been added to a portal. The columns that are indexed will consist of the columns found in the Search view, which can be customized.  Each entity in the list has its default set of attributes indexed as listed here:
+By default, the following entities can be searched within a portal website provided the appropriate solution packages have been installed and search has been added to a portal. The columns that are indexed will consist of the columns found in the Search view, which can be customized.  Each table in the list has its default set of attributes indexed as listed here:
 - Knowledge Article
     - Notes and attachment of a knowledge article are searchable as well. More information: [Search within file attachment content](search-file-attachment.md)
     - Articles are searchable only if they are published and their Internal Only field is set to false.
@@ -59,11 +59,11 @@ By default, the following entities can be searched within a portal website provi
 
 ## Fields searchable in global search
 
-All the fields available in the view defined by the Search/IndexQueryName site setting for any entity are indexed in global search and are searchable. 
+All the fields available in the view defined by the Search/IndexQueryName site setting for any table are indexed in global search and are searchable. 
 
 Default value for Search/IndexQueryName is "Portal Search".
 
-If the view is not available for any entity, it's not indexed and the results are not displayed in global search.
+If the view is not available for any table, it's not indexed and the results are not displayed in global search.
 
 > [!NOTE]
 > If you change the value of the Search/IndexQueryName site setting, you need to trigger a manual re-index of the build using steps defined in the [Rebuild full search index](#rebuild-full-search-index) section.
@@ -82,7 +82,7 @@ The following site settings are related to global search:
 | Search/Stemmer  | English    | The language used by the portal search's stemming algorithm.   |
 | Search/FacetedView  | True   | This enables facets in the search results. When set to True, facets will be shown along with results on the search page.  |
 | Search/IndexNotesAttachments   | False    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
-| Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | This determines how the entities are grouped in Record Type facet on the Search page. This setting is in the format <br>"DisplayNameinRecordTypeFacet1:logicalnameofentity1,logicalnameofentity2; DisplayNameinRecordTypeFacet2:logicalnameofentity3,logicalnameofentity4" <br>Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the entities defined in the configuration.   |
+| Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | This determines how the entities are grouped in Record Type facet on the Search page. This setting is in the format <br>"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br>Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the entities defined in the configuration.   |
 | KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
 |||
 
@@ -111,7 +111,7 @@ The following content snippets are related to global search:
 
 ## Table-specific handling
 
-- **Case**: By default, the only cases that are searchable are in the **Resolved** state with the **Publish to Web** field set to **True**. This behavior can be modified by updating the Portal Search view of the Case entity and removing the filters available in the Portal Search view. However, when this check is removed, it's important to ensure that the Customer Service – Case web template is modified appropriately, as this web template restricts all users from viewing cases that are active and are not published to the web. If the web template is not modified, cases will be visible in search results. However, when you select them, the case detail web page is displayed with the Permission denied error.
+- **Case**: By default, the only cases that are searchable are in the **Resolved** state with the **Publish to Web** field set to **True**. This behavior can be modified by updating the Portal Search view of the Case table and removing the filters available in the Portal Search view. However, when this check is removed, it's important to ensure that the Customer Service – Case web template is modified appropriately, as this web template restricts all users from viewing cases that are active and are not published to the web. If the web template is not modified, cases will be visible in search results. However, when you select them, the case detail web page is displayed with the Permission denied error.
 
 - **Knowledge Base**: Knowledge articles are searchable only if they are in the **Published** state with the **Internal** field set to **No**. This behavior cannot be modified. Knowledge articles also have special functionality available in search results as follows:
 
@@ -214,11 +214,11 @@ You can also rebuild a full search index from a portal.
 
 At times, you might be required to completely remove certain entities from portal global search to ensure that your customers get the right results quickly.
 
-In the following example, we will remove the Case entity from portal global search.
+In the following example, we will remove the Case table from portal global search.
 
-### Step 1: Block case entity from getting indexed
+### Step 1: Block case table from getting indexed
 
-To block the Case entity from getting indexed, you must rename the view of the Case entity that defines the record set to be indexed by the portal (defined by the Search/IndexQueryName site setting). By default, the name of that view is Portal Search.
+To block the Case table from getting indexed, you must rename the view of the Case table that defines the record set to be indexed by the portal (defined by the Search/IndexQueryName site setting). By default, the name of that view is Portal Search.
 
 1. Go to [Power Apps](https://make.powerapps.com).
 
@@ -230,7 +230,7 @@ To block the Case entity from getting indexed, you must rename the view of the C
 
     ![Edit solution](../media/edit-solution.png "Edit solution")
 
-1. Search and edit **Case** entity to see its components.
+1. Search and edit **Case** table to see its components.
 
 1. Select **Views** tab and then select **Portal Search** to open it in a view editor.
 
@@ -243,19 +243,19 @@ To block the Case entity from getting indexed, you must rename the view of the C
 > [!NOTE]
 > In this example, we are making changes in an unmanaged layer by directly editing the view. You can also do this via a managed solution.
 
-### Step 2: Remove case entity from the UI
+### Step 2: Remove case table from the UI
 
-After performing the actions described in Step 1, the Case entity would be stopped from getting indexed. To remove the case entity from UI surface areas, you must modify the site setting associated with portal global search. The following site setting must be modified:
+After performing the actions described in Step 1, the Case table would be stopped from getting indexed. To remove the case table from UI surface areas, you must modify the site setting associated with portal global search. The following site setting must be modified:
 
-search/filters: This will remove case entity from filters on the Search page as well as the search box in the header of the site. By default, the value is: `Content:adx_webpage,adx_webfile;Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Help Desk:incident;Knowledge:knowledgearticle`
+search/filters: This will remove case table from filters on the Search page as well as the search box in the header of the site. By default, the value is: `Content:adx_webpage,adx_webfile;Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Help Desk:incident;Knowledge:knowledgearticle`
 
-You must delete `Help Desk:incident;` from the value of this site setting so that the Incident entity is removed from filters that come next to the search box in the UI.
+You must delete `Help Desk:incident;` from the value of this site setting so that the Incident table is removed from filters that come next to the search box in the UI.
 
 The modified value will be:
 
 `Content:adx_webpage,adx_webfile;Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Knowledge:knowledgearticle`
 
-Once this site setting is changed, the Case entity will be removed from filters on the search page as well as in the header.
+Once this site setting is changed, the Case table will be removed from filters on the search page as well as in the header.
 
 ![Search on page](../media/search-on-page.png "Search on page")
 

@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Manage websites
 
-A website is the core entity of portals application. A portal application selects a single Website record, and this determines what portal entities such as [web pages](web-page.md), [web files](web-files.md), [web roles](create-web-roles.md), and [content snippets](customize-content-snippets.md) are applicable to this application.
+A website is the core table of portals application. A portal application selects a single Website record, and this determines what portal entities such as [web pages](web-page.md), [web files](web-files.md), [web roles](create-web-roles.md), and [content snippets](customize-content-snippets.md) are applicable to this application.
 
 With a website providing an application scope, multiple distinct portal applications can be connected to a single organization.
 

@@ -85,7 +85,7 @@ Hello, stranger.
 [Iteration tags](iteration-tags.md)<br>
 [Variable tags](variable-tags.md)<br>
 [Template tags](template-tags.md)<br>
-[Dataverse entity tags](portals-entity-tags.md)
+[Dataverse table tags](portals-entity-tags.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

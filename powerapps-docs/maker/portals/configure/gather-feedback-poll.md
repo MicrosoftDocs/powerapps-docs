@@ -16,10 +16,10 @@ Polls give your web audiences a quick and easy way to voice their opinion on spe
 
 Use the polls capability of portals to ask your audience about topics of interest and let them give single answers or multiple-choice responses. Either way, their responses are instantly stored and associated with the applicable Contact record for immediate review or aggregate reporting. You can use polls as simple market research tools and, if you refresh or rotate the polls dynamically, you'll keep your website looking current and topical.
 
-Polls can be placed on the portal by using the PollPlacement control. This control works similarly to the AdPlacement control. If there are any polls associated with the Poll Placement entity that is being rendered by the PollPlacement control, those polls will be rendered. If there is more than one poll for a given placement, the placement will randomly present one of the specified polls.
+Polls can be placed on the portal by using the PollPlacement control. This control works similarly to the AdPlacement control. If there are any polls associated with the Poll Placement table that is being rendered by the PollPlacement control, those polls will be rendered. If there is more than one poll for a given placement, the placement will randomly present one of the specified polls.
 
 > [!Note]
-> Users can vote anonymously. Duplicate votes are not permitted. Basic information about submissions can be tracked, and users who sign in to the website will have their submissions linked to the Contact entity that tracks that user in Microsoft Dataverse.
+> Users can vote anonymously. Duplicate votes are not permitted. Basic information about submissions can be tracked, and users who sign in to the website will have their submissions linked to the Contact table that tracks that user in Microsoft Dataverse.
 
 ## Add a poll to the page
 
@@ -32,7 +32,7 @@ or
 `{% include 'Poll Template' ad:ads[Wireframe Development] %}`
 
 > [!Note]
-> Example web templates are configured in the starter websites. You can use the Random Poll template to display a random poll from a particular Poll Placement entity, or you can use the Poll Template template to display a specific poll. You can edit these templates or follow their example and create your own by using [Polls](../liquid/liquid-objects.md#polls). 
+> Example web templates are configured in the starter websites. You can use the Random Poll template to display a random poll from a particular Poll Placement table, or you can use the Poll Template template to display a specific poll. You can edit these templates or follow their example and create your own by using [Polls](../liquid/liquid-objects.md#polls). 
 
 ## Create a poll placement
 
@@ -46,7 +46,7 @@ To create a new poll placement region:
 
 4. Select the associated **Website**, give the placement a name, and&mdash;optionally&mdash;select the [web templates](../liquid/store-content-web-templates.md) that will control how it is rendered.
 
-5. After the placement has been created, you must associate one or more polls with this placement. On the **Polls** tab of the Poll Placement entity, select **Add Existing Poll**. 
+5. After the placement has been created, you must associate one or more polls with this placement. On the **Polls** tab of the Poll Placement table, select **Add Existing Poll**. 
 
 6. In the resulting lookup box, select an existing poll record or create a new poll by selecting **New Poll**.
   
@@ -107,7 +107,7 @@ Users can vote only one time; after this, if the poll is displayed, they will se
 > [!div class=mx-imgBorder]
 > ![Poll votes](../media/poll-votes.png "Poll votes")  
 
-The details of the poll voting results are stored in Dataverse as Poll Submission records. The Poll Submission entity contains the following information:
+The details of the poll voting results are stored in Dataverse as Poll Submission records. The Poll Submission table contains the following information:
 
 | Name        | Description                                                                                   |
 |-------------|-----------------------------------------------------------------------------------------------|

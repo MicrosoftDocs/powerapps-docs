@@ -90,15 +90,15 @@ If portal reset and reprovision doesn't solve this issue, contact Microsoft supp
 
 Any data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Dataverse environment is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata table of portal, for example, web pages, web files, content snippet, site setting, and so on, it's advised to clear cache manually or restart the portal from Power Apps Portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](clear-server-side-cache.md). 
 
-However, if you're seeing stale data for a long time in non-portal metadata entities, it can be because of variety of issues listed below:
+However, if you're seeing stale data for a long time in non-portal metadata tables, it can be because of variety of issues listed below:
 
 ### Entities not enabled for cache invalidation
 
-If you're seeing stale data only for certain entities and not for everything, this can be because the Change Tracking metadata isn't enabled on that specific entity.
+If you're seeing stale data only for certain tables and not for everything, this can be because the Change Tracking metadata isn't enabled on that specific entity.
 
-If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities that are referenced on portal in list or basic forms and advanced forms and aren't enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
+If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the tables that are referenced on portal in list or basic forms and advanced forms and aren't enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
 
-If you're experiencing stale data issue in any of these entities, you can enable change tracking by using Power Apps Portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for a table](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
+If you're experiencing stale data issue in any of these tables, you can enable change tracking by using Power Apps Portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for a table](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
 
 ### Organization not enabled for change tracking
 
@@ -369,11 +369,11 @@ To fix this issue, ensure that the publishing state **Published** is available a
 
 To fix this issue, ensure that the publishing state **Published** has the **isVisible** check box is selected.
 
-## List of entities with search result having invalid URL
+## List of tables with search result having invalid URL
 
 To fix this issue, ensure that your table has appropriate security permission.
 
-## List of entities with CMS security check failed
+## List of tables with CMS security check failed
 
 To fix this issue, ensure that your table has proper search page.
 

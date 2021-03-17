@@ -40,7 +40,7 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
 
 #### Sample JSON for creating related table records in one operation
 
-For example, the following request body posted to the Account table set will create a total of four new entities&mdash;including the account&mdash;in the context of creating the account.
+For example, the following request body posted to the Account table set will create a total of four new tables&mdash;including the account&mdash;in the context of creating the account.
 
 - A contact is created because it's defined as an object property of the single-valued navigation property primarycontactid.
 - An opportunity is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property opportunity_customer_accounts.
@@ -107,7 +107,7 @@ For example, the following request body posted to the Account table set will cre
 
 `documentbody` will contain the attachment as a base64 string.
 
-## Update and delete entities by using the Web API
+## Update and delete tables by using the Web API
 
 ### Basic update
 
@@ -173,7 +173,7 @@ For example, the following request body posted to the Account table set will cre
   </tr>
 </table>
 
-## Associate and disassociate entities by using the Web API
+## Associate and disassociate tables by using the Web API
 
 ### Add a reference to a collection-valued navigation property
 
@@ -239,15 +239,15 @@ For a single-valued navigation property, remove the $id query string parameter.
   </tr>
 </table>
 
-### Associate entities on create
+### Associate tables on create
 
-New entities can be created with relationships by using *deep* insert.
+New tables can be created with relationships by using *deep* insert.
 
-### Associate entities on update by using a single-valued navigation property
+### Associate tables on update by using a single-valued navigation property
 
-You can associate entities on update by using the same message described in [Basic update](#basic-update), earlier in this topic, but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity by using the customerid_account single-valued navigation property.
+You can associate tables on update by using the same message described in [Basic update](#basic-update), earlier in this topic, but you must use the `@odata.bind` annotation to set the value of a single-valued navigation property. The following example changes the account associated to an opportunity by using the customerid_account single-valued navigation property.
 
-### Associate entities on update by using a single-valued navigation property
+### Associate tables on update by using a single-valued navigation property
 
 <table style="text-align:left">
   <tr>
@@ -257,7 +257,7 @@ You can associate entities on update by using the same message described in [Bas
     <th>JSON Sample</th>
   </tr>
   <tr>
-    <td>Associate entities on update by using a single-valued navigation property</td>
+    <td>Associate tables on update by using a single-valued navigation property</td>
     <td>PATCH</td>
     <td><i>[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)</i></td>
     <td><code>{"customerid_account@odata.bind":"[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000002)"}</code></td>

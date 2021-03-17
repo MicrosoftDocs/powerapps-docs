@@ -17,21 +17,21 @@ Power Apps portals has the ability to render&mdash;and allow the manipulation of
 ## Basic forms
 An basic form record allows an administrator to render a Power Apps form on a portal to edit, display, or capture a customizable set of data from its users. This is a relatively easy and straightforward process, and it eliminates the need for any code customizations that would have otherwise been required to achieve such a result before deploying a portal.
 
-This functionality can be taken advantage of for many reasons and use cases, but a common example of how this can be leveraged would be to build a new form under the Lead entity within the **Customize the System** interface, then create an basic form record that can be surfaced on the portal to capture lead data through a contact page or some type of information request page. In fact, this specific example is used for the default **Contact Us** page within portals by default. Other examples include using an basic form for profile management or a single page survey.
+This functionality can be taken advantage of for many reasons and use cases, but a common example of how this can be leveraged would be to build a new form under the Lead table within the **Customize the System** interface, then create an basic form record that can be surfaced on the portal to capture lead data through a contact page or some type of information request page. In fact, this specific example is used for the default **Contact Us** page within portals by default. Other examples include using an basic form for profile management or a single page survey.
 
 ![Contact Us Advanced Form on the left, and its rendering in the portal on the right side.](media/contact-us-web-form.png "A Contact Us advanced form next to its rendering in the portal")
 
 Basic forms contain relationships to webpages and additional properties to control the initialization of the form within the portal. The relationship to a webpage allows dynamic retrieval of the form definition for a given page node within the portal website.
 
-When you create a new basic form, the first step is to decide which entity and form name that you will be rendering and the mode: Insert, Edit, or Read Only. The mode you select will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
+When you create a new basic form, the first step is to decide which table and form name that you will be rendering and the mode: Insert, Edit, or Read Only. The mode you select will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
 
-For this demonstration, let’s consider a scenario in which Contoso, Inc. would like to create a custom entity in Power Apps linked to a form rendered on their [Customer Self-Service Portal](../portal-templates.md#environment-with-customer-engagement-apps) that will allow users to submit suggestions for improvement that they would like to see the company introduce. The steps that the administrator at Contoso, Inc. would take to achieve this include the following:
+For this demonstration, let’s consider a scenario in which Contoso, Inc. would like to create a custom table in Power Apps linked to a form rendered on their [Customer Self-Service Portal](../portal-templates.md#environment-with-customer-engagement-apps) that will allow users to submit suggestions for improvement that they would like to see the company introduce. The steps that the administrator at Contoso, Inc. would take to achieve this include the following:
 
-1. Create the custom entity using [Power Apps](https://make.powerapps.com). More information: [Create a table](../../data-platform/data-platform-create-entity.md). <br> In this example, we’ll call the entity “Suggestion.”
+1. Create the custom table using [Power Apps](https://make.powerapps.com). More information: [Create a table](../../data-platform/data-platform-create-entity.md). <br> In this example, we’ll call the table “Suggestion.”
 
-1. Create two custom fields underneath the Suggestion entity that pertain to the information that should be captured on the form.  In this example, we’ll create **SuggestionOrigin** (Option Set) and **SuggestionSummary** (Multiple Lines of Text) fields.  Both fields will be set to **Business Required**.
+1. Create two custom fields underneath the Suggestion table that pertain to the information that should be captured on the form.  In this example, we’ll create **SuggestionOrigin** (Option Set) and **SuggestionSummary** (Multiple Lines of Text) fields.  Both fields will be set to **Business Required**.
 
-3. [Create a new main form](../../model-driven-apps/create-edit-main-forms.md) underneath the Suggestion entity:
+3. [Create a new main form](../../model-driven-apps/create-edit-main-forms.md) underneath the Suggestion table:
    1. Insert a one-column tab, and change its section’s properties to two columns.  
 
    2. Add the custom fields in addition to the existing **Name** field.
@@ -76,7 +76,7 @@ Lists also support multiple views and actions. If more than one view has been sp
 
 Building on the previous example of the administrator of Contoso, Inc. creating an basic form to collect user suggestions, we will now cover the steps that the administrator would take to (very simplistically) expose the submitted records on the portal for other users to review and for easy access for submitting new ones:
 
-1. [Edit the view](../../model-driven-apps/create-edit-views-app-designer.md) named **Active Suggestions** for the **Suggestions** entity and dd the columns that should be exposed on the portal to this view.
+1. [Edit the view](../../model-driven-apps/create-edit-views-app-designer.md) named **Active Suggestions** for the **Suggestions** table and dd the columns that should be exposed on the portal to this view.
 
 1. Open [Portal Management app](configure-portal.md) > **Lists** and create a new List record.  
    1. Enter a name of **Suggestions List**, set its **Table Name** to **Suggestion (new_suggestion)**. 
@@ -92,7 +92,7 @@ Building on the previous example of the administrator of Contoso, Inc. creating 
 4. If you want, in the portal, edit the **Primary Navigation** and then select the **Add** button (+) to add a new web link to the list. Name the web link **Suggestions List** and assign it to the **Suggestions List** page. You can drag the previously created **Suggestions** form link underneath the new list link to become a child.
 
 Beyond the simplistic setup that was discussed earlier, Lists support many other options, including (but not limited to):
-- Allow users to filter and search the records within that respective entity on the portal.
+- Allow users to filter and search the records within that respective table on the portal.
 - Allow users to create, edit, or delete records, and download the records to an Excel Worksheet.
 - Allow users to execute an on-demand workflow against a record selected in the list.
 - Display the records from the list by using a Bing Maps view of the data 
@@ -102,13 +102,13 @@ Beyond the simplistic setup that was discussed earlier, Lists support many other
 
 Advanced Forms allow users to define basic forms and custom logic to render data entry forms on a portal without the need for custom code. Advanced forms support single-step and multiple-step navigation, in addition to branching logic. Advanced forms are commonly used to produce surveys, such as the out-of-the-box “Case Satisfaction Survey” advanced forms, or to facilitate requests, such as the out-of-the-box “Open New Support Request” advanced form.
 
-Advanced forms differ from basic forms in that they provide the ability for an administrator to specify one or more forms that are to be loaded to produce a single form or a wizard-style, multiple-step process with conditional branching logic. Advanced forms also have additional properties that can be specified to override some of the default behaviors and overcome some entity metadata and form designer limitations.
+Advanced forms differ from basic forms in that they provide the ability for an administrator to specify one or more forms that are to be loaded to produce a single form or a wizard-style, multiple-step process with conditional branching logic. Advanced forms also have additional properties that can be specified to override some of the default behaviors and overcome some table metadata and form designer limitations.
 
 The best way to fully grasp how a advanced form is used within a portal is to provide an example of a use case scenario, and then go through the process of constructing the form and all its underlying parts. Earlier in this document, we went through the process of creating a custom basic form for users to submit suggestions and a custom list to expose these suggestions within a view on the portal. Let’s now assume that Contoso wants to survey its users on which of the submitted suggestions they would prefer to be implemented, and other information about their user base at the same time. The steps that the administrator would take to set up such a survey on the portal would be as follows:
 
-1. Create a custom entity using [Power Apps](https://make.powerapps.com). More information: [Create a table](../../data-platform/data-platform-create-entity.md) <br>.  For this example, we’ll call the entity **Survey**.  
+1. Create a custom table using [Power Apps](https://make.powerapps.com). More information: [Create a table](../../data-platform/data-platform-create-entity.md) <br>.  For this example, we’ll call the table **Survey**.  
 
-3. Create several custom fields underneath the **Survey** entity to represent the answers that will be available for the user to choose on the survey:
+3. Create several custom fields underneath the **Survey** table to represent the answers that will be available for the user to choose on the survey:
 
     1. Three custom fields named **Extended Support Hours**, **New Products**, and **More Stores** for a multiple-choice question that the administrator has planned: “Which is your favorite suggestion for a future Contoso improvement?” Each field is set to a data type of **Two Options**.
 
@@ -117,7 +117,7 @@ The best way to fully grasp how a advanced form is used within a portal is to pr
     3. A custom field named **Contoso Ltd. Rating** of data type **Option Set**. For **Use Existing Option Set**, select **Yes** and from the drop-down list, select **Likert Scale Quality**.
     4. To track the current portal user filling out the survey, a custom field named **Regarding Contact** of data type **Lookup** and target record of **Contact**.
 
-4. Open the main **Information** form underneath the **Survey** entity, select the **General** tab, and then select **Change Properties**. On the **Formatting** tab, select **One Column**, and then select **OK**. More information: [Create or edit a form](../../model-driven-apps/create-edit-main-forms.md)
+4. Open the main **Information** form underneath the **Survey** table, select the **General** tab, and then select **Change Properties**. On the **Formatting** tab, select **One Column**, and then select **OK**. More information: [Create or edit a form](../../model-driven-apps/create-edit-main-forms.md)
 
 5. Switch to the **Insert** tab of the **Information** form, select **Section**, and choose **Two Columns**. Move the default Name and Owner fields to this section and delete the old one.  Open the properties of the Name field and clear the **Visible by default** option on the **Display** tab.
 
@@ -193,7 +193,7 @@ Granted, these steps are very complex and require several records to work in tan
 
 ![Second step in the survey form rendered on a portal.](media/survey-step-2-form-rendered.png "Second step in the survey form rendered on a portal.")
 
-Each completed survey that is submitted will become a record within the **Portals** > **Survey** entity, and this record will contain the contact who completed the advanced form along with all their responses for tabulation.
+Each completed survey that is submitted will become a record within the **Portals** > **Survey** table, and this record will contain the contact who completed the advanced form along with all their responses for tabulation.
 
 ## Form elements rendering
 

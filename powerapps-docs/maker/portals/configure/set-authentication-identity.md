@@ -26,7 +26,7 @@ The portals feature provides authentication functionality built on the [ASP.NET 
 - Invitation code sign-up for registering prepopulated contact records
 
 > [!NOTE]
-> The **Mobile Phone Confirmed** field on the Portal Contact form of the Contact entity currently serves no purpose. This field must be used only when upgrading from Adxstudio Portals.
+> The **Mobile Phone Confirmed** field on the Portal Contact form of the Contact table currently serves no purpose. This field must be used only when upgrading from Adxstudio Portals.
 
 ## Requirements
 

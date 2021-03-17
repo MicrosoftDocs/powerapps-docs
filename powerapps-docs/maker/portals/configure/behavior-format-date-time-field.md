@@ -16,7 +16,7 @@ In this article, you'll learn about working with Microsoft Dataverse fields, and
 
 ## Date and time
 
-In Microsoft Dataverse, the Date and Time data type is used in many system entity fields. For example, you can show when an account was last used in a marketing campaign, or show the date and time when a case was escalated. You can also create custom entities that include the date and time fields. Depending on what the field represents, you can choose one of the following field behaviors for portal forms and grids: 
+In Microsoft Dataverse, the Date and Time data type is used in many system table fields. For example, you can show when an account was last used in a marketing campaign, or show the date and time when a case was escalated. You can also create custom tables that include the date and time fields. Depending on what the field represents, you can choose one of the following field behaviors for portal forms and grids: 
 - **User Local**: The field values are displayed in the user’s local time and formatted as per their current portal language/locale. The values are stored in UTC time zone format in Dataverse. When a user in Dataverse (or another portal user) in a different time zone views that value, they see it converted to their own time zone.
 - **Date Only**: The field values only contain the date and are displayed with no time zone conversion. The time portion of the value is always 12:00 AM. The value entered by one user is seen the same by other users in different time zones (for example, birth dates).
   
