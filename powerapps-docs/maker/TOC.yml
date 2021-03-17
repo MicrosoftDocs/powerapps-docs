@@ -1289,20 +1289,6 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-  - name: Transition to Unified Interface
-    items:
-    - name: Transition quick start
-      href: ./model-driven-apps/transition-web-app.md
-    - name: Use an existing environment to transition quick start
-      href: ./model-driven-apps/transition-web-app-existing.md
-    - name: Unified Interface Playbook
-      href: ./model-driven-apps/unified-interface-playbook.md
-    - name: Approaching a Unified Interface transition
-      href: ./model-driven-apps/approaching-unified-interface.md
-    - name: "Checklist: Unified Interface transition"
-      href: ./model-driven-apps/checklist-transition-unified-interface.md
-    - name: "FAQs: Unified Interface transition"
-      href: ./model-driven-apps/faqs-transition-unified-interface.md
   - name: Model-driven app FAQ
     href: ./model-driven-apps/model-app-faq.md
   - name: Accessibility in Power Apps app designer
