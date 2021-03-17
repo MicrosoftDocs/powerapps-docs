@@ -40,7 +40,7 @@ In this walkthrough, you will set up a simple table in an external SQL Server to
 
 There are three steps to enable a custom data provider to create a virtual table.
 
-[Step 1: Implementing CRUD plug-ins and registering the assembly in Microsoft Dataverse](#step-1-implementing-crud-plugins-and-registering-the-assembly)
+[Step 1: Implementing CRUD plug-ins and registering the assembly](#step-1-implementing-crud-plug-ins-and-registering-the-assembly)
 
 [Step 2: Creating  data provider and adding plug-ins to the provider](#step-2-creating-data-provider-and-adding-plug-ins-to-the-provider)
 
