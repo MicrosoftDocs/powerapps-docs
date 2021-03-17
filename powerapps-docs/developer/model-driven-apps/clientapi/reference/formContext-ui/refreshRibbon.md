@@ -32,12 +32,16 @@ search.app:
 
 ## Remarks
 
- This function is typically used when a ribbon `<EnableRule>` (RibbonDiffXml) depends on a value in the form. After your code changes a value that is used by a rule, use this method to force the ribbon to re-evaluate the data in the form so that the rule can be applied.
+This function is used when a ribbon action `JavaScriptFunction` (RibbonDiffXml) changes the data in the form. For example, changing of state of the record via a ribbon action. After your code changes the data that is used by a rule, use this method to force the ribbon to reevaluate the data in the form so that the rule can be reapplied.
+
+## Guidance
+
+For optimal performance of your form loads, you should not use this function in `EnableRule` (RibbonDiffXml) or `onLoad` (FormXml). The form load itself triggers rules violation of all the ribbon actions and you should use promises and asynchronous pattern in `EnableRule` to control the visibility of a ribbon action.
+
 
 ### Related topics
 
-[formContext.ui](../formContext-ui.md)
-
+[formContext.ui](../formContext-ui.md)      
 [formContext](../../clientapi-form-context.md)
 
 
