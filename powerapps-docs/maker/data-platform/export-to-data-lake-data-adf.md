@@ -1,5 +1,6 @@
 ---
 title: "Ingest Microsoft Dataverse data with Azure Data Factory | MicrosoftDocs"
+description: Learn how to use Azure Data Factory to create dataflows, transform, and run analysis on Dataverse data
 ms.custom: ""
 ms.date: 07/29/2020
 ms.reviewer: "matp"
@@ -18,8 +19,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - sama-zaki
 ---
-
 # Ingest exported Microsoft Dataverse data with Azure Data Factory
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
