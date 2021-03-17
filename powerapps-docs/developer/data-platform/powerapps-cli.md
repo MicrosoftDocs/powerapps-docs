@@ -87,6 +87,7 @@ Command to work with solution packages. It has the following parameters:
 |-------------|-----------|-------|
 |init|Initializes a new package project. It has the following parameter: <br/> - *outputdirectory*: Output directly where the package is created.| `pac package init --outputdirectory c:/samplepackage`|
 |add-reference|Sets the reference path to the solution project folder by passing the `path` parameter.|`pac package add-reference --path c:\Users\Downloads\SampleSolution`|
+|show| shows the content of a package dll or a zip file with a package. <br/> It has the following parameter: <br/> - *package*: path to where the package library (dll) or the zip file| `pac package show c:\samplepackage.dll`|
 
 
 
