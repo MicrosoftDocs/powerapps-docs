@@ -39,7 +39,7 @@ The following data providers ship with Dataverse:
 - An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default. This provider supports create, read (retrieve, retrieve multiple), update and delete operations.
 - An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
-If a data provider cannot be found for your external data source, you can develop a *custom virtual entity data provider*; for more information, see [Virtual entity data providers](custom-ve-data-providers.md). Full CRUD operation is now supported for custom virutal entity data provider. Developers can implement plugins and register them using the Plugin Registration Tool for each of the CRUD operation supporting the virtual entity.
+If a data provider cannot be found for your external data source, you can develop a *custom virtual entity data provider*; for more information, see [Virtual entity data providers](custom-ve-data-providers.md). Full CRUD operation is now supported for custom virtual entity data provider. Developers can implement plugins and register them using the Plugin Registration Tool for each of the CRUD operation supporting the virtual entity.
 
 
 ## Virtual entity creation and mapping
