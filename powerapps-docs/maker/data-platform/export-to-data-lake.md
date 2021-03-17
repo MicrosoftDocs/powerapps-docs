@@ -19,6 +19,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - sama-zaki
 ---
 
 # Export table data to Azure Data Lake Storage Gen2
