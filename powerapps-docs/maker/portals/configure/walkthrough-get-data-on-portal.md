@@ -66,32 +66,32 @@ To add metadata records to an basic form, you can go to the **Basic Form Metadat
 
 Basic form metadata records can be used for a variety of scenarios, including controlling the style of a field, prepopulating a field with a specific value, setting values on the form upon save, validating user-entered values, and more.
 
-## Entity lists
+## Lists
 
-While an Basic form record allows a portal administrator to expose a Power Apps form to portal users, entity lists provide administrators with the ability to add a webpage to their portal that will render a list of records without the need for a developer to surface the view on the portal by using custom code.
+While an Basic form record allows a portal administrator to expose a Power Apps form to portal users, lists provide administrators with the ability to add a webpage to their portal that will render a list of records without the need for a developer to surface the view on the portal by using custom code.
 
-Entity lists support sorting and filtering and will be paginated if the number of records is larger than the **Page Size** value specified on the Entity List record. If a **Web Page for Details View** has also been specified, each record will contain a link to the page and the ID of the record will be appended to the query string along with the ID Query String Parameter Name.
+Lists support sorting and filtering and will be paginated if the number of records is larger than the **Page Size** value specified on the List record. If a **Web Page for Details View** has also been specified, each record will contain a link to the page and the ID of the record will be appended to the query string along with the ID Query String Parameter Name.
 
-Entity lists also support multiple views and actions. If more than one view has been specified, a drop-down menu will be rendered to the end user that allows them to toggle between various views. Likewise, if actions such as **Edit** or **Delete** have been added as action buttons, users with the correct permissions will see these options rendered in the view.
+Lists also support multiple views and actions. If more than one view has been specified, a drop-down menu will be rendered to the end user that allows them to toggle between various views. Likewise, if actions such as **Edit** or **Delete** have been added as action buttons, users with the correct permissions will see these options rendered in the view.
 
 Building on the previous example of the administrator of Contoso, Inc. creating an basic form to collect user suggestions, we will now cover the steps that the administrator would take to (very simplistically) expose the submitted records on the portal for other users to review and for easy access for submitting new ones:
 
 1. [Edit the view](../../model-driven-apps/create-edit-views-app-designer.md) named **Active Suggestions** for the **Suggestions** entity and dd the columns that should be exposed on the portal to this view.
 
-1. Open [Portal Management app](configure-portal.md) > **Entity Lists** and create a new Entity List record.  
+1. Open [Portal Management app](configure-portal.md) > **Lists** and create a new List record.  
    1. Enter a name of **Suggestions List**, set its **Entity Name** to **Suggestion (new_suggestion)**. 
 
    2. Add the default **Active Suggestions** view or the custom-created view to the **Views** list. 
 
    3. Set **Web Page for Create** to **Suggestions**, and add a create button or empty list text as needed.
 
-      ![Create an entity list](media/create-entity-list.png "Create an entity list")
+      ![Create an list](media/create-entity-list.png "Create an list")
 
-3. Using [portals Studio](../portal-designer-anatomy.md), create a new child page named **Suggestions List**. Set **Page Template** to **Full Page**, set **Entity List** to **Suggestions List**, and add an introduction to the exposed view.
+3. Using [portals Studio](../portal-designer-anatomy.md), create a new child page named **Suggestions List**. Set **Page Template** to **Full Page**, set **List** to **Suggestions List**, and add an introduction to the exposed view.
 
 4. If you want, in the portal, edit the **Primary Navigation** and then select the **Add** button (+) to add a new web link to the list. Name the web link **Suggestions List** and assign it to the **Suggestions List** page. You can drag the previously created **Suggestions** form link underneath the new list link to become a child.
 
-Beyond the simplistic setup that was discussed earlier, Entity Lists support many other options, including (but not limited to):
+Beyond the simplistic setup that was discussed earlier, Lists support many other options, including (but not limited to):
 - Allow users to filter and search the records within that respective entity on the portal.
 - Allow users to create, edit, or delete records, and download the records to an Excel Worksheet.
 - Allow users to execute an on-demand workflow against a record selected in the list.
@@ -104,7 +104,7 @@ Advanced Forms allow users to define basic forms and custom logic to render data
 
 Advanced forms differ from basic forms in that they provide the ability for an administrator to specify one or more forms that are to be loaded to produce a single form or a wizard-style, multiple-step process with conditional branching logic. Advanced forms also have additional properties that can be specified to override some of the default behaviors and overcome some entity metadata and form designer limitations.
 
-The best way to fully grasp how a advanced form is used within a portal is to provide an example of a use case scenario, and then go through the process of constructing the form and all its underlying parts. Earlier in this document, we went through the process of creating a custom basic form for users to submit suggestions and a custom entity list to expose these suggestions within a view on the portal. Let’s now assume that Contoso wants to survey its users on which of the submitted suggestions they would prefer to be implemented, and other information about their user base at the same time. The steps that the administrator would take to set up such a survey on the portal would be as follows:
+The best way to fully grasp how a advanced form is used within a portal is to provide an example of a use case scenario, and then go through the process of constructing the form and all its underlying parts. Earlier in this document, we went through the process of creating a custom basic form for users to submit suggestions and a custom list to expose these suggestions within a view on the portal. Let’s now assume that Contoso wants to survey its users on which of the submitted suggestions they would prefer to be implemented, and other information about their user base at the same time. The steps that the administrator would take to set up such a survey on the portal would be as follows:
 
 1. Create a custom entity using [Power Apps](https://make.powerapps.com). More information: [Create a table](../../data-platform/data-platform-create-entity.md) <br>.  For this example, we’ll call the entity **Survey**.  
 

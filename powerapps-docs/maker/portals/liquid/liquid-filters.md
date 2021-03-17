@@ -634,9 +634,9 @@ Mon, 07 May 2018 07:20:46 Z
 ```
 
 
-## Entity list filters
+## List filters
 
-Entity List filters are used to work with certain [entitylist](liquid-objects.md#entitylist) attribute values, and to help create entity list views.  
+List filters are used to work with certain [entitylist](liquid-objects.md#entitylist) attribute values, and to help create list views.  
 
 ### current\_sort
 

@@ -120,7 +120,7 @@ The details of the poll voting results are stored in Dataverse as Poll Submissio
 ### See also
 
 [Configure a portal](configure-portal.md)  
-[About entity lists](entity-lists.md)  
+[About lists](entity-lists.md)  
 [Create and run advertisements on a portal](create-run-advertisement.md)  
 [Rate or vote on a webpage on a portal](rate-webpage.md)  
 [Redirect to a new URL on a portal](add-redirect-url.md)  

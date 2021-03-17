@@ -86,7 +86,7 @@ landingContent:
         links:
           - text: Basic forms
             url: configure/entity-forms.md
-          - text: Entity lists
+          - text: Lists
             url: configure/entity-lists.md
           - text: Advanced forms
             url: configure/web-form-properties.md

@@ -53,7 +53,7 @@ To add list component:
 
     - **Number of records per page**: Enter the number of the records to display on a page.
 
-    - **Enable search in entity list**: Allows a user to search records in the list.
+    - **Enable search in list**: Allows a user to search records in the list.
 
     - **Enable entity permissions**: Entity permissions to be considered for the list. Not selected by default. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)  
 

@@ -12,9 +12,9 @@ ms.reviewer: tapanm
 
 # Search
 
-In Power Apps portals, you can search for records across multiple entities by using portal's global search functionality. You can also search within records of entity lists using entity list search functionality. 
+In Power Apps portals, you can search for records across multiple entities by using portal's global search functionality. You can also search within records of lists using list search functionality. 
 
-Entity list search functionality in the portal uses FetchXML in the backend to search the columns defined in the entity list and then display the results. 
+List search functionality in the portal uses FetchXML in the backend to search the columns defined in the list and then display the results. 
 
 Global search uses an external search index that is based on Lucene.Net and is used to search within multiple entities and fields at once.
 

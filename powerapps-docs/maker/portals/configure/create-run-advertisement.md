@@ -98,7 +98,7 @@ The Ad Entity has the following attributes:
 ### See also
 
 [Configure a portal](configure-portal.md)  
-[About entity lists](entity-lists.md)  
+[About lists](entity-lists.md)  
 [Create and run advertisements on a portal](create-run-advertisement.md)  
 [Gather feedback by using polls on a portal](gather-feedback-poll.md)  
 [Rate or vote on a webpage on a portal](rate-webpage.md)  

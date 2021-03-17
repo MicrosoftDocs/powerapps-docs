@@ -66,7 +66,7 @@ In this example, we've seen how we can combine Liquid, Web Templates, Power Apps
 ### See also
 
 [Create a custom page template by using Liquid and a web template page template](create-custom-template.md)  
-[Render the entity list associated with the current page](render-entity-list-current-page.md)  
+[Render the list associated with the current page](render-entity-list-current-page.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
 

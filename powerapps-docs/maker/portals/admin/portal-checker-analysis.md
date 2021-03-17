@@ -96,7 +96,7 @@ However, if you're seeing stale data for a long time in non-portal metadata enti
 
 If you're seeing stale data only for certain entities and not for everything, this can be because the Change Tracking metadata isn't enabled on that specific entity.
 
-If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities that are referenced on portal in entity list or basic forms and advanced forms and aren't enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
+If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities that are referenced on portal in list or basic forms and advanced forms and aren't enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
 
 If you're experiencing stale data issue in any of these entities, you can enable change tracking by using Power Apps Portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
 

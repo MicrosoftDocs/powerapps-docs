@@ -179,7 +179,7 @@ Another scenario that often occurs while developing a portal is an error generat
 To display custom plugin errors, create the site setting `Site/EnableCustomPluginError` and set its value to True. The custom plugin errors will be displayed on the screen instead of a generic error. The error will display only the message part of the plugin error and not the complete stack trace.
 
 Following are the screens where custom plugin errors will appear: 
-- Entity list 
+- List 
     - Retrieval of records 
 - Basic form 
     - Retrieve 

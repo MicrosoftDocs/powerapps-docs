@@ -249,7 +249,7 @@ This example renders a type of hybrid navigation, based on the portal site map, 
 
 [Create a custom page template by using Liquid and a web template page template](create-custom-template.md)  
 [Create a custom page template to render an RSS feed](render-rss-custom-page-template.md)  
-[Render the entity list associated with the current page](render-entity-list-current-page.md)  
+[Render the list associated with the current page](render-entity-list-current-page.md)  
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 
 

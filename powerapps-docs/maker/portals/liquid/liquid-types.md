@@ -75,7 +75,7 @@ An array holds a list of values of any type. You can access a given item by (zer
 
 {% if entitylist.views.size > 0 %}
 
-This entity list has {{ entitylist.views.size }} views.
+This list has {{ entitylist.views.size }} views.
 
 {% endif %}
 ```
