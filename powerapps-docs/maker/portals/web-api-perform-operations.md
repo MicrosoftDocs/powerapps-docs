@@ -411,25 +411,25 @@ Before you can use the portals Web API, you have to enable the required site set
 
 ### Step 2 - Configure permissions
 
-You'll have to configure permissions so that users are able to use the Web API feature. In this example, you'll enable the Contact entity for entity permissions, create a web role for using the Web API, add the entity permissions for the Contact entity to this web role, and then add the web role to users to allow them to use the Web API.
+You'll have to configure permissions so that users are able to use the Web API feature. In this example, you'll enable the Contact entity for table permissions, create a web role for using the Web API, add the table permissions for the Contact entity to this web role, and then add the web role to users to allow them to use the Web API.
 
-1. In the **Portal Management** app on the left pane, select **Entity Permissions**.
+1. In the **Portal Management** app on the left pane, select **Table Permissions**.
 
 1. Select **New**.
 
-1. In the **Name** box, enter **Contact Entity Permission**.
+1. In the **Name** box, enter **Contact Table Permission**.
 
-1. In the **Entity Name** list, select **Contact (contact)**.
+1. In the **Table Name** list, select **Contact (contact)**.
 
 1. In the **Website** list, select your website record.
 
-1. In the **Scope** list, select **Global**.
+1. In the **Access Type** list, select **Global**.
 
 1. Select **Read**, **Write**, **Create**, and **Delete** privileges.
 
 1. Select **Save & Close**.
 
-    ![Entity permissions](media/web-api/entity-permissions.png "Entity permissions")
+    ![Table permissions](media/web-api/entity-permissions.png "Table permissions")
 
 1. On the left pane, select **Web Roles** .
 
@@ -445,21 +445,21 @@ You'll have to configure permissions so that users are able to use the Web API f
 
 1. Select **Save**.
 
-1. Select **Related** > **Entity Permissions**.
+1. Select **Related** > **Table Permissions**.
 
-    ![Related entity permissions](media/web-api/related-entity-permissions.png "Related entity permissions")
+    ![Related table permissions](media/web-api/related-entity-permissions.png "Related table permissions")
 
-1. Select **Add Existing Entity Permission**.
+1. Select **Add Existing Table Permission**.
 
-1. Select **Contact Entity Permission**, created earlier.
+1. Select **Contact Table Permission**, created earlier.
 
 1. Select **Add**.
 
-    ![Add Contact Entity Permission to Web API User Web Role](media/web-api/add-contact-entity-permission.png "Add Contact Entity Permission to Web API User Web Role")
+    ![Add Contact Table Permission to Web API User Web Role](media/web-api/add-contact-entity-permission.png "Add Contact Table Permission to Web API User Web Role")
 
 1. Select **Save & Close**.
 
-    ![Web API User Web Role Entity Permissions](media/web-api/web-api-user-role-entity-permissions.png "Web API User Web Role Entity Permissions")
+    ![Web API User Web Role Table Permissions](media/web-api/web-api-user-role-entity-permissions.png "Web API User Web Role Table Permissions")
 
 1. On the left pane, select **Contacts**.
 

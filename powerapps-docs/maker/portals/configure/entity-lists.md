@@ -37,7 +37,7 @@ When creating or editing a webpage, you can specify an list in the lookup field 
 |              Name              |                                                                                                                                                                                        Description                                                                                                                                                                                         |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |              Name              |                                                                                                                                                                The descriptive name of the record. This field is required.                                                                                                                                                                 |
-|          Entity Name           |                                                                                                                                               The name of the entity from which the Saved Query view will be loaded. This field is required.                                                                                                                                               |
+|          Table Name           |                                                                                                                                               The name of the entity from which the Saved Query view will be loaded. This field is required.                                                                                                                                               |
 |              View              |                                                                          The Saved Query view(s) of the target entity that is to be rendered. This field is required. If more than one view has been specified, the webpage will contain a drop-down list to allow the user to switch between the various views.                                                                           |
 |           Page Size            |                                                                                                                                            An integer value that specifies the number of records per page. This field is required. Default: 10                                                                                                                                             |
 |   Web Page for Details View    |                                                                                                        An optional webpage that can be linked to for each record. The ID Query String Parameter Name and record ID will be appended to the query string of the URL to this webpage.                                                                                                        |
@@ -97,12 +97,12 @@ These settings are found in the Configuration section of the list form. By defau
 |---------------------------|-----------|
 |**Basic Settings**         |   |
 | View Actions              |Use to add action buttons for actions that are applicable for the entity set and will appear above the grid. The available actions are: <ul><li>Create</li> <li>Download</li></ul> Selecting one of these options displays a configuration area for that action.|
-| Items Actions             |Use to add action buttons for actions that are applicable for an individual record and will appear for each row in the grid, provided the appropriate privilege has been granted by Entity Permissions. The actions generally available are:<ul><li>Details</li><li>Edit</li><li>Delete</li><li>Workflow</li><li>Activate</li><li>Deactivate</li></ul> Selecting one of these options displays a configuration area for that action. See below for details about each action. Furthermore, certain entities have special actions that are available to them on a per-entity basis:<ul><li>Calculate Value of Opportunity (opportunity)</li><li>Cancel Case action (incident)</li><li>Close (resolve) Case action (incident)</li><li>Convert Quote to Order (quote)</li><li>Convert Order to Invoice (salesorder)</li><li>Generate Quote from Opportunity (opportunity)</li><li>Lose Opportunity action (opportunity)</li><li>Win Opportunity action (opportunity)</li><li>Reopen Case action (incident)</li><li>Set Opportunity on Hold (opportunity)</li></ul>|
+| Items Actions             |Use to add action buttons for actions that are applicable for an individual record and will appear for each row in the grid, provided the appropriate privilege has been granted by Table Permissions. The actions generally available are:<ul><li>Details</li><li>Edit</li><li>Delete</li><li>Workflow</li><li>Activate</li><li>Deactivate</li></ul> Selecting one of these options displays a configuration area for that action. See below for details about each action. Furthermore, certain entities have special actions that are available to them on a per-entity basis:<ul><li>Calculate Value of Opportunity (opportunity)</li><li>Cancel Case action (incident)</li><li>Close (resolve) Case action (incident)</li><li>Convert Quote to Order (quote)</li><li>Convert Order to Invoice (salesorder)</li><li>Generate Quote from Opportunity (opportunity)</li><li>Lose Opportunity action (opportunity)</li><li>Win Opportunity action (opportunity)</li><li>Reopen Case action (incident)</li><li>Set Opportunity on Hold (opportunity)</li></ul>|
 | Override Column Attributes|Use to override display settings for individual columns in the grid.<ul><li>Attribute: Logical name of the column you want to override</li><li>Display Name: New column title to override the default</li><li>Width: Width (in either percent or pixels) of the column to override the default. See also Grid Column Width Style</li></ul> To override settings on a column, select **+ Column** and fill in the details.|
 |**Advanced Settings**      |  |
 | Loading Message           |Overrides the default HTML message that appears while the grid is loading.|
 | Error Message             |Overrides the default HTML message that appears when an error occurs while loading the grid.|
-| Access Denied Message     |Overrides the default HTML message that appears when a user does not have sufficient Entity Permissions to view the list.|
+| Access Denied Message     |Overrides the default HTML message that appears when a user does not have sufficient Table Permissions to view the list.|
 | Empty Message             |Overrides the HTML message that appears when the grid contains no data.|
 | Details Form Dialog       |Controls the settings for the dialog box that appears when a user activates the Details action.|
 | Edit Form Dialog          |Controls the settings for the dialog box that appears when a user activates the Edit action.|
@@ -115,7 +115,7 @@ These settings are found in the Configuration section of the list form. By defau
 
 **General action settings**
 
-In general, Entity actions have settings that can be configured. In all cases, this is to give you more options in terms of customization, and the fields are not required. Simply adding the action will allow the action to be taken on the portal, provided the appropriate privilege has been granted by Entity Permissions.
+In general, Entity actions have settings that can be configured. In all cases, this is to give you more options in terms of customization, and the fields are not required. Simply adding the action will allow the action to be taken on the portal, provided the appropriate privilege has been granted by Table Permissions.
 
 Generally, you can configure the corresponding dialog box for each action, which will appear only if you select **Confirmation Required**.
 
@@ -148,7 +148,7 @@ Generally, you can configure the corresponding dialog box for each action, which
 
 **Create action settings**
 
-Enabling a **Create Action** renders a button above the list that, when selected, opens a dialog box with an basic form that the user can use to create a new record, provided the Create privilege has been granted by Entity Permissions.
+Enabling a **Create Action** renders a button above the list that, when selected, opens a dialog box with an basic form that the user can use to create a new record, provided the Create privilege has been granted by Table Permissions.
 
 | Name               | Description                          |
 |--------------------|--------------------------------------|
@@ -208,7 +208,7 @@ Enabling a **Details Action** allows a user to view a read-only basic form of a 
 
 **Edit action settings**
 
-Enabling an **Edit Action** allows a user to view an editable basic form that is data-bound to the record of the selected row from the list, provided the Write privilege has been granted by Entity Permissions.
+Enabling an **Edit Action** allows a user to view an editable basic form that is data-bound to the record of the selected row from the list, provided the Write privilege has been granted by Table Permissions.
 
 
 |                 Name                  |                                                                                                                                                                                                             Description                                                                                                                                                                                                             |
@@ -233,7 +233,7 @@ Enabling an **Edit Action** allows a user to view an editable basic form that is
 
 **Delete action settings**
 
-Enabling a **Delete Action** allows a user to permanently delete the record of the selected row from the list, provided the Delete privilege has been granted by Entity Permissions.
+Enabling a **Delete Action** allows a user to permanently delete the record of the selected row from the list, provided the Delete privilege has been granted by Table Permissions.
 
 | Name              | Description                                                                                                                         |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -273,7 +273,7 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 
 ## Securing lists
 
-To secure an list, you must configure Entity Permissions for the entity for which records are being displayed and also set the **Enable Entity Permissions** Boolean value on the list record to true.
+To secure an list, you must configure Table Permissions for the entity for which records are being displayed and also set the **Enable Table Permissions** Boolean value on the list record to true.
 
 The act of securing an list will ensure that for any user who accesses the page, only records that they have been given permission to are shown. This is achieved by an additional filter being added to the model-driven app views that are being surfaced via the list. This filter will filter only for records that are accessible to the user, via **Read** permission.
 
@@ -281,7 +281,7 @@ In addition, any actions that are defined for the list will respect the correspo
 
 However, good website design requires that if a user is not in a role that has any permissions for the entity (that is, there will never be a situation where they should see any records), they should not have access to the page at all. Ideally, the page should be protected by using Webpage Access Permissions.
 
-If you have secured an list by selecting **Enable Entity Permissions**, and want to display the records level actions that are applicable to the signed in user, you must set the value of **EntityList/ShowRecordLevelActions** site setting to **true**. For example, there are two users: Preston and Teddy. Preston has contact level all access on the Case entity, whereas Teddy has global read access. If an list is created to show all the case records, Preston would see all actions (View, Edit, and Delete) on the records that are related his contact. On other records, he would only see the **View** action. On the other hand, Teddy would only see the **View** action on all records.
+If you have secured an list by selecting **Enable Table Permissions**, and want to display the records level actions that are applicable to the signed in user, you must set the value of **EntityList/ShowRecordLevelActions** site setting to **true**. For example, there are two users: Preston and Teddy. Preston has contact level all access on the Case entity, whereas Teddy has global read access. If an list is created to show all the case records, Preston would see all actions (View, Edit, and Delete) on the records that are related his contact. On other records, he would only see the **View** action. On the other hand, Teddy would only see the **View** action on all records.
 
 If the **EntityList/ShowRecordLevelActions** site setting is set to **false** and the entity has multiple permissions, all the record level actions are visible. But, when a user tries to perform an action that he is not authorized to, an error is displayed.
 
@@ -499,11 +499,11 @@ To display records by using a calendar, those records need to include at a minim
 If enabled, an entity can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
 > [!CAUTION]
-> Use caution when enabling OData feeds without entity permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Entity Permissions** is disabled.
+> Use caution when enabling OData feeds without table permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Table Permissions** is disabled.
 
 ## Enhanced view filter for lists
 
-You can use Entity Permissions if you want to secure records, but if you want to simply provide a filter as part of the set of filter options that is relevant to the current portal user, you can use the List feature. This feature supports filtering of the current user, user's parent account, or website at any depth. Simply build the view filter to match any single contact record and the code will replace its value with the actual value at runtime&mdash;no need to assign values to fields in the Filter Conditions section.
+You can use Table Permissions if you want to secure records, but if you want to simply provide a filter as part of the set of filter options that is relevant to the current portal user, you can use the List feature. This feature supports filtering of the current user, user's parent account, or website at any depth. Simply build the view filter to match any single contact record and the code will replace its value with the actual value at runtime&mdash;no need to assign values to fields in the Filter Conditions section.
 
 - The control will find all condition elements where uitype="contact" and set the value to the actual value of the current portal user's contact ID.
 - The control will find all condition elements where uitype="account" and set the value to the actual value of the current portal user's parent account ID.

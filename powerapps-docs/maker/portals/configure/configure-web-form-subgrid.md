@@ -14,7 +14,7 @@ ms.reviewer: tapanm
 
 Advanced form subgrids are configured in an identical fashion to basic form subgrids: first, create a metadata record for the Advanced form step that has a subgrid, and then add configuration metadata.
 
-Adding subgrids to your managed forms on the portal is easy—just add the subgrid to the form that you are managing by using the out-of-the-box form designer, and you’re done. The grid will use the view that is specified in Microsoft Dataverse form designer, show only related records if that option was chosen, optionally show a search bar, and even respect [entity permissions for portals](assign-entity-permissions.md). It doesn't get any simpler to display a read-only list of records. To enable actions for the grid— Create, Update, Delete, and so on—you must configure those actions by using metadata configuration.
+Adding subgrids to your managed forms on the portal is easy—just add the subgrid to the form that you are managing by using the out-of-the-box form designer, and you’re done. The grid will use the view that is specified in Microsoft Dataverse form designer, show only related records if that option was chosen, optionally show a search bar, and even respect [table permissions for portals](assign-entity-permissions.md). It doesn't get any simpler to display a read-only list of records. To enable actions for the grid— Create, Update, Delete, and so on—you must configure those actions by using metadata configuration.
 
 ## Add subgrid metadata to your form
 
@@ -44,7 +44,7 @@ By default, most settings are shown collapsed to save space. Select **** to expa
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Basic Settings**         |                                                                                                                                                                                                                                                                                                                                                                           |
 | View Actions               | Use to add action buttons for actions that are applicable for the entity set and will appear above the subgrid. The available actions are: <ul><li>Create</li><li>Download</li><li>Associate</li></ul> Selecting one of these options displays a configuration area for that action. See below for details about each action.                                                                                                                                                                                                                                                   |
-| Item Actions               | Use to add action buttons for actions that are applicable for an individual record and will appear in each row in the subgrid, provided the associated privilege has been granted by [Entity Permissions](assign-entity-permissions.md). The available actions are: <ul><li>Details</li><li>Edit</li><li>Delete</li><li>Workflow</li><li>Disassociate</li></ul> Selecting on one of these options displays a configuration area for that action. See below for details about each action.                                                                                                                                                                                                                                                   |
+| Item Actions               | Use to add action buttons for actions that are applicable for an individual record and will appear in each row in the subgrid, provided the associated privilege has been granted by [Table Permissions](assign-entity-permissions.md). The available actions are: <ul><li>Details</li><li>Edit</li><li>Delete</li><li>Workflow</li><li>Disassociate</li></ul> Selecting on one of these options displays a configuration area for that action. See below for details about each action.                                                                                                                                                                                                                                                   |
 | Override Column Attributes | Use to override display settings for individual columns in the grid. <ul><li>Attribute: Logical name of the column you want to override.</li><li>Display Name: New column title to override the default</li><li>Width: Width (in either percent or pixels) of the column to override the default. See also Grid Column Width Style. To override settings on a column, select **Column** and fill in the details.                                                                                                                                                                                                                                                                                             |
 | **Advanced Settings**      |                                                                                                                                                                                                                                                                                                                                                                           |
 | Loading Message            | Overrides the default HTML message that appears while the subgrid is loading.                                                                                                                                                                                                                                                                                             |
@@ -105,7 +105,7 @@ Enabling a **Download action** renders a button above the subgrid that, when sel
 
 ## Associate action
 
-Enabling an **Associate action** displays a button above the subgrid that, when selected, opens a table of entities that the user can choose to associate to the entity record currently being displayed by the [basic form](entity-forms.md), provided the Append and AppendTo privileges have been granted by [Entity Permissions](assign-entity-permissions.md) for the applicable entity types.  
+Enabling an **Associate action** displays a button above the subgrid that, when selected, opens a table of entities that the user can choose to associate to the entity record currently being displayed by the [basic form](entity-forms.md), provided the Append and AppendTo privileges have been granted by [Table Permissions](assign-entity-permissions.md) for the applicable entity types.  
 
 ### Associate action settings
 
@@ -142,7 +142,7 @@ Enabling an **Associate action** displays a button above the subgrid that, when 
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Loading Message       | Overrides the message that appears while the grid of entities is loading.                                                |
 | Error Message         | Overrides the message that appears when an error occurs while loading the grid of entities.                               |
-| Access Denied Message | Overrides the message that appears when a user does not have sufficient entity permissions to view the grid of entities. |
+| Access Denied Message | Overrides the message that appears when a user does not have sufficient table permissions to view the grid of entities. |
 | Empty Message         | Overrides the message that appears when there are no entities that can be associated with the current basic form.       |
 | CSS Class             | Specify a CSS class or classes that will be applied to the associate grid area.                                          |
 | Grid CSS Class        | Specify a CSS class or classes that will be applied to the associate grid's &lt;table&gt; element.                       |
@@ -178,7 +178,7 @@ Enabling a **Details action** allows a user to view a read-only [basic form](ent
 
 ## Edit action
 
-Enabling an **Edit action** allows a user to view an editable [basic form](entity-forms.md) that is data-bound to the record of the subgrid's selected row, if the Write privilege has been granted by [Entity Permissions](assign-entity-permissions.md).  
+Enabling an **Edit action** allows a user to view an editable [basic form](entity-forms.md) that is data-bound to the record of the subgrid's selected row, if the Write privilege has been granted by [Table Permissions](assign-entity-permissions.md).  
 
 ### Edit action settings
 
@@ -206,7 +206,7 @@ Enabling an **Edit action** allows a user to view an editable [basic form](entit
 
 ## Delete action
 
-Enabling a **Delete action** allows a user to permanently delete the entity represented by a row in the subgrid, if the Delete privilege has been granted by [Entity Permissions](assign-entity-permissions.md).  
+Enabling a **Delete action** allows a user to permanently delete the entity represented by a row in the subgrid, if the Delete privilege has been granted by [Table Permissions](assign-entity-permissions.md).  
 
 ### Delete action settings
 
@@ -252,7 +252,7 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 
 ## Disassociate action
 
-Enabling a **Disassociate action** allows a user to remove the link between the record represented by the currently viewed [basic form](entity-forms.md) and the record represented by the selected row in the subgrid, as long as the Append and AppendTo privileges have been granted by [Entity Permissions](assign-entity-permissions.md) for the applicable entity types.
+Enabling a **Disassociate action** allows a user to remove the link between the record represented by the currently viewed [basic form](entity-forms.md) and the record represented by the selected row in the subgrid, as long as the Append and AppendTo privileges have been granted by [Table Permissions](assign-entity-permissions.md) for the applicable entity types.
 
 ### Disassociate action settings
 

@@ -216,7 +216,7 @@ You then set **Right** to **Restrict Read** and **Web Page** to the page at the 
 ### See also
 
 [Create web roles for portals](create-web-roles.md)  
-[Add record-based security using entity permissions for portals](assign-entity-permissions.md)
+[Add record-based security using table permissions for portals](assign-entity-permissions.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

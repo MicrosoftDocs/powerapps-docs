@@ -64,5 +64,5 @@ To add website access permission to a web role, just create a new Website Access
 
 ### See also
 [Control webpage access for portals](../configure/webpage-access-control.md)  
-[Add record-based security using entity permissions for portals](../configure/assign-entity-permissions.md)  
+[Add record-based security using table permissions for portals](../configure/assign-entity-permissions.md)  
 [Create web roles for portals](../configure/create-web-roles.md)  

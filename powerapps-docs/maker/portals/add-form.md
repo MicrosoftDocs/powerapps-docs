@@ -64,7 +64,7 @@ To add a form component:
 
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it isn't selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)
+    - **Enable table permissions**: Table permissions to be considered for the form. By default, it isn't selected. If selected, explicit permissions are required for any user to access the form. More information: [Table permission](configure/assign-entity-permissions.md)
 
         > [!div class=mx-imgBorder]
         > ![Form properties](media/form-props.png "Form properties")

@@ -28,7 +28,7 @@ To work with the document management capabilities of [!INCLUDE[pn-sharepoint-sho
 
 4.	[Configure the appropriate form in Power Apps documents](#step-4-configure-the-appropriate-form-to-display-documents)
 
-5.	[Create appropriate entity permission and assign it to the appropriate web role](#step-5-create-appropriate-entity-permission-and-assign-it-to-the-appropriate-web-role)
+5.	[Create appropriate table permission and assign it to the appropriate web role](#step-5-create-appropriate-entity-permission-and-assign-it-to-the-appropriate-web-role)
 
 ## Step 1: Enable document management functionality in model-driven apps
 
@@ -91,33 +91,33 @@ You can specify name and label as per your requirement. Save and publish the for
 
 Apart from the standard configuration required for basic form or advanced form, you must set the following properties to enable document management:
 
-- **Entity Name** and **Form Name**: Enter the entity and form names customized in the previous step, respectively.
+- **Table Name** and **Form Name**: Enter the entity and form names customized in the previous step, respectively.
 
-- Select the **Enable Entity Permission** check box on the form to allow a user to read the documents.
+- Select the **Enable Table Permission** check box on the form to allow a user to read the documents.
 
 - Set the **Mode** to **Edit** to allow document uploads.
 
 > [!NOTE]
 > Document uploading requires the parent entity record to exist. If you set the Mode to Insert, the document upload will not work because the parent entity record is not created until the form is submitted.
 
-## Step 5: Create appropriate entity permission and assign it to the appropriate web role
+## Step 5: Create appropriate table permission and assign it to the appropriate web role
 
-Two entity permission records are required to establish the necessary access to view and upload documents.
+Two table permission records are required to establish the necessary access to view and upload documents.
 
 - Permissions on the entity of the entity or advanced form: 
-    - Create an **Entity Permission** record specifying the **Entity Name** as the entity of the basic form or advanced form configured previously. 
-    - Select a **Scope** and scope relationship that is appropriate to the behavior of the form that you want.
-    - Enable **Read** and **Append To** privileges to allow read access to documents and optionally enable **Write** privilege to allow document uploads. Ignore the **Child Entity Permissions** section for now since it will be populated by the next step.
-- Permissions on the **Document Location** with **Parent scope** referring to the previous permission record: 
-    - Create an **Entity Permission** record specifying the **Entity Name** as **Document Location** entity with **Scope** set to **Parent**. 
-    - Select the Parent Entity Permission to the entity permission record created in previous step. 
+    - Create an **Table Permission** record specifying the **Table Name** as the entity of the basic form or advanced form configured previously. 
+    - Select a **Access Type** and access type relationship that is appropriate to the behavior of the form that you want.
+    - Enable **Read** and **Append To** privileges to allow read access to documents and optionally enable **Write** privilege to allow document uploads. Ignore the **Child Table Permissions** section for now since it will be populated by the next step.
+- Permissions on the **Document Location** with **Parent access type** referring to the previous permission record: 
+    - Create an **Table Permission** record specifying the **Table Name** as **Document Location** entity with **Access Type** set to **Parent**. 
+    - Select the Parent Table Permission to the table permission record created in previous step. 
     - Privileges 
         - The minimum privileges to allow read access to documents are **Read**, **Create**, and **Append**. 
         - Include **Write** privileges for document upload access. 
         - Include **Delete** to allow deletion of a document.
 
 > [!NOTE]
-> A corresponding child entity permission on the **Document Location** entity needs to be created for each instance of the parent entity permission record that exists on the entity of the entity or advanced form where documents need to be shown.
+> A corresponding child table permission on the **Document Location** entity needs to be created for each instance of the parent table permission record that exists on the entity of the entity or advanced form where documents need to be shown.
 
 ## Configure file upload size
 
@@ -178,13 +178,13 @@ The below example demonstrates configuration using the Case entity which needs t
     
         c. Review and ensure the following properties are set:
     
-         - **Entity Name**: Case (incident)
+         - **Table Name**: Case (incident)
     
          - **Form Name**: Web – Edit Case
     
          - **Mode**: Edit
     
-         - **Entity Permission**: Enabled
+         - **Table Permission**: Enabled
     
          > [!div class=mx-imgBorder]
          > ![Customer Service - Edit Case form](media/customer-service-edit-case-form.png "Customer Service - Edit Case form")
@@ -192,31 +192,31 @@ The below example demonstrates configuration using the Case entity which needs t
         d. If you’ve made any changes to the form, select **Save**.
 
 5. Follow [Step 5](#step-5-create-appropriate-entity-permission-and-assign-it-to-the-appropriate-web-role
-) to make sure entity permissions are granted to the users.
+) to make sure table permissions are granted to the users.
 
    1. Go to the **Web Role** record that is associated to the user. For this sample, we’ll assume that the user has an Administrator web role.
 
-   2. Ensure that an Entity Permission record exists by the name of **Customer Service - Cases where contact is customer**. 
+   2. Ensure that an Table Permission record exists by the name of **Customer Service - Cases where contact is customer**. 
 
       > [!NOTE]
-      > Ensure that your web role has this entity permission added. If your user is already an Administrator, then the above entity permission need not be explicitly assigned.
+      > Ensure that your web role has this table permission added. If your user is already an Administrator, then the above table permission need not be explicitly assigned.
 
-   3. Create a new entity permission, enter the following details, and select **Save**:
+   3. Create a new table permission, enter the following details, and select **Save**:
 
     - **Name** (This can be any name): Customer Service - Related Documents
 
-    - **Entity Name**: Document Location
+    - **Table Name**: Document Location
         
-    - **Scope**: Parent
+    - **Access Type**: Parent
         
-    - **Parent Entity Permission**: Customer Service - Cases where contact is customer
+    - **Parent Table Permission**: Customer Service - Cases where contact is customer
         
     - **Parent Relationship**: incident_SharePointDocumentLocations
         
     - **Privileges**: Read, Create, Append, Write, Delete
 
       > [!div class=mx-imgBorder]
-      > ![Customer Service entity permission](media/customer-service-entity-permission.png "Customer Service entity permission")
+      > ![Customer Service table permission](media/customer-service-entity-permission.png "Customer Service table permission")
   
    4. Sign in to portal to ensure document management is enabled for the Case entity.
 

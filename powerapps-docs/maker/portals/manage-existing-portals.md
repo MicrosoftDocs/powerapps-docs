@@ -90,7 +90,7 @@ For information on security roles and privileges, see [Security roles and privil
 
 ### Share with external users
 
-Your portal should work anonymously and should be accessible by the external users. If you want to try advanced capabilities for managing roles and permissions for external users, see [Configure a contact for use on a portal](configure/configure-contacts.md), [Invite contacts to your portals](configure/invite-contacts.md), [Create web roles for portals](configure/create-web-roles.md), [Assign entity permissions](configure/assign-entity-permissions.md).  
+Your portal should work anonymously and should be accessible by the external users. If you want to try advanced capabilities for managing roles and permissions for external users, see [Configure a contact for use on a portal](configure/configure-contacts.md), [Invite contacts to your portals](configure/invite-contacts.md), [Create web roles for portals](configure/create-web-roles.md), [Assign table permissions](configure/assign-entity-permissions.md).  
 
 ## Settings
 

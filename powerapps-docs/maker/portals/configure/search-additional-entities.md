@@ -24,7 +24,7 @@ To configure search for additional entities:
 
 1. [Create Portal Search view](#step-2-create-or-verify-the-portal-search-view) for each additional entity with the required filters and columns that needs to be searchable.
 
-1. [Configure entity permissions](#step-3-create-entity-permissions) for each additional entity with a Web Role to have at least read privilege. Skip this step if you already have the read permissions configured for each entity.
+1. [Configure table permissions](#step-3-create-entity-permissions) for each additional entity with a Web Role to have at least read privilege. Skip this step if you already have the read permissions configured for each entity.
 
 1. [Create a record details page](#step-4-add-record-details-webpage) for each entity to show the [details of the selected record](#site-marker-for-record-details-page) from the search results page. Skip this step if you already have created separate results record details page for each entity.
 
@@ -59,7 +59,7 @@ The following walkthrough explains each step in detail with a sample database an
 
 > [!NOTE]
 > - This walkthrough explains how to enable search for the **Order Products** entity in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
-> - You can follow the walkthrough with an entity of your choice by replacing the *nwind_products* entity name with your entity's logical name.
+> - You can follow the walkthrough with an entity of your choice by replacing the *nwind_products* table name with your entity's logical name.
 
 ## Step 1: Add or update search site settings
 
@@ -121,23 +121,23 @@ The following walkthrough explains each step in detail with a sample database an
 
     ![Save and publish](media/search-additional-entities/save-publish.png "Save and publish the view")
 
-## Step 3: Create entity permissions
+## Step 3: Create table permissions
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** in the left navigation pane, and then select to open the **Portal Management** model-driven app.  
 
-1. Select **Entity Permissions** in the left navigation pane.
+1. Select **Table Permissions** in the left navigation pane.
 
 1. Select **New**.
 
-    ![New Entity Permission record](media/search-additional-entities/new-entity-permission.png "[New Entity Permission record")
+    ![New Table Permission record](media/search-additional-entities/new-entity-permission.png "[New Table Permission record")
 
-1. Enter the name as **Northwind Products Read All**, and then select the appropriate **Scope** and the **Read** privilege.
+1. Enter the name as **Northwind Products Read All**, and then select the appropriate **Access Type** and the **Read** privilege.
 
-    For this example, the **Global** scope is provided to the **nwind_products** entity.
+    For this example, the **Global** access type is provided to the **nwind_products** entity.
 
-    ![Scope and Read permissions](media/search-additional-entities/scope-read.png "Scope and Read permissions")
+    ![Access Type and Read permissions](media/search-additional-entities/scope-read.png "Access Type and Read permissions")
 
 1. Select **Save & Close**.
 

@@ -43,22 +43,22 @@ The various master pages used by the portal contain declarations of the **Entity
 
 ## Secure your forms
 
-To secure your forms, you must create entity permissions that determine access and ownership of the records according to web roles. If a user lands on an basic form and does not have permissions, they will receive an error message. To enable permissions for an basic form, set **Enable Entity Permissions** to true. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
+To secure your forms, you must create table permissions that determine access and ownership of the records according to web roles. If a user lands on an basic form and does not have permissions, they will receive an error message. To enable permissions for an basic form, set **Enable Table Permissions** to true. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).  
 
 ## Basic form attributes and relationships
 
 |Name|Description|
 |-----|----------|
 |Name|The descriptive name of the record. This field is required.|
-|Entity Name|The name of the entity from which the form will be loaded from. This field is required.|
+|Table Name|The name of the entity from which the form will be loaded from. This field is required.|
 |Form Name|    The name of the Form on the target entity that is to be rendered. This field is required.|
 |Tab Name|    Optional name of a Tab on a Form for a specified entity that is to be rendered.|
 |Mode|One of the following values:<ul><li>Insert</li><li>Edit</li><li>ReadOnly</li></ul>Selecting _Insert_ indicates the form should insert a new record upon submission. Specifying _Edit_ indicates the form should edit an existing record. Selecting _ReadOnly_ indicates the form should display an existing record's non editable form. _Edit_ and _ReadOnly_ requires that a source record exist and parameters specified in the 'Record Source Type' and 'Record ID Query String Parameter Name' fields to select the appropriate record when the form is loaded in the portal.|
 |Record Source Type|One of the following values:<ul><li>Query String</li><li>Current Portal User</li><li>Record Associated to Current Portal User</li></ul>Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the 'Record ID Query String Parameter Name' field.<br>Selecting _Current Portal User_ will retrieve the portal user record for the current authenticated user.<br>Selecting _Record Associated to Current Portal User_ will retrieve the portal user record for the current authenticated user and then retrieve the record for the given relationship as specified by the 'Relationship Name' field.|
 |Record ID Query String Parameter Name|    A parameter name provided in the query string of the URL to the Web Page containing this Basic Form.|
-|Relationship Name|    Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same entity type specified by the Entity Name field.|
+|Relationship Name|    Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same entity type specified by the Table Name field.|
 |Allow Create If Null|    An optional boolean value available when Record Source Type is Record Associated to Current Portal User. Indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist as the form needs a record to data bind to.|
-|Enable Entity Permissions|    Will Cause the form to respect Entity Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form.|
+|Enable Table Permissions|    Will Cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form.|
 |||
 
 ### Form Options
@@ -106,7 +106,7 @@ To secure your forms, you must create entity permissions that determine access a
 |Associate Current Portal User|    Indicates the currently logged in user's record should be associated with the target entity record.|
 |Target Entity Portal User Lookup Attribute|    The logical name of the attribute on the target entity that stores the portal user.|
 |Is Activity Party|    Boolean value indicating whether or not the Target Entity Portal User Lookup Attribute is an Activity Party type.|
-|Attach File |  Select to have the form include a file upload control at the bottom of the form to allow a file to be attached to the record. <br> **Note**: Portals with [version 9.2.2.x and later](https://support.microsoft.com/help/4541765/power-apps-portals-version-9-2-2-x-release) do not require enabling **Enable Entity Permissions** on the basic form to attach files. However, if you have it selected, you must ensure that appropriate privileges are provided on the parent entity and the annotation entity to display the **Attach File** button on the form. Annotation entity must have at least **Create** and **Append** privileges and the parent entity must have the corresponding **AppendTo** privilege. Depending on whether you have a create or update form, you may also need **Create**, **Read** and **Write** privileges to complete the scenario of the form. |
+|Attach File |  Select to have the form include a file upload control at the bottom of the form to allow a file to be attached to the record. <br> **Note**: Portals with [version 9.2.2.x and later](https://support.microsoft.com/help/4541765/power-apps-portals-version-9-2-2-x-release) do not require enabling **Enable Table Permissions** on the basic form to attach files. However, if you have it selected, you must ensure that appropriate privileges are provided on the parent entity and the annotation entity to display the **Attach File** button on the form. Annotation entity must have at least **Create** and **Append** privileges and the parent entity must have the corresponding **AppendTo** privilege. Depending on whether you have a create or update form, you may also need **Create**, **Read** and **Write** privileges to complete the scenario of the form. |
 |Attach File Storage Location|    Options: Note Attachment, Azure Blob Storage. If your organization is configured to use Azure Storage, you can choose to storage uploaded files for this basic Form there. Otherwise, files with be stored as Note Attachments.|
 |Allow Multiple Files|Boolean value indicating whether or not the user can upload more than one file.|
 |Accept|    The accept attribute specifies the MIME types of files that the server accepts through file upload. To specify more than one value, separate the values with a comma (e.g. audio/*,video/*,image/*).|
@@ -149,7 +149,7 @@ By default an Basic Form will allow for reading or updating of an existing recor
 
 These settings are found in the **Additional Settings** section of the basic form. By default, only **Basic Settings** are shown. You can select **Advanced Settings** to show additional settings.
 
-You can add action buttons for the actions that are applicable for an individual record and will appear for each row in the grid provided the appropriate privilege has been granted by [entity permissions](assign-entity-permissions.md). The following actions are available:
+You can add action buttons for the actions that are applicable for an individual record and will appear for each row in the grid provided the appropriate privilege has been granted by [table permissions](assign-entity-permissions.md). The following actions are available:
 
 - Delete
 - Workflow

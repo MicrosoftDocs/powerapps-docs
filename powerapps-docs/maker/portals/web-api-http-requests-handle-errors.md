@@ -34,7 +34,7 @@ For example, use this format when referring a case:
 
 `https://contoso.powerappsportals.com/_api/case`
 
-All Web API resources will follow the respective [portal entity permissions](https://docs.microsoft.com/dynamics365/portals/assign-entity-permissions) in context with Web Roles.
+All Web API resources will follow the respective [portal table permissions](https://docs.microsoft.com/dynamics365/portals/assign-entity-permissions) in context with Web Roles.
 
 ## HTTP methods
 

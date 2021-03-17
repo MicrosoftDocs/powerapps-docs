@@ -55,7 +55,7 @@ To add list component:
 
     - **Enable search in list**: Allows a user to search records in the list.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the list. Not selected by default. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)  
+    - **Enable table permissions**: Table permissions to be considered for the list. Not selected by default. If selected, explicit permissions are required for any user to access the form. More information: [Table permission](configure/assign-entity-permissions.md)  
 
     > [!div class=mx-imgBorder]
     > ![list properties](media/list-props.png "List properties")

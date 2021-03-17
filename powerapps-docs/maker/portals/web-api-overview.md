@@ -16,7 +16,7 @@ ms.reviewer: tapanm
 
 ## Overview
 
-The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, update, and delete operations across all Microsoft Dataverse entities from your portal pages. For example, you can create a new account, update a contact, or change the [entity permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
+The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, update, and delete operations across all Microsoft Dataverse entities from your portal pages. For example, you can create a new account, update a contact, or change the [table permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.2.6.41 or later for this feature to work**.
@@ -41,8 +41,8 @@ You must enable the site setting to enable the portals Web API for your portal. 
 
 | Site setting name | Description|
 | - |- |
-| *Webapi/\<entity name\>/enabled* | Enables or disables the Web API for \<entity name\>. <br> **Default:** `False` <br> **Valid values:** `True`, `False` |
-| *Webapi/\<entity name\>/fields*  | Defines the comma-separated list of attributes that can be modified with the Web API. <br>  **Possible values:**  <br> - *All attributes:* `*` <br> - *Specific attributes:* `attr1,attr2,attr3` <br> **Note**:  The value must be either an asterisk (**\***) or a comma-separated list of field names. <br> **Important**: This is a mandatory site setting. When this setting is missing, you'll see the error "No fields defined for this entity." |
+| *Webapi/\<table name\>/enabled* | Enables or disables the Web API for \<table name\>. <br> **Default:** `False` <br> **Valid values:** `True`, `False` |
+| *Webapi/\<table name\>/fields*  | Defines the comma-separated list of attributes that can be modified with the Web API. <br>  **Possible values:**  <br> - *All attributes:* `*` <br> - *Specific attributes:* `attr1,attr2,attr3` <br> **Note**:  The value must be either an asterisk (**\***) or a comma-separated list of field names. <br> **Important**: This is a mandatory site setting. When this setting is missing, you'll see the error "No fields defined for this entity." |
 | *Webapi/error/innererror* | Enables or disables InnerError. <br> **Default:** `False` <br> **Valid values:** `True`, `False`
 
 > [!NOTE]
@@ -58,7 +58,7 @@ users are allowed to perform create, update, and delete operations on this entit
 
 ## Security with the portals Web API
 
-You can configure record-based security to individual records in portals by using [entity permissions](configure/assign-entity-permissions.md). The portals Web API accesses entity records and follows the entity permissions given to users through the associated [web role](configure/create-web-roles.md).
+You can configure record-based security to individual records in portals by using [table permissions](configure/assign-entity-permissions.md). The portals Web API accesses entity records and follows the table permissions given to users through the associated [web role](configure/create-web-roles.md).
 
 ![Portals Web API security](media/web-api/portals-Webapi-security.png "Portals Web API security architecture")
 

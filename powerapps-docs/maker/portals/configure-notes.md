@@ -15,7 +15,7 @@ ms.reviewer: tapanm
 Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!NOTE]
-> Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding basic form or advanced form step for the entity permissions to take effect.
+> Explicit [Table Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Table Permissions** check box must be selected on the corresponding basic form or advanced form step for the table permissions to take effect.
 
 ## Notes configuration for Basic Forms
 
@@ -150,19 +150,19 @@ After adding the configuration, the Note control will be rendered by using the a
 | Close Button CSS Class   | Specify a CSS class or classes that will be applied to the dialog box's Close (Cancel) button.                                                      |
 |||
 
-### Assign entity permissions
+### Assign table permissions
 
-You must create and assign the appropriate entity permission to the records as follows, otherwise the **Add**, **Edit**, and **Delete** buttons for the note will be hidden:
+You must create and assign the appropriate table permission to the records as follows, otherwise the **Add**, **Edit**, and **Delete** buttons for the note will be hidden:
 
-- Read, Write, Create, Append, and Append To privileges for the **Annotation** entity with the scope as **Global**. This entity permission must be associated with a web role for the user.
-- Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled in it. For example, Account, Contact or Lead entities that show notes on their basic forms. The scope should be set to **Global**. This entity permission must be associated with a web role for the user.
+- Read, Write, Create, Append, and Append To privileges for the **Annotation** entity with the access type as **Global**. This table permission must be associated with a web role for the user.
+- Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled in it. For example, Account, Contact or Lead entities that show notes on their basic forms. The access type should be set to **Global**. This table permission must be associated with a web role for the user.
 
-    ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
+    ![Add table permissions](media/configure-notes/entity-permission.png "Add table permissions")
 
-    ![Add web roles to an entity permission](media/entity-permission-web-roles.png "Add web roles to an entity permission")
+    ![Add web roles to an table permission](media/entity-permission-web-roles.png "Add web roles to an table permission")
 
 > [!IMPORTANT]
-> A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them entity permissions.
+> A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them table permissions.
 
 If you created a custom form and added the notes section to it, be sure to select **Notes** as the default tab you want to be visible.
 

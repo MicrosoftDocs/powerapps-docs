@@ -44,7 +44,7 @@ For this demonstration, let’s consider a scenario in which Contoso, Inc. would
 
       ![Creating a custom form to be rendered on a portal.](media/create-custom-suggestion-form.png "Creating a custom form to be rendered on a portal.")
 
-4. Open [Portal Management app](configure-portal.md) > **Basic Forms** and create a new basic form record. Name it **Suggestion**, set its **Entity Name** field to **Suggestion (new_suggestion)**, set its **Form Name** to **Suggestion Form**, set its **Tab Name** to **Suggestion**, set its **Form Type** as **Insert**, and modify any of the other options as needed.
+4. Open [Portal Management app](configure-portal.md) > **Basic Forms** and create a new basic form record. Name it **Suggestion**, set its **Table Name** field to **Suggestion (new_suggestion)**, set its **Form Name** to **Suggestion Form**, set its **Tab Name** to **Suggestion**, set its **Form Type** as **Insert**, and modify any of the other options as needed.
 
 5. Using [portals Studio](../portal-designer-anatomy.md), create a new child page named **Suggestions**. Set its **Page Template** value to **Advanced Form**, set its **Basic Form** value to **Suggestion**, and add an introduction to the form. 
    > [!Note]
@@ -79,7 +79,7 @@ Building on the previous example of the administrator of Contoso, Inc. creating 
 1. [Edit the view](../../model-driven-apps/create-edit-views-app-designer.md) named **Active Suggestions** for the **Suggestions** entity and dd the columns that should be exposed on the portal to this view.
 
 1. Open [Portal Management app](configure-portal.md) > **Lists** and create a new List record.  
-   1. Enter a name of **Suggestions List**, set its **Entity Name** to **Suggestion (new_suggestion)**. 
+   1. Enter a name of **Suggestions List**, set its **Table Name** to **Suggestion (new_suggestion)**. 
 
    2. Add the default **Active Suggestions** view or the custom-created view to the **Views** list. 
 

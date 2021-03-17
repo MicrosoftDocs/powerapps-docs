@@ -71,9 +71,9 @@ You must open the view editor to get the view ID to be used with the Liquid char
     {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001004" %}
     ```
 
-## Entity permission requirement
+## Table permission requirement
 
-Read privilege is asserted for the target entity being queried in the chart. For anonymous or authenticated users to be able to view the chart, you must ensure that the appropriate [Entity Permission](assign-entity-permissions.md) records are created and assigned to applicable [web roles](create-web-roles.md). 
+Read privilege is asserted for the target entity being queried in the chart. For anonymous or authenticated users to be able to view the chart, you must ensure that the appropriate [Table Permission](assign-entity-permissions.md) records are created and assigned to applicable [web roles](create-web-roles.md). 
  
 If permission isn't granted, the user will see an access denied message.
 

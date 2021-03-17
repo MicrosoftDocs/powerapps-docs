@@ -100,7 +100,7 @@ landingContent:
             url: configure/invite-contacts.md
           - text: Create web roles
             url: configure/create-web-roles.md
-          - text: Assign entity permissions
+          - text: Assign table permissions
             url: configure/assign-entity-permissions.md
           - text: Control web page access
             url: configure/webpage-access-control.md
