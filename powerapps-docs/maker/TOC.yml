@@ -143,7 +143,7 @@
         href: ../user/import-data.md
       - name: Export data to Excel
         href: ../user/export-data-excel.md
-      - name: Export data to Excel Online
+      - name: Open app data in Excel Online
         href: ../user/export-to-excel-online.md      
       - name: Export to a dynamic worksheet
         href: ../user/export-excel-dynamic-worksheet.md
@@ -153,8 +153,6 @@
         href: ../user/export-excel-pivottable.md
       - name: Merge duplicate rows
         href: ../user/merge-duplicate-records.md
-      - name: Troubleshoot export to Excel
-        href: ../user/ts-export-to-excel.md
     - name: Reports
       items:
       - name: Work with reports
@@ -245,6 +243,8 @@
                 href: canvas-apps/use-native-cds-connector.md
             - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
+            - name: Azure Blob Storage
+              href: canvas-apps/connections/connection-azure-blob-storage.md
             - name: Dynamics 365
               href: canvas-apps/connections/connection-dynamics-crmonline.md
             - name: Dynamics AX
@@ -1336,6 +1336,8 @@
       href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
+    - name: Terminology changes in Power Apps portals
+      href: ./portals/terminology-changes.md
     - name: Understand portals architecture
       items:
          - name: Understand portals lifecycle
@@ -2069,7 +2071,7 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
-        - name: Import a Dataverse solution
+        - name: Move customizations between environments
           href: ../teams/import-solution-in-teams.md 
         - name: View table data in Power BI
           href: ../teams/view-table-data-power-bi.md
