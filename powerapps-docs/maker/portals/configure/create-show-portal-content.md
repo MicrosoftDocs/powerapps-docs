@@ -24,7 +24,7 @@ To create a webpage by using basic forms and lists is a complex task. **Create P
     - The **Parent page in the content hierarchy** field is prepopulated with the Home page.
     - The **Partial URL** field is populated based on the page name entered. If required, you can change the value.
     - The **Layout** field is prepopulated with the layout that is marked as default.
-    - If you choose to expose the entity by selecting **Expose organization entities in the portal**, a few additional fields are displayed to gather information required to expose an entity by using basic forms and lists. If you need extra help, hover over any field to read the tooltips. You can also select multiple views.
+    - If you choose to expose the entity by selecting **Expose organization entities in the portal**, a few additional fields are displayed to gather information required to expose a table by using basic forms and lists. If you need extra help, hover over any field to read the tooltips. You can also select multiple views.
 
 5. Select **Create**.
 

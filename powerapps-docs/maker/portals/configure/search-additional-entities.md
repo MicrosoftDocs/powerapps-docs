@@ -59,7 +59,7 @@ The following walkthrough explains each step in detail with a sample database an
 
 > [!NOTE]
 > - This walkthrough explains how to enable search for the **Order Products** entity in the sample database **Northwind**, available with Microsoft Dataverse. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
-> - You can follow the walkthrough with an entity of your choice by replacing the *nwind_products* table name with your entity's logical name.
+> - You can follow the walkthrough with a table of your choice by replacing the *nwind_products* table name with your entity's logical name.
 
 ## Step 1: Add or update search site settings
 
@@ -213,7 +213,7 @@ The following walkthrough explains each step in detail with a sample database an
 
 ## Next steps
 
-[Remove an entity from global search](search.md#remove-an-entity-from-global-search)
+[Remove a table from global search](search.md#remove-an-entity-from-global-search)
 
 ### See also
 

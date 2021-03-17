@@ -40,7 +40,7 @@ If you want to add content access level in a knowledge article from the Customer
 
     ![Open app designer](media/csh-app-designer.png "Open app designer")
 
-2. Under **Entity View**, select the **Forms** tile for the **Knowledge Article** entity.
+2. Under **Table View**, select the **Forms** tile for the **Knowledge Article** entity.
 
 3. In the **Components** pane, select **Portal Knowledge Article for Interactive experience**.
 

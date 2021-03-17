@@ -47,7 +47,7 @@ Results attribute in provided variable (such as 'resultVariable' in above sample
     </table> 
     ```
 
-- *EntityName*
+- *TableName*
 
     Gets the logical name of the entity.
 

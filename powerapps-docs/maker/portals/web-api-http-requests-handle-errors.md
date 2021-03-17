@@ -28,7 +28,7 @@ Construct the Web API URL by using the format in the following table.
 | Protocol | https://                                 |
 | Base URL | \<portal URL\>                          |
 | Web API Path | \_api                                    |
-| Resource     | Name of the entity you want to use |
+| Resource     | Name of the table you want to use |
 
 For example, use this format when referring a case:
 
@@ -97,7 +97,7 @@ OData-Version: 4.0
 })(window.webapi = window.webapi || {}, jQuery)
 ```
 
-### Example: Create entity data
+### Example: Create table data
 
 ```javascript
 	webapi.safeAjax({
@@ -113,7 +113,7 @@ OData-Version: 4.0
 	});
 ```
 
-### Example: Update entity data
+### Example: Update table data
 
 ```javascript
 		webapi.safeAjax({
@@ -129,7 +129,7 @@ OData-Version: 4.0
 	});
 ```
 
-### Example: Delete entity data
+### Example: Delete table data
 
 ```javascript
 		webapi.safeAjax({
@@ -150,11 +150,11 @@ Each HTTP request response includes a status code. Status codes returned by the 
 | - | - | - |
 | 200 OK | Expect this response when your operation will return data in the response body. | Success |
 | 204 No Content | Expect this response when your operation succeeds, but doesn't return data in the response body. | Success |
-| 403 Forbidden | Expect this response for the following types of errors: <ul><li>AccessDenied</li><li>AttributePermissionIsMissing</li><li>EntityPermissionWriteIsMissingDuringUpdate</li><li>EntityPermissionCreateIsMissing</li><li>EntityPermissionDeleteIsMissing</li><li>EntityPermissionAppendIsMissngDuringAssociationChange</li><li>EntityPermissionAppendToIsMissingDuringAssociateChange</li></ul> | Client error |
+| 403 Forbidden | Expect this response for the following types of errors: <ul><li>AccessDenied</li><li>AttributePermissionIsMissing</li><li>TablePermissionWriteIsMissingDuringUpdate</li><li>TablePermissionCreateIsMissing</li><li>TablePermissionDeleteIsMissing</li><li>TablePermissionAppendIsMissngDuringAssociationChange</li><li>TablePermissionAppendToIsMissingDuringAssociateChange</li></ul> | Client error |
 | 401 Unauthorized | Expect this response for the following types of errors:<ul><li>MissingPortalRequestVerificationToken </li><li>MissingPortalSessionCookie</li></ul> | Client error |
 | 413 Payload Too Large | Expect this response when the request length is too large. | Client error |
 | 400 BadRequest | Expect this response when an argument is invalid. <br> InvalidAttribute | Client error |
-| 404 Not Found | Expect this response when the resource doesn't exist. <br>The entity isn't exposed for the Web API. | Client Error |
+| 404 Not Found | Expect this response when the resource doesn't exist. <br>The table isn't exposed for the Web API. | Client Error |
 | 405 Method Not Allowed | This error occurs for incorrect method and resource combinations. For example, you can't use DELETE or PATCH on a collection of entities. This situation can happen for the following types of errors:<ul><li>InvalidOperation</li><li>NotSupported</li></ul> | Client error |
 | 501 Not Implemented | Expect this response when some requested operation isn't implemented. | Server error |
 | 503 Service Unavailable | Expect this response when the Web API service isn't available. | Server error |
@@ -183,14 +183,14 @@ Error codes are displayed in hexadecimal format for all handled scenarios. The f
 
 | **Error code** | **Error name** | **Error message** |
 |-|-|-|
-| 900400FF | NoAttributesForEntityCreate | No attributes for Create Entity action. |
-| 90040100 | InvalidAttribute | Attribute {0} cannot be found for entity {1}. |
-| 90040101 | AttributePermissionIsMissing | Attribute {0} in entity {1} is not enabled for Web Api. |
-| 90040102 | EntityPermissionWriteIsMissingDuringUpdate | You don't have permission to update {0} entity. |
-| 90040103 | EntityPermissionCreateIsMissing | You don't have permission to create {0} entity. |
-| 90040104 | EntityPermissionDeleteIsMissing | You don't have permission to delete {0) entity. |
-| 90040105 | EntityPermissionAppendIsMissngDuringAssociationChange | You don't have permission to associate or disassociate entity {0} with {1}. |
-| 90040106 | EntityPermissionAppendToIsMissingDuringAssociationChange | You don't have permission to associate or disassociate entity {1} to {0} |
+| 900400FF | NoAttributesForTableCreate | No attributes for Create Table action. |
+| 90040100 | InvalidAttribute | Attribute {0} cannot be found for table {1}. |
+| 90040101 | AttributePermissionIsMissing | Attribute {0} in table {1} is not enabled for Web Api. |
+| 90040102 | TablePermissionWriteIsMissingDuringUpdate | You don't have permission to update {0} entity. |
+| 90040103 | TablePermissionCreateIsMissing | You don't have permission to create {0} entity. |
+| 90040104 | TablePermissionDeleteIsMissing | You don't have permission to delete {0) entity. |
+| 90040105 | TablePermissionAppendIsMissngDuringAssociationChange | You don't have permission to associate or disassociate table {0} with {1}. |
+| 90040106 | TablePermissionAppendToIsMissingDuringAssociationChange | You don't have permission to associate or disassociate table {1} to {0} |
 | 90040107 | HttpAntiForgeryException | The anti-forgery cookie token and form field token do not match. |
 | 90040109 | MissingPortalSessionCookie | An Invalid session token was passed into the throwing method. |
 | 9004010C | ResourceDoesNotExists | Resource not found for the segment '{0}'. |

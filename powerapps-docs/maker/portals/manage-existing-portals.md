@@ -31,7 +31,7 @@ Opens the [Power Apps portals Studio](portal-designer-anatomy.md) to edit the co
 
 Portals Studio requires a contact record with the email address `portaluser@powerappsportals.com` for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time.
 
-If you've one or more fields for the Contact entity set as required, or any business logic such as synchronous plug-ins or workflows to restrict contact creation, this contact record creation may fail with the following error message:
+If you've one or more fields for the Contact table set as required, or any business logic such as synchronous plug-ins or workflows to restrict contact creation, this contact record creation may fail with the following error message:
 
 `Contact creation failed` <br>
 `A contact with an email address portaluser@powerappsportals.com must be created before you can edit your portal. Please create this contact manually.`
@@ -84,7 +84,7 @@ For information on security roles and privileges, see [Security roles and privil
 3.  Select **Manage Roles**.
 
     > [!NOTE]
-    > If you are unable to see the **Manage Roles** button on the command bar, you must change the client by setting forceUCI to 0 in the URL. For example, https://&lt;org\_url&gt;/main.aspx?pagetype=entitylist&etn=systemuser&forceUCI=0
+    > If you are unable to see the **Manage Roles** button on the command bar, you must change the client by setting forceUCI to 0 in the URL. For example, https://&lt;org\_url&gt;/main.aspx?pagetype=tablelist&etn=systemuser&forceUCI=0
 
 4.  In the **Manage User Roles** dialog box, select the security role that you created earlier, and then select **OK**.
 

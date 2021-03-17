@@ -37,9 +37,9 @@ To add list component:
 
     - **Name**: Name of the list.
 
-    - **Entity**: The name of the entity from which the views are loaded.
+    - **Table**: The name of the table from which the views are loaded.
 
-    - **Views**: The list of views of the target entity that is to be rendered. You can select multiple views to display records in the list. The view selected first is the default view.
+    - **Views**: The list of views of the target table that is to be rendered. You can select multiple views to display records in the list. The view selected first is the default view.
 
     - **Create new record**: Allows a user to create a record. Select a webpage that contains a form to create a new record.
 

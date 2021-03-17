@@ -19,7 +19,7 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
 > [!IMPORTANT]
 > - **Your portal version must be 9.2.6.41 or later for this feature to work.**
 
-## Create an entity record
+## Create a record in a table
 
 ### Basic create
 
@@ -38,9 +38,9 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
   </tr>
 </table>
 
-#### Sample JSON for creating related entity records in one operation
+#### Sample JSON for creating related table records in one operation
 
-For example, the following request body posted to the Account entity set will create a total of four new entities&mdash;including the account&mdash;in the context of creating the account.
+For example, the following request body posted to the Account table set will create a total of four new entities&mdash;including the account&mdash;in the context of creating the account.
 
 - A contact is created because it's defined as an object property of the single-valued navigation property primarycontactid.
 - An opportunity is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property opportunity_customer_accounts.
@@ -67,7 +67,7 @@ For example, the following request body posted to the Account entity set will cr
 }
 ```
 
-### Associate entity records on create
+### Associate table records on create
 
 <table style="text-align:left">
   <tr>
@@ -77,7 +77,7 @@ For example, the following request body posted to the Account entity set will cr
     <th>JSON Sample</th>
   </tr>
   <tr>
-    <td>Associate entity records on create</td>
+    <td>Associate table records on create</td>
     <td>POST</td>
     <td><i>[Portal URI]/_api/accounts</i></td>
     <td><code>{"name":"Sample Account","primarycontactid@odata.bind":"/contacts(00000000-0000-0000-0000-000000000001)"}</code></td>
@@ -192,7 +192,7 @@ For example, the following request body posted to the Account entity set will cr
   </tr>
 </table>
 
-### Remove a reference to an entity
+### Remove a reference to a table
 
 <table style="text-align:left">
   <tr>
@@ -201,13 +201,13 @@ For example, the following request body posted to the Account entity set will cr
     <th>URI</th>
   </tr>
   <tr>
-    <td>Remove a reference to an entity</td>
+    <td>Remove a reference to a table</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000002)/opportunity_customer_accounts/$ref?$id=[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)</i></td>
   </tr>
 </table>
 
-### Remove a reference to an entity for a single-valued navigation property
+### Remove a reference to a table for a single-valued navigation property
 For a single-valued navigation property, remove the $id query string parameter.
 <table style="text-align:left">
   <tr>
@@ -216,7 +216,7 @@ For a single-valued navigation property, remove the $id query string parameter.
     <th>URI</th>
   </tr>
   <tr>
-    <td>Remove a reference to an entity for a single-valued navigation property</td>
+    <td>Remove a reference to a table for a single-valued navigation property</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)/customerid_account/$ref</i></td>
   </tr>
@@ -266,7 +266,7 @@ You can associate entities on update by using the same message described in [Bas
 
 ## Web API AJAX samples
 
-This sample demonstrates how to create, update, and delete entity records by using Asynchronous JavaScript and XML (AJAX).
+This sample demonstrates how to create, update, and delete table records by using Asynchronous JavaScript and XML (AJAX).
 
 ### Wrapper AJAX function
 
@@ -311,7 +311,7 @@ This sample demonstrates how to create, update, and delete entity records by usi
 			"name": "Sample Account"
 		}),
 		success: function (res, status, xhr) {
-      //print id of newly created entity record
+      //print id of newly created table record
 			console.log("entityID: "+ xhr.getResponseHeader("entityid"))
 		}
 	});
@@ -355,7 +355,7 @@ You can change the field names, or use a different entity, while following the s
 
 ### Step 1 - Create site settings
 
-Before you can use the portals Web API, you have to enable the required site settings with the Portal Management app. The site settings depend on the entity that you want to use when interacting with the Web API.
+Before you can use the portals Web API, you have to enable the required site settings with the Portal Management app. The site settings depend on the table that you want to use when interacting with the Web API.
 
 1. Go to [Power Apps](https://make.powerapps.com).
 
@@ -411,7 +411,7 @@ Before you can use the portals Web API, you have to enable the required site set
 
 ### Step 2 - Configure permissions
 
-You'll have to configure permissions so that users are able to use the Web API feature. In this example, you'll enable the Contact entity for table permissions, create a web role for using the Web API, add the table permissions for the Contact entity to this web role, and then add the web role to users to allow them to use the Web API.
+You'll have to configure permissions so that users are able to use the Web API feature. In this example, you'll enable the Contact table for table permissions, create a web role for using the Web API, add the table permissions for the Contact table to this web role, and then add the web role to users to allow them to use the Web API.
 
 1. In the **Portal Management** app on the left pane, select **Table Permissions**.
 
@@ -567,7 +567,7 @@ Now that you've enabled the Web API and configured user permissions, create a we
     <script>
         //Add the contact data in json object
         var contactList = [
-            {% for entity in contactList.results.entities %}
+            {% for table in contactList.results.entities %}
         {
             id: "{{entity.contactid}}",
                 fullname: "{{entity.fullname}}",

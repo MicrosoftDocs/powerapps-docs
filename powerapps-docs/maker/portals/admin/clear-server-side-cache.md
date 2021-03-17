@@ -16,7 +16,7 @@ As a portal administrator, you can clear the server-side cache for the entire po
 
 > [!IMPORTANT]
 > - Clearing the [portal server-side cache](#steps-to-clear-portal-server-side-cache) or the [configuration entities cache](#configuration-entity-caching-portals-with-capacity-based-licenses) causes temporary performance degradation of the portal while data gets reloaded from Dataverse.
-> - Changes to the [configuration entities](#list-of-configuration-entities-refreshed-when-you-clear-config), or [publish changes](../../data-platform/create-solution.md#publish-changes) actions should be performed during non-peak hours. Frequent or too many entity changes may adversely affect portal performance.
+> - Changes to the [configuration entities](#list-of-configuration-entities-refreshed-when-you-clear-config), or [publish changes](../../data-platform/create-solution.md#publish-changes) actions should be performed during non-peak hours. Frequent or too many table changes may adversely affect portal performance.
 > - The SLA for cache refresh (data transfer between Dataverse and portal) is 15 minutes.
 > - Power Apps portals with version 9.2.6.x or later have improved caching. For more information, go to [Caching changes for portals with version 9.2.6.x or later](#caching-changes-for-portals-with-version-926x-or-later).
 
@@ -34,7 +34,7 @@ The server-side cache is deleted, and data is reloaded from Dataverse.
 
 ![Clear the portal cache](media/clear-server-side-cache/clear-portal-cache.png)
 
-## Configuration entity caching in portals with capacity-based licenses<a name = "configuration-entity-caching-portals-with-capacity-based-licenses"></a>
+## Configuration table caching in portals with capacity-based licenses<a name = "configuration-entity-caching-portals-with-capacity-based-licenses"></a>
 
 [Capacity based](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) portals have more options on `<portal_path>/_services/about`:
 
@@ -214,7 +214,7 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 Power Apps portals with version 9.2.6.x or later benefit from improved caching functionality to increase consistency and reliability as follows.
 
 - [Capacity-based portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals) will use the same caching functionality.
-- Capacity-based portals don't have to manually [clear the configuration entity cache](#configuration-entity-caching-portals-with-capacity-based-licenses).
+- Capacity-based portals don't have to manually [clear the configuration table cache](#configuration-entity-caching-portals-with-capacity-based-licenses).
 - Add-on portals with high load will have improved performance and a reliable data cache refresh.
 
 > [!IMPORTANT]

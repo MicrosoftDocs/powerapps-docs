@@ -171,7 +171,7 @@ certain classes on the containing element, as demonstrated here.
 
 ### Parameters
 
-The first parameter provided to editable is the editable object. For example, this may be a web link set, snippets, or the current page. The optional second parameter is to specify an attribute name or key within that object that is to be rendered and edited. This may be the name of an entity attribute, or a snippet name, for example.
+The first parameter provided to editable is the editable object. For example, this may be a web link set, snippets, or the current page. The optional second parameter is to specify an attribute name or key within that object that is to be rendered and edited. This may be the name of a table attribute, or a snippet name, for example.
 
 After these initial parameters, the tag supports a number of optional named parameters.
 
@@ -314,7 +314,7 @@ Loaded entity view with {{ my_view.total_records }} total records.
 {% endentityview %}
 ```
 
-If entityview is nested within an entitylist block, it will inherit its default configuration (result page size, filter options, etc.) from the list. If no view id or name parameters are provided to entityview, it will load the default view from the enclosing entitylist.
+If entityview is nested within a tablelist block, it will inherit its default configuration (result page size, filter options, etc.) from the list. If no view id or name parameters are provided to entityview, it will load the default view from the enclosing entitylist.
 
 ```
 {% entitylist id:page.adx_entitylist.id %}

@@ -41,7 +41,7 @@ Enter values for the following fields:
 
 You can use snippets to show text or HTML. The content snippets can also use [liquid objects](../liquid/liquid-objects.md), and reference other content such as [entities](../liquid/liquid-objects.md#entities).
 
-For example, you can use the steps explained earlier in this article to create/edit a content snippet. While editing the snippet, you can include sample code to [an entity record](../liquid/liquid-objects.md#entities). Ensure you replace the ID of the Account entity record with the correct ID from your environment. You can also use another entity instead of Account.
+For example, you can use the steps explained earlier in this article to create/edit a content snippet. While editing the snippet, you can include sample code to [a record](../liquid/liquid-objects.md#entities). Ensure you replace the ID of the Account entity record with the correct ID from your environment. You can also use another entity instead of Account.
 
 After you create a snippet with text, HTML, or liquid objects shown in the example above, you can use it in a portal page.
 

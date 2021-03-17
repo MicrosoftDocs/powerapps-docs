@@ -75,7 +75,7 @@ OR
 
 ## Attributes
 
-The Ad Entity has the following attributes:
+The Ad Table has the following attributes:
 
 
 |        Name        |                                                                                                                                                                                                                                             Description                                                                                                                                                                                                                                              |

@@ -21,7 +21,7 @@ The portals Web API enables building a richer user experience inside Power Apps 
 > [!IMPORTANT]
 > - **Your portal version must be 9.2.6.41 or later for this feature to work**.
 > - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration.
-> - Portals Web API operations are limited to entities related to data&mdash;for example, accounts, contacts, or your custom entities. Configuring entity metadata or portal configuration entity data&mdash;for example, configuring portals entities such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [unsupported configuration entities](#unsupported-configuration-entities), later in this topic.
+> - Portals Web API operations are limited to entities related to data&mdash;for example, accounts, contacts, or your custom entities. Configuring table metadata or portal configuration table data&mdash;for example, configuring portals entities such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [unsupported configuration entities](#unsupported-configuration-entities), later in this topic.
 > - The portals Web API benefits from [server-side caching](admin/clear-server-side-cache.md) and, hence, subsequent calls to the Web API are faster than the initial calls. Note that clearing the portal server-side cache causes temporary performance degradation.
 > - Portals Web API operations require Power Apps portals license. For example, Web API calls made by anonymous users are counted towards page view capacity. Web API calls made by authenticated users (internal or external) are not counted towards page views, but require applicable licenses. More information: [Power Apps portals licensing FAQs](power-platform/admin/powerapps-flow-licensing-faq.md#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
 
@@ -31,13 +31,13 @@ The portals Web API offers a subset of capabilities for Dataverse operations tha
 
 ### Web API operations available in portals
 
-- [Create an entity](web-api-perform-operations.md#create-an-entity-record)
+- [Create a table](web-api-perform-operations.md#create-an-entity-record)
 - [Update and delete entities](web-api-perform-operations.md#update-and-delete-entities-by-using-the-web-api) 
 - [Associate and disassociate entities](web-api-perform-operations.md#associate-and-disassociate-entities-by-using-the-web-api)
 
 ## Site settings for the Web API
 
-You must enable the site setting to enable the portals Web API for your portal. Also, you can configure the field-level Web API that determines the entity fields that can or can't be modified with the portals Web API.
+You must enable the site setting to enable the portals Web API for your portal. Also, you can configure the field-level Web API that determines the table fields that can or can't be modified with the portals Web API.
 
 | Site setting name | Description|
 | - |- |
@@ -48,7 +48,7 @@ You must enable the site setting to enable the portals Web API for your portal. 
 > [!NOTE]
 > Site settings must be set to **Active** for changes to take effect.
 
-For example, to expose the Web API for the Case entity where authenticated
+For example, to expose the Web API for the Case table where authenticated
 users are allowed to perform create, update, and delete operations on this entity, the site settings are shown in the following table.
 
 | Site setting name | Site setting value|
@@ -58,7 +58,7 @@ users are allowed to perform create, update, and delete operations on this entit
 
 ## Security with the portals Web API
 
-You can configure record-based security to individual records in portals by using [table permissions](configure/assign-entity-permissions.md). The portals Web API accesses entity records and follows the table permissions given to users through the associated [web role](configure/create-web-roles.md).
+You can configure record-based security to individual records in portals by using [table permissions](configure/assign-entity-permissions.md). The portals Web API accesses table records and follows the table permissions given to users through the associated [web role](configure/create-web-roles.md).
 
 ![Portals Web API security](media/web-api/portals-Webapi-security.png "Portals Web API security architecture")
 

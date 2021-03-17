@@ -88,7 +88,7 @@ If portal reset and reprovision doesn't solve this issue, contact Microsoft supp
 
 ## Portal isn't displaying updated data from Dataverse environment
 
-Any data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Dataverse environment is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata entity of portal, for example, web pages, web files, content snippet, site setting, and so on, it's advised to clear cache manually or restart the portal from Power Apps Portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](clear-server-side-cache.md). 
+Any data displayed on portal is rendered from the portal cache. This cache gets updated whenever data in Dataverse environment is updated. However, this process is asynchronous and can take upto 15 minutes. If the changes are made in the metadata table of portal, for example, web pages, web files, content snippet, site setting, and so on, it's advised to clear cache manually or restart the portal from Power Apps Portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](clear-server-side-cache.md). 
 
 However, if you're seeing stale data for a long time in non-portal metadata entities, it can be because of variety of issues listed below:
 
@@ -98,11 +98,11 @@ If you're seeing stale data only for certain entities and not for everything, th
 
 If you run the Portal checker (self-service diagnostic) tool, it will list down Object Type code of all the entities that are referenced on portal in list or basic forms and advanced forms and aren't enabled for change tracking. Browse your metadata by using the steps mentioned at [Browse the metadata for your organization](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/browse-your-metadata)
 
-If you're experiencing stale data issue in any of these entities, you can enable change tracking by using Power Apps Portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for an entity](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
+If you're experiencing stale data issue in any of these entities, you can enable change tracking by using Power Apps Portals admin center. UI or Dynamics 365 API. More information:  [Enable change tracking for a table](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/use-change-tracking-synchronize-data-external-systems#enable-change-tracking-for-an-entity)
 
 ### Organization not enabled for change tracking
 
-Apart from each entity being enabled for change tracking, organizations on a whole have to be enabled for change tracking as well. An organization is enabled for change tracking when a portal provisioning request is submitted. However, this can break if an organization is restored from an old database or reset. To fix this issue:
+Apart from each table being enabled for change tracking, organizations on a whole have to be enabled for change tracking as well. An organization is enabled for change tracking when a portal provisioning request is submitted. However, this can break if an organization is restored from an old database or reset. To fix this issue:
 
 1. Open [Power Apps Portals admin center](admin-overview.md).
 2. In the **Portal Details** tab, select **Off** from the **Portal State** list.
@@ -196,7 +196,7 @@ The portal checker tool will check if footer output cache is disabled on your po
 
 ## Large number of web file records
 
-The web file entity is used by a portal to store any static files you want to use on your portal. Main use case of this entity is to store static content of your website like CSS, JavaScript, image files, and so on. However, having many such files can cause slowness during the startup of your portal.
+The web file table is used by a portal to store any static files you want to use on your portal. Main use case of this table is to store static content of your website like CSS, JavaScript, image files, and so on. However, having many such files can cause slowness during the startup of your portal.
 
 The portal checker tool will check for this scenario and will provide you an indication if you've more than 500 active web files in your portal. If all of these files represent static content like CSS, JavaScript, image files, and so on, you can take following actions to mitigate this issue.
 
@@ -363,19 +363,19 @@ Profile page is one of the common pages used in your portal for all profile rela
 
 ## Published state isn't available for this website
 
-To fix this issue, ensure that the publishing state entity **Published** is available and active.
+To fix this issue, ensure that the publishing state **Published** is available and active.
 
 ## Published state isn't visible
 
-To fix this issue, ensure that the publishing state entity **Published** has the **isVisible** check box is selected.
+To fix this issue, ensure that the publishing state **Published** has the **isVisible** check box is selected.
 
 ## List of entities with search result having invalid URL
 
-To fix this issue, ensure that your entity has appropriate security permission.
+To fix this issue, ensure that your table has appropriate security permission.
 
 ## List of entities with CMS security check failed
 
-To fix this issue, ensure that your entity has proper search page.
+To fix this issue, ensure that your table has proper search page.
 
 ## Web file isn't active
 

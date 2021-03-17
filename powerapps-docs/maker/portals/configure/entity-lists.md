@@ -22,7 +22,7 @@ The data can also be filtered by the current portal user, the current portal use
 
 ## Add an list to your portal
 
-The list contains relationships to webpages and various properties to control the initialization of the list of records within the portal. The relationship to the webpage allows dynamic retrieval of the list definition for a given page node within the website. To view existing Entity views or to create new Entity views, go to **Portals** > **Lists**.
+The list contains relationships to webpages and various properties to control the initialization of the list of records within the portal. The relationship to the webpage allows dynamic retrieval of the list definition for a given page node within the website. To view existing Table views or to create new Table views, go to **Portals** > **Lists**.
 
 > [!Note]
 > - An list must be associated with a webpage in a given website for the list to be viewable within the site.
@@ -115,7 +115,7 @@ These settings are found in the Configuration section of the list form. By defau
 
 **General action settings**
 
-In general, Entity actions have settings that can be configured. In all cases, this is to give you more options in terms of customization, and the fields are not required. Simply adding the action will allow the action to be taken on the portal, provided the appropriate privilege has been granted by Table Permissions.
+In general, Table actions have settings that can be configured. In all cases, this is to give you more options in terms of customization, and the fields are not required. Simply adding the action will allow the action to be taken on the portal, provided the appropriate privilege has been granted by Table Permissions.
 
 Generally, you can configure the corresponding dialog box for each action, which will appear only if you select **Confirmation Required**.
 
@@ -191,7 +191,7 @@ Enabling a **Details Action** allows a user to view a read-only basic form of a 
 |          **Basic Settings**           |                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |              Basic Form              | Specifies the basic form that will be used to view the details of the selected entity. The drop-down list will include all basic forms that are configured for the entity type of the list. <br> **Note**: If the entity type of the list has no basic forms, the drop-down list will appear empty. If no basic form is supplied for the Details action, it will be ignored and the button will not be rendered in the list. |
 |         **Advanced Settings**         |                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Record ID Query String Parameter Name |                                                                    Specifies the name of the Query String parameter that will be used to select the entity to view in the selected basic form. This should match the value in that basic form's Record ID Query String Parameter Name. The default value for this field, both here and in basic form configuration, is **id**.                                                                     |
+| Record ID Parameter Name |                                                                    Specifies the name of the Query String parameter that will be used to select the entity to view in the selected basic form. This should match the value in that basic form's Record ID Parameter Name. The default value for this field, both here and in basic form configuration, is **id**.                                                                     |
 |             Button Label              |                                                                                                                                                                                      Overrides the HTML label for this action displayed in the list row.                                                                                                                                                                                       |
 |            Button tooltip             |                                                                                                                                                             Overrides the tooltip text that appears when the user points to the button for this action displayed in the list row.                                                                                                                                                              |
 
@@ -216,7 +216,7 @@ Enabling an **Edit Action** allows a user to view an editable basic form that is
 |          **Basic Settings**           |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |              Basic Form              | Specifies the basic form that will be used to edit the selected entity. The drop-down list will include all basic forms that are configured for the entity type of the list. <br> **Note**: If the entity type of the list has no basic forms, the drop-down list will appear empty. If no basic form is supplied for the Edit action, it will be ignored and the button will not be rendered in the list. |
 |         **Advanced Settings**         |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Record ID Query String Parameter Name |                                                           Specifies the name of the Query String parameter that will be used to select the entity to edit in the selected basic form. This should match the value in that basic form's Record ID Query String Parameter Name. The default value for this field, both here and in basic form configuration, is **id**.                                                            |
+| Record ID Parameter Name |                                                           Specifies the name of the Query String parameter that will be used to select the entity to edit in the selected basic form. This should match the value in that basic form's Record ID Parameter Name. The default value for this field, both here and in basic form configuration, is **id**.                                                            |
 |             Button Label              |                                                                                                                                                                             Overrides the HTML label for this action displayed in the list row.                                                                                                                                                                              |
 |            Button Tooltip             |                                                                                                                                                    Overrides the tooltip text that appears when the user points to the button for this action displayed in the list row.                                                                                                                                                     |
 
@@ -281,9 +281,9 @@ In addition, any actions that are defined for the list will respect the correspo
 
 However, good website design requires that if a user is not in a role that has any permissions for the entity (that is, there will never be a situation where they should see any records), they should not have access to the page at all. Ideally, the page should be protected by using Webpage Access Permissions.
 
-If you have secured an list by selecting **Enable Table Permissions**, and want to display the records level actions that are applicable to the signed in user, you must set the value of **EntityList/ShowRecordLevelActions** site setting to **true**. For example, there are two users: Preston and Teddy. Preston has contact level all access on the Case entity, whereas Teddy has global read access. If an list is created to show all the case records, Preston would see all actions (View, Edit, and Delete) on the records that are related his contact. On other records, he would only see the **View** action. On the other hand, Teddy would only see the **View** action on all records.
+If you have secured an list by selecting **Enable Table Permissions**, and want to display the records level actions that are applicable to the signed in user, you must set the value of **TableList/ShowRecordLevelActions** site setting to **true**. For example, there are two users: Preston and Teddy. Preston has contact level all access on the Case entity, whereas Teddy has global read access. If an list is created to show all the case records, Preston would see all actions (View, Edit, and Delete) on the records that are related his contact. On other records, he would only see the **View** action. On the other hand, Teddy would only see the **View** action on all records.
 
-If the **EntityList/ShowRecordLevelActions** site setting is set to **false** and the entity has multiple permissions, all the record level actions are visible. But, when a user tries to perform an action that he is not authorized to, an error is displayed.
+If the **TableList/ShowRecordLevelActions** site setting is set to **false** and the entity has multiple permissions, all the record level actions are visible. But, when a user tries to perform an action that he is not authorized to, an error is displayed.
 
 ## Adding a view details page
 
@@ -301,7 +301,7 @@ To create an basic form please refer the instructions found on the [basic form](
 
 The following are the important settings to be aware of for ensuring that the record from the list is loaded in the basic form.
 
-The Record ID Query String Parameter Name on Basic Form must match the ID Query String Parameter Name on List.
+The Record ID Parameter Name on Basic Form must match the ID Query String Parameter Name on List.
 
 The Mode can be either Edit or ReadOnly, depending on your needs.
 
@@ -496,7 +496,7 @@ To display records by using a calendar, those records need to include at a minim
 
 ## List OData feeds
 
-If enabled, an entity can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
+If enabled, a table can be published to an OData feed. The OData protocol is an application-level protocol for interacting with data via RESTful web services. Data from this feed can be viewed in a web browser, consumed by a client-side web application, or imported into [!INCLUDE[pn-excel-short](../../../includes/pn-excel-short.md)].
 
 > [!CAUTION]
 > Use caution when enabling OData feeds without table permissions for sensitive information. OData feed is accessible anonymously and without authorization checks if **Enable Table Permissions** is disabled.

@@ -159,10 +159,10 @@ The best way to fully grasp how a advanced form is used within a portal is to pr
 18. On the “Contoso Ltd. Survey” Advanced Form record:
     1. Open the **Start Step** lookup field, and select **New** to create a new Advanced Form Step.
     2. Name the step **Survey Step 1**.
-    3. Set the **Target Entity Logical Name** to **Survey (new_survey)**.
+    3. Set the **Target Table Logical Name** to **Survey (new_survey)**.
     4. Set the **Form Name** to **Survey Step 1**.
     5. Select the **Associate Current Portal User** check box.
-    6. Set the **Target Entity Portal User Lookup Attribute** to **Regarding Contact (new_regardingcontact)**.
+    6. Set the **Portal User Lookup Column** to **Regarding Contact (new_regardingcontact)**.
     7. Save the form, but keep it open.
 
         ![The first step of the survey form created.](media/survey-step-1-form.png "The first step of the survey form created.")
@@ -171,7 +171,7 @@ The best way to fully grasp how a advanced form is used within a portal is to pr
     1. Open the **Next Step** lookup field, and select **New** to create a new Advanced Form Step.
     2. Name the step **Survey Step 2**.
     3. Set the Advanced Form to **Contoso Ltd. Survey**.
-    4. Set the **Target Entity Logical Name** to **Survey (new_survey)**.
+    4. Set the **Target Table Logical Name** to **Survey (new_survey)**.
     5. Set the **Mode** to **Edit**.
     6. Set the **Form Name** to **Survey Step 2**.
     7. Set the **Source Type** to **Result From Previous Step**.
@@ -197,7 +197,7 @@ Each completed survey that is submitted will become a record within the **Portal
 
 ## Form elements rendering
 
-Although most forms can be successfully rendered in a portal, note that some features aren't supported by the EntityFormView control that handles the actual rendering of the basic form.
+Although most forms can be successfully rendered in a portal, note that some features aren't supported by the BasicFormView control that handles the actual rendering of the basic form.
 
 
 |                                 Supported form elements                                 |                                Supported, but with caveats form elements                                 |                         Unsupported form elements                          |

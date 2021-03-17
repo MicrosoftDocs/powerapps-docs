@@ -101,7 +101,7 @@ Dynamics 365 Portals version 8.3 for the customer engagement apps has many new u
   > [!Note]
   > Search for attachments can only be performed on the note's description and file attachment name. The content of the attached file is not searchable.
   
-- **Administrative wizard to add an entity to the portal**: This feature introduces a new administrative wizard to easily expose data on the portal. The entity created through the wizard takes the data from your organization and makes a subset of it available to your portal customers, based on the security and permission model you choose.
+- **Administrative wizard to add a table to the portal**: This feature introduces a new administrative wizard to easily expose data on the portal. The table created through the wizard takes the data from your organization and makes a subset of it available to your portal customers, based on the security and permission model you choose.
 
 - **Import metadata translation**: Use this feature to import the metadata translation of newly activated languages after you install a portal. More information: [Import metadata translation](admin/import-metadata-translation.md)
 

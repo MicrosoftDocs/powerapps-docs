@@ -24,7 +24,7 @@ The basic form contains relationships to webpages and additional properties to c
 
 To view existing basic forms or to create new basic forms, open the [Portal Management app](configure-portal.md) and go to **Portals** &gt; **Basic Forms**.
 
-When creating a new basic form, the first step is to decide the **Entity** and **Form Name** that you will be rendering, in addition to the **mode: Insert, Edit, or Read Only**. The mode selected will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
+When creating a new basic form, the first step is to decide the **Table** and **Form Name** that you will be rendering, in addition to the **mode: Insert, Edit, or Read Only**. The mode selected will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
 
 > [!NOTE]
 > - An **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
@@ -39,7 +39,7 @@ The webpages associated with the basic form can be viewed by selecting the **Web
 
 When creating or editing a webpage, an **Basic Form** can be specified in the lookup field provided on the Web Page form.
 
-The various master pages used by the portal contain declarations of the **EntityForm** server control. When rendering the webpage containing either the Page (~/Pages/Page.aspx) page template or Full Page (~/Pages/FullPage.aspx) page template, the controls will determine whether the basic form lookup contains a value, in which case the form will be rendered.
+The various master pages used by the portal contain declarations of the **TableForm** server control. When rendering the webpage containing either the Page (~/Pages/Page.aspx) page template or Full Page (~/Pages/FullPage.aspx) page template, the controls will determine whether the basic form lookup contains a value, in which case the form will be rendered.
 
 ## Secure your forms
 
@@ -53,9 +53,9 @@ To secure your forms, you must create table permissions that determine access an
 |Table Name|The name of the entity from which the form will be loaded from. This field is required.|
 |Form Name|    The name of the Form on the target entity that is to be rendered. This field is required.|
 |Tab Name|    Optional name of a Tab on a Form for a specified entity that is to be rendered.|
-|Mode|One of the following values:<ul><li>Insert</li><li>Edit</li><li>ReadOnly</li></ul>Selecting _Insert_ indicates the form should insert a new record upon submission. Specifying _Edit_ indicates the form should edit an existing record. Selecting _ReadOnly_ indicates the form should display an existing record's non editable form. _Edit_ and _ReadOnly_ requires that a source record exist and parameters specified in the 'Record Source Type' and 'Record ID Query String Parameter Name' fields to select the appropriate record when the form is loaded in the portal.|
-|Record Source Type|One of the following values:<ul><li>Query String</li><li>Current Portal User</li><li>Record Associated to Current Portal User</li></ul>Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the 'Record ID Query String Parameter Name' field.<br>Selecting _Current Portal User_ will retrieve the portal user record for the current authenticated user.<br>Selecting _Record Associated to Current Portal User_ will retrieve the portal user record for the current authenticated user and then retrieve the record for the given relationship as specified by the 'Relationship Name' field.|
-|Record ID Query String Parameter Name|    A parameter name provided in the query string of the URL to the Web Page containing this Basic Form.|
+|Mode|One of the following values:<ul><li>Insert</li><li>Edit</li><li>ReadOnly</li></ul>Selecting _Insert_ indicates the form should insert a new record upon submission. Specifying _Edit_ indicates the form should edit an existing record. Selecting _ReadOnly_ indicates the form should display an existing record's non editable form. _Edit_ and _ReadOnly_ requires that a source record exist and parameters specified in the 'Record Source Type' and 'Record ID Parameter Name' fields to select the appropriate record when the form is loaded in the portal.|
+|Record Source Type|One of the following values:<ul><li>Query String</li><li>Current Portal User</li><li>Record Associated to Current Portal User</li></ul>Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the 'Record ID Parameter Name' field.<br>Selecting _Current Portal User_ will retrieve the portal user record for the current authenticated user.<br>Selecting _Record Associated to Current Portal User_ will retrieve the portal user record for the current authenticated user and then retrieve the record for the given relationship as specified by the 'Relationship Name' field.|
+|Record ID Parameter Name|    A parameter name provided in the query string of the URL to the Web Page containing this Basic Form.|
 |Relationship Name|    Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same entity type specified by the Table Name field.|
 |Allow Create If Null|    An optional boolean value available when Record Source Type is Record Associated to Current Portal User. Indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist as the form needs a record to data bind to.|
 |Enable Table Permissions|    Will Cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form.|
@@ -93,7 +93,7 @@ To secure your forms, you must create table permissions that determine access an
 |or Web Page|Requires On Success set to Redirect. Select a Web Page from the current website.|
 |Append Existing Query String|    Requires On Success set to Redirect. When selected, the existing query string parameters will be added to the target URL prior to redirection.|
 |Append Record ID To Query String|     Requires On Success set to Redirect. When selected, the ID of the record created is appended to the query string of the URL being redirected to.|
-|Record ID Query String Parameter Name|     Requires On Success set to Redirect. The name of the ID parameter in the query string of the URL being redirected to.|
+|Record ID Parameter Name|     Requires On Success set to Redirect. The name of the ID parameter in the query string of the URL being redirected to.|
 |Append Custom Query String|    Requires On Success set to Redirect. A custom string that can be appended to the existing Query String of the redirect URL.|
 |Append Attribute Value to Query String - Parameter Name|    Requires On Success set to Redirect. A name to give to the parameter that correlates to the attribute value on the target entity that gets appended to the Query String of the redirect URL.|
 |Append Attribute Value to Query String - Attribute Logical Name|Requires On Success set to Redirect. A logical name of an attribute on the target entity to get the value to be appended to the Query String of the redirect URL.|
@@ -104,8 +104,8 @@ To secure your forms, you must create table permissions that determine access an
 |Name|Description|
 |----|----------|
 |Associate Current Portal User|    Indicates the currently logged in user's record should be associated with the target entity record.|
-|Target Entity Portal User Lookup Attribute|    The logical name of the attribute on the target entity that stores the portal user.|
-|Is Activity Party|    Boolean value indicating whether or not the Target Entity Portal User Lookup Attribute is an Activity Party type.|
+|Portal User Lookup Column|    The logical name of the attribute on the target entity that stores the portal user.|
+|Is Activity Party|    Boolean value indicating whether or not the Portal User Lookup Column is an Activity Party type.|
 |Attach File |  Select to have the form include a file upload control at the bottom of the form to allow a file to be attached to the record. <br> **Note**: Portals with [version 9.2.2.x and later](https://support.microsoft.com/help/4541765/power-apps-portals-version-9-2-2-x-release) do not require enabling **Enable Table Permissions** on the basic form to attach files. However, if you have it selected, you must ensure that appropriate privileges are provided on the parent entity and the annotation entity to display the **Attach File** button on the form. Annotation entity must have at least **Create** and **Append** privileges and the parent entity must have the corresponding **AppendTo** privilege. Depending on whether you have a create or update form, you may also need **Create**, **Read** and **Write** privileges to complete the scenario of the form. |
 |Attach File Storage Location|    Options: Note Attachment, Azure Blob Storage. If your organization is configured to use Azure Storage, you can choose to storage uploaded files for this basic Form there. Otherwise, files with be stored as Note Attachments.|
 |Allow Multiple Files|Boolean value indicating whether or not the user can upload more than one file.|
@@ -117,24 +117,24 @@ To secure your forms, you must create table permissions that determine access an
 |File Type Error Message|The message displayed during form validation if Restrict Files to Accepted Types is true and the user has attempted to upload an invalid file type. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
 |Maximum File Size (in kilobytes)|    Forces validation on the maximum allowed size of the uploaded file.|
 |File Size Error Message|    The message displayed during form validation if Maximum File Size (in kilobytes) is true and the user has attempted to upload a file that is too large. For each language pack installed and enabled for the organization a field will be available to enter the message in the associated language.|
-|Custom JavaScript|    A custom block of JavaScript that will added to the bottom of the page just before the closing form tag element. The HTML input id of an entity field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy with jQuery.<br>`$(document).ready(function() {   $("#address1_stateorprovince").val("Saskatchewan");});`|
+|Custom JavaScript|    A custom block of JavaScript that will added to the bottom of the page just before the closing form tag element. The HTML input id of a table field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy with jQuery.<br>`$(document).ready(function() {   $("#address1_stateorprovince").val("Saskatchewan");});`|
 |||
 
-### Entity Reference
+### Associated Table Reference
 
-The following parameters pertain to setting an entity reference when the form is saved.
+The following parameters pertain to setting an associated table reference when the form is saved.
 
 This provides a way to associate the current record being created or updated by the form with another target record. This is useful if you have multiple steps with multiple entity types and wish to relate the resulting records or if the page is passed a query string of a record id that you would like associated. For example we have a careers page that lists job postings, each with a link to an application for the job that contains the id of the job posting to the application form so that when the application is created the job posting is associated with the record. 
 
 |Name|Description|
 |-----|---------|
-|Set Entity Reference On Save|Yes or No. A value of yes indicates that an entity reference should be assigned when the form is saved, otherwise none will be set.|
+|Set Table Reference On Save|Yes or No. A value of yes indicates that an associated table reference should be assigned when the form is saved, otherwise none will be set.|
 |Relationship Name|The Relationship Definition Name for a given relationship between two entity types.|
-|Entity Logical Name|The logical name of the reference entity.|
+|Table Logical Name|The logical name of the reference entity.|
 |Target Lookup Attribute Logical Name|Logical name of the lookup attribute on the target entity being created or updated.|
 |Populate Lookup Field|    If the lookup regarding the reference entity is on the form, checking this value will populate the field on the form with the value retrieved using the setting below.|
-|Reference Entity Source Type|    One of the following values:<ul><li>Query String <br> Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the **Query String Name** field. If this parameter is the primary key then select Yes for the **Query String Is Primary Key**, otherwise select No and provide the logical name of the attribute on the target entity to query by specified in the **Query Attribute Logical Name** field.</li><li>Current Portal User <br> Selecting Current Portal User will retrieve the contact record for the current authenticated user.</li></ul>|
-|Reference Entity Step|    The Advanced Form Step record of a previous step to retrieve the entity created or edited in that step to associate it with the record for this current step.|
+|Source Type|    One of the following values:<ul><li>Query String <br> Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the **Query String Name** field. If this parameter is the primary key then select Yes for the **Query String Is Primary Key**, otherwise select No and provide the logical name of the attribute on the target entity to query by specified in the **Query Attribute Logical Name** field.</li><li>Current Portal User <br> Selecting Current Portal User will retrieve the contact record for the current authenticated user.</li></ul>|
+|Reference Table Step|    The Advanced Form Step record of a previous step to retrieve the Table created or edited in that step to associate it with the record for this current step.|
 |Query String Name|    Parameter name provided in the Query String of the URL to the Web Page containing the Advanced Form.|
 |Query String Is Primary Key|    Yes indicates the Query String value is the Primary Key value. No indicates the Query String value is an attribute type other than the Primary Key.|
 |Query Attribute Logical Name|    Logical name of the attribute to query the record.|

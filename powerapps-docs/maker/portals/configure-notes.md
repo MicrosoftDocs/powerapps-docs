@@ -15,7 +15,7 @@ ms.reviewer: tapanm
 Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
 > [!NOTE]
-> Explicit [Table Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Table Permissions** check box must be selected on the corresponding basic form or advanced form step for the table permissions to take effect.
+> Explicit [Table Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) table, the second permission must be assigned to the table type the note is being attached to with the Append To privilege granted. The **Enable Table Permissions** check box must be selected on the corresponding basic form or advanced form step for the table permissions to take effect.
 
 ## Notes configuration for Basic Forms
 
@@ -55,11 +55,11 @@ After adding the configuration, the Note control will be rendered by using the a
 | Name                  | Description                                                                                                                                                  |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Basic settings**    |                                                                                                                                                              |
-| Create Enabled        | Enables the ability to add new notes to the entity.                                                                                                          |
+| Create Enabled        | Enables the ability to add new notes to the table.                                                                                                          |
 | Create Dialog Options | Contains settings for configuring the dialog box when **Create Enabled** is true. See Create Dialog Options for more details.                                    |
-| Edit Enabled          | Enables the ability to edit existing notes on the entity.                                                                                                    |
+| Edit Enabled          | Enables the ability to edit existing notes on the table.                                                                                                    |
 | Edit Dialog Options   | Contains settings for configuring the dialog box when **EditEnabled** is true. See Edit Dialog Options for more details.                                         |
-| Delete Enabled        | Enables the ability to delete notes from the entity.                                                                                                         |
+| Delete Enabled        | Enables the ability to delete notes from the table.                                                                                                         |
 | Delete Dialog Options | Contains settings for configuring the dialog box when **DeleteEnabled** is true. See Delete Dialog Options for more details.                                     |
 |File Attachment Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>|
 |Accept MIME Type(s) | Allows you to specify a list of accepted MIME types. |
@@ -72,7 +72,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Loading Message       | Overrides the message shown while the list of notes is loading.                                                                                              |
 | Error Message         | Overrides the message shown when an error occurs while trying to load the list of notes.                                                                     |
 | Access Denied Message | Overrides the message shown when the user doesn't have sufficient permissions to view the list of notes.                                                    |
-| Empty Message         | Overrides the message shown when the current entity does not have any notes that can be viewed.                                                              |
+| Empty Message         | Overrides the message shown when the current table does not have any notes that can be viewed.                                                              |
 | List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders") <br>  To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
 
@@ -154,8 +154,8 @@ After adding the configuration, the Note control will be rendered by using the a
 
 You must create and assign the appropriate table permission to the records as follows, otherwise the **Add**, **Edit**, and **Delete** buttons for the note will be hidden:
 
-- Read, Write, Create, Append, and Append To privileges for the **Annotation** entity with the access type as **Global**. This table permission must be associated with a web role for the user.
-- Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled in it. For example, Account, Contact or Lead entities that show notes on their basic forms. The access type should be set to **Global**. This table permission must be associated with a web role for the user.
+- Read, Write, Create, Append, and Append To privileges for the **Annotation** table with the access type as **Global**. This table permission must be associated with a web role for the user.
+- Read, Write, Create, Append, and Append To privileges for the table that has the Notes control enabled in it. For example, Account, Contact or Lead entities that show notes on their basic forms. The access type should be set to **Global**. This table permission must be associated with a web role for the user.
 
     ![Add table permissions](media/configure-notes/entity-permission.png "Add table permissions")
 

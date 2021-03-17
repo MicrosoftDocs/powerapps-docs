@@ -28,7 +28,7 @@ Power Apps portals also use cookies to store information for various purposes. T
 | Dynamics365PortalAnalytics | Critical service cookie to analyze service usage anonymously and aggregated for statistical purpose. | 90 days |
 | isDSTObserved | Stores a value to indicate if the current moment is in daylight saving time. | Session |
 | isDSTSupport | Indicates whether a specified date and time falls in the range of daylight saving time. | Session |
-| timeZoneCode | Stores the *timezonecode* field value of *CRM timezonedefinition* entity for the current timezone. | Session |
+| timeZoneCode | Stores the *timezonecode* field value of *CRM timezonedefinition* table for the current timezone. | Session |
 | timezoneoffset | Stores the [timezone difference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset) between UTC and Local browser time. | Session |
 
 ### See also

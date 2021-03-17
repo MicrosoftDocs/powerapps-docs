@@ -27,7 +27,7 @@ Each Advanced Form will be presented on the portal has one or more steps. These 
 | Advanced Form | The Advanced Form associated with the current step. |
 |Type|One of the following:<br>[Load Form/Load Tab step type](load-form-step.md): displays properties of forms. <ul><li>[Load Form/Load Tab step type](load-form-step.md): displays properties of tabs.</li><li>[Conditional step type](add-conditional-step.md): displays properties for specifying expressions to be evaluated for conditional branching. </li><li>[Redirect step type](add-redirect-step.md): displays the settings appropriate for configuring a website redirection.</li></ul><br>For further details on the settings for these advanced form step types, please refer to their corresponding sections below.<br>**Note**: The first step cannot be of type "Condition".|
 | Next Step                  | The step that will follow the current step. This will be blank for single step single form.                                                                                                            |
-| Target Entity Logical Name | The logical name of the entity associated with the form.                                                                                                                                               |
+| Target Table Logical Name | The logical name of the entity associated with the form.                                                                                                                                               |
 | Move Previous Permitted    | Indicates whether the user is given an option to navigate to the previous step in a multiple step advanced form. Default is true. Uncheck to prevent the user from being able to move to the previous step. |
 ||
 

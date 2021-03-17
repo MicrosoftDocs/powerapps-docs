@@ -37,9 +37,9 @@ To add a form component:
 
     - **Name**: Name of the form.
 
-    - **Entity**: The name of the entity from which the form is loaded.
+    - **Table**: The name of the table from which the form is loaded.
 
-    - **Form layout**: The name of the form on the target entity in Dataverse that is to be rendered.
+    - **Form layout**: The name of the form on the target table in Dataverse that is to be rendered.
 
     - **Mode**: Select one of the following options:
 

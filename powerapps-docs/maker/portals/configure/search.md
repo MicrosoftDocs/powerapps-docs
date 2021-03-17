@@ -20,7 +20,7 @@ Global search uses an external search index that is based on Lucene.Net and is u
 
 ## Global search
 
-Global search of portals allows you to search for records across multiple entities. It also allows you to search across multiple columns and configure what columns of an entity would be searchable.
+Global search of portals allows you to search for records across multiple entities. It also allows you to search across multiple columns and configure what columns of a table would be searchable.
 
 Among the benefits of global search are its ability to:
 - Find matches to any word in the search term in any field in the entity. Matches can include inflectional words like stream, streaming, or streamed.
@@ -77,7 +77,7 @@ The following site settings are related to global search:
 | Search/Enabled | True  | A Boolean value that indicates whether search is enabled. If you set its value to false, global search in the portal is turned off.<br>If you're using out-of-the-box web templates and you turn off this setting, the search box will not be displayed in the header as well as on the search page. Also, no results are returned even if the direct URL for the search page is hit.  |
 | Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on additional entities on your portal. <br> Requires *Search/Enabled* set to *True* when used.  |
 | Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment".  |
-| Search/IndexQueryName   | Portal search  | The name of the system view used by the portal search query to define the fields of an entity enabled that are indexed and searched.   |
+| Search/IndexQueryName   | Portal search  | The name of the system view used by the portal search query to define the fields of a table enabled that are indexed and searched.   |
 | Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2 -_logicalname:adx_webfile\~0.9 adx_partialurl:(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:adx_communityforumthread\~0.9   | This setting adds additional weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br>For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
 | Search/Stemmer  | English    | The language used by the portal search's stemming algorithm.   |
 | Search/FacetedView  | True   | This enables facets in the search results. When set to True, facets will be shown along with results on the search page.  |
@@ -109,7 +109,7 @@ The following content snippets are related to global search:
 | Search/Facet/SortOrder/Views| View Count| This content snippet determines the label shown for the "Sort by View Count" option in the sorting drop-down list on the Search Results page.<br>![Sort by view count](../media/sort-view-count.png "Sort by view count")|
 |||
 
-## Entity-specific handling
+## Table-specific handling
 
 - **Case**: By default, the only cases that are searchable are in the **Resolved** state with the **Publish to Web** field set to **True**. This behavior can be modified by updating the Portal Search view of the Case entity and removing the filters available in the Portal Search view. However, when this check is removed, it's important to ensure that the Customer Service – Case web template is modified appropriately, as this web template restricts all users from viewing cases that are active and are not published to the web. If the web template is not modified, cases will be visible in search results. However, when you select them, the case detail web page is displayed with the Permission denied error.
 
@@ -197,7 +197,7 @@ Search index updates in Power Apps portals happen automatically like the cache i
 
 Rebuild of full search index is required whenever:
 
-- You make a metadata change to search properties like changing certain query-specific site settings or changing the search view of an entity, and so on.
+- You make a metadata change to search properties like changing certain query-specific site settings or changing the search view of a table, and so on.
 - Bulk data migration or updates are performed.
 - A website record, associated to your portal, is changed in a Microsoft Dataverse environment.
 
@@ -210,7 +210,7 @@ You can also rebuild a full search index from a portal.
 > - A full index rebuild is a very expensive operation and should not be done during peak hours of usage, as this can bring your portal down.
 > - Time taken to rebuild index is proportional to the size of the data eligible for indexing as per your search query configuration, and can range from a few minutes to an hour.
 
-## Remove an entity from global search
+## Remove a table from global search
 
 At times, you might be required to completely remove certain entities from portal global search to ensure that your customers get the right results quickly.
 
