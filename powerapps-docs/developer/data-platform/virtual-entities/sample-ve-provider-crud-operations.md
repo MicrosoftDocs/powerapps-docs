@@ -25,7 +25,7 @@ This sample shows how to implement a custom data provider to create a virtual ta
 
 To learn more about data providers and plug-in development, see [Custom data providers](https://docs.microsoft.com/powerapps/developer/data-platform/virtual-entities/custom-ve-data-providers)
 
-## Data source details:
+## Data source details
 
 In this walkthrough, you will set up a simple table in an external SQL Server to create a virtual table. The table name used in this example is **VETicket**.
 
@@ -38,7 +38,7 @@ In this walkthrough, you will set up a simple table in an external SQL Server to
 | Severity    | Integer                        | Severity value for the ticket. |
 | Name        | String                         | Description of the ticket.     |
 
-There are three steps to enable a custom data provider to create a virtual table.
+There are four steps to enable a custom data provider to create a virtual table.
 
 [Step 1: Implementing CRUD plug-ins and registering the assembly](#step-1-implementing-crud-plug-ins-and-registering-the-assembly)
 
@@ -330,7 +330,7 @@ There are three steps to enable a custom data provider to create a virtual table
 
 1. Register the assembly using the Plugin Registration Tool. You can get the latest Plugin Registration Tool package from [NuGet](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool).
 
-1. Open the Plugin Registration Tool. Select **CREATE NEW CONNECTION** to connect to your Dataverse environment. Select the **Register** drop-down  and then select **Register New Assembly**.
+1. Open the Plugin Registration Tool. You need to have system administration privileges to register the assembly.Select **CREATE NEW CONNECTION** to connect to your Dataverse environment. Select the **Register** drop-down  and then select **Register New Assembly**.
 
    > [!div class="mx-imgBorder"]
    > ![Register new step](../media/custom-ve-register-plugin-step.png "Register new step")
@@ -344,11 +344,11 @@ There are three steps to enable a custom data provider to create a virtual table
 
 1. Select the **Register** drop-down and then select **Register New Data Provider**.
 
-1. In the **Register New Data Provider** dialog, enter details values for the following fields:
+1. In the **Register New Data Provider** dialog, enter the following details:
 
     1. Enter **Data Provider Name**.
 
-    2. In the **Solutions** option, select an **existing solution** or **create a new solution**. If you want to select a new solution, select the **NewSolution** option from the drop-down. In the **Create New Solution** dialog, enter the details and select **Save**. 
+    2. In the **Solutions** option, select an existing solution or create a new solution in the drop-down. If you want to create a new solution, select the **NewSolution** option from the drop-down. In the **Create New Solution** dialog, enter the required details and select **Save**. 
 
     3. In the **Data Source Entity** option, select **Create New Data Source**. Enter the details. Make sure that the data source is part of the solution you created or selected.
 
@@ -362,14 +362,14 @@ There are three steps to enable a custom data provider to create a virtual table
         > [!div class="mx-imgBorder"]
         > ![Register data provider](../media/custom-ve-register-new-data-provider.png "Register data provider")
 
-1. In the Plugin Registration Tool, you will see the new data source record and the associated data provider. Selecting the data source will display the details which include the plug-ins and their registered GUID.
+1. In the Plugin Registration Tool, you'll see the new data source record and the associated data provider. Selecting the data source will display the details which include the plug-ins and their registered GUID.
 
     > [!div class="mx-imgBorder"]
     > ![Registered data provider](../media/custom-ve-registered-data-provider.png "Registered data provider")
 
 ## Step 3: Creating a virtual table in Dataverse environment
 
-1. Create a new Virtual Entity Data Source by going to **Setting** > **Administration**  **Virtual Entity Data Sources**.
+1. Create a new virtual table data source by navigating to **Setting** > **Administration** > **Virtual Entity Data Sources**.
 
 2. Select **New** and then select the data provider you created in the previous step from the drop-down.
 
@@ -381,14 +381,14 @@ There are three steps to enable a custom data provider to create a virtual table
 
 6. Enter the following details:
 
-    | Field                     | Value                                                                                     |
+    | Column                     | Description                                                                                     |
     |---------------------------|-------------------------------------------------------------------------------------------|
     | Data Source               | Select the data source you created in the previous step.                                          |
-    | Display Name              | Virtual Table name.                                                                        |
-    | Plural Name               | The value will be automatically populated based on the Display Name.                       |
+    | Display Name              | Virtual table name.                                                                        |
+    | Plural Name               | The value will be automatically populated based on the display name.                       |
     | Name                      | This will also be created automatically based on the value you enter for the display name. |
     | External Name             | The name of the source table.                                                              |
-    | External Collections Name | You can use the same value from the Plural Name field.                                     |
+    | External Collections Name | You can use the same value from the plural name column.                                     |
 
 7. Select **Save and Close.**
 
@@ -399,9 +399,9 @@ There are three steps to enable a custom data provider to create a virtual table
 
 9. Select **Fields** to update and create new columns representing the external source.
 
-10. Select the Primary Key field for the virtual table and select **Edit**.
+10. Select the **Primary Key** column for the virtual table and select **Edit**.
 
-11. Update the **External Name** field to match the field name in your external data source. In this example, the external column name is **TicketID**.
+11. Update the **External Name** column to match the column name in your external data source. In this example, the external column name is **TicketID**.
 
     > [!div class="mx-imgBorder"]
     > ![Create new entity](../media/custom-ve-create-new-entity.png "Create new entity")
@@ -417,7 +417,7 @@ There are three steps to enable a custom data provider to create a virtual table
 
 15. Select **Save and Close**.
 
-16. Select **New** to create a new column in the virtual table. This column will represent the Severity field in the external data source.
+16. Select **New** to create a new column in the virtual table. This column will represent the severity column in the external data source.
 
 17. Enter the following information for the new columns:
 
