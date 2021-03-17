@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Write and register a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This tutorial is the first in a series that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The first of three tutorials that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/03/2020
+ms.date: 03/16/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
