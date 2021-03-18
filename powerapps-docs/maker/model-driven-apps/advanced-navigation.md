@@ -54,7 +54,7 @@ To share an app:
     > [!div class="mx-imgBorder"] 
     > ![Share app link](media/share-link.png) 
 
-4. Then follow these steps: [Add security roles to the app](./share-model-driven-app.md#add-security-roles-to-the-app)
+4. Then follow these steps: [Share a model-driven app](./share-model-driven-app.md#preview-share-a-model-driven-app)
  
 ## Settings
 Use the settings area to configure environment settings, activate or deactivate processes, and more. 
