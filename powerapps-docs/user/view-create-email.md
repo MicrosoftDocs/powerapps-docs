@@ -113,7 +113,7 @@ The following table outlines a list of accessibility shortcuts available when us
 
 ### See also
 
-[Set up enhanced email](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)<br>
+[Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Insert an email template](insert-email-template.md)
 
 
