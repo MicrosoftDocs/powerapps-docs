@@ -1758,8 +1758,10 @@
       items:
          - name: Release updates
            href: ./portals/release-updates.md
-         - name: Version 9.3.3.x
-           href: ./portals/version-9.3.3.x.md
+         - name: Version updates
+           items:
+              - name: Version 9.3.3.x
+                href: ./portals/version-9.3.3.x.md
 - name: Dataverse
   items:
   - name: Dataverse
