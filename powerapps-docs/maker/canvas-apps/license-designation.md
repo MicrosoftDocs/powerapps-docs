@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/24/2020
+ms.date: 03/18/2021
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -32,11 +32,10 @@ The following table outlines the designations and which license an end user must
 | Extended​ | An app allowed to use connectors promoted to premium on October 1, 2019.​ An end user must have a Power Apps for Office 365 plan, per app plan or per user plan. [Power Apps licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines which connectors were promoted to premium on October 1, 2019.
 | Premium​ | An app that uses at least one premium connector, a custom connector or an on-premise gateway. An end user must have a per app plan or per user plan to access.
 
-> [!NOTE] 
-> Power Apps built in Microsoft Teams environments that connect to Dataverse for Teams or use custom connectors have a 'premium' license designation. End-users with a [Microsoft 365 subscription including Dataverse for Teams use rights](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#which-microsoft-365-subscriptions-include-dataverse-for-teams-and-power-virtual-agents-capabilities-with-teams) will be able to run these apps in Microsoft Teams. End users that attempt to run these apps outside of Microsoft Teams are required to have a per app plan or per user plan. 
- 
-> Power Apps built in Microsoft Teams environments that use premium connectors will have a 'premium' license designation and will require end-users to have a per app plan or per user plan regardless of where the app is run. 
-
+> [!NOTE]
+> Power Apps built in Microsoft Teams environments that connect to Dataverse for Teams or use custom connectors have **Premium** license designation.
+> - End-users with a [Microsoft 365 subscription including Dataverse for Teams use rights](/power-platform/admin/powerapps-flow-licensing-faq#which-microsoft-365-subscriptions-include-dataverse-for-teams-and-power-virtual-agents-capabilities-with-teams) will be able to run these apps in Microsoft Teams. 
+> - End users that attempt to run these apps outside of Microsoft Teams are required to have a per app plan or per user plan.
 
 ## Check app license designation from app settings
 
