@@ -103,7 +103,11 @@ Note the following limitations when you add the form component control to a tabl
 
 - The form that you use with a form component must be included in your app. More information: [Add components to your app](build-first-model-driven-app.md#add-components-to-your-app).
 
-- You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.  
+- You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
+
+- On mobile, the timeline control does not currently appear in the form component control.
+
+- For subgrids, the **See all records** and **See associated records** command buttons will not be available if they are rendered inside a form component.
 
 ### See also
 

@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 3/12/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -80,8 +80,8 @@ Example:
 
 ![Save changes warning](../media/save-changes-warning.png "Save changes warning")  
 
->[!Note]
-> Firefox does not provide the ability to specify a custom message.
+>[!NOTE]
+> Because of the recent changes related to browsers support for custom text in *beforeunload* event, the ability to specify a custom message using "Save changes" warning is limited to only Internet Explorer 11. More information: [onbeforeunload event in Internet Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741880(v=vs.85)), [Browser compatibility](https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event#browser_compatibility)
 
 ## Geolocation configuration for web form
 
