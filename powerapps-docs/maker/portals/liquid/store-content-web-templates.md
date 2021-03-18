@@ -18,7 +18,7 @@ Web Templates can be included in other content or combined with other templates 
 
 ## Web template attributes
 
-|           |                                                                                                                                                                                                                                                                                 |
+|  Atribute         |     Description                                                                                                                                                                                                                                                                            |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   Name    |                                                                         The name of the template. Used to reference this template when it is included in other content, or extended by other templates.                                                                         |
 |  Source   |                                  The source content of the template. In Power Apps, a source code editor with syntax highlighting and other code editing features is provided for this field.                                  |
