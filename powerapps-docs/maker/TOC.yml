@@ -1754,8 +1754,14 @@
       href: ./portals/faq.md
     - name: Legacy Adxstudio Portals v7 FAQs
       href: ./portals/legacy-portal-faq.md
-    - name: Release updates
-      href: ./portals/release-updates.md
+    - name: Version releases and updates
+      items:
+         - name: Release updates
+           href: ./portals/release-updates.md
+         - name: Version updates
+           items:
+              - name: Version 9.3.3.x
+                href: ./portals/version-9.3.3.x.md
 - name: Dataverse
   items:
   - name: Dataverse
