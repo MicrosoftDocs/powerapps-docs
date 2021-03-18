@@ -23,7 +23,7 @@ When you create a row, you are the owner of the row. If you would like another p
 
 If you want to keep ownership of the row but let someone else work on it with you, then use the **Share** option to share the row. 
 
-For more information on how privileges and access works, see [How access to a row is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
+For more information on how privileges and access works, see [How access to a row is determined](/power-platform/admin/how-record-access-determined).
 
 ## Assign a row to a user or team
 

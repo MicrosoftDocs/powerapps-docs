@@ -100,7 +100,7 @@ Before you can add app components (artifacts) to a newly created app, a site map
      The dashboard designer opens. More information: [Create and edit dashboards](create-edit-dashboards.md)  
   
     > [!NOTE]
-    > - When you're adding a business process flow or table, the **Create New** option opens the corresponding designer. To learn more about creating business process flows or tables, see [Create a business process flow](/flow/create-business-process-flow) and  [Create a custom table](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-create-entity).  
+    > - When you're adding a business process flow or table, the **Create New** option opens the corresponding designer. To learn more about creating business process flows or tables, see [Create a business process flow](/flow/create-business-process-flow) and  [Create a custom table](../data-platform/data-platform-create-entity.md).  
       
   
 5.  When you're done adding artifacts, on the command bar, select **Save**.  
