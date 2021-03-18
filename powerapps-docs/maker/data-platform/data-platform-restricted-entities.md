@@ -4,7 +4,7 @@ description: A list of restricted tables in Microsoft Dataverse that require Dyn
 author: KumarVivek
 ms.service: powerapps
 ms.topic: reference
-ms.date: 08/25/2020
+ms.date: 03/18/2021
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -71,7 +71,7 @@ Transaction Connection|msdyn_transactionconnection |Dynamics 365 for Project Ser
 Transaction Origin|msdyn_transactionorigin |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Transaction Type|msdyn_transactiontype |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Unique Number|msdyn_uniquenumber |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-Work Order Business Process |msdyn_bpf_d3d97bac8c294105840e99e37a9d1c39 |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+Work Order |msdyn_workorder |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgenerationqueue |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 
 [1] *Case table actions permitted with only Power Apps license:*  
