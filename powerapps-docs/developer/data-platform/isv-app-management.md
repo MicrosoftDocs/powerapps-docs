@@ -80,7 +80,7 @@ You can follow the same steps to remove read-only access from a user to ISV Stud
 
 <!--If you do not have permissions to give additional users access to ISV Studio. Please visit our documentation to learn more about user access.  
 If you want additional users to get access to ISV Studio, they can be added as app contributors in Partner Center.  Instructions can be found at
-[Managing users on cloud partner portal](https://docs.microsoft.com/azure/marketplace/cloud-partner-portal-orig/cloud-partner-portal-manage-users).-->
+[Managing users on cloud partner portal](/azure/marketplace/cloud-partner-portal-orig/cloud-partner-portal-manage-users).-->
 
 Continue reading the [App](isv-app-management-apppage.md) and [Tenant](isv-app-management-tenantpage.md) page articles listed below to learn about the capabilities of ISV Studio.
 
