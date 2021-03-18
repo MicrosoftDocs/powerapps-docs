@@ -24,7 +24,7 @@ To configure search for additional tables:
 
 1. [Create Portal Search view](#step-2-create-or-verify-the-portal-search-view) for each additional table with the required filters and columns that needs to be searchable.
 
-1. [Configure table permissions](#step-3-create-entity-permissions) for each additional table with a Web Role to have at least read privilege. Skip this step if you already have the read permissions configured for each table.
+1. [Configure table permissions](#step-3-create-table-permissions) for each additional table with a Web Role to have at least read privilege. Skip this step if you already have the read permissions configured for each table.
 
 1. [Create a record details page](#step-4-add-record-details-webpage) for each table to show the [details of the selected record](#site-marker-for-record-details-page) from the search results page. Skip this step if you already have created separate results record details page for each table.
 
@@ -32,7 +32,7 @@ To configure search for additional tables:
 
 1. [Rebuild the search index](#step-6-rebuild-the-search-index).
 
-1. [Verify the search results](#step-7-verify-that-global-search-works-with-the-custom-entity).
+1. [Verify the search results](#step-7-verify-that-global-search-works-with-the-custom-table).
 
 > [!WARNING]
 > If you don't create a record details page, or if you don't bind the record details page with site marker for search, you won't be able to select the additional table records from search results page to view the record details.
@@ -213,7 +213,7 @@ The following walkthrough explains each step in detail with a sample database an
 
 ## Next steps
 
-[Remove a table from global search](search.md#remove-an-entity-from-global-search)
+[Remove a table from global search](search.md#remove-a-table-from-global-search)
 
 ### See also
 

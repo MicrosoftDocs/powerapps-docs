@@ -89,7 +89,7 @@ You can easily enable and configure actions (Create, Edit, Delete, and so on) fo
 
 These settings are found in the Configuration section of the list form. By default, only **Basic Settings** are shown. Select **Advanced Settings** to see additional settings.
 
-![Configure an list](../media/configure-tablelist.png "Configure an list")  
+![Configure an list](../media/configure-entitylist.png "Configure an list")  
 
 **Attributes**
 

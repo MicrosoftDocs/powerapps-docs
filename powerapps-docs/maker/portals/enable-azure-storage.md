@@ -73,7 +73,7 @@ Add the following site settings from **Portals** > **Site Settings**. [!include[
 |WebFiles/StorageLocation|AzureBlobStorage|
 |||
 
-With additional settings on portals [basic form](configure-notes.md#enable-file-attachment-on-form), your portal is ready to begin uploading and downloading files to and from Azure Storage. However, you cannot take full advantage of this feature until you [add a web resource to enable uploading attachments to Azure Storage](add-web-resource.md), and configure [basic forms](configure-notes.md#notes-configuration-for-entity-forms) or [advanced forms](configure-notes.md#notes-configuration-for-web-forms) to use it.
+With additional settings on portals [basic form](configure-notes.md#enable-file-attachment-on-form), your portal is ready to begin uploading and downloading files to and from Azure Storage. However, you cannot take full advantage of this feature until you [add a web resource to enable uploading attachments to Azure Storage](add-web-resource.md), and configure [basic forms](configure-notes.md#notes-configuration-for-basic-forms) or [advanced forms](configure-notes.md#notes-configuration-for-advanced-forms) to use it.
 
 ### See also
 

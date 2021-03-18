@@ -225,7 +225,7 @@ However, when editing the note from portal web page, you'll see the note in HTML
 
 ## Notes configuration for advanced forms
 
-Advanced form notes are configured in the same way as [basic form notes](#notes-configuration-for-entity-forms). You must create a metadata record for the Advanced Form Step that has notes first, and then add the notes configuration metadata.
+Advanced form notes are configured in the same way as [basic form notes](#notes-configuration-for-basic-forms). You must create a metadata record for the Advanced Form Step that has notes first, and then add the notes configuration metadata.
 
 > [!NOTE]
 > Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) in order to display on the portal.

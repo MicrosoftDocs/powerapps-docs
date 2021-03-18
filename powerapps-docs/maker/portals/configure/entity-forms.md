@@ -149,7 +149,7 @@ By default an Basic Form will allow for reading or updating of an existing recor
 
 These settings are found in the **Additional Settings** section of the basic form. By default, only **Basic Settings** are shown. You can select **Advanced Settings** to show additional settings.
 
-You can add action buttons for the actions that are applicable for an individual record and will appear for each row in the grid provided the appropriate privilege has been granted by [table permissions](assign-table-permissions.md). The following actions are available:
+You can add action buttons for the actions that are applicable for an individual record and will appear for each row in the grid provided the appropriate privilege has been granted by [table permissions](assign-entity-permissions.md). The following actions are available:
 
 - Delete
 - Workflow
