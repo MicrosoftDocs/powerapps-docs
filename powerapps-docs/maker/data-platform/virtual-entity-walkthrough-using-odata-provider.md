@@ -130,7 +130,7 @@ On the left navigation pane of the **Entity: Person** page, select **Fields**. A
    |**Field Requirement**|Business Required|
    |**Data Type**|Single Line of Text|
 
-   ![Create age column](media/severity-field.png)
+   ![Create age column for person](media/severity-field.png)
 
 1. Select **Save and Close**.
 1. Select **New**, and on the **Field: New for Person** page enter the following information:
