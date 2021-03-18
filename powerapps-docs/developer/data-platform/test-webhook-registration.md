@@ -29,7 +29,7 @@ Use the following steps:
 1. Use the Plug-in Registration tool to register a new WebHook as described in [Register a WebHook](register-web-hook.md). 
     1. Use the URL you copied in step 2 as the **Endpoint URL**. 
     1. Set a name and any authentication properties you want. WebHook Tester will not evaluate these values in the way that an actual site that will process the data should, but you can see how they will be passed through.
-1. Use the Plug-in Registration tool to register a step using the WebHook you created in step 4 as described in [Register a step for a WebHook](register-web-hook.md#register-a-step-for-a-WebHook). 
+1. Use the Plug-in Registration tool to register a step using the WebHook you created in step 4 as described in [Register a step for a WebHook](register-web-hook.md#register-a-step-for-a-webhook). 
     1. Make sure to use an event that you can easily perform by editing data in the Microsoft Dataverse application, such as updating a contact table.
 1. Use the Dataverse app to perform the operation to trigger the event.
 1. After you trigger the event, return to the WebHook Tester page from step 2. You should see that the page has been updated to show the data passed in the request:

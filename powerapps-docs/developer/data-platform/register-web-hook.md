@@ -109,7 +109,7 @@ Any errors that occur will be recorded in System Jobs. In the web application yo
 When you know the **sdkmessageprocessingstepid** of a given step, you can query the [AsynchronousOperations Table](reference/entities/asyncoperation.md) for any errors. You can use the [OwningExtensionId](reference/entities/asyncoperation.md#BKMK_OwningExtensionId) value to filter the results to a specific registered step. The following examples use *&lt;stepid&gt;* for the **sdkmessageprocessingstepid** of the step.
 
 > [!TIP]
-> To get the **sdkmessageprocessingstepid** of a given step, see [Query steps registered for a WebHook](#query-steps-registered-for-a-WebHook) below.
+> To get the **sdkmessageprocessingstepid** of a given step, see [Query steps registered for a WebHook](#query-steps-registered-for-a-webhook) below.
 
 **Web API:**
 
@@ -142,7 +142,7 @@ More information: [Use FetchXML with FetchExpression](org-service/entity-operati
 [!INCLUDE [synchronous-webhook-error](includes/synchronous-webhook-error.md)]
 
 > [!NOTE]
-> You should use synchronous mode when it is important that the operation triggered by the WebHook occur immediately or if you want the entire transaction to fail unless the WebHook payload is received by the service. A simple WebHook step registration provides limited options to manage failure, but you can also invoke WebHooks using plug-ins and workflow activities if you require more control. More information: [Invoke a WebHook from a plug-in or workflow activity](use-WebHooks.md#invoke-a-WebHook-from-a-plugin-or-workflow-activity).
+> You should use synchronous mode when it is important that the operation triggered by the WebHook occur immediately or if you want the entire transaction to fail unless the WebHook payload is received by the service. A simple WebHook step registration provides limited options to manage failure, but you can also invoke WebHooks using plug-ins and workflow activities if you require more control. More information: [Invoke a WebHook from a plug-in or workflow activity](use-WebHooks.md#invoke-a-webhook-from-a-plugin-or-workflow-activity).
 
 ## Query steps registered for a WebHook
 
