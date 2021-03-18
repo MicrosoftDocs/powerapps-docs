@@ -114,6 +114,11 @@ Portal host Version 9.3.3.7 resolves the following issues:
 
 -   VoiceOver isn't narrating role for the dates along with it respective day.
 
+- Password field's HTML ID on the login page is changed to enable accessibility scenarios. Any JavaScript that depends on the HTML ID of this field might not work after the upgrade.
+
+    > [!NOTE]
+    > Using HTML IDs of the Login and Password fields from the login page in custom JavaScripts is not supported. These IDs can change in the future releases.
+
 This release also contains performance, security fixes and improves overall
 reliability of Power Apps portals.
 
