@@ -389,7 +389,7 @@ The entitylist object is used within the [Power Apps Dataverse table tags](porta
 |          search\_placeholder          |                                                                                        Returns the configured localized text for the list search field placeholder.                                                                                        |
 |            search\_tooltip            |                                                                                             Returns the configured localized text for the list search tooltip.                                                                                             |
 |                 views                 |                                                                                           Returns the available views for the list, as list view objects.                                                                                           |
-|      \[attribute logical name\]       | You can access any attribute of the list (adx\_entitylist) Power Apps record by logical name, in the same manner as a [table](liquid-objects.md#table) object. For example, {{ entitylist.adx\_name }} |
+|      \[attribute logical name\]       | You can access any attribute of the list (adx\_entitylist) Power Apps record by logical name, in the same manner as a [table](liquid-objects.md#entity) object. For example, {{ entitylist.adx\_name }} |
 
 ### List View Attributes
 
