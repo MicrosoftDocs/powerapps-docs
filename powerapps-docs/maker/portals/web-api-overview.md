@@ -23,7 +23,7 @@ The portals Web API enables building a richer user experience inside Power Apps 
 > - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration.
 > - Portals Web API operations are limited to entities related to data&mdash;for example, accounts, contacts, or your custom entities. Configuring entity metadata or portal configuration entity data&mdash;for example, configuring portals entities such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [unsupported configuration entities](#unsupported-configuration-entities), later in this topic.
 > - The portals Web API benefits from [server-side caching](admin/clear-server-side-cache.md) and, hence, subsequent calls to the Web API are faster than the initial calls. Note that clearing the portal server-side cache causes temporary performance degradation.
-> - Portals Web API operations require Power Apps portals license. For example, Web API calls made by anonymous users are counted towards page view capacity. Web API calls made by authenticated users (internal or external) are not counted towards page views, but require applicable licenses. More information: [Power Apps portals licensing FAQs](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
+> - Portals Web API operations require Power Apps portals license. For example, Web API calls made by anonymous users are counted towards page view capacity. Web API calls made by authenticated users (internal or external) are not counted towards page views, but require applicable licenses. More information: [Power Apps portals licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
 
 ## Web API operations
 
@@ -74,7 +74,7 @@ If audit logging is enabled, a user can see all the audit events in the [Office 
 
 ![Office 365 audit log](media/web-api/office365-security-compliance-audit-log.png)
 
-More information:<br>[Enable and use Activity Logging](https://docs.microsoft.com/power-platform/admin/enable-use-comprehensive-auditing)<br>[Export, configure, and view audit log records](https://docs.microsoft.com/microsoft-365/compliance/export-view-audit-log-records).
+More information:<br>[Enable and use Activity Logging](/power-platform/admin/enable-use-comprehensive-auditing)<br>[Export, configure, and view audit log records](/microsoft-365/compliance/export-view-audit-log-records).
 
 ## Unsupported configuration entities
 
