@@ -10,11 +10,11 @@ ms.author: gisingh
 ms.reviewer: tapanm
 ---
 
-# Dataverse table tags
+# Dataverse entity tags
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Microsoft Dataverse table tags are used to load and display Dataverse data, or use other Power Apps portals framework services. These tags are Dataverse-specific extensions to the Liquid language.
+Microsoft Dataverse entity tags are used to load and display Dataverse data, or use other Power Apps portals framework services. These tags are Dataverse-specific extensions to the Liquid language.
 
 ## chart
 
@@ -314,7 +314,7 @@ Loaded entity view with {{ my_view.total_records }} total records.
 {% endentityview %}
 ```
 
-If entityview is nested within a tablelist block, it will inherit its default configuration (result page size, filter options, etc.) from the list. If no view id or name parameters are provided to entityview, it will load the default view from the enclosing entitylist.
+If entityview is nested within an entitylist block, it will inherit its default configuration (result page size, filter options, etc.) from the list. If no view id or name parameters are provided to entityview, it will load the default view from the enclosing entitylist.
 
 ```
 {% entitylist id:page.adx_entitylist.id %}

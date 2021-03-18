@@ -282,9 +282,9 @@ Allows you to load any Power Apps table by ID. If the table exists, a table obje
 {% endif %}
 ```
 
-### Table
+### Entity
 
-A table object provides access to the attributes of a Power Apps table record.
+A entity object provides access to the attributes of a Power Apps table record.
 
 
 |             Attribute              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -797,7 +797,7 @@ The article object allows you to work with a single knowledgearticle to display 
 
 ### Attributes
 
-article is a [table](#table) object, with all of the same attributes, in addition to those listed below.
+article is an [entity](#entity) object, with all of the same attributes, in addition to those listed below.
 
 |Attribute|Description|
 |---|---|
@@ -819,7 +819,7 @@ The category object allows you to work with a single category to display its det
 
 ### Attributes
 
-category is a [table](#table) object, with all of the same attributes, in addition to those listed below.
+category is an [entity](#entity) object, with all of the same attributes, in addition to those listed below.
 
 |Attribute|Description|
 |---|---|
@@ -1064,7 +1064,7 @@ The searchindex object is used within the [Power Apps Dataverse table tags](port
 
 |   Attribute   |                                                                                                                                                Description                                                                                                                                                 |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    table     |                                                                                                                            The underlying [entities](#entities) for the result.                                                                                                                            |
+|    entity     |                                                                                                                            The underlying [entities](#entities) for the result.                                                                                                                            |
 |   fragment    | A relevant short text fragment for the result, with terms matching the specified query highlighted using the &lt;em&gt; HTML tag. Certain types of queries do not support highlighted fragments, such as fuzzy queries (~) and wildcard queries (\*). This property will be null in those cases. |
 |      Id       |                                                             The Power Apps table ID of the underlying record for the result, as a string. For example, 936DA01F-9ABD-4d9d-80C7-02AF85C822A8                                                              |
 | logical\_name |                                                                           The Power Apps table logical name of the underlying record for the result. For example, adx\_webpage                                                                           |
@@ -1158,7 +1158,7 @@ It's also possible to load a site map node by URL path:
 | Breadcrumbs           | Returns the breadcrumb site map node objects for the node, starting from the site map root node and ending at parent. |
 | Children              | Returns the child site map node objects of the node.                                                                  |
 | Description           | The description/summary content for the node. (This field may contain HTML.)                                          |
-| Table                | Returns the underlying [entities](#entities) of the node. If the node has no underlying table, this value will be null.                                                         |
+| Entity                | Returns the underlying [entities](#entities) of the node. If the node has no underlying table, this value will be null.                                                         |
 | is\_sitemap\_ancestor | Returns true if the sitemap node is an ancestor of the current node, otherwise false.                                                                                                         |
 | is\_sitemap\_current  | Returns true if the sitemap node is the current node, otherwise false.                                                                                                         |
 | Parent                | Returns the parent site map node of the node. If the node is the root node, parent will be null.                                                                     |
@@ -1246,7 +1246,7 @@ Contains properties useful within a [Iteration tags](iteration-tags.md) loop blo
 
 Refers to the current portal user, allowing access to all attributes of the underlying Power Apps contact record. If no user is signed in, this variable will be [null](liquid-types.md#null).  
 
-user is a [table](#table) object.  
+user is an [entity](#entity) object.  
 
 ```
 {% if user %}
@@ -1262,7 +1262,7 @@ Hello, anonymous user!
 
 ### Attributes
 
-In addition to having all of the attributes of a [table](#table) object, user has the following attributes.
+In addition to having all of the attributes of an [entity](#entity) object, user has the following attributes.
 
 
 |    Attribute     |                                                                                                                                                                                     Description                                                                                                                                                                                     |
@@ -1324,7 +1324,7 @@ If the web link set exists, a [web link set object](#web-link-set-attributes) wi
 ### Web Link Set Attributes
 
 > [!Note]
-> A web link set is a [table](#table) object, with all of the same attributes, in addition to those listed below.                                         
+> A web link set is an [entity](#entity) object, with all of the same attributes, in addition to those listed below.                                         
 
 |         Attribute          |                                                                                 Description                                                                                  |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1337,7 +1337,7 @@ If the web link set exists, a [web link set object](#web-link-set-attributes) wi
 ### Web Link Attributes
 
 > [!Note]
-> A web link is a [table](#table) object, with all of the same attributes, in addition to those listed below.
+> A web link is an [entity](#entity) object, with all of the same attributes, in addition to those listed below.
 
 |          Attribute          |                                                                              Description                                                                              |
 |-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1370,7 +1370,7 @@ If the web link set exists, a [web link set object](#web-link-set-attributes) wi
 Refers to the portal website, allowing access to all attributes of the Power Apps Website (adx\_website) record for the portal.  
 
 > [!Note]
-> Website is a [table](#table) object, with all of the same attributes.
+> Website is an [entity](#entity) object, with all of the same attributes.
 
 **Code**
 
