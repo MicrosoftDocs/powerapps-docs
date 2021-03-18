@@ -33,9 +33,9 @@ The following table outlines the designations and which license an end user must
 | Premium​ | An app that uses at least one premium connector, a custom connector or an on-premise gateway. An end user must have a per app plan or per user plan to access.
 
 > [!NOTE]
-> Power Apps built in Microsoft Teams environments that connect to Dataverse for Teams or use custom connectors have **Premium** license designation.
+> Power Apps built in Microsoft Teams environments that connect to Dataverse for Teams, or use custom connectors have **Premium** license designation.
 > - End-users with a [Microsoft 365 subscription including Dataverse for Teams use rights](/power-platform/admin/powerapps-flow-licensing-faq#which-microsoft-365-subscriptions-include-dataverse-for-teams-and-power-virtual-agents-capabilities-with-teams) will be able to run these apps in Microsoft Teams. 
-> - End users that attempt to run these apps outside of Microsoft Teams are required to have a per app plan or per user plan.
+> - End-users that attempt to run these apps outside of Microsoft Teams are required to have a per app plan or per user plan.
 
 ## Check app license designation from app settings
 
