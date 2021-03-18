@@ -18,7 +18,7 @@ As explained in [Configure an OAuth 2.0 provider for portals](configure-oauth2-p
 
 ## Step 1. Create the Microsoft app
 
-On the identity provider configuration steps, you'll see a **Reply URL** for your portal in step 1. You need to [create an app in Azure portal](https://aka.ms/AppRegistrations) with this reply URL. For step-by-step instructions, go to [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+On the identity provider configuration steps, you'll see a **Reply URL** for your portal in step 1. You need to [create an app in Azure portal](https://aka.ms/AppRegistrations) with this reply URL. For step-by-step instructions, go to [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 > [!NOTE]
 > The Reply URL is used by the Microsoft app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.​
