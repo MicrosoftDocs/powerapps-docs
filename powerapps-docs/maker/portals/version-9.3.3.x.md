@@ -10,9 +10,7 @@ ms.author: dileeps
 ms.reviewer: tapanm
 ---
 
-# Power Apps portals Version 9.3.3.x
-
-## Overview
+# Power Apps portals version 9.3.3.x
 
 Power Apps portal version 9.3.3.x is in early upgrade phase. To know the release schedule, check Office 365 message center for release schedule in your geographical region.
 
@@ -23,7 +21,7 @@ In this article, you'll learn about:
 
 For a full list of all portal updates released to date and their corresponding KB articles, go to [Portal Capabilities for Microsoft Dynamics 365 Releases](https://support.microsoft.com/topic/portal-capabilities-for-microsoft-dynamics-365-releases-81f5fcc9-ef72-8b2e-5b4b-29e9840fb5c4).
 
-## Power Apps portals Version 9.3.3.x Release
+## Updates included with Power Apps portals version 9.3.3.x
 
 This release includes only an updated portal host and no solution package
 updates. The portal host will automatically be updated to version 9.3.3.7 by
