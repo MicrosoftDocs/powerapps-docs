@@ -31,7 +31,7 @@ The portals Web API offers a subset of capabilities for Dataverse operations tha
 
 ### Web API operations available in portals
 
-- [Create a table](web-api-perform-operations.md#create-an-entity-record)
+- [Create a table](web-api-perform-operations.md#create-a-table-record)
 - [Update and delete tables](web-api-perform-operations.md#update-and-delete-tables-by-using-the-web-api) 
 - [Associate and disassociate tables](web-api-perform-operations.md#associate-and-disassociate-tables-by-using-the-web-api)
 
