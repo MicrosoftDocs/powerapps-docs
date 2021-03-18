@@ -1,5 +1,6 @@
 ---
 title: "Create a personal view using advanced grid filters  | MicrosoftDocs"
+description: Edit or create personal views using advanced grid filters in model-driven Power Apps.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
