@@ -1,7 +1,7 @@
 ---
 title: "removeOnPreProcessStatusChange (Client API reference) in model-driven apps in Power Apps| MicrosoftDocs"
 ms.date: 06/30/2019
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: reference
 ms.assetid: 
 author: MSFTMan

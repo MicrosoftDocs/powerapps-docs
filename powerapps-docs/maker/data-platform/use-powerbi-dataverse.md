@@ -3,7 +3,7 @@ title: " Use Power BI using Microsoft Dataverse data | MicrosoftDocs"
 description: "Learn how to use Power BI to create reports using Microsoft Dataverse data."
 keywords: PBI
 ms.date: 05/26/2020
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 
