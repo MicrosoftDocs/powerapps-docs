@@ -143,7 +143,7 @@
         href: ../user/import-data.md
       - name: Export data to Excel
         href: ../user/export-data-excel.md
-      - name: Export data to Excel Online
+      - name: Open app data in Excel Online
         href: ../user/export-to-excel-online.md      
       - name: Export to a dynamic worksheet
         href: ../user/export-excel-dynamic-worksheet.md
@@ -153,8 +153,6 @@
         href: ../user/export-excel-pivottable.md
       - name: Merge duplicate rows
         href: ../user/merge-duplicate-records.md
-      - name: Troubleshoot export to Excel
-        href: ../user/ts-export-to-excel.md
     - name: Reports
       items:
       - name: Work with reports
@@ -245,6 +243,8 @@
                 href: canvas-apps/use-native-cds-connector.md
             - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
+            - name: Azure Blob Storage
+              href: canvas-apps/connections/connection-azure-blob-storage.md
             - name: Dynamics 365
               href: canvas-apps/connections/connection-dynamics-crmonline.md
             - name: Dynamics AX
@@ -359,8 +359,16 @@
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
-            - name: Insert interactive maps
-              href: ./canvas-apps/geospatial-component-map.md
+            - name: Use interactive maps
+              items: 
+              - name: Insert interactive maps
+                href: ./canvas-apps/geospatial-component-map.md
+              - name: Use data from Excel to insert pins
+                href: ./canvas-apps/geospatial-map-excel.md
+              - name: Add info cards to pins
+                href: ./canvas-apps/geospatial-map-infocards.md
+              - name: Draw and insert shapes onto maps
+                href: ./canvas-apps/geospatial-map-draw-shapes.md
             - name: Use address lookup
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
@@ -1281,22 +1289,6 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-    - name: Create guided help
-      href: ./model-driven-apps/create-guided-help-learning-path.md
-  - name: Transition to Unified Interface
-    items:
-    - name: Transition quick start
-      href: ./model-driven-apps/transition-web-app.md
-    - name: Use an existing environment to transition quick start
-      href: ./model-driven-apps/transition-web-app-existing.md
-    - name: Unified Interface Playbook
-      href: ./model-driven-apps/unified-interface-playbook.md
-    - name: Approaching a Unified Interface transition
-      href: ./model-driven-apps/approaching-unified-interface.md
-    - name: "Checklist: Unified Interface transition"
-      href: ./model-driven-apps/checklist-transition-unified-interface.md
-    - name: "FAQs: Unified Interface transition"
-      href: ./model-driven-apps/faqs-transition-unified-interface.md
   - name: Model-driven app FAQ
     href: ./model-driven-apps/model-app-faq.md
   - name: Accessibility in Power Apps app designer
@@ -1330,6 +1322,8 @@
       href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
+    - name: Terminology changes in Power Apps portals
+      href: ./portals/terminology-changes.md
     - name: Understand portals architecture
       items:
          - name: Understand portals lifecycle
@@ -2063,7 +2057,7 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md        
-        - name: Import a Dataverse solution
+        - name: Move customizations between environments
           href: ../teams/import-solution-in-teams.md 
         - name: View table data in Power BI
           href: ../teams/view-table-data-power-bi.md

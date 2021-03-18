@@ -1,6 +1,46 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/model-driven-apps/transition-web-app.md",
+      "redirect_url": "../../user/unified-interface",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/transition-web-app-existing.md",
+      "redirect_url": "../../user/unified-interface",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/unified-interface-playbook.md",
+      "redirect_url": "../../user/unified-interface",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/approaching-unified-interface.md",
+      "redirect_url": "../../user/unified-interface",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/checklist-transition-unified-interface.md",
+      "redirect_url": "../../user/unified-interface",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/faqs-transition-unified-interface.md",
+      "redirect_url": "../../user/unified-interface",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/ts-export-to-excel.md",
+      "redirect_url": "export-excel-dynamic-worksheet#refresh-all-doesnt-work",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/create-guided-help-learning-path.md",
+      "redirect_url": "../data-platform/create-custom-help-pages",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/data-platform/change-solution-publisher-prefix.md",
       "redirect_url": "create-solution#solution-publisher",
       "redirect_document_id": "false"
