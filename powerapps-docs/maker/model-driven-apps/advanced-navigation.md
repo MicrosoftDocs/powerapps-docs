@@ -54,7 +54,7 @@ To share an app:
     > [!div class="mx-imgBorder"] 
     > ![Share app link](media/share-link.png) 
 
-4. Then follow these steps: [Add security roles to the app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app#add-security-roles-to-the-app)
+4. Then follow these steps: [Add security roles to the app](./share-model-driven-app.md#add-security-roles-to-the-app)
  
 ## Settings
 Use the settings area to configure environment settings, activate or deactivate processes, and more. 
