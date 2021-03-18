@@ -82,7 +82,7 @@ After signing in to the portal, the customer can go to **Field Service** &gt; **
 You can automatically distribute opportunities to partners based on a set of criteria that determines the best partner for the job. The built-in metrics for opportunity assignment first determine which partners are available to take the opportunity on. This table shows the factors that are used to decide whether a partner is available.
 
 
-|||
+| Name | Description |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 |Capacity     |  A partner's capacity is the maximum number of opportunities that partner can take on at a time. This value can be adjusted on the account details page for each partner. Capacity includes opportunities that are in progress, in addition to those that haven't yet been accepted by a partner. It doesn't include internal opportunities created by that partner.|
 |Estimated revenue     | You can set a minimum and maximum range for estimated revenue on the account details page for each partner. If the estimated revenue for an opportunity falls within this range, the partner will be available for assignment.|
@@ -95,7 +95,7 @@ You can automatically distribute opportunities to partners based on a set of cri
 
 After the available partners have been identified, the opportunity is distributed to a partner based on a ranking system. This system takes the following factors into account.
 
-|||
+| Name | Description |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Distance              | The distance between the address of the partner and the address of the customer account that is associated with the opportunity.     |
 | Win rate              | The percentage of distributed opportunities historically won by the partner.                                                         |
