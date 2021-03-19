@@ -269,3 +269,6 @@ Once this site setting is changed, the Case entity will be removed from filters 
 
 - [Use faceted search](improve-portal-search-faceted-search.md)
 - [File attachment search](search-file-attachment.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

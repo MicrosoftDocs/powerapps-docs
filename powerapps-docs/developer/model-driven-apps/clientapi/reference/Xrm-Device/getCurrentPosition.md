@@ -60,3 +60,6 @@ Xrm.Device.getCurrentPosition().then(
 ### Related topics
 [Xrm.Device](../xrm-device.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

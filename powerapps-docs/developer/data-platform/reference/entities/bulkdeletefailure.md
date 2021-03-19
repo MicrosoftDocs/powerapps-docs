@@ -1003,3 +1003,5 @@ See msdyn_solutionhealthruleset Entity [msdyn_solutionhealthruleset_BulkDeleteFa
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.bulkdeletefailure?text=bulkdeletefailure EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

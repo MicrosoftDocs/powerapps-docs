@@ -111,3 +111,6 @@ More information: [Change app settings](understand-power-apps-studio.md?branch=t
 ### See also
 
 [Publish and share your apps](publish-and-share-apps.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

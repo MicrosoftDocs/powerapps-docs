@@ -65,7 +65,7 @@ https://myserver/mypage.aspx?orgname=AdventureWorksCycle&userlcid=1033&orglcid=1
 >  You will not be able to import the ribbon if the URL includes the ampersand (&) character that is used to separate multiple `querystring` parameters in the URL. This character makes the XML invalid. You must escape the ampersand character in the URL attribute value with "&amp;".  
   
 ## Reading passed parameters  
- Passed parameters are usually read in the target .aspx page by using the `HttpRequest.QueryString` property. More information: [HttpRequest.QueryString Property](https://msdn.microsoft.com/library/system.web.httprequest.querystring.aspx)  
+ Passed parameters are usually read in the target .aspx page by using the `HttpRequest.QueryString` property. More information: [HttpRequest.QueryString Property](/dotnet/api/system.web.httprequest.querystring)  
   
 > [!NOTE]
 >  If the target of your URL is a Web resource, it can accept only the parameters identified in the topic [Passing Parameters to HTMLWeb Resources](webpage-html-web-resources.md#BKMK_PassingParametersToWebResources). The only opportunity to pass custom values is by including them within the `data` parameter. Some special handling is required to include multiple values in a single parameter. More information: [Sample: Passing Multiple Values to a Web Page Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)  
@@ -78,3 +78,6 @@ https://myserver/mypage.aspx?orgname=AdventureWorksCycle&userlcid=1033&orglcid=1
  [Sample: Export Ribbon definitions](sample-export-ribbon-definitions.md)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

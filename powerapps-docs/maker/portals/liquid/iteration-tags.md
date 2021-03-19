@@ -396,3 +396,6 @@ Defines a range of numbers to loop through.
 [Variable tags](variable-tags.md)
 [Template tags](template-tags.md)
 [Dataverse entity tags](portals-entity-tags.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

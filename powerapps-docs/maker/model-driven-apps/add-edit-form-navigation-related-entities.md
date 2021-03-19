@@ -82,3 +82,6 @@ In this topic, you use the form navigation pane that is used to add links to rel
   
 ## Next steps  
  [Create and edit table relationships for Microsoft Dataverse](../data-platform/create-edit-entity-relationships.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

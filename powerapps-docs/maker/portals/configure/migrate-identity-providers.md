@@ -85,3 +85,6 @@ The following field is added in the portal contact record to indicate whether lo
 ### See also
 
 [Configure the Azure AD B2C provider for portals](configure-azure-ad-b2c-provider.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -27,7 +27,7 @@ search.app:
 
 Tables that include the following complex server-side logic require users of an app or flow that uses these tables to have a Power Apps Plan 2 or Power Automate Plan 2 license:
 
-* Code plug-ins. More information: [Plug-in development](/powerapps/developer/data-platform/plug-ins)
+* Code plug-ins. More information: [Plug-in development](../../developer/data-platform/plug-ins.md)
 * Real-time workflows. More information: [Workflow processes](/flow/workflow-processes)
 
     > [!NOTE]
@@ -176,3 +176,6 @@ The following table lists tables that contain complex server-side logic out-of-t
 * Work Order Sub-Status
 * Work template
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -18,7 +18,7 @@ When a request to the portal is generated from any user, their IP address is eva
 
 To add or remove IP addresses, you must be assigned any one of the following roles:
 - Office 365 Global Administrator 
-- Service Administrator. More information: [Use the service admin role to manage your tenant](https://technet.microsoft.com/library/mt793847.aspx)  
+- Service Administrator. More information: [Use the service admin role to manage your tenant](/power-platform/admin/use-service-admin-role-manage-tenant)  
 - System Administrator of the Microsoft Dataverse environment selected for the portal
 
 ## Add an IP address
@@ -33,7 +33,7 @@ Once you add an IP address to the restriction list, the portal will be accessibl
 > [!NOTE]
 > You must specify a public IP address that can be accessed by the portal. Private IP address can't be accessed by the portal.
 
-1.	Open [Power Apps Portals admin center](admin-overview.md).
+1.	Open [Power Apps portals admin center](admin-overview.md).
 
 2.	Go to **Set up IP address restriction**. A list of IP addresses and their type is displayed.
 
@@ -57,7 +57,7 @@ Once you add an IP address to the restriction list, the portal will be accessibl
 
 To remove access to a portal from a previously allowed IP address, you can remove the IP address from the list. If you remove all IP addresses, the portal will be accessible from all IP addresses.
 
-1.	Open [Power Apps Portals admin center](admin-overview.md).
+1.	Open [Power Apps portals admin center](admin-overview.md).
 
 2.	Go to **Set up IP address restriction**. A list of IP addresses and their type is displayed.
 
@@ -68,3 +68,6 @@ To remove access to a portal from a previously allowed IP address, you can remov
 
 4.	Select **Remove** in the confirmation message.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

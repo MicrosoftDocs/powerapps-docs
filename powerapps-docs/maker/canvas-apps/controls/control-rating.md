@@ -109,3 +109,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 
     > [!NOTE]
   > The same keyboard interactions for radio buttons can be used on **Rating**.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

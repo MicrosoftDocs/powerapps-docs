@@ -37,7 +37,7 @@ When you complete this tutorial, you will have a Blazor WebAssembly app that dis
 
 To complete this tutorial, you must have:
 
-- Access to a [Dataverse environment with a database](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database)
+- Access to a [Dataverse environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database)
 - A Dataverse user with a security role that provides read access to the Account and Contact entities
 - Understanding of the C# programming language
 - Understanding of ASP.NET Core Blazor is helpful but not required
@@ -506,3 +506,6 @@ In Visual Studio, press F5 to launch the app with the code changes.
 [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)<br />
 [Use OAuth with Dataverse](authenticate-oauth.md)<br />
 [Use the Dataverse Web API](webapi/overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

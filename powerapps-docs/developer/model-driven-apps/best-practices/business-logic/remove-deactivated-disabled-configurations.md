@@ -56,5 +56,7 @@ As well as Entity components such as:
 
 ### See also
 
-[Apply custom business logic with business rules and flows in model-driven apps](/powerapps/maker/model-driven-apps/guide-staff-through-common-tasks-processes)<br />
-[Events in forms and grids in model-driven apps](/powerapps/developer/model-driven-apps/clientapi/events-forms-grids)<br/>
+[Apply custom business logic with business rules and flows in model-driven apps](../../../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)<br />
+[Events in forms and grids in model-driven apps](../../clientapi/events-forms-grids.md)<br/>
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

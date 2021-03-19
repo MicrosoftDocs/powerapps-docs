@@ -188,3 +188,6 @@ Using **IsError** will prevent any further processing of the error.
 ### See also
 
 [Formula reference for Power Apps](../formula-reference.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

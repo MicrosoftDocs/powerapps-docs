@@ -96,3 +96,6 @@ Similarly, you can use different screens in your app based on the column value, 
 
 - [Formula reference](../formula-reference.md) for Power Apps
 - [Control reference](../reference-properties.md) for Power Apps
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/29/2021
+ms.date: 03/19/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -432,3 +432,5 @@ Your Azure AD B2C tenant is now configured to use the custom page for sign-up an
 [Configure the Azure Active Directory B2C provider (Preview)](configure-azure-ad-b2c-provider.md) <br>
 [Configure the Azure Active Directory B2C provider manually](configure-azure-ad-b2c-provider-manual.md) <br>
 [Customize the user interface with HTML templates in Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/customize-ui-with-html)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

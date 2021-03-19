@@ -46,3 +46,6 @@ public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: (
 [Control](../control.md)<br/>
 [Power Apps component framework API reference](../../reference/index.md)<br/>
 [Power Apps component framework overview](../../overview.md)
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

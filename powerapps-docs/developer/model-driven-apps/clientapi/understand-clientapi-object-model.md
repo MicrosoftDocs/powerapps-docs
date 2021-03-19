@@ -52,3 +52,6 @@ At the root of the Client API object model are the following contexts and the Xr
 
 
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -23,7 +23,7 @@ The following is the schema definition for the ribbon core portion of an import/
 
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
-For more information, see [Package and Distribute Extensions with Solutions](https://docs.microsoft.com/powerapps/developer/data-platform/introduction-solutions).
+For more information, see [Package and Distribute Extensions with Solutions](../data-platform/introduction-solutions.md).
   
 ## Ribbon Core Schema  
   
@@ -142,3 +142,6 @@ For more information, see [Package and Distribute Extensions with Solutions](htt
  [Ribbon types schema](ribbon-types-schema.md)<br/>
  [Ribbon WSS schema](ribbon-wss-schema.md)<br/>
  [Customization solutions file schema](../data-platform/customization-solutions-file-schema.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

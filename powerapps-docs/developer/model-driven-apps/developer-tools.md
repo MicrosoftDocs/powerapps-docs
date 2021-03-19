@@ -36,3 +36,6 @@ Another tool that is not distributed via the XrmToolBox is Jason Lattimer's [RES
 
 > [!IMPORTANT]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

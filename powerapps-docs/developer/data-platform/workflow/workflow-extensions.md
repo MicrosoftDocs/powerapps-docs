@@ -428,3 +428,6 @@ There is no way to configure entity images for workflow extensions since you onl
 [Sample: Create a custom workflow activity](sample-create-custom-workflow-activity.md)<br />
 [Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
 [Sample: Calculate a credit score with a custom workflow activity](sample-calculate-credit-score-custom-workflow-activity.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

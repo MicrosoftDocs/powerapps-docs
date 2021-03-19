@@ -33,7 +33,7 @@ The **GetGlobalContext** function returns the same context object as returned by
 
 You must include a reference to the **ClientGlobalContext.js.aspx** page located at the root of the web resources directory to be able to use the **GetGlobalContext** function.
 
-- If you are not using backslash characters in HTML web resource names to simulate a folder structure, you can include this script by directly referring to it. For example:
+- If you are not using slash characters in HTML web resource names to simulate a folder structure, you can include this script by directly referring to it. For example:
 
     ```HTML
     <head>
@@ -68,3 +68,6 @@ The **ClientGlobalContext.js.aspx** page will include some global event handlers
 
 [Web resources for model-driven apps](../../web-resources.md)
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

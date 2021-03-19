@@ -5,6 +5,7 @@ author: loreleishannonmsft
 ms.topic: article
 ms.date: 02/19/2020
 ms.author: margoc
+ms.service: powerapps
 ---
 
 # Functional Application Consultant Learning Catalog
@@ -41,3 +42,6 @@ For functional consultants, our job-task analysis research showed that everyone 
 | Content  | Description  | Format   | Length    | 
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------|----------------------------------------------------------|
 | [Microsoft Power Platform + Dynamics 365 Core ](https://docs.microsoft.com/learn/certifications/exams/mb-200?wt.mc_id=learningredirect_certs-web-wwl)|	This exam measures your ability to accomplish the following technical tasks: perform discovery, planning and analysis; manage user experience design; manage entities and data; implement security; implement integration; and perform solutions deployment and testing. |	Exam | cost varies by region |
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -50,3 +50,6 @@ Creating a new Page Template is only necessary when creating a brand new .aspx p
 |Description  |A description of this template, for the benefit of front-side editing users. |
 |||
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

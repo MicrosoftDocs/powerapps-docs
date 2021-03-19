@@ -85,3 +85,5 @@ Tracing is especially useful to troubleshoot registered custom code as it is the
 
 [Write a plug-in](../../write-plug-in.md)  
 [Tracing and logging](../../logging-tracing.md)
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

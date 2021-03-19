@@ -48,7 +48,7 @@ Model driven apps can use all actions available on business rules, however not a
 
 ## Prerequisites
 
-To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create and edit tables.
+To follow this topic, you must switch to an [environment](/power-platform/admin/working-with-environments) in which you can create and edit tables.
 
 ## Create a business rule
   
@@ -170,3 +170,6 @@ A business rule may not execute because the field referenced in the business rul
 ### See also
 
 [Apply business logic in Microsoft Dataverse](processes.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

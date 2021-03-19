@@ -842,3 +842,5 @@ See systemuser Entity [lk_pluginassembly_createdonbehalfby](systemuser.md#BKMK_l
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.pluginassembly?text=pluginassembly EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

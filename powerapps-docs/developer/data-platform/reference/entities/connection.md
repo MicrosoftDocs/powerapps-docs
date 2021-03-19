@@ -1320,3 +1320,5 @@ See territory Entity [territory_connections2](territory.md#BKMK_territory_connec
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.connection?text=connection EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -216,3 +216,6 @@ There must be adequate color contrast between [FocusedBorderColor](properties-co
 ### See also
 
 [Limitations of controls in Power Apps](../control-limitations.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

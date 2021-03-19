@@ -16,10 +16,10 @@ Portal development involves several configurations and customizations to achieve
 
 After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Microsoft Dataverse environment, and then importing it into the target Dataverse environment.
 
-To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-configuration-data).
+To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](/dynamics365/customer-engagement/admin/manage-configuration-data).
 
 > [!NOTE]
-> - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget).
+> - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](/dynamics365/customer-engagement/developer/download-tools-nuget).
 > - The minimum solution version of portals supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
 > - Source and destination organizations must have same default language for the migration to work successfully.
 
@@ -121,5 +121,8 @@ Power Apps portals doesn't support tenant to tenant migration. To migrate a port
 
 ### See also
 
-- Tenant to tenant migration of a [Power Platform environment](https://docs.microsoft.com/power-platform/admin/move-environment-tenant).
-- Tenant to tenant migration of [model-driven apps](https://docs.microsoft.com/dynamics365/admin/move-instance-tenant) in Dynamics 365 such as Sales, Customer Service, Marketing, Field Service, and Project Service Automation.
+- Tenant to tenant migration of a [Power Platform environment](/power-platform/admin/move-environment-tenant).
+- Tenant to tenant migration of [model-driven apps](/dynamics365/admin/move-instance-tenant) in Dynamics 365 such as Sales, Customer Service, Marketing, Field Service, and Project Service Automation.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

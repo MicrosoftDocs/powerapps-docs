@@ -37,7 +37,7 @@ A data provider is a particular type of Dataverse plug-in, which is registered a
 
 The following data providers ship with Dataverse:
 - An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default.
-- An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
+- An [Azure Cosmos DB](/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
 If a data provider cannot be found for your external data source, you can develop a *custom virtual entity data provider*; for more information, see [Virtual entity data providers](custom-ve-data-providers.md).
 
@@ -59,6 +59,7 @@ Following are the limitations in virtual entities that must be considered.
     - An attribute on a virtual entity cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
     - Although you can add virtual entity columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual entity lookup column.
 - Auditing and change tracking is not supported.
+- Charts and dashboards are not supported for virtual entities.
 - Virtual entities cannot be enabled for queues.
 - Offline caching of values is not supported for virtual entities.
 - A virtual entity cannot represent an activity and do not support business process flows.
@@ -71,3 +72,6 @@ For more information about how these limitations are reflected in the Dataverse 
 [API considerations of virtual entities](api-considerations-ve.md)<br />
 [Custom virtual entity data providers](custom-ve-data-providers.md)<br />
 [Sample: Generic virtual entity data provider plug-in](sample-generic-ve-plugin.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

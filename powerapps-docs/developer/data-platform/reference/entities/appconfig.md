@@ -634,3 +634,5 @@ See systemuser Entity [lk_appconfig_modifiedby](systemuser.md#BKMK_lk_appconfig_
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.appconfig?text=appconfig EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

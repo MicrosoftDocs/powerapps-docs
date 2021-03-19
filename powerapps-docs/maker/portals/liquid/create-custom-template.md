@@ -111,3 +111,6 @@ Now, all that's left to do is to create a web page that uses our page template, 
 [Render a website header and primary navigation bar](render-site-header-primary-navigation.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

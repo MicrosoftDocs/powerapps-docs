@@ -38,6 +38,8 @@ The control with focus may be visually different based on the [**FocusedBorderCo
 
 You cannot set the focus to controls that are within a [**Gallery**](../controls/control-gallery.md) control, [**Edit form**](../controls/control-form-detail.md) control, or [Component](../create-component.md).  **SetFocus** can be used with a control in a scrollbale screen.
 
+You cannot set the focus to controls that are within a [**Container**](../controls/control-container.md) control.
+
 You can only set the focus to controls on the same screen as the formula containing the **SetFocus** call.
 
 Attempting to set the focus to a control that has its [**DisplayMode**](../controls/properties-core.md) property set to **Disabled** has no effect.  Focus will remain where it was previously.
@@ -149,3 +151,6 @@ To create this example:
 1. Add a [**Button** control](../controls/control-button.md).
 1. Set the **OnSelect** property of this control to the formula `Navigate( Screen1 )`.
 1. Preview the app from this screen.  Press the button.  The **OnVisible** formula will be evaluated and the **Name** field will automatically be in focus.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

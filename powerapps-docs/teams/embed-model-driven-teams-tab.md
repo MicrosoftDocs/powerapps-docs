@@ -51,3 +51,6 @@ The app is now available to use in the channel.
 
 ### See also
 [Embed a canvas app as personal app in Teams](embed-teams-app.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

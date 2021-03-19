@@ -38,3 +38,6 @@ standard control for **datetime** attributes.
 
 [setShowTime](setShowTime.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -22,7 +22,7 @@ To view all activities in a portal Timeline:
     > If **DisplayAllUserActivitiesOnTimeline** site setting does not exist, you can create a new setting with this name.
 
 2. If not present, add the activity type to include in the view filter:  
-    1. Go to [**Settings**](https://docs.microsoft.com/power-platform/admin/admin-settings#app-settings) > **Customizations** > **Customize the System**.
+    1. Go to [**Settings**](/power-platform/admin/admin-settings#app-settings) > **Customizations** > **Customize the System**.
     2. Select **Activity** entity and expand **Views**.
     3. Edit the **Portal Timeline View**.
     4. Update the **Edit Filter Criteria** and add the required activity type such as **Appointment, Email, or Phone Call**.
@@ -35,3 +35,6 @@ To view all activities in a portal Timeline:
 
 > [!NOTE]
 > Portal timeline doesn't show inline images in the timeline control. For example, images embedded within emails don't appear on the portal timeline.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

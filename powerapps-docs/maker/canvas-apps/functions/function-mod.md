@@ -28,3 +28,6 @@ The result has the same sign as the divisor.
 * *Number* - Required. Number to divide.
 * *Divisor* - Required.  Number to divide by.
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

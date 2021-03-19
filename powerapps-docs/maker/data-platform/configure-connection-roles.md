@@ -154,3 +154,6 @@ If more than one matching connection role is configured, those connection roles 
 [Create and edit relationships between tables](create-edit-entity-relationships.md)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -304,3 +304,5 @@ See organization Entity [organization_postlike](organization.md#BKMK_organizatio
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.postlike?text=postlike EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

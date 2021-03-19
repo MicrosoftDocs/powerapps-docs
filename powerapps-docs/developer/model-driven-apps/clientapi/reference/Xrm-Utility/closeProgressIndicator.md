@@ -35,3 +35,6 @@ If no progress dialog is displayed currently, this method will do nothing. You c
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

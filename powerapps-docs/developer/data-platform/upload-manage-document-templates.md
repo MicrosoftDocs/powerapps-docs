@@ -36,3 +36,6 @@ These are the types of template entites:
 - [MailMergeTemplate](reference/entities/mailmergetemplate.md) 
 - [PersonalDocumentTemplate](reference/entities/personaldocumenttemplate.md) 
 - [Template](reference/entities/template.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

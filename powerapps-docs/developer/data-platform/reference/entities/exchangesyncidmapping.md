@@ -493,3 +493,5 @@ See businessunit Entity [business_unit_exchangesyncidmapping](businessunit.md#BK
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.exchangesyncidmapping?text=exchangesyncidmapping EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

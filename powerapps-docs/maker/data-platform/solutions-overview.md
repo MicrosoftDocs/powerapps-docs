@@ -156,3 +156,5 @@ For details about customizing the individual components in a solution, see the f
  
 ### Next steps  
 [Create a solution](create-solution.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

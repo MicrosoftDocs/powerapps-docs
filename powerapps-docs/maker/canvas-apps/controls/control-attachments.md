@@ -116,3 +116,6 @@ The following properties must be present:
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

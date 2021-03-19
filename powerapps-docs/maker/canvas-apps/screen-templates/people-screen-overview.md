@@ -63,7 +63,7 @@ If you want to modify the screen further, use the [people-screen reference](./pe
 
 ### Show different data for people
 
-This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **UserBrowseGallery** control. Adding or changing fields in the gallery is a simple process:
+This screen uses the [Office365Users.SearchUser](/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **UserBrowseGallery** control. Adding or changing fields in the gallery is a simple process:
 
 1. In the **UserBrowseGallery**, select a label to modify (or add one and keep it selected).
 
@@ -110,3 +110,6 @@ The people screen caches your people selections in the **MyPeople** collection. 
 * [View the reference documentation for this screen](./people-screen-reference.md).
 * [Learn more about the Office 365 Outlook connector](../connections/connection-office365-outlook.md).
 * [Learn more about the Office 365 Users connector](../connections/connection-office365-users.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

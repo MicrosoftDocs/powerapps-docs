@@ -151,11 +151,11 @@ Service limits aren't expected to negatively affect normal usage of Dataverse.
 
 For information about current service protection limits for each service, see:
 
-- [Dataverse API request limits](/powerapps/developer/data-platform/api-limits): Applicable to Dynamics 365 customer engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, in addition to connections from Power Apps and Power Automate to Dataverse.
+- [Dataverse API request limits](../../developer/data-platform/api-limits.md): Applicable to Dynamics 365 customer engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, in addition to connections from Power Apps and Power Automate to Dataverse.
 
 - [Microsoft Power Automate limits](/flow/limits-and-config#looping-and-debatching-limits): Applicable for Power Automate. 
 
-- [Limits in connectors](https://docs.microsoft.com/connectors/): Applicable for Power Automate and Power Apps.
+- [Limits in connectors](/connectors/): Applicable for Power Automate and Power Apps.
 
 ### Capacity add-ons
 
@@ -197,3 +197,6 @@ For the current list of datacenter regions, see [Datacenter regions](/power-plat
 ### See also
 
 [Work with any data](work-with-any-data.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
