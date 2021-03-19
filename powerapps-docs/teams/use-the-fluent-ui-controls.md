@@ -95,17 +95,6 @@ help ensure that the user specifies a date in the correct format.
 *Value* – The date currently selected in a date control. This date is
 represented in local time.
 
-*Format* – The text format in which the control shows the date and the user
-specifies the date. You can set this property to ShortDate (default) or LongDate to format dates based on the Language property of this control. You can also set this property to an expression, such as yyyy/mm/dd, if you want the same format independent of the language. For example:
-
--   The control shows 12/31/2017 if the user selects the last day of
-    2017, the Format property is set to ShortDate, and the Language property is
-    set to en-us.
-
--   The control shows dimanche 31 December 2017 if the user selects the
-    last day of 2017, the Format property is set to LongDate, and the Language
-    property is set to fr-fr.
-
 ## Label
 
 A box that shows data such as text, numbers, dates, or currency.
