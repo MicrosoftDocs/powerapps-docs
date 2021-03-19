@@ -39,9 +39,6 @@ If you are new to the Dataverse applications, the topics in this section provide
 [Understand model-driven apps components](../../maker/model-driven-apps/model-driven-app-components.md)<br/>
 [Create your first model-driven app](../../maker/model-driven-apps/build-first-model-driven-app.md)
 
-### See also
-
-[Power Apps for developers](../../index.yml?panel=developer#pivot=home)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
