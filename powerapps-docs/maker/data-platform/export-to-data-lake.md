@@ -217,9 +217,9 @@ After successfully using the Export to Data Lake service, discover how you can a
 
 
 ### See also
-[Analyze exported data with Power BI](https://docs.microsoft.com/powerapps/maker/data-platform/export-to-data-lake-data-powerbi)
+[Analyze exported data with Power BI](./export-to-data-lake-data-powerbi.md)
 
-[Ingest exported data with Azure Data Factory](https://docs.microsoft.com/powerapps/maker/data-platform/export-to-data-lake-data-adf)
+[Ingest exported data with Azure Data Factory](./export-to-data-lake-data-adf.md)
 
 [Export to data lake FAQ](export-data-lake-faq.yml)
 

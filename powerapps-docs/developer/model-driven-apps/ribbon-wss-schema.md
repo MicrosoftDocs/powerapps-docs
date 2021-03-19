@@ -24,7 +24,7 @@ The following is the schema definition for the ribbon types WSS of an import/exp
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
 
-For more information, see [Package and Distribute Extensions with Solutions](https://docs.microsoft.com/powerapps/developer/data-platform/introduction-solutions).
+For more information, see [Package and Distribute Extensions with Solutions](../data-platform/introduction-solutions.md).
 
 
 ## Schema  
