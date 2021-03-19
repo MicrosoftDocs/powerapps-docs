@@ -74,7 +74,7 @@ For example, on **Microsoft Edge**:
 - On the top bar, go to **Debugger** and then search for the component name described in the manifest file in the search bar. For example, type your component name like `Hello World component`.
 
      > [!div class="mx-imgBorder"]
-     > ![Debug component](media/debug-control.png "Debug component")
+     > ![Debug components](media/debug-control.png "Debug components")
 
 > [!NOTE]
 > It is always a good practice to set breakpoints on the component's lifecycle methods like [init](reference/control/init.md) and [updateView](reference/control/updateview.md).
