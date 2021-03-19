@@ -112,7 +112,7 @@ Part of the name of any virtual table you create is the customization prefix. Th
     > [!IMPORTANT]
     > Several options, such as Access Teams, Queues, and Quick Create,  aren't available with virtual tables. More Information [Considerations when you use virtual tables](#considerations)  
       
-    Complete the additional required and optional properties, such as display and plural names, as necessary. For more information about these properties, see [Create and edit tables](create-edit-entities.md).  
+    Complete the additional required and optional properties, such as display and plural names, as necessary. For more information about these properties, see [Create and edit tables](./data-platform-create-entity.md).  
   
 1. Create and add one or more columns for the virtual table. In addition to the standard column properties required to create a custom column, these optional properties are available for each custom column you create for a virtual table.
 
@@ -153,7 +153,7 @@ Virtual tables have these restrictions.
 ### See also  
 
 [OData v4 Data Provider requirements and best practices](virtual-entity-odata-provider-requirements.md)</br> 
-[Create and edit tables](create-edit-entities.md)</br>
+[Create and edit tables](./data-platform-create-entity.md)</br>
 [Create and edit columns](create-edit-fields.md)
 
 

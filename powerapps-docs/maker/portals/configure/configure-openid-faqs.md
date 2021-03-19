@@ -66,7 +66,7 @@ When in use, "emailclaimsmapping" is also used to search for an existing contact
 
 No. The ID token provided by the identity provider isn't made available through any standard technique on the client side, and is only used for the purpose of authentication. However, if you're using the Implicit Grant flow, you can use the methods provided by your identity provider to get access to ID or access tokens.
 
-For example, Azure AD provides [Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) to achieve this scenario in clients.
+For example, Azure AD provides [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) to achieve this scenario in clients.
 
 ## Can I use a custom OpenID Connect provider instead of Azure AD?
 

@@ -37,7 +37,7 @@ A data provider is a particular type of Dataverse plug-in, which is registered a
 
 The following data providers ship with Dataverse:
 - An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default.
-- An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
+- An [Azure Cosmos DB](/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
 If a data provider cannot be found for your external data source, you can develop a *custom virtual entity data provider*; for more information, see [Virtual entity data providers](custom-ve-data-providers.md).
 
