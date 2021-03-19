@@ -1,16 +1,16 @@
 ---
-title: "Configure CORS support in portals | MicrosoftDocs"
-description: "Learn how to configure CORS support in portals."
+title: "Setup HTTP headers in Power Apps portals | MicrosoftDocs"
+description: "Learn how to setup HTTP headers in portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/08/2021
+ms.date: 03/19/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure CORS protocol support in portals
+# Setup HTTP headers in portals
 
 The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain. You can configure CORS support in Power Apps portals using the Portal Management app by adding and configuring the site settings.
 

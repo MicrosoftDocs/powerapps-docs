@@ -1438,7 +1438,7 @@
               href: ./portals/configure/behavior-format-date-time-field.md
         - name: Create and show portal content
           href: ./portals/configure/create-show-portal-content.md
-        - name: Configure CORS support
+        - name: Setup HTTP headers
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
