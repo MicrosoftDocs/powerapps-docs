@@ -89,21 +89,11 @@ There are a few issues that can be resolved through some easy steps.
 * Not all tables support editing and creation of new rows, these tables will open in Excel and allow you to view data but publishing will be disabled.
 * Look up columns must be edited using the add-in to ensure the correct row is referenced, updating these columns via copy and past or typing directly into the column is not supported.
 * The maximum table size when editing in Excel is one million cells. If there are too many rows or columns, not all data will be read or published.
-* [Centralized deployment](/office/dev/add-ins/publish/centralized-deployment) is not supported. This add-in requires access to the Office store. If you get an error in Excel that "Office 365 has been configured to prevent individual acquisition and execution of Office Store add-ins", it is because your admin has [restricted users' access to the Office store](/microsoft-365/admin/manage/manage-addins-in-the-admin-center?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook).
+* If you get an error in Excel that *Office 365 has been configured to prevent individual acquisition and execution of Office Store add-ins*, it is because your admin has [restricted users' access to the Office store](/microsoft-365/admin/manage/manage-addins-in-the-admin-center#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook). This add-in requires access to the Office store. [Centralized deployment](/office/dev/add-ins/publish/centralized-deployment) is not supported.
 * Manually configuring the add-in is prone to errors. For best results, [download the Excel file with Power Apps](#open-table-data-in-excel-1) instead of starting from a blank Excel workbook.
 
 If you encounter an issue that isn't described here, contact us via the [support pages](https://powerapps.microsoft.com/support/).
 
-### Office Store add-in download disabling
-If Office Store add-in downloading has been disabled for your organization, you might receive the following error message when you open the Excel worksheet after selecting the Edit data in Excel command. 
-
-*Office 365 has been configured to prevent individual acquisition and execution of Office Store Add-ins.*
-
-This setting prevents the Power Apps Excel Add-in from downloading. When this occurs, table row data will not be displayed in Excel. 
-
-For more information about enabling Office Store Add-in downloading, contact your Office app administrator. 
-
-For more information about preventing Office Store Add-in downloading from the Office Store, see [Prevent add-in downloads by turning off the Office Store across all clients](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook).
 
 ## Other ways to export and view table row data
 For more information about ways to export and view table row data, see these articles.
