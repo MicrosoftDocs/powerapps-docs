@@ -172,21 +172,21 @@ This makes the web resource available to be selected under the **Event Handlers*
     - Select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnLoad** in the **Function** field. The function name is [Namespace].[Function] from your JavaScript code.
     - Select **Pass execution context as first parameter** to pass in the execution context as a parameter to this function. If you review the function definition in the code, we are passing an **executionContext** object to our function definition, and selecting this option wires them up.
     
-      ![Form OnLoad](../media/clientapi_walkThrough-img6.png)
+      ![Form OnLoad 1](../media/clientapi_walkThrough-img6.png)
 
 1. Select **OK** to return to the **Form Properties** dialog box.
 1. Under the **Event Handlers** section, select **OnSave** as the **Event** this time, and select **Add** to add an event handler for the Form OnSave event.
 
-    ![Form OnSave](../media/clientapi_walkThrough-img7.png)
+    ![Form OnSave ](../media/clientapi_walkThrough-img7.png)
 
 1. In the **Handler Properties** dialog box, select the name of your web resource from the **Library** drop-down list, and specify **Sdk.formOnSave** in the **Function** field. We won't pass the execution context to the function this time as the **Sdk.formOnSave** function code does not require it.
 
-    ![Form OnSave](../media/clientapi_walkThrough-img8.png)
+    ![Form OnSave 1](../media/clientapi_walkThrough-img8.png)
 
 1. Select **OK** to return to the **Form Properties** dialog box.
 1. Under the **Event Handlers** section, select **Account Name** as the control and **OnChange** as the event; select **Add** to add an event handler for the OnChange event.
 
-    ![Form OnSave](../media/clientapi_walkThrough-img9.png)
+    ![Form OnSave 2](../media/clientapi_walkThrough-img9.png)
 
 1. In the **Handler Properties** dialog box:   
 
