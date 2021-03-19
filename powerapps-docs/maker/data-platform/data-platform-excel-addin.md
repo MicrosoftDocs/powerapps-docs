@@ -90,7 +90,7 @@ There are a few issues that can be resolved through some easy steps.
 * Look up columns must be edited using the add-in to ensure the correct row is referenced, updating these columns via copy and past or typing directly into the column is not supported.
 * The maximum table size when editing in Excel is one million cells. If there are too many rows or columns, not all data will be read or published.
 * [Centralized deployment](/office/dev/add-ins/publish/centralized-deployment) is not supported. This add-in requires access to the Office store.
-* Manually configuring the add-in is prone to errors. For best results, [download the Excel file with Power Apps](#open-table-data-in-excel-1) instead of starting from a blank Excel workbook.
+* Manually configuring the add-in might cause unexpected behavior. For best results, [download the Excel file with Power Apps](#open-table-data-in-excel-1) instead of starting from a blank Excel workbook.
 
 If you encounter an issue that isn't described here, contact us via the [support pages](https://powerapps.microsoft.com/support/).
 
