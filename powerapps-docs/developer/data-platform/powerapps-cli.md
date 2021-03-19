@@ -87,8 +87,8 @@ Command to work with solution packages. It has the following parameters:
 |-------------|-----------|-------|
 |init|Initializes a new package project. It has the following parameter: <br/> - *outputdirectory*: Output directly where the package is created.| `pac package init --outputdirectory c:\samplepackage`|
 |add-reference|Sets the reference path to the solution project folder by passing the `path` parameter.|`pac package add-reference --path c:\Users\Downloads\SampleSolution`|
-|show| shows the content of a package dll or a zip file with a package. <br/> It has the following parameter: <br/> - *package*: path to where the package dll (library) or the zip file| `pac package show c:\samplepackage.dll`|
-|deploy| deployes the package dll or the zip file with a package. <br/> It has the following parameters: <br/> - *logFile*:  path to a log file location where the logs would redirected  <br/> - *logConsole*: This option is used if you want to direct the logs to the console <br/> - *package*: The path location to the package dll (library) or a zip file with a package  <br/> **Note**: You can use both logFile and logConsole parameters together or use one parameter or the other | `pac package deploy --logFile c:\samplelogdata --package c:\samplepackage`
+|show| Shows the content of a package dll or a zip file with a package. <br/> It has the following parameter: <br/> - *package*: The path location to the package dll (library) or the zip file.| `pac package show c:\samplepackage.dll`|
+|deploy| Deployes the package dll or the zip file with a package. <br/> It has the following parameters: <br/> - *logFile*:  Path to a log file location where the logs are redirected.  <br/> - *logConsole*: This option is used if you want to direct the logs to the console. <br/> - *package*: The path location to the package dll (library) or a zip file with a package.  <br/> **Note**: You can use both `logFile` and `logConsole` parameters together or use one parameter or the other. | `pac package deploy --logFile c:\samplelogdata --package c:\samplepackage`
 
 
 ### PCF
