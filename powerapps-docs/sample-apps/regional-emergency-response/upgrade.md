@@ -99,3 +99,6 @@ For detailed information about this, see [Step 11.1: Fix the flows for sending e
 Verify and authorize the connection information of the flows for performing specific tasks.
 
 For details about how to do this, see [Step 11.2: Fix the flows for performing specific tasks](/powerapps/sample-apps/regional-emergency-response/deploy#step-112-fix-the-flows-for-performing-specific-tasks) in the deployment topic.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

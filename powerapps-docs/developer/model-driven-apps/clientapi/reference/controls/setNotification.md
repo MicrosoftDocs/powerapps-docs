@@ -48,3 +48,5 @@ Setting an error notification on a control will block the form from saving.
 [addNotification](addNotification.md)
 
 [clearNotification](clearNotification.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

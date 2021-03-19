@@ -1,6 +1,6 @@
 ---
 title: "Get started with Model-driven Apps customization using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can customize Model-driven apps by using tools that are available in the Power Apps portal or that are described in the documentation. " # 115-145 characters including spaces. This abstract displays in the search result.
+description: "You can customize Model-driven apps by using tools that are available in Power Apps or that are described in the documentation. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -21,24 +21,24 @@ search.app:
 Split to just include model-driven apps issues
  -->
 
-You can customize model-driven apps by using tools that are available in the Power Apps portal or that are described in the documentation. These customizations are supported and can be upgraded.
+You can customize model-driven apps by using tools that are available in Power Apps or that are described in the documentation. These customizations are supported and can be upgraded.
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to model-driven apps. For more information, see [Unsupported customizations](#unsupported-customizations) later in this topic.
 
 Topics covered in technical articles published on Microsoft sites such as this one are supported, but might not be upgradable.
 
 
-## Customizations using Power Apps portal
+## Customizations using Power Apps
 
 There are a variety of tools included with model-driven apps that you can use to customize them. Customizations made using the model-driven apps tools are fully supported and fully upgradeable.
 
 The following customization methods can be used to produce fully supported customizations:
 
-- Customization in the Power Apps portal or solution explorer. For more information, see [Overview of building model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
+- Customization in Power Apps or solution explorer. For more information, see [Overview of building model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
 
-- Settings in the web application. For more information, see [Administer model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
+- Settings in the web application. For more information, see [Administer model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md).
 
-- Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-reporting-to-app).
+- Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](../../maker/model-driven-apps/add-reporting-to-app.md).
 
 > [!NOTE]
 > The behavior of model-driven apps depend on customizations applied to the associated Microsoft Dataverse. More information: [Supported Customizations for Dataverse](../data-platform/supported-customizations.md)
@@ -69,7 +69,7 @@ Use of `RibbonDiffXml` to add, remove, or hide ribbon elements is supported. Reu
 
 ## Unsupported customizations
 
-Modifications to Model-driven apps that are made without using either the methods described in this documentation or Power Apps portal tools are not supported and are not preserved during updates or upgrades of model-driven apps. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade model-driven apps.
+Modifications to Model-driven apps that are made without using either the methods described in this documentation or Power Apps tools are not supported and are not preserved during updates or upgrades of model-driven apps. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade model-driven apps.
 
 The following is a list of unsupported action types that are frequently asked about:
 
@@ -87,3 +87,6 @@ The following is a list of unsupported action types that are frequently asked ab
 [Apply business logic using client scripting in Model-driven apps using JavaScript](client-scripting.md)<br/>
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
 [Web resources in model-driven apps](web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

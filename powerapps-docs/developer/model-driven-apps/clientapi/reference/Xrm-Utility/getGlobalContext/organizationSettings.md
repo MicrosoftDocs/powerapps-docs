@@ -56,7 +56,7 @@ Deprecated; use [organizationSettings.baseCurrency](#basecurrency) instead to ac
 
 ## baseCurrency 
 
-Returns a lookup object containing the ID, name, and entity type of the base currency for the current organization. This method is supported only on the Unified Interface.
+Returns a lookup object containing the ID, name, and entity type of the base currency for the current organization. This method is supported only on Unified Interface.
 
 ### Syntax
 
@@ -164,3 +164,6 @@ Indicates whether the Skype protocol is used for the current organization.
 [User settings](userSettings.md)
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]

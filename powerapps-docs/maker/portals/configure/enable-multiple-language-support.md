@@ -5,19 +5,20 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/30/2020
+ms.date: 02/08/2021
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
 # Enable multiple-language portal support
+
 Business is not confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
 
 ![Multi-language dropdown](../media/multi-language-dropdown.png "Multiple-language drop-down list")  
 
 To enable multiple languages for a portal, follow these steps:
 
-1. [Enable languages in a Microsoft Dataverse environment.](https://docs.microsoft.com/power-platform/admin/enable-languages)  
+1. [Enable languages in a Microsoft Dataverse environment.](/power-platform/admin/enable-languages)  
 2. Go to **Portals** > **Website** > **Websites**.
 3. Select the website to add language support to.
 4. In the **Supported Languages** section under the **General** tab, select **New Website Language**.
@@ -84,10 +85,10 @@ The table below shows all the languages currently available out of the box. This
 
 ## Create content in multiple languages
 
-1. Sign in to Dynamics 365 Portals.
+1. Open the [Portal Management app](../configure/configure-portal.md).
 2. Go to **Portals** > **Content** > **Web Pages** to see a list of content. For each webpage, there will be a parent version of the page and a child version of the page for each language activated for the portal.
 3. To add a new localization of the page, go to a base page and scroll down to **Localized Content**.
-4. Select the **+** button on the rightmost side to create a lookup for the localized version.
+4. Select **+ New Web Page** on to create a lookup for the localized version.
 
     ![Add new localized content](../media/add-new-localized-content.png "Add new localized content")  
 
@@ -99,3 +100,6 @@ Knowledge articles will only be displayed if they have been translated into the 
 Web link sets are the navigation links at the top of the portal. By navigating to **Portals** > **Content** > **Web Link Sets** you can control how this content is translated. When a language is active for the portal, a new set of links are created for the newly activated language.
 
 ![Active web link for new language](../media/active-weblink-new-language.png "Active web link for new language")
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

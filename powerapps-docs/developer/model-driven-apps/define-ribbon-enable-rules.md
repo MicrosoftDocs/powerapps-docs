@@ -65,7 +65,7 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 -   `CrmForOutlookOfflineAccess`  
 
 ### Custom Rule
- Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [Script (JScript) web resource](/powerapps/developer/model-driven-apps/script-jscript-web-resources) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
+ Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [Script (JScript) web resource](./script-jscript-web-resources.md) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
 
 ```JavaScript
 function EnableRule()
@@ -166,3 +166,6 @@ Uses the `<ValueRule>` element. Use this rule to check the value of a specific f
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Define Ribbon commands](define-ribbon-commands.md)   
  [Define Ribbon display rules](define-ribbon-display-rules.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

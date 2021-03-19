@@ -35,7 +35,7 @@ search.app:
 |disableMru|Boolean|No|Decides whether to display the most recently used(MRU) item.<br />Available only for Unified Interface.|
 |entityTypes|Array|Yes|The entity types to display.|
 |filters|Array of objects|No|Used to filter the results. Each object in the array contains the following attributes:<br /><ul><li>**filterXml**: String. The FetchXML filter element to apply.</li><li>**entityLogicalName**: String. The entity type to which to apply this filter.</li></ul>|
-|searchText|String|No|Indicates the default search term for the lookup control. This is supported only on [Unified Interface](https://docs.microsoft.com/power-platform/admin/about-unified-interface).|
+|searchText|String|No|Indicates the default search term for the lookup control. This is supported only on [Unified Interface](/power-platform/admin/about-unified-interface).|
 |showBarcodeScanner|Boolean|No|Indicates whether the lookup control should show the barcode scanner in mobile clients.|
 |viewIds|Array|No|The views to be available in the view picker. Only system views are supported.|
 
@@ -69,3 +69,6 @@ function(error){console.log(error);});
 ### Related topics
 
 [Xrm.Utility](../xrm-utility.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

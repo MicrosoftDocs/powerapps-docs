@@ -40,7 +40,7 @@ To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](
 
 5. If this is the first time that you've run the Power Apps Excel Add-in, select **Trust this Add-in** to allow the Excel Add-in to run.
 
-6. If you're prompted to sign in, select **Sign in**, and then sign in by using the same credentials that you used on [Power Apps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). The Excel Add-in will use a previous sign-in context and automatically sign you in if it can. Therefore, verify the user name in the upper right of the Excel Add-in.
+6. If you're prompted to sign in, select **Sign in**, and then sign in by using the same credentials that you used on [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). The Excel Add-in will use a previous sign-in context and automatically sign you in if it can. Therefore, verify the user name in the upper right of the Excel Add-in.
 
 The Excel Add-in automatically reads the data for the table that you selected. Note that there will be no data in the workbook until the Excel Add-in reads it in.
 
@@ -88,6 +88,9 @@ There are a few issues that can be resolved through some easy steps.
 
 * Not all tables support editing and creation of new rows, these tables will open in Excel and allow you to view data but publishing will be disabled.
 * Look up columns must be edited using the add-in to ensure the correct row is referenced, updating these columns via copy and past or typing directly into the column is not supported.
+* The maximum table size when editing in Excel is one million cells. If there are too many rows or columns, not all data will be read or published.
+* [Centralized deployment](/office/dev/add-ins/publish/centralized-deployment) is not supported. This add-in requires access to the Office store.
+* Manually configuring the add-in might cause unexpected behavior. For best results, [download the Excel file with Power Apps](#open-table-data-in-excel-1) instead of starting from a blank Excel workbook.
 
 If you encounter an issue that isn't described here, contact us via the [support pages](https://powerapps.microsoft.com/support/).
 
@@ -100,14 +103,14 @@ This setting prevents the Power Apps Excel Add-in from downloading. When this oc
 
 For more information about enabling Office Store Add-in downloading, contact your Office app administrator. 
 
-For more information about preventing Office Store Add-in downloading from the Office Store, see [Prevent add-in downloads by turning off the Office Store across all clients](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook).
+For more information about preventing Office Store Add-in downloading from the Office Store, see [Prevent add-in downloads by turning off the Office Store across all clients](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook&preserve-view=true).
 
 ## Other ways to export and view table row data
 For more information about ways to export and view table row data, see these articles.
-- [Export data to CSV](/powerapps/maker/data-platform/data-platform-import-export#export-data-to-csv) 
-- [Export your data to Excel Online](/powerapps/user/export-to-excel-online)
-- [Export table data to Azure Data Lake Storage Gen2](/powerapps/maker/data-platform/export-to-data-lake)
-- [Self-service data prep with dataflows](/powerapps/maker/data-platform/self-service-data-prep-with-dataflows)
+- [Export data to CSV](./data-platform-import-export.md#export-data-to-csv) 
+- [Export your data to Excel Online](../../user/export-to-excel-online.md)
+- [Export table data to Azure Data Lake Storage Gen2](./export-to-data-lake.md)
+- [Self-service data prep with dataflows](./self-service-data-prep-with-dataflows.md)
 
 
 ### See also
@@ -116,3 +119,6 @@ For more information about ways to export and view table row data, see these art
 * [Generate an app by using Microsoft Dataverse](../canvas-apps/data-platform-create-app.md)
 * [Create an app from scratch using Dataverse](../canvas-apps/data-platform-create-app-scratch.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

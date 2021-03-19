@@ -863,3 +863,6 @@ DELETE https://[Organization URI]/api/data/v9.0/opportunities(7cf77a42-5f0e-e611
 [Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
 [Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

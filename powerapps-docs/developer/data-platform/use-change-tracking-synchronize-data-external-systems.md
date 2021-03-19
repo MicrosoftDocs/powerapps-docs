@@ -31,7 +31,7 @@ The change tracking feature in Microsoft Dataverse provides a way to keep the da
  ```
  Read more about metadata annotations on [Metadata annotations](webapi/web-api-types-operations.md#bkmk_metannot).
  
- For more information about using the customization user interface (UI), see [Enable change tracking to control data synchronization](https://technet.microsoft.com/library/3fa9c316-9dc9-4b28-9abf-43a3fce5b01d.aspx).  
+ For more information about using the customization user interface (UI), see [Enable change tracking to control data synchronization](/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn946903(v=crm.8)).  
   
 <a name="BKMK_webapi"></a>   
 ## Retrieve changes for an entity using the Web API  
@@ -46,7 +46,7 @@ This example shows how to retrieve changes made in accounts data using the Web A
 
 Request
 ```http
-GET [Organization URI]/org1/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax HTTP/1.1
+GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber,telephone1,fax HTTP/1.1
 Prefer: odata.track-changes
 Cache-Control: no-cache
 OData-Version: 4.0
@@ -110,7 +110,7 @@ GET [Organization URI]/api/data/v9.0/accounts/$count?$deltatoken=919042%2108%2f2
 
 <a name="bkmk_unsupported"></a>
 ## Query options not supported in Change Tracking Web API request
-System query options `$filter`, `$orderby` and `$top` are not supported when using `odata.track-changes` as header in Web API request. An error message saying "The `$filter`/ `$orderby`/ `$top` query parameter isn't supported when Change Tracking is enabled." gets returned when using these query options in the Web API request.
+System query options `$filter`, `$orderby`, `$expand` and `$top` are not supported when using `odata.track-changes` as header in Web API request. An error message saying "The `$filter`/ `$orderby`/ `$expand` / `$top` query parameter isn't supported when Change Tracking is enabled." gets returned when using these query options in the Web API request.
 
 <a name="BKMK_retrieve"></a>   
 ## Retrieve changes for an entity using the Organization Service
@@ -173,3 +173,6 @@ while (true)
  [Define alternate keys for an entity](define-alternate-keys-entity.md)   
  [Using alternate keys](use-alternate-key-create-record.md)   
  [Update Dynamics 365 with external data using Upsert](use-upsert-insert-update-record.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

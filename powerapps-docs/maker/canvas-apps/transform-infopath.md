@@ -169,3 +169,6 @@ With Power Apps and the information in this topic, you're now ready to go out in
 [**Formula reference**](formula-reference.md) - Always a great way to become inspired, just browsing some of the default functions.
 
 [**Power Apps community**](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) - See examples, engage with others, ask and answer questions, and help the Power Apps community grow.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

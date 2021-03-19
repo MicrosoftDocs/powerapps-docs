@@ -688,3 +688,5 @@ See transactioncurrency Entity [TransactionCurrency_officegraphdocument](transac
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.officegraphdocument?text=officegraphdocument EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

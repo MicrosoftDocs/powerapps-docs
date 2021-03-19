@@ -75,3 +75,6 @@ By following the above steps, Fiddler is configured to listen to the requests an
 
 [Web resources](web-resources.md)<br />
 [Client scripting using JavaScript](client-scripting.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

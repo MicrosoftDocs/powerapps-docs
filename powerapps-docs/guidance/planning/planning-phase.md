@@ -42,3 +42,6 @@ In this section, you'll learn about:
 
 > [!div class="nextstepaction"]
 > [Next step: Identifying the business problem to solve](identifying-business-problem-to-solve.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

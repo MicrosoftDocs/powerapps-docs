@@ -50,3 +50,6 @@ results in the browser requesting the following URL:
 
 https://customerportal.contoso.com/surveys/customer-service-survey/
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

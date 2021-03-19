@@ -54,3 +54,6 @@ var kbSearchResult = kbSearchControl.getSelectedResults();
 | **searchBlurb**     | String   | A short snippet of article content that contains the areas where the search query was hit. Use this to give a glimpse of article to the users in the search list and help them determine if this is the article they are looking for. |
 | **serviceDeskUri**  | String   | Link to the article. Use this link to open the article.   |
 | **timesViewed**     | Number   | The number of times an article is viewed on the portal by customers.  |
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

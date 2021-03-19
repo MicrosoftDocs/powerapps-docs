@@ -893,3 +893,5 @@ See msdyn_aibdatasetfile Entity [msdyn_AIBFileAttachedData_msdyn_AIB](msdyn_aibd
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata?text=msdyn_aibfileattacheddata EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

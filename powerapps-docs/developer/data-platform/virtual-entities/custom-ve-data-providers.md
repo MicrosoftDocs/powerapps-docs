@@ -26,7 +26,6 @@ Using the Microsoft Dataverse Data SDK, .NET Developers have the option of creat
 > [!NOTE]
 > As an alternative to creating a custom data source provider, you should consider adapting your data source to an existing data provider. For example, if you create an OData v4 interface to your external data source, then you can directly access it with the supplied standard OData v4 Data Provider, which supports CRUD operations as well. The mechanism of adding this REST interface varies with the underlying data service technology, for example see [WCF Data Services 4.5](https://docs.microsoft.com/dotnet/framework/data/wcf/). OData has broad industry support, with a wide range of dedicated tools and compatible technologies.
 
-
 ## Prerequisites
 
 Custom data providers require substantial development resources to create and maintain. You must have fundamental knowledge of the following areas:
@@ -100,9 +99,8 @@ Unlike an ordinary plugin, you will only use the Plugin Registration Tool (PRT) 
 |**Entity**|**Description**|
 |-----|-----|
 |[EntityDataProvider](../reference/entities/entitydataprovider.md)|Defines the plugins to use for each event and the logical name of the data source.|
-|[EntityDataSource](../reference/entities/entitydatasource.md)|Provides the entity context and any connection information required for the external data source, including any secrets required to authenticate.|
 
-When the metadata for your virtual entity is configured, your plugins are registered using the PRT and the correct configuration data is set in the **EntityDataProvider** and **EntityDataSource** entities, your virtual entity will start to respond to requests.
+When the metadata for your virtual entity is configured, your plugins are registered using the PRT and the correct configuration data is set in the **EntityDataProvider** entity, your virtual entity will start to respond to requests.
 
 ### Debugging plug-ins
 
@@ -116,3 +114,6 @@ A custom virtual entity provider is a type of plug-in. Use the information in th
 [Sample: Generic virtual entity data provider plug-in](sample-generic-ve-plugin.md)
 
  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

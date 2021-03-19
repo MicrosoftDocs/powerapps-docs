@@ -71,7 +71,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
    ![Screenshot showing the Source property with ViewIn3D1.Src in the expression editor](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Src in the expression editor")
 
 
-9. [Save (and, if necessary, publish) the app](save-publish-app.md) and [load it on your mobile device](../../user/run-canvas-and-model-apps-on-mobile.md) to test that you can view the 3D object in MR by selecting the **View in MR** button.
+9. [Save (and, if necessary, publish) the app](save-publish-app.md) and [load it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile) to test that you can view the 3D object in MR by selecting the **View in MR** button.
 
 
 ## Insert a gallery to view photos taken in the app
@@ -108,7 +108,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
     ![With the image thumbnail in the gallery selected, change the OnSelect property](./media/augmented-upload-photo/set-gallery-onselect.png "With the image thumbnail in the gallery selected, change the OnSelect property")
 
-6. [Save and publish the app](save-publish-app.md) and [load it on your mobile device](../../user/run-canvas-and-model-apps-on-mobile.md).
+6. [Save and publish the app](save-publish-app.md) and [load it on your mobile device](/powerapps/maker/canvas-apps/../mobile/run-powerapps-on-mobile).
 7. Tap the **View in MR** button to open MR view. 
 8. Tap the screenshot icon at the bottom of the screen, then tap the back arrow at the top of the screen.
 9. You should see the screenshot now showing underneath the **View in MR** button. Tap the screenshot's thumbnail, and a large version of the screenshot will appear. Tap anywhere on the image to hide it.
@@ -194,3 +194,6 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 - View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

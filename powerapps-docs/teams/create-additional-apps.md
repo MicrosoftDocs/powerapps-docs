@@ -60,3 +60,6 @@ information: [Canvas apps terminology reference and definitions](overview-of-the
 
 [Microsoft Teams integration object](use-teams-integration-object.md)  
 [Use the Fluent UI controls](use-the-fluent-ui-controls.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

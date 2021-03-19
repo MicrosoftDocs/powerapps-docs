@@ -52,5 +52,9 @@ This displays an error dialog with the default message:
 
 ### Related topics
 
-[Xrm.Navigation](../xrm-navigation.md)
+[Xrm.Navigation](../xrm-navigation.md)<br/>
+[List of error codes](../../../../data-platform/org-service/web-service-error-codes.md)
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

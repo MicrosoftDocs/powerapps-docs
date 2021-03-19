@@ -41,10 +41,13 @@ With Dynamics 365 App for Outlook, you can:
   
 - Track Outlook contacts in Dataverse.  
 
-For information on using Dynamics 365 App for Outlook, see [Dynamics 365 App for Outlook User Guide](https://docs.microsoft.com/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide).
+For information on using Dynamics 365 App for Outlook, see [Dynamics 365 App for Outlook User Guide](/dynamics365/customer-engagement/outlook-app/dynamics-365-app-outlook-user-s-guide).
 
 ### See also
 
 [Customize Dynamics 365 App for Outlook](../maker/model-driven-apps/app-for-outlook-customize.md)  
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

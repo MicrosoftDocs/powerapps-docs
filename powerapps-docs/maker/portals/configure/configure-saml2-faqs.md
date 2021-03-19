@@ -43,3 +43,6 @@ Yes. Portals will specify *PasswordProtectedTransport* in authentication request
 [Configure a SAML 2.0 provider for portals with Azure AD](configure-saml2-settings-azure-ad.md)  
 [Configure a SAML 2.0 provider for portals with AD FS](configure-saml2-settings.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

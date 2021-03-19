@@ -91,3 +91,6 @@ Horizontal container control determines the position of the child components so 
    1. Height = Parent. Height
  
 1. Add few buttons, text inputs, media, icons, and select **F5** to see how the app adjusts to the screen changes.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

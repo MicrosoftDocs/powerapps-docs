@@ -240,3 +240,6 @@ Properties of controls have been simplified for the ease of use. The following t
 
 [Create additional apps](create-additional-apps.md)  
 [Understand Power Apps Studio](understand-power-apps-studio.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -64,3 +64,6 @@ For Azure websites and cloud services, the site name and virtual path values are
 
 ### See also
 [Create and manage websites](websites.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

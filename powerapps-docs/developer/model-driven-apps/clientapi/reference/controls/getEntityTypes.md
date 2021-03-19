@@ -37,3 +37,6 @@ Lookup control
 ### Related topics
 
 [setEntityTypes](setEntityTypes.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

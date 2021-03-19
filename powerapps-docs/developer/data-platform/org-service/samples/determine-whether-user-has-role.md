@@ -54,3 +54,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 This sample creates no records. No cleanup is required.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

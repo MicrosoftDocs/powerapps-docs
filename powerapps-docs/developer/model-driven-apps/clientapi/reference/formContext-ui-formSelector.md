@@ -28,7 +28,7 @@ Form Items are available through any of the following:
     See [Collections](collections.md) for information about the collection methods.
  
     > [!NOTE]
-    > This collection isn't available for [Dynamics 365 mobile clients (phones and tablets)](https://docs.microsoft.com/dynamics365/mobile-app/overview).
+    > This collection isn't available for [Dynamics 365 mobile clients (phones and tablets)](/dynamics365/mobile-app/overview).
 
 - **formselector.getCurrentItem** method: Returns a reference to the form currently being shown. When only one form is available this method will return **null**. Example:
  
@@ -47,3 +47,6 @@ After retrieving a form item using one of the above ways, use the following meth
 |[setVisible](formcontext-ui-formselector/setVisible.md)|[!INCLUDE[formcontext-ui-formselector/includes/setVisible-description.md](formcontext-ui-formselector/includes/setVisible-description.md)]|
 
 
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

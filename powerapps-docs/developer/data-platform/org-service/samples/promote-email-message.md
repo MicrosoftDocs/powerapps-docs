@@ -50,3 +50,6 @@ Checks for the current version of the org.
 ### Clean up
 
 Display an option to delete the records created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

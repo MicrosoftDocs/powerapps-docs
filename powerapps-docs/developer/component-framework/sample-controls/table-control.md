@@ -448,3 +448,5 @@ The callback method injects this information as HTML into a div rendered on the 
 [How to use the sample components](../use-sample-components.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

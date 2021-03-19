@@ -78,3 +78,6 @@ More information: [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/
  [Using the ConditionExpression Class](use-conditionexpression-class.md)   
  [Using the FilterExpression Class](use-filterexpression-class.md)   
  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -2347,3 +2347,5 @@ See team Entity [team_goal_goalowner](team.md#BKMK_team_goal_goalowner) One-To-M
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.goal?text=goal EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

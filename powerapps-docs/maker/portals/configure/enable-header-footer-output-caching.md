@@ -164,3 +164,6 @@ Create the following site settings:
 |Header/OutputCache/Enabled|True|
 |Footer/OutputCache/Enabled|True|
 |||
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

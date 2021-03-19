@@ -74,3 +74,6 @@ To perform actions on an organization-owned visualization (`SavedQueryVisualizat
  [Sample: Assign a Chart to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignChartToAnotherUser)   
  [SavedQueryVisualization Entity](../data-platform/reference/entities/savedqueryvisualization.md)   
  [UserQueryVisualization Entity](../data-platform/reference/entities/userqueryvisualization.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

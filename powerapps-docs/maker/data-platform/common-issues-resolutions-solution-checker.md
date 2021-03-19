@@ -80,7 +80,7 @@ To install Power Apps Checker back into your Dataverse environment:
 
 ## Solution checker can't access environments in Administration Mode
 
-Environments that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
+Environments that have been placed into [Administration Mode](/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
 
 In order to use solution checker in this organization, Administration Mode must be disabled.
 
@@ -276,3 +276,6 @@ The solution checker will list the number of the errors found in the app, *inclu
 [Best practices and guidance for the Dataverse](../../developer/data-platform/best-practices/index.md)
 
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

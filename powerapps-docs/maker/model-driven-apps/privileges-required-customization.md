@@ -30,7 +30,7 @@ search.app:
 App users can personalize the system and even share some of their customizations with others, but only users with the correct privileges can apply changes for everyone.  
   
 > [!NOTE]
->  This section assumes you know how to work with security roles. For more information about working with security roles, see [Create users and assign security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles).  
+>  This section assumes you know how to work with security roles. For more information about working with security roles, see [Create users and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles).  
   
 <a name="BKMK_SysAdminAndSysCustomizer"></a>   
 ## System Administrator and System Customizer security roles  
@@ -59,3 +59,6 @@ App users can personalize the system and even share some of their customizations
 ## Next steps  
 [Understand model-driven app components](model-driven-app-components.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -68,3 +68,6 @@ In the United States, with **[Language](function-language.md)** returning "en-US
 | **Clock.AmPmShort()** |This language uses a 12-hour clock. The return value contains the uppercase versions of the short AM and PM designations. |[ "A", "P" ] |
 | **Clock.IsClock24()** |This language uses a 12-hour clock. |**false** |
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -19,7 +19,7 @@ Similar to subgrids, adding notes to your managed forms on the portal is easy&md
 
 ## Notes configuration for Entity Forms
 
-1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
+1. Open the [Portal Management](./configure/configure-portal.md) app.
 
 1. Select **Entity Forms** under **Content** from left pane:
 
@@ -174,7 +174,7 @@ You must enable **Attach File** option for the **Entity Form** to show the attac
 
 To enable attachment on an entity form:
 
-1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
+1. Open the [Portal Management](./configure/configure-portal.md) app.
 
 1. Select **Entity Forms** under **Content** from left pane:
 
@@ -206,7 +206,7 @@ After you configure the notes and enable notes attachments, you can see the **At
 
 ### Notes created with rich-text editor
 
-You can view the notes created using the [rich-text editor in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
+You can view the notes created using the [rich-text editor in timeline](../model-driven-apps/set-up-timeline-control.md#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
 
 For example, the note shows rich-text format in the model-driven app.
 
@@ -229,3 +229,6 @@ Web form notes are configured in the same way as [entity form notes](#notes-conf
 
 > [!NOTE]
 > Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) in order to display on the portal.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

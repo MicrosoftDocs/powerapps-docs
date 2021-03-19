@@ -105,3 +105,6 @@ To learn about unsupported scenarios for Monitor, go to [Advanced monitoring - u
 [Troubleshoot form issues in model-driven apps](https://docs.microsoft.com/powerapps/developer/model-driven-apps/troubleshoot-forms)  
 [Collaborative debugging with Monitor](monitor-collaborative-debugging.md)  
 [Advanced monitoring](monitor-advanced.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

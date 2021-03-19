@@ -251,7 +251,7 @@ When you create a custom table, you might want to show the custom table as an ac
 
 ## Enable or disable rich-text editor for notes in timeline
 
-Rich-text editor enables users to create rich and well-formatted content for the notes with emphasis. The editor brings common word processor features. To learn more, see [Take notes](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#take-a-note). 
+Rich-text editor enables users to create rich and well-formatted content for the notes with emphasis. The editor brings common word processor features. To learn more, see [Take notes](/dynamics365/customer-service/customer-service-hub-user-guide-basics#take-a-note). 
 
 The feature is enabled by default. If you want to disable and enable later for your users, follow the steps:
 
@@ -275,3 +275,6 @@ For instructions about using the timeline control in a model-driven app, see [Ad
 ### See also
 
 [FAQs for timeline control](faqs-timeline-control.md) 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -74,7 +74,7 @@ For example, on **Microsoft Edge**:
 - On the top bar, go to **Debugger** and then search for the component name described in the manifest file in the search bar. For example, type your component name like `Hello World component`.
 
      > [!div class="mx-imgBorder"]
-     > ![Debug component](media/debug-control.png "Debug component")
+     > ![Debug components](media/debug-control.png "Debug components")
 
 > [!NOTE]
 > It is always a good practice to set breakpoints on the component's lifecycle methods like [init](reference/control/init.md) and [updateView](reference/control/updateview.md).
@@ -86,9 +86,12 @@ You can also interact with the component locally in real time and observe elemen
 
 ## Fiddler AutoResponder
 
-Use the Fiddler AutoResponder to debug your code components quickly. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder).
+Use the Fiddler AutoResponder to debug your code components quickly. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder).
 
 ### Related topics
 
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

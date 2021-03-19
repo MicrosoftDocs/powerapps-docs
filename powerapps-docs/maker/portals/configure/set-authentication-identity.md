@@ -236,7 +236,7 @@ The following describes the settings for adjusting username and password validat
 
 | Site setting name      | Description                             |
 |------------------------|-----------------------------------------|
-| Authentication/UserManager/PasswordValidator/EnforcePasswordPolicy      | Determines whether the password contains characters from three of the following categories:<br><ul><li>Uppercase letters of European languages (A through Z, with diacritic marks, Greek and Cyrillic characters)</li><li>Lowercase letters of European languages (a through z, sharp-s, with diacritic marks, Greek and Cyrillic characters)</li><li>Base 10 digits (0 through 9)</li><li>Nonalphanumeric characters (special characters) (for example, !, $, \#, %)</li></ul>Default: true. More information: [Password policy](https://technet.microsoft.com/library/hh994562(v=ws.10).aspx).   |  
+| Authentication/UserManager/PasswordValidator/EnforcePasswordPolicy      | Determines whether the password contains characters from three of the following categories:<br><ul><li>Uppercase letters of European languages (A through Z, with diacritic marks, Greek and Cyrillic characters)</li><li>Lowercase letters of European languages (a through z, sharp-s, with diacritic marks, Greek and Cyrillic characters)</li><li>Base 10 digits (0 through 9)</li><li>Nonalphanumeric characters (special characters) (for example, !, $, \#, %)</li></ul>Default: true. More information: [Password policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh994562(v=ws.10)).   |  
 | Authentication/UserManager/UserValidator/AllowOnlyAlphanumericUserNames | Determines whether to allow only alphanumeric characters for the username. <br> Default: false |  
 | Authentication/UserManager/UserValidator/RequireUniqueEmail             | Determines whether a unique email address is needed for validating the user. <br> Default: true |  
 | Authentication/UserManager/PasswordValidator/RequiredLength             | The minimum required password length. <br> Default: `8` |  
@@ -288,4 +288,7 @@ The following describes settings for modifying default authentication cookie beh
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
-[Microsoft Learn: Power Apps portals authentication settings](https://docs.microsoft.com/learn/modules/authentication-user-management/2-authentication-settings)  
+[Microsoft Learn: Power Apps portals authentication settings](/learn/modules/authentication-user-management/2-authentication-settings)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

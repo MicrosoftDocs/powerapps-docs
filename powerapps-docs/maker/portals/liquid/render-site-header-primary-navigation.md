@@ -194,3 +194,6 @@ Render a website header and primary navigation bar, using portals settings, snip
 [Render the entity list associated with the current page](render-entity-list-current-page.md)  
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)  
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

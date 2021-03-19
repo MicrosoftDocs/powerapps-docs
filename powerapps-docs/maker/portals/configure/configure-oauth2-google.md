@@ -66,3 +66,6 @@ After you've created the app in Google, configure the site settings for the prov
 ## (Optional) Step 3. Additional settings
 
 To configure **Additional settings** for the Google provider, see [Configure additional settings for OAuth 2.0 providers](configure-oauth2-settings.md).
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

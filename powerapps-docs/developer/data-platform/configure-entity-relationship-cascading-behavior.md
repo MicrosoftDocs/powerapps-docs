@@ -48,7 +48,12 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 |RemoveLink|Remove Link|Remove the value of the referencing attribute for all referencing entity records associated with the referenced entity record.|  
 |Restrict|Restrict|Prevent the Referenced entity record from being deleted when referencing entities exist.|  
 |UserOwned|Cascade User Owned|Perform the action on all referencing entity records owned by the same user as the referenced entity record.|  
-  
+
+>[!NOTE]
+> Cascading actions on Active records will only include records that have a Status Code of Active. Any other solution provided or custom status 
+> codes that indicate a record as live and in use will not be processed as an Active record for cascading purposes.
+
+
  The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref href="Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType" />) contains the following properties representing actions that may be performed on the referenced entity in the one-to-many entity relationship.  
   
 |Action|Description|Valid options|  
@@ -90,3 +95,6 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 
 [Entity relationship metadata](entity-relationship-metadata.md)  
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

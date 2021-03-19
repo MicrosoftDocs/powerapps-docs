@@ -47,7 +47,7 @@ After modeling data and defining processes, you build your app by selecting and 
 
 ![App designer](media/model-driven-app-overview/app-designer.png)
 
-If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
+If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](../../guidance/planning/introduction.md).
 
 ## Next steps
 
@@ -55,3 +55,6 @@ If you are new to Power Apps, and want to learn about how to convert your ideas 
 
 [Understand model-driven app components](model-driven-app-components.md)
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -33,7 +33,7 @@ The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium
   
 ## Open solution explorer
 
-Part of the name of any custom column you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
+Part of the name of any custom column you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
@@ -279,3 +279,6 @@ IME mode does not restrict the characters that users can enter. For example, whe
 [Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
 [Define rollup columns that aggregate values](define-rollup-fields.md)<br />
 [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

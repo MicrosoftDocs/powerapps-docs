@@ -80,3 +80,6 @@ If you're updating an app, you might need to identify or change the source of da
 
 * To show and update data in a source such as Excel, SharePoint, Dataverse, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
 * For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connections/connection-office365-outlook.md), [Twitter](connections/connection-twitter.md), and [Microsoft Translator](connections/connection-microsoft-translator.md).
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

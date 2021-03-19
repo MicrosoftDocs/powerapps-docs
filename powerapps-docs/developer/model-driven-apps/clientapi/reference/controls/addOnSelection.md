@@ -42,3 +42,5 @@ kbSearchControl.addOnSelection(myFunction);
 [OnSelection event](../events/onselection.md)
 
 [removeOnSelection](removeOnSelection.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

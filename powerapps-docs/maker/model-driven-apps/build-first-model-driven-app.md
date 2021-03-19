@@ -22,7 +22,7 @@ search.app:
 Model-driven app design is a component-focused approach to app development. In this topic, you simplify how to create a model-driven app by using one of the standard tables that's available in your Power Apps environment.
 
 > [!TIP]
-> Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction).<br/> 
+> Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](../../guidance/planning/introduction.md).<br/> 
 > For detailed information about model-driven apps and how to build it, start here: [Understand model-driven app components](model-driven-app-components.md). 
 
 ## Sign in to Power Apps
@@ -41,7 +41,7 @@ Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have 
 
 3. On the **Create a New App** page, enter the following details, and then select **Done**: 
   - **Name**: Enter a name for the app, such as *My first app*. 
-  - **Unique Name**: By default, the unique name uses the name your specify in the **Name** box without spaces and preceded by the publisher prefix and an underscore (_). For example, *crecf_Myfirstapp*. More information: [Change the solution publisher prefix](../data-platform/change-solution-publisher-prefix.md)
+  - **Unique Name**: By default, the unique name uses the name your specify in the **Name** box without spaces and preceded by the publisher prefix and an underscore (_). For example, *crecf_Myfirstapp*. More information: [Change the solution publisher prefix](../data-platform/create-solution.md#solution-publisher)
   - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
 For information about the additional app properties, see [Create an app](create-edit-app.md#create-an-app).
 
@@ -89,6 +89,9 @@ After publishing the app it's ready for you to run or share with others.
 
 ## Next steps
 In this topic, you built a simple model-driven app. 
-- To see how your app looks when you run it, see [Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md).
+- To see how your app looks when you run it, see [Run a model-driven app on a mobile device](/dynamics365/customerengagement/on-premises/basics/dynamics-365-phones-tablets-users-guide-onprem).
 - To learn how to share your app, see [Share a model-driven app](share-model-driven-app.md).
 - To get started and learn all about building model-driven apps, see [Understand model-driven app components](model-driven-app-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

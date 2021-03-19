@@ -1021,3 +1021,5 @@ See workflow Entity [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](w
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_solutionhealthrule?text=msdyn_solutionhealthrule EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

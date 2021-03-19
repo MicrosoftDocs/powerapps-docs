@@ -54,3 +54,6 @@ can also use this for comparing the money or time saved by the new process.
 
 > [!div class="nextstepaction"]
 > [Next step: Optimize the process](optimizing-business-process.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -98,3 +98,6 @@ To show the extended ASCII characters, it is a simple matter of changing the sta
 Finally, to show the characters in a different font, set the **Font** property of the second label to a value such as **'Dancing Script'**.
 
 ![Dancing Script](media/function-char/chart-higher-dancing-script.png)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

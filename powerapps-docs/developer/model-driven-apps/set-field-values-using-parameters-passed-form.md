@@ -191,3 +191,6 @@ function OpenNewContact() {
  [Open Forms And Views with a URL](open-forms-views-dialogs-reports-url.md)   
  [openForm](clientapi/reference/Xrm-Navigation/openForm.md)  
  [Configure a form to accept custom querystring parameters](configure-form-accept-custom-querystring-parameters.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

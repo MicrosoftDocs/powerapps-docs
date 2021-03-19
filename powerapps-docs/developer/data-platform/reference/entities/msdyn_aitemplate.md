@@ -1119,3 +1119,5 @@ See businessunit Entity [business_unit_msdyn_aitemplate](businessunit.md#BKMK_bu
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_aitemplate?text=msdyn_aitemplate EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

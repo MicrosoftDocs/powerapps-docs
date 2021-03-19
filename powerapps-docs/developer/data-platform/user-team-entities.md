@@ -75,3 +75,6 @@ User and team management is the area of Microsoft Dataverse where you can create
  [Sample: Share a record using an access team](org-service/samples/share-record-using-access-team.md)   
  [Blog: Service Accounts – Non-Interactive Users](https://go.microsoft.com/fwlink/p/?LinkId=234350)   
  [Privilege and Role Entities](/dynamics365/customer-engagement/developer/privilege-role-entities)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

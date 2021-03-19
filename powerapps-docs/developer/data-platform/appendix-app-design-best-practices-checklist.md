@@ -129,3 +129,6 @@ For information on best practices for creating Canvas apps, see [Canvas App Codi
 
   
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -119,3 +119,6 @@ OData-Version: 4.0
  [Theme Entity](../data-platform/reference/entities/theme.md) <br/>
  [Create a theme](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-themes-organization-brandingd) <br/>
  [Developers guide to customization](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

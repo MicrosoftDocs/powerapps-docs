@@ -26,7 +26,7 @@ search.app:
 This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Dataverse messages posted to the Azure Service Bus.  
   
 > [!NOTE]
->  This walkthrough applies to any Dataverse deployment when using SAS authorization for Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/documentation/articles/service-bus-authentication-and-authorization/).  
+>  This walkthrough applies to any Dataverse deployment when using SAS authorization for Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization).  
 >   
 > You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Download tools from NuGet](download-tools-NuGet.md).
   
@@ -77,3 +77,6 @@ A [ServiceEndpoint Entity](reference/entities/serviceendpoint.md) contains confi
 
 [Azure Integration](azure-integration.md)<br />
 [Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
