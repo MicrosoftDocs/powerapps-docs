@@ -40,9 +40,9 @@ The following customization methods can be used to produce fully supported custo
 
 - Customization in Power Apps or solution explorer. For more information, see [What is Dataverse?](../../maker/data-platform/data-platform-intro.md)
 
-- Settings in the web application. For more information, see [Administer Power Apps](../../administrator/admin-guide.md).
+- Settings in the web application. For more information, see [Administer Power Apps](/power-platform/admin/admin-guide).
 
-- Reporting Services. For more information, see [Add reporting to your model-driven app](/powerapps/maker/model-driven-apps/add-reporting-to-app).
+- Reporting Services. For more information, see [Add reporting to your model-driven app](../../maker/model-driven-apps/add-reporting-to-app.md).
 
 > [!NOTE]
 > Fully supported means that developer support can provide assistance for customizations and that application support can help customers running those modifications.
