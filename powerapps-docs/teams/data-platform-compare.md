@@ -53,7 +53,7 @@ In Dataverse for Teams and Dataverse, data is stored within an environment. Data
 
 To make management easier, the lifecycle of the Dataverse for Teams environment is connected to that of the associated team. For example, when a team is deleted, the associated environment is also deleted.
 
-Whereas Dataverse for Teams focuses on one environment per team for up to 500 teams, Dataverse supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
+Whereas Dataverse for Teams focuses on one environment per team for up to 10,000 teams, Dataverse supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
 
 
 |Environment lifecycle  |Dataverse for Teams  |Dataverse  |
