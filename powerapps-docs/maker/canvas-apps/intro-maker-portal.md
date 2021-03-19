@@ -47,7 +47,7 @@ If you create an app in one environment, you won't be able to see it from anothe
 > [!IMPORTANT]
 > Make sure that you're in the right environment *before* you create an app, a flow, or a similar component. You can't easily move components from one environment to another.
 
-For more information, see [Environments overview](../../administrator/environments-overview.md).
+For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
 ## Choose an app type
 
@@ -106,8 +106,8 @@ By selecting options in the header and left navigation bar, you can do more than
   - [Overview of canvas-app connectors](connections-list.md)
   - [Build and certify custom connectors for canvas apps](register-custom-api.md)
   - [Manage an on-premises data gateway](gateway-management.md)
-  - [Administer Power Apps](../../administrator/index.md)
-  - [Licensing overview](../../administrator/pricing-billing-skus.md)
+  - [Administer Power Apps](/power-platform/admin/admin-guide)
+  - [Licensing overview](/power-platform/admin/pricing-billing-skus)
   - [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md)
 
 ### From the left navigation bar
@@ -115,7 +115,7 @@ By selecting options in the header and left navigation bar, you can do more than
 Extend the functionality of your apps by performing these tasks:
 
 - Manage entities, option sets, and data integration in [Dataverse](../data-platform/data-platform-intro.md).
-- Configure business logic in [Power Automate](https://docs.microsoft.com/flow/getting-started).
+- Configure business logic in [Power Automate](/flow/getting-started).
 - Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md).
 
 

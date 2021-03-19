@@ -17,7 +17,7 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-App makers, who are building custom apps, can use all of the Microsoft Dataverse tables available within [Common Data Model](https://docs.microsoft.com/common-data-model/) to create apps and flows for users who have any version of Power Apps license.  
+App makers, who are building custom apps, can use all of the Microsoft Dataverse tables available within [Common Data Model](/common-data-model/) to create apps and flows for users who have any version of Power Apps license.  
 
 However, a smaller set of tables tied to Dynamics 365 apps (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) require canvas and model-driven app users to have a license for the corresponding Dynamics 365 app if they need to create, update, or delete rows within the tables. These are referred to as restricted tables.
 
@@ -81,7 +81,7 @@ Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgeneratio
 > Dynamics 365 Customer Engagement Plan and Dynamics 365 Plan licenses are no longer available for purchase and is referenced here only for the benefit of existing customers who have bought these licenses in the past.
 
 ## Licensing
-For more information on Power Apps and Dynamics 365 licenses, see [Licensing overview](../../administrator/pricing-billing-skus.md) page.
+For more information on Power Apps and Dynamics 365 licenses, see [Licensing overview](/power-platform/admin/pricing-billing-skus) page.
 
 
 

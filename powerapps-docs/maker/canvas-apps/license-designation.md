@@ -19,7 +19,7 @@ search.app:
 
 Starting October 2019, several connectors are reclassified from Standard to Premium.
 
-[Power Apps licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines
+[Power Apps licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines
 reclassified connectors. Apps using these connectors before the
 reclassification have been granted an extended timeframe allowing users
 without a premium license to access these apps.
@@ -29,7 +29,7 @@ The following table outlines the designations and which license an end user must
 | **Designation​** | **Definition**
 |-|-|
 | Standard​ | An app that only uses standard connectors. An end user must have a Power Apps for Office 365 plan, per app plan, or a per user plan to access this app.
-| Extended​ | An app allowed to use connectors promoted to premium on October 1, 2019.​ An end user must have a Power Apps for Office 365 plan, per app plan or per user plan. [Power Apps licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines which connectors were promoted to premium on October 1, 2019.
+| Extended​ | An app allowed to use connectors promoted to premium on October 1, 2019.​ An end user must have a Power Apps for Office 365 plan, per app plan or per user plan. [Power Apps licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines which connectors were promoted to premium on October 1, 2019.
 | Premium​ | An app that uses at least one premium connector, a custom connector or an on-premise gateway. An end user must have a per app plan or per user plan to access.
 
 ## Check app license designation from app settings
@@ -63,11 +63,11 @@ The following table outlines the designations and which license an end user must
 ## Pass assignment
 
 For information about Pass assignment, read [Power Apps per app
-plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp#step-three-set-up-apps-to-use-per-app-plans).
+plans](/power-platform/admin/about-powerapps-perapp#step-three-set-up-apps-to-use-per-app-plans).
 
 ## Next steps
 
-- [Power Apps licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq)
+- [Power Apps licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq)
 
 ### See also
 
