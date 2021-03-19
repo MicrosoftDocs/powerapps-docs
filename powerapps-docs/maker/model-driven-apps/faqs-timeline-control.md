@@ -105,7 +105,7 @@ When the timeline is displayed on more than one column, the filter pane is displ
 
 [Set up timeline control](set-up-timeline-control.md)
 
-[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
+[Timeline section in the Customer Service Hub app](/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
 
 [Add an appointment, email, phone call, note, or task activity to the timeline](../../user/add-activities.md)
 

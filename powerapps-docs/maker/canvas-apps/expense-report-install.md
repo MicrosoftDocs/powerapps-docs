@@ -375,8 +375,8 @@ This list stores the line items that are associated with each expense report.
 ### See also
 
 - [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
-- [Customize a SharePoint list form](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
-- [Add and configure a control](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-configure-controls)
+- [Customize a SharePoint list form](./customize-list-form.md)
+- [Add and configure a control](./add-configure-controls.md)
 - [Edit and manage permissions for a SharePoint list or library](https://support.office.com/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
 
 

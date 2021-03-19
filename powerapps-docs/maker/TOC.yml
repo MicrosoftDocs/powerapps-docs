@@ -1289,20 +1289,6 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-  - name: Transition to Unified Interface
-    items:
-    - name: Transition quick start
-      href: ./model-driven-apps/transition-web-app.md
-    - name: Use an existing environment to transition quick start
-      href: ./model-driven-apps/transition-web-app-existing.md
-    - name: Unified Interface Playbook
-      href: ./model-driven-apps/unified-interface-playbook.md
-    - name: Approaching a Unified Interface transition
-      href: ./model-driven-apps/approaching-unified-interface.md
-    - name: "Checklist: Unified Interface transition"
-      href: ./model-driven-apps/checklist-transition-unified-interface.md
-    - name: "FAQs: Unified Interface transition"
-      href: ./model-driven-apps/faqs-transition-unified-interface.md
   - name: Model-driven app FAQ
     href: ./model-driven-apps/model-app-faq.md
   - name: Accessibility in Power Apps app designer
@@ -1452,7 +1438,7 @@
               href: ./portals/configure/behavior-format-date-time-field.md
         - name: Create and show portal content
           href: ./portals/configure/create-show-portal-content.md
-        - name: Configure CORS support
+        - name: Setup HTTP headers
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md
@@ -1768,8 +1754,14 @@
       href: ./portals/faq.md
     - name: Legacy Adxstudio Portals v7 FAQs
       href: ./portals/legacy-portal-faq.md
-    - name: Release updates
-      href: ./portals/release-updates.md
+    - name: Version releases and updates
+      items:
+         - name: Release updates
+           href: ./portals/release-updates.md
+         - name: Version updates
+           items:
+              - name: Version 9.3.3.x
+                href: ./portals/version-9.3.3.x.md
 - name: Dataverse
   items:
   - name: Dataverse

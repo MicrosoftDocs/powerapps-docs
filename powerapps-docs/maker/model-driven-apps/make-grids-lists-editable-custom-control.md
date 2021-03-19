@@ -144,7 +144,7 @@ Grouping behavior works only on the client side and does not span pages. Group b
 Business Rules on an editable grid are supported only if the conditional column is also a column on the grid. If the column is not a column the business rules won’t work. Verify that each column referenced in the business rule is also included on the form. Note that business rules on an editable grid do not fire if the editable grid is configured on a dashboard.
 
 ## Next steps  
- [Use keyboard shortcuts in editable grids](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
+ [Use keyboard shortcuts in editable grids](/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
 
 
 

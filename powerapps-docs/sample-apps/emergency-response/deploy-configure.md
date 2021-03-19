@@ -86,13 +86,13 @@ Follow the steps below to install Hospital Emergency Response app along with the
 
 You can install the app by using one of the following 3 options:
 
-- Microsoft AppSource (for Power Apps US Govt customers only). See [Option A: Install the app from Microsoft AppSource (US Govt customers)](#option-a-install-the-app-from-microsoft-appsource-us-govt-customers)
+- Power Platform admin center (for Power Apps US Govt customers only). See [Option A: Install the app from Power Platform admin center (US Govt customers)](#option-a-install-the-app-from-power-platform-admin-center-us-govt-customers)
 
 - Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](#option-b-install-the-app-from-microsoft-appsource)
 
 - Deployment package that you downloaded earlier. See [Option C: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
 
-### Option A: Install the app from Microsoft AppSource (US Govt customers)
+### Option A: Install the app from Power Platform admin center (US Govt customers)
 
 1.  Sign in to Power Platform admin center. Use the appropriate URL to sign in:
     - **GCC**: [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us)

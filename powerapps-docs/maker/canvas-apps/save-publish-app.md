@@ -59,7 +59,7 @@ To publish the most recent version, highlight the version and select ellipsis (.
 
 ## Next steps
 
-* Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](../../user/run-app-client.md).
+* Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](/powerapps/maker/canvas-apps/run-canvas-and-model-apps-on-mobile).
 * [Rename an app](set-name-tile.md) from powerapps.com.
 * [Restore an app](restore-an-app.md) if you have multiple versions of an app.
 

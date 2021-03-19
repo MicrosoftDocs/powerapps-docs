@@ -143,7 +143,7 @@ For example, the **CRM Default Theme** was cloned and changed using mostly varyi
 ## See also  
          
  [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568) <br />
- [Query and edit an organization theme](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
+ [Query and edit an organization theme](/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
 
 
 
