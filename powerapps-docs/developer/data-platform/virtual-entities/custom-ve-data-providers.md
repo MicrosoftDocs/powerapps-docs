@@ -100,9 +100,8 @@ Unlike an ordinary plugin, you will only use the Plugin Registration Tool (PRT) 
 |**Entity**|**Description**|
 |-----|-----|
 |[EntityDataProvider](../reference/entities/entitydataprovider.md)|Defines the plugins to use for each event and the logical name of the data source.|
-|[EntityDataSource](../reference/entities/entitydatasource.md)|Provides the entity context and any connection information required for the external data source, including any secrets required to authenticate.|
 
-When the metadata for your virtual entity is configured, your plugins are registered using the PRT and the correct configuration data is set in the **EntityDataProvider** and **EntityDataSource** entities, your virtual entity will start to respond to requests.
+When the metadata for your virtual entity is configured, your plugins are registered using the PRT and the correct configuration data is set in the **EntityDataProvider** entity, your virtual entity will start to respond to requests.
 
 ### Debugging plug-ins
 
