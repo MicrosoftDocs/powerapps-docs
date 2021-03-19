@@ -334,26 +334,32 @@ Finally, if the control passes all the above checks, the record state determines
 
 ## Why a control has a certain value on form load
 
-There are multiple reasons why a control may / may not have a certain value on form load. 
+There are multiple reasons why a control may/may not have a certain value on form load. 
 
 **Resolution:**
 
-The "ControlDefaultValue" operation in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) explains the source of the default values. 
+The `ControlDefaultValue` operation in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) explains the source of the default values. 
+
 ![image](https://user-images.githubusercontent.com/42012025/111517211-0e0fa700-8712-11eb-8803-8cb1a6cf407b.png)
 
-If there are multiple updates happening to a control's value, there will be an "Update Sequence" to indicate which value is final. For example, here is a control that first got populated with a default value and then got overridden with a value passed with a Client API script. There is a call stack provided.
-![image](https://user-images.githubusercontent.com/42012025/111517257-1b2c9600-8712-11eb-92db-68c8c72c2217.png)
+If there are multiple updates happening to a control's value, there will be an `Update Sequence` to indicate which value is final. For example, here is a control that first has a default value and then got overridden with a value passed with a client API script. There is a call stack provided.
+
+> [!div class="mx-imgBorder"]
+> ![Control value before](https://user-images.githubusercontent.com/42012025/111517257-1b2c9600-8712-11eb-92db-68c8c72c2217.png "Control value before")
 
 There are scenarios where fields are populated based on a relationship field mapping, in which case the event will show that.
-![image](https://user-images.githubusercontent.com/42012025/111517284-2253a400-8712-11eb-97f0-f73e54cb4a19.png)
 
-See where the value is coming from and take an action based on the below table:
+> [!div class="mx-imgBorder"]
+> ![Control value after](https://user-images.githubusercontent.com/42012025/111517284-2253a400-8712-11eb-97f0-f73e54cb4a19.png "Control value after")
+
+Verify where the value is coming from and take an action based on the below table:
+
 | Source | How to fix |
 |--|--|
-| Client API script | Contact the script owner |
-| Default value | Check the control's configuration |
-| Relationship field mapping | Check the relationship configuration and update the field mapping |
-| Value passed by page input data passed via URL | Check the API that opens the specific form with the issue, it is passing the value |
+| Client API script | Contact the script owner. |
+| Default value | Check the control's configuration. |
+| Relationship field mapping | Check the relationship configuration and update the field mapping. |
+| Value passed by page input data passed via URL | Check the API that opens the specific form with the issue, it is passing the value. |
 
 
 ## Why a tab or section is visible or hidden
