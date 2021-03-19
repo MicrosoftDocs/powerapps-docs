@@ -5,11 +5,10 @@ author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/17/2021
+ms.date: 03/19/2021
 ms.author: mmercuri
 ms.reviewer: matp
 ---
-
 # How are Dataverse for Teams and Dataverse different?
 
 [!INCLUDE[cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
@@ -60,7 +59,7 @@ Whereas Dataverse for Teams focuses on one environment per team for up to 10,000
 |---------|---------|---------|
 |Environments   | 1 per Team     | Unlimited        |
 |Maximum size     |   1 million rows or 2 GB      |  4 TB or more     |
-|Promote to Dataverse or Dynamics 365   |  Yes    |  Yes    |
+|Upgrade to Dataverse   |  Yes    |  N/A    |
 
 ## Security
 
