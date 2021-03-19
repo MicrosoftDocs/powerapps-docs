@@ -59,7 +59,7 @@ Path of the Power BI report or dashboard. If the Power BI report or dashboard is
 
 Type of authentication required for the Power BI report or dashboard. Valid values for this parameter are:
 
-- **Anonymous**: Allows you to embed publish to web Power BI reports. The default authentication type is Anonymous. When using the authentication type as Anonymous, you must get the Power BI report URL as described at: [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
+- **Anonymous**: Allows you to embed publish to web Power BI reports. The default authentication type is Anonymous. When using the authentication type as Anonymous, you must get the Power BI report URL as described at: [Publish to web from Power BI](/power-bi/service-publish-to-web)
 
 - **AAD**: Allows you to share secure Power BI reports or dashboards to Power BI Azure Active Directory authenticated users.
 
@@ -88,7 +88,7 @@ The complete code will be:
 {% powerbi authentication_type:"AAD" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000001/ReportSection01?filter=Executives/Executive eq 'Bert Hair'" %}
 ```
 
-More information on filtering a report: [Filter a report using query string parameters in the URL](https://docs.microsoft.com/power-bi/service-url-filters)
+More information on filtering a report: [Filter a report using query string parameters in the URL](/power-bi/service-url-filters)
 
 > [!NOTE]
 > Anonymous report doesn't support filtering. 
@@ -114,7 +114,7 @@ Displays the specified tile of the dashboard. You must provide the ID of the til
 
 Roles assigned to the Power BI report. This parameter works only when the **authentication_type** parameter is set to **powerbiembedded**.
 
-If you have defined roles in Power BI and assigned them to reports, you must specify the appropriate roles in the **powerbi** Liquid tag. Roles allow you to filter the data to be displayed in a report. You can specify multiple roles separated by a comma. For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls).
+If you have defined roles in Power BI and assigned them to reports, you must specify the appropriate roles in the **powerbi** Liquid tag. Roles allow you to filter the data to be displayed in a report. You can specify multiple roles separated by a comma. For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](/power-bi/service-admin-rls).
 
 ```
 {% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000000/ReportSection2" roles:"Region_East,Region_West" %}

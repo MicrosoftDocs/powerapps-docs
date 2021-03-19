@@ -26,7 +26,7 @@ Before you can use OneDrive for Business, it must be enabled by your system admi
 
 -   [Find your administrator or support person](find-admin.md)  
 
--   [Enable OneDrive for Business](https://docs.microsoft.com/power-platform/admin/enable-onedrive-for-business)  
+-   [Enable OneDrive for Business](/power-platform/admin/enable-onedrive-for-business)  
 
 
 ## The first time you view your documents  

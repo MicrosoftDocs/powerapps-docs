@@ -41,7 +41,7 @@ If the Ribbon for your organization has been modified, you should export the cur
   
 ### Decompress the ribbon data  
 
- The ribbon data is exported as a compressed file. To decompress the file into XML, you have to use the [System.IO.Packaging.ZipPackage](https://msdn.microsoft.com/library/system.io.packaging.zippackage.aspx) class. The following example is a helper method used in the SDK sample to decompress the file.  
+ The ribbon data is exported as a compressed file. To decompress the file into XML, you have to use the [System.IO.Packaging.ZipPackage](/dotnet/api/system.io.packaging.zippackage) class. The following example is a helper method used in the SDK sample to decompress the file.  
 
  ``` C# 
 /// <summary>

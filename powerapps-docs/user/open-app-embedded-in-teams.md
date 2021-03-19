@@ -22,7 +22,7 @@ search.app:
 
 Microsoft Teams is a chat-based collaboration platform built on Office 365 technologies. You can customize the Teams experience by adding Power Apps canvas apps to your channels in Teams. 
 
-For detailed information about how to add the Product Showcase sample app to a Teams channel and then open the app from the channel, see [Embed a canvas app as a tab app](/powerapps/teams/embed-teams-tab) in **Power Apps and Teams integration** section. 
+For detailed information about how to add the Product Showcase sample app to a Teams channel and then open the app from the channel, see [Embed a canvas app as a tab app](../teams/embed-teams-tab.md) in **Power Apps and Teams integration** section. 
 
 ![App embedded in Microsoft Teams](./media/open-app-embedded-in-teams/embedded-app.png)
 

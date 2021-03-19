@@ -436,9 +436,9 @@ Date filters can be used for date arithmetic or to convert DateTime values into 
 
 Formats a DateTime value using a .NET format string.
 
-[Standard Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)  
+[Standard Date and Time Format Strings](/dotnet/standard/base-types/standard-date-and-time-format-strings)  
 
-[Custom Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings)  
+[Custom Date and Time Format Strings](/dotnet/standard/base-types/custom-date-and-time-format-strings)  
 
 **Code**
 

@@ -32,7 +32,7 @@ Based on the selected environment in Power Apps, you can create a Dataverse star
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-additional-portals.md).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
-More information on working with environments: [Working with environments and Microsoft Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
+More information on working with environments: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments)
 
 More information on available portal templates: [Portal templates](portal-templates.md)
 
@@ -54,7 +54,7 @@ To create a portal:
 5.  In the **Portal from blank** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
 
     > [!TIP]
-    > To create a portal using a different language, you must first [enable the language in the environment](https://docs.microsoft.com/power-platform/admin/enable-languages#enable-the-language) so that it becomes available in the language drop-down list.
+    > To create a portal using a different language, you must first [enable the language in the environment](/power-platform/admin/enable-languages#enable-the-language) so that it becomes available in the language drop-down list.
 
     > [!div class=mx-imgBorder]
     > ![create new portal](media/create-new-portal.png "Create new portal")  
@@ -120,8 +120,8 @@ Once the provisioning request is successfully placed, a confirmation email notif
 [Common problems and resolutions while creating a portal](create-common-problems.md) <br>
 [Control portal creation in a tenant](control-portal-creation.md) <br>
 [Create additional portals in an environment](create-additional-portals.md) <br>
-[Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/) <br>
-[Microsoft Learn: Access Dataverse in Power Apps portals](https://docs.microsoft.com/learn/modules/portals-access-data-platform/)
+[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/) <br>
+[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -60,7 +60,7 @@ access** role.
 1. Choose which apps the **Colleagues with access** role should have access to.
 
 Once you’re done sharing your apps, they’ll appear in the [Built for your
-colleagues](https://docs.microsoft.com/microsoftteams/manage-power-platform-apps) section within the Teams app store. If you’re a Teams admin, you can also pin apps for users in the Teams app bar for even easier discovery.
+colleagues](/microsoftteams/manage-power-platform-apps) section within the Teams app store. If you’re a Teams admin, you can also pin apps for users in the Teams app bar for even easier discovery.
 
 ![Built by your colleagues](media/built-for-your-colleagues.png "Built by your colleagues")
 
@@ -145,11 +145,11 @@ To share an app:
 1. Select **Save**.
 
 The apps you selected will now appear in the [Built for your
-colleagues](https://docs.microsoft.com/microsoftteams/manage-power-platform-apps) section within the Teams app store.
+colleagues](/microsoftteams/manage-power-platform-apps) section within the Teams app store.
 
 #### Optional: Pin the app to the app bar as a tenant administrator
 
-If you're a tenant administrator, you can go one step forward and pin the apps for end users in Teams. To pin apps in Teams, follow the steps to [add an app to the app catalog](embed-teams-app.md), and then, [edit or create a new Teams app setup policy](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies) with your app.
+If you're a tenant administrator, you can go one step forward and pin the apps for end users in Teams. To pin apps in Teams, follow the steps to [add an app to the app catalog](embed-teams-app.md), and then, [edit or create a new Teams app setup policy](/microsoftteams/teams-app-setup-policies) with your app.
 
 | Teams desktop client | Teams mobile client |
 | - | - |

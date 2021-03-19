@@ -18,8 +18,8 @@ Power Apps portals also use cookies to store information for various purposes. T
 
 | Cookie name | Description | Lifetime |
 | - | - | - |
-| __RequestVerificationToken | Used by the [antiforgery](https://docs.microsoft.com/dotnet/api/system.web.helpers.antiforgeryconfig.cookiename) system. | Session |
-| .AspNet.ApplicationCookie | Used to identify user sessions. A user session starts when a user browses portal for the first time. And ends when the session is closed. [Authentication site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity) can be used to change session expiry time span. | Session |
+| __RequestVerificationToken | Used by the [antiforgery](/dotnet/api/system.web.helpers.antiforgeryconfig.cookiename) system. | Session |
+| .AspNet.ApplicationCookie | Used to identify user sessions. A user session starts when a user browses portal for the first time. And ends when the session is closed. [Authentication site settings](../configure/set-authentication-identity.md) can be used to change session expiry time span. | Session |
 | adxPreviewUnpublishedEntities | Stores preview **ON/OFF** mode used in classic CMS system for portal administrators. | Session |
 | adx-notification | Used in basic form actions to store alert message to be shown on redirection. | Session |
 | ARRAffinity | Added automatically by Azure websites and ensures that requests are load balanced between different sites. Doesn't store any of user information. | Session |
@@ -33,7 +33,7 @@ Power Apps portals also use cookies to store information for various purposes. T
 
 ### See also
 
-[Cookie authentication site settings](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity#cookie-authentication-site-settings)
+[Cookie authentication site settings](../configure/set-authentication-identity.md#cookie-authentication-site-settings)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

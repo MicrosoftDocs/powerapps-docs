@@ -30,7 +30,7 @@ When creating a new basic form, the first step is to decide the **Table** and **
 > - An **Basic Form** must be associated with a webpage for a given website for the form to be viewable within the site.
 > - The Connection table subgrids aren't supported in basic forms. If you add a Connection table subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection table.
 > - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in basic forms.
-> - [Image attributes](https://docs.microsoft.com/powerapps/developer/data-platform/image-attributes), [file attributes](https://docs.microsoft.com/powerapps/developer/data-platform/file-attributes) and [table images](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
+> - [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 > - Business rules and client API can enable locked fields on a read-only form.
 > - If you create an basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
 > - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
@@ -171,8 +171,7 @@ Clicking on one of these options displays a configuration area for that action. 
 - Set Opportunity on Hold (opportunity)
 
 > [!NOTE]
-> It is recommend to create a workflow instead of adding an **Activate** or a **Deactivate** button for out of the box tables having defined specific **state** and **status code** values that they require for their business processes. For example, Incident ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/incident#statuscode-options)), Opportunity([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/opportunity#statuscode-options)), Entitlements ([status options](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/entities/entitlement#statuscode-options)). 
-
+> It is recommend to create a workflow instead of adding an **Activate** or a **Deactivate** button for out of the box tables having defined specific **state** and **status code** values that they require for their business processes. For example, Incident ([status options](/dynamics365/customerengagement/on-premises/developer/entities/incident#statuscode-options)), Opportunity([status options](/dynamics365/customerengagement/on-premises/developer/entities/opportunity#statuscode-options)), Entitlements ([status options](/dynamics365/customerengagement/on-premises/developer/entities/entitlement#statuscode-options)).
 
 ## Geolocation configuration for basic forms
 
@@ -188,7 +187,7 @@ The form's map control requires additional configuration to tell it what the IDs
 
 ## Request validation
 
-[Request validation](https://docs.microsoft.com/aspnet/whitepapers/request-validation), a feature of ASP.NET since version 1.1, prevents the server from accepting content containing un-encoded HTML. This feature is designed to help prevent some script-injection attacks whereby client script code or HTML can be unknowingly submitted to a server, stored, and then presented to other users. We still strongly recommend that you validate all input data and HTML encode it when appropriate.
+[Request validation](/aspnet/whitepapers/request-validation), a feature of ASP.NET since version 1.1, prevents the server from accepting content containing un-encoded HTML. This feature is designed to help prevent some script-injection attacks whereby client script code or HTML can be unknowingly submitted to a server, stored, and then presented to other users. We still strongly recommend that you validate all input data and HTML encode it when appropriate.
 
 By default, request validation is enabled on portal resulting in following generic error if you enter script code without HTML encoding inside basic form fields:
 
@@ -196,7 +195,7 @@ By default, request validation is enabled on portal resulting in following gener
 
 To disable request validation, follow these steps:
 
-1. Go to [portal settings](https://docs.microsoft.com/powerapps/maker/portals/manage-existing-portals#settings) and select **Site Settings**.
+1. Go to [portal settings](../manage-existing-portals.md#settings) and select **Site Settings**.
 
 1. Select **New**.
 
@@ -221,7 +220,7 @@ To disable request validation, follow these steps:
 - [Advanced Forms metadata for portals](configure-web-form-metadata.md)  
 - [Advanced Form subgrid configuration for portals](configure-web-form-subgrid.md)  
 - [Notes configuration for basic forms and Advanced Forms for portals](../configure-notes.md)
-- [Microsoft Learn: Interact with Dataverse data using basic forms](https://docs.microsoft.com/learn/modules/portals-access-data-platform/3-entity-forms)
+- [Microsoft Learn: Interact with Dataverse data using basic forms](/learn/modules/portals-access-data-platform/3-entity-forms)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

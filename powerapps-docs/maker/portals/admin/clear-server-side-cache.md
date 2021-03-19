@@ -36,7 +36,7 @@ The server-side cache is deleted, and data is reloaded from Dataverse.
 
 ## Configuration table caching in portals with capacity-based licenses<a name = "configuration-entity-caching-portals-with-capacity-based-licenses"></a>
 
-[Capacity based](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) portals have more options on `<portal_path>/_services/about`:
+[Capacity based](/power-platform/admin/powerapps-flow-licensing-faq#portals) portals have more options on `<portal_path>/_services/about`:
 
 ![Clear portal cache with capacity-based license](media/clear-server-side-cache/clear-config-capacity-license.png)
 
