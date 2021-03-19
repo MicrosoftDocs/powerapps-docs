@@ -308,7 +308,7 @@ There are many possible reasons why a control might be disabled or hidden when t
    > [!div class="mx-imgBorder"]
    > ![Forms controls check](media/form-controls-check.png "Form controls check")
 
-- Another way is to check the `ControlStateChange` operation that explains why the control is in a disabled or visible state. This can occur during a form load, or be triggered after the form is loaded,<!--note from editor: Does this comma belong here? There's a bit of an ambiguity here as to what "by using an OnChange event handler" modifies.--> by using an `OnChange` event handler.
+- Another way is to check the `ControlStateChange` operation that explains why the control is in a disabled or visible state. This can occur during a form load, or be triggered after the form is loaded, by using an `OnChange` event handler.
 
    > [!div class="mx-imgBorder"]
    > ![Control state changed](media/control-state-changed.png "Control state changed")
@@ -331,6 +331,37 @@ Finally, if the control passes all the above checks, the record state determines
 
 > [!NOTE]
 > The difference between `FormControls` and `ControlStateChange` is that the `FormControls` operation reflects the initial control state when the form is loaded, while the `ControlStateChange`operation reflects the state change at any time on the form. For example, if control is disabled for security reasons, it's very unlikely to be enabled after the form is loaded, so the initial state can be found in `FormControls` and isn't likely to be found in `ControlStateChange`. Even if a Client API function tries to enable the control, it won't be effective. You'll see the `ControlStateChange` event of the disabled state change intention by the script without success, and you'll be able to find out why the intention is unsuccessful in `FormControls`.
+
+## Why a control has a certain value on form load
+
+There are multiple reasons why a control may/may not have a certain value on form load. 
+
+**Resolution:**
+
+The `ControlDefaultValue` operation in [Monitor](https://docs.microsoft.com/powerapps/maker/model-driven-apps/monitor-form-checker) explains the source of the default values. 
+
+> [!div class="mx-imgBorder"]
+> ![Default control value](media/control-default-value.png "Default control value")
+
+If there are multiple updates happening to a control's value, there will be an `Update Sequence` to indicate which value is final. For example, here is a control that first has a default value and then got overridden with a value passed with a client API script. There is a call stack provided.
+
+> [!div class="mx-imgBorder"]
+> ![Control value before](media/control-default-value-after.png "Control value before")
+
+There are scenarios where fields are populated based on a relationship field mapping, in which case the event will show that.
+
+> [!div class="mx-imgBorder"]
+> ![Control value after](media/control-default-value-update-sequence.png "Control value after")
+
+Verify where the value is coming from and take an action based on the below table:
+
+| Source | How to fix |
+|--|--|
+| Client API script | Contact the script owner. |
+| Default value | Check the control's configuration. |
+| Relationship field mapping | Check the relationship configuration and update the field mapping. |
+| Value passed by page input data passed via URL | Check the API that opens the specific form with the issue, it is passing the value. |
+
 
 ## Why a tab or section is visible or hidden
 
