@@ -142,7 +142,7 @@ More information: [Use FetchXML with FetchExpression](org-service/entity-operati
 [!INCLUDE [synchronous-webhook-error](includes/synchronous-webhook-error.md)]
 
 > [!NOTE]
-> You should use synchronous mode when it is important that the operation triggered by the WebHook occur immediately or if you want the entire transaction to fail unless the WebHook payload is received by the service. A simple WebHook step registration provides limited options to manage failure, but you can also invoke WebHooks using plug-ins and workflow activities if you require more control. More information: [Invoke a WebHook from a plug-in or workflow activity](use-WebHooks.md#invoke-a-webhook-from-a-plugin-or-workflow-activity).
+> You should use synchronous mode when it is important that the operation triggered by the WebHook occur immediately or if you want the entire transaction to fail unless the WebHook payload is received by the service. A simple WebHook step registration provides limited options to manage failure, but you can also invoke WebHooks using plug-ins and workflow activities if you require more control. More information: [Invoke a WebHook from a plug-in or workflow activity](use-WebHooks.md#invoke-a-webhook-from-a-plug-in-or-workflow-activity).
 
 ## Query steps registered for a WebHook
 
