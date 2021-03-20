@@ -119,6 +119,8 @@ Portal host Version 9.3.3.7 resolves the following issues:
     > [!NOTE]
     > Using HTML IDs of the Login and Password fields from the login page in custom JavaScripts is not supported. These IDs can change in the future releases.
 
+- Entity List isn't loading on Internet Explorer 11 intermittently.
+
 This release also contains performance, security fixes and improves overall
 reliability of Power Apps portals.
 
