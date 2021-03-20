@@ -1919,11 +1919,11 @@
         items:
         - name: Use actions
           href: ./data-platform/actions.md
-        - name: Create a custom action
+        - name: Create a custom process action
           href: ./data-platform/create-actions.md
-        - name: Configure custom actions from a real-time workflow
+        - name: Configure custom process actions from a real-time workflow
           href: ./data-platform/configure-actions.md    
-        - name: Invoke custom actions from a real-time workflow
+        - name: Invoke custom process actions from a real-time workflow
           href: ./data-platform/invoke-custom-actions-workflow-dialog.md
   - name: Work with solutions
     items:

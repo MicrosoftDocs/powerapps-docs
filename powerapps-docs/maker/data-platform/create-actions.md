@@ -1,8 +1,8 @@
 ---
-title: "Create a custom action | MicrosoftDocs"
-description: "Use custom actions when you want to automate a series of commands in the system. Actions expand the vocabulary available for developers to express business processes."
+title: "Create a custom process action | MicrosoftDocs"
+description: "Use custom process actions when you want to automate a series of commands in the system. Actions expand the vocabulary available for developers to express business processes."
 ms.custom: ""
-ms.date: 08/06/2018
+ms.date: 03/20/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.topic: "article"
@@ -19,17 +19,15 @@ search.audienceType:
 
 
 <!-- Be sure to update the publication date. -->
-
-
-
-# Create a custom action
+# Create a custom process action
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Use custom actions when you want to automate a series of commands in the system. Actions expand the vocabulary available for developers to express business processes. An action uses core verbs provided by the system, such as Create, Update, Delete, and Assign, to create more expressive verbs like Approve, Escalate, Route, or Schedule. If the definition of a business process changes, someone who isn’t a developer can edit the custom action so the code doesn’t need to be changed.  
+Use custom process actions when you want to automate a series of commands in the system. Process Actions expand the vocabulary available for developers to express business processes. An process action uses core verbs provided by the system, such as Create, Update, Delete, and Assign, to create more expressive verbs like Approve, Escalate, Route, or Schedule. If the definition of a business process changes, someone who isn’t a developer can edit the custom process action so the code doesn’t need to be changed.  
   
-<a name="create"></a>   
-## Create an action  
+<a name="create"></a>
+
+## Create an action
   
 > [!IMPORTANT]
 > If you’re creating an action to include as part of a solution that will be distributed, create it in the context of the solution. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Solutions** and locate the unmanaged solution that this action will be part of. Then, in the menu bar, select **New** > **Process**. This ensures that the customization prefix associated with the name of the action will be consistent with other components in the solution. After you create the action, you can’t change the prefix.  
@@ -63,10 +61,12 @@ Unlike workflow processes, you don’t need to set the following options:
 Actions also have something that workflow processes don’t—input and output arguments.
 
 > [!NOTE]
-> You can enable a custom action from a workflow without writing code. More information: [Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md)
+> You can enable a custom process action from a workflow without writing code. More information: [Invoke custom process actions from a workflow](invoke-custom-actions-workflow-dialog.md)
  
-<a name="edit"></a>   
+<a name="edit"></a>
+
 ## Edit an action  
+
 You must deactivate processes before you can edit them.  
   
 You can edit an action that was created as part of an unmanaged solution or included in a solution installed in your organization. If the solution is a managed solution, you might not be able to edit it. The solution publisher has the option to edit the managed properties so that the action installed with a managed solution can’t be edited.  
@@ -93,7 +93,7 @@ When editing an action, you have the following options:
   You should consult with the developer who will use this message to determine whether it must be in transaction or not. Generally, an action should be in transaction if the actions performed by the business process don’t make sense unless all of them are completed successfully. The classic example is transferring funds between two bank accounts. If you withdraw funds from one account you must deposit them in the other. If either fails, both must fail.  
   
   > [!NOTE]
-  > You can’t enable rollback if a custom action is invoked directly from within a workflow. You can enable rollback if an action is triggered by a Power Apps web services message.  
+  > You can’t enable rollback if a custom process action is invoked directly from within a workflow. You can enable rollback if an action is triggered by a Power Apps web services message.  
   
 - **Activate as**  
 
@@ -107,8 +107,10 @@ When editing an action, you have the following options:
 
   Like other processes, you specify what actions to perform and when to perform them. More information: [Add stages and steps](#add-stages-and-steps)
 
-<a name="BKMK_DefineProcessArgs"></a>   
-## Define process arguments  
+<a name="BKMK_DefineProcessArgs"></a>
+
+## Define process arguments
+
 When developers use messages, they might begin with some data that they can pass into the message. For example, to create a new case row, there might be the case title value that is passed in as the input argument.  
   
 When the message is finished, the developer might need to pass some data that was changed or generated by the message to another operation in their code. This data is the output argument.  
@@ -119,7 +121,8 @@ The name of the message and the information about all the process arguments repr
   
 You can change the order of the arguments by sorting them or moving them up or down because the arguments are identified by name, not by the order. Also, changing the description won’t break code using the message.  
   
-### Action process argument types  
+### Action process argument types
+
 The following table describes the action process argument types.  
   
 |Type|Description|  
@@ -139,14 +142,17 @@ The following table describes the action process argument types.
 > [!NOTE]
 > **entityCollection** argument values can’t be set in the user interface for conditions or actions. These are provided for use by developers in custom code. More information: [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions) 
   
-<a name="BKMK_AddStagesConditionsAndActions"></a>   
-### Add stages and steps  
+<a name="BKMK_AddStagesConditionsAndActions"></a>
+
+### Add stages and steps
+
 Actions are a type of process very similar to real-time workflows. All the steps that can be used in real-time workflows can be used in actions. For information about the steps that can be used for both real-time workflows and actions, see [Workflow stages and steps](configure-workflow-steps.md).  
   
 In addition to the steps that can be used for real-time workflows, actions also have the **Assign Value** step. In actions, these can be used only to set output arguments. You can use the form assistant to set output arguments to specific values or, more likely, to values from the row that the action is running against, rows related to that row with a many-to-one relationship, rows created in an earlier step, or values that are part of the process itself.  
   
-## Next steps  
-[Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md)   
+## Next steps
+
+[Invoke custom process actions from a workflow](invoke-custom-actions-workflow-dialog.md)   
 
  
  
