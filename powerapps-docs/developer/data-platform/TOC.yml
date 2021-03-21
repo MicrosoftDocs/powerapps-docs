@@ -217,8 +217,6 @@
   - name: Use Web Hooks
     href: use-webhooks.md
     items:
-    - name: Use webhooks to create external handlers for server events
-      href: use-webhooks.md
     - name: Register a web hook
       href: register-web-hook.md
     - name: Test webhook registration
