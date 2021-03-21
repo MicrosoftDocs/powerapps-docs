@@ -43,7 +43,7 @@ A step provides the information about which message the extensions should respon
 
 Generally, you can expect to find a message for most of the **Request* classes in the <xref:Microsoft.Crm.Sdk.Messages> or <xref:Microsoft.Xrm.Sdk.Messages> namespaces, but you will also find messages for any custom actions that have been created in the organization. Any operations involving table definitions (entity metadata) are not available.
 
-Data about messages is stored in the [SdkMessage](reference/entities/sdkmessage.md) and [SdkMessageFilter](reference/entities/sdkmessagefilter.md) entities. The Plug-in registration tool will filter this information to only show valid messages.
+Data about messages is stored in the [SdkMessage](reference/entities/sdkmessage.md) and [SdkMessageFilter](reference/entities/sdkmessagefilter.md) tables. The Plug-in registration tool will filter this information to only show valid messages.
 
 To verify if a message and table combination supports execution of plug-ins using a database query, you can use the following Web API query:
 
