@@ -2,7 +2,7 @@
 title: " Event Framework (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the event framework and information developers should know when working with it." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/18/2019
+ms.date: 03/21/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -108,7 +108,7 @@ When you register a step using the Plug-in registration tool you must also choos
 |--|--|
 |**PreValidation**|[!INCLUDE [cc-prevalidation-description](../../includes/cc-prevalidation-description.md)]|
 |**PreOperation**|[!INCLUDE [cc-preoperation-description](../../includes/cc-preoperation-description.md)]|
-|**MainOperation**|For internal use only.|
+|**MainOperation**|[!INCLUDE [cc-mainoperation-description](../../includes/cc-mainoperation-description.md)]|
 |**PostOperation**|[!INCLUDE [cc-postoperation-description](../../includes/cc-postoperation-description.md)]|
 
 The stage you should choose depends on the purpose of the extension. You don't need to apply all your business logic within a single step. You can apply multiple steps so that your logic about whether to allow a operation to proceed can be in the **PreValidation** stage and your logic to make modifications to the message properties can occur in the **PostOperation** stage.
