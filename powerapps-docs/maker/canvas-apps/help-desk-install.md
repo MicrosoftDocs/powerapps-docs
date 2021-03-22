@@ -50,7 +50,7 @@ Help Desk sample template is available in [Power Apps](https://make.powerapps.co
 1. Press **F5** on the keyboard, or use ![Preview button](./media/help-desk-install/preview.png "Preview button") to play the app.
 
 > [!NOTE]
-> Sample template includes locally saved information using [collections](create-update-collection.md). To use the app for business purpose, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors.md).
+> Sample template includes locally saved information using [collections](create-update-collection.md). To use the app for business purpose, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors).
 
 ## How do I build the app myself?
 
@@ -58,7 +58,7 @@ Help Desk sample template includes the functionality commonly used in Power Apps
 
 [Save](save-publish-app.md#save-changes-to-an-app) the app, and update the app to use data source such as [SharePoint](connections/connection-sharepoint-online.md), or [Microsoft Dataverse](connections/connection-common-data-service.md).
 
-You can also enable the capability to send emails or approval routing using [Power Automate flow](using-logic-flows.md) or [Approvals connector](/connectors/approvals.md).
+You can also enable the capability to send emails or approval routing using [Power Automate flow](using-logic-flows.md) or [Approvals connector](/connectors/approvals).
 
 ## Next steps
 
