@@ -89,7 +89,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
   
  To enable an entity for the auto-created access teams, set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.AutoCreateAccessTeams> attribute to `true`.  
   
- A maximum number of team templates that you can create for an entity is specified in the <xref:Microsoft.Xrm.Sdk.Deployment.TeamSettings.MaxAutoCreatedAccessTeamsPerEntity> deployment setting. The default value is 2. A maximum number of entities that you can enable for auto created access teams is specified in the <xref:Microsoft.Xrm.Sdk.Deployment.TeamSettings.MaxEntitiesEnabledForAutoCreatedAccessTeams> deployment setting. The default value is 5. More information: [Deployment Entities and Deployment Configuration Settings](https://msdn.microsoft.com/library/gg328063.aspx) and [Administer the deployment using Windows PowerShell](https://technet.microsoft.com/library/dn531202.aspx)  
+ A maximum number of team templates that you can create for an entity is specified in the <xref:Microsoft.Xrm.Sdk.Deployment.TeamSettings.MaxAutoCreatedAccessTeamsPerEntity> deployment setting. The default value is 2. A maximum number of entities that you can enable for auto created access teams is specified in the <xref:Microsoft.Xrm.Sdk.Deployment.TeamSettings.MaxEntitiesEnabledForAutoCreatedAccessTeams> deployment setting. The default value is 5. More information: [Deployment Entities and Deployment Configuration Settings](/previous-versions/dynamicscrm-2016/developers-guide/gg328063(v=crm.8)) and [Administer the deployment using Windows PowerShell](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/dn531202(v=crm.8))  
   
  The users are automatically added and removed in the system-managed team, when you add or remove the users in a particular record by using the <xref:Microsoft.Crm.Sdk.Messages.AddUserToRecordTeamRequest> message and the <xref:Microsoft.Crm.Sdk.Messages.RemoveUserFromRecordTeamRequest> message. The actual team is created when you add the first user to the record and the team ID is returned in <xref:Microsoft.Crm.Sdk.Messages.AddUserToRecordTeamResponse.AccessTeamId>. The `Team.SystemManaged` attribute for this team is set to `true`. For a list of the `Team.SystemManaged` values, refer to the `Team` entity metadata. You can find this information in the metadata for your organization. See the preceding metadata browser information. The caller of the message must have the Share privilege on the entity and the access rights on the record that match the access rights provided in the template. For example, if the template specifies the Read access rights, the calling user must have the Read access rights on the record. To be added to the team, a minimum access level a user must have on the entity specified in the template is Basic (User) Read.  
   
@@ -115,13 +115,16 @@ With *owner* teams or *access* teams, you can easily share business objects and 
   
 ### See also  
  [Sample: Share a record using an access team](org-service/samples/share-record-using-access-team.md)   
- [Manage teams](https://technet.microsoft.com/library/dn531089.aspx)   
+ [Manage teams](/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn531089(v=crm.8))   
  [Whitepaper: Access Teams with Microsoft Dynamics CRM 2013](https://download.microsoft.com/download/E/9/0/E9009308-CA01-4B37-B03C-435B8ACB49B4/Access%20Teams%20with%20Microsoft%20Dynamics%20CRM%202013.pdf)   
  [Whitepaper: Scalable security modeling with Microsoft Dynamics CRM](https://go.microsoft.com/fwlink/p/?LinkID=328757)   
  [User and Team Entities](user-team-entities.md)   
  [Team Entity](reference/entities/team.md)   
  [TeamTemplate Entity](reference/entities/teamtemplate.md)   
- [Administer the deployment using Windows PowerShell](https://technet.microsoft.com/library/dn531202.aspx)   
+ [Administer the deployment using Windows PowerShell](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/dn531202(v=crm.8))   
  [Use record-based security to control access to records](/dynamics365/customer-engagement/developer/security-dev/use-record-based-security-control-access-records)   
  [How Role-Based Security Can Be Used to Control Access to Entities In Dynamics 365](/dynamics365/customer-engagement/developer/security-dev/how-role-based-security-control-access-entities)   
  [Cascading Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior#BKMK_CascadingBehavior)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -2,7 +2,7 @@
 title: "Browse the metadata for your organization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the Entity Metadata Browser to view entities and their properties in Microsoft Dataverse. The Entity Metadata Browser is a managed solution you can download and install on your organization." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 01/14/2021
+ms.date: 03/16/2021
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -19,26 +19,31 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can use the Entity Metadata Browser to view entities and their properties in Microsoft Dataverse. The Entity Metadata Browser is a managed solution you can download using the links below.
+You can use the Entity Metadata Browser to view entities and their properties in Microsoft Dataverse. The Entity Metadata Browser is a managed solution you can download here: [Microsoft Downloads: MetadataBrowser_3_0_0_5_managed.zip](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip) 
 
 
-|                                                                                               Version                                                                                                |                                                                                     Download                                                                                      |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Dataverse | [Microsoft Downloads: MetadataBrowser_3_0_0_5_managed.zip](https://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip) |
+## Import the solution
 
-After you download the solution, you must install it. For information about how to install a managed solution, see [Import solutions](import-update-export-solutions)  
+After you download the solution, you must import it to be able to use it.
 
-## Open as an app
-Dataverse is configured as an app. After you install the **Entity Metadata Browser** solution, locate the **Metadata Tools** app and open it. **Entities** is the default view. From the **Tools** navigation area you can select **Entity Metadata** to inspect individual entities.
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. In the left navigation pane, select **Solutions**, and then select **Import** on the command bar. 
+1. On the **Import a solution** page, select **Browse** to locate the solution file (.zip) you downloaded, and select it.
+1. Select **Next**. Information about the solution is displayed.
+1. Select **Import**, and then finish the import process.
+  
 
-## Open from the solution configuration page
-For earlier versions you must use the following steps, but these also work for the latest verison.  
+## Use the app
+After you import the solution successfully, locate the app by selecting **Apps** in the left navigation pane; the app is listed as **Metadata Tools**.
 
-After you install the **Entity Metadata Browser** solution, open the managed solution by double-clicking the row in the solutions list and view the **Configuration** page to view information about the Entity Metadata Browser and buttons to launch two different views.
-- **Metadata Browser** is equivalent to the **Entities** view in the app.
-- **Entity Metadata Browser** is equivalent to the **Entity Metadata** view in the app.
+![Metadata Tools app](media/metadata-tools.png)
 
 ## Entities view
+
+On opening the app, **Entities** is the default view.
+
+![Entities view](media/metadata-tools-entity.png)
+
 You can perform the following actions:
 
 - **View Entity Details**: Select an entity to view using the **Entity Metadata** view.
@@ -49,9 +54,13 @@ You can perform the following actions:
 
 ## Entity Metadata view
 
+Select **Entity Metadata** to inspect individual entities. 
+
+![Entity Metadata view](media/metadata-tools-entity-metadata.png)
+
 You can perform the following actions for a single entity:
 
-- **Entity**: Change the entity that you want to view.
+- **Entity**: Select the entity from the drop-down list that you want to view.
 - **Properties**: View all the properties for the entity and filter the properties displayed.
 
     - **Edit Entity**: Open the selected entity edit form in the default organization, if the entity supports this.
@@ -93,3 +102,6 @@ You can perform the following actions for a single entity:
  [Developer Tools for Dataverse](developer-tools.md)<br />
  [Customize Entity Metadata](customize-entity-metadata.md)<br />
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

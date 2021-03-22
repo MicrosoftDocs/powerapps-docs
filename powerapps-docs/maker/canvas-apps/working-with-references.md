@@ -557,3 +557,6 @@ Other than this difference, you use the **Regarding** lookup in the same manner 
 ## Activity parties
 
 As of this writing, canvas apps don't support activity parties.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

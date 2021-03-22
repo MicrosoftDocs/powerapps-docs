@@ -6,7 +6,6 @@ ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 0b589cb1-fe63-4152-a9ad-7bde9d75de62
-author: ""
 ms.author: "nabuthuk"
 author: Nkrb
 ---
@@ -32,3 +31,5 @@ Model-driven apps and canvas apps (public preview)
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

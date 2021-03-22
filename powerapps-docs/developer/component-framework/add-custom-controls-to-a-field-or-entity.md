@@ -94,3 +94,6 @@ To add a code component like data-set component or simple table component to a g
 [Implementing components in TypeScript](implementing-controls-using-typescript.md)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

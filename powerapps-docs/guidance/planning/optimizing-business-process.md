@@ -98,3 +98,6 @@ Our proposed optimized process looks like the following illustration.
 
 > [!div class="nextstepaction"]
 > [Next step: Is it worth automating this process?](worth-automating-process.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

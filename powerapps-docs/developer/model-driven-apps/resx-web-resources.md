@@ -25,7 +25,7 @@ Use these web resources to manage localized strings in any user interface you de
 
 RESX web resources contain the keys and localized string values for a single language defined using the RESX XML format. RESX is a common format for defining localized resources for windows applications, so there is common tooling available to work with this type of file and localization vendors will be familiar with working with them. When the file is published as a web resource in CRM it will be converted to a JSON format which will be downloaded to the application when needed.
 
-When you create RESX web resources you must explicitly set the language value and include the locale identifier (LCID) for the appropriate language in the name of the web resource. For example, `new_/strings/MyAppResources.1033.resx` would contain resources for English language. See [Microsoft Locale ID Values](https://msdn.microsoft.com/library/ms912047(WinEmbedded.10).aspx) for a list of LCID values.
+When you create RESX web resources you must explicitly set the language value and include the locale identifier (LCID) for the appropriate language in the name of the web resource. For example, `new_/strings/MyAppResources.1033.resx` would contain resources for English language. See [Microsoft Locale ID Values](/previous-versions/windows/embedded/ms912047(v=winembedded.10)) for a list of LCID values.
 
 To extract the localized value use the [Xrm.Utility.getResourceString](clientapi/reference/Xrm-Utility/getResourceString.md) function. This function accepts two parameters: `WebResourceName` and `keyValue`. 
 
@@ -43,6 +43,9 @@ The appropriate string value will be determined by the individual user’s langu
 [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
 [Data (XML) Web resources](data-xml-web-resources.md)<br />
 [CSS web resources](css-web-resources.md)<br />
-[WebResource entity messages and methods](https://docs.microsoft.com/powerapps/developer/data-platform/reference/entities/webresource)<br />
+[WebResource entity messages and methods](../data-platform/reference/entities/webresource.md)<br />
 [Sample: Pass multiple values to a  web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
 [Sample: Import files as web resources](sample-import-files-web-resources.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -31,7 +31,7 @@ When accessing the Discovery Service using the OData V4 RESTful API, you can add
 
 > [!IMPORTANT]
 > - Effective March 2, 2020, the *regional* Discovery Service will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated). Applications must use the global Discovery Service that is documented in this topic.  
-> - For Dynamics 365 US Government users, a *global* Discovery Service endpoint is available for the **GCC** and **GCC High** users, and the URL is different from the regular global Discovery Service URL. More information: [Dynamics 365 Government URLs](https://docs.microsoft.com/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls).
+> - For Dynamics 365 US Government users, a *global* Discovery Service endpoint is available for the **GCC** and **GCC High** users, and the URL is different from the regular global Discovery Service URL. More information: [Dynamics 365 Government URLs](/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls).
 
   
 ## Information provided by the Discovery Service 
@@ -100,3 +100,6 @@ The Discovery Service supports the CORS standard for cross-origin access. For mo
 
 [Discovery Service sample (C#)](samples/global-discovery-service-csharp.md)
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -57,3 +57,6 @@ Security for shortcuts can be based either on the parent page of the shortcut or
 ## Navigate with shortcuts
 
 After the shortcut entity has been created, it will appear in your website. In the above example, Basic Site has two additional pages, Page One and Page Two. Page Two Is a Child of Page One, which is a Child of the Home Page. Additionally, there is a shortcut that is a child of the Home page which points to Page Two. 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

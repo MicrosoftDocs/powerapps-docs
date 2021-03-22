@@ -23,7 +23,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using the main form. 
+There are multiple ways that you can work with related table records on a table form within a Power App. For example, you can include related tables in read-only mode with a quick view form and create or edit a record using a [main form in a dialog.](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
 Another way you can work with related table records is by adding a form component control to another table's main form. The form component control lets users edit information of a related table record directly from another table’s form.
 
@@ -69,7 +69,7 @@ This section describes form component behavior when used in a model-driven app.
 
 All columns, both in the main form and in the form component controls, must be valid for data to be sent to Microsoft Dataverse. This is true for both column validation errors, missing required columns, and so on.
 
-`OnSave` handlers are run for the main form and its form component controls. Any handler can cancel the save for the main form and the form component controls by using [preventDefault](/powerapps/developer/model-driven-apps/clientapi/reference/save-event-arguments/preventdefault). This means no save operation can call `preventDefault` for data to be sent to Dataverse. The order of when the `OnSave` handlers are called is not defined. More information: [Form OnSave Event (Client API reference) in model-driven apps](../../developer/model-driven-apps/clientapi/reference/events/form-onsave.md)
+`OnSave` handlers are run for the main form and its form component controls. Any handler can cancel the save for the main form and the form component controls by using [preventDefault](../../developer/model-driven-apps/clientapi/reference/save-event-arguments/preventdefault.md). This means no save operation can call `preventDefault` for data to be sent to Dataverse. The order of when the `OnSave` handlers are called is not defined. More information: [Form OnSave Event (Client API reference) in model-driven apps](../../developer/model-driven-apps/clientapi/reference/events/form-onsave.md)
 
 ### Record save
 
@@ -93,7 +93,7 @@ Note the following limitations when you add the form component control to a tabl
 
 - The form component control only supports rendering main forms. Similarly, support for adding a form component control is only supported with main forms. Other form types, such as quick create, quick view, and card aren't supported.
 
-- Forms with a business process flow aren’t currently supported. If you have a form with a business process flow, you may encounter unexpected behavior.  We recommend that you do not use a form component with a form that uses a business process flow.
+- Forms with a business process flow aren’t currently supported in either the main table form or the related table form. If you have a form with a business process flow, you may encounter unexpected behavior.  We recommend that you do not use a form component with a form that uses a business process flow.
 
 - The form component control doesn't support embedded form component controls, such as adding a form component control to a form that is used by a form component control. 
 
@@ -103,8 +103,15 @@ Note the following limitations when you add the form component control to a tabl
 
 - The form that you use with a form component must be included in your app. More information: [Add components to your app](build-first-model-driven-app.md#add-components-to-your-app).
 
-- You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.  
+- You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
+
+- On mobile, the timeline control does not currently appear in the form component control.
+
+- For subgrids, the **See all records** and **See associated records** command buttons will not be available if they are rendered inside a form component.
 
 ### See also
 
 [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

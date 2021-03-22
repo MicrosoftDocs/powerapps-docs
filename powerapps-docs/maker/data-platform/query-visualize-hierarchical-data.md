@@ -39,7 +39,7 @@ For some tables, such as account and user, the visualizations are provided out-o
   
 <a name="BKMK_Querydata"></a>   
 ## Query hierarchical data  
- With Microsoft Dataverse, hierarchical data structures are supported by self-referential relationships of the related rows. In the past, to view hierarchical data, you had to iteratively query for the related rows. Presently, you can query the related data as a hierarchy, in one step. You’ll be able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search)  
+ With Microsoft Dataverse, hierarchical data structures are supported by self-referential relationships of the related rows. In the past, to view hierarchical data, you had to iteratively query for the related rows. Presently, you can query the related data as a hierarchy, in one step. You’ll be able to query rows using the **Under** and **Not Under** logic. The **Under** and **Not Under** hierarchical operators are exposed in Advanced Find and the workflow editor. For more information about how to use these operators, see [Configure workflow steps](/flow/configure-workflow-steps). For more information about Advanced Find, see [Create, edit, or save an Advanced Find search](/dynamics365/customer-engagement/basics/save-advanced-find-search)  
   
  The following examples illustrate various scenarios for querying hierarchies:  
   
@@ -127,3 +127,6 @@ For some tables, such as account and user, the visualizations are provided out-o
 ## See also  
  [Video: Hierarchical Security Modelling](https://www.youtube.com/watch?v=kx5So32DrCo&index=10&list=PLC3591A8FE4ADBE07)   
  [Video: Hierarchy Visualization](https://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

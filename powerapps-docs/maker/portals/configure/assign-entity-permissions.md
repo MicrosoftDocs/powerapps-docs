@@ -1,12 +1,12 @@
 ---
 title: "Add record-based security by using Entity Permissions for a portal | MicrosoftDocs"
 description: "Instructions to add an entity permission and assign web roles to it."
-author: sandhangitmsft
+author: GitanjaliSingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 01/06/2021
-ms.author: sandhan
+ms.author: gisingh
 ms.reviewer: tapanm
 ---
 
@@ -139,3 +139,6 @@ After these permissions are in place, users in the Lead Manager role can access 
 
 [Create web roles for portals](create-web-roles.md)  
 [Control webpage access for portals](webpage-access-control.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

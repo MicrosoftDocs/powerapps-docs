@@ -45,7 +45,7 @@ The `type-group` has a limited support for canvas apps in this experimental prev
 
 1. All the types listed in the in the type-group are of compatible in canvas apps. The types that are compatible are:
    - **Strings**: SingleLine.Text, Multiple, SingleLine.TextArea, SingleLine.Email, SingleLine.Phone, SingleLine.URL, SingleLine.Ticker.
-   - **Numbers**: Decimal, Floating Point, Whole.None, Currency.
+   - **Numbers**: Decimal, FP, Whole.None, Currency.
    - **Dates**: DateAndTime.DateAndTime, DateAndTime.DateOnly.
 
 2. If the types listed in the `type-group` are mix of compatible and non compatible types, then the first compatible type listed in the `type-group` is considered.
@@ -66,3 +66,6 @@ The `type-group` has a limited support for canvas apps in this experimental prev
 [Power Apps component framework manifest schema reference](index.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

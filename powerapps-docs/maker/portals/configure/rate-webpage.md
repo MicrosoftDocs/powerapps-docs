@@ -43,3 +43,6 @@ The ratings for webpages can be viewed, modified, or deleted within Power Apps p
 2. Navigate to the **Web page** that you're interested in seeing the ratings for.
 
 3. On the **Related** tab, select **Activities**. The associated view lists the ratings for the selected webpage. Within this view, users can modify or delete existing ratings.
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

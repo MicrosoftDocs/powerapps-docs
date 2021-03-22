@@ -39,3 +39,6 @@ To create a website access permission and add it to a web role:
 6. Save the changes.
 
     
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

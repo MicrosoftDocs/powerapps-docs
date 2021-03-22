@@ -38,7 +38,7 @@ In this article, you'll learn about configuring a SAML 2.0 provider for portals 
 
     > [!NOTE]
     > - The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
-    > - More details about creating the app registration on the Azure portal are available in [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+    > - More details about creating the app registration on the Azure portal are available in [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
     1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -52,7 +52,7 @@ In this article, you'll learn about configuring a SAML 2.0 provider for portals 
 
     1. Enter a name.
 
-    1. If necessary, select a different **Supported account type**. More information: [Supported account types](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
+    1. If necessary, select a different **Supported account type**. More information: [Supported account types](/azure/active-directory/develop/quickstart-register-app)
 
     1. Under **Redirect URI**, select **Web** (if it isn't already selected).
 
@@ -138,3 +138,6 @@ In this article, you'll learn about configuring a SAML 2.0 provider for portals 
 [Configure a SAML 2.0 provider for portals with AD FS](configure-saml2-settings.md)  
 [FAQ for using SAML 2.0 in portals](configure-saml2-faqs.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

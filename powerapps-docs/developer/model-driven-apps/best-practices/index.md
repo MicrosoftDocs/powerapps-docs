@@ -67,3 +67,5 @@ Each guidance article is classified with one or more of the following categories
 - Online Migration - customization or pattern that may increase risk of having an unsuccessful online migration
 - Maintainability – customization that unnecessarily increases the amount of developer effort required to make changes, the frequency of required changes, or the chance of introducing regressions
 - Supportability – customization or pattern that falls outside the boundaries of published supportability statements, including usage of removed APIs or implementation of forbidden techniques
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

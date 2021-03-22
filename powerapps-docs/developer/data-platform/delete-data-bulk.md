@@ -80,3 +80,6 @@ Look at the following Organization service samples for the bulk delete feature:
 ### See also
 
 [BulkDeleteOperation Entity](reference/entities/bulkdeleteoperation.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

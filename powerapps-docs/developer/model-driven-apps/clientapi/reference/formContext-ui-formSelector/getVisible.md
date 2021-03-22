@@ -31,3 +31,5 @@ search.app:
 ### Related topics
 
 [setVisible](setVisible.md)
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

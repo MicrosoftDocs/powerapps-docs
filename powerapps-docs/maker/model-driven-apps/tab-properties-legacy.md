@@ -66,3 +66,6 @@ These are the properties available to configure when using a tab on a form using
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

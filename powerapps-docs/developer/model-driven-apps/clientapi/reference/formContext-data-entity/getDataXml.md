@@ -38,3 +38,6 @@ This method does not work with Microsoft Dynamics 365 for tablets.
 
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

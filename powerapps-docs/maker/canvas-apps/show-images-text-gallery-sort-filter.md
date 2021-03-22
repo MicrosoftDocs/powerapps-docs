@@ -176,3 +176,6 @@ In this topic, you:
 [13]: ./media/show-images-text-gallery-sort-filter/slider.png
 [14]: ./media/show-images-text-gallery-sort-filter/inputandslider.png
 [15]: ./media/show-images-text-gallery-sort-filter/select-overlay.png
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

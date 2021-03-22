@@ -45,7 +45,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 > - Create a new Lookup column for the related table. <br />More information: [Create and edit columns](create-edit-fields.md)
 > - Import a solution that contains the definition of the table relationship. <br />More information: [Import, update, and export solutions](import-update-export-solutions.md)
 > - Use Power Query to create new tables and fill them with data. <br />More information: [Add data to a table in Dataverse by using Power Query](add-data-power-query.md).
-> - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to create and update table relationships. <br />More information: [Customize table relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-table-relationship-metadata)
+> - A developer can use [Metadata services](../../developer/data-platform/metadata-services.md) to write a program to create and update table relationships. <br />More information: [Customize table relationship metadata](/dynamics365/customer-engagement/developer/customize-table-relationship-metadata)
 
 Information in this topic will help you choose which designer you can use. 
 
@@ -60,7 +60,7 @@ You should use the Power Apps portal to create and edit 1:N (one-to-many) or N:1
 
 ## Community tools
 
-**[table Relation Diagram Creator](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools for Dataverse](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
+**[table Relation Diagram Creator](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** is a tool that XrmToolbox community developed for Dataverse. Please see the [Developer tools for Dataverse](/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
@@ -75,3 +75,6 @@ You should use the Power Apps portal to create and edit 1:N (one-to-many) or N:1
 [Developer documentation: table relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)
 
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

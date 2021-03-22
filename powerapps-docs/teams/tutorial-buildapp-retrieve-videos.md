@@ -41,7 +41,7 @@ In this tutorial, we'll use a channel named "Readiness".
 
 ## Step 1: Install and pin Power Apps in Teams
 
-In this section, you’ll install the Power Apps app in Teams and pin it to the left rail so you can easily access it. To learn how to do install and pin the Power Apps app, see [Install the Power Apps personal app in Microsoft Teams](https://docs.microsoft.com/powerapps/teams/install-personal-app).
+In this section, you’ll install the Power Apps app in Teams and pin it to the left rail so you can easily access it. To learn how to do install and pin the Power Apps app, see [Install the Power Apps personal app in Microsoft Teams](./install-personal-app.md).
 
 If you’ve already done installed and pinned the Power Apps app, you can skip to the next step.
 
@@ -973,3 +973,6 @@ Before publishing the application to teams, it’s important to test core functi
 ### See also
 
 [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

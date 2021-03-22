@@ -101,3 +101,6 @@ For more information see [Create a new entity record from another entity](webapi
 ### See also
 
  [Map entity fields](../../maker/data-platform/map-entity-fields.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

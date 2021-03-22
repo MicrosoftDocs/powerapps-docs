@@ -29,4 +29,7 @@ Scenario|Description
 [What is Dataverse for Teams?](overview-data-platform.md)<br/>
 [Create your first app in Teams](create-first-app.md)<br/>
 [Use flows in Microsoft Teams](/power-automate/teams/overview)<br/>
-[Power Virtual Agents in Teams](https://aka.ms/pva-teams-docs)
+[Power Virtual Agents in Teams](/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

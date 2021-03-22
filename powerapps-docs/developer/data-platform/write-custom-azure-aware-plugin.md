@@ -145,3 +145,6 @@ For a plug-in registered to execute asynchronously, the <xref:Microsoft.Xrm.Sdk.
 [Event Execution Pipeline](event-framework.md)<br />
 [Register and Deploy Plug-Ins](register-plug-in.md)
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

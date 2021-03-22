@@ -66,3 +66,6 @@ You should use the [Power Apps portal](https://make.powerapps.com/?utm_source=pa
   
 
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -4,7 +4,7 @@ description: "Learn how to configure actions for workflows in Power Apps."
 ms.custom: ""
 ms.date: 07/30/2020
 ms.reviewer: ""
-ms.service: flow
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -50,7 +50,7 @@ Actions also have something that real-time workflow processes don’t—input an
 ## Create an action  
   
 > [!IMPORTANT]
-> If you’re creating an action to include as part of a solution that will be distributed, create it in the context of the solution. Go to **[Settings](/powerapps/maker/model-driven-apps/advanced-navigation#settings)** > **Solutions** and locate the unmanaged solution that this action will be part of. Then, in the menu bar, select **New** > **Process**. This ensures that the customization prefix associated with the name of the action will be consistent with other components in the solution. After you create the action, you can’t change the prefix.  
+> If you’re creating an action to include as part of a solution that will be distributed, create it in the context of the solution. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Solutions** and locate the unmanaged solution that this action will be part of. Then, in the menu bar, select **New** > **Process**. This ensures that the customization prefix associated with the name of the action will be consistent with other components in the solution. After you create the action, you can’t change the prefix.  
   
 Like real-time workflow processes, actions have the following properties in the **Create Process** dialog box:  
   
@@ -62,7 +62,7 @@ Like real-time workflow processes, actions have the following properties in the 
 
   This property establishes that this is an action process. You can’t change this after you save the process.  
   
-- **table**  
+- **Entity**  
 
   With action processes, you can select a table to provide context for the real-time workflow just like other types of processes, but you also have the option to choose **None (global)**. Use this if your action doesn’t require the context of a specific table. You can’t change this after you save the process.  
   
@@ -93,16 +93,13 @@ When editing an action, you have the following options:
   
 - **Enable rollback**  
 
-
-<!-- from editor: The third sentence below is confusing. Can you take another pass at it? -->
-
-
-  Generally, processes that support transactions will “undo” (or roll back) the entire operation if any part of them fails. There are exceptions to this. Some actions developers might do in code initiated by the action might not support transactions. An example would be when the code perform actions in other systems that are beyond the scope of the transaction. Those can’t be rolled back by the action running in an app. Some messages in the platform don’t support transactions. But everything you can do just with the user interface of the action will support transactions. All the actions that are part of a real-time workflow are considered in transaction, but with actions you have the option to opt out of this.  
+  Generally, processes that support transactions will “undo” (or roll back) the entire operation if any part of them fails. There are exceptions to this. Actions executed in code by a developer initiated by the action might not support transactions. An example would be when the code perform actions in other systems that are beyond the scope of the transaction. Those can’t be rolled back by the action running in an app. Some messages in the platform don’t support transactions. But everything you can do just with the user interface of the action will support transactions. All the actions that are part of a real-time workflow are considered in transaction, but with actions you have the option to opt out of this.  
   
   You should consult with the developer who will use this message to determine whether it must be in transaction or not. Generally, an action should be in transaction if the actions performed by the business process don’t make sense unless all of them are completed successfully. The classic example is transferring funds between two bank accounts. If you withdraw funds from one account you must deposit them in the other. If either fails, both must fail.  
   
   > [!NOTE]
-  > You can’t enable rollback if a custom action is invoked directly from within a workflow. You can enable rollback if an action is triggered by a Power Apps web services message.  
+  > - You can’t enable rollback if a custom action is invoked directly from within a workflow. You can enable rollback if an action is triggered by a Power Apps web services message.  
+  > - If the action defined does not change data, but only retrieves data, there are certain situations where performance can be improved by disabling **Enable rollback.**
   
 - **Activate As**  
 
@@ -113,11 +110,6 @@ When editing an action, you have the following options:
   In this area, you’ll specify any data that the action expects to start and what data will be passed out of the action. More information: [Define process arguments](configure-actions.md#BKMK_DefineProcessArgs)  
   
 - **Add Stages, Conditions and Actions**  
-
-
-
-<!-- from editor: The following link opens a section titled "Add stages and steps". Do you want to change this to match? -->
-
 
   Like other processes, you specify what actions to perform and when to perform them. More information: [Add stages, conditions and actions](configure-actions.md#BKMK_AddStagesConditionsAndActions)
 
@@ -151,7 +143,7 @@ The following table describes the action process argument types.
 |String|A text value.|  
   
 > [!NOTE]
-> **entityCollection** argument values can’t be set in the user interface for conditions or actions. These are provided for use by developers in custom code. More information: [Create your own actions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-own-actions) 
+> **entityCollection** argument values can’t be set in the user interface for conditions or actions. These are provided for use by developers in custom code. More information: [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions) 
   
 <a name="BKMK_AddStagesConditionsAndActions"></a>   
 ### Add stages and steps  
@@ -165,3 +157,6 @@ In addition to the steps that can be used for real-time workflows, actions also 
 [Monitoring real-time workflows and actions](monitor-manage-processes.md#BKMK_MonitorSyncWorkflows)
  
  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

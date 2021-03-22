@@ -91,8 +91,8 @@ This does not apply to opening a new browser window.
 <td>formParameters</td>
 <td>Object</td>
 <td>No</td>
-<td>A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/><br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
-">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a></td>
+<td>A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/><br/>For information about passing parameters to a form, see <a href="/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
+">Set field values using parameters passed to a form</a> and <a href="/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a></td>
 </tr>
 <tr>
 <td>successCallback</td>
@@ -124,8 +124,8 @@ This function is passed an object as a parameter. The object has a <b>savedEntit
 
 ## Remarks
 
-You must use this method to open entity or quick create forms instead of the deprecated  [Xrm.Utility.openEntityForm](https://msdn.microsoft.com/library/jj602956.aspx#openEntityForm) and  [Xrm.Utility.openQuickCreate](https://msdn.microsoft.com/library/jj602956.aspx#openQuickCreate) methods. 
-Use [setActiveProcess](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-data-process/activeprocess/setactiveprocess) to display a particular business process and [setActiveProcessInstance](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-data-process/setactiveprocessinstance) to display a particular business process instance on the form.
+You must use this method to open entity or quick create forms instead of the deprecated  [Xrm.Utility.openEntityForm](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openEntityForm) and  [Xrm.Utility.openQuickCreate](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openQuickCreate) methods. 
+Use [setActiveProcess](../formcontext-data-process/activeprocess/setactiveprocess.md) to display a particular business process and [setActiveProcessInstance](../formcontext-data-process/setactiveprocessinstance.md) to display a particular business process instance on the form.
  
 
 ## Examples
@@ -221,3 +221,6 @@ Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
 ### Related topics
 
 [Xrm.Navigation](../xrm-navigation.md)
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

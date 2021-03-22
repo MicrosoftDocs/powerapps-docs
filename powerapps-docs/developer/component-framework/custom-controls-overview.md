@@ -12,7 +12,7 @@ author: Nkrb
 
 # What are code components
 
-Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
+Code components are a type of solution components, which means they can be included in a solution file and installed in different environments. More information: [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
 > [!div class="mx-imgBorder"] 
 > ![Code components](media/code-components.gif "Code components")
@@ -101,3 +101,6 @@ Each code component should have a resource file to construct its visualization. 
 ### Related topics
 
 [Create and build a code component](create-custom-controls-using-pcf.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

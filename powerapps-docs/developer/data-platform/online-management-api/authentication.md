@@ -2,7 +2,7 @@
 title: "Authenticate to use the Online Management API for Microsoft Dataverse| MicrosoftDocs"
 description: "Provides information about authenticating to the Online Management API to perform environment-related operations."
 ms.date: 10/23/2020
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: conceptual
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
 author: KumarVivek
@@ -97,3 +97,6 @@ You are all set to execute messages against the Online Management API. For a sam
 [Get started with Online Management API](get-started-online-management-api.md)
 
 [Online Management API Reference](/rest/api/admin.services.crm.dynamics.com)
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

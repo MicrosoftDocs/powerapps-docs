@@ -25,11 +25,11 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-You can easily create a table using Power Apps ([make.powerapps.com](https://make.powerapps.com) for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Microsoft Dataverse](create-edit-entities.md), you can achieve them by creating or editing tables using the Solution Explorer.
+You can easily create a table using Power Apps ([make.powerapps.com](https://make.powerapps.com) for most common situations, but not all capabilities are implemented there. When you need to meet the requirements described in [Create and edit tables in Microsoft Dataverse](./data-platform-create-entity.md), you can achieve them by creating or editing tables using the Solution Explorer.
 
 ## Open solution explorer
 
-The customization prefix is part of the name of any table you create. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
+The customization prefix is part of the name of any table you create. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
@@ -197,6 +197,9 @@ Some options are only used when creating a virtual table.
 More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create and edit tables in Dataverse](create-edit-entities.md)<br />
-[Tutorial: Create a custom table that has components in Power Apps](/powerapps/maker/data-platform/create-custom-entity)<br />
+[Create and edit tables in Dataverse](./data-platform-create-entity.md)<br />
+[Tutorial: Create a custom table that has components in Power Apps](./create-custom-entity.md)<br />
 [Create a solution](create-solution.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

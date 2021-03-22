@@ -137,8 +137,8 @@ The Insert tab displays the commands in the following table:
 ||**IFRAME**|You can add an IFRAME to a form to integrate content from another website within a form.| 
 ||**Timeline**|Insert a timeline control in the form. This control shows the timeline of activities related to the table on a form.|  
 ||**Navigation Link**|Using this option, you can insert a link into a form navigation.|  
-||**Timer**|Insert a timer control to a table form to track time against an SLA. More information: [Add a timer control](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
-||**Knowledge Base Search**|Insert a search control that users can use to search knowledge articles. More information:  [Knowledge Base Search control](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/add-knowledge-base-search-control-forms)|  
+||**Timer**|Insert a timer control to a table form to track time against an SLA. More information: [Add a timer control](/dynamics365/customer-engagement/customer-service/add-timer-control-case-form-track-time-against-sla)|
+||**Knowledge Base Search**|Insert a search control that users can use to search knowledge articles. More information:  [Knowledge Base Search control](/dynamics365/customer-engagement/customer-service/add-knowledge-base-search-control-forms)|  
 ||**Relationship Assistant**|Using this option, you can insert a relationship assistant control in the form.|
 
 >[!Note] 
@@ -148,3 +148,6 @@ The Insert tab displays the commands in the following table:
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)  
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

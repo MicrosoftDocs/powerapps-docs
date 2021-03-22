@@ -51,3 +51,6 @@ Download the sample: [Work with XRM Tooling API](https://github.com/microsoft/Po
 [Use the XRM Tooling common login control](use-xrm-tooling-common-login-control-client-applications.md)<br />
 [Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)<br />
 
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

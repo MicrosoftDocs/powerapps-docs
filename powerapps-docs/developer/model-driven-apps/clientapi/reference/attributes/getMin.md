@@ -33,3 +33,6 @@ Decimal, integer, double, money
 
 **Description**: The minimum allowed value for the attribute.
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

@@ -161,3 +161,6 @@ To pull information out of these controls and push it back into the data source,
 | **DataCard.DataField** |**"ApproverEmail"** |The name of the field that the user can display and edit in this card. |
 | **DataCard.Update** |**InputText.Text** |The value to validate and push back into the data source when **[SubmitForm](functions/function-form.md)** runs. |
 
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

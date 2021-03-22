@@ -32,7 +32,7 @@ Improve your products and services by enabling users to provide feedback and rat
   Once you have enabled an entity for feedback and rating, you can't disable it. After you enable an entity for feedback, a regarding relationship is created between the entity and the `Feedback` entity.  
   
 > [!NOTE]
->  You can also use the customization tools in Dataverse to enable feedback and rating for system and custom entities. More information: [Enable an entity for feedback](https://go.microsoft.com/fwlink/p/?LinkId=785436)  
+>  You can also use the customization tools in Dataverse to enable feedback and rating for system and custom entities. More information: [Enable an entity for feedback](/previous-versions/dynamicscrm-2016/admins-customizers-dynamics-365/mt826657(v=crm.8))  
   
  The `Feedback` entity stores the following information :  
   
@@ -57,3 +57,6 @@ Improve your products and services by enabling users to provide feedback and rat
   
 - Entity record that the feedback is associated with  
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

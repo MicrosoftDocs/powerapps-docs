@@ -129,3 +129,6 @@ Display form controls](controls/control-form-detail.md).
 
 - Review the [reference topic](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
 - Learn how to shape data in a collection by using the [AddColumns, DropColumns, RenameColumns, and ShowColumns](functions/function-table-shaping.md) functions.
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

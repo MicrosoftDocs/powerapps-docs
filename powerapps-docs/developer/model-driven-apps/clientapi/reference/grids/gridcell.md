@@ -42,3 +42,6 @@ GridCell supports the following methods.
 [Controls](../controls.md)
 
 
+
+
+[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]

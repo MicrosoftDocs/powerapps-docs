@@ -72,3 +72,5 @@ This is a forum page.
 [Liquid Objects](liquid-objects.md)  
 [Liquid Tags](liquid-tags.md)  
 [Liquid Filters](liquid-filters.md) 
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

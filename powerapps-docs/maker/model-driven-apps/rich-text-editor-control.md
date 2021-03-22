@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 01/15/2021
+ms.date: 02/18/2021
 ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
@@ -789,3 +789,6 @@ A. Large content size can cause latency. For more information, see [Best practic
 ### See also
 
 [Create and edit columns for Microsoft Dataverse using Power Apps portal](../data-platform/create-edit-field-portal.md)
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

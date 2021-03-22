@@ -221,7 +221,7 @@ service.Execute(ssreq);
   
 <a name="BKMK_EditFilterOrSorting"></a>   
 ## Edit filter criteria or configure sorting  
- To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](/powerapps/developer/data-platform/use-fetchxml-construct-query).  
+ To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](../data-platform/use-fetchxml-construct-query.md).  
   
 > [!TIP]
 >  If you are not familiar with FetchXML the following messages can be used to convert between QueryExpression and FetchXML:<xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest>.  
@@ -236,7 +236,7 @@ service.Execute(ssreq);
  You can add custom icon with tooltip text to display in a column depending on the column value; you can also specify localized tooltip text. This can be done by adding the custom icons as image web resources in your instance and then using a JavaScript web resource to add JavaScript code for a column to display the icons depending on the column value.  
   
 > [!NOTE]
->  Adding custom icons with tooltip is supported only for the read-only grids; this feature isn't supported for the editable grids. For more information about editable grids, see [Use editable grids](/powerapps/developer/model-driven-apps/use-editable-grids).  
+>  Adding custom icons with tooltip is supported only for the read-only grids; this feature isn't supported for the editable grids. For more information about editable grids, see [Use editable grids](./use-editable-grids.md).  
   
  Two new attributes, `imageproviderwebresource` and `imageproviderfunctionname`,  are added to the `cell` element of the layoutxml of 
  savedquery that lets you specify the name of a web resource 
@@ -265,7 +265,7 @@ System.String layoutXml =
 </grid>";  
 ```  
   
- The JavaScript function for displaying custom icons and tooltip text expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text for the icon in multiple languages. For more information about the languages supported, see [Enable additional languages](/dynamics365/customer-engagement/customize/enable-additional-languages) <!-- TODO need to update the link in the powerapps repo--> and [Install or upgrade Language Packs](https://technet.microsoft.com/library/hh699674.aspx). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?linkid=829588).  
+ The JavaScript function for displaying custom icons and tooltip text expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text for the icon in multiple languages. For more information about the languages supported, see [Enable additional languages](/dynamics365/customer-engagement/customize/enable-additional-languages) <!-- TODO need to update the link in the powerapps repo--> and [Install or upgrade Language Packs](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/hh699674(v=crm.8)). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs Assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
   
  Assuming you will most likely be adding custom icons for an option set type of attribute as it has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid breaking the code due to changes in the localized label string. Also, in your JavaScript function, specify just the name of an image web resource that you want to use as an icon for a value in the attribute. The image should be of 16x16 pixels size; larger images will be automatically scaled down to 16x16 pixels size.  
   
@@ -329,3 +329,6 @@ function displayIconTooltip(rowData, userLCID) {
 ## Set as default  
  Only one active public view can be set as the default view. To make a view the default view, set the `IsDefault` property to true.  
   
+
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

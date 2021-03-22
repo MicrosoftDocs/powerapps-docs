@@ -364,3 +364,5 @@ See transactioncurrency Entity [TransactionCurrency_ActionCardUserState](transac
 [About entity reference](../about-entity-reference.md)<br />
 [Web API reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.actioncarduserstate?text=actioncarduserstate EntityType" />
+
+[!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

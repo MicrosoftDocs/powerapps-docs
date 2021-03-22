@@ -46,3 +46,6 @@ If there is an active instance of the process, the entity record is loaded with 
  
 
 
+
+
+[!INCLUDE[footer-include](../../../../../../includes/footer-banner.md)]
