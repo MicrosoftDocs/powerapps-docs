@@ -17,7 +17,7 @@ contributors:
   - norliu
 ---
 
-# Install and configure the Expense Report sample for canvas apps in Power Apps
+# Set up and learn about the Expense Report sample template in Power Apps
 
 Track expense reports from submission to approval. Tally line items as individual expenses accrue and submit for approval when ready. This app requires a small amount of setup to make it your own.
 
@@ -30,7 +30,7 @@ You can run this sample app in your browser, on a tablet, or other device that h
 
 ## How do I open the template and run the app?
 
-Help Desk sample template is available in [Power Apps](https://make.powerapps.com). Follow these steps to open the template and run the app.
+Expense Report sample template is available in [Power Apps](https://make.powerapps.com). Follow these steps to open the template and run the app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
