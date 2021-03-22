@@ -50,6 +50,9 @@ Help Desk sample template is available in [Power Apps](https://make.powerapps.co
 
 1. Press **F5** on the keyboard, or use ![Preview button](./media/expense-report-install/preview.png "Preview button") to play the app.
 
+> [!NOTE]
+> Sample template includes locally saved information using [collections](create-update-collection.md). To use the app for business purpose, customize the app to store information using [connectors](/connectors/connector-reference/connector-reference-powerapps-connectors.md).
+
 ## How do I build the app myself?
 
 Expense Report sample template includes the functionality commonly used in Power Apps. You can extend the app functionality by using connectors and connect the app to a data source instead of the default [collections](create-update-collection.md) used by the sample template.
