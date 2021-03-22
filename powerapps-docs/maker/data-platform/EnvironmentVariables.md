@@ -21,6 +21,9 @@ search.app:
 
 Applications often require different configuration settings or input parameters when deployed to different environments. Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environment or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during application lifecycle management (ALM) operations. Because environment variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments.
 
+> [!NOTE]
+> This feature is being deployed and may not currently be available in your region.
+
 Benefits of using environment variables:
 - No need to manually edit configurable values in a production environment.
 - Provide new values while **importing solutions** to other environments.
@@ -108,8 +111,6 @@ You will **not** be prompted if the environment variables already have either a 
    >[!NOTE]
    > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but will not get exported in the solution. This approach allows a new value to be provided while importing the solution into other environments.  
 
-
-
 ## Notifications
 A notification is displayed when the environment variables do not have any values. This is a reminder to set the values so that components dependent on environment variables do not fail. 
 
@@ -120,34 +121,37 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 
 ## Current limitations
 
-- SharePoint online is currently the only data source supported for environment variables of type "data source" within canvas apps. However, Common data service (now Dataverse) will be available shortly for when canvas apps connect to Dataverse environments outside the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would recrod data via Common data service connection. Note: the former does not require a premium license whereas the latter does. 
+- SharePoint Online is currently the only data source supported for environment variables of type "data source" within canvas apps. However, the Common Data Service connector will be available soon for canvas apps. Use the  Common Data Service connector to connect to Dataverse environments other than the current environment. Other types of environment variables may be used within canvas apps by retrieving them as you would record data via a Dataverse connection. Notice that the Common Data Service connector doesn't require a premium license whereas the other connectors for canvas apps do. 
 - Interacting with environment variables via custom code requires an API call to fetch the values; there is not a cache exposed for 3rd party code to leverage. 
-- Azure Key Vault integration for secret management. While on our roadmap, currently environment variables should'nt be used to store secure data such as passwords and keys.
-- Specialized tasks for environment variables of type **data source** are not yet available within the [Power Platform Build Tools tasks](https://docs.microsoft.com/power-platform/alm/devops-build-tool-tasks). However, you may add your own custom tasks to achieve the same result. 
+<!--  Azure Key Vault integration for secret management. While on our roadmap, currently environment variables shouldn't be used to store secure data such as passwords and keys.
+- Specialized tasks for environment variables of type **data source** are not yet available within the [Power Platform Build Tools tasks](/power-platform/alm/devops-build-tool-tasks). However, you may add your own custom tasks to achieve the same result. -->
 
 ## Frequently asked questions
-**How can I view where environemnt variables are being used?**
-Either through clicking **Show dependencies** in the solution interface, while authoring components, or in source control and in the solution file by viewing the app or flow metadata. 
+
+**How can I view where environment variables are being used?**
+Either through selecting **Show dependencies** in the solution interface, while authoring components, or in source control and in the solution file by viewing the app or flow metadata. 
 
 **Are data source environment variables the same as connections?**
-No. Although they're related. A connection represents a credential or authentication required to interact with the connector. Data source environment variables store parameters that are required by one or more actions in the connector and these parameters often vary depending on the action. For example, a SharePoint online connection does not store any information about sites, lists, document libraries, etc.  
+No. Although they're related. A connection represents a credential or authentication required to interact with the connector. Data source environment variables store parameters that are required by one or more actions in the connector and these parameters often vary depending on the action. For example, a SharePoint Online connection does not store any information about sites, lists, or document libraries.  
 
 **Can data source environment variables be used with shared connections such as SQL Server with SQL authentication?**
-Generally no. Shared connections such as SQL server with SQL authentication store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection. 
-Data source environment variables are used for connectors that rely on user based authentication such as Azure Active Directory because the parameters cannot be derived from the connection. For these reasons SQL Server with SQL authtication, which is a shared connection, will not use data source environment varibles but SQL Server with AAD authentication, which is a personal connection will. 
+Generally no. Shared connections such as SQL Server with SQL authentication store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
+
+Data source environment variables are used for connectors that rely on user based authentication such as Azure Active Directory because the parameters cannot be derived from the connection. For these reasons SQL Server with SQL authentication, which is a shared connection, will not use data source environment variables but SQL Server with Azure Active Directory (AAD) authentication, which is a personal connection will. 
 
 **Can my automated ALM pipeline use different values files for different environments?**
-Yes, solution packager accepts file name as input parameters so your pipeline can pack a different values file into the solution depending on the environment type it’s executing against.
+Yes. Solution packager accepts file name as input parameters so your pipeline can pack a different values file into the solution depending on the environment type it’s executing against.
 
 **What if someone inadvertently deletes a value?**
 If not already prevented by dependency system, runtime will use the last known value as a fallback.
 
 **If a value is changed, when does the new value get used in canvas apps and cloud flows?**
 For canvas apps, the new value will be used during the next session. For example, closing the app and then playing it again. 
+
 With cloud flows, the flows must currently be de-activated and re-activated in order to use the updated value. 
 
 **Are premium licenses required?**
-No. While ALM requires Dataflex (or Dynamics 365 for Customer Engagement), use of premium connectors is not required. The one caveat is if you're using the Common data service connector to interact with environment variables as you would with other data records like Accounts or Contacts. Previously this was the only way to use environment variables in canvas apps and flows.  
+No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use of premium connectors is not required. The one caveat is if you're using the Common Data Service connector to interact with environment variables as you would with other data records like accounts or contacts. Previously this was the only way to use environment variables in canvas apps and flows.  
 
 **Can I use all types of environment variables in DataVerse for Teams?**
 Yes.
@@ -155,10 +159,10 @@ Yes.
 
 ### See also
 [Power Apps Blog: Environment variables available in preview!](https://powerapps.microsoft.com/blog/environment-variables-available-in-preview/)
-[Use plug-ins to extend business processes](https://docs.microsoft.com/powerapps/developer/data-platform/plug-ins) </BR>
-[Web API samples](https://docs.microsoft.com/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
-[Create Canvas app from scratch using Dataverse.](https://docs.microsoft.com/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
-[Create a flow with Dataverse](https://docs.microsoft.com/flow/connection-cds)
+[Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins) </BR>
+[Web API samples](/powerapps/developer/data-platform/webapi/web-api-samples) </BR>
+[Create Canvas app from scratch using Dataverse.](/powerapps/maker/canvas-apps/data-platform-create-app-scratch) </BR>
+[Create a flow with Dataverse](/flow/connection-cds)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
