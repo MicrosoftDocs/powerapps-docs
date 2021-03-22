@@ -45,9 +45,10 @@ Environment variables can be created and modified within the modern solution int
 
 ### Create an environment variable in a solution
 
-1. Sign in to Power Apps, and then on the left panes select **Solutions**. 
-2. On the command bar, select **New** and then select **Environment variable**. 
-3. On the left pane, complete the following columns, and then select **Save**:  
+1. Sign in to Power Apps, and then on the left pane select **Solutions**.
+1. Open the solution you want or create a new one.
+1. On the command bar, select **New** and then select **Environment variable**. 
+1. On the right pane, complete the following columns, and then select **Save**:  
    - **Display name**. Enter a name for the environment variable. 
    - **Name**. The unique name is automatically generated from the **Display name**, but you can change it. 
    - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, **Two options**, or **Data source**. 
@@ -69,22 +70,20 @@ Environment variables can be created and modified within the modern solution int
 ### Use pre-existing data source environment variables
 
 Environment variables can be reused across other apps and even different types of resources like cloud flows. You may wish to first create them within your solution and later use them while authoring canvas apps and cloud flows.
-1. Follow the steps above for **Create an environment variable in a solution**
-2. Edit or create a canvas app from your solution.
-4. Add a **new** data source for SharePoint online.
-5. Select the **Advanced** tab
-6. You'll see a filtered list of environment variables that you have access to and that match the parameter being set. For example, when you select the SharePoint site, you'll see a list of all data source environment variables with **Connector** = SharePoint and **Parameter type** = Site. The same is true when selecting SharePoint lists for a given site. 
-
+1. Follow the steps above to [Create an environment variable in a solution](#create-an-environment-variable-in-a-solution).
+1. Edit or create a canvas app from your solution.
+1. Add a **new** data source for SharePoint online.
+1. Select the **Advanced** tab. You'll see a filtered list of environment variables that you have access to and that match the parameter being set. For example, when you select the SharePoint site, you'll see a list of all data source environment variables with **Connector** = SharePoint and **Parameter type** = Site. The same is true when selecting SharePoint lists for a given site. 
 
 ### Automatically create data source environment variables when connecting to data
 
-This option provides simplicity and ensures environment variables will always be used for data sources such as SharePoint online. However, some customers prefer to provide their own schema names and therefore should create them from solutions.
+This option provides simplicity and ensures environment variables will always be used for data sources such as SharePoint Online. However, some customers prefer to provide their own schema names and therefore should create them from solutions.
 1. Edit or create a canvas app from your solution.
 2. Select **File** > **Settings** > **General** and enable the setting to **Automatically create environment variables when adding data sources**.
 3. Add a **new** data source for SharePoint online.
-4. Select a SharePoint **site**, then one or more **lists**. You do not need to select the **Advanced** tab.
+4. Select a SharePoint **site**, then one or more **lists**. You don't need to select the **Advanced** tab.
    >[!NOTE]
-   >To prevent creation of duplicate environment variables, you'll be prompted to use the existing environment variable when duplicates are identified. You may de-select the option to use the existing environment variable if creation of a duplicate is desired. 
+   >To prevent creation of duplicate environment variables, you'll be prompted to use the existing environment variable when duplicates are identified. You can clear the option to use the existing environment variable if creation of a duplicate is desired. 
 5. Select **save**. 
 
 >[!NOTE]
@@ -102,7 +101,6 @@ Environment variables can't be automatically created when authoring flows. Howev
 >[!NOTE]
 >The environment variables are currently listed under **Parameters** and the list is not currently filtered based on matching data types.
 
- 
 ## Enter new values while importing solutions
 
 The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` table.
@@ -129,31 +127,38 @@ The `environmentvariabledefinition` table is [user or team owned](/powerapps/mak
 ## Frequently asked questions
 
 **How can I view where environment variables are being used?**
+
 Either through selecting **Show dependencies** in the solution interface, while authoring components, or in source control and in the solution file by viewing the app or flow metadata. 
 
 **Are data source environment variables the same as connections?**
+
 No. Although they're related. A connection represents a credential or authentication required to interact with the connector. Data source environment variables store parameters that are required by one or more actions in the connector and these parameters often vary depending on the action. For example, a SharePoint Online connection does not store any information about sites, lists, or document libraries.  
 
 **Can data source environment variables be used with shared connections such as SQL Server with SQL authentication?**
+
 Generally no. Shared connections such as SQL Server with SQL authentication store the parameters required to connect to data within the connection. For example, the Server and Database name are provided when creating the connection and therefore are always derived from the connection.
 
 Data source environment variables are used for connectors that rely on user based authentication such as Azure Active Directory because the parameters cannot be derived from the connection. For these reasons SQL Server with SQL authentication, which is a shared connection, will not use data source environment variables but SQL Server with Azure Active Directory (AAD) authentication, which is a personal connection will. 
 
 **Can my automated ALM pipeline use different values files for different environments?**
+
 Yes. Solution packager accepts file name as input parameters so your pipeline can pack a different values file into the solution depending on the environment type it’s executing against.
 
 **What if someone inadvertently deletes a value?**
 If not already prevented by dependency system, runtime will use the last known value as a fallback.
 
 **If a value is changed, when does the new value get used in canvas apps and cloud flows?**
+
 For canvas apps, the new value will be used during the next session. For example, closing the app and then playing it again. 
 
 With cloud flows, the flows must currently be de-activated and re-activated in order to use the updated value. 
 
 **Are premium licenses required?**
+
 No. While ALM requires Dataverse (or Dynamics 365 for Customer Engagement), use of premium connectors is not required. The one caveat is if you're using the Common Data Service connector to interact with environment variables as you would with other data records like accounts or contacts. Previously this was the only way to use environment variables in canvas apps and flows.  
 
 **Can I use all types of environment variables in DataVerse for Teams?**
+
 Yes.
 
 
