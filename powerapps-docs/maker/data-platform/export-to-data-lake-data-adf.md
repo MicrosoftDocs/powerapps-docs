@@ -2,7 +2,7 @@
 title: "Ingest Microsoft Dataverse data with Azure Data Factory | MicrosoftDocs"
 description: Learn how to use Azure Data Factory to create dataflows, transform, and run analysis on Dataverse data
 ms.custom: ""
-ms.date: 07/29/2020
+ms.date: 03/22/2021
 ms.reviewer: "matp"
 author: sabinn-msft
 ms.service: powerapps
@@ -49,20 +49,19 @@ The user account that's used to sign in to Azure must be a member of the
 To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
 
 ### Export to data lake
-
-This guide assumes that you have already exported Dataverse data by using the [Export to Data Lake service](export-to-data-lake.md).
+This guide assumes that you've already exported Dataverse data by using the [Export to Data Lake service](export-to-data-lake.md).
 
 In this example, account table data is exported to the data lake.
 
 ### Azure Data Factory
 
-This guide assumes that you have already created a data factory under the same subscription and resource group as the storage account containing the exported Dataverse data.
+This guide assumes that you've already created a data factory under the same subscription and resource group as the storage account containing the exported Dataverse data.
 
 ## Set the Data Lake Storage Gen2 storage account as a source
 
-1.  Open [Azure Data Factory](https://ms-adf.azure.com/en-us/datafactories) and select the data facotry that is on the same subscription and resource group as the storage account containing your exported Dataverse data. Then select **Create data flow** from the home page. 
+1.  Open [Azure Data Factory](https://ms-adf.azure.com/en-us/datafactories) and select the data factory that is on the same subscription and resource group as the storage account containing your exported Dataverse data. Then select **Create data flow** from the home page. 
 
-2.  Turn on **Data flow debug** mode and select your preferred time to live. This may take up to 10 minutes, but you
+2.  Turn on **Data flow debug** mode and select your preferred time to live. This might take up to 10 minutes, but you
     can proceed with the following steps.
 
     ![Dataflow debug mode](media/data-flow-debug.png "Dataflow debug mode")
@@ -71,7 +70,7 @@ This guide assumes that you have already created a data factory under the same s
 
     ![Add source](media/add-source.png "Add source")
 
-4.  Under **Source settings**, do the following<!--Suggested. It's "configure the following options" here and "select the following options" in the next procedure, but these are a combination of entering and selecting.-->:
+4.  Under **Source settings**, do the following:
 
     - **Output stream name**: Enter the name you want. 
     - **Source type**: Select **Common Data Model**.
@@ -88,7 +87,7 @@ This guide assumes that you have already created a data factory under the same s
   
 6.  Check the **Projection** tab to ensure that your schema has been imported sucessfully. If you do not see any columns, select **Schema options** and check the **Infer drifted column types** option. Configure the formatting options to match your data set then select **Apply**.
 
-7. You may view your data in the **Data preview** tab to ensure the Source creation was complete and accurate.
+7. You can view your data in the **Data preview** tab to ensure the Source creation was complete and accurate.
 
 ## Transform your Dataverse data
 After setting the exported Dataverse data in the Data Lake Storage Gen2 storage account as a source in the Data Factory dataflow, there are many possibilities for transforming your data. More information: [Azure Data Factory](/azure/data-factory/introduction)
@@ -106,7 +105,7 @@ Follow these instructions to create a rank for the each row by the *revenue* of 
 
        ![Configure the Rank settings tab](media/configure-rank.png "Configure the Rank settings tab")
 
-3. You may view your data in the **data preview** tab where you will find the new *revenueRank* column at the right-most position.
+3. You can view your data in the **data preview** tab where you will find the new *revenueRank* column at the right-most position.
 
 ## Set the Data Lake Storage Gen2 storage account as a sink
 Ultimately, you must set a sink for your dataflow. Follow these instructions to place your transformed data as a Delimited Text file in the Data Lake.
@@ -133,7 +132,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
       
 3. On the **Optimize** tab, set the **Partition option** to **Single partition**.
 
-4. You may view your data in the **data preview** tab. 
+4. You can view your data in the **data preview** tab. 
 
 ## Run your dataflow
 
@@ -148,7 +147,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
 4.  Select **Debug** from the command bar.
 
-5.  Let the dataflow run until the bottom view shows that is has been completed. This may take a few minutes.
+5.  Let the dataflow run until the bottom view shows that is has been completed. This might take a few minutes.
 
 6.  Go to the final destination storage container, and find the transformed table data file.
 
