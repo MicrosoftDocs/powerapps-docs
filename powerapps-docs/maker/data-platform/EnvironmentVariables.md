@@ -145,6 +145,7 @@ Data source environment variables are used for connectors that rely on user base
 Yes. Solution packager accepts file name as input parameters so your pipeline can pack a different values file into the solution depending on the environment type it’s executing against.
 
 **What if someone inadvertently deletes a value?**
+
 If not already prevented by dependency system, runtime will use the last known value as a fallback.
 
 **If a value is changed, when does the new value get used in canvas apps and cloud flows?**
