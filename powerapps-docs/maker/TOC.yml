@@ -180,7 +180,7 @@
   - name: Sign in to Power Apps
     href: ./canvas-apps/intro-maker-portal.md
   - name: Find it with unified search
-    href: maker-search.md
+    href: search.md
 - name: Canvas apps
   items:
   - name: Canvas apps
