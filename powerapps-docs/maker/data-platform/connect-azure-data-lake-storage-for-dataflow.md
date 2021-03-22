@@ -58,7 +58,7 @@ Before you configure your environment with an Azure Data Lake Storage Gen2 accou
 The following sections walk through the steps necessary to configure your Azure Data Lake Storage Gen2 account.
 
 ## Create the storage account
-Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 1.	Make sure you select the same region as your environment and set your storage as StorageV2 (general purpose v2).
 2.	Make sure you enable the hierarchical namespace feature. 
 3.	We recommend that you set the replication setting to Read-access geo-redundant storage (RA-GRS).
@@ -125,18 +125,18 @@ Further information about Export to data lake, is available in [this article.](h
 This article provided guidance about how to connect an Azure Data Lake Storage Gen2 account for dataflow storage. 
 
 For more information about dataflows, the Common Data Model, and Azure Data Lake Storage Gen2, see these articles:
-- [Self-service data prep with dataflows](https://go.microsoft.com/fwlink/?linkid=2099972)
-- [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
-- [Add data to a table in Microsoft Dataverse](https://go.microsoft.com/fwlink/?linkid=2100075)
+- [Self-service data prep with dataflows](./self-service-data-prep-with-dataflows.md)
+- [Creating and using dataflows in Power Apps](./create-and-use-dataflows.md)
+- [Connect Azure Data Lake Storage Gen2 for dataflow storage]()
+- [Add data to a table in Microsoft Dataverse](./add-data-power-query.md)
 
 For more information about Azure storage, see this article:
-- [Azure Storage security guide](https://docs.microsoft.com/azure/storage/common/storage-security-guide)
+- [Azure Storage security guide](/azure/storage/common/storage-security-guide)
 
 For more information about the Common Data Model, see these articles:
-- [Common Data Model - overview](https://docs.microsoft.com/powerapps/common-data-model/overview) 
-- [Common Data Model folders](https://go.microsoft.com/fwlink/?linkid=2045304)
-- [CDM model file definition](https://go.microsoft.com/fwlink/?linkid=2045521)
+- [Common Data Model - overview](/common-data-model/) 
+- [Common Data Model folders](/common-data-model/data-lake)
+- [CDM model file definition](/common-data-model/model-json)
 
 You can ask questions in the [Power Apps Community](https://go.microsoft.com/fwlink/?linkid=2099971).
 

@@ -30,11 +30,11 @@ You can have access rights to a perform an action on a record through ownership,
 |Access type|Description|  
 |---------------|-----------------|  
 |**Ownership**| User owns the record or belongs to a team that owns the record.|  
-|[**Role access**](https://docs.microsoft.com/power-platform/admin/how-record-access-determined#role-access)|User has access to perform an action on a record because of their security role.|  
-|[**Shared access**](https://docs.microsoft.com/power-platform/admin/how-record-access-determined#shared-access)| The record is shared with a user, team, or organization by a user that has appropriate share rights.|  
-|[**Hierarchy access**](https://docs.microsoft.com/power-platform/admin/how-record-access-determined#hierarchy-access)|Hierarchy access only takes place if hierarchy security management is turned on for the organization and the entity. The user also needs to be a manager.
+|[**Role access**](/power-platform/admin/how-record-access-determined#role-access)|User has access to perform an action on a record because of their security role.|  
+|[**Shared access**](/power-platform/admin/how-record-access-determined#shared-access)| The record is shared with a user, team, or organization by a user that has appropriate share rights.|  
+|[**Hierarchy access**](/power-platform/admin/how-record-access-determined#hierarchy-access)|Hierarchy access only takes place if hierarchy security management is turned on for the organization and the entity. The user also needs to be a manager.
 
-For more information on how privileges and access checks work, go to [How access to a record is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
+For more information on how privileges and access checks work, go to [How access to a record is determined](/power-platform/admin/how-record-access-determined).
 
 
 ## Check your access to a record
@@ -52,7 +52,7 @@ For more information on how privileges and access checks work, go to [How access
     > [!div class="mx-imgBorder"]
     > ![Access checker showing your access level.](media/check_access_page.png "Access checker showing your access level")
     
-Contact your administrator if you don't have the required access. Only an administrator can edit your security role and privileges. To find your administrator, go to [Find your administrator or support person](https://docs.microsoft.com/powerapps/user/find-admin).
+Contact your administrator if you don't have the required access. Only an administrator can edit your security role and privileges. To find your administrator, go to [Find your administrator or support person](./find-admin.md).
 
 
 ## Check another user's access to a record

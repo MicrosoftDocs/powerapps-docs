@@ -25,9 +25,9 @@ searchScope:
 
 You can quickly find the information that you're looking for by using relevance search. The relevance search experience delivers fast and comprehensive results across multiple tables, in a single list, sorted by relevance.
 
-Relevance search is already available when you're using a model-driven app in a web browser. The functionality is the same in Power Apps Mobile, but it works a little differently. More information: [Search for tables and rows by using relevance search](https://docs.microsoft.com/powerapps/user/relevance-search)
+Relevance search is already available when you're using a model-driven app in a web browser. The functionality is the same in Power Apps Mobile, but it works a little differently. More information: [Search for tables and rows by using relevance search](../user/relevance-search.md)
 
-Before you begin using relevance search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable the new relevance search experience](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)<!--note from editor: Edit to alt text suggested. This isn't really a "diagram," which is a line drawing such as a conceptual illustration.-->
+Before you begin using relevance search, the new experience needs to be enabled by the administrator for your organization. More information: [Enable the new relevance search experience](/power-platform/admin/configure-relevance-search-organization#enable-the-new-relevance-search-experience)<!--note from editor: Edit to alt text suggested. This isn't really a "diagram," which is a line drawing such as a conceptual illustration.-->
 
   > [!div class="mx-imgBorder"]
   > ![Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile](media/powerapps-mobile-rel-search.gif "Demonstration of how relevance search works in a model-driven app running on Power Apps Mobile")

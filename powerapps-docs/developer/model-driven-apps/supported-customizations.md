@@ -36,9 +36,9 @@ The following customization methods can be used to produce fully supported custo
 
 - Customization in Power Apps or solution explorer. For more information, see [Overview of building model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
 
-- Settings in the web application. For more information, see [Administer model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
+- Settings in the web application. For more information, see [Administer model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md).
 
-- Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-reporting-to-app).
+- Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](../../maker/model-driven-apps/add-reporting-to-app.md).
 
 > [!NOTE]
 > The behavior of model-driven apps depend on customizations applied to the associated Microsoft Dataverse. More information: [Supported Customizations for Dataverse](../data-platform/supported-customizations.md)
