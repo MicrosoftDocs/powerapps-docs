@@ -19,28 +19,29 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
-Applications often require different configuration settings or input parameters when deployed to different environments. Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environemnt or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during ALM operations. Because environemnt variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments. 
+Applications often require different configuration settings or input parameters when deployed to different environments. Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environment or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during application lifecycle management (ALM) operations. Because environment variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments.
 
 Benefits of using environment variables:
 - No need to manually edit configurable values in a production environment.
 - Provide new values while **importing solutions** to other environments.
-- Store configuration for the **data sources** used in canvas apps and flows. For example, SharePoint Online site and list parameters can be stored as environment variables; therefore allowing you to connect to different sites and lists in different environments without needing to modify the apps and flows. 
+- Store configuration for the **data sources** used in canvas apps and flows. For example, SharePoint Online site and list parameters can be stored as environment variables; therefore allowing you to connect to different sites and lists in different environments without needing to modify the apps and flows.
 - Package and transport your customization and configuration together and manage them in a single location.
 - One environment variable can be used across many different solution components - whether they're the same type of component or different. For example, a canvas app and a flow can use the same environment variable. When the value of the environment variable needs to change, you only need to change one value. 
-- Additionally, if you need to retire a data source in production environments, you can simply update the environemnt variable values with information for the new data source. The apps and flows do not require modification and will start using the new data source.
-- Granular level security managed by [Microsoft Dataverse](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro).
+- Additionally, if you need to retire a data source in production environments, you can simply update the environment variable values with information for the new data source. The apps and flows do not require modification and will start using the new data source.
+- Granular level security managed by [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro).
 - Unlimited number of variables (max solution size is 29 MB).
 - Service the definitions and the values independently or together.
 - Supported by [SolutionPackager](/powerapps/developer/data-platform/compress-extract-solution-file-solutionpackager) and [DevOps](/powerapps/developer/data-platform/build-tools-overview) tools enable continuous integration and continuous delivery (CI/CD).
--  The environment variables can be unpacked and stored in source control. You may also store different environemnt variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to. 
+- The environment variables can be unpacked and stored in source control. You may also store different environment variables values files for the separate configuration needed in different environments. Solution Packager can then accept the file corresponding to the environment the solution will be imported to. 
 - Support for localization of the display strings.
 - When compared to storing configuration data as record data in custom tables, solution import is far simpler and more performant than handling row data.
 
-
 ## How do they work?
-Environment variables can be created and modified within the modern solution interface, automatically created when connecting to certain data sources in canvas apps, or by [using code](https://docs.microsoft.com/powerapps/developer/data-platform/work-with-data). You may also export and import environment variables using Microsoft Excel. Once environment variables are present in an environment, you can then use them as inputs when authoring canvas apps, Power Automate flows, when developing plug-ins, as well as many other places such as adding a Power BI dashboard to a model-driven app. 
+
+Environment variables can be created and modified within the modern solution interface, automatically created when connecting to certain data sources in canvas apps, or by [using code](/powerapps/developer/data-platform/work-with-data). You can also export and import environment variables using Microsoft Excel. Once environment variables are present in an environment, you can then use them as inputs when authoring canvas apps, Power Automate flows, when developing plug-ins, as well as many other places such as adding a Power BI dashboard to a model-driven app. 
 
 ### Create an environment variable in a solution
+
 1. Sign in to Power Apps, and then on the left panes select **Solutions**. 
 2. On the command bar, select **New** and then select **Environment variable**. 
 3. On the left pane, complete the following columns, and then select **Save**:  
@@ -63,34 +64,38 @@ Environment variables can be created and modified within the modern solution int
 
 ## Use data source environment variables in canvas apps
 ### Use pre-existing data source environment variables
+
 Environment variables can be reused across other apps and even different types of resources like cloud flows. You may wish to first create them within your solution and later use them while authoring canvas apps and cloud flows.
 1. Follow the steps above for **Create an environment variable in a solution**
 2. Edit or create a canvas app from your solution.
 4. Add a **new** data source for SharePoint online.
-5. Click the **Advanced** tab
-6. You'll see a filtered list of environment variables that you have access to and that match the parameter being set. For example, when selecting the SharePoint site you'll see a list of all data source environment variables with **Connector** = SharePoint and **Parameter type** = Site. The same is true when selecting SharePoint lists for a given site. 
+5. Select the **Advanced** tab
+6. You'll see a filtered list of environment variables that you have access to and that match the parameter being set. For example, when you select the SharePoint site, you'll see a list of all data source environment variables with **Connector** = SharePoint and **Parameter type** = Site. The same is true when selecting SharePoint lists for a given site. 
 
 
 ### Automatically create data source environment variables when connecting to data
+
 This option provides simplicity and ensures environment variables will always be used for data sources such as SharePoint online. However, some customers prefer to provide their own schema names and therefore should create them from solutions.
 1. Edit or create a canvas app from your solution.
-2. Click **File**, **Settings**, then **General** and enable the setting to **Automatically create environment variables when adding data sources**.
+2. Select **File** > **Settings** > **General** and enable the setting to **Automatically create environment variables when adding data sources**.
 3. Add a **new** data source for SharePoint online.
 4. Select a SharePoint **site**, then one or more **lists**. You do not need to select the **Advanced** tab.
->[!NOTE]
->To prevent creation of duplicate environment variables, you'll be prompted to use the existing environment variable when duplicates are identified. You may de-select the option to use the existing environment variable if creation of a duplicate is desired. 
-5. Click **save**. 
+   >[!NOTE]
+   >To prevent creation of duplicate environment variables, you'll be prompted to use the existing environment variable when duplicates are identified. You may de-select the option to use the existing environment variable if creation of a duplicate is desired. 
+5. Select **save**. 
 
 >[!NOTE]
 >Pre-existing canvas apps will not automatically use data source environment variables. Remove the data source(s) from the app and add them back using the above steps to upgrade these apps to use environment variables. 
 
 ## Use environment variables in Power Automate cloud flows
-Environment variables cannot be automatically created when authoring flows. However, the useage of environment variables are not limited to those of type = **data source**. All types of environment variables can be used in triggers and actions.
+
+Environment variables can't be automatically created when authoring flows. However, environment variables are not limited to those of type = **data source**. All types of environment variables can be used in triggers and actions.
 1. Follow the steps above for **Create an environment variable in a solution**
 2. Edit or create a cloud flow from a solution. 
-3. When providing a value for the parameter, scroll down and select **Enter a custom value**. Directly entering a value will not use environment variables. 
-4. Environment variables for which you have access to are listed in the **Dynamic content** section of the card.
+3. When you provide a value for the parameter, scroll down and select **Enter a custom value**. Directly entering a value will not use environment variables. 
+4. Environment variables that you have access to are listed in the **Dynamic content** section of the card.
 5. Select the appropriate environment variable.
+
 >[!NOTE]
 >The environment variables are currently listed under **Parameters** and the list is not currently filtered based on matching data types.
 
@@ -111,7 +116,7 @@ A notification is displayed when the environment variables do not have any value
 
 ## Security
 
-The environmentvariabledefinition table is [user or team owned](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-tables). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the environmentvariablevalue table is inherited from the parent environmentvariabledefinition table and therefore does not require separate privileges. More information: [Security in Dataverse](/power-platform/admin/wp-security).
+The `environmentvariabledefinition` table is [user or team owned](/powerapps/maker/common-data-service/types-of-tables). When you create an application that uses environment variables, be sure to assign users the appropriate level of privilege to this table. Permission to the `environmentvariablevalue` table is inherited from the parent `environmentvariabledefinition` table and therefore does not require separate privileges. More information: [Security in Dataverse](/power-platform/admin/wp-security).
 
 ## Current limitations
 
