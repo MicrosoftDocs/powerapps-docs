@@ -179,6 +179,8 @@
     href: index.md
   - name: Sign in to Power Apps
     href: ./canvas-apps/intro-maker-portal.md
+  - name: Find it with unified search
+    href: search.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -1438,7 +1440,7 @@
               href: ./portals/configure/behavior-format-date-time-field.md
         - name: Create and show portal content
           href: ./portals/configure/create-show-portal-content.md
-        - name: Configure CORS support
+        - name: Setup HTTP headers
           href: ./portals/configure/cors-support.md
         - name: Configure advertisements
           href: ./portals/configure/create-run-advertisement.md

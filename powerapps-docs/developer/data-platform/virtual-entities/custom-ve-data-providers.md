@@ -21,11 +21,10 @@ search.app:
 
 [!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
 
-Using the Microsoft Dataverse Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider. Each data provider is composed of a reusable set of Dataverse plug-ins that implement the supported CRUD operations. (The initial release is limited to the **Retrieve** and **RetrieveMultiple** read operations.)  This section provides fundamental information about data providers and approaches to developing custom providers, including example code.
+Using the Microsoft Dataverse Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider. Each data provider is composed of a reusable set of Dataverse plug-ins that implement the supported CRUD operations. For each virtual entity, developers can create plug-ins and register them representing each of the **Create**, **Update**, **Retrieve**, **RetrieveMultiple** and **Delete** operation.  This section provides fundamental information about data providers and approaches to developing custom providers, including example code.
 
 > [!NOTE]
-> As an alternative to creating a custom data source provider, you should consider adapting your data source to an existing data provider. For example, if you create an OData v4 interface to your external data source, then you can directly access it with the supplied standard OData v4 Data Provider. The mechanism of adding this REST interface varies with the underlying data service technology, for example see [WCF Data Services 4.5](/dotnet/framework/data/wcf/). OData has broad industry support, with a wide range of dedicated tools and compatible technologies.
-
+> As an alternative to creating a custom data source provider, you should consider adapting your data source to an existing data provider. For example, if you create an OData v4 interface to your external data source, then you can directly access it with the supplied standard OData v4 Data Provider, which supports CRUD operations as well. The mechanism of adding this REST interface varies with the underlying data service technology, for example see [WCF Data Services 4.5](https://docs.microsoft.com/dotnet/framework/data/wcf/). OData has broad industry support, with a wide range of dedicated tools and compatible technologies.
 
 ## Prerequisites
 
@@ -62,7 +61,7 @@ There are several steps that are required to create a virtual entity data provid
 
 ### Plug-in development
 
-Because virtual entities in this release are read-only, you will write the data provider in the form of a plug-in registered on the **Retrieve** and **RetrieveMultiple** events. Each respective event will include information in the execution context which describes the kind of data to return. 
+Because virtual entities support CRUD operations, you will write the data provider in the form of a plug-in registered on the **Create**, **Update**, **Retrieve**, **RetrieveMultiple** and **Delete** events. Each respective event will include information in the execution context which describes the kind of data to return. 
 
 |**Event**|**Execution Context**|
 |---------|---------------------|
