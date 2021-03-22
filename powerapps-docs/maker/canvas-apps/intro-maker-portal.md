@@ -5,9 +5,9 @@ author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.custom: canvas
+ms.custom:
 ms.reviewer: 
-ms.date: 08/06/2018
+ms.date: 03/21/2021
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -55,8 +55,9 @@ In Power Apps, you can create and run these types of apps:
 
 - **Canvas apps** support designing custom UI and connecting to data from a variety of sources.
 - **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
+- **Portals** help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously.
 
-If you choose an environment that has a Dataverse database, you can build canvas or model-driven apps from the same **Home** page.
+If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
 
 ## Play or edit an app
 
@@ -68,15 +69,15 @@ On the **Apps** page, you can filter the list of apps based on criteria such as 
 
 You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
-## Create an app
+## Create an app, portal, chatbot, or AI model
 
-From the **Home** page, you can create apps in several ways:
+From the **Home** page, you can create apps, portals, chatbots and AI models:
 
-- [generate a canvas app automatically from a set of data](data-platform-create-app.md)
-- [customize a pre-built sample of a canvas app](open-and-run-a-sample-app.md)
-- [build a canvas app from a blank screen](data-platform-create-app-scratch.md)
-- [create your own model-driven app](../model-driven-apps/overview-model-driven-samples.md)
-- [customize a pre-built sample for a model-driven app](../model-driven-apps/build-first-model-driven-app.md)
+- [Get staerted with canvas apps](/powerapps/maker/canvas-apps/)
+- [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
+- [Get started with portals](/powerapps/maker/portals/)
+- [Get started with chatbots](/powerapps/chatbots)
+- [Get started with AI models](/powerapps/use-ai-builder)
 
 ## Learn more
 
@@ -87,11 +88,11 @@ You can find more information about either canvas apps or model-driven apps in t
 
     ![List of model-driven apps with an ellipsis menu open](media/intro-maker-portal/help-icon.png)
 
-Both options show links to this documentation set, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
+Both options show links to this documentation set, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
 ## Other common tasks
 
-By selecting options in the header and left navigation bar, you can do more than create and open apps.
+By selecting options in the header and left navigation bar, you can do more than create and open apps, portals, chatbots, and AI models.
 
 ### From the header
 
@@ -114,7 +115,7 @@ By selecting options in the header and left navigation bar, you can do more than
 
 Extend the functionality of your apps by performing these tasks:
 
-- Manage entities, option sets, and data integration in [Dataverse](../data-platform/data-platform-intro.md).
+- Manage tables, choices, and data integration in [Dataverse](../data-platform/data-platform-intro.md).
 - Configure business logic in [Power Automate](/flow/getting-started).
 - Author, package, and maintain [solutions](../../developer/data-platform/introduction-solutions.md).
 
