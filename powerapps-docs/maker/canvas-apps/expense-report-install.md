@@ -1,6 +1,6 @@
 ---
 title: Learn about how to use the sample Expense Report template to create an app. | Microsoft Docs
-description: Use the sample Help Desk template to create a canvas app, and preview the app features before you customize for business requirements.
+description: Use the sample Expense Report template to create a canvas app, and preview the app features before you customize for business requirements.
 author: norliu
 ms.service: powerapps
 ms.topic: sample
